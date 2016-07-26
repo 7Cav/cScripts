@@ -1,0 +1,49 @@
+/* ########     DESCRIPTION AND INFO     ######## */
+
+    dev                 = "1SG Tully.B";
+    author              = "1SG Tully.B";
+    
+    onLoadName          = "MyMissionName";
+    onLoadMission       = "7th Cavalry";
+    onLoadIntro         = "S3 1BN Battle Staff Operation";
+    
+    loadScreen          = "Data\MissionLogo.paa";
+    overviewPicture     = "Data\MissionLogo.paa";
+    
+/* ########    PARAMETERS   ######## */
+
+    disabledAI              = true;
+    disableChannels[]       = {0,1,2,3,5,6};
+    
+    //corpseManagerMode     = 0;
+    //corpseLimit           = 30;
+    //corpseRemovalMinTime  = 300;
+    //corpseRemovalMaxTime  = 1200;
+    
+    //wreckManagerMode      = 0;
+    //wreckLimit            = 1;
+    //wreckRemovalMinTime   = 60;
+    //wreckRemovalMaxTime   = 1200;
+    
+    forceRotorLibSimulation = 1;
+    
+/* ########     RESPAWN     ######## */
+    
+    // Name a marker "respawn_west" or a veichle "respawn_vehicle_west" for set spawn.
+    // See https://community.bistudio.com/wiki/Arma_3_Respawn for more info on respawn.
+    respawn         = BASE;
+    respawnDelay    = 4;
+    
+/* ####### FUNCTIONS & SYSTEMS ####### */
+
+    #include "cScripts\Loadouts\script\CfgPoppy.hpp"
+    #include "cScripts\ViewingDistance\GUI.h"
+    class CfgFunctions {
+        #include "cScripts\ViewingDistance\CfgFunctions.hpp"
+        #include "cScripts\CavFnc\CfgFunctions.hpp"
+        #include "cScripts\Loadouts\script\CfgFunctions.hpp"
+    };
+    
+    #include "cScripts\Loadouts\CfgLoadouts.hpp"
+    
+/* ########      OTHER      ######## */
