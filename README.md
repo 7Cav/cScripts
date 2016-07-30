@@ -51,7 +51,7 @@ To call the function add this to the initLine of the crate:
 ``` c++
     [this] call cScripts_fnc_initMain;
 ````
-#### initMain
+#### initMainSandbox
 initMainSandbox is simular to initMain but adds a all included arsenal to the box as well. (See above for details.)
 To call the function add this to the initLine of the crate:
 ``` c++
