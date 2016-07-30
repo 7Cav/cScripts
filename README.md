@@ -130,5 +130,6 @@ Following classnames are supported by this script:
 To make a cool CQB experience you can disabled the AI's pathing this will make the AI stay put and still be able to turn around and change stance.
 Put this in the InitLine of the soldier: `this disableAI 'path';`
 If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
-Click on the script command about (https://community.bistudio.com/wiki/setUnitPos)[setUnitPos] and (https://community.bistudio.com/wiki/disableAI)[disableAI]
+
+Click on the script command about [https://community.bistudio.com/wiki/setUnitPos](setUnitPos) and [https://community.bistudio.com/wiki/disableAI](disableAI)
 
