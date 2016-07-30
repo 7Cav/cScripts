@@ -63,24 +63,66 @@ To call the function add this to the initLine of the veichle:
     [this,1] call cScripts_fnc_initVehicle;
 ```
 Tip:
-You can also aply this script mid mission simply by making a repeatable trigger located sugestivle on a reparepad or another place.
+You can also apply this script mid mission simply by making a repeatable trigger located sugestivle on a reparepad or another place.
 To do this folow this simple steps:
 
 1. Place down a trigger and make it a good size.
-1. Set type to `None`.
-1. Set activation to `Anybody`.
-1. Set activation Type to `Present`.
-1. Check the `repeatable` box.
-1. Add this to the On Activation box: `{[_x] call cScripts_fnc_initVehicle;} forEach thislist;`
-1. Set timer type to `Countdown`
-1. Set time on Min, Mid and Max to `60`
+2. Set type to `None`.
+3. Set activation to `Anybody`.
+4. Set activation Type to `Present`.
+5. Check the `repeatable` box.
+6. Add this to the On Activation box: `{[_x] call cScripts_fnc_initVehicle;} forEach thislist;`
+7. Set timer type to `Countdown`
+8. Set time on Min, Mid and Max to `60`
+
+### supplies
+
+#### equipCrate
+equipCrate changes the inventory of the given item to a platoon sized supply crate. 
+To call the function add this to the initLine of a supply crate  or container:
+``` c++
+    [this,1] call cScripts_fnc_equipCrate;
+```
+Tip!
+You can use this script mid mission by using checkCrate. See below.
+
+#### equipMedicalCrate
+equipMedicalCrate populats a given crate with medical equipment.
+
+To call the function add this to the initLine of a crate:
+``` c++
+    [this,1] call cScripts_fnc_equipMedicalCrate;
+```
+
+#### equipBase
+equipBase changes the inventory of the given item to a rediculus sized crate with weapon and equipment suiatable for spawn armory. This script is used by `initMain` and `initMainSandbox` to fill a crate.
+To call the function add this to the initLine of a supply crate  or container:
+``` c++
+    [this,1] call cScripts_fnc_equipBase;
+```
 
 #### checkCrate
+checkCrate checks and applyes a new inventory to a crate suitable for resupplying a platoonsize element. The function is best runned on a trigger that changes the crate mid mission. At start of missions running `equipCrate` on a crate is recomended.
 
-[this] call cScripts_fnc_checkCrate;
-[this,1] call cScripts_fnc_equipBase;
-[this,1] call cScripts_fnc_equipCrate;
-[this,1] call cScripts_fnc_equipMedicalCrate;
+To call the function add this to the initLine of a supply crate:
+``` c++
+    [this] call cScripts_fnc_checkCrate;
+```
+
+To run the function mid mission follow this steps:
+
+1. Place down a trigger and make it a good size.
+2. Set type to `None`.
+3. Set activation to `Anybody`.
+4. Set activation Type to `Present`.
+5. Check the `repeatable` box.
+6. Add this to the On Activation box: `{[_x] call cScripts_fnc_checkCrate;} forEach thislist;`
+7. Set timer type to `Countdown`
+8. Set time on Min, Mid and Max to `60`
+
+Following classnames are supported by this script:
+`CargoNet_01_box_F`, `B_CargoNet_01_ammo_F`, `CargoNet_01_barrels_F` and `B_supplyCrate_F`
+
 
 
 
