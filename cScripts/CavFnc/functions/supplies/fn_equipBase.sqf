@@ -78,12 +78,12 @@ _crate addMagazineCargoGlobal [QUOTE(Chemlight_Red),(_quaScale * 250)];
 
 //================== EXPLOSIVES ==================\\
 
-_crate addMagazineCargoGlobal [QUOTE(_MAG_SATCHELCHARGE),(_quaScale * 50)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_DEMOCHARGE),(_quaScale * 50)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_MINE0),(_quaScale * 50)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_MINE1),(_quaScale * 50)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_MINE2),(_quaScale * 50)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_MINE3),(_quaScale * 50)];
+//_crate addMagazineCargoGlobal [QUOTE(_MAG_SATCHELCHARGE),(_quaScale * 50)];
+//_crate addMagazineCargoGlobal [QUOTE(_MAG_DEMOCHARGE),(_quaScale * 50)];
+//_crate addMagazineCargoGlobal [QUOTE(_MAG_MINE0),(_quaScale * 50)];
+//_crate addMagazineCargoGlobal [QUOTE(_MAG_MINE1),(_quaScale * 50)];
+//_crate addMagazineCargoGlobal [QUOTE(_MAG_MINE2),(_quaScale * 50)];
+//_crate addMagazineCargoGlobal [QUOTE(_MAG_MINE3),(_quaScale * 50)];
 
 //================== ITEMS ==================\\
 

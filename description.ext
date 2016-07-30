@@ -36,14 +36,14 @@
     
 /* ####### FUNCTIONS & SYSTEMS ####### */
 
-    #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     #include "cScripts\ViewingDistance\GUI.h"
+    #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     class CfgFunctions {
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
         #include "cScripts\CavFnc\CfgFunctions.hpp"
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"
     };
-    
+    #include "cScripts\CavFnc\functions\insignia\CfgUnitInsignia.hpp"
     #include "cScripts\Loadouts\CfgLoadouts.hpp"
     
 /* ########      OTHER      ######## */

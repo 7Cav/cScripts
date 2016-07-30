@@ -6,7 +6,8 @@
  * 0: Unit <OBJECT>
  *
  * Example:
- * [this] call cScripts_fnc_initVehicle;
+ * [this,1] call cScripts_fnc_initVehicle;
+ * [this,0.5] call cScripts_fnc_initVehicle;
  */
  
 #include "..\script_component.hpp";
