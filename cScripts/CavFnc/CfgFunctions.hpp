@@ -3,6 +3,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\main";
         class initMain {};
         class initMainSandbox {};
+        class initQuickSelect {};
         class initVehicle {};
     };
     class supplies {
