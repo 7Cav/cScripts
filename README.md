@@ -26,7 +26,7 @@ If you whant to remove a function or script you need to remove the following for
 
 **Loadouts Script** *(Poppy) `cScripts\Loadouts\...`*
 ``` c++
-#include "cScripts\Loadouts\script\CfgPoppy.hpp"
+    #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     class CfgFunctions {
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"
     };
