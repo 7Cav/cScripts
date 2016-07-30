@@ -42,6 +42,8 @@ If you whant to remove a function or script you need to remove the following for
 ```
 
 ## CAV Functions
+CAV Functions are usable functions and scripts that can be called for to easy up your life. You can read more about hte scripts below or visit the mission script viwer in the editor.
+
 ## Main
 #### initMain
 initMain is best run on a crate or cargo container that have an inventory. The script add vital function to the object including; `equipBase`, `ReGear add action`, `Quick Selections` and `Insignia Selection`
