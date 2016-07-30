@@ -127,7 +127,7 @@ Following classnames are supported by this script:
 
 # Other tips and tricks
 ##Make a cool CQB experience
-To make a cool CQB experience you can disabled the AI's pathing this will make the AI stay put and still be able to turn around and change stance.
+In order to make a, hopfylly, cool CQB experience you can disabled the AI's pathing. This will make the AI stay put and still be able to turn around and change stance.
 Put this in the InitLine of the soldier: `this disableAI 'PATH';`
 If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
 
