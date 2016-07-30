@@ -131,5 +131,5 @@ To make a cool CQB experience you can disabled the AI's pathing this will make t
 Put this in the InitLine of the soldier: `this disableAI 'path';`
 If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
 
-Click on the script command about [https://community.bistudio.com/wiki/setUnitPos](setUnitPos) and [https://community.bistudio.com/wiki/disableAI](disableAI)
+Click on the script command about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI)
 
