@@ -1,5 +1,5 @@
 # cScripts
-This is cScripts a easy to use framework for S3 mission making. This framework contain functions scripts and for easy handleing and adaptation to the 7CAV Standard.
+This is cScript a easy to use framework for S3 mission making. This framework contain functions, scripts for easy handleing and adaptation to the 7CAV mission standard.
 
 ## Scripts insalled
 - **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry cScripts (1.0.0)</a>
@@ -22,7 +22,7 @@ If you use the included Description.ext you do not need to do anything otherwise
 ```
 
 ### Uninstall
-If you whant to remove a function or script you need to remove the following for each script:
+If you whant to remove a function or script you need to remove the following from the description.ext:
 
 **Loadouts Script** *(Poppy) `cScripts\Loadouts\...`*
 ``` c++
@@ -42,11 +42,11 @@ If you whant to remove a function or script you need to remove the following for
 ```
 
 ## CAV Functions
-CAV Functions are usable functions and scripts that can be called for to easy up your life. You can read more about hte scripts below or visit the mission script viwer in the editor.
+CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
 
 ## Main
 #### initMain
-initMain is best run on a crate or cargo container that have an inventory. The script add vital function to the object including; `equipBase`, `ReGear add action`, `Quick Selections` and `Insignia Selection`
+initMain is best run on a crate or cargo container that have somekind of a inventory. This function add vital function to the crate including; `equipBase`, `ReGear addAction`, `Quick Selection addActions` and `Insignia Selection addActions`
 To call the function add this to the initLine of the crate:
 ``` c++
     [this] call cScripts_fnc_initMain;
@@ -80,7 +80,7 @@ To do this folow this simple steps:
 ### supplies
 
 #### equipCrate
-equipCrate changes the inventory of the given item to a platoon sized supply crate. 
+equipCrate changes the inventory of the given item to a platoon sized supply crate. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
 To call the function add this to the initLine of a supply crate  or container:
 ``` c++
     [this,1] call cScripts_fnc_equipCrate;
@@ -89,15 +89,14 @@ Tip!
 You can use this script mid mission by using checkCrate. See below.
 
 #### equipMedicalCrate
-equipMedicalCrate populats a given crate with medical equipment.
-
+equipMedicalCrate populats a given crate with medical equipment. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
 To call the function add this to the initLine of a crate:
 ``` c++
     [this,1] call cScripts_fnc_equipMedicalCrate;
 ```
 
 #### equipBase
-equipBase changes the inventory of the given item to a rediculus sized crate with weapon and equipment suiatable for spawn armory. This script is used by `initMain` and `initMainSandbox` to fill a crate.
+equipBase changes the inventory of the given item to a rediculus sized crate with weapon and equipment suiatable for spawn armory. This script is used by `initMain` and `initMainSandbox` to fill a crate. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
 To call the function add this to the initLine of a supply crate  or container:
 ``` c++
     [this,1] call cScripts_fnc_equipBase;
