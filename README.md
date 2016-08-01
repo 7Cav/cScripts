@@ -53,7 +53,8 @@ The AI in cScripts `init.sqf` have been changed to be a little more realistic an
         _x setSkill ["spotdistance", 0.6];
         _x setSkill ["commanding", 1.0];
         _x setSkill ["general", 1.0];
-    } forEach allUnits;```
+    } forEach allUnits;
+```
 
 Tip:
 When playing on a step or desert island it is recomended to change the `"spotdistance"` to `1.0`.
