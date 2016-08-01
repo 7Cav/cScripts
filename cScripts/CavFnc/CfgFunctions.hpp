@@ -17,4 +17,8 @@ class cScripts {
         file = "cScripts\cavFnc\functions\insignia";
         class initInsignia {};
     };
+    class documentation {
+        file = "cScripts\cavFnc\functions\documentation";
+        class initDoc { postInit = 1; };
+    };
 };
