@@ -40,7 +40,7 @@ If you whant to remove a function or script you need to remove the following fro
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
     };
 ```
-## What is done?
+## What do cScripts provide?
 ### AI Tweek
 The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best. But you are offcause free to change it if you whant.
 #### Default:
@@ -55,7 +55,6 @@ The AI in cScripts `init.sqf` have been changed to be a little more realistic an
         _x setSkill ["general", 1.0];
     } forEach allUnits;
 ```
-
 Tip:
 When playing on a step or desert island it is recomended to change the `"spotdistance"` to `1.0`.
 
@@ -103,7 +102,7 @@ To call the function add this to the initLine of a supply crate  or container:
 ``` c++
 [this,1] call cScripts_fnc_equipCrate;
 ```
-Tip!
+Tip:
 You can use this script mid mission by using checkCrate. See below.
 
 #### equipMedicalCrate
