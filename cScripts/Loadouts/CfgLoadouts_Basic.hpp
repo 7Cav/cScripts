@@ -1,3 +1,6 @@
+/*
+GearVersionDate: 160801
+*/
 class rhsusf_army_ocp_squadleader : CommonBlufor {      // Squad Leader
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};

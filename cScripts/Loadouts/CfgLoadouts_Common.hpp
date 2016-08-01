@@ -1,3 +1,6 @@
+/*
+GearVersionDate: 160801
+*/
 class CommonBlufor {
     uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
     backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
