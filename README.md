@@ -8,7 +8,7 @@ This is cScript a easy to use framework for S3 mission making. This framework co
 - **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
 
 ### Manual Installation
-If you use the included Description.ext you do not need to do anything otherwise you need to include the folowing block:
+If you use the included `Description.ext` you do not need to do anything otherwise you need to include the folowing block:
 ``` c++
     #include "cScripts\ViewingDistance\GUI.h"
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
@@ -41,9 +41,11 @@ If you whant to remove a function or script you need to remove the following fro
     };
 ```
 ## What do cScripts provide?
-cScript provde you with the basic for S3 Operation making.
+cScripts provides you with the basic for S3 Operation making.
+
 ### AI Tweek (init.sqf)
 The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best. But you are offcause free to change it if you whant.
+
 #### Default:
 ``` c++
 {
