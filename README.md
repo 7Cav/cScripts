@@ -1,13 +1,13 @@
 # cScripts
 This is cScript a easy to use framework for S3 mission making. This framework contain functions, scripts for easy handleing and adaptation to the 7CAV mission standard.
 
-## Scripts insalled
+## Scripts Installed
 - **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry cScripts (1.0.0)</a>
 - **Loadouts**                  -   <a href="https://7cav.us/">7th Cavalry Loadouts 160730</a>
 - **Loadouts/Script**           -   <a href="https://github.com/BaerMitUmlaut/Poppy">Poppy (1.0.0)</a>
 - **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
 
-### Instalation
+### Manual Installation
 If you use the included Description.ext you do not need to do anything otherwise you need to include the folowing block:
 ``` c++
     #include "cScripts\ViewingDistance\GUI.h"
