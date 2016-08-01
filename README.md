@@ -41,7 +41,8 @@ If you whant to remove a function or script you need to remove the following fro
     };
 ```
 ## What do cScripts provide?
-### AI Tweek
+cScript provde you with the basic for S3 Operation making.
+### AI Tweek (init.sqf)
 The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best. But you are offcause free to change it if you whant.
 #### Default:
 ``` c++
@@ -57,6 +58,9 @@ The AI in cScripts `init.sqf` have been changed to be a little more realistic an
 ```
 Tip:
 When playing on a step or desert island it is recomended to change the `"spotdistance"` to `1.0`.
+
+### Respawn Preset (description.ext)
+Missions running the template is set to default respawn `BASE` with `4` second delay. This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or deleted.
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
