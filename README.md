@@ -40,6 +40,23 @@ If you whant to remove a function or script you need to remove the following fro
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
     };
 ```
+## What is done?
+### AI Tweek
+The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best. But you are offcause free to change it if you whant.
+#### Default:
+``` c++
+{
+        _x setSkill ["aimingspeed", 0.4];
+        _x setSkill ["aimingaccuracy", 0.35];
+        _x setSkill ["aimingshake", 0.4];
+        _x setSkill ["spottime", 0.4];
+        _x setSkill ["spotdistance", 0.6];
+        _x setSkill ["commanding", 1.0];
+        _x setSkill ["general", 1.0];
+    } forEach allUnits;```
+
+Tip:
+When playing on a step or desert island it is recomended to change the `"spotdistance"` to `1.0`.
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
@@ -49,20 +66,20 @@ CAV Functions are usable functions and scripts that can be called. You can read 
 initMain is best run on a crate or cargo container that have somekind of a inventory. This function add vital function to the crate including; `equipBase`, `ReGear addAction`, `Quick Selection addActions` and `Insignia Selection addActions`
 To call the function add this to the initLine of the crate:
 ``` c++
-    [this] call cScripts_fnc_initMain;
+[this] call cScripts_fnc_initMain;
 ````
 #### initMainSandbox
 initMainSandbox is simular to initMain but adds a all included arsenal to the box as well. (See above for details.)
 To call the function add this to the initLine of the crate:
 ``` c++
-    [this] call cScripts_fnc_initMainSandbox;
+[this] call cScripts_fnc_initMainSandbox;
 ````
 
 #### initVehicle
 initVehicle is a repurpuse script that is runned on vehicles at the start of the mission. The script changes the inventory of the Vehicle suit our standard.
 To call the function add this to the initLine of the veichle:
 ``` c++
-    [this,1] call cScripts_fnc_initVehicle;
+[this,1] call cScripts_fnc_initVehicle;
 ```
 Tip:
 You can also apply this script mid mission simply by making a repeatable trigger located sugestivle on a reparepad or another place.
@@ -83,7 +100,7 @@ To do this folow this simple steps:
 equipCrate changes the inventory of the given item to a platoon sized supply crate. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
 To call the function add this to the initLine of a supply crate  or container:
 ``` c++
-    [this,1] call cScripts_fnc_equipCrate;
+[this,1] call cScripts_fnc_equipCrate;
 ```
 Tip!
 You can use this script mid mission by using checkCrate. See below.
@@ -92,14 +109,14 @@ You can use this script mid mission by using checkCrate. See below.
 equipMedicalCrate populats a given crate with medical equipment. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
 To call the function add this to the initLine of a crate:
 ``` c++
-    [this,1] call cScripts_fnc_equipMedicalCrate;
+[this,1] call cScripts_fnc_equipMedicalCrate;
 ```
 
 #### equipBase
 equipBase changes the inventory of the given item to a rediculus sized crate with weapon and equipment suiatable for spawn armory. This script is used by `initMain` and `initMainSandbox` to fill a crate. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
 To call the function add this to the initLine of a supply crate  or container:
 ``` c++
-    [this,1] call cScripts_fnc_equipBase;
+[this,1] call cScripts_fnc_equipBase;
 ```
 
 #### checkCrate
@@ -107,7 +124,7 @@ checkCrate checks and applyes a new inventory to a crate suitable for resupplyin
 
 To call the function add this to the initLine of a supply crate:
 ``` c++
-    [this] call cScripts_fnc_checkCrate;
+[this] call cScripts_fnc_checkCrate;
 ```
 
 To run the function mid mission follow this steps:
