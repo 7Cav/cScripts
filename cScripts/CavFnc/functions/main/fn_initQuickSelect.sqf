@@ -15,9 +15,9 @@ if (!isServer) exitWith {};
 
 params ["_object"];
 
-_object addAction ["  <t color='#ffd966'>Rifleman</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
-_object addAction ["  <t color='#ffd966'>Rifleman LAT</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
-_object addAction ["  <t color='#ffd966'>Rifleman HAT</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
-_object addAction ["  <t color='#ffd966'>Rifleman M-AR Assistant</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
-_object addAction ["  <t color='#ffd966'>Rifleman H-AR Assistant</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
-_object addAction ["  <t color='#ffd966'>Rifleman Ammo Bearer</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
+_object addAction ["   <t color='#ffd966'>Rifleman</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
+_object addAction ["   <t color='#ffd966'>Rifleman LAT</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
+_object addAction ["   <t color='#ffd966'>Rifleman HAT</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
+_object addAction ["   <t color='#ffd966'>Rifleman M-AR Assistant</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
+_object addAction ["   <t color='#ffd966'>Rifleman H-AR Assistant</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];
+_object addAction ["   <t color='#ffd966'>Rifleman Ammo Bearer</t>", {[player,"C_R"] call Poppy_fnc_applyLoadout;}];

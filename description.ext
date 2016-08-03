@@ -43,7 +43,7 @@
         #include "cScripts\CavFnc\CfgFunctions.hpp"
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"
     };
-    #include "cScripts\CavFnc\functions\insignia\CfgUnitInsignia.hpp"
+    #include "cScripts\CfgUnitInsignia.hpp"
     #include "cScripts\Loadouts\CfgLoadouts.hpp"
     
 /* ########      OTHER      ######## */
