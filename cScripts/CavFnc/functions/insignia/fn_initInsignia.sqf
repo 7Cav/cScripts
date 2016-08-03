@@ -12,10 +12,9 @@
 
 #include "..\script_component.hpp";
 
-if (!isServer) exitWith {};
-
 params ["_object"];
 
+_object addAction ["Insignia Selection", {}];
 _object addAction ["   <t color='#66ff66'>Remove Insignia</t>", {[player,""] call BIS_fnc_setUnitInsignia;}];
 _object addAction ["   <t color='#66ff66'>Squad Insignia 1/1/C/1-7</t>", { [player,"11C_17_Insignia"] call BIS_fnc_setUnitInsignia;}];
 //_object addAction ["   <t color='#66ff66'>Squad Insignia 2/1/C/1-7</t>", { [player,"21C_17_Insignia"] call BIS_fnc_setUnitInsignia;}];

@@ -11,11 +11,12 @@
 
 #include "..\script_component.hpp";
 
-if (!isServer) exitWith {};
-
 params ["_object"];
 
-[_object] call FUNC(equipBase);
+if (isServer) then {
+   [_object] call FUNC(equipBase);
+};
+
 _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' />  7th Cavalry Equipment Crate", {}];
 
 _object addAction ["   <t color='#ffcc33'>ReGear</t>", {[player, typeOf player] call Poppy_fnc_applyLoadout;}];
