@@ -20,5 +20,10 @@ class cScripts {
     class documentation {
         file = "cScripts\cavFnc\functions\documentation";
         class initDoc { postInit = 1; };
+        class DocMC {};
+    };
+    class misc {
+        file = "cScripts\cavFnc\functions\misc";
+        class flag {};
     };
 };
