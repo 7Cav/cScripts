@@ -13,4 +13,4 @@
 
 params ["_object"];
 
-_object setFlagTexture "\cScripts\Data\Objects\Flag_7CAV_00.paa";
+_object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_00.paa";
