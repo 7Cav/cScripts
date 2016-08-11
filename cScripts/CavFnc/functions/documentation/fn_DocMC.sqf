@@ -8,8 +8,6 @@
  * [this] call cScripts_fnc_DocMC;
  */
 
-
- 
 player createDiaryRecord["7Cav",
     ["S3 Mission Control",
         "

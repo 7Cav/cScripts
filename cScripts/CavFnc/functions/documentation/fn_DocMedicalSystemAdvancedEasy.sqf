@@ -8,8 +8,6 @@
  * [] call cScripts_fnc_DocMedicalSystemAdvancedEasy;
  */
 
-
- 
 player createDiaryRecord["7Cav",
     ["Medical System Advanced (Easy)",
         "
