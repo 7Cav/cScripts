@@ -25,8 +25,10 @@ player createDiaryRecord["7Cav",
             <executeClose expression=""_string = '[_this select 1,1.0] call cScripts_fnc_equipCrate;';
                 copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1,1.0] call cScripts_fnc_equipCrate;</executeClose><br/>
             <executeClose expression=""_string = '[_this select 1,1.0] call cScripts_fnc_equipMedicalCrate;';
-                copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1,1.0] call cScripts_fnc_equipMedicalCrate;</executeClose><br/><br/></p>
-            <p><font color='#ffc61a'>Here are some usefull functions click to copy:</font></p>
+                copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1,1.0] call cScripts_fnc_equipMedicalCrate;</executeClose><br/>
+            <br/><br/>
+            <executeClose expression=""_string = '[_this select 1] call cScripts_fnc_flag;';
+                copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1] call cScripts_fnc_flag;</executeClose><br/></p>
         "
     ]
 ];
