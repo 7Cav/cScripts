@@ -14,7 +14,7 @@ player createDiaryRecord["7Cav",
     ["S3 Mission Control",
         "
             You can as Mission Control execute functions mid mission on vehicles and objects via the <font color='#ffc61a'>Execute Code Module</font> located under <font color='#ffc61a'>Development Tools</font>. Simply drop the module ontop of the target.<br/><br/>
-            <p><font color='#ffc61a'>Here are some usefull functions click to copy:</font>
+            <p><font color='#ffc61a'>Here are some useful functions click to copy:</font>
             <br/><br/>
             <executeClose expression=""_string = '[_this select 1] call cScripts_fnc_initMain;';
                 copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1] call cScripts_fnc_initMain;</executeClose>
