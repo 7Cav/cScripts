@@ -5,7 +5,7 @@
  * Arguments:
  *
  * Example:
- * [this] call cScripts_fnc_DocMC;
+ * [this] call cScripts_fnc_DocMissionControl;
  */
 
 player createDiaryRecord["7Cav",
