@@ -21,6 +21,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\documentation";
         class initDoc { postInit = 1; };
         class DocMC {};
+        class DocMedicalSystemAdvancedEasy {};
     };
     class misc {
         file = "cScripts\cavFnc\functions\misc";

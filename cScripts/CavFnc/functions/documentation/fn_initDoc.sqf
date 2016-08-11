@@ -17,3 +17,4 @@ if(player diarySubjectExists "7Cav")exitwith{};
 player createDiarySubject ["7Cav","7th Cavalry"];
 
 call cScripts_fnc_DocMC;
+call cScripts_fnc_DocMedicalSystemAdvancedEasy;

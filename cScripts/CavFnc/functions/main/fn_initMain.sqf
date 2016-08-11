@@ -17,7 +17,7 @@ if (isServer) then {
    [_object] call FUNC(equipBase);
 };
 
-_object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' />  7th Cavalry Equipment Crate", {}];
+_object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Equipment Crate", {}];
 
 _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
     if (vehicleVarName player == "") then {
