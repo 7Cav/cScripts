@@ -20,10 +20,18 @@ class cScripts {
     class documentation {
         file = "cScripts\cavFnc\functions\documentation";
         class initDoc { postInit = 1; };
+        
         class DocMissionControl {};
-        class DocMedicalSystemBasic {};
-        class DocMedicalSystemAdvanced {};
-        class DocMedicalSystemAdvancedEasy {};
+
+        class DocRadioLACEACE {};
+        class DocRadioMEDEVAC {};
+        class DocRadioROTARYPICKUP {};
+        class DocRadioSPOTREP {};
+        
+        class DocSandbox_MissionControl {};
+        class DocSandbox_MedicalSystemBasic {};
+        class DocSandbox_MedicalSystemAdvanced {};
+        class DocSandbox_MedicalSystemAdvancedEasy {};
     };
     class misc {
         file = "cScripts\cavFnc\functions\misc";

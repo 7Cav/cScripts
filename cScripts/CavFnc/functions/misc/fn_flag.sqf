@@ -1,5 +1,5 @@
 /*
- * Author: A.Brostrom
+ * Author: CPL.Brostrom.A 
  * This changes a flag texture to better one. (Works on all flags)
  *
  * Arguments:

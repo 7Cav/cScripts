@@ -1,5 +1,5 @@
 /*
- * Author: A.Brostrom
+ * Author: CPL.Brostrom.A 
  * This check for classname of crates and add a inventory.
  * Runns best if used together with a trigger. 
  * With the folowing activation line:

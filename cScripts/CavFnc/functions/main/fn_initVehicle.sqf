@@ -1,5 +1,5 @@
 /*
- * Author: A.Brostrom
+ * Author: CPL.Brostrom.A 
  * This populats a given object with items and commands used during sandboxes.
  *
  * Arguments:

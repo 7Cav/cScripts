@@ -1,5 +1,5 @@
 /*
- * Author: A.Brostrom
+ * Author: CPL.Brostrom.A 
  * This adds a sandbox version of a cavbox used for missions.
  *
  * Arguments:
@@ -34,6 +34,7 @@ _object addAction ["   <t color='#ff6633'>Arsenal</t>", {["Open",true] spawn BIS
 [_object] call FUNC(initInsignia);
 
 _object addAction ["---", {}];
+
 
 
 // ACE Actions (reGear)

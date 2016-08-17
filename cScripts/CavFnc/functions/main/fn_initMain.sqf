@@ -1,5 +1,5 @@
 /*
- * Author: A.Brostrom
+ * Author: CPL.Brostrom.A 
  * This populats a given object with items and commands used during operations.
  *
  * Arguments:
@@ -32,6 +32,7 @@ _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
 [_object] call FUNC(initInsignia);
 
 _object addAction ["---", {}];
+
 
 
 // ACE Actions (reGear)
