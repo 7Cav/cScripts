@@ -1,0 +1,21 @@
+/*
+ * Author: CPL.Brostrom.A 
+ * This generates quick selection buttons to given selections.
+ *
+ * Arguments:
+ * 0: Object <OBJECT>
+ *
+ * Example:
+ * ["this","My kit","my_PoppyClassname"] call cScripts_fnc_addQuickSelection;
+ */
+ 
+params [["_object", objNull, [objNull]], ["_name", "", [""]], ["_className", "", [""]]];
+
+//apply addAction
+_object addAction [format ["   <t color='#ffd966'>%1</t>", _name], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className];
+
+//apply aceAction
+
+private _quickSelection = [format ["cScriptQuickSelection_%1", _className], _name, "", {[player, _this select 2] call Poppy_fnc_applyLoadout;}, {true}, {}, _className] call ace_interact_menu_fnc_createAction;
+[_object, 0, ["ACE_MainActions", "cScriptQuickSelectionMenu"], _quickSelection] call ace_interact_menu_fnc_addActionToObject;
+
