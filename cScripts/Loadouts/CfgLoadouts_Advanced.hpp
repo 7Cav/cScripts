@@ -1,7 +1,8 @@
 /*
-GearVersionDate: 160801
+GearVersionDate: 160818
 */
-class rhsusf_army_ocp_officer : CommonBlufor {          // Officer
+class rhsusf_army_ocp_officer : CommonBlufor {              // Officer
+    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     binoculars[] = {"ACE_Vector"};
@@ -43,7 +44,8 @@ class rhsusf_army_ocp_officer : CommonBlufor {          // Officer
         //itemcTabHCam
     };
 };
-class C_JTAC : CommonBlufor {                           // JTAC
+class CAV_JTAC : CommonBlufor {                             // JTAC
+    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     binoculars[] = {"ACE_Vector"};
@@ -85,7 +87,8 @@ class C_JTAC : CommonBlufor {                           // JTAC
         //itemcTabHCam
     };
 };
-class C_FO : CommonBlufor {                             // Forward Observer
+class CAV_ForwardObserver : CommonBlufor {                  // Forward Observer
+    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     binoculars[] = {"ACE_Vector"};

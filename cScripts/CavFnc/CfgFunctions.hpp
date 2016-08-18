@@ -19,12 +19,12 @@ class cScripts {
 
     class quickSelection {
         file = "cScripts\cavFnc\functions\quickSelection";
-        class initQuickSelection {};
+        class initQuickSelections {};
         class addQuickSelection {};
     };
     class insigniaSelection {
         file = "cScripts\cavFnc\functions\insigniaSelection";
-        class initInsigniaSelection {};
+        class initInsigniaSelections {};
         class addInsigniaSelection {};
     };
 
@@ -35,10 +35,10 @@ class cScripts {
         class DocOperation {};
         class DocMissionControl {};
 
-        class DocRadioLACEACE {};
-        class DocRadioMEDEVAC {};
-        class DocRadioROTARYPICKUP {};
-        class DocRadioSPOTREP {};
+        class DocRadio_LACEACE {};
+        class DocRadio_MEDEVAC {};
+        class DocRadio_ROTARYPICKUP {};
+        class DocRadio_SPOTREP {};
 
         class DocSandbox_MissionControl {};
         class DocSandbox_MedicalSystemBasic {};

@@ -1,7 +1,7 @@
 /*
-GearVersionDate: 160801
+GearVersionDate: 160818
 */
-class rhsusf_army_ocp_squadleader : CommonBlufor {      // Squad Leader
+class rhsusf_army_ocp_squadleader : CommonBlufor {              // Squad Leader
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     binoculars[] = {"ACE_Vector"};
@@ -20,26 +20,23 @@ class rhsusf_army_ocp_squadleader : CommonBlufor {      // Squad Leader
         
     };
     items[] = {
-        //ACE_packingBandage, 10,   // Changed
-        //ACE_morphine, 2,
-        //ACE_epinephrine, 2,
-        //ACE_tourniquet,
-        ACE_packingBandage, 4,
-        ACE_morphine,
+        ACE_packingBandage, 10,
+        ACE_morphine, 2,
+        ACE_epinephrine, 2,
         ACE_tourniquet,
         
         ACE_EarPlugs,
-        //ACE_CableTie, 2           // Changed
-        ACE_CableTie,
+        ACE_CableTie, 2,
         ACE_Flashlight_MX991,
         ACE_microDAGR,
         ACE_MapTools,
         ACE_IR_Strobe_Item,
-        ACE_HuntIR_monitor
-        //itemcTabHCam
+        ACE_HuntIR_monitor,
+        itemcTabHCam
     };
+    gps[] = {"ItemAndroid"};
 };
-class rhsusf_army_ocp_teamleader : CommonBlufor {       // Fire Team Leader
+class rhsusf_army_ocp_teamleader : CommonBlufor {               // Fire Team Leader
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
     headgear[] = {"rhsusf_ach_helmet_ocp"};
     binoculars[] = {"ACE_Vector"};
@@ -64,31 +61,29 @@ class rhsusf_army_ocp_teamleader : CommonBlufor {       // Fire Team Leader
         
     };
     items[] = {
-        //ACE_packingBandage, 10,   // Changed
-        //ACE_morphine, 2,
-        //ACE_epinephrine, 2,
-        //ACE_tourniquet,
-        ACE_packingBandage, 4,
-        ACE_morphine,
+        ACE_packingBandage, 10,
+        ACE_morphine, 2,
+        ACE_epinephrine, 2,
         ACE_tourniquet,
         
         ACE_EarPlugs,
-        //ACE_CableTie, 2           // Changed
-        ACE_CableTie,
+        ACE_CableTie, 2,
         ACE_Flashlight_MX991,
         ACE_microDAGR,
         ACE_MapTools,
         ACE_IR_Strobe_Item,
         ACE_HuntIR_monitor
     };
+    watch[] = {"tf_microdagr"};
 };
-class rhsusf_army_ocp_rifleman : CommonBlufor {         // Rifleman
+class rhsusf_army_ocp_rifleman : CommonBlufor {                 // Rifleman
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
     primary[] = {
         {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
     };
+    watch[] = {"tf_microdagr"};
 };
-class rhsusf_army_ocp_grenadier : CommonBlufor {        // Grenadier
+class rhsusf_army_ocp_grenadier : CommonBlufor {                // Grenadier
     vest[] = {"rhsusf_iotv_ocp_Grenadier"};
     primary[] = {
         {"rhs_weap_m4a1_m320", "acc_pointer_IR", "rhsusf_acc_ACOG"}
@@ -110,8 +105,9 @@ class rhsusf_army_ocp_grenadier : CommonBlufor {        // Grenadier
         Chemlight_Red, 2
         
     };
+    watch[] = {"tf_microdagr"};
 };
-class rhsusf_army_ocp_autorifleman : CommonBlufor {     // Autorifleman (Bandit)
+class rhsusf_army_ocp_autorifleman : CommonBlufor {             // Autorifleman (Bandit)
     vest[] = {"rhsusf_iotv_ocp_SAW"};
     primary[] = {
         {"rhs_weap_m249_pip_L", "acc_pointer_IR", "rhsusf_acc_ACOG"}
@@ -119,7 +115,7 @@ class rhsusf_army_ocp_autorifleman : CommonBlufor {     // Autorifleman (Bandit)
     secondary[] = {"rhsusf_weap_m9"};
     magazines[] = {
         _MAG_AR0, 4,
-        rhsusf_mag_15Rnd_9x19_JHP, 2,
+        _MAG_SECONDARY0, 2,
 
         _GRENADE, 6,
         _GRENADE_SMOKE, 8,
@@ -127,8 +123,9 @@ class rhsusf_army_ocp_autorifleman : CommonBlufor {     // Autorifleman (Bandit)
         Chemlight_Blue, 2,
         Chemlight_Red, 2
     };
+    watch[] = {"tf_microdagr"};
 };
-class rhsusf_army_ocp_machinegunner : CommonBlufor {    // Autorifleman (Gunslinger)
+class rhsusf_army_ocp_machinegunner : CommonBlufor {            // Autorifleman (Gunslinger)
     vest[] = {"rhsusf_iotv_ocp_SAW"};
     primary[] = {
         {"rhs_weap_m240B", "acc_pointer_IR", "rhsusf_acc_ACOG"}
@@ -136,7 +133,7 @@ class rhsusf_army_ocp_machinegunner : CommonBlufor {    // Autorifleman (Gunslin
     secondary[] = {"rhsusf_weap_m9"};
     magazines[] = {
         _MAG_AR1, 5,
-        rhsusf_mag_15Rnd_9x19_JHP, 2,
+        _MAG_SECONDARY0, 2,
 
         _GRENADE, 6,
         _GRENADE_SMOKE, 8,
@@ -144,8 +141,9 @@ class rhsusf_army_ocp_machinegunner : CommonBlufor {    // Autorifleman (Gunslin
         Chemlight_Blue, 2,
         Chemlight_Red, 2
     };
+    watch[] = {"tf_microdagr"};
 };
-class rhsusf_army_ocp_medic : CommonBlufor {            // Combat Life Saver
+class rhsusf_army_ocp_medic : CommonBlufor {                    // Combat Life Saver
     vest[] = {"rhsusf_iotv_ocp_Medic"};
     primary[] = {
         {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
@@ -169,11 +167,11 @@ class rhsusf_army_ocp_medic : CommonBlufor {            // Combat Life Saver
         ACE_tourniquet, 1,
         
         ACE_EarPlugs,
-        //ACE_CableTie, 2,           // Changed
-        ACE_CableTie,
+        ACE_CableTie, 2,
         ACE_Flashlight_MX991,
         ACE_DAGR,
         ACE_MapTools,
         ACE_IR_Strobe_Item
     };
+    watch[] = {"tf_microdagr"};
 };

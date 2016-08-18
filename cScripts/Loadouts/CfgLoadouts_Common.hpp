@@ -2,7 +2,7 @@
 GearVersionDate: 160801
 */
 class CommonBlufor {
-    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
+    uniform[] = {"rhs_uniform_g3_mc"};
     backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
     vest[] = {"rhsusf_iotv_ocp"};
     headgear[] = {"rhsusf_ach_helmet_ocp"};
@@ -22,17 +22,13 @@ class CommonBlufor {
         Chemlight_Red, 2
     };
     items[] = {
-        //ACE_packingBandage, 10,   // Changed
-        //ACE_morphine, 2,
-        //ACE_epinephrine, 2,
-        //ACE_tourniquet,
-        ACE_packingBandage, 4,
-        ACE_morphine,
+        ACE_packingBandage, 10,
+        ACE_morphine, 2,
+        ACE_epinephrine, 2,
         ACE_tourniquet,
         
         ACE_EarPlugs,
-        //ACE_CableTie, 2,           // Changed
-        ACE_CableTie,
+        ACE_CableTie, 2,
         ACE_Flashlight_MX991,
         ACE_DAGR,
         ACE_MapTools,
@@ -40,9 +36,9 @@ class CommonBlufor {
     };
     
     binoculars[] = {""};
-    //map[] = {""};
-    //watch[] = {""};
-    //compass[] = {""};
+    map[] = {"ItemMap"};
+    watch[] = {"ItemWatch"};
+    compass[] = {"ItemCompass"};
     gps[] = {""};
     
     insignia[] = {""};

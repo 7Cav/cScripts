@@ -24,10 +24,10 @@ _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry E
 [_object] call FUNC(addReGear);
 
 //make Quick Selection
-[_object] call FUNC(initQuickSelection);
+[_object] call FUNC(initQuickSelections);
 
 //make Insignia Selection
-[_object] call FUNC(initInsigniaSelection);
+[_object] call FUNC(initInsigniaSelections);
 
 _object addAction ["---", {}];
 

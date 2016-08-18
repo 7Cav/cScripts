@@ -17,19 +17,17 @@ if(player diarySubjectExists "7Cav")exitwith{};
 player createDiarySubject ["7Cav","7th Cavalry"];
 
 // Load diary records (The load order is reversed. So the top will be at the bottom after load.)
+call FUNC(DocMissionControl); // Recommend to have at the bottom aka top.
 
-call cScripts_fnc_DocMissionControl; // Recommend to have at the bottom aka top.
-
-call cScripts_fnc_DocOperation;
-
+call FUNC(DocOperation);
 
 // Add New Topic
 if(player diarySubjectExists "radioReports")exitwith{};
-player createDiarySubject ["radioReports","7CAV Radio Reports"];
+player createDiarySubject ["radioReports","Radio Reports"];
 
 // Load diary records (The load order is reversed. So the top will be at the bottom after load.)
 
-call cScripts_fnc_DocRadioLACEACE
-call cScripts_fnc_DocRadioMEDEVAC;
-call cScripts_fnc_DocRadioROTARYPICKUP;
-call cScripts_fnc_DocRadioSPOTREP;
+call FUNC(DocRadio_LACEACE);
+call FUNC(DocRadio_MEDEVAC);
+call FUNC(DocRadio_ROTARYPICKUP);
+call FUNC(DocRadio_SPOTREP);
