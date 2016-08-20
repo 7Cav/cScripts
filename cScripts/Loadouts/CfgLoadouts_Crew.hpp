@@ -85,7 +85,7 @@ class CAV_TankCommander : CommonBlufor {                        // Tank Commande
     gps[] = {"ItemAndroid"};
     watch[] = {"tf_microdagr"};
 };
-class CAV_TankGunner : CommonBlufor {                           // Tank Gunner 
+class CAV_TankGunner : CommonBlufor {                           // Tank Gunner
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
     headgear[] = {"H_HelmetCrew_I"};
     goggles[] = {"rhs_ess_black"};
@@ -124,6 +124,7 @@ class CAV_TankGunner : CommonBlufor {                           // Tank Gunner
     gps[] = {"ItemAndroid"};
     watch[] = {"tf_microdagr"};
 };
+class CAV_TankDriver : rhsusf_army_ocp_crewman {};              // Tank Driver
 class CAV_TankLoader : CommonBlufor {                           // Tank Loader
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
     headgear[] = {"H_HelmetCrew_I"};

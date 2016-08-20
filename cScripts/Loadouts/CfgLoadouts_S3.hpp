@@ -52,6 +52,12 @@ class MissionControl_2 : S3_BASE {};
 class MissionControl_3 : S3_BASE {};
 class MissionControl_4 : S3_BASE {};
 
+class MissionControlUnit : S3_BASE {};
+class MissionControlUnit_1 : S3_BASE {};
+class MissionControlUnit_2 : S3_BASE {};
+class MissionControlUnit_3 : S3_BASE {};
+class MissionControlUnit_4 : S3_BASE {};
+
 class MC : S3_BASE {};
 class MC_1 : S3_BASE {};
 class MC_2 : S3_BASE {};

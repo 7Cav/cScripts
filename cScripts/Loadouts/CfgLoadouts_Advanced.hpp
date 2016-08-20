@@ -11,7 +11,7 @@ class rhsusf_army_ocp_officer : CommonBlufor {              // Officer
         {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
     };
     magazines[] = {
-        _MAG_PRIMARY, 8,
+        _MAG_PRIMARY, 6,
         _MAG_PRIMARY_TRACER, 4,
         
         _GRENADE, 6,
@@ -54,7 +54,7 @@ class CAV_JTAC : CommonBlufor {                             // JTAC
         {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
     };
     magazines[] = {
-        _MAG_PRIMARY, 8,
+        _MAG_PRIMARY, 6,
         _MAG_PRIMARY_TRACER, 4,
         
         _GRENADE, 6,
@@ -97,7 +97,7 @@ class CAV_ForwardObserver : CommonBlufor {                  // Forward Observer
         {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
     };
     magazines[] = {
-        _MAG_PRIMARY, 8,
+        _MAG_PRIMARY, 6,
         _MAG_PRIMARY_TRACER, 4,
         
         _GRENADE, 6,

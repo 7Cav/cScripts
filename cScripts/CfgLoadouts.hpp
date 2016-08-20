@@ -1,5 +1,6 @@
 class CfgLoadouts {
-    #include "..\script_equipmentDefines.hpp"
+    #include "\script_component.hpp"
+    #include "\script_equipmentDefines.hpp"
     #include "CfgLoadouts_Common.hpp"
     
     #include "CfgLoadouts_Basic.hpp"
