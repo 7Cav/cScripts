@@ -71,6 +71,7 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 | Default | All Blufor | N/A | None | None |
 | Rifleman | `rhsusf_army_ocp_rifleman` | `B_Soldier_F`, `B_T_Soldier_F`, `rhsusf_army_ocp_rifleman_1stcav`, `rhsusf_army_ocp_arb_rifleman`, `rhsusf_army_ucp_rifleman_1stcav`, `rhsusf_army_ucp_rifleman`, `rhsusf_army_ucp_arb_rifleman` | `CAV_Rifleman` | `C_R`, `C_RA`, `CAV_AlphaRifleman`, `CAV_AlphaRifleman`, `CAV_BravoRifleman` |
 | Squad Leader | `rhsusf_army_ocp_squadleader` | `B_Soldier_SL_F`, `B_T_Soldier_SL_F`, `rhsusf_army_ocp_arb_squadleader`, `rhsusf_army_ucp_squadleader`, `rhsusf_army_ucp_arb_squadleader` | `CAV_SquadLeader` | `C_SL` |
+| Fire Team Leader | `rhsusf_army_ocp_teamleader` | `B_Soldier_TL_F`, `B_T_Soldier_TL_F`, `rhsusf_army_ocp_arb_teamleader`, `rhsusf_army_ucp_teamleader`, `rhsusf_army_ucp_arb_teamleader` | `CAV_FireTeamLeader` | `C_FTL`, `C_FTLA`, `C_FTLB`, `CAV_AlphaFireTeamLeader`, `CAV_BravoFireTeamLeader` |
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
