@@ -24,7 +24,7 @@ If you use the included `Description.ext` you do not need to do anything otherwi
 ### Uninstall
 If you whant to remove a function or script you need to remove the following from the description.ext:
 
-**Loadouts Script** *(Poppy) `cScripts\Loadouts\...`*
+**Loadout Script** *(Poppy) `cScripts\Loadouts\...`*
 ``` c++
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     class CfgFunctions {
@@ -64,6 +64,10 @@ When playing on a step or desert island it is recomended to change the `"spotdis
 ### Respawn Preset (description.ext)
 Missions running the template is set to default respawn `BASE` with `4` second delay. This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or delete the lines.
 
+## Automatic Loadout Distrubution (Poppy)
+
+| Loadout               | ClassNames                     | Variable names      |
+| ---                   | ---                            | ---                 |
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
 
