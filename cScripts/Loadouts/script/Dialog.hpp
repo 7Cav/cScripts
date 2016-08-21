@@ -67,7 +67,7 @@ class RscPoppyMessageBox {
         type = 0;
         style = 2096;
         moving = 0;
-        text = "cScripts\Loadouts\script\UI\previous.paa";
+        text = "Poppy\UI\previous.paa";
         font = "PuristaMedium";
         sizeEx = 0.03;
         colorBackground[] = {0.2, 0.2, 0.2, 1};
@@ -79,13 +79,13 @@ class RscPoppyMessageBox {
     };
     class imgBtnNext: imgBtnPrevious {
         idc = 23;
-        text = "cScripts\Loadouts\script\UI\next.paa";
+        text = "Poppy\UI\next.paa";
         x = safeZoneX + safeZoneW - 0.03 * 2;
         y = safeZoneY + safeZoneH + 0.02;
     };
     class imgBtnClose: imgBtnPrevious {
         idc = 24;
-        text = "cScripts\Loadouts\script\UI\close.paa";
+        text = "Poppy\UI\close.paa";
         x = safeZoneX + safeZoneW - 0.03 * 2;
         y = safeZoneY + safeZoneH + 0.02;
     };

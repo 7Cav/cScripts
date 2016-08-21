@@ -9,11 +9,7 @@ _loadoutArray = [];
     if (isArray (_config >> _x)) then {
         _loadoutArray pushBack getArray (_config >> _x);
     } else {
-        if (_x in ["magazines", "items"]) then {
-            _loadoutArray pushBack [];
-        } else {
-            _loadoutArray pushBack [""];
-        };
+        _loadoutArray pushBack [""];
     };
     false
 } count LOADOUT_INDEXES;

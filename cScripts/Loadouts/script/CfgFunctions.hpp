@@ -5,10 +5,9 @@ class Poppy {
         class postInitProxy { postInit = 1; };
         class postInit {};
         class applyLoadout {};
-        class canLoadMagazine {};
         class createBriefingEntry {};
+        class findLoadableWeapon {};
         class getSideConfig {};
-        class loadMagazine {};
         class logError {};
         class logInfo {};
         class logWarning {};

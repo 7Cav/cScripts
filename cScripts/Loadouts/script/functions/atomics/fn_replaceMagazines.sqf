@@ -12,7 +12,7 @@ for "_i" from 0 to (_arrayCount - 1) do {
     if ((_i + 1 < _arrayCount) && {typeName (_array select (_i + 1)) == "SCALAR"}) then {
         _itemCount = _array select (_i + 1);
 
-        private _loadableWeapon = [_unit, _currentItem] call FUNC(canLoadMagazine);
+        private _loadableWeapon = [_unit, _currentItem] call FUNC(findLoadableWeapon);
         if (_loadableWeapon != "") then {
             _unit addWeaponItem [_loadableWeapon, _currentItem];
             _itemCount = _itemCount - 1;
@@ -31,7 +31,7 @@ for "_i" from 0 to (_arrayCount - 1) do {
 
         _i = _i + 1;
     } else {
-        private _loadableWeapon = [_unit, _currentItem] call FUNC(canLoadMagazine);
+        private _loadableWeapon = [_unit, _currentItem] call FUNC(findLoadableWeapon);
         if (_loadableWeapon != "") then {
             _unit addWeaponItem [_loadableWeapon, _currentItem];
         } else {

@@ -3,7 +3,7 @@ params ["_message"];
 
 if ((GVAR(log) find ["Info", _message]) == -1) then {
     diag_log formatText ["[Poppy] Info: %1", _message];
-    if (!isMultiplayer || {is3DENMultiplayer} || {getNumber (missionConfigFile >> "CfgPoppy" >> "forceShowInfos") == 1}) then {
+    if (GVAR(inDevMode) || {getNumber (missionConfigFile >> "CfgPoppy" >> "forceShowInfos") == 1}) then {
         GVAR(log) pushBack ["Info", _message];
     };
 };

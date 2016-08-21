@@ -18,4 +18,4 @@ if (GVAR(cmbClassLastIndex) == 0) then {
 
 [] call FUNC(exportAsConfig);
 ["Your new loadout config has been copied to your clipboard, simply paste it into your description.ext and reload your mission."] call FUNC(logInfo);
-[] spawn FUNC(showMessageBox);
+[] call FUNC(showMessageBox);

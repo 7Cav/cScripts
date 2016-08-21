@@ -21,10 +21,11 @@ private _quickSelectionMenu = ["cScriptQuickSelectionMenu", "Quick Selection", _
 // make addAction Topic
 _object addAction ["Quick Selection", {}];
 
-// make Quick Selections 
-[_object,"Rifleman","C_R"] call FUNC(addQuickSelection);
-[_object,"Rifleman LAT","C_R"] call FUNC(addQuickSelection);
-[_object,"Rifleman HAT","C_R"] call FUNC(addQuickSelection);
-[_object,"Rifleman M-AR Assistant","C_R"] call FUNC(addQuickSelection);
-[_object,"Rifleman H-AR Assistant","C_R"] call FUNC(addQuickSelection);
-[_object,"Rifleman Ammo Bearer","C_R"] call FUNC(addQuickSelection);
+// make Quick Selections
+[_object,"Rifleman","CAV_Rifleman"] call FUNC(addQuickSelection);
+[_object,"Rifleman LAT","CAV_RiflemanLAT"] call FUNC(addQuickSelection);
+[_object,"Rifleman AT","CAV_RiflemanAT"] call FUNC(addQuickSelection);
+[_object,"Rifleman AA","CAV_RiflemanAA"] call FUNC(addQuickSelection);
+[_object,"Rifleman M-AR Assistant","CAV_RiflemanAmmoBearerMAR"] call FUNC(addQuickSelection);
+[_object,"Rifleman H-AR Assistant","CAV_RiflemanAmmoBearerHAR"] call FUNC(addQuickSelection);
+[_object,"Rifleman Ammo Bearer","CAV_RiflemanAmmoBearer"] call FUNC(addQuickSelection);

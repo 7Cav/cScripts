@@ -1,8 +1,7 @@
 /*
 GearVersionDate: 160801
 */
-
-class WhateverPilotClass : CommonBlufor {              // Helicopter Pilot
+class rhsusf_army_ocp_helipilot : CommonBlufor {                    // Helicopter Pilot     !!! WIP !!!
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     binoculars[] = {"ACE_Vector"};
@@ -37,8 +36,7 @@ class WhateverPilotClass : CommonBlufor {              // Helicopter Pilot
     };
     gps[] = {"ItemAndroid"};
 };
-
-class WhateverPilotCrewClass : WhateverPilotClass {              // Helicopter Crew
+class rhsusf_army_ocp_helicrew : rhsusf_army_ocp_helipilot {        // Helicopter Crew      !!! WIP !!!
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     binoculars[] = {"ACE_Vector"};

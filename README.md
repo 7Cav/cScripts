@@ -66,7 +66,7 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 
 ## Automatic Loadout Distrubution (Poppy)
 
-| Loadout | Primary ClassName | Supported ClassNames | Primary VariableName | Supported VariableName |
+| Loadout | Primary ClassName | Supported ClassNames | Primary VariableName | Supported VariableNames |
 |---------|-------------------|----------------------|----------------------|------------------------|
 | Default | All Blufor | N/A | None | None |
 | Rifleman | `rhsusf_army_ocp_rifleman` | `B_Soldier_F`, `B_T_Soldier_F`, `rhsusf_army_ocp_rifleman_1stcav`, `rhsusf_army_ocp_arb_rifleman`, `rhsusf_army_ucp_rifleman_1stcav`, `rhsusf_army_ucp_rifleman`, `rhsusf_army_ucp_arb_rifleman` | `CAV_Rifleman` | `C_R`, `C_RA`, `CAV_AlphaRifleman`, `CAV_AlphaRifleman`, `CAV_BravoRifleman` |

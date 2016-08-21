@@ -14,7 +14,7 @@ _cmbClass ctrlCommit 0;
 
 _availableClasses = [];
 {
-    if (side _x == side player) then {
+    if (side group _x == side group player) then {
         _availableClasses pushBackUnique (typeOf _x);
     };
     false
@@ -26,7 +26,7 @@ if (isNil QGVAR(availableClasses)) then {
 
     GVAR(classLoadoutArrays) = [[GVAR(availableClasses) select 0] call FUNC(generateLoadoutFromConfig)];
     {
-        if (side _x == side player) then {
+        if (side group _x == side group player) then {
             GVAR(classLoadoutArrays) set [GVAR(availableClasses) find (typeOf _x), [_x] call FUNC(generateLoadoutFromUnit)];
         };
         false

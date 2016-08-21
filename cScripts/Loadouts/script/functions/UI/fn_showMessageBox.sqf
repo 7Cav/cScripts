@@ -7,4 +7,4 @@
     GVAR(logIndex) = 0;
     [_display] call FUNC(updateMessageBox);
     [_display] call FUNC(slideMessageBoxUp);
-}, _unit] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_waitUntilAndExecute;

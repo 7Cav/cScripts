@@ -32,18 +32,19 @@ class cScripts {
         file = "cScripts\cavFnc\functions\documentation";
         class initDoc { postInit = 1; };
 
-        class DocOperation {};
-        class DocMissionControl {};
+        class Doc_OperationInfo {};
+        class Doc_MissionControl {};
 
         class DocRadio_LACEACE {};
         class DocRadio_MEDEVAC {};
         class DocRadio_ROTARYPICKUP {};
         class DocRadio_SPOTREP {};
 
+        class DocSandbox_SandboxInfo {};
         class DocSandbox_MissionControl {};
         class DocSandbox_MedicalSystemBasic {};
         class DocSandbox_MedicalSystemAdvanced {};
-        class DocSandbox_MedicalSystemAdvancedEasy {};
+        class DocSandbox_MedicalSystemAdvancedLite {};
     };
     class misc {
         file = "cScripts\cavFnc\functions\misc";

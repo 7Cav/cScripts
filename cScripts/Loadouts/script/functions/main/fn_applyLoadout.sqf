@@ -31,12 +31,7 @@ if (GVAR(usesACRE)) then {
 
 // Delayed items
 {
-    if (_unit canAdd _x) then {
-        _unit addItem _x;
-    } else {
-        ["Inventory full! Could not add """ + _x + """ to """ + (typeOf _unit) + """."] call FUNC(logWarning);
-    };
-    false
+    ["Inventory full! Could not add """ + _x + """ to """ + (typeOf _unit) + """."] call FUNC(logWarning);
 } count GVAR(overflowItems);
 
 _unit selectWeapon (primaryWeapon _unit);

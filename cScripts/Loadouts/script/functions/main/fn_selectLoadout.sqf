@@ -3,7 +3,7 @@ params ["_unit"];
 private ["_config", "_variableName", "_className", "_sideConfig"];
 
 _config = missionConfigFile >> "CfgLoadouts";
-_variableName = str _unit;
+_variableName = vehicleVarName _unit;
 _className = typeOf _unit;
 _sideConfig = [side group _unit] call FUNC(getSideConfig);
 

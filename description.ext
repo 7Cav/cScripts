@@ -2,26 +2,27 @@
 
     dev                 = "1SG Tully.B";
     author              = "1SG Tully.B";
-    
+
     onLoadName          = "MyMissionName";
     onLoadMission       = "7th Cavalry - S3 1BN Battle Staff Operation";
     onLoadIntro         = "S3 1BN Battle Staff Operation";
-    
+
     loadScreen          = "Data\MissionLogo.paa";
     overviewPicture     = "Data\MissionLogo.paa";
-    
+
 /*           RULES            */
 
     disabledAI              = true;
-    disableChannels[]       = {0,1,2,3,5,6};
+    disableChannels[]       = {0,1,2,6};
 
     forceRotorLibSimulation = 1;
-    
+
 /*          RESPAWN           */
 
     // Name a marker "respawn_west" or a veichle "respawn_vehicle_west" for set spawn.
     // See https://community.bistudio.com/wiki/Arma_3_Respawn for more info on respawn.
     respawn         = BASE;
+    respawnTemplates[] = {"MenuInventory","MenuPosition"};
     respawnDelay    = 4;
 
 /*          SYSTEMS           */
@@ -38,3 +39,11 @@
     #include "cScripts\CfgLoadouts.hpp"
 
 /*           OTHER            */
+
+class CfgRespawnInventory
+{
+	class WEST1
+	{
+    
+    };
+};

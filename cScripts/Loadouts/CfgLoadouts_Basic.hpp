@@ -175,3 +175,13 @@ class rhsusf_army_ocp_medic : CommonBlufor {                    // Combat Life S
     };
     watch[] = {"tf_microdagr"};
 };
+
+class CAV_RiflemanLAT : rhsusf_army_ocp_rifleman {              // Rifleman (Light Anti Tank)
+};
+class CAV_RiflemanAT : rhsusf_army_ocp_rifleman {               // Rifleman (Anti Tank)
+};
+class CAV_RiflemanAA : rhsusf_army_ocp_rifleman {               // Rifleman (Anti Air)
+};
+
+class CAV_RiflemanAmmoBearer : rhsusf_army_ocp_rifleman {       // Rifleman (Ammo Bearer)
+};
