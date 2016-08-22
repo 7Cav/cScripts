@@ -5,7 +5,7 @@
  * Arguments:
  *
  * Example:
- * [this] call cScripts_fnc_initDoc;
+ * call cScripts_fnc_initDoc;
  */
 
 #include "..\script_component.hpp";
@@ -19,7 +19,7 @@ player createDiarySubject ["7Cav","7th Cavalry"];
 // Load diary records (The load order is reversed. So the top will be at the bottom after load.)
 call FUNC(Doc_MissionControl); // Recommend to have at the bottom aka top.
 
-call FUNC(Doc_OperationInfo);
+call FUNC(Doc_Info);
 
 // Add New Topic (Radio Reports)
 if(player diarySubjectExists "radioReports")exitwith{};

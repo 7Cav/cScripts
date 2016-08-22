@@ -12,10 +12,11 @@
 params [["_object", objNull, [objNull]]];
 
 //make addAction
-_object addAction ["   <t color='#ff6633'>Arsenal</t>", {["Open",true] spawn BIS_fnc_arsenal;}];
+//_object addAction ["   <t color='#ff6633'>Arsenal</t>", {["Open",true] spawn BIS_fnc_arsenal;}];
+_object addAction ["   <t color='#bfff00'>Arsenal</t>", {["Open",true] spawn BIS_fnc_arsenal;}];
 
 //make aceInteraction
-private _Icon = "cScripts\Data\Icon\icon_00.paa";
+private _Icon = "cScripts\Data\Icon\icon_01.paa";
 private _arsenalCondition = {true};
 private _arsenalStatement = {["Open",true] spawn BIS_fnc_arsenal;};
 private _arsenalAction = ["cScriptsArsenalAce", "Arsenal", _Icon, _arsenalStatement, _arsenalCondition] call ace_interact_menu_fnc_createAction;

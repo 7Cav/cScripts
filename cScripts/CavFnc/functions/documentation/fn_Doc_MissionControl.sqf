@@ -1,11 +1,11 @@
 /*
  * Author: CPL.Brostrom.A 
- * This create diary records to all players.
+ * This create a diary record to all players.
  *
  * Arguments:
  *
  * Example:
- * [this] call cScripts_fnc_DocMissionControl;
+ * call cScripts_fnc_Doc_MissionControl;
  */
 
 player createDiaryRecord["7Cav",

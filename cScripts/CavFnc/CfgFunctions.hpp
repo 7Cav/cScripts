@@ -32,7 +32,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\documentation";
         class initDoc { postInit = 1; };
 
-        class Doc_OperationInfo {};
+        class Doc_Info {};
         class Doc_MissionControl {};
 
         class DocRadio_LACEACE {};
@@ -40,7 +40,7 @@ class cScripts {
         class DocRadio_ROTARYPICKUP {};
         class DocRadio_SPOTREP {};
 
-        class DocSandbox_SandboxInfo {};
+        class DocSandbox_Info {};
         class DocSandbox_MissionControl {};
         class DocSandbox_MedicalSystemBasic {};
         class DocSandbox_MedicalSystemAdvanced {};

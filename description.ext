@@ -39,11 +39,3 @@
     #include "cScripts\CfgLoadouts.hpp"
 
 /*           OTHER            */
-
-class CfgRespawnInventory
-{
-	class WEST1
-	{
-    
-    };
-};

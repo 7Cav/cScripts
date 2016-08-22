@@ -1,6 +1,6 @@
 /*
  * Author: CPL.Brostrom.A 
- * This create diary records to all players.
+ * This create a diary record to all players.
  *
  * Arguments:
  *

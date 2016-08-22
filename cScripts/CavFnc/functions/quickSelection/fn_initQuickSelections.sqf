@@ -14,7 +14,7 @@
 params [["_object", objNull, [objNull]]];
 
 // make ACE category
-private _Icon = "cScripts\Data\Icon\icon_00.paa";
+private _Icon = "cScripts\Data\Icon\icon_01.paa";
 private _quickSelectionMenu = ["cScriptQuickSelectionMenu", "Quick Selection", _Icon, {""}, {true}] call ace_interact_menu_fnc_createAction;
 [_object, 0, ["ACE_MainActions"], _quickSelectionMenu] call ace_interact_menu_fnc_addActionToObject;
 
