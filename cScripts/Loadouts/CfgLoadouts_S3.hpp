@@ -75,3 +75,9 @@ class ZeusUnit_1 : S3_BASE {};
 class ZeusUnit_2 : S3_BASE {};
 class ZeusUnit_3 : S3_BASE {};
 class ZeusUnit_4 : S3_BASE {};
+
+class S3 : S3_BASE {};
+class S3_1 : S3_BASE {};
+class S3_2 : S3_BASE {};
+class S3_3 : S3_BASE {};
+class S3_4 : S3_BASE {};
