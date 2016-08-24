@@ -25,3 +25,8 @@ _object addAction ["Insignia Selection", {}];
 [_object,"Remove Insignia"] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 1/1/C/1-7","11C_17_Insignia","cScripts\Data\Insignia\1-1-C-17.paa"] call FUNC(addInsigniaSelection);
 [_object,"Platoon Insignia 2/C/1-7","2C_17_Insignia","cScripts\Data\Insignia\2-C-17.paa"] call FUNC(addInsigniaSelection);
+
+// 7th Cavalry Gaming Insignias
+[_object,"7th Cavalry Insignia","7_Insignia","cScripts\Data\Insignia\7.paa"] call FUNC(addInsigniaSelection);
+[_object,"7th Cavalry Insignia (M81)","7m81_Insignia","cScripts\Data\Insignia\7_m81.paa"] call FUNC(addInsigniaSelection);
+[_object,"7th Cavalry Insignia (OCP)","7ocp_Insignia","cScripts\Data\Insignia\7_ocp.paa"] call FUNC(addInsigniaSelection);

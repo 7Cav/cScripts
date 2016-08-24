@@ -13,9 +13,9 @@ class CAV_Cadre : CommonBlufor {                            // CADRE
 };
     
 class CAV_DrillInstructor : CommonBlufor {                  // DRILL INSTRUCTOR
-    uniform         = {"rhs_uniform_cu_ocp_1stcav"};
-    vest            = {"V_BandollierB_rgr"};
-    headgear        = {"H_Booniehat_mcamo"};
+    uniform[]       = {"rhs_uniform_cu_ocp_1stcav"};
+    vest[]          = {"V_BandollierB_rgr"};
+    headgear[]      = {"H_Booniehat_mcamo"};
 	goggles[] 		= {""};
 	nvgs[] 			= {""};
 	magazines[] = {
@@ -26,11 +26,11 @@ class CAV_DrillInstructor : CommonBlufor {                  // DRILL INSTRUCTOR
 };
 
 class CAV_Trooper : CommonBlufor {                          // Trooper
-    uniform         = {"rhs_uniform_cu_ocp_1stcav"};
-    vest            = {"rhsusf_iotv_ocp_Rifleman"};
-    headgear        = {"rhsusf_ach_helmet_ocp"};
+    uniform[]       = {"rhs_uniform_cu_ocp_1stcav"};
+    vest[]          = {"rhsusf_iotv_ocp_Rifleman"};
+    headgear[]      = {"rhsusf_ach_helmet_ocp"};
 	nvgs[] 			= {""};
-    backpack        = "rhsusf_assault_eagleaiii_ocp";
+    backpack[]      = {"rhsusf_assault_eagleaiii_ocp"};
     magazines[] = {
         MAG_PRIMARY_TRACER, 2,        
 		GRENADE, 6
