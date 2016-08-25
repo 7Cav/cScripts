@@ -4,6 +4,8 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
+ * 1: Action Name <STRING>
+ * 2: Classname <STRING>
  *
  * Example:
  * ["this","Rifleman","C_R"] call cScripts_fnc_addQuickSelection;

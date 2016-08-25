@@ -76,85 +76,19 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
 
-## Main
-#### initMain
-initMain is best run on a crate or cargo container that have somekind of a inventory. This function add vital function to the crate including; `equipBase`, `ReGear addAction`, `Quick Selection addActions` and `Insignia Selection addActions`
-To call the function add this to the initLine of the crate:
-``` c++
-[this] call cScripts_fnc_initMain;
-````
-#### initMainSandbox
-initMainSandbox is simular to initMain but adds a all included arsenal to the box as well. (See above for details.)
-To call the function add this to the initLine of the crate:
-``` c++
-[this] call cScripts_fnc_initMainSandbox;
-````
+### Insignia Selection
+The insignia selection is called by `cScripts_fnc_initMain` and `cScripts_fnc_initMainSandbox` base crate scripts. In order to add a insignia you first need to define it in `CfgUnitInsignia.hpp` then add it to `fn_initInsigniaSelections.sqf` using the `cScripts_fnc_addInsigniaSelection` function.
 
-#### initVehicle
-initVehicle is a repurpuse script that is runned on vehicles at the start of the mission. The script changes the inventory of the Vehicle suit our standard.
-To call the function add this to the initLine of the veichle:
+Here is a exsample on how to add a new class to the `CfgUnitInsignia.hpp`:
 ``` c++
-[this,1] call cScripts_fnc_initVehicle;
+class 7_Insignia {
+    displayName = "7th Cavalry Insignia";
+    author = "7th Cavalry Gaming";
+    texture = "cScripts\Data\Insignia\7.paa";
+};
 ```
-Tip:
-You can also apply this script mid mission simply by making a repeatable trigger located sugestivle on a reparepad or another place.
-To do this folow this simple steps:
-
-1. Place down a trigger and make it a good size.
-2. Set type to `None`.
-3. Set activation to `Anybody`.
-4. Set activation Type to `Present`.
-5. Check the `repeatable` box.
-6. Add this to the On Activation box: `{[_x] call cScripts_fnc_initVehicle;} forEach thislist;`
-7. Set timer type to `Countdown`
-8. Set time on Min, Mid and Max to `60`
-
-### supplies
-
-#### equipCrate
-equipCrate changes the inventory of the given item to a platoon sized supply crate. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
-To call the function add this to the initLine of a supply crate  or container:
-``` c++
-[this,1] call cScripts_fnc_equipCrate;
-```
-Tip:
-You can use this script mid mission by using checkCrate. See below.
-
-#### equipMedicalCrate
-equipMedicalCrate populats a given crate with medical equipment. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
-To call the function add this to the initLine of a crate:
-``` c++
-[this,1] call cScripts_fnc_equipMedicalCrate;
-```
-
-#### equipBase
-equipBase changes the inventory of the given item to a rediculus sized crate with weapon and equipment suiatable for spawn armory. This script is used by `initMain` and `initMainSandbox` to fill a crate. The function also allows you to change the amount of content. The second parameter handle this the default value is 1.0.
-To call the function add this to the initLine of a supply crate  or container:
-``` c++
-[this,1] call cScripts_fnc_equipBase;
-```
-
-#### checkCrate
-checkCrate checks and applyes a new inventory to a crate suitable for resupplying a platoonsize element. The function is best runned on a trigger that changes the crate mid mission. At start of missions running `equipCrate` on a crate is recomended.
-
-To call the function add this to the initLine of a supply crate:
-``` c++
-[this] call cScripts_fnc_checkCrate;
-```
-
-To run the function mid mission follow this steps:
-
-1. Place down a trigger and make it a good size.
-2. Set type to `None`.
-3. Set activation to `Anybody`.
-4. Set activation Type to `Present`.
-5. Check the `repeatable` box.
-6. Add this to the On Activation box: `{[_x] call cScripts_fnc_checkCrate;} forEach thislist;`
-7. Set timer type to `Countdown`
-8. Set time on Min, Mid and Max to `60`
-
-Following classnames are supported by this script:
-`CargoNet_01_box_F`, `B_CargoNet_01_ammo_F`, `CargoNet_01_barrels_F` and `B_supplyCrate_F`
+Here is the same class referenced in `fn_initInsigniaSelections.sqf`:
+```[_object,"7th Cavalry Insignia","7_Insignia","cScripts\Data\Insignia\7.paa","cScriptInsigniaSelectionMisc"] call FUNC(addInsigniaSelection);```
 
 # Other tips and tricks
 ##Make a cool CQB experience

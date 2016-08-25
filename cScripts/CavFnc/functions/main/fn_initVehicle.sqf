@@ -1,20 +1,21 @@
 /*
  * Author: CPL.Brostrom.A 
- * This populats a given object with items and commands used during sandboxes.
+ * This refits a given vehicle with a more Cav suited supplies equipment.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Vehicle <OBJECT>
+ * 1: Scale cargo ammount <NUMBER> (Default: 1)
  *
  * Example:
- * [this,1] call cScripts_fnc_initVehicle;
- * [this,0.5] call cScripts_fnc_initVehicle;
+ * [this] call cScripts_fnc_initVehicle
+ * [this,1] call cScripts_fnc_initVehicle
+ * [this,0.5] call cScripts_fnc_initVehicle
  */
  
 #include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
-
-params ["_vehicle",["_quaScale",1]];
+params [["_vehicle", objNull, [objNull]], ["_quaScale",1]];
 _vehicleType = typeOf _vehicle;
 
 private _vehicleCargoHUMVEE  = [
@@ -224,13 +225,13 @@ switch (true) do {
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
         
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Blue),(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Red),(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
         
-        _vehicle addItemCargoGlobal [QUOTE(ACE_EarPlugs),(_quaScale * 3)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_FieldDressing),(_quaScale * 6)];
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 3)];
+        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 6)];
         
-        _vehicle addItemCargoGlobal [QUOTE(Toolkit),(_quaScale * 1)];
+        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
     };
     case (_vehicleType in _vehicleCargoTRUCK): {
         _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
@@ -239,13 +240,13 @@ switch (true) do {
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
         
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Blue),(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Red),(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
         
-        _vehicle addItemCargoGlobal [QUOTE(ACE_EarPlugs),(_quaScale * 3)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_FieldDressing),(_quaScale * 6)];
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 3)];
+        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 6)];
         
-        _vehicle addItemCargoGlobal [QUOTE(Toolkit),(_quaScale * 1)];
+        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
     };
     case (_vehicleType in _vehicleCargoARMOR) : {
         _vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 2)];
@@ -254,10 +255,10 @@ switch (true) do {
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
         
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Blue),(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Red),(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
         
-        _vehicle addItemCargoGlobal [QUOTE(Toolkit),(_quaScale * 1)];
+        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
     };
     case (_vehicleType in _vehicleCargoIFV) : {
         _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
@@ -266,81 +267,81 @@ switch (true) do {
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
         
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Blue),(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Red),(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
         
-        _vehicle addItemCargoGlobal [QUOTE(ACE_EarPlugs),(_quaScale * 3)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_FieldDressing),(_quaScale * 6)];
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 3)];
+        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 6)];
         
-        _vehicle addItemCargoGlobal [QUOTE(Toolkit),(_quaScale * 1)];
+        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
     };
     case (_vehicleType in _vehicleCargoMED) : {
-        _vehicle addItemCargoGlobal [QUOTE(ACE_EarPlugs),(_quaScale * 15)];
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 15)];
         
-        _vehicle addItemCargoGlobal [QUOTE(ACE_FieldDressing),(_quaScale * 30)];
+        _vehicle addItemCargoGlobal ["ACE_bloodIV",(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_bloodIV_500",(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_salineIV",(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_salineIV_500",(_quaScale * 10)];
         
-        _vehicle addItemCargoGlobal [QUOTE(_MED_IV0),(_quaScale * 10)];
-        _vehicle addItemCargoGlobal [QUOTE(_MED_IV1),(_quaScale * 10)];
-        _vehicle addItemCargoGlobal [QUOTE(_MED_IV2),(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_morphine",(_quaScale * 30)];
+        _vehicle addItemCargoGlobal ["ACE_epinephrine",(_quaScale * 20)];
+        _vehicle addItemCargoGlobal ["ACE_atropine",(_quaScale * 20)];
         
-        _vehicle addItemCargoGlobal [QUOTE(ACE_morphine),(_quaScale * 30)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_epinephrine),(_quaScale * 20)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_atropine),(_quaScale * 20)];
-
-        _vehicle addItemCargoGlobal [QUOTE(ACE_tourniquet),(_quaScale * 10)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_elasticBandage),(_quaScale * 40)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_packingBandage),(_quaScale * 40)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_quikclot),(_quaScale * 60)];
+        _vehicle addItemCargoGlobal ["ACE_tourniquet",(_quaScale * 4)];
+        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 40)];
+        _vehicle addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 40)];
+        _vehicle addItemCargoGlobal ["ACE_quikclot",(_quaScale * 40)];
         
-        _vehicle addItemCargoGlobal [QUOTE(ACE_bodyBag),(_quaScale * 12)];
+        _vehicle addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 12)];
         
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
         
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Blue),(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Red),(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
         
-        _vehicle addItemCargoGlobal [QUOTE(Toolkit),(_quaScale * 1)];
+        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
     };
     case (_vehicleType in _vehicleCargoTransportAviation) : {
         _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
-        
+
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-        
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Blue),(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Red),(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal [QUOTE(Toolkit),(_quaScale * 1)];
+
+        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
+
+        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
     };
     case (_vehicleType in _vehicleCargoAttackAviation) : {
     };
     case (_vehicleType in _vehicleCargoMedicalAviation) : {
-        _vehicle addItemCargoGlobal [QUOTE(ACE_EarPlugs),(_quaScale * 15)];
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 15)];
         
-        _vehicle addItemCargoGlobal [QUOTE(ACE_FieldDressing),(_quaScale * 30)];
+        _vehicle addItemCargoGlobal ["ACE_bloodIV",(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_bloodIV_500",(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_salineIV",(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_salineIV_500",(_quaScale * 10)];
         
-        _vehicle addItemCargoGlobal [QUOTE(_MED_IV0),(_quaScale * 10)];
-        _vehicle addItemCargoGlobal [QUOTE(_MED_IV1),(_quaScale * 10)];
-        _vehicle addItemCargoGlobal [QUOTE(_MED_IV2),(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal [QUOTE(ACE_morphine),(_quaScale * 30)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_epinephrine),(_quaScale * 20)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_atropine),(_quaScale * 20)];
+        _vehicle addItemCargoGlobal ["ACE_morphine",(_quaScale * 30)];
+        _vehicle addItemCargoGlobal ["ACE_epinephrine",(_quaScale * 20)];
+        _vehicle addItemCargoGlobal ["ACE_atropine",(_quaScale * 20)];
 
-        _vehicle addItemCargoGlobal [QUOTE(ACE_tourniquet),(_quaScale * 10)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_elasticBandage),(_quaScale * 40)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_packingBandage),(_quaScale * 40)];
-        _vehicle addItemCargoGlobal [QUOTE(ACE_quikclot),(_quaScale * 60)];
-        
-        _vehicle addItemCargoGlobal [QUOTE(ACE_bodyBag),(_quaScale * 12)];
+        _vehicle addItemCargoGlobal ["ACE_tourniquet",(_quaScale * 4)];
+        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 10)];
+        _vehicle addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 40)];
+        _vehicle addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 40)];
+        _vehicle addItemCargoGlobal ["ACE_quikclot",(_quaScale * 40)];
+
+        _vehicle addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 12)];
         
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-        
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Blue),(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal [QUOTE(Chemlight_Red),(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal [QUOTE(Toolkit),(_quaScale * 1)];
+
+        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
+        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
+
+        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
     };
 };

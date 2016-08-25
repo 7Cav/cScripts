@@ -6,30 +6,32 @@
  * 0: Object <OBJECT>
  *
  * Example:
- * [this] call cScripts_fnc_initMain;
+ * [this] call cScripts_fnc_initMain
  */
 
 #include "..\script_component.hpp";
 
-params ["_object"];
+params [["_object", objNull, [objNull]]];
 
+// If isServer call equipBase
 if (isServer) then {
    [_object] call FUNC(equipBase);
 };
 
-//make Topic
+// Make addAction Topic
 _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Equipment Crate", {}];
 
-//make ReGear Option
+// Call ReGear Option
 [_object] call FUNC(addReGear);
 
-//make Quick Selection
+// Call Quick Selection
 [_object] call FUNC(initQuickSelections);
 
-//make Insignia Selection
+// Call Insignia Selection
 [_object] call FUNC(initInsigniaSelections);
 
+// Make end of options line.
 _object addAction ["---", {}];
 
-// Make object not loadable
+// Make object not loadable in ACE
 [_object, false, 999] call ace_cargo_fnc_makeLoadable;

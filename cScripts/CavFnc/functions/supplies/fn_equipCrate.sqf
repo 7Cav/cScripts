@@ -4,12 +4,12 @@
  * Main use is for resupplies.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Scale <AMMOUNT>
+ * 0: Crate <OBJECT>
+ * 1: Scale cargo ammount <NUMBER> (Default: 1)
  *
  * Example:
- * [this,0.5] call cScripts_fnc_equipCrate;
- * [this,1] call cScripts_fnc_equipCrate;
+ * [this,0.5] call cScripts_fnc_equipCrate
+ * [this,1] call cScripts_fnc_equipCrate
  */
 
 #include "..\script_component.hpp";

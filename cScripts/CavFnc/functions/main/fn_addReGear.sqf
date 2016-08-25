@@ -1,17 +1,17 @@
 /*
  * Author: CPL.Brostrom.A 
- * This populats a given object with items and commands used during operations.
+ * This adds a adda ction as well as a ACE interaction reGear selection. The script reapplyes the players start loadout.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
  * Example:
- * [this] call cScripts_fnc_addReGear;
+ * [this] call cScripts_fnc_addReGear
  */
  
 params [["_object", objNull, [objNull]]];
 
-//add addAction
+// Make addAction
 _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
     if (vehicleVarName player == "") then {
         [player, typeOf player] call Poppy_fnc_applyLoadout;
@@ -20,7 +20,7 @@ _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
     };
 }];
 
-//add aceInteraction for ReGear
+// Make ACE Interaction for ReGear
 private _Icon = "cScripts\Data\Icon\icon_00.paa";
 private _reGearCondition = {true};
 private _reGearStatement = {

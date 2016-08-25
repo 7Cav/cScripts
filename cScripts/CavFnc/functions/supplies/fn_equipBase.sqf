@@ -4,8 +4,8 @@
  * Main use is for main base and spawn.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Scale <AMMOUNT>
+ * 0: Crate <OBJECT>
+ * 1: Scale cargo ammount <NUMBER> (Default: 1)
  *
  * Example:
  * [this,0.5] call cScripts_fnc_equipBase;
@@ -16,7 +16,7 @@
 
 if (!isServer) exitWith {};
 
-params ["_crate",["_quaScale",1]];
+params [["_crate", objNull, [objNull]],["_quaScale",1]];
 
 clearweaponcargoGlobal _crate;
 clearmagazinecargoGlobal _crate;

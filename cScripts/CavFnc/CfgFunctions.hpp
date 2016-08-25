@@ -49,5 +49,6 @@ class cScripts {
     class misc {
         file = "cScripts\cavFnc\functions\misc";
         class flag {};
+        class addAceCategory {};
     };
 };
