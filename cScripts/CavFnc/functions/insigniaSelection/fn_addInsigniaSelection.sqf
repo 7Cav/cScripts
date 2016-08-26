@@ -31,5 +31,3 @@ _object addAction [format ["   <img image='%1' /> <t color='#66ff66'>%2</t>", _i
 //add aceInteraction
 private _insigniaSelection = [format ["cScriptInsigniaSelection_%1", _className], _lable, _icon, {[player, _this select 2] call BIS_fnc_setUnitInsignia;}, {true}, {}, _className] call ace_interact_menu_fnc_createAction;
 [_object, 0, _category, _insigniaSelection] call ace_interact_menu_fnc_addActionToObject;
-//[_object, 0, ["ACE_MainActions","cScriptInsigniaSelectionMenu"], _insigniaSelection] call ace_interact_menu_fnc_addActionToObject;
-

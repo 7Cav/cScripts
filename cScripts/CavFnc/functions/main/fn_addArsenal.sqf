@@ -11,11 +11,10 @@
  
 params [["_object", objNull, [objNull]]];
 
-//make addAction
-//_object addAction ["   <t color='#ff6633'>Arsenal</t>", {["Open",true] spawn BIS_fnc_arsenal;}];
+// Make addAction
 _object addAction ["   <t color='#bfff00'>Arsenal</t>", {["Open",true] spawn BIS_fnc_arsenal;}];
 
-//make aceInteraction
+// Make aceInteraction
 private _Icon = "cScripts\Data\Icon\icon_01.paa";
 private _arsenalCondition = {true};
 private _arsenalStatement = {["Open",true] spawn BIS_fnc_arsenal;};
