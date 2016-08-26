@@ -1,1 +1,6 @@
 /mission.sqm
+/cScripts/CavFnc/functions/documentation/fn_DocSandbox_Info.sqf
+/cScripts/CavFnc/functions/documentation/fn_DocSandbox_MedicalSystemAdvanced.sqf
+/cScripts/CavFnc/functions/documentation/fn_DocSandbox_MedicalSystemAdvancedLite.sqf
+/cScripts/CavFnc/functions/documentation/fn_DocSandbox_MedicalSystemBasic.sqf
+/cScripts/CavFnc/functions/documentation/fn_DocSandbox_MissionControl.sqf

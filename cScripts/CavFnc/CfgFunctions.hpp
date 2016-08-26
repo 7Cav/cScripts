@@ -39,12 +39,6 @@ class cScripts {
         class DocRadio_MEDEVAC {};
         class DocRadio_ROTARYPICKUP {};
         class DocRadio_SPOTREP {};
-
-        class DocSandbox_Info {};
-        class DocSandbox_MissionControl {};
-        class DocSandbox_MedicalSystemBasic {};
-        class DocSandbox_MedicalSystemAdvanced {};
-        class DocSandbox_MedicalSystemAdvancedLite {};
     };
     class misc {
         file = "cScripts\cavFnc\functions\misc";
