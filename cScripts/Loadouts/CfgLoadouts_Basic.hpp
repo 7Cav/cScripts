@@ -177,11 +177,286 @@ class rhsusf_army_ocp_medic : CommonBlufor {                    // Combat Life S
 };
 
 class CAV_RiflemanLAT : rhsusf_army_ocp_rifleman {              // Rifleman (Light Anti Tank)
+    primary[] = {
+        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "RH_ta31rmr_2D"}
+    };
+    launcher[] = {
+        {"rhs_weap_M136_hp"}
+    };
+
+    magazines[] = {
+        _MAG_PRIMARY, 8,
+
+        _GRENADE, 6,
+        _GRENADE_SMOKE, 8,
+
+        Chemlight_Blue, 2,
+        Chemlight_Red, 2
+    };
+    items[] = {
+        ACE_packingBandage, 15,
+        ACE_elasticBandage, 15,
+        ACE_salineIV, 2,
+        ACE_salineIV_500, 2,
+        ACE_morphine, 2,
+        ACE_epinephrine,  2,
+        ACE_tourniquet, 1,
+        
+        ACE_EarPlugs,
+        ACE_CableTie, 2,
+        ACE_Flashlight_MX991,
+        ACE_DAGR,
+        ACE_MapTools,
+        ACE_IR_Strobe_Item
+    };
+    
+    watch[] = {"tf_microdagr"};
 };
-class CAV_RiflemanAT : rhsusf_army_ocp_rifleman {               // Rifleman (Anti Tank)
+
+class CAV_RiflemanAT : rhsusf_army_ocp_rifleman {               // Rifleman (Anti Tank (M3 MAAWS))
+    primary[] = {
+        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "RH_ta31rmr_2D"}
+    };
+    launcher[] = {
+        {"tf47_m3maaws", "tf47_optic_m3maaws"}
+    };
+
+    magazines[] = {
+        _MAG_PRIMARY, 8,
+
+        _GRENADE, 6,
+        _GRENADE_SMOKE, 8,
+
+        Chemlight_Blue, 2,
+        Chemlight_Red, 2,
+        
+        tf47_m3maaws_HE, 2
+    };
+    items[] = {
+        ACE_packingBandage, 15,
+        ACE_elasticBandage, 15,
+        ACE_salineIV, 2,
+        ACE_salineIV_500, 2,
+        ACE_morphine, 2,
+        ACE_epinephrine,  2,
+        ACE_tourniquet, 1,
+        
+        ACE_EarPlugs,
+        ACE_CableTie, 2,
+        ACE_Flashlight_MX991,
+        ACE_DAGR,
+        ACE_MapTools,
+        ACE_IR_Strobe_Item
+    };
+    
+    watch[] = {"tf_microdagr"};
 };
+class CAV_RiflemanATAssist : rhsusf_army_ocp_rifleman {         // Rifleman (Anti Tank Assistant (M3 MAAWS))
+    primary[] = {
+        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
+    };
+    magazines[] = {
+        _MAG_PRIMARY, 8,
+
+        _GRENADE, 6,
+        _GRENADE_SMOKE, 8,
+
+        Chemlight_Blue, 2,
+        Chemlight_Red, 2,
+        
+        tf47_m3maaws_HE, 2
+    };
+    items[] = {
+        ACE_packingBandage, 15,
+        ACE_elasticBandage, 15,
+        ACE_salineIV, 2,
+        ACE_salineIV_500, 2,
+        ACE_morphine, 2,
+        ACE_epinephrine,  2,
+        ACE_tourniquet, 1,
+        
+        ACE_EarPlugs,
+        ACE_CableTie, 2,
+        ACE_Flashlight_MX991,
+        ACE_DAGR,
+        ACE_MapTools,
+        ACE_IR_Strobe_Item
+    };
+    
+    watch[] = {"tf_microdagr"};
+};
+
+class CAV_RiflemanAT_Javelin : rhsusf_army_ocp_rifleman {       // Rifleman (Anti Tank (FGM-148 Javelin))
+    primary[] = {
+        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "RH_ta31rmr_2D"}
+    };
+    launcher[] = {
+        {"tf47_m3maaws", "tf47_optic_m3maaws"}
+    };
+
+    magazines[] = {
+        _MAG_PRIMARY, 8,
+
+        _GRENADE, 6,
+        _GRENADE_SMOKE, 8,
+
+        Chemlight_Blue, 2,
+        Chemlight_Red, 2,
+        
+        tf47_m3maaws_HE, 2
+    };
+    items[] = {
+        ACE_packingBandage, 15,
+        ACE_elasticBandage, 15,
+        ACE_salineIV, 2,
+        ACE_salineIV_500, 2,
+        ACE_morphine, 2,
+        ACE_epinephrine,  2,
+        ACE_tourniquet, 1,
+        
+        ACE_EarPlugs,
+        ACE_CableTie, 2,
+        ACE_Flashlight_MX991,
+        ACE_DAGR,
+        ACE_MapTools,
+        ACE_IR_Strobe_Item
+    };
+    
+    watch[] = {"tf_microdagr"};
+};
+class CAV_RiflemanAT_JavelinAssist : rhsusf_army_ocp_rifleman { // Rifleman (Anti Tank Assistant (FGM-148 Javelin))
+    primary[] = {
+        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
+    };
+    magazines[] = {
+        _MAG_PRIMARY, 8,
+
+        _GRENADE, 6,
+        _GRENADE_SMOKE, 8,
+
+        Chemlight_Blue, 2,
+        Chemlight_Red, 2,
+        
+        tf47_m3maaws_HE, 2
+    };
+    items[] = {
+        ACE_packingBandage, 15,
+        ACE_elasticBandage, 15,
+        ACE_salineIV, 2,
+        ACE_salineIV_500, 2,
+        ACE_morphine, 2,
+        ACE_epinephrine,  2,
+        ACE_tourniquet, 1,
+        
+        ACE_EarPlugs,
+        ACE_CableTie, 2,
+        ACE_Flashlight_MX991,
+        ACE_DAGR,
+        ACE_MapTools,
+        ACE_IR_Strobe_Item
+    };
+    
+    watch[] = {"tf_microdagr"};
+};
+
 class CAV_RiflemanAA : rhsusf_army_ocp_rifleman {               // Rifleman (Anti Air)
+    primary[] = {
+        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "RH_ta31rmr_2D"}
+    };
+    launcher[] = {
+        {""}
+    };
+
+    magazines[] = {
+        _MAG_PRIMARY, 8,
+
+        _GRENADE, 6,
+        _GRENADE_SMOKE, 8,
+
+        Chemlight_Blue, 2,
+        Chemlight_Red, 2
+    };
+    items[] = {
+        ACE_packingBandage, 15,
+        ACE_elasticBandage, 15,
+        ACE_salineIV, 2,
+        ACE_salineIV_500, 2,
+        ACE_morphine, 2,
+        ACE_epinephrine,  2,
+        ACE_tourniquet, 1,
+        
+        ACE_EarPlugs,
+        ACE_CableTie, 2,
+        ACE_Flashlight_MX991,
+        ACE_DAGR,
+        ACE_MapTools,
+        ACE_IR_Strobe_Item
+    };
+    
+    watch[] = {"tf_microdagr"};
+};
+class CAV_RiflemanAAAssist : rhsusf_army_ocp_rifleman {         // Rifleman (AT Assistant)
+    primary[] = {
+        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
+    };
+    magazines[] = {
+        _MAG_PRIMARY, 8,
+
+        _GRENADE, 6,
+        _GRENADE_SMOKE, 8,
+
+        Chemlight_Blue, 2,
+        Chemlight_Red, 2
+    };
+    items[] = {
+        ACE_packingBandage, 15,
+        ACE_elasticBandage, 15,
+        ACE_salineIV, 2,
+        ACE_salineIV_500, 2,
+        ACE_morphine, 2,
+        ACE_epinephrine,  2,
+        ACE_tourniquet, 1,
+        
+        ACE_EarPlugs,
+        ACE_CableTie, 2,
+        ACE_Flashlight_MX991,
+        ACE_DAGR,
+        ACE_MapTools,
+        ACE_IR_Strobe_Item
+    };
+    
+    watch[] = {"tf_microdagr"};
 };
 
 class CAV_RiflemanAmmoBearer : rhsusf_army_ocp_rifleman {       // Rifleman (Ammo Bearer)
+    primary[] = {
+        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "RH_ta31rmr_2D"}
+    };
+    magazines[] = {
+        _MAG_PRIMARY, 8,
+
+        _GRENADE, 6,
+        _GRENADE_SMOKE, 8,
+
+        Chemlight_Blue, 2,
+        Chemlight_Red, 2
+    };
+    items[] = {
+        ACE_packingBandage, 15,
+        ACE_elasticBandage, 15,
+        ACE_salineIV, 2,
+        ACE_salineIV_500, 2,
+        ACE_morphine, 2,
+        ACE_epinephrine,  2,
+        ACE_tourniquet, 1,
+        
+        ACE_EarPlugs,
+        ACE_CableTie, 2,
+        ACE_Flashlight_MX991,
+        ACE_DAGR,
+        ACE_MapTools,
+        ACE_IR_Strobe_Item
+    };
+    
+    watch[] = {"tf_microdagr"};
 };

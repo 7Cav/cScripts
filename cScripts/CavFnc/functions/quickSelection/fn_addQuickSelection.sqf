@@ -4,8 +4,10 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Action Name <STRING>
- * 2: Classname <STRING>
+ * 1: Lable <STRING>
+ * 2: Loadout classname <STRING>
+ * 3: Path to icon <STRING> (Optional)
+ * 4: Categorys <ARRAY> (Optional)
  *
  * Example:
  * ["this","Rifleman","C_R"] call cScripts_fnc_addQuickSelection;
@@ -13,7 +15,6 @@
 
 #include "..\script_component.hpp";
 
-params [["_object", objNull, [objNull]], ["_lable", "", [""]], ["_className", "", [""]]];
 params [
     ["_object", objNull, [objNull]],
     ["_lable", "", [""]],
@@ -21,6 +22,7 @@ params [
     ["_icon", "", [""]],
     ["_category", ["ACE_MainActions","cScriptQuickSelectionMenu"], [[]]]
 ];
+
 //make addAction
 _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className];
 
