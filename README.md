@@ -76,6 +76,12 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
 
+### Main and basic functions
+`initMain`: initMain is used to call appon a stadgeing area crate. It fills a crate allot of equipment, adds insignia and quick selections. It also adds a ReGear button. The scripts works with addAction and ACE action.
+`initMainSandbox`: initMainSandbox work identical to initMain except that it adds a VirtualArsenal as well.
+
+`flag`: flag is a just a small function that changes a given flagpoles flag texture.
+
 ### Insignia Selection
 The insignia selection is called by `cScripts_fnc_initMain` and `cScripts_fnc_initMainSandbox` base crate scripts. In order to add a insignia you first need to define it in `CfgUnitInsignia.hpp` then add it to `fn_initInsigniaSelections.sqf` using the `cScripts_fnc_addInsigniaSelection` function.
 
