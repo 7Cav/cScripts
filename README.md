@@ -78,6 +78,7 @@ CAV Functions are usable functions and scripts that can be called. You can read 
 
 ### Main and basic functions
 `initMain`: initMain is used to call appon a stadgeing area crate. It fills a crate allot of equipment, adds insignia and quick selections. It also adds a ReGear button. The scripts works with addAction and ACE action.
+
 `initMainSandbox`: initMainSandbox work identical to initMain except that it adds a VirtualArsenal as well.
 
 `flag`: flag is a just a small function that changes a given flagpoles flag texture.
