@@ -31,6 +31,7 @@ class cScripts {
     class documentation {
         file = "cScripts\cavFnc\functions\documentation";
         class initDoc { postInit = 1; };
+        class initMissionStartHint { postInit = 1; };
 
         class Doc_Info {};
         class Doc_MissionControl {};
