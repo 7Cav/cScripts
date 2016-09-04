@@ -1,8 +1,8 @@
 # cScripts
-This is cScript a easy to use framework for S3 mission making. This framework contain functions, scripts for easy handleing and adaptation to the 7CAV mission standard.
+This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
 
 ## Scripts Installed
-- **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry cScripts (1.0.0)</a>
+- **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry Function Library (1.0.0)</a>
 - **Loadouts**                  -   <a href="https://7cav.us/">7th Cavalry Loadouts 160730</a>
 - **Loadouts/Script**           -   <a href="https://github.com/BaerMitUmlaut/Poppy">Poppy (1.0.0)</a>
 - **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
@@ -10,15 +10,15 @@ This is cScript a easy to use framework for S3 mission making. This framework co
 ### Manual Installation
 If you use the included `Description.ext` you do not need to do anything otherwise you need to include the folowing block:
 ``` c++
-    #include "cScripts\ViewingDistance\GUI.h"
-    #include "cScripts\Loadouts\script\CfgPoppy.hpp"
-    class CfgFunctions {
-        #include "cScripts\ViewingDistance\CfgFunctions.hpp"
-        #include "cScripts\CavFnc\CfgFunctions.hpp"
-        #include "cScripts\Loadouts\script\CfgFunctions.hpp"
-    };
-    #include "cScripts\CavFnc\functions\insignia\CfgUnitInsignia.hpp"
-    #include "cScripts\Loadouts\CfgLoadouts.hpp"
+#include "cScripts\ViewingDistance\GUI.h"
+#include "cScripts\Loadouts\script\CfgPoppy.hpp"
+class CfgFunctions {
+    #include "cScripts\ViewingDistance\CfgFunctions.hpp"
+    #include "cScripts\CavFnc\CfgFunctions.hpp"
+    #include "cScripts\Loadouts\script\CfgFunctions.hpp"
+};
+#include "cScripts\CfgUnitInsignia.hpp"
+#include "cScripts\CfgLoadouts.hpp"
 ```
 
 ### Uninstall
@@ -26,19 +26,19 @@ If you whant to remove a function or script you need to remove the following fro
 
 **Loadout Script** *(Poppy) `cScripts\Loadouts\...`*
 ``` c++
-    #include "cScripts\Loadouts\script\CfgPoppy.hpp"
-    class CfgFunctions {
-        #include "cScripts\Loadouts\script\CfgFunctions.hpp"
-    };
-    #include "cScripts\Loadouts\CfgLoadouts.hpp"
+#include "cScripts\Loadouts\script\CfgPoppy.hpp"
+class CfgFunctions {
+    #include "cScripts\Loadouts\script\CfgFunctions.hpp"
+};
+#include "cScripts\CfgLoadouts.hpp"
 ```
 
 **Viewing Distance** *(taw_vd) `cScripts\ViewingDistance\...`*
 ``` c++
-    #include "cScripts\ViewingDistance\GUI.h"
-    class CfgFunctions {
-        #include "cScripts\ViewingDistance\CfgFunctions.hpp"
-    };
+#include "cScripts\ViewingDistance\GUI.h"
+class CfgFunctions {
+    #include "cScripts\ViewingDistance\CfgFunctions.hpp"
+};
 ```
 ## What do cScripts provide?
 cScripts provides you with the basic for S3 Operation making.
@@ -49,14 +49,14 @@ The AI in cScripts `init.sqf` have been changed to be a little more realistic an
 #### Default:
 ``` c++
 {
-        _x setSkill ["aimingspeed", 0.4];
-        _x setSkill ["aimingaccuracy", 0.35];
-        _x setSkill ["aimingshake", 0.4];
-        _x setSkill ["spottime", 0.4];
-        _x setSkill ["spotdistance", 0.6];
-        _x setSkill ["commanding", 1.0];
-        _x setSkill ["general", 1.0];
-    } forEach allUnits;
+    _x setSkill ["aimingspeed", 0.4];
+    _x setSkill ["aimingaccuracy", 0.35];
+    _x setSkill ["aimingshake", 0.4];
+    _x setSkill ["spottime", 0.4];
+    _x setSkill ["spotdistance", 0.6];
+    _x setSkill ["commanding", 1.0];
+    _x setSkill ["general", 1.0];
+} forEach allUnits;
 ```
 Tip:
 When playing on a step or desert island it is recomended to change the `"spotdistance"` to `1.0`.
@@ -75,6 +75,13 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
+
+### Main and basic functions
+`initMain`: initMain is used to call appon a stadgeing area crate. It fills a crate allot of equipment, adds insignia and quick selections. It also adds a ReGear button. The scripts works with addAction and ACE action.
+
+`initMainSandbox`: initMainSandbox work identical to initMain except that it adds a VirtualArsenal as well.
+
+`flag`: flag is a just a small function that changes a given flagpoles flag texture.
 
 ### Insignia Selection
 The insignia selection is called by `cScripts_fnc_initMain` and `cScripts_fnc_initMainSandbox` base crate scripts. In order to add a insignia you first need to define it in `CfgUnitInsignia.hpp` then add it to `fn_initInsigniaSelections.sqf` using the `cScripts_fnc_addInsigniaSelection` function.
