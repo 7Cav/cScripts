@@ -1,42 +1,7 @@
 /*
 GearVersionDate: 160801
 */
-class S3_BASE : CommonBlufor {
-    uniform[] = {"rhs_uniform_g3_blk"};
-    vest[] = {"V_TacVest_oli"};
-    headgear[] = {"rhsusf_Bowman"};
-    nvgs[] = {""};
-    goggles[] = {"G_Tactical_Clear"};
-    backpack[] = {"tf_rt1523g_black"};
-    primary[] = {
-        "rhs_weap_m4a1_carryhandle_pmag"
-    };
-    magazines[] = {
-        _MAG_PRIMARY, 3,
-
-        Chemlight_Blue, 2,
-        Chemlight_Red, 2
-    };
-    items[] = {
-        ACE_packingBandage, 10,
-        ACE_morphine, 2,
-        ACE_epinephrine, 2,
-        ACE_tourniquet,
-        
-        ACE_EarPlugs,
-        ACE_CableTie, 2,
-        ACE_Flashlight_MX991,
-        ACE_DAGR,
-        ACE_MapTools,
-        ACE_IR_Strobe_Item
-    };
-    
-    binoculars[] = {""};
-    map[] = {"ItemMap"};
-    watch[] = {"ItemWatch"};
-    compass[] = {"ItemCompass"};
-    gps[] = {"ItemGPS"};
-    
+class S3_BASE : CAV_Officer {
     insignia[] = {"Curator"};
 };
 

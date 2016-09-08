@@ -4,10 +4,10 @@
     tawvd_disablenone = true;
 
     {
-        _x setSkill ["aimingspeed", 0.4];
-        _x setSkill ["aimingaccuracy", 0.35];
-        _x setSkill ["aimingshake", 0.4];
-        _x setSkill ["spottime", 0.4];
+        _x setSkill ["aimingspeed", 0.42];
+        _x setSkill ["aimingaccuracy", 0.338];
+        _x setSkill ["aimingshake", 0.36];
+        _x setSkill ["spottime", 0.42];
         _x setSkill ["spotdistance", 0.7];
         _x setSkill ["commanding", 1.0];
         _x setSkill ["general", 1.0];

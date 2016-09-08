@@ -1,132 +1,50 @@
 /*
-GearVersionDate: 160818
+GearVersionDate: 160908
 */
-class rhsusf_army_ocp_officer : CommonBlufor {              // Officer
-    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
-    vest[] = {"rhsusf_iotv_ocp_Squadleader"};
-    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
-    binoculars[] = {"ACE_Vector"};
+class CAV_Officer : CommonBlufor {                  // Officer
     backpack[] = {"tf_rt1523g_big_rhs"};
-    primary[] = {
-        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
-    };
-    magazines[] = {
-        _MAG_PRIMARY, 6,
-        _MAG_PRIMARY_TRACER, 4,
-        
-        _GRENADE, 6,
-        _GRENADE_SMOKE, 4,
-        _GRENADE_SMOKE_GREEN, 2,
-        _GRENADE_SMOKE_YELLOW, 2,
-        _GRENADE_SMOKE_RED, 2,
+    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    vest[] = {"rhsusf_iotv_ocp_Squadleader"};
 
-        Chemlight_Blue, 2,
-        Chemlight_Red, 2
-        
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","RH_ta31rmr_2D"};
+    
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",7,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
+
+        "rhs_mag_m67",6,
+
+        "rhs_mag_an_m8hc",8,
+        "rhs_mag_m18_green",4,
+        "rhs_mag_m18_red",2,
+        "rhs_mag_m18_yellow",2,
+
+        "Chemlight_red",2,
+        "Chemlight_blue",2
     };
     items[] = {
-        //ACE_packingBandage, 10,   // Changed
-        //ACE_morphine, 2,
-        //ACE_epinephrine, 2,
-        //ACE_tourniquet,
-        ACE_packingBandage, 4,
-        ACE_morphine,
-        ACE_tourniquet,
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",
+        "ACE_personalAidKit",
         
-        ACE_EarPlugs,
-        //ACE_CableTie, 2           // Changed
-        ACE_CableTie,
-        ACE_Flashlight_MX991,
-        ACE_microDAGR,
-        ACE_MapTools,
-        ACE_IR_Strobe_Item,
-        ACE_HuntIR_monitor
-        //itemcTabHCam
-    };
-};
-class CAV_JTAC : CommonBlufor {                             // JTAC
-    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
-    vest[] = {"rhsusf_iotv_ocp_Squadleader"};
-    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
-    binoculars[] = {"ACE_Vector"};
-    backpack[] = {"tf_rt1523g_big_rhs"};
-    primary[] = {
-        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
-    };
-    magazines[] = {
-        _MAG_PRIMARY, 6,
-        _MAG_PRIMARY_TRACER, 4,
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_Flashlight_MX991",
+        "ACE_CableTie",2,
         
-        _GRENADE, 6,
-        _GRENADE_SMOKE, 4,
-        _GRENADE_SMOKE_GREEN, 2,
-        _GRENADE_SMOKE_YELLOW, 2,
-        _GRENADE_SMOKE_RED, 2,
 
-        Chemlight_Blue, 2,
-        Chemlight_Red, 2
-        
-    };
-    items[] = {
-        //ACE_packingBandage, 10,   // Changed
-        //ACE_morphine, 2,
-        //ACE_epinephrine, 2,
-        //ACE_tourniquet,
-        ACE_packingBandage, 4,
-        ACE_morphine,
-        ACE_tourniquet,
-        
-        ACE_EarPlugs,
-        //ACE_CableTie, 2           // Changed
-        ACE_CableTie,
-        ACE_Flashlight_MX991,
-        ACE_microDAGR,
-        ACE_MapTools,
-        ACE_IR_Strobe_Item,
-        ACE_HuntIR_monitor
-        //itemcTabHCam
-    };
-};
-class CAV_ForwardObserver : CommonBlufor {                  // Forward Observer
-    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
-    vest[] = {"rhsusf_iotv_ocp_Squadleader"};
-    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
-    binoculars[] = {"ACE_Vector"};
-    backpack[] = {"tf_rt1523g_big_rhs"};
-    primary[] = {
-        {"rhs_weap_m4a1_carryhandle", "acc_pointer_IR", "rhsusf_acc_ACOG"}
-    };
-    magazines[] = {
-        _MAG_PRIMARY, 6,
-        _MAG_PRIMARY_TRACER, 4,
-        
-        _GRENADE, 6,
-        _GRENADE_SMOKE, 4,
-        _GRENADE_SMOKE_GREEN, 2,
-        _GRENADE_SMOKE_YELLOW, 2,
-        _GRENADE_SMOKE_RED, 2,
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_HuntIR_monitor",
+        "ItemcTabHCam",
+        "ACE_IR_Strobe_Item",
 
-        Chemlight_Blue, 2,
-        Chemlight_Red, 2
-        
-    };
-    items[] = {
-        //ACE_packingBandage, 10,   // Changed
-        //ACE_morphine, 2,
-        //ACE_epinephrine, 2,
-        //ACE_tourniquet,
-        ACE_packingBandage, 4,
-        ACE_morphine,
-        ACE_tourniquet,
-        
-        ACE_EarPlugs,
-        //ACE_CableTie, 2           // Changed
-        ACE_CableTie,
-        ACE_Flashlight_MX991,
-        ACE_microDAGR,
-        ACE_MapTools,
-        ACE_IR_Strobe_Item,
-        ACE_HuntIR_monitor
-        //itemcTabHCam
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_EntrenchingTool"
     };
 };

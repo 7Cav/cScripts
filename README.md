@@ -49,11 +49,11 @@ The AI in cScripts `init.sqf` have been changed to be a little more realistic an
 #### Default:
 ``` c++
 {
-    _x setSkill ["aimingspeed", 0.4];
-    _x setSkill ["aimingaccuracy", 0.35];
-    _x setSkill ["aimingshake", 0.4];
-    _x setSkill ["spottime", 0.4];
-    _x setSkill ["spotdistance", 0.6];
+    _x setSkill ["aimingspeed", 0.42];
+    _x setSkill ["aimingaccuracy", 0.338];
+    _x setSkill ["aimingshake", 0.36];
+    _x setSkill ["spottime", 0.42];
+    _x setSkill ["spotdistance", 0.7];
     _x setSkill ["commanding", 1.0];
     _x setSkill ["general", 1.0];
 } forEach allUnits;
@@ -66,12 +66,17 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 
 ## Automatic Loadout Distrubution (Poppy)
 
-| Loadout | Primary ClassName | Supported ClassNames | Primary VariableName | Supported VariableNames |
-|---------|-------------------|----------------------|----------------------|------------------------|
-| Default | All Blufor | N/A | None | None |
-| Rifleman | `rhsusf_army_ocp_rifleman` | `B_Soldier_F`, `B_T_Soldier_F`, `rhsusf_army_ocp_rifleman_1stcav`, `rhsusf_army_ocp_arb_rifleman`, `rhsusf_army_ucp_rifleman_1stcav`, `rhsusf_army_ucp_rifleman`, `rhsusf_army_ucp_arb_rifleman` | `CAV_Rifleman` | `C_R`, `C_RA`, `CAV_AlphaRifleman`, `CAV_AlphaRifleman`, `CAV_BravoRifleman` |
-| Squad Leader | `rhsusf_army_ocp_squadleader` | `B_Soldier_SL_F`, `B_T_Soldier_SL_F`, `rhsusf_army_ocp_arb_squadleader`, `rhsusf_army_ucp_squadleader`, `rhsusf_army_ucp_arb_squadleader` | `CAV_SquadLeader` | `C_SL` |
-| Fire Team Leader | `rhsusf_army_ocp_teamleader` | `B_Soldier_TL_F`, `B_T_Soldier_TL_F`, `rhsusf_army_ocp_arb_teamleader`, `rhsusf_army_ucp_teamleader`, `rhsusf_army_ucp_arb_teamleader` | `CAV_FireTeamLeader` | `C_FTL`, `C_FTLA`, `C_FTLB`, `CAV_AlphaFireTeamLeader`, `CAV_BravoFireTeamLeader` |
+| Loadout             | ClassName               | Supported ClassNames                                                              |
+|---------------------|-------------------------|-----------------------------------------------------------------------------------|
+| Default             | `CommonBlufor`          | `ALL PLAYER BLUFOR`                                                               |
+| Squad Leader        | `CAV_SquadLeader`       | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`      |
+| Team Leader         | `CAV_TeamLeader`        | `B_Soldier_TL_F` `rhsusf_army_ocp_teamleader` `rhsusf_army_ucp_teamleader`        |
+| Automatic Rifleman  | `CAV_AutomaticRifleman` | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman`    |
+| Grenadier           | `CAV_Grenadier`         | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`          |
+| Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`               |
+| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_medic_F`                                                                       |
+| Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`              |
+| Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                 |
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.

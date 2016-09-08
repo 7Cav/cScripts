@@ -30,14 +30,20 @@ class CfgUnitInsignia {
 		author = "7th Cavalry Gaming";
 		texture = "cScripts\Data\Insignia\7.paa";
 	};
-    class 7m81_Insignia {
+    class 7_m81_Insignia {
 		displayName = "7th Cavalry Insignia (M81)";
 		author = "7th Cavalry Gaming";
 		texture = "cScripts\Data\Insignia\7_m81.paa";
 	};
-    class 7ocp_Insignia {
+    class 7_ocp_Insignia {
 		displayName = "7th Cavalry Insignia (OCP)";
 		author = "7th Cavalry Gaming";
 		texture = "cScripts\Data\Insignia\7_ocp.paa";
+	};
+    
+    class CLS_Insignia {
+		displayName = "7th Cavalry Insignia";
+		author = "7th Cavalry Gaming";
+		texture = "cScripts\Data\Insignia\CLS.paa";
 	};
 };

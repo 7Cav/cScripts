@@ -29,5 +29,5 @@ _object addAction ["Insignia Selection", {}];
 
 // 7th Cavalry Gaming Insignias
 [_object,"7th Cavalry Insignia","7_Insignia","cScripts\Data\Insignia\7.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionMisc']] call FUNC(addInsigniaSelection);
-[_object,"7th Cavalry Insignia (M81)","7m81_Insignia","cScripts\Data\Insignia\7_m81.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionMisc']] call FUNC(addInsigniaSelection);
-[_object,"7th Cavalry Insignia (OCP)","7ocp_Insignia","cScripts\Data\Insignia\7_ocp.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionMisc']] call FUNC(addInsigniaSelection);
+[_object,"7th Cavalry Insignia (M81)","7m_81_Insignia","cScripts\Data\Insignia\7_m81.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionMisc']] call FUNC(addInsigniaSelection);
+[_object,"7th Cavalry Insignia (OCP)","7_ocp_Insignia","cScripts\Data\Insignia\7_ocp.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionMisc']] call FUNC(addInsigniaSelection);

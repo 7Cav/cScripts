@@ -1,45 +1,54 @@
 /*
-GearVersionDate: 160801
+GearVersionDate: 160908
 */
 class CommonBlufor {
-    uniform[] = {"rhs_uniform_g3_mc"};
     backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
-    vest[] = {"rhsusf_iotv_ocp"};
-    headgear[] = {"rhsusf_ach_helmet_ocp"};
     goggles[] = {"rhs_googles_clear"};
-    nvgs[] = {"rhsusf_ANPVS_14"};
-    primary[] = {
-        {"rhs_weap_m4a1_carryhandle"}
-    };
+    headgear[] = {"rhsusf_ach_helmet_ocp"};
+    uniform[] = {"rhs_uniform_g3_mc"};
+    vest[] = {"rhsusf_iotv_ocp"};
+
+    primary[] = {"rhs_weap_m4a1_carryhandle"};
     secondary[] = {""};
-    magazines[] = {
-        _MAG_PRIMARY, 8,
-
-        _GRENADE, 6,
-        _GRENADE_SMOKE, 8,
-
-        Chemlight_Blue, 2,
-        Chemlight_Red, 2
-    };
-    items[] = {
-        ACE_packingBandage, 10,
-        ACE_morphine, 2,
-        ACE_epinephrine, 2,
-        ACE_tourniquet,
-        
-        ACE_EarPlugs,
-        ACE_CableTie, 2,
-        ACE_Flashlight_MX991,
-        ACE_DAGR,
-        ACE_MapTools,
-        ACE_IR_Strobe_Item
-    };
+    launcher[] = {""};
     
     binoculars[] = {""};
-    map[] = {"ItemMap"};
-    watch[] = {"ItemWatch"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",9,
+
+        "rhs_mag_m67",6,
+
+        "rhs_mag_an_m8hc",8,
+
+        "Chemlight_red",2,
+        "Chemlight_blue",2
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_Flashlight_MX991",
+        "ACE_CableTie",2,
+        
+
+        // Electronics
+        "ACE_DAGR",
+        "ACE_IR_Strobe_Item",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+
     compass[] = {"ItemCompass"};
     gps[] = {""};
-    
+    map[] = {"ItemMap"};
+    nvgs[] = {"rhsusf_ANPVS_14"};
+    watch[] = {"tf_microdagr"};
+
     insignia[] = {""};
 };
