@@ -5,12 +5,6 @@ class CfgLoadouts {
     
     #include "Loadouts\CfgLoadouts_Basic.hpp"
     #include "Loadouts\CfgLoadouts_BasicExtra.hpp"
-    
-    #include "Loadouts\CfgLoadouts_Advanced.hpp"
-    #include "Loadouts\CfgLoadouts_AdvancedExtra.hpp"
-
-    #include "Loadouts\CfgLoadouts_Specialist.hpp"
-    #include "Loadouts\CfgLoadouts_SpecialistExtra.hpp"
 
     #include "Loadouts\CfgLoadouts_Crew.hpp"
     #include "Loadouts\CfgLoadouts_CrewExtra.hpp"

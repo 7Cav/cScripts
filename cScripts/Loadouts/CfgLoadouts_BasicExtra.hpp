@@ -25,3 +25,14 @@ class rhsusf_army_ucp_rifleman : CAV_Rifleman {};
 
 // Combat Life Saver
 class B_medic_F : CAV_CombatLifesaver {};
+
+// Engineer
+class B_engineer_F : CAV_Engineer {};
+class rhsusf_army_ocp_engineer : CAV_Engineer {};
+class rhsusf_army_ucp_engineer : CAV_Engineer {};
+
+
+// Officer
+class B_officer_F : CAV_Officer {};
+class rhsusf_army_ocp_officer : CAV_Officer {};
+class rhsusf_army_ucp_officer : CAV_Officer {};

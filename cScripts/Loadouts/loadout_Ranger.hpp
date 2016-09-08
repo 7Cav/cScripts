@@ -1,3 +1,0 @@
-/*
-GearVersionDate: 160303
-*/

@@ -1,38 +1,41 @@
 class cScripts {
+    class init {
+        file = "cScripts\cavFnc\functions\init";
+        class initDoc { postInit = 1; };
+        class initMissionStartHint { postInit = 1; };
+    };
 
     class main {
         file = "cScripts\cavFnc\functions\main";
         class initMain {};
         class initMainSandbox {};
         class initVehicle {};
-
-        class addReGear {};
-        class addArsenal {};
     };
     class supplies {
         file = "cScripts\cavFnc\functions\supplies";
         class checkCrate {};
+
         class equipBase {};
         class equipCrate {};
         class equipMedicalCrate {};
     };
 
-    class quickSelection {
-        file = "cScripts\cavFnc\functions\quickSelection";
+    class systems {
+        file = "cScripts\cavFnc\functions\systems";
+        class addReGear {};
+        class addArsenal {};
+        class addAceCategory {};
+    };
+    class selections {
+        file = "cScripts\cavFnc\functions\selections";
         class initQuickSelections {};
         class addQuickSelection {};
-    };
-    class insigniaSelection {
-        file = "cScripts\cavFnc\functions\insigniaSelection";
         class initInsigniaSelections {};
         class addInsigniaSelection {};
     };
 
     class documentation {
         file = "cScripts\cavFnc\functions\documentation";
-        class initDoc { postInit = 1; };
-        class initMissionStartHint { postInit = 1; };
-
         class Doc_Info {};
         class Doc_MissionControl {};
 
@@ -41,9 +44,9 @@ class cScripts {
         class DocRadio_ROTARYPICKUP {};
         class DocRadio_SPOTREP {};
     };
+
     class misc {
         file = "cScripts\cavFnc\functions\misc";
         class flag {};
-        class addAceCategory {};
     };
 };

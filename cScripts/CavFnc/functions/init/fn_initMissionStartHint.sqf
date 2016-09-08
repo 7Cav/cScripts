@@ -6,7 +6,7 @@
  * 0: Object <OBJECT>
  *
  * Example:
- * [this] call cScripts_fnc_initMainSandbox
+ * [this] call cScripts_fnc_initMissionStartHint
  */
 
 waitUntil {!isNull player && player == player};
