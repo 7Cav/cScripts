@@ -1,7 +1,7 @@
 class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
-        class initDoc { postInit = 1; };
+        class initDocuments { postInit = 1; };
         class initMissionStartHint { postInit = 1; };
     };
 
