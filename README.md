@@ -66,7 +66,7 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 
 ## Automatic Loadout Distrubution (Poppy)
 
-| Loadout             | ClassName               | Supported ClassNames                                                              |
+| Loadout             | VariableName            | Supported ClassNames                                                              |
 |---------------------|-------------------------|-----------------------------------------------------------------------------------|
 | Default             | `CommonBlufor`          | `ALL PLAYER BLUFOR`                                                               |
 | Squad Leader        | `CAV_SquadLeader`       | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`      |
@@ -75,8 +75,18 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 | Grenadier           | `CAV_Grenadier`         | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`          |
 | Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`               |
 | Combat Life Saver   | `CAV_CombatLifesaver`   | `B_medic_F`                                                                       |
+|                     |                         |                                                                                   |
+| Platoon Medic       | `CAV_PlatoonMedic`      | `rhsusf_army_ocp_medic`                                                           |
 | Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`              |
 | Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                 |
+|                     |                         |                                                                                   |
+| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ucp_crewman`                                                         |
+| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ucp_combatcrewman`                                                   |
+| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_crewman`                                                         |
+| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_combatcrewman`                                                   |
+|                     |                         |                                                                                   |
+| Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`           |
+
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
