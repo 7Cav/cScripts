@@ -47,6 +47,7 @@ class CAV_SquadLeader : CommonBlufor {              // Squad Leader
         "ACE_SpraypaintRed",
         "ACE_EntrenchingTool"
     };
+    gps[] = {"ItemAndroid"};
 };
 class CAV_TeamLeader : CommonBlufor {               // Team Leader
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
@@ -258,6 +259,7 @@ class CAV_CombatLifesaver : CommonBlufor {          // Combat Life Saver
     insignia[] = {"CLS_Insignia"};
 };
 class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
+    backpack[] = {"tf_rt1523g_big_rhs"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     vest[] = {"rhsusf_iotv_ocp_Medic"};
 
@@ -295,7 +297,9 @@ class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
         // Tools
         "ACE_EntrenchingTool"
     };
-    
+
+    gps[] = {"ItemAndroid"};
+
     insignia[] = {"CLS_Insignia"};
 };
 
@@ -388,4 +392,5 @@ class CAV_Officer : CommonBlufor {                  // Officer
         "ACE_SpraypaintRed",
         "ACE_EntrenchingTool"
     };
+    gps[] = {"ItemcTab"};
 };

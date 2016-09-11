@@ -9,7 +9,6 @@
  * [this] call cScripts_fnc_initMissionStartHint
  */
 
-waitUntil {!isNull player && player == player};
 if (!isServer) exitWith {};
 
 #include "..\script_component.hpp";

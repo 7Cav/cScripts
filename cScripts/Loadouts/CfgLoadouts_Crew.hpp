@@ -33,7 +33,8 @@ class CAV_TankCommander : CommonBlufor {            // Tank Commander
         "ACE_microDAGR",
         "ACE_IR_Strobe_Item"
     };
-    
+
+    gps[] = {"ItemAndroid"};
     nvgs[] = {"rhsusf_ANPVS_15"};
 };
 class CAV_TankGunner : CommonBlufor {               // Tank Gunner
@@ -178,6 +179,7 @@ class CAV_HeloPilot : CommonBlufor {                // Helo Pilot
         "ACE_microDAGR",
         "ACE_IR_Strobe_Item"
     };
-
+    
+    gps[] = {"ItemAndroid"};
     nvgs[] = {"rhsusf_ANPVS_15"};
 };
