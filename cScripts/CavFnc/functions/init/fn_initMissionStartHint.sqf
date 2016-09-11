@@ -10,7 +10,6 @@
  */
 
 if (!isServer) exitWith {};
-waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
 
