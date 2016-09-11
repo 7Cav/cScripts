@@ -1,0 +1,2 @@
+call cScripts_fnc_initDocuments;
+call cScripts_fnc_initMissionStartHint;

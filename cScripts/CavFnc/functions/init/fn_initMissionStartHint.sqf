@@ -3,13 +3,13 @@
  * This adds a couple of hints at start for all players.
  *
  * Arguments:
- * 0: Object <OBJECT>
  *
  * Example:
- * [this] call cScripts_fnc_initMissionStartHint
+ *  call cScripts_fnc_initMissionStartHint
  */
 
-if (!isServer) exitWith {};
+if (didJIP) exitWith {};
+waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
 
@@ -24,16 +24,35 @@ _text3a = "<t font='Zeppelin33'>You may now move!</t>";
 _text3b = "<t font='Zeppelin33'>Have fun!</t>";
 _text3c = "<br /><br />Blame Tully if stuff doesn't work.<br />";
 
-parseText (_title1 + _text0 + _image0) remoteExec ["hint",-2];
-sleep 3;
-parseText (_title1 + _text0 + _image0 + _text1) remoteExec ["hint",-2];
-sleep 12;
-parseText (_title1 + _text0 + _image0 + _text2) remoteExec ["hint",-2];
-sleep 14;
-parseText (_title2 + _text3a + _image1 + _text3b) remoteExec ["hint",-2];
+hint parseText (_title1 + _text0 + _image0);
+sleep 5;
+hint parseText (_title1 + _text0 + _image0 + _text1);
+sleep 15;
+hint parseText (_title1 + _text0 + _image0 + _text2);
+sleep 15;
+hint parseText (_title2 + _text3a + _image1 + _text3b);
 sleep 8;
-parseText (_title2 + _text3a + _image1 + _text3b + _text3c) remoteExec ["hint",-2];
+hint parseText (_title2 + _text3a + _image1 + _text3b + _text3c);
 sleep 2;
-"" remoteExec ["hint",-2];
+hint "";
 sleep 60;
-"" remoteExec ["hint",-2]; // Fail safe in case people get the hint stuck
+hint ""; // Fail safe in case people get the hint stuck
+
+/* Saved in case of.
+parseText (_title1 + _text0 + _image0) remoteExec ["hint",0];
+sleep 3;
+parseText (_title1 + _text0 + _image0 + _text1) remoteExec ["hint",0];
+sleep 12;
+parseText (_title1 + _text0 + _image0 + _text2) remoteExec ["hint",0];
+sleep 14;
+parseText (_title2 + _text3a + _image1 + _text3b) remoteExec ["hint",0];
+sleep 8;
+parseText (_title2 + _text3a + _image1 + _text3b + _text3c) remoteExec ["hint",0];
+sleep 2;
+
+diag_log 'Last remoteExec text';
+
+"" remoteExec ["hint",0];
+sleep 60;
+"" remoteExec ["hint",0]; // Fail safe in case people get the hint stuck
+*/
