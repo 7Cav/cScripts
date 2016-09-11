@@ -134,14 +134,9 @@ class CAV_AutomaticRifleman : CommonBlufor {        // Automatic Rifleman
     };
 };
 class CAV_Grenadier : CommonBlufor {                // Grenadier
-    backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
-    goggles[] = {"rhs_googles_clear"};
-    headgear[] = {"rhsusf_ach_helmet_ocp"};
     vest[] = {"rhsusf_iotv_ocp_Grenadier"};
 
     primary[] = {"rhs_weap_m4_m320","acc_pointer_IR","RH_ta31rmr_2D"};
-    secondary[] = {""};
-    launcher[] = {""};
     
     binoculars[] = {"ACE_Vector"};
 
@@ -221,6 +216,7 @@ class CAV_Rifleman : CommonBlufor {                 // Rifleman
         "ACE_EntrenchingTool"
     };
 };
+
 class CAV_CombatLifesaver : CommonBlufor {          // Combat Life Saver
     vest[] = {"rhsusf_iotv_ocp_Medic"};
 
@@ -261,6 +257,48 @@ class CAV_CombatLifesaver : CommonBlufor {          // Combat Life Saver
     
     insignia[] = {"CLS_Insignia"};
 };
+class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
+    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    vest[] = {"rhsusf_iotv_ocp_Medic"};
+
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","RH_ta31rmr_2D"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+
+        "rhs_mag_m67",2,
+
+        "rhs_mag_an_m8hc",6,
+
+        "Chemlight_red",2,
+        "Chemlight_blue",2
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",45,
+        "ACE_morphine",20,
+        "ACE_epinephrine",20,
+        "ACE_tourniquet",2,
+        "ACE_plasmaIV_500",4,
+        "ACE_personalAidKit",2,
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_Flashlight_MX991",
+        "ACE_CableTie",2,
+
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_IR_Strobe_Item",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+    
+    insignia[] = {"CLS_Insignia"};
+};
+
 class CAV_Engineer : CommonBlufor {                 // Engineer
     vest[] = {"rhsusf_iotv_ocp_Repair"};
 
