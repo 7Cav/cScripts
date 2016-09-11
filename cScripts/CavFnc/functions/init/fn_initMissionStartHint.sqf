@@ -10,6 +10,7 @@
  */
 
 if (!isServer) exitWith {};
+waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
 
@@ -24,16 +25,16 @@ _text3a = "<t font='Zeppelin33'>You may now move!</t>";
 _text3b = "<t font='Zeppelin33'>Have fun!</t>";
 _text3c = "<br /><br />Blame Tully if stuff doesn't work.<br />";
 
-parseText (_title1 + _text0 + _image0) remoteExec ["hint"];
+parseText (_title1 + _text0 + _image0) remoteExec ["hint",-2];
 sleep 3;
-parseText (_title1 + _text0 + _image0 + _text1) remoteExec ["hint"];
+parseText (_title1 + _text0 + _image0 + _text1) remoteExec ["hint",-2];
 sleep 12;
-parseText (_title1 + _text0 + _image0 + _text2) remoteExec ["hint"];
+parseText (_title1 + _text0 + _image0 + _text2) remoteExec ["hint",-2];
 sleep 14;
-parseText (_title2 + _text3a + _image1 + _text3b) remoteExec ["hint"];
+parseText (_title2 + _text3a + _image1 + _text3b) remoteExec ["hint",-2];
 sleep 8;
-parseText (_title2 + _text3a + _image1 + _text3b + _text3c) remoteExec ["hint"];
+parseText (_title2 + _text3a + _image1 + _text3b + _text3c) remoteExec ["hint",-2];
 sleep 2;
-"" remoteExec ["hint"];
+"" remoteExec ["hint",-2];
 sleep 60;
-"" remoteExec ["hint"]; // Fail safe in case people get the hint stuck
+"" remoteExec ["hint",-2]; // Fail safe in case people get the hint stuck
