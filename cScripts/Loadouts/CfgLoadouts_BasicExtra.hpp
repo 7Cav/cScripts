@@ -23,8 +23,13 @@ class B_Soldier_F : CAV_Rifleman {};
 class rhsusf_army_ocp_rifleman : CAV_Rifleman {};
 class rhsusf_army_ucp_rifleman : CAV_Rifleman {};
 
+
 // Combat Life Saver
 class B_medic_F : CAV_CombatLifesaver {};
+
+// Platoon Medic
+class rhsusf_army_ocp_medic : CAV_CombatLifesaver {};
+
 
 // Engineer
 class B_engineer_F : CAV_Engineer {};

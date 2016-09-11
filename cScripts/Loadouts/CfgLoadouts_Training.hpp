@@ -37,7 +37,3 @@ class CAV_Trooper : CommonBlufor {                          // Trooper
     };
     
 };
-
-
- 
- 

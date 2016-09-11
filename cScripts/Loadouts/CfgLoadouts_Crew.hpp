@@ -111,7 +111,7 @@ class CAV_TankDriver : CommonBlufor {               // Tank Driver
     
     nvgs[] = {"rhsusf_ANPVS_15"};
 };
-class CAV_TankLoader : CommonBlufor {               // Tank Driver
+class CAV_TankLoader : CommonBlufor {               // Tank Loader
     headgear[] = {"H_HelmetCrew_I"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
 

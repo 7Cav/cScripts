@@ -23,7 +23,7 @@ _text1 = "While waiting you can always read the <t color='#ffc61a'>OPORD</t> and
 _text2 = "If you need to call in <t color='#ffc61a'>support</t> or need other kind of help during the mission see the topic <t color='#ffc61a'>7th Cavalry</t> or <t color='#ffc61a'>Radio Reports</t> on the map screen. You can also see your assigned loudout there.<br />";
 _text3a = "<t font='Zeppelin33'>You may now move!</t>";
 _text3b = "<t font='Zeppelin33'>Have fun!</t>";
-_text3c = "<br /><br />Blame Tully if stuff don't work.<br />";
+_text3c = "<br /><br />Blame Tully if stuff doesn't work.<br />";
 
 parseText (_title1 + _text0 + _image0) remoteExec ["hint"];
 sleep 3;

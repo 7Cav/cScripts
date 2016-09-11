@@ -24,8 +24,9 @@ _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry E
 // Call ReGear Option
 [_object] call FUNC(addReGear);
 
+
 // Call Quick Selection
-[_object] call FUNC(initQuickSelections);
+//[_object] call FUNC(initQuickSelections); // Tempuraly offline
 
 // Call Insignia Selection
 [_object] call FUNC(initInsigniaSelections);

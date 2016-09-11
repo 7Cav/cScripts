@@ -11,7 +11,7 @@
 player createDiaryRecord["7Cav",
     ["Information",
         "
-You have of cause read the <font color='#ffc61a'>OPORD</font>!
+Welcome to this 7th Cavalry Mission. Make sure to read the <t color='#ffc61a'>OPORD</t> and <t color='#ffc61a'>SOI</t> cause it contains vital information.<br/>
         "
     ]
 ];

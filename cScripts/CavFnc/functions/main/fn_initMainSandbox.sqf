@@ -15,7 +15,7 @@ params [["_object", objNull, [objNull]]];
 
 // If isServer call equipBase
 if (isServer) then {
-   [_object] call FUNC(equipBase);
+    [_object] call FUNC(equipBase);
 };
 
 // Make addAction Topic
@@ -26,7 +26,7 @@ _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry E
 [_object] call FUNC(addArsenal);
 
 // Call Quick Selection
-[_object] call FUNC(initQuickSelections);
+//[_object] call FUNC(initQuickSelections); // Tempuraly offline
 
 // Call Insignia Selection
 [_object] call FUNC(initInsigniaSelections);
