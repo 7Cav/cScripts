@@ -280,8 +280,8 @@ class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
         "ACE_quikclot",45,
         "ACE_morphine",20,
         "ACE_epinephrine",20,
-        "ACE_tourniquet",2,
-        "ACE_plasmaIV_500",4,
+        "ACE_tourniquet",4,
+        "ACE_salineIV_500",14,
         "ACE_personalAidKit",2,
         
         // Standard
