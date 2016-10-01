@@ -26,17 +26,22 @@ clearbackpackcargoGlobal _crate;
 //================== RADIOS ==================\\
 
 _crate addItemCargoGlobal ["tf_rf7800str",(_quaScale * 150)];
-_crate addItemCargoGlobal ["tf_anprc152",(_quaScale * 25)];
+_crate addItemCargoGlobal ["tf_anprc152",(_quaScale * 50)];
 _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",(_quaScale * 10)];
 _crate addBackpackCargoGlobal ["tf_rt1523g_rhs",(_quaScale * 25)];
 
 //================== WEAPONS ==================\\
 
-    _crate addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",(_quaScale * 25)];
-    _crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",(_quaScale * 25)];
-    _crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",(_quaScale * 25)];
-    _crate addWeaponCargoGlobal ["rhs_weap_m240B",(_quaScale * 25)];
-    _crate addWeaponCargoGlobal ["rhsusf_weap_m9",(_quaScale * 15)];
+_crate addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",(_quaScale * 25)];
+_crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",(_quaScale * 25)];
+_crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",(_quaScale * 25)];
+_crate addWeaponCargoGlobal ["rhs_weap_m240B",(_quaScale * 25)];
+_crate addWeaponCargoGlobal ["rhsusf_weap_m9",(_quaScale * 15)];
+
+_crate addWeaponCargoGlobal ["rhs_weap_fim92",(_quaScale * 50)];
+_crate addWeaponCargoGlobal ["rhs_weap_fgm148",(_quaScale * 50)];
+_crate addWeaponCargoGlobal ["tf47_m3maaws",(_quaScale * 50)];
+_crate addWeaponCargoGlobal ["rhs_weap_M136_hp",(_quaScale * 50)];
 
 //================== AMMO ==================\\
 
@@ -44,7 +49,14 @@ _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 250)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),(_quaScale * 250)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),(_quaScale * 250)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 250)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),(_quaScale * 250)];
+_crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),(_quaScale * 150)];
+_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER0),(_quaScale * 50)];
+_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER1),(_quaScale * 50)];
+_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER2),(_quaScale * 50)];
+_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),(_quaScale * 50)];
+_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),(_quaScale * 50)];
+_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER5),(_quaScale * 50)];
+_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER6),(_quaScale * 50)];
 
 //================== GRENADES ==================\\
 

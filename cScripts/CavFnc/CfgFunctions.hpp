@@ -13,11 +13,13 @@ class cScripts {
     };
     class supplies {
         file = "cScripts\cavFnc\functions\supplies";
-        class checkCrate {};
-
         class equipBase {};
         class equipCrate {};
         class equipMedicalCrate {};
+        
+        class equipCrateAmmo {};
+        class equipCrateLaunchers {};
+        class equipCrateGrenades {};
     };
 
     class systems {

@@ -2,7 +2,7 @@
 
     enableSaving [false, false];
     tawvd_disablenone = true;
-
+    
     {
         _x setSkill ["aimingspeed", 0.42];
         _x setSkill ["aimingaccuracy", 0.338];
