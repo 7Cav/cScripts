@@ -11,6 +11,6 @@
 
 #include "..\script_component.hpp";
 
-params ["_object", objNull, [objNull]];
+params [["_object", objNull, [objNull]]];
 
 _object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_00.paa";

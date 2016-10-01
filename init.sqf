@@ -3,8 +3,6 @@
     enableSaving [false, false];
     tawvd_disablenone = true;
     
-    ["AllVehicles", "initPost", {cScripts_fnc_initVehicle}, true, ["CAManBase"], true] call CBA_fnc_addClassEventHandler;
-    
     {
         _x setSkill ["aimingspeed", 0.42];
         _x setSkill ["aimingaccuracy", 0.338];
