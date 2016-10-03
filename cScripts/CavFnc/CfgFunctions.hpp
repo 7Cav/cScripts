@@ -4,6 +4,16 @@ class cScripts {
         class initDocuments {};
         class initMissionStartHint {};
     };
+    class DiaryRecord {
+        file = "cScripts\cavFnc\functions\init\DiaryRecord";
+        class Doc_Info {};
+        class Doc_MissionControl {};
+
+        class DocRadio_LACEACE {};
+        class DocRadio_MEDEVAC {};
+        class DocRadio_ROTARYPICKUP {};
+        class DocRadio_SPOTREP {};
+    };
 
     class main {
         file = "cScripts\cavFnc\functions\main";
@@ -34,17 +44,6 @@ class cScripts {
         class addQuickSelection {};
         class initInsigniaSelections {};
         class addInsigniaSelection {};
-    };
-
-    class documentation {
-        file = "cScripts\cavFnc\functions\documentation";
-        class Doc_Info {};
-        class Doc_MissionControl {};
-
-        class DocRadio_LACEACE {};
-        class DocRadio_MEDEVAC {};
-        class DocRadio_ROTARYPICKUP {};
-        class DocRadio_SPOTREP {};
     };
 
     class misc {
