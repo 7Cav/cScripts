@@ -1,6 +1,3 @@
 /mission.sqm
-/cScripts/CavFnc/functions/documentation/fn_DocSandbox_Info.sqf
-/cScripts/CavFnc/functions/documentation/fn_DocSandbox_MedicalSystemAdvanced.sqf
-/cScripts/CavFnc/functions/documentation/fn_DocSandbox_MedicalSystemAdvancedLite.sqf
-/cScripts/CavFnc/functions/documentation/fn_DocSandbox_MedicalSystemBasic.sqf
-/cScripts/CavFnc/functions/documentation/fn_DocSandbox_MissionControl.sqf
+/cScripts/Data/Objects/Ammobox_7CAV_00.psd
+/cScripts/Data/Icon/icon.psd
