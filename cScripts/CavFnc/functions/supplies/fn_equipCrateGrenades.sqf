@@ -30,3 +30,8 @@ _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),(_quaScale * 6)];
+
+// If a corect classname add texture
+if (typeOf _crate isEqualTo "Box_NATO_Grenades_F") then {
+    _crate setObjectTexture [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
+};
