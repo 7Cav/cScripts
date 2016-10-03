@@ -26,3 +26,9 @@ _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 30)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),(_quaScale * 10)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),(_quaScale * 5)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 5)];
+
+// If a corect classname add texture
+if (typeOf _crate isEqualTo "Box_NATO_Ammo_F") then {
+    _crate setObjectTexture [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
+};
+
