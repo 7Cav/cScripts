@@ -3,6 +3,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\init";
         class initDocuments {};
         class initMissionStartHint {};
+        class initMissionStartObjects {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\init\DiaryRecord";
@@ -28,8 +29,11 @@ class cScripts {
         class equipMedicalCrate {};
         
         class equipCrateAmmo {};
-        class equipCrateLaunchers {};
+        class equipCrateExplosives {};
         class equipCrateGrenades {};
+        class equipCrateLaunchers {};
+        class equipCrateSpecialWeapons {};
+        class equipCrateWeapons {};
     };
 
     class systems {
