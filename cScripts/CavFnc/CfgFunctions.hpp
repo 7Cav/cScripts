@@ -3,6 +3,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\init";
         class initDocuments {};
         class initMissionStartHint {};
+        class initTagging {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\init\DiaryRecord";
