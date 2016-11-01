@@ -20,3 +20,10 @@
 #define QGVAR(var) QUOTE(GVAR(var))
 #define FUNC(var) TRIPLES(PREFIX,fnc,var)
 #define QFUNC(var) QUOTE(FUNC(var))
+
+#define MACRO_UNITINSIGNIA(var1,var2) \
+class ##var1 { \
+    displayName = QUOTE(#var1); \
+    author = QUOTE(7th Cavalry Gaming); \
+    texture = QUOTE(cScripts\Data\Insignia\var2); \
+}
