@@ -1,5 +1,5 @@
 /*
-GearVersionDate: 160908
+GearVersionDate: 161109
 */
 class CAV_SquadLeader : CommonBlufor {              // Squad Leader
     backpack[] = {"tf_rt1523g_big_rhs"};
@@ -49,7 +49,7 @@ class CAV_SquadLeader : CommonBlufor {              // Squad Leader
     };
     gps[] = {"ItemAndroid"};
 };
-class CAV_TeamLeader : CommonBlufor {               // Team Leader
+class CAV_TeamLeader : CommonBlufor {               // Fire Team Leader
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
 
@@ -257,6 +257,8 @@ class CAV_CombatLifesaver : CommonBlufor {          // Combat Life Saver
     };
     
     insignia[] = {"CLS_Insignia"};
+    
+    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
 };
 class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
     backpack[] = {"tf_rt1523g_big_rhs"};
@@ -301,6 +303,7 @@ class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
     gps[] = {"ItemAndroid"};
 
     insignia[] = {"CLS_Insignia"};
+    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
 };
 
 class CAV_Engineer : CommonBlufor {                 // Engineer
@@ -344,6 +347,8 @@ class CAV_Engineer : CommonBlufor {                 // Engineer
         "ACE_wirecutter",
         "ACE_EntrenchingTool"
     };
+
+    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 
 class CAV_Officer : CommonBlufor {                  // Officer

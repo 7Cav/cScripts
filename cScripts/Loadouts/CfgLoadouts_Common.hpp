@@ -51,4 +51,7 @@ class CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {""};
+    preLoadout = " \
+        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
+        (_this select 0) setVariable [""ACE_isEngineer"", false];";
 };
