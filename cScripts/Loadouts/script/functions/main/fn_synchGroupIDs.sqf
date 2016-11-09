@@ -4,3 +4,6 @@
     _x setGroupIdGlobal [groupID _x];
     false
 } count allGroups;
+
+GVAR(groupIDsSynched) = true;
+publicVariable QGVAR(groupIDsSynched);

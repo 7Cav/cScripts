@@ -5,8 +5,7 @@ private ["_items", "_itemsUnique", "_itemsCounter", "_itemIndex", "_generated", 
     _loadoutIndex = LOADOUT_INDEXES find _x;
     _items = _this select _loadoutIndex;
     _itemsUnique = _items arrayIntersect _items;
-    _itemsCounter = [];
-    { _itemsCounter pushBack 0; false } count _itemsUnique;
+    _itemsCounter = _itemsUnique apply {0};
 
     {
         _itemIndex = _itemsUnique find _x;

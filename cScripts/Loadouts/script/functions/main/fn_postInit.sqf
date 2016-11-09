@@ -1,5 +1,4 @@
 #include "..\script_component.hpp"
-private ["_units", "_loadout"];
 
 if (isServer) then {
     [] call FUNC(synchGroupIDs);
@@ -25,14 +24,8 @@ if !(isClass (missionConfigFile >> "CfgLoadouts")) exitWith {
 };
 
 // - Misc -------------------------------------------------
-if (getNumber (missionConfigFile >> "CfgPoppy" >> "showLoadoutInBriefing") == 1) then {
-    [] call FUNC(createBriefingEntry);
-};
-
 if (GVAR(inDevMode)) then {
     player addAction ["Configure Loadouts", FUNC(showArsenal), [], 0, false, true];
 };
 
-if (count GVAR(log) > 0) then {
-    [] call FUNC(showMessageBox);
-};
+[] call FUNC(showMessageBox);

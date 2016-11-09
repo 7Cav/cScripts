@@ -8,10 +8,12 @@ class Poppy {
         class createBriefingEntry {};
         class findLoadableWeapon {};
         class getSideConfig {};
+        class getUniqueRadio {};
         class logError {};
         class logInfo {};
         class logWarning {};
         class selectLoadout {};
+        class setUniqueRadio {};
         class synchGroupIDs {};
     };
     class ACRE {
