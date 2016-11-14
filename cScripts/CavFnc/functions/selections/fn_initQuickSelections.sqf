@@ -31,10 +31,11 @@ _object addAction ["Quick Selection", {}];
 [_object,"Grenadier","CAV_Grenadier"] call FUNC(addQuickSelection);
 [_object,"Rifleman","CAV_Rifleman"] call FUNC(addQuickSelection);
 [_object,"Combat Life Saver","CAV_CombatLifesaver"] call FUNC(addQuickSelection);
-[_object,"Engineer","CAV_Engineer"] call FUNC(addQuickSelection);
+
 
 [_object,"Officer","CAV_Officer","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionSpecial']] call FUNC(addQuickSelection);
 [_object,"Platoon Medic","CAV_PlatoonMedic","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionSpecial']] call FUNC(addQuickSelection);
+[_object,"Engineer","CAV_Engineer","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionSpecial']] call FUNC(addQuickSelection);
 
 [_object,"Tank Commander","CAV_TankCommander","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
 [_object,"Tank Gunner","CAV_TankGunner","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
