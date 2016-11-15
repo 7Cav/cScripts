@@ -8,7 +8,8 @@ This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other 
 - **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
 
 ### Manual Installation
-If you use the included `Description.ext` you do not need to do anything otherwise you need to include the folowing block:
+If you use the included `Description.ext` you do not need to do anything.
+Otherwise you need to include the following block:
 ``` c++
 #include "cScripts\ViewingDistance\GUI.h"
 #include "cScripts\Loadouts\script\CfgPoppy.hpp"
@@ -101,16 +102,23 @@ CAV Functions are usable functions and scripts that can be called. You can read 
 ### Insignia Selection
 The insignia selection is called by `cScripts_fnc_initMain` and `cScripts_fnc_initMainSandbox` base crate scripts. In order to add a insignia you first need to define it in `CfgUnitInsignia.hpp` then add it to `fn_initInsigniaSelections.sqf` using the `cScripts_fnc_addInsigniaSelection` function.
 
-Here is a exsample on how to add a new class to the `CfgUnitInsignia.hpp`:
+The script have simplyfyed the creation of new insignias and use a Macro. `MACRO_UNITINSIGNIA(CLASSNAME,FULLPICTURENAME);` Here is a exsample on how to add a new class to the `CfgUnitInsignia.hpp`:
 ``` c++
-class 7_Insignia {
-    displayName = "7th Cavalry Insignia";
-    author = "7th Cavalry Gaming";
-    texture = "cScripts\Data\Insignia\7.paa";
-};
+MACRO_UNITINSIGNIA(11C_17_Insignia,1-1-C-17.paa);
 ```
 Here is the same class referenced in `fn_initInsigniaSelections.sqf`:
-```[_object,"7th Cavalry Insignia","7_Insignia","cScripts\Data\Insignia\7.paa","cScriptInsigniaSelectionMisc"] call FUNC(addInsigniaSelection);```
+``` c++
+[_object,"Squad Insignia 1/1/C/1-7","11C_17_Insignia","cScripts\Data\Insignia\1-1-C-17.paa"] call FUNC(addInsigniaSelection);
+```
+You can also add a insignia in a sub category:
+``` c++
+[_object,"7th Cavalry Insignia","7_Insignia","cScripts\Data\Insignia\7.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionMisc']] call FUNC(addInsigniaSelection);
+```
+
+The categoryes is defined like this:
+``` c++
+[_object,"cScriptInsigniaSelectionMisc","Misc",_Icon,["ACE_MainActions","cScriptInsigniaSelectionMenu"]] call FUNC(addAceCategory);
+```
 
 # Other tips and tricks
 ##Make a cool CQB experience
