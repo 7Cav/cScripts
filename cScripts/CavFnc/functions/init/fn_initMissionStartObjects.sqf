@@ -9,11 +9,6 @@
  */
 
 if (isServer) then {
-    ["I_officer_F", "init", {
-        params ["_unit"];
-        _unit setObjectTextureGlobal [0, 'BlackOrder\data\TERROR_U_Uniform_1.paa'];
-    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
-    
     ["AllVehicles", "init", {
         params ["_vehicle"];
         [_vehicle] call cScripts_fnc_initVehicle;
