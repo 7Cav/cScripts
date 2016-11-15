@@ -185,14 +185,14 @@ class CAV_HeloPilot : CommonBlufor {                // Helo Pilot
 };
 
 class CAV_FixedPilot : CommonBlufor {				// Fixed Wing Pilot
-	backpack[] = {""}; 								// must have access to tf_rt1523g
-	uniform[] = {"U_B_PilotCoveralls"};
+    backpack[] = {""}; 						// must have access to tf_rt1523g
+    uniform[] = {"U_B_PilotCoveralls"};
     headgear[] = {"H_PilotHelmetHeli_B"};
     vest[] = {""};
 	
     primary[] = {"rhs_weap_mk18_bk"};
 	
-	binoculars[] = {"ACE_Vector"};
+    binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",2,
@@ -215,7 +215,7 @@ class CAV_FixedPilot : CommonBlufor {				// Fixed Wing Pilot
         // Electronics
         "ItemWatch",
         "ACE_IR_Strobe_Item",
-		"ACE_Flashlight_MX991"
+	"ACE_Flashlight_MX991"
     };
     
     gps[] = {"ItemAndroid"};
