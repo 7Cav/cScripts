@@ -183,3 +183,41 @@ class CAV_HeloPilot : CommonBlufor {                // Helo Pilot
     gps[] = {"ItemAndroid"};
     nvgs[] = {"rhsusf_ANPVS_15"};
 };
+
+class CAV_FixedPilot : CommonBlufor {				// Fixed Wing Pilot
+	backpack[] = {""}; 								// must have access to tf_rt1523g
+	uniform[] = {"U_B_PilotCoveralls"};
+    headgear[] = {"H_PilotHelmetHeli_B"};
+    vest[] = {""};
+	
+    primary[] = {"rhs_weap_mk18_bk"};
+	
+	binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",2,
+
+        "rhs_mag_m18_purple",2,
+        "rhs_mag_m18_green",2,
+        "rhs_mag_m18_yellow",2
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_epinephrine",2,
+        "ACE_morphine",2,
+        "ACE_quikclot",10,
+        "ACE_tourniquet",
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        
+        // Electronics
+        "ItemWatch",
+        "ACE_IR_Strobe_Item",
+		"ACE_Flashlight_MX991"
+    };
+    
+    gps[] = {"ItemAndroid"};
+    nvgs[] = {""};
+};
