@@ -87,7 +87,7 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 | Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_combatcrewman`                                                   |
 |                     |                         |                                                                                   |
 | Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`           |
-
+| Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                    |
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
