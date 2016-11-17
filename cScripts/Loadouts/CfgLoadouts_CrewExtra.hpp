@@ -8,3 +8,8 @@ class rhsusf_army_ocp_combatcrewman : CAV_TankLoader {};          // Tank Loader
 class B_Helipilot_F : CAV_HeloPilot {};
 class rhsusf_army_ocp_helipilot : CAV_HeloPilot {};
 class rhsusf_army_ucp_helipilot : CAV_HeloPilot {};
+
+// Fixed Wing Pilot
+class B_Pilot_F : CAV_FixedPilot {};
+class rhsusf_airforce_jetpilot : CAV_FixedPilot {};
+class rhsusf_airforce_pilot : CAV_FixedPilot {};
