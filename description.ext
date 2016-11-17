@@ -13,10 +13,7 @@
 /*           RULES            */
 
     disabledAI              = true;
-<<<<<<< HEAD
-=======
     disableChannels[]       = {{0,false,true},{1,false,true},{2,true,true},{6,true,true}};
->>>>>>> 053e80ac2501748d676f3342a7d9dd59f6cda537
 
     forceRotorLibSimulation = 1;
 
