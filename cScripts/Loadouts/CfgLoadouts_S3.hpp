@@ -3,6 +3,9 @@ GearVersionDate: 160801
 */
 class S3_BASE : CAV_Officer {
     insignia[] = {"Curator"};
+    preLoadout = " \
+    (_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]; \
+    (_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 
 class DEBUG : S3_BASE {};
