@@ -21,6 +21,7 @@ class cScripts {
         class initMain {};
         class initMainSandbox {};
         class initVehicle {};
+        class UH60TailNumber {};
     };
     class supplies {
         file = "cScripts\cavFnc\functions\supplies";
