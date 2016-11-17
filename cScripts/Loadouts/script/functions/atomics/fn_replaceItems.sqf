@@ -2,29 +2,10 @@
 params ["_unit", "_array"];
 private ["_arrayCount", "_currentItem"];
 
-_arrayCount = count _array;
-{
-    switch (true) do {
-        case GVAR(usesACRE): {
-            // TODO: substring might be substantially faster
-            if !(_x in ["ItemRadio", "ItemRadioAcreFlagged"] || {_x isKindOf ["ACRE_PRC343", configFile >> "CfgWeapons"]}) then {
-                _unit removeItem _x;
-            };
-        };
-        case GVAR(usesTFAR): {
-            if !(_x isKindOf ["ItemRadio", configFile >> "CfgWeapons"]) then {
-                _unit removeItem _x;
-            };
-        };
-        default {
-            _unit removeItem _x;
-        };
-    };
-
-    false
-} count (items _unit);
+removeAllItems _unit;
 if (_array isEqualTo [""]) exitWith {};
 
+_arrayCount = count _array;
 for "_i" from 0 to (_arrayCount - 1) do {
     _currentItem = _array select _i;
 

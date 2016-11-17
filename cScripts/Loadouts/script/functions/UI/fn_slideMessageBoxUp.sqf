@@ -1,5 +1,5 @@
 #include "..\script_component.hpp"
-params ["_display", ["_time", 1.5]];
+params ["_display", ["_time", 0.5]];
 
 private _height = (ctrlPosition (_display displayCtrl 0)) select 3;
 private _deltaHeight = _height - 0.1; //0.1 buffer
