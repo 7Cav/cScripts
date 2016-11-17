@@ -215,7 +215,7 @@ class CAV_FixedPilot : CommonBlufor {				// Fixed Wing Pilot
         // Electronics
         "ItemWatch",
         "ACE_IR_Strobe_Item",
-	"ACE_Flashlight_MX991"
+        "ACE_Flashlight_MX991"
     };
     
     gps[] = {"ItemAndroid"};
