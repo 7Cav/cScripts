@@ -1,11 +1,12 @@
 /*
- * Author: CPL.Brostrom.A 
- * meh
+ * Author: CPL.Brostrom.A (With the help from; 654wak654)
+ * Move the player outside the passanger door on the right side.
  *
  * Arguments:
+ * 0: Object <OBJECT>
  *
  * Example:
- * this addAction ["Get out (Left side)",{[_this select 0] call cScripts_fnc_getOutUH60Left}];
+ * [this] call cScripts_fnc_doGetOutUH60Right;
  */
 
 #include "..\script_component.hpp";

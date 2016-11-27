@@ -1,6 +1,6 @@
 /*
- * Author: CPL.Brostrom.A 
- * 
+ * Author: CPL.Brostrom.A (With the help from; 654wak654)
+ * This function adds 2 addAction that is only avaible for players in cargo.
  *
  * Arguments:
  * 0: Object <OBJECT>
