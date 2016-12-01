@@ -1,7 +1,7 @@
 /*
  * Author: CPL.Brostrom.A 
- * This function run a startup hint script on mission start.
- * To inform the players to stand still on mission start.
+ * This function give a cupple of hints on mission start.
+ * This is to inform the players to stand still on mission start to avoid issus.
  *
  * Arguments:
  *

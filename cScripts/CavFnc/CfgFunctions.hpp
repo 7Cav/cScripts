@@ -18,14 +18,14 @@ class cScripts {
 
     class main {
         file = "cScripts\cavFnc\functions\main";
-        class initMain {};
-        class initMainSandbox {};
+        class addStarterCrate {};
+        class addStarterCrateSupplies {};
+
         class initVehicle {};
         class UH60TailNumber {};
     };
     class supplies {
         file = "cScripts\cavFnc\functions\supplies";
-        class equipBase {};
         class equipCrate {};
         class equipMedicalCrate {};
         
@@ -54,5 +54,12 @@ class cScripts {
     class misc {
         file = "cScripts\cavFnc\functions\misc";
         class flag {};
+    };
+
+    class obsolete {
+        file = "cScripts\cavFnc\functions\obsolete";
+        class initMain {};
+        class initMainSandbox {};
+        class equipBase {};
     };
 };
