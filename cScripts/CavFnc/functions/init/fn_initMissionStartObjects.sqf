@@ -1,12 +1,14 @@
 /*
  * Author: CPL.Brostrom.A 
- * This run functions at the start of the mission.
+ * This function is runned on all object of a sertain classname bith on mission start and mid mission.
  *
  * Arguments:
  *
  * Example:
- *  call cScripts_fnc_initMissionStartObjects
+ *  call cScripts_fnc_initMissionStartObjects;
  */
+
+#include "..\script_component.hpp";
 
 if (isServer) then {
     ["AllVehicles", "init", {

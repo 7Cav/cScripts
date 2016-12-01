@@ -1,6 +1,6 @@
 /*
  * Author: CPL.Brostrom.A 
- * This create a diary record to all players.
+ * This create a diary record subject called by initDocuments.
  *
  * Arguments:
  *
