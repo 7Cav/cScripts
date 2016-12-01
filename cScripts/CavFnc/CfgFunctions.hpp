@@ -1,6 +1,8 @@
 class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
+        class initVehicle {};
+        
         class initDocuments {};
         class initMissionStartHint {};
         class initMissionStartObjects {};
@@ -20,9 +22,6 @@ class cScripts {
         file = "cScripts\cavFnc\functions\main";
         class addStarterCrate {};
         class addStarterCrateSupplies {};
-
-        class initVehicle {};
-        class UH60TailNumber {};
     };
     class supplies {
         file = "cScripts\cavFnc\functions\supplies";
@@ -54,6 +53,7 @@ class cScripts {
     class misc {
         file = "cScripts\cavFnc\functions\misc";
         class flag {};
+        class UH60TailNumber {};
     };
 
     class obsolete {
