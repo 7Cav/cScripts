@@ -1,11 +1,11 @@
 class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
+        class init {};
         class initVehicle {};
-        
         class initDocuments {};
         class initMissionStartHint {};
-        class initMissionStartObjects {};
+
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\init\DiaryRecord";
