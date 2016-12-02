@@ -1,6 +1,6 @@
 /*
  * Author: CPL.Brostrom.A 
- * This function is runned on all object of a sertain classname bith on mission start and mid mission.
+ * This function is executed on all object of a given classname both on mission start and ongoing mission.
  *
  * Arguments:
  *

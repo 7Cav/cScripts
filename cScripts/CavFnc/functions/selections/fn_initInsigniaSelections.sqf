@@ -1,6 +1,6 @@
 /*
  * Author: CPL.Brostrom.A 
- * This script gives you the ability to select a squad patch.
+ * This function contain insignia selection buttons and categorys.
  *
  * Arguments:
  * 0: Object <OBJECT>

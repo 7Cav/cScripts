@@ -1,6 +1,6 @@
 /*
  * Author: CPL.Brostrom.A 
- * This adds a quick selection loadout for a CavBox Used by InitMain and InitMainSandbox
+ * This function contain quick selection buttons and categorys.
  *
  * Arguments:
  * 0: Object <OBJECT>
