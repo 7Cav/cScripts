@@ -116,3 +116,4 @@ _crate addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 10)];
 //================== BACKPACKS ==================\\
 
 _crate addBackpackCargoGlobal ["rhsusf_assault_eagleaiii_ocp",(_quaScale * 1)];
+_crate addBackpackCargoGlobal ["B_Mortar_01_weapon_F",(_quaScale * 1)];

@@ -6,7 +6,7 @@
  * 0: Object <OBJECT>
  *
  * Example:
- * [this] call cScripts_fnc_addStarterCrate;
+ * [this] call cScripts_fnc_doStarterCrate;
  */
 
 #include "..\script_component.hpp";
