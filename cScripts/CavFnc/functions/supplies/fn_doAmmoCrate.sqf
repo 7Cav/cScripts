@@ -1,14 +1,14 @@
 /*
  * Author: CPL.Brostrom.A 
- * This populats a given object with ammunition.
+ * This function resupply a crate and changes it's texture.
  *
  * Arguments:
  * 0: Crate <OBJECT>
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
  *>
  * Example:
- * [this,0.5] call cScripts_fnc_equipCrateAmmo
- * [this,1] call cScripts_fnc_equipCrateAmmo
+ * [this,0.5] call cScripts_fnc_doAmmoCrate;
+ * [this,1] call cScripts_fnc_doAmmoCrate;
  */
 
 #include "..\script_component.hpp";
@@ -28,7 +28,7 @@ _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),(_quaScale * 5)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 5)];
 
 // If a corect classname add texture
-if (typeOf _crate isEqualTo "Box_NATO_Wps_F") then {
+if (typeOf _crate isEqualTo "Box_NATO_Ammo_F") then {
     _crate setObjectTexture [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
 };
 

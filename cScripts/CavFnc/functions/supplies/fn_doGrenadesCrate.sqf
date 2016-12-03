@@ -1,14 +1,14 @@
 /*
  * Author: CPL.Brostrom.A 
- * This populats a given object with launchers.
+ * This function resupply a crate and changes it's texture.
  *
  * Arguments:
  * 0: Crate <OBJECT>
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
  *>
  * Example:
- * [this,0.5] call cScripts_fnc_equipCrateAmmo
- * [this,1] call cScripts_fnc_equipCrateAmmo
+ * [this,0.5] call cScripts_fnc_doGrenadesCrate;
+ * [this,1] call cScripts_fnc_doGrenadesCrate;
  */
 
 #include "..\script_component.hpp";
