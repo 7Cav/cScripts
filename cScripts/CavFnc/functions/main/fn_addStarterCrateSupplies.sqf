@@ -98,6 +98,11 @@ _crate addItemCargoGlobal ["ACE_UAVBattery",(_quaScale * 50)];
 _crate addItemCargoGlobal ["ACE_SpareBarrel",(_quaScale * 50)];
 _crate addItemCargoGlobal ["ACE_CableTie",(_quaScale * 50)];
 _crate addItemCargoGlobal ["ACE_wirecutter",(_quaScale * 50)];
+_crate addItemCargoGlobal ["ACE_RangeTable_82mm",(_quaScale * 50)];
+
+_crate addWeaponCargoGlobal ["ACE_VMH3",(_quaScale * 25)];
+_crate addWeaponCargoGlobal ["ACE_VMM3",(_quaScale * 25)];
+_crate addItemCargoGlobal ["MineDetector",(_quaScale * 25)];
 
 //================== MEDICAL ==================\\
 
@@ -127,3 +132,5 @@ _crate addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 250)];
 //================== BACKPACKS ==================\\
 
 _crate addBackpackCargoGlobal ["rhsusf_assault_eagleaiii_ocp",(_quaScale * 15)];
+_crate addBackpackCargoGlobal ["B_Mortar_01_support_F",(_quaScale * 5)];
+_crate addBackpackCargoGlobal ["B_Mortar_01_weapon_F",(_quaScale * 5)];
