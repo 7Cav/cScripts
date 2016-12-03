@@ -102,7 +102,6 @@ _crate addItemCargoGlobal ["ACE_RangeTable_82mm",(_quaScale * 50)];
 
 _crate addWeaponCargoGlobal ["ACE_VMH3",(_quaScale * 25)];
 _crate addWeaponCargoGlobal ["ACE_VMM3",(_quaScale * 25)];
-_crate addItemCargoGlobal ["MineDetector",(_quaScale * 25)];
 
 //================== MEDICAL ==================\\
 
