@@ -20,20 +20,20 @@ class cScripts {
 
     class main {
         file = "cScripts\cavFnc\functions\main";
-        class addStarterCrate {};
-        class addStarterCrateSupplies {};
+        class doStarterCrate {};
+        class doStarterCrateSupplies {};
     };
     class supplies {
         file = "cScripts\cavFnc\functions\supplies";
-        class equipCrate {};
-        class equipMedicalCrate {};
+        class doSupplyCrate {};
         
-        class equipCrateAmmo {};
-        class equipCrateExplosives {};
-        class equipCrateGrenades {};
-        class equipCrateLaunchers {};
-        class equipCrateSpecialWeapons {};
-        class equipCrateWeapons {};
+        class doAmmoCrate {};
+        class doExplosivesCrate {};
+        class doGrenadesCrate {};
+        class doLaunchersCrate {};
+        class doMedicalCrate {};
+        class doSpecialWeaponsCrate {};
+        class doWeaponsCrate {};
     };
 
     class systems {
