@@ -17,12 +17,12 @@ _vehicle addAction [
     "Get out (Left side)",
     {[_this select 0] call FUNC(doGetOutUH60Left)},
     0, 1.5, true, true, "",
-    "(_target getCargoIndex _this) in [0,1,2,3,4,5,6,7,8,9,10,11]"
+    "(_target getCargoIndex _this) != -1"
 ];
 
 _vehicle addAction [
     "Get out (Right side)",
     {[_this select 0] call FUNC(doGetOutUH60Right)},
     0, 1.5, true, true, "",
-    "(_target getCargoIndex _this) in [0,1,2,3,4,5,6,7,8,9,10,11]"
+    "(_target getCargoIndex _this) != -1"
 ];
