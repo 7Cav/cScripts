@@ -1,6 +1,7 @@
 /*
  * Author: CPL.Brostrom.A (With the help from; 654wak654)
- * This function adds 2 addAction that is only avaible for players in cargo.
+ * This function add two get out addAction that is only avaible for players in cargo
+ * as well is ffv cargoIndex position. Postions effected are 0 to 11 in other words not -1.
  *
  * Arguments:
  * 0: Object <OBJECT>
