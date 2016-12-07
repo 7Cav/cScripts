@@ -25,5 +25,6 @@ sleep 1;
 // Left
 private _dir = getDir _vehicle - 50;
 private _posASL = (getPosASL _vehicle) vectorAdd [sin _dir * 2.5, cos _dir * 2.5, 0];
+moveOut player;
 player setPosASL _posASL;
 player setDir _dir - 40;
