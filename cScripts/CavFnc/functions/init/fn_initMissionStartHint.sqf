@@ -27,13 +27,13 @@ _text3c = "<br /><br />Blame Tully if stuff doesn't work.<br />";
 hint parseText (_title1 + _text0 + _image0);
 sleep 5;
 hint parseText (_title1 + _text0 + _image0 + _text1);
-sleep 15;
+sleep 30;
 hint parseText (_title1 + _text0 + _image0 + _text2);
-sleep 15;
+sleep 30;
 hint parseText (_title2 + _text3a + _image1 + _text3b);
 sleep 8;
 hint parseText (_title2 + _text3a + _image1 + _text3b + _text3c);
-sleep 2;
+sleep 1.5;
 hint "";
 sleep 60;
 hint ""; // Fail safe in case people get the hint stuck
