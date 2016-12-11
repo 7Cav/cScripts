@@ -15,6 +15,10 @@ if (isServer) then {
         [(_this select 0)] call FUNC(initVehicle);
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 
+    ["RHS_UH60M", "init", {
+        [(_this select 0)] call cScripts_fnc_addGetOutUH60;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+
     // Supply Crates
     ["B_CargoNet_01_ammo_F", "init", {
         [(_this select 0)] call FUNC(equipCrateAmmo);

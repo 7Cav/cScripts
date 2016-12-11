@@ -42,6 +42,10 @@ class cScripts {
         class addReGear {};
         class addArsenal {};
         class addAceCategory {};
+        
+        class addGetOutUH60 {};
+        class doGetOutUH60Left {};
+        class doGetOutUH60Right {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
