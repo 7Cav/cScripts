@@ -15,7 +15,7 @@ params [["_object", objNull, [objNull]]];
 
 // If isServer call equipBase
 if (isServer) then {
-    [_object] call FUNC(addStarterCrateSupplies);
+    [_object] call FUNC(doStarterCrateSupplies);
 };
 
 // Make addAction Topic
