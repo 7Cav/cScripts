@@ -115,6 +115,7 @@ _crate addItemCargoGlobal ["ACE_quikclot",(_quaScale * 250)];
 _crate addItemCargoGlobal ["ACE_tourniquet",(_quaScale * 250)];
 
 _crate addItemCargoGlobal ["ACE_personalAidKit",(_quaScale * 250)];
+_crate addItemCargoGlobal ["ACE_surgicalKit",(_quaScale * 250)];
 
 _crate addItemCargoGlobal ["ACE_bloodIV",(_quaScale * 250)];
 _crate addItemCargoGlobal ["ACE_bloodIV_500",(_quaScale * 250)];
