@@ -12,44 +12,35 @@
 
 if (isServer) then {
     ["AllVehicles", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_initVehicle;
+        [(_this select 0)] call FUNC(initVehicle);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;
     
 /*     ["RHS_UH60M", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_addGetOutUH60;
+        [(_this select 0)] call FUNC(addGetOutUH60);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler; */
     
     // Supply Crates
     ["B_CargoNet_01_ammo_F", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_doSupplyCrate;
+        [(_this select 0)] call FUNC(doSupplyCrate);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;    
     
     // NATO Basic Crates
     ["Box_NATO_Ammo_F", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_doAmmoCrate;
+        [(_this select 0)] call FUNC(doAmmoCrate);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;    
     ["Box_NATO_Wps_F", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_doWeaponsCrate;
+        [(_this select 0)] call FUNC(doWeaponsCrate);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;    
     ["Box_NATO_AmmoOrd_F", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_doExplosivesCrate;
+        [(_this select 0)] call FUNC(doExplosivesCrate);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;    
     ["Box_NATO_Grenades_F", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_doGrenadesCrate;
+        [(_this select 0)] call FUNC(doGrenadesCrate);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;    
     ["Box_NATO_WpsLaunch_F", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_doLaunchersCrate;
+        [(_this select 0)] call FUNC(doLaunchersCrate);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;    
     ["Box_NATO_WpsSpecial_F", "init", {
-        params ["_vehicle"];
-        [_vehicle] call cScripts_fnc_doSpecialWeaponsCrate;;
+        [(_this select 0)] call FUNC(doSpecialWeaponsCrate);
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;    
 };
