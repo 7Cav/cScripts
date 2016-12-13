@@ -1,5 +1,5 @@
 /*
-GearVersionDate: 160908
+GearVersionDate: 161211
 */
 class CommonBlufor {
     backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
@@ -54,4 +54,7 @@ class CommonBlufor {
     /*preLoadout = " \
         (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
         (_this select 0) setVariable [""ACE_isEngineer"", false];";*/
+    postLoadout = " \
+        [(_this select 0), currentWeapon (_this select 0)] call ace_weaponselect_fnc_selectWeaponMode; \
+        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
 };
