@@ -16,10 +16,10 @@ if (isServer) then {
         [_vehicle] call cScripts_fnc_initVehicle;
     }, nil, nil, true] call CBA_fnc_addClassEventHandler;
     
-    ["RHS_UH60M", "init", {
+/*     ["RHS_UH60M", "init", {
         params ["_vehicle"];
         [_vehicle] call cScripts_fnc_addGetOutUH60;
-    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler; */
     
     // Supply Crates
     ["B_CargoNet_01_ammo_F", "init", {
