@@ -34,5 +34,5 @@ _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),(_quaScale * 1)];
 
 // If a corect classname add texture
 if (typeOf _crate isEqualTo "Box_NATO_WpsLaunch_F") then {
-    _crate setObjectTexture [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
+    _crate setObjectTextureGlobal  [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
 };
