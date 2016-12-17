@@ -23,6 +23,7 @@ _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry E
 
 // Call ReGear Option
 [_object] call FUNC(addReGear);
+[_object] call FUNC(addHeal);
 
 // Call Quick Selection
 [_object,"lite"] call FUNC(initQuickSelections);
