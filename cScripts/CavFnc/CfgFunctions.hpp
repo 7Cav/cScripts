@@ -39,6 +39,7 @@ class cScripts {
     class systems {
         file = "cScripts\cavFnc\functions\systems";
         class addReGear {};
+        class addHeal {};
         class addArsenal {};
         class addAceCategory {};
     };
