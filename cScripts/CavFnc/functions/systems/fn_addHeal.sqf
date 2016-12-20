@@ -17,7 +17,7 @@ _object addAction ["   <t color='#ff3333'>Heal</t>", {
 }];
 
 // Make ACE Interaction for ReGear
-private _Icon = "cScripts\Data\Icon\icon_00.paa";
+private _Icon = "Z\ACE\addons\medical\ui\icons\medical_cross.paa";
 private _reHealCondition = {true};
 private _reHealStatement = {
     [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
