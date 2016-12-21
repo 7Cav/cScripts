@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Crate <OBJECT>
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
- *>
+ *
  * Example:
  * [this,0.5] call cScripts_fnc_doWeaponsCrate;
  * [this,1] call cScripts_fnc_doWeaponsCrate;
@@ -26,6 +26,9 @@ _crate addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",(_quaScale * 4)];
 _crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",(_quaScale * 2)];
 _crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",(_quaScale * 1)];
 _crate addWeaponCargoGlobal ["rhs_weap_m240B",(_quaScale * 1)];
+
+// Downsize the crate
+_crate setVariable ["ace_cargo_size", 1];
 
 // If a corect classname add texture
 if (typeOf _crate isEqualTo "Box_NATO_Wps_F") then {

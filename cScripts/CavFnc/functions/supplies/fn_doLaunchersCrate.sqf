@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Crate <OBJECT>
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
- *>
+ *
  * Example:
  * [this,0.5] call cScripts_fnc_doLaunchersCrate;
  * [this,1] call cScripts_fnc_doLaunchersCrate;
@@ -31,6 +31,9 @@ _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER0),(_quaScale * 1)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER1),(_quaScale * 1)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),(_quaScale * 1)];
 _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),(_quaScale * 1)];
+
+// Downsize the crate
+_crate setVariable ["ace_cargo_size", 1];
 
 // If a corect classname add texture
 if (typeOf _crate isEqualTo "Box_NATO_WpsLaunch_F") then {

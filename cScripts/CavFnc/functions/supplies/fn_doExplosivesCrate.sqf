@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Crate <OBJECT>
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
- *>
+ *
  * Example:
  * [this,0.5] call cScripts_fnc_doExplosivesCrate;
  * [this,1] call cScripts_fnc_doExplosivesCrate;
@@ -30,6 +30,9 @@ _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),(_quaScale * 6)];
+
+// Downsize the crate
+_crate setVariable ["ace_cargo_size", 1];
 
 // If a corect classname add texture
 if (typeOf _crate isEqualTo "Box_NATO_AmmoOrd_F") then {

@@ -42,3 +42,6 @@ _crate addItemCargoGlobal ["ACE_epinephrine",(_quaScale * 25)];
 _crate addItemCargoGlobal ["ACE_atropine",(_quaScale * 25)];
 
 _crate addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 10)];
+
+// Downsize the crate
+_crate setVariable ["ace_cargo_size", 1];
