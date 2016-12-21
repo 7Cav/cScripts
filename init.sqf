@@ -13,6 +13,9 @@
         _x setSkill ["general", 1.0];
     } forEach allUnits;
 
+    ACE_maxWeightCarry = 7500;
+    ACE_maxWeightDrag = 10000;
+    
 /*           TFAR            */
     
     tf_no_auto_long_range_radio                 = true;
