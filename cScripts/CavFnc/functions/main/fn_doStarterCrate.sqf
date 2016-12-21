@@ -57,5 +57,8 @@ if (_InsigniaSelectOption) then {
 // Make end of options line.
 _object addAction ["---", {}];
 
+// Disable slingload
+_object enableRopeAttach false;
+
 // Make object not loadable in ACE
 [_object, false, 999] call ace_cargo_fnc_makeLoadable;
