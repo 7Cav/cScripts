@@ -235,7 +235,7 @@ switch (true) do {
     };
     case (_vehicleType in _vehicleCargoTRUCK): {
         _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 4)];
+        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR0),(_quaScale * 4)];
         
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
@@ -249,8 +249,8 @@ switch (true) do {
         _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
     };
     case (_vehicleType in _vehicleCargoARMOR) : {
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 2)];
-        _vehicle addWeaponCargoGlobal [QUOTE(_WEAPON_PRIMARY_AR1),(_quaScale * 1)];
+        //_vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 2)];
+        //_vehicle addWeaponCargoGlobal [QUOTE(_WEAPON_PRIMARY_AR1),(_quaScale * 1)];
         
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
@@ -262,7 +262,7 @@ switch (true) do {
     };
     case (_vehicleType in _vehicleCargoIFV) : {
         _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 4)];
+        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR0),(_quaScale * 4)];
         
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
         _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
