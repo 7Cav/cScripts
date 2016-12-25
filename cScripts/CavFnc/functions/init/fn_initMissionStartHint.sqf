@@ -14,6 +14,7 @@ waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
 
+params [["_time", 60]];
 
 // Write text
 _title1  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>RED LIGHT!</t><br />";
@@ -30,11 +31,11 @@ _text3c = "<br /><br />Blame Tully if stuff doesn't work.<br />";
 
 // Run hints
 hint parseText (_title1 + _text0 + _image0);
-sleep 5;
+sleep 1;
 hint parseText (_title1 + _text0 + _image0 + _text1);
-sleep 30;
+sleep (_time * 0.5);
 hint parseText (_title1 + _text0 + _image0 + _text2);
-sleep 30;
+sleep (_time * 0.5);
 hint parseText (_title2 + _text3a + _image1 + _text3b);
 sleep 8;
 hint parseText (_title2 + _text3a + _image1 + _text3b + _text3c);
