@@ -1,8 +1,29 @@
-// Add diary records to all players.
-call cScripts_fnc_initDocuments;
 
-// Changes All Veichles and NATO crates on mission start.
-call cScripts_fnc_init;
+// Add diary records on mission start
+if (getNumber (missionConfigFile >> "CfgSettings" >> "showDiaryRecords") == 1) then {
+    call cScripts_fnc_initDocuments;
+};
 
-// Set time in seconds for Red Light startup hint.
-[60] call cScripts_fnc_initMissionStartHint;
+if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then {
+        call cScripts_fnc_init;
+
+    // Change inventory content of supply crates on mission start.
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptVehicleInventory") == 1) then {
+        call cScripts_fnc_initSupply;
+    };
+
+    // Change inventory content of vehicle on mission start.
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptSupplyInventory") == 1) then {
+        call cScripts_fnc_initVehicle;
+    };
+    // Add a Get Out Right and Left on all BlackHawks on Mission Start
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "addUH60SelectGetOut") == 1) then {
+        call cScripts_fnc_initUH60M;
+    };
+};
+
+// Set time and run the "Red Light" start script.
+if (getNumber (missionConfigFile >> "CfgSettings" >> "useRedLightStart") == 1) then {
+    private _setRedLightTime = getNumber (missionConfigFile >> "CfgSettings" >> "setRedLightTime");
+    [_setRedLightTime] call cScripts_fnc_initMissionStartHint;
+};

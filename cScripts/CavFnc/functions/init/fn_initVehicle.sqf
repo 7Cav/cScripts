@@ -7,341 +7,221 @@
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
  *
  * Example:
- * [this] call cScripts_fnc_initVehicle;
- * [this,1] call cScripts_fnc_initVehicle;
- * [this,0.5] call cScripts_fnc_initVehicle;
+ * call cScripts_fnc_initVehicle;:
+ * [true] call cScripts_fnc_initVehicle;
  */
  
 #include "..\script_component.hpp";
 
-if (!isServer) exitWith {};
-params [["_vehicle", objNull, [objNull]], ["_quaScale",1]];
-_vehicleType = typeOf _vehicle;
+if (isServer) then {
+    /*["AllVehicles", "init", {
+        [(_this select 0)] call FUNC(initVehicle);
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler; */
 
-private _vehicleCargoHUMVEE  = [
-    "rhsusf_m1025_d_m2",
-    "rhsusf_m1025_d_Mk19",
-    "rhsusf_m1025_d",
-    "rhsusf_m998_d_2dr_fulltop",
-    "rhsusf_m998_d_2dr_halftop",
-    "rhsusf_m998_d_2dr",
-    "rhsusf_m998_d_4dr_fulltop",
-    "rhsusf_m998_d_4dr_halftop",
-    "rhsusf_m998_d_4dr",
-    "rhsusf_rg33_d",
-    "rhsusf_rg33_m2_d",
-    "rhsusf_m1025_w_m2",
-    "rhsusf_m1025_w_mk19",
-    "rhsusf_m1025_w",
-    "rhsusf_m998_w_2dr_fulltop",
-    "rhsusf_m998_w_2dr_halftop",
-    "rhsusf_m998_w_2dr",
-    "rhsusf_m998_w_4dr_fulltop",
-    "rhsusf_m998_w_4dr_halftop",
-    "rhsusf_m998_w_4dr",
-    "rhsusf_rg33_wd",
-    "rhsusf_rg33_m2_wd"
-];
-private _vehicleCargoTRUCK  = [
-    "rhsusf_M1078A1P2_d_fmtv_usarmy",
-    "rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy",
-    "rhsusf_M1078A1P2_d_open_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_d_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_M2_d_open_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_d_open_fmtv_usarmy",
-    "rhsusf_M1083A1P2_d_fmtv_usarmy",
-    "rhsusf_M1083A1P2_d_flatbed_fmtv_usarmy",
-    "rhsusf_M1083A1P2_d_open_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_d_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_d_flatbed_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_M2_d_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_M2_d_flatbed_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_d_open_fmtv_usarmy",
-    "rhsusf_M1078A1P2_wd_fmtv_usarmy",
-    "rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy",
-    "rhsusf_M1078A1P2_wd_open_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_wd_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_M2_wd_flatbed_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_M2_wd_open_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy",
-    "rhsusf_M1083A1P2_wd_fmtv_usarmy",
-    "rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy",
-    "rhsusf_M1083A1P2_wd_open_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_wd_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_wd_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_wd_flatbed_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_M2_wd_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_M2_wd_flatbed_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_M2_wd_open_fmtv_usarmy",
-    "rhsusf_M1083A1P2_B_wd_open_fmtv_usarmy",
-    
-    "rhsusf_M1083A1P2_B_M2_d_MHQ_fmtv_usarmy"
-];
-private _vehicleCargoARMOR = [
-    "rhsusf_m1a1aim_tuski_d",
-    "rhsusf_m1a1aim_tuski_wd",
-    "rhsusf_m1a1aimd_usarmy",
-    "rhsusf_m1a1aimwd_usarmy",
-    "rhsusf_m1a1fep_d",
-    "rhsusf_m1a1fep_od",
-    "rhsusf_m1a1fep_wd",
-    "rhsusf_m1a2sep1d_usarmy",
-    "rhsusf_m1a2sep1tuskid_usarmy",
-    "rhsusf_m1a2sep1tuskiid_usarmy",
-    "rhsusf_m1a2sep1tuskiiwd_usarmy",
-    "rhsusf_m1a2sep1tuskiwd_usarmy",
-    "rhsusf_m1a2sep1wd_usarmy",
+    //UH60M
+    ["RHS_UH60_Base", "init", {
+        //[(_this select 0)] call FUNC(addGetOutUH60);
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["RHS_UH60M_MEV", "init", {
+        //[(_this select 0)] call FUNC(addGetOutUH60);
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",15];
+        (_this select 0) addItemCargoGlobal ["ACE_salineIV_500",10];
+        (_this select 0) addItemCargoGlobal ["ACE_morphine",30];
+        (_this select 0) addItemCargoGlobal ["ACE_epinephrine",20];
+        (_this select 0) addItemCargoGlobal ["ACE_atropine",20];
+        (_this select 0) addItemCargoGlobal ["ACE_tourniquet",8];
+        (_this select 0) addItemCargoGlobal ["ACE_FieldDressing",10];
+        (_this select 0) addItemCargoGlobal ["ACE_packingBandage",40];
+        (_this select 0) addItemCargoGlobal ["ACE_elasticBandage",40];
+        (_this select 0) addItemCargoGlobal ["ACE_quikclot",40];
+        (_this select 0) addItemCargoGlobal ["ACE_bodyBag",12];
+        (_this select 0) addItemCargoGlobal ["ACE_personalAidKit",8];
+        (_this select 0) addItemCargoGlobal ["ACE_surgicalKit",2];
 
-    "rhsusf_m109d_usarmy",
-    "rhsusf_m109_usarmy"
-];
-private _vehicleCargoIFV = [
-    "RHS_M2A2",
-    "RHS_M2A2_BUSKI",
-    "RHS_M2A3",
-    "RHS_M2A3_BUSKI",
-    "RHS_M2A3_BUSKIII",
-    "RHS_M2A2_wd",
-    "RHS_M2A2_BUSKI_WD",
-    "RHS_M2A3_wd",
-    "RHS_M2A3_BUSKI_wd",
-    "RHS_M2A3_BUSKIII_wd",
-    "RHS_M6",
-    "RHS_M6_wd",
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),2];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["RHS_CH_47F_base", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["RHS_AH64_base", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
-    "M1126_ICV_M134_DG1_NOSLATDES",
-    "M1126_ICV_M134_DG1_NOSLATWOOD",
-    "M1126_ICV_M134_DG1_SLATWOOD",
-    "M1126_ICV_M134_DG1_SLATDES",
-    "M1126_ICV_M2_DG1_NOSLATDES",
-    "M1126_ICV_M2_DG1_NOSLATWOOD",
-    "M1126_ICV_M2_DG1_SLATDES",
-    "M1126_ICV_M2_DG1_SLATWOOD",
-    "M1126_ICV_M2NEST_DG1_NOSLATWOOD",
-    "M1126_ICV_M2NEST_DG1_NOSLATDES",
-    "M1126_ICV_M2NEST_DG1_SLATDES",
-    "M1126_ICV_M2NEST_DG1_SLATWOOD",
-    "M1126_ICV_mk19_DG1_NOSLATWOOD",
-    "M1126_ICV_mk19_DG1_NOSLATDES",
-    "M1126_ICV_mk19_DG1_SLATDES",
-    "M1126_ICV_mk19_DG1_SLATWOOD",
-    "M1128_MGS_DG1_NOSLATWOOD",
-    "M1128_MGS_DG1_NOSLATDES",
-    "M1128_MGS_DG1_SLATDES",
-    "M1128_MGS_DG1_SLATWOOD",
-    "M1129_MC_DG1_NOSLATWOOD",
-    "M1129_MC_DG1_NOSLATDES",
-    "M1129_MC_DG1_SLATDES",
-    "M1129_MC_DG1_SLATWOOD",
-    "M1130_CV_DG1_NOSLATWOOD",
-    "M1130_CV_DG1_NOSLATDES",
-    "M1130_CV_DG1_SLATDES",
-    "M1130_CV_DG1_SLATWOOD",
-    "M1135_ATGMV_DG1_NOSLATDES",
-    "M1135_ATGMV_DG1_NOSLATWOOD",
-    "M1135_ATGMV_DG1_SLATDES",
-    "M1135_ATGMV_DG1_SLATWOOD",
+    ["rhsusf_hmmwe_base", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["rhsusf_rg33_base", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["rhsusf_fmtv_base", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["rhsusf_HEMTT_A4_base", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["B_Truck_01_transport_F", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
-    "rhsusf_m113d_usarmy_supply",
-    "rhsusf_m113d_usarmy",
-    "rhsusf_m113d_usarmy_M240",
-    "rhsusf_m113d_usarmy_MK19",
-    "rhsusf_m113d_usarmy_unarmed"
-];
-private _vehicleCargoMED = [
-    "M1133_MEV_DG1_NOSLATWOOD",
-    "M1133_MEV_DG1_NOSLATDES",
-    "M1133_MEV_DG1_SLATDES",
-    "M1133_MEV_DG1_SLATWOOD",
-    
-    "rhsusf_m113_usarmy_medical",
-    "rhsusf_m113d_usarmy_medical",
+    ["StrykerBase_DG1DES", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["rhsusf_m113_usarmy", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["rhsusf_m113_usarmy_medical", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",15];
+        (_this select 0) addItemCargoGlobal ["ACE_salineIV_500",10];
+        (_this select 0) addItemCargoGlobal ["ACE_morphine",30];
+        (_this select 0) addItemCargoGlobal ["ACE_epinephrine",20];
+        (_this select 0) addItemCargoGlobal ["ACE_atropine",20];
+        (_this select 0) addItemCargoGlobal ["ACE_tourniquet",8];
+        (_this select 0) addItemCargoGlobal ["ACE_FieldDressing",10];
+        (_this select 0) addItemCargoGlobal ["ACE_packingBandage",40];
+        (_this select 0) addItemCargoGlobal ["ACE_elasticBandage",40];
+        (_this select 0) addItemCargoGlobal ["ACE_quikclot",40];
+        (_this select 0) addItemCargoGlobal ["ACE_bodyBag",12];
+        (_this select 0) addItemCargoGlobal ["ACE_personalAidKit",8];
+        (_this select 0) addItemCargoGlobal ["ACE_surgicalKit",2];
 
-    "rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy"
-];
-private _vehicleCargoTransportAviation = [
-    "RHS_UH1Y",
-    "RHS_UH1Y_FFAR",
-    "RHS_UH1Y_FFAR_d",
-    "RHS_UH1Y_UNARMED",
-    "RHS_UH1Y_UNARMED_d",
-    "RHS_UH1Y_d",
-    "RHS_UH60M",
-    "RHS_UH60M_d",
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),2];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["RHS_M2A2_Base", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
-    "rhsusf_CH53E_USMC_D",
-    "rhsusf_CH53E_USMC",
-    
-    "RHS_CH_47F_10",
-    "RHS_CH_47F_light",
-    "RHS_CH_47F"
-];
-private _vehicleCargoAttackAviation = [
-    "B_Heli_Light_01_armed_F",
-    "MELB_AH6M_H",
-    "MELB_AH6M_L",
-    "MELB_AH6M_M",
-    "RHS_AH64D_AA",
-    "RHS_AH64D_CS",
-    "RHS_AH64D_GS",
-    "RHS_AH64D",
-    "RHS_AH64DGrey",
-    "RHS_AH64D_wd_AA",
-    "RHS_AH64D_wd_CS",
-    "RHS_AH64D_wd_GS",
-    "RHS_AH64D_wd",
-    "RHS_AH1Z_CS",
-    "RHS_AH1Z_GS",
-    "RHS_AH1Z",
-    "RHS_AH1Z_wd_CS",
-    "RHS_AH1Z_wd_GS",
-    "RHS_AH1Z_wd",
-    
-    "RHS_A10",
-    "RHS_C130J",
-    "rhsusf_f22"
-];
-private _vehicleCargoMedicalAviation = [
-    "RHS_UH60M_MEV2_d",
-    "RHS_UH60M_MEV_d",
-    "RHS_UH60M_MEV2",
-    "RHS_UH60M_MEV"
-];
-clearweaponcargoGlobal _vehicle;
-clearmagazinecargoGlobal _vehicle;
-clearitemcargoGlobal _vehicle;
-clearbackpackcargoGlobal _vehicle;
-
-switch (true) do {
-    case (_vehicleType in _vehicleCargoHUMVEE): {
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
-        
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-        
-        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 3)];
-        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 6)];
-        
-        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
-    };
-    case (_vehicleType in _vehicleCargoTRUCK): {
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR0),(_quaScale * 4)];
-        
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-        
-        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 3)];
-        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 6)];
-        
-        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
-    };
-    case (_vehicleType in _vehicleCargoARMOR) : {
-        //_vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR1),(_quaScale * 2)];
-        //_vehicle addWeaponCargoGlobal [QUOTE(_WEAPON_PRIMARY_AR1),(_quaScale * 1)];
-        
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-        
-        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
-    };
-    case (_vehicleType in _vehicleCargoIFV) : {
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_AR0),(_quaScale * 4)];
-        
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-        
-        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 3)];
-        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 6)];
-        
-        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
-    };
-    case (_vehicleType in _vehicleCargoMED) : {
-        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 15)];
-        
-        _vehicle addItemCargoGlobal ["ACE_bloodIV",(_quaScale * 10)];
-        _vehicle addItemCargoGlobal ["ACE_bloodIV_500",(_quaScale * 10)];
-        _vehicle addItemCargoGlobal ["ACE_salineIV",(_quaScale * 10)];
-        _vehicle addItemCargoGlobal ["ACE_salineIV_500",(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal ["ACE_morphine",(_quaScale * 30)];
-        _vehicle addItemCargoGlobal ["ACE_epinephrine",(_quaScale * 20)];
-        _vehicle addItemCargoGlobal ["ACE_atropine",(_quaScale * 20)];
-        
-        _vehicle addItemCargoGlobal ["ACE_tourniquet",(_quaScale * 4)];
-        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 10)];
-        _vehicle addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 40)];
-        _vehicle addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 40)];
-        _vehicle addItemCargoGlobal ["ACE_quikclot",(_quaScale * 40)];
-        
-        _vehicle addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 12)];
-        
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-        
-        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
-    };
-    case (_vehicleType in _vehicleCargoTransportAviation) : {
-        _vehicle addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 15)];
-
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-
-        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
-
-        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
-    };
-    case (_vehicleType in _vehicleCargoAttackAviation) : {
-    };
-    case (_vehicleType in _vehicleCargoMedicalAviation) : {
-        _vehicle addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 15)];
-        
-        _vehicle addItemCargoGlobal ["ACE_bloodIV",(_quaScale * 10)];
-        _vehicle addItemCargoGlobal ["ACE_bloodIV_500",(_quaScale * 10)];
-        _vehicle addItemCargoGlobal ["ACE_salineIV",(_quaScale * 10)];
-        _vehicle addItemCargoGlobal ["ACE_salineIV_500",(_quaScale * 10)];
-        
-        _vehicle addItemCargoGlobal ["ACE_morphine",(_quaScale * 30)];
-        _vehicle addItemCargoGlobal ["ACE_epinephrine",(_quaScale * 20)];
-        _vehicle addItemCargoGlobal ["ACE_atropine",(_quaScale * 20)];
-
-        _vehicle addItemCargoGlobal ["ACE_tourniquet",(_quaScale * 4)];
-        _vehicle addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 10)];
-        _vehicle addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 40)];
-        _vehicle addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 40)];
-        _vehicle addItemCargoGlobal ["ACE_quikclot",(_quaScale * 40)];
-
-        _vehicle addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 12)];
-        
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),(_quaScale * 2)];
-        _vehicle addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),(_quaScale * 1)];
-
-        _vehicle addMagazineCargoGlobal ["Chemlight_Blue",(_quaScale * 10)];
-        _vehicle addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 10)];
-
-        _vehicle addItemCargoGlobal ["Toolkit",(_quaScale * 1)];
-    };
+    ["rhsusf_m1a1tank_base", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    ["rhsusf_m109_usarmy", "init", {
+        clearweaponcargoGlobal (_this select 0);
+        clearmagazinecargoGlobal (_this select 0);
+        clearitemcargoGlobal (_this select 0);
+        clearbackpackcargoGlobal (_this select 0);
+        (_this select 0) addItemCargoGlobal ["ACE_EarPlugs",3];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),2];
+        (_this select 0) addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),1];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Blue",3];
+        (_this select 0) addMagazineCargoGlobal ["Chemlight_Red",3];
+        (_this select 0) addItemCargoGlobal ["Toolkit",1];
+    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
 };
