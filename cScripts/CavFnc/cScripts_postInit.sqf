@@ -5,7 +5,7 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "showDiaryRecords") == 1) t
 };
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then {
-        call cScripts_fnc_init;
+    call cScripts_fnc_init;
 
     // Change inventory content of supply crates on mission start.
     if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptVehicleInventory") == 1) then {
