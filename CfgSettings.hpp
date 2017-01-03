@@ -1,6 +1,6 @@
 class CfgSettings {
     isDebugMode                 =   0;      // 0 or 1 Add debug messages in the log (Default: 0)
-    isMissionType               =   2;      // 0 = Custom, 1 = Operation, 2 = Training (Default: 1)
+    isMissionType               =   1;      // 0 = Custom, 1 = Operation, 2 = Training (Default: 1)
     isMissionOpenTerrain        =   0;      // 0 or 1 Changes AI spot distance too far. Recommended for Steps and desert islands. (Default: 0)
     
     // Hints and documents
