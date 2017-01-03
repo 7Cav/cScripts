@@ -14,39 +14,21 @@ player createDiaryRecord["7Cav",
 You can as Mission Control execute functions mid mission on vehicles and objects via the <font color='#ffc61a'>Execute Code Module</font> located under <font color='#ffc61a'>Development Tools</font>. Simply drop the module ontop of the target.<br/><br/>
 <p><font color='#ffc61a'>Here are some useful functions you can use:</font>
 <br/><br/>
-            [_this select 1] call cScripts_fnc_initMain;<br/>
-            [_this select 1] call cScripts_fnc_initMainSandbox;<br/>
-            [_this select 1] call cScripts_fnc_initVehicle;<br/>
-<br/><br/>
-            [_this select 1,1.0] call cScripts_fnc_equipCrate;<br/>
-            [_this select 1,1.0] call cScripts_fnc_equipMedicalCrate;<br/>
-<br/><br/>
-            [_this select 1] call cScripts_fnc_flag;<br/></p>
+        <font color='#ffc61a'>Call on basicly any item.</font><br/>
+                [_this select 1] call cScripts_fnc_doStarterCrate;<br/>
+                [_this select 1,'none',true,true,true,1] call cScripts_fnc_doStarterCrate;<br/>
+<br/>
+        <font color='#ffc61a'>Call on a Vehicle</font><br/>
+                call cScripts_fnc_initVehicle;<br/>
+<br/>
+        <font color='#ffc61a'>Call on a NATO Crates</font><br/>
+                call cScripts_fnc_initSupply;<br/>
+<br/>
+        <font color='#ffc61a'>Call on any flag pole</font><br/>
+                [_this select 1] call cScripts_fnc_flag;<br/>
+<br/>
+        <font color='#ffc61a'>Call on a UH60</font><br/>
+                [_this select 1,'b1'] call cScripts_fnc_UH60TailNumber;</p>
         "
     ]
 ];
-
-/*player createDiaryRecord["7Cav",
-    ["S3 Mission Control",
-        "
-You can as Mission Control execute functions mid mission on vehicles and objects via the <font color='#ffc61a'>Execute Code Module</font> located under <font color='#ffc61a'>Development Tools</font>. Simply drop the module ontop of the target.<br/><br/>
-<p><font color='#ffc61a'>Here are some useful functions click to copy:</font>
-<br/><br/>
-            <executeClose expression=""_string = '[_this select 1] call cScripts_fnc_initMain;';
-    copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1] call cScripts_fnc_initMain;</executeClose>
-<br/>
-            <executeClose expression=""_string = '[_this select 1] call cScripts_fnc_initMainSandbox;';
-    copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1] call cScripts_fnc_initMainSandbox;</executeClose><br/>
-            <executeClose expression=""_string = '[_this select 1] call cScripts_fnc_initVehicle;';
-    copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1] call cScripts_fnc_initVehicle;</executeClose><br/>
-<br/><br/>
-            <executeClose expression=""_string = '[_this select 1,1.0] call cScripts_fnc_equipCrate;';
-    copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1,1.0] call cScripts_fnc_equipCrate;</executeClose><br/>
-            <executeClose expression=""_string = '[_this select 1,1.0] call cScripts_fnc_equipMedicalCrate;';
-    copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1,1.0] call cScripts_fnc_equipMedicalCrate;</executeClose><br/>
-<br/>
-            <executeClose expression=""_string = '[_this select 1] call cScripts_fnc_flag;';
-    copyToClipboard _string; hint 'Copied to clipboard'"">[_this select 1] call cScripts_fnc_flag;</executeClose><br/></p>
-        "
-    ]
-];*/

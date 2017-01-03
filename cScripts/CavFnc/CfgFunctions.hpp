@@ -7,6 +7,7 @@ class cScripts {
         class initUH60M {};
         class initDocuments {};
         class initMissionStartHint {};
+        class initTrainingStartHint {};
 
     };
     class DiaryRecord {

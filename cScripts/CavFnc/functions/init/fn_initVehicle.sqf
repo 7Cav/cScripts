@@ -8,7 +8,6 @@
  *
  * Example:
  * call cScripts_fnc_initVehicle;:
- * [true] call cScripts_fnc_initVehicle;
  */
  
 #include "..\script_component.hpp";
