@@ -77,6 +77,18 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this,"b5"] call cScripts_fnc_UH60TailNumber;
 ```
 
+#### cScripts_fnc_flag
+``` c++
+ This add or change a given flag poles flag to a new and better one.
+ 
+ Arguments:
+ 0: Object <OBJECT>
+ 
+ Example:
+ [this] call cScripts_fnc_flag;
+```
+
+
 # Other tips and tricks
 ## Make a cool CQB experience
 In order to make a, hopfylly, cool CQB experience you can disabled the AI's pathing. This will make the AI stay put and still be able to turn around and change stance.
