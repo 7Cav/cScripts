@@ -46,6 +46,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
 ####[this] call cScripts_fnc_doStarterCrate;
 ``` c++
  This populats a given object with items and commands used during operations.
+ 
  Arguments:
  0: Object <OBJECT>
  1: Quick Select Scale <STRING>   (Default: "none")
@@ -53,7 +54,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  3: Heal action <BOOL>            (Default: true)
  4: Insignia Selection <BOOL>     (Default: true)
  5: Supply Size <NUMBER>          (Default: 1)
-
+ 
  Example:
  [this] call cScripts_fnc_doStarterCrate;
  [this,"none",false] call cScripts_fnc_doStarterCrate;
