@@ -42,14 +42,14 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 | Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                    |
 
 ## CAV Functions
-CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the Function Viewer (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
+CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
 #### cScripts_fnc_doStarterCrate
 ``` c++
  This populats a given object with items and commands used during operations.
  
  Arguments:
  0: Object <OBJECT>
- 1: Quick Select Scale <STRING>   (Default: "none")
+ 1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full"]
  2: ReGear action <BOOL>          (Default: true)
  3: Heal action <BOOL>            (Default: true)
  4: Insignia Selection <BOOL>     (Default: true)
@@ -67,14 +67,11 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  
  Arguments:
  0: Vehicle <OBJECT>
- 1: Texture <STRING>
+ 1: Texture <STRING> ["b1","b2","b3","b4","b5"]
  
  Example:
  [this,"b1"] call cScripts_fnc_UH60TailNumber;
  [this,"b2"] call cScripts_fnc_UH60TailNumber;
- [this,"b3"] call cScripts_fnc_UH60TailNumber;
- [this,"b4"] call cScripts_fnc_UH60TailNumber;
- [this,"b5"] call cScripts_fnc_UH60TailNumber;
 ```
 
 #### cScripts_fnc_flag
@@ -88,12 +85,33 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this] call cScripts_fnc_flag;
 ```
 
+#### cScripts_fnc_doSupplyCrate
+``` c++
+ This populats a given object with items.
+ Use for mission resupplies.
+
+ Arguments:
+ 0: Crate <OBJECT>
+ 1: Scale cargo ammount <NUMBER> (Default: 1)
+ 
+ Example:
+ [this,0.5] call cScripts_fnc_doSupplyCrate;
+ [this,1] call cScripts_fnc_doSupplyCrate;
+```
+**Note:** *There are specialized crates as well: `cScripts_fnc_doAmmoCrate`, `cScripts_fnc_doLaunchersCrate`, `cScripts_fnc_doGrenadesCrate`, `cScripts_fnc_doExplosivesCrate` you can read more about them in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) under the supplies category. You can find additional ones there as well.*
+
 
 # Other tips and tricks
+## Find a classname
+If you wantto put down a specific unit or kit mentaiond under; [Automatic Loadout Distrubution (Poppy)](#automatic-loadout-distrubution-poppy), and can't seam to find the unit. You can search for a classname by typing `class` followed by the classname.
+Exsample:
+> class rhsusf_army_ucp_medic
+
 ## Make a cool CQB experience
 In order to make a, hopfylly, cool CQB experience you can disabled the AI's pathing. This will make the AI stay put and still be able to turn around and change stance.
 Put this in the InitLine of the soldier: `this disableAI 'PATH';`
 If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
 
 Click on the script command to see more info about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI).
+
 
