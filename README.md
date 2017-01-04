@@ -49,7 +49,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  
  Arguments:
  0: Object <OBJECT>
- 1: Quick Select Scale <STRING>   (Default: "none")
+ 1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full"]
  2: ReGear action <BOOL>          (Default: true)
  3: Heal action <BOOL>            (Default: true)
  4: Insignia Selection <BOOL>     (Default: true)
@@ -67,14 +67,11 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  
  Arguments:
  0: Vehicle <OBJECT>
- 1: Texture <STRING>
+ 1: Texture <STRING> ["b1","b2","b3","b4","b5"]
  
  Example:
  [this,"b1"] call cScripts_fnc_UH60TailNumber;
  [this,"b2"] call cScripts_fnc_UH60TailNumber;
- [this,"b3"] call cScripts_fnc_UH60TailNumber;
- [this,"b4"] call cScripts_fnc_UH60TailNumber;
- [this,"b5"] call cScripts_fnc_UH60TailNumber;
 ```
 
 #### cScripts_fnc_flag
