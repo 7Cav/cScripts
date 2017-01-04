@@ -102,10 +102,14 @@ CAV Functions are usable functions and scripts that can be called. You can find 
 
 
 # Other tips and tricks
+# Find a classname
+If you wantto put down a specific unit or kit mentaiond under; [Automatic Loadout Distrubution (Poppy)](https://github.com/7Cav/cScripts/tree/CleaningAndDocumentationProject#automatic-loadout-distrubution-poppy), and can't seam to find the unit. You can search for a classname by typing `class` followed by the classname Exsample `class rhsusf_army_ucp_medic`
+
 ## Make a cool CQB experience
 In order to make a, hopfylly, cool CQB experience you can disabled the AI's pathing. This will make the AI stay put and still be able to turn around and change stance.
 Put this in the InitLine of the soldier: `this disableAI 'PATH';`
 If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
 
 Click on the script command to see more info about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI).
+
 
