@@ -88,6 +88,20 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this] call cScripts_fnc_flag;
 ```
 
+#### cScripts_fnc_doSupplyCrate
+``` c++
+ This populats a given object with items.
+ Use for mission resupplies.
+
+ Arguments:
+ 0: Crate <OBJECT>
+ 1: Scale cargo ammount <NUMBER> (Default: 1)
+ 
+ Example:
+ [this,0.5] call cScripts_fnc_doSupplyCrate;
+ [this,1] call cScripts_fnc_doSupplyCrate;
+```
+
 
 # Other tips and tricks
 ## Make a cool CQB experience
