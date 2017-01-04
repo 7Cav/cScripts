@@ -42,7 +42,7 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 | Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                    |
 
 ## CAV Functions
-CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the Function Viewer (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
+CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
 #### cScripts_fnc_doStarterCrate
 ``` c++
  This populats a given object with items and commands used during operations.
@@ -101,6 +101,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this,0.5] call cScripts_fnc_doSupplyCrate;
  [this,1] call cScripts_fnc_doSupplyCrate;
 ```
+Note there are specialized crates as well: `cScripts_fnc_doAmmoCrate`, `cScripts_fnc_doLaunchersCrate`, `cScripts_fnc_doGrenadesCrate`, `cScripts_fnc_doExplosivesCrate` you cna read more about them in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function).
 
 
 # Other tips and tricks
