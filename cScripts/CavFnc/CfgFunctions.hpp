@@ -59,11 +59,4 @@ class cScripts {
         class flag {};
         class UH60TailNumber {};
     };
-
-    class obsolete {
-        file = "cScripts\cavFnc\functions\obsolete";
-        class initMain {};
-        class initMainSandbox {};
-        class equipBase {};
-    };
 };
