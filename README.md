@@ -5,8 +5,8 @@ This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other 
 cScripts provides you with the basic for S3 Operation making.
 
 ### Scripts Installed
-- **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry Function Library (1.0.0)</a>
-- **Loadouts**                  -   <a href="https://7cav.us/">7th Cavalry Loadouts 160730</a>
+- **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry Function Library (3.0.0)</a>
+- **Loadouts**                  -   <a href="https://7cav.us/">7th Cavalry Loadouts 170104</a>
 - **Loadouts/Script**           -   <a href="https://github.com/BaerMitUmlaut/Poppy">Poppy (1.0.0)</a>
 - **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
 
