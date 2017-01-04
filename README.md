@@ -101,7 +101,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this,0.5] call cScripts_fnc_doSupplyCrate;
  [this,1] call cScripts_fnc_doSupplyCrate;
 ```
-Note there are specialized crates as well: `cScripts_fnc_doAmmoCrate`, `cScripts_fnc_doLaunchersCrate`, `cScripts_fnc_doGrenadesCrate`, `cScripts_fnc_doExplosivesCrate` you can read more about them in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function).
+**Note:** *there are specialized crates as well: `cScripts_fnc_doAmmoCrate`, `cScripts_fnc_doLaunchersCrate`, `cScripts_fnc_doGrenadesCrate`, `cScripts_fnc_doExplosivesCrate` you can read more about them in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) under the supplies category. You can find additional ones there as well.*
 
 
 # Other tips and tricks
