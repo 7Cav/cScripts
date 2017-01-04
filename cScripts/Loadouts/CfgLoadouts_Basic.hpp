@@ -306,6 +306,52 @@ class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
     insignia[] = {"CLS_Insignia"};
     //preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
 };
+class CAV_Starlight : CommonBlufor {                // Starlight Mobile Medic Team
+    backpack[] = {"tf_rt1523g_big_rhs"};
+    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    vest[] = {"rhsusf_iotv_ocp_Medic"};
+
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","RH_ta31rmr_2D"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+
+        "rhs_mag_m67",2,
+
+        "rhs_mag_an_m8hc",6,
+
+        "Chemlight_red",2,
+        "Chemlight_blue",2
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",45,
+        "ACE_morphine",20,
+        "ACE_epinephrine",20,
+        "ACE_tourniquet",4,
+        "ACE_salineIV_500",14,
+        "ACE_personalAidKit",2,
+        "ACE_surgicalKit",1,
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_Flashlight_MX991",
+        "ACE_CableTie",2,
+
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_IR_Strobe_Item",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemAndroid"};
+
+    insignia[] = {"CLS_Insignia"};
+    //preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
+};
 
 class CAV_Engineer : CommonBlufor {                 // Engineer
     vest[] = {"rhsusf_iotv_ocp_Repair"};
