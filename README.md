@@ -43,27 +43,17 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the Function Viewer (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
-###`doStarterCrate`
-`[this] call cScripts_fnc_doStarterCrate;`
+#####`[this] call cScripts_fnc_doStarterCrate;`
+> This populats a given object with items and commands used during operations.
 
 ``` c++
-/*
- * Author: CPL.Brostrom.A 
- * This populats a given object with items and commands used during operations.
- *
- * Arguments:
- * 0: Object <OBJECT>
- * 1: Quick Select Scale <STRING>   (Default: "none")
- * 2: ReGear action <BOOL>          (Default: true)
- * 3: Heal action <BOOL>            (Default: true)
- * 4: Insignia Selection <BOOL>     (Default: true)
- * 5: Supply Size <NUMBER>          (Default: 1)
- *
- * Example:
- * [this] call cScripts_fnc_doStarterCrate;
- * [this,"none",false] call cScripts_fnc_doStarterCrate;
- * [this,"none",true,true,true,1] call cScripts_fnc_doStarterCrate;
- */
+ Arguments:
+ 0: Object <OBJECT>
+ 1: Quick Select Scale <STRING>   (Default: "none")
+ 2: ReGear action <BOOL>          (Default: true)
+ 3: Heal action <BOOL>            (Default: true)
+ 4: Insignia Selection <BOOL>     (Default: true)
+ 5: Supply Size <NUMBER>          (Default: 1)
 ```
 
 # Other tips and tricks
@@ -73,4 +63,3 @@ Put this in the InitLine of the soldier: `this disableAI 'PATH';`
 If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
 
 Click on the script command to see more info about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI).
-
