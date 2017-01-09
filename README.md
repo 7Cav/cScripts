@@ -108,8 +108,10 @@ Exsample:
 > class rhsusf_army_ucp_medic
 
 ## Make a cool CQB experience
-In order to make a, hopfylly, cool CQB experience you can disabled the AI's pathing. This will make the AI stay put and still be able to turn around and change stance.
-Put this in the InitLine of the soldier: `this disableAI 'PATH';`
-If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
+There are two ways of doing so AI garrison units inside of a building. The easy way is to just add this line to a group of AI soldier:
+```[(getPos this), (units this), 150, true, false] call Ares_fnc_ZenOccupyHouse;```
+This will throw the set group in to a close building and garrison it.
 
-Click on the script command to see more info about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI).
+HTe other way is to manually place a unita and lock them in position by disabled the AI's pathing (`this disableAI 'PATH';`). This will make the AI stay put but still able to turn around and change stance. If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
+
+__Read more about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI) by clicking on them.__
