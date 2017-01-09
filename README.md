@@ -5,16 +5,9 @@ This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other 
 cScripts provides you with the basic for S3 Operation making.
 
 ### Scripts Installed
-<<<<<<< HEAD
 - **CavFnc**                    -   [7th Cavalry Function Library (1.0.0)](https://7cav.us/)
 - **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
 - **ViewingDistance**           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
-=======
-- **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry Function Library (3.0.0)</a>
-- **Loadouts**                  -   <a href="https://7cav.us/">7th Cavalry Loadouts 170104</a>
-- **Loadouts/Script**           -   <a href="https://github.com/BaerMitUmlaut/Poppy">Poppy (1.1.0)</a>
-- **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
->>>>>>> ff8580eb8901c178d56210d95cf2e196b635b795
 
 ### AI Tweek (init.sqf)
 The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best.
