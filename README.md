@@ -5,10 +5,16 @@ This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other 
 cScripts provides you with the basic for S3 Operation making.
 
 ### Scripts Installed
+<<<<<<< HEAD
+- **CavFnc**                    -   [7th Cavalry Function Library (1.0.0)](https://7cav.us/)
+- **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
+- **ViewingDistance**           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
+=======
 - **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry Function Library (3.0.0)</a>
 - **Loadouts**                  -   <a href="https://7cav.us/">7th Cavalry Loadouts 170104</a>
 - **Loadouts/Script**           -   <a href="https://github.com/BaerMitUmlaut/Poppy">Poppy (1.1.0)</a>
 - **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
+>>>>>>> ff8580eb8901c178d56210d95cf2e196b635b795
 
 ### AI Tweek (init.sqf)
 The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best.
@@ -17,6 +23,7 @@ The AI in cScripts `init.sqf` have been changed to be a little more realistic an
 Missions running the template is set to default respawn `BASE` with `4` second delay. This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or delete the lines.
 
 ## Automatic Loadout Distrubution (Poppy)
+cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automaticly give ___all blufor players___ a pre defined loadout in the list below. If you havea un recugnice loadout you will be given the default loadout (CommonBlufor).
 
 | Loadout             | VariableName            | Supported ClassNames                                                              |
 |---------------------|-------------------------|-----------------------------------------------------------------------------------|
@@ -113,5 +120,3 @@ Put this in the InitLine of the soldier: `this disableAI 'PATH';`
 If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
 
 Click on the script command to see more info about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI).
-
-
