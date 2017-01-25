@@ -1,6 +1,6 @@
 /*
  * Author: CPL.Brostrom.A 
- * This generates quick selection buttons to given selections.
+ * This function generates a quick selection button.
  *
  * Arguments:
  * 0: Object <OBJECT>

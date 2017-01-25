@@ -1,71 +1,22 @@
 # cScripts
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
 
-## Scripts Installed
-- **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry Function Library (1.0.0)</a>
-- **Loadouts**                  -   <a href="https://7cav.us/">7th Cavalry Loadouts 160730</a>
-- **Loadouts/Script**           -   <a href="https://github.com/BaerMitUmlaut/Poppy">Poppy (1.0.0)</a>
-- **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
-
-### Manual Installation
-If you use the included `Description.ext` you do not need to do anything.
-Otherwise you need to include the following block:
-``` c++
-#include "cScripts\ViewingDistance\GUI.h"
-#include "cScripts\Loadouts\script\CfgPoppy.hpp"
-class CfgFunctions {
-    #include "cScripts\ViewingDistance\CfgFunctions.hpp"
-    #include "cScripts\CavFnc\CfgFunctions.hpp"
-    #include "cScripts\Loadouts\script\CfgFunctions.hpp"
-};
-#include "cScripts\CfgUnitInsignia.hpp"
-#include "cScripts\CfgLoadouts.hpp"
-```
-
-### Uninstall
-If you whant to remove a function or script you need to remove the following from the description.ext:
-
-**Loadout Script** *(Poppy) `cScripts\Loadouts\...`*
-``` c++
-#include "cScripts\Loadouts\script\CfgPoppy.hpp"
-class CfgFunctions {
-    #include "cScripts\Loadouts\script\CfgFunctions.hpp"
-};
-#include "cScripts\CfgLoadouts.hpp"
-```
-
-**Viewing Distance** *(taw_vd) `cScripts\ViewingDistance\...`*
-``` c++
-#include "cScripts\ViewingDistance\GUI.h"
-class CfgFunctions {
-    #include "cScripts\ViewingDistance\CfgFunctions.hpp"
-};
-```
 ## What do cScripts provide?
 cScripts provides you with the basic for S3 Operation making.
 
-### AI Tweek (init.sqf)
-The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best. But you are offcause free to change it if you whant.
+### Scripts Installed
+- **CavFnc**                    -   [7th Cavalry Function Library (1.0.0)](https://7cav.us/)
+- **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
+- **ViewingDistance**           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
 
-#### Default:
-``` c++
-{
-    _x setSkill ["aimingspeed", 0.42];
-    _x setSkill ["aimingaccuracy", 0.338];
-    _x setSkill ["aimingshake", 0.36];
-    _x setSkill ["spottime", 0.42];
-    _x setSkill ["spotdistance", 0.7];
-    _x setSkill ["commanding", 1.0];
-    _x setSkill ["general", 1.0];
-} forEach allUnits;
-```
-Tip:
-When playing on a step or desert island it is recomended to change the `"spotdistance"` to `1.0`.
+### AI Tweek (init.sqf)
+The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best.
 
 ### Respawn Preset (description.ext)
 Missions running the template is set to default respawn `BASE` with `4` second delay. This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or delete the lines.
 
 ## Automatic Loadout Distrubution (Poppy)
+cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automaticly give ___all blufor players___ a pre defined loadout in the list below. If you havea un recugnice loadout you will be given the default loadout (CommonBlufor).
 
 | Loadout             | VariableName            | Supported ClassNames                                                              |
 |---------------------|-------------------------|-----------------------------------------------------------------------------------|
@@ -77,7 +28,8 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 | Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`               |
 | Combat Life Saver   | `CAV_CombatLifesaver`   | `B_medic_F`                                                                       |
 |                     |                         |                                                                                   |
-| Platoon Medic       | `CAV_PlatoonMedic`      | `rhsusf_army_ocp_medic`                                                           |
+| Platoon Medic       | `CAV_Starlight `        | `rhsusf_army_ucp_medic`                                                           |
+| Starlight           | `CAV_PlatoonMedic`      | `rhsusf_army_ocp_medic`                                                           |
 | Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`              |
 | Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                 |
 |                     |                         |                                                                                   |
@@ -90,41 +42,76 @@ Missions running the template is set to default respawn `BASE` with `4` second d
 | Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                    |
 
 ## CAV Functions
-CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
-
-### Main and basic functions
-`initMain`: initMain is used to call appon a stadgeing area crate. It fills a crate allot of equipment, adds insignia and quick selections. It also adds a ReGear button. The scripts works with addAction and ACE action.
-
-`initMainSandbox`: initMainSandbox work identical to initMain except that it adds a VirtualArsenal as well.
-
-`flag`: flag is a just a small function that changes a given flagpoles flag texture.
-
-### Insignia Selection
-The insignia selection is called by `cScripts_fnc_initMain` and `cScripts_fnc_initMainSandbox` base crate scripts. In order to add a insignia you first need to define it in `CfgUnitInsignia.hpp` then add it to `fn_initInsigniaSelections.sqf` using the `cScripts_fnc_addInsigniaSelection` function.
-
-The script have simplyfyed the creation of new insignias and use a Macro. `MACRO_UNITINSIGNIA(CLASSNAME,FULLPICTURENAME);` Here is a exsample on how to add a new class to the `CfgUnitInsignia.hpp`:
+CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
+#### cScripts_fnc_doStarterCrate
 ``` c++
-MACRO_UNITINSIGNIA(11C_17_Insignia,1-1-C-17.paa);
+ This populats a given object with items and commands used during operations.
+ 
+ Arguments:
+ 0: Object <OBJECT>
+ 1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full"]
+ 2: ReGear action <BOOL>          (Default: true)
+ 3: Heal action <BOOL>            (Default: true)
+ 4: Insignia Selection <BOOL>     (Default: true)
+ 5: Supply Size <NUMBER>          (Default: 1)
+ 
+ Example:
+ [this] call cScripts_fnc_doStarterCrate;
+ [this,"none",false] call cScripts_fnc_doStarterCrate;
+ [this,"none",true,true,true,1] call cScripts_fnc_doStarterCrate;
 ```
-Here is the same class referenced in `fn_initInsigniaSelections.sqf`:
+#### cScripts_fnc_UH60TailNumber
 ``` c++
-[_object,"Squad Insignia 1/1/C/1-7","11C_17_Insignia","cScripts\Data\Insignia\1-1-C-17.paa"] call FUNC(addInsigniaSelection);
-```
-You can also add a insignia in a sub category:
-``` c++
-[_object,"7th Cavalry Insignia","7_Insignia","cScripts\Data\Insignia\7.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionMisc']] call FUNC(addInsigniaSelection);
+ This function create a tail number suitable for the RHS UH-60M Blackhawk.
+ It will work for any vehicle but don't.
+ 
+ Arguments:
+ 0: Vehicle <OBJECT>
+ 1: Texture <STRING> ["b1","b2","b3","b4","b5"]
+ 
+ Example:
+ [this,"b1"] call cScripts_fnc_UH60TailNumber;
+ [this,"b2"] call cScripts_fnc_UH60TailNumber;
 ```
 
-The categoryes is defined like this:
+#### cScripts_fnc_flag
 ``` c++
-[_object,"cScriptInsigniaSelectionMisc","Misc",_Icon,["ACE_MainActions","cScriptInsigniaSelectionMenu"]] call FUNC(addAceCategory);
+ This add or change a given flag poles flag to a new and better one.
+ 
+ Arguments:
+ 0: Object <OBJECT>
+ 
+ Example:
+ [this] call cScripts_fnc_flag;
 ```
+
+#### cScripts_fnc_doSupplyCrate
+``` c++
+ This populats a given object with items.
+ Use for mission resupplies.
+
+ Arguments:
+ 0: Crate <OBJECT>
+ 1: Scale cargo ammount <NUMBER> (Default: 1)
+ 
+ Example:
+ [this,0.5] call cScripts_fnc_doSupplyCrate;
+ [this,1] call cScripts_fnc_doSupplyCrate;
+```
+**Note:** *There are specialized crates as well: `cScripts_fnc_doAmmoCrate`, `cScripts_fnc_doLaunchersCrate`, `cScripts_fnc_doGrenadesCrate`, `cScripts_fnc_doExplosivesCrate` you can read more about them in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) under the supplies category. You can find additional ones there as well.*
+
 
 # Other tips and tricks
-##Make a cool CQB experience
-In order to make a, hopfylly, cool CQB experience you can disabled the AI's pathing. This will make the AI stay put and still be able to turn around and change stance.
-Put this in the InitLine of the soldier: `this disableAI 'PATH';`
-If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
+## Find a classname
+If you wantto put down a specific unit or kit mentaiond under; [Automatic Loadout Distrubution (Poppy)](#automatic-loadout-distrubution-poppy), and can't seam to find the unit. You can search for a classname by typing `class` followed by the classname.
+Exsample:
+> class rhsusf_army_ucp_medic
 
-Click on the script command to see more info about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI).
+## Make a cool CQB experience
+There are two ways of doing so AI garrison units inside of a building. The easy way is to just add this line to a group of AI soldier:
+```[(getPos this), (units this), 150, true, false] call Ares_fnc_ZenOccupyHouse;```
+This will throw the set group in to a close building and garrison it.
 
+HTe other way is to manually place a unita and lock them in position by disabled the AI's pathing (`this disableAI 'PATH';`). This will make the AI stay put but still able to turn around and change stance. If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
+
+__Read more about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI) by clicking on them.__
