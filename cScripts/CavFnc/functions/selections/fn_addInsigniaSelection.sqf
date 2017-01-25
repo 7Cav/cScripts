@@ -1,6 +1,6 @@
 /*
  * Author: CPL.Brostrom.A 
- * This script auto generates the selections.
+ * This function generates a insignia selection button.
  *
  * Arguments:
  * 0: Object <OBJECT>

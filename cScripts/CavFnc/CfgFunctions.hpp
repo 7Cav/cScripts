@@ -1,9 +1,14 @@
 class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
+        class init {};
+        class initSupply {};
+        class initVehicle {};
+        class initUH60M {};
         class initDocuments {};
         class initMissionStartHint {};
-        class initMissionStartObjects {};
+        class initTrainingStartHint {};
+
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\init\DiaryRecord";
@@ -18,28 +23,26 @@ class cScripts {
 
     class main {
         file = "cScripts\cavFnc\functions\main";
-        class initMain {};
-        class initMainSandbox {};
-        class initVehicle {};
-        class UH60TailNumber {};
+        class doStarterCrate {};
+        class doStarterCrateSupplies {};
     };
     class supplies {
         file = "cScripts\cavFnc\functions\supplies";
-        class equipBase {};
-        class equipCrate {};
-        class equipMedicalCrate {};
+        class doSupplyCrate {};
         
-        class equipCrateAmmo {};
-        class equipCrateExplosives {};
-        class equipCrateGrenades {};
-        class equipCrateLaunchers {};
-        class equipCrateSpecialWeapons {};
-        class equipCrateWeapons {};
+        class doAmmoCrate {};
+        class doExplosivesCrate {};
+        class doGrenadesCrate {};
+        class doLaunchersCrate {};
+        class doMedicalCrate {};
+        class doSpecialWeaponsCrate {};
+        class doWeaponsCrate {};
     };
 
     class systems {
         file = "cScripts\cavFnc\functions\systems";
         class addReGear {};
+        class addHeal {};
         class addArsenal {};
         class addAceCategory {};
     };
@@ -54,5 +57,6 @@ class cScripts {
     class misc {
         file = "cScripts\cavFnc\functions\misc";
         class flag {};
+        class UH60TailNumber {};
     };
 };

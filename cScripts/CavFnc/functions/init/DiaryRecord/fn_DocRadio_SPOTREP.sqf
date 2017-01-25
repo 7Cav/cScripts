@@ -1,11 +1,11 @@
 /*
  * Author: CPL.Brostrom.A and SGT.Argus.J
- * This create a diary record to all players.
+ * This create a diary record subject called by initDocuments.
  *
  * Arguments:
  *
  * Example:
- * call cScripts_fnc_DocRadioSPOTREP;
+ * call cScripts_fnc_DocRadio_SPOTREP;
  */
 
 player createDiaryRecord["radioReports",

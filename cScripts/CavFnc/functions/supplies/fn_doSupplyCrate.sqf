@@ -8,8 +8,8 @@
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
  *
  * Example:
- * [this,0.5] call cScripts_fnc_equipCrate
- * [this,1] call cScripts_fnc_equipCrate
+ * [this,0.5] call cScripts_fnc_doSupplyCrate;
+ * [this,1] call cScripts_fnc_doSupplyCrate;
  */
 
 #include "..\script_component.hpp";
@@ -116,3 +116,4 @@ _crate addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 10)];
 //================== BACKPACKS ==================\\
 
 _crate addBackpackCargoGlobal ["rhsusf_assault_eagleaiii_ocp",(_quaScale * 1)];
+_crate addBackpackCargoGlobal ["B_Mortar_01_weapon_F",(_quaScale * 1)];

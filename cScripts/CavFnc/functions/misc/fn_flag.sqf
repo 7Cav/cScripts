@@ -1,12 +1,12 @@
 /*
  * Author: CPL.Brostrom.A 
- * This changes a given flag texture to a better one. (Works on all flag poles)
+ * This add or change a given flag poles flag to a new and better one.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
  * Example:
- * [this] call cScripts_fnc_flag
+ * [this] call cScripts_fnc_flag;
  */
 
 #include "..\script_component.hpp";

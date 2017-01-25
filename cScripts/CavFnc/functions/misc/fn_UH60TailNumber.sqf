@@ -1,10 +1,11 @@
 /*
  * Author: CPL.Brostrom.A 
- * Blub
+ * This function create a tail number suitable for the RHS UH-60M Blackhawk.
+ * It will work for any vehicle but don't.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: 
+ * 1: Texture <STRING>
  *
  * Example:
  * [this,"b1"] call cScripts_fnc_UH60TailNumber;
