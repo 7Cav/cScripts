@@ -1,14 +1,14 @@
 /*
  * Author: CPL.Brostrom.A 
- * This populats a given object with launchers.
+ * This function resupply a crate and changes it's texture.
  *
  * Arguments:
  * 0: Crate <OBJECT>
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
- *>
+ *
  * Example:
- * [this,0.5] call cScripts_fnc_equipCrateAmmo
- * [this,1] call cScripts_fnc_equipCrateAmmo
+ * [this,0.5] call cScripts_fnc_doGrenadesCrate;
+ * [this,1] call cScripts_fnc_doGrenadesCrate;
  */
 
 #include "..\script_component.hpp";
@@ -31,7 +31,10 @@ _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),(_quaScale * 6)];
 
+// Downsize the crate
+_crate setVariable ["ace_cargo_size", 1];
+
 // If a corect classname add texture
-if (typeOf _crate isEqualTo "Box_NATO_AmmoOrd_F") then {
+if (typeOf _crate isEqualTo "Box_NATO_Grenades_F") then {
     _crate setObjectTexture [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
 };

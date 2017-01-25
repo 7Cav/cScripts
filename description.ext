@@ -26,15 +26,18 @@
 
 /*          SYSTEMS           */
 
+    #include "CfgSettings.hpp"
     class Extended_PostInit_EventHandlers {
         cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_postInit.sqf'";
+    };
+    class Extended_PreInit_EventHandlers {
+        cScripts_preInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_preInit.sqf'";
     };
     class CfgFunctions {
         #include "cScripts\CavFnc\CfgFunctions.hpp"
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
     };
-
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     #include "cScripts\ViewingDistance\GUI.h"
     #include "cScripts\CfgUnitInsignia.hpp"

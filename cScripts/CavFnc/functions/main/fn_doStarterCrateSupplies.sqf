@@ -1,15 +1,14 @@
 /*
  * Author: CPL.Brostrom.A 
- * This populats a given object with items.
- * Main use is for main base and spawn.
+ * This function changes the inventory of a given object and gives it a new.
  *
  * Arguments:
  * 0: Crate <OBJECT>
- * 1: Scale cargo ammount <NUMBER> (Default: 1)
+ * 1: Scale cargo Ammount <NUMBER> (Default: 1)
  *
  * Example:
- * [this,0.5] call cScripts_fnc_equipBase;
- * [this,1] call cScripts_fnc_equipBase;
+ * [this,0.5] call cScripts_fnc_doStarterCrateSupplies;
+ * [this,1] call cScripts_fnc_doStarterCrateSupplies;
  */
 
 #include "..\script_component.hpp";
@@ -99,6 +98,10 @@ _crate addItemCargoGlobal ["ACE_UAVBattery",(_quaScale * 50)];
 _crate addItemCargoGlobal ["ACE_SpareBarrel",(_quaScale * 50)];
 _crate addItemCargoGlobal ["ACE_CableTie",(_quaScale * 50)];
 _crate addItemCargoGlobal ["ACE_wirecutter",(_quaScale * 50)];
+_crate addItemCargoGlobal ["ACE_RangeTable_82mm",(_quaScale * 50)];
+
+_crate addWeaponCargoGlobal ["ACE_VMH3",(_quaScale * 25)];
+_crate addWeaponCargoGlobal ["ACE_VMM3",(_quaScale * 25)];
 
 //================== MEDICAL ==================\\
 
@@ -112,6 +115,7 @@ _crate addItemCargoGlobal ["ACE_quikclot",(_quaScale * 250)];
 _crate addItemCargoGlobal ["ACE_tourniquet",(_quaScale * 250)];
 
 _crate addItemCargoGlobal ["ACE_personalAidKit",(_quaScale * 250)];
+_crate addItemCargoGlobal ["ACE_surgicalKit",(_quaScale * 250)];
 
 _crate addItemCargoGlobal ["ACE_bloodIV",(_quaScale * 250)];
 _crate addItemCargoGlobal ["ACE_bloodIV_500",(_quaScale * 250)];
@@ -128,3 +132,5 @@ _crate addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 250)];
 //================== BACKPACKS ==================\\
 
 _crate addBackpackCargoGlobal ["rhsusf_assault_eagleaiii_ocp",(_quaScale * 15)];
+_crate addBackpackCargoGlobal ["B_Mortar_01_support_F",(_quaScale * 5)];
+_crate addBackpackCargoGlobal ["B_Mortar_01_weapon_F",(_quaScale * 5)];
