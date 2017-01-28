@@ -26,17 +26,19 @@ cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a rel
 | Automatic Rifleman  | `CAV_AutomaticRifleman` | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman`    |
 | Grenadier           | `CAV_Grenadier`         | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`          |
 | Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`               |
-| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_medic_F`                                                                       |
 |                     |                         |                                                                                   |
-| Platoon Medic       | `CAV_Starlight `        | `rhsusf_army_ucp_medic`                                                           |
-| Starlight           | `CAV_PlatoonMedic`      | `rhsusf_army_ocp_medic`                                                           |
+| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`        |
+| Platoon Medic       | `CAV_PlatoonMedic`      | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                       |
+| Starlight           | `CAV_Starlight`         | `rhsusf_navy_marpat_wd_medic` `rhsusf_navy_marpat_d_medic`                        |
+|                     |                         |                                                                                   |
 | Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`              |
+|                     |                         |                                                                                   |
 | Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                 |
 |                     |                         |                                                                                   |
-| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ucp_crewman`                                                         |
-| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ucp_combatcrewman`                                                   |
-| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_crewman`                                                         |
-| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_combatcrewman`                                                   |
+| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ocp_crewman`                                                         |
+| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ocp_combatcrewman`                                                   |
+| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_driver`                                                          |
+| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_driver_armored`                                                  |
 |                     |                         |                                                                                   |
 | Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`           |
 | Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                    |

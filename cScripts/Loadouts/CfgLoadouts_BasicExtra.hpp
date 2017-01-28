@@ -25,13 +25,18 @@ class rhsusf_army_ucp_rifleman : CAV_Rifleman {};
 
 
 // Combat Life Saver
-class B_medic_F : CAV_CombatLifesaver {};
+class B_Soldier_lite_F : CAV_CombatLifesaver {};
+class rhsusf_army_ocp_riflemanl : CAV_CombatLifesaver {};
+class rhsusf_army_ucp_riflemanl : CAV_CombatLifesaver {};
 
 // Platoon Medic
+class B_medic_F : CAV_PlatoonMedic {};
 class rhsusf_army_ocp_medic : CAV_PlatoonMedic {};
+class rhsusf_army_ucp_medic : CAV_PlatoonMedic {};
 
 // Starlight Mobile Medic Team
-class rhsusf_army_ucp_medic : CAV_Starlight {};
+class rhsusf_navy_marpat_wd_medic : CAV_Starlight {};
+class rhsusf_navy_marpat_d_medic : CAV_Starlight {};
 
 
 // Engineer
