@@ -20,10 +20,10 @@ params [["_time", 15]];
 // Write text
 _title  = "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>Welcome!</t><br />";
 _image  = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
-_text0 = "<t font='Zeppelin33'>S3 Training Mission</t><br /><br />";
+_text0 = "<t font='PuristaMedium'>S3 Training Mission</t><br /><br />";
 _text1 = "Welcome to this training mission Trooper!<br />";
 _text2 = "Listen to your instructor.<br /><br />";
-_textHaveFun = "<t font='Zeppelin33'>Have fun!</t>";
+_textHaveFun = "<t font='PuristaMedium'>Have fun!</t>";
 _textEasterEgg = "<br /><br />Blame Argus if stuff doesn't work.<br />";
 
 
