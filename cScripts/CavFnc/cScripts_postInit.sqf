@@ -10,16 +10,20 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then
 
     // Change inventory content of supply crates on mission start.
     if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptVehicleInventory") == 1) then {
-        call cScripts_fnc_initSupply;
-    };
-
-    // Change inventory content of vehicle on mission start.
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptSupplyInventory") == 1) then {
         call cScripts_fnc_initVehicle;
     };
-    // Add a Get Out Right and Left on all BlackHawks on Mission Start
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "addUH60SelectGetOut") == 1) then {
-        call cScripts_fnc_initUH60M;
+    // Change inventory content of vehicle on mission start.
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptSupplyInventory") == 1) then {
+        call cScripts_fnc_initSupply;
+    };
+    // Add a Get Out Right and Left on all helicopters on Mission Start and on zeus spawned items.
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "useHeloGetOutRL") == 1) then {
+        call cScripts_fnc_initHelo;
+        call cScripts_fnc_initCuratorHeloGetOutRL;
+    };
+    // Add FRIES on zeus spawnd helicopters.
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "addFRIESonZeusSpawn") == 1) then {
+        call cScripts_fnc_initCuratorHeloFRIES;
     };
 };
 

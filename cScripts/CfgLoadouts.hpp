@@ -7,6 +7,9 @@ class CfgLoadouts {
 
     #include "Loadouts\CfgLoadouts_Crew.hpp"
     #include "Loadouts\CfgLoadouts_CrewExtra.hpp"
+    
+    #include "Loadouts\CfgLoadouts_Ranger.hpp"
+    #include "Loadouts\CfgLoadouts_RangerExtra.hpp"
 
     #include "Loadouts\CfgLoadouts_Training.hpp"
     #include "Loadouts\CfgLoadouts_TrainingExtra.hpp"

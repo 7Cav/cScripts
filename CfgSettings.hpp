@@ -13,8 +13,9 @@ class CfgSettings {
     
     // Custom mission start
     useCustomInit               =   1;      // 0 or 1 Allow the mission to run CustomInits on mission start. (Default: 1)
-    useScriptVehicleInventory   =   1;      // 0 or 1 Allow the mission to change Vehicles inventory on mission start. (Default: 1)
-    useScriptSupplyInventory    =   1;      // 0 or 1 Allow the mission to change Supply crate inventorys on mission start. (Default: 1)
+    useScriptVehicleInventory   =   0;      // 0 or 1 Allow the mission to change Vehicles inventory on mission start. (Default: 0)
+    useScriptSupplyInventory    =   0;      // 0 or 1 Allow the mission to change Supply crate inventorys on mission start. (Default: 0)
     
-    addUH60SelectGetOut         =   0;      // 0 or 1 Allow the mission to add Get Out Left/Right on the UH60. (Default: 0)
+    useHeloGetOutRL             =   1;      // 0 or 1 Allow the mission to add Get Out Left/Right on helicopters spawned helos. (Default: 1)
+    addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE to helicopters spawned by Zeus. (Default: 1)
 };
