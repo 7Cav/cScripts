@@ -43,6 +43,31 @@ cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a rel
 |                     |                         |                                                                                   |
 | Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`           |
 | Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                    |
+If you want to disable or change the loadouts you can find them here: `cScripts\CfgLoadouts.hpp`, `cScripts\Loadouts\*.hpp`
+
+## CfgSettings
+cScripts have settings to make stuff easier to use and customizable. All settings can be found here: `CfgSettings.hpp`. Below are each settings avalible and a description on what they do.
+
+``` c++
+    isDebugMode                 =   0;      // 0 or 1 Add debug messages in the log (Default: 0)
+    isMissionType               =   1;      // 0: Custom, 1: Operation, 2: Training (Default: 1)
+    aiSystemDifficulty          =   2;      // 0: Standard, 1: Desert, 2: Dumb As Fuck (Default: 0)
+    
+    // Hints and documents
+    useStartHint                =   1;      // 0 or 1 Allow the mission to run the RedLightHint or TrainingMissionHint depends on mission type (Default: 1)
+    setRedLightTime             =   60;     // Seconds for how long it is red light (Default: 60)
+    setTrainingHintTime         =   15;     // Seconds for how long the hint is shown (Default: 15)
+ 
+    showDiaryRecords            =   1;      // 0 or 1 Allow the mission to add Radio Reports and 7th Cavalry records on mission start. (Default: 1)
+    
+    // Custom mission start
+    useCustomInit               =   1;      // 0 or 1 Allow the mission to run CustomInits on mission start. (Default: 1)
+    useScriptVehicleInventory   =   0;      // 0 or 1 Allow the mission to change Vehicles inventory on mission start. (Default: 0)
+    useScriptSupplyInventory    =   0;      // 0 or 1 Allow the mission to change Supply crate inventorys on mission start. (Default: 0)
+    
+    useHeloGetOutRL             =   1;      // 0 or 1 Allow the mission to add Get Out Left/Right on helicopters. (Default: 1)
+    addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE to helicopters spawned by Zeus. (Default: 1)
+```
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
