@@ -187,8 +187,8 @@ class CAV_HeloPilot : CommonBlufor {                // Helo Pilot
 class CAV_FixedPilot : CommonBlufor {				// Fixed Wing Pilot
     backpack[] = {""}; 						// must have access to tf_rt1523g
     uniform[] = {"U_B_PilotCoveralls"};
-    headgear[] = {"H_PilotHelmetHeli_B"};
-    vest[] = {""};
+    headgear[] = {"RHS_jetpilot_usaf"};
+    vest[] = {"V_TacVest_blk"};
 	
     primary[] = {"rhs_weap_mk18_bk"};
 	
