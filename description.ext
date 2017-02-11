@@ -42,5 +42,6 @@
     #include "cScripts\ViewingDistance\GUI.h"
     #include "cScripts\CfgUnitInsignia.hpp"
     #include "cScripts\CfgLoadouts.hpp"
+    #include "cScripts\CfgACESettings.hpp"
 
 /*           OTHER            */
