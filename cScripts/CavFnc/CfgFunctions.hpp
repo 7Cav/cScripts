@@ -1,14 +1,15 @@
 class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
-        class init {};
         class initSupply {};
         class initVehicle {};
-        class initUH60M {};
+        class initHelo {};
         class initDocuments {};
         class initMissionStartHint {};
         class initTrainingStartHint {};
-
+        
+        class initCuratorHeloFRIES {};
+        class initCuratorHeloGetOutRL {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\init\DiaryRecord";
@@ -45,6 +46,10 @@ class cScripts {
         class addHeal {};
         class addArsenal {};
         class addAceCategory {};
+        
+        class addGetOutHelo {};
+        class doGetOutHeloLeft {};
+        class doGetOutHeloRight {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";

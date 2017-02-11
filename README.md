@@ -13,7 +13,8 @@ cScripts provides you with the basic for S3 Operation making.
 The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best.
 
 ### Respawn Preset (description.ext)
-Missions running the template is set to default respawn `BASE` with `4` second delay. This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or delete the lines.
+Missions running the template is set to default respawn `BASE` with `4` second delay. To make a respawn location put down a marker and name it `respawn_west` This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or delete the lines.
+More information about respawn see the [BIS Community Wiki](https://community.bistudio.com/wiki/Arma_3_Respawn).
 
 ## Automatic Loadout Distrubution (Poppy)
 cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automaticly give ___all blufor players___ a pre defined loadout in the list below. If you havea un recugnice loadout you will be given the default loadout (CommonBlufor).
@@ -26,20 +27,47 @@ cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a rel
 | Automatic Rifleman  | `CAV_AutomaticRifleman` | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman`    |
 | Grenadier           | `CAV_Grenadier`         | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`          |
 | Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`               |
-| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_medic_F`                                                                       |
 |                     |                         |                                                                                   |
-| Platoon Medic       | `CAV_Starlight `        | `rhsusf_army_ucp_medic`                                                           |
-| Starlight           | `CAV_PlatoonMedic`      | `rhsusf_army_ocp_medic`                                                           |
+| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`        |
+| Platoon Medic       | `CAV_PlatoonMedic`      | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                       |
+| Starlight           | `CAV_Starlight`         | `rhsusf_navy_marpat_wd_medic` `rhsusf_navy_marpat_d_medic`                        |
+|                     |                         |                                                                                   |
 | Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`              |
+|                     |                         |                                                                                   |
 | Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                 |
 |                     |                         |                                                                                   |
-| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ucp_crewman`                                                         |
-| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ucp_combatcrewman`                                                   |
-| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_crewman`                                                         |
-| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_combatcrewman`                                                   |
+| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ocp_crewman`                                                         |
+| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ocp_combatcrewman`                                                   |
+| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_driver`                                                          |
+| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_driver_armored`                                                  |
 |                     |                         |                                                                                   |
 | Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`           |
 | Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                    |
+If you want to disable or change the loadouts you can find them here: `cScripts\CfgLoadouts.hpp`, `cScripts\Loadouts\*.hpp`
+
+## CfgSettings
+cScripts have settings to make stuff easier to use and customizable. All settings can be found here: `CfgSettings.hpp`. Below are each settings avalible and a description on what they do.
+
+``` c++
+isDebugMode                 =   0;      // 0 or 1 Add debug messages in the log (Default: 0)
+isMissionType               =   1;      // 0: Custom, 1: Operation, 2: Training (Default: 1)
+aiSystemDifficulty          =   2;      // 0: Standard, 1: Desert, 2: Dumb As Fuck (Default: 0)
+
+// Hints and documents
+useStartHint                =   1;      // 0 or 1 Allow the mission to run the RedLightHint or TrainingMissionHint depends on mission type (Default: 1)
+setRedLightTime             =   60;     // Seconds for how long it is red light (Default: 60)
+setTrainingHintTime         =   15;     // Seconds for how long the hint is shown (Default: 15)
+
+showDiaryRecords            =   1;      // 0 or 1 Allow the mission to add Radio Reports and 7th Cavalry records on mission start. (Default: 1)
+
+// Custom mission start
+useCustomInit               =   1;      // 0 or 1 Allow the mission to run CustomInits on mission start. (Default: 1)
+useScriptVehicleInventory   =   0;      // 0 or 1 Allow the mission to change Vehicles inventory on mission start. (Default: 0)
+useScriptSupplyInventory    =   0;      // 0 or 1 Allow the mission to change Supply crate inventorys on mission start. (Default: 0)
+
+useHeloGetOutRL             =   1;      // 0 or 1 Allow the mission to add Get Out Left/Right on helicopters. (Default: 1)
+addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE to helicopters spawned by Zeus. (Default: 1)
+```
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
@@ -49,7 +77,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  
  Arguments:
  0: Object <OBJECT>
- 1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full"]
+ 1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full","ranger"]
  2: ReGear action <BOOL>          (Default: true)
  3: Heal action <BOOL>            (Default: true)
  4: Insignia Selection <BOOL>     (Default: true)
@@ -57,7 +85,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  
  Example:
  [this] call cScripts_fnc_doStarterCrate;
- [this,"none",false] call cScripts_fnc_doStarterCrate;
+ [this,"none",true] call cScripts_fnc_doStarterCrate;
  [this,"none",true,true,true,1] call cScripts_fnc_doStarterCrate;
 ```
 #### cScripts_fnc_UH60TailNumber
@@ -114,4 +142,4 @@ This will throw the set group in to a close building and garrison it.
 
 HTe other way is to manually place a unita and lock them in position by disabled the AI's pathing (`this disableAI 'PATH';`). This will make the AI stay put but still able to turn around and change stance. If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
 
-__Read more about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI) by clicking on them.__
+*Read more about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI) by clicking on them.*
