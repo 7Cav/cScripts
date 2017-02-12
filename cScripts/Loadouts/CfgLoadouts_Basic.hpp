@@ -109,7 +109,7 @@ class CAV_Grenadier : CommonBlufor {                // Grenadier
 
         "rhs_mag_M441_HE",11,
         "rhs_mag_M433_HEDP",4,
-        "rhs_mag_m714_White",4
+        "rhs_mag_m714_White",4,
         
         "rhs_mag_m67",6,
 

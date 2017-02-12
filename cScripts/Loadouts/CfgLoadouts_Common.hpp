@@ -17,7 +17,7 @@ class CommonBlufor {
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",9,
 
-        "rhs_mag_m67",6
+        "rhs_mag_m67",6,
         
         "SmokeShell",6
     };
