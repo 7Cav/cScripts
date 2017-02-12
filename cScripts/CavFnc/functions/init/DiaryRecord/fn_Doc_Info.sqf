@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A,
+ * Author: CPL.Brostrom.A
  * This create a diary record subject called by initDocuments.
  *
  * Arguments:
