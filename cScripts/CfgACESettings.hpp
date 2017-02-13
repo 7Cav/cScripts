@@ -1,5 +1,4 @@
 class ACE_Settings {
-
     class ace_medical_blood_enabledFor {
         value = 2;
         typeName = "SCALAR";
@@ -321,7 +320,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_medical_medicSetting_SurgicalKit {
-        value = 2;
+        value = 1;
         typeName = "SCALAR";
         force = 1;
     };
@@ -904,5 +903,5 @@ class ACE_Settings {
         value = 3000;
         typeName = "SCALAR";
         force = 1;
-    };
+    }
 };
