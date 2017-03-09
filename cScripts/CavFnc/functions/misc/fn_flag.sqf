@@ -13,7 +13,7 @@
 
 #include "..\script_component.hpp";
 
-params [["_object", objNull, [objNull],["_flagType", "yellow"]];
+params [["_object", objNull, [objNull]],["_flagType", "yellow"]];
 
 if ((_flagType == "yellow")) then {
     _object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_00.paa";
