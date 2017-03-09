@@ -4,13 +4,20 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
+ * 1: flagType <STRING>   (Default: "yellow")  ["yellow","black"]
  *
  * Example:
  * [this] call cScripts_fnc_flag;
+ * [this,"yellow"] call cScripts_fnc_flag;
  */
 
 #include "..\script_component.hpp";
 
-params [["_object", objNull, [objNull]]];
+params [["_object", objNull, [objNull]],["_flagType", "yellow"];
 
-_object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_00.paa";
+if ((_flagType == "yellow")) then {
+    _object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_00.paa";
+};
+if ((_flagType == "black")) then {
+    _object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_01.paa";
+};
