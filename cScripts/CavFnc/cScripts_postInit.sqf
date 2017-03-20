@@ -26,6 +26,11 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then
 };
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 0) then {
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "useStartHint") == 1) then {
+        private _setCustomHintTopic = getText (missionConfigFile >> "CfgSettings" >> "setCustomHintTopic");
+        private _setCustomHintText = getText (missionConfigFile >> "CfgSettings" >> "setCustomHintText");
+        [_setCustomHintTopic, _setCustomHintText, 15] call cScripts_fnc_initCustomStartHint;
+    };
 };
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 1) then {
