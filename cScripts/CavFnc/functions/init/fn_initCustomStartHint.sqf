@@ -6,8 +6,8 @@
  * Arguments:
  *
  * Example:
- *  call cScripts_fnc_initTrainingStartHint;
- *  [15] call cScripts_fnc_initTrainingStartHint;
+ *  call cScripts_fnc_initCustomStartHint;
+ *  ["My mission", "Description text.", 10] call cScripts_initCustomStartHint;
  */
 
 if (didJIP) exitWith {};
