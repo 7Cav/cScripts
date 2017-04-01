@@ -302,6 +302,183 @@ class CAV_Engineer : CommonBlufor {                 // Engineer
     //preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 
+class CAV_JavelinSpecialist : CommonBlufor {
+    backpack[] = {"B_Carryall_mcamo"};
+    vest[] = {"rhsusf_iotv_ocp_Teamleader"};
+
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+    launcher[] = {"rhs_weap_fgm148"};
+    
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+
+        "rhs_mag_m67",2,
+
+        "rhs_fgm148_magazine_AT"		
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_DAGR"
+    };
+};
+class CAV_JavelinAssistantSpecialist : CommonBlufor {
+    backpack[] = {"B_Carryall_mcamo"};
+    vest[] = {"rhsusf_iotv_ocp_Teamleader"};
+    
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+    
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+
+        "rhs_mag_m67",2,
+
+        "rhs_fgm148_magazine_AT"
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_DAGR",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+};
+class CAV_MAAWSSpecialist : CommonBlufor {
+    backpack[] = {"B_Carryall_mcamo"};
+    vest[] = {"rhsusf_iotv_ocp_Teamleader"};
+    
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+	launcher[] = {"tf47_m3maaws"};
+    
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+
+        "rhs_mag_m67",2,
+
+        "tf47_m3maaws_HEAT",
+        "tf47_m3maaws_HEDP"
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_DAGR"
+    };
+};
+class CAV_MAAWSAssistantSpecialist : CommonBlufor {
+    backpack[] = {"B_Carryall_mcamo"};
+    vest[] = {"rhsusf_iotv_ocp_Teamleader"};
+    
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+    
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+
+        "rhs_mag_m67",2,
+
+        "tf47_m3maaws_HEAT",
+        "tf47_m3maaws_HEDP"
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_DAGR",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+};
+class CAV_AASpecialist : CommonBlufor {
+    backpack[] = {"B_Carryall_mcamo"};
+    vest[] = {"rhsusf_iotv_ocp_Teamleader"};
+    
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+	launcher[] = {"rhs_weap_fim92"};
+    
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+
+        "rhs_mag_m67",2,
+
+        "rhs_fim92_mag"
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_DAGR"
+    };
+};
+class CAV_AAAssistantSpecialist : CommonBlufor {
+    backpack[] = {"B_Carryall_mcamo"};
+    vest[] = {"rhsusf_iotv_ocp_Teamleader"};
+    
+    primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
+    
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+
+        "rhs_mag_m67",2,
+
+        "rhs_fim92_mag"
+    };
+    items[] = {
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+        
+        // Standard
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_DAGR",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+};
+
 class CAV_Officer : CommonBlufor {                  // Officer
     backpack[] = {"tf_rt1523g_big_rhs"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
@@ -342,7 +519,7 @@ class CAV_Officer : CommonBlufor {                  // Officer
     };
     gps[] = {"ItemcTab"};
 };
-class CAV_JTAC : CommonBlufor {                     // Officer
+class CAV_JTAC : CommonBlufor {                     // JTAC
     backpack[] = {"tf_rt1523g_big_rhs"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
