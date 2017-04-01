@@ -8,7 +8,7 @@ class CAV_TankCommander : CommonBlufor {            // Tank Commander
     vest[] = {"rhsusf_iotv_ocp_Repair"};
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG3"};
-    
+
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
@@ -21,7 +21,7 @@ class CAV_TankCommander : CommonBlufor {            // Tank Commander
         "rhs_mag_m18_red",2,
 
         "UGL_FlareCIR_F",2,
-        
+
         "Chemlight_green",2,
         "ACE_Chemlight_HiRed",2
     };
@@ -29,7 +29,7 @@ class CAV_TankCommander : CommonBlufor {            // Tank Commander
         // Medical Equipment
         "ACE_quikclot",10,
         "ACE_morphine",5,
-        
+
         // Standard
         "ACE_EarPlugs",2,
         "ACE_MapTools",
@@ -62,7 +62,7 @@ class CAV_TankGunner : CommonBlufor {               // Tank Gunner
         "rhs_mag_m18_red",2,
 
         "UGL_FlareCIR_F",
-        
+
         "Chemlight_green",2,
         "ACE_Chemlight_HiRed",2
     };
@@ -71,7 +71,7 @@ class CAV_TankGunner : CommonBlufor {               // Tank Gunner
         "ACE_quikclot",60,
         "ACE_morphine",35,
         "ACE_personalAidKit",2,
-        
+
         // Standard
         "ACE_EarPlugs",2,
         "ACE_MapTools",
@@ -79,7 +79,7 @@ class CAV_TankGunner : CommonBlufor {               // Tank Gunner
 
         // Electronics
         "ACE_IR_Strobe_Item",
-        
+
         //Tools
         "ToolKit"
     };
@@ -106,7 +106,7 @@ class CAV_TankDriver : CommonBlufor {               // Tank Driver
         "rhs_mag_m18_red",2,
 
         "UGL_FlareCIR_F",
-        
+
         "Chemlight_green",2,
         "ACE_Chemlight_HiRed",2
     };
@@ -114,15 +114,15 @@ class CAV_TankDriver : CommonBlufor {               // Tank Driver
         // Medical Equipment
         "ACE_quikclot",35,
         "ACE_morphine",10,
-        
+
         // Standard
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_Flashlight_MX991",      
-        
+
         // Electronics
         "ACE_IR_Strobe_Item",
-        
+
         //Tools
         "ToolKit"
     };
@@ -166,9 +166,6 @@ class CAV_TankLoader : CommonBlufor {               // Tank Loader
 
         // Electronics
         "ACE_IR_Strobe_Item",
-        
-        //Tools
-        "ToolKit"
     };
     
     gps[] = {"itemAndroid"};
