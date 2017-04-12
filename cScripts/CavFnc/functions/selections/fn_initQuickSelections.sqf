@@ -30,6 +30,9 @@ if ((_selectSize == "full")) then {
 if ((_selectSize == "full") or (_selectSize == "medium")) then {
     [_object,"cScriptQuickSelectionCrew","Crew",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
 };
+if ((_selectSize == "full") or (_selectSize == "medium")) then {
+    [_object,"cScriptQuickSelectionLaunchers","Launchers",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
+};
 
 if ((_selectSize == "full") or (_selectSize == "medium") or (_selectSize == "lite")) then {
     // make addAction Topic
@@ -42,6 +45,15 @@ if ((_selectSize == "full") or (_selectSize == "medium") or (_selectSize == "lit
     [_object,"Grenadier","CAV_Grenadier"] call FUNC(addQuickSelection);
     [_object,"Rifleman","CAV_Rifleman"] call FUNC(addQuickSelection);
     [_object,"Combat Life Saver","CAV_CombatLifesaver"] call FUNC(addQuickSelection);
+};
+
+if ((_selectSize == "full") or (_selectSize == "medium")) then {
+    [_object,"Javelin Specialist","CAV_JavelinSpecialist","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionLaunchers']] call FUNC(addQuickSelection);
+    [_object,"Javelin Specialist Asst.","CAV_JavelinAssistantSpecialist","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionLaunchers']] call FUNC(addQuickSelection);
+    [_object,"MAAWS Specialist","CAV_MAAWSSpecialist","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionLaunchers']] call FUNC(addQuickSelection);
+    [_object,"MAAWS Specialist Asst.","CAV_MAAWSAssistantSpecialist","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionLaunchers']] call FUNC(addQuickSelection);
+    [_object,"AA Specialist","CAV_AASpecialist","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionLaunchers']] call FUNC(addQuickSelection);
+    [_object,"AA Specialist Asst.","CAV_AAAssistantSpecialist","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionLaunchers']] call FUNC(addQuickSelection);
 };
 
 if ((_selectSize == "full")) then {
