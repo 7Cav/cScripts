@@ -1,7 +1,7 @@
 /*
 GearVersionDate: 170211
 */
-class CAV_SquadLeader : CommonBlufor {              // Squad Leader
+class CAV_SquadLeader : CommonBlufor {                  // Squad Leader
     backpack[] = {"tf_rt1523g_big_rhs"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
@@ -43,7 +43,7 @@ class CAV_SquadLeader : CommonBlufor {              // Squad Leader
     };
     gps[] = {"ItemAndroid"};
 };
-class CAV_TeamLeader : CommonBlufor {               // Fire Team Leader
+class CAV_TeamLeader : CommonBlufor {                   // Fire Team Leader
     backpack[] = {"B_Kitbag_cbr"};
 
     primary[] = {"rhs_weap_m4a1_m320","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
@@ -88,7 +88,7 @@ class CAV_TeamLeader : CommonBlufor {               // Fire Team Leader
         "DAR_Beret_Mar"
     };
 };
-class CAV_AutomaticRifleman : CommonBlufor {        // Automatic Rifleman
+class CAV_AutomaticRifleman : CommonBlufor {            // Automatic Rifleman
     primary[] = {"rhs_weap_m249_pip_L","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
@@ -99,7 +99,7 @@ class CAV_AutomaticRifleman : CommonBlufor {        // Automatic Rifleman
         "SmokeShell",4
     };
 };
-class CAV_Grenadier : CommonBlufor {                // Grenadier
+class CAV_Grenadier : CommonBlufor {                    // Grenadier
     backpack[] = {"B_Kitbag_cbr"};
 
     primary[] = {"rhs_weap_m4a1_m320","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
@@ -116,11 +116,11 @@ class CAV_Grenadier : CommonBlufor {                // Grenadier
         "SmokeShell",6
     };
 };
-class CAV_Rifleman : CommonBlufor {                 // Rifleman
+class CAV_Rifleman : CommonBlufor {                     // Rifleman
     primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
 };
 
-class CAV_CombatLifesaver : CommonBlufor {          // Combat Life Saver
+class CAV_CombatLifesaver : CommonBlufor {              // Combat Life Saver
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
@@ -162,7 +162,7 @@ class CAV_CombatLifesaver : CommonBlufor {          // Combat Life Saver
     
     //preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
 };
-class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
+class CAV_PlatoonMedic : CommonBlufor {                 // Platoon Medic
     backpack[] = {"tf_rt1523g_big_rhs"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
@@ -209,7 +209,7 @@ class CAV_PlatoonMedic : CommonBlufor {             // Platoon Medic
     insignia[] = {"CLS_Insignia"};
     //preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
 };
-class CAV_Starlight : CommonBlufor {                // Mobile Medic Team
+class CAV_Starlight : CommonBlufor {                    // Mobile Medic Team
     backpack[] = {"tf_rt1523g_big_rhs"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
@@ -257,7 +257,7 @@ class CAV_Starlight : CommonBlufor {                // Mobile Medic Team
     //preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
 };
 
-class CAV_Engineer : CommonBlufor {                 // Engineer
+class CAV_Engineer : CommonBlufor {                     // Engineer
     vest[] = {"rhsusf_iotv_ocp_Repair"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_ACOG_RMR"};
@@ -302,7 +302,7 @@ class CAV_Engineer : CommonBlufor {                 // Engineer
     //preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 
-class CAV_JavelinSpecialist : CommonBlufor {
+class CAV_JavelinSpecialist : CommonBlufor {            // Javelin Specialist
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
 
@@ -330,7 +330,7 @@ class CAV_JavelinSpecialist : CommonBlufor {
         "ACE_DAGR"
     };
 };
-class CAV_JavelinAssistantSpecialist : CommonBlufor {
+class CAV_JavelinAssistantSpecialist : CommonBlufor {   // Javelin Specialist Asst.
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
     
@@ -360,7 +360,7 @@ class CAV_JavelinAssistantSpecialist : CommonBlufor {
         "ACE_EntrenchingTool"
     };
 };
-class CAV_MAAWSSpecialist : CommonBlufor {
+class CAV_MAAWSSpecialist : CommonBlufor {              // MAAWS Specialist
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
     
@@ -389,7 +389,7 @@ class CAV_MAAWSSpecialist : CommonBlufor {
         "ACE_DAGR"
     };
 };
-class CAV_MAAWSAssistantSpecialist : CommonBlufor {
+class CAV_MAAWSAssistantSpecialist : CommonBlufor {     // MAAWS Specialist Asst.
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
     
@@ -420,7 +420,7 @@ class CAV_MAAWSAssistantSpecialist : CommonBlufor {
         "ACE_EntrenchingTool"
     };
 };
-class CAV_AASpecialist : CommonBlufor {
+class CAV_AASpecialist : CommonBlufor {                 // AA Specialist
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
     
@@ -448,7 +448,7 @@ class CAV_AASpecialist : CommonBlufor {
         "ACE_DAGR"
     };
 };
-class CAV_AAAssistantSpecialist : CommonBlufor {
+class CAV_AAAssistantSpecialist : CommonBlufor {        // AA Specialist Asst.
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
     
@@ -479,7 +479,7 @@ class CAV_AAAssistantSpecialist : CommonBlufor {
     };
 };
 
-class CAV_Officer : CommonBlufor {                  // Officer
+class CAV_Officer : CommonBlufor {                      // Officer
     backpack[] = {"tf_rt1523g_big_rhs"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
@@ -519,7 +519,7 @@ class CAV_Officer : CommonBlufor {                  // Officer
     };
     gps[] = {"ItemcTab"};
 };
-class CAV_JTAC : CommonBlufor {                     // JTAC
+class CAV_JTAC : CommonBlufor {                         // JTAC
     backpack[] = {"tf_rt1523g_big_rhs"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 

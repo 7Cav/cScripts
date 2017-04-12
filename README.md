@@ -19,31 +19,38 @@ More information about respawn see the [BIS Community Wiki](https://community.bi
 ## Automatic Loadout Distrubution (Poppy)
 cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automaticly give ___all blufor players___ a pre defined loadout in the list below. If you havea un recugnice loadout you will be given the default loadout (CommonBlufor).
 
-| Loadout             | VariableName            | Supported ClassNames                                                             | Update |
-|---------------------|-------------------------|----------------------------------------------------------------------------------|--------|
-| Default             | `CommonBlufor`          | `ALL PLAYER BLUFOR`                                                              | 170211 |
-| Squad Leader        | `CAV_SquadLeader`       | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`     | 170211 |
-| Team Leader         | `CAV_TeamLeader`        | `B_Soldier_TL_F` `rhsusf_army_ocp_teamleader` `rhsusf_army_ucp_teamleader`       | 170211 |
-| Automatic Rifleman  | `CAV_AutomaticRifleman` | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman`   | 170211 |
-| Grenadier           | `CAV_Grenadier`         | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`         | 170211 |
-| Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`              | 170211 |
-|                     |                         |                                                                                  |        |
-| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`       | 170211 |
-| Platoon Medic       | `CAV_PlatoonMedic`      | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                      | 170211 |
-| Starlight           | `CAV_Starlight`         | `rhsusf_navy_marpat_wd_medic` `rhsusf_navy_marpat_d_medic`                       | 170211 |
-|                     |                         |                                                                                  |        |
-| Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`             |        |
-|                     |                         |                                                                                  |        |
-| Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                | 170211 |
-| JTAC                | `CAV_JTAC`              |                                                                                  | 170211 |
-|                     |                         |                                                                                  |        |
-| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ocp_crewman`                                                        |        |
-| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ocp_combatcrewman`                                                  |        |
-| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_driver`                                                         |        |
-| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_driver_armored`                                                 |        |
-|                     |                         |                                                                                  |        |
-| Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`          |        |
-| Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                   |        |
+| Loadout                   | VariableName                     | Supported ClassNames                                                             | Update |
+|---------------------------|----------------------------------|----------------------------------------------------------------------------------|--------|
+| Default                   | `CommonBlufor`                   | `ALL PLAYER BLUFOR`                                                              | 170211 |
+| Squad Leader              | `CAV_SquadLeader`                | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`     | 170211 |
+| Team Leader               | `CAV_TeamLeader`                 | `B_Soldier_TL_F` `rhsusf_army_ocp_teamleader` `rhsusf_army_ucp_teamleader`       | 170211 |
+| Automatic Rifleman        | `CAV_AutomaticRifleman`          | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman`   | 170211 |
+| Grenadier                 | `CAV_Grenadier`                  | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`         | 170211 |
+| Rifleman                  | `CAV_Rifleman`                   | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`              | 170211 |
+|                           |                                  |                                                                                  |        |
+| Javelin Specialist        | `CAV_JavelinSpecialist`          | ``                                                                               | 170412 |
+| Javelin Specialist Asst.  | `CAV_JavelinAssistantSpecialist` | ``                                                                               | 170412 |
+| MAAWS Specialist          | `CAV_MAAWSSpecialist`            | ``                                                                               | 170412 |
+| MAAWS Specialist Asst.    | `CAV_MAAWSAsstSpecialist`        | ``                                                                               | 170412 |
+| AA Specialist Asst.       | `CAV_AASpecialist`               | ``                                                                               | 170412 |
+| AA Specialist Asst.       | `CAV_AAAssistantSpecialist`      | ``                                                                               | 170412 |
+|                           |                                  |                                                                                  |        |
+| Combat Life Saver         | `CAV_CombatLifesaver`            | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`       | 170211 |
+| Platoon Medic             | `CAV_PlatoonMedic`               | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                      | 170211 |
+| Starlight                 | `CAV_Starlight`                  | `rhsusf_navy_marpat_wd_medic` `rhsusf_navy_marpat_d_medic`                       | 170211 |
+|                           |                                  |                                                                                  |        |
+| Engineer                  | `CAV_Engineer`                   | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`             |        |
+|                           |                                  |                                                                                  |        |
+| Officer                   | `CAV_Officer`                    | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                | 170211 |
+| JTAC                      | `CAV_JTAC`                       |                                                                                  | 170211 |
+|                           |                                  |                                                                                  |        |
+| Tank Commander            | `CAV_TankCommander`              | `rhsusf_army_ocp_crewman`                                                        | 170412 |
+| Tank Gunner               | `CAV_TankGunner`                 | `rhsusf_army_ocp_combatcrewman`                                                  | 170412 |
+| Tank Driver               | `CAV_TankDriver`                 | `rhsusf_army_ocp_driver`                                                         | 170412 |
+| Tank Loader               | `CAV_TankLoader`                 | `rhsusf_army_ocp_driver_armored`                                                 | 170412 |
+|                           |                                  |                                                                                  |        |
+| Helicopter Pilot          | `CAV_HeloPilot`                  | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`          |        |
+| Fixed Wing Pilot          | `CAV_FixedPilot`                 | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                   |        |
 If you want to disable or change the loadouts you can find them here: `cScripts\CfgLoadouts.hpp`, `cScripts\Loadouts\*.hpp`
 
 ## CfgSettings

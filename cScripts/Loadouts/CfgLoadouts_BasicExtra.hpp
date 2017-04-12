@@ -45,7 +45,7 @@ class rhsusf_army_ocp_engineer : CAV_Engineer {};
 class rhsusf_army_ucp_engineer : CAV_Engineer {};
 
 
-//AATeam
+//Javelin Team
 class rhsusf_army_ocp_javelin : CAV_JavelinSpecialist {};
 class rhsusf_army_ocp_javelin_assistant : CAV_JavelinAssistantSpecialist {};
 
@@ -54,7 +54,7 @@ class rhsusf_army_ocp_javelin_assistant : CAV_JavelinAssistantSpecialist {};
 class rhsusf_army_ocp_arb_riflemanat : CAV_MAAWSSpecialist {};
 class rhsusf_army_ocp_rifleman_arb_m16 : CAV_MAAWSAsstSpecialist {};
 
-//AATeam
+//AA Team
 class rhsusf_army_ocp_aa : CAV_AASpecialist {};
 class rhsusf_army_ocp_arb_rifleman_m590 : CAV_AAAssistantSpecialist {};
 
