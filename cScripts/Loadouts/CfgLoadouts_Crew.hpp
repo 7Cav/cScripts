@@ -47,7 +47,6 @@ class CAV_TankGunner : CommonBlufor {               // Tank Gunner
     backpack[] = {"B_AssaultPack_cbr"};
     goggles[] = {"G_Lowprofile"};
     headgear[] = {"rhsusf_cvc_green_helmet"};
-    headgear[] = {"H_HelmetCrew_I"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG3"};
@@ -88,7 +87,6 @@ class CAV_TankDriver : CommonBlufor {               // Tank Driver
     backpack[] = {"B_AssaultPack_cbr"};
     goggles[] = {"G_Lowprofile"};
     headgear[] = {"rhsusf_cvc_green_helmet"};
-    headgear[] = {"H_HelmetCrew_I"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG3"};
@@ -131,7 +129,6 @@ class CAV_TankLoader : CommonBlufor {               // Tank Loader
     backpack[] = {"B_AssaultPack_cbr"};
     goggles[] = {"G_Lowprofile"};
     headgear[] = {"rhsusf_cvc_green_helmet"};
-    headgear[] = {"H_HelmetCrew_I"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG3"};

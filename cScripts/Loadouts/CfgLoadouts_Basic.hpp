@@ -1,5 +1,5 @@
 /*
-GearVersionDate: 170211
+GearVersionDate: 170412
 */
 class CAV_SquadLeader : CommonBlufor {                  // Squad Leader
     backpack[] = {"tf_rt1523g_big_rhs"};

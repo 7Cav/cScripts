@@ -28,12 +28,12 @@ cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a rel
 | Grenadier                 | `CAV_Grenadier`                  | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`         | 170211 |
 | Rifleman                  | `CAV_Rifleman`                   | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`              | 170211 |
 |                           |                                  |                                                                                  |        |
-| Javelin Specialist        | `CAV_JavelinSpecialist`          | ``                                                                               | 170412 |
-| Javelin Specialist Asst.  | `CAV_JavelinAssistantSpecialist` | ``                                                                               | 170412 |
-| MAAWS Specialist          | `CAV_MAAWSSpecialist`            | ``                                                                               | 170412 |
-| MAAWS Specialist Asst.    | `CAV_MAAWSAsstSpecialist`        | ``                                                                               | 170412 |
-| AA Specialist Asst.       | `CAV_AASpecialist`               | ``                                                                               | 170412 |
-| AA Specialist Asst.       | `CAV_AAAssistantSpecialist`      | ``                                                                               | 170412 |
+| Javelin Specialist        | `CAV_JavelinSpecialist`          | `B_soldier_AT_F` `rhsusf_army_ocp_javelin`                                       | 170412 |
+| Javelin Specialist Asst.  | `CAV_JavelinAssistantSpecialist` | `B_soldier_AAT_F` `rhsusf_army_ocp_javelin_assistant`                            | 170412 |
+| MAAWS Specialist          | `CAV_MAAWSSpecialist`            | `B_support_GMG_F` `B_support_MG_F`                                               | 170412 |
+| MAAWS Specialist Asst.    | `CAV_MAAWSAsstSpecialist`        | `B_support_AMG_F6`                                                               | 170412 |
+| AA Specialist Asst.       | `CAV_AASpecialist`               | `B_soldier_AA_F`                                                                 | 170412 |
+| AA Specialist Asst.       | `CAV_AAAssistantSpecialist`      | `B_soldier_AAA_F`                                                                | 170412 |
 |                           |                                  |                                                                                  |        |
 | Combat Life Saver         | `CAV_CombatLifesaver`            | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`       | 170211 |
 | Platoon Medic             | `CAV_PlatoonMedic`               | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                      | 170211 |
