@@ -4,6 +4,7 @@ class Poppy {
         class preInit { preInit = 1; };
         class postInitProxy { postInit = 1; };
         class postInit {};
+        class addItemSorted {};
         class applyLoadout {};
         class createBriefingEntry {};
         class findLoadableWeapon {};
