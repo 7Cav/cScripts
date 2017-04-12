@@ -412,10 +412,7 @@ class CAV_TankLoader : CommonBlufor {               // Tank Loader
         "ACE_Flashlight_MX991",
 
         // Electronics
-        "ACE_IR_Strobe_Item",
-        
-        //Tools
-        "ToolKit"
+        "ACE_IR_Strobe_Item"
     };
     
     gps[] = {"itemAndroid"};
