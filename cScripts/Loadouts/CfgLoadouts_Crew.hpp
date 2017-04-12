@@ -62,7 +62,7 @@ class CAV_TankGunner : CommonBlufor {               // Tank Gunner
         "rhs_mag_m18_red",2,
 
         "UGL_FlareCIR_F",
-        
+
         "Chemlight_green",2,
         "ACE_Chemlight_HiRed",2
     };
@@ -71,17 +71,14 @@ class CAV_TankGunner : CommonBlufor {               // Tank Gunner
         "ACE_quikclot",60,
         "ACE_morphine",35,
         "ACE_personalAidKit",2,
-        
+
         // Standard
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_Flashlight_MX991",        
 
         // Electronics
-        "ACE_IR_Strobe_Item",
-        
-        //Tools
-        "ToolKit"
+        "ACE_IR_Strobe_Item"
     };
     
     gps[] = {"itemAndroid"};
@@ -162,7 +159,7 @@ class CAV_TankLoader : CommonBlufor {               // Tank Loader
         // Standard
         "ACE_EarPlugs",2,
         "ACE_MapTools",
-        "ACE_Flashlight_MX991",        
+        "ACE_Flashlight_MX991",
 
         // Electronics
         "ACE_IR_Strobe_Item",
