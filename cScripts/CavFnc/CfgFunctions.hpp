@@ -7,6 +7,7 @@ class cScripts {
         class initDocuments {};
         class initMissionStartHint {};
         class initTrainingStartHint {};
+        class initCustomStartHint {};
         
         class initCuratorHeloFRIES {};
         class initCuratorHeloGetOutRL {};
