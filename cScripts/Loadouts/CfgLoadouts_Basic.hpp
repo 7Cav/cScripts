@@ -160,7 +160,7 @@ class CAV_CombatLifesaver : CommonBlufor {              // Combat Life Saver
     
     insignia[] = {"CLS_Insignia"};
     
-    //preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
+    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]";
 };
 class CAV_PlatoonMedic : CommonBlufor {                 // Platoon Medic
     backpack[] = {"tf_rt1523g_big_rhs"};
@@ -207,7 +207,7 @@ class CAV_PlatoonMedic : CommonBlufor {                 // Platoon Medic
     gps[] = {"ItemAndroid"};
 
     insignia[] = {"CLS_Insignia"};
-    //preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
+    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
 };
 class CAV_Starlight : CommonBlufor {                    // Mobile Medic Team
     backpack[] = {"tf_rt1523g_big_rhs"};
@@ -254,7 +254,7 @@ class CAV_Starlight : CommonBlufor {                    // Mobile Medic Team
     gps[] = {"ItemAndroid"};
 
     insignia[] = {"CLS_Insignia"};
-    //preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
+    preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]";
 };
 
 class CAV_Engineer : CommonBlufor {                     // Engineer
