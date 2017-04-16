@@ -9,6 +9,8 @@ class cScripts {
         class initTrainingStartHint {};
         class initCustomStartHint {};
         
+        class initModuels {};
+        
         class initCuratorHeloFRIES {};
         class initCuratorHeloGetOutRL {};
     };
@@ -64,5 +66,11 @@ class cScripts {
         file = "cScripts\cavFnc\functions\misc";
         class flag {};
         class UH60TailNumber {};
+    };
+    class moduels {
+        file = "cScripts\cavFnc\functions\moduels";
+        class moduelApplyStarterCrate {};
+        class moduelApplySupply {};
+        class moduelApplyTailNumber {};
     };
 };
