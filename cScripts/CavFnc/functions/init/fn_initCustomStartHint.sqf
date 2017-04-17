@@ -29,7 +29,7 @@ _image  = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='ce
 _text0 = format["<t font='PuristaMedium' size='1.1'>%1</t><br /><br />", _setTopic];
 _text1 = format["%1<br />", _setText];
 _textHaveFun = "<t font='PuristaMedium' size='1.1'>Have fun!</t>";
-_textEasterEgg = "<br /><br />Blame Tully if stuff doesn't work.<br />";
+_textEasterEgg = "<br /><br />Blame Brostrom if stuff doesn't work on this one.<br />";
 
 
 // Run hints
