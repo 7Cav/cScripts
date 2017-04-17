@@ -35,5 +35,5 @@ _diaryRecord = _diaryRecord + "<br />";
     false
 } count ((magazines player) arrayIntersect (magazines player));
 
-//player createDiarySubject ["poppy", "Loadout"];
-player createDiaryRecord ["7Cav", ["Loadout", _diaryRecord]];
+player createDiarySubject ["poppy", "Loadout"];
+player createDiaryRecord ["poppy", ["Loadout", _diaryRecord]];
