@@ -1,16 +1,18 @@
 /*
  * Author: CPL.Brostrom.A 
  * This function give a cupple of hints on mission start.
- * This is to inform the players to stand still on mission start to avoid issus.
  *
  * Arguments:
+ * 0: Topic <STRING>
+ * 1: Text <STRING>
+ * 2: Time <NUMBER> (Optional)  (Default: 15)
  *
  * Example:
  *  call cScripts_fnc_initCustomStartHint;
  *  ["My mission", "Description text.", 10] call cScripts_initCustomStartHint;
  */
 
-if (didJIP) exitWith {};
+//if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
