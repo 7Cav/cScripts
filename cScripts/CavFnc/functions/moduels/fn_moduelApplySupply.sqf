@@ -22,7 +22,6 @@ _crateType = [
     "Box_IND_Grenades_F","Box_East_Grenades_F","Box_NATO_Grenades_F",
     "Box_IED_Exp_F","Box_IND_AmmoOrd_F","Box_East_AmmoOrd_F","Box_NATO_AmmoOrd_F"
 ];
-
 if (typeOf _crate in _crateType) then {
 
     _netCrateType = ["CargoNet_01_box_F", "B_CargoNet_01_ammo_F"];
@@ -46,7 +45,7 @@ if (typeOf _crate in _crateType) then {
     };
 
     _launchersCrateType = ["Box_IND_WpsLaunch_F","Box_East_WpsLaunch_F","Box_NATO_WpsLaunch_F","Box_Syndicate_WpsLaunch_F"];
-    if (typeOf _crate in _grenadesCrateType) then {
+    if (typeOf _crate in _launchersCrateType) then {
         [_crate,1] call FUNC(doLaunchersCrate);
     };
     _grenadesCrateType = ["Box_IND_Grenades_F","Box_East_Grenades_F","Box_NATO_Grenades_F"];
