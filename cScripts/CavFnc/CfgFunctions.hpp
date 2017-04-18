@@ -73,5 +73,6 @@ class cScripts {
         class moduelApplySupply {};
         class moduelApplyTailNumber {};
         class moduelReadyHelicopter {};
+        class moduelApplyFlag {};
     };
 };

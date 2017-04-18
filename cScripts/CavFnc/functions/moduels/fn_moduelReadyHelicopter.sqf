@@ -11,10 +11,9 @@
 
 #include "..\script_component.hpp";
 
-if (!isServer) exitWith {};
+params ["_vehicle"];
 
-params [["_vehicle", objNull, [objNull]],"_texture"];
-
+_vehicle = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
 _vehicleType = [
     "B_CTRG_Heli_Transport_01_sand_F",
     "B_CTRG_Heli_Transport_01_tropic_F",
@@ -37,9 +36,8 @@ _vehicleType = [
 ];
 
 if (typeOf _vehicle in _vehicleType) then {
-    [(_this select 1)] call FUNC(addGetOutHelo);
-    //[(_this select 1)] call ace_fastroping_fnc_equipFRIES;
+    [_vehicle] remoteExec ["cScripts_fnc_addGetOutHelo",0,true];
 } else {
-    ["No or wrong type helicopter selected."] call Ares_fnc_ShowZeusMessage;
+    ["No or wrong type helicopter selected!"] call Ares_fnc_ShowZeusMessage;
     playSound "FD_Start_F";
 };
