@@ -121,6 +121,7 @@ class CAV_Rifleman : CommonBlufor {                     // Rifleman
 };
 
 class CAV_CombatLifesaver : CommonBlufor {              // Combat Life Saver
+    backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
