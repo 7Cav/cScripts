@@ -10,8 +10,8 @@
  
 #include "..\script_component.hpp";
 
-["7Cav Logistics", "Transform to Starter Crate",{
-    [(_this select 1)] call FUNC(moduelApplyStarterCrate);
+["7Cav Logistics", "Create Starter Crate",{
+    [(_this select 0)] call FUNC(moduelCreateStarterCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Transform to Cav Supply",{
