@@ -8,7 +8,7 @@ class cScripts {
         class initMissionStartHint {};
         class initTrainingStartHint {};
         class initCustomStartHint {};
-        
+
         class initCuratorHeloFRIES {};
         class initCuratorHeloGetOutRL {};
     };
@@ -31,7 +31,7 @@ class cScripts {
     class supplies {
         file = "cScripts\cavFnc\functions\supplies";
         class doSupplyCrate {};
-        
+
         class doAmmoCrate {};
         class doExplosivesCrate {};
         class doGrenadesCrate {};
@@ -47,7 +47,7 @@ class cScripts {
         class addHeal {};
         class addArsenal {};
         class addAceCategory {};
-        
+
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
@@ -62,7 +62,9 @@ class cScripts {
 
     class misc {
         file = "cScripts\cavFnc\functions\misc";
+        class attachVehicleLabel {};
         class flag {};
-        class UH60TailNumber {};
+
+        class UH60TailNumber {}; //will be merged with "attachVehicleLabel"
     };
 };
