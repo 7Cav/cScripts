@@ -82,8 +82,10 @@ addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE 
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
-#### cScripts_fnc_doStarterCrate
-``` c++
+
+| Loadout                        |                                                                                           |
+|--------------------------------|-------------------------------------------------------------------------------------------|
+| cScripts_fnc_doStarterCrate    |``` c++
  This populats a given object with items and commands used during operations.
  
  Arguments:
@@ -98,19 +100,17 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this] call cScripts_fnc_doStarterCrate;
  [this,"none",true] call cScripts_fnc_doStarterCrate;
  [this,"none",true,true,true,1] call cScripts_fnc_doStarterCrate;
-```
-#### cScripts_fnc_UH60TailNumber
-``` c++
- This function create a tail number suitable for the RHS UH-60M Blackhawk.
- It will work for any vehicle but don't.
- 
+```|
+| cScripts_fnc_doStarterCrate    |``` c++
+ This function creates and attach a lable on a given vehicle.
+
  Arguments:
  0: Vehicle <OBJECT>
- 1: Texture <STRING> ["b1","b2","b3","b4","b5"]
- 
+ 1: Texture <STRING> [For BlackHawk; b1,b2,b3,b4]
+
  Example:
- [this,"b1"] call cScripts_fnc_UH60TailNumber;
- [this,"b2"] call cScripts_fnc_UH60TailNumber;
+ [this] call cScripts_fnc_attachVehicleLabel;
+ [this,"B1"] call cScripts_fnc_attachVehicleLabel;
 ```
 
 #### cScripts_fnc_flag
