@@ -83,9 +83,9 @@ addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
 
-| Loadout                        |                                                                                           |
-|--------------------------------|-------------------------------------------------------------------------------------------|
-| cScripts_fnc_doStarterCrate    |``` c++
+
+####cScripts_fnc_doStarterCrate
+``` c++
  This populats a given object with items and commands used during operations.
  
  Arguments:
@@ -101,7 +101,9 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this,"none",true] call cScripts_fnc_doStarterCrate;
  [this,"none",true,true,true,1] call cScripts_fnc_doStarterCrate;
 ```|
-| cScripts_fnc_doStarterCrate    |``` c++
+
+#### cScripts_fnc_doStarterCrate
+``` c++
  This function creates and attach a lable on a given vehicle.
 
  Arguments:
