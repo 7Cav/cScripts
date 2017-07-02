@@ -103,7 +103,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
 ```
 
 #### cScripts_fnc_initVehicle
-*This script can also be called by the mission it self via **cfgSettings** > **useScriptVehicleInventory** *
+*This script can also be called by the mission it self via* ***cfgSettings*** *>* ***useScriptVehicleInventory***
 ``` c++
  This refits a given vehicle with a more Cav suited supplies equipment.
 
