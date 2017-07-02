@@ -43,7 +43,7 @@ cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a rel
 | Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_driver_armored`                                               | `medium` `full`        |        |
 |                     |                         |                                                                                |                        |        |
 | Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`        | `medium` `full`        |        |
-| Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                 |                        |        |
+| Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                 | `medium` `full`        |        |
 
 If you want to disable or change the loadouts you can find them here: `cScripts\CfgLoadouts.hpp`, `cScripts\Loadouts\*.hpp`
 

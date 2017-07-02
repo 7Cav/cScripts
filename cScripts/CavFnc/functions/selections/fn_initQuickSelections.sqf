@@ -68,4 +68,5 @@ if ((_selectSize == "full") or (_selectSize == "medium")) then {
     [_object,"Tank Driver","CAV_TankDriver","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
     [_object,"Tank Loader","CAV_TankLoader","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
     [_object,"Helo Pilot","CAV_HeloPilot","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
+    [_object,"Fixed Wing Pilot","CAV_FixedPilot","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
 };
