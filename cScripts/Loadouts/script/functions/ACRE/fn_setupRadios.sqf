@@ -14,6 +14,8 @@ if (isPlayer _unit) then {
 
 // - Longrange --------------------------------------------
 if !(isArray (missionConfigFile >> "CfgPoppy" >> "ACRE" >> "channelNames")) exitWith {};
+if  (count allMissionObjects "acre_api_basicMissionSetup" > 0)              exitWith {};
+if  (count allMissionObjects "acre_api_nameChannels" > 0)                   exitWith {};
 private _lrChannels = getArray (missionConfigFile >> "CfgPoppy" >> "ACRE" >> "channelNames");
 
 {

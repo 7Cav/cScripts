@@ -31,10 +31,11 @@ _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),(_quaScale * 6)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),(_quaScale * 6)];
 
-// Downsize the crate
+// Change ace logistics size of crate
 _crate setVariable ["ace_cargo_size", 1];
 
-// If a corect classname add texture
-if (typeOf _crate isEqualTo "Box_NATO_Grenades_F") then {
+// If a correct classname add texture
+_crateType = ["Box_East_Grenades_F","Box_NATO_Grenades_F"];
+if (typeOf _crate in _crateType) then {
     _crate setObjectTextureGlobal  [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
 };

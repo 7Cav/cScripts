@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 params ["_unit", "_array"];
 
-if (typeName (_array select 0) == "ARRAY") then {
+if ((_array select 0) isEqualType []) then {
     _array = selectRandom _array;
 };
 
-_array params ["_gun", ["_attachment0", ""], ["_attachment1", ""], ["_attachment2", ""]];
+_array params ["_gun"];
 
 if (_gun != handgunWeapon _unit) then {
     _unit removeWeapon (handgunWeapon _unit);
@@ -14,4 +14,4 @@ if (_gun != handgunWeapon _unit) then {
 
 removeAllHandgunItems _unit;
 { _unit removeHandgunItem _x; false } count (handgunMagazine _unit);
-{ _unit addHandgunItem _x; false } count [_attachment0, _attachment1, _attachment2];
+{ _unit addHandgunItem _x; false } count (_array select [1, 100]);
