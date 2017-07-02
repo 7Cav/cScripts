@@ -18,5 +18,5 @@ class CfgSettings {
     useScriptSupplyInventory    =   0;      // 0 or 1 Allow the mission to change Supply crate inventorys on mission start. (Default: 0)
 
     useHeloGetOutRL             =   1;      // 0 or 1 Allow the mission to add Get Out Left/Right on helicopters. (Default: 1)
-    addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE to helicopters spawned by Zeus. (Default: 1)
+    addFRIESonZeusSpawn         =   0;      // 0 or 1 Allow the mission to add FRIE to helicopters spawned by Zeus. (Default: 0)
 };
