@@ -75,6 +75,8 @@ addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE 
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
+
+
 #### cScripts_fnc_doStarterCrate
 ``` c++
  This populats a given object with items and commands used during operations.
@@ -92,29 +94,32 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this,"none",true] call cScripts_fnc_doStarterCrate;
  [this,"none",true,true,true,1] call cScripts_fnc_doStarterCrate;
 ```
-#### cScripts_fnc_UH60TailNumber
+
+#### cScripts_fnc_initVehicle
+*This script can also be called by the mission it self via* ***cfgSettings*** *>* ***useScriptVehicleInventory***
 ``` c++
- This function create a tail number suitable for the RHS UH-60M Blackhawk.
- It will work for any vehicle but don't.
- 
+ This refits a given vehicle with a more Cav suited supplies equipment.
+
  Arguments:
  0: Vehicle <OBJECT>
- 1: Texture <STRING> ["b1","b2","b3","b4","b5"]
- 
+ 1: Scale cargo ammount <NUMBER> (Default: 1)
+
  Example:
- [this,"b1"] call cScripts_fnc_UH60TailNumber;
- [this,"b2"] call cScripts_fnc_UH60TailNumber;
+ [this] call cScripts_fnc_initVehicle;
+ [this,1] call cScripts_fnc_initVehicle;
 ```
 
-#### cScripts_fnc_flag
+#### cScripts_fnc_attachVehicleLabel
 ``` c++
- This add or change a given flag poles flag to a new and better one.
- 
+ This function creates and attach a lable on a given vehicle.
+
  Arguments:
- 0: Object <OBJECT>
- 
+ 0: Vehicle <OBJECT>
+ 1: Texture <STRING> [For BlackHawk; b1,b2,b3,b4]
+
  Example:
- [this] call cScripts_fnc_flag;
+ [this] call cScripts_fnc_attachVehicleLabel;
+ [this,"B1"] call cScripts_fnc_attachVehicleLabel;
 ```
 
 #### cScripts_fnc_doSupplyCrate
@@ -130,8 +135,21 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this,0.5] call cScripts_fnc_doSupplyCrate;
  [this,1] call cScripts_fnc_doSupplyCrate;
 ```
+
 **Note:** *There are specialized crates as well: `cScripts_fnc_doAmmoCrate`, `cScripts_fnc_doLaunchersCrate`, `cScripts_fnc_doGrenadesCrate`, `cScripts_fnc_doExplosivesCrate` you can read more about them in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) under the supplies category. You can find additional ones there as well.*
 
+
+#### cScripts_fnc_flag
+``` c++
+ This add or change a given flag poles flag to a new and better one.
+ 
+ 0: Object <OBJECT>
+ 1: flagType <STRING>   (Default: "yellow")  ["yellow","black"]
+
+ Example:
+ [this] call cScripts_fnc_flag;
+ [this,"yellow"] call cScripts_fnc_flag;
+```
 
 # Other tips and tricks
 ## Find a classname
