@@ -12,6 +12,7 @@
  */
  
 #include "..\script_component.hpp";
+if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {INFO('Executing initVehicle');};
 
 if (isServer) then {
     /*["AllVehicles", "init", {

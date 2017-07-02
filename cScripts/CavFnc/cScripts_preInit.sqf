@@ -1,4 +1,5 @@
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {diag_log formatText ["[cScripts] Info: Loading preInit"];};
+#include "functions\script_component.hpp"
+if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {INFO('Executing preInit');};
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 0) then {
     

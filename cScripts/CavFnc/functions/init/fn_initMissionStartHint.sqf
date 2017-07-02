@@ -14,6 +14,7 @@ if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
+if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {INFO('Executing initMissionStartHint');};
 
 params [["_time", 60]];
 

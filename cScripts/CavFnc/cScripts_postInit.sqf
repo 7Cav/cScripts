@@ -1,4 +1,9 @@
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {diag_log formatText ["[cScripts] Info: Loading postInit"];};
+#include "functions\script_component.hpp"
+if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {
+    systemChat ('DebugMode');
+    systemChat format['%1 %2 Version %3', QUOTE(PREFIX),QUOTE(COMPONENT),VERSION];
+    INFO('Executing postInit');
+};
 
 // Add diary records on mission start
 if (getNumber (missionConfigFile >> "CfgSettings" >> "showDiaryRecords") == 1) then {
