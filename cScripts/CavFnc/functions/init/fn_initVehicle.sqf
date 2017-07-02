@@ -7,7 +7,8 @@
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
  *
  * Example:
- * call cScripts_fnc_initVehicle;:
+ * [this] call cScripts_fnc_initVehicle;
+ * [this,1] call cScripts_fnc_initVehicle;
  */
  
 #include "..\script_component.hpp";
