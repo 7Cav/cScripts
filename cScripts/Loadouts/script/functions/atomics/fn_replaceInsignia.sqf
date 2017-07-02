@@ -1,10 +1,9 @@
 #include "..\script_component.hpp"
 params ["_unit", "_array"];
-private ["_insignia", "_config"];
 
-_insignia = selectRandom _array;
+private _insignia = selectRandom _array;
 if (_insignia == "") exitWith {};
-_config = configNull;
+private _config = configNull;
 
 if (isClass (missionConfigFile >> "CfgUnitInsignia" >> _insignia)) then {
     _config = missionConfigFile >> "CfgUnitInsignia" >> _insignia;

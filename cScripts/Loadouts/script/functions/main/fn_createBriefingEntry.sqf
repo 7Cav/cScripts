@@ -1,11 +1,10 @@
 #include "..\script_component.hpp"
-private ["_diaryRecord", "_picture", "_currentMagazine"];
 
-_diaryRecord = "";
+private _diaryRecord = "";
 
 {
     if !(_x in ["Throw", "Put"] || {_x isKindOf ["Binocular", configFile >> "CfgWeapons"]}) then {
-        _picture = getText (configFile >> "CfgWeapons" >> _x >> "picture");
+        private _picture = getText (configFile >> "CfgWeapons" >> _x >> "picture");
         if (_picture find "." == -1) then {
             _picture = _picture + ".paa";
         };
@@ -22,8 +21,8 @@ _diaryRecord = "";
 _diaryRecord = _diaryRecord + "<br />";
 
 {
-    _currentMagazine = _x;
-    _picture = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "picture");
+    private _currentMagazine = _x;
+    private _picture         = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "picture");
     if (_picture find "." == -1) then {
         _picture = _picture + ".paa";
     };

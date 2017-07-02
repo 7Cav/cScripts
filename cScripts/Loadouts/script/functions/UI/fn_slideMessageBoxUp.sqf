@@ -5,8 +5,8 @@ private _height = (ctrlPosition (_display displayCtrl 0)) select 3;
 private _deltaHeight = _height - 0.1; //0.1 buffer
 
 {
-    private _ctrl = _display displayCtrl _x;
-    _ctrlPosition = ctrlPosition _ctrl;
+    private _ctrl         = _display displayCtrl _x;
+    private _ctrlPosition = ctrlPosition _ctrl;
     _ctrl ctrlSetPosition [
         _ctrlPosition select 0,
         (_ctrlPosition select 1) - _deltaHeight,

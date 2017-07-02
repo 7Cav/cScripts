@@ -163,7 +163,7 @@ class CAV_CombatLifesaver : CommonBlufor {              // Combat Life Saver
     preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]";
 };
 class CAV_PlatoonMedic : CommonBlufor {                 // Platoon Medic
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_cbr"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
@@ -210,7 +210,7 @@ class CAV_PlatoonMedic : CommonBlufor {                 // Platoon Medic
     preLoadout = "(_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]";
 };
 class CAV_Starlight : CommonBlufor {                    // Mobile Medic Team
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_cbr"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR"};
