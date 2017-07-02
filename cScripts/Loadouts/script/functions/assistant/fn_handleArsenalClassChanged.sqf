@@ -1,6 +1,5 @@
 #include "..\script_component.hpp"
 params ["_control", "_index"];
-private ["_newCommonLoadout", "_commonLoadoutDiff", "_diffIndexes", "_classLoadout"];
 
 if (GVAR(cmbClassLastIndex) == 0) then {
     [] call FUNC(applyCommonLoadoutDiff);

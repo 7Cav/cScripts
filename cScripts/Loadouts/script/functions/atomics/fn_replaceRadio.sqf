@@ -1,11 +1,13 @@
 #include "..\script_component.hpp"
-params ["_unit", "_array"];
+params ["_unit", "_radio"];
 
-// ACRE and TFAR replace the radios on their own.
-if (GVAR(usesACRE) || {GVAR(usesTFAR)}) exitWith {};
-
-private _radio = selectRandom _array;
-_unit unlinkItem "ItemRadio";
-if (_radio != "") then {
-    _unit linkItem _radio;
+switch (true) do {
+    case GVAR(usesACRE): {
+        _radio = [_radio] call acre_api_fnc_getBaseRadio;
+    };
+    case GVAR(usesTFAR): {
+        _radio = getText (configFile >> "CfgWeapons" >> _radio >> "tf_parent");
+    };
 };
+
+[_unit, _radio, [UNIFORM, BACKPACK, VEST]] call FUNC(addItemSorted);

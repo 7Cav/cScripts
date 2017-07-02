@@ -1,10 +1,9 @@
 #include "..\script_component.hpp"
 params ["_class"];
-private ["_config", "_loadoutArray"];
 
-_config = missionConfigFile >> "CfgLoadouts" >> _class;
+private _config = missionConfigFile >> "CfgLoadouts" >> _class;
 
-_loadoutArray = [];
+private _loadoutArray = [];
 {
     if (isArray (_config >> _x)) then {
         _loadoutArray pushBack getArray (_config >> _x);
@@ -13,5 +12,13 @@ _loadoutArray = [];
     };
     false
 } count LOADOUT_INDEXES;
+
+if (GVAR(usesACRE)) then {
+    if (isArray (_config >> "lrRadios")) then {
+        _loadoutArray pushBack getArray (_config >> "lrRadios");
+    } else {
+        _loadoutArray pushBack [];
+    };
+};
 
 _loadoutArray
