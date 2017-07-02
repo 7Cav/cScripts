@@ -1,16 +1,18 @@
 /*
  * Author: CPL.Brostrom.A 
  * This function give a cupple of hints on mission start.
- * This is to inform the players to stand still on mission start to avoid issus.
  *
  * Arguments:
+ * 0: Topic <STRING>
+ * 1: Text <STRING>
+ * 2: Time <NUMBER> (Optional)  (Default: 15)
  *
  * Example:
  *  call cScripts_fnc_initCustomStartHint;
  *  ["My mission", "Description text.", 10] call cScripts_initCustomStartHint;
  */
 
-if (didJIP) exitWith {};
+//if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
@@ -27,7 +29,7 @@ _image  = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='ce
 _text0 = format["<t font='PuristaMedium' size='1.1'>%1</t><br /><br />", _setTopic];
 _text1 = format["%1<br />", _setText];
 _textHaveFun = "<t font='PuristaMedium' size='1.1'>Have fun!</t>";
-_textEasterEgg = "<br /><br />Blame Tully if stuff doesn't work.<br />";
+_textEasterEgg = "<br /><br />Blame Brostrom if stuff doesn't work on this one.<br />";
 
 
 // Run hints

@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Quick Select Scale <STRING>   (Default: "none")
+ * 1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full","ranger"]
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)

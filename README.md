@@ -19,38 +19,31 @@ More information about respawn see the [BIS Community Wiki](https://community.bi
 ## Automatic Loadout Distrubution (Poppy)
 cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automaticly give ___all blufor players___ a pre defined loadout in the list below. If you havea un recugnice loadout you will be given the default loadout (CommonBlufor).
 
-| Loadout                   | VariableName                     | Supported ClassNames                                                             | Update |
-|---------------------------|----------------------------------|----------------------------------------------------------------------------------|--------|
-| Default                   | `CommonBlufor`                   | `ALL PLAYER BLUFOR`                                                              | 170211 |
-| Squad Leader              | `CAV_SquadLeader`                | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`     | 170211 |
-| Team Leader               | `CAV_TeamLeader`                 | `B_Soldier_TL_F` `rhsusf_army_ocp_teamleader` `rhsusf_army_ucp_teamleader`       | 170211 |
-| Automatic Rifleman        | `CAV_AutomaticRifleman`          | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman`   | 170211 |
-| Grenadier                 | `CAV_Grenadier`                  | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`         | 170211 |
-| Rifleman                  | `CAV_Rifleman`                   | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`              | 170211 |
-|                           |                                  |                                                                                  |        |
-| Javelin Specialist        | `CAV_JavelinSpecialist`          | `B_soldier_AT_F` `rhsusf_army_ocp_javelin`                                       | 170412 |
-| Javelin Specialist Asst.  | `CAV_JavelinAssistantSpecialist` | `B_soldier_AAT_F` `rhsusf_army_ocp_javelin_assistant`                            | 170412 |
-| MAAWS Specialist          | `CAV_MAAWSSpecialist`            | `B_support_GMG_F` `B_support_MG_F`                                               | 170412 |
-| MAAWS Specialist Asst.    | `CAV_MAAWSAsstSpecialist`        | `B_support_AMG_F6`                                                               | 170412 |
-| AA Specialist Asst.       | `CAV_AASpecialist`               | `B_soldier_AA_F`                                                                 | 170412 |
-| AA Specialist Asst.       | `CAV_AAAssistantSpecialist`      | `B_soldier_AAA_F`                                                                | 170412 |
-|                           |                                  |                                                                                  |        |
-| Combat Life Saver         | `CAV_CombatLifesaver`            | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`       | 170211 |
-| Platoon Medic             | `CAV_PlatoonMedic`               | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                      | 170211 |
-| Starlight                 | `CAV_Starlight`                  | `rhsusf_navy_marpat_wd_medic` `rhsusf_navy_marpat_d_medic`                       | 170211 |
-|                           |                                  |                                                                                  |        |
-| Engineer                  | `CAV_Engineer`                   | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`             |        |
-|                           |                                  |                                                                                  |        |
-| Officer                   | `CAV_Officer`                    | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                | 170211 |
-| JTAC                      | `CAV_JTAC`                       |                                                                                  | 170211 |
-|                           |                                  |                                                                                  |        |
-| Tank Commander            | `CAV_TankCommander`              | `rhsusf_army_ocp_crewman`                                                        | 170412 |
-| Tank Gunner               | `CAV_TankGunner`                 | `rhsusf_army_ocp_combatcrewman`                                                  | 170412 |
-| Tank Driver               | `CAV_TankDriver`                 | `rhsusf_army_ocp_driver`                                                         | 170412 |
-| Tank Loader               | `CAV_TankLoader`                 | `rhsusf_army_ocp_driver_armored`                                                 | 170412 |
-|                           |                                  |                                                                                  |        |
-| Helicopter Pilot          | `CAV_HeloPilot`                  | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`          |        |
-| Fixed Wing Pilot          | `CAV_FixedPilot`                 | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                   |        |
+| Loadout             | VariableName            | Supported ClassNames                                                           | Quick Select Scale     | Update |
+|---------------------|-------------------------|--------------------------------------------------------------------------------|------------------------|--------|
+| Default             | `CommonBlufor`          | `ALL PLAYER BLUFOR`                                                            |                        | 170211 |
+| Squad Leader        | `CAV_SquadLeader`       | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`   | `lite` `medium` `full` | 170211 |
+| Team Leader         | `CAV_TeamLeader`        | `B_Soldier_TL_F` `rhsusf_army_ocp_teamleader` `rhsusf_army_ucp_teamleader`     | `lite` `medium` `full` | 170211 |
+| Automatic Rifleman  | `CAV_AutomaticRifleman` | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman` | `lite` `medium` `full` | 170211 |
+| Grenadier           | `CAV_Grenadier`         | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`       | `lite` `medium` `full` | 170211 |
+| Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`            | `lite` `medium` `full` | 170211 |
+|                     |                         |                                                                                |                        |        |
+| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`     | `lite` `medium` `full` | 170211 |
+| Platoon Medic       | `CAV_PlatoonMedic`      | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                    | `full`                 | 170211 |
+| Starlight           | `CAV_Starlight`         | `rhsusf_navy_marpat_wd_medic` `rhsusf_navy_marpat_d_medic`                     | `full`                 | 170211 |
+|                     |                         |                                                                                |                        |        |
+| Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`           | `full`                 |        |
+|                     |                         |                                                                                |                        |        |
+| Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`              | `full`                 | 170211 |
+| JTAC                | `CAV_JTAC`              |                                                                                |                        | 170211 |
+|                     |                         |                                                                                |                        |        |
+| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ocp_crewman`                                                      | `medium` `full`        |        |
+| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ocp_combatcrewman`                                                | `medium` `full`        |        |
+| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_driver`                                                       | `medium` `full`        |        |
+| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_driver_armored`                                               | `medium` `full`        |        |
+|                     |                         |                                                                                |                        |        |
+| Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`        | `medium` `full`        |        |
+| Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                 |                        |        |
 
 If you want to disable or change the loadouts you can find them here: `cScripts\CfgLoadouts.hpp`, `cScripts\Loadouts\*.hpp`
 
@@ -82,6 +75,8 @@ addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE 
 
 ## CAV Functions
 CAV Functions are usable functions and scripts that can be called. You can find __all__ the functions and there parameters in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) (`CTRL` + `F`) in the editor. Below here are a list of the moest common and usefull functions with it's parameters:
+
+
 #### cScripts_fnc_doStarterCrate
 ``` c++
  This populats a given object with items and commands used during operations.
@@ -99,29 +94,32 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this,"none",true] call cScripts_fnc_doStarterCrate;
  [this,"none",true,true,true,1] call cScripts_fnc_doStarterCrate;
 ```
-#### cScripts_fnc_UH60TailNumber
+
+#### cScripts_fnc_initVehicle
+*This script can also be called by the mission it self via* ***cfgSettings*** *>* ***useScriptVehicleInventory***
 ``` c++
- This function create a tail number suitable for the RHS UH-60M Blackhawk.
- It will work for any vehicle but don't.
- 
+ This refits a given vehicle with a more Cav suited supplies equipment.
+
  Arguments:
  0: Vehicle <OBJECT>
- 1: Texture <STRING> ["b1","b2","b3","b4","b5"]
- 
+ 1: Scale cargo ammount <NUMBER> (Default: 1)
+
  Example:
- [this,"b1"] call cScripts_fnc_UH60TailNumber;
- [this,"b2"] call cScripts_fnc_UH60TailNumber;
+ [this] call cScripts_fnc_initVehicle;
+ [this,1] call cScripts_fnc_initVehicle;
 ```
 
-#### cScripts_fnc_flag
+#### cScripts_fnc_attachVehicleLabel
 ``` c++
- This add or change a given flag poles flag to a new and better one.
- 
+ This function creates and attach a lable on a given vehicle.
+
  Arguments:
- 0: Object <OBJECT>
- 
+ 0: Vehicle <OBJECT>
+ 1: Texture <STRING> [For BlackHawk; b1,b2,b3,b4]
+
  Example:
- [this] call cScripts_fnc_flag;
+ [this] call cScripts_fnc_attachVehicleLabel;
+ [this,"B1"] call cScripts_fnc_attachVehicleLabel;
 ```
 
 #### cScripts_fnc_doSupplyCrate
@@ -137,8 +135,21 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  [this,0.5] call cScripts_fnc_doSupplyCrate;
  [this,1] call cScripts_fnc_doSupplyCrate;
 ```
+
 **Note:** *There are specialized crates as well: `cScripts_fnc_doAmmoCrate`, `cScripts_fnc_doLaunchersCrate`, `cScripts_fnc_doGrenadesCrate`, `cScripts_fnc_doExplosivesCrate` you can read more about them in the [Function Viewer](https://community.bistudio.com/wiki/Functions_Library_(Arma_3)#Finding_a_Function) under the supplies category. You can find additional ones there as well.*
 
+
+#### cScripts_fnc_flag
+``` c++
+ This add or change a given flag poles flag to a new and better one.
+ 
+ 0: Object <OBJECT>
+ 1: flagType <STRING>   (Default: "yellow")  ["yellow","black"]
+
+ Example:
+ [this] call cScripts_fnc_flag;
+ [this,"yellow"] call cScripts_fnc_flag;
+```
 
 # Other tips and tricks
 ## Find a classname

@@ -27,11 +27,11 @@ _crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",(_quaScale * 2)];
 _crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",(_quaScale * 1)];
 _crate addWeaponCargoGlobal ["rhs_weap_m240B",(_quaScale * 1)];
 
-// Downsize the crate
+// Change ace logistics size of crate
 _crate setVariable ["ace_cargo_size", 1];
 
-// If a corect classname add texture
-if (typeOf _crate isEqualTo "Box_NATO_WpsSpecial_F") then {
+// If a correct classname add texture
+_crateType = ["Box_T_East_Wps_F","Box_East_Wps_F","Box_T_NATO_Wps_F","Box_NATO_Wps_F"];
+if (typeOf _crate in _crateType) then {
     _crate setObjectTextureGlobal  [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
 };
-
