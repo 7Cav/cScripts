@@ -11,6 +11,8 @@
  * [this,"B1"] call cScripts_fnc_attachVehicleLabel;
  */
 
+#include "..\script_component.hpp";
+
 if (!isServer) exitWith {};
 params [["_vehicle", objNull, [objNull]],"_texture"];
 
