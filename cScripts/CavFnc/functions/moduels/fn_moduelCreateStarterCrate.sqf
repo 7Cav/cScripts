@@ -23,7 +23,7 @@ _dialogResult = [
         ["ReGear action",["true","false"],0],
         ["Heal action",["true","false"],0],
         ["Insignia Selection",["true","false"],0],
-        ["Supply Size (Currently forced 1)", "1", "1"]
+        ["Supply Size","SLIDER",1.0]
     ]
 ] call Ares_fnc_ShowChooseDialog;
 
@@ -43,4 +43,4 @@ _InsigniaSelectOption = if (_dialogResult select 3 == 0) then {true} else {false
 _supplieSize = _dialogResult select 4;
 
 _crate = "B_supplyCrate_F" createVehicle _pos;
-[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,1] remoteExec ["cScripts_fnc_doStarterCrate",0,true];
+[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_supplieSize] remoteExec ["cScripts_fnc_doStarterCrate",0,true];
