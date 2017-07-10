@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/7Cav/cScripts/releases/latest">
-        <img src="https://img.shields.io/badge/Version-3.1.5-blue.svg?style=flat-square" alt="cScripts Version">
+        <img src="https://img.shields.io/badge/Version-3.1.5-blue.svg?style=plastic" alt="cScripts Version">
     </a>
     <a href="https://github.com/7Cav/cScripts/issues">
         <img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=flat-square&label=Issues" alt="cScripts Issues">
