@@ -1,6 +1,6 @@
 # cScripts
 <p align="left">
-<a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/badge/Stable-3.1.3-blue.svg?style=plastic" alt="Released Version"></a>
+<a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/badge/Release Build-3.1.3-blue.svg?style=plastic" alt="Released Version"></a>
 <a href="https://github.com/7Cav/cScripts/"><img src="https://img.shields.io/badge/DevBuild-3.1.5-brightgreen.svg?style=plastic" alt="DevBuild Version"></a>
  <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=plastic&label=Issues" alt="cScripts Issues"></a>
  <a href="https://github.com/7Cav/cScripts/releases"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads"></a>
