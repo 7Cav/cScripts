@@ -54,4 +54,8 @@
     
     TF_terrain_interception_coefficient         = 7.0; //Coefficient defining the level of radio signal interruption caused by terrain.
     
+
+/*           SYSTEMS            */
+	DEBUG(systemChat ('DebugMode'); systemChat format['%1 %2 Version %3', QUOTE(PREFIX),QUOTE(COMPONENT),VERSION];);
+
 /*           MODUELS            */

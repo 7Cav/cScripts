@@ -29,3 +29,8 @@ class ##var1 { \
     author = QUOTE(7th Cavalry Gaming); \
     texture = QUOTE(cScripts\Data\Insignia\var2); \
 }
+
+#define DEBUG(var) \
+if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then { \
+    #var \
+}

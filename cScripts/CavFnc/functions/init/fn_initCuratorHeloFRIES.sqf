@@ -9,7 +9,7 @@
  */
 
 #include "..\script_component.hpp";
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {INFO('Executing initCuratorHeloFRIES');};
+DEBUG(INFO('Executing initCuratorHeloFRIES'););
 
 {
     addFRIES = _x addEventHandler ["CuratorObjectPlaced", {

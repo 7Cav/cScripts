@@ -16,7 +16,7 @@
 waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {INFO('Executing initCustomStartHint');};
+DEBUG(INFO('Executing initCustomStartHint'););
 
 params [
     ["_setTopic", "My custom Mission!"],

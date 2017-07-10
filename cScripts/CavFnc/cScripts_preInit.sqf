@@ -1,5 +1,5 @@
 #include "functions\script_component.hpp"
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {INFO('Executing preInit');};
+DEBUG(INFO('Executing preInit'););
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 0) then {
     

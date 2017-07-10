@@ -9,7 +9,7 @@
  */
 
 #include "..\script_component.hpp";
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {INFO('Executing initSupply');};
+DEBUG(INFO('Executing initSupply'););
 
 if (isServer) then {
     // Supply Crates

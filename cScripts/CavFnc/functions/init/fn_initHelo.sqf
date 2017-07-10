@@ -9,7 +9,7 @@
  */
  
 #include "..\script_component.hpp";
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {INFO('Executing initHelo');};
+DEBUG(INFO('Executing initHelo');)
 
 if (isServer) then {
     ["RHS_UH60M", "init", {
