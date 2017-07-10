@@ -3,10 +3,10 @@
         <img src="https://img.shields.io/badge/Version-3.1.5-blue.svg?style=plastic" alt="cScripts Version">
     </a>
     <a href="https://github.com/7Cav/cScripts/issues">
-        <img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=flat-square&label=Issues" alt="cScripts Issues">
+        <img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=plastic&label=Issues" alt="cScripts Issues">
     </a>
     <a href="https://github.com/7Cav/cScripts/releases">
-        <img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=flat-square&label=Downloads" alt="cScripts Downloads">
+        <img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads">
     </a>
 </p>
 
