@@ -1,4 +1,10 @@
 # cScripts
+<p align="left">
+<a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/badge/Release Build-3.1.3-blue.svg?style=plastic" alt="Release Build Version"></a>
+<a href="https://github.com/7Cav/cScripts/tree/master"><img src="https://img.shields.io/badge/Dev Build-3.1.5-brightgreen.svg?style=plastic" alt="Development Build Version"></a>
+ <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=plastic&label=Issues" alt="cScripts Issues"></a>
+ <a href="https://github.com/7Cav/cScripts/releases"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads"></a>
+</p>
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
 
 ## What do cScripts provide?
@@ -43,7 +49,7 @@ cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a rel
 | Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_driver_armored`                                               | `medium` `full`        |        |
 |                     |                         |                                                                                |                        |        |
 | Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`        | `medium` `full`        |        |
-| Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                 |                        |        |
+| Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                 | `medium` `full`        |        |
 
 If you want to disable or change the loadouts you can find them here: `cScripts\CfgLoadouts.hpp`, `cScripts\Loadouts\*.hpp`
 
@@ -70,7 +76,7 @@ useScriptVehicleInventory   =   0;      // 0 or 1 Allow the mission to change Ve
 useScriptSupplyInventory    =   0;      // 0 or 1 Allow the mission to change Supply crate inventorys on mission start. (Default: 0)
 
 useHeloGetOutRL             =   1;      // 0 or 1 Allow the mission to add Get Out Left/Right on helicopters. (Default: 1)
-addFRIESonZeusSpawn         =   1;      // 0 or 1 Allow the mission to add FRIE to helicopters spawned by Zeus. (Default: 1)
+addFRIESonZeusSpawn         =   0;      // 0 or 1 Allow the mission to add FRIE to helicopters spawned by Zeus. (Default: 0)
 ```
 
 ## CAV Functions
