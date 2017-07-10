@@ -1,5 +1,5 @@
 # cScripts
-<p align="center">
+<p align="left">
     <a href="https://github.com/7Cav/cScripts/releases/latest">
         <img src="https://img.shields.io/badge/Version-3.1.5-blue.svg?style=plastic" alt="cScripts Version">
     </a>
