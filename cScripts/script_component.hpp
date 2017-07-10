@@ -31,6 +31,8 @@ class ##var1 { \
 }
 
 #define DEBUG(var) \
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then { \
-    #var \
-}
+if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {var}
+#define DEBUG_M(MESSAGE) \
+DEBUG(systemChat format ['%1', MESSAGE];)
+#define DEBUG_V \
+DEBUG(systemChat format ['%1 version %2', QUOTE(PREFIX), VERSION];)

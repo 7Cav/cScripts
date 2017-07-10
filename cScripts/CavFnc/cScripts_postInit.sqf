@@ -1,5 +1,7 @@
 #include "functions\script_component.hpp"
 DEBUG(INFO('Executing postInit'););
+DEBUG_M('DebugMode');
+DEBUG_V;
 
 // Add diary records on mission start
 if (getNumber (missionConfigFile >> "CfgSettings" >> "showDiaryRecords") == 1) then {

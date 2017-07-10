@@ -9,7 +9,7 @@
  */
  
 #include "..\script_component.hpp";
-DEBUG(INFO('Executing initHelo');)
+DEBUG(INFO('Executing initHelo'););
 
 if (isServer) then {
     ["RHS_UH60M", "init", {
