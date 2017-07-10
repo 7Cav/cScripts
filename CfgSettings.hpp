@@ -1,5 +1,5 @@
 class CfgSettings {
-    isDebugMode                 =   1;      // 0 or 1 Add debug messages in the log (Default: 0)
+    isDebugMode                 =   0;      // 0 or 1 Add debug messages in the log (Default: 0)
     isMissionType               =   1;      // 0: Custom, 1: Operation, 2: Training (Default: 1)
     aiSystemDifficulty          =   0;      // 0: Standard, 1: Desert, 2: Dumb As Fuck (Default: 0)
 
