@@ -27,11 +27,11 @@
 /*          SYSTEMS           */
 
     #include "CfgSettings.hpp"
-    class Extended_PostInit_EventHandlers {
-        cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_postInit.sqf'";
-    };
     class Extended_PreInit_EventHandlers {
         cScripts_preInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_preInit.sqf'";
+    };
+    class Extended_PostInit_EventHandlers {
+        cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_postInit.sqf'";
     };
     class CfgFunctions {
         #include "cScripts\CavFnc\CfgFunctions.hpp"
