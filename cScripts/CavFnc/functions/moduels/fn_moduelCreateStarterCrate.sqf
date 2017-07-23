@@ -20,10 +20,10 @@ _dialogResult = [
     "7th Cavalry Starter Crate",
     [
         ["Quick Select Scale",["none","lite","medium","full","ranger"],0],
-        ["ReGear action",["true","false"],0],
+        ["ReGear action",["true","false"],1],
         ["Heal action",["true","false"],0],
-        ["Insignia Selection",["true","false"],0]
-        //["Supply Size","SLIDER",1.0]
+        ["Insignia Selection",["true","false"],0],
+        ["Supply Size","SLIDER",1]
     ]
 ] call Ares_fnc_ShowChooseDialog;
 
@@ -40,7 +40,7 @@ _quickSelectScale = switch (_dialogResult select 0) do {
 _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};
 _reHealOption = if (_dialogResult select 2 == 0) then {true} else {false};
 _InsigniaSelectOption = if (_dialogResult select 3 == 0) then {true} else {false};
-//_supplieSize = _dialogResult select 4;
+_supplieSize = _dialogResult select 4;
 
 _crate = "B_supplyCrate_F" createVehicle _pos;
-[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,1] remoteExec ["cScripts_fnc_doStarterCrate",0,true];
+[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_supplieSize] remoteExec ["cScripts_fnc_doStarterCrate",0,true];
