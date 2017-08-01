@@ -17,6 +17,12 @@ This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other 
 - **TF47 Launchers**            - [Link](https://forums.bistudio.com/forums/topic/176437-tf47-launchers-wip/)
 *Thease are the minimum requirements to run the script propperly due to the fact equipment and veichles are listed in the script.*
 
+## Installation
+In order to install this script package you only need to [download](https://github.com/7Cav/cScripts/releases/latest) it and place the content in your mission folder located:
+`%USERPROFILE%\Documents\Arma 3 - Other Profiles\[MY AMRA3 USER NAME]\missions\[MY MISSION NAME].[ISLAND]`
+
+*Note! If you have a `init.sqf` and/or a `desctioption.ext` file included in your mission folder they will be needed to be replaced or edited inorder to install this.*
+
 ## What do cScripts provide?
 cScripts provides you with the basic for S3 Operation making.
 
