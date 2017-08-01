@@ -7,6 +7,7 @@
  <a href="https://github.com/7Cav/cScripts/releases"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads"></a>
 </p>
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
+
 ## Requrements
 - **CBA**                       - [Link](https://github.com/CBATeam/CBA_A3)
 - **ACE3**                      - [Link](https://ace3mod.com/)
