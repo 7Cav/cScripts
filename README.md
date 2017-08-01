@@ -7,6 +7,14 @@
  <a href="https://github.com/7Cav/cScripts/releases"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads"></a>
 </p>
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
+## Requrements
+- **CBA**                       - [Link](https://github.com/CBATeam/CBA_A3)
+- **ACE3**                      - [Link](https://ace3mod.com/)
+- **RHSUSAF**                   - [Link](http://www.rhsmods.org/)
+- **TFAR**                      - [Link](http://radio.task-force.ru/en/)
+- **cTab**                      - [Link](https://github.com/Riouken/cTab)
+- **TF47 Launchers**            - [Link](https://forums.bistudio.com/forums/topic/176437-tf47-launchers-wip/)
+*Thease are the minimum requirements to run the script propperly due to the fact equipment and veichles are listed in the script.*
 
 ## What do cScripts provide?
 cScripts provides you with the basic for S3 Operation making.
