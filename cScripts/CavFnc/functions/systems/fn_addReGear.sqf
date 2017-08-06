@@ -9,7 +9,7 @@
  * [this] call cScripts_fnc_addReGear
  */
  
-params [["_object", objNull, [objNull]]];
+params [["_object", objNull, [objNull]],["_healOption",true]];
 
 // Make addAction
 _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
@@ -28,10 +28,14 @@ private _reGearCondition = {true};
 private _reGearStatement = {
     if (vehicleVarName player == "") then {
         [player, typeOf player] call Poppy_fnc_applyLoadout;
-        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        if (_healOption) then
+            [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        };
     } else {
         [player, vehicleVarName player] call Poppy_fnc_applyLoadout;
-        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        if (_healOption) then
+            [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        };
     };
 };
 private _reGearAction = ["cScriptsReGearAce", "ReGear", _Icon, _reGearStatement, _reGearCondition] call ace_interact_menu_fnc_createAction;

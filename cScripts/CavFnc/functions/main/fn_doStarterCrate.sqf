@@ -37,8 +37,8 @@ if (isServer) then {
 _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Equipment Crate", {}];
 
 // Call ReGear Option
-if (_reGearOption) then {
-    [_object] call FUNC(addReGear);
+if (_reGearOption,) then {
+    [_object,_reHealOption] call FUNC(addReGear);
 };
 
 // Call addHeal option
