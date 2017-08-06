@@ -15,10 +15,14 @@ params [["_object", objNull, [objNull]],["_healOption",true]];
 _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
     if (vehicleVarName player == "") then {
         [player, typeOf player] call Poppy_fnc_applyLoadout;
-        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        if (_healOption) then
+            [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        };
     } else {
         [player, vehicleVarName player] call Poppy_fnc_applyLoadout;
-        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        if (_healOption) then
+            [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        };
     };
 }];
 
