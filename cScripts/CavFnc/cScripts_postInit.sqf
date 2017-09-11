@@ -1,5 +1,12 @@
 #include "functions\script_component.hpp"
-DEBUG(INFO('Executing postInit'););
+if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {    // Debug
+    systemChat 'WARNNG! Debug Mode is active';
+    WARNING('Debug Mode is active');
+    _debugVersionCheck = format['%1 version %2', QUOTE(PREFIX), VERSION ];
+    systemChat _debugVersionCheck;
+    INFO(_debugVersionCheck);
+    INFO('Executing postInit');
+};
 
 // Add diary records on mission start
 if (getNumber (missionConfigFile >> "CfgSettings" >> "showDiaryRecords") == 1) then {

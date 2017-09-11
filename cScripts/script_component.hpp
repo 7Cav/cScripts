@@ -32,10 +32,6 @@ class ##var1 { \
 
 // Debug Macros
 #define DEBUG(var) \
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {var}
-
-#define DEBUG_MODE \
-DEBUG(systemChat format ['WARNNG! Debug Mode is active']; \
-WARNING('Debug Mode is active') \
-systemChat format ['%1 version %2', QUOTE(PREFIX), VERSION]; \
-INFO(format ['%1 version %2', QUOTE(PREFIX), VERSION];))
+if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then { \
+    var \
+}
