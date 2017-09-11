@@ -1,17 +1,33 @@
 # cScripts
 <p align="left">
-<a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/badge/Release Build-3.1.3-blue.svg?style=plastic" alt="Release Build Version"></a>
-<a href="https://github.com/7Cav/cScripts/tree/master"><img src="https://img.shields.io/badge/Dev Build-3.1.5-brightgreen.svg?style=plastic" alt="Development Build Version"></a>
+<a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/release/7Cav/cScripts.svg?style=plastic&label=Release%20Build" alt="Release Build Version"></a>
+ <a href="https://github.com/7Cav/cScripts/releases/"><img src="https://img.shields.io/github/release/7Cav/cScripts/all.svg?style=plastic&label=Pre-release" alt="Pre release and or current build version"></a>
+ <a href="https://github.com/7Cav/cScripts/tree/master"><img src="https://img.shields.io/badge/Dev Build-v3.1.7-brightgreen.svg?style=plastic" alt="Development Build Version"></a>
  <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=plastic&label=Issues" alt="cScripts Issues"></a>
  <a href="https://github.com/7Cav/cScripts/releases"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads"></a>
 </p>
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
 
+## Minimum Requrements
+- **CBA**                       - [Link](https://github.com/CBATeam/CBA_A3)
+- **ACE3**                      - [Link](https://ace3mod.com/)
+- **RHSUSAF**                   - [Link](http://www.rhsmods.org/)
+- **TFAR**                      - [Link](http://radio.task-force.ru/en/)
+- **cTab**                      - [Link](https://github.com/Riouken/cTab)
+- **TF47 Launchers**            - [Link](https://forums.bistudio.com/forums/topic/176437-tf47-launchers-wip/)
+*Thease are the minimum requirements to run the script propperly due to the fact equipment and veichles are listed in the script.*
+
+## Installation
+In order to install this script package you only need to [download](https://github.com/7Cav/cScripts/releases/latest) it and place the content in your mission folder located:
+`%USERPROFILE%\Documents\Arma 3 - Other Profiles\[MY AMRA3 USER NAME]\missions\[MY MISSION NAME].[ISLAND]`
+
+*Note! If you have a `init.sqf` and/or a `desctioption.ext` file included in your mission folder they will be needed to be replaced or edited inorder to install this.*
+
 ## What do cScripts provide?
 cScripts provides you with the basic for S3 Operation making.
 
 ### Scripts Installed
-- **CavFnc**                    -   [7th Cavalry Function Library (1.0.0)](https://7cav.us/)
+- **CavFnc**                    -   [7th Cavalry Function Library](https://7cav.us/)
 - **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
 - **ViewingDistance**           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
 
@@ -25,31 +41,41 @@ More information about respawn see the [BIS Community Wiki](https://community.bi
 ## Automatic Loadout Distrubution (Poppy)
 cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automaticly give ___all blufor players___ a pre defined loadout in the list below. If you havea un recugnice loadout you will be given the default loadout (CommonBlufor).
 
-| Loadout             | VariableName            | Supported ClassNames                                                           | Quick Select Scale     | Update |
-|---------------------|-------------------------|--------------------------------------------------------------------------------|------------------------|--------|
-| Default             | `CommonBlufor`          | `ALL PLAYER BLUFOR`                                                            |                        | 170211 |
-| Squad Leader        | `CAV_SquadLeader`       | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`   | `lite` `medium` `full` | 170211 |
-| Team Leader         | `CAV_TeamLeader`        | `B_Soldier_TL_F` `rhsusf_army_ocp_teamleader` `rhsusf_army_ucp_teamleader`     | `lite` `medium` `full` | 170211 |
-| Automatic Rifleman  | `CAV_AutomaticRifleman` | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman` | `lite` `medium` `full` | 170211 |
-| Grenadier           | `CAV_Grenadier`         | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`       | `lite` `medium` `full` | 170211 |
-| Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`            | `lite` `medium` `full` | 170211 |
-|                     |                         |                                                                                |                        |        |
-| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`     | `lite` `medium` `full` | 170211 |
-| Platoon Medic       | `CAV_PlatoonMedic`      | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                    | `full`                 | 170211 |
-| Starlight           | `CAV_Starlight`         | `rhsusf_navy_marpat_wd_medic` `rhsusf_navy_marpat_d_medic`                     | `full`                 | 170211 |
-|                     |                         |                                                                                |                        |        |
-| Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`           | `full`                 |        |
-|                     |                         |                                                                                |                        |        |
-| Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`              | `full`                 | 170211 |
-| JTAC                | `CAV_JTAC`              |                                                                                |                        | 170211 |
-|                     |                         |                                                                                |                        |        |
-| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ocp_crewman`                                                      | `medium` `full`        |        |
-| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ocp_combatcrewman`                                                | `medium` `full`        |        |
-| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_driver`                                                       | `medium` `full`        |        |
-| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_driver_armored`                                               | `medium` `full`        |        |
-|                     |                         |                                                                                |                        |        |
-| Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`        | `medium` `full`        |        |
-| Fixed Wing Pilot    | `CAV_FixedPilot`        | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                 | `medium` `full`        |        |
+| Loadout                   | VariableName                      | Supported ClassNames                                                           | Quick Select Scale     | Update |
+|---------------------------|-----------------------------------|--------------------------------------------------------------------------------|------------------------|--------|
+| Default                   | `CommonBlufor`                    | `ALL PLAYER BLUFOR`                                                            |                        | 170211 |
+| Squad Leader              | `CAV_SquadLeader`                 | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`   | `lite` `medium` `full` | 170211 |
+| Team Leader               | `CAV_TeamLeader`                  | `B_Soldier_TL_F` `rhsusf_army_ocp_teamleader` `rhsusf_army_ucp_teamleader`     | `lite` `medium` `full` | 170211 |
+| Automatic Rifleman        | `CAV_AutomaticRifleman`           | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman` | `lite` `medium` `full` | 170211 |
+| Grenadier                 | `CAV_Grenadier`                   | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`       | `lite` `medium` `full` | 170211 |
+| Rifleman                  | `CAV_Rifleman`                    | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`            | `lite` `medium` `full` | 170211 |
+|                           |                                   |                                                                                |                        |        |
+| Combat Life Saver         | `CAV_CombatLifesaver`             | `B_Soldier_lite_F` `rhsusf_army_ocp_riflemanl` `rhsusf_army_ucp_riflemanl`     | `lite` `medium` `full` | 170211 |
+| Platoon Medic             | `CAV_PlatoonMedic`                | `B_medic_F` `rhsusf_army_ocp_medic` `rhsusf_army_ucp_medic`                    | `full`                 | 170211 |
+| Starlight                 | `CAV_Starlight`                   | `rhsusf_navy_marpat_wd_medic` `rhsusf_navy_marpat_d_medic`                     | `full`                 | 170211 |
+|                           |                                   |                                                                                |                        |        |
+| Javelin Specialist        | `CAV_JavelinSpecialist`           |                                                                                | `medium` `full`        | 170412 |
+| Javelin Specialist Asst.  | `CAV_JavelinAssistantSpecialist`  |                                                                                | `medium` `full`        | 170412 |
+| MAAWS Specialist          | `CAV_MAAWSSpecialist`             |                                                                                | `medium` `full`        | 170412 |
+| MAAWS Specialist Asst.    | `CAV_MAAWSAssistantSpecialist`    |                                                                                | `medium` `full`        | 170412 |
+| AA Specialist             | `CAV_AASpecialist`                |                                                                                | `medium` `full`        | 170412 |
+| AA Specialist Asst.       | `CAV_AAAssistantSpecialist`       |                                                                                | `medium` `full`        | 170412 |
+|                           |                                   |                                                                                |                        |        |
+| Engineer                  | `CAV_Engineer`                    | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`           | `full`                 |        |
+|                           |                                   |                                                                                |                        |        |
+| Officer                   | `CAV_Officer`                     | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`              | `full`                 | 170211 |
+| JTAC                      | `CAV_JTAC`                        |                                                                                |                        | 170211 |
+|                           |                                   |                                                                                |                        |        |
+| Tank Commander            | `CAV_TankCommander`               | `rhsusf_army_ocp_crewman`                                                      | `medium` `full`        |        |
+| Tank Gunner               | `CAV_TankGunner`                  | `rhsusf_army_ocp_combatcrewman`                                                | `medium` `full`        |        |
+| Tank Driver               | `CAV_TankDriver`                  | `rhsusf_army_ocp_driver`                                                       | `medium` `full`        |        |
+| Tank Loader               | `CAV_TankLoader`                  | `rhsusf_army_ocp_driver_armored`                                               | `medium` `full`        |        |
+|                           |                                   |                                                                                |                        |        |
+| Helicopter Pilot          | `CAV_HeloPilot`                   | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`        | `medium` `full`        |        |
+| Fixed Wing Pilot          | `CAV_FixedPilot`                  | `B_Pilot_F` `rhsusf_airforce_jetpilot` `rhsusf_airforce_pilot`                 | `medium` `full`        |        |
+|                           |                                   |                                                                                |                        |        |
+| Sniper                    | `CAV_Sniper`                      | `B_sniper_F` `rhsusf_army_ucp_sniper` `rhsusf_army_ocp_sniper`                 | `ranger`               | 170723 |
+| Spotter                   | `CAV_Spotter`                     | `B_spotter_F`                                                                  | `ranger`               | 170723 |
 
 If you want to disable or change the loadouts you can find them here: `cScripts\CfgLoadouts.hpp`, `cScripts\Loadouts\*.hpp`
 

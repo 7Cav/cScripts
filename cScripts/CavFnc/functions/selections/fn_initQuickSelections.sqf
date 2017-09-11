@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Size Type <SIZE> (none,lite,medium,full)
+ * 1: Size Type <SIZE> ["none","lite","medium","full","ranger"]
  *
  * Example:
  * [this] call cScripts_fnc_initQuickSelections;
@@ -15,14 +15,16 @@
 
 params [["_object", objNull, [objNull]],["_selectSize", "none"]];
 
-
-
 // make default ACE category
 private _icon = "cScripts\Data\Icon\icon_01.paa";
 if ((_selectSize == "full") or (_selectSize == "medium") or (_selectSize == "lite")) then {
     [_object,"cScriptQuickSelectionMenu","Quick Selection",_Icon,["ACE_MainActions"]] call FUNC(addAceCategory);
     [_object,"cScriptQuickSelectionStandard","Standard",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
 };
+if ((_selectSize == "ranger")) then {
+    [_object,"cScriptQuickSelectionMenu","Quick Selection",_Icon,["ACE_MainActions"]] call FUNC(addAceCategory);
+};
+
 // make additional category
 if ((_selectSize == "full")) then {
     [_object,"cScriptQuickSelectionSpecial","Special",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
@@ -33,6 +35,10 @@ if ((_selectSize == "full") or (_selectSize == "medium")) then {
 if ((_selectSize == "full") or (_selectSize == "medium")) then {
     [_object,"cScriptQuickSelectionLaunchers","Launchers",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
 };
+if (_selectSize == "ranger") then {
+    [_object,"cScriptQuickSelectionRanger","Ranger",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
+};
+
 
 if ((_selectSize == "full") or (_selectSize == "medium") or (_selectSize == "lite")) then {
     // make addAction Topic
@@ -56,7 +62,7 @@ if ((_selectSize == "full") or (_selectSize == "medium")) then {
     [_object,"AA Specialist Asst.","CAV_AAAssistantSpecialist","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionLaunchers']] call FUNC(addQuickSelection);
 };
 
-if ((_selectSize == "full")) then {
+if (_selectSize == "full") then {
     [_object,"Officer","CAV_Officer","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionSpecial']] call FUNC(addQuickSelection);
     [_object,"Platoon Medic","CAV_PlatoonMedic","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionSpecial']] call FUNC(addQuickSelection);
     [_object,"Engineer","CAV_Engineer","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionSpecial']] call FUNC(addQuickSelection);
@@ -69,4 +75,9 @@ if ((_selectSize == "full") or (_selectSize == "medium")) then {
     [_object,"Tank Loader","CAV_TankLoader","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
     [_object,"Helo Pilot","CAV_HeloPilot","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
     [_object,"Fixed Wing Pilot","CAV_FixedPilot","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionCrew']] call FUNC(addQuickSelection);
+};
+
+if (_selectSize == "ranger") then {
+    [_object,"Sniper","CAV_Sniper","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionRanger']] call FUNC(addQuickSelection);
+    [_object,"Spotter","CAV_Spotter","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelectionRanger']] call FUNC(addQuickSelection);
 };

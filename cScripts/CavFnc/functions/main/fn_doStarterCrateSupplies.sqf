@@ -42,6 +42,9 @@ _crate addWeaponCargoGlobal ["rhs_weap_fgm148",(_quaScale * 50)];
 _crate addWeaponCargoGlobal ["tf47_m3maaws",(_quaScale * 50)];
 _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",(_quaScale * 50)];
 
+
+_crate addWeaponCargoGlobal ["tf47_optic_m3maaws",(_quaScale * 50)];
+
 //================== AMMO ==================\\
 
 _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),(_quaScale * 250)];
