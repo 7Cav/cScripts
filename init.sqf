@@ -1,7 +1,3 @@
-#include "cScripts\script_component.hpp";
-DEBUG_MODE;
-DEBUG(INFO('Executing init'););
-
 /*           RULES            */
     
     enableSaving [false, false];
