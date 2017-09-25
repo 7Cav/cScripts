@@ -42,6 +42,8 @@ class CAV_TankCommander : CommonBlufor {            // Tank Commander
 
     gps[] = {"itemCTab"};
     nvgs[] = {"rhsusf_ANPVS_15"};
+    
+    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 class CAV_TankGunner : CommonBlufor {               // Tank Gunner
     backpack[] = {"B_AssaultPack_cbr"};
@@ -82,6 +84,8 @@ class CAV_TankGunner : CommonBlufor {               // Tank Gunner
     
     gps[] = {"itemAndroid"};
     nvgs[] = {"rhsusf_ANPVS_15"};
+    
+    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 class CAV_TankDriver : CommonBlufor {               // Tank Driver
     backpack[] = {"B_AssaultPack_cbr"};
@@ -124,6 +128,8 @@ class CAV_TankDriver : CommonBlufor {               // Tank Driver
     
     gps[] = {"itemAndroid"};
     nvgs[] = {"rhsusf_ANPVS_15"};
+    
+    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 class CAV_TankLoader : CommonBlufor {               // Tank Loader
     backpack[] = {"B_AssaultPack_cbr"};
@@ -164,6 +170,8 @@ class CAV_TankLoader : CommonBlufor {               // Tank Loader
     
     gps[] = {"itemAndroid"};
     nvgs[] = {"rhsusf_ANPVS_15"};
+    
+    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 
 class CAV_HeloPilot : CommonBlufor {                // Helo Pilot
@@ -202,6 +210,8 @@ class CAV_HeloPilot : CommonBlufor {                // Helo Pilot
     
     gps[] = {"ItemAndroid"};
     nvgs[] = {"rhsusf_ANPVS_15"};
+    
+    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 
 class CAV_FixedPilot : CommonBlufor {				// Fixed Wing Pilot
@@ -240,4 +250,6 @@ class CAV_FixedPilot : CommonBlufor {				// Fixed Wing Pilot
     
     gps[] = {"ItemAndroid"};
     nvgs[] = {""};
+    
+    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
