@@ -9,6 +9,8 @@
  */
 
 #include "..\script_component.hpp";
+DEBUG(INFO('Executing initCuratorHeloGetOutRL'););
+
 {
     addHeloGetOut = _x addEventHandler ["CuratorObjectPlaced", {
         _helo = ["RHS_UH60M","RHS_UH60M_MEV","RHS_UH60M_MEV2","RHS_UH60M_d","RHS_UH60M_MEV_d","RHS_UH60M_MEV2_d","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","RHS_UH1Y","RHS_UH1Y_FFAR","RHS_UH1Y_GS","RHS_UH1Y_UNARMED","RHS_UH1Y_d","RHS_UH1Y_FFAR_d","RHS_UH1Y_d_GS","RHS_UH1Y_UNARMED_d"];

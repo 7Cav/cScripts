@@ -16,6 +16,7 @@
 waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
+DEBUG(INFO('Executing initCustomStartHint'););
 
 params [
     ["_setTopic", "My custom Mission!"],

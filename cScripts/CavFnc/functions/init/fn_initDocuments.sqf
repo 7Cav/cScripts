@@ -11,6 +11,7 @@
 #include "..\script_component.hpp";
 
 waitUntil {!isNull player && player == player};
+DEBUG(INFO('Executing initDocuments'););
 
 // Add New Topic (7th Cavalry)
 if(player diarySubjectExists "7Cav")exitwith{};

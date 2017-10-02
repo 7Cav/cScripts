@@ -9,6 +9,8 @@
  */
 
 #include "..\script_component.hpp";
+DEBUG(INFO('Executing initCuratorHeloFRIES'););
+
 {
     addFRIES = _x addEventHandler ["CuratorObjectPlaced", {
         _entity = _this select 1;

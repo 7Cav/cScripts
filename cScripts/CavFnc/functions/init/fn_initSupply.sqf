@@ -9,6 +9,7 @@
  */
 
 #include "..\script_component.hpp";
+DEBUG(INFO('Executing initSupply'););
 
 if (isServer) then {
     // Supply Crates

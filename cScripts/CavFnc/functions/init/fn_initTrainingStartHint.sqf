@@ -14,6 +14,7 @@ if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
+DEBUG(INFO('Executing initTrainingStartHint'););
 
 params [["_time", 15]];
 

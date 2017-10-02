@@ -12,6 +12,7 @@
  */
  
 #include "..\script_component.hpp";
+DEBUG(INFO('Executing initVehicle'););
 
 if (isServer) then {
     /*["AllVehicles", "init", {
