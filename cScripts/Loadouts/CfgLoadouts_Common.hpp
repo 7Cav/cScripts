@@ -52,3 +52,13 @@ class CommonBlufor {
         [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
         [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
 };
+class CAV_ALPHA_BASE : CommonBlufor {
+};
+class CAV_BRAVO_BASE : CommonBlufor {
+};
+class CAV_CHARLIE_BASE : CommonBlufor {
+};
+class CAV_DELTA_BASE : CommonBlufor {
+};
+class CAV_RANGER_BASE : CommonBlufor {
+};
