@@ -14,9 +14,14 @@
     [(_this select 0)] call FUNC(moduelCreateStarterCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
-["7Cav Logistics", "Create Supply Crate",{
-    [(_this select 0)] call FUNC(moduelCreateSupplyCrate);
+/*["7Cav Logistics", "Transform to Cav Supply",{
+    [(_this select 1)] call FUNC(moduelApplySupply);
 }] call Ares_fnc_RegisterCustomModule;
+
+["7Cav Logistics", "Transform to Vehicle",{
+    [(_this select 1)] call FUNC(initVehicle;
+}] call Ares_fnc_RegisterCustomModule;
+*/
 
 ["7Cav Helicopters", "Add Get Out Right/Left",{
     [(_this select 1)] call FUNC(moduelReadyHelicopter);
