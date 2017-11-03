@@ -1,4 +1,5 @@
 class ACE_Settings {
+
     class ace_medical_blood_enabledFor {
         value = 2;
         typeName = "SCALAR";
@@ -25,17 +26,17 @@ class ACE_Settings {
         force = 1;
     };
     class ace_cookoff_enable {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
     class ace_cookoff_enableAmmobox {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
     class ace_cookoff_enableAmmoCookoff {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -425,7 +426,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_mk6mortar_allowComputerRangefinder {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -455,7 +456,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_nightvision_disableNVGsWithSights {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
@@ -490,7 +491,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_pylons_rearmNewPylons {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
@@ -510,7 +511,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_pylons_requireToolkit {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -540,7 +541,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_refuel_hoseLength {
-        value = 12;
+        value = 15;
         typeName = "SCALAR";
         force = 1;
     };
@@ -650,7 +651,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_scopes_deduceBarometricPressureFromTerrainAltitude {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
@@ -695,7 +696,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_switchunits_enableSafeZone {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -905,7 +906,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_hearing_enabledForZeusUnits {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -940,7 +941,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_zeus_autoAddObjects {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
@@ -1025,7 +1026,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_medical_enableFractures {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
