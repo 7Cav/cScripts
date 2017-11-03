@@ -39,6 +39,11 @@ class ACE_Settings {
         typeName = "BOOL";
         force = 1;
     };
+    class ace_cookoff_ammoCookoffDuration {
+        value = 1;
+        typeName = "SCALAR";
+        force = 1;
+    };
     class ace_finger_enabled {
         value = 1;
         typeName = "BOOL";
@@ -74,11 +79,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         force = 1;
     };
-    class ace_frag_enableDebugTrace {
-        value = 0;
-        typeName = "BOOL";
-        force = 1;
-    };
     class ace_gforces_enabledFor {
         value = 1;
         typeName = "SCALAR";
@@ -96,6 +96,11 @@ class ACE_Settings {
     };
     class ace_interaction_enableTeamManagement {
         value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_interaction_disableNegativeRating {
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -189,6 +194,16 @@ class ACE_Settings {
         typeName = "SCALAR";
         force = 1;
     };
+    class ace_markers_movableMarkersEnabled {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_markers_moveRestriction {
+        value = 0;
+        typeName = "SCALAR";
+        force = 1;
+    };
     class ace_medical_level {
         value = 2;
         typeName = "SCALAR";
@@ -222,16 +237,6 @@ class ACE_Settings {
     class ace_medical_painCoefficient {
         value = 1;
         typeName = "SCALAR";
-        force = 1;
-    };
-    class ace_medical_enableAirway {
-        value = 0;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class ace_medical_enableFractures {
-        value = 0;
-        typeName = "BOOL";
         force = 1;
     };
     class ace_medical_enableAdvancedWounds {
@@ -409,6 +414,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         force = 1;
     };
+    class ace_missileguidance_enabled {
+        value = 2;
+        typeName = "SCALAR";
+        force = 1;
+    };
     class ace_mk6mortar_airResistanceEnabled {
         value = 0;
         typeName = "BOOL";
@@ -469,13 +479,68 @@ class ACE_Settings {
         typeName = "BOOL";
         force = 1;
     };
+    class ace_overpressure_distanceCoefficient {
+        value = 1;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_pylons_enabled {
+        value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_pylons_rearmNewPylons {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_pylons_searchDistance {
+        value = 15;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_pylons_timePerPylon {
+        value = 5;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_pylons_requireEngineer {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_pylons_requireToolkit {
+        value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_quickmount_distance {
+        value = 3;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_quickmount_speed {
+        value = 18;
+        typeName = "SCALAR";
+        force = 1;
+    };
     class ace_rearm_level {
         value = 2;
         typeName = "SCALAR";
         force = 1;
     };
+    class ace_rearm_supply {
+        value = 0;
+        typeName = "SCALAR";
+        force = 1;
+    };
     class ace_refuel_rate {
         value = 10;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_refuel_hoseLength {
+        value = 12;
         typeName = "SCALAR";
         force = 1;
     };
@@ -544,14 +609,54 @@ class ACE_Settings {
         typeName = "SCALAR";
         force = 1;
     };
-    class ace_spectator_filterUnits {
-        value = 2;
+    class ace_scopes_enabled {
+        value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_scopes_forceUseOfAdjustmentTurrets {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_scopes_correctZeroing {
+        value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_scopes_overwriteZeroRange {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_scopes_defaultZeroRange {
+        value = 100;
         typeName = "SCALAR";
         force = 1;
     };
-    class ace_spectator_filterSides {
+    class ace_scopes_zeroReferenceTemperature {
+        value = 15;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_scopes_zeroReferenceBarometricPressure {
+        value = 1013.25;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_scopes_zeroReferenceHumidity {
         value = 0;
         typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_scopes_deduceBarometricPressureFromTerrainAltitude {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_spectator_enableAI {
+        value = 0;
+        typeName = "BOOL";
         force = 1;
     };
     class ace_spectator_restrictModes {
@@ -639,11 +744,6 @@ class ACE_Settings {
         typeName = "BOOL";
         force = 1;
     };
-    class ace_weather_syncRain {
-        value = 1;
-        typeName = "BOOL";
-        force = 1;
-    };
     class ace_weather_syncWind {
         value = 1;
         typeName = "BOOL";
@@ -677,36 +777,6 @@ class ACE_Settings {
     class ace_winddeflection_simulationRadius {
         value = 3000;
         typeName = "SCALAR";
-        force = 1;
-    };
-    class ace_zeus_zeusAscension {
-        value = 0;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class ace_zeus_zeusBird {
-        value = 0;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class ace_zeus_remoteWind {
-        value = 0;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class ace_zeus_radioOrdnance {
-        value = 0;
-        typeName = "BOOL";
-        force = 1;
-    };
-    class ace_zeus_revealMines {
-        value = 0;
-        typeName = "SCALAR";
-        force = 1;
-    };
-    class ace_zeus_autoAddObjects {
-        value = 0;
-        typeName = "BOOL";
         force = 1;
     };
     class acex_sitting_enable {
@@ -789,9 +859,19 @@ class ACE_Settings {
         typeName = "BOOL";
         force = 1;
     };
+    class ace_captives_requireSurrenderAi {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
     class ace_cargo_enable {
         value = 1;
         typeName = "BOOL";
+        force = 1;
+    };
+    class ace_cargo_paradropTimeCoefficent {
+        value = 2.5;
+        typeName = "SCALAR";
         force = 1;
     };
     class ace_explosives_requireSpecialist {
@@ -831,6 +911,36 @@ class ACE_Settings {
     };
     class ace_hearing_autoAddEarplugsToUnits {
         value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_zeus_zeusAscension {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_zeus_zeusBird {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_zeus_remoteWind {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_zeus_radioOrdnance {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_zeus_revealMines {
+        value = 0;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_zeus_autoAddObjects {
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -903,5 +1013,35 @@ class ACE_Settings {
         value = 3000;
         typeName = "SCALAR";
         force = 1;
-    }
+    };
+    class ace_frag_enableDebugTrace {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_medical_enableAirway {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_medical_enableFractures {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_spectator_filterUnits {
+        value = 2;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_spectator_filterSides {
+        value = 0;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_weather_syncRain {
+        value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
 };
