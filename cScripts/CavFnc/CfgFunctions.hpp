@@ -72,6 +72,7 @@ class cScripts {
     class moduels {
         file = "cScripts\cavFnc\functions\moduels";
         class moduelCreateStarterCrate {};
+        class moduelCreateSupplyCrate {};
         //class moduelApplySupply {};
         class moduelApplyTailNumber {};
         class moduelReadyHelicopter {};
