@@ -77,4 +77,5 @@ class cScripts {
         class moduelReadyHelicopter {};
         class moduelApplyFlag {};
     };
+    
 };
