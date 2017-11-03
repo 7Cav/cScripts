@@ -38,7 +38,7 @@ _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry E
 
 // Call ReGear Option
 if (_reGearOption) then {
-    [_object] call FUNC(addReGear);
+    [_object,_reHealOption] call FUNC(addReGear);
 };
 
 // Call addHeal option
@@ -61,4 +61,4 @@ _object addAction ["---", {}];
 _object enableRopeAttach false;
 
 // Make object not loadable in ACE
-[_object, false, 999] call ace_cargo_fnc_makeLoadable;
+[_object, -1] call ace_cargo_fnc_setSize;
