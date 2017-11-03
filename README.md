@@ -1,11 +1,27 @@
 # cScripts
 <p align="left">
-<a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/badge/Release Build-3.1.3-blue.svg?style=plastic" alt="Release Build Version"></a>
-<a href="https://github.com/7Cav/cScripts/tree/master"><img src="https://img.shields.io/badge/Dev Build-3.1.6-brightgreen.svg?style=plastic" alt="Development Build Version"></a>
+<a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/release/7Cav/cScripts.svg?style=plastic&label=Release%20Build" alt="Release Build Version"></a>
+ <a href="https://github.com/7Cav/cScripts/releases/"><img src="https://img.shields.io/github/release/7Cav/cScripts/all.svg?style=plastic&label=Pre-release" alt="Pre release and or current build version"></a>
+ <a href="https://github.com/7Cav/cScripts/tree/master"><img src="https://img.shields.io/badge/Dev Build-v3.1.7-brightgreen.svg?style=plastic" alt="Development Build Version"></a>
  <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=plastic&label=Issues" alt="cScripts Issues"></a>
  <a href="https://github.com/7Cav/cScripts/releases"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads"></a>
 </p>
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
+
+## Minimum Requrements
+- **CBA**                       - [Link](https://github.com/CBATeam/CBA_A3)
+- **ACE3**                      - [Link](https://ace3mod.com/)
+- **RHSUSAF**                   - [Link](http://www.rhsmods.org/)
+- **TFAR**                      - [Link](http://radio.task-force.ru/en/)
+- **cTab**                      - [Link](https://github.com/Riouken/cTab)
+- **TF47 Launchers**            - [Link](https://forums.bistudio.com/forums/topic/176437-tf47-launchers-wip/)
+*Thease are the minimum requirements to run the script propperly due to the fact equipment and veichles are listed in the script.*
+
+## Installation
+In order to install this script package you only need to [download](https://github.com/7Cav/cScripts/releases/latest) it and place the content in your mission folder located:
+`%USERPROFILE%\Documents\Arma 3 - Other Profiles\[MY AMRA3 USER NAME]\missions\[MY MISSION NAME].[ISLAND]`
+
+*Note! If you have a `init.sqf` and/or a `desctioption.ext` file included in your mission folder they will be needed to be replaced or edited inorder to install this.*
 
 ## What do cScripts provide?
 cScripts provides you with the basic for S3 Operation making.

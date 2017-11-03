@@ -299,7 +299,7 @@ class CAV_Engineer : CommonBlufor {                     // Engineer
         "ACE_EntrenchingTool"
     };
 
-    //preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
+    preLoadout = "(_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 
 class CAV_JavelinSpecialist : CommonBlufor {            // Javelin Specialist
