@@ -1,4 +1,5 @@
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {diag_log formatText ["[cScripts] Info: Loading preInit"];};
+If is3DEN exitWith {};
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 0) then {
     
