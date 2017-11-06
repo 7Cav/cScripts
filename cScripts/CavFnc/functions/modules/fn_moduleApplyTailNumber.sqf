@@ -7,7 +7,7 @@
  * 1: Texture <STRING>
  *
  * Example:
- *  call cScripts_fnc_moduelApplyTailNumber;
+ *  call cScripts_fnc_moduleApplyTailNumber;
  */
 
 #include "..\script_component.hpp";
