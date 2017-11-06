@@ -7,7 +7,7 @@
  * 1: Texture <STRING>
  *
  * Example:
- *  call cScripts_fnc_moduelApplyFlag;
+ *  call cScripts_fnc_moduleApplyFlag;
  */
 
 #include "..\script_component.hpp";
