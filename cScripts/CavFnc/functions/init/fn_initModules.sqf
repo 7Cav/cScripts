@@ -11,11 +11,11 @@
 #include "..\script_component.hpp";
 
 ["7Cav Logistics", "Create Starter Crate",{
-    [(_this select 0)] call FUNC(moduelCreateStarterCrate);
+    [(_this select 0)] call FUNC(moduleCreateStarterCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 /*["7Cav Logistics", "Transform to Cav Supply",{
-    [(_this select 1)] call FUNC(moduelApplySupply);
+    [(_this select 1)] call FUNC(moduleApplySupply);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Transform to Vehicle",{
@@ -24,13 +24,13 @@
 */
 
 ["7Cav Helicopters", "Add Get Out Right/Left",{
-    [(_this select 1)] call FUNC(moduelReadyHelicopter);
+    [(_this select 1)] call FUNC(moduleReadyHelicopter);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Helicopters", "Add Tail Number",{
-    [(_this select 1)] call FUNC(moduelApplyTailNumber);
+    [(_this select 1)] call FUNC(moduleApplyTailNumber);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Misc", "Transform to Cav Flag",{
-    [(_this select 1)] call FUNC(moduelApplyFlag);
+    [(_this select 1)] call FUNC(moduleApplyFlag);
 }] call Ares_fnc_RegisterCustomModule;
