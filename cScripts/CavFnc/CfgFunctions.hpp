@@ -9,7 +9,7 @@ class cScripts {
         class initTrainingStartHint {};
         class initCustomStartHint {};
 
-        class initModuels {};
+        class initModules {};
 
         class initCuratorHeloFRIES {};
         class initCuratorHeloGetOutRL {};
@@ -69,12 +69,12 @@ class cScripts {
         class UH60TailNumber {}; //will be merged with "attachVehicleLabel"
         class flag {};
     };
-    class moduels {
-        file = "cScripts\cavFnc\functions\moduels";
-        class moduelCreateStarterCrate {};
-        //class moduelApplySupply {};
-        class moduelApplyTailNumber {};
-        class moduelReadyHelicopter {};
-        class moduelApplyFlag {};
+    class modules {
+        file = "cScripts\cavFnc\functions\modules";
+        class moduleCreateStarterCrate {};
+        //class moduleApplySupply {};
+        class moduleApplyTailNumber {};
+        class moduleReadyHelicopter {};
+        class moduleApplyFlag {};
     };
 };
