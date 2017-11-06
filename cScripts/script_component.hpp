@@ -1,4 +1,4 @@
-//#include "\x\cba\addons\main\script_macros_mission.hpp"
+#include "\x\cba\addons\main\script_macros_mission.hpp"
 
 #define QUOTE(var) #var
 #define DOUBLES(var1,var2) ##var1##_##var2
