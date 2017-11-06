@@ -5,7 +5,7 @@
  * Arguments:
  *
  * Example:
- * call cScripts_fnc_initModuels;
+ * call cScripts_fnc_initModules;
  */
  
 #include "..\script_component.hpp";
