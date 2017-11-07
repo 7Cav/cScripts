@@ -31,5 +31,4 @@ class ##var1 { \
 }
 
 //Debug
-#define DEBUG(str) \
-["#str", "[cScripts]", [false, true, false]] call CBA_fnc_debug;
+#define DEBUG(str) ["#str", "[cScripts]", [false, true, false]] call CBA_fnc_debug;
