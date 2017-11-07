@@ -8,6 +8,9 @@
  * call cScripts_fnc_initModules;
  */
  
+// Check if Achilles is active else terminate
+if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {DEBUG(cfgPatches for Achilles not detected, terminating modules.);};
+ 
 #include "..\script_component.hpp";
 
 ["7Cav Logistics", "Create Starter Crate",{
