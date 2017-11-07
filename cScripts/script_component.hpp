@@ -29,3 +29,7 @@ class ##var1 { \
     author = QUOTE(7th Cavalry Gaming); \
     texture = QUOTE(cScripts\Data\Insignia\var2); \
 }
+
+//Debug
+#define DEBUG(str) \
+["#str", "[cScripts]", [false, true, false]] call CBA_fnc_debug;
