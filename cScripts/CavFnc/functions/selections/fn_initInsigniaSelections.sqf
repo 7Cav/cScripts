@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function contain insignia selection buttons and categorys.
  *
  * Arguments:
@@ -22,11 +22,11 @@ private _icon = "cScripts\Data\Icon\icon_00.paa";
 // Make addAction Topic.
 _object addAction ["Insignia Selection", {}];
 
-// Add the Insignia Selections 
+// Add the Insignia Selections
 [_object,"Remove Insignia"] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 1/1/C/1-7","11C_17_Insignia","cScripts\Data\Insignia\1-1-C-17.paa"] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 2/1/C/1-7","21C_17_Insignia","cScripts\Data\Insignia\2-1-C-17.paa"] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 3/1/C/1-7","31C_17_Insignia","cScripts\Data\Insignia\3-1-C-17.paa"] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 3/1/C/1-7","31C_17_Insignia","cScripts\Data\Insignia\3-1-C-17.paa"] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 4/1/C/1-7","41C_17_Insignia","cScripts\Data\Insignia\4-1-C-17.paa"] call FUNC(addInsigniaSelection);
 
 [_object,"Platoon Insignia 2/C/1-7","2C_17_Insignia","cScripts\Data\Insignia\2-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu']] call FUNC(addInsigniaSelection);
