@@ -5,5 +5,5 @@ params [
 ];
 
 if ((getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) or (_isForced)) then {
-    diag_log formatText ["[cScripts] Info: %1", _message];
+    diag_log formatText ["[cScripts] INFO: %1", _message];
 };
