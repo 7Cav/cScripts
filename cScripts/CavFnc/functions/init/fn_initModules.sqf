@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function adds the get out right and left function to all supported helos.
  *
  * Arguments:
@@ -7,11 +7,11 @@
  * Example:
  * call cScripts_fnc_initModules;
  */
- 
+
 // Check if Achilles is active else terminate
-if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {FORCEINFO(cfgPatches for Achilles not detected, terminating modules.);};
- 
 #include "..\script_component.hpp";
+
+if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith { FORCEINFO("cfgPatches for Achilles not detected, terminating modules.");};
 
 ["7Cav Logistics", "Create Starter Crate",{
     [(_this select 0)] call FUNC(moduleCreateStarterCrate);
