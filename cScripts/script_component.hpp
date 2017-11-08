@@ -31,7 +31,9 @@ class ##var1 { \
 }
 
 //Debug
-#define INFO(str)      [str,false] call cScripts_fnc_logInfo
-#define FORCEINFO(str) [str,true] call cScripts_fnc_logInfo
-#define WARNING(str)   [str] call cScripts_fnc_logWarning
-#define ERROR(str)     [str] call cScripts_fnc_logError
+#define INFO(str)          [str,false] call cScripts_fnc_logInfo
+#define FORCEINFO(str)     [str,true] call cScripts_fnc_logInfo
+#define WARNING(str)       [str,false] call cScripts_fnc_logWarning
+#define FORCEWARNING(str)  [str,true] call cScripts_fnc_logWarning
+#define ERROR(str)         [str,false] call cScripts_fnc_logError
+#define FORCEERROR(str)    [str,true] call cScripts_fnc_logError
