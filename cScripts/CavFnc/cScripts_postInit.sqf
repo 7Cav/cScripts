@@ -50,3 +50,4 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 2) then
         [_setTrainingHintTime] call cScripts_fnc_initTrainingStartHint;
     };
 };
+FORCEINFO("postInit loaded");
