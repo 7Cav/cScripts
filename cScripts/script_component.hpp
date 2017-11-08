@@ -4,7 +4,7 @@
 #define DOUBLES(var1,var2) ##var1##_##var2
 #define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
 
-#define _QUA0(a) 
+#define _QUA0(a)
 #define _QUA1(a) a
 #define _QUA2(a) a, a
 #define _QUA3(a) a, a, a
@@ -31,4 +31,7 @@ class ##var1 { \
 }
 
 //Debug
-#define DEBUG(str) ["#str", "[cScripts]", [false, true, false]] call CBA_fnc_debug;
+#define INFO(str)      [str,false] call cScripts_fnc_logInfo
+#define FORCEINFO(str) [str,true] call cScripts_fnc_logInfo
+#define WARNING(str)   [str] call cScripts_fnc_logWarning
+#define ERROR(str)     [str] call cScripts_fnc_logError
