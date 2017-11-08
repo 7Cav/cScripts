@@ -20,3 +20,5 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then
 if (getNumber (missionConfigFile >> "CfgSettings" >> "use7cavZeusModules") == 1) then {
     call cScripts_fnc_initModules;
 };
+
+FORCEINFO("preInit loaded");
