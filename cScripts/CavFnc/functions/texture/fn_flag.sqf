@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This add or change a given flag poles flag to a new and better one.
  *
  * Arguments:
@@ -15,9 +15,11 @@
 
 params [["_object", objNull, [objNull]],["_flagType", "yellow"]];
 
-if ((_flagType == "yellow")) then {
-    _object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_00.paa";
-};
-if ((_flagType == "black")) then {
-    _object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_01.paa";
+switch (_flagType) do {
+    case "yellow": {
+        _object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_00.paa";
+    };
+    case "black": {
+        _object setFlagTexture "cScripts\Data\Objects\Flag_7CAV_01.paa";
+    };
 };

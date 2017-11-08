@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This adds a reGear selection option. The script reApplyes the players start loadout. But may also heal you if option is allowed.
  *
  * Arguments:
@@ -9,7 +9,7 @@
  * Example:
  * [this,true] call cScripts_fnc_addReGear
  */
- 
+
 params [
     ["_object", objNull, [objNull]],
     ["_doHeal", true]

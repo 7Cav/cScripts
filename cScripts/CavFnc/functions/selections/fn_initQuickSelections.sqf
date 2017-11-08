@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function contain quick selection buttons and categorys.
  *
  * Arguments:

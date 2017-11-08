@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function creates diary records to all players.
  *
  * Arguments:

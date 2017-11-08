@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This populats a given object with items.
  * Use for mission resupplies.
  *

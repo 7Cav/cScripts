@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This refits a given vehicle with a more Cav suited supplies equipment.
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * [this] call cScripts_fnc_initVehicle;
  * [this,1] call cScripts_fnc_initVehicle;
  */
- 
+
 #include "..\script_component.hpp";
 
 if (isServer) then {

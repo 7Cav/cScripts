@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function generates a insignia selection button.
  *
  * Arguments:
@@ -14,7 +14,7 @@
  * [this,"Squad Insignia 1/1/C/1-7","11C_17_Insignia","cScripts\Data\Insignia\1-1-C-17.paa"] call cScripts_fnc_addInsigniaSelection;
  * [this,"Platoon Insignia 1/1/C/1-7","2C_17_Insignia","cScripts\Data\Insignia\2-C-17.paa"] call cScripts_fnc_addInsigniaSelection;
  */
- 
+
 #include "..\script_component.hpp";
 
 params [

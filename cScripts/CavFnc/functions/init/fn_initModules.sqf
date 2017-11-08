@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function adds the get out right and left function to all supported helos.
  *
  * Arguments:
@@ -7,7 +7,7 @@
  * Example:
  * call cScripts_fnc_initModules;
  */
- 
+
 #include "..\script_component.hpp";
 
 ["7Cav Logistics", "Create Starter Crate",{
