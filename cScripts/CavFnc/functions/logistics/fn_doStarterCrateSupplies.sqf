@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function changes the inventory of a given object and gives it a new.
  *
  * Arguments:

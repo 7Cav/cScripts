@@ -20,13 +20,13 @@ player createDiaryRecord["radioReports",
     - Red - Number of vehicles urgently need fuel, at 10% or less<br/>
     - Yellow/Amber/Orange - Number of vehicles need fuel, at 50% or less<br/>
     - Green - report if all vehicles are green<br/><br/>
-    
+
 <font color='#ffc61a'>Line 2: Ammunition</font><br/>
     - Black - completely out of item<br/>
     - Red - Not enough of item for another contact. Specify item type<br/>
     - Yellow/Orange/Amber - Down to half of full load<br/>
     - Green - report if all ammunition types are green<br/><br/>
-    
+
     Examples:<br/>
     - Five-Five-Six Mags yellow, Frags yellow, White Smoke yellow, Forty-Mike-Mike<br/>
        HE yellow<br/><br/>
@@ -37,7 +37,7 @@ player createDiaryRecord["radioReports",
     - Yellow/Amber/Orange - Number of troopers injured needing return to full<br/>
        health<br/>
     - Green - report if all troopers are green (full health)<br/><br/>
-    
+
     Examples:<br/>
     - 1 red, 2 yellow<br/><br/>
 
@@ -49,7 +49,7 @@ player createDiaryRecord["radioReports",
     - Yellow/Amber/Orange - number of unit vehicles combat effective needing<br/>
        repair or mission critical equipment/AT/AA at 50% level<br/>
     - Green - report if all vehicles/mission critical equipment and AT/AA are green<br/><br/>
-    
+
     Examples:<br/>
     - Demo - black, MAAWS HEAT - red<br/>
     - 1 black, 1 red, 2 yellow (vehicles)<br/><br/>
