@@ -11,7 +11,8 @@
 // Check if Achilles is active else terminate
 #include "..\script_component.hpp";
 
-if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith { FORCEINFO("cfgPatches for Achilles not detected, terminating modules.");};
+if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {FORCEWARNING("cfgPatches for Achilles not detected, terminating modules.");};
+INFO("Achilles mod found adding modules.");
 
 ["7Cav Logistics", "Create Starter Crate",{
     [(_this select 0)] call FUNC(moduleCreateStarterCrate);
