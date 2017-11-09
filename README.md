@@ -9,12 +9,14 @@
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
 
 ## Minimum Requrements
-- **CBA**                       - [Link](https://github.com/CBATeam/CBA_A3)
-- **ACE3**                      - [Link](https://ace3mod.com/)
-- **RHSUSAF**                   - [Link](http://www.rhsmods.org/)
-- **TFAR**                      - [Link](http://radio.task-force.ru/en/)
-- **cTab**                      - [Link](https://github.com/Riouken/cTab)
-- **TF47 Launchers**            - [Link](https://forums.bistudio.com/forums/topic/176437-tf47-launchers-wip/)
+- **CBA**                                    - [Link](https://github.com/CBATeam/CBA_A3)
+- **ACE3**                                   - [Link](https://ace3mod.com/)
+- **RHSUSAF**                                - [Link](http://www.rhsmods.org/)
+- **TFAR**                                   - [Link](http://radio.task-force.ru/en/)
+- **cTab**                                   - [Link](https://github.com/Riouken/cTab)
+- **TF47 Launchers**                         - [Link](https://forums.bistudio.com/forums/topic/176437-tf47-launchers-wip/)
+- **Ares Mod Achilles Expansion** (OPTIONAL) - [Link](https://github.com/ArmaAchilles/AresModAchillesExpansion)
+
 *Thease are the minimum requirements to run the script propperly due to the fact equipment and veichles are listed in the script.*
 
 ## Installation
@@ -112,7 +114,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
 #### cScripts_fnc_doStarterCrate
 ``` c++
  This populats a given object with items and commands used during operations.
- 
+
  Arguments:
  0: Object <OBJECT>
  1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full","ranger"]
@@ -120,7 +122,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  3: Heal action <BOOL>            (Default: true)
  4: Insignia Selection <BOOL>     (Default: true)
  5: Supply Size <NUMBER>          (Default: 1)
- 
+
  Example:
  [this] call cScripts_fnc_doStarterCrate;
  [this,"none",true] call cScripts_fnc_doStarterCrate;
@@ -162,7 +164,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  Arguments:
  0: Crate <OBJECT>
  1: Scale cargo ammount <NUMBER> (Default: 1)
- 
+
  Example:
  [this,0.5] call cScripts_fnc_doSupplyCrate;
  [this,1] call cScripts_fnc_doSupplyCrate;
@@ -174,7 +176,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
 #### cScripts_fnc_flag
 ``` c++
  This add or change a given flag poles flag to a new and better one.
- 
+
  0: Object <OBJECT>
  1: flagType <STRING>   (Default: "yellow")  ["yellow","black"]
 
