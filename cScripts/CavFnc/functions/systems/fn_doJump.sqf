@@ -6,6 +6,9 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
+ * 1: Player <STRING>
+ * 2: Minimum jump altetude <INTEGER>
+ * 3: Parachute deploy height <INTEGER>
  *
  * Example:
  * [this,player] call cScripts_fnc_doJump;

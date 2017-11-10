@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A (With the help from; 654wak654)
+ * Author: CPL.Brostrom.A
  * The ability to jump out of a C130.
  *
  * Arguments:
