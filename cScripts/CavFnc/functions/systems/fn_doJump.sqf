@@ -2,7 +2,7 @@
  * Author: Igi_PL
  * Exported and rewritten: CPL.Brostrom.A
  * This is a exported script from the IGI load mod to get ridd of all the un used system they have.
- * The code is a direct export with some variables renamed and changed.
+ * The code is a direct export with some strings renamed and changed.
  *
  * Arguments:
  * 0: Object <OBJECT>
