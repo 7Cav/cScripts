@@ -53,6 +53,7 @@ class cScripts {
 
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
+        class doGetOutHeloRight {};
         class addJump {};
         class doJump {};
     };
