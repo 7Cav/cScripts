@@ -20,7 +20,6 @@
 params [
     ["_vehicle", objNull, [objNull]],
     ["_player",player],
-    ["_paraJumpATL",200],
     ["_paraChuteOpen_ATL",160]
 ];
 

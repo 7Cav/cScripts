@@ -17,8 +17,8 @@
 params [["_vehicle", objNull, [objNull]], ["_paraJumpATL",200], ["_paraChuteOpen_ATL",160]];
 
 _vehicle addAction [
-    "<t color='#800080'>Eject</t>",
-    {[_this select 0, _this select 1] call FUNC(doJump);
-    },[_paraJumpATL, _paraChuteOpen_ATL], 1.5, true, true, "",
-    "((_target getCargoIndex _this) != -1) && (((getPosATL _target) select 2) >= 200) && (_target animationPhase 'ramp_bottom' > 0.64)"
+    "<t color='#ef1fef'>Jump</t>",
+    {[_this select 0, _this select 1, _this select 3] call FUNC(doJump)
+	},_paraChuteOpen_ATL,1.5,true,true,"",
+    format ["((_target getCargoIndex _this) != -1) && (((getPosATL _target) select 2) >= %1) && (_target animationPhase 'ramp_bottom' > 0.64)", _paraJumpATL]
 ];
