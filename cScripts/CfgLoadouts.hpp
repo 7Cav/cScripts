@@ -1,11 +1,19 @@
 class CfgLoadouts {
     #include "script_component.hpp"
     #include "Loadouts\CfgLoadouts_Common.hpp"
-    #include "Loadouts\CfgLoadouts_Basic.hpp"
-
-    #include "Loadouts\CfgLoadouts_Charlie_Squads.hpp"
-    #include "Loadouts\CfgLoadouts_Charlie_Squads_Extra.hpp"
     
+    #include "Loadouts\CfgLoadouts_Alpha.hpp"
+    #include "Loadouts\CfgLoadouts_AlphaClass.hpp"
+    
+    #include "Loadouts\CfgLoadouts_Bravo.hpp"
+    #include "Loadouts\CfgLoadouts_BravoClass.hpp"
+    
+    #include "Loadouts\CfgLoadouts_Charlie.hpp"
+    #include "Loadouts\CfgLoadouts_CharlieClass.hpp"
+    
+    #include "Loadouts\CfgLoadouts_Ranger.hpp"
+    #include "Loadouts\CfgLoadouts_RangerClass.hpp"
+
     #include "Loadouts\CfgLoadouts_S3.hpp"
     
     #include "Loadouts\CfgLoadouts_UserCustom.hpp"
