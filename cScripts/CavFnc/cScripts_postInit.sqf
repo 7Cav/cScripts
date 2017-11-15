@@ -1,3 +1,4 @@
+if (is3DEN) exitWith {};
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {diag_log formatText ["[cScripts] Info: Loading postInit"];};
 
 // Add diary records on mission start

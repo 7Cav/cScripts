@@ -6,7 +6,7 @@
  * 0: Object <OBJECT>
  *
  * Example:
- *  call cScripts_fnc_moduelReadyHelicopter;
+ *  call cScripts_fnc_moduleReadyHelicopter;
  */
 
 #include "..\script_component.hpp";

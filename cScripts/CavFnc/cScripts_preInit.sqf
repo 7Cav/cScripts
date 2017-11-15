@@ -1,3 +1,4 @@
+if (is3DEN) exitWith {};
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {diag_log formatText ["[cScripts] Info: Loading preInit"];};
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 0) then {
@@ -15,6 +16,6 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then
 
 };
 
-if (getNumber (missionConfigFile >> "CfgSettings" >> "use7cavZeusModuels") == 1) then {
-    call cScripts_fnc_initModuels;
+if (getNumber (missionConfigFile >> "CfgSettings" >> "use7cavZeusModules") == 1) then {
+    call cScripts_fnc_initModules;
 };

@@ -7,7 +7,7 @@
  * 0: Object <OBJECT>
  *
  * Example:
- *  this call moduelCreateStarterCrate;
+ *  this call moduleCreateStarterCrate;
  */
 
 #include "..\script_component.hpp";
