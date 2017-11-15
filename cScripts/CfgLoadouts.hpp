@@ -11,6 +11,9 @@ class CfgLoadouts {
     #include "Loadouts\CfgLoadouts_Charlie.hpp"
     #include "Loadouts\CfgLoadouts_CharlieClass.hpp"
     
+    #include "Loadouts\CfgLoadouts_Medical.hpp"
+    #include "Loadouts\CfgLoadouts_MedicalClass.hpp"
+    
     #include "Loadouts\CfgLoadouts_Ranger.hpp"
     #include "Loadouts\CfgLoadouts_RangerClass.hpp"
 
