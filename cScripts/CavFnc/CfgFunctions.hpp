@@ -23,6 +23,11 @@ class cScripts {
         class DocRadio_MEDEVAC {};
         class DocRadio_ROTARYPICKUP {};
         class DocRadio_SPOTREP {};
+        class DocRadio_JMTASKS {};
+        class DocRadio_CFF {};
+        class DocRadio_LZSPECS {};
+        class DocRadio_LZINSERT {};
+        class DocRadio_LZEXTRACT {};
     };
 
     class main {

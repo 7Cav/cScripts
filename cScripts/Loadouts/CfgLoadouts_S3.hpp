@@ -1,51 +1,55 @@
 /*
 GearVersionDate: 160801
 */
-class S3_BASE : CAV_Officer {
+
+class CAV_S3_Base : CAV_Bravo_OFFCR {
     insignia[] = {"Curator"};
-    /*preLoadout = " \
+    preLoadout = " \
+    (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 4]; \
+    (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 4]; \
     (_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]; \
-    (_this select 0) setVariable [""ACE_isEngineer"", true]";*/
+    (_this select 0) allowDamage false; \
+    (_this select 0) setVariable [""ACE_isEngineer"", true]";
 };
 
-class DEBUG : S3_BASE {};
-class DEBUG_1 : S3_BASE {};
-class DEBUG_2 : S3_BASE {};
-class DEBUG_3 : S3_BASE {};
-class DEBUG_4 : S3_BASE {};
+class DEBUG : CAV_S3_Base {};
+class DEBUG_1 : CAV_S3_Base {};
+class DEBUG_2 : CAV_S3_Base {};
+class DEBUG_3 : CAV_S3_Base {};
+class DEBUG_4 : CAV_S3_Base {};
 
-class MissionControl : S3_BASE {};
-class MissionControl_1 : S3_BASE {};
-class MissionControl_2 : S3_BASE {};
-class MissionControl_3 : S3_BASE {};
-class MissionControl_4 : S3_BASE {};
+class MissionControl : CAV_S3_Base {};
+class MissionControl_1 : CAV_S3_Base {};
+class MissionControl_2 : CAV_S3_Base {};
+class MissionControl_3 : CAV_S3_Base {};
+class MissionControl_4 : CAV_S3_Base {};
 
-class MissionControlUnit : S3_BASE {};
-class MissionControlUnit_1 : S3_BASE {};
-class MissionControlUnit_2 : S3_BASE {};
-class MissionControlUnit_3 : S3_BASE {};
-class MissionControlUnit_4 : S3_BASE {};
+class MissionControlUnit : CAV_S3_Base {};
+class MissionControlUnit_1 : CAV_S3_Base {};
+class MissionControlUnit_2 : CAV_S3_Base {};
+class MissionControlUnit_3 : CAV_S3_Base {};
+class MissionControlUnit_4 : CAV_S3_Base {};
 
-class MC : S3_BASE {};
-class MC_1 : S3_BASE {};
-class MC_2 : S3_BASE {};
-class MC_3 : S3_BASE {};
-class MC_4 : S3_BASE {};
+class MC : CAV_S3_Base {};
+class MC_1 : CAV_S3_Base {};
+class MC_2 : CAV_S3_Base {};
+class MC_3 : CAV_S3_Base {};
+class MC_4 : CAV_S3_Base {};
 
-class Zeus : S3_BASE {};
-class Zeus_1 : S3_BASE {};
-class Zeus_2 : S3_BASE {};
-class Zeus_3 : S3_BASE {};
-class Zeus_4 : S3_BASE {};
+class Zeus : CAV_S3_Base {};
+class Zeus_1 : CAV_S3_Base {};
+class Zeus_2 : CAV_S3_Base {};
+class Zeus_3 : CAV_S3_Base {};
+class Zeus_4 : CAV_S3_Base {};
 
-class ZeusUnit : S3_BASE {};
-class ZeusUnit_1 : S3_BASE {};
-class ZeusUnit_2 : S3_BASE {};
-class ZeusUnit_3 : S3_BASE {};
-class ZeusUnit_4 : S3_BASE {};
+class ZeusUnit : CAV_S3_Base {};
+class ZeusUnit_1 : CAV_S3_Base {};
+class ZeusUnit_2 : CAV_S3_Base {};
+class ZeusUnit_3 : CAV_S3_Base {};
+class ZeusUnit_4 : CAV_S3_Base {};
 
-class S3 : S3_BASE {};
-class S3_1 : S3_BASE {};
-class S3_2 : S3_BASE {};
-class S3_3 : S3_BASE {};
-class S3_4 : S3_BASE {};
+class S3 : CAV_S3_Base {};
+class S3_1 : CAV_S3_Base {};
+class S3_2 : CAV_S3_Base {};
+class S3_3 : CAV_S3_Base {};
+class S3_4 : CAV_S3_Base {};

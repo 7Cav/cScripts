@@ -21,6 +21,16 @@ player createDiarySubject ["7Cav","7th Cavalry"];
 call FUNC(Doc_MissionControl);
 call FUNC(Doc_Info);
 
+// Add New Topic (Checklists)
+if(player diarySubjectExists "Chklists")exitwith{};
+player createDiarySubject ["Chklists","Checklists"];
+
+call FUNC(DocRadio_LZEXTRACT);
+call FUNC(DocRadio_LZINSERT);
+call FUNC(DocRadio_LZSPECS);
+call FUNC(DocRadio_JMTASKS);
+call FUNC(DocRadio_CFF);
+
 // Add New Topic (Radio Reports)
 if(player diarySubjectExists "radioReports")exitwith{};
 player createDiarySubject ["radioReports","Radio Reports"];
