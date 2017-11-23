@@ -10,7 +10,7 @@ class CfgSettings {
     setTrainingHintTime         =   15;     // Seconds for how long the hint is shown (Default: 15)
     setCustomHintTopic          =   "My custom Mission!"; // Sets a custom mission hint topic. (Requires: isMissionType=0)
     setCustomHintText           =   "I have design this mission! Yey for me!"; // Sets a custom mission hint text. (Requires: isMissionType=0)
-    
+
     showDiaryRecords            =   1;      // 0 or 1 Allow the mission to add Radio Reports and 7th Cavalry records on mission start. (Default: 1)
 
     // Custom mission start

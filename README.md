@@ -112,7 +112,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
 #### cScripts_fnc_doStarterCrate
 ``` c++
  This populats a given object with items and commands used during operations.
- 
+
  Arguments:
  0: Object <OBJECT>
  1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full","ranger"]
@@ -120,7 +120,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  3: Heal action <BOOL>            (Default: true)
  4: Insignia Selection <BOOL>     (Default: true)
  5: Supply Size <NUMBER>          (Default: 1)
- 
+
  Example:
  [this] call cScripts_fnc_doStarterCrate;
  [this,"none",true] call cScripts_fnc_doStarterCrate;
@@ -162,7 +162,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
  Arguments:
  0: Crate <OBJECT>
  1: Scale cargo ammount <NUMBER> (Default: 1)
- 
+
  Example:
  [this,0.5] call cScripts_fnc_doSupplyCrate;
  [this,1] call cScripts_fnc_doSupplyCrate;
@@ -174,7 +174,7 @@ CAV Functions are usable functions and scripts that can be called. You can find 
 #### cScripts_fnc_flag
 ``` c++
  This add or change a given flag poles flag to a new and better one.
- 
+
  0: Object <OBJECT>
  1: flagType <STRING>   (Default: "yellow")  ["yellow","black"]
 

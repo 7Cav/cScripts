@@ -17,14 +17,14 @@ params [["_vehicle", objNull, [objNull]]];
 if (!isNil {_vehicle getVariable QGVAR(GetOutHelo)}) exitWith {};
 
 _vehicle addAction [
-    "Get out (Left side)",
+    "<t color='#ff0000'>Get out Left Side</t>",
     {[_this select 0] call FUNC(doGetOutHeloLeft)},
     0, 1.5, true, true, "",
     "(_target getCargoIndex _this) != -1"
 ];
 
 _vehicle addAction [
-    "Get out (Right side)",
+    "<t color='#0000ff'>Get out Right Side</t>",
     {[_this select 0] call FUNC(doGetOutHeloRight)},
     0, 1.5, true, true, "",
     "(_target getCargoIndex _this) != -1"

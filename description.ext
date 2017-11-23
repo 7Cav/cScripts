@@ -21,10 +21,19 @@
 
     // Name a marker "respawn_west" or a veichle "respawn_vehicle_west" for set spawn.
     // See https://community.bistudio.com/wiki/Arma_3_Respawn for more info on respawn.
-    respawn         = BASE;
-    respawnDelay    = 4;
+    respawn                = BASE;
+    respawnDelay           = 4;
+    respawnOnStart         = -1;  // All players at start will load in on the positions they have been placed at.  Ignores respawn menu
+    respawnTemplatesWest[] = {"MenuPosition"};  // Allows players to respawn at the respawn location of their choice after the mission has been started.
 
 /*          SYSTEMS           */
+
+    class Header
+    {
+        gameType = Coop;
+        minPlayers = 1;
+        maxPlayers = 100;
+     };
 
     #include "CfgSettings.hpp"
     class Extended_PreInit_EventHandlers {
