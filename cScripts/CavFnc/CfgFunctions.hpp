@@ -76,5 +76,6 @@ class cScripts {
         class moduleApplyTailNumber {};
         class moduleReadyHelicopter {};
         class moduleApplyFlag {};
+        class moduleMakeDoctor {};
     };
 };
