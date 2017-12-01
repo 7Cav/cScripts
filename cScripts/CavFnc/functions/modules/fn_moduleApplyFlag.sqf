@@ -123,13 +123,14 @@ if (typeOf _flagpole in _flagpoleType) then {
     _dialogResult = [
         "Set Flag Texture",
         [
-            ["Texture type",["Yellow","Black"],0]
+            ["Texture type",["Crossed swords","Crossed swords with Cut","Black Coat of arms"],0]
         ]
     ] call Ares_fnc_ShowChooseDialog;
 
     _texture = switch (_dialogResult select 0) do {
-        case 0: {"yellow";};
-        case 1: {"black";};
+        case 0: {"0";};
+        case 1: {"1";};
+        case 2: {"2";};
     };
 
     [_flagpole,_texture] remoteExec ["cScripts_fnc_flag",0,true];
