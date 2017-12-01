@@ -78,4 +78,10 @@ class cScripts {
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
     };
+    class debug {
+        file = "cScripts\cavFnc\functions\debug";
+        class logError {};
+        class logInfo {}; //will be merged with "attachVehicleLabel"
+        class logWarning {};
+    };
 };

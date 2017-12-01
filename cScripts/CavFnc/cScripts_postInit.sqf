@@ -1,5 +1,6 @@
 if (is3DEN) exitWith {};
-if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {diag_log formatText ["[cScripts] Info: Loading postInit"];};
+#include "..\script_component.hpp";
+FORCEINFO("Loading postInit");
 
 // Add diary records on mission start
 if (getNumber (missionConfigFile >> "CfgSettings" >> "showDiaryRecords") == 1) then {
@@ -49,3 +50,4 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 2) then
         [_setTrainingHintTime] call cScripts_fnc_initTrainingStartHint;
     };
 };
+FORCEINFO("postInit loaded");
