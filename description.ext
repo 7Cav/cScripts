@@ -19,7 +19,7 @@
 
 /*          RESPAWN           */
 
-    // Name a marker "respawn_west" or a veichle "respawn_vehicle_west" for set spawn.
+    // Name a marker "respawn_west" or a vehicle "respawn_vehicle_west" for set spawn.
     // See https://community.bistudio.com/wiki/Arma_3_Respawn for more info on respawn.
     respawn         = BASE;
     respawnDelay    = 4;
