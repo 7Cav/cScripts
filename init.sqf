@@ -49,7 +49,6 @@
     TF_give_microdagr_to_soldier                = false;
     TF_defaultWestPersonalRadio                 = "tf_rf7800str";
     TF_defaultWestRiflemanRadio                 = "tf_anprc152";
-    TF_defaultWestAirborneRadio                 = "tf_rf7800str";
     TF_defaultWestBackpack                      = "tf_rt1523g_big_rhs";
     
     TF_terrain_interception_coefficient         = 7.0; //Coefficient defining the level of radio signal interruption caused by terrain.
