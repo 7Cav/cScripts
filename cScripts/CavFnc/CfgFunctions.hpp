@@ -76,5 +76,12 @@ class cScripts {
         class moduleApplyTailNumber {};
         class moduleReadyHelicopter {};
         class moduleApplyFlag {};
+        class moduleMakeDoctor {};
+    };
+    class debug {
+        file = "cScripts\cavFnc\functions\debug";
+        class logError {};
+        class logInfo {}; //will be merged with "attachVehicleLabel"
+        class logWarning {};
     };
 };
