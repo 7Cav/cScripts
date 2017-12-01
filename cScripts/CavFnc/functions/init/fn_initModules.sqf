@@ -8,10 +8,11 @@
  * call cScripts_fnc_initModules;
  */
 
-// Check if Achilles is active else terminate
 #include "..\script_component.hpp";
 
+// Check if Achilles is active else terminate
 if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {FORCEWARNING("cfgPatches for Achilles not detected, terminating modules.");};
+
 INFO("Achilles mod found adding modules.");
 
 ["7Cav Logistics", "Create Starter Crate",{
@@ -37,4 +38,8 @@ INFO("Achilles mod found adding modules.");
 
 ["7Cav Misc", "Transform to Cav Flag",{
     [(_this select 1)] call FUNC(moduleApplyFlag);
+}] call Ares_fnc_RegisterCustomModule;
+
+["7Cav Misc", "Make Doctor",{
+    [(_this select 1)] call FUNC(moduleMakeDoctor);
 }] call Ares_fnc_RegisterCustomModule;

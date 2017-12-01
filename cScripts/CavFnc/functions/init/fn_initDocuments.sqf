@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function creates diary records to all players.
  *
  * Arguments:
@@ -11,6 +11,8 @@
 #include "..\script_component.hpp";
 
 waitUntil {!isNull player && player == player};
+
+INFO("Adding diary records");
 
 // Add New Topic (7th Cavalry)
 if(player diarySubjectExists "7Cav")exitwith{};

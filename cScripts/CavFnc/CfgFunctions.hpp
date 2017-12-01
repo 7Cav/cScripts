@@ -76,6 +76,7 @@ class cScripts {
         class moduleApplyTailNumber {};
         class moduleReadyHelicopter {};
         class moduleApplyFlag {};
+        class moduleMakeDoctor {};
     };
     class debug {
         file = "cScripts\cavFnc\functions\debug";
