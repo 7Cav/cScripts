@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function contain insignia selection buttons and categorys.
  *
  * Arguments:
@@ -25,7 +25,7 @@ private _icon = "cScripts\Data\Icon\icon_00.paa";
 // Make addAction Topic.
 _object addAction ["Insignia Selection", {}];
 
-// Add the Insignia Selections 
+// Add the Insignia Selections
 [_object,"Remove Insignia"] call FUNC(addInsigniaSelection);
 
 // 7th Cavalry Gaming Insignias
