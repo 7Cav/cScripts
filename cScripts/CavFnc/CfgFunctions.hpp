@@ -59,6 +59,8 @@ class cScripts {
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
+
+        class canSelectLoadout {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
