@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function creates and attach a lable on a given vehicle.
  *
  * Arguments:
@@ -57,4 +57,3 @@ _VehicleTypeUH60 = [
 if (typeOf _vehicle in _VehicleTypeUH60) then {
     [_vehicle,_texture] call FUNC(UH60TailNumber);
 };
-

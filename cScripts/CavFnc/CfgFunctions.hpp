@@ -4,7 +4,9 @@ class cScripts {
         class initSupply {};
         class initVehicle {};
         class initHelo {};
+
         class initDocuments {};
+
         class initMissionStartHint {};
         class initTrainingStartHint {};
         class initCustomStartHint {};
@@ -15,7 +17,7 @@ class cScripts {
         class initCuratorHeloGetOutRL {};
     };
     class DiaryRecord {
-        file = "cScripts\cavFnc\functions\init\DiaryRecord";
+        file = "cScripts\cavFnc\functions\documents";
         class Doc_Info {};
         class Doc_MissionControl {};
 
@@ -25,14 +27,11 @@ class cScripts {
         class DocRadio_SPOTREP {};
     };
 
-    class main {
-        file = "cScripts\cavFnc\functions\main";
+    class logistics {
+        file = "cScripts\cavFnc\functions\logistics";
         class doStarterCrate {};
         class doStarterCrateSupplies {};
-    };
 
-    class supplies {
-        file = "cScripts\cavFnc\functions\supplies";
         class doSupplyCrate {};
 
         class doAmmoCrate {};
@@ -42,10 +41,15 @@ class cScripts {
         class doMedicalCrate {};
         class doSpecialWeaponsCrate {};
         class doWeaponsCrate {};
+
+        class doEmptyCrate {};
     };
 
     class systems {
         file = "cScripts\cavFnc\functions\systems";
+        class addQuickSelection {};
+        class addInsigniaSelection {};
+
         class addReGear {};
         class addHeal {};
         class addArsenal {};
@@ -58,13 +62,11 @@ class cScripts {
     class selections {
         file = "cScripts\cavFnc\functions\selections";
         class initQuickSelections {};
-        class addQuickSelection {};
         class initInsigniaSelections {};
-        class addInsigniaSelection {};
     };
 
     class misc {
-        file = "cScripts\cavFnc\functions\misc";
+        file = "cScripts\cavFnc\functions\texture";
         class attachVehicleLabel {};
         class UH60TailNumber {}; //will be merged with "attachVehicleLabel"
         class flag {};

@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function gear a helicopter with fastrope and add the get out right and left ability.
  *
  * Arguments:

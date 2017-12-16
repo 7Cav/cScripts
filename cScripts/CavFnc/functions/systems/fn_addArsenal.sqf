@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This populats a given object with items and commands used during operations.
  *
  * Arguments:
@@ -8,7 +8,7 @@
  * Example:
  * [this] call cScripts_fnc_addArsenal
  */
- 
+
 params [["_object", objNull, [objNull]]];
 
 // Make addAction

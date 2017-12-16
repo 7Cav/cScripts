@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function give a cupple of hints on mission start.
  * This is to inform the players to stand still on mission start to avoid issus.
  *
