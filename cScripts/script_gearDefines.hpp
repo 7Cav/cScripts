@@ -20,13 +20,13 @@
 
 #define _GRENADE                    rhs_mag_m67
 #define _GRENADE_IR                 B_IR_Grenade
-#define _GRENADE_SMOKE              rhs_mag_an_m8hc
-#define _GRENADE_SMOKE_RED          rhs_mag_m18_red
+#define _GRENADE_SMOKE              SmokeShell
+#define _GRENADE_SMOKE_RED          SmokeShellRed
 #define _GRENADE_SMOKE_BLUE         SmokeShellBlue
-#define _GRENADE_SMOKE_GREEN        rhs_mag_m18_green
+#define _GRENADE_SMOKE_GREEN        SmokeShellGreen
 #define _GRENADE_SMOKE_ORANGE       SmokeShellOrange
-#define _GRENADE_SMOKE_YELLOW       rhs_mag_m18_yellow
-#define _GRENADE_SMOKE_PURPLE       rhs_mag_m18_purple
+#define _GRENADE_SMOKE_YELLOW       SmokeShellYellow
+#define _GRENADE_SMOKE_PURPLE       SmokeShellPurple
 
 #define _GLSHELL0                   rhs_mag_M441_HE
 #define _GLSHELL1                   rhs_mag_M433_HEDP

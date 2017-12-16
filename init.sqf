@@ -51,7 +51,9 @@
     TF_defaultWestRiflemanRadio                 = "tf_anprc152";
     TF_defaultWestBackpack                      = "tf_rt1523g_big_rhs";
 
+
     TF_terrain_interception_coefficient         = 7.0; //Coefficient defining the level of radio signal interruption caused by terrain.
+
 /*           DEBUG              */
     if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {
         ["DEBUG MODE IS ACTIVE!", "WARNING", [true, false, true]] call CBA_fnc_debug;

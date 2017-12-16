@@ -41,7 +41,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_cookoff_ammoCookoffDuration {
-        value = 1;
+        value = 0;
         typeName = "SCALAR";
         force = 1;
     };
@@ -456,7 +456,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_nightvision_disableNVGsWithSights {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
         force = 1;
     };
@@ -821,7 +821,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_advanced_fatigue_recoveryFactor {
-        value = 1;
+        value = 1.5;
         typeName = "SCALAR";
         force = 1;
     };
@@ -876,7 +876,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_explosives_requireSpecialist {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
@@ -886,7 +886,7 @@ class ACE_Settings {
         force = 1;
     };
     class ace_explosives_explodeOnDefuse {
-        value = 0;
+        value = 1;
         typeName = "BOOL";
         force = 1;
     };
