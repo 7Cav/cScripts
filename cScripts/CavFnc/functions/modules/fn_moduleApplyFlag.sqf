@@ -1,5 +1,5 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This function checks if the helicopter type is correct and apply the desired logo.
  *
  * Arguments:

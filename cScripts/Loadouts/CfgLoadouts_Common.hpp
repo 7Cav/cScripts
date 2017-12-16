@@ -1,42 +1,133 @@
-/*
-GearVersionDate: 170211
-*/
-class CommonBlufor {
-    backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
-    goggles[] = {"rhs_googles_clear"};
-    headgear[] = {"rhsusf_ach_helmet_ocp"};
-    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman"};
+/* Gear Date 15 NOV 17 */
 
-    primary[] = {"rhs_weap_m4a1_carryhandle"};
+/* R E A D   T H I S   B E F O R E   M A K I N G   C H A N G E S
+
+HOW CSCRIPTS WORKS FOR DUMMIES:
+
+1.  When you load into the server, cscripts does the following:
+
+- checks the classname of the player unit against the list of classes in CfgLoadouts_AlphaClass.hpp (Bravo, Charlie etc).
+
+- applies the loadout per the common loadout in CfgLoadouts_Common.hpp (base items) Runs any preloadout and postloadout instructions.
+
+- applies the loadout per the loadout in CfgLoadouts_Alpha.hpp (Bravo, Charlie etc) Runs any preloadout and postloadout instructions, over-writing any previous instructions.
+
+2. Important to know:
+
+- Companies have their own loadouts.
+
+- each class of item (backpack, goggles, etc) is overwritten completely if you change it at any stage, i.e. CommonBlufor, Alpha_Base, or in the actual loadout.  So if you need to change an item in the actual loadout, you have to include all the items you want in there or the only thing that will appear is the one thing you added.
+
+- CommonBlufor is used to give a loadout to units that may not have a class defined in the list of classes in CfgLoadouts_AlphaClass.hpp (Bravo, Charlie etc).  i.e. if the mission maker used a unit type by mistake that has no defined class or loadout.  It also defines every single class to ensure that it clears the inventory of any vanilla items inherited from those classes.
+
+*/
+
+class CommonBlufor {
+    backpack[] = {""};
+    goggles[] = {"rhs_googles_clear"};
+    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
+    vest[] = {""};
+
+    primary[] = {""};
     secondary[] = {""};
     launcher[] = {""};
-    
+
+    binoculars[] = {""};
+
+    magazines[] = {""};
+    items[] = {""};
+
+    compass[] = {"ItemCompass"};
+    gps[] = {""};
+    map[] = {"ItemMap"};
+    nvgs[] = {""};
+    watch[] = {"tf_microdagr"};
+
+    insignia[] = {""};
+    preLoadout = " \
+        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
+        (_this select 0) setVariable [""ACE_isEngineer"", false];";
+    postLoadout = " \
+        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
+        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+};
+
+class CAV_Alpha_Base : CommonBlufor {
+
+    backpack[] = {""};
+    goggles[] = {""};
+    headgear[] = {""};
+    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
+    vest[] = {"rhsusf_spcs_ocp"};
+
+    primary[] = {"rhs_weap_m4a1","rhsusf_acc_eotech_552","rhsusf_acc_anpeq15A","rhsusf_acc_grip3"};
+    secondary[] = {"rhsusf_weap_m9"};
+    launcher[] = {""};
+
     binoculars[] = {""};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",9,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",4,
+        "rhsusf_mag_15Rnd_9x19_JHP",2,
 
-        "rhs_mag_m67",6,
-        
-        "SmokeShell",6
+        "Chemlight_green",
+        "ACE_Chemlight_HiRed",
+        "ACE_Chemlight_HiYellow",
+        "SmokeShell",
+        "SmokeShellGreen",
+        "SmokeShellRed",
+        "B_IR_Grenade",2
     };
+
     items[] = {
-        // Medical Equipment
-        "ACE_quikclot",10,
+        // Personal Medical Equipment
+        "ACE_quikclot",6,
         "ACE_tourniquet",2,
-        
+
         // Standard
-        "ACE_EarPlugs",
         "ACE_MapTools",
-        "ACE_CableTie",
+        "ACE_IR_Strobe_Item",
+        "ACE_Flashlight_MX991",
+        "ACE_CableTie",2,
 
         // Electronics
-        "ACE_DAGR",
-
-        // Tools
-        "ACE_EntrenchingTool"
+        "ACE_microDAGR"
     };
+
+    compass[] = {"ItemCompass"};
+    gps[] = {"ItemAndroid"};
+    map[] = {"ItemMap"};
+    nvgs[] = {"rhsusf_ANPVS_15"};
+    watch[] = {"tf_microdagr"};
+
+    insignia[] = {""};
+    preLoadout = " \
+        (_this select 0) setVariable [""CAV_isAlphaUnit"", true]; \
+        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
+        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 4]; \
+        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 4]; \
+        (_this select 0) setVariable [""ACE_isEngineer"", false];";
+    postLoadout = " \
+        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
+        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+};
+
+class CAV_Bravo_Base : CommonBlufor {
+    backpack[] = {"B_Kitbag_mcamo"};
+    goggles[] = {"rhs_googles_clear"};
+    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
+    vest[] = {"rhsusf_iotv_ocp_Squadleader"};
+
+    primary[] = {"rhs_weap_m4a1_grip","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR","rhsusf_acc_grip1"};
+    secondary[] = {""};
+    launcher[] = {""};
+
+    binoculars[] = {""};
+
+    magazines[] = {""};
+    items[] = {""};
 
     compass[] = {"ItemCompass"};
     gps[] = {""};
@@ -46,7 +137,123 @@ class CommonBlufor {
 
     insignia[] = {""};
     preLoadout = " \
+        (_this select 0) setVariable [""CAV_isBravoUnit"", true]; \
         (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
+        (_this select 0) setVariable [""ACE_isEngineer"", false];";
+    postLoadout = " \
+        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
+        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+};
+
+class CAV_Charlie_Base : CommonBlufor {
+    backpack[] = {"B_Kitbag_cbr"};
+    goggles[] = {"rhs_googles_clear"};
+    headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
+    uniform[] = {"rhs_uniform_cu_ocp"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman"};
+
+    primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
+    secondary[] = {""};
+    launcher[] = {""};
+
+    binoculars[] = {""};
+
+    magazines[] = {};
+
+    items[] = {
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_microDAGR",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+
+    compass[] = {"ItemCompass"};
+    gps[] = {""};
+    map[] = {"ItemMap"};
+    nvgs[] = {""};
+    watch[] = {"tf_microdagr"};
+
+    insignia[] = {""};
+    preLoadout = " \
+        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
+        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
+        (_this select 0) setVariable [""ACE_isEngineer"", false];";
+    postLoadout = " \
+        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
+        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+};
+
+class CAV_Ranger_Base : CommonBlufor {
+    backpack[] = {""};
+    goggles[] = {"rhs_googles_clear"};
+    headgear[] = {"rhsusf_mich_bare_norotos_alt"};
+    uniform[] = {"rhs_uniform_g3_mc"};
+    vest[] = {"rhsusf_mbav_rifleman"};
+
+    primary[] = {""};
+    secondary[] = {""};
+    launcher[] = {""};
+
+    binoculars[] = {""};
+
+    magazines[] = {""};
+    items[] = {""};
+
+    compass[] = {"ItemCompass"};
+    gps[] = {"ItemAndroid"};
+    map[] = {"ItemMap"};
+    nvgs[] = {""};
+    watch[] = {"ACE_Altimeter"};
+
+    insignia[] = {"Ranger_Insignia"};
+    preLoadout = " \
+        (_this select 0) setVariable [""CAV_isRangerUnit"", true]; \
+        (_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]; \
+        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 4]; \
+        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 4]; \
+        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    postLoadout = " \
+        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
+        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+};
+
+class CAV_Medical_Base : CommonBlufor {
+
+    backpack[] = {""};
+    goggles[] = {"rhs_googles_clear"};
+    headgear[] = {"rhsusf_ach_bare_tan_headset"};
+    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
+    vest[] = {"rhsusf_mbav_medic"};
+    binoculars[] = {"ACE_Vector"};
+
+    primary[] = {"rhs_weap_m4a1_grip","rhsusf_acc_anpeq15side","rhsusf_acc_compm4","rhsusf_acc_grip3"};
+    secondary[] = {"rhsusf_weap_m9"};
+    launcher[] = {""};
+
+    magazines[] = {};
+
+    items[] = {};
+
+    compass[] = {"ItemCompass"};
+    gps[] = {"ItemAndroid"};
+    map[] = {"ItemMap"};
+    nvgs[] = {""};
+    watch[] = {"tf_microdagr"};
+
+    insignia[] = {"CLS_Insignia"};
+    preLoadout = " \
+        (_this select 0) setVariable [""CAV_isMedicalUnit"", true]; \
+        (_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]; \
         (_this select 0) setVariable [""ACE_isEngineer"", false];";
     postLoadout = " \
         [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
