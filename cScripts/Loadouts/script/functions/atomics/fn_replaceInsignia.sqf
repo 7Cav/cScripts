@@ -15,7 +15,7 @@ if (isClass (missionConfigFile >> "CfgUnitInsignia" >> _insignia)) then {
 
 if !(isNull _config) then {
     {
-    	if (_x == "insignia") exitwith {
+        if (_x == "insignia") exitwith {
             _unit setObjectTextureGlobal [
                 _forEachIndex,
                 getText (_config >> "texture")
