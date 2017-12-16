@@ -1,14 +1,4 @@
 /*
- * Author: CPL.Brostrom.A (With the help from; 654wak654)
- * Move the player outside the passanger door on the right side.
- *
- * Arguments:
- * 0: Object <OBJECT>
- *
- * Example:
- * [this] call cScripts_fnc_doGetOutUH60Right;
- */
-/*
  * Author: CPL.Brostrom.A
  * Check if you can select a loadout.
  *
