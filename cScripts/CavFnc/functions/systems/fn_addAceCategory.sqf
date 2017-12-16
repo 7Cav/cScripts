@@ -27,5 +27,5 @@ params [
 ];
 
 // Make ACE Category
-private _insigniaMenu = [_name, _lable, _Icon, {""}, _condistion] call ace_interact_menu_fnc_createAction;
-[_object, 0, _category, _insigniaMenu] call ace_interact_menu_fnc_addActionToObject;
+private _aceInteractionAction = [_name, _lable, _Icon, {}, {_condistion}] call ace_interact_menu_fnc_createAction;
+[_object, 0, _category, _aceInteractionAction] call ace_interact_menu_fnc_addActionToObject;
