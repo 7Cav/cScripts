@@ -63,8 +63,12 @@ class cScripts {
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
+
         class addJump {};
         class doJump {};
+        
+        class canSelectLoadout {};
+        class canNotSelectLoadout {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";

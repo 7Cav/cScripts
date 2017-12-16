@@ -1,10 +1,10 @@
 /*
- * Author: CPL.Brostrom.A 
+ * Author: CPL.Brostrom.A
  * This populats a given object with items and commands used during operations.
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Quick Select Scale <STRING>   (Default: "none") ["none","lite","medium","full","ranger"]
+ * 1: Quick Select Scale <STRING>   (Default: "none") ["none","alpha","bravo","charlie","ranger","medical","full"]
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
@@ -24,7 +24,8 @@ params [
     ["_reGearOption", true],
     ["_reHealOption", true],
     ["_InsigniaSelectOption", true],
-    ["_supplieSize", 1]
+    ["_supplieSize", 1],
+    ["_requirePlatoonVariable", true]
 ];
 
 // If isServer call equipBase
@@ -47,7 +48,7 @@ if (_reHealOption) then {
 };
 
 // Call Quick Selection
-[_object,_quickSelectScale] call FUNC(initQuickSelections);
+[_object,_quickSelectScale,_requirePlatoonVariable] call FUNC(initQuickSelections);
 
 // Call Insignia Selection
 if (_InsigniaSelectOption) then {
