@@ -1,6 +1,6 @@
 /*
  * Author: CPL.Brostrom.A
- * This function give a cupple of hints on mission start.
+ * This function give all users a hint at mission start as well as JIP.
  *
  * Arguments:
  * 0: Topic <STRING>
@@ -24,12 +24,12 @@ params [
 ];
 
 // Write text
-_title  = "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>Welcome!</t><br />";
-_image  = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
-_text0 = format["<t font='PuristaMedium' size='1.1'>%1</t><br /><br />", _setTopic];
-_text1 = format["%1<br />", _setText];
-_textHaveFun = "<t font='PuristaMedium' size='1.1'>Have fun!</t>";
-_textEasterEgg = "<br /><br />Blame Brostrom if stuff doesn't work on this one.<br />";
+private _title  = "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>Welcome!</t><br />";
+private _image  = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
+private _text0 = format["<t font='PuristaMedium' size='1.1'>%1</t><br /><br />", _setTopic];
+private _text1 = format["%1<br />", _setText];
+private _textHaveFun = "<t font='PuristaMedium' size='1.1'>Have fun!</t>";
+private _textEasterEgg = "<br /><br />Blame Brostrom if stuff doesn't work on this one.<br />";
 
 
 // Run hints

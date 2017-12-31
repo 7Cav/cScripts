@@ -21,10 +21,6 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then
         call cScripts_fnc_initHelo;
         call cScripts_fnc_initCuratorHeloGetOutRL;
     };
-    // Add FRIES on zeus spawnd helicopters.
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "addFRIESonZeusSpawn") == 1) then {
-        call cScripts_fnc_initCuratorHeloFRIES;
-    };
 };
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "isMissionType") == 0) then {
