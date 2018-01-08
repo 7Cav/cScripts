@@ -101,7 +101,6 @@ switch (true) do {
     case (typeOf _vehicle in _transportHeavy): {};
     case (typeOf _vehicle in _fixedWingTransport): {};
     case (typeOf _vehicle in _fixedWingAttack): {};
-
     case (typeOf _vehicle in _ambulance): {};
 };
 
