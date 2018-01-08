@@ -14,6 +14,8 @@
 #include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
+if (_vehicle getVariable QGVAR(hasVehicleLable)) exitWith {};
+
 params [["_vehicle", objNull, [objNull]],"_texture"];
 
 _VehicleTypeStriker = [
@@ -57,3 +59,5 @@ _VehicleTypeUH60 = [
 if (typeOf _vehicle in _VehicleTypeUH60) then {
     [_vehicle,_texture] call FUNC(UH60TailNumber);
 };
+
+_vehicle setVariable [QGVAR(hasVehicleLable), true];

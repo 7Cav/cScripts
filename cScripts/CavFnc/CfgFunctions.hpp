@@ -13,7 +13,6 @@ class cScripts {
 
         class initModules {};
 
-        class initCuratorHeloFRIES {};
         class initCuratorHeloGetOutRL {};
     };
     class DiaryRecord {
@@ -49,9 +48,16 @@ class cScripts {
 
         class doEmptyCrate {};
     };
-
+    class settings {
+        file = "cScripts\cavFnc\functions\settings";
+        class setPlayerSettings {};
+        class setVehicleSettings {};
+    };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
+        class setCavVehicle {};
+        class setVehicleInventory {};
+
         class addQuickSelection {};
         class addInsigniaSelection {};
 
@@ -66,7 +72,7 @@ class cScripts {
 
         class addJump {};
         class doJump {};
-        
+
         class canSelectLoadout {};
         class canNotSelectLoadout {};
     };

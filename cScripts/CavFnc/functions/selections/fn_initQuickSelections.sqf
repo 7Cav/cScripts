@@ -211,7 +211,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "ranger")) then {
 
         [_object,"Team Leader","CAV_Ranger_TL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Automatic Rifleman","CAV_Ranger_AR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"Grenadier","CAV_Ranger_GR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger'],_requirePlatoonVariable,falsefalse] call FUNC(addQuickSelection);
+        [_object,"Grenadier","CAV_Ranger_GR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Rifleman","CAV_Ranger_RM","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Medic","CAV_Ranger_MEDIC","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
 

@@ -14,6 +14,7 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
+// Check so the options arent added twice.
 if (!isNil {_vehicle getVariable QGVAR(GetOutHelo)}) exitWith {};
 
 _vehicle addAction [
