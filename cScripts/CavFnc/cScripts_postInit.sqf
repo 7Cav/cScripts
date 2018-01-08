@@ -1,3 +1,8 @@
+/*
+ * Author: CPL.Brostrom.A
+ * This is the rule set for the mission using the cba XEH. Each setting here is turned on and off
+ * in the cfgSettings in the root folder.
+ */
 if (is3DEN) exitWith {};
 #include "..\script_component.hpp";
 FORCEINFO("Loading postInit");
@@ -8,6 +13,11 @@ if (cScripts_Settings_showDiaryRecords) then {
 };
 
 if (cScripts_Settings_allowCustomInit) then {
+    // Add a Get Out Right and Left on all helicopters on Mission Start and on zeus spawned items.
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "useHeloGetOutRL") == 1) then {
+        call cScripts_fnc_initHelo;
+        call cScripts_fnc_initCuratorHeloGetOutRL;
+    };
     // Change inventory content of supply crates on mission start.
     if (cScripts_Settings_useCustomVehicleInventory) then {
         call cScripts_fnc_initVehicle;
@@ -28,18 +38,17 @@ if (cScripts_Settings_setMissionType == 0) then {
         [cScripts_Settings_setCustomHintTopic, cScripts_Settings_setCustomHintText, 15] call cScripts_fnc_initCustomStartHint;
     };
 };
-
 if (cScripts_Settings_setMissionType == 1) then {
 // Set time and run the "Red Light" start script.
     if (cScripts_Settings_enableStartHint) then {
         [cScripts_Settings_setRedLightTime] call cScripts_fnc_initMissionStartHint;
     };
 };
-
 if (cScripts_Settings_setMissionType == 2) then {
 // Set time and run Training Mission start script.
     if (cScripts_Settings_enableStartHint) then {
         [cScripts_Settings_setTrainingHintTime] call cScripts_fnc_initTrainingStartHint;
     };
 };
+
 FORCEINFO("postInit loaded");
