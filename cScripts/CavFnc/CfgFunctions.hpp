@@ -58,6 +58,7 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
+        // Buttons and options
         class addReGear {};
         class addHeal {};
         class addArsenal {};

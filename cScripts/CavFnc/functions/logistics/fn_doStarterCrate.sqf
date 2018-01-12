@@ -8,12 +8,12 @@
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
- * 5: Supply Size <NUMBER>          (Default: 1)
+ * 5: Elatoon variable <BOOL>       (Default: true)
  *
  * Example:
  * [this] call cScripts_fnc_doStarterCrate;
  * [this,"none",true] call cScripts_fnc_doStarterCrate;
- * [this,"none",true,true,true,1] call cScripts_fnc_doStarterCrate;
+ * [this,"none",true,true,true] call cScripts_fnc_doStarterCrate;
  */
 
 #include "..\script_component.hpp";
@@ -24,14 +24,13 @@ params [
     ["_reGearOption", true],
     ["_reHealOption", true],
     ["_InsigniaSelectOption", true],
-    ["_supplieSize", 1],
     ["_requirePlatoonVariable", true]
 ];
 
 // If isServer call equipBase
 
 if (isServer) then {
-    [_object,_supplieSize] call FUNC(doStarterCrateSupplies);
+    [_object,_quickSelectScale,_requirePlatoonVariable] call FUNC(doStarterCrateSupplies);
 };
 
 // Make addAction Topic
