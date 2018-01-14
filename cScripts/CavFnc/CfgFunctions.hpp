@@ -49,7 +49,8 @@ class cScripts {
     };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
-        class setPlayerSettings {};
+        class setPreInitPlayerSettings {};
+        class setPostInitPlayerSettings {};
 
         class setCavVehicle {};
         class setVehicleInventory {};
