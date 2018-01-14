@@ -17,18 +17,14 @@ if (!isServer) exitWith {};
 
 params [
     ["_crate", objNull, [objNull]],
-    ["_platoonSelector", "none"],
-    ["_requirePlatoonVariable", false]
+    ["_platoonSelector", "none"]
+    //["_requirePlatoonVariable", false] Not used yet
 ];
 
 clearweaponcargoGlobal _crate;
 clearmagazinecargoGlobal _crate;
 clearitemcargoGlobal _crate;
 clearbackpackcargoGlobal _crate;
-
-/* if (_requirePlatoonVariable) then {
-    INFO("Require the Platoon Variable");
-}; */
 
 //------------------ A L P H A   C O M P A N Y --------------------\\
 if (_platoonSelector == "alpha") then {
@@ -49,7 +45,7 @@ if (_platoonSelector == "alpha") then {
 
     _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),(_quaScale * 30)];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),30];
 
     //================== GRENADES ==================\\
 
@@ -526,7 +522,7 @@ if (_platoonSelector == "ranger") then {
     _crate addWeaponCargoGlobal ["ACE_HuntIR_monitor",20];
     _crate addWeaponCargoGlobal ["ACE_Kestrel4500",20];
     _crate addWeaponCargoGlobal ["ACE_UAVBattery",20];
-    _crate addWeaponCargoGlobal ["rhs_LaserMag",20];
+    _crate addMagazineCargoGlobal ["rhs_LaserMag",20];
     _crate addWeaponCargoGlobal ["ACE_Tripod",20];
     _crate addWeaponCargoGlobal ["ACE_SpottingScope",20];
     _crate addWeaponCargoGlobal ["ItemAndroid",20];
@@ -650,7 +646,7 @@ if (_platoonSelector == "sniper") then {
     _crate addWeaponCargoGlobal ["ACE_HuntIR_monitor",20];
     _crate addWeaponCargoGlobal ["ACE_Kestrel4500",20];
     _crate addWeaponCargoGlobal ["ACE_UAVBattery",20];
-    _crate addWeaponCargoGlobal ["rhs_LaserMag",20];
+    _crate addMagazineCargoGlobal ["rhs_LaserMag",20];
     _crate addWeaponCargoGlobal ["ACE_Tripod",20];
     _crate addWeaponCargoGlobal ["ACE_SpottingScope",20];
     _crate addWeaponCargoGlobal ["ItemAndroid",20];
