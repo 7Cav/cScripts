@@ -9,11 +9,12 @@
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
  * 5: Elatoon variable <BOOL>       (Default: true)
+ * 6: Arsenal                       (Default: false)
  *
  * Example:
  * [this] call cScripts_fnc_doStarterCrate;
  * [this,"none",true] call cScripts_fnc_doStarterCrate;
- * [this,"none",true,true,true] call cScripts_fnc_doStarterCrate;
+ * [this,"none",true,true,true,false] call cScripts_fnc_doStarterCrate;
  */
 
 #include "..\script_component.hpp";
@@ -24,7 +25,8 @@ params [
     ["_reGearOption", true],
     ["_reHealOption", true],
     ["_InsigniaSelectOption", true],
-    ["_requirePlatoonVariable", true]
+    ["_requirePlatoonVariable", true],
+    ["_arsenal", false]
 ];
 
 // If isServer call equipBase
@@ -35,6 +37,10 @@ if (isServer) then {
 
 // Make addAction Topic
 _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Equipment Crate", {}];
+
+if (_arsenal) then {
+    [_object, true] call ace_arsenal_fnc_initBox;
+};
 
 // Call ReGear Option
 if (_reGearOption) then {
@@ -51,7 +57,7 @@ if (_reHealOption) then {
 
 // Call Insignia Selection
 if (_InsigniaSelectOption) then {
-[_object] call FUNC(initInsigniaSelections);
+    [_object] call FUNC(initInsigniaSelections);
 };
 
 // Make end of options line.

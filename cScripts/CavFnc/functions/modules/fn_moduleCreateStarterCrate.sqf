@@ -23,7 +23,8 @@ private _dialogResult = [
         ["ReGear action",["true","false"],1],
         ["Heal action",["true","false"],0],
         ["Insignia Selection",["true","false"],0],
-        ["Require Platoon Variable",["true","false"],1]
+        ["Require Platoon Variable",["true","false"],1],
+        ["Add full arsenal",["true","false"],1]
     ]
 ] call Ares_fnc_ShowChooseDialog;
 
@@ -44,6 +45,7 @@ private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false
 private _reHealOption = if (_dialogResult select 2 == 0) then {true} else {false};
 private _InsigniaSelectOption = if (_dialogResult select 3 == 0) then {true} else {false};
 private _requirePlatoonVariable = if (_dialogResult select 4 == 0) then {true} else {false};
+private _arsenal = if (_dialogResult select 5 == 0) then {true} else {false};
 
 _crate = "B_supplyCrate_F" createVehicle _pos;
-[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requirePlatoonVariable] remoteExec ["cScripts_fnc_doStarterCrate",0,true];
+[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requirePlatoonVariable,_arsenal] remoteExec ["cScripts_fnc_doStarterCrate",0,true];
