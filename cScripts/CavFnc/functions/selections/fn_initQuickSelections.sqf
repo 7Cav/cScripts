@@ -22,7 +22,6 @@ params [
 
 // make icons
 private _icon = "cScripts\Data\Icon\icon_01.paa";
-private _icon_X = "cScripts\Data\Icon\icon_x.paa";
 
 // make topic
 [_object,"cScriptQuickSelectionMenu","Quick Selection",_Icon,["ACE_MainActions"]] call FUNC(addAceCategory);
@@ -32,9 +31,6 @@ private _icon_X = "cScripts\Data\Icon\icon_x.paa";
 if ((_platoonSelector == "full") or (_platoonSelector == "alpha")) then {
     // make ace interaction category
     [_object,"cScriptQuickSelection_Alpha","Alpha",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
-    if (_requirePlatoonVariable) then {
-        [_object,"cScriptQuickSelection_Alpha_Restricted","Loadout are restricted",_icon_X,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Alpha"],{[ARR_2(player,'CAV_isAlphaUnit')] call FUNC(canNotSelectLoadout)}] call FUNC(addAceCategory);
-    };
 
     // make lodouts and topics
     if (_platoonSelector == "alpha") then {
@@ -65,9 +61,6 @@ if ((_platoonSelector == "full") or (_platoonSelector == "alpha")) then {
 if ((_platoonSelector == "full") or (_platoonSelector == "bravo")) then {
     // make ace interaction category
     [_object,"cScriptQuickSelection_Bravo","Bravo",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
-    if (_requirePlatoonVariable) then {
-        [_object,"cScriptQuickSelection_Bravo_Restricted","Loadout are restricted",_icon_X,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Bravo"],{[ARR_2(player,'CAV_isBravoUnit')] call FUNC(canNotSelectLoadout)}] call FUNC(addAceCategory);
-    };
 
     // make lodouts and topics
     if (_platoonSelector == "bravo") then {
@@ -120,9 +113,6 @@ if ((_platoonSelector == "full") or (_platoonSelector == "bravo")) then {
 if ((_platoonSelector == "full") or (_platoonSelector == "charlie")) then {
     // make ace interaction category
     [_object,"cScriptQuickSelection_Charlie","Charlie",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
-    if (_requirePlatoonVariable) then {
-        [_object,"cScriptQuickSelection_Charlie_Restricted","Loadout are restricted",_icon_X,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"],{[ARR_2(player,'CAV_isCharlieUnit')] call FUNC(canNotSelectLoadout)}] call FUNC(addAceCategory);
-    };
 
     // make lodouts and topics
     if (_platoonSelector == "charlie") then {
@@ -164,7 +154,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "charlie")) then {
         [_object,"Combat Life Saver","CAV_Charlie_CLS","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
 
         [_object,"Squad Leader (H)","CAV_Charlie_Weapons_SL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"Fire Team Leader (H)","CAV_Charlie_Weapons_TL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,falsefalse] call FUNC(addQuickSelection);
+        [_object,"Fire Team Leader (H)","CAV_Charlie_Weapons_TL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Automatic Rifleman (H)","CAV_Charlie_Weapons_AR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Grenadier (H)","CAV_Charlie_Weapons_GR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Rifleman (H)","CAV_Charlie_Weapons_RM","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
@@ -178,9 +168,6 @@ if ((_platoonSelector == "full") or (_platoonSelector == "charlie")) then {
 if ((_platoonSelector == "full") or (_platoonSelector == "ranger")) then {
     // make ace interaction category
     [_object,"cScriptQuickSelection_Ranger","Ranger",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
-    if (_requirePlatoonVariable) then {
-        [_object,"cScriptQuickSelection_Ranger_Restricted","Loadout are restricted",_icon_X,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Ranger"],{[ARR_2(player,'CAV_isRangerUnit')] call FUNC(canNotSelectLoadout)}] call FUNC(addAceCategory);
-    };
 
     // make lodouts and topics
     if (_platoonSelector == "ranger") then {
@@ -226,9 +213,6 @@ if ((_platoonSelector == "full") or (_platoonSelector == "ranger")) then {
 if ((_platoonSelector == "full") or (_platoonSelector == "medical")) then {
     // make ace interaction category
     [_object,"cScriptQuickSelection_Medical","Medical",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
-    if (_requirePlatoonVariable) then {
-        [_object,"cScriptQuickSelection_Medical_Restricted","Loadout are restricted",_icon_X,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Medical"],{[ARR_2(player,'CAV_isMedicalUnit')] call FUNC(canNotSelectLoadout)}] call FUNC(addAceCategory);
-    };
 
     // make lodouts and topics
     if (_platoonSelector == "medical") then {
