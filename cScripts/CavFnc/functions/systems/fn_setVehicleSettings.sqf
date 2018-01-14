@@ -22,6 +22,7 @@ private _fixedWingTransport = ["RHS_C130J"];
 switch (true) do {
     case (typeOf _vehicle in _transportRotary): {
         [_vehicle] call FUNC(addGetOutHelo);
+    };
     case (typeOf _vehicle in _fixedWingTransport): {
         [_vehicle,200,160,250] call FUNC(addJump);
     };
