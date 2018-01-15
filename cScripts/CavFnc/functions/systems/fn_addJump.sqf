@@ -13,7 +13,7 @@
  * [this,200,160,250] call cScripts_fnc_addJump;
  */
 
- #include "..\script_component.hpp";
+#include "..\script_component.hpp";
 
 params [["_vehicle", objNull, [objNull]], ["_paraJumpATL",200], ["_paraChuteOpen_ATL",160], ["_maxSpeed",250]];
 

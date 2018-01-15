@@ -10,6 +10,8 @@
  *
  */
 
+#include "..\script_component.hpp";
+
 if (!isServer) exitwith {};
 
 params [["_vehicle", objNull, [objNull]]];
