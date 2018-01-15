@@ -19,7 +19,7 @@ _pos = _this select 0;
 private _dialogResult = [
     "7th Cavalry Starter Crate",
     [
-        ["Quick Select Scale",["none","alpha","bravo","charlie","ranger","medical","full"],0],
+        ["Quick Select Scale",["None","Alpha","Bravo","Charlie","Heavy Weapons","Ranger","Medical","Full"],0],
         ["ReGear action",["true","false"],1],
         ["Heal action",["true","false"],0],
         ["Insignia Selection",["true","false"],0],
@@ -35,10 +35,11 @@ private _quickSelectScale = switch (_dialogResult select 0) do {
     case 1: {"alpha";};
     case 2: {"bravo";};
     case 3: {"charlie";};
-    case 4: {"ranger";};
-    case 5: {"medical";};
+    case 4: {"heavyweapons";};
+    case 5: {"ranger";};
+    case 6: {"medical";};
 
-    case 6: {"full";};
+    case 7: {"full";};
 };
 
 private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};
