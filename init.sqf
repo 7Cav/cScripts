@@ -56,9 +56,9 @@
 
 /*           Languishes              */
 
-[   [west, "English"],
-    [east, "Russian", "French", "Persian", "Arabic"],
-    [civilian, "French", "Persian", "Arabic"]
+[   [west, "English", "Russian", "French", "Persian", "Arabic"],
+    [east, "English", "Russian", "French", "Persian", "Arabic"],
+    [civilian, "English", "Russian", "French", "Persian", "Arabic"]
 ] call acre_api_fnc_setupMission;
 
 ["en", "English"] call acre_api_fnc_babelAddLanguageType;
