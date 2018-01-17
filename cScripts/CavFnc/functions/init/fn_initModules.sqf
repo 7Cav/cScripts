@@ -24,7 +24,7 @@ INFO("Achilles mod found adding modules.");
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Create Special Weapons Crate",{
-    [(_this select 0)] call FUNC(doSpecialWeaponsCrate);
+    [(_this select 0)] call FUNC(moduelCreateSpecialWeaponsCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 
