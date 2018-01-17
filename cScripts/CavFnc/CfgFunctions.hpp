@@ -30,7 +30,6 @@ class cScripts {
         class DocRadio_LZINSERT {};
         class DocRadio_LZEXTRACT {};
     };
-
     class logistics {
         file = "cScripts\cavFnc\functions\logistics";
         class doStarterCrate {};
@@ -48,19 +47,19 @@ class cScripts {
 
         class doEmptyCrate {};
     };
-    class settings {
-        file = "cScripts\cavFnc\functions\settings";
-        class setPlayerSettings {};
-        class setVehicleSettings {};
-    };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
+        class setPreInitPlayerSettings {};
+        class setPostInitPlayerSettings {};
+
         class setCavVehicle {};
         class setVehicleInventory {};
+        class setVehicleSettings {};
 
         class addQuickSelection {};
         class addInsigniaSelection {};
 
+        // Buttons and options
         class addReGear {};
         class addHeal {};
         class addArsenal {};

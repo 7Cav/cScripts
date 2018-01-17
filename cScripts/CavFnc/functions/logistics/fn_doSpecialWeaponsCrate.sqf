@@ -22,16 +22,29 @@ clearmagazinecargoGlobal _crate;
 clearitemcargoGlobal _crate;
 clearbackpackcargoGlobal _crate;
 
-_crate addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",(_quaScale * 4)];
-_crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",(_quaScale * 2)];
-_crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",(_quaScale * 1)];
-_crate addWeaponCargoGlobal ["rhs_weap_m240B",(_quaScale * 1)];
+// SELECT TYPE TO FILL BOX - MORTARS,50 CAL, Mk19, TOW
+
+// MORTARS
+_crate addBackpackCargoGlobal ["B_Mortar_01_weapon_F",(_quaScale * 8)];
+_crate addBackpackCargoGlobal ["B_Mortar_01_support_F",(_quaScale * 4)];
+
+// M2 50 CAL
+_crate addBackpackCargoGlobal ["RHS_M2_Gun_Bag",(_quaScale * 4)];
+_crate addBackpackCargoGlobal ["RHS_M2_MiniTripod_Bag",(_quaScale * 8)];
+
+// Mk19
+_crate addBackpackCargoGlobal ["RHS_Mk19_Gun_Bag",(_quaScale * 4)];
+_crate addBackpackCargoGlobal ["RHS_Mk19_Tripod_Bag",(_quaScale * 8)];
+
+// TOW
+_crate addBackpackCargoGlobal ["rhs_Tow_Gun_Bag",(_quaScale * 4)];
+_crate addBackpackCargoGlobal ["rhs_TOW_Tripod_Bag",(_quaScale * 8)];
 
 // Change ace logistics size of crate
 _crate setVariable ["ace_cargo_size", 1];
 
 // If a correct classname add texture
-_crateType = ["Box_T_East_Wps_F","Box_East_Wps_F","Box_T_NATO_Wps_F","Box_NATO_Wps_F"];
+private _crateType = ["Box_T_East_Wps_F","Box_East_Wps_F","Box_T_NATO_Wps_F","Box_NATO_Wps_F"];
 if (typeOf _crate in _crateType) then {
     _crate setObjectTextureGlobal  [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
 };

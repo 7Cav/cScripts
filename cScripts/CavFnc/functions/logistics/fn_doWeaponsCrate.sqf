@@ -31,7 +31,7 @@ _crate addWeaponCargoGlobal ["rhs_weap_m240B",(_quaScale * 1)];
 _crate setVariable ["ace_cargo_size", 1];
 
 // If a correct classname add texture
-_crateType = ["Box_T_East_WpsSpecial_F","Box_East_WpsSpecial_F","Box_T_NATO_WpsSpecial_F","Box_NATO_WpsSpecial_F"];
+private _crateType = ["Box_T_East_WpsSpecial_F","Box_East_WpsSpecial_F","Box_T_NATO_WpsSpecial_F","Box_NATO_WpsSpecial_F"];
 if (typeOf _crate in _crateType) then {
     _crate setObjectTextureGlobal  [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
 };
