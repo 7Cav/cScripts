@@ -62,6 +62,7 @@
 ] call acre_api_fnc_setupMission;
 
 ["en", "English"] call acre_api_fnc_babelAddLanguageType;
+["gr", "Greek"] call acre_api_fnc_babelAddLanguageType;
 ["ru", "Russian"] call acre_api_fnc_babelAddLanguageType;
 ["fr", "French"] call acre_api_fnc_babelAddLanguageType;
 ["pe", "Persian"] call acre_api_fnc_babelAddLanguageType;
