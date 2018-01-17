@@ -54,6 +54,19 @@
 
     TF_terrain_interception_coefficient         = 7.0; //Coefficient defining the level of radio signal interruption caused by terrain.
 
+/*           Languishes              */
+
+[   [west, "English"],
+    [east, "Russian", "French", "Persian", "Arabic"],
+    [civilian, "French", "Persian", "Arabic"]
+] call acre_api_fnc_setupMission;
+
+["en", "English"] call acre_api_fnc_babelAddLanguageType;
+["ru", "Russian"] call acre_api_fnc_babelAddLanguageType;
+["fr", "French"] call acre_api_fnc_babelAddLanguageType;
+["pe", "Persian"] call acre_api_fnc_babelAddLanguageType;
+["ar", "Arabic"] call acre_api_fnc_babelAddLanguageType;
+
 /*           DEBUG              */
     if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {
         ["DEBUG MODE IS ACTIVE!", "WARNING", [true, false, true]] call CBA_fnc_debug;
