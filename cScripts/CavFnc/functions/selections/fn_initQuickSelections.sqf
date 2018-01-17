@@ -55,8 +55,6 @@ if ((_platoonSelector == "full") or (_platoonSelector == "alpha")) then {
     };
 };
 
-
-
 // make bravo selections
 if ((_platoonSelector == "full") or (_platoonSelector == "bravo")) then {
     // make ace interaction category
@@ -83,10 +81,6 @@ if ((_platoonSelector == "full") or (_platoonSelector == "bravo")) then {
         [_object,"Grenadier","CAV_Bravo_GR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
         [_object,"Rifleman","CAV_Bravo_RM","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
         [_object,"Combat Life Saver","CAV_Bravo_CLS","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
-
-        [_object,"HW Team Leader","CAV_Bravo_Weapons_TL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
-        [_object,"HW Machine Gunner","CAV_Bravo_Weapons_MG","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
-        [_object,"Gunner AND Assistant Gunner","CAV_Bravo_Weapons_GNR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
     } else {
         // add loadouts when alpha is not selected. (No topic required.)
         [_object,"Officer","CAV_Bravo_OFFCR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
@@ -100,14 +94,8 @@ if ((_platoonSelector == "full") or (_platoonSelector == "bravo")) then {
         [_object,"Grenadier","CAV_Bravo_GR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Rifleman","CAV_Bravo_RM","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Combat Life Saver","CAV_Bravo_CLS","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-
-        [_object,"HW Team Leader","CAV_Bravo_Weapons_TL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"HW Machine Gunner","CAV_Bravo_Weapons_MG","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"Gunner AND Assistant Gunner","CAV_Bravo_Weapons_GNR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
     };
 };
-
-
 
 // make charlie selections
 if ((_platoonSelector == "full") or (_platoonSelector == "charlie")) then {
@@ -152,16 +140,44 @@ if ((_platoonSelector == "full") or (_platoonSelector == "charlie")) then {
         [_object,"Grenadier","CAV_Charlie_GR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Rifleman","CAV_Charlie_RM","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
         [_object,"Combat Life Saver","CAV_Charlie_CLS","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-
-        [_object,"Squad Leader (H)","CAV_Charlie_Weapons_SL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"Fire Team Leader (H)","CAV_Charlie_Weapons_TL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"Automatic Rifleman (H)","CAV_Charlie_Weapons_AR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"Grenadier (H)","CAV_Charlie_Weapons_GR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"Rifleman (H)","CAV_Charlie_Weapons_RM","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
-        [_object,"Combat Life Saver (H)","CAV_Charlie_Weapons_CLS","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
     };
 };
 
+
+// make Bravo and Charlie Heavy Weapons selections
+if ((_platoonSelector == "full") or (_platoonSelector == "heavyweapons")) then {
+
+    // make ace interaction category
+    [_object,"cScriptQuickSelection_CharlieHW","Charlie (Heavy Weapons)",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
+    [_object,"cScriptQuickSelection_BravoHW","Bravo (Heavy Weapons)",_Icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
+
+    // make addAction topic
+    if (_requirePlatoonVariable) then {
+        _object addAction ["Charlie Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isCharlieUnit')] call FUNC(canSelectLoadout))];
+    } else {
+        _object addAction ["Charlie Quick Selection", {}, nil, 1.5, true, true, "", "true"];
+    };
+
+    // add loadouts
+    if (_platoonSelector == "full") then {[_object,"Charlie WPN SL","CAV_Charlie_Weapons_SL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);};
+    [_object,"Charlie WPN TL","CAV_Charlie_Weapons_TL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
+    [_object,"Charlie WPN AR","CAV_Charlie_Weapons_AR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
+    [_object,"Charlie WPN GR","CAV_Charlie_Weapons_GR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
+    [_object,"Charlie WPN RM","CAV_Charlie_Weapons_RM","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
+    [_object,"Charlie WPN CLS","CAV_Charlie_Weapons_CLS","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
+
+    // make addAction topic
+    if (_requirePlatoonVariable) then {
+        _object addAction ["Bravo Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isBravoUnit')] call FUNC(canSelectLoadout))];
+    } else {
+        _object addAction ["Bravo Quick Selection", {}, nil, 1.5, true, true, "", "true"];
+    };
+
+    // add loadouts
+    [_object,"Bravo WPN TL","CAV_Bravo_Weapons_TL","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
+    [_object,"Bravo WPN MG","CAV_Bravo_Weapons_MG","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
+    [_object,"Bravo WPN GNR","CAV_Bravo_Weapons_GNR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo'],_requirePlatoonVariable,true] call FUNC(addQuickSelection);
+};
 
 
 // make ranger selections
@@ -206,8 +222,6 @@ if ((_platoonSelector == "full") or (_platoonSelector == "ranger")) then {
         [_object,"Spotter","CAV_Spotter","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger'],_requirePlatoonVariable,false] call FUNC(addQuickSelection);
     };
 };
-
-
 
 // make ranger selections
 if ((_platoonSelector == "full") or (_platoonSelector == "medical")) then {
