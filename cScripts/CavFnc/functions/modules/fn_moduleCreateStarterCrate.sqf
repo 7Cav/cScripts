@@ -19,7 +19,7 @@ _pos = _this select 0;
 private _dialogResult = [
     "7th Cavalry Starter Crate",
     [
-        ["Quick Select Scale",["None","Alpha","Bravo","Charlie","Heavy Weapons","Ranger","Medical","Full"],0],
+        ["Quick Select Scale",["None","Alpha","Bravo","Charlie","Heavy Weapons","Ranger","Sniper","Medical","Full"],0],
         ["ReGear action",["true","false"],1],
         ["Heal action",["true","false"],0],
         ["Insignia Selection",["true","false"],0],
