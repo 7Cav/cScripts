@@ -37,8 +37,8 @@ private _quickSelectScale = switch (_dialogResult select 0) do {
     case 3: {"charlie";};
     case 4: {"heavyweapons";};
     case 5: {"ranger";};
-    case 5: {"sniper";};
-    case 6: {"medical";};
+    case 6: {"sniper";};
+    case 7: {"medical";};
 
     case 7: {"full";};
 };
