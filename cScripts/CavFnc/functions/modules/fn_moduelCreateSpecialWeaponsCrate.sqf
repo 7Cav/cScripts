@@ -36,4 +36,4 @@ private _crateType = switch (_dialogResult select 0) do {
 private _supplieSize = _dialogResult select 1;
 
 private _crate = "B_CargoNet_01_ammo_F" createVehicle _pos;
-[_crate,_supplieSize,_crateType] remoteExec ["cScripts_fnc_doSupplyCrate",0,true];
+[_crate,_supplieSize,_crateType] remoteExec ["cScripts_fnc_doSpecialWeaponsCrate",0,true];
