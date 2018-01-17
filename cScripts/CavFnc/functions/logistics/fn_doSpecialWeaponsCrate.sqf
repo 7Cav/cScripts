@@ -58,7 +58,7 @@ if ((_cargoType == "all") or (_cargoType == "tow")) then {
 _crate setVariable ["ace_cargo_size", 1];
 
 // If a correct classname add texture
-private _crateType = ["Box_T_East_Wps_F","Box_East_Wps_F","Box_T_NATO_Wps_F","Box_NATO_Wps_F"];
+private _crateType = ["Box_T_East_WpsSpecial_F","Box_East_WpsSpecial_F","Box_T_NATO_WpsSpecial_F","Box_NATO_WpsSpecial_F"];
 if (typeOf _crate in _crateType) then {
     _crate setObjectTextureGlobal  [0, "cScripts\Data\Objects\Ammobox_7CAV_00.paa"];
 };
