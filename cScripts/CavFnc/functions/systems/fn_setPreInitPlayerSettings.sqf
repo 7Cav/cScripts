@@ -41,6 +41,10 @@ private _platoonMedical = if (_platoon == "medical") then {true} else {false};
 
 // Set cav native tough langish and secondary if any
 switch (_translator) do {
+    case "gr": {
+        ["en","gr"] call acre_api_fnc_babelSetSpokenLanguages;
+        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
+    };
     case "fr": {
         ["en","fr"] call acre_api_fnc_babelSetSpokenLanguages;
         ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
@@ -62,7 +66,7 @@ switch (_translator) do {
         ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
     };
     case "s3": {
-        ["en","fr","ru","fr","pe","ar"] call acre_api_fnc_babelSetSpokenLanguages;
+        ["en","gr","fr","ru","fr","pe","ar"] call acre_api_fnc_babelSetSpokenLanguages;
         ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
     };
     default {
