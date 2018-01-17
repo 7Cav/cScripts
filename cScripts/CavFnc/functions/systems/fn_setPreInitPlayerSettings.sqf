@@ -7,7 +7,7 @@
  * 1: Platoon <STRING>
  * 2: MedicClass <NUMBER>             (Default: 0)
  * 3: Engineer <BOOL>                 (Default: false)
- * 3: Translator Languish  <STRING>   (Optional)
+ * 4: Translator Languish  <STRING>   (Optional)
  *
  * Example:
  * [this] call cScripts_fnc_setPreInitPlayerSettings;
