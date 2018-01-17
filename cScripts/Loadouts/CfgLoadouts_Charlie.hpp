@@ -315,6 +315,8 @@ class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
         "ACE_HuntIR_monitor",
 
         // Tools
+        "Flagstack_Red",
+        "ACE_Fortify",
         "ACE_EntrenchingTool"
     };
 
