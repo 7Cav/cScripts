@@ -15,7 +15,7 @@ params ["_crate","_pos"];
 
 _pos = _this select 0;
 
-_dialogResult = [
+private _dialogResult = [
     "7th Cavalry Supply Crate",
     [
         ["Supply Size","SLIDER",1]
@@ -24,7 +24,7 @@ _dialogResult = [
 
 if (count _dialogResult == 0) exitWith {};
 
-_supplieSize = _dialogResult select 0;
+private _supplieSize = _dialogResult select 0;
 
-_crate = "B_CargoNet_01_ammo_F" createVehicle _pos;
+private _crate = "B_CargoNet_01_ammo_F" createVehicle _pos;
 [_crate,_supplieSize] remoteExec ["cScripts_fnc_doSupplyCrate",0,true];
