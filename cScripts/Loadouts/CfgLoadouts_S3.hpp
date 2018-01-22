@@ -5,11 +5,8 @@ GearVersionDate: 160801
 class CAV_S3_Base : CAV_Bravo_OFFCR {
     insignia[] = {"Curator"};
     preLoadout = " \
-    (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 4]; \
-    (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 4]; \
-    (_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]; \
-    (_this select 0) allowDamage false; \
-    (_this select 0) setVariable [""ACE_isEngineer"", true]";
+    [(_this select 0), '', 2, false, 's3'] call cScripts_fnc_setPreInitPlayerSettings; \
+    (_this select 0) allowDamage false;";
 };
 
 class DEBUG : CAV_S3_Base {};
