@@ -45,12 +45,8 @@ class CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {""};
-    preLoadout = " \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", false];";
-    postLoadout = " \
-        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
-        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+    preLoadout = "[(_this select 0), '', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Alpha_Base : CommonBlufor {
@@ -102,15 +98,8 @@ class CAV_Alpha_Base : CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {""};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isAlphaUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 4]; \
-        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 4]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", false];";
-    postLoadout = " \
-        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
-        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+    preLoadout = "[(_this select 0), 'Alpha', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Bravo_Base : CommonBlufor {
@@ -136,13 +125,8 @@ class CAV_Bravo_Base : CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {""};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isBravoUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", false];";
-    postLoadout = " \
-        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
-        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+    preLoadout = "[(_this select 0), 'Bravo', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Charlie_Base : CommonBlufor {
@@ -184,13 +168,8 @@ class CAV_Charlie_Base : CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {""};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", false];";
-    postLoadout = " \
-        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
-        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+    preLoadout = "[(_this select 0), 'charlie', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Ranger_Base : CommonBlufor {
@@ -216,15 +195,8 @@ class CAV_Ranger_Base : CommonBlufor {
     watch[] = {"ACE_Altimeter"};
 
     insignia[] = {"Ranger_Insignia"};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isRangerUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]; \
-        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 4]; \
-        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 4]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
-    postLoadout = " \
-        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
-        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+    preLoadout = "[(_this select 0), 'ranger', 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Medical_Base : CommonBlufor {
@@ -251,11 +223,6 @@ class CAV_Medical_Base : CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {"CLS_Insignia"};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isMedicalUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", false];";
-    postLoadout = " \
-        [(_this select 0), currentWeapon (_this select 0), currentMuzzle (_this select 0)] call ace_safemode_fnc_lockSafety; \
-        [(_this select 0)] call ace_hearing_fnc_putInEarplugs";
+    preLoadout = "[(_this select 0), 'medical', 2, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };

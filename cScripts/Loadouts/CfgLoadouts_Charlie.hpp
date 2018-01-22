@@ -40,10 +40,7 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
     gps[] = {"ItemcTab"};
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
@@ -99,12 +96,6 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 
     gps[] = {"ItemcTab"};
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", false]; \
-        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 4]; \
-        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 4];";
 };
 
 class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
@@ -320,10 +311,7 @@ class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
 
     gps[] = {"ItemAndroid"};
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg with Mortar Bipod, 39.2kg with M2 Minitripod, 36.4 with Mk19/TOW tripod
 
@@ -365,10 +353,7 @@ class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg
 
     gps[] = {"ItemAndroid"};
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_AR : CAV_Charlie_Base {  // Automatic Rifleman  30.1kg, 36.0 with Mortar Bipod, 36.9kg with M2 Minitripod, 34.1 with Mk19/TOW tripod
 
@@ -400,10 +385,7 @@ class CAV_Charlie_Weapons_AR : CAV_Charlie_Base {  // Automatic Rifleman  30.1kg
         "ACE_EntrenchingTool"
     };
     gps[] = {"ItemAndroid"};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_GR : CAV_Charlie_Base {  // Grenadier 24.9kg, 39.9kg with Mortar Tube, 40.0kg with M2 Gun Bag, 36.3kg with Mk19/TOW Gun Bag
     backpack[] = {"B_Kitbag_cbr"};
@@ -437,10 +419,7 @@ class CAV_Charlie_Weapons_GR : CAV_Charlie_Base {  // Grenadier 24.9kg, 39.9kg w
         "ACE_EntrenchingTool"
     };
     gps[] = {"ItemAndroid"};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_RM : CAV_Charlie_Base {  // Rifleman 22.8kg, 37.8kg with Mortar Tube, 37.9kg with M2 Gun Bag, 34.3kg with Mk19/TOW Gun Bag
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
@@ -472,10 +451,7 @@ class CAV_Charlie_Weapons_RM : CAV_Charlie_Base {  // Rifleman 22.8kg, 37.8kg wi
         "ACE_EntrenchingTool"
     };
     gps[] = {"ItemAndroid"};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_CLS : CAV_Charlie_Base {  // Combat Life Saver 23.0kg, 37.9kg with Mortar Tube, 38.0kg with M2 Gun Bag, 34.4kg with Mk19/TOW Gun Bag
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
@@ -519,8 +495,5 @@ class CAV_Charlie_Weapons_CLS : CAV_Charlie_Base {  // Combat Life Saver 23.0kg,
 
     insignia[] = {"CLS_Insignia"};
     gps[] = {"ItemAndroid"};
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isCharlieUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };

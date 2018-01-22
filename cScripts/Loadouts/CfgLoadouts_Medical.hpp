@@ -130,8 +130,5 @@ class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
         "ACE_EntrenchingTool"
     };
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isMedicalUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", false];";
+    preLoadout = "[(_this select 0), 'medical', 1, false] call cScripts_fnc_setPreInitPlayerSettings;";
 };

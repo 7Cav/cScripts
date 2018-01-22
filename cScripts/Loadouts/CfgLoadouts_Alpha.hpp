@@ -34,13 +34,7 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
         // Tools
         "ToolKit"
     };
-
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isAlphaUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 2]; \
-        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 2]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
@@ -66,12 +60,7 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
         "ToolKit"
     };
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isAlphaUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 2]; \
-        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 2]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 //  F I X E D   W I N G
@@ -116,5 +105,4 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         // Electronics
         "ACE_microDAGR"
     };
-
 };

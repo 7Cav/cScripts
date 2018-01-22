@@ -6,17 +6,22 @@
  * 0: Player <STRING>
  *
  * Example:
- * [this] call cScripts_fnc_setPreInitPlayerSettings;
+ * [this,true,true] call cScripts_fnc_setPreInitPlayerSettings;
  */
 
 #include "..\script_component.hpp";
 
 params [
-    ["_player",""]
+    ["_player",""],
+    ["_safeMode", true],
+    ["_earPlugs", true]
 ];
 
 // Safety first
-[_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
-
+if (_safemode) then {
+    [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
+};
 // Add earplugs if you dont have them in.
-if ([_player] call ace_hearing_fnc_hasEarPlugsIn) then {} else {[_player] call ace_hearing_fnc_putInEarplugs;};
+if (_earPlugs) then {
+    if ([_player] call ace_hearing_fnc_hasEarPlugsIn) then {} else {[_player] call ace_hearing_fnc_putInEarplugs;};
+};

@@ -17,6 +17,8 @@
 
 #include "..\script_component.hpp";
 
+INFO("Applying loadout")
+
 params [
     ["_player",""],
     ["_platoon",""],
@@ -84,4 +86,4 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 // Set Engineer
 (_player) setVariable ["ACE_isEngineer", _isEngineer];
 
-hint "LoadoutApplyed with all the weird shit that come with it!";
+INFO("Done applying loadout")
