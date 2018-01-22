@@ -1,7 +1,7 @@
 class CfgSettings {
     isDebugMode                 =   0;      // 0 or 1 Add debug messages in the log (Default: 0)
     isMissionType               =   1;      // 0: Custom, 1: Operation, 2: Training (Default: 1)
-    aiSystemDifficulty          =   0;      // 0: Standard, 1: Desert, 2: Dumb As Fuck (Default: 0)
+    aiSystemDifficulty          =   0;      // 0: Day, 1: Night, 2: (Default: 0)
     use7cavZeusModules          =   1;      // 0 or 1 Allow the misson to use the 7Cav module system. (Default: 1)
 
     // Hints and documents

@@ -38,8 +38,9 @@ if (_platoonSelector == "alpha") then {
 
     _crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",2];
     _crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",2];
-
     _crate addWeaponCargoGlobal ["tf47_at4_HP",6];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
 
     //================== AMMO ==================\\
 
@@ -112,6 +113,8 @@ if (_platoonSelector == "bravo") then {
 
     //================== WEAPONS ==================\\
 
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
     _crate additemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate additemCargoGlobal ["tf47_optic_m3maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
@@ -191,6 +194,8 @@ if (_platoonSelector == "charlie") then {
     //================== WEAPONS ==================\\
 
     _crate additemCargoGlobal ["rhsusf_acc_eotech_552",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
     _crate additemCargoGlobal ["tf47_optic_m3maaws",10];
     _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
     _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
@@ -263,6 +268,8 @@ if (_platoonSelector == "medical") then {
     //================== WEAPONS ==================\\
 
     _crate additemCargoGlobal ["rhsusf_acc_eotech_552",10];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
 
     //================== AMMO ==================\\
 
@@ -336,6 +343,8 @@ if (_platoonSelector == "heavyweapons") then {
     //================== WEAPONS ==================\\
 
     _crate additemCargoGlobal ["rhsusf_acc_eotech_552",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
     _crate additemCargoGlobal ["tf47_optic_m3maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
     _crate addWeaponCargoGlobal ["rhs_weap_fim92",10];
@@ -433,6 +442,7 @@ if (_platoonSelector == "ranger") then {
 
     _crate additemCargoGlobal ["rhsusf_acc_compm4",50];
     _crate additemCargoGlobal ["rhsusf_acc_ACOG_RMR",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
     _crate additemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate additemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate additemCargoGlobal ["rhsusf_acc_anpeq15A",50];
@@ -589,6 +599,7 @@ if (_platoonSelector == "sniper") then {
     _crate additemCargoGlobal ["rhsusf_acc_M2010S_wd",2];
     _crate additemCargoGlobal ["rhsusf_acc_compm4",2];
     _crate additemCargoGlobal ["rhsusf_acc_ACOG_RMR",2];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
     _crate additemCargoGlobal ["rhsusf_acc_eotech_552",2];
     _crate additemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",2];
     _crate additemCargoGlobal ["rhsusf_acc_anpeq15A",2];
@@ -695,4 +706,121 @@ if (_platoonSelector == "sniper") then {
     _crate addItemCargoGlobal ["U_B_T_FullGhillie_tna_F",2];
     _crate addItemCargoGlobal ["U_B_FullGhillie_lsh",2];
     _crate addItemCargoGlobal ["U_B_FullGhillie_sard",2];
+};
+
+//------------------ F U L L   C R A T E --------------------\\
+
+if (_platoonSelector == "full") then {
+
+    //================== RADIOS ==================\\
+
+    _crate addItemCargoGlobal ["tf_anprc152",50];
+    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+
+    //================== WEAPONS ==================\\
+
+    _crate additemCargoGlobal ["rhsusf_acc_eotech_552",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate additemCargoGlobal ["tf47_optic_m3maaws",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
+    _crate addWeaponCargoGlobal ["rhs_weap_fim92",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_fgm148",10];
+    _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
+    _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
+
+    //================== AMMO ==================\\
+
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR1),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),150];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER0),50];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER1),50];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER2),50];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),50];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),50];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER5),50];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER6),50];
+
+    //================== GRENADES ==================\\
+
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEGREEN),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEYELLOW),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKERED),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLHUNTIR),250];
+    _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),250];
+    _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
+    _crate addMagazineCargoGlobal ["Chemlight_Red",250];
+
+    //================== EXPLOSIVES ==================\\
+
+    _crate addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",50];
+    _crate addMagazineCargoGlobal ["DemoCharge_Remote_Mag",50];
+    _crate addMagazineCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",50];
+    _crate addMagazineCargoGlobal ["APERSMine_Range_Mag",50];
+    _crate addMagazineCargoGlobal ["APERSBoundingMine_Range_Mag",50];
+    _crate addMagazineCargoGlobal ["ACE_FlareTripMine_Mag",50];
+    _crate addMagazineCargoGlobal ["SLAMDirectionalMine_Wire_Mag",50];
+    _crate addMagazineCargoGlobal ["rhs_mine_M19_mag",50];
+
+    //================== ITEMS ==================\\
+
+    _crate addItemCargoGlobal ["rhsusf_ANPVS_14",50];
+    _crate addItemCargoGlobal ["Toolkit",10];
+    _crate addItemCargoGlobal ["ACE_M26_Clacker",20];
+    _crate addItemCargoGlobal ["ACE_DefusalKit",20];
+    _crate addItemCargoGlobal ["ACE_Flashlight_MX991",50];
+    _crate addItemCargoGlobal ["ACE_CableTie",50];
+    _crate addItemCargoGlobal ["ACE_wirecutter",10];
+    _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
+    _crate addItemCargoGlobal ["ACE_RangeTable_82mm",20];
+    _crate additemCargoGlobal ["ACE_VMH3",20];
+    _crate additemCargoGlobal ["ACE_VMM3",20];
+    _crate additemCargoGlobal ["ACE_IR_Strobe_Item",20];
+    _crate additemCargoGlobal ["Flagstack_Red",10];
+    _crate additemCargoGlobal ["Signpack_Mines",10];
+    _crate additemCargoGlobal ["ACE_Fortify",10];
+
+    //================== MEDICAL ==================\\
+
+    _crate addItemCargoGlobal ["ACE_EarPlugs",250];
+
+    _crate addItemCargoGlobal ["ACE_FieldDressing",250];
+    _crate addItemCargoGlobal ["ACE_packingBandage",250];
+    _crate addItemCargoGlobal ["ACE_elasticBandage",250];
+    _crate addItemCargoGlobal ["ACE_quikclot",250];
+
+    _crate addItemCargoGlobal ["ACE_tourniquet",250];
+
+    _crate addItemCargoGlobal ["ACE_personalAidKit",250];
+    _crate addItemCargoGlobal ["ACE_surgicalKit",250];
+
+    _crate addItemCargoGlobal ["ACE_bloodIV",250];
+    _crate addItemCargoGlobal ["ACE_bloodIV_500",250];
+    _crate addItemCargoGlobal ["ACE_salineIV",250];
+    _crate addItemCargoGlobal ["ACE_salineIV_500",250];
+
+    _crate addItemCargoGlobal ["ACE_morphine",250];
+    _crate addItemCargoGlobal ["ACE_epinephrine",250];
+    _crate addItemCargoGlobal ["ACE_atropine",250];
+
+    _crate addItemCargoGlobal ["ACE_bodyBag",250];
+
+    //================== BACKPACKS ==================\\
+
+    _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
 };
