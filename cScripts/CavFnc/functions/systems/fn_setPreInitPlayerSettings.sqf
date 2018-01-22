@@ -31,6 +31,7 @@ private _platoonBravo = if (_platoon == "bravo") then {true} else {false};
 private _platoonCharlie = if (_platoon == "charlie") then {true} else {false};
 private _platoonRanger = if (_platoon == "ranger") then {true} else {false};
 private _platoonMedical = if (_platoon == "medical") then {true} else {false};
+private _platoonS3 = if (_platoon == "s3") then {true} else {false};
 
 (_player) setVariable ["CAV_isCavTrooper", true];
 (_player) setVariable ["CAV_isAlphaUnit", _platoonAlpha];
@@ -38,6 +39,7 @@ private _platoonMedical = if (_platoon == "medical") then {true} else {false};
 (_player) setVariable ["CAV_isCharlieUnit", _platoonCharlie];
 (_player) setVariable ["CAV_isRangerUnit", _platoonRanger];
 (_player) setVariable ["CAV_isMedicalUnit", _platoonMedical];
+(_player) setVariable ["CAV_isS3Unit", _platoonS3];
 
 // Set cav native tough langish and secondary if any
 switch (_translator) do {
