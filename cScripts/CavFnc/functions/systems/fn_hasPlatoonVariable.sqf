@@ -6,7 +6,7 @@
  * 0: player <STRING>
  *
  * Return Value:
- * Has platoon variable <BOOL>
+ * Array <BOOL>
  *
  * Example:
  * [player] call cScripts_fnc_hasPlatoonVariable
