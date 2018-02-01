@@ -5,27 +5,54 @@
  * Arguments:
  * 0: Crate <OBJECT>
  * 1: Scale cargo ammount <NUMBER> (Default: 1)
+ * 2: Type
  *
  * Example:
- * [this,0.5] call cScripts_fnc_doSpecialWeaponsCrate;
- * [this,1] call cScripts_fnc_doSpecialWeaponsCrate;
+ * [this] call cScripts_fnc_doSpecialWeaponsCrate;
+ * [this,"Full",0.5] call cScripts_fnc_doSpecialWeaponsCrate;
+ * [this,"Full",1] call cScripts_fnc_doSpecialWeaponsCrate;
  */
 
 #include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
 
-params [["_crate", objNull, [objNull]],["_quaScale",1]];
+params [
+    ["_crate", objNull, [objNull]],
+    ["_cargoType","mortar"],
+    ["_quaScale",1]
+];
 
 clearweaponcargoGlobal _crate;
 clearmagazinecargoGlobal _crate;
 clearitemcargoGlobal _crate;
 clearbackpackcargoGlobal _crate;
 
-_crate addWeaponCargoGlobal ["rhs_weap_m4a1_carryhandle",(_quaScale * 4)];
-_crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",(_quaScale * 2)];
-_crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",(_quaScale * 1)];
-_crate addWeaponCargoGlobal ["rhs_weap_m240B",(_quaScale * 1)];
+// SELECT TYPE TO FILL BOX - MORTARS,50 CAL, Mk19, TOW
+
+// MORTARS
+if ((_cargoType == "all") or (_cargoType == "mortar")) then {
+    _crate addBackpackCargoGlobal ["B_Mortar_01_weapon_F",(_quaScale * 8)];
+    _crate addBackpackCargoGlobal ["B_Mortar_01_support_F",(_quaScale * 4)];
+};
+
+// M2 50 CAL
+if ((_cargoType == "all") or (_cargoType == "m2")) then {
+    _crate addBackpackCargoGlobal ["RHS_M2_Gun_Bag",(_quaScale * 4)];
+    _crate addBackpackCargoGlobal ["RHS_M2_MiniTripod_Bag",(_quaScale * 8)];
+};
+
+// Mk19
+if ((_cargoType == "all") or (_cargoType == "mk19")) then {
+    _crate addBackpackCargoGlobal ["RHS_Mk19_Gun_Bag",(_quaScale * 4)];
+    _crate addBackpackCargoGlobal ["RHS_Mk19_Tripod_Bag",(_quaScale * 8)];
+};
+
+// TOW
+if ((_cargoType == "all") or (_cargoType == "tow")) then {
+    _crate addBackpackCargoGlobal ["rhs_Tow_Gun_Bag",(_quaScale * 4)];
+    _crate addBackpackCargoGlobal ["rhs_TOW_Tripod_Bag",(_quaScale * 8)];
+};
 
 // Change ace logistics size of crate
 _crate setVariable ["ace_cargo_size", 1];

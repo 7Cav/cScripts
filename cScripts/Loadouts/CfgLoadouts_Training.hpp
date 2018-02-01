@@ -48,6 +48,55 @@ class CAV_SOI_INSTR : CAV_Charlie_Base {  // Instructor
         (_this select 0) allowDamage false;";
 };
 
+class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
+
+    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
+    headgear[] = {"DAR_JMCap_Blk"};
+    goggles[] = {""};
+    vest[] = {"V_TacVest_khk"};
+    backpack[] = {"tf_rt1523g_rhs"};
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",2,
+        "SmokeShellBlue",1,
+        "SmokeShellGreen",1,
+        "SmokeShellRed",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+
+        // Standard
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+        "H_Cap_tan_specops_US",
+
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_HuntIR_monitor",
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemAndroid"};
+
+    insignia[] = {"CAG"};
+
+    preLoadout = " \
+        (_this select 0) setVariable [""CAV_isTrainingUnit"", true]; \
+        (_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]; \
+        (_this select 0) allowDamage false; \
+        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+};
+
 class CAV_SOI_STUD : CAV_Bravo_Base {  // Rifleman
 
     backpack[] = {"B_AssaultPack_mcamo"};

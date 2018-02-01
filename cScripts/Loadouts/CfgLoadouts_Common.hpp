@@ -55,7 +55,7 @@ class CAV_Alpha_Base : CommonBlufor {
     goggles[] = {""};
     headgear[] = {""};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
-    vest[] = {"rhsusf_spcs_ocp"};
+    vest[] = {"rhsusf_mbav_light"};
 
     primary[] = {"rhs_weap_m4a1","rhsusf_acc_eotech_552","rhsusf_acc_anpeq15A","rhsusf_acc_grip3"};
     secondary[] = {"rhsusf_weap_m9"};
@@ -194,7 +194,7 @@ class CAV_Ranger_Base : CommonBlufor {
     nvgs[] = {""};
     watch[] = {"ACE_Altimeter"};
 
-    insignia[] = {"Ranger_Insignia"};
+    insignia[] = {"RANGER"};
     preLoadout = "[(_this select 0), 'ranger', 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
