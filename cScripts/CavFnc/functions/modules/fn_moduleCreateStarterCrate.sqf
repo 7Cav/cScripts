@@ -19,12 +19,12 @@ _pos = _this select 0;
 private _dialogResult = [
     "7th Cavalry Starter Crate",
     [
-        ["Quick Select Scale",["none","alpha","bravo","charlie","ranger","medical","full"],0],
+        ["Quick Select Scale",["None","Alpha","Bravo","Charlie","Heavy Weapons","Ranger","Sniper","Medical","Full"],0],
         ["ReGear action",["true","false"],1],
         ["Heal action",["true","false"],0],
         ["Insignia Selection",["true","false"],0],
-        ["Supply Size","SLIDER",1],
-        ["Require Platoon Variable",["true","false"],1]
+        ["Require Platoon Variable",["true","false"],1],
+        ["Add full arsenal",["true","false"],1]
     ]
 ] call Ares_fnc_ShowChooseDialog;
 
@@ -35,17 +35,19 @@ private _quickSelectScale = switch (_dialogResult select 0) do {
     case 1: {"alpha";};
     case 2: {"bravo";};
     case 3: {"charlie";};
-    case 4: {"ranger";};
-    case 5: {"medical";};
+    case 4: {"heavyweapons";};
+    case 5: {"ranger";};
+    case 6: {"sniper";};
+    case 7: {"medical";};
 
-    case 6: {"full";};
+    case 7: {"full";};
 };
 
 private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};
 private _reHealOption = if (_dialogResult select 2 == 0) then {true} else {false};
 private _InsigniaSelectOption = if (_dialogResult select 3 == 0) then {true} else {false};
-private _supplieSize = _dialogResult select 4;
-private _requirePlatoonVariable = if (_dialogResult select 5 == 0) then {true} else {false};
+private _requirePlatoonVariable = if (_dialogResult select 4 == 0) then {true} else {false};
+private _arsenal = if (_dialogResult select 5 == 0) then {true} else {false};
 
 _crate = "B_supplyCrate_F" createVehicle _pos;
-[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_supplieSize,_requirePlatoonVariable] remoteExec ["cScripts_fnc_doStarterCrate",0,true];
+[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requirePlatoonVariable,_arsenal] remoteExec ["cScripts_fnc_doStarterCrate",0,true];

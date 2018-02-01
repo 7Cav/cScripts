@@ -3,6 +3,7 @@
 // Instructors
 
 class rhsusf_usmc_marpat_wd_officer : CAV_SOI_INSTR {};
+class rhsusf_usmc_marpat_d_officer : CAV_JM_INSTR {};
 class rhsusf_usmc_marpat_wd_crewman : CAV_TAS_INSTR {};
 class rhsusf_usmc_marpat_wd_helipilot : CAV_ACE_ROTARY_INSTR {};
 class rhsusf_airforce_jetpilot : CAV_ACE_FIXED_INSTR {};

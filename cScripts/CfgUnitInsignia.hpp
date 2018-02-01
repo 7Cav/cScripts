@@ -22,6 +22,7 @@ class CfgUnitInsignia {
     MACRO_UNITINSIGNIA(CLS_Insignia,CLS.paa);
 
 	// Specialized
-    MACRO_UNITINSIGNIA(RANGER_Insignia,Ranger.paa);
+    MACRO_UNITINSIGNIA(RANGER,Ranger.paa);
+    MACRO_UNITINSIGNIA(CAG,Airborne_Insignia.paa);
     MACRO_UNITINSIGNIA(Follow_Me,follow-me-patch.paa);
 };

@@ -9,6 +9,7 @@
 #include "..\script_component.hpp";
 if (!isServer) exitWith {};
 
+//All helicopters
 ["RHS_UH60_Base", "init", {
     (_this select 0) call FUNC(setCavVehicle);
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
@@ -22,7 +23,11 @@ if (!isServer) exitWith {};
 ["RHS_AH64_base", "init", {
     (_this select 0) call FUNC(setCavVehicle);
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;
+["RHS_C130J", "init", {
+    (_this select 0) call FUNC(setCavVehicle);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
 
+// All cars
 ["rhsusf_hmmwe_base", "init", {
     (_this select 0) call FUNC(setCavVehicle);
 }, nil, nil, true] call CBA_fnc_addClassEventHandler;

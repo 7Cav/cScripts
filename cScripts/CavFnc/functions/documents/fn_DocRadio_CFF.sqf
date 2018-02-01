@@ -11,7 +11,7 @@
 player createDiaryRecord["Chklists",
     ["CALL FOR FIRE",
         "
-<img image='cScripts\Data\Images\CFF.paa' width='367' height='587'/>
+<img image='cScripts\Data\Images\CFF.jpg' width='367' height='587'/>
         "
     ]
 ];
