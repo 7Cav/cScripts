@@ -32,7 +32,8 @@
     ACE_maxWeightDrag = 10000;
 
 /*           ACRE            */
-
+    [true,true] call acre_api_fnc_setupMission;
+    
 /*           DEBUG              */
     if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {
         ["DEBUG MODE IS ACTIVE!", "WARNING", [true, false, true]] call CBA_fnc_debug;
