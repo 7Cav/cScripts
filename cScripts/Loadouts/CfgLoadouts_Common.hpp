@@ -46,7 +46,7 @@ class CommonBlufor {
 
     insignia[] = {""};
     preLoadout = "[(_this select 0),'', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 class CAV_Alpha_Base : CommonBlufor {
@@ -99,7 +99,7 @@ class CAV_Alpha_Base : CommonBlufor {
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'alpha', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 class CAV_Bravo_Base : CommonBlufor {
@@ -126,7 +126,7 @@ class CAV_Bravo_Base : CommonBlufor {
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'bravo', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 class CAV_Charlie_Base : CommonBlufor {
@@ -169,7 +169,7 @@ class CAV_Charlie_Base : CommonBlufor {
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'charlie', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 class CAV_Ranger_Base : CommonBlufor {
@@ -196,7 +196,7 @@ class CAV_Ranger_Base : CommonBlufor {
 
     insignia[] = {"RANGER"};
     preLoadout = "[(_this select 0), 'ranger', 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 class CAV_Medical_Base : CommonBlufor {
@@ -224,5 +224,5 @@ class CAV_Medical_Base : CommonBlufor {
 
     insignia[] = {"CLS_Insignia"};
     preLoadout = "[(_this select 0), 'medical', 2, false] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
