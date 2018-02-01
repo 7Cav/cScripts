@@ -72,6 +72,7 @@ class cScripts {
         class addJump {};
         class doJump {};
 
+        class hasPlatoonVariable {};
         class canSelectLoadout {};
         class canNotSelectLoadout {};
     };

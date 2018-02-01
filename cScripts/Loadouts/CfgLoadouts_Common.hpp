@@ -45,7 +45,7 @@ class CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {""};
-    preLoadout = "[(_this select 0), '', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0),'', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
@@ -98,7 +98,7 @@ class CAV_Alpha_Base : CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {""};
-    preLoadout = "[(_this select 0), 'Alpha', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'alpha', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
@@ -125,7 +125,7 @@ class CAV_Bravo_Base : CommonBlufor {
     watch[] = {"tf_microdagr"};
 
     insignia[] = {""};
-    preLoadout = "[(_this select 0), 'Bravo', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
