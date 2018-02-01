@@ -32,25 +32,6 @@
     ACE_maxWeightDrag = 10000;
 
 /*           ACRE            */
-    private _english = ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    private _russian = ["ru"] call acre_api_fnc_babelSetSpeakingLanguage;
-    private _greek = ["gr"] call acre_api_fnc_babelSetSpeakingLanguage;
-    private _french = ["fr"] call acre_api_fnc_babelSetSpeakingLanguage;
-    //private _persian = ["pe"] call acre_api_fnc_babelSetSpeakingLanguage;
-    //private _arabic = ["ar"] call acre_api_fnc_babelSetSpeakingLanguage;
-    //private _kurdish = ["ku"] call acre_api_fnc_babelSetSpeakingLanguage;
-
-    [ [west, _english], [east, _russian], [civilian, _greek, _french] ] call acre_api_fnc_setupMission;
-
-    //Languishes
-    ["en", "English"] call acre_api_fnc_babelAddLanguageType;
-    ["ru", "Russian"] call acre_api_fnc_babelAddLanguageType;
-    ["gr", "Greek"] call acre_api_fnc_babelAddLanguageType;
-    ["fr", "French"] call acre_api_fnc_babelAddLanguageType;
-
-    ["pe", "Persian"] call acre_api_fnc_babelAddLanguageType;
-    ["ar", "Arabic"] call acre_api_fnc_babelAddLanguageType;
-    ["ku", "Kurdish"] call acre_api_fnc_babelAddLanguageType;
 
 /*           DEBUG              */
     if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {

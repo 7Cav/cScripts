@@ -7,7 +7,7 @@
  * 1: Platoon <STRING>
  * 2: MedicClass <NUMBER>             (Default: 0)
  * 3: Engineer <BOOL>                 (Default: false)
- * 4: Translator Languish  <STRING>   (Optional)
+ * 4: Translator Languish  <STRING>   (Optional)    NOT IMPLEMENTED
  *
  * Example:
  * [this] call cScripts_fnc_setPreInitPlayerSettings;
@@ -17,14 +17,14 @@
 
 #include "..\script_component.hpp";
 
-INFO("Applying loadout")
+INFO("Applying PreLoadout Player Settings")
 
 params [
     ["_player",""],
     ["_platoon",""],
     ["_isMedicClass", 0],
-    ["_isEngineer", false],
-    ["_translator",""]
+    ["_isEngineer", false]
+    //["_translator",""]    Not implemented
 ];
 
 // Set platoonVariables
@@ -43,42 +43,6 @@ private _platoonS3 = if (_platoon == "s3") then {true} else {false};
 (_player) setVariable ["CAV_isMedicalUnit", _platoonMedical];
 (_player) setVariable ["CAV_isS3Unit", _platoonS3];
 
-// Set cav native tough langish and secondary if any
-switch (_translator) do {
-    case "gr": {
-        ["en","gr"] call acre_api_fnc_babelSetSpokenLanguages;
-        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    };
-    case "fr": {
-        ["en","fr"] call acre_api_fnc_babelSetSpokenLanguages;
-        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    };
-    case "ru": {
-        ["en","ru"] call acre_api_fnc_babelSetSpokenLanguages;
-        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    };
-    case "fr": {
-        ["en","fr"] call acre_api_fnc_babelSetSpokenLanguages;
-        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    };
-    case "pe": {
-        ["en","pe"] call acre_api_fnc_babelSetSpokenLanguages;
-        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    };
-    case "ar": {
-        ["en","ar"] call acre_api_fnc_babelSetSpokenLanguages;
-        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    };
-    case "s3": {
-        ["en","gr","fr","ru","fr","pe","ar"] call acre_api_fnc_babelSetSpokenLanguages;
-        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    };
-    default {
-        ["en"] call acre_api_fnc_babelSetSpokenLanguages;
-        ["en"] call acre_api_fnc_babelSetSpeakingLanguage;
-    };
-};
-
 // Set MedicClass
 private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 (_player) setVariable ["ACE_medical_medicClass", _isMedicClass, _MedicClass];
@@ -86,4 +50,4 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 // Set Engineer
 (_player) setVariable ["ACE_isEngineer", _isEngineer];
 
-INFO("Done applying loadout")
+INFO("Done Applying PreLoadout Player Settings")

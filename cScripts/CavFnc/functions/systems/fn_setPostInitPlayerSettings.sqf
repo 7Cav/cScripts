@@ -11,6 +11,8 @@
 
 #include "..\script_component.hpp";
 
+INFO("Applying PostLoadout Player Settings")
+
 params [
     ["_player",""],
     ["_safeMode", true],
@@ -25,3 +27,5 @@ if (_safemode) then {
 if (_earPlugs) then {
     if ([_player] call ace_hearing_fnc_hasEarPlugsIn) then {} else {[_player] call ace_hearing_fnc_putInEarplugs;};
 };
+
+INFO("Done Applying PostLoadout Player Settings")
