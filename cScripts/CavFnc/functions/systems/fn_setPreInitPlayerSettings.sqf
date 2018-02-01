@@ -24,7 +24,6 @@ params [
     ["_setPlatoon",""],
     ["_isMedicClass", 0],
     ["_isEngineer", false]
-    //["_translator",""]    Not implemented
 ];
 
 // Set platoonVariables
