@@ -8,7 +8,8 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",4,
 
@@ -56,7 +57,8 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",4,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",2,
 
@@ -115,7 +117,8 @@ class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
 
         "rhs_mag_m67",4,
 
@@ -154,7 +157,8 @@ class CAV_Charlie_TL : CAV_Charlie_Base {  // Fire Team Leader
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
 
         "rhs_mag_m67",4,
 
@@ -282,7 +286,8 @@ class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",4,
 
@@ -335,7 +340,8 @@ class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",4,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",2,
 

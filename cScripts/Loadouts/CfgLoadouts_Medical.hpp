@@ -96,6 +96,7 @@ class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",5,
+        "rhsusf_mag_15Rnd_9x19_JHP",2,
 
         "rhs_mag_m67",2,
 
