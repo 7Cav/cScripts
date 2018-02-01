@@ -123,7 +123,7 @@ class CAV_TAS_INSTR : CAV_Bravo_Base {  // Instructor
     headgear[] = {"H_Cap_usblack"};
     goggles[] = {"rhsusf_shemagh_od"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15side","rhsusf_acc_compm4"};

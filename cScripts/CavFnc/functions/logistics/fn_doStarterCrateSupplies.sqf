@@ -30,9 +30,8 @@ clearbackpackcargoGlobal _crate;
 if (_platoonSelector == "alpha") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",25];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -108,8 +107,8 @@ if (_platoonSelector == "alpha") then {
 if (_platoonSelector == "bravo") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -188,8 +187,8 @@ if (_platoonSelector == "bravo") then {
 if (_platoonSelector == "charlie") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -262,8 +261,8 @@ if (_platoonSelector == "charlie") then {
 if (_platoonSelector == "medical") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",10];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",5];
+    _crate addItemCargoGlobal ["ACRE_PRC152",10];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",5];
 
     //================== WEAPONS ==================\\
 
@@ -337,8 +336,8 @@ if (_platoonSelector == "medical") then {
 if (_platoonSelector == "heavyweapons") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -435,8 +434,8 @@ if (_platoonSelector == "heavyweapons") then {
 if (_platoonSelector == "ranger") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",25];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -582,8 +581,8 @@ if (_platoonSelector == "ranger") then {
 if (_platoonSelector == "sniper") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",10];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -715,7 +714,7 @@ if (_platoonSelector == "full") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addBackpackCargoGlobal ["B_Kitbag_mcamo",10];
 
     //================== WEAPONS ==================\\
 

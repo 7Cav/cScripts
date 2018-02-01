@@ -4,7 +4,7 @@
 
 class CAV_Medical_OFFCR : CAV_Medical_Base {  // Medical Team Leader or SL and up leadership positions
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
@@ -91,7 +91,7 @@ class CAV_Medical_BONESAW : CAV_Medical_Base {  // Medical Team Member
 };
 
 class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
     magazines[] = {

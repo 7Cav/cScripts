@@ -2,7 +2,7 @@
 
 class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
@@ -45,7 +45,7 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
 class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     nvgs[] = {""};
     binoculars[] = {"Laserdesignator"};
@@ -100,7 +100,7 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 
 class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
@@ -267,7 +267,7 @@ class CAV_Charlie_CLS : CAV_Charlie_Base {  // Combat Life Saver 24.3kg
 };
 
 class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};

@@ -13,7 +13,7 @@ class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasu
 
 class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
 
     items[] = {

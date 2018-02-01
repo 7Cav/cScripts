@@ -2,7 +2,7 @@
 
 class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
@@ -41,7 +41,7 @@ class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
 
 class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
@@ -81,7 +81,7 @@ class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
 
 class CAV_Ranger_TL : CAV_Ranger_Base {                    //35.92kg
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
@@ -160,7 +160,7 @@ class CAV_Ranger_AR : CAV_Ranger_Base {                    //33.62kg
 
 class CAV_Ranger_GR : CAV_Ranger_Base {                    //35.92kg
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
@@ -240,7 +240,7 @@ class CAV_Ranger_RM : CAV_Ranger_Base {                    //25.85kg
 
 class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
     nvgs[] = {""};
 

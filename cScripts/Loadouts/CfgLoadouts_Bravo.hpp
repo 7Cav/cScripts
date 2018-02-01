@@ -6,7 +6,7 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
 
     goggles[] = {"rhsusf_shemagh_gogg_tan"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
@@ -50,7 +50,7 @@ class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
     headgear[] = {"rhsusf_cvc_green_helmet"};
     goggles[] = {"rhsusf_shemagh_gogg_tan"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15side","rhsusf_acc_compm4"};
@@ -179,7 +179,7 @@ class CAV_Bravo_Crew_CREW : CAV_Bravo_Base {  // Driver-Loader (acts as Engineer
 
 class CAV_Bravo_SL : CAV_Bravo_Base {  // Squad Leader
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
