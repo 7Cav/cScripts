@@ -22,6 +22,9 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
     };
 
     items[] = {
+        // Radio
+        "ACRE_PRC152",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
