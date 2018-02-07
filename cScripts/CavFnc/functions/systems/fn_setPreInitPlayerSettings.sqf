@@ -12,7 +12,7 @@
  * Example:
  * [this] call cScripts_fnc_setPreInitPlayerSettings;
  * [this, "charlie"] call cScripts_fnc_setPreInitPlayerSettings;
- * [this, "charlie",0,false,""] call cScripts_fnc_setPreInitPlayerSettings;
+ * [this, "charlie",0,false] call cScripts_fnc_setPreInitPlayerSettings;
  */
 
 #include "..\script_component.hpp";
