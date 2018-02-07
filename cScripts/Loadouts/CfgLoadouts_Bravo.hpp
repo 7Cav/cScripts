@@ -1,4 +1,4 @@
-/* Gear Date 15 NOV 17 */
+/* Gear Date 07 FEB 18 */
 
 //  O F F I C E R   A N D   C R E W
 
@@ -10,7 +10,8 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",2,
 
@@ -22,8 +23,10 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
     };
 
     items[] = {
-        // Radio
+        // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
+        "ACRE_PRC117F",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -61,7 +64,8 @@ class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
     secondary[] = {"rhsusf_weap_m9"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",4,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
         "rhsusf_mag_15Rnd_9x19_JHP",4,
 
         "rhs_mag_m714_White",
@@ -78,6 +82,11 @@ class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
+
         // Personal Medical Equipment
         "ACE_quikclot",6,
         "ACE_tourniquet",2,
@@ -116,6 +125,10 @@ class CAV_Bravo_Crew_GNR : CAV_Bravo_Base {  // Crew Gunner (acts as CLS also)
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+
         // Medical Equipment
         "ACE_personalAidKit",
         "ACE_quikclot",20,
@@ -137,6 +150,7 @@ class CAV_Bravo_Crew_GNR : CAV_Bravo_Base {  // Crew Gunner (acts as CLS also)
 
     insignia[] = {"CLS_Insignia"};
     gps[] = {"ItemAndroid"};
+
 };
 
 class CAV_Bravo_Crew_CREW : CAV_Bravo_Base {  // Driver-Loader (acts as Engineer also)
@@ -159,6 +173,10 @@ class CAV_Bravo_Crew_CREW : CAV_Bravo_Base {  // Driver-Loader (acts as Engineer
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -186,7 +204,8 @@ class CAV_Bravo_SL : CAV_Bravo_Base {  // Squad Leader
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",4,
 
@@ -198,6 +217,11 @@ class CAV_Bravo_SL : CAV_Bravo_Base {  // Squad Leader
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -227,7 +251,8 @@ class CAV_Bravo_TL : CAV_Bravo_Base {  // Fire Team Leader
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",4,
 
@@ -244,6 +269,11 @@ class CAV_Bravo_TL : CAV_Bravo_Base {  // Fire Team Leader
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -294,6 +324,28 @@ class CAV_Bravo_GR : CAV_Bravo_Base {  // Grenadier
 
         "SmokeShell",6
     };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_microDAGR",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+
 };
 
 class CAV_Bravo_RM : CAV_Bravo_Base {  // Rifleman
@@ -331,6 +383,9 @@ class CAV_Bravo_CLS : CAV_Bravo_Base {  // Combat Life Saver 24.3kg
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+
         // Medical Equipment
         "ACE_personalAidKit",
         "ACE_quikclot",20,
@@ -373,6 +428,11 @@ class CAV_Bravo_Weapons_TL : CAV_Bravo_Base {  // Team Leader
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,

@@ -54,6 +54,7 @@ _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),(_quaScale * 20)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),(_quaScale * 20)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),(_quaScale * 20)];
 _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),(_quaScale * 10)];
+_crate addMagazineCargoGlobal ["ACE_M84",25];
 _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),(_quaScale * 40)];
 _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),(_quaScale * 40)];
 _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),(_quaScale * 20)];

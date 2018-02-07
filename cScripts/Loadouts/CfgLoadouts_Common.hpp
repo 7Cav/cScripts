@@ -42,7 +42,7 @@ class CommonBlufor {
     gps[] = {""};
     map[] = {"ItemMap"};
     nvgs[] = {""};
-    watch[] = {"tf_microdagr"};
+    watch[] = {"itemWatch"};
 
     insignia[] = {""};
     preLoadout = "[(_this select 0),'', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
@@ -77,6 +77,10 @@ class CAV_Alpha_Base : CommonBlufor {
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+
         // Personal Medical Equipment
         "ACE_quikclot",6,
         "ACE_tourniquet",2,
@@ -88,14 +92,15 @@ class CAV_Alpha_Base : CommonBlufor {
         "ACE_CableTie",2,
 
         // Electronics
-        "ACE_microDAGR"
+        "ACE_microDAGR",
+
     };
 
     compass[] = {"ItemCompass"};
     gps[] = {"ItemAndroid"};
     map[] = {"ItemMap"};
     nvgs[] = {"rhsusf_ANPVS_15"};
-    watch[] = {"tf_microdagr"};
+    watch[] = {"ItemWatch"};
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'alpha', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
@@ -116,13 +121,31 @@ class CAV_Bravo_Base : CommonBlufor {
     binoculars[] = {""};
 
     magazines[] = {""};
-    items[] = {""};
+    items[] = {
+        // Radios
+        "ACRE_PRC343",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_microDAGR",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
 
     compass[] = {"ItemCompass"};
     gps[] = {""};
     map[] = {"ItemMap"};
     nvgs[] = {"rhsusf_ANPVS_14"};
-    watch[] = {"tf_microdagr"};
+    watch[] = {"ItemWatch"};
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'bravo', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
@@ -145,6 +168,9 @@ class CAV_Charlie_Base : CommonBlufor {
     magazines[] = {};
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -165,7 +191,7 @@ class CAV_Charlie_Base : CommonBlufor {
     gps[] = {""};
     map[] = {"ItemMap"};
     nvgs[] = {""};
-    watch[] = {"tf_microdagr"};
+    watch[] = {"ItemWatch"};
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'charlie', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
@@ -220,7 +246,7 @@ class CAV_Medical_Base : CommonBlufor {
     gps[] = {"ItemAndroid"};
     map[] = {"ItemMap"};
     nvgs[] = {""};
-    watch[] = {"tf_microdagr"};
+    watch[] = {"ItemWatch"};
 
     insignia[] = {"CLS_Insignia"};
     preLoadout = "[(_this select 0), 'medical', 2, false] call cScripts_fnc_setPreInitPlayerSettings;";
