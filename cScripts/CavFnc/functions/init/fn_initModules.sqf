@@ -15,15 +15,15 @@ if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {F
 
 INFO("Achilles mod found adding modules.");
 
-["7Cav Logistics", "Create Starter Crate",{
+["7Cav Logistics", "Starter Crate",{
     [(_this select 0)] call FUNC(moduleCreateStarterCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
-["7Cav Logistics", "Create Supply Crate",{
+["7Cav Logistics", "Re-supply Crate",{
     [(_this select 0)] call FUNC(moduelCreateSupplyCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
-["7Cav Logistics", "Create Special Weapons Crate",{
+["7Cav Logistics", "Crew-Served Weapons Crate",{
     [(_this select 0)] call FUNC(moduelCreateSpecialWeaponsCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
@@ -33,7 +33,7 @@ INFO("Achilles mod found adding modules.");
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Transform to Vehicle",{
-    [(_this select 1)] call FUNC(initVehicle;
+    [(_this select 1)] call FUNC(initVehicle);
 }] call Ares_fnc_RegisterCustomModule;
 */
 
