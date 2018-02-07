@@ -45,6 +45,7 @@ if (_platoonSelector == "alpha") then {
     //================== AMMO ==================\\
 
     _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),30];
 
@@ -203,6 +204,7 @@ if (_platoonSelector == "charlie") then {
     //================== AMMO ==================\\
 
     _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),50];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),50];
@@ -274,6 +276,7 @@ if (_platoonSelector == "medical") then {
     //================== AMMO ==================\\
 
     _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
 
     //================== GRENADES ==================\\
 
