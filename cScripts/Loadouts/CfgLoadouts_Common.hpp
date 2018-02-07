@@ -50,7 +50,6 @@ class CommonBlufor {
 };
 
 class CAV_Alpha_Base : CommonBlufor {
-
     backpack[] = {""};
     goggles[] = {""};
     headgear[] = {""};
@@ -78,7 +77,7 @@ class CAV_Alpha_Base : CommonBlufor {
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
+
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -123,7 +122,7 @@ class CAV_Bravo_Base : CommonBlufor {
     magazines[] = {""};
     items[] = {
         // Radios
-        "ACRE_PRC343",
+
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -169,7 +168,7 @@ class CAV_Charlie_Base : CommonBlufor {
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
+
 
         // Personal Medical Equipment
         "ACE_quikclot",10,

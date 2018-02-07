@@ -20,7 +20,6 @@ class CAV_Medical_OFFCR : CAV_Medical_Base {  // Medical Team Leader or SL and u
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -69,7 +68,6 @@ class CAV_Medical_BONESAW : CAV_Medical_Base {  // Medical Team Member
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -117,7 +115,6 @@ class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
     };
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 

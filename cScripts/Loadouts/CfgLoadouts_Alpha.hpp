@@ -17,6 +17,9 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
     headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
 
     items[] = {
+        // Radios
+        "ACRE_PRC152",
+
         // Personal Medical Equipment
         "ACE_quikclot",26,
         "ACE_tourniquet",8,
@@ -30,8 +33,6 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
         // Electronics
         "ACE_microDAGR",
-        "ACRE_PRC343",
-        "ACRE_PRC152",
 
         // Tools
         "ToolKit"
@@ -48,6 +49,9 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
     headgear[] = {"rhsusf_hgu56p_visor_mask_black_skull"};
 
     items[] = {
+        // Radios
+        "ACRE_PRC152",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -60,8 +64,6 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
 
         // Electronics
         "ACE_microDAGR",
-        "ACRE_PRC343",
-        "ACRE_PRC152",
 
         // Tools
         "ToolKit"
@@ -87,7 +89,6 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
     binoculars[] = {""};
 
     magazines[] = {
-
         "rhsusf_mag_15Rnd_9x19_JHP",3,
 
         "Chemlight_green",
@@ -100,6 +101,9 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC152",
+
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,
@@ -110,10 +114,7 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         "ACE_Flashlight_MX991",
 
         // Electronics
-        "ACE_microDAGR",
-        "ACRE_PRC343",
-        "ACRE_PRC152"
-
+        "ACE_microDAGR"
     };
 
     preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";

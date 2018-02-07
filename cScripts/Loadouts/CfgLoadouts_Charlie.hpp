@@ -21,7 +21,6 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -80,7 +79,6 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -131,7 +129,6 @@ class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -181,7 +178,6 @@ class CAV_Charlie_TL : CAV_Charlie_Base {  // Fire Team Leader
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -237,7 +233,6 @@ class CAV_Charlie_GR : CAV_Charlie_Base {  // Grenadier 28.4kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -288,7 +283,7 @@ class CAV_Charlie_CLS : CAV_Charlie_Base {  // Combat Life Saver 24.3kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
+
 
         // Medical Equipment
         "ACE_personalAidKit",
@@ -338,7 +333,6 @@ class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -389,7 +383,6 @@ class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -429,7 +422,6 @@ class CAV_Charlie_Weapons_AR : CAV_Charlie_Base {  // Automatic Rifleman  30.1kg
     };
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -467,7 +459,6 @@ class CAV_Charlie_Weapons_GR : CAV_Charlie_Base {  // Grenadier 24.9kg, 39.9kg w
     };
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -503,7 +494,6 @@ class CAV_Charlie_Weapons_RM : CAV_Charlie_Base {  // Rifleman 22.8kg, 37.8kg wi
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -543,7 +533,6 @@ class CAV_Charlie_Weapons_CLS : CAV_Charlie_Base {  // Combat Life Saver 23.0kg,
     };
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Medical Equipment
