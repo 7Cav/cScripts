@@ -1,10 +1,10 @@
-/* Gear Date 15 NOV 17 */
+/* Gear Date 07 FEB 18 */
 
 //  P E G A S U S   A N D   H E L I C O P T E R   C R E W
 
 class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasus
 
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor"};
 
     gps[] = {"ItemcTab"};
@@ -13,7 +13,7 @@ class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasu
 
 class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
 
     items[] = {
@@ -30,17 +30,16 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
         // Electronics
         "ACE_microDAGR",
+        "ACRE_PRC343",
+        "ACRE_PRC152",
 
         // Tools
         "ToolKit"
     };
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isAlphaUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 2]; \
-        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 2]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    gps[] = {"ItemcTab"};
+
+    preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
@@ -61,17 +60,14 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
 
         // Electronics
         "ACE_microDAGR",
+        "ACRE_PRC343",
+        "ACRE_PRC152",
 
         // Tools
         "ToolKit"
     };
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isAlphaUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 0, true]; \
-        (_this select 0) setVariable [""tf_receivingDistanceMultiplicator"", 2]; \
-        (_this select 0) setVariable [""tf_sendingDistanceMultiplicator"", 2]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 //  F I X E D   W I N G
@@ -114,7 +110,12 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         "ACE_Flashlight_MX991",
 
         // Electronics
-        "ACE_microDAGR"
+        "ACE_microDAGR",
+        "ACRE_PRC343",
+        "ACRE_PRC152"
+
     };
+
+    preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 
 };
