@@ -3,7 +3,7 @@
     enableSaving [false, false];
     tawvd_disablenone = true;
 
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "aiSystemDifficulty") == 0) then {
+    if (cScripts_Settings_setAiSystemDifficulty == 0) then {
         {
             _x setSkill ["aimingspeed",     0.420];
             _x setSkill ["aimingaccuracy",  0.338];
@@ -14,7 +14,7 @@
             _x setSkill ["general",         1.0];
         } forEach allUnits;
     };
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "aiSystemDifficulty") == 1) then {
+    if (cScripts_Settings_setAiSystemDifficulty == 1) then {
         {
             _x setSkill ["aimingspeed",     0.015];
             _x setSkill ["aimingaccuracy",  0.100];
