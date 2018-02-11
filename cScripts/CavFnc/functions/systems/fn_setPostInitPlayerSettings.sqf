@@ -14,19 +14,19 @@
 INFO("Applying PostLoadout Player Settings");
 
 params [
-    ["_player",""],
+    ["_unit",""],
     ["_safeMode", true],
     ["_earPlugs", true]
 ];
 
 // Safety first
 if (_safemode) then {
-    [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
+    [_unit, currentWeapon _unit, currentMuzzle _unit] call ace_safemode_fnc_lockSafety;
 };
 
 // Add earplugs if you dont have them in.
 if (_earPlugs) then {
-    if ([_player] call ace_hearing_fnc_hasEarPlugsIn) then {} else {[_player] call ace_hearing_fnc_putInEarplugs;};
+    if ([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {} else {[_unit] call ace_hearing_fnc_putInEarplugs;};
 };
 
 INFO("Done Applying PostLoadout Player Settings");

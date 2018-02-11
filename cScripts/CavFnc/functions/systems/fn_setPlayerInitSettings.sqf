@@ -14,22 +14,27 @@
 INFO("Applying init for player");
 
 params [
-    ["_player",""],
-    ["_squadName", "true"],
-    ["_squadChannel", 0]
+    ["_unit",""],
+    ["_squadName", ""],
+    ["_srChannel", 0],
+    ["_lrChannel", 0]
 ];
 
 // setSquadName
 if (_squadName != "") then {
-    [group _player, _squadName] call CBA_fnc_setCallsign;
+    [group _unit, _squadName] call CBA_fnc_setCallsign;
 };
 
 // Set the acre radio
-//waitUntil { ([] call acre_api_fnc_isInitialized) };
-if (_squadChannel != 0) then {
+if (_srChannel != 0) then {
     {
-        [["ACRE_PRC343"] call acre_api_fnc_getRadioByType, _squadChannel] call acre_api_fnc_setRadioChannel;
-    } forEach units group _player;
+        [{
+            if ((call acre_api_fnc_isInitialized) && ([(items player), "ACRE_PRC343"] call acre_api_fnc_hasKindOfRadio)) then {true};
+        }, {
+            params ["","","_srChannel"];
+            [["ACRE_PRC343"] call acre_api_fnc_getRadioByType, _srChannel] call acre_api_fnc_setRadioChannel;
+        }, _this] call CBA_fnc_waitUntilAndExecute;
+    } forEach units group _unit;
 };
 
 INFO("Done Applying init for player");

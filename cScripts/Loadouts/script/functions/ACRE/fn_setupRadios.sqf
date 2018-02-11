@@ -2,7 +2,7 @@
 params [["_unit", objNull]];
 
 // - Shortrange -------------------------------------------
-if (isPlayer _unit) then {
+/* if (isPlayer _unit) then {
     [{
         GVAR(groupIDsSynched)
         && {!isNil {["ACRE_PRC343"] call acre_api_fnc_getRadioByType}}
@@ -10,7 +10,7 @@ if (isPlayer _unit) then {
         private _srChannel = [_this] call FUNC(findGroupChannel);
         [["ACRE_PRC343"] call acre_api_fnc_getRadioByType, _srChannel] call acre_api_fnc_setRadioChannel;
     }, _unit] call CBA_fnc_waitUntilAndExecute;
-};
+}; */
 
 // - Longrange --------------------------------------------
 if !(isArray (missionConfigFile >> "CfgPoppy" >> "ACRE" >> "channelNames")) exitWith {};
