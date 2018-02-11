@@ -2,7 +2,7 @@
 
 class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
@@ -16,6 +16,7 @@ class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -45,7 +46,7 @@ class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
 
 class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
@@ -59,6 +60,7 @@ class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -89,7 +91,7 @@ class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
 
 class CAV_Ranger_TL : CAV_Ranger_Base {                    //35.92kg
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
@@ -111,6 +113,7 @@ class CAV_Ranger_TL : CAV_Ranger_Base {                    //35.92kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -137,7 +140,7 @@ class CAV_Ranger_TL : CAV_Ranger_Base {                    //35.92kg
 
 class CAV_Ranger_AR : CAV_Ranger_Base {                    //33.62kg
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
     nvgs[] = {""};
 
@@ -151,6 +154,7 @@ class CAV_Ranger_AR : CAV_Ranger_Base {                    //33.62kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -175,7 +179,7 @@ class CAV_Ranger_AR : CAV_Ranger_Base {                    //33.62kg
 
 class CAV_Ranger_GR : CAV_Ranger_Base {                    //35.92kg
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
@@ -197,6 +201,7 @@ class CAV_Ranger_GR : CAV_Ranger_Base {                    //35.92kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -223,7 +228,7 @@ class CAV_Ranger_GR : CAV_Ranger_Base {                    //35.92kg
 
 class CAV_Ranger_RM : CAV_Ranger_Base {                    //25.85kg
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
     nvgs[] = {""};
 
@@ -237,6 +242,7 @@ class CAV_Ranger_RM : CAV_Ranger_Base {                    //25.85kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -262,7 +268,7 @@ class CAV_Ranger_RM : CAV_Ranger_Base {                    //25.85kg
 
 class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
     nvgs[] = {""};
 
@@ -280,21 +286,23 @@ class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
         // Medical Equipment
-        "ACE_personalAidKit",2,
+        "ACE_personalAidKit",6,
         "ACE_surgicalKit",
-        "ACE_quikclot",35,
-        "ACE_tourniquet",6,
-        "ACE_salineIV",8,
-        "ACE_morphine",10 ,
-        "ACE_epinephrine",10,
+        "ACE_tourniquet",10,
 
-	// Personal Medical Equipment
-        "ACE_quikclot",10,
-        "ACE_tourniquet",2,
+        "ACE_quikclot",25,
+        "ACE_elasticBandage",20,
+
+        "ACE_adenosine",5,
+        "ACE_epinephrine",20,
+        "ACE_morphine",20,
+
+        "ACE_salineIV",6,
 
         // Standard
         "ACE_EarPlugs",2,
@@ -328,6 +336,7 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -353,7 +362,7 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
     preLoadout = "[(_this select 0), 'ranger', 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {"B_Kitbag_cbr"};A
     vest[] = {"rhsusf_spcs_ocp"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
@@ -370,6 +379,7 @@ class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 

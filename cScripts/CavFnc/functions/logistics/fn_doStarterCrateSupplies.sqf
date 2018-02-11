@@ -450,6 +450,7 @@ if (_platoonSelector == "ranger") then {
     _crate additemCargoGlobal ["rhsusf_acc_compm4",50];
     _crate additemCargoGlobal ["rhsusf_acc_ACOG_RMR",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_SpecterDR",50];
     _crate additemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate additemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate additemCargoGlobal ["rhsusf_acc_anpeq15A",50];
@@ -599,7 +600,7 @@ if (_platoonSelector == "sniper") then {
     _crate addWeaponCargoGlobal ["rhs_weap_M107",2];
     _crate addWeaponCargoGlobal ["rhsusf_weap_m9",2];
     _crate additemCargoGlobal ["rhsusf_acc_premier_anpvs27",2];
-    _crate additemCargoGlobal ["rhsusf_acc_M8541_low",2];
+    _crate additemCargoGlobal ["rhsusf_acc_M8541",2];
     _crate additemCargoGlobal ["rhsusf_acc_M2010S_wd",2];
     _crate additemCargoGlobal ["rhsusf_acc_SR25S",2];
     _crate additemCargoGlobal ["rhsusf_acc_M2010S_wd",2];

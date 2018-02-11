@@ -18,12 +18,12 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
-        "ACE_quikclot",26,
-        "ACE_tourniquet",8,
-        "ACE_morphine",8,
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
 
         // Standard
         "ACE_MapTools",
@@ -50,11 +50,13 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
-        "ACE_quikclot",10,
-        "ACE_tourniquet",2,
+        "ACE_quikclot",26,
+        "ACE_tourniquet",8,
+        "ACE_morphine",8,
 
         // Standard
         "ACE_MapTools",
@@ -89,6 +91,7 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
     binoculars[] = {""};
 
     magazines[] = {
+
         "rhsusf_mag_15Rnd_9x19_JHP",3,
 
         "Chemlight_green",
@@ -114,7 +117,10 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         "ACE_Flashlight_MX991",
 
         // Electronics
-        "ACE_microDAGR"
+        "ACE_microDAGR",
+        "ACRE_PRC343",
+        "ACRE_PRC152"
+
     };
 
     preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
