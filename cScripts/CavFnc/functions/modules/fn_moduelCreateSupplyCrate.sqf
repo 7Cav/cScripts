@@ -28,3 +28,4 @@ private _supplieSize = _dialogResult select 0;
 
 private _crate = "B_CargoNet_01_ammo_F" createVehicle _pos;
 [_crate,_supplieSize] remoteExec ["cScripts_fnc_doSupplyCrate",0,true];
+[_crate] call ace_zeus_fnc_addObjectToCurator;

@@ -1,6 +1,7 @@
 /*
  * Author: CPL.Brostrom.A
- * This populats a given object with items and commands used during operations.
+ * This scripts crate the 7th cavalry starter crate.
+ * It adds equipment and some optional selections to a given object.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -8,7 +9,7 @@
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
- * 5: Elatoon variable <BOOL>       (Default: true)
+ * 5: Platoon variable <BOOL>       (Default: true)
  * 6: Arsenal                       (Default: false)
  *
  * Example:

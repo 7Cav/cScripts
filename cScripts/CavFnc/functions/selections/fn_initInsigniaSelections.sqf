@@ -40,8 +40,14 @@ _object addAction ["Insignia Selection", {}];
 [_object,"Squad Insignia C/2/A/1-7","C2A_17_Insignia","cScripts\Data\Insignia\C-2-A-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
 
 // Charlie Company
-[_object,"Platoon Insignia 2/C/1-7","2C_17_Insignia","cScripts\Data\Insignia\2-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+//[_object,"Platoon Insignia 1/C/1-7","1C_17_Insignia","cScripts\Data\Insignia\1-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 1/1/C/1-7","11C_17_Insignia","cScripts\Data\Insignia\1-1-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 2/1/C/1-7","21C_17_Insignia","cScripts\Data\Insignia\2-1-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 3/1/C/1-7","31C_17_Insignia","cScripts\Data\Insignia\3-1-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 4/1/C/1-7","41C_17_Insignia","cScripts\Data\Insignia\4-1-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+
+[_object,"Platoon Insignia 2/C/1-7","2C_17_Insignia","cScripts\Data\Insignia\2-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 1/2/C/1-7","12C_17_Insignia","cScripts\Data\Insignia\1-2-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 2/2/C/1-7","22C_17_Insignia","cScripts\Data\Insignia\2-2-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 3/2/C/1-7","32C_17_Insignia","cScripts\Data\Insignia\3-2-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 4/2/C/1-7","42C_17_Insignia","cScripts\Data\Insignia\4-2-C-17.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);

@@ -4,7 +4,7 @@
 
 class CAV_Medical_OFFCR : CAV_Medical_Base {  // Medical Team Leader or SL and up leadership positions
 
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
@@ -19,6 +19,11 @@ class CAV_Medical_OFFCR : CAV_Medical_Base {  // Medical Team Leader or SL and u
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
+
         // Medical Equipment
         "ACE_personalAidKit",6,
         "ACE_surgicalKit",
@@ -63,6 +68,11 @@ class CAV_Medical_BONESAW : CAV_Medical_Base {  // Medical Team Member
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
+
         // Medical Equipment
         "ACE_personalAidKit",6,
         "ACE_surgicalKit",
@@ -91,11 +101,12 @@ class CAV_Medical_BONESAW : CAV_Medical_Base {  // Medical Team Member
 };
 
 class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
-    backpack[] = {"tf_rt1523g_big_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",5,
+        "rhsusf_mag_15Rnd_9x19_JHP",2,
 
         "rhs_mag_m67",2,
 
@@ -105,6 +116,11 @@ class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
         "SmokeShellYellow"
     };
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
+
         // Medical Equipment
         "ACE_personalAidKit",2,
         "ACE_surgicalKit",
@@ -130,8 +146,5 @@ class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
         "ACE_EntrenchingTool"
     };
 
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isMedicalUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 1, true]; \
-        (_this select 0) setVariable [""ACE_isEngineer"", false];";
+    preLoadout = "[(_this select 0), 'medical', 1, false] call cScripts_fnc_setPreInitPlayerSettings;";
 };

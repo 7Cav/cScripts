@@ -30,9 +30,8 @@ clearbackpackcargoGlobal _crate;
 if (_platoonSelector == "alpha") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",25];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -45,6 +44,7 @@ if (_platoonSelector == "alpha") then {
     //================== AMMO ==================\\
 
     _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),30];
 
@@ -59,6 +59,7 @@ if (_platoonSelector == "alpha") then {
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),25];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),25];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),25];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),25];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),25];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),25];
@@ -108,8 +109,8 @@ if (_platoonSelector == "alpha") then {
 if (_platoonSelector == "bravo") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -144,6 +145,7 @@ if (_platoonSelector == "bravo") then {
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
@@ -188,8 +190,8 @@ if (_platoonSelector == "bravo") then {
 if (_platoonSelector == "charlie") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -203,6 +205,7 @@ if (_platoonSelector == "charlie") then {
     //================== AMMO ==================\\
 
     _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),50];
     _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),50];
@@ -220,6 +223,7 @@ if (_platoonSelector == "charlie") then {
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
@@ -262,8 +266,8 @@ if (_platoonSelector == "charlie") then {
 if (_platoonSelector == "medical") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",10];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",5];
+    _crate addItemCargoGlobal ["ACRE_PRC152",10];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",5];
 
     //================== WEAPONS ==================\\
 
@@ -274,6 +278,7 @@ if (_platoonSelector == "medical") then {
     //================== AMMO ==================\\
 
     _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
+    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),250];
 
     //================== GRENADES ==================\\
 
@@ -286,6 +291,7 @@ if (_platoonSelector == "medical") then {
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
@@ -323,7 +329,7 @@ if (_platoonSelector == "medical") then {
 
     _crate addItemCargoGlobal ["ACE_morphine",250];
     _crate addItemCargoGlobal ["ACE_epinephrine",250];
-    _crate addItemCargoGlobal ["ACE_atropine",250];
+    _crate addItemCargoGlobal ["ACE_adenosine",250];
 
     _crate addItemCargoGlobal ["ACE_bodyBag",250];
 
@@ -337,8 +343,8 @@ if (_platoonSelector == "medical") then {
 if (_platoonSelector == "heavyweapons") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -378,6 +384,7 @@ if (_platoonSelector == "heavyweapons") then {
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
@@ -435,14 +442,15 @@ if (_platoonSelector == "heavyweapons") then {
 if (_platoonSelector == "ranger") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",25];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
     _crate additemCargoGlobal ["rhsusf_acc_compm4",50];
     _crate additemCargoGlobal ["rhsusf_acc_ACOG_RMR",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_SpecterDR",50];
     _crate additemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate additemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate additemCargoGlobal ["rhsusf_acc_anpeq15A",50];
@@ -485,9 +493,9 @@ if (_platoonSelector == "ranger") then {
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal ["rhs_mag_an_m14_th3",250];
     _crate addMagazineCargoGlobal ["rhs_mag_m7a3_cs",250];
-    _crate addMagazineCargoGlobal ["rhs_mag_mk84",250];
     _crate addMagazineCargoGlobal ["rhs_mag_mk3a2",250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
@@ -568,7 +576,7 @@ if (_platoonSelector == "ranger") then {
 
     _crate addItemCargoGlobal ["ACE_morphine",250];
     _crate addItemCargoGlobal ["ACE_epinephrine",250];
-    _crate addItemCargoGlobal ["ACE_atropine",250];
+    _crate addItemCargoGlobal ["ACE_adenosine",250];
 
     _crate addItemCargoGlobal ["ACE_bodyBag",250];
 
@@ -582,8 +590,8 @@ if (_platoonSelector == "ranger") then {
 if (_platoonSelector == "sniper") then {
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",10];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -592,7 +600,7 @@ if (_platoonSelector == "sniper") then {
     _crate addWeaponCargoGlobal ["rhs_weap_M107",2];
     _crate addWeaponCargoGlobal ["rhsusf_weap_m9",2];
     _crate additemCargoGlobal ["rhsusf_acc_premier_anpvs27",2];
-    _crate additemCargoGlobal ["rhsusf_acc_M8541_low",2];
+    _crate additemCargoGlobal ["rhsusf_acc_M8541",2];
     _crate additemCargoGlobal ["rhsusf_acc_M2010S_wd",2];
     _crate additemCargoGlobal ["rhsusf_acc_SR25S",2];
     _crate additemCargoGlobal ["rhsusf_acc_M2010S_wd",2];
@@ -632,7 +640,7 @@ if (_platoonSelector == "sniper") then {
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),50];
     _crate addMagazineCargoGlobal ["rhs_mag_an_m14_th3",50];
     _crate addMagazineCargoGlobal ["rhs_mag_m7a3_cs",50];
-    _crate addMagazineCargoGlobal ["rhs_mag_mk84",50];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal ["rhs_mag_mk3a2",50];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",50];
     _crate addMagazineCargoGlobal ["Chemlight_Red",50];
@@ -693,7 +701,7 @@ if (_platoonSelector == "sniper") then {
 
     _crate addItemCargoGlobal ["ACE_morphine",250];
     _crate addItemCargoGlobal ["ACE_epinephrine",250];
-    _crate addItemCargoGlobal ["ACE_atropine",250];
+    _crate addItemCargoGlobal ["ACE_adenosine",250];
 
     _crate addItemCargoGlobal ["ACE_bodyBag",250];
 
@@ -715,7 +723,7 @@ if (_platoonSelector == "full") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["tf_rt1523g_big_rhs",10];
+    _crate addBackpackCargoGlobal ["B_Kitbag_mcamo",10];
 
     //================== WEAPONS ==================\\
 
@@ -755,6 +763,7 @@ if (_platoonSelector == "full") then {
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
@@ -816,7 +825,7 @@ if (_platoonSelector == "full") then {
 
     _crate addItemCargoGlobal ["ACE_morphine",250];
     _crate addItemCargoGlobal ["ACE_epinephrine",250];
-    _crate addItemCargoGlobal ["ACE_atropine",250];
+    _crate addItemCargoGlobal ["ACE_adenosine",250];
 
     _crate addItemCargoGlobal ["ACE_bodyBag",250];
 
