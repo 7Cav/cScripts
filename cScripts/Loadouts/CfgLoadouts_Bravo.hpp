@@ -24,6 +24,7 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -82,6 +83,7 @@ class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -124,6 +126,7 @@ class CAV_Bravo_Crew_GNR : CAV_Bravo_Base {  // Crew Gunner (acts as CLS also)
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Medical Equipment
@@ -171,6 +174,7 @@ class CAV_Bravo_Crew_CREW : CAV_Bravo_Base {  // Driver-Loader (acts as Engineer
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -214,6 +218,7 @@ class CAV_Bravo_SL : CAV_Bravo_Base {  // Squad Leader
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -265,6 +270,7 @@ class CAV_Bravo_TL : CAV_Bravo_Base {  // Fire Team Leader
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -321,6 +327,7 @@ class CAV_Bravo_GR : CAV_Bravo_Base {  // Grenadier
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -377,7 +384,7 @@ class CAV_Bravo_CLS : CAV_Bravo_Base {  // Combat Life Saver 24.3kg
 
     items[] = {
         // Radios
-
+        "ACRE_PRC343",
 
         // Medical Equipment
         "ACE_personalAidKit",
@@ -422,6 +429,7 @@ class CAV_Bravo_Weapons_TL : CAV_Bravo_Base {  // Team Leader
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 

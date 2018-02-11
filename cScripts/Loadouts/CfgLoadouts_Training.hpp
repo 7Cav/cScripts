@@ -8,7 +8,7 @@ class CAV_SOI_INSTR : CAV_Charlie_Base {  // Instructor
     headgear[] = {"DAR_Beret_Mar"};
     goggles[] = {""};
     vest[] = {"V_TacVest_khk"};
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
@@ -24,6 +24,10 @@ class CAV_SOI_INSTR : CAV_Charlie_Base {  // Instructor
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
 
         // Standard
         "ACE_EarPlugs",
@@ -54,7 +58,7 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
     headgear[] = {"DAR_JMCap_Blk"};
     goggles[] = {""};
     vest[] = {"V_TacVest_khk"};
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
@@ -70,6 +74,10 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
 
         // Standard
         "ACE_EarPlugs",
@@ -148,6 +156,11 @@ class CAV_TAS_INSTR : CAV_Bravo_Base {  // Instructor
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC117F",
+
         // Personal Medical Equipment
         "ACE_quikclot",6,
         "ACE_tourniquet",2,
@@ -187,6 +200,10 @@ class CAV_TAS_STUD : CAV_Bravo_Base {  // Crewman
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -213,7 +230,7 @@ class CAV_TAS_STUD : CAV_Bravo_Base {  // Crewman
 class CAV_ACE_ROTARY_INSTR : CAV_Alpha_Base {  // Rotary Instructor Pilots
 
     goggles[] = {"rhsusf_shemagh_od"};
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor"};
 
     gps[] = {"ItemcTab"};
@@ -225,7 +242,7 @@ class CAV_ACE_ROTARY_INSTR : CAV_Alpha_Base {  // Rotary Instructor Pilots
 
 class CAV_ACE_ROTARY_STUD : CAV_Alpha_Base {  // Rotary Instructor Pilots
 
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_green"};
 
     gps[] = {"ItemcTab"};
@@ -238,7 +255,7 @@ class CAV_ACE_ROTARY_STUD : CAV_Alpha_Base {  // Rotary Instructor Pilots
 class CAV_ACE_FIXED_INSTR : CAV_Alpha_Base {
 
     nvgs[] = {""};
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {""};
     headgear[] = {"H_PilotHelmetFighter_B"};  // This has been tested by CPT.Blackburn.J
     uniform[] = {"U_B_PilotCoveralls"};
     vest[] = {""};
@@ -263,6 +280,10 @@ class CAV_ACE_FIXED_INSTR : CAV_Alpha_Base {
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+ 
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,
@@ -284,7 +305,7 @@ class CAV_ACE_FIXED_INSTR : CAV_Alpha_Base {
 class CAV_ACE_FIXED_STUD : CAV_Alpha_Base {
 
     nvgs[] = {""};
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {""};
     headgear[] = {"H_PilotHelmetFighter_B"};  // This has been tested by CPT.Blackburn.J
     uniform[] = {"U_B_PilotCoveralls"};
     vest[] = {""};
@@ -309,6 +330,10 @@ class CAV_ACE_FIXED_STUD : CAV_Alpha_Base {
     };
 
     items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,
