@@ -362,7 +362,7 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
     preLoadout = "[(_this select 0), 'ranger', 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
-    backpack[] = {"B_Kitbag_cbr"};A
+    backpack[] = {"B_Kitbag_cbr"};
     vest[] = {"rhsusf_spcs_ocp"};
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
