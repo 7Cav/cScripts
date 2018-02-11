@@ -27,7 +27,16 @@ if (_squadName != "") then {
 
 // Set the acre radio
 if (_srChannel != 0) then {
-    [{!isNil {["ACRE_PRC343"] call acre_api_fnc_getRadioByType;}},
+    diag_log "[DEBUG CSCRIPTS]";
+    diag_log _srChannel;
+    {
+        _x setVariable [QGVAR(srRadioChannel), _srChannel];
+        diag_log _x;
+        diag_log _srChannel;
+        systemChat "Applyed for all soliders in group!";
+    } forEach units group _unit;
+    diag_log _unit;
+    /* [{!isNil {["ACRE_PRC343"] call acre_api_fnc_getRadioByType;}},
     {
         params ["_unit","_srChannel"];
         {
@@ -35,7 +44,7 @@ if (_srChannel != 0) then {
             systemChat "Applyed!";
         } forEach units group _unit;
     },[_unit,_srChannel]] call CBA_fnc_waitUntilAndExecute;
-    systemChat "DONE!";
+    systemChat "DONE!"; */
 };
 
 INFO("Done Applying init for player");
