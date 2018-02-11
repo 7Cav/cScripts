@@ -29,7 +29,4 @@ if (_earPlugs) then {
     if ([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {} else {[_unit] call ace_hearing_fnc_putInEarplugs;};
 };
 
-//set Radio
-[_unit] call poppy_fnc_setupRadios;
-
 INFO("Done Applying PostLoadout Player Settings");
