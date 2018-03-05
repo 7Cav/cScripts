@@ -84,9 +84,9 @@ _crate addItemCargoGlobal ["ACE_personalAidKit",(_quaScale * 20)];
 
 
 // Change ace logistics size of crate
-[_crate, 1] call ace_cargo_fnc_setSize;
-[_crate, true] call ace_dragging_fnc_setDraggable;
-[_crate, true] call ace_dragging_fnc_setCarryable;
+[_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];
+[_crate, true] remoteExec ["ace_dragging_fnc_setDraggable",0,true];
+[_crate, true] remoteExec ["ace_dragging_fnc_setCarryable",0,true];
 
 // If a correct classname add texture
 private _crateType = [
