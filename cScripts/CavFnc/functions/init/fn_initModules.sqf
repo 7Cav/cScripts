@@ -11,7 +11,7 @@
  * Public: Yes
  */
 
- #include "..\script_component.hpp";
+#include "..\script_component.hpp";
 
 // Check if Achilles is active else terminate
 if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {FORCEWARNING("cfgPatches for Achilles not detected, terminating modules.");};

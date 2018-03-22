@@ -11,8 +11,8 @@
  * Public: Yes
  */
 
- if (!isServer) exitWith {};
- #include "..\script_component.hpp";
+if (!isServer) exitWith {};
+#include "..\script_component.hpp";
 
 INFO("Adding eventhandles for get out right and left to all helicopters");
 

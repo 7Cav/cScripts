@@ -11,8 +11,8 @@
  * Public: Yes
  */
 
- if (!isServer) exitWith {};
- #include "..\script_component.hpp";
+if (!isServer) exitWith {};
+#include "..\script_component.hpp";
 
 // Supply Crates
 ["B_CargoNet_01_ammo_F", "init", {
