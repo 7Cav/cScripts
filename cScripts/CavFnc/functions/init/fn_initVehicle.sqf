@@ -1,13 +1,20 @@
 /*
  * Author: CPL.Brostrom.A
- * This checks common class names used for the 7cav and sets them as Cav Vehicle.
+ * This function add eventhandelers adding cav functionality to all vehicles.
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
- * call cScripts_fnc_initVehicle;
+ * call cScripts_fnc_initVehicle
+ *
+ * Public: Yes
  */
 
-#include "..\script_component.hpp";
 if (!isServer) exitWith {};
+#include "..\script_component.hpp";
+
+INFO("Adding eventhandles to all vehicles");
 
 //All helicopters
 ["RHS_UH60_Base", "init", {

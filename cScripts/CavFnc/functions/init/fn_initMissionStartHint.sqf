@@ -1,12 +1,18 @@
 /*
  * Author: CPL.Brostrom.A
- * This function give all users a hint at mission start.
+ * This function give all players a hint on mission start only.
  *
  * Arguments:
+ * 0: Time <NUMBER> (Default; 60)
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
- *  call cScripts_fnc_initMissionStartHint;
- *  [60] call cScripts_fnc_initMissionStartHint;
+ * call cScripts_fnc_initMissionStartHint
+ * [60] call cScripts_fnc_initMissionStartHint
+ *
+ * Public: Yes
  */
 
 if (didJIP) exitWith {};

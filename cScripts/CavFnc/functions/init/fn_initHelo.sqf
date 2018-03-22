@@ -1,16 +1,18 @@
 /*
  * Author: CPL.Brostrom.A
- * This function adds the get out right and left function to all supported helos.
+ * This function add eventhandelers adding get out right and left functionality to all helicotpers.
  *
- * Arguments:
+ * Return Value:
+ * Nothing
  *
  * Example:
- * call cScripts_fnc_initHelo;
+ * ["example"] call cScripts_fnc_initHelo
+ *
+ * Public: Yes
  */
 
-#include "..\script_component.hpp";
-
-if (!isServer) exitwith {};
+ if (!isServer) exitWith {};
+ #include "..\script_component.hpp";
 
 INFO("Adding eventhandles for get out right and left to all helicopters");
 

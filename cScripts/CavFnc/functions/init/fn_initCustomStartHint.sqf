@@ -1,18 +1,22 @@
 /*
  * Author: CPL.Brostrom.A
- * This function give all users a hint at mission start as well as JIP.
+ * This function show all players, as well as JIP players, a custom mission hint.
  *
  * Arguments:
  * 0: Topic <STRING>
  * 1: Text <STRING>
- * 2: Time <NUMBER> (Optional)  (Default: 15)
+ * 2: Timer <NUMBER> (Optional) (Default; 15)
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
- *  call cScripts_fnc_initCustomStartHint;
- *  ["My mission", "Description text.", 10] call cScripts_initCustomStartHint;
+ * ["My custom Mission!","I have design this mission!"] call cScripts_fnc_initCustomStartHint
+ * ["My custom Mission!","I have design this mission!",15] call cScripts_fnc_initCustomStartHint
+ *
+ * Public: Yes
  */
 
-//if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
