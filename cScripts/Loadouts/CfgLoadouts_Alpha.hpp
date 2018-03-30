@@ -79,7 +79,7 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
 class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
 
     nvgs[] = {""};
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {"B_AssaultPack_mcamo"};
     headgear[] = {"H_PilotHelmetFighter_B"};  // This has been tested by CPT.Blackburn.J
     uniform[] = {"U_B_PilotCoveralls"};
     vest[] = {""};

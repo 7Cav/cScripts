@@ -722,8 +722,8 @@ if (_platoonSelector == "full") then {
 
     //================== RADIOS ==================\\
 
-    _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["B_Kitbag_mcamo",10];
+    _crate addItemCargoGlobal ["ACRE_PRC152",10];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
 
     //================== WEAPONS ==================\\
 
@@ -832,4 +832,6 @@ if (_platoonSelector == "full") then {
     //================== BACKPACKS ==================\\
 
     _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
+    _crate addBackpackCargoGlobal ["B_AssaultPack_mcamo",10];
+
 };
