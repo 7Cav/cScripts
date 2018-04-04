@@ -70,7 +70,7 @@ switch (_texturePath) do {
     };
 
     // Custom insignia
-    case ("bancheeRed"): {
+    /* case ("bancheeRed"): {
         _texturePath = "cScripts\Data\Vehicles\insignia\BancheeRed.paa";
     };
     case ("bancheeSand"): {
@@ -78,7 +78,7 @@ switch (_texturePath) do {
     };
     case ("guidon"): {
         _texturePath = "cScripts\Data\Vehicles\insignia\Guidon.paa";
-    };
+    }; */
 
     // Special
     case ("stryker"): {
