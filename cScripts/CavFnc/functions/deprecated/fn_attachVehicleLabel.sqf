@@ -17,12 +17,6 @@ if (typeOf _vehicle in _vehicleTypeUH60) then {
     [_vehicle,"B","1"] call cScripts_fnc_attachVehicleLabel;
 };
 
-
-/*
- * STRYKER
- *  <SPECIAL>
- *  Supporing 1 special lable on the front of the vehicle.
- */
 private _vehicleTypeStriker = [
     "M1126_ICV_M134_DG1_NOSLATDES",
     "M1126_ICV_M134_DG1_NOSLATWOOD",
