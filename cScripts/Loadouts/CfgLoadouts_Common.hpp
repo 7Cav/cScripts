@@ -221,7 +221,7 @@ class CAV_Ranger_Base : CommonBlufor {
     watch[] = {"ACE_Altimeter"};
 
     insignia[] = {"RANGER"};
-    preLoadout = "[(_this select 0), 'ranger', 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'ranger', 1, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 

@@ -48,7 +48,7 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
     };
 
     gps[] = {"ItemcTab"};
-    preLoadout = "[(_this select 0), 'bravo', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
