@@ -78,6 +78,9 @@ switch (_texturePath) do {
     };
     case ("guidon"): {
         _texturePath = "cScripts\Data\Vehicles\insignia\Guidon.paa";
+    };
+    case ("v1"): {
+        _texturePath = "cScripts\Data\Vehicles\insignia\Vic1.paa";
     }; */
 
     // Special
