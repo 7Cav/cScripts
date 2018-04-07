@@ -113,5 +113,8 @@ private _vehicleTypeStriker = [
 ];
 
 if (typeOf _vehicle in _vehicleTypeStriker) then {
-    if (_lable1 != "") then { [_vehicle,[0.420521,3.50066,1.35656],180,_lableTexture1] call FUNC(createVehicleLable); };
+    private _strykerLable = ["stryker"] call FUNC(getVehicleLable);
+
+    [_vehicle,[0.420521,3.50066,1.35656],180,_strykerLable] call FUNC(createVehicleLable);
+
 };
