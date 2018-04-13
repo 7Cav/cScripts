@@ -1,6 +1,6 @@
 
 #include "..\script_component.hpp";
-FORCEINFO("Loading CBA Settings");
+diag_log formatText ["[cScripts] INFO: Loading CBA Settings"];
 
 private _cScriptSettings = "cScripts Mission Settings";
 
@@ -11,7 +11,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Debug Mode",
     _cScriptSettings,
     false,
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 
@@ -22,7 +22,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Mission Type",
     _cScriptSettings,
     [[0,1,2], ["Custom", "Operation", "Training"], 1],
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 
@@ -32,8 +32,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     "AI Setting",
     _cScriptSettings,
-    [[0,1], ["Day", "Night"], 0],
-    2,
+    [[0,1], ["Day", "Night / Forset"], 0],
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 
@@ -44,7 +44,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Startup Hint",
     _cScriptSettings,
     true,
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 [
@@ -53,7 +53,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Red light delay",
     _cScriptSettings,
     [5, 180, 15, 0],
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 [
@@ -62,7 +62,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Training hint delay",
     _cScriptSettings,
     [5, 180, 15, 0],
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 [
@@ -71,7 +71,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Custom hint topic",
     _cScriptSettings,
     "My custom Mission!",
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 [
@@ -80,7 +80,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Custom hint text",
     _cScriptSettings,
     "I have design this mission! Yey for me!",
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 
@@ -91,7 +91,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Show checklists and radio reports",
     _cScriptSettings,
     true,
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 
@@ -102,9 +102,10 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Allow mission to automaticly applying init",
     _cScriptSettings,
     true,
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
+
 // Vehicle
 [
     "cScripts_Settings_useCustomVehicleInventory",
@@ -112,9 +113,10 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Add vehicle inventory and settings",
     _cScriptSettings,
     true,
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
+
 // Supply
 [
     "cScripts_Settings_useCustomSupplyInventory",
@@ -122,7 +124,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Add NATO crate inventory",
     _cScriptSettings,
     false,
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 
@@ -133,7 +135,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "Add Get out right and left on helicopters",
     _cScriptSettings,
     true,
-    2,
+    true,
     {}
 ] call CBA_Settings_fnc_init;
 
@@ -145,7 +147,7 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
         "Use 7Cav Zeus Moduels",
         _cScriptSettings,
         true,
-        2,
+        true,
         {}
     ] call CBA_Settings_fnc_init;
 };
@@ -153,16 +155,13 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
 if (is3DEN) exitWith {};
 FORCEINFO("Loading preInit");
 
-if (cScripts_Settings_setMissionType == 0) then {
-
-};
-
-if (cScripts_Settings_setMissionType == 1) then {
-
-};
-
-if (cScripts_Settings_setMissionType == 2) then {
-
+switch (cScripts_Settings_setMissionType) do {
+    case (0): {
+    };
+    case (1): {
+    };
+    case (2): {
+    };
 };
 
 if (cScripts_Settings_allowCustomInit) then {

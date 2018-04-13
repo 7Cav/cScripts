@@ -33,21 +33,21 @@ if (cScripts_Settings_allowCustomInit) then {
     };
 };
 
-if (cScripts_Settings_setMissionType == 0) then {
-    if (cScripts_Settings_enableStartHint) then {
-        [cScripts_Settings_setCustomHintTopic, cScripts_Settings_setCustomHintText, 15] call cScripts_fnc_initCustomStartHint;
+switch (cScripts_Settings_setMissionType) do {
+    case (0): {
+        if (cScripts_Settings_enableStartHint) then {
+            [cScripts_Settings_setCustomHintTopic, cScripts_Settings_setCustomHintText, 15] call cScripts_fnc_initCustomStartHint;
+        };
     };
-};
-if (cScripts_Settings_setMissionType == 1) then {
-// Set time and run the "Red Light" start script.
-    if (cScripts_Settings_enableStartHint) then {
-        [cScripts_Settings_setRedLightTime] call cScripts_fnc_initMissionStartHint;
+    case (1): {
+        if (cScripts_Settings_enableStartHint) then {
+            [cScripts_Settings_setRedLightTime] call cScripts_fnc_initMissionStartHint;
+        };
     };
-};
-if (cScripts_Settings_setMissionType == 2) then {
-// Set time and run Training Mission start script.
-    if (cScripts_Settings_enableStartHint) then {
-        [cScripts_Settings_setTrainingHintTime] call cScripts_fnc_initTrainingStartHint;
+    case (2): {
+        if (cScripts_Settings_enableStartHint) then {
+            [cScripts_Settings_setTrainingHintTime] call cScripts_fnc_initTrainingStartHint;
+        };
     };
 };
 

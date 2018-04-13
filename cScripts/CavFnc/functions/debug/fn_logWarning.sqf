@@ -1,4 +1,3 @@
-if (is3DEN) exitWith {};
 #include "..\script_component.hpp"
 params [
     "_message",
