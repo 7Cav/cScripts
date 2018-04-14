@@ -82,22 +82,22 @@ switch (_texturePath) do {
         _texturePath = "cScripts\Data\Vehicles\special\stryker_ca.paa";
     };
     case ("vic1"): {
-        _texturePath = "cScripts\Data\Vehicles\insignia\Vic1_ca.paa";
+        _texturePath = "cScripts\Data\Vehicles\special\vic1_ca.paa";
     };
     case ("vic2"): {
-        _texturePath = "cScripts\Data\Vehicles\insignia\Vic1_ca.paa";
+        _texturePath = "cScripts\Data\Vehicles\special\vic2_ca.paa";
     };
     case ("vic3"): {
-        _texturePath = "cScripts\Data\Vehicles\insignia\Vic1_ca.paa";
+        _texturePath = "cScripts\Data\Vehicles\special\vic3_ca.paa";
     };
     case ("vic4"): {
-        _texturePath = "cScripts\Data\Vehicles\insignia\Vic1_ca.paa";
+        _texturePath = "cScripts\Data\Vehicles\special\vic4_ca.paa";
     };
     case ("vic5"): {
-        _texturePath = "cScripts\Data\Vehicles\insignia\Vic1_ca.paa";
+        _texturePath = "cScripts\Data\Vehicles\special\vic5_ca.paa";
     };
     case ("vic6"): {
-        _texturePath = "cScripts\Data\Vehicles\insignia\Vic1_ca.paa";
+        _texturePath = "cScripts\Data\Vehicles\special\vic6_ca.paa";
     };
 };
 
