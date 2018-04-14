@@ -113,8 +113,34 @@ private _vehicleTypeStriker = [
 ];
 
 if (typeOf _vehicle in _vehicleTypeStriker) then {
+    // Always added
     private _strykerLable = ["stryker"] call FUNC(getVehicleLable);
-
     [_vehicle,[0.420521,3.50066,1.35656],180,_strykerLable] call FUNC(createVehicleLable);
 
+};
+
+private _vehicleTypeAbrams = [
+    "rhsusf_m1a1aimd_usarmy",
+    "rhsusf_m1a1aim_tuski_d",
+    "rhsusf_m1a2sep1d_usarmy",
+    "rhsusf_m1a2sep1tuskid_usarmy",
+    "rhsusf_m1a2sep1tuskiid_usarmy",
+    "rhsusf_m1a1aimwd_usarmy",
+    "rhsusf_m1a1aim_tuski_wd",
+    "rhsusf_m1a2sep1wd_usarmy",
+    "rhsusf_m1a2sep1tuskiwd_usarmy",
+    "rhsusf_m1a2sep1tuskiiwd_usarmy",
+    "rhsusf_m1a1fep_d",
+    "rhsusf_m1a1fep_wd",
+    "rhsusf_m1a1fep_od",
+    "rhsusf_m1a1hc_wd"
+];
+
+if (typeOf _vehicle in _vehicleTypeAbrams) then {
+    //Front
+    if (_lable1 != "") then { [_vehicle,[-0.5,2.53,-0.64],180,_lableTexture1,[0,0.9,1]] call FUNC(createVehicleLable); };
+
+    //Side
+    if (_lable2 != "") then { [_vehicle,[-1.69787,-2.83845,-0.455],89.8278,_lableTexture2] call FUNC(createVehicleLable); };
+    if (_lable2 != "") then { [_vehicle,[2.03401,-2.82751,-0.455],270.172,_lableTexture2] call FUNC(createVehicleLable); };
 };
