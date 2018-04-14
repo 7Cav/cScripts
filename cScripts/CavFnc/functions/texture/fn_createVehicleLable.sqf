@@ -14,16 +14,18 @@
  * Public: [Yes/No]
  */
 
- params [
+params [
     ["_vehicle", objNull, [objNull]],
     ["_pos",[0,0,0]],
     ["_dir",0],
-    ["_texture",""]
+    ["_texture",""],
+    ["_vector",[0,0,1]]
 ];
 
- if (!isServer) exitWith {};
+if (!isServer) exitWith {};
 
- private _lable = "UserTexture1m_F" createVehicle [0,0,0];
- _lable attachTo [_vehicle, _pos];
- _lable setDir _dir;
- _lable setObjectTextureGlobal [0, _texture];
+private _lable = "UserTexture1m_F" createVehicle [0,0,0];
+_lable attachTo [_vehicle, _pos];
+_lable setObjectTextureGlobal [0, _texture];
+_lable setDir _dir;
+_lable setvectorUp _vector;
