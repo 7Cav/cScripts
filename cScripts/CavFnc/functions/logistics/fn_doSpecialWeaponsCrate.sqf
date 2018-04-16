@@ -60,9 +60,7 @@ if ((_cargoType == "all") or (_cargoType == "tow")) then {
 [_crate, true] remoteExec ["ace_dragging_fnc_setCarryable",0,true];
 
 // If a correct classname add texture
-private _crateType = [
-    "B_CargoNet_01_ammo_F",
-
+private _smallBox = [
     "Box_T_East_Ammo_F",
     "Box_East_Ammo_F",
     "Box_NATO_Ammo_F",
@@ -86,6 +84,12 @@ private _crateType = [
     "Box_East_WpsLaunch_F",
     "Box_NATO_WpsLaunch_F"
 ];
-if (typeOf _crate in _crateType) then {
+private _largeBox = [
+    "B_CargoNet_01_ammo_F"
+];
+if (typeOf _crate in _smallBox) then {
     _crate setObjectTextureGlobal  [0, "cScripts\Data\Objects\Ammobox_7CAV_co.paa"];
+};
+if (typeOf _crate in _largeBox) then {
+    _crate setObjectTextureGlobal  [1, "cScripts\Data\Objects\Ammobox_7CAV_co.paa"];
 };
