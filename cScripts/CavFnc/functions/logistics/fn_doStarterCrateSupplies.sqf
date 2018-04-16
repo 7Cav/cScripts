@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Crate <OBJECT>
- * 1: Scale cargo Ammount <NUMBER> (Default: 1)
+ * 1: Set platoon type.
  *
  * Example:
  * [this,0.5] call cScripts_fnc_doStarterCrateSupplies;
@@ -18,7 +18,6 @@ if (!isServer) exitWith {};
 params [
     ["_crate", objNull, [objNull]],
     ["_platoonSelector", "none"]
-    //["_requirePlatoonVariable", false] Not used yet
 ];
 
 clearweaponcargoGlobal _crate;
@@ -27,7 +26,9 @@ clearitemcargoGlobal _crate;
 clearbackpackcargoGlobal _crate;
 
 //------------------ A L P H A   C O M P A N Y --------------------\\
+
 if (_platoonSelector == "alpha") then {
+
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["ACRE_PRC152",50];
@@ -106,6 +107,7 @@ if (_platoonSelector == "alpha") then {
 };
 
 //------------------B R A V O   C O M P A N Y --------------------\\
+
 if (_platoonSelector == "bravo") then {
     //================== RADIOS ==================\\
 
@@ -187,6 +189,7 @@ if (_platoonSelector == "bravo") then {
 };
 
 //------------------ C H A R L I E   C O M P A N Y --------------------\\
+
 if (_platoonSelector == "charlie") then {
     //================== RADIOS ==================\\
 
@@ -263,6 +266,7 @@ if (_platoonSelector == "charlie") then {
 };
 
 //------------------ M E D I C A L   P L A T O O N --------------------\\
+
 if (_platoonSelector == "medical") then {
     //================== RADIOS ==================\\
 
@@ -340,6 +344,7 @@ if (_platoonSelector == "medical") then {
 };
 
 //------------------ H E A V Y   W E A P O N S --------------------\\
+
 if (_platoonSelector == "heavyweapons") then {
     //================== RADIOS ==================\\
 
@@ -439,6 +444,7 @@ if (_platoonSelector == "heavyweapons") then {
 };
 
 //------------------ R A N G E R   C O M P A N Y --------------------\\
+
 if (_platoonSelector == "ranger") then {
     //================== RADIOS ==================\\
 
@@ -590,6 +596,7 @@ if (_platoonSelector == "ranger") then {
 };
 
 //------------------ S N I P E R   S E C T I O N --------------------\\
+
 if (_platoonSelector == "sniper") then {
     //================== RADIOS ==================\\
 
@@ -836,3 +843,5 @@ if (_platoonSelector == "full") then {
 
     _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
 };
+
+if (_platoonSelector == "none") then {};
