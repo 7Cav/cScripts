@@ -68,6 +68,9 @@ _crate addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 25)];
 
 //================== EXPLOSIVES ==================\\
 
+    _crate addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",10];
+    _crate addMagazineCargoGlobal ["DemoCharge_Remote_Mag",10];
+
 //================== ITEMS ==================\\
 
 //================== MEDICAL ==================\\
@@ -81,7 +84,6 @@ _crate addItemCargoGlobal ["ACE_tourniquet",(_quaScale * 12)];
 _crate addItemCargoGlobal ["ACE_personalAidKit",(_quaScale * 20)];
 
 //================== BACKPACKS ==================\\
-
 
 // Change ace logistics size of crate
 [_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];

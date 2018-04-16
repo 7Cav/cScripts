@@ -40,7 +40,7 @@ private _quickSelectScale = switch (_dialogResult select 0) do {
     case 6: {"sniper";};
     case 7: {"medical";};
 
-    case 7: {"full";};
+    case 8: {"full";};
 };
 
 private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};
