@@ -85,9 +85,11 @@ class cScripts {
 
     class misc {
         file = "cScripts\cavFnc\functions\texture";
-        class attachVehicleLabel {};
-        class UH60TailNumber {}; //will be merged with "attachVehicleLabel"
         class flag {};
+
+        class setVehicleLable {};
+        class createVehicleLable {};
+        class getVehicleLable {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
@@ -105,5 +107,13 @@ class cScripts {
         class logError {};
         class logInfo {}; //will be merged with "attachVehicleLabel"
         class logWarning {};
+    };
+
+
+    
+    class deprecated {
+        file = "cScripts\cavFnc\functions\deprecated";
+        class attachVehicleLabel {};    // replaced with setVehicleLable
+        class UH60TailNumber {};        // replaced with setVehicleLable
     };
 };
