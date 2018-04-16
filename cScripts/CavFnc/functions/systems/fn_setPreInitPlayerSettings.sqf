@@ -5,16 +5,20 @@
  * Arguments:
  * 0: Player <STRING>
  * 1: Platoon <STRING>
- * 2: MedicClass <NUMBER>             (Default: 0)
- * 3: Engineer <BOOL>                 (Default: false)
- * 4: Translator Languish  <STRING>   (Optional)    NOT IMPLEMENTED
+ * 2: MedicClass <NUMBER> (Optional) (Default; 0)
+ * 3: Engineer <BOOL> (Optional) (Default; 0)
+ * 4: EOD <BOOL> (Optional) (Default; 0)
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
  * [this] call cScripts_fnc_setPreInitPlayerSettings;
- * [this, "charlie"] call cScripts_fnc_setPreInitPlayerSettings;
- * [this, "charlie",0,false] call cScripts_fnc_setPreInitPlayerSettings;
+ * [this, "charlie",0] call cScripts_fnc_setPreInitPlayerSettings;
+ * [this, "charlie",0,false,false] call cScripts_fnc_setPreInitPlayerSettings;
+ *
+ * Public: [Yes/No]
  */
-
 #include "..\script_component.hpp";
 
 INFO("Applying PreLoadout Player Settings");
@@ -23,7 +27,8 @@ params [
     ["_player",""],
     ["_setPlatoon",""],
     ["_isMedicClass", 0],
-    ["_isEngineer", false]
+    ["_isEngineer", false],
+    ["_isEOD", false]
 ];
 
 // Set platoonVariables
@@ -50,5 +55,8 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 
 // Set Engineer
 (_player) setVariable ["ACE_isEngineer", _isEngineer];
+
+// Set EOD capable
+(_player) setVariable ["ACE_isEOD", _isEOD];
 
 INFO("Done Applying PreLoadout Player Settings");
