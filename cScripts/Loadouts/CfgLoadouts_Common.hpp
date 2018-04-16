@@ -64,7 +64,7 @@ class CAV_Alpha_Base : CommonBlufor {
     binoculars[] = {""};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",4,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",4,
         "rhsusf_mag_15Rnd_9x19_JHP",2,
 
         "Chemlight_green",
@@ -78,7 +78,6 @@ class CAV_Alpha_Base : CommonBlufor {
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -108,7 +107,7 @@ class CAV_Alpha_Base : CommonBlufor {
 };
 
 class CAV_Bravo_Base : CommonBlufor {
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
@@ -122,9 +121,6 @@ class CAV_Bravo_Base : CommonBlufor {
 
     magazines[] = {""};
     items[] = {
-        // Radios
-        "ACRE_PRC343",
-
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -168,9 +164,6 @@ class CAV_Charlie_Base : CommonBlufor {
     magazines[] = {};
 
     items[] = {
-        // Radios
-        "ACRE_PRC343",
-
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,

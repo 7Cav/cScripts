@@ -466,6 +466,7 @@ if (_platoonSelector == "ranger") then {
     _crate addWeaponCargoGlobal ["rhs_weap_fgm148",50];
     _crate addWeaponCargoGlobal ["tf47_m3maaws",50];
     _crate addWeaponCargoGlobal ["tf47_at4_HP",50];
+    _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
 
     //================== AMMO ==================\\
 
@@ -554,6 +555,7 @@ if (_platoonSelector == "ranger") then {
     _crate additemCargoGlobal ["ACE_MX2A",20];
     _crate additemCargoGlobal ["Laserdesignator_01_khk_F",20];
     _crate additemCargoGlobal ["ACE_Altimeter",20];
+    _crate additemCargoGlobal ["B_UavTerminal",20];
 
     //================== MEDICAL ==================\\
 
@@ -584,6 +586,7 @@ if (_platoonSelector == "ranger") then {
     //================== BACKPACKS ==================\\
 
     _crate addBackpackCargoGlobal ["B_Carryall_mcamo",15];
+    _crate addBackpackCargoGlobal ["B_UAV_01_backpack_F",15];
 };
 
 //------------------ S N I P E R   S E C T I O N --------------------\\
@@ -723,7 +726,7 @@ if (_platoonSelector == "full") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["tf_anprc152",50];
-    _crate addBackpackCargoGlobal ["B_Kitbag_mcamo",10];
+    _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
 
     //================== WEAPONS ==================\\
 
