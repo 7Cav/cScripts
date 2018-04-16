@@ -8,7 +8,7 @@
  * Example:
  * [this,"Charlie 1",1] call cScripts_fnc_setPlayerInitSettings;
  */
-
+/*
 #include "..\script_component.hpp";
 
 INFO("Applying init for player");
@@ -38,3 +38,4 @@ if (_srChannel != 0) then {
 };
 
 INFO("Done Applying init for player");
+*/

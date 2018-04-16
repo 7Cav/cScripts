@@ -49,6 +49,10 @@ INFO("Achilles mod found adding modules.");
     [(_this select 1)] call FUNC(moduleApplyFlag);
 }] call Ares_fnc_RegisterCustomModule;
 
-["7Cav Misc", "Make Doctor",{
+["7Cav Misc", "Assign Doctor",{
     [(_this select 1)] call FUNC(moduleMakeDoctor);
+}] call Ares_fnc_RegisterCustomModule;
+
+["7Cav Misc", "Assign Engineer",{
+    [(_this select 1)] call FUNC(moduleMakeEngineer);
 }] call Ares_fnc_RegisterCustomModule;
