@@ -43,5 +43,7 @@ _crate addItemCargoGlobal ["ACE_atropine",(_quaScale * 25)];
 
 _crate addItemCargoGlobal ["ACE_bodyBag",(_quaScale * 10)];
 
-// Downsize the crate
-_crate setVariable ["ace_cargo_size", 1];
+// Change ace logistics size of crate
+[_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];
+[_crate, true] remoteExec ["ace_dragging_fnc_setDraggable",0,true];
+[_crate, true] remoteExec ["ace_dragging_fnc_setCarryable",0,true];

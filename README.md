@@ -5,6 +5,9 @@
  <a href="https://github.com/7Cav/cScripts/tree/master"><img src="https://img.shields.io/badge/Dev Build-v3.2.0-brightgreen.svg?style=plastic" alt="Development Build Version"></a>
  <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=plastic&label=Issues" alt="cScripts Issues"></a>
  <a href="https://github.com/7Cav/cScripts/releases"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads"></a>
+<a href="https://travis-ci.org/7Cav/cScripts">
+    <img src="https://img.shields.io/travis/7Cav/cScripts.svg?style=plastic" alt="cScripts Build">
+</a>
 </p>
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
 
