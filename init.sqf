@@ -38,3 +38,4 @@
     };
 
 /*           MODULES            */
+    player setdamag 1;
