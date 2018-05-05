@@ -16,7 +16,6 @@ class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -60,7 +59,6 @@ class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -113,7 +111,6 @@ class CAV_Ranger_TL : CAV_Ranger_Base {                    //35.92kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -154,7 +151,6 @@ class CAV_Ranger_AR : CAV_Ranger_Base {                    //33.62kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -201,7 +197,6 @@ class CAV_Ranger_GR : CAV_Ranger_Base {                    //35.92kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -242,7 +237,6 @@ class CAV_Ranger_RM : CAV_Ranger_Base {                    //25.85kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -286,7 +280,6 @@ class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -316,7 +309,7 @@ class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
         "ACE_Flashlight_MX991",
         "ACE_CableTie",2
     };
-    preLoadout = "[(_this select 0), 'ranger', 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'ranger', 2, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
@@ -336,7 +329,6 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -359,7 +351,7 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
         "ACE_ATragMX"
 
     };
-    preLoadout = "[(_this select 0), 'ranger', 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'ranger', 2, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
     backpack[] = {"B_Kitbag_cbr"};
@@ -370,7 +362,7 @@ class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
     primary[] = {"rhs_weap_m4a1_carryhandle","acc_pointer_IR","rhsusf_acc_ACOG_RMR","rhsusf_acc_harris_bipod"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",1,
 
         "rhs_mag_m67",4,
@@ -379,7 +371,6 @@ class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC117F",
 
@@ -405,5 +396,5 @@ class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
         "Leupold_Mk4",
         "ACE_ATragMX"
     };
-    preLoadout = "[(_this select 0), 'ranger', 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'ranger', 2, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };

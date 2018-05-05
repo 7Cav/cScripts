@@ -101,6 +101,7 @@ class cScripts {
         class moduleReadyHelicopter {};
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
+        class moduleMakeEngineer {};
     };
     class debug {
         file = "cScripts\cavFnc\functions\debug";

@@ -31,9 +31,8 @@ params [
 ];
 
 // If isServer call equipBase
-
 if (isServer) then {
-    [_object,_quickSelectScale,_requirePlatoonVariable] call FUNC(doStarterCrateSupplies);
+    [_object,_quickSelectScale] call FUNC(doStarterCrateSupplies);
 };
 
 // Make addAction Topic
