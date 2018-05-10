@@ -50,6 +50,7 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC152",		
 
         // Personal Medical Equipment
         "ACE_quikclot",26,
@@ -104,7 +105,8 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
     items[] = {
         // Radios
         "ACRE_PRC152",
-
+        "ACRE_PRC152",
+		
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,

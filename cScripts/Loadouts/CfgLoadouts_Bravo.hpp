@@ -25,7 +25,7 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -83,7 +83,7 @@ class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",6,
@@ -212,7 +212,7 @@ class CAV_Bravo_SL : CAV_Bravo_Base {  // Squad Leader
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -263,7 +263,7 @@ class CAV_Bravo_TL : CAV_Bravo_Base {  // Fire Team Leader
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -417,7 +417,7 @@ class CAV_Bravo_Weapons_TL : CAV_Bravo_Base {  // Team Leader
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
