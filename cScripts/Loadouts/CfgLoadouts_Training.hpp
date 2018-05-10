@@ -26,7 +26,6 @@ class CAV_SOI_INSTR : CAV_Charlie_Base {  // Instructor
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
 
         // Standard
         "ACE_EarPlugs",
@@ -75,7 +74,6 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
 
         // Standard
         "ACE_EarPlugs",
@@ -156,7 +154,6 @@ class CAV_TAS_INSTR : CAV_Bravo_Base {  // Instructor
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
 
         // Personal Medical Equipment
         "ACE_quikclot",6,
@@ -278,7 +275,7 @@ class CAV_ACE_FIXED_INSTR : CAV_Alpha_Base {
     items[] = {
         // Radios
         "ACRE_PRC152",
- 
+
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,
