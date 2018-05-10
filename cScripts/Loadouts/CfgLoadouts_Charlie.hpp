@@ -22,6 +22,7 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -79,6 +80,8 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC152",
+		
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -128,6 +131,7 @@ class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -175,6 +179,7 @@ class CAV_Charlie_TL : CAV_Charlie_Base {  // Fire Team Leader
 
     items[] = {
         // Radios
+        "ACRE_PRC152",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -328,6 +333,7 @@ class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -376,6 +382,7 @@ class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg
 
     items[] = {
         // Radios
+        "ACRE_PRC152",
         "ACRE_PRC152",
 
         // Personal Medical Equipment

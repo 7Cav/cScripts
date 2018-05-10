@@ -17,6 +17,7 @@ class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -58,6 +59,7 @@ class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
 
     items[] = {
         // Radios
+        "ACRE_PRC152",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -109,6 +111,7 @@ class CAV_Ranger_TL : CAV_Ranger_Base {                    //35.92kg
 
     items[] = {
         // Radios
+        "ACRE_PRC152",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -325,6 +328,7 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -366,6 +370,7 @@ class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
 
     items[] = {
         // Radios
+        "ACRE_PRC152",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
