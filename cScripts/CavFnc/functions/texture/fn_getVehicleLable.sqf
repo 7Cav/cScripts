@@ -81,6 +81,7 @@ switch (_texturePath) do {
     case ("stryker"): {
         _texturePath = "cScripts\Data\Vehicles\special\stryker_ca.paa";
     };
+
     case ("vic1"): {
         _texturePath = "cScripts\Data\Vehicles\special\vic1_ca.paa";
     };
