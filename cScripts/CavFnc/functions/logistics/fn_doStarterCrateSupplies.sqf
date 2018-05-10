@@ -204,6 +204,7 @@ if (_platoonSelector == "charlie") then {
     _crate additemCargoGlobal ["tf47_optic_m3maaws",10];
     _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
     _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
 
     //================== AMMO ==================\\
 

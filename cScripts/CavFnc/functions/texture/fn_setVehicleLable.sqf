@@ -1,7 +1,7 @@
 /*
  * Author: CPL.Brostrom.A
  * This function attaches a predefined lable to a predefined location on a given vehicle.
- * Supported vehciles; Black Hawks, STRYKER
+ * Supported vehicles; UH60 Black Hawks, STRYKER, M1A1 Abrams, M2/M3 Bradley,
  *
  * Arguments:
  * 0: Vehicles <OBJECT>
@@ -119,6 +119,11 @@ if (typeOf _vehicle in _vehicleTypeStriker) then {
 
 };
 
+/*
+ * M1A1 Abrams
+ *  <SPECIAL>
+ *  Supporing 1 special lable on the side of the vehicle.
+ */
 private _vehicleTypeAbrams = [
     "rhsusf_m1a1aimd_usarmy",
     "rhsusf_m1a1aim_tuski_d",
@@ -143,4 +148,46 @@ if (typeOf _vehicle in _vehicleTypeAbrams) then {
     //Side
     if (_lable2 != "") then { [_vehicle,[-1.69787,-2.83845,-0.455],89.8278,_lableTexture2] call FUNC(createVehicleLable); };
     if (_lable2 != "") then { [_vehicle,[2.03401,-2.82751,-0.455],270.172,_lableTexture2] call FUNC(createVehicleLable); };
+};
+
+private _vehicleTypeBradly = [
+    "RHS_M2A2",
+    "RHS_M2A3",
+    "RHS_M6",
+    "RHS_M2A2_wd",
+    "RHS_M2A3_wd",
+    "RHS_M6_wd"
+];
+
+/*
+ * M2/M3 Bradley
+ *  <SPECIAL>
+ *  Supporing 2 special lable on the front of the vehicle and side.
+ */
+if (typeOf _vehicle in _vehicleTypeBradly) then {
+    //Side
+    if (_lable1 != "") then { [_vehicle,[-1.61249,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };
+    if (_lable1 != "") then { [_vehicle,[1.62437,-1.0,0],270,_lableTexture1] call FUNC(createVehicleLable); };
+};
+
+private _vehicleTypeBradlyBUSK = [
+    "RHS_M2A2_BUSKI",
+    "RHS_M2A3_BUSKI",
+    "RHS_M2A2_BUSKI_WD",
+    "RHS_M2A3_BUSKI_wd"
+];
+if (typeOf _vehicle in _vehicleTypeBradlyBUSK) then {
+    //Side
+    if (_lable1 != "") then { [_vehicle,[-1.864,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };
+    if (_lable1 != "") then { [_vehicle,[1.878,-1.0,0],270,_lableTexture1] call FUNC(createVehicleLable); };
+};
+
+private _vehicleTypeBradlyBUSK3 = [
+    "RHS_M2A3_BUSKIII",
+    "RHS_M2A3_BUSKIII_wd"
+];
+if (typeOf _vehicle in _vehicleTypeBradlyBUSK3) then {
+    //Side
+    if (_lable1 != "") then { [_vehicle,[-1.964,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };
+    if (_lable1 != "") then { [_vehicle,[1.968,-1.0,0],270,_lableTexture1] call FUNC(createVehicleLable); };
 };

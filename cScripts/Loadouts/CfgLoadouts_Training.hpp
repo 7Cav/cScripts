@@ -26,7 +26,7 @@ class CAV_SOI_INSTR : CAV_Charlie_Base {  // Instructor
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Standard
         "ACE_EarPlugs",
@@ -75,7 +75,6 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
 
         // Standard
         "ACE_EarPlugs",
@@ -104,9 +103,9 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
 };
 
 class CAV_SOI_STUD : CAV_Bravo_Base {  // Rifleman
-
-    backpack[] = {"B_AssaultPack_mcamo"};
+    
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
+    backpack[] = {"B_Carryall_mcamo"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",10,
@@ -156,7 +155,7 @@ class CAV_TAS_INSTR : CAV_Bravo_Base {  // Instructor
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",6,
@@ -278,7 +277,7 @@ class CAV_ACE_FIXED_INSTR : CAV_Alpha_Base {
     items[] = {
         // Radios
         "ACRE_PRC152",
- 
+
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,

@@ -152,7 +152,7 @@ class CAV_Charlie_Base : CommonBlufor {
     backpack[] = {"B_Kitbag_cbr"};
     goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
-    uniform[] = {"rhs_uniform_cu_ocp"};
+    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
     vest[] = {"rhsusf_spcs_ocp_rifleman"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};

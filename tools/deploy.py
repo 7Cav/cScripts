@@ -10,16 +10,49 @@ import sys
 import shutil
 from distutils.dir_util import copy_tree
 import logging
+
 # copy everything > release folder
 # exlude copy tools, ".git", ".github", ".editorconfig", ".gitatteributes", ".gitignore",
 # bump version number add revision number
 # zip everything in release folder
 # make tag release
 
-exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', 'mission.sqm', 'release', 'tools']
+exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools']
+
+# Check if argument exist
+update = False
+update_rc = False
+
+try:
+    argument_1 = sys.argv[1]
+except IndexError:
+    argument_1 = ""
+try:
+    argument_2 = sys.argv[2]
+except IndexError:
+    argument_2 = ""
+
+# Passigng arguments:
+argument_1_List = ["dev","major","minor","patch"]
+argument_2_List = ["rc"]
+if argument_1 in argument_1_List:
+    update = True
+else:
+    if not argument_1 == "":
+        sys.exit("\"{}\" is a none valid argument.".format(sys.argv[1]));
+argument_2_def = argument_2[:2]
+if argument_2_def in argument_2_List and not argument_2 == "":
+    if argument_2 == "rc":
+        sys.exit("Pleace define the release candidate number. (rc1, rc2, rc3 etc...)".format(sys.argv[1]));
+    else:
+        update_rc = True
+else:
+    if not argument_2 == "":
+        sys.exit("\"{}\" is a none valid argument.".format(sys.argv[1]));
 
 def getFiles():
     pass
+
 def getDirectory():
     pass
 
@@ -30,8 +63,33 @@ def getVersion(FilePath):
             line = line.partition('"')[-1].rpartition('"')[0]
             line = line.split(".")
             version = line
+            version = list(map(int, version))
     return version
 
+def setVersion(version,type,rc):
+    if type == argument_1_List[0]:
+        type = ".DevBuild"
+    if type == argument_1_List[1]:
+        version[0] += 1
+        version[1] = 0
+        version[2] = 0
+    if type == argument_1_List[2]:
+        version[1] += 1
+        version[2] = 0
+    if type == argument_1_List[3]:
+        version[2] += 1
+    if rc[:2] == "rc" and not type == "dev":
+        type = rc
+        type = type.upper()
+        type = ".{}".format(type)
+    else:
+        type = ""
+    print('New version will be: ',end='')
+    printNewVersion = "{}.{}.{}{}".format(str(version[0]),str(version[1]),str(version[2]),str(type))
+    print(printNewVersion)
+
+    file = open("cScripts_v{}.md".format(printNewVersion), "w")
+    file.write('I am a dummy file that just show version numbers. I\'ve done my purpose yey!')
 
 def main():
     print("""
@@ -102,17 +160,41 @@ def main():
 
 
     # Preppearing file update
-    print('\033[1mPerppering update\033[0m'.format(file))
+    if update == True:
+        print('\033[1mPerppering update\033[0m'.format(file))
+        # Getting local version number
+        os.chdir(releasefolder)
+        versionFilePath = ("cScripts\\CavFnc\\functions\\script_component.hpp")
+        currentVersion = getVersion(versionFilePath)
 
-    # Getting local version number
-    os.chdir(releasefolder)
-    versionFilePath = "cScripts\\CavFnc\\functions" # Make Sure to use double backslashes !
-    versionFile = ("{}\\script_component.hpp".format(versionFilePath))
-    currentVersion = getVersion(versionFile)
-    print('Found local version: ',end='')
-    print('\033[6m.'.join(currentVersion),end='\033[0m')
+        print('Current version is: ',end='')
+        printCurrentVersion = "{}.{}.{}".format(str(currentVersion[0]),str(currentVersion[1]),str(currentVersion[2]))
+        print(printCurrentVersion)
 
-    #os.rename()
+        # Prepping the update
+        if update_rc == True:
+            rcbuild = "release candidate build"
+            releaseCandidate = argument_2
+        else:
+            rcbuild = "build"
+            releaseCandidate = ""
+
+        if (argument_1) == argument_1_List[0]:
+            print("Prepering development build")
+            if update_rc == True:
+                print("DevBuilds don't have Release candidates. Ignoring the parameter...")
+            newVersionType = argument_1_List[0]
+        elif argument_1 == argument_1_List[1]:
+            print("Prepering major {}.".format(rcbuild))
+            newVersionType = argument_1_List[1]
+        elif argument_1 == argument_1_List[2]:
+            print("Prepering minor {}.".format(rcbuild))
+            newVersionType = argument_1_List[2]
+        elif argument_1 == argument_1_List[3]:
+            print("Prepering patch {}.".format(rcbuild))
+            newVersionType = argument_1_List[3]
+        setVersion(currentVersion,newVersionType,releaseCandidate)
+        #os.rename()
     print()
 
 if __name__ == "__main__":
