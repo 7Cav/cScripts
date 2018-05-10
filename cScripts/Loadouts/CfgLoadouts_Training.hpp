@@ -103,8 +103,7 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
 };
 
 class CAV_SOI_STUD : CAV_Bravo_Base {  // Rifleman
-
-    backpack[] = {"B_AssaultPack_mcamo"};
+    
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
     backpack[] = {"B_Carryall_mcamo"};
 
