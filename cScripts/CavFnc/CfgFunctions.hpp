@@ -109,12 +109,4 @@ class cScripts {
         class logInfo {}; //will be merged with "attachVehicleLabel"
         class logWarning {};
     };
-
-
-    
-    class deprecated {
-        file = "cScripts\cavFnc\functions\deprecated";
-        class attachVehicleLabel {};    // replaced with setVehicleLable
-        class UH60TailNumber {};        // replaced with setVehicleLable
-    };
 };
