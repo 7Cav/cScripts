@@ -1,11 +1,14 @@
 /*
  * Author: CPL.Brostrom.A and SGT.Argus.J
- * This create a diary record subject called by initDocuments.
+ * This function write a diary record.
  *
  * Arguments:
+ * None
  *
  * Example:
- * call cScripts_fnc_DocRadio_LZEXTRACT;
+ *  call cScripts_fnc_Doc_LZEXTRACT
+ *
+ * Public: No
  */
 
 player createDiaryRecord["Chklists",

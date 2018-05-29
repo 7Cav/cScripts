@@ -4,10 +4,6 @@ import git
 versionFilePath = "..\\cScripts\\CavFnc\\functions" # Make Sure to use double backslashes !
 versionFile = ("{}\\script_component.hpp".format(versionFilePath))
 
-def main():
-    currentVersion = getVersion(versionFile)
-    print (currentVersion)
-
 def getVersion(FilePath):
     verFile = open(FilePath)
     for i, line in enumerate(verFile):
@@ -23,6 +19,10 @@ def setVersion():
     diff = diff.index
     print (diff)
 
+def main():
+    currentVersion = getVersion(versionFile)
+    print (currentVersion)
+    setVersion()
+
 if __name__ == "__main__":
     main()
-    setVersion()

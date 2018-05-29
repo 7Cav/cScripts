@@ -1,11 +1,14 @@
 /*
  * Author: CPL.Brostrom.A and SGT.Argus.J
- * This create a diary record subject called by initDocuments.
+ * This function write a diary record.
  *
  * Arguments:
+ * None
  *
  * Example:
- * call cScripts_fnc_DocRadio_ROTARYPICKUP;
+ *  call cScripts_fnc_Doc_ROTARYOICUP
+ *
+ * Public: No
  */
 
 player createDiaryRecord["radioReports",

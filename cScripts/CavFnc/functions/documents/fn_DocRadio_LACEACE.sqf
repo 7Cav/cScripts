@@ -1,13 +1,15 @@
 /*
  * Author: CPL.Brostrom.A and SGT.Argus.J
- * This create a diary record subject called by initDocuments.
+ * This function write a diary record.
  *
  * Arguments:
+ * None
  *
  * Example:
- * call cScripts_fnc_DocRadio_LACEACE;
+ *  call cScripts_fnc_Doc_LANEACE
+ *
+ * Public: No
  */
-
 player createDiaryRecord["radioReports",
     ["LACE/ACE REPORT",
         "
