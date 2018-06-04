@@ -1,56 +1,40 @@
 /*
- * Author: Igi_PL
- * Exported and rewritten: CPL.Brostrom.A
- * This is a exported script from the IGI load mod to get ridd of all the un used system they have.
- * The code is a direct export with some strings renamed and changed.
+ * Author: CPL.Brostrom.A
+ * This jump throw a player out of a aircraft and ataches a parashoot.
  *
  * Arguments:
- * 0: Object <OBJECT>
- * 1: Player <STRING>
- * 3: Parachute deploy height <NUMBER>
+ * 0: Player <PLAYER>
+ * 1: Vehicle <OBJECT>
  *
  * Example:
- * [this,player] call cScripts_fnc_doJump;
- * [this,player,160] call cScripts_fnc_doJump;
+ * ["this","my_C130"] call cScripts_fnc_doJump
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
 
 params [
-    ["_vehicle", objNull, [objNull]],
-    ["_player",player],
-    ["_paraChuteOpen_ATL",160]
+    ["_player", objNull, [objNull]],
+    ["_vehicle", objNull, [objNull]]
 ];
 
-private _dist_out_para = 11;
-
-// Prepere jump
-_player allowDamage false;
-sleep 0.2;
-unassignVehicle _player;
-_player action ["EJECT",vehicle _player];
-sleep 0.5;
-// Set player position and directoecton
-private _pos = ([_vehicle, _dist_out_para, ((getDir _vehicle) + 180 + 8)] call BIS_fnc_relPos);
+private _dir = getDir _vehicle - 50;
+moveOut _player;
+private _pos = ([_vehicle, 12, ((getDir _vehicle) + 180 + 8)] call BIS_fnc_relPos);
 private _pos = [_pos select 0, _pos select 1, ((getPosATL _vehicle) select 2)];
 _player setPosATL _pos;
-private _dist = _vehicle distance _player;
-while {(_vehicle distance _player) - _dist < 20} do {
-    sleep 0.2;
-};
-// Prepere to open chute
-if (_paraChuteOpen_ATL > 0) then {
-    while {(getPosATL _player) select 2 > _paraChuteOpen_ATL} do {
-        sleep 0.2;
-    };
-};
-//Open chute
-if !(unitBackpack _player isKindOf "B_Parachute") then {
-    private _chute = createVehicle ["NonSteerable_Parachute_F", position _player, [], 0, "CAN_COLLIDE"];
-    _chute AttachTo [_player, [0,0,0]];
-    detach _chute;
-    private _velocity = velocity _player;
-    _player moveInDriver _chute;
-    _chute setVelocity _velocity;
-};
+_player setDir _dir - 30;
+
+_player allowDamage false;
+
+sleep 0.3;
+private _velocity = velocity _player;
+private _chute = createVehicle ["NonSteerable_Parachute_F", (position _player), [], 0, "CAN_COLLIDE"];
+_chute AttachTo [_player, [0,0,0]];
+detach _chute;
+_player moveInDriver _chute;
+_chute setVelocity _velocity;
+
+sleep 0.2;
 _player allowDamage true;
