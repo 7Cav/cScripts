@@ -22,14 +22,30 @@ params [
 ];
 
 // Check so the options arent added twice.
-if (!isNil {_vehicle getVariable QGVAR(JumpOutAirframe)}) exitWith {};
+ if (!isNil {_vehicle getVariable QGVAR(JumpOutAirframe)}) exitWith {};
 
+/*_vehicle setVariable [QGVAR(allowJump),false,true];
+
+_vehicle addAction [
+    "<t color='#800080'>Allow jump</t>",
+    {_vehicle setVariable [QGVAR(allowJump),true,true];},
+    0, 2, true, true, "",
+    "(player == driver vehicle player) && (_target getVariable ['cscripts_allowJump',''])"
+];
+_vehicle addAction [
+    "<t color='#ff0000'>Forbid jump</t>",
+    {_vehicle setVariable [QGVAR(allowJump),false,true];},
+    0, 2, true, true, "",
+    "(player == driver vehicle player) && (_target getVariable ['cscripts_allowJump',''])"
+]; */
+
+// Add hold action for jump
 [
     _vehicle,
-    "Jump",
+    "<t color='#800080'>Jump</t>",
     "cScripts\Data\Icon\icon_02.paa",
     "cScripts\Data\Icon\icon_02.paa",
-    "((_target getCargoIndex _this) != -1)",
+    format ["((_target getCargoIndex player) != -1) && ((getPosATL _target) select 2 >= %1) && ((getPosATL _target) select 2 <= %2) && (speed _target <= %3)", _minAltetude, _maxAltetude, _maxSpeed],
     "true",
     {},
     {},
@@ -37,9 +53,8 @@ if (!isNil {_vehicle getVariable QGVAR(JumpOutAirframe)}) exitWith {};
     {},
     [],
     0.2,
+    25,
     false
 ] remoteExec ['BIS_fnc_holdActionAdd', 0, _vehicle];
-
-// format ["((_target getCargoIndex _this) != -1) && (((getPosATL _target) select 2) >= %1) && (((getPosATL _target) select 2) <= %2) && (speed _target <= %3)", _maxAltetude, _minAltetude, _maxSpeed],
 
 _vehicle setVariable [QGVAR(JumpOutAirframe),"true"];
