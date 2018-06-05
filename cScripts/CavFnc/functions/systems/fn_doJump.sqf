@@ -19,14 +19,15 @@ params [
     ["_vehicle", objNull, [objNull]]
 ];
 
+_player allowDamage false;
+
 private _dir = getDir _vehicle - 50;
 moveOut _player;
-private _pos = ([_vehicle, 12, ((getDir _vehicle) + 180 + 8)] call BIS_fnc_relPos);
+private _pos = ([_vehicle, 14, ((getDir _vehicle) + 180 + 8)] call BIS_fnc_relPos);
 private _pos = [_pos select 0, _pos select 1, ((getPosATL _vehicle) select 2)];
 _player setPosATL _pos;
-_player setDir _dir - 30;
+_player setDir _dir - 140;
 
-_player allowDamage false;
 
 sleep 1.5;
 private _velocity = velocity _player;
@@ -36,5 +37,5 @@ detach _chute;
 _player moveInDriver _chute;
 _chute setVelocity _velocity;
 
-sleep 0.2;
+sleep 0.5;
 _player allowDamage true;
