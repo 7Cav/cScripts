@@ -28,7 +28,7 @@ _player setDir _dir - 30;
 
 _player allowDamage false;
 
-sleep 0.3;
+sleep 1.5;
 private _velocity = velocity _player;
 private _chute = createVehicle ["NonSteerable_Parachute_F", (position _player), [], 0, "CAN_COLLIDE"];
 _chute AttachTo [_player, [0,0,0]];
