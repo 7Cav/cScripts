@@ -52,7 +52,7 @@ _vehicle addAction [
     {[(_this select 1),(_this select 0)] call FUNC(doJump)},
     {},
     [],
-    0.2,
+    0,
     25,
     false
 ] remoteExec ['BIS_fnc_holdActionAdd', 0, _vehicle];
