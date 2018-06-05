@@ -16,8 +16,8 @@
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_minAltetude", 150],
-    ["_maxAltetude", 1000],
+    ["_minAltetude", 200],
+    ["_maxAltetude", 350],
     ["_maxSpeed", 300]
 ];
 
@@ -36,8 +36,9 @@ if (!isNil {_vehicle getVariable QGVAR(JumpOutAirframe)}) exitWith {};
     {[(_this select 1),(_this select 0)] call FUNC(doJump)},
     {},
     [],
-    1
-] call BIS_fnc_holdActionAdd;
+    0.2,
+    false
+] remoteExec ['BIS_fnc_holdActionAdd', 0, _vehicle];
 
 // format ["((_target getCargoIndex _this) != -1) && (((getPosATL _target) select 2) >= %1) && (((getPosATL _target) select 2) <= %2) && (speed _target <= %3)", _maxAltetude, _minAltetude, _maxSpeed],
 
