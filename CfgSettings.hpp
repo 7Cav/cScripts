@@ -18,5 +18,6 @@ class CfgSettings {
     useScriptVehicleInventory   =   1;      // 0 or 1 Allow the mission to change Vehicles inventory on mission start. (Default: 0)
     useScriptSupplyInventory    =   0;      // 0 or 1 Allow the mission to change Supply crate inventorys on mission start. (Default: 0)
 
+    usePlaneJumpOut             =   1;      // 0 or 1 Allow the mission to add jump out action on C130. (Default: 1)
     useHeloGetOutRL             =   1;      // 0 or 1 Allow the mission to add Get Out Left/Right on helicopters. (Default: 1)
 };
