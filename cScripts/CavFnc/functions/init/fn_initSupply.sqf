@@ -2,6 +2,9 @@
  * Author: CPL.Brostrom.A
  * This function add eventhandelers chaning the inventory of all crates.
  *
+ * Arguments:
+ * None
+ *
  * Return Value:
  * Nothing
  *

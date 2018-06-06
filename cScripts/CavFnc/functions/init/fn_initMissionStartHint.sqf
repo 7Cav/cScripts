@@ -38,14 +38,14 @@ private _text3c = "<br /><br />Blame Tully if stuff doesn't work.<br />";
 // Run hints
 hint parseText (_title1 + _text0 + _image0);
 sleep 1;
-hint parseText (_title1 + _text0 + _image0 + _text1);
+hintSilent parseText (_title1 + _text0 + _image0 + _text1);
 sleep (_time * 0.5);
-hint parseText (_title1 + _text0 + _image0 + _text2);
+hintSilent parseText (_title1 + _text0 + _image0 + _text2);
 sleep (_time * 0.5);
 hint parseText (_title2 + _text3a + _image1 + _text3b);
 sleep 8;
-hint parseText (_title2 + _text3a + _image1 + _text3b + _text3c);
+hintSilent parseText (_title2 + _text3a + _image1 + _text3b + _text3c);
 sleep 1.5;
-hint "";
+hintSilent "";
 sleep 60;
-hint ""; // Fail safe in case people get the hint stuck
+hintSilent ""; // Fail safe in case people get the hint stuck

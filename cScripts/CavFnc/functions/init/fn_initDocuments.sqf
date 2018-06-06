@@ -2,6 +2,9 @@
  * Author: CPL.Brostrom.A
  * This function add diary records for all players.
  *
+ * Arguments:
+ * None
+ *
  * Return Value:
  * Nothing
  *

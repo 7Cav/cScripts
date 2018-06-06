@@ -1,11 +1,11 @@
 /*
  * Author: CPL.Brostrom.A
- * This function show all players, as well as JIP players, a custom mission hint.
+ * This function show all players, as well as JIP players, a custom mission hint when conected.
  *
  * Arguments:
- * 0: Topic <STRING>
+ * 0: Header <STRING>
  * 1: Text <STRING>
- * 2: Timer <NUMBER> (Optional) (Default; 15)
+ * 2: Seconds to show <NUMBER> (Optional) (Default; 15)
  *
  * Return Value:
  * Nothing
@@ -39,10 +39,10 @@ private _textEasterEgg = "<br /><br />Blame Brostrom if stuff doesn't work on th
 // Run hints
 hint parseText (_title + _text0 + _image);
 sleep 1;
-hint parseText (_title + _text0 + _image + _text1 + _textHaveFun);
+hintSilent parseText (_title + _text0 + _image + _text1 + _textHaveFun);
 sleep (_time);
-hint parseText (_title + _text0 + _image + _text1 + _textHaveFun + _textEasterEgg);
+hintSilent parseText (_title + _text0 + _image + _text1 + _textHaveFun + _textEasterEgg);
 sleep 1.5;
-hint "";
+hintSilent "";
 sleep 60;
-hint ""; // Fail safe in case people get the hint stuck
+hintSilent ""; // Fail safe in case people get the hint stuck

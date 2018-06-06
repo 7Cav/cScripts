@@ -1,6 +1,9 @@
 /*
  * Author: SSG.Argus.J
- * This function adds a get out right and left on all helicopters spawned by curator.
+ * This function adds a get out right and left on all curator spawned helicopters.
+ *
+ * Arguments:
+ * None
  *
  * Return Value:
  * Nothing

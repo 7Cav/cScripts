@@ -2,6 +2,9 @@
  * Author: CPL.Brostrom.A
  * This function add eventhandelers adding get out right and left functionality to all helicotpers.
  *
+ * Arguments:
+ * None
+ *
  * Return Value:
  * Nothing
  *

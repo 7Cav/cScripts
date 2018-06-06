@@ -3,6 +3,10 @@
  * This function adds the get out right and left function to all supported helos.
  *
  * Arguments:
+ * None
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
  * call cScripts_fnc_initHelo;
@@ -12,7 +16,7 @@
 
 if (!isServer) exitwith {};
 
-INFO("Adding eventhandles for get out right and left to all helicopters");
+INFO("Adding eventhandles for jump to all c130");
 
 ["RHS_C130J", "init", {
     [(_this select 0)] call FUNC(addJump);
