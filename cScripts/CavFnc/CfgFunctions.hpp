@@ -3,6 +3,8 @@ class cScripts {
         file = "cScripts\cavFnc\functions\init";
         class initSupply {};
         class initVehicle {};
+
+        class initC130 {};
         class initHelo {};
 
         class initDocuments {};
@@ -14,6 +16,7 @@ class cScripts {
         class initModules {};
 
         class initCuratorHeloGetOutRL {};
+        class initCuratorC130 {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\documents";
