@@ -6,7 +6,7 @@ class CfgSettings {
 
     // Hints and documents
     useStartHint                =   1;      // 0 or 1 Allow the mission to run the RedLightHint or TrainingMissionHint depends on mission type (Default: 1)
-    setRedLightTime             =   60;     // Seconds for how long it is red light (Default: 60)
+    setRedLightTime             =   30;     // Seconds for how long it is red light (Default: 60)
     setTrainingHintTime         =   15;     // Seconds for how long the hint is shown (Default: 15)
     setCustomHintTopic          =   "My custom Mission!"; // Sets a custom mission hint topic. (Requires: isMissionType=0)
     setCustomHintText           =   "I have design this mission! Yey for me!"; // Sets a custom mission hint text. (Requires: isMissionType=0)
