@@ -18,6 +18,11 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then
         call cScripts_fnc_initHelo;
         call cScripts_fnc_initCuratorHeloGetOutRL;
     };
+    // Add jump out action to all C-130
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "usePlaneJumpOut") == 1) then {
+        call cScripts_fnc_initC130;
+        call cScripts_fnc_initCuratorC130;
+    };
     // Change inventory content of supply crates on mission start.
     if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptVehicleInventory") == 1) then {
         call cScripts_fnc_initVehicle;

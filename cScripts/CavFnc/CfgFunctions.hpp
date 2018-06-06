@@ -3,6 +3,8 @@ class cScripts {
         file = "cScripts\cavFnc\functions\init";
         class initSupply {};
         class initVehicle {};
+
+        class initC130 {};
         class initHelo {};
 
         class initDocuments {};
@@ -14,6 +16,7 @@ class cScripts {
         class initModules {};
 
         class initCuratorHeloGetOutRL {};
+        class initCuratorC130 {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\documents";
@@ -60,6 +63,9 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
+        class addJump {};
+        class doJump {};
+
         // Buttons and options
         class addReGear {};
         class addHeal {};
@@ -69,9 +75,6 @@ class cScripts {
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
-
-        class addJump {};
-        class doJump {};
 
         class hasPlatoonVariable {};
         class canSelectLoadout {};
@@ -111,7 +114,7 @@ class cScripts {
     };
 
 
-    
+
     class deprecated {
         file = "cScripts\cavFnc\functions\deprecated";
         class attachVehicleLabel {};    // replaced with setVehicleLable
