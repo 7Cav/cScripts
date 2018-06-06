@@ -1,9 +1,9 @@
 // ACE Advanced Ballistics
-force ace_advanced_ballistics_ammoTemperatureEnabled = false;
-force ace_advanced_ballistics_barrelLengthInfluenceEnabled = false;
-force ace_advanced_ballistics_bulletTraceEnabled = false;
+force ace_advanced_ballistics_ammoTemperatureEnabled = true;
+force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
+force ace_advanced_ballistics_bulletTraceEnabled = true;
 force ace_advanced_ballistics_enabled = false;
-force ace_advanced_ballistics_muzzleVelocityVariationEnabled = false;
+force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
@@ -45,7 +45,7 @@ ace_common_displayTextColor = [0,0,0,0.1];
 ace_common_displayTextFontColor = [1,1,1,1];
 ace_common_settingFeedbackIcons = 1;
 ace_common_settingProgressBarLocation = 0;
-force force ace_noradio_enabled = false;
+force force ace_noradio_enabled = true;
 force force ace_parachute_hideAltimeter = true;
 
 // ACE Cook off
@@ -61,10 +61,10 @@ force force ace_explosives_punishNonSpecialists = false;
 force force ace_explosives_requireSpecialist = true;
 
 // ACE Fragmentation Simulation
-force force ace_frag_enabled = false;
+force force ace_frag_enabled = true;
 force force ace_frag_maxTrack = 10;
 force force ace_frag_maxTrackPerFrame = 10;
-force force ace_frag_reflectionsEnabled = false;
+force force ace_frag_reflectionsEnabled = true;
 force force ace_frag_spallEnabled = false;
 
 // ACE Goggles
@@ -88,8 +88,8 @@ force force ace_interaction_enableTeamManagement = true;
 ace_gestures_showOnInteractionMenu = 0;
 ace_interact_menu_actionOnKeyRelease = true;
 ace_interact_menu_addBuildingActions = false;
-force force ace_interact_menu_alwaysUseCursorInteraction = true;
-force force ace_interact_menu_alwaysUseCursorSelfInteraction = true;
+ace_interact_menu_alwaysUseCursorInteraction = true;
+ace_interact_menu_alwaysUseCursorSelfInteraction = true;
 ace_interact_menu_colorShadowMax = [0,0,0,1];
 ace_interact_menu_colorShadowMin = [0,0,0,0.25];
 ace_interact_menu_colorTextMax = [1,1,1,1];
@@ -103,7 +103,7 @@ ace_interact_menu_useListMenu = false;
 
 // ACE Logistics
 force force ace_cargo_enable = true;
-force force ace_cargo_paradropTimeCoefficent = 0.95068;
+force force ace_cargo_paradropTimeCoefficent = 1;
 force force ace_refuel_hoseLength = 15;
 force force ace_refuel_rate = 1;
 force force ace_repair_addSpareParts = true;
