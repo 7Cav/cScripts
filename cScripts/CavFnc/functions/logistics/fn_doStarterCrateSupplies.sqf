@@ -241,6 +241,10 @@ if (_platoonSelector == "charlie") then {
 
     //================== EXPLOSIVES ==================\\
 
+    _crate addItemCargoGlobal ["ACE_M26_Clacker",20];
+    _crate addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",50];
+    _crate addMagazineCargoGlobal ["DemoCharge_Remote_Mag",50];
+
     //================== ITEMS ==================\\
 
     _crate addItemCargoGlobal ["rhsusf_ANPVS_14",50];
