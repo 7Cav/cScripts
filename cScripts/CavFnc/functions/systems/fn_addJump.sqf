@@ -45,7 +45,7 @@ _vehicle addAction [
     "<t color='#800080'>Jump</t>",
     "cScripts\Data\Icon\icon_02.paa",
     "cScripts\Data\Icon\icon_02.paa",
-    format ["((_target getCargoIndex player) != -1) && (_target animationPhase 'ramp_bottom' > 0.64) && ((getPosATL _target) select 2 >= %1) && ((getPosATL _target) select 2 <= %2) && (speed _target <= %3)", _minAltetude, _maxAltetude, _maxSpeed],
+    format ["((_target getCargoIndex player) != -1) && (_target animationPhase 'ramp_bottom' > 0.64) && ((getPosASL _target) select 2 >= %1) && ((getPosASL _target) select 2 <= %2) && (speed _target <= %3)", _minAltetude, _maxAltetude, _maxSpeed],
     "true",
     {},
     {},
