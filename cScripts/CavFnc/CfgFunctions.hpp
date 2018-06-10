@@ -97,6 +97,7 @@ class cScripts {
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         class moduleCreateStarterCrate {};
+        class moduelCreateMedicalCrate {};
         class moduelCreateSupplyCrate {};
         class moduelCreateSpecialWeaponsCrate {};
 
