@@ -11,8 +11,6 @@
 
 #include "..\script_component.hpp";
 
-if (!isServer) exitWith {};
-
 params [["_vehicle", objNull, [objNull]]];
 
 // check if this already have been applied

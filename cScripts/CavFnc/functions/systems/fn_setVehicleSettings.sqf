@@ -12,8 +12,6 @@
 
 #include "..\script_component.hpp";
 
-if (!isServer) exitwith {};
-
 params [["_vehicle", objNull, [objNull]]];
 
 if (!isNil{_vehicle getVariable QGVAR(hasVehicleSettings)}) exitWith {WARNING("Vehicle Settings is already applied")};
