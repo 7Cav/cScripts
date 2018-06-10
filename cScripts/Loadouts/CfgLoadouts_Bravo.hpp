@@ -283,6 +283,7 @@ class CAV_Bravo_TL : CAV_Bravo_Base {  // Fire Team Leader
         "ACE_SpraypaintRed",
         "ACE_EntrenchingTool"
     };
+    gps[] = {"ItemAndroid"};
 };
 
 class CAV_Bravo_AR : CAV_Bravo_Base {  // Automatic Rifleman
