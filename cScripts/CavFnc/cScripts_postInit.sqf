@@ -14,13 +14,14 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "showDiaryRecords") == 1) t
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then {
     // Change inventory content of supply crates on mission start.
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptVehicleInventory") == 1) then {
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptVehicleInit") == 1) then {
         call cScripts_fnc_initVehicle;
 
+        // make sure curator object gets its functions reapplied.
         call cScripts_fnc_initCuratorC130;
         call cScripts_fnc_initCuratorHeloGetOutRL;
     };
-    // Change inventory content of vehicle on mission start.
+    // Change inventory content of nato supply crates on mission start.
     if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptSupplyInventory") == 1) then {
         call cScripts_fnc_initSupply;
     };
