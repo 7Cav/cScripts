@@ -86,7 +86,6 @@ switch (true) do {
         _vehicle addMagazineCargoGlobal ["rhs_mag_m18_purple",50];
         _vehicle addMagazineCargoGlobal ["rhs_mag_m18_red",50];
         _vehicle addMagazineCargoGlobal ["rhs_mag_m67",25];
-        _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
         _vehicle addItemCargoGlobal ["ACE_epinephrine",10];
         _vehicle addItemCargoGlobal ["ACE_morphine",50];
         _vehicle addItemCargoGlobal ["ToolKit",15];
@@ -97,7 +96,9 @@ switch (true) do {
     };
     case (typeOf _vehicle in _attackRotary): {};
     case (typeOf _vehicle in _transportRotary): {};
-    case (typeOf _vehicle in _fixedWingTransport): {};
+    case (typeOf _vehicle in _fixedWingTransport): {
+        _vehicle addBackpackCargoGlobal ["ACE_NonSteerableParachute", 25];
+    };
     case (typeOf _vehicle in _fixedWingAttack): {};
     case (typeOf _vehicle in _ambulance): {};
 };
