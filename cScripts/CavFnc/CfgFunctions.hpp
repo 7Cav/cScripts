@@ -4,9 +4,6 @@ class cScripts {
         class initSupply {};
         class initVehicle {};
 
-        class initC130 {};
-        class initHelo {};
-
         class initDocuments {};
 
         class initMissionStartHint {};
@@ -56,7 +53,6 @@ class cScripts {
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
 
-        class setCavVehicle {};
         class setVehicleInventory {};
         class setVehicleSettings {};
 

@@ -22,7 +22,7 @@ params [
 ];
 
 // Check so the options arent added twice.
- if (!isNil {_vehicle getVariable QGVAR(JumpOutAirframe)}) exitWith {};
+if (!isNil {_vehicle getVariable QGVAR(JumpOutAirframe)}) exitWith {};
 
 /*_vehicle setVariable [QGVAR(allowJump),false,true];
 
