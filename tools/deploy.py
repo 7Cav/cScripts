@@ -17,44 +17,8 @@ import logging
 # zip everything in release folder
 # make tag release
 
-exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools']
+exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
 
-# Check if argument exist
-update = False
-update_rc = False
-
-try:
-    argument_1 = sys.argv[1]
-except IndexError:
-    argument_1 = ""
-try:
-    argument_2 = sys.argv[2]
-except IndexError:
-    argument_2 = ""
-
-# Passigng arguments:
-argument_1_List = ["dev","major","minor","patch"]
-argument_2_List = ["rc"]
-if argument_1 in argument_1_List:
-    update = True
-else:
-    if not argument_1 == "":
-        sys.exit("\"{}\" is a none valid argument.".format(sys.argv[1]));
-argument_2_def = argument_2[:2]
-if argument_2_def in argument_2_List and not argument_2 == "":
-    if argument_2 == "rc":
-        sys.exit("Pleace define the release candidate number. (rc1, rc2, rc3 etc...)".format(sys.argv[1]));
-    else:
-        update_rc = True
-else:
-    if not argument_2 == "":
-        sys.exit("\"{}\" is a none valid argument.".format(sys.argv[1]));
-
-def getFiles():
-    pass
-
-def getDirectory():
-    pass
 
 def getVersion(FilePath):
     verFile = open(FilePath)
@@ -65,6 +29,8 @@ def getVersion(FilePath):
             version = line
             version = list(map(int, version))
     return version
+
+
 
 def setVersion(version,type,rc):
     if type == argument_1_List[0]:
@@ -91,6 +57,16 @@ def setVersion(version,type,rc):
     file = open("cScripts_v{}.md".format(printNewVersion), "w")
     file.write('I am a dummy file that just show version numbers. I\'ve done my purpose yey!')
 
+
+
+def zipdir(path, ziph):
+    # ziph is zipfile handle
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            ziph.write(os.path.join(root, file))
+
+
+
 def main():
     print("""
 \033[1mcScripts Build and Deploy Script v{}\033[0m
@@ -103,8 +79,16 @@ def main():
 
     releasefolder = "release"
     releasepath = projectpath + "\\" + releasefolder
-
+    tempfolder = "tmp"
+    temppath = projectpath + "\\" + tempfolder
     os.chdir(projectpath)
+
+    # Create temp folder
+    try:
+        os.stat(tempfolder)
+    except:
+        os.mkdir(tempfolder)
+
 
     # Create release folder
     try:
@@ -134,19 +118,19 @@ def main():
     print('\033[0m \033[96m'.join(fileList) + '\033[96m')
 
     # copying files to release folder
-    print('\n\033[0m\033[1m'+'Starting file copying\033[0m')
+    print('\n\033[0m\033[1m'+'Starting file copying...\033[0m')
     for file in fileList:
         print('Copying \033[96m' + file + '\033[0m file to release folder.')
         try:
-            shutil.copy2(file, releasepath)
+            shutil.copy2(file, temppath)
         except:
             print('\033[96m' + file + '\033[0m already existed skipping...')
 
-    # copying directories to release folder and create its folder in case of.
+    # copying directories to temp folder and create its folder in case of.
     for dir in dirList:
         print('Copying \033[42m' + dir + '\033[0m folder to release folder.')
         os.chdir(projectpath)
-        dirPath = releasepath + '\\' + dir
+        dirPath = temppath + '\\' + dir
         try:
             os.stat(dir)
         except:
@@ -156,45 +140,24 @@ def main():
         except:
             print('\033[42m' + dir + '\033[0m already existed skipping...')
 
-    print('\033[1mCopying compleet\033[0m'.format(file))
+    print('\033[0mCopying compleet.\033[0m')
 
+    # Ziping release
+    print('\033[0mMaking archive...\033[0m')
 
-    # Preppearing file update
-    if update == True:
-        print('\033[1mPerppering update\033[0m'.format(file))
-        # Getting local version number
-        os.chdir(releasefolder)
-        versionFilePath = ("cScripts\\CavFnc\\functions\\script_component.hpp")
-        currentVersion = getVersion(versionFilePath)
+    # Feaching version
+    versionFilePath = ("cScripts\\CavFnc\\functions\\script_component.hpp")
+    versionZipName = getVersion(versionFilePath)
 
-        print('Current version is: ',end='')
-        printCurrentVersion = "{}.{}.{}".format(str(currentVersion[0]),str(currentVersion[1]),str(currentVersion[2]))
-        print(printCurrentVersion)
+    # Ziping content
+    shutil.make_archive('release\\cScripts_{}.{}.{}'.format(str(versionZipName[0]),str(versionZipName[1]),str(versionZipName[2])), 'zip', "tmp")
+    print('\033[0mcScripts_{}.{}.{}.zip is created.\033[0m'.format(str(versionZipName[0]),str(versionZipName[1]),str(versionZipName[2])))
 
-        # Prepping the update
-        if update_rc == True:
-            rcbuild = "release candidate build"
-            releaseCandidate = argument_2
-        else:
-            rcbuild = "build"
-            releaseCandidate = ""
+    # removing temp folder
+    shutil.rmtree(tempfolder)
 
-        if (argument_1) == argument_1_List[0]:
-            print("Prepering development build")
-            if update_rc == True:
-                print("DevBuilds don't have Release candidates. Ignoring the parameter...")
-            newVersionType = argument_1_List[0]
-        elif argument_1 == argument_1_List[1]:
-            print("Prepering major {}.".format(rcbuild))
-            newVersionType = argument_1_List[1]
-        elif argument_1 == argument_1_List[2]:
-            print("Prepering minor {}.".format(rcbuild))
-            newVersionType = argument_1_List[2]
-        elif argument_1 == argument_1_List[3]:
-            print("Prepering patch {}.".format(rcbuild))
-            newVersionType = argument_1_List[3]
-        setVersion(currentVersion,newVersionType,releaseCandidate)
-        #os.rename()
+    print('\033[1mcScripts version {}.{}.{} is packed and ready for release.\033[0m'.format(str(versionZipName[0]),str(versionZipName[1]),str(versionZipName[2])))
+
     print()
 
 if __name__ == "__main__":
