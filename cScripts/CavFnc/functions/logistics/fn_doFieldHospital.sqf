@@ -16,34 +16,21 @@
 #include "..\script_component.hpp";
 
 params [
-    ["_object", objNull, [objNull]],
+    ["_crate", objNull, [objNull]],
     ["_isFacility", true],
     ["_quaScale", 1]
 ];
 
 // Make addAction Topic
-_object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Field Hospital", {}];
+_crate addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Field Hospital", {}];
 
 if (_isFacility) then {
-    _object setVariable ["ace_medical_isMedicalFacility", _isFacility, true];
+    _crate setVariable ["ace_medical_isMedicalFacility", true, true];
 };
 
+// If isServer add medical equipment
 if (isServer) then {
-    _crate addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 25)];
-
-    _crate addItemCargoGlobal ["ACE_FieldDressing",(_quaScale * 100)];
-    _crate addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 100)];
-    _crate addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 100)];
-    _crate addItemCargoGlobal ["ACE_quikclot",(_quaScale * 100)];
-
-    _crate addItemCargoGlobal ["ACE_personalAidKit",(_quaScale * 50)];
-
-    _crate addItemCargoGlobal ["ACE_salineIV",(_quaScale * 25)];
-    _crate addItemCargoGlobal ["ACE_salineIV_500",(_quaScale * 25)];
-
-    _crate addItemCargoGlobal ["ACE_morphine",(_quaScale * 25)];
-    _crate addItemCargoGlobal ["ACE_epinephrine",(_quaScale * 25)];
-    _crate addItemCargoGlobal ["ACE_adenosine",(_quaScale * 25)];
+    [_crate,_quaScale] call FUNC(doMedicalCrate);
 };
 
 // Change ace logistics size of crate
