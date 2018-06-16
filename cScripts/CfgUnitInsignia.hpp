@@ -23,7 +23,7 @@ class CfgUnitInsignia {
     MACRO_UNITINSIGNIA(11C_17_Insignia,1-1-C-17.paa);
     MACRO_UNITINSIGNIA(21C_17_Insignia,2-1-C-17.paa);
     MACRO_UNITINSIGNIA(31C_17_Insignia,3-1-C-17.paa);
-    //MACRO_UNITINSIGNIA(41C_17_Insignia,4-1-C-17.paa);
+    MACRO_UNITINSIGNIA(41C_17_Insignia,4-1-C-17.paa);
 
     // Charlie second platoon
     MACRO_UNITINSIGNIA(2C_17_Insignia,2-C-17.paa);

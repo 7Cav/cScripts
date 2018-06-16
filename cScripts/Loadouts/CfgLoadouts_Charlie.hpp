@@ -2,13 +2,13 @@
 
 class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
 
         "rhs_mag_m67",4,
@@ -21,9 +21,8 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -46,12 +45,12 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
     gps[] = {"ItemcTab"};
 
-    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     nvgs[] = {""};
     binoculars[] = {"Laserdesignator"};
@@ -59,7 +58,7 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",4,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",4,
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",2,
@@ -80,9 +79,8 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -108,17 +106,18 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 
     gps[] = {"ItemcTab"};
 
+    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
 
         "rhs_mag_m67",4,
@@ -131,9 +130,8 @@ class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -163,7 +161,7 @@ class CAV_Charlie_TL : CAV_Charlie_Base {  // Fire Team Leader
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
 
         "rhs_mag_m67",4,
@@ -181,7 +179,7 @@ class CAV_Charlie_TL : CAV_Charlie_Base {  // Fire Team Leader
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
+        "ACRE_PRC152",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -201,6 +199,7 @@ class CAV_Charlie_TL : CAV_Charlie_Base {  // Fire Team Leader
         "ACE_SpraypaintRed",
         "ACE_EntrenchingTool"
     };
+    gps[] = {"ItemAndroid"};
 };
 
 class CAV_Charlie_AR : CAV_Charlie_Base {  // Automatic Rifleman 31.9kg
@@ -223,7 +222,7 @@ class CAV_Charlie_GR : CAV_Charlie_Base {  // Grenadier 28.4kg
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",10,
 
         "rhs_mag_M441_HE",12,
         "rhs_mag_M397_HET",2,
@@ -237,7 +236,6 @@ class CAV_Charlie_GR : CAV_Charlie_Base {  // Grenadier 28.4kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -263,7 +261,7 @@ class CAV_Charlie_RM : CAV_Charlie_Base {  // Rifleman
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",12,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",12,
 
         "rhs_mag_m67",6,
 
@@ -276,7 +274,7 @@ class CAV_Charlie_CLS : CAV_Charlie_Base {  // Combat Life Saver 24.3kg
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",8,
 
         "rhs_mag_m67",4,
 
@@ -287,9 +285,6 @@ class CAV_Charlie_CLS : CAV_Charlie_Base {  // Combat Life Saver 24.3kg
     };
 
     items[] = {
-        // Radios
-        "ACRE_PRC343",
-
         // Medical Equipment
         "ACE_personalAidKit",
         "ACE_quikclot",20,
@@ -315,13 +310,13 @@ class CAV_Charlie_CLS : CAV_Charlie_Base {  // Combat Life Saver 24.3kg
 };
 
 class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
 
         "rhs_mag_m67",4,
@@ -338,9 +333,8 @@ class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -367,7 +361,7 @@ class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
 
     gps[] = {"ItemAndroid"};
 
-    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg with Mortar Bipod, 39.2kg with M2 Minitripod, 36.4 with Mk19/TOW tripod
 
@@ -377,7 +371,7 @@ class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
 
         "rhs_mag_m67",2,
 
@@ -389,7 +383,7 @@ class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
+        "ACRE_PRC152",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -413,7 +407,7 @@ class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg
 
     gps[] = {"ItemAndroid"};
 
-    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_AR : CAV_Charlie_Base {  // Automatic Rifleman  30.1kg, 36.0 with Mortar Bipod, 36.9kg with M2 Minitripod, 34.1 with Mk19/TOW tripod
 
@@ -429,7 +423,6 @@ class CAV_Charlie_Weapons_AR : CAV_Charlie_Base {  // Automatic Rifleman  30.1kg
     };
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -449,7 +442,7 @@ class CAV_Charlie_Weapons_AR : CAV_Charlie_Base {  // Automatic Rifleman  30.1kg
         "ACE_EntrenchingTool"
     };
     gps[] = {"ItemAndroid"};
-    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_GR : CAV_Charlie_Base {  // Grenadier 24.9kg, 39.9kg with Mortar Tube, 40.0kg with M2 Gun Bag, 36.3kg with Mk19/TOW Gun Bag
     backpack[] = {"B_Kitbag_cbr"};
@@ -457,7 +450,7 @@ class CAV_Charlie_Weapons_GR : CAV_Charlie_Base {  // Grenadier 24.9kg, 39.9kg w
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
 
         "rhs_mag_M441_HE",8,
         "rhs_mag_m714_White",2,
@@ -467,7 +460,6 @@ class CAV_Charlie_Weapons_GR : CAV_Charlie_Base {  // Grenadier 24.9kg, 39.9kg w
     };
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -487,7 +479,7 @@ class CAV_Charlie_Weapons_GR : CAV_Charlie_Base {  // Grenadier 24.9kg, 39.9kg w
         "ACE_EntrenchingTool"
     };
     gps[] = {"ItemAndroid"};
-    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_RM : CAV_Charlie_Base {  // Rifleman 22.8kg, 37.8kg with Mortar Tube, 37.9kg with M2 Gun Bag, 34.3kg with Mk19/TOW Gun Bag
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
@@ -495,7 +487,7 @@ class CAV_Charlie_Weapons_RM : CAV_Charlie_Base {  // Rifleman 22.8kg, 37.8kg wi
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",8,
 
         "rhs_mag_m67",4,
         "SmokeShell",4
@@ -503,7 +495,6 @@ class CAV_Charlie_Weapons_RM : CAV_Charlie_Base {  // Rifleman 22.8kg, 37.8kg wi
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -523,7 +514,7 @@ class CAV_Charlie_Weapons_RM : CAV_Charlie_Base {  // Rifleman 22.8kg, 37.8kg wi
         "ACE_EntrenchingTool"
     };
     gps[] = {"ItemAndroid"};
-    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_Weapons_CLS : CAV_Charlie_Base {  // Combat Life Saver 23.0kg, 37.9kg with Mortar Tube, 38.0kg with M2 Gun Bag, 34.4kg with Mk19/TOW Gun Bag
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
@@ -532,7 +523,7 @@ class CAV_Charlie_Weapons_CLS : CAV_Charlie_Base {  // Combat Life Saver 23.0kg,
 
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
 
         "rhs_mag_m67",2,
 
@@ -543,7 +534,6 @@ class CAV_Charlie_Weapons_CLS : CAV_Charlie_Base {  // Combat Life Saver 23.0kg,
     };
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Medical Equipment
@@ -571,5 +561,5 @@ class CAV_Charlie_Weapons_CLS : CAV_Charlie_Base {  // Combat Life Saver 23.0kg,
 
     insignia[] = {"CLS_Insignia"};
     gps[] = {"ItemAndroid"};
-    preLoadout = "[(_this select 0), 'charlie', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };

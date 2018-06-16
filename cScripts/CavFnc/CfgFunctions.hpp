@@ -3,7 +3,6 @@ class cScripts {
         file = "cScripts\cavFnc\functions\init";
         class initSupply {};
         class initVehicle {};
-        class initHelo {};
 
         class initDocuments {};
 
@@ -14,6 +13,7 @@ class cScripts {
         class initModules {};
 
         class initCuratorHeloGetOutRL {};
+        class initCuratorC130 {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\documents";
@@ -53,12 +53,14 @@ class cScripts {
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
 
-        class setCavVehicle {};
         class setVehicleInventory {};
         class setVehicleSettings {};
 
         class addQuickSelection {};
         class addInsigniaSelection {};
+
+        class addJump {};
+        class doJump {};
 
         // Buttons and options
         class addReGear {};
@@ -69,9 +71,6 @@ class cScripts {
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
-
-        class addJump {};
-        class doJump {};
 
         class hasPlatoonVariable {};
         class canSelectLoadout {};
@@ -85,13 +84,16 @@ class cScripts {
 
     class misc {
         file = "cScripts\cavFnc\functions\texture";
-        class attachVehicleLabel {};
-        class UH60TailNumber {}; //will be merged with "attachVehicleLabel"
         class flag {};
+
+        class setVehicleLable {};
+        class createVehicleLable {};
+        class getVehicleLable {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         class moduleCreateStarterCrate {};
+        class moduelCreateMedicalCrate {};
         class moduelCreateSupplyCrate {};
         class moduelCreateSpecialWeaponsCrate {};
 
@@ -99,11 +101,20 @@ class cScripts {
         class moduleReadyHelicopter {};
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
+        class moduleMakeEngineer {};
     };
     class debug {
         file = "cScripts\cavFnc\functions\debug";
         class logError {};
         class logInfo {}; //will be merged with "attachVehicleLabel"
         class logWarning {};
+    };
+
+
+
+    class deprecated {
+        file = "cScripts\cavFnc\functions\deprecated";
+        class attachVehicleLabel {};    // replaced with setVehicleLable
+        class UH60TailNumber {};        // replaced with setVehicleLable
     };
 };

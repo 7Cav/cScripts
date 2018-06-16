@@ -4,10 +4,10 @@
 
 class CAV_Medical_OFFCR : CAV_Medical_Base {  // Medical Team Leader or SL and up leadership positions
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",8,
         "rhsusf_mag_15Rnd_9x19_JHP",2,
 
         "rhs_mag_m67",
@@ -20,9 +20,8 @@ class CAV_Medical_OFFCR : CAV_Medical_Base {  // Medical Team Leader or SL and u
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Medical Equipment
         "ACE_personalAidKit",6,
@@ -53,10 +52,10 @@ class CAV_Medical_OFFCR : CAV_Medical_Base {  // Medical Team Leader or SL and u
 
 class CAV_Medical_BONESAW : CAV_Medical_Base {  // Medical Team Member
 
-    backpack[] = {"B_Kitbag_cbr"};
+    backpack[] = {"B_Carryall_mcamo"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",8,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",8,
         "rhsusf_mag_15Rnd_9x19_JHP",2,
 
         "rhs_mag_m67",
@@ -69,9 +68,8 @@ class CAV_Medical_BONESAW : CAV_Medical_Base {  // Medical Team Member
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Medical Equipment
         "ACE_personalAidKit",6,
@@ -101,11 +99,11 @@ class CAV_Medical_BONESAW : CAV_Medical_Base {  // Medical Team Member
 };
 
 class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",5,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
         "rhsusf_mag_15Rnd_9x19_JHP",2,
 
         "rhs_mag_m67",2,
@@ -117,9 +115,7 @@ class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
     };
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
 
         // Medical Equipment
         "ACE_personalAidKit",2,

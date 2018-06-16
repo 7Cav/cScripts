@@ -8,11 +8,11 @@ class CAV_SOI_INSTR : CAV_Charlie_Base {  // Instructor
     headgear[] = {"DAR_Beret_Mar"};
     goggles[] = {""};
     vest[] = {"V_TacVest_khk"};
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
 
         "rhs_mag_m67",2,
 
@@ -25,9 +25,8 @@ class CAV_SOI_INSTR : CAV_Charlie_Base {  // Instructor
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Standard
         "ACE_EarPlugs",
@@ -58,11 +57,11 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
     headgear[] = {"DAR_JMCap_Blk"};
     goggles[] = {""};
     vest[] = {"V_TacVest_khk"};
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
 
         "rhs_mag_m67",2,
 
@@ -75,9 +74,7 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
 
         // Standard
         "ACE_EarPlugs",
@@ -106,12 +103,12 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
 };
 
 class CAV_SOI_STUD : CAV_Bravo_Base {  // Rifleman
-
-    backpack[] = {"B_AssaultPack_mcamo"};
+    
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
+    backpack[] = {"B_Carryall_mcamo"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",10,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",10,
 
         "rhs_mag_m67",6,
 
@@ -131,7 +128,7 @@ class CAV_TAS_INSTR : CAV_Bravo_Base {  // Instructor
     headgear[] = {"H_Cap_usblack"};
     goggles[] = {"rhsusf_shemagh_od"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15side","rhsusf_acc_compm4"};
@@ -139,7 +136,7 @@ class CAV_TAS_INSTR : CAV_Bravo_Base {  // Instructor
     secondary[] = {"rhsusf_weap_m9"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
         "rhsusf_mag_15Rnd_9x19_JHP",4,
 
         "rhs_mag_m714_White",
@@ -157,9 +154,8 @@ class CAV_TAS_INSTR : CAV_Bravo_Base {  // Instructor
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
-        "ACRE_PRC117F",
+        "ACRE_PRC152",
 
         // Personal Medical Equipment
         "ACE_quikclot",6,
@@ -190,7 +186,7 @@ class CAV_TAS_STUD : CAV_Bravo_Base {  // Crewman
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15side","rhsusf_acc_compm4"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
 
         "rhs_mag_m67",2,
 
@@ -201,7 +197,6 @@ class CAV_TAS_STUD : CAV_Bravo_Base {  // Crewman
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -230,7 +225,7 @@ class CAV_TAS_STUD : CAV_Bravo_Base {  // Crewman
 class CAV_ACE_ROTARY_INSTR : CAV_Alpha_Base {  // Rotary Instructor Pilots
 
     goggles[] = {"rhsusf_shemagh_od"};
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor"};
 
     gps[] = {"ItemcTab"};
@@ -242,7 +237,7 @@ class CAV_ACE_ROTARY_INSTR : CAV_Alpha_Base {  // Rotary Instructor Pilots
 
 class CAV_ACE_ROTARY_STUD : CAV_Alpha_Base {  // Rotary Instructor Pilots
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_green"};
 
     gps[] = {"ItemcTab"};
@@ -281,9 +276,8 @@ class CAV_ACE_FIXED_INSTR : CAV_Alpha_Base {
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
- 
+
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,
@@ -331,7 +325,6 @@ class CAV_ACE_FIXED_STUD : CAV_Alpha_Base {
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment

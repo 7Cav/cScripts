@@ -4,7 +4,7 @@
 
 class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasus
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor"};
 
     gps[] = {"ItemcTab"};
@@ -13,12 +13,11 @@ class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasu
 
 class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Personal Medical Equipment
@@ -45,13 +44,13 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
 class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
 
-    backpack[] = {"B_Kitbag_mcamo"};
+    backpack[] = {"B_Carryall_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_mask_black_skull"};
 
     items[] = {
         // Radios
-        "ACRE_PRC343",
         "ACRE_PRC152",
+        "ACRE_PRC152",		
 
         // Personal Medical Equipment
         "ACE_quikclot",26,
@@ -79,7 +78,7 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
 class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
 
     nvgs[] = {""};
-    backpack[] = {"tf_rt1523g_rhs"};
+    backpack[] = {"B_AssaultPack_mcamo"};
     headgear[] = {"H_PilotHelmetFighter_B"};  // This has been tested by CPT.Blackburn.J
     uniform[] = {"U_B_PilotCoveralls"};
     vest[] = {""};
@@ -106,7 +105,8 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
     items[] = {
         // Radios
         "ACRE_PRC152",
-
+        "ACRE_PRC152",
+		
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,
