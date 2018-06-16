@@ -19,6 +19,14 @@ INFO("Achilles mod found adding modules.");
     [(_this select 0)] call FUNC(moduleCreateStarterCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
+// If ability boost on locatin allow usage of this moduel
+if (ace_medical_increaseTrainingInLocations) then {
+    ["7Cav Logistics", "Field Hospital",{
+        [(_this select 0)] call FUNC(moduelCreateFieldHospital);
+    }] call Ares_fnc_RegisterCustomModule;
+};
+
+
 ["7Cav Logistics", "Re-supply Crate",{
     [(_this select 0)] call FUNC(moduelCreateSupplyCrate);
 }] call Ares_fnc_RegisterCustomModule;
