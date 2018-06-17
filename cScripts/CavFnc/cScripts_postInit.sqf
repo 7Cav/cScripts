@@ -1,10 +1,11 @@
 /*
  * Author: CPL.Brostrom.A
- * This is the rule set for the mission using the cba XEH. Each setting here is turned on and off
- * in the cfgSettings in the root folder.
+ * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 if (is3DEN) exitWith {};
+
 #include "..\script_component.hpp";
+
 FORCEINFO("Loading postInit");
 
 // Add diary records on mission start
@@ -14,21 +15,17 @@ if (cScripts_Settings_showDiaryRecords) then {
 
 if (cScripts_Settings_allowCustomInit) then {
     // Change inventory content of supply crates on mission start.
-    if (cScripts_Settings_useCustomVehicleInventory) then {
+    if (cScripts_Settings_useCustomVehicleSettings) then {
         call cScripts_fnc_initVehicle;
 
-        // make sure curator object gets its functions reapplied.
+        // Make sure curator object gets its functions reapplied.
         call cScripts_fnc_initCuratorC130;
         call cScripts_fnc_initCuratorHeloGetOutRL;
     };
+
     // Change inventory content of nato supply crates on mission start.
     if (cScripts_Settings_useCustomSupplyInventory) then {
         call cScripts_fnc_initSupply;
-    };
-    // Add a Get Out Right and Left on all helicopters on Mission Start and on zeus spawned items.
-    if (cScripts_Settings_useHeloGetOutRL) then {
-        call cScripts_fnc_initHelo;
-        call cScripts_fnc_initCuratorHeloGetOutRL;
     };
 };
 
