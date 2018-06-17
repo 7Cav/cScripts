@@ -1,6 +1,10 @@
-
+/*
+ * Author: CPL.Brostrom.A
+ * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
+ */
 #include "..\script_component.hpp";
-diag_log formatText ["[cScripts] INFO: Loading CBA Settings"];
+
+diag_log formatText ["[cScripts] (EDEN) INFO: Loading CBA Settings"];
 
 private _cScriptSettings = "cScripts Mission Settings";
 
@@ -8,7 +12,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     "cScripts_Settings_setDebugMode",
     "CHECKBOX",
-    "Debug Mode",
+    ["Debug Mode","Debug allow you to see more rpt log messages and get more indepth data on the mission.\nNOTE! This function work only when you preview mission in multiplayer.\n"],
     _cScriptSettings,
     false,
     true,
@@ -19,8 +23,8 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     "cScripts_Settings_setMissionType",
     "LIST",
-    "Mission Type",
-    _cScriptSettings,
+    ["Mission Type", "This will deside on what kind of startup hint you get on mission start.\n"],
+    [_cScriptSettings, "1; Mission"],
     [[0,1,2], ["Custom", "Operation", "Training"], 1],
     true,
     {}
@@ -30,9 +34,9 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     "cScripts_Settings_setAiSystemDifficulty",
     "LIST",
-    "AI Setting",
-    _cScriptSettings,
-    [[0,1], ["Day", "Night / Forset"], 0],
+    ["AI Setting", "This adjustes the ai and make them less godlike and more roleplay to play against.\n"],
+    [_cScriptSettings, "1; Mission"],
+    [[0,1], ["Day", "Night / Jungle"], 0],
     true,
     {}
 ] call CBA_Settings_fnc_init;
@@ -41,8 +45,8 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     "cScripts_Settings_enableStartHint",
     "CHECKBOX",
-    "Startup Hint",
-    _cScriptSettings,
+    ["Startup Hint", "Enable or disable startup hints on mission start.\n"],
+    [_cScriptSettings, "2; Mission Startup"],
     true,
     true,
     {}
@@ -50,18 +54,18 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     "cScripts_Settings_setRedLightTime",
     "SLIDER",
-    "Red light delay",
-    _cScriptSettings,
-    [5, 180, 15, 0],
+    ["Red light delay","Define in seconds for how long red light is enected.\n"],
+    [_cScriptSettings, "2; Mission Startup"],
+    [5, 180, 30, 0],
     true,
     {}
 ] call CBA_Settings_fnc_init;
 [
     "cScripts_Settings_setTrainingHintTime",
     "SLIDER",
-    "Training hint delay",
-    _cScriptSettings,
-    [5, 180, 15, 0],
+    ["Training hint delay","Define in seconds for how long training hint time is shown.\n"],
+    [_cScriptSettings, "2; Mission Startup"],
+    [5, 180, 20, 0],
     true,
     {}
 ] call CBA_Settings_fnc_init;
@@ -69,7 +73,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "cScripts_Settings_setCustomHintTopic",
     "EDITBOX",
     "Custom hint topic",
-    _cScriptSettings,
+    [_cScriptSettings, "2; Mission Startup"],
     "My custom Mission!",
     true,
     {}
@@ -78,7 +82,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "cScripts_Settings_setCustomHintText",
     "EDITBOX",
     "Custom hint text",
-    _cScriptSettings,
+    [_cScriptSettings, "2; Mission Startup"],
     "I have design this mission! Yey for me!",
     true,
     {}
@@ -88,7 +92,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     "cScripts_Settings_showDiaryRecords",
     "CHECKBOX",
-    "Show checklists and radio reports",
+    ["Help documents","Allow the mission to write diary help documents.\n"],
     _cScriptSettings,
     true,
     true,
@@ -99,8 +103,8 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     "cScripts_Settings_allowCustomInit",
     "CHECKBOX",
-    "Allow mission to automaticly applying init",
-    _cScriptSettings,
+    ["Custom object init", "Allow the mission to be able to apply custom init to vehicles and objects pressent on mission start.\n"],
+    [_cScriptSettings, "3; Custom Initzialisation"],
     true,
     true,
     {}
@@ -108,33 +112,33 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 // Vehicle
 [
-    "cScripts_Settings_useCustomVehicleInventory",
+    "cScripts_Settings_useCustomVehicleSettings",
     "CHECKBOX",
-    "Add vehicle inventory and settings",
-    _cScriptSettings,
+    ["Vehicle Settings", "Allow mission to apply custom settings, including change inventory, to vehicles.\nC130 jump action and Helicopter Get out right and Left is Included here.\n"],
+    [_cScriptSettings, "3; Custom Initzialisation"],
     true,
     true,
     {}
 ] call CBA_Settings_fnc_init;
+[
+    "cScripts_Settings_useCustomVehicleInventory",
+    "CHECKBOX",
+    ["Vehicle Inventory", "Allow mission to change the vehicles inventory.\n"],
+    [_cScriptSettings, "3; Custom Initzialisation"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+
 
 // Supply
 [
     "cScripts_Settings_useCustomSupplyInventory",
     "CHECKBOX",
-    "Add NATO crate inventory",
-    _cScriptSettings,
+    ["Custom supplies Crates","Allow mission to adjust crate content.\n"],
+    [_cScriptSettings, "3; Custom Initzialisation"],
     false,
-    true,
-    {}
-] call CBA_Settings_fnc_init;
-
-// Get out right left
-[
-    "cScripts_Settings_useHeloGetOutRL",
-    "CHECKBOX",
-    "Add Get out right and left on helicopters",
-    _cScriptSettings,
-    true,
     true,
     {}
 ] call CBA_Settings_fnc_init;
@@ -144,15 +148,19 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
     [
         "cScripts_Settings_enable7cavZeusModules",
         "CHECKBOX",
-        "Use 7Cav Zeus Moduels",
-        _cScriptSettings,
+        ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
+        [_cScriptSettings, "4; Zeus"],
         true,
         true,
         {}
     ] call CBA_Settings_fnc_init;
 };
 
+diag_log formatText ["[cScripts] (EDEN) INFO: CBA Settings are loaded."];
+
+// Load preInit mission settings
 if (is3DEN) exitWith {};
+
 FORCEINFO("Loading preInit");
 
 switch (cScripts_Settings_setMissionType) do {
