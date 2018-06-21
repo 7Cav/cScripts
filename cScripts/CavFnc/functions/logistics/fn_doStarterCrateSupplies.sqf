@@ -80,6 +80,7 @@ if (_platoonSelector == "alpha") then {
     _crate addItemCargoGlobal ["ACE_Flashlight_MX991",50];
     _crate addItemCargoGlobal ["itemcTabHCam",50];
     _crate addItemCargoGlobal ["ACE_CableTie",50];
+    _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
 
     //================== MEDICAL ==================\\
 
@@ -170,6 +171,7 @@ if (_platoonSelector == "bravo") then {
     _crate addItemCargoGlobal ["ACE_wirecutter",10];
     _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
     _crate addItemCargoGlobal ["ACE_IR_Strobe_Item",20];
+    _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
 
     //================== MEDICAL ==================\\
 
@@ -253,6 +255,7 @@ if (_platoonSelector == "charlie") then {
     _crate addItemCargoGlobal ["ACE_wirecutter",10];
     _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
     _crate addItemCargoGlobal ["ACE_IR_Strobe_Item",20];
+    _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
 
     //================== MEDICAL ==================\\
 
@@ -316,6 +319,7 @@ if (_platoonSelector == "medical") then {
     _crate addItemCargoGlobal ["ACE_wirecutter",10];
     _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
     _crate addItemCargoGlobal ["ACE_IR_Strobe_Item",20];
+    _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
 
     //================== MEDICAL ==================\\
 
@@ -567,6 +571,7 @@ if (_platoonSelector == "ranger") then {
     _crate addItemCargoGlobal ["Laserdesignator_01_khk_F",20];
     _crate addItemCargoGlobal ["ACE_Altimeter",20];
     _crate addItemCargoGlobal ["B_UavTerminal",20];
+    _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
 
     //================== MEDICAL ==================\\
 
@@ -694,6 +699,7 @@ if (_platoonSelector == "sniper") then {
     _crate addItemCargoGlobal ["ACE_MX2A",20];
     _crate addItemCargoGlobal ["Laserdesignator_01_khk_F",20];
     _crate addItemCargoGlobal ["ACE_Altimeter",20];
+    _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
 
     //================== MEDICAL ==================\\
 
@@ -818,6 +824,7 @@ if (_platoonSelector == "full") then {
     _crate addItemCargoGlobal ["Flagstack_Red",10];
     _crate addItemCargoGlobal ["Signpack_Mines",10];
     _crate addItemCargoGlobal ["ACE_Fortify",10];
+    _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
 
     //================== MEDICAL ==================\\
 
