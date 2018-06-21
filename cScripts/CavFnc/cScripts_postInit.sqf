@@ -13,21 +13,15 @@ if (getNumber (missionConfigFile >> "CfgSettings" >> "showDiaryRecords") == 1) t
 };
 
 if (getNumber (missionConfigFile >> "CfgSettings" >> "useCustomInit") == 1) then {
-    // Add a Get Out Right and Left on all helicopters on Mission Start and on zeus spawned items.
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "useHeloGetOutRL") == 1) then {
-        call cScripts_fnc_initHelo;
+    // Change inventory content of supply crates on mission start.
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptVehicleInit") == 1) then {
+        call cScripts_fnc_initVehicle;
+
+        // make sure curator object gets its functions reapplied.
+        call cScripts_fnc_initCuratorC130;
         call cScripts_fnc_initCuratorHeloGetOutRL;
     };
-    // Add jump out action to all C-130
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "usePlaneJumpOut") == 1) then {
-        call cScripts_fnc_initC130;
-        call cScripts_fnc_initCuratorC130;
-    };
-    // Change inventory content of supply crates on mission start.
-    if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptVehicleInventory") == 1) then {
-        call cScripts_fnc_initVehicle;
-    };
-    // Change inventory content of vehicle on mission start.
+    // Change inventory content of nato supply crates on mission start.
     if (getNumber (missionConfigFile >> "CfgSettings" >> "useScriptSupplyInventory") == 1) then {
         call cScripts_fnc_initSupply;
     };

@@ -19,8 +19,20 @@ INFO("Achilles mod found adding modules.");
     [(_this select 0)] call FUNC(moduleCreateStarterCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
+// Check if increase training on location is true then add option.
+if (ace_medical_increaseTrainingInLocations) then {
+    ["7Cav Logistics", "Field Hospital",{
+        [(_this select 0)] call FUNC(moduelCreateFieldHospital);
+    }] call Ares_fnc_RegisterCustomModule;
+};
+
+
 ["7Cav Logistics", "Re-supply Crate",{
     [(_this select 0)] call FUNC(moduelCreateSupplyCrate);
+}] call Ares_fnc_RegisterCustomModule;
+
+["7Cav Logistics", "Medical Re-supply Crate",{
+    [(_this select 0)] call FUNC(moduelCreateMedicalCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Crew-Served Weapons Crate",{

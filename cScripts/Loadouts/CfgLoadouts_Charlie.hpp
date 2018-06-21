@@ -81,7 +81,7 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
         // Radios
         "ACRE_PRC152",
         "ACRE_PRC152",
-		
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",2,
@@ -199,6 +199,7 @@ class CAV_Charlie_TL : CAV_Charlie_Base {  // Fire Team Leader
         "ACE_SpraypaintRed",
         "ACE_EntrenchingTool"
     };
+    gps[] = {"ItemAndroid"};
 };
 
 class CAV_Charlie_AR : CAV_Charlie_Base {  // Automatic Rifleman 31.9kg
