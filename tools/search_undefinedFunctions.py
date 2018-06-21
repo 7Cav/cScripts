@@ -58,10 +58,10 @@ def getFunctions(filepath):
 
     fileFuncs = []
     for func in modfuncs:
-        fileFuncs.append("ace_{0}_fnc_{1}".format(selfmodule,func))
+        fileFuncs.append("cScripts_{0}_fnc_{1}".format(selfmodule,func))
 
     for exModule,func in exfuncs:
-        fileFuncs.append("ace_{0}_fnc_{1}".format(exModule, func))
+        fileFuncs.append("cScripts_{0}_fnc_{1}".format(exModule, func))
 
     return fileFuncs
 
@@ -83,10 +83,10 @@ def getStrings(filepath):
 
     fileStrings = []
     for localString in modStrings:
-        fileStrings.append("STR_ACE_{0}_{1}".format(selfmodule, localString))
+        fileStrings.append("STR_CSCRIPTS_{0}_{1}".format(selfmodule, localString))
 
     for (exModule, exString) in exStrings:
-        fileStrings.append("STR_ACE_{0}_{1}".format(exModule, exString))
+        fileStrings.append("STR_CSCRIPTS_{0}_{1}".format(exModule, exString))
 
     return fileStrings
 
