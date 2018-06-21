@@ -34,6 +34,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\logistics";
         class doStarterCrate {};
         class doStarterCrateSupplies {};
+        class doFieldHospital {};
 
         class doSupplyCrate {};
 
@@ -93,6 +94,7 @@ class cScripts {
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         class moduleCreateStarterCrate {};
+        class moduelCreateFieldHospital {};
         class moduelCreateMedicalCrate {};
         class moduelCreateSupplyCrate {};
         class moduelCreateSpecialWeaponsCrate {};
