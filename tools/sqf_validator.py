@@ -155,7 +155,7 @@ def main():
     # Allow running from root directory as well as from inside the tools directory
     rootDir = "../cScripts"
     if (os.path.exists("cScripts")):
-        rootDir = "addons"
+        rootDir = "cScripts"
 
     for root, dirnames, filenames in os.walk(rootDir + '/' + args.module):
       for filename in fnmatch.filter(filenames, '*.sqf'):
