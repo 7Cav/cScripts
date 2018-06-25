@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys, os
-import argparse, shutil
-__version__ = 1.0
+import argparse, shutil, tempfile
+__version__ = 1.1
 
 # GLOBALS
 exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
@@ -23,6 +23,7 @@ def createFolder(folder):
         except:
             os.mkdir(folder)
         return folderPath
+
 
 
 def listFileContent(exlude_content=[]):
@@ -51,6 +52,18 @@ def listFileContent(exlude_content=[]):
 
 
 
+def getVersion(versionFile):
+    verFile = open(versionFile)
+    for i, line in enumerate(verFile):
+        if i == 1:
+            line = line.partition('"')[-1].rpartition('"')[0]
+            line = line.split(".")
+            version = line
+            version = list(map(int, version))
+    return version
+
+
+
 def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
     # copying files to release folder
     print('Starting build copying...')
@@ -75,6 +88,7 @@ def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
     print('\033[0mFeatch compleet.\033[0m')
 
 
+
 def copyTempToRelease(releaseFolder):
     # Copying teh temp directory to release
     print('Moving build to release folder...')
@@ -91,23 +105,97 @@ def copyTempToRelease(releaseFolder):
     print('\033[0mMove compleet.\033[0m')
 
 
-def getVersion(versionFile):
-    verFile = open(versionFile)
-    for i, line in enumerate(verFile):
-        if i == 1:
-            line = line.partition('"')[-1].rpartition('"')[0]
-            line = line.split(".")
-            version = line
-            version = list(map(int, version))
-    return version
-
-
 
 def zipBuild(versionNumber=['','','']):
     print('Creating archive...')
     shutil.make_archive('release\\cScripts_{}.{}.{}'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2])), 'zip', "tmp")
     print('\033[0mcScripts_{}.{}.{}.zip is created.\033[0m'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2])))
 
+
+
+def publicBuildFindString(file,string):
+    try:
+        os.stat('{}'.format(file))
+    except:
+        sys.exit('{} could not be found...'.format(file))
+
+    fileObject = open('{}'.format(file), "r")
+    for l in fileObject:
+        if (string in l):
+            string = l
+    fileObject.close()
+    return string
+
+
+
+def publicBuildFindStringCount(file,string):
+    try:
+        os.stat('{}'.format(file))
+    except:
+        sys.exit('{} could not be found...'.format(file))
+
+    count = 1
+    fileObject = open('{}'.format(file), "r")
+    for l in fileObject:
+        if (string in l):
+            count += 1
+    return count
+
+
+
+def publicBuildReplace(file_path, pattern, subst):
+    #Create temp file
+    fh, abs_path = tempfile.mkstemp()
+    with os.fdopen(fh,'w') as new_file:
+        with open(file_path) as old_file:
+            for line in old_file:
+                new_file.write(line.replace(pattern, subst))
+    #Remove original file
+    os.remove(file_path)
+    #Move new file
+    shutil.move(abs_path, file_path)
+
+
+
+def createModdedBuild(folder):
+    print('Starting construction of a public cScripts version...')
+
+    print('Adjusting \033[96mdescription.ext\033[0m...')
+
+    print('Adjusting \033[96mCfgSettings.hpp\033[0m...')
+    # disable startup hint
+    x = publicBuildFindString('{}\\CfgSettings.hpp'.format(folder),'    useStartHint')
+    publicBuildReplace('{}\\CfgSettings.hpp'.format(folder), x, '    useStartHint                =   0;\n')
+    # find setting mission type to custom
+    x = publicBuildFindString('{}\\CfgSettings.hpp'.format(folder),'    isMissionType')
+    publicBuildReplace('{}\\CfgSettings.hpp'.format(folder), x, '    isMissionType               =   0;\n')
+    # find setting mission type to custom
+    x = publicBuildFindString('{}\\CfgSettings.hpp'.format(folder),'    setCustomHintTopic')
+    publicBuildReplace('{}\\CfgSettings.hpp'.format(folder), x, '    setCustomHintTopic          =   "Public";\n')
+    # find setting mission type to custom
+    x = publicBuildFindString('{}\\CfgSettings.hpp'.format(folder),'    setCustomHintText')
+    publicBuildReplace('{}\\CfgSettings.hpp'.format(folder), x, '    setCustomHintText           =   "This is Tactical Realism. Be tactical and realistic.";\n')
+
+    print('Starting to adjust Loadouts...')
+    loadoutFiles = ['CfgLoadouts_Common.hpp','CfgLoadouts_Alpha.hpp','CfgLoadouts_Bravo.hpp','CfgLoadouts_Charlie.hpp','CfgLoadouts_Medical.hpp','CfgLoadouts_Ranger.hpp','CfgLoadouts_Training.hpp','CfgLoadouts_S3.hpp']
+    for loadoutFile in loadoutFiles:
+        print('Searching for and replacing objects in \033[96m{}\033[0m...'.format(loadoutFile))
+        # finding object: ItemcTab
+        file = '{}\\cScripts\\Loadouts\\{}'.format(folder,loadoutFile)
+        c = publicBuildFindStringCount(file,'gps[] = {"ItemcTab"};')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'gps[] = {"ItemcTab"};')
+            publicBuildReplace(file, x, '    gps[] = {""};\n')
+
+        # finding object: ItemAndroid
+        c = publicBuildFindStringCount(file,'gps[] = {"ItemAndroid"};')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'gps[] = {"ItemAndroid"};')
+            publicBuildReplace(file, x, '    gps[] = {""};\n')
+
+    print('Loadouts adjustments compleet...')
+
+    print('Starting to adjust logistical crates...')
 
 
 def main():
@@ -120,6 +208,9 @@ def main():
     parser = argparse.ArgumentParser()
 
     group = parser.add_mutually_exclusive_group(required=False)
+
+    parser.add_argument("-p", "--public",           help="Create a \"public\" build to be used on non CavPack Enviroment",
+                        action="store_true")
     group.add_argument("-s", "--save",              help="Save the build",
                         action="store_true")
     group.add_argument("-sz", "--savedontzip",      help="Save the build and don\'t zip it",
@@ -150,16 +241,20 @@ def main():
 
     versionNumber = getVersion(version_File)
 
-    if args.save or args.savedontzip:
-        if args.savedontzip:
-            pass
-        else:
-            zipBuild(versionNumber)
+
+    if args.public:
+        createModdedBuild(tmpFolder)
+
+    if args.save:
         copyTempToRelease(releaseFolder)
-        shutil.rmtree(tmpFolder)
+
+    if args.savedontzip:
+        copyTempToRelease(releaseFolder)
     else:
         zipBuild(versionNumber)
-        shutil.rmtree(tmpFolder)
+
+    shutil.rmtree(tmpFolder)
+
 
 
 if __name__ == "__main__":
