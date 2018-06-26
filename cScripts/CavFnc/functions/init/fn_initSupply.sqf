@@ -11,7 +11,6 @@
  * Example:
  * call cScripts_fnc_initSupply
  *
- * Public: Yes
  */
 
 if (!isServer) exitWith {};

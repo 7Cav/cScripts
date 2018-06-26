@@ -28,7 +28,6 @@
  * [this,"RedCross"] call cScripts_fnc_setVehicleLable
  * [this,"RedCross",RedCross,"S","6"] call cScripts_fnc_setVehicleLable
  *
- * Public: Yes
  */
 
 #include "..\script_component.hpp";

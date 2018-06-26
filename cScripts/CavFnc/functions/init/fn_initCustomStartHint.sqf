@@ -14,7 +14,6 @@
  * ["My custom Mission!","I have design this mission!"] call cScripts_fnc_initCustomStartHint
  * ["My custom Mission!","I have design this mission!",15] call cScripts_fnc_initCustomStartHint
  *
- * Public: Yes
  */
 
 waitUntil {!isNull player && player == player};

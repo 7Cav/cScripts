@@ -12,7 +12,6 @@
  * call cScripts_fnc_initMissionStartHint
  * [60] call cScripts_fnc_initMissionStartHint
  *
- * Public: Yes
  */
 
 if (didJIP) exitWith {};

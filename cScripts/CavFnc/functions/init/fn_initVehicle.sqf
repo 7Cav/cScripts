@@ -8,7 +8,6 @@
  * Example:
  * call cScripts_fnc_initVehicle
  *
- * Public: Yes
  */
 
 if (!isServer) exitWith {};

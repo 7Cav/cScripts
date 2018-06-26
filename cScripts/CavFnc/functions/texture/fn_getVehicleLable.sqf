@@ -11,7 +11,6 @@
  * Example:
  * ["MyExsampleTexture"] call cScripts_fnc_getVehicleLable
  *
- * Public: No
  */
 
 params [["_texturePath", ""]];

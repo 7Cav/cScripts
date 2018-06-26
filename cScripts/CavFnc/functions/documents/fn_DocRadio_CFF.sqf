@@ -8,7 +8,6 @@
  * Example:
  *  call cScripts_fnc_Doc_CFF
  *
- * Public: No
  */
 
 player createDiaryRecord["Chklists",

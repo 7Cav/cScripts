@@ -8,7 +8,6 @@
  * Example:
  *  call cScripts_fnc_Doc_LZSPECS
  *
- * Public: No
  */
 
 player createDiaryRecord["Chklists",

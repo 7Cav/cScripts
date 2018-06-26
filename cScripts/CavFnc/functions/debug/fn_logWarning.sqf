@@ -9,7 +9,6 @@
  * Example:
  * ["Something is wrong here."] call cScripts_fnc_logWarning
  *
- * Public: Yes
  */
 
 #include "..\script_component.hpp"

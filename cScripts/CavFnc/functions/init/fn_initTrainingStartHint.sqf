@@ -12,7 +12,6 @@
  * call cScripts_fnc_initTrainingStartHint
  * [60] call cScripts_fnc_initTrainingStartHint
  *
- * Public: Yes
  */
 
 if (didJIP) exitWith {};

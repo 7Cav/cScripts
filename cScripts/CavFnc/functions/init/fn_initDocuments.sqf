@@ -11,7 +11,6 @@
  * Example:
  * call cScripts_fnc_initDocuments
  *
- * Public: Yes
  */
 
 waitUntil {!isNull player && player == player};

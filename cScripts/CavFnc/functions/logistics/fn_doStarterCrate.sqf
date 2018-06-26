@@ -20,7 +20,6 @@
  * [this,"none",true] call cScripts_fnc_doStarterCrate;
  * [this,"none",true,true,true,true,false] call cScripts_fnc_doStarterCrate;
  *
- * Public: Yes
  */
 
 #include "..\script_component.hpp";

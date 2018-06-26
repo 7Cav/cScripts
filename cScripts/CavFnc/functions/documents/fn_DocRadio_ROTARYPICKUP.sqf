@@ -8,7 +8,6 @@
  * Example:
  *  call cScripts_fnc_Doc_ROTARYOICUP
  *
- * Public: No
  */
 
 player createDiaryRecord["radioReports",

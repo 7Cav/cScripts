@@ -11,7 +11,6 @@
  * Example:
  * call cScripts_fnc_initCuratorHeloGetOutRL
  *
- * Public: Yes
  */
 
 #include "..\script_component.hpp";

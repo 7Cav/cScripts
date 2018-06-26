@@ -8,7 +8,6 @@
  * Example:
  *  call cScripts_fnc_Doc_Info
  *
- * Public: No
  */
 
 player createDiaryRecord["7Cav",

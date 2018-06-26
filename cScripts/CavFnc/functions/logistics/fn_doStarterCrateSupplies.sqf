@@ -13,7 +13,6 @@
  * [this] call cScripts_fnc_doStarterCrateSupplies;
  * [this,"none"] call cScripts_fnc_doStarterCrateSupplies;
  *
- * Public: Yes
  */
 
 #include "..\script_component.hpp";

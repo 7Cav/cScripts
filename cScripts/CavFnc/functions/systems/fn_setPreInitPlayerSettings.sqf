@@ -17,7 +17,6 @@
  * [this, "charlie",0] call cScripts_fnc_setPreInitPlayerSettings;
  * [this, "charlie",0,false,false] call cScripts_fnc_setPreInitPlayerSettings;
  *
- * Public: [Yes/No]
  */
 #include "..\script_component.hpp";
 

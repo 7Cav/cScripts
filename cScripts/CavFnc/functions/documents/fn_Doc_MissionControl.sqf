@@ -8,7 +8,6 @@
  * Example:
  *  call cScripts_fnc_Doc_MissionControl
  *
- * Public: No
  */
 
 player createDiaryRecord["7Cav",

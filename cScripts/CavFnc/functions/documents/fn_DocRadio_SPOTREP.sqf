@@ -8,9 +8,8 @@
  * Example:
  *  call cScripts_fnc_Doc_SPOTREP
  *
- * Public: No
  */
- 
+
 player createDiaryRecord["radioReports",
     ["SPOTREP",
         "

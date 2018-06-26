@@ -8,7 +8,6 @@
  * Example:
  *  call cScripts_fnc_Doc_LANEACE
  *
- * Public: No
  */
 player createDiaryRecord["radioReports",
     ["LACE/ACE REPORT",

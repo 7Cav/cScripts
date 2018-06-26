@@ -11,7 +11,6 @@
  * Example:
  * ["example"] call cScripts_fnc_initHelo
  *
- * Public: Yes
  */
 
 if (!isServer) exitWith {};
