@@ -1,6 +1,7 @@
 /*           INFO            */
 
 /*=================== O N L Y   E D I T   B E T W E E N   T H E S E   L I N E S====================*/
+
     dev                 = "1SG Tully.B";
     author              = "1SG Tully.B";
 
@@ -39,7 +40,6 @@
         maxPlayers = 100;
      };
 
-    #include "CfgSettings.hpp"
     class Extended_PreInit_EventHandlers {
         cScripts_preInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_preInit.sqf'";
     };
