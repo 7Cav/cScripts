@@ -11,7 +11,6 @@
  * Example:
  * [player] call cScripts_fnc_hasPlatoonVariable
  *
- * Public: No
  */
 
 #include "..\script_component.hpp";

@@ -1,18 +1,21 @@
 /*
  * Author: CPL.Brostrom.A
- * This function give all users a hint at mission start as well as JIP.
+ * This function show all players, as well as JIP players, a custom mission hint when conected.
  *
  * Arguments:
- * 0: Topic <STRING>
+ * 0: Header <STRING>
  * 1: Text <STRING>
- * 2: Time <NUMBER> (Optional)  (Default: 15)
+ * 2: Seconds to show <NUMBER> (Optional) (Default; 15)
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
- *  call cScripts_fnc_initCustomStartHint;
- *  ["My mission", "Description text.", 10] call cScripts_initCustomStartHint;
+ * ["My custom Mission!","I have design this mission!"] call cScripts_fnc_initCustomStartHint
+ * ["My custom Mission!","I have design this mission!",15] call cScripts_fnc_initCustomStartHint
+ *
  */
 
-//if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
 
 #include "..\script_component.hpp";
@@ -35,10 +38,10 @@ private _textEasterEgg = "<br /><br />Blame Brostrom if stuff doesn't work on th
 // Run hints
 hint parseText (_title + _text0 + _image);
 sleep 1;
-hint parseText (_title + _text0 + _image + _text1 + _textHaveFun);
+hintSilent parseText (_title + _text0 + _image + _text1 + _textHaveFun);
 sleep (_time);
-hint parseText (_title + _text0 + _image + _text1 + _textHaveFun + _textEasterEgg);
+hintSilent parseText (_title + _text0 + _image + _text1 + _textHaveFun + _textEasterEgg);
 sleep 1.5;
-hint "";
+hintSilent "";
 sleep 60;
-hint ""; // Fail safe in case people get the hint stuck
+hintSilent ""; // Fail safe in case people get the hint stuck
