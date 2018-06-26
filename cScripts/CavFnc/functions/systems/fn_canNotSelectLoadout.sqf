@@ -12,7 +12,6 @@
  * Example:
  * [player, "myvarname"] call cScripts_fnc_canSelectLoadout
  *
- * Public: No
  */
 
 #include "..\script_component.hpp";

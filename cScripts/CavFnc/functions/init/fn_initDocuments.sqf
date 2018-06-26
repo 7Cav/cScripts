@@ -1,16 +1,21 @@
 /*
  * Author: CPL.Brostrom.A
- * This function creates diary records to all players.
+ * This function add diary records for all players.
  *
  * Arguments:
+ * None
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
- * call cScripts_fnc_initDocuments;
+ * call cScripts_fnc_initDocuments
+ *
  */
 
-#include "..\script_component.hpp";
-
 waitUntil {!isNull player && player == player};
+
+#include "..\script_component.hpp";
 
 INFO("Adding diary records");
 

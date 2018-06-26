@@ -11,7 +11,6 @@
  * Example:
  * ["example"] call cScripts_fnc_[functionName]
  *
- * Public: [Yes/No]
  */
 
 params [

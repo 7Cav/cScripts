@@ -1,7 +1,7 @@
 /*
  * Author: CPL.Brostrom.A
  * This scripts crate the 7th cavalry starter crate.
- * It adds equipment and some optional selections to a given object.
+ * It adds equipment and some selections to a given object.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -10,12 +10,16 @@
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
  * 5: Platoon variable <BOOL>       (Default: true)
- * 6: Arsenal                       (Default: false)
+ * 6: Arsenal <BOOL>                (Default: false)
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
  * [this] call cScripts_fnc_doStarterCrate;
  * [this,"none",true] call cScripts_fnc_doStarterCrate;
- * [this,"none",true,true,true,false] call cScripts_fnc_doStarterCrate;
+ * [this,"none",true,true,true,true,false] call cScripts_fnc_doStarterCrate;
+ *
  */
 
 #include "..\script_component.hpp";

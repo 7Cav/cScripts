@@ -1,12 +1,17 @@
 /*
  * Author: CPL.Brostrom.A
- * This function give all users a hint at mission start.
+ * This function give all players a hint on mission start only.
  *
  * Arguments:
+ * 0: Time <NUMBER> (Default; 60)
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
- *  call cScripts_fnc_initTrainingStartHint;
- *  [15] call cScripts_fnc_initTrainingStartHint;
+ * call cScripts_fnc_initTrainingStartHint
+ * [60] call cScripts_fnc_initTrainingStartHint
+ *
  */
 
 if (didJIP) exitWith {};
@@ -29,10 +34,10 @@ private _textEasterEgg = "<br /><br />Blame Argus if stuff doesn't work.<br />";
 // Run hints
 hint parseText (_title + _text0 + _image);
 sleep 1;
-hint parseText (_title + _text0 + _image + _text1 + _text2 + _textHaveFun);
+hintSilent parseText (_title + _text0 + _image + _text1 + _text2 + _textHaveFun);
 sleep (_time);
-hint parseText (_title + _text0 + _image + _text1 + _text2 + _textHaveFun + _textEasterEgg);
+hintSilent parseText (_title + _text0 + _image + _text1 + _text2 + _textHaveFun + _textEasterEgg);
 sleep 1.5;
-hint "";
+hintSilent "";
 sleep 60;
-hint ""; // Fail safe in case people get the hint stuck
+hintSilent ""; // Fail safe in case people get the hint stuck

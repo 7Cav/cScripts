@@ -1,14 +1,18 @@
 /*
  * Author: CPL.Brostrom.A
- * This function changes the inventory of a given object and gives it a new.
+ * This function adds equipment to a given item baserd on platoon type.
  *
  * Arguments:
  * 0: Crate <OBJECT>
- * 1: Set platoon type.
+ * 1: Set platoon type. <STRING> ["none","alpha","bravo","charlie","ranger","medical","full"]
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
- * [this,0.5] call cScripts_fnc_doStarterCrateSupplies;
- * [this,1] call cScripts_fnc_doStarterCrateSupplies;
+ * [this] call cScripts_fnc_doStarterCrateSupplies;
+ * [this,"none"] call cScripts_fnc_doStarterCrateSupplies;
+ *
  */
 
 #include "..\script_component.hpp";
