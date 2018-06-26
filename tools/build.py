@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys, os
 import argparse, shutil, tempfile
-__version__ = 1.1
+__version__ = 1.2
 
 # GLOBALS
 exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
@@ -106,10 +106,10 @@ def copyTempToRelease(releaseFolder):
 
 
 
-def zipBuild(versionNumber=['','','']):
+def zipBuild(versionNumber=['','',''],tag=''):
     print('Creating archive...')
-    shutil.make_archive('release\\cScripts_{}.{}.{}'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2])), 'zip', "tmp")
-    print('\033[0mcScripts_{}.{}.{}.zip is created.\033[0m'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2])))
+    shutil.make_archive('release\\cScripts_{}.{}.{}{}'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),tag), 'zip', "tmp")
+    print('\033[0mcScripts_{}.{}.{}{}.zip is created.\033[0m'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),tag))
 
 
 
@@ -193,9 +193,39 @@ def createModdedBuild(folder):
             x = publicBuildFindString(file,'gps[] = {"ItemAndroid"};')
             publicBuildReplace(file, x, '    gps[] = {""};\n')
 
+        # finding object: Flagstack_Red
+        c = publicBuildFindStringCount(file,'"Flagstack_Red",')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"Flagstack_Red",')
+            publicBuildReplace(file, x, '')
     print('Loadouts adjustments compleet...')
 
     print('Starting to adjust logistical crates...')
+    functionFiles = ['fn_doAmmoCrate.sqf','fn_doExplosivesCrate.sqf','fn_doGrenadesCrate.sqf','fn_doLaunchersCrate.sqf','fn_doSpecialWeaponsCrate.sqf','fn_doStarterCrateSupplies.sqf','fn_doSupplyCrate.sqf','fn_doWeaponsCrate.sqf']
+    for functionFile in functionFiles:
+        print('Searching for and replacing objects in \033[96m{}\033[0m...'.format(functionFile))
+        # finding object: ItemcTab
+        file = '{}\\cScripts\\CavFnc\\functions\\logistics\\{}'.format(folder,functionFile)
+        c = publicBuildFindStringCount(file,'"ItemcTab"')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"ItemcTab"')
+            publicBuildReplace(file, x, '')
+
+        # finding object: ItemAndroid
+        c = publicBuildFindStringCount(file,'"ItemAndroid"')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"ItemAndroid"')
+            publicBuildReplace(file, x, '')
+
+        # finding object: Flagstack_Red
+        c = publicBuildFindStringCount(file,'"Flagstack_Red"')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"Flagstack_Red"')
+            publicBuildReplace(file, x, '')
+
+    print('Logistical crates adjustments compleet...')
+
+
 
 
 def main():
@@ -231,6 +261,7 @@ def main():
     print('\033[0m \033[96m'.join(objectList[1]) + '\033[96m')
     print('',end='\033[0m')
 
+    tagString = ''
 
     input('\nPress enter to start the build process...')
 
@@ -243,6 +274,7 @@ def main():
 
 
     if args.public:
+        tagString = '_PUBLIC'
         createModdedBuild(tmpFolder)
 
     if args.save:
@@ -251,7 +283,7 @@ def main():
     if args.savedontzip:
         copyTempToRelease(releaseFolder)
     else:
-        zipBuild(versionNumber)
+        zipBuild(versionNumber,tagString)
 
     shutil.rmtree(tmpFolder)
 
