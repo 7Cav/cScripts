@@ -10,7 +10,6 @@
  * ["this",150] call cScripts_fnc_addJump
  * ["this",150,1000,300] call cScripts_fnc_addJump
  *
- * Public: Yes
  */
 #include "..\script_component.hpp";
 

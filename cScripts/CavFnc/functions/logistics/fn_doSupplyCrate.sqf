@@ -73,6 +73,8 @@ _crate addMagazineCargoGlobal ["Chemlight_Red",(_quaScale * 25)];
 
 //================== ITEMS ==================\\
 
+_crate addItemCargoGlobal ["ACE_Chemlight_Shield",5];
+
 //================== MEDICAL ==================\\
 
 _crate addItemCargoGlobal ["ACE_EarPlugs",(_quaScale * 25)];

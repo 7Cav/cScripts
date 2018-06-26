@@ -9,7 +9,6 @@
  * Example:
  * ["this","my_C130"] call cScripts_fnc_doJump
  *
- * Public: No
  */
 
 #include "..\script_component.hpp";

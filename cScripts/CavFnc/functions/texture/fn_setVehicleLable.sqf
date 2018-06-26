@@ -1,7 +1,11 @@
 /*
  * Author: CPL.Brostrom.A
- * This function attaches a predefined lable to a predefined location on a given vehicle.
- * Supported vehicles; UH60 Black Hawks, STRYKER, M1A1 Abrams, M2/M3 Bradley,
+ * This function fetches a texture from the getVehicleLable texture list and apply it to a supported vechicle.
+ * Supported vehicles:
+ *   UH60 Black Hawks   2 PARMS     <LETTER and NUMBER> OR <SPECIAL>    (Locations: Tail)
+ *   STRYKER            NONE        NONE                                (Locations: Front)
+ *   M1A1 Abrams        2 PARMS     <SPECIAL>                           (Locations: Front, Side)
+ *   M2/M3 Bradley      1 PARMS     <SPECIAL>                           (Locations: Side)
  *
  * Arguments:
  * 0: Vehicles <OBJECT>
@@ -24,7 +28,6 @@
  * [this,"RedCross"] call cScripts_fnc_setVehicleLable
  * [this,"RedCross",RedCross,"S","6"] call cScripts_fnc_setVehicleLable
  *
- * Public: Yes
  */
 
 #include "..\script_component.hpp";
@@ -57,11 +60,7 @@ private _lableTexture9 = [_lable9] call FUNC(getVehicleLable);
 private _lableTextureLine = ["line"] call FUNC(getVehicleLable);
 
 
-/*
- * UH-60 blackhawk
- * <LETTER and NUMBER> OR <CUSTOM>
- * Supporing letter and number combo ("B","1") OR 1 costum ("RedCross") on the tail.
- */
+// UH-60 blackhawk
 private _vehicleTypeUH60 = [
     "RHS_UH60M_d",
     "RHS_UH60M_MEV2_d",
@@ -84,11 +83,7 @@ if (typeOf _vehicle in _vehicleTypeUH60) then {
 };
 
 
-/*
- * STRYKER
- *  <SPECIAL>
- *  Supporing 1 special lable on the front of the vehicle.
- */
+// STRYKER
 private _vehicleTypeStriker = [
     "M1126_ICV_M134_DG1_NOSLATDES",
     "M1126_ICV_M134_DG1_NOSLATWOOD",
@@ -119,11 +114,8 @@ if (typeOf _vehicle in _vehicleTypeStriker) then {
 
 };
 
-/*
- * M1A1 Abrams
- *  <SPECIAL>
- *  Supporing 1 special lable on the side of the vehicle.
- */
+// M1A1 Abrams
+
 private _vehicleTypeAbrams = [
     "rhsusf_m1a1aimd_usarmy",
     "rhsusf_m1a1aim_tuski_d",
@@ -159,11 +151,9 @@ private _vehicleTypeBradly = [
     "RHS_M6_wd"
 ];
 
-/*
- * M2/M3 Bradley
- *  <SPECIAL>
- *  Supporing 2 special lable on the front of the vehicle and side.
- */
+
+// M2/M3 Bradley
+
 if (typeOf _vehicle in _vehicleTypeBradly) then {
     //Side
     if (_lable1 != "") then { [_vehicle,[-1.61249,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };

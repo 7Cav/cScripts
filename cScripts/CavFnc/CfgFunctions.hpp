@@ -34,6 +34,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\logistics";
         class doStarterCrate {};
         class doStarterCrateSupplies {};
+        class doFieldHospital {};
 
         class doSupplyCrate {};
 
@@ -93,6 +94,7 @@ class cScripts {
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         class moduleCreateStarterCrate {};
+        class moduelCreateFieldHospital {};
         class moduelCreateMedicalCrate {};
         class moduelCreateSupplyCrate {};
         class moduelCreateSpecialWeaponsCrate {};
@@ -108,13 +110,5 @@ class cScripts {
         class logError {};
         class logInfo {}; //will be merged with "attachVehicleLabel"
         class logWarning {};
-    };
-
-
-
-    class deprecated {
-        file = "cScripts\cavFnc\functions\deprecated";
-        class attachVehicleLabel {};    // replaced with setVehicleLable
-        class UH60TailNumber {};        // replaced with setVehicleLable
     };
 };
