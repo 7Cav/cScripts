@@ -162,19 +162,19 @@ def createModdedBuild(folder):
 
     print('Adjusting \033[96mdescription.ext\033[0m...')
 
-    print('Adjusting \033[96mCfgSettings.hpp\033[0m...')
+    print('Adjusting \033[96mcba_settings.sqf\033[0m...')
     # disable startup hint
-    x = publicBuildFindString('{}\\CfgSettings.hpp'.format(folder),'    useStartHint')
-    publicBuildReplace('{}\\CfgSettings.hpp'.format(folder), x, '    useStartHint                =   0;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_enableStartHint')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_enableStartHint = false;\n')
     # find setting mission type to custom
-    x = publicBuildFindString('{}\\CfgSettings.hpp'.format(folder),'    isMissionType')
-    publicBuildReplace('{}\\CfgSettings.hpp'.format(folder), x, '    isMissionType               =   0;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_setMissionType')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_setMissionType = 0;\n')
     # find setting mission type to custom
-    x = publicBuildFindString('{}\\CfgSettings.hpp'.format(folder),'    setCustomHintTopic')
-    publicBuildReplace('{}\\CfgSettings.hpp'.format(folder), x, '    setCustomHintTopic          =   "Public";\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_setCustomHintTopic')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_setCustomHintTopic = "Public Mission";\n')
     # find setting mission type to custom
-    x = publicBuildFindString('{}\\CfgSettings.hpp'.format(folder),'    setCustomHintText')
-    publicBuildReplace('{}\\CfgSettings.hpp'.format(folder), x, '    setCustomHintText           =   "This is Tactical Realism. Be tactical and realistic.";\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_setCustomHintText')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_setCustomHintText = "This is Tactical Realism. Be tactical and realistic.";\n')
 
     print('Starting to adjust Loadouts...')
     loadoutFiles = ['CfgLoadouts_Common.hpp','CfgLoadouts_Alpha.hpp','CfgLoadouts_Bravo.hpp','CfgLoadouts_Charlie.hpp','CfgLoadouts_Medical.hpp','CfgLoadouts_Ranger.hpp','CfgLoadouts_Training.hpp','CfgLoadouts_S3.hpp']
