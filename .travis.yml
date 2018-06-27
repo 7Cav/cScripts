@@ -12,5 +12,5 @@ before_script:
   fi
 script:
 - python3 tools/sqf_validator.py
+- python3 tools/config_style_checker.py
 #- python3 tools/sqf_linter.py
-#- python3 tools/config_style_checker.py
