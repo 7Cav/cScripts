@@ -41,7 +41,6 @@ INFO("Adding eventhandles to all vehicles");
 
 // All cars
 ["rhsusf_hmmwe_base", "init", {
-
     if (cScripts_Settings_useCustomVehicleInventory) then {(_this select 0) call FUNC(setVehicleInventory);};
     (_this select 0) call FUNC(setVehicleSettings);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
