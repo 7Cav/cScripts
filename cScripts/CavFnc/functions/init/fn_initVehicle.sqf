@@ -10,9 +10,7 @@
  *
  */
 
-if (!isServer) exitWith {};
 #include "..\script_component.hpp";
-
 
 INFO("Adding eventhandles to all vehicles");
 
