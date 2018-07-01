@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys, os
 import argparse, shutil, tempfile
-__version__ = 1.2
+__version__ = 1.3
 
 # GLOBALS
 exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
@@ -108,8 +108,8 @@ def copyTempToRelease(releaseFolder):
 
 def zipBuild(versionNumber=['','',''],tag=''):
     print('Creating archive...')
-    shutil.make_archive('release\\cScripts_{}.{}.{}{}'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),tag), 'zip', "tmp")
-    print('\033[0mcScripts_{}.{}.{}{}.zip is created.\033[0m'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),tag))
+    shutil.make_archive('release\\cScripts_v{}.{}.{}{}'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),tag), 'zip', "tmp")
+    print('\033[0mcScripts_v{}.{}.{}{}.zip is created.\033[0m'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),tag))
 
 
 
