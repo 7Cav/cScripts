@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 import sys, os
 import argparse, shutil, tempfile
-__version__ = 1.3
+__version__ = 1.6
 
 # GLOBALS
 exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
 version_File = ("cScripts\\CavFnc\\functions\\script_component.hpp")
+script_Name = 'cScripts'
 
 # set projecty path
 scriptpath = os.path.realpath(__file__)
@@ -93,8 +94,8 @@ def copyTempToRelease(releaseFolder):
     # Copying teh temp directory to release
     print('Moving build to release folder...')
     try:
-        newFolderPath = releaseFolder + '\\cScripts'
-        createFolder('cScripts')
+        newFolderPath = releaseFolder + '\\{}'.format(script_Name)
+        createFolder(script_Name)
     except:
         shutil.rmtree('tmp')
         sys.exit('Issues occured when trying to copy build to release, already exist...')
@@ -106,10 +107,11 @@ def copyTempToRelease(releaseFolder):
 
 
 
-def zipBuild(versionNumber=['','',''],tag=''):
+def zipBuild(versionNumber=['','',''],tag='_',build='',rc=''):
+    ZipName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
     print('Creating archive...')
-    shutil.make_archive('release\\cScripts_v{}.{}.{}{}'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),tag), 'zip', "tmp")
-    print('\033[0mcScripts_v{}.{}.{}{}.zip is created.\033[0m'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),tag))
+    shutil.make_archive('release\\{}'.format(ZipName), 'zip', "tmp")
+    print('\033[0m{}.zip is created.\033[0m'.format(ZipName))
 
 
 
@@ -157,8 +159,8 @@ def publicBuildReplace(file_path, pattern, subst):
 
 
 
-def createModdedBuild(folder):
-    print('Starting construction of a public cScripts version...')
+def createModdedBuild(folder):      # This function is compleetly manual atm:
+    print('Starting construction of a public {} version...'.format(script_Name))
 
     print('Adjusting \033[96mdescription.ext\033[0m...')
 
@@ -241,6 +243,9 @@ def main():
 
     parser.add_argument("-p", "--public",           help="Create a \"public\" build to be used on non CavPack Enviroment",
                         action="store_true")
+    parser.add_argument('-b', '--build', required=False, choices=['dev', 'test'], help="Add a additional tag to a to the build")
+    parser.add_argument('-rc', '--releasecandidate', type=int, required=False,  help="Set a release candidate number to the build \".RC1\" for exsample")
+
     group.add_argument("-s", "--save",              help="Save the build",
                         action="store_true")
     group.add_argument("-sz", "--savedontzip",      help="Save the build and don\'t zip it",
@@ -261,8 +266,12 @@ def main():
     print('\033[0m \033[96m'.join(objectList[1]) + '\033[96m')
     print('',end='\033[0m')
 
-    tagString = ''
+    # Set som empty strings
+    tagString = '_'
+    buildString = ''
+    rcString = ''
 
+    # press enter to start build
     input('\nPress enter to start the build process...')
 
     releaseFolder = createFolder("release")
@@ -272,10 +281,17 @@ def main():
 
     versionNumber = getVersion(version_File)
 
-
     if args.public:
-        tagString = '_PUBLIC'
+        tagString = '_PUBLIC_'
         createModdedBuild(tmpFolder)
+
+    if args.build:
+        if args.build == 'dev':
+            buildString = '_DevBuild'.format()
+        if args.build == 'test':
+            buildString = '_TestBuild'.format()
+    if args.releasecandidate:
+        rcString = '.RC{}'.format(str(args.releasecandidate))
 
     if args.save:
         copyTempToRelease(releaseFolder)
@@ -283,7 +299,7 @@ def main():
     if args.savedontzip:
         copyTempToRelease(releaseFolder)
     else:
-        zipBuild(versionNumber,tagString)
+        zipBuild(versionNumber,tagString,buildString,rcString)
 
     shutil.rmtree(tmpFolder)
 
