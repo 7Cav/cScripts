@@ -443,19 +443,3 @@ force force STHud_Settings_Occlusion = true;
 force force STHud_Settings_RemoveDeadViaProximity = true;
 force force STHud_Settings_SquadBar = false;
 force force STHud_Settings_TextShadow = 1;
-
-// cScripts Mission Settings
-force force cScripts_Settings_allowCustomInit = true;
-force force cScripts_Settings_enable7cavZeusModules = true;
-force force cScripts_Settings_enableStartHint = true;
-force force cScripts_Settings_setAiSystemDifficulty = 1;
-force force cScripts_Settings_setCustomHintText = "I have design this mission! Yey for me!";
-force force cScripts_Settings_setCustomHintTopic = "My custom Mission!";
-force force cScripts_Settings_setDebugMode = false;
-force force cScripts_Settings_setMissionType = 1;
-force force cScripts_Settings_setRedLightTime = 5;
-force force cScripts_Settings_setTrainingHintTime = 20;
-force force cScripts_Settings_showDiaryRecords = true;
-force force cScripts_Settings_useCustomSupplyInventory = false;
-force force cScripts_Settings_useCustomVehicleInventory = true;
-force force cScripts_Settings_useCustomVehicleSettings = true;
