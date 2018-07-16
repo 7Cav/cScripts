@@ -8,7 +8,7 @@ force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
 force force ace_advanced_fatigue_enabled = true;
-ace_advanced_fatigue_enableStaminaBar = true;
+//ace_advanced_fatigue_enableStaminaBar = true;
 force force ace_advanced_fatigue_loadFactor = 1;
 force force ace_advanced_fatigue_performanceFactor = 1.40374;
 force force ace_advanced_fatigue_recoveryFactor = 3.03773;
@@ -41,10 +41,10 @@ force ace_common_allowFadeMusic = true;
 force force ace_common_checkPBOsAction = 0;
 force force ace_common_checkPBOsCheckAll = false;
 force force ace_common_checkPBOsWhitelist = "[]";
-ace_common_displayTextColor = [0,0,0,0.1];
-ace_common_displayTextFontColor = [1,1,1,1];
-ace_common_settingFeedbackIcons = 1;
-ace_common_settingProgressBarLocation = 0;
+//ace_common_displayTextColor = [0,0,0,0.1];
+//ace_common_displayTextFontColor = [1,1,1,1];
+//ace_common_settingFeedbackIcons = 1;
+//ace_common_settingProgressBarLocation = 0;
 force force ace_noradio_enabled = true;
 force force ace_parachute_hideAltimeter = true;
 
@@ -69,7 +69,7 @@ force force ace_frag_spallEnabled = false;
 
 // ACE Goggles
 force force ace_goggles_effects = 2;
-ace_goggles_showInThirdPerson = false;
+//ace_goggles_showInThirdPerson = false;
 
 // ACE Hearing
 force force ace_hearing_autoAddEarplugsToUnits = false;
@@ -85,21 +85,21 @@ force force ace_interaction_enableMagazinePassing = true;
 force force ace_interaction_enableTeamManagement = true;
 
 // ACE Interaction Menu
-ace_gestures_showOnInteractionMenu = 0;
-ace_interact_menu_actionOnKeyRelease = true;
-ace_interact_menu_addBuildingActions = false;
-ace_interact_menu_alwaysUseCursorInteraction = true;
-ace_interact_menu_alwaysUseCursorSelfInteraction = true;
-ace_interact_menu_colorShadowMax = [0,0,0,1];
-ace_interact_menu_colorShadowMin = [0,0,0,0.25];
-ace_interact_menu_colorTextMax = [1,1,1,1];
-ace_interact_menu_colorTextMin = [1,1,1,0.25];
-ace_interact_menu_cursorKeepCentered = false;
-ace_interact_menu_menuAnimationSpeed = 0;
-ace_interact_menu_menuBackground = 2;
-ace_interact_menu_shadowSetting = 2;
-ace_interact_menu_textSize = 3;
-ace_interact_menu_useListMenu = false;
+//ace_gestures_showOnInteractionMenu = 0;
+//ace_interact_menu_actionOnKeyRelease = true;
+//ace_interact_menu_addBuildingActions = false;
+//ace_interact_menu_alwaysUseCursorInteraction = true;
+//ace_interact_menu_alwaysUseCursorSelfInteraction = true;
+//ace_interact_menu_colorShadowMax = [0,0,0,1];
+//ace_interact_menu_colorShadowMin = [0,0,0,0.25];
+//ace_interact_menu_colorTextMax = [1,1,1,1];
+//ace_interact_menu_colorTextMin = [1,1,1,0.25];
+//ace_interact_menu_cursorKeepCentered = false;
+//ace_interact_menu_menuAnimationSpeed = 0;
+//ace_interact_menu_menuBackground = 2;
+//ace_interact_menu_shadowSetting = 2;
+//ace_interact_menu_textSize = 3;
+//ace_interact_menu_useListMenu = false;
 
 // ACE Logistics
 force force ace_cargo_enable = true;
@@ -137,12 +137,12 @@ force force ace_map_mapShowCursorCoordinates = false;
 force force ace_markers_moveRestriction = 0;
 
 // ACE Map Gestures
-ace_map_gestures_defaultColor = [1,0.88,0,0.7];
-ace_map_gestures_defaultLeadColor = [1,0.88,0,0.95];
+//ace_map_gestures_defaultColor = [1,0.88,0,0.7];
+//ace_map_gestures_defaultLeadColor = [1,0.88,0,0.95];
 force force ace_map_gestures_enabled = true;
 force force ace_map_gestures_interval = 0.03;
 force force ace_map_gestures_maxRange = 10;
-ace_map_gestures_nameTextColor = [0.2,0.2,0.2,0.3];
+//ace_map_gestures_nameTextColor = [0.2,0.2,0.2,0.3];
 
 // ACE Map Tools
 force force ace_maptools_drawStraightLines = true;
@@ -181,7 +181,7 @@ force force ace_medical_menu_allow = 1;
 force force ace_medical_menu_maxRange = 3;
 force force ace_medical_menu_openAfterTreatment = true;
 force force ace_medical_menu_useMenu = 1;
-ace_medical_menuTypeStyle = 0;
+//ace_medical_menuTypeStyle = 0;
 force force ace_medical_moveUnitsFromGroupOnUnconscious = false;
 force force ace_medical_painCoefficient = 1;
 force force ace_medical_painEffectType = 0;
@@ -202,16 +202,16 @@ force force ace_mk6mortar_allowComputerRangefinder = false;
 force force ace_mk6mortar_useAmmoHandling = false;
 
 // ACE Name Tags
-ace_nametags_defaultNametagColor = [0.77,0.51,0.08,1];
+//ace_nametags_defaultNametagColor = [0.77,0.51,0.08,1];
 force ace_nametags_playerNamesMaxAlpha = 0.8;
 force force ace_nametags_playerNamesViewDistance = 5;
 force force ace_nametags_showCursorTagForVehicles = true;
-ace_nametags_showNamesForAI = false;
+//ace_nametags_showNamesForAI = false;
 force force ace_nametags_showPlayerNames = 1;
 force force ace_nametags_showPlayerRanks = true;
 force force ace_nametags_showSoundWaves = 1;
 force force ace_nametags_showVehicleCrewInfo = true;
-ace_nametags_tagSize = 2;
+//ace_nametags_tagSize = 2;
 
 // ACE Nightvision
 force ace_nightvision_aimDownSightsBlur = 0;
@@ -219,7 +219,7 @@ force ace_nightvision_disableNVGsWithSights = false;
 force ace_nightvision_effectScaling = 0.101011;
 force ace_nightvision_fogScaling = 0;
 force ace_nightvision_noiseScaling = 0.0713011;
-ace_nightvision_shutterEffects = true;
+//ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
 force force ace_overheating_displayTextOnJam = true;
@@ -232,7 +232,7 @@ force force ace_overheating_unJamOnreload = false;
 
 // ACE Pointing
 force force ace_finger_enabled = true;
-ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
+//ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
 force force ace_finger_indicatorForSelf = true;
 force force ace_finger_maxRange = 10;
 
@@ -291,10 +291,10 @@ force force ace_tagging_quickTag = 1;
 // ACE Uncategorized
 force force ace_gforces_enabledFor = 1;
 force force ace_hitreactions_minDamageToTrigger = 0.363636;
-ace_inventory_inventoryDisplaySize = 0;
+//ace_inventory_inventoryDisplaySize = 0;
 force force ace_laser_dispersionCount = 2;
 force force ace_microdagr_mapDataAvailable = 2;
-ace_optionsmenu_showNewsOnMainMenu = true;
+//ace_optionsmenu_showNewsOnMainMenu = true;
 force force ace_overpressure_distanceCoefficient = 1;
 
 // ACE User Interface
@@ -342,10 +342,10 @@ force force ace_vehiclelock_vehicleStartingLockState = -1;
 // ACE View Distance Limiter
 force ace_viewdistance_enabled = false;
 force ace_viewdistance_limitViewDistance = 10000;
-ace_viewdistance_objectViewDistanceCoeff = 0;
-ace_viewdistance_viewDistanceAirVehicle = 0;
-ace_viewdistance_viewDistanceLandVehicle = 0;
-ace_viewdistance_viewDistanceOnFoot = 0;
+//ace_viewdistance_objectViewDistanceCoeff = 0;
+//ace_viewdistance_viewDistanceAirVehicle = 0;
+//ace_viewdistance_viewDistanceLandVehicle = 0;
+//ace_viewdistance_viewDistanceOnFoot = 0;
 
 // ACE Weapons
 force force ace_common_persistentLaserEnabled = false;
@@ -410,11 +410,11 @@ force force achilles_curator_vision_whitehotredcold = false;
 force force Achilles_Debug_Output_Enabled = false;
 
 // Achilles - Defaults
-Achilles_var_setRadioFrequenciesLR_Default = "50";
-Achilles_var_setRadioFrequenciesSR_Default = "150";
+//Achilles_var_setRadioFrequenciesLR_Default = "50";
+//Achilles_var_setRadioFrequenciesSR_Default = "150";
 
 // Achilles - Icon Selection
-force force Achilles_var_iconSelection = "Achilles_var_iconSelection_Ares";
+//force force Achilles_var_iconSelection = "Achilles_var_iconSelection_Ares";
 
 // Achilles - Modules Interface
 force force Achilles_var_moduleTreeCollapse = true;
@@ -425,10 +425,10 @@ force force Achilles_var_moduleTreeHelmet = false;
 force force acre_sys_core_fullDuplex = false;
 force force acre_sys_core_ignoreAntennaDirection = true;
 force force acre_sys_core_interference = false;
-acre_sys_core_postmixGlobalVolume = 1;
-acre_sys_core_premixGlobalVolume = 1;
+//acre_sys_core_postmixGlobalVolume = 1;
+//acre_sys_core_premixGlobalVolume = 1;
 force force acre_sys_core_revealToAI = true;
-acre_sys_core_spectatorVolume = 1;
+//acre_sys_core_spectatorVolume = 1;
 force force acre_sys_core_terrainLoss = 0;
 force force acre_sys_core_ts3ChannelName = "";
 force force acre_sys_core_ts3ChannelPassword = "";
