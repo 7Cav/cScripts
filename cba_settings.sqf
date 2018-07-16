@@ -436,10 +436,10 @@ force force acre_sys_core_ts3ChannelSwitch = false;
 force force acre_sys_core_unmuteClients = true;
 
 // STUI Settings
-force force STHud_Settings_ColourBlindMode = "Normal";
-force force STHud_Settings_Font = "PuristaSemibold";
-force force STHud_Settings_HUDMode = 3;
-force force STHud_Settings_Occlusion = true;
+//STHud_Settings_ColourBlindMode = "Normal";
+//STHud_Settings_Font = "PuristaSemibold";
+//STHud_Settings_HUDMode = 3;
+//STHud_Settings_Occlusion = true;
 force force STHud_Settings_RemoveDeadViaProximity = true;
-force force STHud_Settings_SquadBar = false;
-force force STHud_Settings_TextShadow = 1;
+force force STHud_Settings_SquadBar = true;
+//STHud_Settings_TextShadow = 1;
