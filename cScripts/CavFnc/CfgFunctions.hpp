@@ -79,6 +79,7 @@ class cScripts {
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
+        class initForgeSelections {};
         class initQuickSelections {};
         class initInsigniaSelections {};
     };
