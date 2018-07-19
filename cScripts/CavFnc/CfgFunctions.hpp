@@ -73,9 +73,8 @@ class cScripts {
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
 
+        class getPlatoonVariable {};
         class hasPlatoonVariable {};
-        class canSelectLoadout {};
-        class canNotSelectLoadout {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
@@ -105,6 +104,10 @@ class cScripts {
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
         class moduleMakeEngineer {};
+
+        class moduleRegearTrooper {};
+            
+        class moduleCallEndex {};
     };
     class debug {
         file = "cScripts\cavFnc\functions\debug";

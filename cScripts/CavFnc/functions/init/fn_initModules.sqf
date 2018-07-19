@@ -31,7 +31,6 @@ if (ace_medical_increaseTrainingInLocations) then {
     }] call Ares_fnc_RegisterCustomModule;
 };
 
-
 ["7Cav Logistics", "Re-supply Crate",{
     [(_this select 0)] call FUNC(moduelCreateSupplyCrate);
 }] call Ares_fnc_RegisterCustomModule;
@@ -62,6 +61,7 @@ if (ace_medical_increaseTrainingInLocations) then {
     [(_this select 1)] call FUNC(moduleApplyTailNumber);
 }] call Ares_fnc_RegisterCustomModule;
 
+
 ["7Cav Misc", "Transform to Cav Flag",{
     [(_this select 1)] call FUNC(moduleApplyFlag);
 }] call Ares_fnc_RegisterCustomModule;
@@ -73,4 +73,15 @@ if (ace_medical_increaseTrainingInLocations) then {
 ["7Cav Misc", "Assign Engineer",{
     [(_this select 1)] call FUNC(moduleMakeEngineer);
 }] call Ares_fnc_RegisterCustomModule;
+
+
+["7Cav Utilities", "Regerar Trooper",{
+    [(_this select 1)] call FUNC(moduleRegearTrooper);
+}] call Ares_fnc_RegisterCustomModule;
+
+
+["7Cav Mission", "Call Endex",{
+    call FUNC(moduleCallEndex);
+}] call Ares_fnc_RegisterCustomModule;
+
 INFO("cav moduels successfully added.");

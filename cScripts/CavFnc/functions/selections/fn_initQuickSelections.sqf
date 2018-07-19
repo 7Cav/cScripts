@@ -37,7 +37,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "alpha")) then {
     // make addAction topic
     if !(_platoonSelector == "full") then {
         if (_requirePlatoonVariable) then {
-            _object addAction ["Alpha Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isAlphaUnit')] call FUNC(canSelectLoadout))];
+            _object addAction ["Alpha Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'Alpha')] call FUNC(hasPlatoonVariable))];
         } else {
             _object addAction ["Alpha Quick Selection", {}, nil, 1.5, true, true, "", "true"];
         };
@@ -58,7 +58,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "bravo")) then {
     // make addAction topic
     if !(_platoonSelector == "full") then {
         if (_requirePlatoonVariable) then {
-            _object addAction ["Bravo Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isBravoUnit')] call FUNC(canSelectLoadout))];
+            _object addAction ["Bravo Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'Bravo')] call FUNC(hasPlatoonVariable))];
         } else {
             _object addAction ["Bravo Quick Selection", {}, nil, 1.5, true, true, "", "true"];
         };
@@ -86,7 +86,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "charlie")) then {
     // make addAction topic
     if !(_platoonSelector == "full") then {
         if (_requirePlatoonVariable) then {
-            _object addAction ["Charlie Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isCharlieUnit')] call FUNC(canSelectLoadout))];
+            _object addAction ["Charlie Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'Charlie')] call FUNC(hasPlatoonVariable))];
         } else {
             _object addAction ["Charlie Quick Selection", {}, nil, 1.5, true, true, "", "true"];
         };
@@ -115,7 +115,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "heavyweapons")) then {
     // make addAction topic
     if !(_platoonSelector == "full") then {
         if (_requirePlatoonVariable) then {
-            _object addAction ["Charlie Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isCharlieUnit')] call FUNC(canSelectLoadout))];
+            _object addAction ["Charlie Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'Charlie')] call FUNC(hasPlatoonVariable))];
         } else {
             _object addAction ["Charlie Quick Selection", {}, nil, 1.5, true, true, "", "true"];
         };
@@ -132,7 +132,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "heavyweapons")) then {
     // make addAction topic
     if !(_platoonSelector == "full") then {
         if (_requirePlatoonVariable) then {
-            _object addAction ["Bravo Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isBravoUnit')] call FUNC(canSelectLoadout))];
+            _object addAction ["Bravo Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'Bravo')] call FUNC(hasPlatoonVariable))];
         } else {
             _object addAction ["Bravo Quick Selection", {}, nil, 1.5, true, true, "", "true"];
         };
@@ -153,7 +153,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "ranger")) then {
     // make addAction topic
     if !(_platoonSelector == "full") then {
         if (_requirePlatoonVariable) then {
-            _object addAction ["Ranger Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isRangerUnit')] call FUNC(canSelectLoadout))];
+            _object addAction ["Ranger Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'Ranger')] call FUNC(hasPlatoonVariable))];
         } else {
             _object addAction ["Ranger Quick Selection", {}, nil, 1.5, true, true, "", "true"];
         };
@@ -181,7 +181,7 @@ if ((_platoonSelector == "full") or (_platoonSelector == "medical")) then {
     // make addAction topic
     if !(_platoonSelector == "full") then {
         if (_requirePlatoonVariable) then {
-            _object addAction ["Medical Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'CAV_isMedicalUnit')] call FUNC(canSelectLoadout))];
+            _object addAction ["Medical Quick Selection", {}, nil, 1.5, true, true, "", QUOTE([ARR_2(_this,'Medical')] call FUNC(hasPlatoonVariable))];
         } else {
             _object addAction ["Medical Quick Selection", {}, nil, 1.5, true, true, "", "true"];
         };

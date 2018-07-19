@@ -1,9 +1,12 @@
 /*
  * Author: CPL.Brostrom.A
  * This function fetches a texture from the getVehicleLable texture list and apply it to a supported vechicle.
+ *
  * Supported vehicles:
+ *   C-130              3 PARMS     <LETTER and NUMBER> OR <SPECIAL>    (Locations: Tail)
  *   UH60 Black Hawks   2 PARMS     <LETTER and NUMBER> OR <SPECIAL>    (Locations: Tail)
  *   STRYKER            NONE        NONE                                (Locations: Front)
+ *   MRAP               5 PARMS     <LETTER and NUMBER> OR <SPECIAL>    (Locations: Side)
  *   M1A1 Abrams        2 PARMS     <SPECIAL>                           (Locations: Front, Side)
  *   M2/M3 Bradley      1 PARMS     <SPECIAL>                           (Locations: Side)
  *
@@ -60,6 +63,8 @@ private _lableTexture9 = [_lable9] call FUNC(getVehicleLable);
 private _lableTextureLine = ["line"] call FUNC(getVehicleLable);
 
 
+
+
 // UH-60 blackhawk
 private _vehicleTypeUH60 = [
     "RHS_UH60M_d",
@@ -69,7 +74,6 @@ private _vehicleTypeUH60 = [
     "RHS_UH60M_MEV2",
     "RHS_UH60M_MEV"
 ];
-
 if (typeOf _vehicle in _vehicleTypeUH60) then {
     if (_lable1 != "") then { [_vehicle,[-0.49,-2.45,-1.3],87,_lableTexture1] call FUNC(createVehicleLable); };
     if (_lable1 != "" && (_lable2 != "")) then { [_vehicle,[-0.49,-2.45,-1.3],87,_lableTextureLine] call FUNC(createVehicleLable); };
@@ -81,6 +85,59 @@ if (typeOf _vehicle in _vehicleTypeUH60) then {
     if (_lable2 != "") then { [_vehicle,[0.49,-2.45,-1.3],-87,_lableTexture2] call FUNC(createVehicleLable); };
     //if (_lable3 != "") then { [_vehicle,[0.49,-2.45,-1.3],-87,""] call FUNC(createVehicleLable); };
 };
+
+
+
+
+// C-130
+private _vehicleTypeC130J = [
+    "RHS_C130J"
+];
+if (typeOf _vehicle in _vehicleTypeC130J) then {
+    if (_lable1 != "") then { [_vehicle,[-0.205,-10.9,8.920],90,_lableTexture1,[0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable2 != "") then { [_vehicle,[-0.205,-11.4,8.920],90,_lableTexture2,[0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable3 != "") then { [_vehicle,[-0.205,-11.9,8.920],90,_lableTexture3,[0.05,0,1]] call FUNC(createVehicleLable); };
+
+    if (_lable1 != "") then { [_vehicle,[0.205,-11.9,8.920],-90,_lableTexture1,[-0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable2 != "") then { [_vehicle,[0.205,-11.4,8.920],-90,_lableTexture2,[-0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable3 != "") then { [_vehicle,[0.205,-10.9,8.920],-90,_lableTexture3,[-0.05,0,1]] call FUNC(createVehicleLable); };
+};
+
+
+
+
+// MRAP
+private _vehicleTypeMRAP = [
+    "rhsusf_M1230_M2_usarmy_d",
+    "rhsusf_M1230_MK19_usarmy_d",
+    "rhsusf_M1230a1_usarmy_d",
+    "rhsusf_M1237_M2_usarmy_d",
+    "rhsusf_M1237_MK19_usarmy_d",
+    "rhsusf_M1230_M2_usarmy_wd",
+    "rhsusf_M1230_MK19_usarmy_wd",
+    "rhsusf_M1230a1_usarmy_wd",
+    "rhsusf_M1237_M2_usarmy_wd",
+    "rhsusf_M1237_MK19_usarmy_wd"
+];
+if (typeOf _vehicle in _vehicleTypeMRAP) then {
+
+    // Vic Lable
+    if (_lable1 != "" || _lable3 == "") then { [_vehicle,[-1.627,-1.32,-1.25],90,_lableTexture1] call FUNC(createVehicleLable); };
+    if (_lable1 != "" || _lable3 == "") then { [_vehicle,[1.494,-1.32,-1.25],-90,_lableTexture1] call FUNC(createVehicleLable); };
+
+    // Number Lables (NOTE: Will be ontop of the vic lable as well)
+    if (_lable2 != "") then { [_vehicle,[-1.627,-1.9,-1.25],90,_lableTexture5] call FUNC(createVehicleLable); };
+    if (_lable3 != "") then { [_vehicle,[-1.627,-1.32,-1.25],90,_lableTexture4] call FUNC(createVehicleLable); };
+    if (_lable4 != "") then { [_vehicle,[-1.627,-0.8,-1.25],90,_lableTexture3] call FUNC(createVehicleLable); };
+    if (_lable5 != "") then { [_vehicle,[-1.627,-0.269,-1.25],90,_lableTexture2] call FUNC(createVehicleLable); };
+
+    if (_lable5 != "") then { [_vehicle,[1.494,-1.9,-1.25],-90,_lableTexture2] call FUNC(createVehicleLable); };
+    if (_lable4 != "") then { [_vehicle,[1.494,-1.32,-1.25],-90,_lableTexture3] call FUNC(createVehicleLable); };
+    if (_lable3 != "") then { [_vehicle,[1.494,-0.8,-1.25],-90,_lableTexture4] call FUNC(createVehicleLable); };
+    if (_lable2 != "") then { [_vehicle,[1.494,-0.269,-1.25],-90,_lableTexture5] call FUNC(createVehicleLable); };
+};
+
+
 
 
 // STRYKER
@@ -106,16 +163,16 @@ private _vehicleTypeStriker = [
     "M1133_MEV_DG1_NOSLATDES",
     "M1135_ATGMV_DG1_NOSLATDES"
 ];
-
 if (typeOf _vehicle in _vehicleTypeStriker) then {
     // Always added
     private _strykerLable = ["stryker"] call FUNC(getVehicleLable);
     [_vehicle,[0.420521,3.50066,1.35656],180,_strykerLable] call FUNC(createVehicleLable);
-
 };
 
-// M1A1 Abrams
 
+
+
+// M1A1 Abrams
 private _vehicleTypeAbrams = [
     "rhsusf_m1a1aimd_usarmy",
     "rhsusf_m1a1aim_tuski_d",
@@ -132,7 +189,6 @@ private _vehicleTypeAbrams = [
     "rhsusf_m1a1fep_od",
     "rhsusf_m1a1hc_wd"
 ];
-
 if (typeOf _vehicle in _vehicleTypeAbrams) then {
     //Front
     if (_lable1 != "") then { [_vehicle,[-0.5,2.53,-0.64],180,_lableTexture1,[0,0.9,1]] call FUNC(createVehicleLable); };
@@ -142,6 +198,10 @@ if (typeOf _vehicle in _vehicleTypeAbrams) then {
     if (_lable2 != "") then { [_vehicle,[2.03401,-2.82751,-0.455],270.172,_lableTexture2] call FUNC(createVehicleLable); };
 };
 
+
+
+
+// M2/M3 Bradley
 private _vehicleTypeBradly = [
     "RHS_M2A2",
     "RHS_M2A3",
@@ -150,32 +210,26 @@ private _vehicleTypeBradly = [
     "RHS_M2A3_wd",
     "RHS_M6_wd"
 ];
-
-
-// M2/M3 Bradley
-
-if (typeOf _vehicle in _vehicleTypeBradly) then {
-    //Side
-    if (_lable1 != "") then { [_vehicle,[-1.61249,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };
-    if (_lable1 != "") then { [_vehicle,[1.62437,-1.0,0],270,_lableTexture1] call FUNC(createVehicleLable); };
-};
-
 private _vehicleTypeBradlyBUSK = [
     "RHS_M2A2_BUSKI",
     "RHS_M2A3_BUSKI",
     "RHS_M2A2_BUSKI_WD",
     "RHS_M2A3_BUSKI_wd"
 ];
+private _vehicleTypeBradlyBUSK3 = [
+    "RHS_M2A3_BUSKIII",
+    "RHS_M2A3_BUSKIII_wd"
+];
+if (typeOf _vehicle in _vehicleTypeBradly) then {
+    //Side
+    if (_lable1 != "") then { [_vehicle,[-1.61249,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };
+    if (_lable1 != "") then { [_vehicle,[1.62437,-1.0,0],270,_lableTexture1] call FUNC(createVehicleLable); };
+};
 if (typeOf _vehicle in _vehicleTypeBradlyBUSK) then {
     //Side
     if (_lable1 != "") then { [_vehicle,[-1.864,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };
     if (_lable1 != "") then { [_vehicle,[1.878,-1.0,0],270,_lableTexture1] call FUNC(createVehicleLable); };
 };
-
-private _vehicleTypeBradlyBUSK3 = [
-    "RHS_M2A3_BUSKIII",
-    "RHS_M2A3_BUSKIII_wd"
-];
 if (typeOf _vehicle in _vehicleTypeBradlyBUSK3) then {
     //Side
     if (_lable1 != "") then { [_vehicle,[-1.964,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };
