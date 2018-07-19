@@ -103,6 +103,10 @@ class cScripts {
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
         class moduleMakeEngineer {};
+
+        class moduleRegearTrooper {};
+            
+        class moduleCallEndex {};
     };
     class debug {
         file = "cScripts\cavFnc\functions\debug";
