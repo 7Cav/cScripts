@@ -98,14 +98,14 @@ class cScripts {
         class moduelCreateSupplyCrate {};
         class moduelCreateSpecialWeaponsCrate {};
 
-        class moduleApplyTailNumber {};
-        class moduleReadyHelicopter {};
+        class moduleApplyVehicleLable {};
+
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
         class moduleMakeEngineer {};
 
         class moduleRegearTrooper {};
-            
+
         class moduleCallEndex {};
     };
     class debug {
