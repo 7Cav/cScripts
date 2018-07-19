@@ -1,12 +1,13 @@
 /*
  * Author: CPL.Brostrom.A
- * Check if you have a PlatoonVariable
+ * Retun true or false if your a cav trooper and belong to the given platoon.
  *
  * Arguments:
  * 0: player <STRING>
+ * 1: hasVariable <STRING>
  *
  * Return Value:
- * Array <BOOL>
+ * HasVariable <BOOL>
  *
  * Example:
  * [player] call cScripts_fnc_hasPlatoonVariable
@@ -16,27 +17,17 @@
 #include "..\script_component.hpp";
 
 params [
-    ["_player", objNull, [objNull]]
+    ["_player", objNull, [objNull]],
+    ["_hasVariable",""]
 ];
 
-private _hasCavTrooper = if (_player getVariable ["CAV_isCavTrooper", true]) then {true} else {false};
-private _hasPlatoonVariablesAlpha = if (_player getVariable ["CAV_isAlphaUnit", true]) then {true} else {false};
-private _hasPlatoonVariablesBravo = if (_player getVariable ["CAV_isBravoUnit", true]) then {true} else {false};
-private _hasPlatoonVariablesCharlie = if (_player getVariable ["CAV_isCharlieUnit", true]) then {true} else {false};
-private _hasPlatoonVariablesRanger = if (_player getVariable ["CAV_isRangerUnit", true]) then {true} else {false};
-private _hasPlatoonVariablesMedical = if (_player getVariable ["CAV_isMedicalUnit", true]) then {true} else {false};
-private _hasPlatoonVariablesTraining = if (_player getVariable ["CAV_isTrainingUnit", true]) then {true} else {false};
-private _hasPlatoonVariablesS3 = if (_player getVariable ["CAV_isS3Unit", true]) then {true} else {false};
+private _return = false;
+if (_hasVariable == "") exitWith {_return};
 
-private _return = [
-    _hasCavTrooper,
-    _hasPlatoonVariablesAlpha,
-    _hasPlatoonVariablesBravo,
-    _hasPlatoonVariablesCharlie,
-    _hasPlatoonVariablesRanger,
-    _hasPlatoonVariablesMedical,
-    _hasPlatoonVariablesTraining,
-    _hasPlatoonVariablesS3
-];
+if (_player getVariable QGVAR(7cav_Trooper)) then {
+    if ([_player] call FUNC(getPlatoonVariable) == _hasVariable) then {
+        _return = true;
+    };
+};
 
 _return;

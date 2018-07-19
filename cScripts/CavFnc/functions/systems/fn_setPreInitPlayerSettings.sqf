@@ -31,22 +31,8 @@ params [
 ];
 
 // Set platoonVariables
-private _platoonAlpha = if (_setPlatoon == "alpha") then {true} else {false};
-private _platoonBravo = if (_setPlatoon == "bravo") then {true} else {false};
-private _platoonCharlie = if (_setPlatoon == "charlie") then {true} else {false};
-private _platoonRanger = if (_setPlatoon == "ranger") then {true} else {false};
-private _platoonMedical = if (_setPlatoon == "medical") then {true} else {false};
-private _platoonTraining = if (_setPlatoon == "training") then {true} else {false};
-private _platoonS3 = if (_setPlatoon == "s3") then {true} else {false};
-
-(_player) setVariable ["CAV_isCavTrooper", true];
-(_player) setVariable ["CAV_isAlphaUnit", _platoonAlpha];
-(_player) setVariable ["CAV_isBravoUnit", _platoonBravo];
-(_player) setVariable ["CAV_isCharlieUnit", _platoonCharlie];
-(_player) setVariable ["CAV_isRangerUnit", _platoonRanger];
-(_player) setVariable ["CAV_isMedicalUnit", _platoonMedical];
-(_player) setVariable ["CAV_isTrainingUnit", _platoonTraining];
-(_player) setVariable ["CAV_isS3Unit", _platoonS3];
+(_player) setVariable [QGVAR(7cav_Trooper), true];
+(_player) setVariable [QGVAR(7cav_Platoon), _setPlatoon];
 
 // Set MedicClass
 private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
