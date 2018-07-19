@@ -36,6 +36,8 @@ if (typeOf _vehicle in _vehicleTypeUH60) exitWith {
         ]
     ] call Ares_fnc_ShowChooseDialog;
 
+    if (count _dialogResult == 0) exitWith {};
+
     _texture1 = switch (_dialogResult select 0) do {
         case 0: {"A";};
         case 1: {"B";};
@@ -73,6 +75,8 @@ if (typeOf _vehicle in _vehicleTypeC130J) exitWith {
             ["Tail Number (3)",["None","A","B","C","S","1","2","3","4","5","6","7","8","9","0"],5]
         ]
     ] call Ares_fnc_ShowChooseDialog;
+
+    if (count _dialogResult == 0) exitWith {};
 
     _texture1 = switch (_dialogResult select 0) do {
         case 0: {"";};
@@ -156,6 +160,8 @@ if (typeOf _vehicle in _vehicleTypeMRAP) exitWith {
 
         ]
     ] call Ares_fnc_ShowChooseDialog;
+
+    if (count _dialogResult == 0) exitWith {};
 
     _texture1 = switch (_dialogResult select 0) do {
         case 0: {"";};
@@ -296,6 +302,8 @@ if (typeOf _vehicle in _vehicleTypeAbrams) exitWith {
         ]
     ] call Ares_fnc_ShowChooseDialog;
 
+    if (count _dialogResult == 0) exitWith {};
+
     _texture1 = switch (_dialogResult select 0) do {
         case 0: {"";};
         case 1: {"vic1";};
@@ -346,6 +354,9 @@ if (typeOf _vehicle in _vehicleTypeBradly) exitWith {
             ["Vehicle Number (Side)",["None","VIC 1","VIC 2","VIC 3","VIC 4","VIC 5","VIC 6"],1]
         ]
     ] call Ares_fnc_ShowChooseDialog;
+
+    if (count _dialogResult == 0) exitWith {};
+
     _texture1 = switch (_dialogResult select 0) do {
         case 0: {"";};
         case 1: {"vic1";};
@@ -364,6 +375,9 @@ if (typeOf _vehicle in _vehicleTypeBradlyBUSK) exitWith {
             ["Vehicle Number (Side)",["None","VIC 1","VIC 2","VIC 3","VIC 4","VIC 5","VIC 6"],1]
         ]
     ] call Ares_fnc_ShowChooseDialog;
+
+    if (count _dialogResult == 0) exitWith {};
+
     _texture1 = switch (_dialogResult select 0) do {
         case 0: {"";};
         case 1: {"vic1";};
@@ -382,6 +396,9 @@ if (typeOf _vehicle in _vehicleTypeBradlyBUSK3) exitWith {
             ["Vehicle Number (Side)",["None","VIC 1","VIC 2","VIC 3","VIC 4","VIC 5","VIC 6"],1]
         ]
     ] call Ares_fnc_ShowChooseDialog;
+
+    if (count _dialogResult == 0) exitWith {};
+
     _texture1 = switch (_dialogResult select 0) do {
         case 0: {"";};
         case 1: {"vic1";};
