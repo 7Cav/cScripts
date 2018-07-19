@@ -3,7 +3,7 @@
  * This function fetches a texture from the getVehicleLable texture list and apply it to a supported vechicle.
  *
  * Supported vehicles:
- *   C-130              1 PARM      <LETTER and NUMBER> OR <SPECIAL>    (Locations: Tail)
+ *   C-130              3 PARMS     <LETTER and NUMBER> OR <SPECIAL>    (Locations: Tail)
  *   UH60 Black Hawks   2 PARMS     <LETTER and NUMBER> OR <SPECIAL>    (Locations: Tail)
  *   STRYKER            NONE        NONE                                (Locations: Front)
  *   MRAP               5 PARMS     <LETTER and NUMBER> OR <SPECIAL>    (Locations: Side)
