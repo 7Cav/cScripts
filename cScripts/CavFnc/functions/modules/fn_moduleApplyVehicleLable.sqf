@@ -270,6 +270,9 @@ private _vehicleTypeStriker = [
     "M1135_ATGMV_DG1_NOSLATDES"
 ];
 if (typeOf _vehicle in _vehicleTypeStriker) exitWith {
+
+    if (count _dialogResult == 0) exitWith {};
+
     [_vehicle] call FUNC(setVehicleLable);
 };
 
