@@ -117,15 +117,15 @@ _flagpoleType = [
     "FlagCarrierWhite_EP1",
     "FlagPole_EP1"
 ];
-
-if (typeOf _flagpole in _flagpoleType) then {
-
+if (typeOf _flagpole in _flagpoleType) exitWith {
     _dialogResult = [
-        "Set Flag Texture",
+        "Change Flag Texture",
         [
-            ["Texture type",["Crossed swords","Crossed swords with Cut","Black Coat of arms"],0]
+            ["Flag type",["Crossed swords","Crossed swords with Cut","Black Coat of arms"],0]
         ]
     ] call Ares_fnc_ShowChooseDialog;
+
+    if (count _dialogResult == 0) exitWith {};
 
     _texture = switch (_dialogResult select 0) do {
         case 0: {"0";};
@@ -134,7 +134,48 @@ if (typeOf _flagpole in _flagpoleType) then {
     };
 
     [_flagpole,_texture] remoteExec ["cScripts_fnc_flag",0,true];
-} else {
-    ["Not a flagpole."] call Ares_fnc_ShowZeusMessage;
-    playSound "FD_Start_F";
 };
+
+
+
+if (_flagpole isKindOf "Tank") exitWith {
+    _dialogResult = [
+        "Set Vehicle Flag Texture",
+        [
+            ["Flag type",["Crossed swords","Crossed swords with Cut","Black Coat of arms"],0]
+        ]
+    ] call Ares_fnc_ShowChooseDialog;
+
+    if (count _dialogResult == 0) exitWith {};
+
+    _texture = switch (_dialogResult select 0) do {
+        case 0: {"cScripts\Data\Objects\Flag_7CAV_00.paa";};
+        case 1: {"cScripts\Data\Objects\Flag_7CAV_02.paa";};
+        case 2: {"cScripts\Data\Objects\Flag_7CAV_01.paa";};
+    };
+    _flagpole forceFlagTexture _texture;
+};
+
+
+
+if (_flagpole isKindOf "Car") exitWith {
+    _dialogResult = [
+        "Set Vehicle Flag Texture",
+        [
+            ["Flag type",["Crossed swords","Crossed swords with Cut","Black Coat of arms"],0]
+        ]
+    ] call Ares_fnc_ShowChooseDialog;
+
+    if (count _dialogResult == 0) exitWith {};
+
+    _texture = switch (_dialogResult select 0) do {
+        case 0: {"cScripts\Data\Objects\Flag_7CAV_00.paa";};
+        case 1: {"cScripts\Data\Objects\Flag_7CAV_02.paa";};
+        case 2: {"cScripts\Data\Objects\Flag_7CAV_01.paa";};
+    };
+};
+
+
+
+["Not a supported flag carrier."] call Ares_fnc_ShowZeusMessage;
+playSound "FD_Start_F";
