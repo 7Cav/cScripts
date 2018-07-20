@@ -14,6 +14,8 @@
 
 params ["_flagpole"];
 
+if (!isServer) exitWith {};
+
 _flagpole = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
 _flagpoleType = [
     "rhs_Flag_chdkz",
