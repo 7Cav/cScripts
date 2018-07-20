@@ -23,7 +23,7 @@ private _icon = "cScripts\Data\Icon\icon_00.paa";
 //[_object,"cScriptInsigniaSelectionDelta","Delta Co.",_Icon,["ACE_MainActions","cScriptInsigniaSelectionMenu"]] call FUNC(addAceCategory);
 
 // Make addAction Topic.
-_object addAction ["Insignia Selection", {}];
+_object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5];
 
 // Add the Insignia Selections
 [_object,"Remove Insignia"] call FUNC(addInsigniaSelection);

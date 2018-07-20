@@ -33,37 +33,37 @@ params [
 if (_allowAddActionSelect) then {
     if (_category isEqualTo ["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Alpha"]) then {
         if (_requirePlatoonVariable) then {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Alpha')] call FUNC(hasPlatoonVariable))];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Alpha')] call FUNC(hasPlatoonVariable)), 5];
         } else {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", "true", 5]
         };
     };
     if (_category isEqualTo ["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Bravo"]) then {
         if (_requirePlatoonVariable) then {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Bravo')] call FUNC(hasPlatoonVariable))];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Bravo')] call FUNC(hasPlatoonVariable)), 5];
         } else {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", "true", 5]
         };
     };
     if (_category isEqualTo ["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]) then {
         if (_requirePlatoonVariable) then {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Charlie')] call FUNC(hasPlatoonVariable))];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Charlie')] call FUNC(hasPlatoonVariable)), 5];
         } else {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", "true", 5]
         };
     };
     if (_category isEqualTo ["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Ranger"]) then {
         if (_requirePlatoonVariable) then {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Ranger')] call FUNC(hasPlatoonVariable))];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Ranger')] call FUNC(hasPlatoonVariable)), 5];
         } else {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", "true", 5]
         };
     };
     if (_category isEqualTo ["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Medical"]) then {
         if (_requirePlatoonVariable) then {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Medical')] call FUNC(hasPlatoonVariable))];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", QUOTE([ARR_2(_this,'Medical')] call FUNC(hasPlatoonVariable)), 5];
         } else {
-            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className];
+            _object addAction [format ["   <t color='#ffd966'>%1</t>", _lable], {[player, _this select 3] call Poppy_fnc_applyLoadout;}, _className, 1.5, true, true, "", "true", 5]
         };
     };
 };

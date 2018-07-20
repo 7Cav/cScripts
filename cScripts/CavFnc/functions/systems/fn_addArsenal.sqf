@@ -12,7 +12,7 @@
 params [["_object", objNull, [objNull]]];
 
 // Make addAction
-_object addAction ["   <t color='#bfff00'>Arsenal</t>", {["Open",true] spawn BIS_fnc_arsenal;}];
+_object addAction ["   <t color='#bfff00'>Arsenal</t>", {["Open",true] spawn BIS_fnc_arsenal;}, [], 1.5, true, true, "", "true", 5];
 
 // Make aceInteraction
 private _Icon = "cScripts\Data\Icon\icon_01.paa";
