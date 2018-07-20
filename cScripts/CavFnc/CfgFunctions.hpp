@@ -75,6 +75,8 @@ class cScripts {
 
         class getPlatoonVariable {};
         class hasPlatoonVariable {};
+
+        class teleport {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
@@ -105,7 +107,7 @@ class cScripts {
         class moduleMakeEngineer {};
 
         class moduleRegearTrooper {};
-            
+
         class moduleCallEndex {};
     };
     class debug {
