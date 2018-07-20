@@ -1,6 +1,6 @@
 /*
  * Author: Origunaly some one but CPL.Brostrom.A rewrote it.
- * This teleports a target to a given marker.
+ * This teleports a target to a given marker or any other kind of object.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -22,7 +22,7 @@
 params [
     ["_object", objNull, [objNull]],
     ["_action", "Teleport"],
-    ["_dest", '']
+    ["_dest", ""]
 ];
 
 if (_dest == "") exitWith {};
@@ -33,11 +33,10 @@ _object addAction [
         private _dir = random 359;
 
         // Check if it is a marker or object
-        _isObject = if (isNil QUOTE(_this select 3)) then {false} else {true};
+        _isObject = true;
 
         if (_isObject) then {
-            _isObjectDest = call compile _dest;
-            (_this select 1) setPos [(position _isObjectDest select 0)-10*sin(_dir),(position _isObjectDest select 1)-10*cos(_dir)];
+            (_this select 1) setPos [(getPos _isObjectDest select 0)-10*sin(_dir),(getPos _isObjectDest select 1)-10*cos(_dir)];
             hint "Teleported via object code";
         } else {
             (_this select 1) setPos [(getMarkerPos _dest select 0)-10*sin(_dir),(getMarkerPos _dest select 1)-10*cos(_dir)];
