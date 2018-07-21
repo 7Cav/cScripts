@@ -135,7 +135,7 @@ if (typeOf _flagpole in _flagpoleType) exitWith {
         case 2: {"2";};
     };
 
-    [_flagpole,_texture] remoteExec ["cScripts_fnc_flag",0,true];
+    [_flagpole, _texture] call FUNC(flag);
 };
 
 
