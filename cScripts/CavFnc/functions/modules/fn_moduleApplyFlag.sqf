@@ -14,8 +14,6 @@
 
 params ["_flagpole"];
 
-if (!isServer) exitWith {};
-
 _flagpole = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
 _flagpoleType = [
     "rhs_Flag_chdkz",
@@ -130,12 +128,11 @@ if (typeOf _flagpole in _flagpoleType) exitWith {
     if (count _dialogResult == 0) exitWith {};
 
     _texture = switch (_dialogResult select 0) do {
-        case 0: {"0";};
-        case 1: {"1";};
-        case 2: {"2";};
+        case 0: {"cScripts\Data\Objects\Flag_7CAV_00.paa";};
+        case 1: {"cScripts\Data\Objects\Flag_7CAV_02.paa";};
+        case 2: {"cScripts\Data\Objects\Flag_7CAV_01.paa";};
     };
-
-    [_flagpole, _texture] call FUNC(flag);
+    _flagpole setFlagTexture _texture;
 };
 
 
