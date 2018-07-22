@@ -1,20 +1,53 @@
 /*
- * Author: CPL.Brostrom.A 
- * This changes a given flag texture to a better one. (Works on all flag poles)
+ * Author: CPL.Brostrom.A
+ * This adds custom spray tags to all units.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * None
+ *
+ * Return Value:
+ * Nothing
  *
  * Example:
- * [this] call cScripts_fnc_initTagging
+ * call cScripts_fnc_initTagging
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
 
-[
-    "cScripts_tagging_7cavLogo",
-    "7th Cavalry",
+#ifdef DEBUG_MODE
+    ["Initializing custom spray tags."] call FUNC(logInfo);
+#endif
+
+[   "cScripts_tagging_cav_black",
+    "7Cav Black",
     "ACE_SpraypaintBlack",
-    ["cScripts\Data\Tagging\black_7cav.paa"],
-    "cScripts\Data\Tagging\black_icon.paa"
+    ["cScripts\Data\Tagging\tag_cav_black_ca.paa"],
+    "cScripts\Data\Tagging\icon_action_black_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
+
+[   "cScripts_tagging_cav_blue",
+    "7Cav Blue",
+    "ACE_SpraypaintBlue",
+    ["cScripts\Data\Tagging\tag_cav_blue_ca.paa"],
+    "cScripts\Data\Tagging\icon_action_blue_ca.paa"
+] call ace_tagging_fnc_addCustomTag;
+
+[   "cScripts_tagging_cav_green",
+    "7Cav Green",
+    "ACE_SpraypaintGreen",
+    ["cScripts\Data\Tagging\tag_cav_green_ca.paa"],
+    "cScripts\Data\Tagging\icon_action_green_ca.paa"
+] call ace_tagging_fnc_addCustomTag;
+
+[   "cScripts_tagging_cav_red",
+    "7Cav Red",
+    "ACE_SpraypaintRed",
+    ["cScripts\Data\Tagging\tag_cav_red_ca.paa"],
+    "cScripts\Data\Tagging\icon_action_red_ca.paa"
+] call ace_tagging_fnc_addCustomTag;
+
+#ifdef DEBUG_MODE
+    ["Custom spray tags initialization complete."] call FUNC(logInfo);
+#endif
