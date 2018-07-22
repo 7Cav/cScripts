@@ -1,5 +1,7 @@
 /*           INFO            */
 
+/*=================== O N L Y   E D I T   B E T W E E N   T H E S E   L I N E S====================*/
+
     dev                 = "1SG Tully.B";
     author              = "1SG Tully.B";
 
@@ -10,22 +12,37 @@
     loadScreen          = "Data\MissionLogo.paa";
     overviewPicture     = "Data\MissionLogo.paa";
 
+/*=================== D O   N O T   E D I T   B E L O W   T H E S E   L I N E S====================*/
+
 /*           RULES            */
 
+    cba_settings_hasSettingsFile = 1;
     disabledAI              = true;
-    disableChannels[]       = {0,1,2,6};
+    disableChannels[]       = {{0,false,true},{1,false,true},{2,true,true},{6,true,true}};
 
     forceRotorLibSimulation = 1;
 
 /*          RESPAWN           */
 
-    // Name a marker "respawn_west" or a veichle "respawn_vehicle_west" for set spawn.
+    // Name a marker "respawn_west" or a vehicle "respawn_vehicle_west" for set spawn.
     // See https://community.bistudio.com/wiki/Arma_3_Respawn for more info on respawn.
-    respawn         = BASE;
-    respawnDelay    = 4;
+    respawn                = BASE;
+    respawnDelay           = 4;
+    respawnOnStart         = -1;  // All players at start will load in on the positions they have been placed at.  Ignores respawn menu
+    respawnTemplatesWest[] = {"MenuPosition"};  // Allows players to respawn at the respawn location of their choice after the mission has been started.
 
 /*          SYSTEMS           */
 
+    class Header
+    {
+        gameType = Coop;
+        minPlayers = 1;
+        maxPlayers = 100;
+     };
+
+    class Extended_PreInit_EventHandlers {
+        cScripts_preInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_preInit.sqf'";
+    };
     class Extended_PostInit_EventHandlers {
         cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_postInit.sqf'";
     };
@@ -37,7 +54,6 @@
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
     };
-
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     #include "cScripts\ViewingDistance\GUI.h"
     #include "cScripts\CfgUnitInsignia.hpp"

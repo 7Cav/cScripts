@@ -1,122 +1,61 @@
 # cScripts
+<p align="left">
+<a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/release/7Cav/cScripts.svg?style=plastic&label=Release%20Build" alt="Release Build Version"></a>
+ <a href="https://github.com/7Cav/cScripts/releases/"><img src="https://img.shields.io/github/release/7Cav/cScripts/all.svg?style=plastic&label=Pre-release" alt="Pre release and or current build version"></a>
+ <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=plastic&label=Issues" alt="cScripts Issues"></a>
+ <a href="https://github.com/7Cav/cScripts/releases"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=plastic&label=Downloads" alt="cScripts Downloads"></a>
+<a href="https://travis-ci.org/7Cav/cScripts">
+    <img src="https://img.shields.io/travis/7Cav/cScripts.svg?style=plastic" alt="cScripts Build">
+</a>
+</p>
 This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
 
-## Scripts Installed
-- **CavFnc**                    -   <a href="https://7cav.us/">7th Cavalry Function Library (1.0.0)</a>
-- **Loadouts**                  -   <a href="https://7cav.us/">7th Cavalry Loadouts 160730</a>
-- **Loadouts/Script**           -   <a href="https://github.com/BaerMitUmlaut/Poppy">Poppy (1.0.0)</a>
-- **ViewingDistance**           -   <a href="http://www.armaholic.com/page.php?id=19751">taw_vd (v1.5)</a>
+## Minimum Requrements
+- **CBA**                                    - [Link](https://github.com/CBATeam/CBA_A3)
+- **ACE3**                                   - [Link](https://ace3mod.com/)
+- **RHSUSAF**                                - [Link](http://www.rhsmods.org/)
+- **TFAR**                                   - [Link](http://radio.task-force.ru/en/)
+- **cTab**                                   - [Link](https://github.com/Riouken/cTab)
+- **TF47 Launchers**                         - [Link](https://forums.bistudio.com/forums/topic/176437-tf47-launchers-wip/)
+- **Ares Mod Achilles Expansion** (OPTIONAL) - [Link](https://github.com/ArmaAchilles/AresModAchillesExpansion)
 
-### Manual Installation
-If you use the included `Description.ext` you do not need to do anything otherwise you need to include the folowing block:
-``` c++
-#include "cScripts\ViewingDistance\GUI.h"
-#include "cScripts\Loadouts\script\CfgPoppy.hpp"
-class CfgFunctions {
-    #include "cScripts\ViewingDistance\CfgFunctions.hpp"
-    #include "cScripts\CavFnc\CfgFunctions.hpp"
-    #include "cScripts\Loadouts\script\CfgFunctions.hpp"
-};
-#include "cScripts\CfgUnitInsignia.hpp"
-#include "cScripts\CfgLoadouts.hpp"
-```
+*Thease are the minimum requirements to run the script propperly due to the fact equipment and veichles are listed in the script.*
 
-### Uninstall
-If you whant to remove a function or script you need to remove the following from the description.ext:
+## Installation
+In order to install this script package you only need to [download](https://github.com/7Cav/cScripts/releases/latest) it and place the content in your mission folder located:
+`%USERPROFILE%\Documents\Arma 3 - Other Profiles\[MY AMRA3 USER NAME]\missions\[MY MISSION NAME].[ISLAND]`
 
-**Loadout Script** *(Poppy) `cScripts\Loadouts\...`*
-``` c++
-#include "cScripts\Loadouts\script\CfgPoppy.hpp"
-class CfgFunctions {
-    #include "cScripts\Loadouts\script\CfgFunctions.hpp"
-};
-#include "cScripts\CfgLoadouts.hpp"
-```
+*Note! If you have a `init.sqf` and/or a `desctioption.ext` file included in your mission folder they will be needed to be replaced or edited inorder to install this.*
 
-**Viewing Distance** *(taw_vd) `cScripts\ViewingDistance\...`*
-``` c++
-#include "cScripts\ViewingDistance\GUI.h"
-class CfgFunctions {
-    #include "cScripts\ViewingDistance\CfgFunctions.hpp"
-};
-```
 ## What do cScripts provide?
 cScripts provides you with the basic for S3 Operation making.
 
-### AI Tweek (init.sqf)
-The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best. But you are offcause free to change it if you whant.
+### Scripts Installed
+- **CavFnc**                    -   [7th Cavalry Function Library](https://7cav.us/)
+- **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
+- **ViewingDistance**           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
 
-#### Default:
-``` c++
-{
-    _x setSkill ["aimingspeed", 0.42];
-    _x setSkill ["aimingaccuracy", 0.338];
-    _x setSkill ["aimingshake", 0.36];
-    _x setSkill ["spottime", 0.42];
-    _x setSkill ["spotdistance", 0.7];
-    _x setSkill ["commanding", 1.0];
-    _x setSkill ["general", 1.0];
-} forEach allUnits;
-```
-Tip:
-When playing on a step or desert island it is recomended to change the `"spotdistance"` to `1.0`.
+### AI Tweek (init.sqf)
+The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best.
 
 ### Respawn Preset (description.ext)
-Missions running the template is set to default respawn `BASE` with `4` second delay. This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or delete the lines.
+Missions running the template is set to default respawn `BASE` with `4` second delay. To make a respawn location put down a marker and name it `respawn_west` This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or delete the lines.
+More information about respawn see the [BIS Community Wiki](https://community.bistudio.com/wiki/Arma_3_Respawn).
 
 ## Automatic Loadout Distrubution (Poppy)
-
-| Loadout             | VariableName            | Supported ClassNames                                                              |
-|---------------------|-------------------------|-----------------------------------------------------------------------------------|
-| Default             | `CommonBlufor`          | `ALL PLAYER BLUFOR`                                                               |
-| Squad Leader        | `CAV_SquadLeader`       | `B_Soldier_SL_F` `rhsusf_army_ocp_squadleader` `rhsusf_army_ucp_squadleader`      |
-| Team Leader         | `CAV_TeamLeader`        | `B_Soldier_TL_F` `rhsusf_army_ocp_teamleader` `rhsusf_army_ucp_teamleader`        |
-| Automatic Rifleman  | `CAV_AutomaticRifleman` | `B_soldier_AR_F` `rhsusf_army_ocp_autorifleman` `rhsusf_army_ucp_autorifleman`    |
-| Grenadier           | `CAV_Grenadier`         | `B_Soldier_GL_F` `rhsusf_army_ocp_grenadier` `rhsusf_army_ucp_grenadier`          |
-| Rifleman            | `CAV_Rifleman`          | `B_Soldier_F` `rhsusf_army_ocp_rifleman` `rhsusf_army_ucp_rifleman`               |
-| Combat Life Saver   | `CAV_CombatLifesaver`   | `B_medic_F`                                                                       |
-|                     |                         |                                                                                   |
-| Platoon Medic       | `CAV_PlatoonMedic`      | `rhsusf_army_ocp_medic`                                                           |
-| Engineer            | `CAV_Engineer`          | `B_engineer_F` `rhsusf_army_ocp_engineer` `rhsusf_army_ucp_engineer`              |
-| Officer             | `CAV_Officer`           | `B_officer_F` `rhsusf_army_ocp_officer` `rhsusf_army_ucp_officer`                 |
-|                     |                         |                                                                                   |
-| Tank Commander      | `CAV_TankCommander`     | `rhsusf_army_ucp_crewman`                                                         |
-| Tank Gunner         | `CAV_TankGunner`        | `rhsusf_army_ucp_combatcrewman`                                                   |
-| Tank Driver         | `CAV_TankDriver`        | `rhsusf_army_ocp_crewman`                                                         |
-| Tank Loader         | `CAV_TankLoader`        | `rhsusf_army_ocp_combatcrewman`                                                   |
-|                     |                         |                                                                                   |
-| Helicopter Pilot    | `CAV_HeloPilot`         | `B_Helipilot_F` `rhsusf_army_ocp_helipilot` `rhsusf_army_ucp_helipilot`           |
-
-
-## CAV Functions
-CAV Functions are usable functions and scripts that can be called. You can read more about hte scripts bellow or visit the mission Function Viewer in the editor.
-
-### Main and basic functions
-`initMain`: initMain is used to call appon a stadgeing area crate. It fills a crate allot of equipment, adds insignia and quick selections. It also adds a ReGear button. The scripts works with addAction and ACE action.
-
-`initMainSandbox`: initMainSandbox work identical to initMain except that it adds a VirtualArsenal as well.
-
-`flag`: flag is a just a small function that changes a given flagpoles flag texture.
-
-### Insignia Selection
-The insignia selection is called by `cScripts_fnc_initMain` and `cScripts_fnc_initMainSandbox` base crate scripts. In order to add a insignia you first need to define it in `CfgUnitInsignia.hpp` then add it to `fn_initInsigniaSelections.sqf` using the `cScripts_fnc_addInsigniaSelection` function.
-
-Here is a exsample on how to add a new class to the `CfgUnitInsignia.hpp`:
-``` c++
-class 7_Insignia {
-    displayName = "7th Cavalry Insignia";
-    author = "7th Cavalry Gaming";
-    texture = "cScripts\Data\Insignia\7.paa";
-};
-```
-Here is the same class referenced in `fn_initInsigniaSelections.sqf`:
-```[_object,"7th Cavalry Insignia","7_Insignia","cScripts\Data\Insignia\7.paa","cScriptInsigniaSelectionMisc"] call FUNC(addInsigniaSelection);```
+cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automaticly give ___all blufor players___ a pre defined loadout in the list below. If you havea un recugnice loadout you will be given the default loadout (CommonBlufor).
 
 # Other tips and tricks
-##Make a cool CQB experience
-In order to make a, hopfylly, cool CQB experience you can disabled the AI's pathing. This will make the AI stay put and still be able to turn around and change stance.
-Put this in the InitLine of the soldier: `this disableAI 'PATH';`
-If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
+## Find a classname
+If you wantto put down a specific unit or kit mentaiond under; [Automatic Loadout Distrubution (Poppy)](#automatic-loadout-distrubution-poppy), and can't seam to find the unit. You can search for a classname by typing `class` followed by the classname.
+Exsample:
+> class rhsusf_army_ucp_medic
 
-Click on the script command to see more info about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI).
+## Make a cool CQB experience
+There are two ways of doing so AI garrison units inside of a building. The easy way is to just add this line to a group of AI soldier:
+```[(getPos this), (units this), 150, true, false] call Ares_fnc_ZenOccupyHouse;```
+This will throw the set group in to a close building and garrison it.
 
+HTe other way is to manually place a unita and lock them in position by disabled the AI's pathing (`this disableAI 'PATH';`). This will make the AI stay put but still able to turn around and change stance. If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
+
+*Read more about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI) by clicking on them.*

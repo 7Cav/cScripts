@@ -1,15 +1,21 @@
 /*
- * Author: CPL.Brostrom.A 
- * This adds a adda ction as well as a ACE interaction reGear selection. The script reapplyes the players start loadout.
+ * Author: CPL.Brostrom.A
+ * This adds a reGear selection option. The script reApplyes the players start loadout. But may also heal you if option is allowed.
  *
  * Arguments:
  * 0: Object <OBJECT>
+ * 1: Allow Heal <BOOL>
  *
  * Example:
- * [this] call cScripts_fnc_addReGear
+ * [this,true] call cScripts_fnc_addReGear
  */
- 
-params [["_object", objNull, [objNull]]];
+
+ #include "..\script_component.hpp";
+
+params [
+    ["_object", objNull, [objNull]],
+    ["_doHeal", true]
+];
 
 // Make addAction
 _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
@@ -17,8 +23,12 @@ _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
         [player, typeOf player] call Poppy_fnc_applyLoadout;
     } else {
         [player, vehicleVarName player] call Poppy_fnc_applyLoadout;
+
     };
-}];
+    if (_this select 3) then {
+        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+    };
+}, _doHeal];
 
 // Make ACE Interaction for ReGear
 private _Icon = "cScripts\Data\Icon\icon_00.paa";
@@ -28,6 +38,9 @@ private _reGearStatement = {
         [player, typeOf player] call Poppy_fnc_applyLoadout;
     } else {
         [player, vehicleVarName player] call Poppy_fnc_applyLoadout;
+    };
+    if (_doHeal) then {
+        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
     };
 };
 private _reGearAction = ["cScriptsReGearAce", "ReGear", _Icon, _reGearStatement, _reGearCondition] call ace_interact_menu_fnc_createAction;

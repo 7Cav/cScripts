@@ -1,20 +1,18 @@
 #include "..\script_component.hpp"
-private ["_items", "_itemsUnique", "_itemsCounter", "_itemIndex", "_generated", "_loadoutIndex"];
 
 {
-    _loadoutIndex = LOADOUT_INDEXES find _x;
-    _items = _this select _loadoutIndex;
-    _itemsUnique = _items arrayIntersect _items;
-    _itemsCounter = [];
-    { _itemsCounter pushBack 0; false } count _itemsUnique;
+    private _loadoutIndex = LOADOUT_INDEXES find _x;
+    private _items        = _this select _loadoutIndex;
+    private _itemsUnique  = _items arrayIntersect _items;
+    private _itemsCounter = _itemsUnique apply {0};
 
     {
-        _itemIndex = _itemsUnique find _x;
+        private _itemIndex = _itemsUnique find _x;
         _itemsCounter set [_itemIndex, (_itemsCounter select _itemIndex) + 1];
         false
     } count _items;
 
-    _generated = [];
+    private _generated = [];
     {
         _generated pushBack _x;
         if (_itemsCounter select _forEachIndex > 1) then {

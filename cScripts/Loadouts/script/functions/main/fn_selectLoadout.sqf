@@ -1,11 +1,10 @@
 #include "..\script_component.hpp"
 params ["_unit"];
-private ["_config", "_variableName", "_className", "_sideConfig"];
 
-_config = missionConfigFile >> "CfgLoadouts";
-_variableName = vehicleVarName _unit;
-_className = typeOf _unit;
-_sideConfig = [side group _unit] call FUNC(getSideConfig);
+private _config       = missionConfigFile >> "CfgLoadouts";
+private _variableName = vehicleVarName _unit;
+private _className    = typeOf _unit;
+private _sideConfig   = [side group _unit] call FUNC(getSideConfig);
 
 switch (true) do {
     case (isClass (_config >> _variableName)): {

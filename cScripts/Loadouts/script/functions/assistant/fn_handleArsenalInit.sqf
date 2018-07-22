@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
-private ["_display", "_cmbClass", "_availableClasses", "_sideConfig"];
 
-_display = uiNamespace getVariable "RscDisplayArsenal";
-_cmbClass = _display ctrlCreate ["RscXListBox", 929479];
+private _display  = uiNamespace getVariable "RscDisplayArsenal";
+private _cmbClass = _display ctrlCreate ["RscXListBox", 929479];
 _cmbClass ctrlSetPosition [
     SafeZoneX + SafeZoneW / 2 - 0.3,
     SafeZoneY + 0.05,
@@ -12,7 +11,7 @@ _cmbClass ctrlSetPosition [
 _cmbClass ctrlSetFontHeight 0.06;
 _cmbClass ctrlCommit 0;
 
-_availableClasses = [];
+private _availableClasses = [];
 {
     if (side group _x == side group player) then {
         _availableClasses pushBackUnique (typeOf _x);
@@ -33,7 +32,7 @@ if (isNil QGVAR(availableClasses)) then {
     } count switchableUnits;
 };
 
-_sideConfig = [side group player] call FUNC(getSideConfig);
+private _sideConfig = [side group player] call FUNC(getSideConfig);
 _cmbClass lbAdd _sideConfig;
 _cmbClass lbSetData [0, _sideConfig];
 for "_i" from 0 to (count _availableClasses) - 1 do {

@@ -4,19 +4,21 @@ class Poppy {
         class preInit { preInit = 1; };
         class postInitProxy { postInit = 1; };
         class postInit {};
+        class addItemSorted {};
         class applyLoadout {};
         class createBriefingEntry {};
         class findLoadableWeapon {};
         class getSideConfig {};
+        class getUniqueRadio {};
         class logError {};
         class logInfo {};
         class logWarning {};
         class selectLoadout {};
+        class setUniqueRadio {};
         class synchGroupIDs {};
     };
     class ACRE {
         file ="cScripts\Loadouts\script\functions\ACRE";
-        class addLRRadios {};
         class applyRadioLoadout {};
         class findGroupChannel {};
         class setupRadios {};
