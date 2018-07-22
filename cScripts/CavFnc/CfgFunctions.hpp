@@ -12,6 +12,7 @@ class cScripts {
 
         class initModules {};
         class initTagging {};
+
         class initCuratorHeloGetOutRL {};
         class initCuratorC130 {};
     };
