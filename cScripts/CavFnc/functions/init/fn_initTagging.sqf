@@ -21,28 +21,28 @@
 #endif
 
 [   "cScripts_tagging_cav_black",
-    "7Cav Black",
+    "Cav Black",
     "ACE_SpraypaintBlack",
     ["cScripts\Data\Tagging\tag_cav_black_ca.paa"],
     "cScripts\Data\Tagging\icon_action_black_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
 
 [   "cScripts_tagging_cav_blue",
-    "7Cav Blue",
+    "Cav Blue",
     "ACE_SpraypaintBlue",
     ["cScripts\Data\Tagging\tag_cav_blue_ca.paa"],
     "cScripts\Data\Tagging\icon_action_blue_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
 
 [   "cScripts_tagging_cav_green",
-    "7Cav Green",
+    "Cav Green",
     "ACE_SpraypaintGreen",
     ["cScripts\Data\Tagging\tag_cav_green_ca.paa"],
     "cScripts\Data\Tagging\icon_action_green_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
 
 [   "cScripts_tagging_cav_red",
-    "7Cav Red",
+    "Cav Red",
     "ACE_SpraypaintRed",
     ["cScripts\Data\Tagging\tag_cav_red_ca.paa"],
     "cScripts\Data\Tagging\icon_action_red_ca.paa"
