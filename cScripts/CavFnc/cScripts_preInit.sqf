@@ -4,20 +4,12 @@
  */
 #include "..\script_component.hpp";
 
-diag_log formatText ["[cScripts] (EDEN) INFO: Loading CBA Settings"];
+#ifdef DEBUG_MODE
+    ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
+#endif
 
+// Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
-
-// Debug Mode
-[
-    "cScripts_Settings_setDebugMode",
-    "CHECKBOX",
-    ["Debug Mode","Debug allow you to see more rpt log messages and get more indepth data on the mission.\nNOTE! This function work only when you preview mission in multiplayer.\n"],
-    _cScriptSettings,
-    false,
-    true,
-    {}
-] call CBA_Settings_fnc_init;
 
 // Mission type
 [
@@ -156,12 +148,16 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
     ] call CBA_Settings_fnc_init;
 };
 
-diag_log formatText ["[cScripts] (EDEN) INFO: CBA Settings are loaded."];
+#ifdef DEBUG_MODE
+    ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
+#endif
 
 // Load preInit mission settings
 if (is3DEN) exitWith {};
 
-FORCEINFO("Loading preInit");
+#ifdef DEBUG_MODE
+    ["postInit Initializing."] call FUNC(logInfo);
+#endif
 
 switch (cScripts_Settings_setMissionType) do {
     case (0): {
@@ -180,4 +176,6 @@ if (cScripts_Settings_enable7cavZeusModules) then {
     call cScripts_fnc_initModules;
 };
 
-FORCEINFO("preInit loaded");
+#ifdef DEBUG_MODE
+    ["postInit initialization completed."] call FUNC(logInfo);
+#endif

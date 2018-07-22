@@ -14,10 +14,14 @@
  *
  */
 
+#include "..\script_component.hpp";
+
 if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
 
-#include "..\script_component.hpp";
+#ifdef DEBUG_MODE
+    ["Running training startup hint."] call FUNC(logInfo);
+#endif
 
 params [["_time", 15]];
 

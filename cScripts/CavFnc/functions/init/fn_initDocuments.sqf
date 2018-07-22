@@ -13,11 +13,13 @@
  *
  */
 
-waitUntil {!isNull player && player == player};
-
 #include "..\script_component.hpp";
 
-INFO("Adding diary records");
+waitUntil {!isNull player && player == player};
+
+#ifdef DEBUG_MODE
+    ["Applying diary records."] call FUNC(logInfo);
+#endif
 
 // Add New Topic (7th Cavalry)
 if(player diarySubjectExists "7Cav")exitwith{};

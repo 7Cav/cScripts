@@ -10,10 +10,13 @@
  *
  * Example:
  * call cScripts_fnc_initCuratorHeloGetOutRL
- *
  */
 
 #include "..\script_component.hpp";
+
+#ifdef DEBUG_MODE
+    ["Applying CuratorObjectPlaced EH to Curator to handle Helicopter settings application."] call FUNC(logInfo);
+#endif
 
 {
     addHeloGetOut = _x addEventHandler ["CuratorObjectPlaced", {

@@ -20,8 +20,6 @@
  */
 #include "..\script_component.hpp";
 
-INFO("Applying PreLoadout Player Settings");
-
 params [
     ["_player",""],
     ["_setPlatoon",""],
@@ -29,6 +27,10 @@ params [
     ["_isEngineer", false],
     ["_isEOD", false]
 ];
+
+#ifdef DEBUG_MODE
+    [formatText["Applying preLoadout to %1.", _player]] call FUNC(logInfo);
+#endif
 
 // Set platoonVariables
 (_player) setVariable [QGVAR(7cav_Trooper), true];
@@ -44,4 +46,6 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 // Set EOD capable
 (_player) setVariable ["ACE_isEOD", _isEOD];
 
-INFO("Done Applying PreLoadout Player Settings");
+#ifdef DEBUG_MODE
+    [formatText["preLoadout application completed for %1.", _player]] call FUNC(logInfo);
+#endif

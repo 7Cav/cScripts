@@ -13,6 +13,8 @@
  *
  */
 
+#include "..\script_component.hpp";
+
 params [
     ["_vehicle", objNull, [objNull]],
     ["_pos",[0,0,0]],
@@ -20,6 +22,10 @@ params [
     ["_texture",""],
     ["_vector",[0,0,1]]
 ];
+
+#ifdef DEBUG_MODE
+    [formatText["Texture label ""%1"" is being created for %2.", _texture, _vehicle]] call FUNC(logInfo);
+#endif
 
 if (!isServer) exitWith {};
 
