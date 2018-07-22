@@ -7,19 +7,15 @@ class cScripts {
         class initDocuments {};
 
         class initMissionStartHint {};
-
         class initTrainingStartHint {};
         class initCustomStartHint {};
 
         class initModules {};
-
         class initTagging {};
-
         class initCuratorHeloGetOutRL {};
         class initCuratorC130 {};
     };
     class DiaryRecord {
-        file = "cScripts\cavFnc\functions\init\DiaryRecord";
         file = "cScripts\cavFnc\functions\documents";
         class Doc_Info {};
         class Doc_MissionControl {};
@@ -40,11 +36,6 @@ class cScripts {
         class doStarterCrateSupplies {};
         class doFieldHospital {};
 
-    class main {
-        file = "cScripts\cavFnc\functions\main";
-        class initMain {};
-        class initMainSandbox {};
-        class initVehicle {};
         class doSupplyCrate {};
 
         class doAmmoCrate {};
@@ -57,17 +48,6 @@ class cScripts {
 
         class doEmptyCrate {};
     };
-    class supplies {
-        file = "cScripts\cavFnc\functions\supplies";
-        class equipBase {};
-        class equipCrate {};
-        class equipMedicalCrate {};
-        
-        class equipCrateAmmo {};
-        class equipCrateLaunchers {};
-        class equipCrateGrenades {};
-    };
-
     class systems {
         file = "cScripts\cavFnc\functions\systems";
         class setPlayerInitSettings {};
@@ -99,13 +79,10 @@ class cScripts {
     class selections {
         file = "cScripts\cavFnc\functions\selections";
         class initQuickSelections {};
-        class addQuickSelection {};
         class initInsigniaSelections {};
-        class addInsigniaSelection {};
     };
 
     class misc {
-        file = "cScripts\cavFnc\functions\misc";
         file = "cScripts\cavFnc\functions\texture";
         class flag {};
 
@@ -113,7 +90,6 @@ class cScripts {
         class createVehicleLable {};
         class getVehicleLable {};
     };
-};
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         class moduleCreateStarterCrate {};
@@ -129,7 +105,7 @@ class cScripts {
         class moduleMakeEngineer {};
 
         class moduleRegearTrooper {};
-            
+
         class moduleCallEndex {};
     };
     class debug {
