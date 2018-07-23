@@ -25,6 +25,10 @@ params [
     ["_vector",[0,0,1]]
 ];
 
+#ifdef DEBUG_MODE
+    [formatText["Texture label ""%1"" is being created for %2.", _texture, _vehicle]] call FUNC(logInfo);
+#endif
+
 if (!isServer) exitWith {};
 if (_texture == '') exitWith {};
 

@@ -10,9 +10,10 @@
  *
  */
 
+#include "..\script_component.hpp";
+
 player createDiaryRecord["7Cav",
     ["S3 Mission Control",
-        "
-        "
+        format["Your currently running cScripts version: <font color='#ffc61a'>%1</font>", VERSION]
     ]
 ];

@@ -21,6 +21,10 @@ params [
     ["_quaScale", 1]
 ];
 
+#ifdef DEBUG_MODE
+    [formatText["Fieald Hostiptal applied to %1.", _crate]] call FUNC(logInfo);
+#endif
+
 // Make addAction Topic
 _crate addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Field Hospital", {}, [], 1.5, true, true, "", "true", 5];
 

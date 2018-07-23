@@ -11,24 +11,28 @@
 
 #include "..\script_component.hpp";
 
-INFO("Applying PostLoadout Player Settings");
-
 params [
-    ["_unit",""],
+    ["_player",""],
     ["_safeMode", true],
     ["_earPlugs", true]
 ];
 
+#ifdef DEBUG_MODE
+    [formatText["Applying PostLoadout to %1.", _player]] call FUNC(logInfo);
+#endif
+
 // Safety first
 if (_safemode) then {
-    if (_unit getVariable ["ace_safemode_actionID", -1] == -1) then {
-        [_unit, currentWeapon _unit, currentMuzzle _unit] call ace_safemode_fnc_lockSafety;
+    if (_player getVariable ["ace_safemode_actionID", -1] == -1) then {
+        [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
     };
 };
 
 // Add earplugs if you dont have them in.
 if (_earPlugs) then {
-    if !([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {[_unit] call ace_hearing_fnc_putInEarplugs;};
+    if ([_player] call ace_hearing_fnc_hasEarPlugsIn) then {} else {[_player] call ace_hearing_fnc_putInEarplugs;};
 };
 
-INFO("Done Applying PostLoadout Player Settings");
+#ifdef DEBUG_MODE
+    [formatText["postLoadout application completed for %1.", _player]] call FUNC(logInfo);
+#endif

@@ -16,9 +16,11 @@
 #include "..\script_component.hpp";
 
 // Check if Achilles is active else terminate
-if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {FORCEWARNING("cfgPatches for Achilles not detected, terminating modules.");};
+if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {["cfgPatches for Achilles not detected, terminating modules."] call FUNC(logInfo);};
 
-INFO("Achilles mod found adding cav modules.");
+#ifdef DEBUG_MODE
+    ["Initializing 7Cav custom Achilles Modules."] call FUNC(logInfo);
+#endif
 
 ["7Cav Logistics", "Starter Crate",{
     [(_this select 0)] call FUNC(moduleCreateStarterCrate);
@@ -80,4 +82,6 @@ if (ace_medical_increaseTrainingInLocations) then {
     call FUNC(moduleCallEndex);
 }] call Ares_fnc_RegisterCustomModule;
 
-INFO("cav moduels successfully added.");
+#ifdef DEBUG_MODE
+    ["7Cav Custom Achilles Modules initialization complete"] call FUNC(logInfo);
+#endif

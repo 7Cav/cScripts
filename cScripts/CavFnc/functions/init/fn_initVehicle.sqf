@@ -12,7 +12,9 @@
 
 #include "..\script_component.hpp";
 
-INFO("Adding eventhandles to all vehicles");
+#ifdef DEBUG_MODE
+    ["Applying EH init to vehicles to handle inventory and settings."] call FUNC(logInfo);
+#endif
 
 //All helicopters
 ["RHS_UH60_Base", "init", {

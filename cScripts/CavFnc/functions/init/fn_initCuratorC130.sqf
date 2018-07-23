@@ -13,6 +13,11 @@
  */
 
 #include "..\script_component.hpp";
+
+#ifdef DEBUG_MODE
+    ["Applying CuratorObjectPlaced EH to Curator to handle C130 settings application."] call FUNC(logInfo);
+#endif
+
 {
     addPlaneJump = _x addEventHandler ["CuratorObjectPlaced", {
         private _plane = ["RHS_C130J"];

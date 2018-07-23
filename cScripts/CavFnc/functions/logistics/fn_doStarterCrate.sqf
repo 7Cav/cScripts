@@ -34,6 +34,10 @@ params [
     ["_arsenal", false]
 ];
 
+#ifdef DEBUG_MODE
+    [formatText["Starter Crate system applied to %1.", _object]] call FUNC(logInfo);
+#endif
+
 // If isServer call equipBase
 if (isServer) then {
     [_object,_quickSelectScale] call FUNC(doStarterCrateSupplies);
