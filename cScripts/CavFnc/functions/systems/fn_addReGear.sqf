@@ -28,7 +28,7 @@ _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
     if (_this select 3) then {
         [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
     };
-}, _doHeal];
+}, _doHeal, 1.5, true, true, "", "true", 5];
 
 // Make ACE Interaction for ReGear
 private _Icon = "cScripts\Data\Icon\icon_00.paa";
