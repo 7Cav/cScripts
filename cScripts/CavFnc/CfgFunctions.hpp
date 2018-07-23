@@ -11,6 +11,7 @@ class cScripts {
         class initCustomStartHint {};
 
         class initModules {};
+        class initTagging {};
 
         class initCuratorHeloGetOutRL {};
         class initCuratorC130 {};
@@ -105,7 +106,7 @@ class cScripts {
         class moduleMakeEngineer {};
 
         class moduleRegearTrooper {};
-            
+
         class moduleCallEndex {};
     };
     class debug {
