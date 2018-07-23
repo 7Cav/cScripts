@@ -23,7 +23,9 @@ params [
 
 // Safety first
 if (_safemode) then {
-    [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
+    if (_player getVariable ["ace_safemode_actionID", -1] == -1) then {
+        [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
+    };
 };
 
 // Add earplugs if you dont have them in.

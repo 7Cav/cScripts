@@ -55,16 +55,12 @@ if (ace_medical_increaseTrainingInLocations) then {
 }] call Ares_fnc_RegisterCustomModule;
 */
 
-["7Cav Helicopters", "Add Get Out Right/Left",{
-    [(_this select 1)] call FUNC(moduleReadyHelicopter);
-}] call Ares_fnc_RegisterCustomModule;
-
-["7Cav Helicopters", "Add Tail Number",{
-    [(_this select 1)] call FUNC(moduleApplyTailNumber);
+["7Cav Vehicle", "Add Vehicle Lable",{
+    [(_this select 1)] call FUNC(moduleApplyVehicleLable);
 }] call Ares_fnc_RegisterCustomModule;
 
 
-["7Cav Misc", "Transform to Cav Flag",{
+["7Cav Misc", "Apply Cav Flag",{
     [(_this select 1)] call FUNC(moduleApplyFlag);
 }] call Ares_fnc_RegisterCustomModule;
 

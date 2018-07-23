@@ -26,7 +26,7 @@ params [
 #endif
 
 // Make addAction Topic
-_crate addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Field Hospital", {}];
+_crate addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Field Hospital", {}, [], 1.5, true, true, "", "true", 5];
 
 if (_isFacility) then {
     _crate setVariable ["ace_medical_isMedicalFacility", true, true];

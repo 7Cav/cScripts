@@ -1,3 +1,4 @@
+
 /*
  * Author: CPL.Brostrom.A
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
@@ -135,13 +136,24 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
+// Tagging
+[
+    "cScripts_Settings_allowCustomTagging",
+    "CHECKBOX",
+    ["Allow Custom Tagging","Allow players to spray custom taggs.\n"],
+    [_cScriptSettings, "4; Player Actions"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
 // Aries Achilles Zeus Moduels
 if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
     [
         "cScripts_Settings_enable7cavZeusModules",
         "CHECKBOX",
         ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-        [_cScriptSettings, "4; Zeus"],
+        [_cScriptSettings, "5; Zeus"],
         true,
         true,
         {}
@@ -169,7 +181,10 @@ switch (cScripts_Settings_setMissionType) do {
 };
 
 if (cScripts_Settings_allowCustomInit) then {
+};
 
+if (cScripts_Settings_allowCustomTagging) then {
+    call cScripts_fnc_initTagging;
 };
 
 if (cScripts_Settings_enable7cavZeusModules) then {
