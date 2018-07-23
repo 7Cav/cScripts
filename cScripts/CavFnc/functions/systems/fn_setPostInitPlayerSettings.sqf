@@ -28,7 +28,7 @@ if (_safemode) then {
 
 // Add earplugs if you dont have them in.
 if (_earPlugs) then {
-    if ([_player] call ace_hearing_fnc_hasEarPlugsIn) then {} else {[_player] call ace_hearing_fnc_putInEarplugs;};
+    if (![_player] call ace_hearing_fnc_hasEarPlugsIn) then {[_player] call ace_hearing_fnc_putInEarplugs;};
 };
 
 #ifdef DEBUG_MODE
