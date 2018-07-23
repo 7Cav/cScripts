@@ -5,7 +5,7 @@ __version__ = 1.6
 
 # GLOBALS
 exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
-version_File = ("cScripts\\CavFnc\\functions\\script_component.hpp")
+version_File = ("cScripts\\script_component.hpp")
 script_Name = 'cScripts'
 
 # set projecty path
