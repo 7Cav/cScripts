@@ -24,6 +24,9 @@ params [
 // Safety first
 if (_safemode) then {
     if (_player getVariable ["ace_safemode_actionID", -1] == -1) then {
+        #ifdef DEBUG_MODE
+            if (_safeMode) then {[formatText["%1 have got there weapon on safe in postLoadout.", _player]] call FUNC(logInfo);};
+        #endif
         [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
     };
 };
@@ -34,5 +37,6 @@ if (_earPlugs) then {
 };
 
 #ifdef DEBUG_MODE
+    if (_earPlugs) then {[formatText["%1 have got there earplugs assigned in postLoadout.", _player]] call FUNC(logInfo);};
     [formatText["postLoadout application completed for %1.", _player]] call FUNC(logInfo);
 #endif

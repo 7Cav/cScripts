@@ -47,5 +47,9 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 (_player) setVariable ["ACE_isEOD", _isEOD];
 
 #ifdef DEBUG_MODE
+    if (_setPlatoon != "") then {[formatText["%1 have got platoon variable %2 in preLoadout", _player, _setPlatoon]] call FUNC(logInfo);};
+    [formatText["%1 medical ability is set to %2 in preLoadout", _player, _isMedicClass]] call FUNC(logInfo);
+    if (_isEngineer) then {[formatText["%1 is assigned engineer ability via preLoadout", _player]] call FUNC(logInfo);};
+    if (_isEOD) then {[formatText["%1 is assinged as eod specialist via preLoadout", _player]] call FUNC(logInfo);};
     [formatText["preLoadout application completed for %1.", _player]] call FUNC(logInfo);
 #endif
