@@ -1,10 +1,10 @@
 /*
- * Author: Origunaly some one but CPL.Brostrom.A rewrote it.
+ * Author: Originally some one but CPL.Brostrom.A rewrote it.
  * This teleports a target to a given marker or any other kind of object.
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Lable text <STRING>
+ * 1: Label text <STRING>
  * 2: Destination <STRING or OBJECT>
  * 3: Is object <BOOL> (Default: false)
  *
@@ -19,7 +19,7 @@
  * [this,"Teleport - Boat", baseObject, true] call cScripts_fnc_teleport
  * [this,"Teleport - Carrier", emptyTextureObject, true] call cScripts_fnc_teleport
  */
-
+ 
 #include "..\script_component.hpp";
 
 params [
