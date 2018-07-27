@@ -6,7 +6,9 @@ if (is3DEN) exitWith {};
 
 #include "..\script_component.hpp";
 
-FORCEINFO("Loading postInit");
+#ifdef DEBUG_MODE
+    ["postInit Initializing."] call FUNC(logInfo);
+#endif
 
 // Add diary records on mission start
 if (cScripts_Settings_showDiaryRecords) then {
@@ -47,4 +49,6 @@ switch (cScripts_Settings_setMissionType) do {
     };
 };
 
-FORCEINFO("postInit loaded");
+#ifdef DEBUG_MODE
+    ["postInit initialization completed."] call FUNC(logInfo);
+#endif

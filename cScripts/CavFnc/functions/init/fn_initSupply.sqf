@@ -13,8 +13,13 @@
  *
  */
 
-if (!isServer) exitWith {};
 #include "..\script_component.hpp";
+
+if (!isServer) exitWith {};
+
+#ifdef DEBUG_MODE
+    ["Applying EH init to supply crates to handle inventory and settings."] call FUNC(logInfo);
+#endif
 
 // Supply Crates
 ["B_CargoNet_01_ammo_F", "init", {

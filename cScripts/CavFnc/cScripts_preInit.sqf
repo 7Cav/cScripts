@@ -1,23 +1,16 @@
+
 /*
  * Author: CPL.Brostrom.A
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 #include "..\script_component.hpp";
 
-diag_log formatText ["[cScripts] (EDEN) INFO: Loading CBA Settings"];
+#ifdef DEBUG_MODE
+    ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
+#endif
 
+// Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
-
-// Debug Mode
-[
-    "cScripts_Settings_setDebugMode",
-    "CHECKBOX",
-    ["Debug Mode","Debug allow you to see more rpt log messages and get more indepth data on the mission.\nNOTE! This function work only when you preview mission in multiplayer.\n"],
-    _cScriptSettings,
-    false,
-    true,
-    {}
-] call CBA_Settings_fnc_init;
 
 // Mission type
 [
@@ -143,25 +136,40 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
+// Tagging
+[
+    "cScripts_Settings_allowCustomTagging",
+    "CHECKBOX",
+    ["Allow Custom Tagging","Allow players to spray custom taggs.\n"],
+    [_cScriptSettings, "4; Player Actions"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
 // Aries Achilles Zeus Moduels
 if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
     [
         "cScripts_Settings_enable7cavZeusModules",
         "CHECKBOX",
         ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-        [_cScriptSettings, "4; Zeus"],
+        [_cScriptSettings, "5; Zeus"],
         true,
         true,
         {}
     ] call CBA_Settings_fnc_init;
 };
 
-diag_log formatText ["[cScripts] (EDEN) INFO: CBA Settings are loaded."];
+#ifdef DEBUG_MODE
+    ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
+#endif
 
 // Load preInit mission settings
 if (is3DEN) exitWith {};
 
-FORCEINFO("Loading preInit");
+#ifdef DEBUG_MODE
+    ["postInit Initializing."] call FUNC(logInfo);
+#endif
 
 switch (cScripts_Settings_setMissionType) do {
     case (0): {
@@ -173,11 +181,16 @@ switch (cScripts_Settings_setMissionType) do {
 };
 
 if (cScripts_Settings_allowCustomInit) then {
+};
 
+if (cScripts_Settings_allowCustomTagging) then {
+    call cScripts_fnc_initTagging;
 };
 
 if (cScripts_Settings_enable7cavZeusModules) then {
     call cScripts_fnc_initModules;
 };
 
-FORCEINFO("preInit loaded");
+#ifdef DEBUG_MODE
+    ["postInit initialization completed."] call FUNC(logInfo);
+#endif

@@ -16,9 +16,11 @@
 #include "..\script_component.hpp";
 
 // Check if Achilles is active else terminate
-if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {FORCEWARNING("cfgPatches for Achilles not detected, terminating modules.");};
+if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {["cfgPatches for Achilles not detected, terminating modules."] call FUNC(logInfo);};
 
-INFO("Achilles mod found adding cav modules.");
+#ifdef DEBUG_MODE
+    ["Initializing 7Cav custom Achilles Modules."] call FUNC(logInfo);
+#endif
 
 ["7Cav Logistics", "Starter Crate",{
     [(_this select 0)] call FUNC(moduleCreateStarterCrate);
@@ -53,16 +55,12 @@ if (ace_medical_increaseTrainingInLocations) then {
 }] call Ares_fnc_RegisterCustomModule;
 */
 
-["7Cav Helicopters", "Add Get Out Right/Left",{
-    [(_this select 1)] call FUNC(moduleReadyHelicopter);
-}] call Ares_fnc_RegisterCustomModule;
-
-["7Cav Helicopters", "Add Tail Number",{
-    [(_this select 1)] call FUNC(moduleApplyTailNumber);
+["7Cav Vehicle", "Add Vehicle Lable",{
+    [(_this select 1)] call FUNC(moduleApplyVehicleLable);
 }] call Ares_fnc_RegisterCustomModule;
 
 
-["7Cav Misc", "Transform to Cav Flag",{
+["7Cav Misc", "Apply Cav Flag",{
     [(_this select 1)] call FUNC(moduleApplyFlag);
 }] call Ares_fnc_RegisterCustomModule;
 
@@ -84,4 +82,6 @@ if (ace_medical_increaseTrainingInLocations) then {
     call FUNC(moduleCallEndex);
 }] call Ares_fnc_RegisterCustomModule;
 
-INFO("cav moduels successfully added.");
+#ifdef DEBUG_MODE
+    ["7Cav Custom Achilles Modules initialization complete"] call FUNC(logInfo);
+#endif

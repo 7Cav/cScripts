@@ -14,7 +14,7 @@ params [["_object", objNull, [objNull]]];
 // Make addAction
 _object addAction ["   <t color='#ff3333'>Heal</t>", {
     [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
-}];
+}, [], 1.5, true, true, "", "true", 5];
 
 // Make ACE Interaction for ReGear
 private _Icon = "Z\ACE\addons\medical\ui\icons\medical_cross.paa";

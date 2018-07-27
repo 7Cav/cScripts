@@ -34,13 +34,17 @@ params [
     ["_arsenal", false]
 ];
 
+#ifdef DEBUG_MODE
+    [formatText["Starter Crate system applied to %1.", _object]] call FUNC(logInfo);
+#endif
+
 // If isServer call equipBase
 if (isServer) then {
     [_object,_quickSelectScale] call FUNC(doStarterCrateSupplies);
 };
 
 // Make addAction Topic
-_object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Equipment Crate", {}];
+_object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Equipment Crate", {}, [], 1.5, true, true, "", "true", 5];
 
 if (_arsenal) then {
     [_object, true] call ace_arsenal_fnc_initBox;
@@ -65,7 +69,7 @@ if (_InsigniaSelectOption) then {
 };
 
 // Make end of options line.
-_object addAction ["---", {}];
+_object addAction ["---", {}, [], 1.5, true, true, "", "true", 5];
 
 // Disable slingload
 _object enableRopeAttach false;

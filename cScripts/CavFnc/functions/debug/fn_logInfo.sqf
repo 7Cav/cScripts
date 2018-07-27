@@ -4,7 +4,6 @@
  *
  * Arguments:
  * 0: Message <STRING>
- * 1: Forced <BOOL>
  *
  * Example:
  * ["Something is wrong here."] call cScripts_fnc_logInfo
@@ -14,10 +13,10 @@
 #include "..\script_component.hpp"
 
 params [
-    "_message",
-    ["_isForced",false]
+    "_message"
 ];
 
-if ((cScripts_Settings_setDebugMode) or (_isForced)) then {
-    diag_log formatText ["[cScripts] INFO: %1", _message];
-};
+private _prefix = "[cScripts]";
+private _type = "INFO";
+
+diag_log formatText ["%1 %2: %3", _prefix, _type, _message];

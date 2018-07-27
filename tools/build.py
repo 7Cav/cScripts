@@ -5,7 +5,7 @@ __version__ = 1.6
 
 # GLOBALS
 exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
-version_File = ("cScripts\\CavFnc\\functions\\script_component.hpp")
+version_File = ("cScripts\\script_component.hpp")
 script_Name = 'cScripts'
 
 # set projecty path
@@ -86,7 +86,7 @@ def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
         except:
             shutil.rmtree(tmpFolder)
             sys.exit('Issues occured when featching folder ' + dir + '.')
-    print('\033[0mFeatch compleet.\033[0m')
+    print('\033[0mFeatch complete.\033[0m')
 
 
 
@@ -103,7 +103,7 @@ def copyTempToRelease(releaseFolder):
         shutil.copytree('tmp', newFolderPath)
     except:
         sys.exit('Issues occured when trying to copy build to release...')
-    print('\033[0mMove compleet.\033[0m')
+    print('\033[0mMove complete.\033[0m')
 
 
 
@@ -159,7 +159,7 @@ def publicBuildReplace(file_path, pattern, subst):
 
 
 
-def createModdedBuild(folder):      # This function is compleetly manual atm:
+def createModdedBuild(folder):      # This function is completely manual atm:
     print('Starting construction of a public {} version...'.format(script_Name))
 
     print('Adjusting \033[96mdescription.ext\033[0m...')
@@ -200,7 +200,7 @@ def createModdedBuild(folder):      # This function is compleetly manual atm:
         for n in range(0,c):
             x = publicBuildFindString(file,'"Flagstack_Red",')
             publicBuildReplace(file, x, '')
-    print('Loadouts adjustments compleet...')
+    print('Loadouts adjustments complete...')
 
     print('Starting to adjust logistical crates...')
     functionFiles = ['fn_doAmmoCrate.sqf','fn_doExplosivesCrate.sqf','fn_doGrenadesCrate.sqf','fn_doLaunchersCrate.sqf','fn_doSpecialWeaponsCrate.sqf','fn_doStarterCrateSupplies.sqf','fn_doSupplyCrate.sqf','fn_doWeaponsCrate.sqf']
@@ -225,7 +225,7 @@ def createModdedBuild(folder):      # This function is compleetly manual atm:
             x = publicBuildFindString(file,'"Flagstack_Red"')
             publicBuildReplace(file, x, '')
 
-    print('Logistical crates adjustments compleet...')
+    print('Logistical crates adjustments complete...')
 
 
 

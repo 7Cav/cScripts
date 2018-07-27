@@ -235,3 +235,16 @@ if (typeOf _vehicle in _vehicleTypeBradlyBUSK3) then {
     if (_lable1 != "") then { [_vehicle,[-1.964,-1.0,0],90,_lableTexture1] call FUNC(createVehicleLable); };
     if (_lable1 != "") then { [_vehicle,[1.968,-1.0,0],270,_lableTexture1] call FUNC(createVehicleLable); };
 };
+
+
+// Add eventHandlers to handle death and deletion.
+_vehicle addEventHandler ["Killed", {
+    params["_vehicle"];
+    private _labels = _vehicle getVariable [QGVAR(labels), []];
+    {deleteVehicle _x} forEach _labels;
+}];
+_vehicle addEventHandler ["Deleted", {
+    params["_vehicle"];
+    private _labels = _vehicle getVariable [QGVAR(labels), []];
+    {deleteVehicle _x} forEach _labels;
+}];

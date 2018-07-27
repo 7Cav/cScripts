@@ -1,17 +1,21 @@
 /*
  * Author: CPL.Brostrom.A
- * [Description]
+ * This function create a texture that is attached to a given object.
  *
  * Arguments:
- * 0: Argument Name <OBJECT/BOOL/NUMBER/STRING/ARRAY/CODE> (Optional) (Default; MyDefaultValue)
- *
- * Return Value:
- * Return Name <BOOL/NUMBER/STRING>
+ * 0: Vehicle <OBJECT>
+ * 1: Position <ARRAY>
+ * 2: Rotation <NUMBER>
+ * 3: Texture <STRING>
+ * 4: Vector <ARRAY> (Optional) (Default; [0,0,1])
  *
  * Example:
- * ["example"] call cScripts_fnc_[functionName]
+ * ["UH60",[-0.49,-2.45,-1.3],87,"path/to/texture.paa"] call cScripts_fnc_createVehicleLable
+ * ["C130",[0.205,-11.9,8.920],-90,"path/to/texture.paa",[-0.05,0,1]] call cScripts_fnc_createVehicleLable
  *
  */
+
+#include "..\script_component.hpp";
 
 params [
     ["_vehicle", objNull, [objNull]],
@@ -21,10 +25,20 @@ params [
     ["_vector",[0,0,1]]
 ];
 
-if (!isServer) exitWith {};
+#ifdef DEBUG_MODE
+    [formatText["Texture label ""%1"" is being created for %2.", _texture, _vehicle]] call FUNC(logInfo);
+#endif
 
-private _lable = "UserTexture1m_F" createVehicle [0,0,0];
-_lable attachTo [_vehicle, _pos];
-_lable setObjectTextureGlobal [0, _texture];
-_lable setDir _dir;
-_lable setvectorUp _vector;
+if (!isServer) exitWith {};
+if (_texture == '') exitWith {};
+
+private _label = "UserTexture1m_F" createVehicle [0,0,0];
+_label attachTo [_vehicle, _pos];
+_label setObjectTextureGlobal [0, _texture];
+_label setDir _dir;
+_label setvectorUp _vector;
+
+// Collect lables in to variable
+private _labels = _vehicle getVariable [QGVAR(labels), []];
+_labels pushBack _label;
+_vehicle setVariable [QGVAR(labels), _labels, true];
