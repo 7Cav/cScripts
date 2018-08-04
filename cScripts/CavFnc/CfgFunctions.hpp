@@ -82,7 +82,12 @@ class cScripts {
         class initQuickSelections {};
         class initInsigniaSelections {};
     };
-
+    class carrier {
+        file = "cScripts\cavFnc\functions\carrier";
+        class carrier_init {};
+        class carrier_action {};
+        class carrier_spawn {};
+    };
     class misc {
         file = "cScripts\cavFnc\functions\texture";
         class flag {};
