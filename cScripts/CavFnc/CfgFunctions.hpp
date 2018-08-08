@@ -15,7 +15,7 @@ class cScripts {
 
         class initCuratorHeloGetOutRL {};
         class initCuratorC130 {};
-		class initCuratorMk6Mortar{};
+        class initCuratorMk6Mortar{};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\documents";
