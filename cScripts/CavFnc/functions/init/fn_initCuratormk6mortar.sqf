@@ -15,8 +15,7 @@
 #include "..\script_component.hpp";
 
 #ifdef DEBUG_MODE
-    ["Applying CuratorObjectPlaced EH to Curator to handle Mk6 Mortar skin application: <prtar_McGehee_cerimonial_black."] call FUNC(logInfo);
-    ["Applying CuratorObjectPlaced EH to Curator to handle Mk6 Mortar skin application: <prtar_McGehee_camo_Green."] call FUNC(logInfo);
+    ["Applying CuratorObjectPlaced EH to Curator to handle Mk6 Mortar skin application"] call FUNC(logInfo);
 #endif
 
 /*Curator texturing of the mk6 mortar in honour of McGehee - Waldie.A & Brostrom
