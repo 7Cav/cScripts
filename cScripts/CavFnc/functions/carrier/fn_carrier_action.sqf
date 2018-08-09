@@ -1,23 +1,30 @@
 /*
  * Author: CPL.Brostrom.A
- * [Description]
+ * This function add a ace action to a given object that give you the ability to spawn a aircraft on a given carrier.
  *
  * Arguments:
- * 0: Argument Name <OBJECT/BOOL/NUMBER/STRING/ARRAY/CODE> (Optional) (Default; MyDefaultValue)
+ * 0: Object                <OBJECT>
+ * 1: Carrier               <OBJECT/STRING>
+ * 2: Lable                 <STRING>
+ * 3: ClassName             <STRING>
+ * 4: Poition and Directon  <ARRAY>         (Default; [0,0,0,0])
+ * 5: Icon                  <STRING>        (Default; "")
+ * 6: Category Name         <STRING>        (Default; "")
+ * 6: Category              <STRING>        (Default; ["ACE_MainActions","cScriptCarrierSpawnSystem_Main"])
  *
  * Return Value:
- * Return Name <BOOL/NUMBER/STRING>
+ * Nothing
  *
  * Example:
- * [carrier,"FIR_F16C_Blank",[35.5,122,25.5],-90] call cScripts_fnc_carrier_action
- * [carrier,"FIR_F16C_Blank",[-32,75,25.5],90] call cScripts_fnc_carrier_action
- * [carrier,"FIR_F16C_Blank",[-32,-11.5,25.5],90] call cScripts_fnc_carrier_action
-
- * [carrier,"RHS_UH60M",[6,140,26.5],180] call cScripts_fnc_carrier_action
- * [carrier,"RHS_UH60M",[6,95,26.5],180] call cScripts_fnc_carrier_action
- * [carrier,"RHS_UH60M",[6,50,26.5],180] call cScripts_fnc_carrier_action
+ * [this,carrier,"Elevator A","FIR_F16C_Blank", [35.5,122,25.5,-90], _icon, "cScriptCarrierSpawnSystem_F16_ElevatarA", ["ACE_MainActions","cScriptCarrierSpawnSystem_Main","cScriptCarrierSpawnSystem_Sub_F16"]] call cScripts_fnc_carrier_action
+ * [this,carrier,"Elevator B","FIR_F16C_Blank", [-32,75,25.5,90], _icon, "cScriptCarrierSpawnSystem_F16_ElevatarB", ["ACE_MainActions","cScriptCarrierSpawnSystem_Main","cScriptCarrierSpawnSystem_Sub_F16"]] call cScripts_fnc_carrier_action
+ * [this,carrier,"Elevator C","FIR_F16C_Blank", [-32,-11.5,25.5,90], _icon, "cScriptCarrierSpawnSystem_F16_ElevatarC", ["ACE_MainActions","cScriptCarrierSpawnSystem_Main","cScriptCarrierSpawnSystem_Sub_F16"]] call cScripts_fnc_carrier_action
  *
- * Public: [Yes/No]
+ * //[this,carrier,"RHS_UH60M",[6,140,26.5],180] call cScripts_fnc_carrier_action
+ * //[this,carrier,"RHS_UH60M",[6,95,26.5],180] call cScripts_fnc_carrier_action
+ * //[this,carrier,"RHS_UH60M",[6,50,26.5],180] call cScripts_fnc_carrier_action
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
@@ -48,6 +55,8 @@ private _dir = _posAndDir select 3;
 private _carrierSelectAction = [_categoryName, _lable, _icon, {
         params ["_target", "_player", "_actionParams"];
         _actionParams params ["_carrier", "_className", "_posX", "_posY","_posZ","_dir"];
-        [_carrier, _className, [_posX,_posY,_posZ], _dir] call FUNC(carrier_spawn);
+        [_carrier, _className, [_posX,_posY,_posZ], _dir] remoteExecCall [QFUNC(carrier_spawn), 2, false];
+        //[[_carrier, _className, [_posX,_posY,_posZ], _dir], QFUNC(carrier_spawn), false, false, false] call BIS_fnc_MP;
+        //[_carrier, _className, [_posX,_posY,_posZ], _dir] call FUNC(carrier_spawn);
     }, {true}, {}, [_carrier, _className, _posX, _posY, _posZ, _dir]] call ace_interact_menu_fnc_createAction;
 [_object, 0, _category, _carrierSelectAction] call ace_interact_menu_fnc_addActionToObject;

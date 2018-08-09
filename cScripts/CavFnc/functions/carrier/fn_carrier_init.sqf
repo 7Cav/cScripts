@@ -1,10 +1,10 @@
 /*
  * Author: CPL.Brostrom.A
- * [Description]
+ * This function initzialize a spawning system on the given object to spawn aircraft on a carrier.
  *
  * Arguments:
- * 0: Object
- * 1: Carrier
+ * 0: Object    <OBJECT>
+ * 1: Carrier   <OBJECT/STRING>
  *
  * Return Value:
  * BOOL
@@ -12,7 +12,7 @@
  * Example:
  * [this,Carrier] call cScripts_fnc_carrier_init
  *
- * Public: [Yes/No]
+ * Public: Yes
  */
 
 #include "..\script_component.hpp";
