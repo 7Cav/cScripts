@@ -4,7 +4,7 @@ import argparse, shutil, tempfile
 __version__ = 1.6
 
 # GLOBALS
-exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
+exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
 version_File = ("cScripts\\script_component.hpp")
 script_Name = 'cScripts'
 
