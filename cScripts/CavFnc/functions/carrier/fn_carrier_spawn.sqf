@@ -24,19 +24,19 @@
 #define DEBUG_MODE
 
 params [
-    ["_carrier",""],
-    ["_vehicle",""],
+    ["_carrier", objNull],
+    ["_vehicle", objNull],
     ["_pos",[0,0,0]],
     ["_dir",0]
 ];
 
-if (_carrier == "") exitWith {[formatText["There are no carrier defined..."]] call FUNC(logError);};
+if (!isServer) exitWith {};
+
+//if (_carrier == "") exitWith {[formatText["There are no carrier defined..."]] call FUNC(logError);};
 
 #ifdef DEBUG_MODE
-    [formatText["Spawning classname %1 on carrier %2.", _vehicle, _carrier]] call FUNC(logInfo);
+    [formatText["Spawning classname %1 at %2 rotated %3 on %4.", _vehicle, _pos, _dir, _carrier]] call FUNC(logInfo);
 #endif
-
-hint formatText["Spawned %1",_vehicle];
 
 private _veh = _vehicle createVehicle [0,0,0];
 _veh attachTo [_carrier, _pos];
