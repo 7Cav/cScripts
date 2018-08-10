@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import sys, os
-import argparse, shutil, tempfile
+import argparse, shutil, subprocess, tempfile
 __version__ = 1.6
 
 # GLOBALS
@@ -61,6 +61,14 @@ def getVersion(versionFile):
             line = line.split(".")
             version = line
             version = list(map(int, version))
+    # get Revision hash
+    try:
+        hash = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip()
+        version.append (hash)
+    except:
+        version.append ('')
+    
+
     return version
 
 
@@ -107,17 +115,27 @@ def copyTempToRelease(releaseFolder):
 
 
 
-def zipBuild(versionNumber=['','',''],tag='_',build='',rc=''):
-    ZipName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+def zipBuild(versionNumber=['','','',''],tag='_',build='',rc=''):
+    if (versionNumber[3] != '') and (build != ''):
+        hash = str(versionNumber[3])[2:]
+        hash = hash[:-1]
+        ZipName = '{}{}v{}.{}.{}-{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    else:
+        ZipName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
     print('Creating archive...')
     shutil.make_archive('release\\{}'.format(ZipName), 'zip', "tmp")
     print('\033[0m{}.zip is created.\033[0m'.format(ZipName))
 
 
 
-def makeDummyVersionFile(versionNumber=['','',''],tag='_',build='',rc=''):
+def makeDummyVersionFile(versionNumber=['','','',''],tag='_',build='',rc=''):
     print('Creating version dummy file...')
-    dummyName = 'tmp//{}{}v{}.{}.{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+    if (versionNumber[3] != '') and (build != ''):
+        hash = str(versionNumber[3])[2:]
+        hash = hash[:-1]
+        dummyName = 'tmp//{}{}v{}.{}.{}-{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    else:
+        dummyName = 'tmp//{}{}v{}.{}.{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
     dummy = open(dummyName,"w+")
     dummy.write('I\'am a dummy file that just show version numbers. I\'ve done my purpose yey!\n')
 
@@ -289,9 +307,8 @@ def main():
     tmpFolder = createFolder("tmp")
 
     createBuild(objectList[0],objectList[1], tmpFolder, releaseFolder)
-
     versionNumber = getVersion(version_File)
-
+    
     if args.public:
         tagString = '_PUBLIC_'
         createModdedBuild(tmpFolder)
