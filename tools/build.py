@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import sys, os
-import argparse, shutil, tempfile
+import argparse, shutil, subprocess, tempfile
 __version__ = 1.6
 
 # GLOBALS
-exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
+exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
 version_File = ("cScripts\\script_component.hpp")
 script_Name = 'cScripts'
 
@@ -61,6 +61,14 @@ def getVersion(versionFile):
             line = line.split(".")
             version = line
             version = list(map(int, version))
+    # get Revision hash
+    try:
+        hash = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip()
+        version.append (hash)
+    except:
+        version.append ('')
+    
+
     return version
 
 
@@ -91,7 +99,7 @@ def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
 
 
 def copyTempToRelease(releaseFolder):
-    # Copying teh temp directory to release
+    # Copying the temp directory to release
     print('Moving build to release folder...')
     try:
         newFolderPath = releaseFolder + '\\{}'.format(script_Name)
@@ -107,12 +115,29 @@ def copyTempToRelease(releaseFolder):
 
 
 
-def zipBuild(versionNumber=['','',''],tag='_',build='',rc=''):
-    ZipName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+def zipBuild(versionNumber=['','','',''],tag='_',build='',rc=''):
+    if (versionNumber[3] != '') and (build != ''):
+        hash = str(versionNumber[3])[2:]
+        hash = hash[:-1]
+        ZipName = '{}{}v{}.{}.{}-{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    else:
+        ZipName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
     print('Creating archive...')
     shutil.make_archive('release\\{}'.format(ZipName), 'zip', "tmp")
     print('\033[0m{}.zip is created.\033[0m'.format(ZipName))
 
+
+
+def makeDummyVersionFile(versionNumber=['','','',''],tag='_',build='',rc=''):
+    print('Creating version dummy file...')
+    if (versionNumber[3] != '') and (build != ''):
+        hash = str(versionNumber[3])[2:]
+        hash = hash[:-1]
+        dummyName = 'tmp//{}{}v{}.{}.{}-{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    else:
+        dummyName = 'tmp//{}{}v{}.{}.{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+    dummy = open(dummyName,"w+")
+    dummy.write('I\'am a dummy file that just show version numbers. I\'ve done my purpose yey!\n')
 
 
 def publicBuildFindString(file,string):
@@ -243,7 +268,7 @@ def main():
 
     parser.add_argument("-p", "--public",           help="Create a \"public\" build to be used on non CavPack Enviroment",
                         action="store_true")
-    parser.add_argument('-b', '--build', required=False, choices=['dev', 'test'], help="Add a additional tag to a to the build")
+    parser.add_argument('-b', '--build', required=False, choices=['dev', 'test', 'custom'], help="Add a additional tag to a to the build")
     parser.add_argument('-rc', '--releasecandidate', type=int, required=False,  help="Set a release candidate number to the build \".RC1\" for exsample")
 
     group.add_argument("-s", "--save",              help="Save the build",
@@ -274,13 +299,16 @@ def main():
     # press enter to start build
     input('\nPress enter to start the build process...')
 
+    # Remove tempfolder if it exist on start
+    if os.path.isdir('tmp'):
+        shutil.rmtree('tmp')
+
     releaseFolder = createFolder("release")
     tmpFolder = createFolder("tmp")
 
     createBuild(objectList[0],objectList[1], tmpFolder, releaseFolder)
-
     versionNumber = getVersion(version_File)
-
+    
     if args.public:
         tagString = '_PUBLIC_'
         createModdedBuild(tmpFolder)
@@ -290,8 +318,12 @@ def main():
             buildString = '_DevBuild'.format()
         if args.build == 'test':
             buildString = '_TestBuild'.format()
+        if args.build == 'custom':
+            buildString = '_CustomBuild'.format()
     if args.releasecandidate:
         rcString = '.RC{}'.format(str(args.releasecandidate))
+
+    makeDummyVersionFile(versionNumber,tagString,buildString,rcString)
 
     if args.save:
         copyTempToRelease(releaseFolder)
