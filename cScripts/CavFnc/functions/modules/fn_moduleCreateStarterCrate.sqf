@@ -1,20 +1,22 @@
 /*
  * Author: CPL.Brostrom.A
  * Modified by: PVT.Schouten.M
- * This function crates a startercrate.
+ * This module function spawn a 7th Cavalry Starter Crate.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
  * Example:
- *  this call moduleCreateStarterCrate;
+ * this call moduleCreateStarterCrate;
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
 
-params ["_crate","_pos"];
+params ["_crate"];
 
-_pos = _this select 0;
+private _pos = _this select 0;
 
 private _dialogResult = [
     "7th Cavalry Starter Crate",

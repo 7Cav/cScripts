@@ -1,13 +1,14 @@
 /*
  * Author: CPL.Brostrom.A
- * This function checks if the helicopter type is correct and apply the desired logo.
+ * This module function allow you to apply a texture lable to a given vehicle.
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Texture <STRING>
  *
  * Example:
- *  call cScripts_fnc_moduleApplyVehicleLable;
+ * this call cScripts_fnc_moduleApplyVehicleLable
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
@@ -15,8 +16,6 @@
 params ["_vehicle"];
 
 _vehicle = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
-
-
 
 // UH-60 blackhawk
 private _vehicleTypeUH60 = [
