@@ -7,7 +7,6 @@
  * 0: Object <OBJECT>
  * 1: Label text <STRING>
  * 2: Destination <MARKER/OBJECT/LOCATION/GROUP/TASK>
- * 3: Radius <NUMBER> (Optional)
  *
  * Return Value:
  * Nothing
@@ -24,30 +23,49 @@
 params [
     ["_object", objNull, [objNull]],
     ["_action", "Teleport"],
-    ["_dest", nil, [objNull, grpNull, "", locationNull, taskNull, []]],
-    ["_radius", 0, [0]]
+    ["_dest", nil, [objNull, grpNull, "", locationNull, taskNull, []]]
 ];
 
-if (isNil "_dest") exitWith {[formatText["No destination given for teleporter %1 (%2).", _object, _action]] call FUNC(logError)};
+if (isNil "_dest") exitWith {[formatText["No valid destination given for teleporter %1 (Action named; %2).", _object, _action]] call FUNC(logError)};
 
 #ifdef DEBUG_MODE
-    [format["Teleporter action added to %1.", _object]] call FUNC(logInfo);
+    [format["Teleporter action, named '%1', added to %2 with destination: %3.", _action, _object, _dest]] call FUNC(logInfo);
 #endif
 
 _object addAction [
     format["<t color='#C9FFC9'>%1</t>", _action], {
-        private _dest = _this select 3;
-        private _radius = _this select 4;
-        //private _dir = getDir _dest;
-        titleText ["", "BLACK OUT", 3];
-        [{
-            params ["_dest",["_radius",0]];
-            [player, _dest, _radius] call CBA_fnc_setPos;
-        }, [_dest,_radius], 2] call CBA_fnc_waitAndExecute;
-        //player setDir _dir;
+        params ["","","","_dest"];
+        private _height = [0,0,0];
+
+        switch (typeName _dest) do {
+            case "OBJECT" : {
+                _height = getPosASL _dest;
+                _height = _height select 2;
+            };
+            case "GROUP" : {
+                _height = getPosASL _dest;
+                _height = _height select 2;
+            };
+            case "STRING" : {
+                _height = _height select 2;
+            };
+            case "LOCATION" : {
+                _height = _height select 2;
+            };
+            case "TASK" : {
+                _height = _height select 2;
+            };
+            default {
+                _height = _height select 2;
+            };
+        };
+        
+        [player, _dest] call CBA_fnc_setPos;
+        [player, _height] call CBA_fnc_setHeight;
         titleText ["", "BLACK IN", 3];
         #ifdef DEBUG_MODE
-            [format["%1 have been teleportet to %2", name player, _dest]] call FUNC(logInfo);
+            [format["%1 have been teleportet to %2 at height %3.", name player, _dest, _height]] call FUNC(logInfo);
         #endif
-    }, [_dest,_radius], 1.5, true, true, "", "true", 10
+
+    }, _dest, 1.5, true, true, "", "true", 10
 ];
