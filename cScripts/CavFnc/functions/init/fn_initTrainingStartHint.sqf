@@ -12,6 +12,7 @@
  * call cScripts_fnc_initTrainingStartHint
  * [60] call cScripts_fnc_initTrainingStartHint
  *
+ * Public: No
  */
 
 #include "..\script_component.hpp";

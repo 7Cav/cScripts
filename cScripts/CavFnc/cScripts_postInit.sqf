@@ -21,8 +21,7 @@ if (cScripts_Settings_allowCustomInit) then {
         call cScripts_fnc_initVehicle;
 
         // Make sure curator object gets its functions reapplied.
-        call cScripts_fnc_initCuratorC130;
-        call cScripts_fnc_initCuratorHeloGetOutRL;
+        call cScripts_fnc_initCuratorObjectPlaced;
     };
 
     // Change inventory content of nato supply crates on mission start.

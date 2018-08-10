@@ -13,8 +13,7 @@ class cScripts {
         class initModules {};
         class initTagging {};
 
-        class initCuratorHeloGetOutRL {};
-        class initCuratorC130 {};
+        class initCuratorObjectPlaced {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\documents";
