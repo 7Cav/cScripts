@@ -14,7 +14,7 @@
 
 params [["_message","",[]]];
 
-private _prefix = format["[%1]",PREFIX];
+private _prefix = formatText["[%1]", QUOTE(PREFIX)];
 private _type = "WARNING";
 
 diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
