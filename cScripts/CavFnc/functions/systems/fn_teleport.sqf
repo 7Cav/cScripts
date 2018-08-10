@@ -16,6 +16,8 @@
  * [this,"Teleport - Base", MyBase] call cScripts_fnc_teleport
  * [this,"Teleport - Talon", "FOB_Talon"] call cScripts_fnc_teleport
  * [this,"Teleport - Base", "respawn_west"] call cScripts_fnc_teleport
+ *
+ * Public: Yes
  */
  
 #include "..\script_component.hpp";
