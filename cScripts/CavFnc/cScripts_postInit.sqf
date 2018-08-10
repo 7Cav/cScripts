@@ -22,6 +22,7 @@ if (cScripts_Settings_allowCustomInit) then {
 
         // Make sure curator object gets its functions reapplied.
         call cScripts_fnc_initCuratorC130;
+        call cScripts_fnc_initCuratorMk6Mortar;
         call cScripts_fnc_initCuratorHeloGetOutRL;
     };
 
