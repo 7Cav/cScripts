@@ -33,7 +33,7 @@ params [
     ["_dir",0]
 ];
 
-if (!isServer) exitWith {};
+//if (!isServer) exitWith {};
 //if (_carrier == "") exitWith {[formatText["There are no carrier defined..."]] call FUNC(logError);};
 
 #ifdef DEBUG_MODE
@@ -41,20 +41,21 @@ if (!isServer) exitWith {};
 #endif
 
 private _veh = _vehicle createVehicle [0,0,0];
-//[_veh, [_carrier, _pos]] remoteExec ["attachTo", _veh];
-//[_dir] remoteExecCall ["setDir", _veh];
-
-_veh attachTo [_carrier, _pos];
-_veh setDir _dir;
-_veh setvectorUp [0,0,1];
-
 [{
-    params ["_veh"];
-    //[_veh] remoteExec ["detach", _veh];
-    detach _veh;
-}, [_veh], 2] call CBA_fnc_waitAndExecute;
+    params ["_veh","_carrier","_pos","_dir"];
 
+    _veh attachTo [_carrier, _pos];
+    _veh setDir _dir;
+    _veh setvectorUp [0,0,1];
 
-#ifdef DEBUG_MODE
-    [formatText["%1 have been spawned at %2.", _veh, getPosASL _veh]] call FUNC(logInfo);
-#endif
+    [{
+        params ["_veh"];
+        detach _veh;
+    }, [_veh], 2] call CBA_fnc_waitAndExecute;
+
+    #ifdef DEBUG_MODE
+        [formatText["%1 have been spawned at %2.", _veh, getPosASL _veh]] call FUNC(logInfo);
+    #endif
+    
+},[_veh,_carrier,_pos,_dir]] call CBA_fnc_execNextFrame;
+
