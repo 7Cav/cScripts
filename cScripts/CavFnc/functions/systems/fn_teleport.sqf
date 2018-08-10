@@ -1,5 +1,5 @@
 /*
- * Author: Originally some one but CPL.Brostrom.A rewrote it.
+ * Author: CPL.Brostrom.A
  * This teleports a target to a given marker or any other kind of object.
  * Z will always be 0 for MARKER, LOCATION and TASK.
  *
@@ -12,10 +12,10 @@
  * Nothing
  *
  * Example:
- * [this,"Teleport - Talon","FOB_Talon"] call cScripts_fnc_teleport
- * [this,"Teleport - Airfield","Airstrip"] call cScripts_fnc_teleport
- * [this,"Teleport - Base","MyBase"] call cScripts_fnc_teleport
- * [this,"Teleport - Base","respawn_west",5] call cScripts_fnc_teleport
+ * [this,"Teleport - Airfield", Airstrip] call cScripts_fnc_teleport
+ * [this,"Teleport - Base", MyBase] call cScripts_fnc_teleport
+ * [this,"Teleport - Talon", "FOB_Talon"] call cScripts_fnc_teleport
+ * [this,"Teleport - Base", "respawn_west"] call cScripts_fnc_teleport
  */
  
 #include "..\script_component.hpp";
