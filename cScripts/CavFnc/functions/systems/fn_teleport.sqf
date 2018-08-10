@@ -19,7 +19,7 @@
  */
  
 #include "..\script_component.hpp";
-#define DEBUG_MODE
+
 params [
     ["_object", objNull, [objNull]],
     ["_action", "Teleport"],
