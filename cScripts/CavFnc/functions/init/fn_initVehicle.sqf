@@ -12,6 +12,8 @@
 
 #include "..\script_component.hpp";
 
+if (!isServer) exitWith {};
+
 #ifdef DEBUG_MODE
     ["Applying EH init to vehicles to handle inventory and settings."] call FUNC(logInfo);
 #endif
