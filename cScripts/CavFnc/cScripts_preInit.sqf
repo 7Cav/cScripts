@@ -187,7 +187,7 @@ if (EGVAR(Settings,allowCustomTagging)) then {
     call FUNC(initTagging);
 };
 
-if (EGVAR(Settings,enable7cavZeusModules) then {
+if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
 };
 

@@ -17,7 +17,7 @@ if (EGVAR(Settings,showDiaryRecords)) then {
 
 if (EGVAR(Settings,allowCustomInit)) then {
     // Change inventory content of supply crates on mission start.
-    if (EGVAR(Settings,useCustomVehicleSettings) then {
+    if (EGVAR(Settings,useCustomVehicleSettings)) then {
         call FUNC(initVehicle);
 
         // Make sure curator object gets its functions reapplied.
@@ -31,7 +31,7 @@ if (EGVAR(Settings,allowCustomInit)) then {
     };
 };
 
-switch (EGVAR(Settings,setMissionType) do {
+switch (EGVAR(Settings,setMissionType)) do {
     case (0): {
         if (EGVAR(Settings,enableStartHint)) then {
             [EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText), 15] call FUNC(initCustomStartHint);
