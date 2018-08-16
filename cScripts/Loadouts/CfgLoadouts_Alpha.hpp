@@ -2,19 +2,59 @@
 
 //  P E G A S U S   A N D   H E L I C O P T E R   C R E W
 
-class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasus
 
-    backpack[] = {"B_Carryall_mcamo"};
-    headgear[] = {"rhsusf_hgu56p_visor"};
+//DEVNOTES:
+// "Helmet types?
+// "2x Earplugs" Airframe have 10 and you have 1, need extra?
+// Chemlight types?
+// "1x Soft Cover" what is that? Barret?
+// "1x Shemagh" Glasses variant and Color?
+// "1x 117F Radio" airframe have 1, share ability, have additional more?
+
+class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasus
+    gps[] = {"ItemcTab"};
+};
+
+class CAV_Alpha_Helo_COPILOT : CAV_Alpha_Base {  // Use for CoPilots
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+
+        // Personal and additional medical equipment
+        "ACE_quikclot",20,
+        "ACE_morphine",7,
+        "ACE_epinephrine",7,
+        "ACE_tourniquet",7,
+
+        // Standard
+        "ACE_MapTools",
+        "ACE_Flashlight_XL50",
+
+        // Electronics
+        "ACE_microDAGR"
+    };
 
     gps[] = {"ItemcTab"};
-
 };
 
 class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
+    vest[] = {"rhsusf_mbav_mg"};
 
-    backpack[] = {"B_Carryall_mcamo"};
-    headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
+    primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_anpeq15A","rhsusf_acc_eotech_552"};
+
+    magazines[] = {
+        "rhs_200rnd_556x45_M_SAW",5,
+        "rhsusf_mag_15Rnd_9x19_JHP",2,
+
+        "B_IR_Grenade",2,
+        "SmokeShellBlue",2,
+        "SmokeShellRed",2,
+        "SmokeShellGreen",2,
+
+        "Chemlight_green",2,
+        "ACE_Chemlight_HiRed",2,
+        "ACE_Chemlight_HiYellow",2
+    };
 
     items[] = {
         // Radios
@@ -22,13 +62,13 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
+        "ACE_morphine",2,
+        "ACE_epinephrine",2,
         "ACE_tourniquet",2,
 
         // Standard
         "ACE_MapTools",
-        "ACE_IR_Strobe_Item",
-        "ACE_Flashlight_MX991",
-        "ACE_CableTie",2,
+        "ACE_Flashlight_XL50",
 
         // Electronics
         "ACE_microDAGR",
@@ -36,41 +76,45 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
         // Tools
         "ToolKit"
     };
-
-    gps[] = {"ItemcTab"};
 
     preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",3,
+        "rhsusf_mag_15Rnd_9x19_JHP",2,
 
-    backpack[] = {"B_Carryall_mcamo"};
-    headgear[] = {"rhsusf_hgu56p_visor_mask_black_skull"};
+        "B_IR_Grenade",2,
+        "SmokeShellBlue",2,
+        "SmokeShellRed",2,
+        "SmokeShellGreen",2,
+
+        "Chemlight_green",2,
+        "ACE_Chemlight_HiRed",2,
+        "ACE_Chemlight_HiYellow",2
+    };
 
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC152",		
 
         // Personal Medical Equipment
-        "ACE_quikclot",26,
-        "ACE_tourniquet",8,
-        "ACE_morphine",8,
+        "ACE_quikclot",20,
+        "ACE_fieldDressing",10,
+        "ACE_elasticBandage",10,
+        "ACE_packingBandage",10,
+        "ACE_morphine",10,
+        "ACE_epinephrine",10,
+        "ACE_tourniquet",7,
 
         // Standard
         "ACE_MapTools",
-        "ACE_IR_Strobe_Item",
-        "ACE_Flashlight_MX991",
-        "ACE_CableTie",2,
+        "ACE_Flashlight_XL50",
 
         // Electronics
-        "ACE_microDAGR",
-
-        // Tools
-        "ToolKit"
+        "ACE_microDAGR"
     };
-
-    preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 //  F I X E D   W I N G

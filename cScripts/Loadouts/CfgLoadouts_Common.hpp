@@ -50,10 +50,9 @@ class CommonBlufor {
 };
 
 class CAV_Alpha_Base : CommonBlufor {
-
-    backpack[] = {""};
+    backpack[] = {"B_Kitbag_mcamo"};
     goggles[] = {""};
-    headgear[] = {""};
+    headgear[] = {"rhsusf_hgu56p_visor"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
     vest[] = {"rhsusf_mbav_light"};
 
@@ -61,19 +60,20 @@ class CAV_Alpha_Base : CommonBlufor {
     secondary[] = {"rhsusf_weap_m9"};
     launcher[] = {""};
 
-    binoculars[] = {""};
+    binoculars[] = {"Binocular"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",4,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",3,
         "rhsusf_mag_15Rnd_9x19_JHP",2,
 
-        "Chemlight_green",
-        "ACE_Chemlight_HiRed",
-        "ACE_Chemlight_HiYellow",
-        "SmokeShell",
-        "SmokeShellGreen",
-        "SmokeShellRed",
-        "B_IR_Grenade",2
+        "B_IR_Grenade",2,
+        "SmokeShellBlue",2,
+        "SmokeShellRed",2,
+        "SmokeShellGreen",2,
+
+        "Chemlight_green",2,
+        "ACE_Chemlight_HiRed",2,
+        "ACE_Chemlight_HiYellow",2
     };
 
     items[] = {
@@ -81,25 +81,24 @@ class CAV_Alpha_Base : CommonBlufor {
         "ACRE_PRC152",
 
         // Personal Medical Equipment
-        "ACE_quikclot",6,
+        "ACE_quikclot",10,
+        "ACE_morphine",2,
+        "ACE_epinephrine",2,
         "ACE_tourniquet",2,
 
         // Standard
         "ACE_MapTools",
-        "ACE_IR_Strobe_Item",
-        "ACE_Flashlight_MX991",
-        "ACE_CableTie",2,
+        "ACE_Flashlight_XL50",
 
         // Electronics
-        "ACE_microDAGR",
-
+        "ACE_microDAGR"
     };
 
-    compass[] = {"ItemCompass"};
+    //compass[] = {"ItemCompass"};
     gps[] = {"ItemAndroid"};
-    map[] = {"ItemMap"};
+    //map[] = {"ItemMap"};
     nvgs[] = {"rhsusf_ANPVS_15"};
-    watch[] = {"ItemWatch"};
+    //watch[] = {"ItemWatch"};
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'alpha', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
