@@ -13,7 +13,7 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (!isServer) exitWith {};
+if (didJIP) exitWith {};
 
 // check if this already have been applied
 if (!isNil {_vehicle getVariable QGVAR(hasVehicleInventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle]] call FUNC(logWarning);};
