@@ -67,11 +67,17 @@ private _lableTextureLine = ["line"] call FUNC(getVehicleLable);
 
 // UH-60 blackhawk
 private _vehicleTypeUH60 = [
-    "RHS_UH60M_d",
-    "RHS_UH60M_MEV2_d",
-    "RHS_UH60M_MEV_d",
-    "RHS_UH60M",
-    "RHS_UH60M_MEV2",
+    "RHS_UH60M_d", 
+    "RHS_UH60M_ESSS_d", 
+    "RHS_UH60M_ESSS2_d", 
+    "RHS_UH60M2_d", 
+    "RHS_UH60M_MEV2_d", 
+    "RHS_UH60M_MEV_d", 
+    "RHS_UH60M", 
+    "RHS_UH60M_ESSS", 
+    "RHS_UH60M_ESSS2", 
+    "RHS_UH60M2", 
+    "RHS_UH60M_MEV2", 
     "RHS_UH60M_MEV"
 ];
 if (typeOf _vehicle in _vehicleTypeUH60) then {
