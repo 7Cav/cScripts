@@ -13,8 +13,6 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (didJIP) exitWith {};
-
 // check if this already have been applied
 if (!isNil {_vehicle getVariable QGVAR(hasVehicleInventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle]] call FUNC(logWarning);};
 
@@ -31,17 +29,23 @@ private _fixedWingTransport = ["RHS_C130J"];
 private _fixedWingAttack = ["RHS_A10", "rhsusf_f22", "FIR_F16C", "FIR_F16C_RS_512TFS", "FIR_F16C_RS_400", "FIR_F16C_RS_526TFS", "FIR_F16C_RS_86TFW2", "FIR_F16C_RS_86TFW", "FIR_F16C_RS_86WG", "FIR_F16C_Ag_arctic", "FIR_F16C_Ag_flanker", "FIR_F16C_Ag_lizard", "FIR_F16C_AV", "FIR_F16C_Blank", "FIR_F16C_CFTTEST", "FIR_F16C_Makos", "FIR_F16C_Osan", "FIR_F16C_HG", "FIR_F16C_Polish", "FIR_F16C_ROKAF_B32", "FIR_F16C_ROKAF", "FIR_F16C_WP", "FIR_F16C_Polish_CFT", "FIR_F16C_WW", "FIR_F16D", "FIR_F16D_CFTTEST", "FIR_F16D_ROKAF", "FIR_F16D_Polish_CFT", "FIR_F16D_AV", "FIR_F16D_Blank", "FIR_F16D_WP", "B_Plane_Fighter_01_F", "B_Plane_Fighter_01_Stealth_F"];
 private _ambulance = ["B_Truck_01_medical_F", "B_T_Truck_01_medical_F", "M1133_MEV_DG1_NOSLATWOOD", "M1133_MEV_DG1_NOSLATDES", "M1133_MEV_DG1_SLATDES", "M1133_MEV_DG1_SLATWOOD", "rhsusf_m113d_usarmy_medical", "RHS_UH60M_MEV2_d", "RHS_UH60M_MEV_d", "rhsusf_m113_usarmy_medical", "RHS_UH60M_MEV2", "RHS_UH60M_MEV"];
 
-// Apply inventory
-clearweaponcargoGlobal _vehicle;
-clearmagazinecargoGlobal _vehicle;
-clearitemcargoGlobal _vehicle;
-clearbackpackcargoGlobal _vehicle;
-
-_vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
-
 switch (true) do {
-    case (typeOf _vehicle in _trucks): {};
+    case (typeOf _vehicle in _trucks): {
+        clearweaponcargoGlobal _vehicle;
+        clearmagazinecargoGlobal _vehicle;
+        clearitemcargoGlobal _vehicle;
+        clearbackpackcargoGlobal _vehicle;
+
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+    };
     case (typeOf _vehicle in _apcIcvIfv): {
+        clearweaponcargoGlobal _vehicle;
+        clearmagazinecargoGlobal _vehicle;
+        clearitemcargoGlobal _vehicle;
+        clearbackpackcargoGlobal _vehicle;
+
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+
         _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50],
         _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",50],
         _vehicle addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",25],
@@ -81,6 +85,13 @@ switch (true) do {
         _vehicle addWeaponCargoGlobal ["tf47_m3maaws",1]
     };
     case (typeOf _vehicle in _tanks): {
+        clearweaponcargoGlobal _vehicle;
+        clearmagazinecargoGlobal _vehicle;
+        clearitemcargoGlobal _vehicle;
+        clearbackpackcargoGlobal _vehicle;
+
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+        
         _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
         _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",50];
         _vehicle addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",10];
@@ -100,13 +111,46 @@ switch (true) do {
         _vehicle addWeaponCargoGlobal ["rhs_weap_M136_hp",1];
         _vehicle addWeaponCargoGlobal ["rhs_weap_M136",1];
     };
-    case (typeOf _vehicle in _attackRotary): {};
-    case (typeOf _vehicle in _transportRotary): {};
+    case (typeOf _vehicle in _attackRotary): {
+        clearweaponcargoGlobal _vehicle;
+        clearmagazinecargoGlobal _vehicle;
+        clearitemcargoGlobal _vehicle;
+        clearbackpackcargoGlobal _vehicle;
+
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+    };
+    case (typeOf _vehicle in _transportRotary): {
+        clearweaponcargoGlobal _vehicle;
+        clearmagazinecargoGlobal _vehicle;
+        clearitemcargoGlobal _vehicle;
+        clearbackpackcargoGlobal _vehicle;
+
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+    };
     case (typeOf _vehicle in _fixedWingTransport): {
+        clearweaponcargoGlobal _vehicle;
+        clearmagazinecargoGlobal _vehicle;
+        clearitemcargoGlobal _vehicle;
+        clearbackpackcargoGlobal _vehicle;
+
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+        
         _vehicle addBackpackCargoGlobal ["ACE_NonSteerableParachute", 25];
     };
-    case (typeOf _vehicle in _fixedWingAttack): {};
-    case (typeOf _vehicle in _ambulance): {};
+    case (typeOf _vehicle in _fixedWingAttack): {
+        clearweaponcargoGlobal _vehicle;
+        clearmagazinecargoGlobal _vehicle;
+        clearitemcargoGlobal _vehicle;
+        clearbackpackcargoGlobal _vehicle;
+    };
+    case (typeOf _vehicle in _ambulance): {
+        clearweaponcargoGlobal _vehicle;
+        clearmagazinecargoGlobal _vehicle;
+        clearitemcargoGlobal _vehicle;
+        clearbackpackcargoGlobal _vehicle;
+
+        _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+    };
 };
 
 _vehicle setVariable [QGVAR(hasVehicleInventory), true];
