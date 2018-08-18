@@ -59,9 +59,6 @@ if (ace_medical_increaseTrainingInLocations) then {
     [(_this select 1)] call FUNC(moduleApplyVehicleLable);
 }] call Ares_fnc_RegisterCustomModule;
 
-["7Cav Misc", "Setup HQ",{
-    [(_this select 1)] call FUNC(moduleSetupHQ);
-}] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Misc", "Apply Cav Flag",{
     [(_this select 1)] call FUNC(moduleApplyFlag);
