@@ -100,11 +100,12 @@ class cScripts {
         class moduelCreateSpecialWeaponsCrate {};
 
         class moduleApplyVehicleLable {};
-
+        class moduleSetupHQ {};
         class moduleApplyFlag {};
+        
         class moduleMakeDoctor {};
         class moduleMakeEngineer {};
-
+        
         class moduleRegearTrooper {};
 
         class moduleCallEndex {};
