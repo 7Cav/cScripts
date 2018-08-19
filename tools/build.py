@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys, os
 import argparse, shutil, subprocess, tempfile
-__version__ = 1.6
+__version__ = 1.7
 
 # GLOBALS
 exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
@@ -188,8 +188,62 @@ def createModdedBuild(folder):      # This function is completely manual atm:
     print('Starting construction of a public {} version...'.format(script_Name))
 
     print('Adjusting \033[96mdescription.ext\033[0m...')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'    dev                 = "1SG Tully.B";')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, '    dev                 = "CPL. Geki.T";\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'    onLoadMission       = "7th Cavalry - S3 1BN Battle Staff Operation";')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, '    onLoadMission       = "7th Cavalry - S3 Public Staff";\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'    onLoadIntro         = "S3 1BN Battle Staff Operation";')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, '    onLoadIntro         = "S3 1BN Public Staff";\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'    forceRotorLibSimulation = 1;')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, '    forceRotorLibSimulation = 0;\n')
 
     print('Adjusting \033[96mcba_settings.sqf\033[0m...')
+
+    # adjusting blueforce tracker settings
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_Enabled')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_Enabled = true;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_HideAiGroups')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_HideAiGroups = true;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_Interval')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_Interval = 5;\n')
+
+    # adjusting medical settings
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_medical_enableUnconsciousnessAI')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_medical_enableUnconsciousnessAI = 0;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_medical_medicSetting_PAK')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_medical_medicSetting_PAK = 1;\n')
+
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_nametags_playerNamesViewDistance')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'ace_nametags_playerNamesViewDistance = 1;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showCursorTagForVehicles')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'ace_nametags_showCursorTagForVehicles = true;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showPlayerNames')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'ace_nametags_showPlayerNames = 1;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showPlayerRanks')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'ace_nametags_showPlayerRanks = true;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showSoundWaves')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'ace_nametags_showSoundWaves = 1;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showVehicleCrewInfo')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'ace_nametags_showVehicleCrewInfo = true;\n')
+
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'ace_nightvision_aimDownSightsBlur')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'ace_nightvision_aimDownSightsBlur = 0.25;\n')
+
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_ColourBlindMode')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'STHud_Settings_ColourBlindMode = "Normal";\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_Font')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'STHud_Settings_Font = "PuristaSemibold";\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_HUDMode')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'STHud_Settings_HUDMode = 3;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_Occlusion')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'STHud_Settings_Occlusion = true;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_RemoveDeadViaProximity')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'STHud_Settings_RemoveDeadViaProximity = true;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_SquadBar')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'STHud_Settings_SquadBar = false;\n')
+    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_TextShadow')
+    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'STHud_Settings_TextShadow = 1;\n')
+
     # disable startup hint
     x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_enableStartHint')
     publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_enableStartHint = false;\n')
@@ -225,7 +279,62 @@ def createModdedBuild(folder):      # This function is completely manual atm:
         for n in range(0,c):
             x = publicBuildFindString(file,'"Flagstack_Red",')
             publicBuildReplace(file, x, '')
+
+    loadoutFiles = ['CfgLoadouts_Charlie.hpp','CfgLoadouts_Medical.hpp']
+    for loadoutFile in loadoutFiles:
+        print('Searching for and updating loadouts in \033[96m{}\033[0m...'.format(loadoutFile))
+
+        file = '{}\\cScripts\\Loadouts\\{}'.format(folder,loadoutFile)
+
+        c = publicBuildFindStringCount(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,')
+            publicBuildReplace(file, x, '        "rhs_mag_30Rnd_556x45_M856A1_PMAG_Tracer_Red",4,\n')
+
+        c = publicBuildFindStringCount(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,')
+            publicBuildReplace(file, x, '        "rhs_mag_30Rnd_556x45_M856A1_PMAG_Tracer_Red",2,\n')
+
+        
+        c = publicBuildFindStringCount(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",4,')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",4,')
+            publicBuildReplace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",4,\n')
+
+        c = publicBuildFindStringCount(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",5,')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",5,')
+            publicBuildReplace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",5,\n')
+
+        c = publicBuildFindStringCount(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",6,')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",6,')
+            publicBuildReplace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",6,\n')
+
+        c = publicBuildFindStringCount(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",8,')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",8,')
+            publicBuildReplace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,\n')
+
+        c = publicBuildFindStringCount(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",10,')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",10,')
+            publicBuildReplace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",10,\n')
+
+        c = publicBuildFindStringCount(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",12,')
+        for n in range(0,c):
+            x = publicBuildFindString(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",12,')
+            publicBuildReplace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",12,\n')
+
     print('Loadouts adjustments complete...')
+
+    print('Adding new loadout classnames...')
+    
+    x = publicBuildFindString('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder),'class B_Helicrew_F : CAV_Alpha_Helo_GNR {{}};')
+    publicBuildReplace('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder), x, 'class B_Helicrew_F : CAV_Alpha_Helo_GNR {{}};\nclass B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {{}};\n')
+    
+    print('New loadouts additions added...')
 
     print('Starting to adjust logistical crates...')
     functionFiles = ['fn_doAmmoCrate.sqf','fn_doExplosivesCrate.sqf','fn_doGrenadesCrate.sqf','fn_doLaunchersCrate.sqf','fn_doSpecialWeaponsCrate.sqf','fn_doStarterCrateSupplies.sqf','fn_doSupplyCrate.sqf','fn_doWeaponsCrate.sqf']
@@ -250,7 +359,11 @@ def createModdedBuild(folder):      # This function is completely manual atm:
             x = publicBuildFindString(file,'"Flagstack_Red"')
             publicBuildReplace(file, x, '')
 
-    print('Logistical crates adjustments complete...')
+    print('Adjusting radio presets...')
+    x = publicBuildFindString('{}\\cScripts\\Loadouts\\script\\CfgPoppy.hpp'.format(folder),'channelNames')
+    publicBuildReplace('{}\\cScripts\\Loadouts\\script\\CfgPoppy.hpp'.format(folder), x, '        channelNames[] = {"GUNSLINGER","AVIATION","VIKING","PUNISHER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","LOGISTICS","CONVOY-1","CONVOY-2","ZEUS","CAG","COMMAND"};\n')
+    
+    print('Radio presets adjustments complete...')
 
 
 
