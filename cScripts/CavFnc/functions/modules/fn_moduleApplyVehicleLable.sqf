@@ -17,6 +17,11 @@ params ["_vehicle"];
 
 _vehicle = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
 
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Label)}) exitwith {
+    ["Vehicle all ready have a lable!"] call Ares_fnc_ShowZeusMessage;
+    playSound "FD_Start_F";
+};
+
 // UH-60 blackhawk
 private _vehicleTypeUH60 = [
     "RHS_UH60M_d", 
