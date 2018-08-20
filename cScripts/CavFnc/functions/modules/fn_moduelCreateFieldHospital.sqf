@@ -11,9 +11,7 @@
 
 #include "..\script_component.hpp";
 
-params ["_crate","_pos"];
-
-_pos = _this select 0;
+params ["_crate"];
 
 private _dialogResult = [
     "7th Cavalry Fieald Hostpital Crate",
@@ -26,8 +24,8 @@ if (count _dialogResult == 0) exitWith {};
 
 private _supplieSize = _dialogResult select 0;
 
-private _crate = "C_IDAP_supplyCrate_F" createVehicle _pos;
-[_crate,true,_supplieSize] remoteExec ["cScripts_fnc_doFieldHospital",0,true];
+private _crate = "C_IDAP_supplyCrate_F" createVehicle _crate;
+[_crate,true,_supplieSize] remoteExec [QFUNC(doFieldHospital),0,true];
 
 // Change ace characteristics of crate
 [_crate, 1] call ace_cargo_fnc_setSize;
