@@ -21,8 +21,7 @@ if (EGVAR(Settings,allowCustomInit)) then {
         call FUNC(initVehicle);
 
         // Make sure curator object gets its functions reapplied.
-        call FUNC(initCuratorC130);
-        call FUNC(initCuratorHeloGetOutRL);
+        call  FUNC(initCuratorObjectPlaced);
     };
 
     // Change inventory content of nato supply crates on mission start.

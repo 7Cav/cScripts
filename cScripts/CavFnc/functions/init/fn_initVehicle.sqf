@@ -8,6 +8,7 @@
  * Example:
  * call cScripts_fnc_initVehicle
  *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
