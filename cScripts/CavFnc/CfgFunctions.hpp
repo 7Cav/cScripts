@@ -76,6 +76,8 @@ class cScripts {
 
         class getPlatoonVariable {};
         class hasPlatoonVariable {};
+
+        class teleport {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";

@@ -15,8 +15,6 @@
 
 params ["_crate"];
 
-private _pos = _this select 0;
-
 private _dialogResult = [
     "7th Cavalry Crew-Served Weapons Crate",
     [
@@ -37,6 +35,6 @@ private _cargoType = switch (_dialogResult select 0) do {
 
 private _cargoSize = _dialogResult select 1;
 
-private _crate = "B_CargoNet_01_ammo_F" createVehicle _pos;
-[_crate,_cargoType,_cargoSize] remoteExec ["cScripts_fnc_doSpecialWeaponsCrate",0,true];
+private _crate = "B_CargoNet_01_ammo_F" createVehicle _crate;
+[_crate,_cargoType,_cargoSize] remoteExec [QFUNC(doSpecialWeaponsCrate),0,true];
 [_crate] call ace_zeus_fnc_addObjectToCurator;

@@ -32,4 +32,4 @@ switch (true) do {
     };
 };
 
-_vehicle setVariable [QGVAR(hasVehicleSettings), true];
+_vehicle setVariable [QEGVAR(Vehicle,Settings), true];
