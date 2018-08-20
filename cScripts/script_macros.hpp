@@ -27,8 +27,12 @@
 #define ARR_7(ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) ARG1, ARG2, ARG3, ARG4, ARG5, ARG6, ARG7
 #define ARR_8(ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) ARG1, ARG2, ARG3, ARG4, ARG5, ARG6, ARG7, ARG8
 
-#define GVAR(var) DOUBLES(PREFIX,var)
-#define QGVAR(var) QUOTE(GVAR(var))
+#define GVAR(var1) DOUBLES(PREFIX,var1)
+#define EGVAR(var1,var2) TRIPLES(PREFIX,var1,var2)
+#define QGVAR(var1) QUOTE(GVAR(var1))
+#define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
+#define QQGVAR(var1) QUOTE(QGVAR(var1))
+#define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
 #define FUNC(var) TRIPLES(PREFIX,fnc,var)
 #define QFUNC(var) QUOTE(FUNC(var))
 
