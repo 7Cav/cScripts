@@ -1,12 +1,14 @@
 /*
  * Author: CPL.Brostrom.A
- * Thsi function is a moduel that aply the doctor ability to a given unit.
+ * This module function apply the doctor ability to a given unit.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Example:
- *  call cScripts_fnc_moduleMakeDoctor;
+ * this call cScripts_fnc_moduleMakeDoctor
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";

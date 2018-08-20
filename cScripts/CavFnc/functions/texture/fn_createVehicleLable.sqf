@@ -39,6 +39,6 @@ _label setDir _dir;
 _label setvectorUp _vector;
 
 // Collect lables in to variable
-private _labels = _vehicle getVariable [QGVAR(labels), []];
+private _labels = _vehicle getVariable [QEGVAR(Vehicle,Label), []];
 _labels pushBack _label;
-_vehicle setVariable [QGVAR(labels), _labels, true];
+_vehicle setVariable [QEGVAR(Vehicle,Label), _labels, true];
