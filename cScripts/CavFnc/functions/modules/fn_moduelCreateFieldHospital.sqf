@@ -1,12 +1,14 @@
 /*
  * Author: CPL.Brostrom.A
- * This function crates a supply crate.
+ * This module function spawn a 7th Cavalry Fieald Hostpital.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
  * Example:
- *  this call cScripts_fnc_moduelCreateFieldHostpital;
+ * this call cScripts_fnc_moduelCreateFieldHostpital
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";

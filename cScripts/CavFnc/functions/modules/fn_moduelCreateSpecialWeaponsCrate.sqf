@@ -1,12 +1,14 @@
 /*
  * Author: CPL.Brostrom.A
- * This function crates a supply crate.
+ * This module function spawn a special weapons crate.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
  * Example:
- *  this call moduelCreateSupplyCrate;
+ * this call moduelCreateSupplyCrate
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";

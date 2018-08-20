@@ -1,13 +1,14 @@
 /*
  * Author: CPL.Brostrom.A
- * This function checks if the helicopter type is correct and apply the desired logo.
+ * This module function allow you to apply a flag to a given flag carrier.
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Texture <STRING>
  *
  * Example:
- *  call cScripts_fnc_moduleApplyFlag;
+ * this call cScripts_fnc_moduleApplyFlag
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
@@ -15,6 +16,7 @@
 params ["_flagpole"];
 
 _flagpole = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
+
 _flagpoleType = [
     "rhs_Flag_chdkz",
     "rhssaf_flag_serbia",

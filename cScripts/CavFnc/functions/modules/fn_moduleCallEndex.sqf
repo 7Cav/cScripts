@@ -1,12 +1,14 @@
 /*
  * Author: CPL.Brostrom.A
- * Thsi function is a moduel that aply the doctor ability to a given unit.
+ * This module function print some hints and spam the chat with ENDEX. 
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * Nothing
  *
  * Example:
- *  call cScripts_fnc_moduleCallEndex;
+ * call cScripts_fnc_moduleCallEndex;
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
