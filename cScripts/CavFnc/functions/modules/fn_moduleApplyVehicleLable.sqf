@@ -20,11 +20,17 @@ _vehicle = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
 
 // UH-60 blackhawk
 private _vehicleTypeUH60 = [
-    "RHS_UH60M_d",
-    "RHS_UH60M_MEV2_d",
-    "RHS_UH60M_MEV_d",
-    "RHS_UH60M",
-    "RHS_UH60M_MEV2",
+    "RHS_UH60M_d", 
+    "RHS_UH60M_ESSS_d", 
+    "RHS_UH60M_ESSS2_d", 
+    "RHS_UH60M2_d", 
+    "RHS_UH60M_MEV2_d", 
+    "RHS_UH60M_MEV_d", 
+    "RHS_UH60M", 
+    "RHS_UH60M_ESSS", 
+    "RHS_UH60M_ESSS2", 
+    "RHS_UH60M2", 
+    "RHS_UH60M_MEV2", 
     "RHS_UH60M_MEV"
 ];
 if (typeOf _vehicle in _vehicleTypeUH60) exitWith {
@@ -58,7 +64,6 @@ if (typeOf _vehicle in _vehicleTypeUH60) exitWith {
     };
     [_vehicle,_texture1,_texture2] remoteExec [QFUNC(setVehicleLable),0,true];
 };
-
 
 
 
@@ -131,7 +136,6 @@ if (typeOf _vehicle in _vehicleTypeC130J) exitWith {
     };
     [_vehicle,_texture1,_texture2,_texture3] remoteExec [QFUNC(setVehicleLable),0,true];
 };
-
 
 
 
@@ -245,7 +249,6 @@ if (typeOf _vehicle in _vehicleTypeMRAP) exitWith {
 
 
 
-
 // STRYKER
 private _vehicleTypeStriker = [
     "M1126_ICV_M134_DG1_NOSLATDES",
@@ -275,7 +278,6 @@ if (typeOf _vehicle in _vehicleTypeStriker) exitWith {
 
     [_vehicle] call FUNC(setVehicleLable);
 };
-
 
 
 
@@ -327,7 +329,6 @@ if (typeOf _vehicle in _vehicleTypeAbrams) exitWith {
     };
     [_vehicle,_texture1,_texture2] remoteExec [QFUNC(setVehicleLable),0,true];
 };
-
 
 
 

@@ -12,18 +12,16 @@
 
 #include "..\script_component.hpp";
 
-params ["_crate","_pos"];
-
-_pos = _this select 0;
+params ["_crate"];
 
 private _dialogResult = [
     "7th Cavalry Starter Crate",
     [
-        ["Quick Select Scale",["None","Alpha","Bravo","Charlie","Heavy Weapons","Ranger","Sniper","Medical","Full"],0],
-        ["ReGear action",["true","false"],1],
+        ["Company Crate Type",["None","Alpha","Bravo","Charlie","Heavy Weapons","Ranger","Sniper","Medical","All"],0],
+        ["ReGear action",["true","false"],0],
         ["Heal action",["true","false"],0],
         ["Insignia Selection",["true","false"],0],
-        ["Require Platoon Variable",["true","false"],1],
+        ["Company Variable Required",["true","false"],1],
         ["Add full arsenal",["true","false"],1]
     ]
 ] call Ares_fnc_ShowChooseDialog;
@@ -49,6 +47,6 @@ private _InsigniaSelectOption = if (_dialogResult select 3 == 0) then {true} els
 private _requirePlatoonVariable = if (_dialogResult select 4 == 0) then {true} else {false};
 private _arsenal = if (_dialogResult select 5 == 0) then {true} else {false};
 
-_crate = "B_supplyCrate_F" createVehicle _pos;
-[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requirePlatoonVariable,_arsenal] remoteExec ["cScripts_fnc_doStarterCrate",0,true];
+_crate = "B_supplyCrate_F" createVehicle _crate;
+[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requirePlatoonVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),0,true];
 [_crate] call ace_zeus_fnc_addObjectToCurator;

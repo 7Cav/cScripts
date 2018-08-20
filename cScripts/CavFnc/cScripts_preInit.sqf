@@ -1,4 +1,3 @@
-
 /*
  * Author: CPL.Brostrom.A
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
@@ -118,7 +117,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "CHECKBOX",
     ["Vehicle Inventory", "Allow mission to change the vehicles inventory.\n"],
     [_cScriptSettings, "3; Custom Initzialisation"],
-    true,
+    false,
     true,
     {}
 ] call CBA_Settings_fnc_init;
