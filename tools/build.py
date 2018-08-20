@@ -286,7 +286,6 @@ def createModdedBuild(folder):      # This function is completely manual atm:
     add(x, 'force force cScripts_Settings_useCustomVehicleInventory = false;\n')
     add(x, 'force force cScripts_Settings_useCustomVehicleSettings = true;\n')
 
-    print('cScripts settings is sucsessfully added...')
 
     print('Starting to adjust Loadouts...')
     loadoutFiles = ['CfgLoadouts_Common.hpp','CfgLoadouts_Alpha.hpp','CfgLoadouts_Bravo.hpp','CfgLoadouts_Charlie.hpp','CfgLoadouts_Medical.hpp','CfgLoadouts_Ranger.hpp','CfgLoadouts_Training.hpp','CfgLoadouts_S3.hpp']
@@ -357,6 +356,7 @@ def createModdedBuild(folder):      # This function is completely manual atm:
         for n in range(0,c):
             x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",12,')
             replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",12,\n')
+    
     
     print('Creating new loadouts...')
     print('Adding new loadout \033[32mCAV_Alpha_Helo_GNR\033[0m to \033[96mCfgLoadouts_AlphaClass.hpp\033[0m...')
