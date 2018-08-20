@@ -1,18 +1,37 @@
 #!/usr/bin/env python3
 import sys, os
 import argparse, shutil, subprocess, tempfile
-__version__ = 1.7
+__version__ = 1.8
 
-# GLOBALS
+# #########################################################################################
+#
+# usage: build.py [-h] [-p] [-b {dev,test,custom}] [-rc RELEASECANDIDATE]
+#                 [-s | -sz]
+#
+# optional arguments:
+#   -h, --help            show this help message and exit
+#   -p, --public          Create a "public" build to be used on non CavPack
+#                         Enviroment
+#   -b {dev,test,custom}, --build {dev,test,custom}
+#                         Add a additional tag to a to the build
+#   -rc RELEASECANDIDATE, --releasecandidate RELEASECANDIDATE
+#                         Set a release candidate number to the build ".RC1" for
+#                         exsample
+#   -s, --save            Save the build
+#   -sz, --savedontzip    Save the build and don't zip it
+#
+# GLOBALS #################################################################################
+
 exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'resourses','tools', 'tmp']
 version_File = ("cScripts\\script_component.hpp")
 script_Name = 'cScripts'
+
+# #########################################################################################
 
 # set projecty path
 scriptpath = os.path.realpath(__file__)
 projectpath = os.path.dirname(os.path.dirname(scriptpath))
 os.chdir(projectpath)
-
 
 def createFolder(folder):
     # Get mission root
