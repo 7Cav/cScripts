@@ -14,7 +14,7 @@
 params [["_vehicle", objNull, [objNull]]];
 
 // check if this already have been applied
-if (!isNil {_vehicle getVariable QGVAR(hasVehicleInventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle]] call FUNC(logWarning);};
+if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle]] call FUNC(logWarning);};
 
 #ifdef DEBUG_MODE
     [formatText["Applying vehicle inventory to %1.", _vehicle]] call FUNC(logInfo);
@@ -107,4 +107,4 @@ switch (true) do {
     case (typeOf _vehicle in _ambulance): {};
 };
 
-_vehicle setVariable [QGVAR(hasVehicleInventory), true];
+_vehicle setVariable [QEGVAR(Vehicle,Inventory), true];
