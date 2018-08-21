@@ -76,6 +76,7 @@ class cScripts {
         class getPlatoonVariable {};
         class hasPlatoonVariable {};
 
+        class hq {};
         class teleport {};
     };
     class selections {
