@@ -18,17 +18,17 @@
 #include "..\script_component.hpp";
 
 params [
-	["_vehicle", objNull, [objNull]],
-	["_radio","ACRE_PRC117F", [""]]
+    ["_vehicle", objNull, [objNull]],
+    ["_radio","ACRE_PRC117F", [""]]
 ];
 
 _vehicle addAction [
     "Setup HQ Radio System", 
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
-		[_target, {}] call acre_api_fnc_initVehicleRacks;
-		[_target, ["ACRE_VRC103", "HQ Radio", "ERadio", false, ["external"], [], _arguments select 0, [], []],false, {true}] call acre_api_fnc_addRackToVehicle;
-		_target setVariable [QEGVAR(object,hq),true];
+        [_target, {}] call acre_api_fnc_initVehicleRacks;
+        [_target, ["ACRE_VRC103", "HQ Radio", "ERadio", false, ["external"], [], _arguments select 0, [], []],false, {true}] call acre_api_fnc_addRackToVehicle;
+        _target setVariable [QEGVAR(object,hq),true];
     },
     [_radio],1.5,true,true, "",
     "(isNil {_target getVariable 'cscripts_object_hq'});",
