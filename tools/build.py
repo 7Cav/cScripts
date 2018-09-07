@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import sys, os
-import argparse, shutil, subprocess, tempfile
+import argparse, shutil, subprocess, tempfile, platform
 __version__ = 1.8
 
 # #########################################################################################
@@ -396,10 +396,9 @@ def createModdedBuild(folder):      # This function is completely manual atm:
 
 
 def main():
-    print("""
-\033[1mcScripts Build Script v{}\033[0m
+    print("""\033[1mcScripts Build Script v{}\033[0m
 \033[90mThis is a build script that prep build and zip a release build.\033[0m
-    """.format(__version__))
+""".format(__version__))
 
     # set up and handle arguments
     parser = argparse.ArgumentParser()
@@ -418,9 +417,9 @@ def main():
 
     args = parser.parse_args()
 
-    print('\033[0m\033[1m' + 'Functions:' + '\033[0m')
-    parser.print_help()
-    print()
+    #print('\033[0m\033[1m' + 'Functions:' + '\033[0m')
+    #parser.print_help()
+    #print()
 
     objectList = listFileContent(exlude_content)
 
@@ -475,7 +474,10 @@ def main():
 
     shutil.rmtree(tmpFolder)
 
+    input('\nBuild process is compleet press enter to exit...')
 
+    if platform.system() == 'Windows':
+        os.system('explorer.exe {}\\release'.format(projectpath))
 
 if __name__ == "__main__":
     sys.exit(main())
