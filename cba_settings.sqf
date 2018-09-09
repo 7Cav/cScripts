@@ -180,7 +180,7 @@ force force ace_medical_medicSetting_SurgicalKit = 1;
 force force ace_medical_menu_allow = 1;
 force force ace_medical_menu_maxRange = 3;
 force force ace_medical_menu_openAfterTreatment = true;
-force force ace_medical_menu_useMenu = 1;
+//ace_medical_menu_useMenu = 1;
 //ace_medical_menuTypeStyle = 0;
 force force ace_medical_moveUnitsFromGroupOnUnconscious = false;
 force force ace_medical_painCoefficient = 1;
@@ -203,14 +203,14 @@ force force ace_mk6mortar_useAmmoHandling = false;
 
 // ACE Name Tags
 //ace_nametags_defaultNametagColor = [0.77,0.51,0.08,1];
-force ace_nametags_playerNamesMaxAlpha = 0.8;
+//ace_nametags_playerNamesMaxAlpha = 0.8;
 force force ace_nametags_playerNamesViewDistance = 5;
-force force ace_nametags_showCursorTagForVehicles = true;
+//ace_nametags_showCursorTagForVehicles = true;
 //ace_nametags_showNamesForAI = false;
-force force ace_nametags_showPlayerNames = 1;
-force force ace_nametags_showPlayerRanks = true;
-force force ace_nametags_showSoundWaves = 1;
-force force ace_nametags_showVehicleCrewInfo = true;
+//ace_nametags_showPlayerNames = 1;
+//ace_nametags_showPlayerRanks = true;
+//ace_nametags_showSoundWaves = 1;
+//ace_nametags_showVehicleCrewInfo = true;
 //ace_nametags_tagSize = 2;
 
 // ACE Nightvision
