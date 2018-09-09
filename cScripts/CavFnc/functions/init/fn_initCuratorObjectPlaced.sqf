@@ -33,5 +33,15 @@
         if ((typeOf _entity) in _helo) then {
             [_entity] call FUNC(addGetOutHelo);
         };
+
+        private _mortarA = ["B_Mortar_01_F"];
+        if ((typeOf _entity) in _mortarA) then {
+            _entity setObjectTextureGlobal  [0,"cScripts\Data\Vehicles\McGehee\Mortar_McGehee_ceremonial_black.paa"];
+        };
+
+        private _mortarB = ["B_G_Mortar_01_F"];
+        if ((typeOf _entity) in _mortarB) then {
+            _entity setObjectTextureGlobal  [0,"cScripts\Data\Vehicles\McGehee\Mortar_McGehee_camo_Green.paa"];
+        };
     }];
 } forEach allCurators;
