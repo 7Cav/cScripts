@@ -48,14 +48,14 @@ if (_platoonSelector == "alpha") then {
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),30];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",30];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),50];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",50];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),50];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),25];
     _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),25];
@@ -73,8 +73,9 @@ if (_platoonSelector == "alpha") then {
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKERED),25];
     _crate addMagazineCargoGlobal [QUOTE(_GLSHELLHUNTIR),25];
     _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),25];
-    _crate addMagazineCargoGlobal ["Chemlight_Blue",25];
-    _crate addMagazineCargoGlobal ["Chemlight_Red",25];
+    _crate addMagazineCargoGlobal ["Chemlight_green",25];
+    _crate addMagazineCargoGlobal ["Chemlight_red",25];
+    _crate addMagazineCargoGlobal ["Chemlight_yellow",25];
 
     //================== EXPLOSIVES ==================\\
 
@@ -101,14 +102,11 @@ if (_platoonSelector == "alpha") then {
     //================== BACKPACKS ==================\\
 
     //================== HELMETS ==================\\
+    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor",12];
+    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_green",12];
     _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_black",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_black_skull",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_Empire_black",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_smiley",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_usa",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_pink",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_pink",12];
     _crate addItemCargoGlobal ["H_PilotHelmetFighter_B",6];
+    _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
 };
 
 //------------------B R A V O   C O M P A N Y --------------------\\

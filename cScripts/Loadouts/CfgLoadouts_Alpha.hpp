@@ -38,12 +38,13 @@ class CAV_Alpha_Helo_COPILOT : CAV_Alpha_Base {  // Use for CoPilots
 };
 
 class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
+    headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     vest[] = {"rhsusf_mbav_mg"};
 
     primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_anpeq15A","rhsusf_acc_eotech_552"};
 
     magazines[] = {
-        "rhs_200rnd_556x45_M_SAW",5,
+        "rhs_200rnd_556x45_M_SAW",3,
         "rhsusf_mag_15Rnd_9x19_JHP",2,
 
         "B_IR_Grenade",2,
@@ -52,7 +53,7 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
         "SmokeShellGreen",2,
 
         "Chemlight_green",2,
-        "ACE_Chemlight_HiRed",2,
+        "Chemlight_red",2,
         "ACE_Chemlight_HiYellow",2
     };
 
@@ -81,6 +82,8 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 };
 
 class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
+    headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
+
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",3,
         "rhsusf_mag_15Rnd_9x19_JHP",2,
@@ -91,7 +94,7 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
         "SmokeShellGreen",2,
 
         "Chemlight_green",2,
-        "ACE_Chemlight_HiRed",2,
+        "Chemlight_red",2,
         "ACE_Chemlight_HiYellow",2
     };
 
@@ -120,7 +123,6 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
 //  F I X E D   W I N G
 
 class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
-
     nvgs[] = {""};
     backpack[] = {"B_AssaultPack_mcamo"};
     headgear[] = {"H_PilotHelmetFighter_B"};  // This has been tested by CPT.Blackburn.J
@@ -138,7 +140,7 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         "rhsusf_mag_15Rnd_9x19_JHP",3,
 
         "Chemlight_green",
-        "ACE_Chemlight_HiRed",
+        "Chemlight_red",
         "ACE_Chemlight_HiYellow",
         "SmokeShell",
         "SmokeShellGreen",
