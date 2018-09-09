@@ -477,12 +477,17 @@ if (_platoonSelector == "ranger") then {
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
     _crate addItemCargoGlobal ["rhsusf_acc_SpecterDR",50];
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
-    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
-    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15A",50];
+
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15side_bk",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_top",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk",25];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",25];
+    _crate addItemCargoGlobal ["acc_pointer_ir",50];
+
     _crate addItemCargoGlobal ["rhsusf_acc_nt4_black",50];
     _crate addItemCargoGlobal ["rhsusf_acc_harris_bipod",50];
     _crate addItemCargoGlobal ["rhsusf_acc_grip1",50];
-    _crate addItemCargoGlobal ["acc_pointer_ir",50];
+
     _crate addItemCargoGlobal ["tf47_optic_m3maaws",50];
 
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",25];
@@ -651,10 +656,10 @@ if (_platoonSelector == "sniper") then {
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_FMJ",50];
-    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m62_Mag",50];
+    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_SR25_m62_Mag",50];
     _crate addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",50];
-    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",50];
-    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m993_Mag",50];
+    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_SR25_m118_special_Mag",50];
+    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_SR25_m993_Mag",50];
     _crate addMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33",50];
     _crate addMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211",50];
 
