@@ -18,7 +18,9 @@ class CfgUnitInsignia {
     // Bravo first platoon
 
     // Bravo second platoon
-
+	MACRO_UNITINSIGNIA(A2B_17_Insignia,1-2-B-17.paa);
+	MACRO_UNITINSIGNIA(2B_17_Insignia,2-B-17.paa);
+	
     // Charlie first platoon
     MACRO_UNITINSIGNIA(11C_17_Insignia,1-1-C-17.paa);
     MACRO_UNITINSIGNIA(21C_17_Insignia,2-1-C-17.paa);
