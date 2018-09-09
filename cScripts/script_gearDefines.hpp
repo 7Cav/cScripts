@@ -5,8 +5,8 @@
 #define _MAG_AR1                    rhsusf_100Rnd_762x51_m61_ap
 
 #define _MAG_SNIPER0                rhsusf_5Rnd_300winmag_xm2010
-#define _MAG_MARKSMAN0              ACE_20Rnd_762x51_Mk316_Mod_0_Mag
-#define _MAG_MARKSMAN1              rhsusf_20Rnd_762x51_m118_special_Mag
+#define _MAG_MARKSMAN0              rhsusf_20Rnd_762x51_SR25_m993_Mag
+#define _MAG_MARKSMAN1              rhsusf_20Rnd_762x51_SR25_m118_special_Mag
 
 #define _MAG_SECONDARY0              rhsusf_mag_15Rnd_9x19_JHP
 

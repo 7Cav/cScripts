@@ -6,7 +6,7 @@ class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle_pmag_grip","rhsusf_acc_grip1","rhsusf_acc_ACOG_RMR","rhsusf_acc_anpeq15side_bk"};
+    primary[] = {"rhs_weap_m4a1_carryhandle_pmag_grip","rhsusf_acc_grip1","rhsusf_acc_ACOG_RMR","acc_pointer_IR"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",11,
@@ -49,7 +49,7 @@ class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle_pmag_grip","rhsusf_acc_grip1","rhsusf_acc_ACOG_RMR","rhsusf_acc_anpeq15side_bk"};
+    primary[] = {"rhs_weap_m4a1_carryhandle_pmag_grip","rhsusf_acc_grip1","rhsusf_acc_ACOG_RMR","acc_pointer_IR"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",11,
@@ -93,7 +93,7 @@ class CAV_Ranger_TL : CAV_Ranger_Base {                    //35.92kg
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
-    primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_ACOG_RMR","rhsusf_acc_anpeq15side_bk"};
+    primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_ACOG_RMR","acc_pointer_IR"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",11,
@@ -141,7 +141,7 @@ class CAV_Ranger_AR : CAV_Ranger_Base {                    //33.62kg
     binoculars[] = {"ACE_Vector"};
     nvgs[] = {""};
 
-    primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_ACOG_RMR","rhsusf_acc_anpeq15side_bk"};
+    primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_ACOG_RMR","acc_pointer_IR"};
 
     magazines[] = {
         "rhs_200rnd_556x45_M_SAW",5,
@@ -179,7 +179,7 @@ class CAV_Ranger_GR : CAV_Ranger_Base {                    //35.92kg
     binoculars[] = {"Laserdesignator"};
     nvgs[] = {""};
 
-    primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_ACOG_RMR","rhsusf_acc_anpeq15side_bk"};
+    primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_ACOG_RMR","acc_pointer_IR"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",11,
@@ -226,7 +226,7 @@ class CAV_Ranger_RM : CAV_Ranger_Base {                    //25.85kg
     binoculars[] = {"ACE_Vector"};
     nvgs[] = {""};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle_pmag_grip","rhsusf_acc_grip1","rhsusf_acc_ACOG_RMR","rhsusf_acc_anpeq15side_bk"};
+    primary[] = {"rhs_weap_m4a1_carryhandle_pmag_grip","rhsusf_acc_grip1","rhsusf_acc_ACOG_RMR","acc_pointer_IR"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",11,
@@ -265,7 +265,7 @@ class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
     binoculars[] = {"ACE_Vector"};
     nvgs[] = {""};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle_pmag_grip","rhsusf_acc_grip1","rhsusf_acc_ACOG_RMR","rhsusf_acc_anpeq15side_bk"};
+    primary[] = {"rhs_weap_m4a1_carryhandle_pmag_grip","rhsusf_acc_grip1","rhsusf_acc_ACOG_RMR","acc_pointer_IR"};
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",9,
@@ -320,7 +320,7 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
     primary[] = {"rhs_weap_sr25_d","acc_pointer_IR","rhsusf_acc_M8541","rhsusf_acc_harris_bipod","rhsusf_acc_SR25S"};
 
     magazines[] = {
-        "rhsusf_20Rnd_762x51_m118_special_Mag",11,
+        "rhsusf_20Rnd_762x51_SR25_m118_special_Mag",11,
         "rhs_mag_m67",4,
         "SmokeShell",4
     };

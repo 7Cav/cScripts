@@ -1,13 +1,14 @@
 /*
  * Author: CPL.Brostrom.A
- * This function checks if the helicopter type is correct and apply the desired logo.
+ * This module function allow you to apply a texture lable to a given vehicle.
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Texture <STRING>
  *
  * Example:
- *  call cScripts_fnc_moduleApplyVehicleLable;
+ * this call cScripts_fnc_moduleApplyVehicleLable
+ *
+ * Public: No
  */
 
 #include "..\script_component.hpp";
@@ -16,15 +17,24 @@ params ["_vehicle"];
 
 _vehicle = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
 
-
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Label)}) exitwith {
+    ["Vehicle all ready have a lable!"] call Ares_fnc_ShowZeusMessage;
+    playSound "FD_Start_F";
+};
 
 // UH-60 blackhawk
 private _vehicleTypeUH60 = [
-    "RHS_UH60M_d",
-    "RHS_UH60M_MEV2_d",
-    "RHS_UH60M_MEV_d",
-    "RHS_UH60M",
-    "RHS_UH60M_MEV2",
+    "RHS_UH60M_d", 
+    "RHS_UH60M_ESSS_d", 
+    "RHS_UH60M_ESSS2_d", 
+    "RHS_UH60M2_d", 
+    "RHS_UH60M_MEV2_d", 
+    "RHS_UH60M_MEV_d", 
+    "RHS_UH60M", 
+    "RHS_UH60M_ESSS", 
+    "RHS_UH60M_ESSS2", 
+    "RHS_UH60M2", 
+    "RHS_UH60M_MEV2", 
     "RHS_UH60M_MEV"
 ];
 if (typeOf _vehicle in _vehicleTypeUH60) exitWith {
@@ -58,7 +68,6 @@ if (typeOf _vehicle in _vehicleTypeUH60) exitWith {
     };
     [_vehicle,_texture1,_texture2] remoteExec [QFUNC(setVehicleLable),0,true];
 };
-
 
 
 
@@ -131,7 +140,6 @@ if (typeOf _vehicle in _vehicleTypeC130J) exitWith {
     };
     [_vehicle,_texture1,_texture2,_texture3] remoteExec [QFUNC(setVehicleLable),0,true];
 };
-
 
 
 
@@ -245,7 +253,6 @@ if (typeOf _vehicle in _vehicleTypeMRAP) exitWith {
 
 
 
-
 // STRYKER
 private _vehicleTypeStriker = [
     "M1126_ICV_M134_DG1_NOSLATDES",
@@ -275,7 +282,6 @@ if (typeOf _vehicle in _vehicleTypeStriker) exitWith {
 
     [_vehicle] call FUNC(setVehicleLable);
 };
-
 
 
 
@@ -327,7 +333,6 @@ if (typeOf _vehicle in _vehicleTypeAbrams) exitWith {
     };
     [_vehicle,_texture1,_texture2] remoteExec [QFUNC(setVehicleLable),0,true];
 };
-
 
 
 

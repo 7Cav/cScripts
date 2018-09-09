@@ -21,8 +21,8 @@ params [
 
 private _return = "none";
 
-if (_player getVariable QGVAR(7cav_Trooper)) then {
-    _return = _player getVariable QGVAR(7cav_Platoon);
+if (_player getVariable QEGVAR(Cav,Trooper)) then {
+    _return = _player getVariable QEGVAR(Cav,Platoon);
 };
 
 _return;
