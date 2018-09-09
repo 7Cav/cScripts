@@ -33,8 +33,8 @@ params [
 #endif
 
 // Set platoonVariables
-(_player) setVariable [QGVAR(7cav_Trooper), true];
-(_player) setVariable [QGVAR(7cav_Platoon), _setPlatoon];
+(_player) setVariable [QEGVAR(Cav,Trooper), true];
+(_player) setVariable [QEGVAR(Cav,Platoon), _setPlatoon];
 
 // Set MedicClass
 private _MedicClass = if (_isMedicClass > 1) then {true} else {false};

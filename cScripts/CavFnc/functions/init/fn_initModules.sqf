@@ -11,6 +11,7 @@
  * Example:
  * call cScripts_fnc_initModules
  *
+ * Public: No
  */
 
 #include "..\script_component.hpp";

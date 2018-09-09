@@ -13,9 +13,7 @@ class cScripts {
         class initModules {};
         class initTagging {};
 
-        class initCuratorHeloGetOutRL {};
-        class initCuratorC130 {};
-        class initCuratorMk6Mortar{};
+        class initCuratorObjectPlaced {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\documents";
@@ -77,6 +75,8 @@ class cScripts {
 
         class getPlatoonVariable {};
         class hasPlatoonVariable {};
+
+        class teleport {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
