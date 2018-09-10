@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-import sys, os
-import argparse, shutil, subprocess, tempfile, platform
-__version__ = 1.8
 
-# #########################################################################################
 #
 # usage: build.py [-h] [-p] [-b {dev,test,custom}] [-rc RELEASECANDIDATE]
 #                 [-s | -sz]
@@ -20,10 +16,15 @@ __version__ = 1.8
 #   -s, --save            Save the build
 #   -sz, --savedontzip    Save the build and don't zip it
 #
+
+import sys, os
+import argparse, shutil, subprocess, tempfile, platform
+__version__ = 1.9
+
 # GLOBALS #################################################################################
 
 exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'resourses','tools', 'tmp']
-version_File = ("cScripts\\script_component.hpp")
+version_File = 'cScripts\\script_component.hpp'
 script_Name = 'cScripts'
 
 # #########################################################################################
@@ -42,7 +43,7 @@ def createFolder(folder):
             os.stat(folder)
         except:
             os.mkdir(folder)
-        return folderPath
+    return folderPath
 
 
 
@@ -119,10 +120,11 @@ def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
 def copyTempToRelease(releaseFolder):
     # Copying the temp directory to release
     print('Moving build to release folder...')
+    newFolderPath = releaseFolder + '\\{}'.format(script_Name)
     try:
-        newFolderPath = releaseFolder + '\\{}'.format(script_Name)
         createFolder(script_Name)
     except:
+        createFolder(script_Name)
         shutil.rmtree('tmp')
         sys.exit('Issues occured when trying to copy build to release, already exist...')
     try:
@@ -200,6 +202,7 @@ def replace(file_path, pattern, subst):
     shutil.move(abs_path, file_path)
 
 
+
 def add(file, string):
     fileObject = open('{}'.format(file), "a")
     fileObject.write(string)
@@ -211,17 +214,19 @@ def createModdedBuild(folder):      # This function is completely manual atm:
 
     print('Adjusting \033[96mdescription.ext\033[0m...')
     x = grep('{}\\description.ext'.format(folder),'    dev                 = "1SG Tully.B";')
-    replace('{}\\description.ext'.format(folder), x, '    dev                 = "CPL. Geki.T";\n')
+    replace('{}\\description.ext'.format(folder), x, '    dev                 = "CPL.Geki.T";\n')
+    x = grep('{}\\description.ext'.format(folder),'    author              = "1SG Tully.B";')
+    replace('{}\\description.ext'.format(folder), x, '    author              = "CPL.Geki.T";\n')
     x = grep('{}\\description.ext'.format(folder),'    onLoadMission       = "7th Cavalry - S3 1BN Battle Staff Operation";')
     replace('{}\\description.ext'.format(folder), x, '    onLoadMission       = "7th Cavalry - S3 Public Staff";\n')
     x = grep('{}\\description.ext'.format(folder),'    onLoadIntro         = "S3 1BN Battle Staff Operation";')
     replace('{}\\description.ext'.format(folder), x, '    onLoadIntro         = "S3 1BN Public Staff";\n')
-    x = grep('{}\\description.ext'.format(folder),'    forceRotorLibSimulation = 1;')
+    x = grep('{}\\description.ext'.format(folder),'    forceRotorLibSimulation = 1;\n')
     replace('{}\\description.ext'.format(folder), x, '    forceRotorLibSimulation = 0;\n')
 
     print('Adjusting \033[96mcba_settings.sqf\033[0m...')
 
-    # adjusting blueforce tracker settings
+    # Enableling blueforce tracker settings
     x = grep('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_Enabled')
     replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_Enabled = true;\n')
     x = grep('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_HideAiGroups')
@@ -235,38 +240,10 @@ def createModdedBuild(folder):      # This function is completely manual atm:
     x = grep('{}\\cba_settings.sqf'.format(folder),'ace_medical_medicSetting_PAK')
     replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_medical_medicSetting_PAK = 1;\n')
 
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nametags_playerNamesViewDistance')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nametags_playerNamesViewDistance = 1;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showCursorTagForVehicles')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nametags_showCursorTagForVehicles = true;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showPlayerNames')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nametags_showPlayerNames = 1;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showPlayerRanks')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nametags_showPlayerRanks = true;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showSoundWaves')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nametags_showSoundWaves = 1;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nametags_showVehicleCrewInfo')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nametags_showVehicleCrewInfo = true;\n')
-
+    # Allow players to edit down sight blur
     x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nightvision_aimDownSightsBlur')
     replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nightvision_aimDownSightsBlur = 0.25;\n')
 
-    x = grep('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_ColourBlindMode')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//STHud_Settings_ColourBlindMode = "Normal";\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_Font')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//STHud_Settings_Font = "PuristaSemibold";\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_HUDMode')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//STHud_Settings_HUDMode = 3;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_Occlusion')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//STHud_Settings_Occlusion = true;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_RemoveDeadViaProximity')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//STHud_Settings_RemoveDeadViaProximity = true;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_SquadBar')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//STHud_Settings_SquadBar = false;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'STHud_Settings_TextShadow')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//STHud_Settings_TextShadow = 1;\n')
-
- 
     print('Adding cScripts settings to \033[96mcba_settings.sqf\033[0m...')
     x = '{}\\cba_settings.sqf'.format(folder)
     add(x, '\n')
@@ -275,7 +252,7 @@ def createModdedBuild(folder):      # This function is completely manual atm:
     add(x, 'force force cScripts_Settings_allowCustomTagging = true;\n')
     add(x, 'force force cScripts_Settings_enable7cavZeusModules = true;\n')
     add(x, 'force force cScripts_Settings_setAiSystemDifficulty = 0;\n')
-    add(x, 'force force cScripts_Settings_enableStartHint = true;\n')
+    add(x, 'force force cScripts_Settings_enableStartHint = false;\n')
     add(x, 'force force cScripts_Settings_setCustomHintText = "Public Mission";\n')
     add(x, 'force force cScripts_Settings_setCustomHintTopic = "This is Tactical Realism. Be tactical and realistic.";\n')
     add(x, 'force force cScripts_Settings_setMissionType = 0;\n')
@@ -392,13 +369,12 @@ def createModdedBuild(folder):      # This function is completely manual atm:
     replace('{}\\cScripts\\Loadouts\\script\\CfgPoppy.hpp'.format(folder), x, '        channelNames[] = {"GUNSLINGER","AVIATION","VIKING","PUNISHER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","LOGISTICS","CONVOY-1","CONVOY-2","ZEUS","CAG","COMMAND"};\n')
 
 
-
+def setName(name): # WIP will handle naming.
+    return name
 
 
 def main():
-    print("""\033[1mcScripts Build Script v{}\033[0m
-\033[90mThis is a build script that prep build and zip a release build.\033[0m
-""".format(__version__))
+    print('Preparing a build for {}.\n'.format(script_Name))
 
     # set up and handle arguments
     parser = argparse.ArgumentParser()
@@ -414,12 +390,9 @@ def main():
                         action="store_true")
     group.add_argument("-sz", "--savedontzip",      help="Save the build and don\'t zip it",
                         action="store_true")
+    parser.add_argument('-v', '--version', action='version', version='Build script version {}.'.format(__version__))
 
     args = parser.parse_args()
-
-    #print('\033[0m\033[1m' + 'Functions:' + '\033[0m')
-    #parser.print_help()
-    #print()
 
     objectList = listFileContent(exlude_content)
 
@@ -474,7 +447,7 @@ def main():
 
     shutil.rmtree(tmpFolder)
 
-    input('\nBuild process is compleet press enter to exit...')
+    #input('\nBuild process is compleet press enter to exit...')
 
     if platform.system() == 'Windows':
         os.system('explorer.exe {}\\release'.format(projectpath))
