@@ -16,7 +16,6 @@
 #   -s, --save            Save the build
 #   -sz, --savedontzip    Save the build and don't zip it
 #
-
 import sys, os
 import argparse, shutil, subprocess, tempfile, platform
 __version__ = 1.9
@@ -46,7 +45,6 @@ def createFolder(folder):
     return folderPath
 
 
-
 def listFileContent(exlude_content=[]):
     # Get mission root
     content = os.listdir(projectpath)
@@ -72,7 +70,6 @@ def listFileContent(exlude_content=[]):
     return objectList
 
 
-
 def getVersion(versionFile):
     verFile = open(versionFile)
     for i, line in enumerate(verFile):
@@ -89,7 +86,6 @@ def getVersion(versionFile):
         version.append ('')
     
     return version
-
 
 
 def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
@@ -116,23 +112,26 @@ def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
     print('\033[0mFeatch complete.\033[0m')
 
 
-
-def copyTempToRelease(releaseFolder):
+def copyTempToRelease(releaseFolder='', versionNumber=['','','',''], tag='_', build='', rc=''):
     # Copying the temp directory to release
     print('Moving build to release folder...')
-    newFolderPath = releaseFolder + '\\{}'.format(script_Name)
+    if (versionNumber[3] != '') and (build != ''):
+        hash = str(versionNumber[3])[2:]
+        hash = hash[:-1]
+        folderName = '{}{}v{}.{}.{}-{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    else:
+        folderName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+
+    newFolderPath = releaseFolder + '\\{}'.format(folderName)
     try:
-        createFolder(script_Name)
+        shutil.rmtree(newFolderPath)
     except:
-        createFolder(script_Name)
-        shutil.rmtree('tmp')
-        sys.exit('Issues occured when trying to copy build to release, already exist...')
+        pass
     try:
         shutil.copytree('tmp', newFolderPath)
     except:
         sys.exit('Issues occured when trying to copy build to release...')
     print('\033[0mMove complete.\033[0m')
-
 
 
 def zipBuild(versionNumber=['','','',''],tag='_',build='',rc=''):
@@ -147,7 +146,6 @@ def zipBuild(versionNumber=['','','',''],tag='_',build='',rc=''):
     print('\033[0m{}.zip is created.\033[0m'.format(ZipName))
 
 
-
 def makeDummyVersionFile(versionNumber=['','','',''],tag='_',build='',rc=''):
     print('Creating version dummy file...')
     if (versionNumber[3] != '') and (build != ''):
@@ -157,7 +155,13 @@ def makeDummyVersionFile(versionNumber=['','','',''],tag='_',build='',rc=''):
     else:
         dummyName = 'tmp//{}{}v{}.{}.{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
     dummy = open(dummyName,"w+")
-    dummy.write('I\'am a dummy file that just show version numbers. I\'ve done my purpose yey!\n')
+    #dummy.write('I\'am a dummy file that just show version numbers. I\'ve done my purpose yey!\n')
+    dummy.write('cScripts version {}.{}.{}{}{}\n'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build))
+    hash = subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip()
+    hash = str(hash)
+    hash = hash[:-1]
+    hash = hash[2:]
+    dummy.write('Rev: {}'.format(hash))
 
 
 def grep(file,string):
@@ -174,7 +178,6 @@ def grep(file,string):
     return string
 
 
-
 def count(file,string):
     try:
         os.stat('{}'.format(file))
@@ -186,7 +189,6 @@ def count(file,string):
         if (string in l):
             count += 1
     return count
-
 
 
 def replace(file_path, pattern, subst):
@@ -202,11 +204,9 @@ def replace(file_path, pattern, subst):
     shutil.move(abs_path, file_path)
 
 
-
 def add(file, string):
     fileObject = open('{}'.format(file), "a")
     fileObject.write(string)
-
 
 
 def createModdedBuild(folder):      # This function is completely manual atm:
@@ -438,10 +438,10 @@ def main():
     makeDummyVersionFile(versionNumber,tagString,buildString,rcString)
 
     if args.save:
-        copyTempToRelease(releaseFolder)
+        copyTempToRelease(releaseFolder, versionNumber,tagString,buildString,rcString)
 
     if args.savedontzip:
-        copyTempToRelease(releaseFolder)
+        copyTempToRelease(releaseFolder, versionNumber,tagString,buildString,rcString)
     else:
         zipBuild(versionNumber,tagString,buildString,rcString)
 
