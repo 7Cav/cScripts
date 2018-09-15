@@ -77,6 +77,8 @@ class cScripts {
         class hasPlatoonVariable {};
 
         class teleport {};
+
+        class addObjectToCurator {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
