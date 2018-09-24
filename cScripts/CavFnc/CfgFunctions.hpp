@@ -113,7 +113,7 @@ class cScripts {
     class debug {
         file = "cScripts\cavFnc\functions\debug";
         class logError {};
-        class logInfo {}; //will be merged with "attachVehicleLabel"
+        class logInfo {};
         class logWarning {};
     };
 };
