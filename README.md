@@ -35,7 +35,7 @@ In order to install this script package you only need to [download the latest bu
 cScripts provides you with the basic scripts and functions for S3 Operation making.
 
 ### Scripts Installed
-- **CavFnc**                    -   [7th Cavalry Function https://github.com/7Cav/cScripts/wiki/Features/)
+- **CavFnc**                    -   [7th Cavalry Function Library](https://github.com/7Cav/cScripts/wiki/Features/)
 - **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
 - **ViewingDistance**           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
 
