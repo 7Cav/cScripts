@@ -13,32 +13,46 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
+// Don't reapply on JIP
+if (didJIP) exitWith {};
 // check if this already have been applied
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle]] call FUNC(logWarning);};
 
-#ifdef DEBUG_MODE
-    [formatText["Applying vehicle inventory to %1.", _vehicle]] call FUNC(logInfo);
-#endif
-
-private _trucks = ["rhsusf_m1025_d_m2", "rhsusf_m1025_d_Mk19", "rhsusf_m1025_d", "rhsusf_m998_d_2dr_fulltop", "rhsusf_m998_d_2dr_halftop", "rhsusf_m998_d_2dr", "rhsusf_m998_d_4dr_fulltop", "rhsusf_m998_d_4dr_halftop", "rhsusf_m998_d_4dr", "rhsusf_M1220_usarmy_d", "rhsusf_M1220_M153_M2_usarmy_d", "rhsusf_M1220_M2_usarmy_d", "rhsusf_M1220_MK19_usarmy_d", "rhsusf_M1230_M2_usarmy_d", "rhsusf_M1230_MK19_usarmy_d", "rhsusf_M1232_usarmy_d", "rhsusf_M1232_M2_usarmy_d", "rhsusf_M1232_MK19_usarmy_d", "rhsusf_M1237_M2_usarmy_d", "rhsusf_M1237_MK19_usarmy_d", "rhsusf_M1220_usarmy_wd", "rhsusf_M1220_M153_M2_usarmy_wd", "rhsusf_M1220_M2_usarmy_wd", "rhsusf_M1220_MK19_usarmy_wd", "rhsusf_M1230_M2_usarmy_wd", "rhsusf_M1230_MK19_usarmy_wd", "rhsusf_M1232_usarmy_wd", "rhsusf_M1232_M2_usarmy_wd", "rhsusf_M1232_MK19_usarmy_wd", "rhsusf_M1237_MK19_usarmy_wd", "rhsusf_M1237_M2_usarmy_wd", "rhsusf_m1025_w_m2", "rhsusf_m1025_w_mk19", "rhsusf_m1025_w", "rhsusf_m998_w_2dr_fulltop", "rhsusf_m998_w_2dr_halftop", "rhsusf_m998_w_2dr", "rhsusf_m998_w_4dr_fulltop", "rhsusf_m998_w_4dr_halftop", "rhsusf_m998_w_4dr", "rhsusf_m1025_d_s_m2", "rhsusf_m1025_d_s_Mk19", "rhsusf_m1025_d_s", "rhsusf_m998_d_s_2dr", "rhsusf_m998_d_s_2dr_halftop", "rhsusf_m998_d_s_2dr", "rhsusf_m998_d_s_2dr_fulltop", "rhsusf_m998_d_s_4dr_halftop", "rhsusf_m998_d_s_4dr", "rhsusf_m998_d_s_4dr_fulltop", "rhsusf_rg33_usmc_d", "rhsusf_rg33_m2_usmc_d", "rhsusf_m1025_w_s_m2", "rhsusf_m1025_w_s_Mk19", "rhsusf_m1025_w_s", "rhsusf_m998_w_s_2dr_halftop", "rhsusf_m998_w_s_2dr_fulltop", "rhsusf_m998_w_s_2dr", "rhsusf_m998_w_s_4dr_halftop", "rhsusf_m998_w_s_4dr", "rhsusf_m998_w_s_4dr_fulltop", "rhsusf_rg33_usmc_wd", "rhsusf_rg33_m2_usmc_wd", "rhsusf_rg33_m2_usmc_wd","M1126_ICV_M134_DG1_NOSLATDES", "M1126_ICV_M134_DG1_NOSLATWOOD", "M1126_ICV_M2_DG1_NOSLATDES", "M1126_ICV_M2_DG1_NOSLATWOOD", "M1126_ICV_M2NEST_DG1_NOSLATWOOD", "M1126_ICV_M2NEST_DG1_NOSLATDES", "M1126_ICV_mk19_DG1_NOSLATWOOD", "M1126_ICV_mk19_DG1_NOSLATDES", "M1128_MGS_DG1_NOSLATWOOD", "M1126_ICV_mk19_DG1_NOSLATDES", "M1128_MGS_DG1_NOSLATWOOD", "M1128_MGS_DG1_NOSLATDES", "M1129_MC_DG1_NOSLATWOOD", "M1129_MC_DG1_NOSLATDES", "M1130_CV_DG1_NOSLATWOOD", "M1130_CV_DG1_NOSLATDES", "M1133_MEV_DG1_NOSLATWOOD", "M1135_ATGMV_DG1_NOSLATWOOD", "M1133_MEV_DG1_NOSLATDES", "M1135_ATGMV_DG1_NOSLATDES"];
-private _apcIcvIfv = [];
+private _trucks = [ "rhsusf_M1078A1P2_WD_fmtv_usarmy", "rhsusf_M1078A1P2_WD_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_WD_fmtv_usarmy", "rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_WD_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_WD_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy", "rhsusf_M1083A1P2_WD_fmtv_usarmy", "rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_WD_fmtv_usarmy", "rhsusf_M1083A1P2_B_WD_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_WD_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_WD_flatbed_fmtv_usarmy", "rhsusf_M1084A1P2_WD_fmtv_usarmy", "rhsusf_M1084A1P2_B_WD_fmtv_usarmy", "rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy", "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy", "rhsusf_M977A4_usarmy_wd", "rhsusf_M977A4_AMMO_usarmy_wd", "rhsusf_M977A4_REPAIR_usarmy_wd", "rhsusf_M977A4_BKIT_usarmy_wd", "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd", "rhsusf_M977A4_AMMO_BKIT_usarmy_wd", "rhsusf_M977A4_BKIT_M2_usarmy_wd", "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd", "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd", "rhsusf_M978A4_usarmy_wd", "rhsusf_M978A4_BKIT_usarmy_wd", "rhsusf_M1078A1P2_D_fmtv_usarmy", "rhsusf_M1078A1P2_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy", "rhsusf_M1083A1P2_D_fmtv_usarmy", "rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_D_fmtv_usarmy", "rhsusf_M1083A1P2_B_D_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_D_flatbed_fmtv_usarmy", "rhsusf_M1084A1P2_D_fmtv_usarmy", "rhsusf_M1084A1P2_B_D_fmtv_usarmy", "rhsusf_M1084A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M977A4_usarmy_d", "rhsusf_M977A4_AMMO_usarmy_d", "rhsusf_M977A4_REPAIR_usarmy_d", "rhsusf_M977A4_AMMO_BKIT_usarmy_d", "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d", "rhsusf_M977A4_BKIT_usarmy_d", "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d", "rhsusf_M977A4_BKIT_M2_usarmy_d", "rhsusf_M977A4_REPAIR_BKIT_usarmy_d", "rhsusf_M978A4_usarmy_d", "rhsusf_M978A4_BKIT_usarmy_d"];
+private _mrap = ["rhsusf_m1025_d_m2", "rhsusf_m1025_d_Mk19", "rhsusf_m1025_d", "rhsusf_m1043_d_m2", "rhsusf_m1043_d_mk19", "rhsusf_m1043_d", "rhsusf_m1045_d", "rhsusf_m998_d_2dr_fulltop", "rhsusf_m998_d_2dr_halftop", "rhsusf_m998_d_2dr", "rhsusf_m998_d_4dr_fulltop", "rhsusf_m998_d_4dr_halftop", "rhsusf_m998_d_4dr", "rhsusf_m966_d", "rhsusf_M1117_D", "rhsusf_M1117_O", "rhsusf_M1220_usarmy_d", "rhsusf_M1220_M153_M2_usarmy_d", "rhsusf_M1220_M2_usarmy_d", "rhsusf_M1220_MK19_usarmy_d", "rhsusf_M1230_M2_usarmy_d", "rhsusf_M1230_MK19_usarmy_d", "rhsusf_M1232_usarmy_d", "rhsusf_M1232_M2_usarmy_d", "rhsusf_M1232_MK19_usarmy_d", "rhsusf_M1237_M2_usarmy_d", "rhsusf_M1237_MK19_usarmy_d", "rhsusf_m1025_w_m2", "rhsusf_m1025_w_mk19", "rhsusf_m1025_w", "rhsusf_m1043_w_m2", "rhsusf_m1043_w_mk19", "rhsusf_m1043_w", "rhsusf_m1045_w", "rhsusf_m998_w_2dr_fulltop", "rhsusf_m998_w_2dr_halftop", "rhsusf_m998_w_2dr", "rhsusf_m998_w_4dr_fulltop", "rhsusf_m998_w_4dr_halftop", "rhsusf_m998_w_4dr", "rhsusf_m966_w", "rhsusf_M1117_W", "rhsusf_M1220_usarmy_wd", "rhsusf_M1220_M2_usarmy_wd", "rhsusf_M1220_M153_M2_usarmy_wd", "rhsusf_M1220_MK19_usarmy_wd", "rhsusf_M1230_M2_usarmy_wd", "rhsusf_M1230_MK19_usarmy_wd", "rhsusf_M1230a1_usarmy_wd", "rhsusf_M1232_usarmy_wd", "rhsusf_M1232_M2_usarmy_wd", "rhsusf_M1232_MK19_usarmy_wd", "rhsusf_M1237_M2_usarmy_wd", "rhsusf_M1232_MK19_usarmy_wd", "rhsusf_M1237_M2_usarmy_wd", "rhsusf_M1237_MK19_usarmy_wd"];
+private _apcIcvIfv = ["M1126_ICV_M134_DG1_NOSLATDES", "M1126_ICV_M134_DG1_NOSLATWOOD", "M1126_ICV_M134_DG1_SLATDES", "M1126_ICV_M134_DG1_SLATWOOD", "M1126_ICV_M2_DG1_NOSLATDES", "M1126_ICV_M2_DG1_NOSLATWOOD", "M1126_ICV_M2_DG1_SLATDES", "M1126_ICV_M2_DG1_SLATWOOD", "M1126_ICV_M2NEST_DG1_NOSLATDES", "M1126_ICV_M2NEST_DG1_SLATDES", "M1126_ICV_M2NEST_DG1_SLATWOOD", "M1126_ICV_mk19_DG1_NOSLATDES", "M1126_ICV_mk19_DG1_NOSLATWOOD", "M1126_ICV_mk19_DG1_SLATDES", "M1126_ICV_mk19_DG1_SLATWOOD", "M1128_MGS_DG1_NOSLATWOOD", "M1128_MGS_DG1_NOSLATDES", "M1128_MGS_DG1_SLATDES", "M1128_MGS_DG1_SLATWOOD", "M1129_MC_DG1_NOSLATDES", "M1129_MC_DG1_NOSLATWOOD", "M1129_MC_DG1_SLATWOOD", "M1129_MC_DG1_SLATDES", "M1130_CV_DG1_NOSLATWOOD", "M1130_CV_DG1_SLATDES", "M1130_CV_DG1_SLATWOOD", "M1135_ATGMV_DG1_NOSLATDES", "M1135_ATGMV_DG1_NOSLATWOOD", "M1135_ATGMV_DG1_SLATWOOD", "M1135_ATGMV_DG1_SLATDES", "B_APC_Wheeled_01_cannon_F", "B_AFV_Wheeled_01_cannon_F", "B_AFV_Wheeled_01_up_cannon_F", "RHS_M2A2", "RHS_M2A2_BUSKI", "RHS_M2A3", "RHS_M2A3_BUSKI", "RHS_M2A3_BUSKIII", "RHS_M6", "RHS_M2A2_wd", "RHS_M2A2_BUSKI_WD", "RHS_M2A3_wd", "RHS_M2A3_BUSKI_wd", "RHS_M2A3_BUSKIII_wd", "RHS_M6_wd"];
 private _tanks = ["rhsusf_m1a1aimd_usarmy", "rhsusf_m1a1aim_tuski_d", "rhsusf_m1a2sep1d_usarmy", "rhsusf_m1a2sep1tuskid_usarmy", "rhsusf_m1a2sep1tuskiid_usarmy", "rhsusf_m1a1aimwd_usarmy", "rhsusf_m1a1aim_tuski_wd", "rhsusf_m1a2sep1wd_usarmy", "rhsusf_m1a2sep1tuskiwd_usarmy", "rhsusf_m1a2sep1tuskiiwd_usarmy", "rhsusf_m1a1fep_d", "rhsusf_m1a1fep_wd", "rhsusf_m1a1fep_od", "rhsusf_m1a1hc_wd"];
+
 private _attackRotary = ["RHS_MELB_AH6M", "RHS_MELB_MH6M", "B_Heli_Attack_01_dynamicLoadout_F", "B_Heli_Light_01_dynamicLoadout_F", "RHS_AH64D_wd", "RHS_AH64D_noradar_wd", "RHS_AH1Z", "RHS_AH1Z_wd"];
 private _transportRotary = ["RHS_UH60M_MEV_d","RHS_UH60M_MEV2_d","RHS_UH60M2_d","RHS_UH60M_ESSS_d","RHS_UH60M_ESSS2_d","RHS_UH60M_d","RHS_UH60M","RHS_UH60M_ESSS","RHS_UH60M_ESSS2","RHS_UH60M2","RHS_UH60M_MEV2","RHS_UH60M_MEV","RHS_UH1Y_FFAR_d","RHS_UH1Y_d","RHS_UH1Y_UNARMED_d","RHS_UH1Y_FFAR","RHS_UH1Y","RHS_UH1Y_UNARMED","B_Heli_Transport_01_F"];
+
 private _fixedWingTransport = ["RHS_C130J"];
 private _fixedWingAttack = ["RHS_A10", "rhsusf_f22", "FIR_F16C", "FIR_F16C_RS_512TFS", "FIR_F16C_RS_400", "FIR_F16C_RS_526TFS", "FIR_F16C_RS_86TFW2", "FIR_F16C_RS_86TFW", "FIR_F16C_RS_86WG", "FIR_F16C_Ag_arctic", "FIR_F16C_Ag_flanker", "FIR_F16C_Ag_lizard", "FIR_F16C_AV", "FIR_F16C_Blank", "FIR_F16C_CFTTEST", "FIR_F16C_Makos", "FIR_F16C_Osan", "FIR_F16C_HG", "FIR_F16C_Polish", "FIR_F16C_ROKAF_B32", "FIR_F16C_ROKAF", "FIR_F16C_WP", "FIR_F16C_Polish_CFT", "FIR_F16C_WW", "FIR_F16D", "FIR_F16D_CFTTEST", "FIR_F16D_ROKAF", "FIR_F16D_Polish_CFT", "FIR_F16D_AV", "FIR_F16D_Blank", "FIR_F16D_WP", "B_Plane_Fighter_01_F", "B_Plane_Fighter_01_Stealth_F"];
-private _ambulance = ["B_Truck_01_medical_F", "B_T_Truck_01_medical_F", "M1133_MEV_DG1_NOSLATWOOD", "M1133_MEV_DG1_NOSLATDES", "M1133_MEV_DG1_SLATDES", "M1133_MEV_DG1_SLATWOOD", "rhsusf_m113d_usarmy_medical", "RHS_UH60M_MEV2_d", "RHS_UH60M_MEV_d", "rhsusf_m113_usarmy_medical", "RHS_UH60M_MEV2", "RHS_UH60M_MEV"];
 
-// Apply inventory
-clearweaponcargoGlobal _vehicle;
-clearmagazinecargoGlobal _vehicle;
-clearitemcargoGlobal _vehicle;
-clearbackpackcargoGlobal _vehicle;
+private _ambulance = [ "rhsusf_M1085A1P2_B_D_Medical_fmtv_usarmy", "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy", "M1133_MEV_DG1_NOSLATWOOD", "M1133_MEV_DG1_NOSLATDES", "M1133_MEV_DG1_SLATDES", "M1133_MEV_DG1_SLATWOOD", "B_Truck_01_medical_F", "RHS_UH60M_MEV2", "RHS_UH60M_MEV", "RHS_UH60M_MEV2_d", "RHS_UH60M_MEV_d"];
 
-_vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+private _allVehicles = [];
+{ _allVehicles append _x } forEach [_trucks, _mrap, _apcIcvIfv, _tanks, _attackRotary, _transportRotary, _fixedWingTransport, _fixedWingAttack, _ambulance];
+
+
+// Global inventory
+if (typeOf _vehicle in _allVehicles) then {
+    #ifdef DEBUG_MODE
+        [formatText["Added vehicle inventory to %1.", _vehicle]] call FUNC(logInfo);
+    #endif
+
+    // Apply inventory
+    clearweaponcargoGlobal _vehicle;
+    clearmagazinecargoGlobal _vehicle;
+    clearitemcargoGlobal _vehicle;
+    clearbackpackcargoGlobal _vehicle;
+
+    _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+};
 
 switch (true) do {
     case (typeOf _vehicle in _trucks): {};
+    case (typeOf _vehicle in _mrap): {};
     case (typeOf _vehicle in _apcIcvIfv): {
         _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50],
         _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",50],
