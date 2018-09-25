@@ -11,9 +11,9 @@ class cScripts {
         class initCustomStartHint {};
 
         class initModules {};
+        class initTagging {};
 
-        class initCuratorHeloGetOutRL {};
-        class initCuratorC130 {};
+        class initCuratorObjectPlaced {};
     };
     class DiaryRecord {
         file = "cScripts\cavFnc\functions\documents";
@@ -75,6 +75,8 @@ class cScripts {
 
         class getPlatoonVariable {};
         class hasPlatoonVariable {};
+
+        class teleport {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
@@ -99,14 +101,14 @@ class cScripts {
         class moduelCreateSupplyCrate {};
         class moduelCreateSpecialWeaponsCrate {};
 
-        class moduleApplyTailNumber {};
-        class moduleReadyHelicopter {};
+        class moduleApplyVehicleLable {};
+
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
         class moduleMakeEngineer {};
 
         class moduleRegearTrooper {};
-            
+
         class moduleCallEndex {};
     };
     class debug {

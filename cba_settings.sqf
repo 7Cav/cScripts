@@ -2,7 +2,7 @@
 force ace_advanced_ballistics_ammoTemperatureEnabled = true;
 force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
 force ace_advanced_ballistics_bulletTraceEnabled = true;
-force ace_advanced_ballistics_enabled = false;
+force ace_advanced_ballistics_enabled = true;
 force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force ace_advanced_ballistics_simulationInterval = 0.05;
 
@@ -180,7 +180,7 @@ force force ace_medical_medicSetting_SurgicalKit = 1;
 force force ace_medical_menu_allow = 1;
 force force ace_medical_menu_maxRange = 3;
 force force ace_medical_menu_openAfterTreatment = true;
-force force ace_medical_menu_useMenu = 1;
+//ace_medical_menu_useMenu = 1;
 //ace_medical_menuTypeStyle = 0;
 force force ace_medical_moveUnitsFromGroupOnUnconscious = false;
 force force ace_medical_painCoefficient = 1;
@@ -203,14 +203,14 @@ force force ace_mk6mortar_useAmmoHandling = false;
 
 // ACE Name Tags
 //ace_nametags_defaultNametagColor = [0.77,0.51,0.08,1];
-force ace_nametags_playerNamesMaxAlpha = 0.8;
+//ace_nametags_playerNamesMaxAlpha = 0.8;
 force force ace_nametags_playerNamesViewDistance = 5;
-force force ace_nametags_showCursorTagForVehicles = true;
+//ace_nametags_showCursorTagForVehicles = true;
 //ace_nametags_showNamesForAI = false;
-force force ace_nametags_showPlayerNames = 1;
-force force ace_nametags_showPlayerRanks = true;
-force force ace_nametags_showSoundWaves = 1;
-force force ace_nametags_showVehicleCrewInfo = true;
+//ace_nametags_showPlayerNames = 1;
+//ace_nametags_showPlayerRanks = true;
+//ace_nametags_showSoundWaves = 1;
+//ace_nametags_showVehicleCrewInfo = true;
 //ace_nametags_tagSize = 2;
 
 // ACE Nightvision
@@ -233,7 +233,7 @@ force force ace_overheating_unJamOnreload = false;
 // ACE Pointing
 force force ace_finger_enabled = true;
 //ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
-force force ace_finger_indicatorForSelf = true;
+//ace_finger_indicatorForSelf = true;
 force force ace_finger_maxRange = 10;
 
 // ACE Pylons
@@ -340,8 +340,8 @@ force force ace_vehiclelock_lockVehicleInventory = true;
 force force ace_vehiclelock_vehicleStartingLockState = -1;
 
 // ACE View Distance Limiter
-force ace_viewdistance_enabled = false;
-force ace_viewdistance_limitViewDistance = 10000;
+//ace_viewdistance_enabled = false;
+//ace_viewdistance_limitViewDistance = 10000;
 //ace_viewdistance_objectViewDistanceCoeff = 0;
 //ace_viewdistance_viewDistanceAirVehicle = 0;
 //ace_viewdistance_viewDistanceLandVehicle = 0;
@@ -414,7 +414,7 @@ force force Achilles_Debug_Output_Enabled = false;
 //Achilles_var_setRadioFrequenciesSR_Default = "150";
 
 // Achilles - Icon Selection
-//force force Achilles_var_iconSelection = "Achilles_var_iconSelection_Ares";
+//Achilles_var_iconSelection = "Achilles_var_iconSelection_Ares";
 
 // Achilles - Modules Interface
 force force Achilles_var_moduleTreeCollapse = true;

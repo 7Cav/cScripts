@@ -1,3 +1,5 @@
 /mission.sqm
 /release/*
 *.psd
+/.vscode/*
+/tmp

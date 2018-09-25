@@ -4,24 +4,16 @@
  */
 #include "..\script_component.hpp";
 
-diag_log formatText ["[cScripts] (EDEN) INFO: Loading CBA Settings"];
+#ifdef DEBUG_MODE
+    ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
+#endif
 
+// Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
-
-// Debug Mode
-[
-    "cScripts_Settings_setDebugMode",
-    "CHECKBOX",
-    ["Debug Mode","Debug allow you to see more rpt log messages and get more indepth data on the mission.\nNOTE! This function work only when you preview mission in multiplayer.\n"],
-    _cScriptSettings,
-    false,
-    true,
-    {}
-] call CBA_Settings_fnc_init;
 
 // Mission type
 [
-    "cScripts_Settings_setMissionType",
+    QEGVAR(Settings,setMissionType),
     "LIST",
     ["Mission Type", "This will deside on what kind of startup hint you get on mission start.\n"],
     [_cScriptSettings, "1; Mission"],
@@ -32,7 +24,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 // Ai setting
 [
-    "cScripts_Settings_setAiSystemDifficulty",
+    QEGVAR(Settings,setAiSystemDifficulty),
     "LIST",
     ["AI Setting", "This adjustes the ai and make them less godlike and more roleplay to play against.\n"],
     [_cScriptSettings, "1; Mission"],
@@ -43,7 +35,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 // Mission startup hint settings
 [
-    "cScripts_Settings_enableStartHint",
+    QEGVAR(Settings,enableStartHint),
     "CHECKBOX",
     ["Startup Hint", "Enable or disable startup hints on mission start.\n"],
     [_cScriptSettings, "2; Mission Startup"],
@@ -52,7 +44,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 [
-    "cScripts_Settings_setRedLightTime",
+    QEGVAR(Settings,setRedLightTime),
     "SLIDER",
     ["Red light delay","Define in seconds for how long red light is enected.\n"],
     [_cScriptSettings, "2; Mission Startup"],
@@ -61,7 +53,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 [
-    "cScripts_Settings_setTrainingHintTime",
+    QEGVAR(Settings,setTrainingHintTime),
     "SLIDER",
     ["Training hint delay","Define in seconds for how long training hint time is shown.\n"],
     [_cScriptSettings, "2; Mission Startup"],
@@ -70,7 +62,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 [
-    "cScripts_Settings_setCustomHintTopic",
+    QEGVAR(Settings,setCustomHintTopic),
     "EDITBOX",
     "Custom hint topic",
     [_cScriptSettings, "2; Mission Startup"],
@@ -79,7 +71,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 [
-    "cScripts_Settings_setCustomHintText",
+    QEGVAR(Settings,setCustomHintText),
     "EDITBOX",
     "Custom hint text",
     [_cScriptSettings, "2; Mission Startup"],
@@ -90,7 +82,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 // Diary Records
 [
-    "cScripts_Settings_showDiaryRecords",
+    QEGVAR(Settings,showDiaryRecords),
     "CHECKBOX",
     ["Help documents","Allow the mission to write diary help documents.\n"],
     _cScriptSettings,
@@ -101,7 +93,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 // Custom init
 [
-    "cScripts_Settings_allowCustomInit",
+    QEGVAR(Settings,allowCustomInit),
     "CHECKBOX",
     ["Custom object init", "Allow the mission to be able to apply custom init to vehicles and objects pressent on mission start.\n"],
     [_cScriptSettings, "3; Custom Initzialisation"],
@@ -112,7 +104,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 // Vehicle
 [
-    "cScripts_Settings_useCustomVehicleSettings",
+    QEGVAR(Settings,useCustomVehicleSettings),
     "CHECKBOX",
     ["Vehicle Settings", "Allow mission to apply custom settings, including change inventory, to vehicles.\nC130 jump action and Helicopter Get out right and Left is Included here.\n"],
     [_cScriptSettings, "3; Custom Initzialisation"],
@@ -121,11 +113,11 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 [
-    "cScripts_Settings_useCustomVehicleInventory",
+    QEGVAR(Settings,useCustomVehicleInventory),
     "CHECKBOX",
     ["Vehicle Inventory", "Allow mission to change the vehicles inventory.\n"],
     [_cScriptSettings, "3; Custom Initzialisation"],
-    true,
+    false,
     true,
     {}
 ] call CBA_Settings_fnc_init;
@@ -134,7 +126,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 // Supply
 [
-    "cScripts_Settings_useCustomSupplyInventory",
+    QEGVAR(Settings,useCustomSupplyInventory),
     "CHECKBOX",
     ["Custom supplies Crates","Allow mission to adjust crate content.\n"],
     [_cScriptSettings, "3; Custom Initzialisation"],
@@ -143,27 +135,42 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
+// Tagging
+[
+    QEGVAR(Settings,allowCustomTagging),
+    "CHECKBOX",
+    ["Allow Custom Tagging","Allow players to spray custom taggs.\n"],
+    [_cScriptSettings, "4; Player Actions"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
 // Aries Achilles Zeus Moduels
 if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
     [
-        "cScripts_Settings_enable7cavZeusModules",
+        QEGVAR(Settings,enable7cavZeusModules),
         "CHECKBOX",
         ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-        [_cScriptSettings, "4; Zeus"],
+        [_cScriptSettings, "5; Zeus"],
         true,
         true,
         {}
     ] call CBA_Settings_fnc_init;
 };
 
-diag_log formatText ["[cScripts] (EDEN) INFO: CBA Settings are loaded."];
+#ifdef DEBUG_MODE
+    ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
+#endif
 
 // Load preInit mission settings
 if (is3DEN) exitWith {};
 
-FORCEINFO("Loading preInit");
+#ifdef DEBUG_MODE
+    ["postInit Initializing."] call FUNC(logInfo);
+#endif
 
-switch (cScripts_Settings_setMissionType) do {
+switch (EGVAR(Settings,setMissionType)) do {
     case (0): {
     };
     case (1): {
@@ -172,12 +179,17 @@ switch (cScripts_Settings_setMissionType) do {
     };
 };
 
-if (cScripts_Settings_allowCustomInit) then {
-
+if (EGVAR(Settings,allowCustomInit)) then {
 };
 
-if (cScripts_Settings_enable7cavZeusModules) then {
-    call cScripts_fnc_initModules;
+if (EGVAR(Settings,allowCustomTagging)) then {
+    call FUNC(initTagging);
 };
 
-FORCEINFO("preInit loaded");
+if (EGVAR(Settings,enable7cavZeusModules)) then {
+    call FUNC(initModules);
+};
+
+#ifdef DEBUG_MODE
+    ["postInit initialization completed."] call FUNC(logInfo);
+#endif

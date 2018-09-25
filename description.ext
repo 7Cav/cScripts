@@ -46,6 +46,7 @@
     class Extended_PostInit_EventHandlers {
         cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_postInit.sqf'";
     };
+
     class CfgFunctions {
         #include "cScripts\CavFnc\CfgFunctions.hpp"
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"

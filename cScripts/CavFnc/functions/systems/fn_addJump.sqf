@@ -21,7 +21,7 @@ params [
 ];
 
 // Check so the options arent added twice.
-if (!isNil {_vehicle getVariable QGVAR(JumpOutAirframe)}) exitWith {};
+if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {};
 
 /*_vehicle setVariable [QGVAR(allowJump),false,true];
 
@@ -56,4 +56,4 @@ _vehicle addAction [
     false
 ] call BIS_fnc_holdActionAdd;
 
-_vehicle setVariable [QGVAR(JumpOutAirframe),"true"];
+_vehicle setVariable [QEGVAR(Vehicle,Eject),"true"];

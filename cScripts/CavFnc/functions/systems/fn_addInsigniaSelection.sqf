@@ -27,7 +27,7 @@ params [
 
 //add addAction
 if (_category isEqualTo ["ACE_MainActions","cScriptInsigniaSelectionMenu"]) then {
-    _object addAction [format ["   <img image='%1' /> <t color='#66ff66'>%2</t>", _icon, _lable], {[player, _this select 3] call BIS_fnc_setUnitInsignia;}, _className];
+    _object addAction [format ["   <img image='%1' /> <t color='#66ff66'>%2</t>", _icon, _lable], {[player, _this select 3] call BIS_fnc_setUnitInsignia;}, _className, 1.5, true, true, "", "true", 5];
 };
 
 

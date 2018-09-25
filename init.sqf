@@ -5,6 +5,13 @@
  * Read more about Initzialisation order here: https://community.bistudio.com/wiki/Initialization_Order
  */
 
+#include "cScripts\script_component.hpp"
+
+#ifdef DEBUG_MODE
+    ["init Initializing."] call FUNC(logInfo);
+    [formatText["cScripts Version %1 is running.",VERSION]] call FUNC(logInfo);
+#endif
+
 enableSaving [false, false];
 tawvd_disablenone = true;
 
@@ -13,7 +20,7 @@ ACE_maxWeightDrag = 10000;
 
 // Check if the mission is running on multiplayer.
 if (!isMultiplayer) then {
-    ["Mission is running on singelplayer enviroment.",true] call cScripts_fnc_logWarning;
+    ["Mission is running on singelplayer enviroment."] call FUNC(logWarning);
 };
 
 // Applying AI difficultlies
@@ -21,7 +28,9 @@ if (isMultiplayer) then {
     switch (cScripts_Settings_setAiSystemDifficulty) do {
         // Day
         case (0): {
-            ["Applying Day AI skill level to all units.",false] call cScripts_fnc_logInfo;
+            #ifdef DEBUG_MODE
+                ["Applying DAY AI to units."] call FUNC(logInfo);
+            #endif
             {
                 _x setSkill ["aimingspeed",     0.420];
                 _x setSkill ["aimingaccuracy",  0.338];
@@ -34,7 +43,9 @@ if (isMultiplayer) then {
         };
         // Night / Jungle
         case (1): {
-            ["Applying Night AI skill level to all units.",false] call cScripts_fnc_logInfo;
+            #ifdef DEBUG_MODE
+                ["Applying NIGHT/JUNGLE AI to units."] call FUNC(logInfo);
+            #endif
             {
                 _x setSkill ["aimingspeed",     0.015];
                 _x setSkill ["aimingaccuracy",  0.100];
@@ -47,16 +58,20 @@ if (isMultiplayer) then {
         };
     };
 } else {
-    ["Running mission on singelplayer ai setting is not applied.",true] call cScripts_fnc_logWarning;
+    ["Mission is running on singelplayer enviroment AI setting is not applied."] call FUNC(logWarning);
 };
 
 // Enable debug mode if on multiplayer.
 if (isMultiplayer) then {
-    if (cScripts_Settings_setDebugMode) then {
-        ["Debug Mode is active.",true] call cScripts_fnc_logWarning;
-        titleText ["Warning! cScripts debug mode is active!", "PLAIN DOWN", 3];
+    #ifdef DEBUG_MODE
+        ["Debug mode is currently active."] call FUNC(logWarning);
+        titleText ["Warning! cScripts debug mode is active.", "PLAIN DOWN", 3];
         logEntities;
-    };
+    #endif
 };
+
+#ifdef DEBUG_MODE
+    ["init initialization completed."] call FUNC(logInfo);
+#endif
 
 /* APPLY STUFF ONLY BELOW THIS LINE */

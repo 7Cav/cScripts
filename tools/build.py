@@ -1,18 +1,37 @@
 #!/usr/bin/env python3
-import sys, os
-import argparse, shutil, tempfile
-__version__ = 1.6
 
-# GLOBALS
-exlude_content = ['.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'tools', 'tmp']
-version_File = ("cScripts\\CavFnc\\functions\\script_component.hpp")
+#
+# usage: build.py [-h] [-p] [-b {dev,test,custom}] [-rc RELEASECANDIDATE]
+#                 [-s | -sz]
+#
+# optional arguments:
+#   -h, --help            show this help message and exit
+#   -p, --public          Create a "public" build to be used on non CavPack
+#                         Enviroment
+#   -b {dev,test,custom}, --build {dev,test,custom}
+#                         Add a additional tag to a to the build
+#   -rc RELEASECANDIDATE, --releasecandidate RELEASECANDIDATE
+#                         Set a release candidate number to the build ".RC1" for
+#                         exsample
+#   -s, --save            Save the build
+#   -sz, --savedontzip    Save the build and don't zip it
+#
+import sys, os
+import argparse, shutil, subprocess, tempfile
+__version__ = 1.9
+
+# GLOBALS #################################################################################
+
+exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'resourses','tools', 'tmp']
+version_File = 'cScripts\\script_component.hpp'
 script_Name = 'cScripts'
+
+# #########################################################################################
 
 # set projecty path
 scriptpath = os.path.realpath(__file__)
 projectpath = os.path.dirname(os.path.dirname(scriptpath))
 os.chdir(projectpath)
-
 
 def createFolder(folder):
     # Get mission root
@@ -23,8 +42,7 @@ def createFolder(folder):
             os.stat(folder)
         except:
             os.mkdir(folder)
-        return folderPath
-
+    return folderPath
 
 
 def listFileContent(exlude_content=[]):
@@ -52,7 +70,6 @@ def listFileContent(exlude_content=[]):
     return objectList
 
 
-
 def getVersion(versionFile):
     verFile = open(versionFile)
     for i, line in enumerate(verFile):
@@ -61,8 +78,14 @@ def getVersion(versionFile):
             line = line.split(".")
             version = line
             version = list(map(int, version))
+    # get Revision hash
+    try:
+        hash = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip()
+        version.append (hash)
+    except:
+        version.append ('')
+    
     return version
-
 
 
 def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
@@ -86,36 +109,62 @@ def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
         except:
             shutil.rmtree(tmpFolder)
             sys.exit('Issues occured when featching folder ' + dir + '.')
-    print('\033[0mFeatch compleet.\033[0m')
+    print('\033[0mFeatch complete.\033[0m')
 
 
-
-def copyTempToRelease(releaseFolder):
-    # Copying teh temp directory to release
+def copyTempToRelease(releaseFolder='', versionNumber=['','','',''], tag='_', build='', rc=''):
+    # Copying the temp directory to release
     print('Moving build to release folder...')
+    if (versionNumber[3] != '') and (build != ''):
+        hash = str(versionNumber[3])[2:]
+        hash = hash[:-1]
+        folderName = '{}{}v{}.{}.{}-{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    else:
+        folderName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+
+    newFolderPath = releaseFolder + '\\{}'.format(folderName)
     try:
-        newFolderPath = releaseFolder + '\\{}'.format(script_Name)
-        createFolder(script_Name)
+        shutil.rmtree(newFolderPath)
     except:
-        shutil.rmtree('tmp')
-        sys.exit('Issues occured when trying to copy build to release, already exist...')
+        pass
     try:
         shutil.copytree('tmp', newFolderPath)
     except:
         sys.exit('Issues occured when trying to copy build to release...')
-    print('\033[0mMove compleet.\033[0m')
+    print('\033[0mMove complete.\033[0m')
 
 
-
-def zipBuild(versionNumber=['','',''],tag='_',build='',rc=''):
-    ZipName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+def zipBuild(versionNumber=['','','',''],tag='_',build='',rc=''):
+    if (versionNumber[3] != '') and (build != ''):
+        hash = str(versionNumber[3])[2:]
+        hash = hash[:-1]
+        ZipName = '{}{}v{}.{}.{}-{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    else:
+        ZipName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
     print('Creating archive...')
     shutil.make_archive('release\\{}'.format(ZipName), 'zip', "tmp")
     print('\033[0m{}.zip is created.\033[0m'.format(ZipName))
 
 
+def makeDummyVersionFile(versionNumber=['','','',''],tag='_',build='',rc=''):
+    print('Creating version dummy file...')
+    if (versionNumber[3] != '') and (build != ''):
+        hash = str(versionNumber[3])[2:]
+        hash = hash[:-1]
+        dummyName = 'tmp//{}{}v{}.{}.{}-{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    else:
+        dummyName = 'tmp//{}{}v{}.{}.{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+    dummy = open(dummyName,"w+")
+    #dummy.write('I\'am a dummy file that just show version numbers. I\'ve done my purpose yey!\n')
+    dummy.write('cScripts version {}.{}.{}{}{}\n'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build))
+    hash = subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip()
+    hash = str(hash)
+    hash = hash[:-1]
+    hash = hash[2:]
+    dummy.write('Rev: {}'.format(hash))
 
-def publicBuildFindString(file,string):
+
+def grep(file,string):
     try:
         os.stat('{}'.format(file))
     except:
@@ -129,13 +178,11 @@ def publicBuildFindString(file,string):
     return string
 
 
-
-def publicBuildFindStringCount(file,string):
+def count(file,string):
     try:
         os.stat('{}'.format(file))
     except:
         sys.exit('{} could not be found...'.format(file))
-
     count = 1
     fileObject = open('{}'.format(file), "r")
     for l in fileObject:
@@ -144,8 +191,7 @@ def publicBuildFindStringCount(file,string):
     return count
 
 
-
-def publicBuildReplace(file_path, pattern, subst):
+def replace(file_path, pattern, subst):
     #Create temp file
     fh, abs_path = tempfile.mkstemp()
     with os.fdopen(fh,'w') as new_file:
@@ -158,25 +204,65 @@ def publicBuildReplace(file_path, pattern, subst):
     shutil.move(abs_path, file_path)
 
 
+def add(file, string):
+    fileObject = open('{}'.format(file), "a")
+    fileObject.write(string)
 
-def createModdedBuild(folder):      # This function is compleetly manual atm:
+
+def createModdedBuild(folder):      # This function is completely manual atm:
     print('Starting construction of a public {} version...'.format(script_Name))
 
     print('Adjusting \033[96mdescription.ext\033[0m...')
+    x = grep('{}\\description.ext'.format(folder),'    dev                 = "1SG Tully.B";')
+    replace('{}\\description.ext'.format(folder), x, '    dev                 = "CPL.Geki.T";\n')
+    x = grep('{}\\description.ext'.format(folder),'    author              = "1SG Tully.B";')
+    replace('{}\\description.ext'.format(folder), x, '    author              = "CPL.Geki.T";\n')
+    x = grep('{}\\description.ext'.format(folder),'    onLoadMission       = "7th Cavalry - S3 1BN Battle Staff Operation";')
+    replace('{}\\description.ext'.format(folder), x, '    onLoadMission       = "7th Cavalry - S3 Public Staff";\n')
+    x = grep('{}\\description.ext'.format(folder),'    onLoadIntro         = "S3 1BN Battle Staff Operation";')
+    replace('{}\\description.ext'.format(folder), x, '    onLoadIntro         = "S3 1BN Public Staff";\n')
+    x = grep('{}\\description.ext'.format(folder),'    forceRotorLibSimulation = 1;\n')
+    replace('{}\\description.ext'.format(folder), x, '    forceRotorLibSimulation = 0;\n')
 
     print('Adjusting \033[96mcba_settings.sqf\033[0m...')
-    # disable startup hint
-    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_enableStartHint')
-    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_enableStartHint = false;\n')
-    # find setting mission type to custom
-    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_setMissionType')
-    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_setMissionType = 0;\n')
-    # find setting mission type to custom
-    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_setCustomHintTopic')
-    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_setCustomHintTopic = "Public Mission";\n')
-    # find setting mission type to custom
-    x = publicBuildFindString('{}\\cba_settings.sqf'.format(folder),'cScripts_Settings_setCustomHintText')
-    publicBuildReplace('{}\\cba_settings.sqf'.format(folder), x, 'force force cScripts_Settings_setCustomHintText = "This is Tactical Realism. Be tactical and realistic.";\n')
+
+    # Enableling blueforce tracker settings
+    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_Enabled')
+    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_Enabled = true;\n')
+    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_HideAiGroups')
+    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_HideAiGroups = true;\n')
+    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_Interval')
+    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_Interval = 5;\n')
+
+    # adjusting medical settings
+    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_medical_enableUnconsciousnessAI')
+    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_medical_enableUnconsciousnessAI = 0;\n')
+    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_medical_medicSetting_PAK')
+    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_medical_medicSetting_PAK = 1;\n')
+
+    # Allow players to edit down sight blur
+    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nightvision_aimDownSightsBlur')
+    replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nightvision_aimDownSightsBlur = 0.25;\n')
+
+    print('Adding cScripts settings to \033[96mcba_settings.sqf\033[0m...')
+    x = '{}\\cba_settings.sqf'.format(folder)
+    add(x, '\n')
+    add(x, '// cScripts Mission Settings\n')
+    add(x, 'force force cScripts_Settings_allowCustomInit = true;\n')
+    add(x, 'force force cScripts_Settings_allowCustomTagging = true;\n')
+    add(x, 'force force cScripts_Settings_enable7cavZeusModules = true;\n')
+    add(x, 'force force cScripts_Settings_setAiSystemDifficulty = 0;\n')
+    add(x, 'force force cScripts_Settings_enableStartHint = false;\n')
+    add(x, 'force force cScripts_Settings_setCustomHintText = "Public Mission";\n')
+    add(x, 'force force cScripts_Settings_setCustomHintTopic = "This is Tactical Realism. Be tactical and realistic.";\n')
+    add(x, 'force force cScripts_Settings_setMissionType = 0;\n')
+    add(x, 'force force cScripts_Settings_setRedLightTime = 30;\n')
+    add(x, 'force force cScripts_Settings_setTrainingHintTime = 20;\n')
+    add(x, 'force force cScripts_Settings_showDiaryRecords = true;\n')
+    add(x, 'force force cScripts_Settings_useCustomSupplyInventory = false;\n')
+    add(x, 'force force cScripts_Settings_useCustomVehicleInventory = false;\n')
+    add(x, 'force force cScripts_Settings_useCustomVehicleSettings = true;\n')
+
 
     print('Starting to adjust Loadouts...')
     loadoutFiles = ['CfgLoadouts_Common.hpp','CfgLoadouts_Alpha.hpp','CfgLoadouts_Bravo.hpp','CfgLoadouts_Charlie.hpp','CfgLoadouts_Medical.hpp','CfgLoadouts_Ranger.hpp','CfgLoadouts_Training.hpp','CfgLoadouts_S3.hpp']
@@ -184,23 +270,76 @@ def createModdedBuild(folder):      # This function is compleetly manual atm:
         print('Searching for and replacing objects in \033[96m{}\033[0m...'.format(loadoutFile))
         # finding object: ItemcTab
         file = '{}\\cScripts\\Loadouts\\{}'.format(folder,loadoutFile)
-        c = publicBuildFindStringCount(file,'gps[] = {"ItemcTab"};')
+        c = count(file,'gps[] = {"ItemcTab"};')
         for n in range(0,c):
-            x = publicBuildFindString(file,'gps[] = {"ItemcTab"};')
-            publicBuildReplace(file, x, '    gps[] = {""};\n')
+            x = grep(file,'gps[] = {"ItemcTab"};')
+            replace(file, x, '    gps[] = {""};\n')
 
         # finding object: ItemAndroid
-        c = publicBuildFindStringCount(file,'gps[] = {"ItemAndroid"};')
+        c = count(file,'gps[] = {"ItemAndroid"};')
         for n in range(0,c):
-            x = publicBuildFindString(file,'gps[] = {"ItemAndroid"};')
-            publicBuildReplace(file, x, '    gps[] = {""};\n')
+            x = grep(file,'gps[] = {"ItemAndroid"};')
+            replace(file, x, '    gps[] = {""};\n')
 
         # finding object: Flagstack_Red
-        c = publicBuildFindStringCount(file,'"Flagstack_Red",')
+        c = count(file,'"Flagstack_Red",')
         for n in range(0,c):
-            x = publicBuildFindString(file,'"Flagstack_Red",')
-            publicBuildReplace(file, x, '')
-    print('Loadouts adjustments compleet...')
+            x = grep(file,'"Flagstack_Red",')
+            replace(file, x, '')
+
+    loadoutFiles = ['CfgLoadouts_Charlie.hpp','CfgLoadouts_Medical.hpp']
+    for loadoutFile in loadoutFiles:
+        print('Searching for and replacing magazines in \033[96m{}\033[0m...'.format(loadoutFile))
+
+        file = '{}\\cScripts\\Loadouts\\{}'.format(folder,loadoutFile)
+
+        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,')
+        for n in range(0,c):
+            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,')
+            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",4,\n')
+
+        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,')
+        for n in range(0,c):
+            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,')
+            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",2,\n')
+
+        
+        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",4,')
+        for n in range(0,c):
+            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",4,')
+            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",4,\n')
+
+        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",5,')
+        for n in range(0,c):
+            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",5,')
+            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",5,\n')
+
+        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",6,')
+        for n in range(0,c):
+            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",6,')
+            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",6,\n')
+
+        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",8,')
+        for n in range(0,c):
+            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",8,')
+            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,\n')
+
+        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",10,')
+        for n in range(0,c):
+            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",10,')
+            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",10,\n')
+
+        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",12,')
+        for n in range(0,c):
+            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",12,')
+            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",12,\n')
+    
+    
+    print('Creating new loadouts...')
+    print('Adding new loadout \033[32mCAV_Alpha_Helo_GNR\033[0m to \033[96mCfgLoadouts_AlphaClass.hpp\033[0m...')
+    x = grep('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder),'class B_Helicrew_F : CAV_Alpha_Helo_GNR {{}};')
+    replace('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder), x, 'class B_Helicrew_F : CAV_Alpha_Helo_GNR {{}};\nclass B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {{}};\n')
+   
 
     print('Starting to adjust logistical crates...')
     functionFiles = ['fn_doAmmoCrate.sqf','fn_doExplosivesCrate.sqf','fn_doGrenadesCrate.sqf','fn_doLaunchersCrate.sqf','fn_doSpecialWeaponsCrate.sqf','fn_doStarterCrateSupplies.sqf','fn_doSupplyCrate.sqf','fn_doWeaponsCrate.sqf']
@@ -208,33 +347,34 @@ def createModdedBuild(folder):      # This function is compleetly manual atm:
         print('Searching for and replacing objects in \033[96m{}\033[0m...'.format(functionFile))
         # finding object: ItemcTab
         file = '{}\\cScripts\\CavFnc\\functions\\logistics\\{}'.format(folder,functionFile)
-        c = publicBuildFindStringCount(file,'"ItemcTab"')
+        c = count(file,'"ItemcTab"')
         for n in range(0,c):
-            x = publicBuildFindString(file,'"ItemcTab"')
-            publicBuildReplace(file, x, '')
+            x = grep(file,'"ItemcTab"')
+            replace(file, x, '')
 
         # finding object: ItemAndroid
-        c = publicBuildFindStringCount(file,'"ItemAndroid"')
+        c = count(file,'"ItemAndroid"')
         for n in range(0,c):
-            x = publicBuildFindString(file,'"ItemAndroid"')
-            publicBuildReplace(file, x, '')
+            x = grep(file,'"ItemAndroid"')
+            replace(file, x, '')
 
         # finding object: Flagstack_Red
-        c = publicBuildFindStringCount(file,'"Flagstack_Red"')
+        c = count(file,'"Flagstack_Red"')
         for n in range(0,c):
-            x = publicBuildFindString(file,'"Flagstack_Red"')
-            publicBuildReplace(file, x, '')
+            x = grep(file,'"Flagstack_Red"')
+            replace(file, x, '')
 
-    print('Logistical crates adjustments compleet...')
+    print('Adjusting radio presets...')
+    x = grep('{}\\cScripts\\Loadouts\\script\\CfgPoppy.hpp'.format(folder),'channelNames')
+    replace('{}\\cScripts\\Loadouts\\script\\CfgPoppy.hpp'.format(folder), x, '        channelNames[] = {"GUNSLINGER","AVIATION","VIKING","PUNISHER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","LOGISTICS","CONVOY-1","CONVOY-2","ZEUS","CAG","COMMAND"};\n')
 
 
+def setName(name): # WIP will handle naming.
+    return name
 
 
 def main():
-    print("""
-\033[1mcScripts Build Script v{}\033[0m
-\033[90mThis is a build script that prep build and zip a release build.\033[0m
-    """.format(__version__))
+    print('Preparing a build for {}.\n'.format(script_Name))
 
     # set up and handle arguments
     parser = argparse.ArgumentParser()
@@ -243,19 +383,16 @@ def main():
 
     parser.add_argument("-p", "--public",           help="Create a \"public\" build to be used on non CavPack Enviroment",
                         action="store_true")
-    parser.add_argument('-b', '--build', required=False, choices=['dev', 'test'], help="Add a additional tag to a to the build")
+    parser.add_argument('-b', '--build', required=False, choices=['dev', 'test', 'custom'], help="Add a additional tag to a to the build")
     parser.add_argument('-rc', '--releasecandidate', type=int, required=False,  help="Set a release candidate number to the build \".RC1\" for exsample")
 
     group.add_argument("-s", "--save",              help="Save the build",
                         action="store_true")
     group.add_argument("-sz", "--savedontzip",      help="Save the build and don\'t zip it",
                         action="store_true")
+    parser.add_argument('-v', '--version', action='version', version='Build script version {}.'.format(__version__))
 
     args = parser.parse_args()
-
-    print('\033[0m\033[1m' + 'Functions:' + '\033[0m')
-    parser.print_help()
-    print()
 
     objectList = listFileContent(exlude_content)
 
@@ -274,13 +411,16 @@ def main():
     # press enter to start build
     input('\nPress enter to start the build process...')
 
+    # Remove tempfolder if it exist on start
+    if os.path.isdir('tmp'):
+        shutil.rmtree('tmp')
+
     releaseFolder = createFolder("release")
     tmpFolder = createFolder("tmp")
 
     createBuild(objectList[0],objectList[1], tmpFolder, releaseFolder)
-
     versionNumber = getVersion(version_File)
-
+    
     if args.public:
         tagString = '_PUBLIC_'
         createModdedBuild(tmpFolder)
@@ -290,20 +430,27 @@ def main():
             buildString = '_DevBuild'.format()
         if args.build == 'test':
             buildString = '_TestBuild'.format()
+        if args.build == 'custom':
+            buildString = '_CustomBuild'.format()
     if args.releasecandidate:
         rcString = '.RC{}'.format(str(args.releasecandidate))
 
+    makeDummyVersionFile(versionNumber,tagString,buildString,rcString)
+
     if args.save:
-        copyTempToRelease(releaseFolder)
+        copyTempToRelease(releaseFolder, versionNumber,tagString,buildString,rcString)
 
     if args.savedontzip:
-        copyTempToRelease(releaseFolder)
+        copyTempToRelease(releaseFolder, versionNumber,tagString,buildString,rcString)
     else:
         zipBuild(versionNumber,tagString,buildString,rcString)
 
     shutil.rmtree(tmpFolder)
 
+    #input('\nBuild process is compleet press enter to exit...')
 
+    if os.name == 'nt':
+        os.system('explorer.exe {}\\release'.format(projectpath))
 
 if __name__ == "__main__":
     sys.exit(main())

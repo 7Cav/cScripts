@@ -12,12 +12,17 @@
  * call cScripts_fnc_initMissionStartHint
  * [60] call cScripts_fnc_initMissionStartHint
  *
+ * Public: No
  */
+
+#include "..\script_component.hpp";
 
 if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
 
-#include "..\script_component.hpp";
+#ifdef DEBUG_MODE
+    ["Running mission startup hint."] call FUNC(logInfo);
+#endif
 
 params [["_time", 60]];
 

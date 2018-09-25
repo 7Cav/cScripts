@@ -20,8 +20,6 @@
  */
 #include "..\script_component.hpp";
 
-INFO("Applying PreLoadout Player Settings");
-
 params [
     ["_player",""],
     ["_setPlatoon",""],
@@ -30,9 +28,13 @@ params [
     ["_isEOD", false]
 ];
 
+#ifdef DEBUG_MODE
+    [formatText["Applying preLoadout to %1.", _player]] call FUNC(logInfo);
+#endif
+
 // Set platoonVariables
-(_player) setVariable [QGVAR(7cav_Trooper), true];
-(_player) setVariable [QGVAR(7cav_Platoon), _setPlatoon];
+(_player) setVariable [QEGVAR(Cav,Trooper), true];
+(_player) setVariable [QEGVAR(Cav,Platoon), _setPlatoon];
 
 // Set MedicClass
 private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
@@ -44,4 +46,10 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 // Set EOD capable
 (_player) setVariable ["ACE_isEOD", _isEOD];
 
-INFO("Done Applying PreLoadout Player Settings");
+#ifdef DEBUG_MODE
+    if (_setPlatoon != "") then {[formatText["%1 have got platoon variable %2 in preLoadout", _player, _setPlatoon]] call FUNC(logInfo);};
+    [formatText["%1 medical ability is set to %2 in preLoadout", _player, _isMedicClass]] call FUNC(logInfo);
+    if (_isEngineer) then {[formatText["%1 is assigned engineer ability via preLoadout", _player]] call FUNC(logInfo);};
+    if (_isEOD) then {[formatText["%1 is assinged as eod specialist via preLoadout", _player]] call FUNC(logInfo);};
+    [formatText["preLoadout application completed for %1.", _player]] call FUNC(logInfo);
+#endif
