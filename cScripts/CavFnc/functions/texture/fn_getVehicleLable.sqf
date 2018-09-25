@@ -106,7 +106,7 @@ switch (_texturePath) do {
     };
 
     // Symbols
-    case ("line"): {
+    case ("LINE"): {
         _texturePath = "cScripts\Data\Vehicles\symbols\c_line_ca.paa";
     };
 
@@ -119,26 +119,26 @@ switch (_texturePath) do {
     }; */
 
     // Special
-    case ("stryker"): {
+    case ("STRYKER"): {
         _texturePath = "cScripts\Data\Vehicles\special\stryker_ca.paa";
     };
 
-    case ("vic1"): {
+    case ("VIC1"): {
         _texturePath = "cScripts\Data\Vehicles\special\vic1_ca.paa";
     };
-    case ("vic2"): {
+    case ("VIC2"): {
         _texturePath = "cScripts\Data\Vehicles\special\vic2_ca.paa";
     };
-    case ("vic3"): {
+    case ("VIC3"): {
         _texturePath = "cScripts\Data\Vehicles\special\vic3_ca.paa";
     };
-    case ("vic4"): {
+    case ("VIC4"): {
         _texturePath = "cScripts\Data\Vehicles\special\vic4_ca.paa";
     };
-    case ("vic5"): {
+    case ("VIC5"): {
         _texturePath = "cScripts\Data\Vehicles\special\vic5_ca.paa";
     };
-    case ("vic6"): {
+    case ("VIC6"): {
         _texturePath = "cScripts\Data\Vehicles\special\vic6_ca.paa";
     };
 };
