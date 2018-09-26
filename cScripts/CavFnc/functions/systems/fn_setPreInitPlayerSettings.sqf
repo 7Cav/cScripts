@@ -47,21 +47,24 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 (_player) setVariable ["ACE_isEOD", _isEOD];
 
 // Set ingame rank based on name rank prefix
-private _profileName = profileName;
-_profileName = [_profileName, 0, 2] call BIS_fnc_trimString;
-_profileName = toUpper(_profileName);
-switch (true) do {
-    case (_profileName in ['=7C']): {
-        _player setRank 'PRIVATE';
-        systemChat format['Hey %1! You are not following the Cav name standard.', profileName];
+if (isNil {_player getVariable QEGVAR(Cav,Rank)}) then {
+    private _profileName = profileName;
+    _profileName = [_profileName, 0, 2] call BIS_fnc_trimString;
+    _profileName = toUpper(_profileName);
+    switch (true) do {
+        case (_profileName in ['=7C']): {
+            _player setRank 'PRIVATE';
+            systemChat format['Hey %1! You are not following the Cav name standard.', profileName];
+        };
+        case (_profileName in ['RCT','PVT','PFC']): {_player setRank 'PRIVATE';};
+        case (_profileName in ['SPC','CPL','WO1']): {_player setRank 'CORPORAL';};
+        case (_profileName in ['SGT','SSG','SFC','MSG','1SG','SGM','CSM','CW2','CW3','CW4','CW5']): {_player setRank 'SERGEANT';};
+        case (_profileName in ['2LT','1LT']): {_player setRank 'LIEUTENANT';};
+        case (_profileName in ['CPT']): {_player setRank 'CAPTAIN';};
+        case (_profileName in ['MAJ']): {_player setRank 'MAJOR';};
+        case (_profileName in ['LTC','COL','BG.','MG.','LTG','GEN']): {_player setRank 'COLONEL';};
     };
-    case (_profileName in ['RCT','PVT','PFC']): {_player setRank 'PRIVATE';};
-    case (_profileName in ['SPC','CPL','WO1']): {_player setRank 'CORPORAL';};
-    case (_profileName in ['SGT','SSG','SFC','MSG','1SG','SGM','CSM','CW2','CW3','CW4','CW5']): {_player setRank 'SERGEANT';};
-    case (_profileName in ['2LT','1LT']): {_player setRank 'LIEUTENANT';};
-    case (_profileName in ['CPT']): {_player setRank 'CAPTAIN';};
-    case (_profileName in ['MAJ']): {_player setRank 'MAJOR';};
-    case (_profileName in ['LTC','COL','BG.','MG.','LTG','GEN']): {_player setRank 'COLONEL';};
+    (_player) setVariable [QEGVAR(Cav,Rank), true];
 };
 
 #ifdef DEBUG_MODE
