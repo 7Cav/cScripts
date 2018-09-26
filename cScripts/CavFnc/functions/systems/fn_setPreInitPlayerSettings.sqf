@@ -25,7 +25,8 @@ params [
     ["_setPlatoon",""],
     ["_isMedicClass", 0],
     ["_isEngineer", false],
-    ["_isEOD", false]
+    ["_isEOD", false],
+    ["_setRank", true]
 ];
 
 #ifdef DEBUG_MODE
@@ -46,31 +47,43 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 // Set EOD capable
 (_player) setVariable ["ACE_isEOD", _isEOD];
 
-// Set ingame rank based on name rank prefix
-if (isNil {_player getVariable QEGVAR(Cav,Rank)}) then {
-    private _profileName = profileName;
-    _profileName = [_profileName, 0, 2] call BIS_fnc_trimString;
-    _profileName = toUpper(_profileName);
-    switch (true) do {
-        case (_profileName in ['=7C']): {
-            _player setRank 'PRIVATE';
-            systemChat format['Hey %1! You are not following the Cav name standard.', profileName];
-        };
-        case (_profileName in ['RCT','PVT','PFC']): {_player setRank 'PRIVATE';};
-        case (_profileName in ['SPC','CPL','WO1']): {_player setRank 'CORPORAL';};
-        case (_profileName in ['SGT','SSG','SFC','MSG','1SG','SGM','CSM','CW2','CW3','CW4','CW5']): {_player setRank 'SERGEANT';};
-        case (_profileName in ['2LT','1LT']): {_player setRank 'LIEUTENANT';};
-        case (_profileName in ['CPT']): {_player setRank 'CAPTAIN';};
-        case (_profileName in ['MAJ']): {_player setRank 'MAJOR';};
-        case (_profileName in ['LTC','COL','BG.','MG.','LTG','GEN']): {_player setRank 'COLONEL';};
-    };
-    (_player) setVariable [QEGVAR(Cav,Rank), true];
-};
-
 #ifdef DEBUG_MODE
     if (_setPlatoon != "") then {[formatText["%1 have got platoon variable %2 in preLoadout", _player, _setPlatoon]] call FUNC(logInfo);};
     [formatText["%1 medical ability is set to %2 in preLoadout", _player, _isMedicClass]] call FUNC(logInfo);
     if (_isEngineer) then {[formatText["%1 is assigned engineer ability via preLoadout", _player]] call FUNC(logInfo);};
     if (_isEOD) then {[formatText["%1 is assinged as eod specialist via preLoadout", _player]] call FUNC(logInfo);};
+#endif
+
+// Set ingame rank based on name rank prefix
+if _setRank then {
+    if (isNil {_player getVariable QEGVAR(Cav,Rank)}) then {
+        private _profileName = profileName;
+        _profileName = [_profileName, 0, 2] call BIS_fnc_trimString;
+        _profileName = toUpper(_profileName);
+        switch (true) do {
+            case (_profileName in ['=7C']): {
+                _player setRank 'PRIVATE';
+                systemChat format['Hey %1! You are not following the Cav name standard.', profileName];
+            };
+            case (_profileName in ['RCT','PVT','PFC']): {_player setRank 'PRIVATE';};
+            case (_profileName in ['SPC','CPL','WO1']): {_player setRank 'CORPORAL';};
+            case (_profileName in ['SGT','SSG','SFC','MSG','1SG','SGM','CSM','CW2','CW3','CW4','CW5']): {_player setRank 'SERGEANT';};
+            case (_profileName in ['2LT','1LT']): {_player setRank 'LIEUTENANT';};
+            case (_profileName in ['CPT']): {_player setRank 'CAPTAIN';};
+            case (_profileName in ['MAJ']): {_player setRank 'MAJOR';};
+            case (_profileName in ['LTC','COL','BG.','MG.','LTG','GEN']): {_player setRank 'COLONEL';};
+        };
+        #ifdef DEBUG_MODE
+            [formatText["Rank is applied to %1", _player]] call FUNC(logInfo);
+        #endif
+        (_player) setVariable [QEGVAR(Cav,Rank), true];
+    } else {
+        #ifdef DEBUG_MODE
+            [formatText["Rank already set for %1 no need to change it.", _player]] call FUNC(logInfo);
+        #endif
+    };
+};
+
+#ifdef DEBUG_MODE
     [formatText["preLoadout application completed for %1.", _player]] call FUNC(logInfo);
 #endif
