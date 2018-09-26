@@ -1,4 +1,10 @@
-**cScript Version:** `x.xx` (stable / rc / dev)
+---
+name: Bug report
+about: Create a report to help us improve
+
+---
+
+**cScripts Version:** `x.xx` (stable / rc / dev)
 
 
 **Description:**
