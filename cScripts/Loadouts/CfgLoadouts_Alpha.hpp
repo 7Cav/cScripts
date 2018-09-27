@@ -2,59 +2,80 @@
 
 //  P E G A S U S   A N D   H E L I C O P T E R   C R E W
 
-
-//DEVNOTES:
-// "Helmet types?
-// "2x Earplugs" Airframe have 10 and you have 1, need extra?
-// Chemlight types?
-// "1x Soft Cover" what is that? Barret?
-// "1x Shemagh" Glasses variant and Color?
-// "1x 117F Radio" airframe have 1, share ability, have additional more?
-
 class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasus
     gps[] = {"ItemcTab"};
 };
 
 class CAV_Alpha_Helo_COPILOT : CAV_Alpha_Base {  // Use for CoPilots
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
+        "rhsusf_mag_15Rnd_9x19_JHP",2,
+
+        "B_IR_Grenade",1,
+        "SmokeShell",2,
+        "SmokeShellBlue",2,
+        "SmokeShellRed",2,
+        "SmokeShellGreen",2,
+
+        "Chemlight_green",2,
+        "ACE_Chemlight_HiRed",2,
+        "Chemlight_blue",2,
+
+        "DemoCharge_Remote_Mag",2
+    };
+
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC117F",
 
-        // Personal and additional medical equipment
-        "ACE_quikclot",20,
-        "ACE_morphine",7,
-        "ACE_epinephrine",7,
-        "ACE_tourniquet",7,
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_morphine",2,
+        "ACE_epinephrine",2,
+        "ACE_tourniquet",2,
+
+        // Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_morphine",5,
+        "ACE_epinephrine",5,
+        "ACE_tourniquet",5,
+
 
         // Standard
         "ACE_MapTools",
         "ACE_Flashlight_XL50",
 
         // Electronics
-        "ACE_microDAGR"
+        "ACE_microDAGR",
+
+        // Tools
+        "ACE_Clacker"
     };
 
-    gps[] = {"ItemcTab"};
+    gps[] = {"ItemAndroid"};
 };
 
 class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
     headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
-    vest[] = {"rhsusf_mbav_mg"};
 
-    primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_anpeq15A","rhsusf_acc_eotech_552"};
+    primary[] = {"rhs_weap_m249_pip_L_para","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ELCAN_ard"};
 
     magazines[] = {
-        "rhs_200rnd_556x45_M_SAW",3,
+        "rhsusf_200Rnd_556x45_box",1,
         "rhsusf_mag_15Rnd_9x19_JHP",2,
 
-        "B_IR_Grenade",2,
+        "B_IR_Grenade",1,
+        "SmokeShell",2,
         "SmokeShellBlue",2,
         "SmokeShellRed",2,
         "SmokeShellGreen",2,
 
         "Chemlight_green",2,
-        "Chemlight_red",2,
-        "ACE_Chemlight_HiYellow",2
+        "ACE_Chemlight_HiRed",2,
+        "Chemlight_blue",2,
+
+        "DemoCharge_Remote_Mag",2
     };
 
     items[] = {
@@ -68,6 +89,8 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_EntrenchingTool",
+        "ACE_CableTie",2,
         "ACE_MapTools",
         "ACE_Flashlight_XL50",
 
@@ -78,40 +101,34 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
         "ToolKit"
     };
 
+    gps[] = {"ItemAndroid"};
+
     preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
     headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
 
-    magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",3,
-        "rhsusf_mag_15Rnd_9x19_JHP",2,
-
-        "B_IR_Grenade",2,
-        "SmokeShellBlue",2,
-        "SmokeShellRed",2,
-        "SmokeShellGreen",2,
-
-        "Chemlight_green",2,
-        "Chemlight_red",2,
-        "ACE_Chemlight_HiYellow",2
-    };
-
     items[] = {
         // Radios
         "ACRE_PRC152",
 
         // Personal Medical Equipment
-        "ACE_quikclot",20,
-        "ACE_fieldDressing",10,
-        "ACE_elasticBandage",10,
-        "ACE_packingBandage",10,
+        "ACE_quikclot",10,
+        "ACE_morphine",2,
+        "ACE_epinephrine",2,
+        "ACE_tourniquet",2,
+
+        // Medical Equipment
+        "ACE_quikclot",40,
+        "ACE_fieldDressing",40,
         "ACE_morphine",10,
         "ACE_epinephrine",10,
-        "ACE_tourniquet",7,
+        "ACE_tourniquet",5,
 
         // Standard
+        "ACE_EntrenchingTool",
+        "ACE_CableTie",2,
         "ACE_MapTools",
         "ACE_Flashlight_XL50",
 
