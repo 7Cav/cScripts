@@ -96,8 +96,8 @@ class CAV_Alpha_Base : CommonBlufor {
         "ACE_microDAGR",
         
         // Misc
-        "H_Cap_tan"
-        "ACE_EntrenchingTool"
+        "H_Cap_tan",
+        "ACE_EntrenchingTool",
         "rhsusf_shemagh_tan"
     };
 
