@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This populats a given object with items.
@@ -11,8 +12,6 @@
  * [this,0.5] call cScripts_fnc_doSupplyCrate;
  * [this,1] call cScripts_fnc_doSupplyCrate;
  */
-
-#include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
 

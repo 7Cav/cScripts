@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function contain insignia selection buttons and categorys.
@@ -9,10 +10,7 @@
  * call cScripts_fnc_initInsigniaSelections;
  */
 
-#include "..\script_component.hpp";
-
 params [["_object", objNull, [objNull]]];
-
 
 // Make ACE Category
 private _icon = "cScripts\Data\Icon\icon_00.paa";

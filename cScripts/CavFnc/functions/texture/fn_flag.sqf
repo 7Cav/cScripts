@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A 
  * This add or change a given flag poles flag to a new and better one.
@@ -10,8 +11,6 @@
  * [this] call cScripts_fnc_flag;
  * [this,0] call cScripts_fnc_flag;
  */
-
-#include "..\script_component.hpp";
 
 params [["_object", objNull, [objNull]],["_flagType", 0]];
 

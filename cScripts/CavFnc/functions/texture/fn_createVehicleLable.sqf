@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function create a texture that is attached to a given object.
@@ -14,8 +15,6 @@
  * ["C130",[0.205,-11.9,8.920],-90,"path/to/texture.paa",[-0.05,0,1]] call cScripts_fnc_createVehicleLable
  *
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_vehicle", objNull, [objNull]],

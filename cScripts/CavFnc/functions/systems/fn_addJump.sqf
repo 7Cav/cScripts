@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function adds a Jump out option to a vehicle.
@@ -11,7 +12,6 @@
  * ["this",150,1000,300] call cScripts_fnc_addJump
  *
  */
-#include "..\script_component.hpp";
 
 params [
     ["_vehicle", objNull, [objNull]],

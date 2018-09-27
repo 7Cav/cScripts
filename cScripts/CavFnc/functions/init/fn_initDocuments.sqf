@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function add diary records for all players.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 waitUntil {!isNull player && player == player};
 

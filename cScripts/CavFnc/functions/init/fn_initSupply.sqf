@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function add eventhandelers chaning the inventory of all crates.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
 
