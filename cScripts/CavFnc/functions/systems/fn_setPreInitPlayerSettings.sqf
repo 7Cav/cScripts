@@ -63,10 +63,10 @@ if _setRank then {
         switch (true) do {
             case (_profileName in ['=7C']): {
                 _player setRank 'PRIVATE';
-                systemChat format['Hey %1! You are not following the Cav name standard.', profileName];
+                systemChat format['Hey %1! You are not following the 7CAV name standard.', profileName];
             };
             case (_profileName in ['RCT','PVT','PFC']): {_player setRank 'PRIVATE';};
-            case (_profileName in ['SPC','CPL','WO1']): {_player setRank 'CORPORAL';};
+            case (_profileName in ['RET','SPC','CPL','WO1']): {_player setRank 'CORPORAL';};
             case (_profileName in ['SGT','SSG','SFC','MSG','1SG','SGM','CSM','CW2','CW3','CW4','CW5']): {_player setRank 'SERGEANT';};
             case (_profileName in ['2LT','1LT']): {_player setRank 'LIEUTENANT';};
             case (_profileName in ['CPT']): {_player setRank 'CAPTAIN';};
@@ -76,7 +76,20 @@ if _setRank then {
         #ifdef DEBUG_MODE
             [formatText["Rank is applied to %1", _player]] call FUNC(logInfo);
         #endif
+
+        #ifdef DEBUG_MODE
+            [formatText["Checking steam name for player", _player]] call FUNC(logInfo);
+        #endif
+        private _profileNameSteam = profileNameSteam;
+        _profileNameSteam = [_profileNameSteam, 0, 5] call BIS_fnc_trimString;
+        _profileNameSteam = toUpper(_profileNameSteam);
+        if !(_profileNameSteam in ['=7CAV=']) then {
+            //format["%1 your steam name (%2) does not follow the 7CAV standard according to General Order Three - Regimental Tags.", profileName, profileNameSteam] remoteExecCall ["systemChat", 0];
+            systemChat format["%1 your steam name (%2) does not follow the 7CAV standard according to General Order Three - Regimental Tags.", profileName, profileNameSteam];
+        };
+
         (_player) setVariable [QEGVAR(Cav,Rank), true];
+
     } else {
         #ifdef DEBUG_MODE
             [formatText["Rank already set for %1 no need to change it.", _player]] call FUNC(logInfo);
