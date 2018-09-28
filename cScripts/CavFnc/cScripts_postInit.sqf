@@ -32,20 +32,15 @@ if (EGVAR(Settings,allowCustomInit)) then {
 
 switch (EGVAR(Settings,setMissionType)) do {
     case (0): {
-        if (EGVAR(Settings,enableStartHint)) then {
-            [EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText), 15] call FUNC(initCustomStartHint);
-        };
     };
     case (1): {
-        if (EGVAR(Settings,enableStartHint)) then {
-            [EGVAR(Settings,setRedLightTime)] call FUNC(initMissionStartHint);
-        };
     };
     case (2): {
-        if (EGVAR(Settings,enableStartHint)) then {
-            [EGVAR(Settings,setTrainingHintTime)] call FUNC(initTrainingStartHint);
-        };
     };
+};
+
+if (EGVAR(Settings,enableStartHint)) then {
+    [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] call FUNC(initStartupHint);
 };
 
 #ifdef DEBUG_MODE
