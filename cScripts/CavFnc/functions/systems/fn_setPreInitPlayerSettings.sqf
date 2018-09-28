@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function is used to handle player premissions
@@ -18,8 +19,7 @@
  * [this, "charlie",0,false,false] call cScripts_fnc_setPreInitPlayerSettings;
  *
  */
-#include "..\script_component.hpp";
-
+#define DEBUG_MODE
 params [
     ["_player",""],
     ["_setPlatoon",""],
@@ -63,7 +63,7 @@ if _setRank then {
         switch (true) do {
             case (_profileName in ['=7C']): {
                 _player setRank 'PRIVATE';
-                systemChat format['Hey %1! You are not following the 7CAV name standard.', profileName];
+                systemChat format['Hey %1! You are out of uniform TROOPER!', profileName];
             };
             case (_profileName in ['RCT','PVT','PFC']): {_player setRank 'PRIVATE';};
             case (_profileName in ['RET','SPC','CPL','WO1']): {_player setRank 'CORPORAL';};
@@ -77,15 +77,15 @@ if _setRank then {
             [formatText["Rank is applied to %1", _player]] call FUNC(logInfo);
         #endif
 
-        #ifdef DEBUG_MODE
-            [formatText["Checking steam name for player", _player]] call FUNC(logInfo);
-        #endif
         private _profileNameSteam = profileNameSteam;
         _profileNameSteam = [_profileNameSteam, 0, 5] call BIS_fnc_trimString;
         _profileNameSteam = toUpper(_profileNameSteam);
         if !(_profileNameSteam in ['=7CAV=']) then {
-            //format["%1 your steam name (%2) does not follow the 7CAV standard according to General Order Three - Regimental Tags.", profileName, profileNameSteam] remoteExecCall ["systemChat", 0];
-            systemChat format["%1 your steam name (%2) does not follow the 7CAV standard according to General Order Three - Regimental Tags.", profileName, profileNameSteam];
+            #ifdef DEBUG_MODE
+                [formatText["Checking steam name for player", _player]] call FUNC(logInfo);
+            #endif
+            //format["%1 your steam name (%2) does not follow the 7CAV naming convention outlined by General Order Three - Regimental Tags & 7CAV-POL-004.", profileName, profileNameSteam] remoteExecCall ["systemChat", 0];
+            systemChat format["%1 your steam name (%2) does not follow the 7CAV naming convention outlined by General Order Three - Regimental Tags & 7CAV-POL-004.", profileName, profileNameSteam];
         };
 
         (_player) setVariable [QEGVAR(Cav,Rank), true];
