@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function resupply a crate and changes it's texture.
@@ -8,8 +9,6 @@
  * Example:
  * [this] call cScripts_fnc_setVehicleInventory;
  */
-
-#include "..\script_component.hpp";
 
 params [["_vehicle", objNull, [objNull]]];
 

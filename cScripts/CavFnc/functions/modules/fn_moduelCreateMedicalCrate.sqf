@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This module function spawn a supply medical crate.
@@ -10,8 +11,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 params ["_crate"];
 

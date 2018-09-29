@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function fetches a texture from the getVehicleLable texture list and apply it to a supported vechicle.
@@ -32,8 +33,6 @@
  * [this,"RedCross",RedCross,"S","6"] call cScripts_fnc_setVehicleLable
  *
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_vehicle", objNull, [objNull]],

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function give all players a hint on mission start only.
@@ -14,8 +15,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 if (didJIP) exitWith {};
 waitUntil {!isNull player && player == player};
