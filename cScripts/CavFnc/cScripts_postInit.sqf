@@ -46,6 +46,8 @@ switch (EGVAR(Settings,setMissionType)) do {
             [EGVAR(Settings,setTrainingHintTime)] call FUNC(initTrainingStartHint);
         };
     };
+    case (3): {
+    };
 };
 
 #ifdef DEBUG_MODE
