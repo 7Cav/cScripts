@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function generates a quick selection button.
@@ -16,8 +17,6 @@
  * [this,"Rifleman","Class_Rifleman","",["ACE_MainActions","cScriptQuickSelectionMenu"]] call cScripts_fnc_addQuickSelection;
  * [this,"Rifleman","Class_Rifleman","",["ACE_MainActions","cScriptQuickSelectionMenu"],false,false] call cScripts_fnc_addQuickSelection;
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_object", objNull, [objNull]],

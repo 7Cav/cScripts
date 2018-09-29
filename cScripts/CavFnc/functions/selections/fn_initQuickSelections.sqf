@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function contain quick selection buttons and categorys.
@@ -11,8 +12,6 @@
  * [this] call cScripts_fnc_initQuickSelections;
  * [this,"full",true] call cScripts_fnc_initQuickSelections;
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_object", objNull, [objNull]],

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This jump throw a player out of a aircraft and ataches a parashoot.
@@ -10,8 +11,6 @@
  * ["this","my_C130"] call cScripts_fnc_doJump
  *
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_player", objNull, [objNull]],

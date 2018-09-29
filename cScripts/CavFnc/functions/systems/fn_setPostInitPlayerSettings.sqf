@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function is used to handle player premissions
@@ -8,8 +9,6 @@
  * Example:
  * [this,true,true] call cScripts_fnc_setPreInitPlayerSettings;
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_player",""],

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function show all players, as well as JIP players, a custom mission hint when conected.
@@ -16,8 +17,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 waitUntil {!isNull player && player == player};
 

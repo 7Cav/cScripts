@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: CPL.Brostrom.A
  *  This function print debug information in the RPT log
@@ -9,8 +10,6 @@
  * ["Something is wrong here."] call cScripts_fnc_logInfo
  *
  */
-
-#include "..\script_component.hpp"
 
 params [["_message","",[]]];
 
