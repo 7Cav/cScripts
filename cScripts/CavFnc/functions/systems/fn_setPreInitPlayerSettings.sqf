@@ -19,6 +19,7 @@
  * [this, "charlie",0,false,false] call cScripts_fnc_setPreInitPlayerSettings;
  *
  */
+
 params [
     ["_player",""],
     ["_setPlatoon",""],

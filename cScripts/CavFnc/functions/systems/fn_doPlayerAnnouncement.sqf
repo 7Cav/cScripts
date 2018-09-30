@@ -13,7 +13,7 @@
  * [this] call cScripts_fnc_doPlayerAnnouncement;
  *
  */
-#define DEBUG_MODE
+
 params [
     ["_player",""]
 ];
