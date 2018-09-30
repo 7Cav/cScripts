@@ -1,10 +1,9 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 if (is3DEN) exitWith {};
-
-#include "..\script_component.hpp";
 
 #ifdef DEBUG_MODE
     ["postInit Initializing."] call FUNC(logInfo);

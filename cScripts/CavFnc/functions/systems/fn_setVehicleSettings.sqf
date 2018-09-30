@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This
@@ -9,8 +10,6 @@
  * Example:
  *
  */
-
-#include "..\script_component.hpp";
 
 params [["_vehicle", objNull, [objNull]]];
 

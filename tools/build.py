@@ -17,7 +17,7 @@
 #   -sz, --savedontzip    Save the build and don't zip it
 #
 import sys, os
-import argparse, shutil, subprocess, tempfile, platform
+import argparse, shutil, subprocess, tempfile
 __version__ = 1.9
 
 # GLOBALS #################################################################################
@@ -449,7 +449,7 @@ def main():
 
     #input('\nBuild process is compleet press enter to exit...')
 
-    if platform.system() == 'Windows':
+    if os.name == 'nt':
         os.system('explorer.exe {}\\release'.format(projectpath))
 
 if __name__ == "__main__":

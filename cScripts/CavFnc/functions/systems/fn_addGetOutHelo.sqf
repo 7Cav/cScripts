@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A (With the help from; 654wak654)
  * This function add two get out addAction that is only avaible for players in cargo
@@ -9,8 +10,6 @@
  * Example:
  * [this] call cScripts_fnc_addGetOutHelo;
  */
-
-#include "..\script_component.hpp";
 
 params [["_vehicle", objNull, [objNull]]];
 

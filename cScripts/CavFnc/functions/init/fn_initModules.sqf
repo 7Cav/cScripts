@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function load all Cav moduels. Requires Achilles to run propperly will not load this function otherwise.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 // Check if Achilles is active else terminate
 if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {["cfgPatches for Achilles not detected, terminating modules."] call FUNC(logInfo);};

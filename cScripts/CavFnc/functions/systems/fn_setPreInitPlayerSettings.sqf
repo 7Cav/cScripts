@@ -19,7 +19,6 @@
  * [this, "charlie",0,false,false] call cScripts_fnc_setPreInitPlayerSettings;
  *
  */
-#define DEBUG_MODE
 params [
     ["_player",""],
     ["_setPlatoon",""],

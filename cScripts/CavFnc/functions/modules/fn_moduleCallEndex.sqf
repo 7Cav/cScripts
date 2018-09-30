@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This module function print some hints and spam the chat with ENDEX. 
@@ -10,8 +11,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 "ENDEX ENDEX ENDEX" remoteExecCall ["systemChat", 0];
 "ENDEX ENDEX ENDEX" remoteExecCall ["systemChat", 0];

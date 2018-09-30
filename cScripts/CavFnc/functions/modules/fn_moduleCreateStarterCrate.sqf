@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * Modified by: PVT.Schouten.M
@@ -11,8 +12,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 params ["_crate"];
 

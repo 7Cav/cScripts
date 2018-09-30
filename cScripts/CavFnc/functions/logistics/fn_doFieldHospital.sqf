@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This scripts crate the 7th cavalry field hostpital.
@@ -12,8 +13,6 @@
  * [this] call cScripts_fnc_doFieldHospital;
  * [this, true, 1] call cScripts_fnc_doFieldHospital;
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_crate", objNull, [objNull]],
