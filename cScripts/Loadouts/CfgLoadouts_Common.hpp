@@ -1,4 +1,4 @@
-/* Gear Date 15 NOV 17 */
+/* Gear Date 180930 */
 
 /* R E A D   T H I S   B E F O R E   M A K I N G   C H A N G E S
 
@@ -64,7 +64,7 @@ class CAV_Alpha_Base : CommonBlufor {
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
-        "rhsusf_mag_15Rnd_9x19_JHP",2,
+        "rhsusf_mag_15Rnd_9x19_JHP",3,
 
         "B_IR_Grenade",1,
         "SmokeShell",2,
@@ -89,6 +89,7 @@ class CAV_Alpha_Base : CommonBlufor {
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_EntrenchingTool",
         "ACE_MapTools",
         "ACE_Flashlight_MX991",
 
@@ -97,7 +98,6 @@ class CAV_Alpha_Base : CommonBlufor {
         
         // Misc
         "H_Cap_tan",
-        "ACE_EntrenchingTool",
         "rhsusf_shemagh_tan"
     };
 

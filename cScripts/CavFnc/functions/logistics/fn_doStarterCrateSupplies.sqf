@@ -91,18 +91,15 @@ if (_platoonSelector == "alpha") then {
     //================== MEDICAL ==================\\
 
     _crate addItemCargoGlobal ["ACE_EarPlugs",50];
-
     _crate addItemCargoGlobal ["ACE_quikclot",250];
-
     _crate addItemCargoGlobal ["ACE_tourniquet",25];
-
     _crate addItemCargoGlobal ["ACE_surgicalKit",10];
-
     _crate addItemCargoGlobal ["ACE_morphine",25];
 
     //================== BACKPACKS ==================\\
 
     //================== HELMETS ==================\\
+    _crate addItemCargoGlobal ["rhsusf_ihadss",12];
     _crate addItemCargoGlobal ["rhsusf_hgu56p_visor",12];
     _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_green",12];
     _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_black",12];
