@@ -1,17 +1,18 @@
 // ACE Advanced Ballistics
-force ace_advanced_ballistics_ammoTemperatureEnabled = true;
-force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
-force ace_advanced_ballistics_bulletTraceEnabled = true;
-force ace_advanced_ballistics_enabled = true;
-force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
-force ace_advanced_ballistics_simulationInterval = 0.05;
+force force ace_advanced_ballistics_ammoTemperatureEnabled = true;
+force force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
+force force ace_advanced_ballistics_bulletTraceEnabled = true;
+force force ace_advanced_ballistics_enabled = true;
+force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
+force force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
 force force ace_advanced_fatigue_enabled = true;
-//ace_advanced_fatigue_enableStaminaBar = true;
+//force ace_advanced_fatigue_enableStaminaBar = true;
 force force ace_advanced_fatigue_loadFactor = 1;
 force force ace_advanced_fatigue_performanceFactor = 1.40374;
 force force ace_advanced_fatigue_recoveryFactor = 3.03773;
+force force ace_advanced_fatigue_swayFactor = 1;
 force force ace_advanced_fatigue_terrainGradientFactor = 1;
 
 // ACE Advanced Throwing
@@ -24,11 +25,11 @@ force force ace_advanced_throwing_showThrowArc = true;
 // ACE Arsenal
 force force ace_arsenal_allowDefaultLoadouts = true;
 force force ace_arsenal_allowSharedLoadouts = true;
-force force ace_arsenal_camInverted = false;
-force ace_arsenal_enableIdentityTabs = true;
-force force ace_arsenal_enableModIcons = true;
+//ace_arsenal_camInverted = false;
+force force ace_arsenal_enableIdentityTabs = false;
+//ace_arsenal_enableModIcons = true;
 force force ace_arsenal_EnableRPTLog = false;
-force force ace_arsenal_fontHeight = 4.5;
+//ace_arsenal_fontHeight = 4.5;
 
 // ACE Captives
 force force ace_captives_allowHandcuffOwnSide = true;
@@ -37,7 +38,7 @@ force force ace_captives_requireSurrender = 0;
 force force ace_captives_requireSurrenderAi = false;
 
 // ACE Common
-force ace_common_allowFadeMusic = true;
+force force ace_common_allowFadeMusic = true;
 force force ace_common_checkPBOsAction = 0;
 force force ace_common_checkPBOsCheckAll = false;
 force force ace_common_checkPBOsWhitelist = "[]";
@@ -85,25 +86,28 @@ force force ace_interaction_enableMagazinePassing = true;
 force force ace_interaction_enableTeamManagement = true;
 
 // ACE Interaction Menu
-//ace_gestures_showOnInteractionMenu = 0;
+//ace_gestures_showOnInteractionMenu = 2;
 //ace_interact_menu_actionOnKeyRelease = true;
 //ace_interact_menu_addBuildingActions = false;
-//ace_interact_menu_alwaysUseCursorInteraction = true;
-//ace_interact_menu_alwaysUseCursorSelfInteraction = true;
+//ace_interact_menu_alwaysUseCursorInteraction = false;
+//ace_interact_menu_alwaysUseCursorSelfInteraction = false;
 //ace_interact_menu_colorShadowMax = [0,0,0,1];
 //ace_interact_menu_colorShadowMin = [0,0,0,0.25];
 //ace_interact_menu_colorTextMax = [1,1,1,1];
 //ace_interact_menu_colorTextMin = [1,1,1,0.25];
 //ace_interact_menu_cursorKeepCentered = false;
 //ace_interact_menu_menuAnimationSpeed = 0;
-//ace_interact_menu_menuBackground = 2;
+//ace_interact_menu_menuBackground = 0;
+//ace_interact_menu_selectorColor = [1,0,0];
 //ace_interact_menu_shadowSetting = 2;
-//ace_interact_menu_textSize = 3;
+//ace_interact_menu_textSize = 2;
 //ace_interact_menu_useListMenu = false;
 
 // ACE Logistics
 force force ace_cargo_enable = true;
 force force ace_cargo_paradropTimeCoefficent = 1;
+force force ace_rearm_level = 1;
+force force ace_rearm_supply = 0;
 force force ace_refuel_hoseLength = 15;
 force force ace_refuel_rate = 1;
 force force ace_repair_addSpareParts = true;
@@ -214,11 +218,11 @@ force force ace_nametags_playerNamesViewDistance = 5;
 //ace_nametags_tagSize = 2;
 
 // ACE Nightvision
-force ace_nightvision_aimDownSightsBlur = 0;
-force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 0.101011;
-force ace_nightvision_fogScaling = 0;
-force ace_nightvision_noiseScaling = 0.0713011;
+force force ace_nightvision_aimDownSightsBlur = 0;
+force force ace_nightvision_disableNVGsWithSights = false;
+force force ace_nightvision_effectScaling = 0.101011;
+force force ace_nightvision_fogScaling = 0;
+force force ace_nightvision_noiseScaling = 0.0713011;
 //ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -237,7 +241,8 @@ force force ace_finger_enabled = true;
 force force ace_finger_maxRange = 10;
 
 // ACE Pylons
-force force ace_pylons_enabled = true;
+force force ace_pylons_enabledForZeus = true;
+force force ace_pylons_enabledFromAmmoTrucks = true;
 force force ace_pylons_rearmNewPylons = false;
 force force ace_pylons_requireEngineer = false;
 force force ace_pylons_requireToolkit = true;
@@ -249,10 +254,6 @@ force force ace_quickmount_distance = 5;
 force force ace_quickmount_enabled = true;
 force force ace_quickmount_priority = 3;
 force force ace_quickmount_speed = 5;
-
-// ACE Rearm
-force force ace_rearm_level = 1;
-force force ace_rearm_supply = 0;
 
 // ACE Respawn
 force force ace_respawn_removeDeadBodiesDisconnected = true;
@@ -272,9 +273,9 @@ force force ace_scopes_zeroReferenceHumidity = 0;
 force force ace_scopes_zeroReferenceTemperature = 15;
 
 // ACE Spectator
-force force ace_spectator_enableAI = false;
-force force ace_spectator_restrictModes = 0;
-force force ace_spectator_restrictVisions = 0;
+//ace_spectator_enableAI = false;
+//ace_spectator_restrictModes = 0;
+//ace_spectator_restrictVisions = 0;
 
 // ACE Switch Units
 force force ace_switchunits_enableSafeZone = true;
@@ -371,6 +372,9 @@ force force ace_zeus_revealMines = 0;
 force force ace_zeus_zeusAscension = false;
 force force ace_zeus_zeusBird = false;
 
+// ACEX Fortify
+acex_fortify_settingHint = 2;
+
 // ACEX Headless
 force force acex_headless_delay = 15;
 force force acex_headless_enabled = false;
@@ -386,6 +390,7 @@ force force acex_viewrestriction_modeSelectiveAir = 0;
 force force acex_viewrestriction_modeSelectiveFoot = 0;
 force force acex_viewrestriction_modeSelectiveLand = 0;
 force force acex_viewrestriction_modeSelectiveSea = 0;
+force force acex_viewrestriction_preserveView = false;
 
 // ACEX Volume
 force force acex_volume_enabled = false;
@@ -396,15 +401,15 @@ force force acex_volume_remindIfLowered = false;
 force force acex_volume_showNotification = true;
 
 // Achilles - Curator Vision Modes
-force force achilles_curator_vision_blackhot = true;
-force force achilles_curator_vision_blackhotgreencold = false;
-force force achilles_curator_vision_blackhotredcold = false;
-force force achilles_curator_vision_greenhotcold = false;
-force force achilles_curator_vision_nvg = true;
-force force achilles_curator_vision_redgreen = false;
-force force achilles_curator_vision_redhot = false;
-force force achilles_curator_vision_whitehot = true;
-force force achilles_curator_vision_whitehotredcold = false;
+//achilles_curator_vision_blackhot = true;
+//achilles_curator_vision_blackhotgreencold = false;
+//achilles_curator_vision_blackhotredcold = false;
+//achilles_curator_vision_greenhotcold = false;
+//achilles_curator_vision_nvg = true;
+//achilles_curator_vision_redgreen = false;
+//achilles_curator_vision_redhot = false;
+//achilles_curator_vision_whitehot = true;
+//achilles_curator_vision_whitehotredcold = false;
 
 // Achilles - Debug
 force force Achilles_Debug_Output_Enabled = false;
@@ -417,9 +422,9 @@ force force Achilles_Debug_Output_Enabled = false;
 //Achilles_var_iconSelection = "Achilles_var_iconSelection_Ares";
 
 // Achilles - Modules Interface
-force force Achilles_var_moduleTreeCollapse = true;
-force force Achilles_var_moduleTreeDLC = true;
-force force Achilles_var_moduleTreeHelmet = false;
+//Achilles_var_moduleTreeCollapse = true;
+//Achilles_var_moduleTreeDLC = true;
+//Achilles_var_moduleTreeHelmet = false;
 
 // ACRE2
 force force acre_sys_core_fullDuplex = false;
@@ -434,6 +439,22 @@ force force acre_sys_core_ts3ChannelName = "";
 force force acre_sys_core_ts3ChannelPassword = "";
 force force acre_sys_core_ts3ChannelSwitch = false;
 force force acre_sys_core_unmuteClients = true;
+
+// GRAD Trenches
+force force grad_trenches_functions_allowBigEnvelope = true;
+force force grad_trenches_functions_allowCamouflage = true;
+force force grad_trenches_functions_allowDigging = true;
+force force grad_trenches_functions_allowGigantEnvelope = true;
+force force grad_trenches_functions_allowShortEnvelope = true;
+force force grad_trenches_functions_allowSmallEnvelope = true;
+force force grad_trenches_functions_allowVehicleEnvelope = true;
+force force grad_trenches_functions_bigEnvelopeDigTime = 40;
+force force grad_trenches_functions_buildFatigueFactor = 1;
+force force grad_trenches_functions_camouflageRequireEntrenchmentTool = false;
+force force grad_trenches_functions_gigantEnvelopeDigTime = 90;
+force force grad_trenches_functions_shortEnvelopeDigTime = 20;
+force force grad_trenches_functions_smallEnvelopeDigTime = 30;
+force force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 
 // STUI Settings
 //STHud_Settings_ColourBlindMode = "Normal";
