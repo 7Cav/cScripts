@@ -1,13 +1,13 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function is used to handle player premissions
+ * This function is used to handle player premissions and some player functions.
  *
  * Arguments:
  * 0: Player <STRING>
  *
  * Example:
- * [this,true,true] call cScripts_fnc_setPreInitPlayerSettings;
+ * [this,true,true] call cScripts_fnc_setPostInitPlayerSettings;
  */
 
 params [
