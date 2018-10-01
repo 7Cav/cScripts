@@ -393,12 +393,12 @@ force force acex_viewrestriction_modeSelectiveSea = 0;
 force force acex_viewrestriction_preserveView = false;
 
 // ACEX Volume
-force force acex_volume_enabled = false;
-force force acex_volume_fadeDelay = 1;
-force force acex_volume_lowerInVehicles = false;
-force force acex_volume_reduction = 5;
-force force acex_volume_remindIfLowered = false;
-force force acex_volume_showNotification = true;
+//acex_volume_enabled = false;
+//acex_volume_fadeDelay = 1;
+//acex_volume_lowerInVehicles = false;
+//acex_volume_reduction = 5;
+//acex_volume_remindIfLowered = false;
+//acex_volume_showNotification = true;
 
 // Achilles - Curator Vision Modes
 //achilles_curator_vision_blackhot = true;
