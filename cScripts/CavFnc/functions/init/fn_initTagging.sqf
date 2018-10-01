@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This adds custom spray tags to all units.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 #ifdef DEBUG_MODE
     ["Initializing custom spray tags."] call FUNC(logInfo);

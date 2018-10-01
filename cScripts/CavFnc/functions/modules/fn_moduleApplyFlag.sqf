@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This module function allow you to apply a flag to a given flag carrier.
@@ -10,8 +11,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 params ["_flagpole"];
 

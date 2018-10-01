@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function adds equipment to a given item baserd on platoon type.
@@ -14,8 +15,6 @@
  * [this,"none"] call cScripts_fnc_doStarterCrateSupplies;
  *
  */
-
-#include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
 

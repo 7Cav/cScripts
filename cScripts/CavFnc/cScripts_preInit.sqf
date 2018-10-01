@@ -1,8 +1,8 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
-#include "..\script_component.hpp";
 
 #ifdef DEBUG_MODE
     ["Initializing CBA Settings from preInit."] call FUNC(logInfo);

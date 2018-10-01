@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function add eventhandelers adding cav functionality to all vehicles.
@@ -10,8 +11,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 #ifdef DEBUG_MODE
     ["Applying EH init to vehicles to handle inventory and settings."] call FUNC(logInfo);

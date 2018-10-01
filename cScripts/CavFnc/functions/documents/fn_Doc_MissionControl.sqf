@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function write a diary record.
@@ -9,8 +10,6 @@
  *  call cScripts_fnc_Doc_MissionControl
  *
  */
-
-#include "..\script_component.hpp";
 
 player createDiaryRecord["7Cav",
     ["S3 Mission Control",

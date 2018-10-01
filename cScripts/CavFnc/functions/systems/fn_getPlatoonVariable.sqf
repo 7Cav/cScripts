@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * Show you your current platoon variable.
@@ -12,8 +13,6 @@
  * [player] call cScripts_fnc_getPlatoonVariable
  *
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_player", objNull, [objNull]]
