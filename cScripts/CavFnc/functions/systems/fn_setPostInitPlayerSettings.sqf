@@ -22,7 +22,11 @@ params [
 
 // Safety first
 if (_safemode) then {
-    [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
+    private _weapon = currentWeapon player;
+    private _safedWeapons = _player getVariable ['ace_safemode_safedWeapons', []];
+    if !(_weapon in _safedWeapons) exitWith { 
+        [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
+    };
 };
 
 // Add earplugs if you dont have them in.
