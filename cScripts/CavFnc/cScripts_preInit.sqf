@@ -117,7 +117,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "CHECKBOX",
     ["Vehicle Inventory", "Allow mission to change the vehicles inventory.\n"],
     [_cScriptSettings, "3; Custom Initzialisation"],
-    false,
+    true,
     true,
     {}
 ] call CBA_Settings_fnc_init;
