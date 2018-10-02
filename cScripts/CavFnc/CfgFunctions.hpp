@@ -60,6 +60,10 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
+        class getPlayerRank {};
+        class setPlayerRank {};
+        class doPlayerAnnouncement {};
+
         class addJump {};
         class doJump {};
 
