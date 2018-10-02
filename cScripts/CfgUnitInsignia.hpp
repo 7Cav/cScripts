@@ -11,7 +11,7 @@ class CfgUnitInsignia {
     // Alpha second platoon
     MACRO_UNITINSIGNIA(2A_17_Insignia,2-A-17.paa);
     MACRO_UNITINSIGNIA(A2A_17_Insignia,A-2-A-17.paa);
-    //MACRO_UNITINSIGNIA(B2A_17_Insignia,B-2-A-17.paa);
+    MACRO_UNITINSIGNIA(B2A_17_Insignia,B-2-A-17.paa);
     MACRO_UNITINSIGNIA(C2A_17_Insignia,C-2-A-17.paa);
     //MACRO_UNITINSIGNIA(D2A_17_Insignia,D-2-A-17.paa);
 
