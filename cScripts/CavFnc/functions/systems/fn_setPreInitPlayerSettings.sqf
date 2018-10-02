@@ -25,7 +25,8 @@ params [
     ["_setPlatoon",""],
     ["_isMedicClass", 0],
     ["_isEngineer", false],
-    ["_isEOD", false]
+    ["_isEOD", false],
+    ["_setRank", true]
 ];
 
 #ifdef DEBUG_MODE
@@ -46,10 +47,24 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 // Set EOD capable
 (_player) setVariable ["ACE_isEOD", _isEOD];
 
+// Set ingame rank based on name rank prefix
+if (_setRank) then {
+    [_player] call FUNC(setPlayerRank);
+};
+
+// Handle player announcement
+if (EGVAR(Settings,setMissionType) != 3) then {
+    [_player] call FUNC(doPlayerAnnouncement);
+};
+
 #ifdef DEBUG_MODE
     if (_setPlatoon != "") then {[formatText["%1 have got platoon variable %2 in preLoadout", _player, _setPlatoon]] call FUNC(logInfo);};
     [formatText["%1 medical ability is set to %2 in preLoadout", _player, _isMedicClass]] call FUNC(logInfo);
     if (_isEngineer) then {[formatText["%1 is assigned engineer ability via preLoadout", _player]] call FUNC(logInfo);};
     if (_isEOD) then {[formatText["%1 is assinged as eod specialist via preLoadout", _player]] call FUNC(logInfo);};
+#endif
+
+
+#ifdef DEBUG_MODE
     [formatText["preLoadout application completed for %1.", _player]] call FUNC(logInfo);
 #endif

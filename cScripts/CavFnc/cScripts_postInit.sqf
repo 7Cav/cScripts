@@ -36,6 +36,8 @@ switch (EGVAR(Settings,setMissionType)) do {
     };
     case (2): {
     };
+    case (3): {
+    };
 };
 
 if (EGVAR(Settings,enableStartHint)) then {

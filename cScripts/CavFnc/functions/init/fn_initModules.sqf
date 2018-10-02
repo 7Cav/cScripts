@@ -46,15 +46,6 @@ if (ace_medical_increaseTrainingInLocations) then {
 }] call Ares_fnc_RegisterCustomModule;
 
 
-/*["7Cav Logistics", "Transform to Cav Supply",{
-    [(_this select 1)] call FUNC(moduleApplySupply);
-}] call Ares_fnc_RegisterCustomModule;
-
-["7Cav Logistics", "Transform to Vehicle",{
-    [(_this select 1)] call FUNC(initVehicle);
-}] call Ares_fnc_RegisterCustomModule;
-*/
-
 ["7Cav Vehicle", "Add Vehicle Lable",{
     [(_this select 1)] call FUNC(moduleApplyVehicleLable);
 }] call Ares_fnc_RegisterCustomModule;
