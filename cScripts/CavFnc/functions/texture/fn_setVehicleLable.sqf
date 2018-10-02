@@ -49,17 +49,17 @@ params [
 
 if (!isServer) exitWith {};
 
-private _lableTexture1 = [_lable1] call FUNC(getVehicleLable);
-private _lableTexture2 = [_lable2] call FUNC(getVehicleLable);
-private _lableTexture3 = [_lable3] call FUNC(getVehicleLable);
-private _lableTexture4 = [_lable4] call FUNC(getVehicleLable);
-private _lableTexture5 = [_lable5] call FUNC(getVehicleLable);
-private _lableTexture6 = [_lable6] call FUNC(getVehicleLable);
-private _lableTexture7 = [_lable7] call FUNC(getVehicleLable);
-private _lableTexture8 = [_lable8] call FUNC(getVehicleLable);
-private _lableTexture9 = [_lable9] call FUNC(getVehicleLable);
+private _lableTexture1 = [toUpper(_lable1)] call FUNC(getVehicleLable);
+private _lableTexture2 = [toUpper(_lable2)] call FUNC(getVehicleLable);
+private _lableTexture3 = [toUpper(_lable3)] call FUNC(getVehicleLable);
+private _lableTexture4 = [toUpper(_lable4)] call FUNC(getVehicleLable);
+private _lableTexture5 = [toUpper(_lable5)] call FUNC(getVehicleLable);
+private _lableTexture6 = [toUpper(_lable6)] call FUNC(getVehicleLable);
+private _lableTexture7 = [toUpper(_lable7)] call FUNC(getVehicleLable);
+private _lableTexture8 = [toUpper(_lable8)] call FUNC(getVehicleLable);
+private _lableTexture9 = [toUpper(_lable9)] call FUNC(getVehicleLable);
 
-private _lableTextureLine = ["line"] call FUNC(getVehicleLable);
+private _lableTextureLine = ["LINE"] call FUNC(getVehicleLable);
 
 
 
@@ -164,7 +164,7 @@ private _vehicleTypeStriker = [
 ];
 if (typeOf _vehicle in _vehicleTypeStriker) then {
     // Always added
-    private _strykerLable = ["stryker"] call FUNC(getVehicleLable);
+    private _strykerLable = ["STRYKER"] call FUNC(getVehicleLable);
     [_vehicle,[0.420521,3.50066,1.35656],180,_strykerLable] call FUNC(createVehicleLable);
 };
 
