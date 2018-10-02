@@ -1,13 +1,13 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This module function spawn a supply medical crate.
+ * This module function spawn a 7th Cavalry Fieald Hostpital.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
  * Example:
- * this call moduelCreateMedicalCrate
+ * this call cScripts_fnc_moduleCreateFieldHostpital
  *
  * Public: No
  */
@@ -15,9 +15,9 @@
 params ["_crate"];
 
 private _dialogResult = [
-    "7th Cavalry Medical Crate",
+    "7th Cavalry Fieald Hostpital Crate",
     [
-        ["Medical Size","SLIDER",1]
+        ["Supply Size","SLIDER",1]
     ]
 ] call Ares_fnc_ShowChooseDialog;
 
@@ -25,8 +25,8 @@ if (count _dialogResult == 0) exitWith {};
 
 private _supplieSize = _dialogResult select 0;
 
-private _crate = "ACE_medicalSupplyCrate" createVehicle _crate;
-[_crate,_supplieSize] remoteExec [QFUNC(doMedicalCrate),0,true];
+private _crate = "C_IDAP_supplyCrate_F" createVehicle _crate;
+[_crate,true,_supplieSize] remoteExec [QFUNC(doFieldHospital),0,true];
 
 // Change ace characteristics of crate
 [_crate, 1] call ace_cargo_fnc_setSize;

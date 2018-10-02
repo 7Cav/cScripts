@@ -7,7 +7,7 @@
  * 0: Object <OBJECT>
  *
  * Example:
- * this call moduelCreateSupplyCrate
+ * this call cScripts_fnc_moduleCreateSupplyCrate
  *
  * Public: No
  */
