@@ -13,9 +13,10 @@
  */
 
 params [["_object", objNull, [objNull]]];
+[format["object: %1",_object]] call FUNC(logInfo);
 
 [{
     {
-        _x addCuratorEditableObjects [[_object], true];
+        _x addCuratorEditableObjects [[_this], true];
     } forEach allCurators;
 }, _object] call CBA_fnc_execNextFrame;
