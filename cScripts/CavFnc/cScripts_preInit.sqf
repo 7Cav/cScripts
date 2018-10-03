@@ -163,6 +163,18 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
     ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
 #endif
 
+if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
+    #ifdef DEBUG_MODE
+        ["Setting up Default ACE Arsenal loadouts."] call FUNC(logInfo);
+    #endif
+
+    call FUNC(initACELoadouts);
+
+    #ifdef DEBUG_MODE
+        ["Setup of Default ACE Arsenal loadouts is completed."] call FUNC(logInfo);
+    #endif
+};
+
 // Load preInit mission settings
 if (is3DEN) exitWith {};
 
@@ -191,6 +203,7 @@ if (EGVAR(Settings,allowCustomTagging)) then {
 if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
 };
+
 
 #ifdef DEBUG_MODE
     ["postInit initialization completed."] call FUNC(logInfo);
