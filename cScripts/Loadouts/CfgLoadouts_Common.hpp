@@ -45,7 +45,7 @@ class CommonBlufor {
     watch[] = {"itemWatch"};
 
     insignia[] = {""};
-    preLoadout = "[(_this select 0),'', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0),'', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
@@ -108,7 +108,7 @@ class CAV_Alpha_Base : CommonBlufor {
     watch[] = {"ACE_Altimeter"};
 
     insignia[] = {""};
-    preLoadout = "[(_this select 0), 'alpha', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'alpha', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
@@ -150,7 +150,7 @@ class CAV_Bravo_Base : CommonBlufor {
     watch[] = {"ItemWatch"};
 
     insignia[] = {""};
-    preLoadout = "[(_this select 0), 'bravo', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
@@ -193,7 +193,7 @@ class CAV_Charlie_Base : CommonBlufor {
     watch[] = {"ItemWatch"};
 
     insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
@@ -220,12 +220,11 @@ class CAV_Ranger_Base : CommonBlufor {
     watch[] = {"ACE_Altimeter"};
 
     insignia[] = {"RANGER"};
-    preLoadout = "[(_this select 0), 'ranger', 1, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'ranger', 1, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 class CAV_Medical_Base : CommonBlufor {
-
     backpack[] = {""};
     goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_bare_tan_headset"};
@@ -248,6 +247,6 @@ class CAV_Medical_Base : CommonBlufor {
     watch[] = {"ItemWatch"};
 
     insignia[] = {"CLS_Insignia"};
-    preLoadout = "[(_this select 0), 'medical', 2, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'medical', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };

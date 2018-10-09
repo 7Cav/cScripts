@@ -117,7 +117,7 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
     gps[] = {"ItemAndroid"};
 
-    preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
@@ -268,6 +268,6 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         "ACE_microDAGR"
     };
 
-    preLoadout = "[(_this select 0), 'alpha', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 
 };

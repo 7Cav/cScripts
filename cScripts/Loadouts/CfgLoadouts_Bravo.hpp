@@ -47,7 +47,7 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
     };
 
     gps[] = {"ItemcTab"};
-    preLoadout = "[(_this select 0), 'bravo', 0, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
@@ -99,7 +99,7 @@ class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
     };
 
     gps[] = {"ItemAndroid"};
-    preLoadout = "[(_this select 0), 'bravo', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Bravo_Crew_GNR : CAV_Bravo_Base {  // Crew Gunner (acts as CLS also)
@@ -186,7 +186,7 @@ class CAV_Bravo_Crew_CREW : CAV_Bravo_Base {  // Driver-Loader (acts as Engineer
 
     insignia[] = {"CLS_Insignia"};
     gps[] = {"ItemAndroid"};
-    preLoadout = "[(_this select 0), 'bravo', 0, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 //  I N F A N T R Y   S Q U A D

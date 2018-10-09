@@ -142,5 +142,5 @@ class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
         "ACE_EntrenchingTool"
     };
 
-    preLoadout = "[(_this select 0), 'medical', 1, false] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'medical', 1, 0] call cScripts_fnc_setPreInitPlayerSettings;";
 };
