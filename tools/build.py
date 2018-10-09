@@ -18,7 +18,7 @@
 #
 import sys, os
 import argparse, shutil, subprocess, tempfile
-__version__ = 1.9
+__version__ = 1.10
 
 # GLOBALS #################################################################################
 
@@ -251,16 +251,16 @@ def createModdedBuild(folder):      # This function is completely manual atm:
     add(x, 'force force cScripts_Settings_allowCustomInit = true;\n')
     add(x, 'force force cScripts_Settings_allowCustomTagging = true;\n')
     add(x, 'force force cScripts_Settings_enable7cavZeusModules = true;\n')
-    add(x, 'force force cScripts_Settings_setAiSystemDifficulty = 0;\n')
     add(x, 'force force cScripts_Settings_enableStartHint = false;\n')
+    add(x, 'force force cScripts_Settings_setAiSystemDifficulty = 1;\n')
     add(x, 'force force cScripts_Settings_setCustomHintText = "Public Mission";\n')
     add(x, 'force force cScripts_Settings_setCustomHintTopic = "This is Tactical Realism. Be tactical and realistic.";\n')
-    add(x, 'force force cScripts_Settings_setMissionType = 0;\n')
+    add(x, 'force force cScripts_Settings_setMissionType = 3;\n')
     add(x, 'force force cScripts_Settings_setRedLightTime = 30;\n')
     add(x, 'force force cScripts_Settings_setTrainingHintTime = 20;\n')
     add(x, 'force force cScripts_Settings_showDiaryRecords = true;\n')
     add(x, 'force force cScripts_Settings_useCustomSupplyInventory = false;\n')
-    add(x, 'force force cScripts_Settings_useCustomVehicleInventory = false;\n')
+    add(x, 'force force cScripts_Settings_useCustomVehicleInventory = true;\n')
     add(x, 'force force cScripts_Settings_useCustomVehicleSettings = true;\n')
 
 
@@ -287,60 +287,12 @@ def createModdedBuild(folder):      # This function is completely manual atm:
             x = grep(file,'"Flagstack_Red",')
             replace(file, x, '')
 
-    loadoutFiles = ['CfgLoadouts_Charlie.hpp','CfgLoadouts_Medical.hpp']
-    for loadoutFile in loadoutFiles:
-        print('Searching for and replacing magazines in \033[96m{}\033[0m...'.format(loadoutFile))
 
-        file = '{}\\cScripts\\Loadouts\\{}'.format(folder,loadoutFile)
-
-        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,')
-        for n in range(0,c):
-            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,')
-            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",4,\n')
-
-        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,')
-        for n in range(0,c):
-            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,')
-            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",2,\n')
-
-        
-        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",4,')
-        for n in range(0,c):
-            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",4,')
-            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",4,\n')
-
-        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",5,')
-        for n in range(0,c):
-            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",5,')
-            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",5,\n')
-
-        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",6,')
-        for n in range(0,c):
-            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",6,')
-            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",6,\n')
-
-        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",8,')
-        for n in range(0,c):
-            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",8,')
-            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,\n')
-
-        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",10,')
-        for n in range(0,c):
-            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",10,')
-            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",10,\n')
-
-        c = count(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",12,')
-        for n in range(0,c):
-            x = grep(file,'"rhs_mag_30Rnd_556x45_M855A1_Stanag",12,')
-            replace(file, x, '        "rhs_mag_30Rnd_556x45_M855A1_PMAG",12,\n')
-    
-    
     print('Creating new loadouts...')
     print('Adding new loadout \033[32mCAV_Alpha_Helo_GNR\033[0m to \033[96mCfgLoadouts_AlphaClass.hpp\033[0m...')
-    x = grep('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder),'class B_Helicrew_F : CAV_Alpha_Helo_GNR {{}};')
-    replace('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder), x, 'class B_Helicrew_F : CAV_Alpha_Helo_GNR {{}};\nclass B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {{}};\n')
+    x = '{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder)
+    add(x, '\n\n// Script added\nclass B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {{}};\n')
    
-
     print('Starting to adjust logistical crates...')
     functionFiles = ['fn_doAmmoCrate.sqf','fn_doExplosivesCrate.sqf','fn_doGrenadesCrate.sqf','fn_doLaunchersCrate.sqf','fn_doSpecialWeaponsCrate.sqf','fn_doStarterCrateSupplies.sqf','fn_doSupplyCrate.sqf','fn_doWeaponsCrate.sqf']
     for functionFile in functionFiles:
