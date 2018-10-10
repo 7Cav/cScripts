@@ -8,7 +8,7 @@ class CAV_S5_Base : CommonBlufor {
 	secondary[] = {"","","","",""};
 	launcher[] = {"","","","",""};
 	magazines[] = {""};
-	items[] = {"ACRE_PRC343","ACE_microDAGR","ACE_MapTools","ACE_Flashlight_XL50","ACRE_PRC152_ID_1","ACRE_PRC152_ID_2","ACE_morphine",3,"ACE_personalAidKit","ACE_elasticBandage",15,"ACE_quikclot",15,"ACE_EntrenchingTool","ACE_NVG_Wide"};
+	items[] = {"ACE_microDAGR","ACE_MapTools","ACE_Flashlight_XL50","ACRE_PRC152_ID_1","ACRE_PRC152_ID_2","ACE_morphine",3,"ACE_personalAidKit","ACE_elasticBandage",15,"ACE_quikclot",15,"ACE_EntrenchingTool","ACE_NVG_Wide"};
 	binoculars[] = {"ACE_Vector"};
 	compass[] = {"ItemCompass"};
 	goggles[] = {"rhs_googles_clear"};
