@@ -492,14 +492,17 @@ if (_platoonSelector == "ranger") then {
     _crate addWeaponCargoGlobal ["tf47_m3maaws",50];
     _crate addWeaponCargoGlobal ["tf47_at4_HP",50];
     _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
+    _crate addWeaponCargoGlobal ["rhsusf_weap_glock17g4",50];
+    _crate addWeaponCargoGlobal ["rhs_weap_m32",50];
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
-    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",250];
     _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_FMJ",150];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",150];
     _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",50];
     _crate addMagazineCargoGlobal ["rhs_fim92_mag",50];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
@@ -531,6 +534,7 @@ if (_platoonSelector == "ranger") then {
     _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
     _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
     _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
+    _crate addMagazineCargoGlobal ["UGL_FlareCIR_F",50];
     _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
     _crate addMagazineCargoGlobal ["rhs_mag_m661_green",250];
     _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
@@ -539,6 +543,15 @@ if (_platoonSelector == "ranger") then {
     _crate addMagazineCargoGlobal ["ACE_HandFlare_White",250];
     _crate addMagazineCargoGlobal ["ACE_HandFlare_Red",250];
     _crate addMagazineCargoGlobal ["ACE_HandFlare_Green",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M714_white",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M713_red",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M715_green",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M585_white",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M576_Buckshot",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_m4009",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M441_HE",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M397_HET",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M433_HEDP",250];
 
     //================== EXPLOSIVES ==================\\
 
