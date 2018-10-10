@@ -2,7 +2,7 @@
 
 class CAV_S5_Base : CommonBlufor {
     uniform[] = {"U_C_Journalist"};
-	vest[] = {"V_Press_F"};
+    vest[] = {"V_Press_F"};
     backpack[] = {"B_AssaultPack_blk"};
     primary[] = {"","","","",""};
     secondary[] = {"","","","",""};
