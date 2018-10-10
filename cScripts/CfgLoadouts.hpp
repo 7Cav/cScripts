@@ -21,7 +21,7 @@ class CfgLoadouts {
     #include "Loadouts\CfgLoadouts_TrainingClass.hpp"
 
     #include "Loadouts\CfgLoadouts_S3.hpp"
-	#include "Loadouts\CfgLoadouts_S5.hpp"
+    #include "Loadouts\CfgLoadouts_S5.hpp"
 
     #include "Loadouts\CfgLoadouts_UserCustom.hpp"
 };
