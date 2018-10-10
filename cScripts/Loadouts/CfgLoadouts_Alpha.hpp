@@ -254,7 +254,7 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         "ACRE_PRC152",
         "ACRE_PRC152",
         "ACRE_PRC343",
-		
+        
         // Personal Medical Equipment
         "ACE_quikclot",5,
         "ACE_tourniquet",2,
