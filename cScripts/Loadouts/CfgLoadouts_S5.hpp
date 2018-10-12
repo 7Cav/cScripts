@@ -19,8 +19,9 @@ class CAV_S5_Base : CommonBlufor {
     watch[] = {"ItemWatch"};
     insignia[] = {""};
     preLoadout = " \
-    [(_this select 0), 's3', 2, true, true] call cScripts_fnc_setPreInitPlayerSettings; \
-    (_this select 0) allowDamage false;\(_this select 0) setCaptive true;";
+    [(_this select 0), 's5', 2, 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+    (_this select 0) allowDamage false;\
+    (_this select 0) setCaptive true;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
