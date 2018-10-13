@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This make it posssible to start up a HQ system (add a vehicle rack to the given object.)
@@ -15,7 +16,6 @@
  *
  * Public: Yes
  */
-#include "..\script_component.hpp";
 
 params [
     ["_vehicle", objNull, [objNull]],
