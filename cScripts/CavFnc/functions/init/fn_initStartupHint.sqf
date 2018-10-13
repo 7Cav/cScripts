@@ -11,14 +11,19 @@
  *
  * Example:
  * call cScripts_fnc_initStartupHint
- * [60,"Operation","My custom Mission!","I have design this mission!"] call cScripts_fnc_initStartupHint
+ * [60,1,"My custom Mission!","I have design this mission!"] call cScripts_fnc_initStartupHint
  *
  * Public: No
  */
 
 waitUntil {!isNull player && player == player};
 
-params [["_delay", 30, [0]], ["_missionType", 1, [1]], ["_setCustomTopic", "My custom Mission!", [""]], ["_setCustomText", "I have design this mission!", [""]]];
+params [
+    ["_delay", 30, [0]],
+    ["_missionType", 1, [1]],
+    ["_setCustomTopic", "My custom Mission!", [""]],
+    ["_setCustomText", "I have design this mission!", [""]]
+];
 
 // String table
 private _title_RedLight         = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>RED LIGHT!</t><br />";
@@ -58,7 +63,16 @@ private _image_Shield           = "<br /><br /><img size='5' image='cScripts\Dat
 #endif
 
 switch (_missionType) do {
-    case (1): {
+    case (0): { // Custom
+        hintSilent parseText (_title_Welcome + _textCustom_P1 + _image_Cross);
+        sleep 1;
+        hintSilent parseText (_title_Welcome + _textCustom_P1 + _image_Cross + _textCustom_P2 + _text_HaveFun_P);
+        sleep _delay;
+        hintSilent parseText (_title_Welcome + _textCustom_P1 + _image_Cross + _textCustom_P2 + _text_HaveFun_P + _text_EasterEgg_Author);
+        sleep 1.5;
+        hintSilent "";
+    };
+    case (1): { // Operation
         if (didJIP) exitWith {
             #ifdef DEBUG_MODE
                 ["Mission type is operation hint will not run"] call FUNC(logInfo);
@@ -77,7 +91,7 @@ switch (_missionType) do {
         sleep 1.5;
         hintSilent "";
     };
-    case (0): {
+    case (2): { // Training
         if (didJIP) exitWith {
             #ifdef DEBUG_MODE
                 ["Mission type is training hint will not run"] call FUNC(logInfo);
@@ -93,13 +107,6 @@ switch (_missionType) do {
         sleep 1.5;
         hintSilent "";
     };
-    case (2): {
-        hint parseText (_title_Welcome + _textCustom_P1 + _image_Cross);
-        sleep 1;
-        hintSilent parseText (_title_Welcome + _textCustom_P1 + _image_Cross + _textCustom_P2 + _text_HaveFun_P);
-        sleep (_delay);
-        hintSilent parseText (_title_Welcome + _textCustom_P1 + _image_Cross + _textCustom_P2 + _text_HaveFun_P + _text_EasterEgg_Author);
-        sleep 1.5;
-        hintSilent "";
+    case (3): {  // Public
     };
 };
