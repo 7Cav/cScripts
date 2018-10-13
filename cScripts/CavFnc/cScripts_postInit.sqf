@@ -39,7 +39,6 @@ switch (EGVAR(Settings,setMissionType)) do {
     case (3): { // Public
     };
 };
-};
 
 if (EGVAR(Settings,enableStartHint)) then {
     [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] call FUNC(initStartupHint);
