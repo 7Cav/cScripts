@@ -6,9 +6,10 @@
  * Arguments:
  * 0: Player <STRING>
  * 1: Platoon <STRING>
- * 2: MedicClass <NUMBER> (Optional) (Default; 0)
- * 3: Engineer <BOOL> (Optional) (Default; 0)
- * 4: EOD <BOOL> (Optional) (Default; 0)
+ * 2: Medic Type <NUMBER>       (Optional)      (Default; 0)
+ * 3: Engineer Type <NUMBER>    (Optional)      (Default; 0)
+ * 4: EOD <BOOL>                (Optional)      (Default; false)
+ * 5: Set Rank <BOOL>           (Optional)      (Default; true)
  *
  * Return Value:
  * Nothing
@@ -16,7 +17,7 @@
  * Example:
  * [this] call cScripts_fnc_setPreInitPlayerSettings;
  * [this, "charlie",0] call cScripts_fnc_setPreInitPlayerSettings;
- * [this, "charlie",0,false,false] call cScripts_fnc_setPreInitPlayerSettings;
+ * [this, "charlie", 0, 0, false, true] call cScripts_fnc_setPreInitPlayerSettings;
  *
  */
 
@@ -24,7 +25,7 @@ params [
     ["_player",""],
     ["_setPlatoon",""],
     ["_isMedicClass", 0],
-    ["_isEngineer", false],
+    ["_isEngineerClass", 0],
     ["_isEOD", false],
     ["_setRank", true]
 ];
@@ -42,7 +43,8 @@ private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 (_player) setVariable ["ACE_medical_medicClass", _isMedicClass, _MedicClass];
 
 // Set Engineer
-(_player) setVariable ["ACE_isEngineer", _isEngineer];
+private _EngineerClass = if (_isEngineerClass > 1) then {true} else {false};
+(_player) setVariable ['ACE_isEngineer', _isEngineerClass, _EngineerClass];
 
 // Set EOD capable
 (_player) setVariable ["ACE_isEOD", _isEOD];
