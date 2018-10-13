@@ -8,7 +8,7 @@
  * 0: Object <OBJECT>
  *
  * Example:
- * this call moduleCreateStarterCrate;
+ * this call cScripts_fnc_moduleCreateStarterCrate;
  *
  * Public: No
  */
@@ -50,4 +50,4 @@ private _arsenal = if (_dialogResult select 5 == 0) then {true} else {false};
 
 _crate = "B_supplyCrate_F" createVehicle _crate;
 [_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requirePlatoonVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),0,true];
-[_crate] call ace_zeus_fnc_addObjectToCurator;
+[_crate] call FUNC(addObjectToCurator);
