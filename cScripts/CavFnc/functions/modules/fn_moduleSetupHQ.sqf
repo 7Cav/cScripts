@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function aply a vehicle rack to a given object accesable only from the outside.
@@ -9,7 +10,6 @@
  *  call cScripts_fnc_moduleMakeDoctor;
  */
 
-#include "..\script_component.hpp";
 
 params [
     ["_vehicle", objNull, [objNull]],
