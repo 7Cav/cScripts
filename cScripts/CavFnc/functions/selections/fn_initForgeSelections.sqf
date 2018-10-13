@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function contain insignia selection buttons and categorys.
@@ -8,8 +9,6 @@
  * Example:
  * call cScripts_fnc_initForgeSelections
  */
-
-#include "..\script_component.hpp";
 
 params [["_object", objNull, [objNull]]];
 
