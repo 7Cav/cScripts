@@ -1,6 +1,7 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function load all Cav moduels. Requires Achilles to run propperly will not load this function otherwise.
+ * This function load all Cav modules. Requires Achilles to run propperly will not load this function otherwise.
  *
  * Arguments:
  * None
@@ -14,8 +15,6 @@
  * Public: No
  */
 
-#include "..\script_component.hpp";
-
 // Check if Achilles is active else terminate
 if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {["cfgPatches for Achilles not detected, terminating modules."] call FUNC(logInfo);};
 
@@ -24,37 +23,28 @@ if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {[
 #endif
 
 ["7Cav Logistics", "Starter Crate",{
-    [(_this select 0)] call FUNC(moduleCreateStarterCrate);
+    [(_this select 0)] call FUNC(moduleCreateStarterCrate);    
 }] call Ares_fnc_RegisterCustomModule;
 
 // Check if increase training on location is true then add option.
 if (ace_medical_increaseTrainingInLocations) then {
     ["7Cav Logistics", "Field Hospital",{
-        [(_this select 0)] call FUNC(moduelCreateFieldHospital);
+        [(_this select 0)] call FUNC(moduleCreateFieldHospital);
     }] call Ares_fnc_RegisterCustomModule;
 };
 
 ["7Cav Logistics", "Re-supply Crate",{
-    [(_this select 0)] call FUNC(moduelCreateSupplyCrate);
+    [(_this select 0)] call FUNC(moduleCreateSupplyCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Medical Re-supply Crate",{
-    [(_this select 0)] call FUNC(moduelCreateMedicalCrate);
+    [(_this select 0)] call FUNC(moduleCreateMedicalCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Crew-Served Weapons Crate",{
-    [(_this select 0)] call FUNC(moduelCreateSpecialWeaponsCrate);
+    [(_this select 0)] call FUNC(moduleCreateSpecialWeaponsCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
-
-/*["7Cav Logistics", "Transform to Cav Supply",{
-    [(_this select 1)] call FUNC(moduleApplySupply);
-}] call Ares_fnc_RegisterCustomModule;
-
-["7Cav Logistics", "Transform to Vehicle",{
-    [(_this select 1)] call FUNC(initVehicle);
-}] call Ares_fnc_RegisterCustomModule;
-*/
 
 ["7Cav Vehicle", "Add Vehicle Lable",{
     [(_this select 1)] call FUNC(moduleApplyVehicleLable);

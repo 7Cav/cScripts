@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This module function allow you to apply a texture lable to a given vehicle.
@@ -11,11 +12,14 @@
  * Public: No
  */
 
-#include "..\script_component.hpp";
-
 params ["_vehicle"];
 
 _vehicle = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
+
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Label)}) exitwith {
+    ["Vehicle all ready have a lable!"] call Ares_fnc_ShowZeusMessage;
+    playSound "FD_Start_F";
+};
 
 // UH-60 blackhawk
 private _vehicleTypeUH60 = [

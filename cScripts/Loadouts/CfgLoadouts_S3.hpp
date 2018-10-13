@@ -5,7 +5,7 @@ GearVersionDate: 160801
 class CAV_S3_Base : CAV_Bravo_OFFCR {
     insignia[] = {"Curator"};
     preLoadout = " \
-    [(_this select 0), 's3', 2, true, true] call cScripts_fnc_setPreInitPlayerSettings; \
+    [(_this select 0), 's3', 2, 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
     (_this select 0) allowDamage false;";
 };
 

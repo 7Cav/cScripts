@@ -60,6 +60,10 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
+        class getPlayerRank {};
+        class setPlayerRank {};
+        class doPlayerAnnouncement {};
+
         class addJump {};
         class doJump {};
 
@@ -78,6 +82,8 @@ class cScripts {
 
         class hq {};
         class teleport {};
+
+        class addObjectToCurator {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
@@ -96,10 +102,10 @@ class cScripts {
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         class moduleCreateStarterCrate {};
-        class moduelCreateFieldHospital {};
-        class moduelCreateMedicalCrate {};
-        class moduelCreateSupplyCrate {};
-        class moduelCreateSpecialWeaponsCrate {};
+        class moduleCreateFieldHospital {};
+        class moduleCreateMedicalCrate {};
+        class moduleCreateSupplyCrate {};
+        class moduleCreateSpecialWeaponsCrate {};
 
         class moduleApplyVehicleLable {};
         class moduleSetupHQ {};
@@ -115,7 +121,7 @@ class cScripts {
     class debug {
         file = "cScripts\cavFnc\functions\debug";
         class logError {};
-        class logInfo {}; //will be merged with "attachVehicleLabel"
+        class logInfo {};
         class logWarning {};
     };
 };
