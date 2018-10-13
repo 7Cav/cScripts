@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * Retun true or false if your a cav trooper and belong to the given platoon.
@@ -13,8 +14,6 @@
  * [player] call cScripts_fnc_hasPlatoonVariable
  *
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_player", objNull, [objNull]],

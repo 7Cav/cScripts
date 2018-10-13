@@ -1,8 +1,8 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
-#include "..\script_component.hpp";
 
 #ifdef DEBUG_MODE
     ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
@@ -17,7 +17,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     ["Mission Type", "This will deside on what kind of startup hint you get on mission start.\n"],
     [_cScriptSettings, "1; Mission"],
-    [[0,1,2], ["Custom", "Operation", "Training"], 1],
+    [[0,1,2,3], ["Custom", "Operation", "Training", "Public"], 1],
     true,
     {}
 ] call CBA_Settings_fnc_init;
@@ -117,7 +117,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "CHECKBOX",
     ["Vehicle Inventory", "Allow mission to change the vehicles inventory.\n"],
     [_cScriptSettings, "3; Custom Initzialisation"],
-    false,
+    true,
     true,
     {}
 ] call CBA_Settings_fnc_init;
@@ -176,6 +176,8 @@ switch (EGVAR(Settings,setMissionType)) do {
     case (1): {
     };
     case (2): {
+    };
+    case (3): {
     };
 };
 

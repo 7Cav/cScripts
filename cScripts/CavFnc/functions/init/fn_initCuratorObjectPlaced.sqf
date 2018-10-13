@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: SSG.Argus.J, CPL.Brostrom.A
  * This function adds a jump out action to a curator spawned C130.
@@ -13,8 +14,6 @@
  *
  * Public: No
  */
-
-#include "..\script_component.hpp";
 
 #ifdef DEBUG_MODE
     [format["Executing Curator Object Placed event handler."]] call FUNC(logInfo);

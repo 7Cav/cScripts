@@ -1,15 +1,14 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function is used to handle player premissions
+ * This function is used to handle player premissions and some player functions.
  *
  * Arguments:
  * 0: Player <STRING>
  *
  * Example:
- * [this,true,true] call cScripts_fnc_setPreInitPlayerSettings;
+ * [this,true,true] call cScripts_fnc_setPostInitPlayerSettings;
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_player",""],
@@ -23,7 +22,11 @@ params [
 
 // Safety first
 if (_safemode) then {
-    [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
+    private _weapon = currentWeapon player;
+    private _safedWeapons = _player getVariable ['ace_safemode_safedWeapons', []];
+    if !(_weapon in _safedWeapons) then { 
+        [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
+    };
 };
 
 // Add earplugs if you dont have them in.

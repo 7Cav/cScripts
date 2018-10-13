@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This script auto generates the selections.
@@ -14,8 +15,6 @@
  * [this,"MyCategory","Insignia","icon.paa",["ACE_MainActions"]] call cScripts_fnc_addAceCategory;
  * [this,"MySecondCategory","Misc","data/icon.paa",["ACE_MainActions","MyCategory"]] call cScripts_fnc_addAceCategory;
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_object", objNull, [objNull]],

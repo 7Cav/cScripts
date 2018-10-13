@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This teleports a target to a given marker or any other kind of object.
@@ -19,8 +20,6 @@
  *
  * Public: Yes
  */
- 
-#include "..\script_component.hpp";
 
 params [
     ["_object", objNull, [objNull]],

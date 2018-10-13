@@ -47,7 +47,7 @@ class CAV_SOI_INSTR : CAV_Charlie_Base {  // Instructor
 
     insignia[] = {"Follow_Me"};
 
-    preLoadout = "[(_this select 0), 'training', 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
 
@@ -94,12 +94,8 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
     gps[] = {"ItemAndroid"};
 
     insignia[] = {"CAG"};
-
-    preLoadout = " \
-        (_this select 0) setVariable [""CAV_isTrainingUnit"", true]; \
-        (_this select 0) setVariable [""ACE_medical_medicClass"", 2, true]; \
-        (_this select 0) allowDamage false; \
-        (_this select 0) setVariable [""ACE_isEngineer"", true];";
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
+        (_this select 0) allowDamage false;";
 };
 
 class CAV_SOI_STUD : CAV_Bravo_Base {  // Rifleman
@@ -117,7 +113,7 @@ class CAV_SOI_STUD : CAV_Bravo_Base {  // Rifleman
         "rhs_200rnd_556x45_M_SAW",2
     };
 
-    preLoadout = "[(_this select 0), 'training', 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
 
@@ -173,7 +169,7 @@ class CAV_TAS_INSTR : CAV_Bravo_Base {  // Instructor
 
     gps[] = {"ItemAndroid"};
 
-    preLoadout = "[(_this select 0), 'training', 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
 
@@ -216,7 +212,7 @@ class CAV_TAS_STUD : CAV_Bravo_Base {  // Crewman
     gps[] = {"ItemAndroid"};
 
     preLoadout = " \
-        [(_this select 0), 'training', 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+        [(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
 
@@ -231,7 +227,7 @@ class CAV_ACE_ROTARY_INSTR : CAV_Alpha_Base {  // Rotary Instructor Pilots
     gps[] = {"ItemcTab"};
 
     preLoadout = " \
-        [(_this select 0), 'training', 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+        [(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
 
@@ -243,7 +239,7 @@ class CAV_ACE_ROTARY_STUD : CAV_Alpha_Base {  // Rotary Instructor Pilots
     gps[] = {"ItemcTab"};
 
     preLoadout = " \
-        [(_this select 0), 'training', 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+        [(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
 
@@ -292,7 +288,7 @@ class CAV_ACE_FIXED_INSTR : CAV_Alpha_Base {
     };
 
     preLoadout = " \
-        [(_this select 0), 'training', 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+        [(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
 
@@ -341,6 +337,6 @@ class CAV_ACE_FIXED_STUD : CAV_Alpha_Base {
     };
 
     preLoadout = " \
-        [(_this select 0), 'training', 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
+        [(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
