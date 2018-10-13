@@ -26,8 +26,8 @@ _vehicle addAction [
     "Setup HQ Radio System", 
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
-        [_target, {}] call acre_api_fnc_initVehicleRacks;
-        [_target, ["ACRE_VRC103", "HQ Radio", "ERadio", false, ["external"], [], _arguments select 0, [], []],false, {true}] call acre_api_fnc_addRackToVehicle;
+        [_target, {}] remoteExec ["acre_api_fnc_initVehicleRacks", 2];
+        [_target, ["ACRE_VRC103", "HQ Radio", "ERadio", false, ["external"], [], _arguments select 0, [], []],false, {true}] remoteExec ["acre_api_fnc_addRackToVehicle", 2];
         _target setVariable [QEGVAR(object,hq),true];
     },
     [_radio],1.5,true,true, "",
