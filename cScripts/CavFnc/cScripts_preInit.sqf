@@ -162,15 +162,16 @@ if (is3DEN) exitWith {};
 #endif
 
 switch (EGVAR(Settings,setMissionType)) do {
-    case (0): {
+    case (0): { // Custom
     };
-    case (1): {
+    case (1): { // Operation
     };
-    case (2): {
+    case (2): { // Training
     };
-    case (3): {
+    case (3): { // Public
     };
 };
+
 
 if (EGVAR(Settings,allowCustomInit)) then {
 };
