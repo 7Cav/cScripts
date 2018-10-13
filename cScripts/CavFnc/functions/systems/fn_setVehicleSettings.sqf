@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This
@@ -10,11 +11,9 @@
  *
  */
 
-#include "..\script_component.hpp";
-
 params [["_vehicle", objNull, [objNull]]];
 
-if (!isNil{_vehicle getVariable QGVAR(hasVehicleSettings)}) exitWith {[formatText["Vehicle settings already applied for %1.", _vehicle]] call FUNC(logWarning);};
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Settings)}) exitWith {[formatText["Vehicle settings already applied for %1.", _vehicle]] call FUNC(logWarning);};
 
 #ifdef DEBUG_MODE
     [formatText["Applying vehicle settings to %1.", _vehicle]] call FUNC(logInfo);
@@ -32,4 +31,4 @@ switch (true) do {
     };
 };
 
-_vehicle setVariable [QGVAR(hasVehicleSettings), true];
+_vehicle setVariable [QEGVAR(Vehicle,Settings), true];

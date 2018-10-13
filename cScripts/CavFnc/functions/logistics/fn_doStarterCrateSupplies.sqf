@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function adds equipment to a given item baserd on platoon type.
@@ -14,8 +15,6 @@
  * [this,"none"] call cScripts_fnc_doStarterCrateSupplies;
  *
  */
-
-#include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
 
@@ -37,6 +36,7 @@ if (_platoonSelector == "alpha") then {
 
     _crate addItemCargoGlobal ["ACRE_PRC152",50];
     _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+    _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
     //================== WEAPONS ==================\\
 
@@ -48,33 +48,34 @@ if (_platoonSelector == "alpha") then {
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),30];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",30];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",50];
+    _crate addMagazineCargoGlobal ["SmokeShell",50];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",25];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",25];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",25];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",25];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",25];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",25];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",25];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEGREEN),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEYELLOW),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKERED),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLHUNTIR),25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),25];
-    _crate addMagazineCargoGlobal ["Chemlight_Blue",25];
-    _crate addMagazineCargoGlobal ["Chemlight_Red",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",25];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",25];
+    _crate addMagazineCargoGlobal ["Chemlight_green",25];
+    _crate addMagazineCargoGlobal ["Chemlight_red",25];
+    _crate addMagazineCargoGlobal ["Chemlight_yellow",25];
 
     //================== EXPLOSIVES ==================\\
 
@@ -89,26 +90,20 @@ if (_platoonSelector == "alpha") then {
     //================== MEDICAL ==================\\
 
     _crate addItemCargoGlobal ["ACE_EarPlugs",50];
-
     _crate addItemCargoGlobal ["ACE_quikclot",250];
-
     _crate addItemCargoGlobal ["ACE_tourniquet",25];
-
     _crate addItemCargoGlobal ["ACE_surgicalKit",10];
-
     _crate addItemCargoGlobal ["ACE_morphine",25];
 
     //================== BACKPACKS ==================\\
 
     //================== HELMETS ==================\\
+    _crate addItemCargoGlobal ["rhsusf_ihadss",12];
+    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor",12];
+    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_green",12];
     _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_black",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_black_skull",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_Empire_black",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_smiley",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_usa",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_pink",12];
-    _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_pink",12];
     _crate addItemCargoGlobal ["H_PilotHelmetFighter_B",6];
+    _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
 };
 
 //------------------B R A V O   C O M P A N Y --------------------\\
@@ -118,6 +113,7 @@ if (_platoonSelector == "bravo") then {
 
     _crate addItemCargoGlobal ["ACRE_PRC152",50];
     _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+    _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
     //================== WEAPONS ==================\\
 
@@ -131,36 +127,36 @@ if (_platoonSelector == "bravo") then {
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR1),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),150];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),25];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),25];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER5),25];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER6),25];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",25];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",25];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",25];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",25];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
+    _crate addMagazineCargoGlobal ["SmokeShell",250];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",250];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",250];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",250];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",250];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",250];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",250];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEGREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEYELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKERED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLHUNTIR),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
@@ -201,6 +197,7 @@ if (_platoonSelector == "charlie") then {
 
     _crate addItemCargoGlobal ["ACRE_PRC152",50];
     _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+    _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
     //================== WEAPONS ==================\\
 
@@ -214,34 +211,34 @@ if (_platoonSelector == "charlie") then {
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER5),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER6),50];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
+    _crate addMagazineCargoGlobal ["SmokeShell",250];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",250];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",250];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",250];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",250];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",250];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",250];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEGREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEYELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKERED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLHUNTIR),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
@@ -284,6 +281,7 @@ if (_platoonSelector == "medical") then {
 
     _crate addItemCargoGlobal ["ACRE_PRC152",10];
     _crate addItemCargoGlobal ["ACRE_PRC117F",5];
+    _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
     //================== WEAPONS ==================\\
 
@@ -293,22 +291,22 @@ if (_platoonSelector == "medical") then {
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
+    _crate addMagazineCargoGlobal ["SmokeShell",250];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",250];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",250];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",250];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",250];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",250];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",250];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
@@ -363,6 +361,7 @@ if (_platoonSelector == "heavyweapons") then {
 
     _crate addItemCargoGlobal ["ACRE_PRC152",50];
     _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+    _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
     //================== WEAPONS ==================\\
 
@@ -378,39 +377,39 @@ if (_platoonSelector == "heavyweapons") then {
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR1),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),150];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER0),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER1),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER2),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER5),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER6),50];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
+    _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",50];
+    _crate addMagazineCargoGlobal ["rhs_fim92_mag",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
+    _crate addMagazineCargoGlobal ["SmokeShell",250];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",250];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",250];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",250];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",250];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",250];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",250];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEGREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEYELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKERED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLHUNTIR),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
@@ -463,6 +462,7 @@ if (_platoonSelector == "ranger") then {
 
     _crate addItemCargoGlobal ["ACRE_PRC152",25];
     _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+    _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
     //================== WEAPONS ==================\\
 
@@ -471,11 +471,17 @@ if (_platoonSelector == "ranger") then {
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
     _crate addItemCargoGlobal ["rhsusf_acc_SpecterDR",50];
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
-    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
-    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15A",50];
+
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15side_bk",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_top",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk",25];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",25];
+    _crate addItemCargoGlobal ["acc_pointer_ir",50];
+
     _crate addItemCargoGlobal ["rhsusf_acc_nt4_black",50];
     _crate addItemCargoGlobal ["rhsusf_acc_harris_bipod",50];
     _crate addItemCargoGlobal ["rhsusf_acc_grip1",50];
+
     _crate addItemCargoGlobal ["tf47_optic_m3maaws",50];
 
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",25];
@@ -486,46 +492,50 @@ if (_platoonSelector == "ranger") then {
     _crate addWeaponCargoGlobal ["tf47_m3maaws",50];
     _crate addWeaponCargoGlobal ["tf47_at4_HP",50];
     _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
+    _crate addWeaponCargoGlobal ["rhsusf_weap_glock17g4",50];
+    _crate addWeaponCargoGlobal ["rhs_weap_m32",50];
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",250];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_FMJ",150];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER0),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER1),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER2),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER5),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER6),50];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",150];
+    _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",50];
+    _crate addMagazineCargoGlobal ["rhs_fim92_mag",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
+    _crate addMagazineCargoGlobal ["SmokeShell",250];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",250];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",250];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",250];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",250];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",250];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",250];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal ["rhs_mag_an_m14_th3",250];
     _crate addMagazineCargoGlobal ["rhs_mag_m7a3_cs",250];
     _crate addMagazineCargoGlobal ["rhs_mag_mk3a2",250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",250];
     _crate addMagazineCargoGlobal ["rhs_mag_M397_HET",250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEGREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEYELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKERED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLHUNTIR),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
+    _crate addMagazineCargoGlobal ["UGL_FlareCIR_F",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
     _crate addMagazineCargoGlobal ["rhs_mag_m661_green",250];
     _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
@@ -533,6 +543,15 @@ if (_platoonSelector == "ranger") then {
     _crate addMagazineCargoGlobal ["ACE_HandFlare_White",250];
     _crate addMagazineCargoGlobal ["ACE_HandFlare_Red",250];
     _crate addMagazineCargoGlobal ["ACE_HandFlare_Green",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M714_white",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M713_red",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M715_green",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M585_white",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M576_Buckshot",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_m4009",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M441_HE",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M397_HET",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_6Rnd_M433_HEDP",250];
 
     //================== EXPLOSIVES ==================\\
 
@@ -641,27 +660,27 @@ if (_platoonSelector == "sniper") then {
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),50];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_FMJ",50];
-    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m62_Mag",50];
+    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_SR25_m62_Mag",50];
     _crate addMagazineCargoGlobal ["rhsusf_5Rnd_300winmag_xm2010",50];
-    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",50];
-    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m993_Mag",50];
+    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_SR25_m118_special_Mag",50];
+    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_SR25_m993_Mag",50];
     _crate addMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33",50];
     _crate addMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211",50];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),50];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),50];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",50];
+    _crate addMagazineCargoGlobal ["SmokeShell",50];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",50];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",50];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",50];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",50];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",50];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",50];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",50];
     _crate addMagazineCargoGlobal ["rhs_mag_an_m14_th3",50];
     _crate addMagazineCargoGlobal ["rhs_mag_m7a3_cs",50];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
@@ -749,6 +768,7 @@ if (_platoonSelector == "full") then {
 
     _crate addItemCargoGlobal ["ACRE_PRC152",10];
     _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+    _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
     //================== WEAPONS ==================\\
 
@@ -764,39 +784,39 @@ if (_platoonSelector == "full") then {
 
     //================== AMMO ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_PRIMARY_TRACER),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_AR1),250];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_SECONDARY0),150];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER0),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER1),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER2),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER5),50];
-    _crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER6),50];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
+    _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
+    _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",50];
+    _crate addMagazineCargoGlobal ["rhs_fim92_mag",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
 
     //================== GRENADES ==================\\
 
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_RED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_BLUE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_GREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_ORANGE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_YELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_SMOKE_PURPLE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GRENADE_IR),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
+    _crate addMagazineCargoGlobal ["SmokeShell",250];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",250];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",250];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",250];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",250];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",250];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",250];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL0),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELL1),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKE),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEGREEN),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKEYELLOW),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLSMOKERED),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLSHELLHUNTIR),250];
-    _crate addMagazineCargoGlobal [QUOTE(_GLFLARE),250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
@@ -814,6 +834,7 @@ if (_platoonSelector == "full") then {
     //================== ITEMS ==================\\
 
     _crate addItemCargoGlobal ["rhsusf_ANPVS_14",50];
+    _crate addItemCargoGlobal ["acc_pointer_ir",50];
     _crate addItemCargoGlobal ["Toolkit",10];
     _crate addItemCargoGlobal ["ACE_M26_Clacker",20];
     _crate addItemCargoGlobal ["ACE_DefusalKit",20];

@@ -1,5 +1,7 @@
-# cScripts
-<p align="left">
+<p align="center">
+<img src="https://github.com/7Cav/cScripts/blob/master/resourses/logo.png" width="600">
+</p>
+<p align="center">
 <a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/release/7Cav/cScripts.svg?style=plastic&label=Release%20Build" alt="Release Build Version"></a>
  <a href="https://github.com/7Cav/cScripts/releases/"><img src="https://img.shields.io/github/release/7Cav/cScripts/all.svg?style=plastic&label=Pre-release" alt="Pre release and or current build version"></a>
  <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=plastic&label=Issues" alt="cScripts Issues"></a>
@@ -8,54 +10,44 @@
     <img src="https://img.shields.io/travis/7Cav/cScripts.svg?style=plastic" alt="cScripts Build">
 </a>
 </p>
-This is cScripts a easy to use framework for the Arma3 S3 Battlestaff and other mission makers. This framework contain functions, scripts that is easy to use and implement on a new mission. All scripts and functions are adaptatied to 7CAV mission standard.
+cScripts is an easy to use framework for the ARMA3 S3 Operations staff and other mission makers. This framework contains functions and scripts that are easy to use and implement on a new mission. All scripts and functions are adapted to 7th Cavalry mission standards.
 
-## Minimum Requrements
+## Minimum Requirements
 - **CBA**                                    - [Link](https://github.com/CBATeam/CBA_A3)
 - **ACE3**                                   - [Link](https://ace3mod.com/)
 - **RHSUSAF**                                - [Link](http://www.rhsmods.org/)
-- **TFAR**                                   - [Link](http://radio.task-force.ru/en/)
+- **ACRE2**                                  - [Link](https://github.com/IDI-Systems/acre2)
+- **Project OPFOR**                          - [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+- **TF47 Launchers**                         - [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=508476583)
 - **cTab**                                   - [Link](https://github.com/Riouken/cTab)
-- **TF47 Launchers**                         - [Link](https://forums.bistudio.com/forums/topic/176437-tf47-launchers-wip/)
+- **ACE 3 Extension (Placeables)**           - [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=866772689)
 - **Ares Mod Achilles Expansion** (OPTIONAL) - [Link](https://github.com/ArmaAchilles/AresModAchillesExpansion)
 
-*Thease are the minimum requirements to run the script propperly due to the fact equipment and veichles are listed in the script.*
+*These are the minimum requirements to run the script framework due to weapons, equipment, and references being used.*
 
 ## Installation
-In order to install this script package you only need to [download](https://github.com/7Cav/cScripts/releases/latest) it and place the content in your mission folder located:
-`%USERPROFILE%\Documents\Arma 3 - Other Profiles\[MY AMRA3 USER NAME]\missions\[MY MISSION NAME].[ISLAND]`
+In order to install this script package you only need to [download the latest build](https://github.com/7Cav/cScripts/releases/latest) it and place the content in your mission folder located:
+`%USERPROFILE%\Documents\Arma 3 - Other Profiles\[MY ARMA3 USER NAME]\missions\[MY MISSION NAME].[ISLAND]`
 
-*Note! If you have a `init.sqf` and/or a `desctioption.ext` file included in your mission folder they will be needed to be replaced or edited inorder to install this.*
+*Note! If you have a `init.sqf` and/or a `description.ext` file included in your mission folder, they will be need to be replaced or edited in order to install this.*
 
 ## What do cScripts provide?
-cScripts provides you with the basic for S3 Operation making.
+cScripts provides you with the basic scripts and functions for S3 Operation making.
 
 ### Scripts Installed
-- **CavFnc**                    -   [7th Cavalry Function Library](https://7cav.us/)
+- **CavFnc**                    -   [7th Cavalry Function Library](https://github.com/7Cav/cScripts/wiki/Features/)
 - **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
 - **ViewingDistance**           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
 
-### AI Tweek (init.sqf)
-The AI in cScripts `init.sqf` have been changed to be a little more realistic and to avoid them being rediculus. The recomended default setting is the one probided and it have been carfully tested and seam to be the best.
+### AI Tweak (init.sqf)
+The AI in cScripts `init.sqf` have been changed to be more realistic and less ridiculous. The recommended default setting is the one provided, and it has been carefully tested, making it the best setting.
 
-### Respawn Preset (description.ext)
-Missions running the template is set to default respawn `BASE` with `4` second delay. To make a respawn location put down a marker and name it `respawn_west` This chan be changed in the `description.ext`. Eather by commenting it out *(recomended)* by adding two `//` infront or delete the lines.
-More information about respawn see the [BIS Community Wiki](https://community.bistudio.com/wiki/Arma_3_Respawn).
+### Custom mission customization and initialization
+All cScripts options, actions and initialization are optional and can be toggled on or off. They can be tweaked via CBA settings in an easy manner, this is to make the script as flexible as possible. Read more about how to use and change settings [here](https://github.com/7Cav/cScripts/wiki/CBA-Mission-Settings).
 
-## Automatic Loadout Distrubution (Poppy)
-cScripts core function are [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automaticly give ___all blufor players___ a pre defined loadout in the list below. If you havea un recugnice loadout you will be given the default loadout (CommonBlufor).
+### Custom mission modules (Achilles)
+cScripts offers a custom made module system based on Ares Mod Achilles Expansion custom mission module system.
+The modules are easy to use and allow for sand-boxing as well as tools for game masters. Read more about the mission modules [here](https://github.com/7Cav/cScripts/wiki/7Cav-Modules).
 
-# Other tips and tricks
-## Find a classname
-If you wantto put down a specific unit or kit mentaiond under; [Automatic Loadout Distrubution (Poppy)](#automatic-loadout-distrubution-poppy), and can't seam to find the unit. You can search for a classname by typing `class` followed by the classname.
-Exsample:
-> class rhsusf_army_ucp_medic
-
-## Make a cool CQB experience
-There are two ways of doing so AI garrison units inside of a building. The easy way is to just add this line to a group of AI soldier:
-```[(getPos this), (units this), 150, true, false] call Ares_fnc_ZenOccupyHouse;```
-This will throw the set group in to a close building and garrison it.
-
-HTe other way is to manually place a unita and lock them in position by disabled the AI's pathing (`this disableAI 'PATH';`). This will make the AI stay put but still able to turn around and change stance. If you whant to lock the AI in standing stance add this as well: `this setUnitPos 'UP';`
-
-*Read more about [setUnitPos](https://community.bistudio.com/wiki/setUnitPos) and [disableAI](https://community.bistudio.com/wiki/disableAI) by clicking on them.*
+### Automatic Loadout Distrubution (Poppy)
+cScripts core function is [Poppy](https://github.com/BaerMitUmlaut/Poppy) a reliable, self configuring, error finding loadout framework made by [BaerMitUmlaut](https://github.com/BaerMitUmlaut). The script automatically gives all BluFor players a predefined loadout in the list below. If you have an unrecognizable loadout, you will be given the default loadout (CommonBlufor).

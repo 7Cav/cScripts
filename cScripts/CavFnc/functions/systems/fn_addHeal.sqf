@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This adds a adda ction as well as a ACE interaction reGear selection. The script reapplyes the players start loadout.

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function contain quick selection buttons and categorys.
@@ -11,8 +12,6 @@
  * [this] call cScripts_fnc_initQuickSelections;
  * [this,"full",true] call cScripts_fnc_initQuickSelections;
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_object", objNull, [objNull]],
@@ -45,8 +44,13 @@ if ((_platoonSelector == "full") or (_platoonSelector == "alpha")) then {
 
     // add loadouts
     [_object,"Pilot","CAV_Alpha_Helo_PILOT","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requirePlatoonVariable,_addActionAllowedOnPlatoon] call FUNC(addQuickSelection);
+    [_object,"CoPilot","CAV_Alpha_Helo_COPILOT","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requirePlatoonVariable,_addActionAllowedOnPlatoon] call FUNC(addQuickSelection);
     [_object,"Crew Chief","CAV_Alpha_Helo_CHIEF","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requirePlatoonVariable,_addActionAllowedOnPlatoon] call FUNC(addQuickSelection);
     [_object,"Door Gunner","CAV_Alpha_Helo_GNR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requirePlatoonVariable,_addActionAllowedOnPlatoon] call FUNC(addQuickSelection);
+    
+    //[_object,"Pilot (Attack Rotary)","CAV_Alpha_Helo_PILOT_ATT","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requirePlatoonVariable,_addActionAllowedOnPlatoon] call FUNC(addQuickSelection);
+    //[_object,"CoPilot (Attack Rotary)","CAV_Alpha_Helo_COPILOT_ATT","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requirePlatoonVariable,_addActionAllowedOnPlatoon] call FUNC(addQuickSelection);
+    
     [_object,"Fixed Wing Pilot","CAV_Alpha_Fixed_PILOT","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requirePlatoonVariable,_addActionAllowedOnPlatoon] call FUNC(addQuickSelection);
 };
 

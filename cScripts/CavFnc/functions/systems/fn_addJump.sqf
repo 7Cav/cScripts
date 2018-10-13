@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function adds a Jump out option to a vehicle.
@@ -11,7 +12,6 @@
  * ["this",150,1000,300] call cScripts_fnc_addJump
  *
  */
-#include "..\script_component.hpp";
 
 params [
     ["_vehicle", objNull, [objNull]],
@@ -21,7 +21,7 @@ params [
 ];
 
 // Check so the options arent added twice.
-if (!isNil {_vehicle getVariable QGVAR(JumpOutAirframe)}) exitWith {};
+if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {};
 
 /*_vehicle setVariable [QGVAR(allowJump),false,true];
 
@@ -56,4 +56,4 @@ _vehicle addAction [
     false
 ] call BIS_fnc_holdActionAdd;
 
-_vehicle setVariable [QGVAR(JumpOutAirframe),"true"];
+_vehicle setVariable [QEGVAR(Vehicle,Eject),"true"];

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function show all players, as well as JIP players, a custom mission hint when conected.
@@ -14,9 +15,8 @@
  * ["My custom Mission!","I have design this mission!"] call cScripts_fnc_initCustomStartHint
  * ["My custom Mission!","I have design this mission!",15] call cScripts_fnc_initCustomStartHint
  *
+ * Public: No
  */
-
-#include "..\script_component.hpp";
 
 waitUntil {!isNull player && player == player};
 

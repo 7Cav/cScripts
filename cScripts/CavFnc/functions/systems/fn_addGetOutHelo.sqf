@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A (With the help from; 654wak654)
  * This function add two get out addAction that is only avaible for players in cargo
@@ -10,12 +11,10 @@
  * [this] call cScripts_fnc_addGetOutHelo;
  */
 
-#include "..\script_component.hpp";
-
 params [["_vehicle", objNull, [objNull]]];
 
 // Check so the options arent added twice.
-if (!isNil {_vehicle getVariable QGVAR(GetOutHelo)}) exitWith {};
+if (!isNil {_vehicle getVariable QEGVAR(Vehicle,GetOutRightLeft)}) exitWith {};
 
 _vehicle addAction [
     "<t color='#ff0000'>Get out Left Side</t>",
@@ -31,4 +30,4 @@ _vehicle addAction [
     "(_target getCargoIndex _this) != -1"
 ];
 
-_vehicle setVariable [QGVAR(GetOutHelo),"true"];
+_vehicle setVariable [QEGVAR(Vehicle,GetOutRightLeft),"true"];

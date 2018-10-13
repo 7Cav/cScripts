@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function add diary records for all players.
@@ -11,9 +12,8 @@
  * Example:
  * call cScripts_fnc_initDocuments
  *
+ * Public: No
  */
-
-#include "..\script_component.hpp";
 
 waitUntil {!isNull player && player == player};
 

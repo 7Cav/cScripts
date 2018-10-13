@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function resupply a crate and changes it's texture.
@@ -12,8 +13,6 @@
  * [this,"Full",0.5] call cScripts_fnc_doSpecialWeaponsCrate;
  * [this,"Full",1] call cScripts_fnc_doSpecialWeaponsCrate;
  */
-
-#include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
 

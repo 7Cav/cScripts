@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function create a texture that is attached to a given object.
@@ -14,8 +15,6 @@
  * ["C130",[0.205,-11.9,8.920],-90,"path/to/texture.paa",[-0.05,0,1]] call cScripts_fnc_createVehicleLable
  *
  */
-
-#include "..\script_component.hpp";
 
 params [
     ["_vehicle", objNull, [objNull]],
@@ -39,6 +38,6 @@ _label setDir _dir;
 _label setvectorUp _vector;
 
 // Collect lables in to variable
-private _labels = _vehicle getVariable [QGVAR(labels), []];
+private _labels = _vehicle getVariable [QEGVAR(Vehicle,Label), []];
 _labels pushBack _label;
-_vehicle setVariable [QGVAR(labels), _labels, true];
+_vehicle setVariable [QEGVAR(Vehicle,Label), _labels, true];

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This adds a reGear selection option. The script reApplyes the players start loadout. But may also heal you if option is allowed.
@@ -9,8 +10,6 @@
  * Example:
  * [this,true] call cScripts_fnc_addReGear
  */
-
- #include "..\script_component.hpp";
 
 params [
     ["_object", objNull, [objNull]],

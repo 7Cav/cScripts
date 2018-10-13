@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function add eventhandelers chaning the inventory of all crates.
@@ -11,9 +12,8 @@
  * Example:
  * call cScripts_fnc_initSupply
  *
+ * Public: No
  */
-
-#include "..\script_component.hpp";
 
 if (!isServer) exitWith {};
 

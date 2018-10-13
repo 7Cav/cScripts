@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A (With the help from; 654wak654)
  * Move the player outside the passanger door on the left side.
@@ -8,8 +9,6 @@
  * Example:
  * [this] call cScripts_fnc_doGetOutHeloLeft;
  */
-
-#include "..\script_component.hpp";
 
 params [["_vehicle", objNull, [objNull]]];
 
