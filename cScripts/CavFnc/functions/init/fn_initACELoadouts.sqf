@@ -41,6 +41,6 @@ private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 ["Charlie Weapons Team - Rifleman", _empty] call ace_arsenal_fnc_addDefaultLoadout;
 ["Charlie Weapons Team - Combat Life Saver", _empty] call ace_arsenal_fnc_addDefaultLoadout;
 
-["Medical - Medical Team Leader", _empty] call ace_arsenal_fnc_addDefaultLoadout;
-["Medical - Medical Team Member", _empty] call ace_arsenal_fnc_addDefaultLoadout;
-["Medical - Platoon Medic", _empty] call ace_arsenal_fnc_addDefaultLoadout;
+//["Medical - Medical Team Leader", _empty] call ace_arsenal_fnc_addDefaultLoadout;
+//["Medical - Medical Team Member", _empty] call ace_arsenal_fnc_addDefaultLoadout;
+//["Medical - Platoon Medic", _empty] call ace_arsenal_fnc_addDefaultLoadout;
