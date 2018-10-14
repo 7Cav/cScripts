@@ -626,6 +626,8 @@ if (_platoonSelector == "ranger") then {
 
     _crate addBackpackCargoGlobal ["B_Carryall_mcamo",15];
     _crate addBackpackCargoGlobal ["B_UAV_01_backpack_F",15];
+    _crate addBackpackCargoGlobal ["B_AssaultPack_cbr",15];
+
 };
 
 //------------------ S N I P E R   S E C T I O N --------------------\\
