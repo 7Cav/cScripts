@@ -143,7 +143,7 @@ class CAV_Bravo_Crew_GNR : CAV_Bravo_Base {  // Crew Gunner (acts as CLS also)
         "ACE_microDAGR"
     };
 
-    insignia[] = {"CLS_Insignia"};
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
     gps[] = {"ItemAndroid"};
 
 };
@@ -395,7 +395,7 @@ class CAV_Bravo_CLS : CAV_Bravo_Base {  // Combat Life Saver 24.3kg
         "ACE_EntrenchingTool"
     };
 
-    insignia[] = {"CLS_Insignia"};
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
 };
 
 //  W E A P O N S   T E A M

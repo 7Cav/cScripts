@@ -2,47 +2,60 @@ class CfgUnitInsignia {
     #include "script_component.hpp"
 
     // Alpha first platoon
-    //MACRO_UNITINSIGNIA(1A_17_Insignia,1-A-17.paa);
-    //MACRO_UNITINSIGNIA(A1A_17_Insignia,A-1-A-17.paa);
-    //MACRO_UNITINSIGNIA(B1A_17_Insignia,B-1-A-17.paa);
-    MACRO_UNITINSIGNIA(C1A_17_Insignia,C-1-A-17.paa);
-    //MACRO_UNITINSIGNIA(D1A_17_Insignia,D-1-A-17.paa);
+    //MACRO_UNITINSIGNIA(Alpha Co. 1st platoon,Alpha_1);
+    //MACRO_UNITINSIGNIA(Alpha Co. 1st platoon - A,Alpha_1_A);
+    //MACRO_UNITINSIGNIA(Alpha Co. 1st platoon - B,Alpha_1_B);
+    MACRO_UNITINSIGNIA(Alpha Co. 1st platoon - C,Alpha_1_C);
+    //MACRO_UNITINSIGNIA(Alpha Co. 1st platoon - D,Alpha_1_D);
 
     // Alpha second platoon
-    MACRO_UNITINSIGNIA(2A_17_Insignia,2-A-17.paa);
-    MACRO_UNITINSIGNIA(A2A_17_Insignia,A-2-A-17.paa);
-    MACRO_UNITINSIGNIA(B2A_17_Insignia,B-2-A-17.paa);
-    MACRO_UNITINSIGNIA(C2A_17_Insignia,C-2-A-17.paa);
-    //MACRO_UNITINSIGNIA(D2A_17_Insignia,D-2-A-17.paa);
+    MACRO_UNITINSIGNIA(Alpha Co. 2nd platoon,Alpha_2);
+    MACRO_UNITINSIGNIA(Alpha Co. 2nd platoon - A,Alpha_2_A);
+    MACRO_UNITINSIGNIA(Alpha Co. 2nd platoon - B,Alpha_2_B);
+    MACRO_UNITINSIGNIA(Alpha Co. 2nd platoon - C,Alpha_2_C);
+    //MACRO_UNITINSIGNIA(Alpha Co. 2nd platoon - D,Alpha_2_D);
+
 
     // Bravo first platoon
+    //MACRO_UNITINSIGNIA(Bravo Co. 1st platoon,Bravo_1);
+    //MACRO_UNITINSIGNIA(Bravo Co. 1st platoon - A,Bravo_1_A);
+    //MACRO_UNITINSIGNIA(Bravo Co. 1st platoon - B,Bravo_1_B);
+    //MACRO_UNITINSIGNIA(Bravo Co. 1st platoon - C,Bravo_1_C);
+    //MACRO_UNITINSIGNIA(Bravo Co. 1st platoon - D,Bravo_1_D);
 
     // Bravo second platoon
-    MACRO_UNITINSIGNIA(A2B_17_Insignia,1-2-B-17.paa);
-    MACRO_UNITINSIGNIA(2B_17_Insignia,2-B-17.paa);
+    MACRO_UNITINSIGNIA(Bravo Co. 2nd platoon,Bravo_2);
+    MACRO_UNITINSIGNIA(Bravo Co. 2nd platoon - 1,Bravo_2_1);
+    //MACRO_UNITINSIGNIA(Bravo Co. 2nd platoon - 2,Bravo_2_2);
+    //MACRO_UNITINSIGNIA(Bravo Co. 2nd platoon - 3,Bravo_2_3);
+    //MACRO_UNITINSIGNIA(Bravo Co. 2nd platoon - 4,Bravo_2_4);
     
+
     // Charlie first platoon
-    MACRO_UNITINSIGNIA(11C_17_Insignia,1-1-C-17.paa);
-    MACRO_UNITINSIGNIA(21C_17_Insignia,2-1-C-17.paa);
-    MACRO_UNITINSIGNIA(31C_17_Insignia,3-1-C-17.paa);
-    MACRO_UNITINSIGNIA(41C_17_Insignia,4-1-C-17.paa);
+    //MACRO_UNITINSIGNIA(Charlie Co. 1st platoon,Charlie_1);
+    MACRO_UNITINSIGNIA(Charlie Co. 1st platoon - 1,Charlie_1_1);
+    MACRO_UNITINSIGNIA(Charlie Co. 1st platoon - 2,Charlie_1_2);
+    MACRO_UNITINSIGNIA(Charlie Co. 1st platoon - 3,Charlie_1_3);
+    MACRO_UNITINSIGNIA(Charlie Co. 1st platoon - 4,Charlie_1_4);
 
     // Charlie second platoon
-    MACRO_UNITINSIGNIA(2C_17_Insignia,2-C-17.paa);
-    MACRO_UNITINSIGNIA(12C_17_Insignia,1-2-C-17.paa);
-    //MACRO_UNITINSIGNIA(22C_17_Insignia,1-2-C-17.paa);
-    //MACRO_UNITINSIGNIA(32C_17_Insignia,1-2-C-17.paa);
-    //MACRO_UNITINSIGNIA(42C_17_Insignia,1-2-C-17.paa);
+    MACRO_UNITINSIGNIA(Charlie Co. 2nd platoon,Charlie_2);
+    MACRO_UNITINSIGNIA(Charlie Co. 2nd platoon - 1,Charlie_2_1);
+    //MACRO_UNITINSIGNIA(Charlie Co. 2nd platoon - 2,Charlie_2_2);
+    //MACRO_UNITINSIGNIA(Charlie Co. 2nd platoon - 3,Charlie_2_3);
+    //MACRO_UNITINSIGNIA(Charlie Co. 2nd platoon - 4,Charlie_2_4);
 
 
     // Other Insignias
-    MACRO_UNITINSIGNIA(7_Insignia,7.paa);
-    MACRO_UNITINSIGNIA(7_m81_Insignia,7_m81.paa);
-    MACRO_UNITINSIGNIA(7_ocp_Insignia,7_ocp.paa);
-    MACRO_UNITINSIGNIA(CLS_Insignia,CLS.paa);
+    MACRO_UNITINSIGNIA(Patch,Custom_Cav_7);
+    MACRO_UNITINSIGNIA(Patch M81,Custom_Cav_7_m81);
+    MACRO_UNITINSIGNIA(Patch OCP,Custom_Cav_7_ocp);
+
 
     // Specialized
-    MACRO_UNITINSIGNIA(RANGER,Ranger.paa);
-    MACRO_UNITINSIGNIA(CAG,Airborne_Insignia.paa);
-    MACRO_UNITINSIGNIA(Follow_Me,follow-me-patch.paa);
+    MACRO_UNITINSIGNIA(CAG,Specialized_Airborne);
+    MACRO_UNITINSIGNIA(CLS,Specialized_CLS);
+    MACRO_UNITINSIGNIA(RANGER,Specialized_Ranger);
+    MACRO_UNITINSIGNIA(Follow Me,Specialized_FollowMe);
+
 };

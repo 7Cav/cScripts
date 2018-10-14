@@ -93,7 +93,7 @@ class CAV_JM_INSTR : CAV_Charlie_Base {  // Instructor
 
     gps[] = {"ItemAndroid"};
 
-    insignia[] = {"CAG"};
+    insignia[] = {"Cav_Insignia_Specialized_CAG"};
     preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
