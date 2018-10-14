@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function spawn a given classname on a specific position on a carrier rotates it and release it.
@@ -23,7 +24,6 @@
  * Public: No
  */
 
-#include "..\script_component.hpp";
 #define DEBUG_MODE
 
 params [

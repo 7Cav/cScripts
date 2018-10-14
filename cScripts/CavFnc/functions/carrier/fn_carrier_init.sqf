@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function initzialize a spawning system on the given object to spawn aircraft on a carrier.
@@ -15,7 +16,6 @@
  * Public: Yes
  */
 
-#include "..\script_component.hpp";
 #define DEBUG_MODE
 
 params [

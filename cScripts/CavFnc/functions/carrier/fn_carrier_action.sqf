@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
  * This function add a ace action to a given object that give you the ability to spawn a aircraft on a given carrier.
@@ -27,7 +28,6 @@
  * Public: No
  */
 
-#include "..\script_component.hpp";
 #define DEBUG_MODE
 
 params [
