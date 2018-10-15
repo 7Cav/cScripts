@@ -12,6 +12,22 @@
  * Public: No
  */
 
+// Check ACE version
+private _vMajor = (getArray (configFile >> "CfgPatches" >> "ace_arsenal" >> "versionar") select 0) >= 3;
+private _vMinor = (getArray (configFile >> "CfgPatches" >> "ace_arsenal" >> "versionar") select 1) >= 12;
+private _vPatch = (getArray (configFile >> "CfgPatches" >> "ace_arsenal" >> "versionar") select 2) >= 4;
+if !((_vMajor) && (_vMinor) && (_vPatch)) exitWith {
+    private _aceVersion = getText (configFile >> "CfgPatches" >> "ace_arsenal" >> "version");
+    if !(is3DEN) then {
+        [format["Your ACE3 version %1 do not support this function.", _aceVersion]] call FUNC(logWarning);
+    } else {
+        private _prefix = formatText["[%1]", QUOTE(PREFIX)];
+        private _type = "WARNING";
+        private _message = format["Your ACE3 version %1 do not support this function.", _aceVersion];
+        diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
+    };
+};
+
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
             ["Setting up Default ACE Arsenal loadouts."] call FUNC(logInfo);
