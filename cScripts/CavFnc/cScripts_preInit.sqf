@@ -4,9 +4,11 @@
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 
-#ifdef DEBUG_MODE
-    ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
-#endif
+if !(is3DEN) then {
+    #ifdef DEBUG_MODE
+        ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
+    #endif
+};
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
@@ -159,20 +161,14 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
     ] call CBA_Settings_fnc_init;
 };
 
-#ifdef DEBUG_MODE
-    ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
-#endif
+if !(is3DEN) then {
+    #ifdef DEBUG_MODE
+        ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
+    #endif
+};
 
 if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
-    #ifdef DEBUG_MODE
-        ["Setting up Default ACE Arsenal loadouts."] call FUNC(logInfo);
-    #endif
-
-    call FUNC(initACELoadouts);
-
-    #ifdef DEBUG_MODE
-        ["Setup of Default ACE Arsenal loadouts is completed."] call FUNC(logInfo);
-    #endif
+    0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\functions\init\fn_initACELoadouts.sqf';
 };
 
 // Load preInit mission settings
