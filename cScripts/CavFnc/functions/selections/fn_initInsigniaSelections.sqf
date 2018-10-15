@@ -12,6 +12,10 @@
 
 params [["_object", objNull, [objNull]]];
 
+#ifdef DEBUG_MODE
+	[format["Setting up Insinia Selector on %1.",_object]] call FUNC(logInfo);
+#endif
+
 // Make ACE Category
 private _icon = "cScripts\Data\Icon\icon_00.paa";
 [_object,"cScriptInsigniaSelectionMenu","Insignia",_Icon,["ACE_MainActions"]] call FUNC(addAceCategory);
@@ -64,7 +68,7 @@ _object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5]
 
 
 // Charlie Company  1st Platoon
-//[_object,"Platoon Insignia 1/C/1-7","Charlie_1","cScripts\Data\Insignia\Charlie_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Platoon Insignia 1/C/1-7","Charlie_1","cScripts\Data\Insignia\Charlie_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 1/1/C/1-7","Charlie_1_1","cScripts\Data\Insignia\Charlie_1_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 2/1/C/1-7","Charlie_1_2","cScripts\Data\Insignia\Charlie_1_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 3/1/C/1-7","Charlie_1_3","cScripts\Data\Insignia\Charlie_1_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
@@ -76,3 +80,7 @@ _object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5]
 //[_object,"Squad Insignia 2/2/C/1-7","Charlie_2_2","cScripts\Data\Insignia\Charlie_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 3/2/C/1-7","Charlie_2_3","cScripts\Data\Insignia\Charlie_2_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","cScripts\Data\Insignia\Charlie_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+
+#ifdef DEBUG_MODE
+	[format["Setup Insinia Selector on %1 completed.",_object]] call FUNC(logInfo);
+#endif

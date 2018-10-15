@@ -12,11 +12,16 @@
  * Public: No
  */
 
-if !(is3DEN) then {
-    #ifdef DEBUG_MODE
-        ["Setting up Default ACE Arsenal loadouts."] call FUNC(logInfo);
-    #endif
-};
+#ifdef DEBUG_MODE
+    if !(is3DEN) then {
+            ["Setting up Default ACE Arsenal loadouts."] call FUNC(logInfo);
+    } else {
+        private _prefix = formatText["[%1]", QUOTE(PREFIX)];
+        private _type = "INFO";
+        private _message = "Setting up Default ACE Arsenal loadouts in eden.";
+        diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
+    };
+#endif
 
 private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 ["<empty>", _empty] call ace_arsenal_fnc_addDefaultLoadout;
@@ -61,8 +66,13 @@ private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 ["Charlie Weapons Team - Rifleman", [["rhs_weap_m4a1_carryhandle","","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_Stanag",30],[],""],[],[],["LOP_U_ISTS_Fatigue_19",[["ACE_EarPlugs",1],["ACE_MapTools",1],["ACE_M26_Clacker",1],["ACE_DefusalKit",1],["ACE_microDAGR",1],["ACE_EntrenchingTool",1],["ACRE_PRC152_ID_1",1]]],["rhsusf_spcs_ocp_rifleman",[["ACRE_PRC343_ID_2",1],["rhs_mag_30Rnd_556x45_M855A1_Stanag",7,30],["rhs_mag_m67",4,1],["SmokeShell",4,1]]],["B_Kitbag_cbr",[["ACE_quikclot",10],["ACE_tourniquet",2]]],"rhsusf_ach_helmet_camo_ocp","rhs_googles_clear",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ItemWatch",""]]] call ace_arsenal_fnc_addDefaultLoadout;
 ["Charlie Weapons Team - Combat Life Saver", [["rhs_weap_m4a1_carryhandle","","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_Stanag",30],[],""],[],[],["LOP_U_ISTS_Fatigue_19",[["ACE_EarPlugs",1],["ACE_MapTools",1],["ACE_M26_Clacker",1],["ACE_DefusalKit",1],["ACE_microDAGR",1],["ACE_EntrenchingTool",1],["ACRE_PRC152_ID_3",1]]],["rhsusf_spcs_ocp_rifleman",[["ACRE_PRC343_ID_2",1],["rhs_mag_30Rnd_556x45_M855A1_Stanag",5,30],["rhs_mag_m67",2,1],["SmokeShell",2,1],["SmokeShellGreen",1,1],["SmokeShellRed",1,1],["SmokeShellYellow",1,1]]],["B_Kitbag_cbr",[["ACE_personalAidKit",1],["ACE_quikclot",30],["ACE_tourniquet",4],["ACE_morphine",6]]],"rhsusf_ach_helmet_camo_ocp","rhs_googles_clear",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ItemWatch",""]]] call ace_arsenal_fnc_addDefaultLoadout;
 
-if !(is3DEN) then {
-    #ifdef DEBUG_MODE
-        ["Setup of Default ACE Arsenal loadouts is completed."] call FUNC(logInfo);
-    #endif
-};
+#ifdef DEBUG_MODE
+    if !(is3DEN) then {
+            ["Default ACE Arsenal loadouts completed."] call FUNC(logInfo);
+    } else {
+        private _prefix = formatText["[%1]", QUOTE(PREFIX)];
+        private _type = "INFO";
+        private _message = "Default ACE Arsenal loadouts completed in eden.";
+        diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
+    };
+#endif

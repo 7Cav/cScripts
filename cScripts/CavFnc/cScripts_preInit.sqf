@@ -6,9 +6,18 @@
 
 if !(is3DEN) then {
     #ifdef DEBUG_MODE
-        ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
     #endif
 };
+#ifdef DEBUG_MODE
+    if !(is3DEN) then {
+        ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
+    } else {
+        private _prefix = formatText["[%1]", QUOTE(PREFIX)];
+        private _type = "INFO";
+        private _message = "Initializing CBA Settings from preInit in eden.";
+        diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
+    };
+#endif
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
@@ -161,14 +170,23 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
     ] call CBA_Settings_fnc_init;
 };
 
-if !(is3DEN) then {
-    #ifdef DEBUG_MODE
-        ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
-    #endif
-};
+#ifdef DEBUG_MODE
+    if !(is3DEN) then {
+            ["CBA Settings initialization from preInit completed."] call FUNC(logInfo);
+    } else {
+        private _prefix = formatText["[%1]", QUOTE(PREFIX)];
+        private _type = "INFO";
+        private _message = "CBA Settings initialization from preInit in eden completed.";
+        diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
+    };
+#endif
 
 if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
-    0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\functions\init\fn_initACELoadouts.sqf';
+    if !(is3DEN) then {
+        call FUNC(initACELoadouts);
+    } else {
+        0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\functions\init\fn_initACELoadouts.sqf';
+    };
 };
 
 // Load preInit mission settings
