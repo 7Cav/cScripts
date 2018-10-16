@@ -4,18 +4,12 @@
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 
-if !(is3DEN) then {
-    #ifdef DEBUG_MODE
-    #endif
-};
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
         ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
     } else {
-        private _prefix = formatText["[%1]", QUOTE(PREFIX)];
-        private _type = "INFO";
         private _message = "Initializing CBA Settings from preInit in eden.";
-        diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
+        diag_log formatText ["%1 %2: %3", QUOTE(PREFIX), "INFO", _message];
     };
 #endif
 
