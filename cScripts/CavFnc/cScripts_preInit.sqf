@@ -8,8 +8,7 @@
     if !(is3DEN) then {
         ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
     } else {
-        private _message = "Initializing CBA Settings from preInit in eden.";
-        diag_log formatText ["%1 %2: %3", QUOTE(PREFIX), "INFO", _message];
+        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "Initializing CBA Settings from preInit in eden."];
     };
 #endif
 
@@ -166,12 +165,9 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-            ["CBA Settings initialization from preInit completed."] call FUNC(logInfo);
+        ["CBA Settings initialization from preInit completed."] call FUNC(logInfo);
     } else {
-        private _prefix = formatText["[%1]", QUOTE(PREFIX)];
-        private _type = "INFO";
-        private _message = "CBA Settings initialization from preInit in eden completed.";
-        diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
+        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "CBA Settings initialization from preInit in eden completed."];
     };
 #endif
 
