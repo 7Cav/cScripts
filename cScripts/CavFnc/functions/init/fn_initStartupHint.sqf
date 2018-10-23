@@ -26,14 +26,26 @@ params [
 ];
 
 // String table
-private _title_RedLight         = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>RED LIGHT!</t><br />";
-private _title_GreenLight       = "<t color='#00cd00' size='1.2' shadow='1' shadowColor='#000000' align='center'>GREEN LIGHT!</t><br />";
 
-private _text_RedLight_P1       = "<t font='PuristaMedium' size='1.1'>Hold comms and stand still.</t><br /><br />";
-private _text_RedLight_P2       = "While waiting you can always read the <t color='#ffc61a'>OPORD</t> and <t color='#ffc61a'>SOI</t> again. Because you have already read it once.<br />";
-private _text_RedLight_P3       = "If you need to call in <t color='#ffc61a'>support</t> or need other kind of help during the mission see the topic <t color='#ffc61a'>7th Cavalry</t> or <t color='#ffc61a'>Radio Reports</t> on the map screen.<br />";
-private _text_GreenLight_P1     = "<t font='PuristaMedium' size='1.1'>You may now move!</t>";
+private _player_name = "Brostrom.A";
+private _player_rankFormal = "Corpral";
+private _player_company = [player] call cScripts_fnc_getPlatoonVariable;
+if (_player_company == "alpha") then {_player_company = "Alpha Company"};
+if (_player_company == "bravo") then {_player_company = "Bravo Company"};
+if (_player_company == "charlie") then {_player_company = "Charlie Company"};
+if (_player_company == "ranger") then {_player_company = "a Ranger"};
+if (_player_company == "s3") then {_player_company = "Mission Controll"};
+if (_player_company == "s5") then {_player_company = "a combat reporter"};
+private _operationName = "Operation";
+if ((getText getMissionConfig "onLoadName") != "") then {
+    _operationName = (getText getMissionConfig "onLoadName");
+};
 
+// private _player_name            = [player,'PROFILE'] call cScripts_fnc_getPlayerName;
+// private _player_rankFormal      = [player,'FORMAL'] call cScripts_fnc_getPlayerRank;
+
+private _title_Welcome_opp      = format["<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1</t><br /><br />", _operationName];
+private _text_Operation_Blur1   = format["Welcome %1, to this operation you're currently slotted in as <t color='#ffc61a'>%2</t>. Make sure you've read the <t color='#ffc61a'>OPORD</t> and report to your COC ASAP.<br />", _player_rankFormal, _player_company];
 
 private _text_Training_P1       = "<t font='PuristaMedium' size='1.1'>S3 Training Mission</t><br /><br />";
 private _text_Training_P2       = format ["Welcome <t color='#ffc61a'>%1</t>!<br />Keep your weapon at <t color='#ffc61a'>safe</t> and your finger away from the trigger.<br /><br />", profileName];
@@ -42,7 +54,7 @@ private _text_Training_P3       = "Listen to the instructor but the most importa
 private _textCustom_P1          = format ["<t font='PuristaMedium' size='1.1'>%1</t><br /><br />", _setCustomTopic];
 private _textCustom_P2          = format ["%1<br />", _setCustomText];
 
-private _text_EasterEgg_1       = "<br /><br />Blame Tully if stuff doesn't work.<br />";
+private _text_EasterEgg_1       = "<br /><br />Don't forget to blame Tully if the opp doesn't work.<br />";
 private _text_EasterEgg_2       = "<br /><br />Blame Argus if stuff doesn't work.<br />";
 private _text_EasterEgg_3       = "<br /><br />Blame Brostrom if stuff doesn't work on this one.<br />";
 private _text_EasterEgg_4       = "<br /><br />Blame Carter if stuff doesn't work.<br />";
@@ -78,16 +90,12 @@ switch (_missionType) do {
                 ["Mission type is operation hint will not run"] call FUNC(logInfo);
             #endif
         };
-        hint parseText (_title_RedLight + _text_RedLight_P1 + _image_Cross);
-        systemChat "Hold comms and stand still!";
+
+        hint parseText (_title_Welcome_opp + _image_Cross);
         sleep 1;
-        hintSilent parseText (_title_RedLight + _text_RedLight_P1 + _image_Cross + _text_RedLight_P2);
-        sleep (_delay * 0.5);
-        hintSilent parseText (_title_RedLight + _text_RedLight_P1 + _image_Cross + _text_RedLight_P3);
-        sleep (_delay * 0.5);
-        hint parseText (_title_GreenLight + _text_GreenLight_P1 + _image_Shield + _text_HaveFun_P);
-        sleep 8;
-        hintSilent parseText (_title_GreenLight + _text_GreenLight_P1 + _image_Shield + _text_HaveFun_P + _text_EasterEgg_1);
+        hintSilent parseText (_title_Welcome_opp + _image_Cross + _text_Operation_Blur1 + _text_HaveFun_P);
+        sleep _delay;
+        hintSilent parseText (_title_Welcome_opp + _image_Cross + _text_Operation_Blur1 + _text_HaveFun_P + _text_EasterEgg_1);
         sleep 1.5;
         hintSilent "";
     };
