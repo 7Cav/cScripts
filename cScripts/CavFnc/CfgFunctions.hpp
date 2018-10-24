@@ -79,8 +79,8 @@ class cScripts {
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
 
-        class getPlatoonVariable {};
-        class hasPlatoonVariable {};
+        class getCompanyVariable {};
+        class hasCompanyVariable {};
 
         class teleport {};
 
