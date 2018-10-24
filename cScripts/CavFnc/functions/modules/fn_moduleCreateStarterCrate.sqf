@@ -45,9 +45,9 @@ private _quickSelectScale = switch (_dialogResult select 0) do {
 private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};
 private _reHealOption = if (_dialogResult select 2 == 0) then {true} else {false};
 private _InsigniaSelectOption = if (_dialogResult select 3 == 0) then {true} else {false};
-private _requirePlatoonVariable = if (_dialogResult select 4 == 0) then {true} else {false};
+private _requireCompanyVariable = if (_dialogResult select 4 == 0) then {true} else {false};
 private _arsenal = if (_dialogResult select 5 == 0) then {true} else {false};
 
 _crate = "B_supplyCrate_F" createVehicle _crate;
-[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requirePlatoonVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),0,true];
+[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requireCompanyVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),0,true];
 [_crate] call FUNC(addObjectToCurator);

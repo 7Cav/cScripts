@@ -1,11 +1,11 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function adds equipment to a given item baserd on platoon type.
+ * This function adds equipment to a given item baserd on company type.
  *
  * Arguments:
  * 0: Crate <OBJECT>
- * 1: Set platoon type. <STRING> ["none","alpha","bravo","charlie","ranger","medical","full"]
+ * 1: Set company type. <STRING> ["none","alpha","bravo","charlie","ranger","medical","full"]
  *
  * Return Value:
  * Nothing
@@ -20,7 +20,7 @@ if (!isServer) exitWith {};
 
 params [
     ["_crate", objNull, [objNull]],
-    ["_platoonSelector", "none"]
+    ["_companySelector", "none"]
 ];
 
 clearweaponcargoGlobal _crate;
@@ -30,7 +30,7 @@ clearbackpackcargoGlobal _crate;
 
 //------------------ A L P H A   C O M P A N Y --------------------\\
 
-if (_platoonSelector == "alpha") then {
+if (_companySelector == "alpha") then {
 
     //================== RADIOS ==================\\
 
@@ -108,7 +108,7 @@ if (_platoonSelector == "alpha") then {
 
 //------------------B R A V O   C O M P A N Y --------------------\\
 
-if (_platoonSelector == "bravo") then {
+if (_companySelector == "bravo") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["ACRE_PRC152",50];
@@ -192,7 +192,7 @@ if (_platoonSelector == "bravo") then {
 
 //------------------ C H A R L I E   C O M P A N Y --------------------\\
 
-if (_platoonSelector == "charlie") then {
+if (_companySelector == "charlie") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["ACRE_PRC152",50];
@@ -276,7 +276,7 @@ if (_platoonSelector == "charlie") then {
 
 //------------------ M E D I C A L   P L A T O O N --------------------\\
 
-if (_platoonSelector == "medical") then {
+if (_companySelector == "medical") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["ACRE_PRC152",10];
@@ -356,7 +356,7 @@ if (_platoonSelector == "medical") then {
 
 //------------------ H E A V Y   W E A P O N S --------------------\\
 
-if (_platoonSelector == "heavyweapons") then {
+if (_companySelector == "heavyweapons") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["ACRE_PRC152",50];
@@ -457,7 +457,7 @@ if (_platoonSelector == "heavyweapons") then {
 
 //------------------ R A N G E R   C O M P A N Y --------------------\\
 
-if (_platoonSelector == "ranger") then {
+if (_companySelector == "ranger") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["ACRE_PRC152",25];
@@ -632,7 +632,7 @@ if (_platoonSelector == "ranger") then {
 
 //------------------ S N I P E R   S E C T I O N --------------------\\
 
-if (_platoonSelector == "sniper") then {
+if (_companySelector == "sniper") then {
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["ACRE_PRC152",10];
@@ -764,7 +764,7 @@ if (_platoonSelector == "sniper") then {
 
 //------------------ F U L L   C R A T E --------------------\\
 
-if (_platoonSelector == "full") then {
+if (_companySelector == "full") then {
 
     //================== RADIOS ==================\\
 
@@ -885,4 +885,4 @@ if (_platoonSelector == "full") then {
 
 };
 
-if (_platoonSelector == "none") then {};
+if (_companySelector == "none") then {};

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Player <STRING>
- * 1: Platoon <STRING>
+ * 1: Company <STRING>
  * 2: Medic Type <NUMBER>       (Optional)      (Default; 0)
  * 3: Engineer Type <NUMBER>    (Optional)      (Default; 0)
  * 4: EOD <BOOL>                (Optional)      (Default; false)
@@ -23,7 +23,7 @@
 
 params [
     ["_player",""],
-    ["_setPlatoon",""],
+    ["_setCompany",""],
     ["_isMedicClass", 0],
     ["_isEngineerClass", 0],
     ["_isEOD", false],
@@ -34,9 +34,9 @@ params [
     [formatText["Applying preLoadout to %1.", _player]] call FUNC(logInfo);
 #endif
 
-// Set platoonVariables
+// Set company Variables
 (_player) setVariable [QEGVAR(Cav,Trooper), true];
-(_player) setVariable [QEGVAR(Cav,Platoon), _setPlatoon];
+(_player) setVariable [QEGVAR(Cav,Company), _setCompany];
 
 // Set MedicClass
 private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
@@ -60,7 +60,7 @@ if (EGVAR(Settings,setMissionType) != 3) then {
 };
 
 #ifdef DEBUG_MODE
-    if (_setPlatoon != "") then {[formatText["%1 have got platoon variable %2 in preLoadout", _player, _setPlatoon]] call FUNC(logInfo);};
+    if (_setCompany != "") then {[formatText["%1 have got Company variable %2 in preLoadout", _player, _setCompany]] call FUNC(logInfo);};
     [formatText["%1 medical ability is set to %2 in preLoadout", _player, _isMedicClass]] call FUNC(logInfo);
     if (_isEngineer) then {[formatText["%1 is assigned engineer ability via preLoadout", _player]] call FUNC(logInfo);};
     if (_isEOD) then {[formatText["%1 is assinged as eod specialist via preLoadout", _player]] call FUNC(logInfo);};
