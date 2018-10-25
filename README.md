@@ -5,8 +5,8 @@
 <a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/release/7Cav/cScripts.svg?style=for-the-badge&label=Release%20Build" alt="Release Build Version"></a>
  <a href="https://github.com/7Cav/cScripts/releases/"><img src="https://img.shields.io/github/release/7Cav/cScripts/all.svg?style=for-the-badge&label=Pre-release" alt="Pre release and or current build version"></a>
  <a href="https://github.com/7Cav/cScripts/tags"><img src="https://img.shields.io/github/tag/7Cav/cScripts.svg?style=for-the-badge&colorB=df2d00&label=Latest%20Tag" alt="Dev-build or the latest tag of the current build."></a><br>
- <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=for-the-badge&label=Issues" alt="cScripts Issues"></a>
  <a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=for-the-badge&label=Downloads" alt="cScripts Downloads"></a>
+ <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=for-the-badge&label=Issues" alt="cScripts Issues"></a>
 <a href="https://travis-ci.org/7Cav/cScripts">
     <img src="https://img.shields.io/travis/7Cav/cScripts.svg?style=for-the-badge" alt="cScripts Build">
 </a>
