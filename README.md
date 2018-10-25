@@ -8,7 +8,7 @@
  <a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=for-the-badge&label=Downloads" alt="cScripts Downloads"></a>
  <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=for-the-badge&label=Issues" alt="cScripts Issues"></a>
 <a href="https://travis-ci.org/7Cav/cScripts">
-    <img src="https://img.shields.io/travis/7Cav/cScripts.svg?style=for-the-badge" alt="cScripts Build">
+    <img src="https://img.shields.io/travis/7Cav/cScripts.svg?style=for-the-badge&logo=Travis-CI" alt="cScripts Build">
 </a>
 </p>
 cScripts is an easy to use framework for the ARMA3 S3 Operations staff and other mission makers. This framework contains functions and scripts that are easy to use and implement on a new mission. All scripts and functions are adapted to 7th Cavalry mission standards.
