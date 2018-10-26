@@ -274,7 +274,7 @@ class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
         "SmokeShell",3,
         "SmokeShellGreen",1,
         "SmokeShellRed",1,
-        "SmokeShellYellow",1,
+        "SmokeShellYellow",1
     };
 
     items[] = {
@@ -307,7 +307,7 @@ class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
         "ACE_Flashlight_MX991",
         "ACE_CableTie",2
     };
-    preLoadout = "[(_this select 0), 'ranger', 2, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'ranger', 2, 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
@@ -350,7 +350,7 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
         "ACE_ATragMX"
 
     };
-    preLoadout = "[(_this select 0), 'ranger', 2, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'ranger', 2, 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
     backpack[] = {"B_Kitbag_cbr"};
@@ -395,5 +395,5 @@ class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
         "Leupold_Mk4",
         "ACE_ATragMX"
     };
-    preLoadout = "[(_this select 0), 'ranger', 2, true, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'ranger', 2, 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
