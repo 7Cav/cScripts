@@ -60,6 +60,7 @@ class cScripts {
 
         class getPlayerRank {};
         class setPlayerRank {};
+        class getPlayerName {};
         class doPlayerAnnouncement {};
 
         class addJump {};
