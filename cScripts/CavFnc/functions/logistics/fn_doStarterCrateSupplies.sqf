@@ -134,8 +134,8 @@ if (_companySelector == "bravo") then {
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
     _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",25];
     _crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",25];
-	_crate addMagazineCargoGlobal ["rhs_mag_maaws_HEDP",25];
-	
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEDP",25];
+
     //================== GRENADES ==================\\
 
     _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
