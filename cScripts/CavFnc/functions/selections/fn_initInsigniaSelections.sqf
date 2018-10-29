@@ -13,7 +13,7 @@
 params [["_object", objNull, [objNull]]];
 
 #ifdef DEBUG_MODE
-	[format["Setting up Insinia Selector on %1.",_object]] call FUNC(logInfo);
+    [format["Setting up Insinia Selector on %1.",_object]] call FUNC(logInfo);
 #endif
 
 // Make ACE Category
@@ -82,5 +82,5 @@ _object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5]
 //[_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","cScripts\Data\Insignia\Charlie_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 
 #ifdef DEBUG_MODE
-	[format["Setup Insinia Selector on %1 completed.",_object]] call FUNC(logInfo);
+    [format["Setup Insinia Selector on %1 completed.",_object]] call FUNC(logInfo);
 #endif
