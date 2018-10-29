@@ -35,7 +35,7 @@ if (_player_role == "" or _player_role == []) then {
     _player_role = "trooper";
 } else {
     _player_role = _player_role select 0;
-}
+};
 
 private _player_group = groupId (group player);
 if (_player_group == "") then { _player_group = "in your squad" } else { _player_group = format["under the callsign <t color='#ffc61a'>%1</t>", _player_group]};
