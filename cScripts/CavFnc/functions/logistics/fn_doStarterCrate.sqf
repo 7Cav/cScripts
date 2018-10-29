@@ -10,7 +10,7 @@
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
- * 5: Platoon variable <BOOL>       (Default: true)
+ * 5: Company variable <BOOL>       (Default: true)
  * 6: Arsenal <BOOL>                (Default: false)
  *
  * Return Value:
@@ -29,7 +29,7 @@ params [
     ["_reGearOption", true],
     ["_reHealOption", true],
     ["_InsigniaSelectOption", true],
-    ["_requirePlatoonVariable", true],
+    ["_requireCompanyVariable", true],
     ["_arsenal", false]
 ];
 
@@ -60,7 +60,7 @@ if (_reHealOption) then {
 };
 
 // Call Quick Selection
-[_object,_quickSelectScale,_requirePlatoonVariable] call FUNC(initQuickSelections);
+[_object,_quickSelectScale,_requireCompanyVariable] call FUNC(initQuickSelections);
 
 // Call Insignia Selection
 if (_InsigniaSelectOption) then {
