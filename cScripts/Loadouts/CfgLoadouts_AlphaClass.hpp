@@ -4,7 +4,7 @@
 
 class B_Helipilot_F : CAV_Alpha_Helo_PILOT {};
 //class undefinedClass : CAV_Alpha_Helo_COPILOT {};
-class B_Helicrew_T : CAV_Alpha_Helo_CHIEF {};
+class B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {};
 class B_Helicrew_F : CAV_Alpha_Helo_GNR {};
 
 //class undefinedClass : CAV_Alpha_Helo_PILOT_ATT {};

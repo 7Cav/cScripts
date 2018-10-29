@@ -42,7 +42,7 @@ if (_companySelector == "alpha") then {
 
     _crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",2];
     _crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",2];
-    _crate addWeaponCargoGlobal ["tf47_at4_HP",6];
+    _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",6];
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
 
@@ -120,10 +120,10 @@ if (_companySelector == "bravo") then {
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
-    _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
+    _crate addItemCargoGlobal ["rhs_optic_maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
-    _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
-    _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_maaws",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",10];
 
     //================== AMMO ==================\\
 
@@ -132,11 +132,10 @@ if (_companySelector == "bravo") then {
     _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",25];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",25];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",25];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",25];
-
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",25];
+	_crate addMagazineCargoGlobal ["rhs_mag_maaws_HEDP",25];
+	
     //================== GRENADES ==================\\
 
     _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
@@ -204,9 +203,9 @@ if (_companySelector == "charlie") then {
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
-    _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
-    _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
-    _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
+    _crate addItemCargoGlobal ["rhs_optic_maaws",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_maaws",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",10];
     _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
 
     //================== AMMO ==================\\
@@ -214,10 +213,8 @@ if (_companySelector == "charlie") then {
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
     _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",50];
 
     //================== GRENADES ==================\\
 
@@ -368,12 +365,12 @@ if (_companySelector == "heavyweapons") then {
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
-    _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
+    _crate addItemCargoGlobal ["rhs_optic_maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
     _crate addWeaponCargoGlobal ["rhs_weap_fim92",10];
     _crate addWeaponCargoGlobal ["rhs_weap_fgm148",10];
-    _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
-    _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_maaws",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",10];
 
     //================== AMMO ==================\\
 
@@ -384,11 +381,9 @@ if (_companySelector == "heavyweapons") then {
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
     _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",50];
     _crate addMagazineCargoGlobal ["rhs_fim92_mag",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEDP",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",50];
 
     //================== GRENADES ==================\\
 
@@ -482,15 +477,15 @@ if (_companySelector == "ranger") then {
     _crate addItemCargoGlobal ["rhsusf_acc_harris_bipod",50];
     _crate addItemCargoGlobal ["rhsusf_acc_grip1",50];
 
-    _crate addItemCargoGlobal ["tf47_optic_m3maaws",50];
+    _crate addItemCargoGlobal ["rhs_optic_maaws",50];
 
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",25];
     _crate addWeaponCargoGlobal ["rhsusf_weap_m9",15];
 
     _crate addWeaponCargoGlobal ["rhs_weap_fim92",50];
     _crate addWeaponCargoGlobal ["rhs_weap_fgm148",50];
-    _crate addWeaponCargoGlobal ["tf47_m3maaws",50];
-    _crate addWeaponCargoGlobal ["tf47_at4_HP",50];
+    _crate addWeaponCargoGlobal ["rhs_weap_maaws",50];
+    _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",50];
     _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
     _crate addWeaponCargoGlobal ["rhsusf_weap_glock17g4",50];
     _crate addWeaponCargoGlobal ["rhs_weap_m32",50];
@@ -505,11 +500,9 @@ if (_companySelector == "ranger") then {
     _crate addMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",150];
     _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",50];
     _crate addMagazineCargoGlobal ["rhs_fim92_mag",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEDP",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",50];
 
     //================== GRENADES ==================\\
 
@@ -777,12 +770,12 @@ if (_companySelector == "full") then {
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
-    _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
+    _crate addItemCargoGlobal ["rhs_optic_maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
     _crate addWeaponCargoGlobal ["rhs_weap_fim92",10];
     _crate addWeaponCargoGlobal ["rhs_weap_fgm148",10];
-    _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
-    _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_maaws",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",10];
 
     //================== AMMO ==================\\
 
@@ -793,9 +786,9 @@ if (_companySelector == "full") then {
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
     _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",50];
     _crate addMagazineCargoGlobal ["rhs_fim92_mag",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEDP",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",50];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
 
