@@ -1,5 +1,5 @@
 #define PREFIX cScripts
-#define VERSION "4.2.12"
+#define VERSION "4.2.13"
 
 // Uncomment to enable debug mode
 //#define DEBUG_MODE
