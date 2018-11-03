@@ -289,9 +289,10 @@ def createModdedBuild(folder):      # This function is completely manual atm:
 
 
     print('Creating new loadouts...')
-    print('Adding new loadout \033[32mCAV_Alpha_Helo_GNR\033[0m to \033[96mCfgLoadouts_AlphaClass.hpp\033[0m...')
-    x = '{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder)
-    add(x, '\n\n// Script added\nclass B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {{}};\n')
+    print('Adding new loadout \033[32mCAV_Alpha_Helo_CHIEF\033[0m to \033[96mCfgLoadouts_AlphaClass.hpp\033[0m...')
+    x = grep('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder),'class B_Helicrew_T : CAV_Alpha_Helo_CHIEF {{}};')
+    replace('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder), x, 'class B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {{}};\n')
+   
    
     print('Starting to adjust logistical crates...')
     functionFiles = ['fn_doAmmoCrate.sqf','fn_doExplosivesCrate.sqf','fn_doGrenadesCrate.sqf','fn_doLaunchersCrate.sqf','fn_doSpecialWeaponsCrate.sqf','fn_doStarterCrateSupplies.sqf','fn_doSupplyCrate.sqf','fn_doWeaponsCrate.sqf']
