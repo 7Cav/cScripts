@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: player <STRING>
- * 1: type <STRING>     ['CAV', 'BIS']
+ * 1: type <STRING>     ['CAV', 'BIS', 'FORMAT']
  *
  * Return Value:
  * Rank based on name <STRING>
@@ -67,17 +67,16 @@ if (_getType == 'CAV') then {
 if (_getType == 'FORMAL') then {
     switch (_getType == 'FORMAL') do {
         case (_profileName in ['RET']): {_return = 'old man'};
-        case (_profileName in ['RCT']): {_return = 'recruit'};
-        case (_profileName in ['PVT', 'PFC']): {_return = 'private'};
-        case (_profileName in ['SPC']): {_return = 'specialist'};
-        case (_profileName in ['CPL']): {_return = 'corporal'};
-        case (_profileName in ['WO1']): {_return = 'sir'};
-        case (_profileName in ['SGT', 'SSG', 'SFC', 'MSG']): {_return = 'sergeant'};
-        case (_profileName in ['1SG']): {_return = 'first sergeant'};
-        case (_profileName in ['SGM', 'CSM']): {_return = 'sergeant major'};
-        case (_profileName in ['CW2', 'CW3', 'CW4', 'CW5']): {_return = 'chief'};
-        case (_profileName in ['2LT', '1LT', 'CPT', 'MAJ', 'LTC', 'COL', 'BG.', 'BG ', 'MG.', 'MG ', 'LTG', 'GEN']): {_return = 'sir'};
-        default {_return = 'trooper'};
+        case (_profileName in ['RCT']): {_return = 'Recruit'};
+        case (_profileName in ['PVT', 'PFC']): {_return = 'Private'};
+        case (_profileName in ['SPC']): {_return = 'Specialist'};
+        case (_profileName in ['CPL']): {_return = 'Corporal'};
+        case (_profileName in ['SGT', 'SSG', 'SFC', 'MSG']): {_return = 'Sergeant'};
+        case (_profileName in ['1SG']): {_return = 'First Sergeant'};
+        case (_profileName in ['SGM', 'CSM']): {_return = 'Sergeant Major'};
+        case (_profileName in ['CW2', 'CW3', 'CW4', 'CW5']): {_return = 'Chief'};
+        case (_profileName in ['WO1', '2LT', '1LT', 'CPT', 'MAJ', 'LTC', 'COL', 'BG.', 'BG ', 'MG.', 'MG ', 'LTG', 'GEN']): {_return = 'sir'};
+        default {_return = 'Trooper'};
     };
 };
 

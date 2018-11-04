@@ -6,9 +6,7 @@ class cScripts {
 
         class initDocuments {};
 
-        class initMissionStartHint {};
-        class initTrainingStartHint {};
-        class initCustomStartHint {};
+        class initStartupHint {};
 
         class initModules {};
         class initTagging {};
