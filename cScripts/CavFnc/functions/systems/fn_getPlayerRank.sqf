@@ -75,7 +75,7 @@ if (_getType == 'FORMAL') then {
         case (_profileName in ['1SG']): {_return = 'First Sergeant'};
         case (_profileName in ['SGM', 'CSM']): {_return = 'Sergeant Major'};
         case (_profileName in ['CW2', 'CW3', 'CW4', 'CW5']): {_return = 'Chief'};
-        case (_profileName in ['WO1', '2LT', '1LT', 'CPT', 'MAJ', 'LTC', 'COL', 'BG.', 'BG ', 'MG.', 'MG ', 'LTG', 'GEN']): {_return = 'sir'};
+        case (_profileName in ['WO1', '2LT', '1LT', 'CPT', 'MAJ', 'LTC', 'COL', 'BG.', 'BG ', 'MG.', 'MG ', 'LTG', 'GEN']): {_return = 'Sir'};
         default {_return = 'Trooper'};
     };
 };
