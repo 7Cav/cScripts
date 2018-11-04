@@ -29,12 +29,12 @@ params [
 private _player_name = [player,'PROFILE'] call FUNC(getPlayerName);
 private _player_rankFormal = [player,'FORMAL'] call FUNC(getPlayerRank);
 
-private _player_role = roleDescription player;
-_player_role = _player_role splitString "@";
-if (_player_role == "" or _player_role == []) then {
-    _player_role = "trooper";
-} else {
+private _player_role = "trooper";
+if (isMultiplayer) then {
+    _player_role = roleDescription player;
+    _player_role = _player_role splitString "@";
     _player_role = _player_role select 0;
+    if (_player_role == "") then {_player_role = "trooper"};
 };
 
 private _player_group = groupId (group player);
@@ -73,6 +73,7 @@ private _text_EasterEgg_Author  = format["Blame %1 if stuff doesn't work.<br />"
 private _title_Welcome          = "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>Welcome!</t><br />";
 private _text_GL_P              = "<t font='PuristaMedium' size='1.1'>Good luck!</t>";
 private _text_HaveFun_P         = "<t font='PuristaMedium' size='1.1'>Have fun!</t>";
+private _text_Standby           = "<t font='PuristaMedium' size='1.1'>Standby!</t>";
 
 // Images
 private _image_Cross            = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
@@ -87,7 +88,7 @@ private _image_Shield           = "<br /><br /><img size='5' image='cScripts\Dat
 
 switch (_missionType) do {
     case (0): { // Custom
-        hintSilent parseText (_title_Welcome + _textCustom_P1 + _image_Cross);
+        hintSilent parseText (_title_Welcome + _textCustom_P1 + _image_Cross + _text_Standby);
         sleep 1;
         hintSilent parseText (_title_Welcome + _textCustom_P1 + _image_Cross + _textCustom_P2 + _text_HaveFun_P);
         sleep _delay;
@@ -102,7 +103,7 @@ switch (_missionType) do {
             #endif
         };
 
-        hint parseText (_title_Welcome_opp + _image_Cross);
+        hint parseText (_title_Welcome_opp + _image_Cross + _text_Standby);
         sleep 1;
         hintSilent parseText (_title_Welcome_opp + _image_Cross + _text_Operation_Blur1 + _text_GL_P);
         sleep _delay;
@@ -116,7 +117,7 @@ switch (_missionType) do {
                 ["Mission type is training hint will not run"] call FUNC(logInfo);
             #endif
         };
-        hint parseText (_title_Welcome + _text_Training_P1 + _image_Cross);
+        hint parseText (_title_Welcome + _text_Training_P1 + _image_Cross + _text_Standby);
         sleep 1;
         hintSilent parseText (_title_Welcome + _text_Training_P1 + _image_Cross + _text_Training_P2);
         sleep (_delay * 0.5);
