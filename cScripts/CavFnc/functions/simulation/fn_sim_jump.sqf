@@ -27,57 +27,57 @@ private _hatRandom = random [1, 4, 10];
 private _glaRandom = random [1, 4, 10];
 
 switch (EGVAR(Settings,jumpSimulation)) do {
-	case (1): { // Basic
+    case (1): { // Basic
 
-		if (EGVAR(Settings,jumpSimulationNVG) && ((hmd _player != "") && (_nvgRandom > 4))) then {
-			_player unassignItem (hmd _player);
-			#ifdef DEBUG_MODE
-				[format["Jump simulation %1 lost NVG (%2>4)", _player, _nvgRandom]] call FUNC(logInfo);
-			#endif
-		};
+        if (EGVAR(Settings,jumpSimulationNVG) && ((hmd _player != "") && (_nvgRandom > 4))) then {
+            _player unassignItem (hmd _player);
+            #ifdef DEBUG_MODE
+                [format["Jump simulation %1 lost NVG (%2>4)", _player, _nvgRandom]] call FUNC(logInfo);
+            #endif
+        };
 
-		if (EGVAR(Settings,jumpSimulationHat) && ((headgear _player in _blacklist_headgear) && (_hatRandom > 3))) then {
-			_player unassignItem (headgear _player);
-			#ifdef DEBUG_MODE
-				[format["Jump simulation %1 lost Hat (%2>32)", _player, _hatRandom]] call FUNC(logInfo);
-			#endif
-		};
+        if (EGVAR(Settings,jumpSimulationHat) && ((headgear _player in _blacklist_headgear) && (_hatRandom > 3))) then {
+            _player unassignItem (headgear _player);
+            #ifdef DEBUG_MODE
+                [format["Jump simulation %1 lost Hat (%2>32)", _player, _hatRandom]] call FUNC(logInfo);
+            #endif
+        };
 
-		if (EGVAR(Settings,jumpSimulationGlasses) && ((goggles _player in _blacklist_glasses) && (_glaRandom > 2))) then {
-			_player unassignItem (goggles _player);
-			#ifdef DEBUG_MODE
-				[format["Jump simulation %1 lost Glasses (%2>2)", _player, _glaRandom]] call FUNC(logInfo);
-			#endif
-		};
+        if (EGVAR(Settings,jumpSimulationGlasses) && ((goggles _player in _blacklist_glasses) && (_glaRandom > 2))) then {
+            _player unassignItem (goggles _player);
+            #ifdef DEBUG_MODE
+                [format["Jump simulation %1 lost Glasses (%2>2)", _player, _glaRandom]] call FUNC(logInfo);
+            #endif
+        };
 
-		["You almost lost some gear!", "", nil, _player, 2] call ace_common_fnc_displayTextPicture;
+        ["You almost lost some gear!", "", nil, _player, 2] call ace_common_fnc_displayTextPicture;
 
-	};
-	case (2): { // Advanced
+    };
+    case (2): { // Advanced
 
-		if (EGVAR(Settings,jumpSimulationNVG) && ((hmd _player != "") && (_nvgRandom > 4))) then {
-			_player unlinkItem (hmd _player);
-			#ifdef DEBUG_MODE
-				[format["Jump simulation %1 lost NVG (%2>4)", _player, _nvgRandom]] call FUNC(logInfo);
-			#endif
-		};
+        if (EGVAR(Settings,jumpSimulationNVG) && ((hmd _player != "") && (_nvgRandom > 4))) then {
+            _player unlinkItem (hmd _player);
+            #ifdef DEBUG_MODE
+                [format["Jump simulation %1 lost NVG (%2>4)", _player, _nvgRandom]] call FUNC(logInfo);
+            #endif
+        };
 
-		if (EGVAR(Settings,jumpSimulationHat) && ((headgear _player in _blacklist_headgear) && (_hatRandom > 3))) then {
-			_player unlinkItem (headgear _player);
-			#ifdef DEBUG_MODE
-				[format["Jump simulation %1 lost Hat (%2>3)", _player, _hatRandom]] call FUNC(logInfo);
-			#endif
-		};
+        if (EGVAR(Settings,jumpSimulationHat) && ((headgear _player in _blacklist_headgear) && (_hatRandom > 3))) then {
+            _player unlinkItem (headgear _player);
+            #ifdef DEBUG_MODE
+                [format["Jump simulation %1 lost Hat (%2>3)", _player, _hatRandom]] call FUNC(logInfo);
+            #endif
+        };
 
-		if (EGVAR(Settings,jumpSimulationGlasses) && ((goggles _player in _blacklist_glasses) && (_glaRandom > 2))) then {
-			_player unlinkItem (goggles _player);
-			#ifdef DEBUG_MODE
-				[format["Jump simulation %1 lost Glasses (%2>2)", _player, _glaRandom]] call FUNC(logInfo);
-			#endif
-		};
+        if (EGVAR(Settings,jumpSimulationGlasses) && ((goggles _player in _blacklist_glasses) && (_glaRandom > 2))) then {
+            _player unlinkItem (goggles _player);
+            #ifdef DEBUG_MODE
+                [format["Jump simulation %1 lost Glasses (%2>2)", _player, _glaRandom]] call FUNC(logInfo);
+            #endif
+        };
 
-		["You lost some gear!", "", nil, _player, 2] call ace_common_fnc_displayTextPicture;
+        ["You lost some gear!", "", nil, _player, 2] call ace_common_fnc_displayTextPicture;
 
-	};
-	default {};
+    };
+    default {};
 };
