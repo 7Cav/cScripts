@@ -89,6 +89,10 @@ class cScripts {
         class initQuickSelections {};
         class initInsigniaSelections {};
     };
+    class simulation {
+        file = "cScripts\cavFnc\functions\simulation";
+        class sim_jump {};
+    };
 
     class misc {
         file = "cScripts\cavFnc\functions\texture";
