@@ -23,28 +23,13 @@ params [
 // Check so the options arent added twice.
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {};
 
-/*_vehicle setVariable [QGVAR(allowJump),false,true];
-
-_vehicle addAction [
-    "<t color='#800080'>Allow jump</t>",
-    {_vehicle setVariable [QGVAR(allowJump),true,true];},
-    0, 2, true, true, "",
-    "(player == driver vehicle player) && (_target getVariable ['cscripts_allowJump',''])"
-];
-_vehicle addAction [
-    "<t color='#ff0000'>Forbid jump</t>",
-    {_vehicle setVariable [QGVAR(allowJump),false,true];},
-    0, 2, true, true, "",
-    "(player == driver vehicle player) && (_target getVariable ['cscripts_allowJump',''])"
-]; */
-
 // Add hold action for jump
 [
     _vehicle,
     "<t color='#800080'>Jump</t>",
     "cScripts\Data\Icon\icon_02.paa",
     "cScripts\Data\Icon\icon_02.paa",
-    format ["((_target getCargoIndex player) != -1) && (_target animationPhase 'ramp_bottom' > 0.64) && ((getPosASL _target) select 2 >= %1) && ((getPosASL _target) select 2 <= %2) && (speed _target <= %3)", _minAltetude, _maxAltetude, _maxSpeed],
+    format ["((_target getCargoIndex player) != -1) && ((_target animationPhase 'ramp_bottom' > 0.64) or (_target animationPhase 'door_2_1' == 1) or (_target animationPhase 'door_2_2' == 1)) && ((getPosASL _target) select 2 >= %1) && ((getPosASL _target) select 2 <= %2) && (speed _target <= %3)", _minAltetude, _maxAltetude, _maxSpeed],
     "true",
     {},
     {},
