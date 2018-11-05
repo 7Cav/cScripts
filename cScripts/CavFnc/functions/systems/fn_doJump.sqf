@@ -8,7 +8,7 @@
  * 1: Vehicle <OBJECT>
  *
  * Example:
- * ["this","my_C130"] call cScripts_fnc_doJump
+ * ["bob","my_C130"] call cScripts_fnc_doJump
  *
  */
 
@@ -26,7 +26,6 @@ private _pos = [_pos select 0, _pos select 1, ((getPosATL _vehicle) select 2)];
 _player setPosATL _pos;
 _player setDir _dir - 140;
 
-
 sleep 1.5;
 private _velocity = velocity _player;
 private _chute = createVehicle ["NonSteerable_Parachute_F", (position _player), [], 0, "CAN_COLLIDE"];
@@ -34,6 +33,8 @@ _chute AttachTo [_player, [0,0,0]];
 detach _chute;
 _player moveInDriver _chute;
 _chute setVelocity _velocity;
+
+[_player] call FUNC(sim_jump);
 
 sleep 0.5;
 _player allowDamage true;

@@ -10,6 +10,7 @@
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
+private _cScriptSettingsSim = "cScripts Simulation Settings";
 
 // Mission type
 [
@@ -149,6 +150,45 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
         {}
     ] call CBA_Settings_fnc_init;
 };
+
+// Mission simulation settings
+// JumpSimulation
+[
+    QEGVAR(Settings,jumpSimulation),
+    "LIST",
+["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
+    [_cScriptSettingsSim, "1; Combat Jump Simulation"],
+    [[0,1,2], ["None", "Basic", "Advanced"], 0],
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+[
+    QEGVAR(Settings,jumpSimulationNVG),
+    "CHECKBOX",
+    ["Include Night Vision Googles","Include equiped Night Vison Googles in the simulation.\n"],
+    [_cScriptSettingsSim, "1; Combat Jump Simulation"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+[
+    QEGVAR(Settings,jumpSimulationGlasses),
+    "CHECKBOX",
+    ["Include Non-combat Googles","Include Non-combat Googles in the simulation. This refere to sunshades and simular non-safety googles.\n"],
+    [_cScriptSettingsSim, "1; Combat Jump Simulation"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+[
+    QEGVAR(Settings,jumpSimulationHat),
+    "CHECKBOX",
+    ["Include Non-combat Headgear","Include Non-combat Headgear in the simulation. This refere to hats bandanas and baretes.\n"],
+    [_cScriptSettingsSim, "1; Combat Jump Simulation"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
 
 #ifdef DEBUG_MODE
     ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
