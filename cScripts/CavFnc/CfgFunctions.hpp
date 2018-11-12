@@ -49,7 +49,6 @@ class cScripts {
     };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
-        class setPlayerInitSettings {};
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
 
