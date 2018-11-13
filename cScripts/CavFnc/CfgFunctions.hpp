@@ -89,6 +89,12 @@ class cScripts {
         class initQuickSelections {};
         class initInsigniaSelections {};
     };
+    class miner {
+        file = "cScripts\cavFnc\functions\miner";
+        class setMineLayer {};
+        class doMineDeploy {};
+        class doMineReload {};
+    };
 
     class misc {
         file = "cScripts\cavFnc\functions\texture";
