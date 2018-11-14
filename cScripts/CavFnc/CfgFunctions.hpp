@@ -6,9 +6,7 @@ class cScripts {
 
         class initDocuments {};
 
-        class initMissionStartHint {};
-        class initTrainingStartHint {};
-        class initCustomStartHint {};
+        class initStartupHint {};
 
         class initModules {};
         class initTagging {};
@@ -24,11 +22,12 @@ class cScripts {
         class DocRadio_MEDEVAC {};
         class DocRadio_ROTARYPICKUP {};
         class DocRadio_SPOTREP {};
-        class DocRadio_JMTASKS {};
-        class DocRadio_CFF {};
-        class DocRadio_LZSPECS {};
-        class DocRadio_LZINSERT {};
-        class DocRadio_LZEXTRACT {};
+        
+        class DocChklist_CFF {};
+        class DocChklist_JMTASKS {};
+        class DocChklist_LZSPECS {};
+        class DocChklist_LZINSERT {};
+        class DocChklist_LZEXTRACT {};
     };
     class logistics {
         file = "cScripts\cavFnc\functions\logistics";
@@ -62,6 +61,7 @@ class cScripts {
 
         class getPlayerRank {};
         class setPlayerRank {};
+        class getPlayerName {};
         class doPlayerAnnouncement {};
 
         class addJump {};
