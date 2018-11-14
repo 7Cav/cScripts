@@ -48,27 +48,18 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 [
-    QEGVAR(Settings,setRedLightTime),
+    QEGVAR(Settings,setStartupDelay),
     "SLIDER",
-    ["Red light delay","Define in seconds for how long red light is enected.\n"],
+    ["Startup delay time","Define in seconds for how long the startup hint is shown or be enected.\n"],
     [_cScriptSettings, "2; Mission Startup"],
     [5, 180, 30, 0],
     true,
     {}
 ] call CBA_Settings_fnc_init;
 [
-    QEGVAR(Settings,setTrainingHintTime),
-    "SLIDER",
-    ["Training hint delay","Define in seconds for how long training hint time is shown.\n"],
-    [_cScriptSettings, "2; Mission Startup"],
-    [5, 180, 20, 0],
-    true,
-    {}
-] call CBA_Settings_fnc_init;
-[
     QEGVAR(Settings,setCustomHintTopic),
     "EDITBOX",
-    "Custom hint topic",
+    ["Custom hint topic", "When mission is set to Custom this topic will be shown.\nIt will look something like this:\n\n               Welcome!\n      My Custom Topic!\n                 [IMAGE]\n  My custom mission text...\n               Have fun!\n"],
     [_cScriptSettings, "2; Mission Startup"],
     "My custom Mission!",
     true,
@@ -77,7 +68,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     QEGVAR(Settings,setCustomHintText),
     "EDITBOX",
-    "Custom hint text",
+    ["Custom hint text", "When mission is set to Custom this text will be shown.\nIt will look something like this:\n\n               Welcome!\n      My Custom Topic!\n                 [IMAGE]\n  My custom mission text...\n               Have fun!\n"],
     [_cScriptSettings, "2; Mission Startup"],
     "I have design this mission! Yey for me!",
     true,
@@ -187,15 +178,16 @@ if (is3DEN) exitWith {};
 #endif
 
 switch (EGVAR(Settings,setMissionType)) do {
-    case (0): {
+    case (0): { // Custom
     };
-    case (1): {
+    case (1): { // Operation
     };
-    case (2): {
+    case (2): { // Training
     };
-    case (3): {
+    case (3): { // Public
     };
 };
+
 
 if (EGVAR(Settings,allowCustomInit)) then {
 };

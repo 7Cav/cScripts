@@ -366,7 +366,7 @@ class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
 class CAV_Charlie_Weapons_TL : CAV_Charlie_Base {  // Team Leader 32.4kg, 38.3kg with Mortar Bipod, 39.2kg with M2 Minitripod, 36.4 with Mk19/TOW tripod
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
-    launcher[] = {"tf47_at4_HP"};
+    launcher[] = {"rhs_weap_M136_hp"};
 
     binoculars[] = {"ACE_Vector"};
 
