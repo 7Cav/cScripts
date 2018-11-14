@@ -11,14 +11,13 @@
  *
  */
 
+private _variableName = vehicleVarName player;
+private _missionController = ["DEBUG", "DEBUG_1", "DEBUG_2", "DEBUG_3", "DEBUG_4", "MissionControl", "MissionControl_1", "MissionControl_2", "MissionControl_3", "MissionControl_4", "MissionControlUnit", "MissionControlUnit_1", "MissionControlUnit_2", "MissionControlUnit_3", "MissionControlUnit_4", "MC", "MC_1", "MC_2", "MC_3", "MC_4", "Zeus", "Zeus_1", "Zeus_2", "Zeus_3", "Zeus_4", "ZeusUnit", "ZeusUnit_1", "ZeusUnit_2", "ZeusUnit_3", "ZeusUnit_4", "S3", "S3_1", "S3_2", "S3_3", "S3_4"];
+
+if !(_variableName in _missionController) exitWith {};
+
 player createDiaryRecord["7Cav",
     ["S3 Mission Control",
-        format[
-"Your currently running cScripts version: <font color='#ffc61a'>%1</font><br/><br/>
-<p><font color='#ffc61a'>cScripts</font> is custom mission script framework created and maintained by the 1BN Battlestaff Department.<br/><br/>
-In order to give you a top notch experience, we are always improving the framework and fixing bugs. If you have suggestions, feedback, or a bug to report, go to our official github and add an issue:<br/><br/>
-<font color='#ffc61a'><a href='https://github.com/7Cav/cScripts/issues'>https://github.com/7Cav/cScripts/issues</a></font></p><br/><br/>
-<p>You can also contact the <font color='#ffc61a'>1BN Scripting Department</font>.</p>
-", VERSION]
+        "Oh! This tab is under redevelopment!"
     ]
 ];
