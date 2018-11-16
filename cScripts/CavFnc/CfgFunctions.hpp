@@ -89,8 +89,7 @@ class cScripts {
         class initQuickSelections {};
         class initInsigniaSelections {};
     };
-
-    class misc {
+    class texture {
         file = "cScripts\cavFnc\functions\texture";
         class flag {};
 
