@@ -7,7 +7,7 @@
  * 0: Player <STRING>
  *
  * Example:
- * [this,true,true] call cScripts_fnc_setPostInitPlayerSettings;
+ * ["bob",true,true] call cScripts_fnc_setPostInitPlayerSettings;
  */
 
 params [

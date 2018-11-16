@@ -1,14 +1,13 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This
+ * This function apply settigns to vehicles.
  *
  * Arguments:
- * 0: Object <OBJECT>
- * 1: Lable <INTERGER> (Optinal)
+ * 0: Vehicle <OBJECT>
  *
  * Example:
- *
+ * ["vic"] call cScripts_fnc_setVehicleSettings
  */
 
 params [["_vehicle", objNull, [objNull]]];

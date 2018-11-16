@@ -126,16 +126,31 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
-// Tagging
+
+
+// Rank
 [
-    QEGVAR(Settings,allowCustomTagging),
+    QEGVAR(Settings,setPlayerRank),
     "CHECKBOX",
-    ["Allow Custom Tagging","Allow players to spray custom taggs.\n"],
-    [_cScriptSettings, "4; Player Actions"],
+    ["Set Rank","Allow mission to apply rank based on cav name prefix.\n"],
+    [_cScriptSettings, "4; Player"],
     true,
     true,
     {}
 ] call CBA_Settings_fnc_init;
+
+// Tagging
+[
+    QEGVAR(Settings,allowCustomTagging),
+    "CHECKBOX",
+    ["Custom Tagging","Allow players to spray a custom 7cav tag.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+
 
 // Aries Achilles Zeus Moduels
 if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
