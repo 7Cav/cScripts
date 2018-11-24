@@ -131,7 +131,18 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,allowCustomTagging),
     "CHECKBOX",
     ["Allow Custom Tagging","Allow players to spray custom taggs.\n"],
-    [_cScriptSettings, "4; Player Actions"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+// Eyewere
+[
+    QEGVAR(Settings,enforceEyewereBlacklist),
+    "CHECKBOX",
+    ["Enforce eyewere and facewere blacklist","Enforce eyewere and facewere blacklist this will remove rediculus selected eyewere when a player spawns.\n"],
+    [_cScriptSettings, "4; Player"],
     true,
     true,
     {}

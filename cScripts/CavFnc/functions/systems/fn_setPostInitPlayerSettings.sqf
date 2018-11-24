@@ -42,50 +42,52 @@ if (_earPlugs) then {
 };
 
 // Check if custom used glases are approved.
-if (_facewere) then {
-    private _blacklist_glasses = [
-        "rhs_balaclava",
-        "G_Balaclava_blk",
-        "G_Balaclava_combat",
-        "G_Balaclava_lowprofile",
-        "G_Balaclava_oli",
-        "rhs_balaclava1_olive",
-        "G_Bandanna_aviator",
-        "G_Bandanna_beast",
-        "G_Bandanna_blk",
-        "G_Bandanna_khk",
-        "G_Bandanna_oli",
-        "G_Bandanna_shades",
-        "G_Bandanna_sport",
-        "G_Bandanna_tan",
-        "G_Diving",
-        "G_I_Diving",
-        "G_O_Diving",
-        "G_B_Diving",
-        "G_Lady_Blue",
-        "G_Respirator_blue_F",
-        "G_Respirator_white_F",
-        "G_Respirator_yellow_F",
-        "G_EyeProtectors_F",
-        "G_EyeProtectors_Earpiece_F",
-        "rhs_scarf",
-        "G_Spectacles",
-        "G_Squares",
-        "G_Balaclava_TI_blk_F",
-        "G_Balaclava_TI_G_blk_F",
-        "G_Balaclava_TI_tna_F",
-        "G_Balaclava_TI_G_tna_F",
-        "G_Tactical_Clear",
-        "G_Tactical_Black",
-        "G_Goggles_VR",
-        "G_WirelessEarpiece_F"
-    ];
+if (EGVAR(Settings,enforceEyewereBlacklist)) {
+    if (_facewere) then {
+        private _blacklist_glasses = [
+            "rhs_balaclava",
+            "G_Balaclava_blk",
+            "G_Balaclava_combat",
+            "G_Balaclava_lowprofile",
+            "G_Balaclava_oli",
+            "rhs_balaclava1_olive",
+            "G_Bandanna_aviator",
+            "G_Bandanna_beast",
+            "G_Bandanna_blk",
+            "G_Bandanna_khk",
+            "G_Bandanna_oli",
+            "G_Bandanna_shades",
+            "G_Bandanna_sport",
+            "G_Bandanna_tan",
+            "G_Diving",
+            "G_I_Diving",
+            "G_O_Diving",
+            "G_B_Diving",
+            "G_Lady_Blue",
+            "G_Respirator_blue_F",
+            "G_Respirator_white_F",
+            "G_Respirator_yellow_F",
+            "G_EyeProtectors_F",
+            "G_EyeProtectors_Earpiece_F",
+            "rhs_scarf",
+            "G_Spectacles",
+            "G_Squares",
+            "G_Balaclava_TI_blk_F",
+            "G_Balaclava_TI_G_blk_F",
+            "G_Balaclava_TI_tna_F",
+            "G_Balaclava_TI_G_tna_F",
+            "G_Tactical_Clear",
+            "G_Tactical_Black",
+            "G_Goggles_VR",
+            "G_WirelessEarpiece_F"
+        ];
 
-    if (goggles _player in _blacklist_glasses) then {
-        _player unlinkItem (goggles _player);
-        #ifdef DEBUG_MODE
-            [format["%1 using un-authorized facewere it have been removed.", _player]] call FUNC(logInfo);
-        #endif
+        if (goggles _player in _blacklist_glasses) then {
+            _player unlinkItem (goggles _player);
+            #ifdef DEBUG_MODE
+                [format["%1 using un-authorized facewere it have been removed.", _player]] call FUNC(logInfo);
+            #endif
+        };
     };
 };
 
