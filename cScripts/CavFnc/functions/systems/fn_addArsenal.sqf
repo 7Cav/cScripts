@@ -71,10 +71,10 @@ private _alpha_arsenal = [
 ];
 private _bravo_arsenal = [
     // Bravo Approved Headgear
-    "rhsusf_ach_helmet_ocp","rhsusf_ach_helmet_headset_ocp","rhsusf_ach_helmet_headset_ess_ocp"
+    "rhsusf_ach_helmet_ocp","rhsusf_ach_helmet_headset_ocp","rhsusf_ach_helmet_headset_ess_ocp",
     // Bravo Approved Uniforms
     // Bravo Approved vest
-    "rhsusf_iotv_ocp_Grenadier", "rhsusf_iotv_ocp_Medic","rhsusf_iotv_ocp","rhsusf_iotv_ocp_Repair","rhsusf_iotv_ocp_Rifleman","rhsusf_iotv_ocp_SAW","rhsusf_iotv_ocp_Squadleader","rhsusf_iotv_ocp_Teamleader"
+    "rhsusf_iotv_ocp_Grenadier", "rhsusf_iotv_ocp_Medic","rhsusf_iotv_ocp","rhsusf_iotv_ocp_Repair","rhsusf_iotv_ocp_Rifleman","rhsusf_iotv_ocp_SAW","rhsusf_iotv_ocp_Squadleader","rhsusf_iotv_ocp_Teamleader",
     // Bravo Approved Backpack
     // Bravo Approved Weapons
     "rhs_weap_m4a1_carryhandle", "rhs_weap_m4a1_carryhandle_m203", "rhs_weap_m4a1_carryhandle_m203S", "rhs_weap_m4a1", "rhs_weap_m4a1_m203", "rhs_weap_m4a1_m203s", "rhs_weap_m4a1_m320",
