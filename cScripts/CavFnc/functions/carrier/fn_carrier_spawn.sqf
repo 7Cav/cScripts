@@ -29,33 +29,47 @@
 params [
     ["_carrier", objNull],
     ["_vehicle", objNull],
-    ["_pos",[0,0,0]],
-    ["_dir",0]
+    ["_pos",[0,140,25.5]],
+    ["_dir",180]
 ];
 
-//if (!isServer) exitWith {};
-//if (_carrier == "") exitWith {[formatText["There are no carrier defined..."]] call FUNC(logError);};
+if (!isServer) exitWith {};
 
 #ifdef DEBUG_MODE
-    [formatText["Spawning classname %1 at %2 rotated %3 on %4.", _vehicle, _pos, _dir, _carrier]] call FUNC(logInfo);
+    [formatText["Prepering to spawn %1 at %2 rotated %3 on %4.", _vehicle, _pos, _dir, _carrier]] call FUNC(logInfo);
 #endif
 
 private _veh = _vehicle createVehicle [0,0,0];
+
 [{
-    params ["_veh","_carrier","_pos","_dir"];
-
-    _veh attachTo [_carrier, _pos];
-    _veh setDir _dir;
-    _veh setvectorUp [0,0,1];
-
-    [{
-        params ["_veh"];
-        detach _veh;
-    }, [_veh], 2] call CBA_fnc_waitAndExecute;
+    _args = params ["_veh", "_carrier", "_pos", "_dir"];
 
     #ifdef DEBUG_MODE
-        [formatText["%1 have been spawned at %2.", _veh, getPosASL _veh]] call FUNC(logInfo);
+        [formatText["%1 is spawned and located at %2.", _veh, getPosASL _veh]] call FUNC(logInfo);
     #endif
-    
-},[_veh,_carrier,_pos,_dir]] call CBA_fnc_execNextFrame;
 
+    [{
+        _args = params ["_veh", "_carrier", "_pos", "_dir"];
+
+        #ifdef DEBUG_MODE
+            [formatText["Attaching %1 to %2 on %3 with the %4 direction.", _veh, _carrier, _pos, _dir]] call FUNC(logInfo);
+        #endif
+
+        _veh attachTo [_carrier, _pos];
+        _veh setDir _dir;
+        _veh setvectorUp [0,0,1];
+
+    }, [_veh, _carrier, _pos, _dir], 1] call CBA_fnc_waitAndExecute;
+
+    [{
+        _args = params ["_veh","_carrier"];
+
+        detach _veh;
+        
+        #ifdef DEBUG_MODE
+            [formatText["Detachig %1 from the %2 new postion is %3.", _veh, _carrier, getPosASL _veh]] call FUNC(logInfo);
+        #endif
+
+    }, [_veh, _carrier], 2] call CBA_fnc_waitAndExecute;
+
+}, [_veh, _carrier, _pos, _dir]] call CBA_fnc_execNextFrame;

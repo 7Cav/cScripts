@@ -55,7 +55,7 @@ private _dir = _posAndDir select 3;
 private _carrierSelectAction = [_categoryName, _lable, _icon, {
         params ["_target", "_player", "_actionParams"];
         _actionParams params ["_carrier", "_className", "_posX", "_posY","_posZ","_dir"];
-        //[_carrier, _className, [_posX,_posY,_posZ], _dir] remoteExecCall [QFUNC(carrier_spawn), 2, false];
-        [_carrier, _className, [_posX,_posY,_posZ], _dir] call FUNC(carrier_spawn);
+        [_carrier, _className, [_posX,_posY,_posZ], _dir] remoteExecCall [QFUNC(carrier_spawn), 0];
+        //[_carrier, _className, [_posX,_posY,_posZ], _dir] spawn FUNC(carrier_spawn);
     }, {true}, {}, [_carrier, _className, _posX, _posY, _posZ, _dir]] call ace_interact_menu_fnc_createAction;
 [_object, 0, _category, _carrierSelectAction] call ace_interact_menu_fnc_addActionToObject;
