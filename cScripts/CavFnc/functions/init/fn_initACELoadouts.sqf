@@ -14,9 +14,9 @@
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-        ["Setting up Default ACE Arsenal loadouts."] call FUNC(logInfo);
+        ["Setting up CAV Default ACE Arsenal loadouts."] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "Setting up Default ACE Arsenal loadouts in eden."];
+        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "Setting up CAV Default ACE Arsenal loadouts in eden."];
     };
 #endif
 
@@ -82,8 +82,8 @@ if ((EGVAR(Settings,setMissionType) == 0) or (is3DEN)) then {
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-            ["Default ACE Arsenal loadouts completed."] call FUNC(logInfo);
+            ["CAV Default ACE Arsenal loadouts completed."] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "Default ACE Arsenal loadouts completed in eden."];
+        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "CAV Default ACE Arsenal loadouts added in eden."];
     };
 #endif
