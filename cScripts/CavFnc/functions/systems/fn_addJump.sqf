@@ -7,9 +7,9 @@
  * 0: Vehicle <OBJECT>
  *
  * Example:
- * ["this"] call cScripts_fnc_addJump
- * ["this",180] call cScripts_fnc_addJump
- * ["this",180,350,300] call cScripts_fnc_addJump
+ * ["my_c130"] call cScripts_fnc_addJump
+ * ["my_c130",180] call cScripts_fnc_addJump
+ * ["my_c130",180,350,300] call cScripts_fnc_addJump
  *
  */
 
@@ -17,7 +17,8 @@ params [
     ["_vehicle", objNull, [objNull]],
     ["_minAltetude", 180],
     ["_maxAltetude", 350],
-    ["_maxSpeed", 300]
+    ["_maxSpeed", 300],
+    ["_chuteVehicleClass", "rhs_d6_Parachute"]
 ];
 
 // Check so the options arent added twice.
@@ -33,9 +34,11 @@ if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {};
     "true",
     {},
     {},
-    {[(_this select 1),(_this select 0)] call FUNC(doJump)},
+    {
+        [(_this select 1),(_this select 0),(_this select 3) select 0] call FUNC(doJump)
+    },
     {},
-    [],
+    [_chuteVehicleClass],
     0,
     25,
     false
