@@ -149,17 +149,15 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_Settings_fnc_init;
 
 // Aries Achilles Zeus Moduels
-if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
-    [
-        QEGVAR(Settings,enable7cavZeusModules),
-        "CHECKBOX",
-        ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-        [_cScriptSettings, "5; Zeus"],
-        true,
-        true,
-        {}
-    ] call CBA_Settings_fnc_init;
-};
+[
+    QEGVAR(Settings,enable7cavZeusModules),
+    "CHECKBOX",
+    ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
+    [_cScriptSettings, "5; Zeus"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
 
 #ifdef DEBUG_MODE
     ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
