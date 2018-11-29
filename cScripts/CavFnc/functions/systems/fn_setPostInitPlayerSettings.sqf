@@ -42,7 +42,7 @@ if (_earPlugs) then {
 };
 
 // Check if custom used glases are approved.
-if (EGVAR(Settings,enforceEyewereBlacklist)) {
+if (EGVAR(Settings,enforceEyewereBlacklist)) then {
     if (_facewere) then {
         private _blacklist_glasses = [
             "rhs_balaclava",
