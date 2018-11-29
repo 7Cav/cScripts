@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [this] call cScripts_fnc_setPlayerRank;
+ * ["bob"] call cScripts_fnc_setPlayerRank;
  *
  */
 

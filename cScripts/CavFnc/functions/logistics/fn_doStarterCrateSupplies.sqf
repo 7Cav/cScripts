@@ -104,6 +104,7 @@ if (_companySelector == "alpha") then {
     _crate addItemCargoGlobal ["rhsusf_hgu56p_visor_mask_black",12];
     _crate addItemCargoGlobal ["H_PilotHelmetFighter_B",6];
     _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
+    _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
 //------------------B R A V O   C O M P A N Y --------------------\\
@@ -187,6 +188,7 @@ if (_companySelector == "bravo") then {
     //================== HELMETS ==================\\
     _crate addItemCargoGlobal ["rhsusf_cvc_green_helmet",12];
     _crate addItemCargoGlobal ["rhsusf_ach_helmet_headset_ocp",12];
+    _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
 //------------------ C H A R L I E   C O M P A N Y --------------------\\
@@ -269,6 +271,7 @@ if (_companySelector == "charlie") then {
 
     //================== HELMETS ==================\\
     _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
+    _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
 //------------------ M E D I C A L   P L A T O O N --------------------\\
@@ -349,6 +352,10 @@ if (_companySelector == "medical") then {
     //================== BACKPACKS ==================\\
 
     _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
+
+    //================== HELMETS ==================\\
+    _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
+    _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
 //------------------ H E A V Y   W E A P O N S --------------------\\
@@ -448,6 +455,10 @@ if (_companySelector == "heavyweapons") then {
     //================== BACKPACKS ==================\\
 
     _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
+
+    //================== HELMETS ==================\\
+    _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
+    _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
 //------------------ R A N G E R   C O M P A N Y --------------------\\
@@ -621,6 +632,9 @@ if (_companySelector == "ranger") then {
     _crate addBackpackCargoGlobal ["B_UAV_01_backpack_F",15];
     _crate addBackpackCargoGlobal ["B_AssaultPack_cbr",15];
 
+    //================== HELMETS ==================\\
+    _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
+    _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
 //------------------ S N I P E R   S E C T I O N --------------------\\
@@ -753,6 +767,10 @@ if (_companySelector == "sniper") then {
     _crate addItemCargoGlobal ["U_B_T_FullGhillie_tna_F",2];
     _crate addItemCargoGlobal ["U_B_FullGhillie_lsh",2];
     _crate addItemCargoGlobal ["U_B_FullGhillie_sard",2];
+
+    //================== HELMETS ==================\\
+    _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
+    _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
 //------------------ F U L L   C R A T E --------------------\\
@@ -876,6 +894,9 @@ if (_companySelector == "full") then {
     _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
     _crate addBackpackCargoGlobal ["B_AssaultPack_mcamo",10];
 
+    //================== HELMETS ==================\\
+    _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
+    _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
 if (_companySelector == "none") then {};
