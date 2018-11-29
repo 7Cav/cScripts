@@ -219,7 +219,7 @@ class CAV_Ranger_Base : CommonBlufor {
     nvgs[] = {""};
     watch[] = {"ACE_Altimeter"};
 
-    insignia[] = {"RANGER"};
+    insignia[] = {"Cav_Insignia_Specialized_Ranger"};
     preLoadout = "[(_this select 0), 'ranger', 1, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
@@ -246,7 +246,7 @@ class CAV_Medical_Base : CommonBlufor {
     nvgs[] = {""};
     watch[] = {"ItemWatch"};
 
-    insignia[] = {"CLS_Insignia"};
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
     preLoadout = "[(_this select 0), 'medical', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
