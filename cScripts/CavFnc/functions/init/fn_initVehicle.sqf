@@ -13,71 +13,18 @@
  */
 
 #ifdef DEBUG_MODE
-    ["Applying EH init to vehicles to handle settings."] call FUNC(logInfo);
+    ["Applying Event Handers (init) to vehicles for function expantions..."] call FUNC(logInfo);
 #endif
 
 /* Add Settings to vehicles */
 
-// All helicopters
-["RHS_UH60_Base", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["RHS_UH60M_MEV", "init", {
+["RHS_C130J_Base", "init", {
     (_this select 0) call FUNC(setVehicleSettings);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
-["RHS_CH_47F_base", "init", {
+["Helicopter_Base_F", "init", {
     (_this select 0) call FUNC(setVehicleSettings);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
-["RHS_AH64_base", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["RHS_C130J", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-
-// All cars
-["rhsusf_hmmwe_base", "init", {
-
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["rhsusf_caiman_base", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["rhsusf_rg33_base", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["rhsusf_fmtv_base", "init", {
-
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["rhsusf_HEMTT_A4_base", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["B_Truck_01_transport_F", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-
-["StrykerBase_DG1DES", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["rhsusf_m113_usarmy", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["rhsusf_m113_usarmy_medical", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["RHS_M2A2_Base", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-
-["rhsusf_m1a1tank_base", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-["rhsusf_m109_usarmy", "init", {
-    (_this select 0) call FUNC(setVehicleSettings);
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-
 
 
 /*Mortar texturing for preplaced units, in honour of McGehee - Waldie.A & Brostrom
@@ -92,12 +39,10 @@ B_Mortar_01_F = NATO MORTAR, B_G_Mortar_01_F = FIA MORTAR*/
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 
-
 /* Add inventory to all map vehicles */
-
 if (EGVAR(Settings,useCustomVehicleInventory)) then {
     #ifdef DEBUG_MODE
-        ["Applying inventory to all vehicles."] call FUNC(logInfo);
+        ["Applying inventory to vehicles..."] call FUNC(logInfo);
     #endif
     {[_x] call FUNC(setVehicleInventory);} forEach vehicles;
 };

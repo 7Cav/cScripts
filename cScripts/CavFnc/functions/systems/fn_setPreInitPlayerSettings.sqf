@@ -15,9 +15,9 @@
  * Nothing
  *
  * Example:
- * [this] call cScripts_fnc_setPreInitPlayerSettings;
- * [this, "charlie",0] call cScripts_fnc_setPreInitPlayerSettings;
- * [this, "charlie", 0, 0, false, true] call cScripts_fnc_setPreInitPlayerSettings;
+ * ["bob"] call cScripts_fnc_setPreInitPlayerSettings;
+ * ["bob", "charlie",0] call cScripts_fnc_setPreInitPlayerSettings;
+ * ["bob", "charlie", 0, 0, false, true] call cScripts_fnc_setPreInitPlayerSettings;
  *
  */
 
@@ -50,7 +50,7 @@ private _EngineerClass = if (_isEngineerClass > 1) then {true} else {false};
 (_player) setVariable ["ACE_isEOD", _isEOD];
 
 // Set ingame rank based on name rank prefix
-if (_setRank) then {
+if ((_setRank) && (EGVAR(Settings,setPlayerRank))) then {
     [_player] call FUNC(setPlayerRank);
 };
 
