@@ -51,7 +51,6 @@ class cScripts {
     };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
-        class setPlayerInitSettings {};
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
 
@@ -82,6 +81,7 @@ class cScripts {
         class getCompanyVariable {};
         class hasCompanyVariable {};
 
+        class gate {};
         class teleport {};
 
         class addObjectToCurator {};
@@ -91,8 +91,7 @@ class cScripts {
         class initQuickSelections {};
         class initInsigniaSelections {};
     };
-
-    class misc {
+    class texture {
         file = "cScripts\cavFnc\functions\texture";
         class flag {};
 
