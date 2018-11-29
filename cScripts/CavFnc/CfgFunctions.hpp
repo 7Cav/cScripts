@@ -79,6 +79,7 @@ class cScripts {
         class getCompanyVariable {};
         class hasCompanyVariable {};
 
+        class gate {};
         class teleport {};
 
         class addObjectToCurator {};
