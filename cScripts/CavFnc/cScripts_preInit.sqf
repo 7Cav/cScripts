@@ -126,6 +126,19 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
+
+
+// Rank
+[
+    QEGVAR(Settings,setPlayerRank),
+    "CHECKBOX",
+    ["Set Rank","Allow mission to apply rank based on cav name prefix.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
 // Tagging
 [
     QEGVAR(Settings,allowCustomTagging),
@@ -147,6 +160,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     {}
 ] call CBA_Settings_fnc_init;
+
+
 
 // Aries Achilles Zeus Moduels
 [
