@@ -24,11 +24,11 @@ private _return = "";
 
 _getType = toUpper(_getType);
 
-// featch clan tag if in multiplayer
 private _playerClan = "";
-if (isMultiplayer) then {
-    _playerClan = squadParams _player;
-    _playerClan = _playerClan select 0 select 0;
+
+// featch clan tag if in multiplayer
+if ((isMultiplayer) && !(isnil QUOTE(squadParams _player))) then {
+    _playerClan = squadParams _player select 0 select 0;
 };
 
 // Profile name
