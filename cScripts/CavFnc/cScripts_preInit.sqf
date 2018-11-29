@@ -143,7 +143,18 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     QEGVAR(Settings,allowCustomTagging),
     "CHECKBOX",
-    ["Custom Tagging","Allow players to spray a custom 7cav tag.\n"],
+    ["Allow Custom Tagging","Allow players to spray custom taggs.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+// Eyewere
+[
+    QEGVAR(Settings,enforceEyewereBlacklist),
+    "CHECKBOX",
+    ["Enforce eyewere and facewere blacklist","Enforce eyewere and facewere blacklist this will remove rediculus selected eyewere when a player spawns.\n"],
     [_cScriptSettings, "4; Player"],
     true,
     true,
@@ -153,17 +164,15 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 
 // Aries Achilles Zeus Moduels
-if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
-    [
-        QEGVAR(Settings,enable7cavZeusModules),
-        "CHECKBOX",
-        ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-        [_cScriptSettings, "5; Zeus"],
-        true,
-        true,
-        {}
-    ] call CBA_Settings_fnc_init;
-};
+[
+    QEGVAR(Settings,enable7cavZeusModules),
+    "CHECKBOX",
+    ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
+    [_cScriptSettings, "5; Zeus"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
 
 #ifdef DEBUG_MODE
     ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
