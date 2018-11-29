@@ -117,6 +117,13 @@ class cScripts {
 
         class moduleCallEndex {};
     };
+
+    class helpers {
+        file = "cScripts\cavFnc\functions\helpers";
+        class exportBoxToArsenal {};
+        class exportLoadoutsToArsenal {};
+    };
+
     class debug {
         file = "cScripts\cavFnc\functions\debug";
         class logError {};
