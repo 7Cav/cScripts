@@ -306,7 +306,7 @@ class CAV_Charlie_CLS : CAV_Charlie_Base {  // Combat Life Saver 24.3kg
         "ACE_EntrenchingTool"
     };
 
-    insignia[] = {"CLS_Insignia"};
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
 };
 
 class CAV_Charlie_Weapons_SL : CAV_Charlie_Base {  // Squad Leader 35.3kg
@@ -559,7 +559,7 @@ class CAV_Charlie_Weapons_CLS : CAV_Charlie_Base {  // Combat Life Saver 23.0kg,
         "ACE_EntrenchingTool"
     };
 
-    insignia[] = {"CLS_Insignia"};
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
     gps[] = {"ItemAndroid"};
     preLoadout = "[(_this select 0), 'charlie', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
