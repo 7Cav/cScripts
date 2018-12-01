@@ -69,6 +69,17 @@ _crate addMagazineCargoGlobal ["DemoCharge_Remote_Mag", (_quaScale * 10)];
 
 //================== ITEMS ==================\\
 
+_crate addItemCargoGlobal ["ACE_WaterBottle", (_quaScale * 50)];
+
+_crate addItemCargoGlobal ["ACE_MRE_BeefStew", (_quaScale * 10)];
+_crate addItemCargoGlobal ["ACE_MRE_ChickenTikkaMasala", (_quaScale * 10)];
+_crate addItemCargoGlobal ["ACE_MRE_ChickenHerbDumplings", (_quaScale * 10)];
+_crate addItemCargoGlobal ["ACE_MRE_CreamChickenSoup", (_quaScale * 10)];
+_crate addItemCargoGlobal ["ACE_MRE_CreamTomatoSoup", (_quaScale * 10)];
+_crate addItemCargoGlobal ["ACE_MRE_LambCurry", (_quaScale * 10)];
+_crate addItemCargoGlobal ["ACE_MRE_MeatballsPasta", (_quaScale * 10)];
+_crate addItemCargoGlobal ["ACE_MRE_SteakVegetables", (_quaScale * 10)];
+
 _crate addItemCargoGlobal ["ACE_Chemlight_Shield", (_quaScale * 5)];
 
 //================== MEDICAL ==================\\
