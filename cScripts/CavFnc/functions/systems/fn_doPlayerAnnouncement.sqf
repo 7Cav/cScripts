@@ -18,7 +18,7 @@ params [
     ["_player",""]
 ];
 
-if !(isNil {_player getVariable QEGVAR(Cav,Announced)}) exitWith {
+if !(isNil {_player getVariable QEGVAR(Player,Announced)}) exitWith {
     #ifdef DEBUG_MODE
         [formatText["%1 already announced.", _player]] call FUNC(logInfo);
     #endif
@@ -46,7 +46,7 @@ if !(_profileNameSteam in ['=7CAV=']) then {
     systemChat format["%1 your steam name (%2) does not follow the 7CAV naming convention outlined by General Order Three - Regimental Tags & 7CAV-POL-004.", profileName, profileNameSteam];
 };
 
-(_player) setVariable [QEGVAR(Cav,Announced), true];
+(_player) setVariable [QEGVAR(Player,Announced), true];
 
 #ifdef DEBUG_MODE
     [formatText["Player %1 is announced.", _player]] call FUNC(logInfo);
