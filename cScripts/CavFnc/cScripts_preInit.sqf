@@ -173,7 +173,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
 ["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
     [_cScriptSettings, "5; Combat Jump Simulation"],
-    [[0,1,2], ["None", "Basic", "Advanced"], 0],
+    [[0,1,2], ["None", "Basic", "Advanced"], 1],
     true,
     {}
 ] call CBA_Settings_fnc_init;
