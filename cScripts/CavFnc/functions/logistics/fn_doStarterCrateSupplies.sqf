@@ -807,8 +807,6 @@ if (_companySelector == "full") then {
     _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEDP",50];
     _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",50];
     _crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_SMOKE",50];
-    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
 
     //================== GRENADES ==================\\
 

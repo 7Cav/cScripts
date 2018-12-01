@@ -37,8 +37,8 @@
 #define QFUNC(var) QUOTE(FUNC(var))
 
 #define MACRO_UNITINSIGNIA(var1,var2) \
-class ##var1 { \
-    displayName = QUOTE(#var1); \
+class TRIPLES(Cav,Insignia,var2) { \
+    displayName = QUOTE([7CAV] var1); \
     author = QUOTE(7th Cavalry Gaming); \
-    texture = QUOTE(cScripts\Data\Insignia\var2); \
+    texture = QUOTE(cScripts\Data\Insignia\var2.paa); \
 }

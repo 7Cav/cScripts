@@ -24,7 +24,7 @@ HOW CSCRIPTS WORKS FOR DUMMIES:
 
 class CommonBlufor {
     backpack[] = {""};
-    goggles[] = {"rhs_googles_clear"};
+    //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
     vest[] = {""};
@@ -51,7 +51,7 @@ class CommonBlufor {
 
 class CAV_Alpha_Base : CommonBlufor {
     backpack[] = {""};
-    goggles[] = {""};
+    //goggles[] = {""};
     headgear[] = {"rhsusf_hgu56p_visor_green"};
     uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
     vest[] = {"rhsusf_mbav_light"};
@@ -89,6 +89,7 @@ class CAV_Alpha_Base : CommonBlufor {
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EntrenchingTool",
         "ACE_MapTools",
         "ACE_Flashlight_MX991",
@@ -114,7 +115,7 @@ class CAV_Alpha_Base : CommonBlufor {
 
 class CAV_Bravo_Base : CommonBlufor {
     backpack[] = {"B_Carryall_mcamo"};
-    goggles[] = {"rhs_googles_clear"};
+    //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
@@ -140,6 +141,7 @@ class CAV_Bravo_Base : CommonBlufor {
         "ACE_microDAGR",
 
         // Tools
+        "ACE_Canteen",
         "ACE_EntrenchingTool"
     };
 
@@ -156,10 +158,10 @@ class CAV_Bravo_Base : CommonBlufor {
 
 class CAV_Charlie_Base : CommonBlufor {
     backpack[] = {"B_Kitbag_cbr"};
-    goggles[] = {"rhs_googles_clear"};
-    headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
+    //goggles[] = {"rhs_googles_clear"};
+    headgear[] = {"rhsusf_ach_helmet_ocp"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman"};
+    vest[] = {"rhsusf_spcs_ocp"};
 
     primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
     secondary[] = {""};
@@ -183,6 +185,7 @@ class CAV_Charlie_Base : CommonBlufor {
         "ACE_microDAGR",
 
         // Tools
+        "ACE_Canteen",
         "ACE_EntrenchingTool"
     };
 
@@ -199,7 +202,7 @@ class CAV_Charlie_Base : CommonBlufor {
 
 class CAV_Ranger_Base : CommonBlufor {
     backpack[] = {""};
-    goggles[] = {"rhs_googles_clear"};
+    //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_mich_bare_norotos_alt"};
     uniform[] = {"rhs_uniform_g3_mc"};
     vest[] = {"rhsusf_mbav_rifleman"};
@@ -219,14 +222,14 @@ class CAV_Ranger_Base : CommonBlufor {
     nvgs[] = {""};
     watch[] = {"ACE_Altimeter"};
 
-    insignia[] = {"RANGER"};
+    insignia[] = {"Cav_Insignia_Specialized_Ranger"};
     preLoadout = "[(_this select 0), 'ranger', 1, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 class CAV_Medical_Base : CommonBlufor {
     backpack[] = {""};
-    goggles[] = {"rhs_googles_clear"};
+    //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_bare_tan_headset"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
     vest[] = {"rhsusf_mbav_medic"};
@@ -246,7 +249,7 @@ class CAV_Medical_Base : CommonBlufor {
     nvgs[] = {""};
     watch[] = {"ItemWatch"};
 
-    insignia[] = {"CLS_Insignia"};
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
     preLoadout = "[(_this select 0), 'medical', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
