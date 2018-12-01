@@ -75,17 +75,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
-// Diary Records
-[
-    QEGVAR(Settings,showDiaryRecords),
-    "CHECKBOX",
-    ["Help documents","Allow the mission to write diary help documents.\n"],
-    _cScriptSettings,
-    true,
-    true,
-    {}
-] call CBA_Settings_fnc_init;
-
 // Custom init
 [
     QEGVAR(Settings,allowCustomInit),
@@ -131,12 +120,22 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_Settings_fnc_init;
 
 
+// Diary Records
+[
+    QEGVAR(Settings,showDiaryRecords),
+    "CHECKBOX",
+    ["Help documents","Allow the mission to write diary help documents.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
 
 // Rank
 [
     QEGVAR(Settings,setPlayerRank),
     "CHECKBOX",
-    ["Set Rank","Allow mission to apply rank based on cav name prefix.\n"],
+    ["Apply Prefix Rank","Allow mission to apply rank based on 7Cav name prefix.\n"],
     [_cScriptSettings, "4; Player"],
     true,
     true,
@@ -158,7 +157,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     QEGVAR(Settings,enforceEyewereBlacklist),
     "CHECKBOX",
-    ["Enforce eyewere and facewere blacklist","Enforce eyewere and facewere blacklist this will remove rediculus selected eyewere when a player spawns.\n"],
+    ["Enforce google blacklist","Enforce google blacklist this will remove rediculus selected eyewere when a player spawns.\n"],
     [_cScriptSettings, "4; Player"],
     true,
     true,
