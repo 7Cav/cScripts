@@ -46,6 +46,7 @@ class CAV_Alpha_Helo_COPILOT : CAV_Alpha_Base {  // Use for CoPilots
         "ACE_tourniquet",5,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EntrenchingTool",
         "ACE_MapTools",
         "ACE_Flashlight_XL50",
@@ -99,6 +100,7 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EntrenchingTool",
         "ACE_CableTie",2,
         "ACE_MapTools",
@@ -142,6 +144,7 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
         "ACE_tourniquet",5,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EntrenchingTool",
         "ACE_CableTie",2,
         "ACE_MapTools",
@@ -202,6 +205,7 @@ class CAV_Alpha_Helo_COPILOT_ATT : CAV_Alpha_Base {  // Use for Attack Rotary
         "ACE_tourniquet",5,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EntrenchingTool",
         "ACE_MapTools",
         "ACE_Flashlight_XL50",
@@ -260,6 +264,7 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_Canteen",
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",
         "ACE_Flashlight_MX991",
