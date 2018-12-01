@@ -19,8 +19,9 @@ if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[formatT
 private _transport = [
     "rhsusf_M1078A1P2_WD_fmtv_usarmy", "rhsusf_M1078A1P2_WD_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_WD_fmtv_usarmy", "rhsusf_M1078A1P2_B_WD_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_WD_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_WD_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy", "rhsusf_M1083A1P2_WD_fmtv_usarmy", "rhsusf_M1083A1P2_WD_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_WD_fmtv_usarmy", "rhsusf_M1083A1P2_B_WD_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_WD_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_WD_flatbed_fmtv_usarmy", "rhsusf_M1084A1P2_WD_fmtv_usarmy", "rhsusf_M1084A1P2_B_WD_fmtv_usarmy", "rhsusf_M1084A1P2_B_M2_WD_fmtv_usarmy", "rhsusf_M1085A1P2_B_WD_Medical_fmtv_usarmy",
     "rhsusf_m1025_d_m2", "rhsusf_m1025_d_Mk19", "rhsusf_m1025_d", "rhsusf_m1043_d_m2", "rhsusf_m1043_d_mk19", "rhsusf_m1043_d", "rhsusf_m1045_d", "rhsusf_m998_d_2dr_fulltop", "rhsusf_m998_d_2dr_halftop", "rhsusf_m998_d_2dr", "rhsusf_m998_d_4dr_fulltop", "rhsusf_m998_d_4dr_halftop", "rhsusf_m998_d_4dr", "rhsusf_m966_d", "rhsusf_M1117_D", "rhsusf_M1117_O", "rhsusf_M1220_usarmy_d", "rhsusf_M1220_M153_M2_usarmy_d", "rhsusf_M1220_M2_usarmy_d", "rhsusf_M1220_MK19_usarmy_d", "rhsusf_M1230_M2_usarmy_d", "rhsusf_M1230_MK19_usarmy_d", "rhsusf_M1232_usarmy_d", "rhsusf_M1232_M2_usarmy_d", "rhsusf_M1232_MK19_usarmy_d", "rhsusf_M1237_M2_usarmy_d", "rhsusf_M1237_MK19_usarmy_d", "rhsusf_m1025_w_m2", "rhsusf_m1025_w_mk19", "rhsusf_m1025_w", "rhsusf_m1043_w_m2", "rhsusf_m1043_w_mk19", "rhsusf_m1043_w", "rhsusf_m1045_w", "rhsusf_m998_w_2dr_fulltop", "rhsusf_m998_w_2dr_halftop", "rhsusf_m998_w_2dr", "rhsusf_m998_w_4dr_fulltop", "rhsusf_m998_w_4dr_halftop", "rhsusf_m998_w_4dr", "rhsusf_m966_w", "rhsusf_M1117_W", "rhsusf_M1220_usarmy_wd", "rhsusf_M1220_M2_usarmy_wd", "rhsusf_M1220_M153_M2_usarmy_wd", "rhsusf_M1220_MK19_usarmy_wd", "rhsusf_M1230_M2_usarmy_wd", "rhsusf_M1230_MK19_usarmy_wd", "rhsusf_M1230a1_usarmy_wd", "rhsusf_M1232_usarmy_wd", "rhsusf_M1232_M2_usarmy_wd", "rhsusf_M1232_MK19_usarmy_wd", "rhsusf_M1237_M2_usarmy_wd", "rhsusf_M1232_MK19_usarmy_wd", "rhsusf_M1237_M2_usarmy_wd", "rhsusf_M1237_MK19_usarmy_wd",
-    "rhsusf_M977A4_usarmy_wd", "rhsusf_M977A4_AMMO_usarmy_wd", "rhsusf_M977A4_REPAIR_usarmy_wd", "rhsusf_M977A4_BKIT_usarmy_wd", "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd", "rhsusf_M977A4_AMMO_BKIT_usarmy_wd", "rhsusf_M977A4_BKIT_M2_usarmy_wd", "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd", "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd", "rhsusf_M978A4_usarmy_wd", "rhsusf_M978A4_BKIT_usarmy_wd", "rhsusf_M1078A1P2_D_fmtv_usarmy", "rhsusf_M1078A1P2_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy", "rhsusf_M1083A1P2_D_fmtv_usarmy", "rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_D_fmtv_usarmy", "rhsusf_M1083A1P2_B_D_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_D_flatbed_fmtv_usarmy", "rhsusf_M1084A1P2_D_fmtv_usarmy", "rhsusf_M1084A1P2_B_D_fmtv_usarmy", "rhsusf_M1084A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M977A4_usarmy_d", "rhsusf_M977A4_AMMO_usarmy_d", "rhsusf_M977A4_REPAIR_usarmy_d", "rhsusf_M977A4_AMMO_BKIT_usarmy_d", "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d", "rhsusf_M977A4_BKIT_usarmy_d", "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d", "rhsusf_M977A4_BKIT_M2_usarmy_d", "rhsusf_M977A4_REPAIR_BKIT_usarmy_d", "rhsusf_M978A4_usarmy_d", "rhsusf_M978A4_BKIT_usarmy_d",
-    // Rotary transport
+    "rhsusf_M977A4_usarmy_wd", "rhsusf_M977A4_AMMO_usarmy_wd", "rhsusf_M977A4_REPAIR_usarmy_wd", "rhsusf_M977A4_BKIT_usarmy_wd", "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd", "rhsusf_M977A4_AMMO_BKIT_usarmy_wd", "rhsusf_M977A4_BKIT_M2_usarmy_wd", "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd", "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd", "rhsusf_M978A4_usarmy_wd", "rhsusf_M978A4_BKIT_usarmy_wd", "rhsusf_M1078A1P2_D_fmtv_usarmy", "rhsusf_M1078A1P2_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M1078A1P2_B_M2_D_flatbed_fmtv_usarmy", "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy", "rhsusf_M1083A1P2_D_fmtv_usarmy", "rhsusf_M1083A1P2_D_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_D_fmtv_usarmy", "rhsusf_M1083A1P2_B_D_flatbed_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M1083A1P2_B_M2_D_flatbed_fmtv_usarmy", "rhsusf_M1084A1P2_D_fmtv_usarmy", "rhsusf_M1084A1P2_B_D_fmtv_usarmy", "rhsusf_M1084A1P2_B_M2_D_fmtv_usarmy", "rhsusf_M977A4_usarmy_d", "rhsusf_M977A4_AMMO_usarmy_d", "rhsusf_M977A4_REPAIR_usarmy_d", "rhsusf_M977A4_AMMO_BKIT_usarmy_d", "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d", "rhsusf_M977A4_BKIT_usarmy_d", "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d", "rhsusf_M977A4_BKIT_M2_usarmy_d", "rhsusf_M977A4_REPAIR_BKIT_usarmy_d", "rhsusf_M978A4_usarmy_d", "rhsusf_M978A4_BKIT_usarmy_d"
+];
+private _transport_rotary = [
     "RHS_UH60M_MEV_d","RHS_UH60M_MEV2_d","RHS_UH60M2_d","RHS_UH60M_ESSS_d","RHS_UH60M_ESSS2_d","RHS_UH60M_d","RHS_UH60M","RHS_UH60M_ESSS","RHS_UH60M_ESSS2","RHS_UH60M2","RHS_UH60M_MEV2","RHS_UH60M_MEV","RHS_UH1Y_FFAR_d","RHS_UH1Y_d","RHS_UH1Y_UNARMED_d","RHS_UH1Y_FFAR","RHS_UH1Y","RHS_UH1Y_UNARMED"
 ];
 private _armoredTransport = [
@@ -38,15 +39,13 @@ private _empty = [
 ];
 
 private _allVehicles = [];
-{ _allVehicles append _x } forEach [_transport, _armoredTransport, _armor, _medical, _c130];
+{ _allVehicles append _x } forEach [_transport, _transport_rotary, _armoredTransport, _armor, _medical, _c130];
 
 
 if (typeOf _vehicle in _allVehicles) then {
     #ifdef DEBUG_MODE
         [formatText["Added vehicle inventory to %1.", _vehicle]] call FUNC(logInfo);
     #endif
-
-    // Apply inventory
     clearweaponcargoGlobal _vehicle;
     clearmagazinecargoGlobal _vehicle;
     clearitemcargoGlobal _vehicle;
@@ -56,12 +55,61 @@ if (typeOf _vehicle in _allVehicles) then {
 };
 
 switch (true) do {
-    case (typeOf _vehicle in _transport): {};
-    case (typeOf _vehicle in _armoredTransport): {};
-    case (typeOf _vehicle in _armor): {};
-    case (typeOf _vehicle in _medical): {};
+    case (typeOf _vehicle in _transport): {
+        _vehicle addWeaponCargoGlobal ["rhs_weap_M136", 1];
+
+        _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 16];
+        _vehicle addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_box", 2];
+
+        _vehicle addMagazineCargoGlobal ["SmokeShell", 8];
+        _vehicle addMagazineCargoGlobal ["SmokeShellBlue", 2];
+        _vehicle addMagazineCargoGlobal ["SmokeShellGreen", 2];
+
+        _vehicle addItemCargoGlobal ["ACE_tourniquet", 2];
+        _vehicle addItemCargoGlobal ["ACE_fieldDressing", 10];
+    };
+    case (typeOf _vehicle in _transport_rotary): {
+        _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 16];
+        _vehicle addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_box", 2];
+
+        _vehicle addMagazineCargoGlobal ["SmokeShell", 8];
+
+        _vehicle addItemCargoGlobal ["ACE_tourniquet", 2];
+        _vehicle addItemCargoGlobal ["ACE_fieldDressing", 10];
+    };
+    case (typeOf _vehicle in _armoredTransport): {
+        _vehicle addWeaponCargoGlobal ["rhs_weap_M136", 1];
+
+        _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 16];
+        _vehicle addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_box", 2];
+
+        _vehicle addMagazineCargoGlobal ["SmokeShell", 8];
+        _vehicle addMagazineCargoGlobal ["SmokeShellBlue", 2];
+        _vehicle addMagazineCargoGlobal ["SmokeShellGreen", 2];
+
+        _vehicle addItemCargoGlobal ["ACE_tourniquet", 2];
+        _vehicle addItemCargoGlobal ["ACE_fieldDressing", 10];
+    };
+    case (typeOf _vehicle in _armor): {
+        _vehicle addItemCargoGlobal ["Toolkit", 2];
+    };
+    case (typeOf _vehicle in _medical): {
+        _vehicle addItemCargoGlobal ["ACE_FieldDressing", 30];
+        _vehicle addItemCargoGlobal ["ACE_packingBandage", 30];
+        _vehicle addItemCargoGlobal ["ACE_elasticBandage", 30];
+        _vehicle addItemCargoGlobal ["ACE_quikclot", 50];
+
+        _vehicle addItemCargoGlobal ["ACE_personalAidKit", 10];
+
+        _vehicle addItemCargoGlobal ["ACE_salineIV", 6];
+        _vehicle addItemCargoGlobal ["ACE_salineIV_500", 6];
+
+        _vehicle addItemCargoGlobal ["ACE_morphine", 10];
+        _vehicle addItemCargoGlobal ["ACE_epinephrine", 5];
+        _vehicle addItemCargoGlobal ["ACE_adenosine", 5];
+    };
     case (typeOf _vehicle in _c130): {
-        _vehicle addBackpackCargoGlobal ["ACE_NonSteerableParachute", 25];
+        _vehicle addBackpackCargoGlobal ["rhsusf_eject_Parachute_backpack", 25];
     };
     case (typeOf _vehicle in _empty): {
         #ifdef DEBUG_MODE
