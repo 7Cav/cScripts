@@ -111,6 +111,7 @@ class cScripts {
         class moduleCreateMedicalCrate {};
         class moduleCreateSupplyCrate {};
         class moduleCreateSpecialWeaponsCrate {};
+        class moduleCreateTimer {};
 
         class moduleApplyVehicleLable {};
 
@@ -121,6 +122,7 @@ class cScripts {
         class moduleRegearTrooper {};
 
         class moduleCallEndex {};
+        class modulePowerOutage {};
     };
 
     class helpers {

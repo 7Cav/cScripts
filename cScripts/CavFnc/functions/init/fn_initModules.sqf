@@ -72,6 +72,14 @@ if (ace_medical_increaseTrainingInLocations) then {
 ["7Cav Mission", "Call Endex",{
     call FUNC(moduleCallEndex);
 }] call Ares_fnc_RegisterCustomModule;
+// Created module entry for CreateTimer addition - uaon
+["7Cav Utilities", "Create Timer",{
+    call FUNC(moduleCreateTimer);
+}]  call Ares_fnc_RegisterCustomModule;
+
+["7Cav Misc", "Power Outage",{
+    call FUNC(modulePowerOutage);
+}]  call Ares_fnc_RegisterCustomModule;
 
 #ifdef DEBUG_MODE
     ["7Cav Custom Achilles Modules initialization complete"] call FUNC(logInfo);
