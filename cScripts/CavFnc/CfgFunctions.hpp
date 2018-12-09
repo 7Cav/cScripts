@@ -122,6 +122,7 @@ class cScripts {
         class moduleRegearTrooper {};
 
         class moduleCallEndex {};
+        class modulePowerOutage {};
     };
 
     class helpers {

@@ -22,6 +22,7 @@ private _dialogResult = [
 
 if (count _dialogResult == 0) exitWith {};
 
+
 private _Ctimer = _dialogResult select 0;
 
 		_time = [] call bis_fnc_countdown;
@@ -40,11 +41,10 @@ private _Ctimer = _dialogResult select 0;
 			} else {
 				_value call bis_fnc_countdown;
 			};
-		};
-	} else {
+		} else {
 		if (ismultiplayer) then {
 			estimatedtimeleft 1e10;
-		} else {
+		 } else {
 			-1 call bis_fnc_countdown;
 		};
 		if !(isnil "bis_fnc_moduleCountdown_end") then {

@@ -77,6 +77,10 @@ if (ace_medical_increaseTrainingInLocations) then {
     call FUNC(moduleCreateTimer);
 }]  call Ares_fnc_RegisterCustomModule;
 
+["7Cav Misc", "Power Outage",{
+    call FUNC(modulePowerOutage);
+}]  call Ares_fnc_RegisterCustomModule;
+
 #ifdef DEBUG_MODE
     ["7Cav Custom Achilles Modules initialization complete"] call FUNC(logInfo);
 #endif
