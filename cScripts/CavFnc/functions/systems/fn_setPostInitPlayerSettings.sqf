@@ -14,7 +14,8 @@ params [
     ["_player",""],
     ["_safeMode", true],
     ["_earPlugs", true],
-    ["_facewere", true]
+    ["_facewere", true],
+    ["_radio",true]
 ];
 
 #ifdef DEBUG_MODE
@@ -90,6 +91,15 @@ if (EGVAR(Settings,enforceEyewereBlacklist)) then {
         };
     };
 };
+
+//if (EGVAR(Settings,setRadio)) then {
+    if (_radio) then {
+        [_player] call FUNC(setRadioChannel);
+        #ifdef DEBUG_MODE
+            [format["%1 have got there radio channel schedueld to be changed in postLoadout.", _player]] call FUNC(logInfo);
+        #endif
+    };
+//};
 
 #ifdef DEBUG_MODE
     [formatText["postLoadout application completed for %1.", _player]] call FUNC(logInfo);
