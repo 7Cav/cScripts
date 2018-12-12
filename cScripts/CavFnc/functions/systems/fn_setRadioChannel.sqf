@@ -20,7 +20,7 @@ params [["_player", objNull, [objNull]]];
 
 [{[] call acre_api_fnc_isInitialized}, {
     private _playerRadios = [(_this select 0)] call acre_api_fnc_getCurrentRadioList;
-    {	
+    {
         if !(_x == "") then {
             private _channel = [(_this select 0)] call FUNC(getRadioChannel);
 
