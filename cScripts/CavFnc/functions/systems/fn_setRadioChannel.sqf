@@ -19,18 +19,18 @@
 params [["_player", objNull, [objNull]]];
 
 [{[] call acre_api_fnc_isInitialized}, {
-	private _playerRadios = [(_this select 0)] call acre_api_fnc_getCurrentRadioList;
-	{	
-		if !(_x == "") then {
-			private _channel = [(_this select 0)] call FUNC(getRadioChannel);
+    private _playerRadios = [(_this select 0)] call acre_api_fnc_getCurrentRadioList;
+    {	
+        if !(_x == "") then {
+            private _channel = [(_this select 0)] call FUNC(getRadioChannel);
 
-			[_x, _channel] call acre_api_fnc_setRadioChannel;
+            [_x, _channel] call acre_api_fnc_setRadioChannel;
 
-			#ifdef DEBUG_MODE
-				[format["%1 radio (%2) have have its channel set to %3",(_this select 0), _x, _channel]] call FUNC(logInfo);
-			#endif
-		} else {
-			[format["Empty radio is trying to get it's channel applied for %1.",(_this select 0)]] call FUNC(logWarning);
-		};
-	} forEach _playerRadios;
+            #ifdef DEBUG_MODE
+                [format["%1 radio (%2) have have its channel set to %3",(_this select 0), _x, _channel]] call FUNC(logInfo);
+            #endif
+        } else {
+            [format["Empty radio is trying to get it's channel applied for %1.",(_this select 0)]] call FUNC(logWarning);
+        };
+    } forEach _playerRadios;
 }, [_player]] call CBA_fnc_waitUntilAndExecute;
