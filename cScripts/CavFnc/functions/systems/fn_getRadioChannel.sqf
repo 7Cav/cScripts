@@ -136,45 +136,45 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "APOLLO-6": {_channel = 14};
         
         //Air
-        case "PEGASUS-2": {_channel = 1};
+        case "PEGASUS-2": {_channel = 2};
 
-        case "BUFFALO-1": {_channel = 1};
-        case "BUFFALO-2": {_channel = 1};
-        case "BUFFALO-3": {_channel = 1};
-        case "BUFFALO-4": {_channel = 1};
+        case "BUFFALO-1": {_channel = 2};
+        case "BUFFALO-2": {_channel = 2};
+        case "BUFFALO-3": {_channel = 2};
+        case "BUFFALO-4": {_channel = 2};
 
-        case "GRIZZLY-1": {_channel = 1};
-        case "GRIZZLY-2": {_channel = 1};
-        case "GRIZZLY-3": {_channel = 1};
+        case "GRIZZLY-1": {_channel = 2};
+        case "GRIZZLY-2": {_channel = 2};
+        case "GRIZZLY-3": {_channel = 2};
 
-        case "RAVEN-1": {_channel = 1};
-        case "RAVEN-2": {_channel = 1};
-        case "RAVEN-3": {_channel = 1};
-        case "RAVEN-4": {_channel = 1};
+        case "RAVEN-1": {_channel = 2};
+        case "RAVEN-2": {_channel = 2};
+        case "RAVEN-3": {_channel = 2};
+        case "RAVEN-4": {_channel = 2};
 
-        case "EAGLE-1": {_channel = 1};
-        case "EAGLE-2": {_channel = 1};
-        case "EAGLE-3": {_channel = 1};
+        case "EAGLE-1": {_channel = 2};
+        case "EAGLE-2": {_channel = 2};
+        case "EAGLE-3": {_channel = 2};
 
-        case "HOG-1": {_channel = 1};
-        case "HOG-2": {_channel = 1};
-        case "HOG-3": {_channel = 1};
-        case "HOG-4": {_channel = 1};
+        case "HOG-1": {_channel = 2};
+        case "HOG-2": {_channel = 2};
+        case "HOG-3": {_channel = 2};
+        case "HOG-4": {_channel = 2};
 
-        case "RAIDER-1": {_channel = 1};
-        case "RAIDER-2": {_channel = 1};
+        case "RAIDER-1": {_channel = 2};
+        case "RAIDER-2": {_channel = 2};
 
-        case "TITAN-1": {_channel = 1};
-        case "TITAN-2": {_channel = 1};
-        case "TITAN-3": {_channel = 1};
-        case "TITAN-4": {_channel = 1};
+        case "TITAN-1": {_channel = 2};
+        case "TITAN-2": {_channel = 2};
+        case "TITAN-3": {_channel = 2};
+        case "TITAN-4": {_channel = 2};
 
         // Ground
-        case "SABER-1": {_channel = 5};
-        case "SABER-2": {_channel = 5};
-        case "SABER-3": {_channel = 5};
-        case "SABER-4": {_channel = 5};
-        case "SABER-7": {_channel = 5};
+        case "SABER-1": {_channel = 6};
+        case "SABER-2": {_channel = 6};
+        case "SABER-3": {_channel = 6};
+        case "SABER-4": {_channel = 6};
+        case "SABER-7": {_channel = 6};
 
         case "VIKING-1": {_channel = 2};
         case "VIKING-2": {_channel = 2};
@@ -192,30 +192,30 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "PUNISHER-6": {_channel = 3};
         case "PUNISHER-7": {_channel = 3};
 
-        case "BANDIT-1": {_channel = 6};
-        case "BANDIT-2": {_channel = 6};
-        case "BANDIT-3": {_channel = 6};
-        case "BANDIT-4": {_channel = 6};
-        case "BANDIT-5": {_channel = 6};
-        case "BANDIT-6": {_channel = 6};
-        case "BANDIT-7": {_channel = 6};
+        case "BANDIT-1": {_channel = 7};
+        case "BANDIT-2": {_channel = 7};
+        case "BANDIT-3": {_channel = 7};
+        case "BANDIT-4": {_channel = 7};
+        case "BANDIT-5": {_channel = 7};
+        case "BANDIT-6": {_channel = 7};
+        case "BANDIT-7": {_channel = 7};
 
-        case "MISFIT-1": {_channel = 7};
-        case "MISFIT-2": {_channel = 7};
-        case "MISFIT-3": {_channel = 7};
-        case "MISFIT-4": {_channel = 7};
-        case "MISFIT-5": {_channel = 7};
-        case "MISFIT-6": {_channel = 7};
-        case "MISFIT-7": {_channel = 7};
+        case "MISFIT-1": {_channel = 8};
+        case "MISFIT-2": {_channel = 8};
+        case "MISFIT-3": {_channel = 8};
+        case "MISFIT-4": {_channel = 8};
+        case "MISFIT-5": {_channel = 8};
+        case "MISFIT-6": {_channel = 8};
+        case "MISFIT-7": {_channel = 8};
 
         // Ranger
-        case "ROUGHNECK-1": {_channel = 18};
-        case "ROUGHNECK-2": {_channel = 18};
-        case "ROUGHNECK-3": {_channel = 18};
-        case "ROUGHNECK-4": {_channel = 18};
-        case "ROUGHNECK-6": {_channel = 18};
-        case "PHANTOM-1": {_channel = 18};
-        case "PHANTOM-2": {_channel = 18};
+        case "ROUGHNECK-1": {_channel = 20};
+        case "ROUGHNECK-2": {_channel = 20};
+        case "ROUGHNECK-3": {_channel = 20};
+        case "ROUGHNECK-4": {_channel = 20};
+        case "ROUGHNECK-6": {_channel = 20};
+        case "PHANTOM-1": {_channel = 20};
+        case "PHANTOM-2": {_channel = 20};
 
         case "ZEUS": {_channel = 18};
 
