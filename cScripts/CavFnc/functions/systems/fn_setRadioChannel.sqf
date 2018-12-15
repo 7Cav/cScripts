@@ -19,12 +19,18 @@
 params [["_player", objNull, [objNull]]];
 
 [{[] call acre_api_fnc_isInitialized}, {
+    (_this select 0) setVariable [QEGVAR(Player,RadioChannel), []];
     private _playerRadios = [(_this select 0)] call acre_api_fnc_getCurrentRadioList;
     {
         if !(_x == "") then {
             private _channel = [(_this select 0)] call FUNC(getRadioChannel);
 
             [_x, _channel] call acre_api_fnc_setRadioChannel;
+
+            // Store radio channels in variable.
+            private _radioAndChannel = (_this select 0) getVariable [QEGVAR(Player,RadioChannel), []];
+            _radioAndChannel pushBack [[_x] call acre_api_fnc_getBaseRadio, _channel];
+            (_this select 0) setVariable [QEGVAR(Player,RadioChannel), _radioAndChannel];
 
             #ifdef DEBUG_MODE
                 [format["%1 radio (%2) have have its channel set to %3",(_this select 0), _x, _channel]] call FUNC(logInfo);
