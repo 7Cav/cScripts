@@ -98,7 +98,6 @@ if (EGVAR(Settings,enforceEyewereBlacklist)) then {
 
 // Add squad insignia
 if (_squadInsignia) then {
-
     if (isNil {_player getVariable QEGVAR(Cav,Insignia)}) then {
         if ((_player call BIS_fnc_getUnitInsignia) != "") then {
             _insignia = _player call BIS_fnc_getUnitInsignia;

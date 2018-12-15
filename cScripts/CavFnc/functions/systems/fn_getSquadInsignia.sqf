@@ -117,7 +117,7 @@ switch (_group) do {
     case "PHANTOM-1": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
     case "PHANTOM-2": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
     
-    case "ZEUS": {};
+    case "ZEUS": {_return = ""};
 
     default {_return = ""};
 };
