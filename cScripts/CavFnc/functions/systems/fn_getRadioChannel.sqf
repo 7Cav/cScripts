@@ -217,7 +217,7 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "PHANTOM-1": {_channel = 20};
         case "PHANTOM-2": {_channel = 20};
 
-        case "ZEUS": {_channel = 18};
+        case "ZEUS": {_channel = 17};
 
         default {_channel = 0};
     };
