@@ -5,16 +5,21 @@
  *
  * Arguments:
  * 0: Player <STRING>
+ * 1: Safe Mode <BOOL>
+ * 2: Put in Earplugs <BOOL>
+ * 3: Facewere blacklist <BOOL>
+ * 4: Set Squad insignia <BOOL>
  *
  * Example:
- * ["bob",true,true] call cScripts_fnc_setPostInitPlayerSettings;
+ * ["bob",true,true,true] call cScripts_fnc_setPostInitPlayerSettings;
  */
 
 params [
     ["_player",""],
     ["_safeMode", true],
     ["_earPlugs", true],
-    ["_facewere", true]
+    ["_facewere", true],
+    ["_squadInsignia",true]
 ];
 
 #ifdef DEBUG_MODE
@@ -88,6 +93,35 @@ if (EGVAR(Settings,enforceEyewereBlacklist)) then {
                 [format["%1 using un-authorized facewere it have been removed.", _player]] call FUNC(logInfo);
             #endif
         };
+    };
+};
+
+// Add squad insignia
+if (_squadInsignia) then {
+
+    if (isNil {_player getVariable QEGVAR(Cav,Insignia)}) then {
+        if ((_player call BIS_fnc_getUnitInsignia) != "") then {
+            _insignia = _player call BIS_fnc_getUnitInsignia;
+            _player setVariable [QEGVAR(Cav,Insignia), _insignia];
+            #ifdef DEBUG_MODE
+                [format["%1 already have a insignia; %2 saving it.", _player, _insignia]] call FUNC(logInfo);
+            #endif
+        } else {
+            private _insignia = [_player] call FUNC(getSquadInsignia);
+            if (_insignia != "") then {
+                [_player, _insignia] call BIS_fnc_setUnitInsignia;
+                _player setVariable [QEGVAR(Cav,Insignia), _insignia];
+                #ifdef DEBUG_MODE
+                    [format["%1 got assigned insignia; %2 based on squad name.", _player, _insignia]] call FUNC(logInfo);
+                #endif
+            };
+        };
+    } else {
+        private _insignia = _player getVariable QEGVAR(Cav,Insignia);
+        [_player, _insignia] call BIS_fnc_setUnitInsignia;
+        #ifdef DEBUG_MODE
+            [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
+        #endif
     };
 };
 
