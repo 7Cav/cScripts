@@ -18,7 +18,7 @@
 
 params [["_player", objNull, [objNull]]];
 
-private _channel = 0;
+private _channel = 1;
 private _group = groupId (group _player);
 _group = toUpper(_group);
 
@@ -124,16 +124,16 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
     };
 } else {
     switch (_group) do {
-        case "GODFATHER-5": {_channel = 19};
-        case "GODFATHER-6": {_channel = 19};
-        case "GODFATHER-7": {_channel = 19};
+        case "GODFATHER-5": {_channel = 20};
+        case "GODFATHER-6": {_channel = 20};
+        case "GODFATHER-7": {_channel = 20};
 
-        case "MUSTANG-1": {_channel = 14};
-        case "MUSTANG-2": {_channel = 14};
+        case "MUSTANG-1": {_channel = 15};
+        case "MUSTANG-2": {_channel = 15};
 
-        case "APOLLO-1": {_channel = 14};
-        case "APOLLO-5": {_channel = 14};
-        case "APOLLO-6": {_channel = 14};
+        case "APOLLO-1": {_channel = 15};
+        case "APOLLO-5": {_channel = 15};
+        case "APOLLO-6": {_channel = 15};
         
         //Air
         case "PEGASUS-2": {_channel = 2};
@@ -209,15 +209,15 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "MISFIT-7": {_channel = 8};
 
         // Ranger
-        case "ROUGHNECK-1": {_channel = 20};
-        case "ROUGHNECK-2": {_channel = 20};
-        case "ROUGHNECK-3": {_channel = 20};
-        case "ROUGHNECK-4": {_channel = 20};
-        case "ROUGHNECK-6": {_channel = 20};
-        case "PHANTOM-1": {_channel = 20};
-        case "PHANTOM-2": {_channel = 20};
+        case "ROUGHNECK-1": {_channel = 19};
+        case "ROUGHNECK-2": {_channel = 19};
+        case "ROUGHNECK-3": {_channel = 19};
+        case "ROUGHNECK-4": {_channel = 19};
+        case "ROUGHNECK-6": {_channel = 19};
+        case "PHANTOM-1": {_channel = 19};
+        case "PHANTOM-2": {_channel = 19};
 
-        case "ZEUS": {_channel = 17};
+        case "ZEUS": {_channel = 18};
 
         default {_channel = 0};
     };
