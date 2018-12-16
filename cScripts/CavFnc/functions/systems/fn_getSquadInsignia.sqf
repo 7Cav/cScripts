@@ -76,13 +76,13 @@ switch (_group) do {
     case "SABER-4": {_return = ""};
     case "SABER-7": {_return = ""};
 
-    case "VIKING-1": {_return = ""};
-    case "VIKING-2": {_return = ""};
-    case "VIKING-3": {_return = ""};
-    case "VIKING-4": {_return = ""};
-    case "VIKING-5": {_return = ""};
-    case "VIKING-6": {_return = ""};
-    case "VIKING-7": {_return = ""};
+    case "VIKING-1": {_return = "Cav_Insignia_Bravo_2_1"};
+    case "VIKING-2": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING-3": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING-4": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING-5": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING-6": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING-7": {_return = "Cav_Insignia_Bravo_2"};
 
     case "PUNISHER-1": {_return = ""};
     case "PUNISHER-2": {_return = ""};
@@ -92,30 +92,30 @@ switch (_group) do {
     case "PUNISHER-6": {_return = ""};
     case "PUNISHER-7": {_return = ""};
 
-    case "BANDIT-1": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_1_1))};
-    case "BANDIT-2": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_1_2))};
-    case "BANDIT-3": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_1_3))};
-    case "BANDIT-4": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_1_4))};
-    case "BANDIT-5": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_1))};
-    case "BANDIT-6": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_1))};
-    case "BANDIT-7": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_1))};
+    case "BANDIT-1": {_return = "Cav_Insignia_Charlie_1_1"};
+    case "BANDIT-2": {_return = "Cav_Insignia_Charlie_1_2"};
+    case "BANDIT-3": {_return = "Cav_Insignia_Charlie_1_3"};
+    case "BANDIT-4": {_return = "Cav_Insignia_Charlie_1_4"};
+    case "BANDIT-5": {_return = "Cav_Insignia_Charlie_1"};
+    case "BANDIT-6": {_return = "Cav_Insignia_Charlie_1"};
+    case "BANDIT-7": {_return = "Cav_Insignia_Charlie_1"};
 
-    case "MISFIT-1": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_2_1))};
-    case "MISFIT-2": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_2))};
-    case "MISFIT-3": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_2))};
-    case "MISFIT-4": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_2))};
-    case "MISFIT-5": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_2))};
-    case "MISFIT-6": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_2))};
-    case "MISFIT-7": {_return = QUOTE(TRIPLES(Cav,Insignia,Charlie_2))};
+    case "MISFIT-1": {_return = "Cav_Insignia_Charlie_2_1"};
+    case "MISFIT-2": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT-3": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT-4": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT-5": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT-6": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT-7": {_return = "Cav_Insignia_Charlie_2"};
 
     // Ranger
-    case "ROUGHNECK-1": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
-    case "ROUGHNECK-2": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
-    case "ROUGHNECK-3": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
-    case "ROUGHNECK-4": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
-    case "ROUGHNECK-6": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
-    case "PHANTOM-1": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
-    case "PHANTOM-2": {_return = QUOTE(TRIPLES(Cav,Insignia,Specialized_Ranger))};
+    case "ROUGHNECK-1": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "ROUGHNECK-2": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "ROUGHNECK-3": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "ROUGHNECK-4": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "ROUGHNECK-6": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "PHANTOM-1": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "PHANTOM-2": {_return = "Cav_Insignia_Specialized_Ranger"};
     
     case "ZEUS": {_return = ""};
 
