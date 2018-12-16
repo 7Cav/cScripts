@@ -97,30 +97,32 @@ if (EGVAR(Settings,enforceEyewereBlacklist)) then {
 };
 
 // Add squad insignia
-if (_squadInsignia) then {
-    if (isNil {_player getVariable QEGVAR(Cav,Insignia)}) then {
-        if ((_player call BIS_fnc_getUnitInsignia) != "") then {
-            _insignia = _player call BIS_fnc_getUnitInsignia;
-            _player setVariable [QEGVAR(Cav,Insignia), _insignia];
-            #ifdef DEBUG_MODE
-                [format["%1 already have a insignia; %2 saving it.", _player, _insignia]] call FUNC(logInfo);
-            #endif
-        } else {
-            private _insignia = [_player] call FUNC(getSquadInsignia);
-            if (_insignia != "") then {
-                [_player, _insignia] call BIS_fnc_setUnitInsignia;
+if (EGVAR(Settings,allowInsigniaApplication)) then {
+    if (_squadInsignia) then {
+        if (isNil {_player getVariable QEGVAR(Cav,Insignia)}) then {
+            if ((_player call BIS_fnc_getUnitInsignia) != "") then {
+                _insignia = _player call BIS_fnc_getUnitInsignia;
                 _player setVariable [QEGVAR(Cav,Insignia), _insignia];
                 #ifdef DEBUG_MODE
-                    [format["%1 got assigned insignia; %2 based on squad name.", _player, _insignia]] call FUNC(logInfo);
+                    [format["%1 already have a insignia; %2 saving it.", _player, _insignia]] call FUNC(logInfo);
                 #endif
+            } else {
+                private _insignia = [_player] call FUNC(getSquadInsignia);
+                if (_insignia != "") then {
+                    [_player, _insignia] call BIS_fnc_setUnitInsignia;
+                    _player setVariable [QEGVAR(Cav,Insignia), _insignia];
+                    #ifdef DEBUG_MODE
+                        [format["%1 got assigned insignia; %2 based on squad name.", _player, _insignia]] call FUNC(logInfo);
+                    #endif
+                };
             };
+        } else {
+            private _insignia = _player getVariable QEGVAR(Cav,Insignia);
+            [_player, _insignia] call BIS_fnc_setUnitInsignia;
+            #ifdef DEBUG_MODE
+                [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
+            #endif
         };
-    } else {
-        private _insignia = _player getVariable QEGVAR(Cav,Insignia);
-        [_player, _insignia] call BIS_fnc_setUnitInsignia;
-        #ifdef DEBUG_MODE
-            [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
-        #endif
     };
 };
 
