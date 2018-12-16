@@ -27,7 +27,7 @@ _getType = toUpper(_getType);
 private _playerClan = "";
 
 // featch clan tag if in multiplayer
-if ((isMultiplayer) && (!isNil {squadParams player})) then {
+if ((isMultiplayer) && (!isNil {squadParams _player})) then {
     _playerClan = squadParams _player select 0 select 0;
 };
 
