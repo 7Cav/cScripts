@@ -118,6 +118,7 @@ class cScripts {
         class moduleCreateSpecialWeaponsCrate {};
 
         class moduleApplyVehicleLable {};
+        class moduleApplyVehicleInventory {};
 
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
