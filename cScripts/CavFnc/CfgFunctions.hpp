@@ -83,6 +83,8 @@ class cScripts {
 
         class getCompanyVariable {};
         class hasCompanyVariable {};
+        
+        class getSquadInsignia {};
 
         class gate {};
         class teleport {};

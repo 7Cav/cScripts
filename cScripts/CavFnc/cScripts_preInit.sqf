@@ -164,6 +164,17 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
+// Auto Insignia Application
+[
+    QEGVAR(Settings,allowInsigniaApplication),
+    "CHECKBOX",
+    ["Allow Auto Insignia","Automaticly apply insignias based on squad name.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
 // Radio Switch
 [
     QEGVAR(Settings,setRadio),
