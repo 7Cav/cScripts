@@ -19,6 +19,7 @@ params [
     ["_safeMode", true],
     ["_earPlugs", true],
     ["_facewere", true],
+    ["_radio",true],
     ["_squadInsignia",true]
 ];
 
@@ -96,6 +97,7 @@ if (EGVAR(Settings,enforceEyewereBlacklist)) then {
     };
 };
 
+
 // Add squad insignia
 if (EGVAR(Settings,allowInsigniaApplication)) then {
     if (_squadInsignia) then {
@@ -123,6 +125,15 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
                 [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
             #endif
         };
+    };
+};
+
+if (EGVAR(Settings,setRadio)) then {
+    if (_radio) then {
+        [_player] call FUNC(setRadioChannel);
+        #ifdef DEBUG_MODE
+            [format["%1 have got there radio channel schedueld to be changed in postLoadout.", _player]] call FUNC(logInfo);
+        #endif
     };
 };
 
