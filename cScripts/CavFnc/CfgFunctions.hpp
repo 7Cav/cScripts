@@ -65,6 +65,9 @@ class cScripts {
         class getPlayerName {};
         class doPlayerAnnouncement {};
 
+        class getRadioChannel {};
+        class setRadioChannel {};
+
         class addJump {};
         class doJump {};
 
