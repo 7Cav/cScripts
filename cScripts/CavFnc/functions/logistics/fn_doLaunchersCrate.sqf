@@ -23,13 +23,10 @@ clearbackpackcargoGlobal _crate;
 
 _crate addWeaponCargoGlobal ["rhs_weap_fim92",(_quaScale * 1)];
 _crate addWeaponCargoGlobal ["rhs_weap_fgm148",(_quaScale * 1)];
-_crate addWeaponCargoGlobal ["tf47_m3maaws",(_quaScale * 1)];
 _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",(_quaScale * 2)];
 
-_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER0),(_quaScale * 1)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER1),(_quaScale * 1)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER3),(_quaScale * 1)];
-_crate addMagazineCargoGlobal [QUOTE(_MAG_LAUNCHER4),(_quaScale * 1)];
+_crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT", (_quaScale * 1)];
+_crate addMagazineCargoGlobal ["rhs_fim92_mag",(_quaScale * 1)];
 
 // Change ace logistics size of crate
 [_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];

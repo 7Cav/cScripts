@@ -46,7 +46,7 @@ if (isServer) then {
 _object addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Equipment Crate", {}, [], 1.5, true, true, "", "true", 5];
 
 if (_arsenal) then {
-    [_object, true] call ace_arsenal_fnc_initBox;
+    [_object, _quickSelectScale] call FUNC(addArsenal);
 };
 
 // Call ReGear Option

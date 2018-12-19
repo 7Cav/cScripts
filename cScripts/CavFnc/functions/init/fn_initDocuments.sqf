@@ -16,37 +16,58 @@
  */
 
 waitUntil {!isNull player && player == player};
+if (!isNil{player getVariable QEGVAR(player,documents)}) exitWith {[formatText["Diary Records already applied for %1.", player]] call FUNC(logWarning);};
 
 #ifdef DEBUG_MODE
-    ["Applying diary records."] call FUNC(logInfo);
+    [format["Applying Diary Records to %1...", player]] call FUNC(logInfo);
 #endif
 
 // Add New Topic (7th Cavalry)
-if (player diarySubjectExists "7Cav") exitwith {};
-player createDiarySubject ["7Cav","7th Cavalry"];
+if !(player diarySubjectExists "7Cav") then {
 
-// Load diary records (NOTE! The load order is reversed. So the top will be at the bottom after load.)
+    player createDiarySubject ["7Cav","7th Cavalry"];
 
-call FUNC(Doc_MissionControl);
-call FUNC(Doc_Info);
+    // Load diary records (NOTE! The load order is reversed. So the top will be at the bottom after load.)
+    call FUNC(Doc_MissionControl);
+    call FUNC(Doc_Info);
+
+    // debug
+    #ifdef DEBUG_MODE
+        [format["Added Diary Records and 7th Cavalry category to %1.", player]] call FUNC(logInfo);
+    #endif
+};
 
 // Add New Topic (Checklists)
-if (player diarySubjectExists "Chklists") exitwith {};
-player createDiarySubject ["Chklists","Checklists"];
+if !(player diarySubjectExists "Chklists") then {
+    player createDiarySubject ["Chklists","Checklists"];
 
-call FUNC(DocChklist_LZEXTRACT);
-call FUNC(DocChklist_LZINSERT);
-call FUNC(DocChklist_LZSPECS);
-call FUNC(DocChklist_JMTASKS);
-call FUNC(DocChklist_CFF);
+    // Load diary records (NOTE! The load order is reversed. So the top will be at the bottom after load.)
+    call FUNC(DocChklist_LZEXTRACT);
+    call FUNC(DocChklist_LZINSERT);
+    call FUNC(DocChklist_LZSPECS);
+    call FUNC(DocChklist_JMTASKS);
+    call FUNC(DocChklist_CFF);
+
+    // debug
+    #ifdef DEBUG_MODE
+        [format["Added Diary Records and Checklists category to %1.", player]] call FUNC(logInfo);
+    #endif
+};
 
 // Add New Topic (Radio Reports)
-if (player diarySubjectExists "radioReports") exitwith{};
-player createDiarySubject ["radioReports","Radio Reports"];
+if !(player diarySubjectExists "radioReports") then {
+    player createDiarySubject ["radioReports","Radio Reports"];
 
-// Load diary records (NOTE! The load order is reversed. So the top will be at the bottom after load.)
+    // Load diary records (NOTE! The load order is reversed. So the top will be at the bottom after load.)
+    call FUNC(DocRadio_LACEACE);
+    call FUNC(DocRadio_MEDEVAC);
+    call FUNC(DocRadio_ROTARYPICKUP);
+    call FUNC(DocRadio_SPOTREP);
 
-call FUNC(DocRadio_LACEACE);
-call FUNC(DocRadio_MEDEVAC);
-call FUNC(DocRadio_ROTARYPICKUP);
-call FUNC(DocRadio_SPOTREP);
+    // debug
+    #ifdef DEBUG_MODE
+        [format["Added Diary Records and Radio Reports category to %1.", player]] call FUNC(logInfo);
+    #endif
+};
+
+player setVariable [QEGVAR(player,documents), true];
