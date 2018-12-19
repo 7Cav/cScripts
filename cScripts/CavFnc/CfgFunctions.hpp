@@ -102,7 +102,7 @@ class cScripts {
         class setMineLayer {};
         class doMineDeploy {};
         class doMineReload {};
-
+    };
     class simulation {
         file = "cScripts\cavFnc\functions\simulation";
         class sim_jump {};
