@@ -1,6 +1,8 @@
 class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
+        class initACELoadouts {};
+
         class initSupply {};
         class initVehicle {};
 
@@ -49,7 +51,6 @@ class cScripts {
     };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
-        class setPlayerInitSettings {};
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
 
@@ -63,6 +64,9 @@ class cScripts {
         class setPlayerRank {};
         class getPlayerName {};
         class doPlayerAnnouncement {};
+
+        class getRadioChannel {};
+        class setRadioChannel {};
 
         class addJump {};
         class doJump {};
@@ -79,7 +83,10 @@ class cScripts {
 
         class getCompanyVariable {};
         class hasCompanyVariable {};
+        
+        class getSquadInsignia {};
 
+        class gate {};
         class teleport {};
 
         class addObjectToCurator {};
@@ -89,12 +96,19 @@ class cScripts {
         class initQuickSelections {};
         class initInsigniaSelections {};
     };
+
     class carrier {
         file = "cScripts\cavFnc\functions\carrier";
         class carrier_init {};
         class carrier_action {};
         class carrier_spawn {};
     };
+
+    class simulation {
+        file = "cScripts\cavFnc\functions\simulation";
+        class sim_jump {};
+    };
+
     class misc {
         file = "cScripts\cavFnc\functions\texture";
         class flag {};
@@ -112,6 +126,7 @@ class cScripts {
         class moduleCreateSpecialWeaponsCrate {};
 
         class moduleApplyVehicleLable {};
+        class moduleApplyVehicleInventory {};
 
         class moduleApplyFlag {};
         class moduleMakeDoctor {};
@@ -121,6 +136,13 @@ class cScripts {
 
         class moduleCallEndex {};
     };
+
+    class helpers {
+        file = "cScripts\cavFnc\functions\helpers";
+        class exportBoxToArsenal {};
+        class exportLoadoutsToArsenal {};
+    };
+
     class debug {
         file = "cScripts\cavFnc\functions\debug";
         class logError {};

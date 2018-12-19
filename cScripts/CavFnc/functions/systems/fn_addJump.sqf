@@ -7,36 +7,22 @@
  * 0: Vehicle <OBJECT>
  *
  * Example:
- * ["this"] call cScripts_fnc_addJump
- * ["this",150] call cScripts_fnc_addJump
- * ["this",150,1000,300] call cScripts_fnc_addJump
+ * ["my_c130"] call cScripts_fnc_addJump
+ * ["my_c130",180] call cScripts_fnc_addJump
+ * ["my_c130",180,350,300] call cScripts_fnc_addJump
  *
  */
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_minAltetude", 200],
+    ["_minAltetude", 180],
     ["_maxAltetude", 350],
-    ["_maxSpeed", 300]
+    ["_maxSpeed", 300],
+    ["_chuteVehicleClass", "rhs_d6_Parachute"]
 ];
 
 // Check so the options arent added twice.
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {};
-
-/*_vehicle setVariable [QGVAR(allowJump),false,true];
-
-_vehicle addAction [
-    "<t color='#800080'>Allow jump</t>",
-    {_vehicle setVariable [QGVAR(allowJump),true,true];},
-    0, 2, true, true, "",
-    "(player == driver vehicle player) && (_target getVariable ['cscripts_allowJump',''])"
-];
-_vehicle addAction [
-    "<t color='#ff0000'>Forbid jump</t>",
-    {_vehicle setVariable [QGVAR(allowJump),false,true];},
-    0, 2, true, true, "",
-    "(player == driver vehicle player) && (_target getVariable ['cscripts_allowJump',''])"
-]; */
 
 // Add hold action for jump
 [
@@ -44,13 +30,15 @@ _vehicle addAction [
     "<t color='#800080'>Jump</t>",
     "cScripts\Data\Icon\icon_02.paa",
     "cScripts\Data\Icon\icon_02.paa",
-    format ["((_target getCargoIndex player) != -1) && (_target animationPhase 'ramp_bottom' > 0.64) && ((getPosASL _target) select 2 >= %1) && ((getPosASL _target) select 2 <= %2) && (speed _target <= %3)", _minAltetude, _maxAltetude, _maxSpeed],
+    format ["((_target getCargoIndex player) != -1) && ((_target animationPhase 'ramp_bottom' > 0.64) or (_target animationPhase 'door_2_1' == 1) or (_target animationPhase 'door_2_2' == 1)) && ((getPosVisual _target) select 2 >= %1) && ((getPosVisual _target) select 2 <= %2) && (speed _target <= %3)", _minAltetude, _maxAltetude, _maxSpeed],
     "true",
     {},
     {},
-    {[(_this select 1),(_this select 0)] call FUNC(doJump)},
+    {
+        [(_this select 1),(_this select 0),(_this select 3) select 0] call FUNC(doJump)
+    },
     {},
-    [],
+    [_chuteVehicleClass],
     0,
     25,
     false

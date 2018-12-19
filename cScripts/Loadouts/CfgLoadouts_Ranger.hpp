@@ -26,6 +26,7 @@ class CAV_Ranger_OIC : CAV_Ranger_Base {                    //34.15kg
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
@@ -69,6 +70,7 @@ class CAV_Ranger_2IC : CAV_Ranger_Base {                    //34.15kg
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
@@ -121,6 +123,7 @@ class CAV_Ranger_TL : CAV_Ranger_Base {                    //35.92kg
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
@@ -160,6 +163,7 @@ class CAV_Ranger_AR : CAV_Ranger_Base {                    //33.62kg
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
@@ -206,6 +210,7 @@ class CAV_Ranger_GR : CAV_Ranger_Base {                    //35.92kg
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
@@ -245,6 +250,7 @@ class CAV_Ranger_RM : CAV_Ranger_Base {                    //25.85kg
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
@@ -296,6 +302,7 @@ class CAV_Ranger_MEDIC : CAV_Ranger_Base {                    //36.27kg
         "ACE_salineIV",6,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
@@ -337,6 +344,7 @@ class CAV_Sniper : CAV_Ranger_Base {                      // 31.96kg
         "ACE_surgicalKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
@@ -381,6 +389,7 @@ class CAV_Spotter : CAV_Ranger_Base {                      // 35.46kg
         "ACE_morphine",5,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",2,
         "ACE_MapTools",
 
