@@ -65,6 +65,9 @@ class cScripts {
         class getPlayerName {};
         class doPlayerAnnouncement {};
 
+        class getRadioChannel {};
+        class setRadioChannel {};
+
         class addJump {};
         class doJump {};
 
@@ -80,6 +83,8 @@ class cScripts {
 
         class getCompanyVariable {};
         class hasCompanyVariable {};
+        
+        class getSquadInsignia {};
 
         class gate {};
         class teleport {};
@@ -114,6 +119,7 @@ class cScripts {
         class moduleCreateTimer {};
 
         class moduleApplyVehicleLable {};
+        class moduleApplyVehicleInventory {};
 
         class moduleApplyFlag {};
         class moduleMakeDoctor {};

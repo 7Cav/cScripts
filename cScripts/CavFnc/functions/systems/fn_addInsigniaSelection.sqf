@@ -36,10 +36,16 @@ if (_className != '') then {
 
 //add addAction
 if (_category isEqualTo ["ACE_MainActions","cScriptInsigniaSelectionMenu"]) then {
-    _object addAction [format ["   <img image='%1' /> <t color='#66ff66'>%2</t>", _icon, _lable], {[player, _this select 3] call BIS_fnc_setUnitInsignia;}, _className, 1.5, true, true, "", "true", 5];
+    _object addAction [format ["   <img image='%1' /> <t color='#66ff66'>%2</t>", _icon, _lable], {
+        [player, _this select 3] call BIS_fnc_setUnitInsignia;
+        player setVariable [QEGVAR(Cav,Insignia), _this select 3];
+    }, _className, 1.5, true, true, "", "true", 5];
 };
 
 
 //add aceInteraction
-private _insigniaSelection = [format ["cScriptInsigniaSelection_%1", _className], _lable, _icon, {[player, _this select 2] call BIS_fnc_setUnitInsignia;}, {true}, {}, _className] call ace_interact_menu_fnc_createAction;
+private _insigniaSelection = [format ["cScriptInsigniaSelection_%1", _className], _lable, _icon, {
+    [player, _this select 2] call BIS_fnc_setUnitInsignia;
+    player setVariable [QEGVAR(Cav,Insignia), _this select 2];
+}, {true}, {}, _className] call ace_interact_menu_fnc_createAction;
 [_object, 0, _category, _insigniaSelection] call ace_interact_menu_fnc_addActionToObject;
