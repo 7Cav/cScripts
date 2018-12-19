@@ -38,6 +38,7 @@ class CAV_Medical_OFFCR : CAV_Medical_Base {  // Medical Team Leader or SL and u
         "ACE_salineIV",6,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -86,6 +87,7 @@ class CAV_Medical_BONESAW : CAV_Medical_Base {  // Medical Team Member
         "ACE_salineIV",6,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -131,6 +133,7 @@ class CAV_Medical_PLMEDIC : CAV_Medical_Base {  // Platoon Medics
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
