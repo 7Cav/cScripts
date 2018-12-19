@@ -5,7 +5,11 @@
  */
 
 #ifdef DEBUG_MODE
-    ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
+    if !(is3DEN) then {
+        ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
+    } else {
+        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "Initializing CBA Settings from preInit in eden."];
+    };
 #endif
 
 // Make settings name
@@ -71,17 +75,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
-// Diary Records
-[
-    QEGVAR(Settings,showDiaryRecords),
-    "CHECKBOX",
-    ["Help documents","Allow the mission to write diary help documents.\n"],
-    _cScriptSettings,
-    true,
-    true,
-    {}
-] call CBA_Settings_fnc_init;
-
 // Custom init
 [
     QEGVAR(Settings,allowCustomInit),
@@ -126,33 +119,140 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_Settings_fnc_init;
 
-// Tagging
+
+// Diary Records
 [
-    QEGVAR(Settings,allowCustomTagging),
+    QEGVAR(Settings,showDiaryRecords),
     "CHECKBOX",
-    ["Allow Custom Tagging","Allow players to spray custom taggs.\n"],
-    [_cScriptSettings, "4; Player Actions"],
+    ["Help documents","Allow the mission to write diary help documents.\n"],
+    [_cScriptSettings, "4; Player"],
     true,
     true,
     {}
 ] call CBA_Settings_fnc_init;
 
+// Rank
+[
+    QEGVAR(Settings,setPlayerRank),
+    "CHECKBOX",
+    ["Apply Prefix Rank","Allow mission to apply rank based on 7Cav name prefix.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+// Tagging
+[
+    QEGVAR(Settings,allowCustomTagging),
+    "CHECKBOX",
+    ["Allow Custom Tagging","Allow players to spray custom taggs.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+// Eyewere
+[
+    QEGVAR(Settings,enforceEyewereBlacklist),
+    "CHECKBOX",
+    ["Enforce google blacklist","Enforce google blacklist this will remove rediculus selected eyewere when a player spawns.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+// Auto Insignia Application
+[
+    QEGVAR(Settings,allowInsigniaApplication),
+    "CHECKBOX",
+    ["Allow Auto Insignia","Automaticly apply insignias based on squad name.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+// Radio Switch
+[
+    QEGVAR(Settings,setRadio),
+    "CHECKBOX",
+    ["Change Radio Channel","Allow radio channels to be changed based on player squad.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+
+// JumpSimulation
+[
+    QEGVAR(Settings,jumpSimulation),
+    "LIST",
+["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
+    [_cScriptSettings, "5; Combat Jump Simulation"],
+    [[0,1,2], ["None", "Basic", "Advanced"], 1],
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+[
+    QEGVAR(Settings,jumpSimulationNVG),
+    "CHECKBOX",
+    ["Include Night Vision Googles","Include equiped Night Vison Googles in the simulation.\n"],
+    [_cScriptSettings, "5; Combat Jump Simulation"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+[
+    QEGVAR(Settings,jumpSimulationGlasses),
+    "CHECKBOX",
+    ["Include Non-combat Googles","Include Non-combat Googles in the simulation. This refere to sunshades and simular non-safety googles.\n"],
+    [_cScriptSettings, "5; Combat Jump Simulation"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+[
+    QEGVAR(Settings,jumpSimulationHat),
+    "CHECKBOX",
+    ["Include Non-combat Headgear","Include Non-combat Headgear in the simulation. This refere to hats bandanas and baretes.\n"],
+    [_cScriptSettings, "5; Combat Jump Simulation"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
+
+
+
 // Aries Achilles Zeus Moduels
-if (isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) then {
-    [
-        QEGVAR(Settings,enable7cavZeusModules),
-        "CHECKBOX",
-        ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-        [_cScriptSettings, "5; Zeus"],
-        true,
-        true,
-        {}
-    ] call CBA_Settings_fnc_init;
-};
+[
+    QEGVAR(Settings,enable7cavZeusModules),
+    "CHECKBOX",
+    ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
+    [_cScriptSettings, "6; Zeus"],
+    true,
+    true,
+    {}
+] call CBA_Settings_fnc_init;
 
 #ifdef DEBUG_MODE
-    ["CBA Settings initialization from preInit completed"] call FUNC(logInfo);
+    if !(is3DEN) then {
+        ["CBA Settings initialization from preInit completed."] call FUNC(logInfo);
+    } else {
+        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "CBA Settings initialization from preInit in eden completed."];
+    };
 #endif
+
+if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
+    if !(is3DEN) then {
+        call FUNC(initACELoadouts);
+    } else {
+        0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\functions\init\fn_initACELoadouts.sqf';
+    };
+};
 
 // Load preInit mission settings
 if (is3DEN) exitWith {};
@@ -183,6 +283,7 @@ if (EGVAR(Settings,allowCustomTagging)) then {
 if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
 };
+
 
 #ifdef DEBUG_MODE
     ["postInit initialization completed."] call FUNC(logInfo);

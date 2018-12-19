@@ -105,6 +105,7 @@ force force ace_interaction_enableTeamManagement = true;
 
 // ACE Logistics
 force force ace_cargo_enable = true;
+force force ace_cargo_loadTimeCoefficient = 2.5;
 force force ace_cargo_paradropTimeCoefficent = 1;
 force force ace_rearm_level = 1;
 force force ace_rearm_supply = 0;
@@ -184,7 +185,7 @@ force force ace_medical_medicSetting_SurgicalKit = 1;
 force force ace_medical_menu_allow = 1;
 force force ace_medical_menu_maxRange = 3;
 force force ace_medical_menu_openAfterTreatment = true;
-//ace_medical_menu_useMenu = 1;
+//ace_medical_menu_useMenu = 0;
 //ace_medical_menuTypeStyle = 0;
 force force ace_medical_moveUnitsFromGroupOnUnconscious = false;
 force force ace_medical_painCoefficient = 1;
@@ -207,9 +208,14 @@ force force ace_mk6mortar_useAmmoHandling = false;
 
 // ACE Name Tags
 //ace_nametags_defaultNametagColor = [0.77,0.51,0.08,1];
+//ace_nametags_nametagColorBlue = [0.67,0.67,1,1];
+//ace_nametags_nametagColorGreen = [0.67,1,0.67,1];
+//ace_nametags_nametagColorMain = [1,1,1,1];
+//ace_nametags_nametagColorRed = [1,0.67,0.67,1];
+//ace_nametags_nametagColorYellow = [1,1,0.67,1];
 //ace_nametags_playerNamesMaxAlpha = 0.8;
 force force ace_nametags_playerNamesViewDistance = 5;
-//ace_nametags_showCursorTagForVehicles = true;
+//ace_nametags_showCursorTagForVehicles = false;
 //ace_nametags_showNamesForAI = false;
 //ace_nametags_showPlayerNames = 1;
 //ace_nametags_showPlayerRanks = true;
@@ -252,6 +258,7 @@ force force ace_pylons_timePerPylon = 5;
 // ACE Quick Mount
 force force ace_quickmount_distance = 5;
 force force ace_quickmount_enabled = true;
+ace_quickmount_enableMenu = 3;
 force force ace_quickmount_priority = 3;
 force force ace_quickmount_speed = 5;
 
@@ -295,6 +302,7 @@ force force ace_hitreactions_minDamageToTrigger = 0.363636;
 //ace_inventory_inventoryDisplaySize = 0;
 force force ace_laser_dispersionCount = 2;
 force force ace_microdagr_mapDataAvailable = 2;
+force force ace_microdagr_waypointPrecision = 3;
 //ace_optionsmenu_showNewsOnMainMenu = true;
 force force ace_overpressure_distanceCoefficient = 1;
 
@@ -366,11 +374,20 @@ force force ace_winddeflection_vehicleEnabled = true;
 
 // ACE Zeus
 force force ace_zeus_autoAddObjects = true;
+force force ace_zeus_canCreateZeus = -1;
 force force ace_zeus_radioOrdnance = false;
 force force ace_zeus_remoteWind = false;
 force force ace_zeus_revealMines = 0;
 force force ace_zeus_zeusAscension = false;
 force force ace_zeus_zeusBird = false;
+
+// ACEX Field Rations
+force force acex_field_rations_enabled = false;
+force force acex_field_rations_hudShowLevel = 90;
+//acex_field_rations_hudTransparency = -1;
+//acex_field_rations_hudType = 0;
+force acex_field_rations_timeWithoutFood = 504;
+force acex_field_rations_timeWithoutWater = 168;
 
 // ACEX Fortify
 acex_fortify_settingHint = 2;
@@ -400,8 +417,81 @@ force force acex_viewrestriction_preserveView = false;
 //acex_volume_remindIfLowered = false;
 //acex_volume_showNotification = true;
 
+// Achilles - Available Factions
+//Achilles_var_BLU_CTRG_F = true;
+//Achilles_var_BLU_F = true;
+//Achilles_var_BLU_GEN_F = true;
+//Achilles_var_BLU_T_F = true;
+//Achilles_var_CIV_F = true;
+//Achilles_var_CIV_IDAP_F = true;
+//Achilles_var_FIR_AWS_ENEMY_F = true;
+//Achilles_var_FIR_AWS_FRND_F = true;
+//Achilles_var_IND_C_F = true;
+//Achilles_var_IND_F = true;
+//Achilles_var_IND_G_F = true;
+//Achilles_var_Interactive_F = true;
+//Achilles_var_LOP_AA = true;
+//Achilles_var_LOP_AFR = true;
+//Achilles_var_LOP_AFR_Civ = true;
+//Achilles_var_LOP_AM = true;
+//Achilles_var_LOP_BH = true;
+//Achilles_var_LOP_CDF = true;
+//Achilles_var_LOP_ChDKZ = true;
+//Achilles_var_LOP_CHR_Civ = true;
+//Achilles_var_LOP_IA = true;
+//Achilles_var_LOP_IRA = true;
+//Achilles_var_LOP_IRAN = true;
+//Achilles_var_LOP_ISTS = true;
+//Achilles_var_LOP_NAPA = true;
+//Achilles_var_LOP_PESH = true;
+//Achilles_var_LOP_PMC = true;
+//Achilles_var_LOP_RACS = true;
+//Achilles_var_LOP_SLA = true;
+//Achilles_var_LOP_TAK_Civ = true;
+//Achilles_var_LOP_TKA = true;
+//Achilles_var_LOP_UA = true;
+//Achilles_var_LOP_UKR = true;
+//Achilles_var_LOP_UN = true;
+//Achilles_var_LOP_US = true;
+//Achilles_var_LOP_UVF = true;
+//Achilles_var_OPF_F = true;
+//Achilles_var_OPF_T_F = true;
+//Achilles_var_OPF_V_F = true;
+//Achilles_var_rhs_faction_insurgents = true;
+//Achilles_var_rhs_faction_msv = true;
+//Achilles_var_rhs_faction_rva = true;
+//Achilles_var_rhs_faction_socom = true;
+//Achilles_var_rhs_faction_tv = true;
+//Achilles_var_rhs_faction_usaf = true;
+//Achilles_var_rhs_faction_usarmy = true;
+//Achilles_var_rhs_faction_usarmy_d = true;
+//Achilles_var_rhs_faction_usarmy_wd = true;
+//Achilles_var_rhs_faction_usmc = true;
+//Achilles_var_rhs_faction_usmc_d = true;
+//Achilles_var_rhs_faction_usmc_wd = true;
+//Achilles_var_rhs_faction_usn = true;
+//Achilles_var_rhs_faction_vdv = true;
+//Achilles_var_rhs_faction_vdv_45 = true;
+//Achilles_var_rhs_faction_vmf = true;
+//Achilles_var_rhs_faction_vpvo = true;
+//Achilles_var_rhs_faction_vv = true;
+//Achilles_var_rhs_faction_vvs = true;
+//Achilles_var_rhs_faction_vvs_c = true;
+//Achilles_var_rhsgref_faction_cdf_air = true;
+//Achilles_var_rhsgref_faction_cdf_ground = true;
+//Achilles_var_rhsgref_faction_cdf_ng = true;
+//Achilles_var_rhsgref_faction_chdkz = true;
+//Achilles_var_rhsgref_faction_hidf = true;
+//Achilles_var_rhsgref_faction_nationalist = true;
+//Achilles_var_rhsgref_faction_tla = true;
+//Achilles_var_rhsgref_faction_un = true;
+//Achilles_var_rhssaf_faction_airforce = true;
+//Achilles_var_rhssaf_faction_army = true;
+//Achilles_var_rhssaf_faction_un = true;
+//Achilles_var_Virtual_F = true;
+
 // Achilles - Curator Vision Modes
-//achilles_curator_vision_blackhot = true;
+//achilles_curator_vision_blackhot = false;
 //achilles_curator_vision_blackhotgreencold = false;
 //achilles_curator_vision_blackhotredcold = false;
 //achilles_curator_vision_greenhotcold = false;
@@ -439,6 +529,9 @@ force force acre_sys_core_ts3ChannelName = "";
 force force acre_sys_core_ts3ChannelPassword = "";
 force force acre_sys_core_ts3ChannelSwitch = false;
 force force acre_sys_core_unmuteClients = true;
+
+// CBA UI
+//cba_ui_StorePasswords = 1;
 
 // GRAD Trenches
 force force grad_trenches_functions_allowBigEnvelope = true;

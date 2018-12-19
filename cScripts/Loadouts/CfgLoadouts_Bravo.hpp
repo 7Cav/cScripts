@@ -4,7 +4,7 @@
 
 class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
 
-    goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
     backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
@@ -33,6 +33,7 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -40,6 +41,9 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
         // Electronics
         "ACE_microDAGR",
         "ACE_HuntIR_monitor",
+        
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
 
         // Tools
         "ACE_SpraypaintRed",
@@ -53,7 +57,7 @@ class CAV_Bravo_OFFCR : CAV_Bravo_Base {  // Leadership positions PSG and up
 class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
 
     headgear[] = {"rhsusf_cvc_green_helmet"};
-    goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
     backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
@@ -89,10 +93,15 @@ class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
         "ACE_quikclot",6,
         "ACE_tourniquet",2,
 
+
         // Standard
+        "ACE_Canteen",
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
+
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
 
         // Electronics
         "ACE_microDAGR"
@@ -105,7 +114,7 @@ class CAV_Bravo_Crew_CDR : CAV_Bravo_Base {  // Crew Commander
 class CAV_Bravo_Crew_GNR : CAV_Bravo_Base {  // Crew Gunner (acts as CLS also)
 
     headgear[] = {"rhsusf_cvc_green_helmet"};
-    goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
     backpack[] = {"B_AssaultPack_mcamo"};
 
@@ -136,14 +145,18 @@ class CAV_Bravo_Crew_GNR : CAV_Bravo_Base {  // Crew Gunner (acts as CLS also)
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_Canteen",
         "ACE_MapTools",
         "ACE_CableTie",
+
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
 
         // Electronics
         "ACE_microDAGR"
     };
 
-    insignia[] = {"CLS_Insignia"};
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
     gps[] = {"ItemAndroid"};
 
 };
@@ -151,7 +164,7 @@ class CAV_Bravo_Crew_GNR : CAV_Bravo_Base {  // Crew Gunner (acts as CLS also)
 class CAV_Bravo_Crew_CREW : CAV_Bravo_Base {  // Driver-Loader (acts as Engineer also)
 
     headgear[] = {"rhsusf_cvc_green_helmet"};
-    goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
     vest[] = {"rhsusf_iotv_ocp_Repair"};
     backpack[] = {"B_AssaultPack_mcamo"};
 
@@ -176,9 +189,13 @@ class CAV_Bravo_Crew_CREW : CAV_Bravo_Base {  // Driver-Loader (acts as Engineer
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_Canteen",
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
+        
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
 
         // Electronics
         "ACE_microDAGR"
@@ -220,6 +237,7 @@ class CAV_Bravo_SL : CAV_Bravo_Base {  // Squad Leader
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -271,6 +289,7 @@ class CAV_Bravo_TL : CAV_Bravo_Base {  // Fire Team Leader
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -326,6 +345,7 @@ class CAV_Bravo_GR : CAV_Bravo_Base {  // Grenadier
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -385,6 +405,7 @@ class CAV_Bravo_CLS : CAV_Bravo_Base {  // Combat Life Saver 24.3kg
         "ACE_tourniquet",2,
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -395,7 +416,7 @@ class CAV_Bravo_CLS : CAV_Bravo_Base {  // Combat Life Saver 24.3kg
         "ACE_EntrenchingTool"
     };
 
-    insignia[] = {"CLS_Insignia"};
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
 };
 
 //  W E A P O N S   T E A M
@@ -426,6 +447,7 @@ class CAV_Bravo_Weapons_TL : CAV_Bravo_Base {  // Team Leader
         "ACE_personalAidKit",
 
         // Standard
+        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",

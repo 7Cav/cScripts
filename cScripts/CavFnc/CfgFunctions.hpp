@@ -1,6 +1,8 @@
 class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
+        class initACELoadouts {};
+
         class initSupply {};
         class initVehicle {};
 
@@ -49,7 +51,6 @@ class cScripts {
     };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
-        class setPlayerInitSettings {};
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
 
@@ -63,6 +64,9 @@ class cScripts {
         class setPlayerRank {};
         class getPlayerName {};
         class doPlayerAnnouncement {};
+
+        class getRadioChannel {};
+        class setRadioChannel {};
 
         class addJump {};
         class doJump {};
@@ -79,8 +83,11 @@ class cScripts {
 
         class getCompanyVariable {};
         class hasCompanyVariable {};
+        
+        class getSquadInsignia {};
 
         class hq {};
+        class gate {};
         class teleport {};
 
         class addObjectToCurator {};
@@ -89,6 +96,10 @@ class cScripts {
         file = "cScripts\cavFnc\functions\selections";
         class initQuickSelections {};
         class initInsigniaSelections {};
+    };
+    class simulation {
+        file = "cScripts\cavFnc\functions\simulation";
+        class sim_jump {};
     };
 
     class misc {
@@ -108,7 +119,11 @@ class cScripts {
         class moduleCreateSpecialWeaponsCrate {};
 
         class moduleApplyVehicleLable {};
+
         class moduleSetupHQ {};
+
+        class moduleApplyVehicleInventory {};
+
         class moduleApplyFlag {};
 
         class moduleMakeDoctor {};
@@ -118,6 +133,13 @@ class cScripts {
 
         class moduleCallEndex {};
     };
+
+    class helpers {
+        file = "cScripts\cavFnc\functions\helpers";
+        class exportBoxToArsenal {};
+        class exportLoadoutsToArsenal {};
+    };
+
     class debug {
         file = "cScripts\cavFnc\functions\debug";
         class logError {};
