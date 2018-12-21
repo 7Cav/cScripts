@@ -4,7 +4,9 @@ class cScripts {
         class initACELoadouts {};
 
         class initSupply {};
-        class initVehicle {};
+        class initVehicleSettings {};
+        class initVehicleTextures {};
+        class initVehicleInventory {};
 
         class initDocuments {};
 

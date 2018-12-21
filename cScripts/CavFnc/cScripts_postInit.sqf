@@ -15,17 +15,12 @@ if (EGVAR(Settings,showDiaryRecords)) then {
 };
 
 if (EGVAR(Settings,allowCustomInit)) then {
-    // Change inventory content of supply crates on mission start.
     if (EGVAR(Settings,useCustomVehicleSettings)) then {
-        call FUNC(initVehicle);
+        call FUNC(initVehicleSettings);
+        call FUNC(initVehicleTextures);
 
         // Make sure curator object gets its functions reapplied.
-        call  FUNC(initCuratorObjectPlaced);
-    };
-
-    // Change inventory content of nato supply crates on mission start.
-    if (EGVAR(Settings,useCustomSupplyInventory)) then {
-        call FUNC(initSupply);
+        call FUNC(initCuratorObjectPlaced);
     };
 };
 
