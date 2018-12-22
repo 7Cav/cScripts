@@ -14,7 +14,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE;
 
 params [["_player", objNull, [objNull]]];
 
