@@ -4,7 +4,7 @@
 
 class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasus
     backpack[] = {"B_Kitbag_mcamo"};
-
+    nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemcTab"};
 };
 
@@ -61,7 +61,7 @@ class CAV_Alpha_Helo_COPILOT : CAV_Alpha_Base {  // Use for CoPilots
         "H_Cap_tan",
         "rhsusf_shemagh_tan"
     };
-
+    nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemAndroid"};
 };
 
@@ -116,7 +116,7 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
         "H_Cap_tan",
         "rhsusf_shemagh_tan"
     };
-
+    nvgs[] = {"NVGogglesB_grn_F"};
     gps[] = {"ItemAndroid"};
 
     preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
@@ -157,13 +157,15 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
         "H_Cap_tan",
         "rhsusf_shemagh_tan"
     };
+	nvgs[] = {"NVGogglesB_grn_F"};
+	gps[] = {"ItemAndroid"};
 };
 
 class CAV_Alpha_Helo_PILOT_ATT : CAV_Alpha_Base {  // Use for Attack Rotary
     headgear[] = {"rhsusf_ihadss"};
     backpack[] = {"B_Kitbag_mcamo"};
 
-    gps[] = {"ItemcTab"};
+    gps[] = {"ItemAndroid"};
 };
 
 class CAV_Alpha_Helo_COPILOT_ATT : CAV_Alpha_Base {  // Use for Attack Rotary
@@ -221,7 +223,7 @@ class CAV_Alpha_Helo_COPILOT_ATT : CAV_Alpha_Base {  // Use for Attack Rotary
         "rhsusf_shemagh_tan"
     };
 
-    gps[] = {"ItemAndroid"};
+    gps[] = {"ItemcTab"};
 };
 
 
@@ -273,6 +275,7 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
         "ACE_microDAGR"
     };
 
-    preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
+    gps[] = {"ItemAndroid"};
+	preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 
 };
