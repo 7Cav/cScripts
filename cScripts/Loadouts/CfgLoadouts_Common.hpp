@@ -105,7 +105,6 @@ class CAV_Alpha_Base : CommonBlufor {
     //compass[] = {"ItemCompass"};
     //gps[] = {""};
     //map[] = {"ItemMap"};
-    nvgs[] = {"NVGogglesB_grn_F"};
     watch[] = {"ACE_Altimeter"};
 
     insignia[] = {""};
