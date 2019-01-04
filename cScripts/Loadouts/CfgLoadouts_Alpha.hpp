@@ -157,8 +157,8 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
         "H_Cap_tan",
         "rhsusf_shemagh_tan"
     };
-	nvgs[] = {"NVGogglesB_grn_F"};
-	gps[] = {"ItemAndroid"};
+    nvgs[] = {"NVGogglesB_grn_F"};
+    gps[] = {"ItemAndroid"};
 };
 
 class CAV_Alpha_Helo_PILOT_ATT : CAV_Alpha_Base {  // Use for Attack Rotary
@@ -276,6 +276,6 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
     };
 
     gps[] = {"ItemAndroid"};
-	preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 
 };
