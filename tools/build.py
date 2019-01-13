@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
-
 #
-# usage: build.py [-h] [-p] [-b {dev,test,custom}] [-rc RELEASECANDIDATE]
-#                 [-s | -sz]
-#
+# usage: build [-h] [-b {release,dev,test,custom}] [-p]
+#                    [-rc RELEASECANDIDATE] [-y] [--auto_color] [-v]
+# 
+# This script build and pack the selected mission framework.
+# 
 # optional arguments:
 #   -h, --help            show this help message and exit
+#   -b {release,dev,test,custom}, --buildtype {release,dev,test,custom}
+#                         Add a additional tag to a to the build
 #   -p, --public          Create a "public" build to be used on non CavPack
 #                         Enviroment
-#   -b {dev,test,custom}, --build {dev,test,custom}
-#                         Add a additional tag to a to the build
 #   -rc RELEASECANDIDATE, --releasecandidate RELEASECANDIDATE
 #                         Set a release candidate number to the build ".RC1" for
-#                         exsample
-#   -s, --save            Save the build
-#   -sz, --savedontzip    Save the build and don't zip it
+#                         example.
+#   -y, --fastbuild       Will instantly run untill done.
+#   --auto_color          This will set color to the build.
+#   -v, --version         show program's version number and exit
+# 
+# This build script is primarly built to pack 7th Cavalry Script package; cScripts.
+# The tool is build tool should be cross platform and can be used for other packages as well.
 #
 import sys, os, fnmatch
 import argparse, shutil, subprocess, tempfile
@@ -23,7 +28,7 @@ __version__ = 2.0
 # GLOBALS #################################################################################
 
 exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'resourses', 'tools', 'tmp']
-version_file = 'cScripts\\script_component.hpp'
+version_file = 'cScripts//script_component.hpp'
 script_name = 'cScripts'
 
 # #########################################################################################
@@ -246,7 +251,12 @@ def build_release(package_name='',build_type='',release_candidate=0, auto_color=
 
 def main():
     # Handle arguments
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        prog='Build',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description='This script build and pack the selected mission framework.',
+        epilog='This build script is primarly built to pack 7th Cavalry Script package; cScripts.\nThe tool should be cross platform and can be used for other packages as well.'
+    )
 
     #group = parser.add_mutually_exclusive_group(required=False)
 
@@ -275,7 +285,7 @@ def main():
         action="store_true"
     )
 
-    parser.add_argument('-v', '--version', action='version', version='Build script version {}.'.format(__version__))
+    parser.add_argument('-v', '--version', action='version', version='Author: Andreas Broström <andreas.brostrom.ce@gmail.com>\nScript version: {}.'.format(__version__))
 
     args = parser.parse_args()
 
@@ -306,7 +316,7 @@ def main():
 
     build_release(script_name,args.buildtype,args.releasecandidate,args.auto_color)
 
-    print('Build compleet.')
+    print('Build complet.')
 
     if os.name == 'nt':
         os.system('explorer.exe {}\\release'.format(rootDir))
