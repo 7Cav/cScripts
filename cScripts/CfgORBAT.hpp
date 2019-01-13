@@ -23,21 +23,7 @@ class CfgORBAT {
             commander = "Savage.T";
             commanderRank = "Captain";
             text = "Headquarters and Headquarters Company";
-            textShort = "HHC/1-7CAV";
-
-            class MEDICAL {
-                id = Medical;
-                idtype = 0;
-                side = "west";
-                size = "Platoon";
-                type = "Medical";
-                insignia = "";
-                commander = "Hollenshead.J";
-                commanderRank = "Lieutenant";
-                text = "Medical Platoon";
-                textShort = "MED/HHC/1-7CAV";
-            };	
-        
+            textShort = "HHC/1-7CAV";    
         };
 
         class ACO {
@@ -123,7 +109,7 @@ class CfgORBAT {
                 idtype = 0;
                 side = "west";
                 size = "Platoon";
-                type = "MechanizedInfantry";
+                type = "Medical";
                 insignia = "";
                 commander = "Kane.T";
                 commanderRank = "Lieutenant";
@@ -178,7 +164,7 @@ class CfgORBAT {
             size = "Company";
             type = "Support";
             insignia = "";
-            commander = "Virtualized";
+            commander = "";
             commanderRank = "Major";
             text = "%1 %3 (%2)";
             textShort = "D/1-7CAV";
