@@ -38,6 +38,10 @@ params [
 (_player) setVariable [QEGVAR(Cav,Trooper), true];
 (_player) setVariable [QEGVAR(Cav,Company), _setCompany];
 
+// Set player name
+_playerName = [_player,'PROFILE'] call FUNC(getPlayerName);
+(_player) setVariable [QEGVAR(Player,Name), _playerName];
+
 // Set MedicClass
 private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
 (_player) setVariable ["ACE_medical_medicClass", _isMedicClass, _MedicClass];
