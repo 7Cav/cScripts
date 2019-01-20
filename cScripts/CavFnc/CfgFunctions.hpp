@@ -49,16 +49,10 @@ class cScripts {
 
         class doEmptyCrate {};
     };
-    class systems {
-        file = "cScripts\cavFnc\functions\systems";
+    class players {
+        file = "cScripts\cavFnc\functions\players";
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
-
-        class setVehicleInventory {};
-        class setVehicleSettings {};
-
-        class addQuickSelection {};
-        class addInsigniaSelection {};
 
         class getPlayerRank {};
         class setPlayerRank {};
@@ -67,6 +61,19 @@ class cScripts {
 
         class getRadioChannel {};
         class setRadioChannel {};
+
+        class getCompanyVariable {};
+        class hasCompanyVariable {};
+        
+        class getSquadInsignia {};
+    };
+    class systems {
+        file = "cScripts\cavFnc\functions\systems";
+        class setVehicleInventory {};
+        class setVehicleSettings {};
+
+        class addQuickSelection {};
+        class addInsigniaSelection {};
 
         class addJump {};
         class doJump {};
@@ -80,11 +87,6 @@ class cScripts {
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
-
-        class getCompanyVariable {};
-        class hasCompanyVariable {};
-        
-        class getSquadInsignia {};
 
         class gate {};
         class teleport {};
