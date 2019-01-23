@@ -21,22 +21,40 @@
 # This build script is primarly built to pack 7th Cavalry Script package; cScripts.
 # The tool is build tool should be cross platform and can be used for other packages as well.
 #
-import sys, os, fnmatch
+import sys, os, fnmatch, re
 import argparse, shutil, subprocess, tempfile
+import configparser
+
 __version__ = 2.0
 
 # GLOBALS #################################################################################
 
-exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'resourses', 'tools', 'tmp']
+exclude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'resourses', 'tools', 'tmp']
 version_file = 'cScripts//script_component.hpp'
 script_name = 'cScripts'
 
 # #########################################################################################
 
 # set projecty path
-scriptDir = os.path.realpath(__file__)
-rootDir = os.path.dirname(os.path.dirname(scriptDir))
+scriptPath = os.path.realpath(__file__)
+scriptDir = os.path.dirname(scriptPath)
+rootDir = os.path.dirname(os.path.dirname(scriptPath))
 os.chdir(rootDir)
+
+# #########################################################################################
+
+# GLOBAL config handling
+config = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation())
+config.read('{}/build.ini'.format(scriptDir))
+
+exclude_content = config['DEFAULT']['exclude']
+exclude_content = exclude_content.replace(' ','')
+exclude_content = exclude_content.replace('\'','')
+exclude_content = exclude_content.replace('\n',',')
+exclude_content = exclude_content.split(',')
+exclude_content = [x for x in exclude_content if x] # Remove empty array object if exists.
+version_file = config['DEFAULT']['version_file']
+script_name = config['DEFAULT']['name']
 
 # #########################################################################################
 
@@ -59,9 +77,7 @@ def get_git_commit_hash(get_long=False):
         except:
             commit_hash = ''
 
-    commit_hash = str(commit_hash)
-    commit_hash = commit_hash[:-1]
-    commit_hash = commit_hash[2:]
+    commit_hash = commit_hash.decode("utf-8")
 
     return commit_hash
 
@@ -74,9 +90,7 @@ def get_git_branch_name():
     except:
         branch_name = ''
 
-    branch_name = str(branch_name)
-    branch_name = branch_name[:-1]
-    branch_name = branch_name[2:]
+    branch_name = branch_name.decode("utf-8")
 
     return branch_name
 
@@ -109,7 +123,7 @@ def get_script_version_number(version_file='',return_type='arr'):
 
 
 
-def set_package_name(package_name='',build_type='',release_candidate=0):
+def set_package_name(package_name='',build_type='',release_candidate=0, public_version=False):
     version_number = get_script_version_number(version_file,'str')
     commit_hash = get_git_commit_hash(False)
     branch_name = get_git_branch_name()
@@ -144,20 +158,24 @@ def set_package_name(package_name='',build_type='',release_candidate=0):
     else:
         build_type = ''
 
-
+    if public_version:
+        public_build = '_PUBLIC'
+    else:
+        public_build = ''
 
     if release_candidate:
         release_candidate = '_rc{}'.format(release_candidate)
     else:
         release_candidate = ''
 
-    name = '{}{}{}{}'.format(package_name,version_number,build_type,release_candidate)
+    name = '{}{}{}{}{}'.format(package_name,public_build,version_number,build_type,release_candidate)
 
     return name
 
 
 
 def request_action(text='Continue?'):
+    Continue_Count = 0
     while(True):
         yes_no = input('{} (Yes or No)\n> '.format(text))
         yes_no = yes_no.lower()
@@ -167,6 +185,9 @@ def request_action(text='Continue?'):
             return False
         else:
             pass
+        Continue_Count += 1
+        if Continue_Count >= 3:
+            sys.exit()
 
 
 
@@ -180,10 +201,10 @@ def fetch_objects():
 
     for obj in content:
         if os.path.isfile(obj):
-            if obj not in exlude_content:
+            if obj not in exclude_content:
                 fileList.append(obj)
         elif os.path.isdir(obj):
-            if obj not in exlude_content:
+            if obj not in exclude_content:
                 folderList.append(obj)
         else:
             sys.exit('\nIssues occured when listing files.')
@@ -208,10 +229,14 @@ def list_objects(objects,auto_color=False):
 
 
 
-def build_release(package_name='',build_type='',release_candidate=0, auto_color=False):
+def build_release(package_name='',build_type='', release_candidate=0, public_version=False, public_file_paths=[], public_operations=[], auto_color=False):
+    
+    def build_public():
+        pass
+
     temp = tempfile.mkdtemp()
 
-    name = set_package_name(package_name,build_type,release_candidate)
+    name = set_package_name(package_name,build_type,release_candidate,public_version)
     dummy_name = '{}.md'.format(name)
     version = get_script_version_number(version_file,'str')
     branch_name = get_git_branch_name()
@@ -239,14 +264,43 @@ def build_release(package_name='',build_type='',release_candidate=0, auto_color=
     else:
         relase_folder = 'release'
 
+    if public_version:
+        public_build = ' public'
+    else:
+        public_build = ''
+
+    # creating public build from config
+    if public_version:
+        print('Creating public build...')
+
+        print('Replacing gear...')
+        for file in public_file_paths[0]:
+            print('Checking config file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
+            print(public_operations[0])
+            print(len(public_operations))
+            print(len(public_operations[0]))
+
+                
+        sys.exit('HALT!!"!!')
+        for file in public_file_paths[1]:
+            print('Checking script file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
+        for file in public_file_paths[2]:
+            print('Checking ace arsena file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
+        # dummy = open('{}\{}'.format(temp,dummy_name),"w+")
+        # regex = re.compile(r"^.*interfaceOpDataFile.*$", re.IGNORECASE)
+        # for line in some_file:
+        #     line = regex.sub("interfaceOpDataFile %s" % fileIn, line)
+
     print('Creating version dummy file...')
     dummy = open('{}\{}'.format(temp,dummy_name),"w+")
-    dummy.write('{} version {}\nrev: {}\nbranch: {}'.format(script_name,version,commit_hash,branch_name))
+    dummy.write('{}{} version {}\nrev: {}\nbranch: {}'.format(script_name,public_build,version,commit_hash,branch_name))
+    dummy.close()
+
 
     print('Building archive...')
     archive_name = '{}'.format(name)
     shutil.make_archive('{}/{}'.format(relase_folder,archive_name), 'zip', temp)
-    
+
 # #########################################################################################
 
 def main():
@@ -258,8 +312,6 @@ def main():
         epilog='This build script is primarly built to pack 7th Cavalry Script package; cScripts.\nThe tool should be cross platform and can be used for other packages as well.'
     )
 
-    #group = parser.add_mutually_exclusive_group(required=False)
-
     parser.add_argument('-b', '--buildtype',
         required=False,
         choices=['release', 'dev', 'test', 'custom'],
@@ -268,6 +320,7 @@ def main():
     )
     parser.add_argument("-p", "--public",
         help="Create a \"public\" build to be used on non CavPack Enviroment",
+        required=False,
         action="store_true"
     )
     parser.add_argument('-rc', '--releasecandidate',
@@ -281,14 +334,54 @@ def main():
         action="store_false"
     )
     parser.add_argument("--auto_color",
-        help="This will set color to the build.",
-        action="store_true"
+        help="Enable collors in the script." if os.name == 'nt' else "Disable colors in the script.",
+        action="store_true" if os.name == 'nt' else "store_false"
     )
 
     parser.add_argument('-v', '--version', action='version', version='Author: Andreas Broström <andreas.brostrom.ce@gmail.com>\nScript version: {}.'.format(__version__))
 
     args = parser.parse_args()
 
+    # Construct public build
+    public_file_paths = []
+    public_operations = []
+    
+    if args.public:
+        config_gear_files = config['PATHS']['config_gear_files']
+        config_gear_files = config_gear_files.replace(' ','')
+        config_gear_files = config_gear_files.replace('\n',',')
+        config_gear_files = config_gear_files.split(',')
+        config_gear_files = [x for x in config_gear_files if x] # Remove empty array object if exists.
+        public_file_paths.append(config_gear_files)
+
+        script_gear_files = config['PATHS']['script_gear_files']
+        script_gear_files = script_gear_files.replace(' ','')
+        script_gear_files = script_gear_files.replace('\n',',')
+        script_gear_files = script_gear_files.split(',')
+        script_gear_files = [x for x in script_gear_files if x] # Remove empty array object if exists.
+        public_file_paths.append(script_gear_files)
+
+        acearsenak_files = config['PATHS']['acearsenak_files']
+        acearsenak_files = acearsenak_files.replace(' ','')
+        acearsenak_files = acearsenak_files.replace('\n',',')
+        acearsenak_files = acearsenak_files.split(',')
+        acearsenak_files = [x for x in acearsenak_files if x] # Remove empty array object if exists.
+        public_file_paths.append(acearsenak_files)
+
+        # Handler
+        replace = config['PUBLIC BUILD OPERATIONS']['Replace']
+        replace = replace.replace(' ','')
+        replace = replace.replace('\n',',')
+        replace = replace.split(',')
+        replace = [x for x in replace if x] # Remove empty array object if exists.
+        replaces = []
+        if not (len(replace) % 2) == 0:
+            sys.exit('Replace have a detected a uneven replace number. You can\'t replace anything in to nothing. Use the remove operation for this. \nBuild Aborted')
+        for x in replace:
+            replaces.append(x)
+            if len(replaces) == 2:
+                public_operations.append(replaces)
+                replaces = []
 
     # build handler
     print(c_string('Preparing a build for {}\n'.format(script_name),'\033[1m',args.auto_color))
@@ -297,24 +390,29 @@ def main():
     list_objects(objects,args.auto_color)
 
     # press enter to start build
-    if args.fastbuild:
-        input('\nPress enter to start the build process...')
-    else:
-        print('')
+    input('\nPress enter to start the build process...') if args.fastbuild else print('')
 
     # prep release
     if args.buildtype == 'release':
         if not get_git_branch_name() == 'master':
             if args.fastbuild:
-                action = request_action('WARNING! You are currently not on master branch do you wish to checkout master?')
+                action = request_action('You are currently not on master branch. Do you wish to checkout master?')
                 if action:
-                    subprocess.check_output(['git', 'checkout', 'master'], shell=True)
+                    try:
+                        subprocess.check_output(['git', 'checkout', 'master'], shell=True)
+                    except:
+                        action = request_action('Do you wish to continue anyways?')
+                    if not action:
+                        sys.exit()
             else:
-                subprocess.check_output(['git', 'checkout', 'master'], shell=True)
+                try:
+                    subprocess.check_output(['git', 'checkout', 'master'], shell=True)
+                except:
+                    print(c_string('Warning: Checkout was aborted. Your still on branch {}...'.format(get_git_branch_name()),'\033[91m',args.auto_color))
                 
     name = set_package_name(script_name,args.buildtype,args.releasecandidate)
 
-    build_release(script_name,args.buildtype,args.releasecandidate,args.auto_color)
+    build_release(script_name,args.buildtype,args.releasecandidate,args.public,public_file_paths,public_operations,args.auto_color)
 
     print('Build complet.')
 
