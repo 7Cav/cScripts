@@ -440,6 +440,7 @@ def main():
 
         # Remove Handler
         remove = config['PUBLIC BUILD OPERATIONS']['Remove_gear']
+
         remove = remove.replace(' ','')
         remove = remove.replace('\n',',')
         remove = remove.split(',')
