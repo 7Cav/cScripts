@@ -21,7 +21,7 @@
 # This build script is primarly built to pack 7th Cavalry Script package; cScripts.
 # The tool is build tool should be cross platform and can be used for other packages as well.
 #
-import sys, os, fnmatch, re
+import sys, os, fnmatch, fileinput
 import argparse, shutil, subprocess, tempfile
 import configparser
 
@@ -95,6 +95,11 @@ def get_git_branch_name():
     return branch_name
 
 
+def get_filename_from_path_string(pathfile=''):
+    filenamepath = pathfile.split('/')
+    filename = filenamepath[-1]
+    filename = str(filename)
+    return filename
 
 def get_script_version_number(version_file='',return_type='arr'):
     file = open(version_file)
@@ -104,6 +109,7 @@ def get_script_version_number(version_file='',return_type='arr'):
             line = line.split(".")
             version = line
             version = list(map(int, version))
+    file.close()    
     if return_type == 'arr':
         return version
     elif return_type == 'str':
@@ -230,9 +236,12 @@ def list_objects(objects,auto_color=False):
 
 
 def build_release(package_name='',build_type='', release_candidate=0, public_version=False, public_file_paths=[], public_operations=[], auto_color=False):
-    
-    def build_public():
-        pass
+
+    def replace(file,searchExp,replaceExp):
+        for line in fileinput.input(file, inplace=1):
+            if searchExp in line:
+                line = line.replace(searchExp,replaceExp)
+            sys.stdout.write(line)
 
     temp = tempfile.mkdtemp()
 
@@ -273,26 +282,70 @@ def build_release(package_name='',build_type='', release_candidate=0, public_ver
     if public_version:
         print('Creating public build...')
 
-        print('Replacing gear...')
-        for file in public_file_paths[0]:
-            print('Checking config file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
-            print(public_operations[0])
-            print(len(public_operations))
-            print(len(public_operations[0]))
+        if not len(public_operations[0]) == 0:
+            print('Replacing gear...')
+            for file in public_file_paths[0]:
+                print('Checking config file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                for gear in public_operations[0]:
+                    print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                    replace('{}/{}'.format(temp,file),gear[0],gear[1])
 
-                
-        sys.exit('HALT!!"!!')
-        for file in public_file_paths[1]:
-            print('Checking script file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
-        for file in public_file_paths[2]:
-            print('Checking ace arsena file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
-        # dummy = open('{}\{}'.format(temp,dummy_name),"w+")
-        # regex = re.compile(r"^.*interfaceOpDataFile.*$", re.IGNORECASE)
-        # for line in some_file:
-        #     line = regex.sub("interfaceOpDataFile %s" % fileIn, line)
+            for file in public_file_paths[1]:
+                print('Checking script file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                for gear in public_operations[0]:
+                    print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                    replace('{}/{}'.format(temp,file),gear[0],gear[1])
+                    
+            for file in public_file_paths[2]:
+                print('Checking ace arsena file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                for gear in public_operations[0]:
+                    print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                    replace('{}/{}'.format(temp,file),gear[0],gear[1])
+
+        if not len(public_operations[1]) == 0:
+            print('Removing gear...')
+            for file in public_file_paths[0]:
+                print('Checking config file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                for gear in public_operations[1]:
+                    print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                    replace('{}/{}'.format(temp,file),gear, "\"\"")
+                    replace('{}/{}'.format(temp,file),"        \"\",", "")
+
+            for file in public_file_paths[1]:
+                print('Checking script file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                for gear in public_operations[1]:
+                    print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                    replace('{}/{}'.format(temp,file),gear, "\"\"")
+
+            for file in public_file_paths[2]:
+                print('Checking ace arsena file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                for gear in public_operations[1]:
+                    print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                    replace('{}/{}'.format(temp,file),gear, "\"\"")
+
+        if os.path.isfile('{}/cba_settings.sqf'.format(temp)):
+            print(c_string('cba_settings.sqf','\033[96m',auto_color) + ' detected allowing for adjustmetns to be made...')
+
+            if not len(public_operations[2]) == 0:
+                print('Applying adjustmetns to settings...')
+                for setting in public_operations[2]:
+                    print('Changing ' + c_string('{}'.format(setting[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(setting[1]),'\033[95m',auto_color) + '.')
+                    replace('{}/cba_settings.sqf'.format(temp),setting[0],setting[1])
+
+            if not len(public_operations[3]) == 0:
+                print('Adding new settings...')
+                with open('{}/cba_settings.sqf'.format(temp), 'a') as settings_file:
+                    settings_file.write('\n')
+                    for line in public_operations[3]:
+                        print('Adding ' + c_string('{}'.format(line),'\033[95m',auto_color) + ' to the end of the ' + c_string('cba_settings.sqf','\033[96m',auto_color))
+                        settings_file.write('\n{}'.format(line))
+                settings_file.close()
+
+        else:
+            print('No CBA settings file detected skipping changes...')
 
     print('Creating version dummy file...')
-    dummy = open('{}\{}'.format(temp,dummy_name),"w+")
+    dummy = open('{}/{}'.format(temp,dummy_name),"w+")
     dummy.write('{}{} version {}\nrev: {}\nbranch: {}'.format(script_name,public_build,version,commit_hash,branch_name))
     dummy.close()
 
@@ -361,27 +414,67 @@ def main():
         script_gear_files = [x for x in script_gear_files if x] # Remove empty array object if exists.
         public_file_paths.append(script_gear_files)
 
-        acearsenak_files = config['PATHS']['acearsenak_files']
-        acearsenak_files = acearsenak_files.replace(' ','')
-        acearsenak_files = acearsenak_files.replace('\n',',')
-        acearsenak_files = acearsenak_files.split(',')
-        acearsenak_files = [x for x in acearsenak_files if x] # Remove empty array object if exists.
-        public_file_paths.append(acearsenak_files)
+        acearsenal_files = config['PATHS']['acearsenal_files']
+        acearsenal_files = acearsenal_files.replace(' ','')
+        acearsenal_files = acearsenal_files.replace('\n',',')
+        acearsenal_files = acearsenal_files.split(',')
+        acearsenal_files = [x for x in acearsenal_files if x] # Remove empty array object if exists.
+        public_file_paths.append(acearsenal_files)
 
-        # Handler
-        replace = config['PUBLIC BUILD OPERATIONS']['Replace']
+        # Replace Handler
+        replace = config['PUBLIC BUILD OPERATIONS']['Replace_gear']
         replace = replace.replace(' ','')
         replace = replace.replace('\n',',')
         replace = replace.split(',')
         replace = [x for x in replace if x] # Remove empty array object if exists.
         replaces = []
+        replacesList = []
         if not (len(replace) % 2) == 0:
             sys.exit('Replace have a detected a uneven replace number. You can\'t replace anything in to nothing. Use the remove operation for this. \nBuild Aborted')
         for x in replace:
             replaces.append(x)
             if len(replaces) == 2:
-                public_operations.append(replaces)
+                replacesList.append(replaces)
                 replaces = []
+        public_operations.append(replacesList)
+
+        # Remove Handler
+        remove = config['PUBLIC BUILD OPERATIONS']['Remove_gear']
+        remove = remove.replace(' ','')
+        remove = remove.replace('\n',',')
+        remove = remove.split(',')
+        remove = [x for x in remove if x] # Remove empty array object if exists.
+        removes = []
+        for x in remove:
+            removes.append(x)
+        public_operations.append(removes)
+
+        # Settings Change handler
+        change_setting = config['PUBLIC BUILD OPERATIONS']['Change_settings']
+        change_setting = change_setting.replace(', ',',')
+        change_setting = change_setting.replace('\n',',')
+        change_setting = change_setting.split(',')
+        change_setting = [x for x in change_setting if x] # Remove empty array object if exists.
+        change_settings = []
+        change_settings_list = []
+        if not (len(change_setting) % 2) == 0:
+            sys.exit('Settings changes have a detected a uneven change number. You can\'t change a settings in to nothing. \nBuild Aborted')
+        for x in change_setting:
+            change_settings.append(x)
+            if len(change_settings) == 2:
+                change_settings_list.append(change_settings)
+                change_settings = []
+        public_operations.append(change_settings_list)
+
+        # Settings Add handler
+        add_setting = config['PUBLIC BUILD OPERATIONS']['New_settings']
+        add_setting = add_setting.replace('\n',',')
+        add_setting = add_setting.split(',')
+        add_setting = [x for x in add_setting if x] # Remove empty array object if exists.
+        add_settings = []
+        for x in add_setting:
+            add_settings.append(x)
+        public_operations.append(add_settings)
 
     # build handler
     print(c_string('Preparing a build for {}\n'.format(script_name),'\033[1m',args.auto_color))
