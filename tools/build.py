@@ -21,7 +21,7 @@
 # This build script is primarly built to pack 7th Cavalry Script package; cScripts.
 # The tool is build tool should be cross platform and can be used for other packages as well.
 #
-import sys, os, fnmatch, re
+import sys, os, fnmatch, fileinput
 import argparse, shutil, subprocess, tempfile
 import configparser
 
@@ -230,9 +230,12 @@ def list_objects(objects,auto_color=False):
 
 
 def build_release(package_name='',build_type='', release_candidate=0, public_version=False, public_file_paths=[], public_operations=[], auto_color=False):
-    
-    def build_public():
-        pass
+
+    def replace(file,searchExp,replaceExp):
+        for line in fileinput.input(file, inplace=1):
+            if searchExp in line:
+                line = line.replace(searchExp,replaceExp)
+            sys.stdout.write(line)
 
     temp = tempfile.mkdtemp()
 
@@ -275,24 +278,47 @@ def build_release(package_name='',build_type='', release_candidate=0, public_ver
 
         print('Replacing gear...')
         for file in public_file_paths[0]:
-            print('Checking config file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
-            print(public_operations[0])
-            print(len(public_operations))
-            print(len(public_operations[0]))
+            print('Checking config file ' + c_string('{}'.format(file),'\033[96m',auto_color) +'...')
+            for gear in public_operations[0]:
+                print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                replace('{}/{}'.format(temp,file),gear[0],gear[1])
 
-                
-        sys.exit('HALT!!"!!')
         for file in public_file_paths[1]:
-            print('Checking script file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
+            print('Checking script file ' + c_string('{}'.format(file),'\033[96m',auto_color) +'...')
+            for gear in public_operations[0]:
+                print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                replace('{}/{}'.format(temp,file),gear[0],gear[1])
+                
         for file in public_file_paths[2]:
-            print('Checking ace arsena file ' + c_string('{1}'.format(temp,file),'\033[96m',auto_color) +'...')
-        # dummy = open('{}\{}'.format(temp,dummy_name),"w+")
-        # regex = re.compile(r"^.*interfaceOpDataFile.*$", re.IGNORECASE)
-        # for line in some_file:
-        #     line = regex.sub("interfaceOpDataFile %s" % fileIn, line)
+            print('Checking ace arsena file ' + c_string('{}'.format(file),'\033[96m',auto_color) +'...')
+            for gear in public_operations[0]:
+                print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                replace('{}/{}'.format(temp,file),gear[0],gear[1])
+                
+                
+        print('Removing gear...')
+
+        for file in public_file_paths[0]:
+            print('Checking config file ' + c_string('{}'.format(file),'\033[96m',auto_color) +'...')
+            for gear in public_operations[1]:
+                print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                replace('{}/{}'.format(temp,file),gear, "\"\"")
+                replace('{}/{}'.format(temp,file),"        \"\",", "")
+
+        for file in public_file_paths[1]:
+            print('Checking script file ' + c_string('{}'.format(file),'\033[96m',auto_color) +'...')
+            for gear in public_operations[1]:
+                print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                replace('{}/{}'.format(temp,file),gear, "\"\"")
+
+        for file in public_file_paths[2]:
+            print('Checking ace arsena file ' + c_string('{}'.format(file),'\033[96m',auto_color) +'...')
+            for gear in public_operations[1]:
+                print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                replace('{}/{}'.format(temp,file),gear, "\"\"")
 
     print('Creating version dummy file...')
-    dummy = open('{}\{}'.format(temp,dummy_name),"w+")
+    dummy = open('{}/{}'.format(temp,dummy_name),"w+")
     dummy.write('{}{} version {}\nrev: {}\nbranch: {}'.format(script_name,public_build,version,commit_hash,branch_name))
     dummy.close()
 
@@ -375,13 +401,25 @@ def main():
         replace = replace.split(',')
         replace = [x for x in replace if x] # Remove empty array object if exists.
         replaces = []
+        replacesList = []
         if not (len(replace) % 2) == 0:
             sys.exit('Replace have a detected a uneven replace number. You can\'t replace anything in to nothing. Use the remove operation for this. \nBuild Aborted')
         for x in replace:
             replaces.append(x)
             if len(replaces) == 2:
-                public_operations.append(replaces)
+                replacesList.append(replaces)
                 replaces = []
+        public_operations.append(replacesList)
+
+        remove = config['PUBLIC BUILD OPERATIONS']['Remove']
+        remove = remove.replace(' ','')
+        remove = remove.replace('\n',',')
+        remove = remove.split(',')
+        remove = [x for x in remove if x] # Remove empty array object if exists.
+        removes = []
+        for x in remove:
+            removes.append(x)
+        public_operations.append(removes)
 
     # build handler
     print(c_string('Preparing a build for {}\n'.format(script_name),'\033[1m',args.auto_color))
