@@ -156,7 +156,7 @@ class CAV_Bravo_Base : CommonBlufor {
 };
 
 class CAV_Charlie_Base : CommonBlufor {
-    backpack[] = {"B_Kitbag_cbr"};
+    backpack[] = {"B_AssaultPack_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_ocp"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
