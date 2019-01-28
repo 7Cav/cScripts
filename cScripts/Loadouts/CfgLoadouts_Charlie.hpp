@@ -222,7 +222,7 @@ class CAV_Charlie_AR : CAV_Charlie_Base {  // Automatic Rifleman 31.9kg
 
     headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     vest[] = {"rhsusf_spcs_ocp_saw"};
-    primary[] = {"rhs_weap_m249_pip_L_para","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
+    primary[] = {"rhs_weap_m249_pip_L_para","rhsusf_acc_anpeq15A","rhsusf_acc_ELCAN_ard"};
 
     magazines[] = {
         "rhs_200rnd_556x45_M_SAW",5,
