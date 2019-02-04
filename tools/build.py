@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 #
-# usage: build [-h] [-b {release,dev,test,custom}] [-p]
-#                    [-rc RELEASECANDIDATE] [-y] [--auto_color] [-v]
-# 
+# usage: Build [-h] [-b {release,dev,test,custom}] [-p] [-rc RELEASECANDIDATE]
+#              [-y] [--auto_color] [-v]
+#
 # This script build and pack the selected mission framework.
-# 
+#
 # optional arguments:
 #   -h, --help            show this help message and exit
 #   -b {release,dev,test,custom}, --buildtype {release,dev,test,custom}
@@ -15,11 +15,11 @@
 #                         Set a release candidate number to the build ".RC1" for
 #                         example.
 #   -y, --fastbuild       Will instantly run untill done.
-#   --auto_color          This will set color to the build.
+#   --auto_color          Enable collors in the script.
 #   -v, --version         show program's version number and exit
-# 
+#
 # This build script is primarly built to pack 7th Cavalry Script package; cScripts.
-# The tool is build tool should be cross platform and can be used for other packages as well.
+# The tool should be cross platform and can be used for other packages as well.
 #
 import sys, os, fnmatch, fileinput
 import argparse, shutil, subprocess, tempfile
