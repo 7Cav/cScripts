@@ -21,7 +21,6 @@ cScripts is an easy to use framework for the ARMA3 S3 Operations staff and other
 - **RHSUSAF**                                - [Link](http://www.rhsmods.org/)
 - **ACRE2**                                  - [Link](https://github.com/IDI-Systems/acre2)
 - **Project OPFOR**                          - [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
-- **TF47 Launchers**                         - [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=508476583)
 - **cTab**                                   - [Link](https://github.com/Riouken/cTab)
 - **ACE 3 Extension (Placeables)**           - [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=866772689)
 - **Ares Mod Achilles Expansion** (OPTIONAL) - [Link](https://github.com/ArmaAchilles/AresModAchillesExpansion)

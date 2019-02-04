@@ -105,7 +105,6 @@ class CAV_Alpha_Base : CommonBlufor {
     //compass[] = {"ItemCompass"};
     //gps[] = {""};
     //map[] = {"ItemMap"};
-    nvgs[] = {"NVGogglesB_grn_F"};
     watch[] = {"ACE_Altimeter"};
 
     insignia[] = {""};
@@ -157,7 +156,7 @@ class CAV_Bravo_Base : CommonBlufor {
 };
 
 class CAV_Charlie_Base : CommonBlufor {
-    backpack[] = {"B_Kitbag_cbr"};
+    backpack[] = {"B_AssaultPack_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_ocp"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
@@ -180,9 +179,6 @@ class CAV_Charlie_Base : CommonBlufor {
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
-
-        // Electronics
-        "ACE_microDAGR",
 
         // Tools
         "ACE_Canteen",
