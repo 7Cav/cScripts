@@ -2,7 +2,7 @@
 
 class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
-    backpack[] = {"B_Carryall_mcamo"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     vest[] = {"rhsusf_spcs_ocp_squadleader"};
     binoculars[] = {"ACE_Vector"};
@@ -14,6 +14,7 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
 
         "rhs_mag_m67",4,
+        "ACE_HandFlare_Red",4,
 
         "SmokeShell",4,
         "SmokeShellGreen",1,
@@ -40,6 +41,7 @@ class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
         // Electronics
         "ACE_microDAGR",
         "ACE_HuntIR_monitor",
+        "ItemAndroid",
 
         // Tools
         "ACE_SpraypaintRed",
@@ -102,6 +104,7 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
         "ACE_HuntIR_monitor",
         "Laserbatteries",2,
         "ACE_Vector",
+        "ItemcTabHCam",
         "ACE_MX2A",
         "rhsusf_ANPVS_15",
 
@@ -117,7 +120,7 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
 
     headgear[] = {"rhsusf_ach_helmet_headset_ess_ocp"};
-    backpack[] = {"B_Carryall_mcamo"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
     vest[] = {"rhsusf_spcs_ocp_teamleader_alt"};
     binoculars[] = {"ACE_Vector"};
 
@@ -128,6 +131,7 @@ class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
 
         "rhs_mag_m67",4,
+        "ACE_Handflare_Red",4,
 
         "SmokeShell",4,
         "SmokeShellGreen",1,
@@ -175,6 +179,7 @@ class CAV_Charlie_TL : CAV_Charlie_Base {  // Fire Team Leader
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",4,
 
         "rhs_mag_m67",4,
+        "ACE_HandFlare_Red",2,
 
         "SmokeShell",4,
         "SmokeShellGreen",1,
@@ -217,7 +222,7 @@ class CAV_Charlie_AR : CAV_Charlie_Base {  // Automatic Rifleman 31.9kg
 
     headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     vest[] = {"rhsusf_spcs_ocp_saw"};
-    primary[] = {"rhs_weap_m249_pip_L_para","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
+    primary[] = {"rhs_weap_m249_pip_L_para","rhsusf_acc_anpeq15A","rhsusf_acc_ELCAN_ard"};
 
     magazines[] = {
         "rhs_200rnd_556x45_M_SAW",5,
@@ -262,9 +267,6 @@ class CAV_Charlie_GR : CAV_Charlie_Base {  // Grenadier 28.4kg
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
-
-        // Electronics
-        "ACE_microDAGR",
 
         // Tools
         "ACE_EntrenchingTool"
@@ -322,8 +324,6 @@ class CAV_Charlie_CLS : CAV_Charlie_Base {  // Combat Life Saver 24.3kg
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
-
-        "ACE_microDAGR",
 
         // Tools
         "ACE_EntrenchingTool"
