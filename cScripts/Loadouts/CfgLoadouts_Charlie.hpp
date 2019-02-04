@@ -2,7 +2,7 @@
 
 class CAV_Charlie_OFFCR : CAV_Charlie_Base {  // Leadership positions PSG and up
 
-    backpack[] = {"B_AssaultPack_mcamo"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     vest[] = {"rhsusf_spcs_ocp_squadleader"};
     binoculars[] = {"ACE_Vector"};
@@ -120,7 +120,7 @@ class CAV_Charlie_JFO : CAV_Charlie_Base {  // Joint Fires Observer 36.3kg
 class CAV_Charlie_SL : CAV_Charlie_Base {  // Squad Leader
 
     headgear[] = {"rhsusf_ach_helmet_headset_ess_ocp"};
-    backpack[] = {"B_AssaultPack_mcamo"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
     vest[] = {"rhsusf_spcs_ocp_teamleader_alt"};
     binoculars[] = {"ACE_Vector"};
 
