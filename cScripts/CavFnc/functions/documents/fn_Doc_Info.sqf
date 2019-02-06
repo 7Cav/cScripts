@@ -23,7 +23,8 @@ if (isMultiplayer) then {
     if (_playerRole == "") then {_playerRole = "trooper"};
 };
 
-private _playerGroup = groupId (group player);
+private _playerGroup = call FUNC(getCavSquadName);
+diag_log _playerGroup;
 if (_playerGroup == "") then { _playerGroup = "in your squad" } else { _playerGroup = formatText["under the callsign <font color='#ffc61a'>%1</font>", _playerGroup]};
 
 player createDiaryRecord["7Cav",

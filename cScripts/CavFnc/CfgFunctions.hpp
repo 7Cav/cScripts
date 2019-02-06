@@ -59,12 +59,14 @@ class cScripts {
         class getPlayerName {};
         class doPlayerAnnouncement {};
 
+
         class getRadioChannel {};
         class setRadioChannel {};
 
         class getCompanyVariable {};
         class hasCompanyVariable {};
         
+        class getCavSquadName {};
         class getSquadInsignia {};
     };
     class systems {
