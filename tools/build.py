@@ -58,9 +58,9 @@ script_name = config['DEFAULT']['name']
 
 # #########################################################################################
 
-def c_string(string='',color='\033[0m',auto_color=False):
+def color_string(string='', color='\033[0m', auto_color=False):
     if auto_color:
-        return '\033[0m'+ color + string + '\033[0m'
+        return '\033[0m{}{}\033[0m'.format(color,string)
     else:
         return string
 
@@ -95,13 +95,13 @@ def get_git_branch_name():
     return branch_name
 
 
-def get_filename_from_path_string(pathfile=''):
+def strip_path_from_filename(pathfile=''):
     filenamepath = pathfile.split('/')
     filename = filenamepath[-1]
     filename = str(filename)
     return filename
 
-def get_script_version_number(version_file='',return_type='arr'):
+def get_script_version_number(version_file='', return_type='arr'):
     file = open(version_file)
     for i, line in enumerate(file):
         if i == 1:
@@ -129,7 +129,7 @@ def get_script_version_number(version_file='',return_type='arr'):
 
 
 
-def set_package_name(package_name='',build_type='',release_candidate=0, public_version=False):
+def set_package_name(package_name='', build_type='', release_candidate=0, public_version=False):
     version_number = get_script_version_number(version_file,'str')
     commit_hash = get_git_commit_hash(False)
     branch_name = get_git_branch_name()
@@ -222,22 +222,31 @@ def fetch_objects():
 
 
 
-def list_objects(objects,auto_color=False):
+def list_objects(objects, auto_color=False):
     if objects == []:
         sys.exit('No objects were found\nThis means that a build cant be created att all pleace check your paths and script location.')
     else:
-        print(c_string('Found Objects:','\033[1m',auto_color))
-        for obj in objects[0]:
-            print(c_string(obj,'\033[42m',auto_color),end=' ')
-        for obj in objects[1]:
-            print(c_string(obj,'\033[96m',auto_color),end=' ')
+        print(color_string('Found Objects:','\033[1m',auto_color))
+        for time, obj in enumerate(objects[0]):
+            print(color_string(''.join(obj),'\033[42m',auto_color),end='')
+            if not time == len(objects[0])-1:
+                print(', ', end='')
+            else:
+                if objects[1]:
+                    print(', ', end='')
+                else:
+                    print('', end='')
+        for time, obj in enumerate(objects[1]):
+            print(color_string(''.join(obj),'\033[96m',auto_color),end='')
+            if not time == len(objects[1])-1:
+                print(', ', end='')
         print()
 
 
 
-def build_release(package_name='',build_type='', release_candidate=0, public_version=False, public_file_paths=[], public_operations=[], auto_color=False):
+def build_release(package_name='', build_type='', release_candidate=0, public_version=False, public_file_paths=[], public_operations=[], auto_color=False):
 
-    def replace(file,searchExp,replaceExp):
+    def replace(file, searchExp, replaceExp):
         for line in fileinput.input(file, inplace=1):
             if searchExp in line:
                 line = line.replace(searchExp,replaceExp)
@@ -258,12 +267,12 @@ def build_release(package_name='',build_type='', release_candidate=0, public_ver
     folder_list = content_list[0]
     file_list = content_list[1]
 
-    for obj in file_list:
-        print('Featching ' + c_string(obj,'\033[96m',auto_color) + '...')
-        shutil.copy2(obj, temp)
     for obj in folder_list:
-        print('Featching ' + c_string(obj,'\033[42m',auto_color) + ' directory...')
+        print('Featching directorys and files from {}...'.format(color_string(obj,'\033[42m',auto_color)))
         shutil.copytree(obj, '{}/{}'.format(temp,obj))
+    for obj in file_list:
+        print('Featching files {}...'.format(color_string(obj,'\033[96m',auto_color)))
+        shutil.copy2(obj, temp)
 
     if not os.path.isdir('release'):
         try:
@@ -285,74 +294,87 @@ def build_release(package_name='',build_type='', release_candidate=0, public_ver
         if not len(public_operations[0]) == 0:
             print('Replacing gear...')
             for file in public_file_paths[0]:
-                print('Checking config file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                print('Checking config file {}...'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
                 for gear in public_operations[0]:
-                    print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                    print('Replacing {} with {}.'.format(color_string('{}'.format(gear[0]),'\033[95m',auto_color),color_string('{}'.format(gear[1]),'\033[95m',auto_color)))
                     replace('{}/{}'.format(temp,file),gear[0],gear[1])
 
             for file in public_file_paths[1]:
-                print('Checking script file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                print('Checking script file {}...'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
                 for gear in public_operations[0]:
-                    print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                    print('Replacing {} with {}.'.format(color_string('{}'.format(gear[0]),'\033[95m',auto_color),color_string('{}'.format(gear[1]),'\033[95m',auto_color)))
                     replace('{}/{}'.format(temp,file),gear[0],gear[1])
                     
             for file in public_file_paths[2]:
-                print('Checking ace arsena file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                print('Checking ace arsena file {}...'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
                 for gear in public_operations[0]:
-                    print('Replacing ' + c_string('{}'.format(gear[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(gear[1]),'\033[95m',auto_color) + '.')
+                    print('Replacing {} with {}.'.format(color_string('{}'.format(gear[0]),'\033[95m',auto_color),color_string('{}'.format(gear[1]),'\033[95m',auto_color)))
                     replace('{}/{}'.format(temp,file),gear[0],gear[1])
 
         if not len(public_operations[1]) == 0:
-            print('Removing gear...')
+            print('Removing ', end='')
+            for time, gear in enumerate(public_operations[1]):
+                print(color_string(''.join(gear),'\033[95m',auto_color),end='')
+                if not time == len(public_operations[1])-1:
+                    print(', ', end='')
+                else:
+                    print(' from script and config files...')
+                
             for file in public_file_paths[0]:
-                print('Checking config file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                print('Checking config file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
                 for gear in public_operations[1]:
-                    print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                    #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',auto_color)))
                     replace('{}/{}'.format(temp,file),gear, "\"\"")
                     replace('{}/{}'.format(temp,file),"        \"\",", "")
 
             for file in public_file_paths[1]:
-                print('Checking script file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                print('Checking script file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
                 for gear in public_operations[1]:
-                    print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                    #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',auto_color)))
                     replace('{}/{}'.format(temp,file),gear, "\"\"")
 
             for file in public_file_paths[2]:
-                print('Checking ace arsena file ' + c_string(get_filename_from_path_string(file),'\033[96m',auto_color) +'...')
+                print('Checking ace arsenal script file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
                 for gear in public_operations[1]:
-                    print('Removing ' + c_string('{}'.format(gear),'\033[95m',auto_color) + '.')
+                    #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',auto_color)))
                     replace('{}/{}'.format(temp,file),gear, "\"\"")
 
         if os.path.isfile('{}/cba_settings.sqf'.format(temp)):
-            print(c_string('cba_settings.sqf','\033[96m',auto_color) + ' detected allowing for adjustmetns to be made...')
-
             if not len(public_operations[2]) == 0:
-                print('Applying adjustmetns to settings...')
+                print('Applying adjustmetns to {}...'.format(color_string('cba_settings.sqf','\033[96m',auto_color)))
                 for setting in public_operations[2]:
-                    print('Changing ' + c_string('{}'.format(setting[0]),'\033[95m',auto_color) + ' with ' + c_string('{}'.format(setting[1]),'\033[95m',auto_color) + '.')
+                    print('Replacing {} with {}'.format(color_string('{}'.format(setting[0]),'\033[95m',auto_color), color_string('{}'.format(setting[1]),'\033[95m',auto_color)))
                     replace('{}/cba_settings.sqf'.format(temp),setting[0],setting[1])
 
             if not len(public_operations[3]) == 0:
-                print('Adding new settings...')
+                print('Adding new settings to {}...'.format(color_string('cba_settings.sqf','\033[96m',auto_color)))
                 with open('{}/cba_settings.sqf'.format(temp), 'a') as settings_file:
                     settings_file.write('\n')
                     for line in public_operations[3]:
-                        print('Adding ' + c_string('{}'.format(line),'\033[95m',auto_color) + ' to the end of the ' + c_string('cba_settings.sqf','\033[96m',auto_color))
+                        print('Adding {}'.format(color_string(line,'\033[95m',auto_color)))
                         settings_file.write('\n{}'.format(line))
                 settings_file.close()
-
         else:
-            print('No CBA settings file detected skipping changes...')
+            print('No {} detected skipping changes...'.format(color_string('cba_settings.sqf','\033[96m',auto_color)))
+        
+        if os.path.isfile('{}/description.ext'.format(temp)):
+            #if not len(public_operations[4]) == 0:
+            if not 0 == 0:
+                print('Applying adjustmetns to {}...'.format(color_string('description.ext','\033[96m',auto_color)))
+        else:
+            print('No {} detected skipping changes...'.format(color_string('description.ext','\033[96m',auto_color)))
 
     print('Creating version dummy file...')
     dummy = open('{}/{}'.format(temp,dummy_name),"w+")
     dummy.write('{}{} version {}\nrev: {}\nbranch: {}'.format(script_name,public_build,version,commit_hash,branch_name))
     dummy.close()
 
-
     print('Building archive...')
     archive_name = '{}'.format(name)
-    shutil.make_archive('{}/{}'.format(relase_folder,archive_name), 'zip', temp)
+    archive_type = 'zip'
+    shutil.make_archive('{}/{}'.format(relase_folder,archive_name), archive_type, temp)
+    print('Archive created you can find it in the release folder. ({})'.format(color_string('{}/{}.{}'.format(relase_folder,archive_name,archive_type),'\033[96m',auto_color)))
+
 
 # #########################################################################################
 
@@ -478,7 +500,7 @@ def main():
         public_operations.append(add_settings)
 
     # build handler
-    print(c_string('Preparing a build for {}\n'.format(script_name),'\033[1m',args.auto_color))
+    print(color_string('Preparing a build for {}\n'.format(script_name),'\033[1m',args.auto_color))
 
     objects = fetch_objects()
     list_objects(objects,args.auto_color)
@@ -502,7 +524,7 @@ def main():
                 try:
                     subprocess.check_output(['git', 'checkout', 'master'], shell=True)
                 except:
-                    print(c_string('Warning: Checkout was aborted. Your still on branch {}...'.format(get_git_branch_name()),'\033[91m',args.auto_color))
+                    print(color_string('Warning: Checkout was aborted. Your still on branch {}...'.format(get_git_branch_name()),'\033[91m',args.auto_color))
                 
     name = set_package_name(script_name,args.buildtype,args.releasecandidate)
 
