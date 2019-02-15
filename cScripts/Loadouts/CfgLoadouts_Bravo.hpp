@@ -488,3 +488,232 @@ class CAV_Bravo_Weapons_GNR : CAV_Bravo_Base {  // Gunner AND Assistant Gunner
         "SmokeShell",3
     };
 };
+
+// Logistics Team
+class CAV_LOGI_OFFCR : CAV_Logistics_Base {  // Leadership positions PSG and up
+
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    backpack[] = {"B_Carryall_mcamo"};
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",8,
+        "SmokeShellBlue",4,
+        "SmokeShellGreen",4,
+        "SmokeShellRed",2,
+        "SmokeShellYellow",2,
+        "ACE_Chemlight_UltraHiOrange",6,
+        "B_IR_Grenade",6,
+        "ACE_HandFlare_Red",4,
+        "ACE_HandFlare_Yellow",4
+        
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",4,
+        "ACE_morphine",5,
+        "ACE_personalAidKit",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_IR_Strobe_Item",6,
+        "ACE_CableTie",2,
+
+        // Electronics
+        "ACE_microDAGR",
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_SpraypaintBlue",
+        "ACE_SpraypaintGreen",
+        "ACE_Fortify",
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemcTab"};
+};
+
+class CAV_LOGI_TL : CAV_Logistics_Base {  // Logistics Team Leaders
+
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    backpack[] = {"B_Carryall_mcamo"};
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",8,
+        "SmokeShellBlue",4,
+        "SmokeShellGreen",4,
+        "SmokeShellRed",2,
+        "SmokeShellYellow",2,
+        "ACE_Chemlight_UltraHiOrange",6,
+        "B_IR_Grenade",6,
+        "ACE_HandFlare_Red",4,
+        "ACE_HandFlare_Yellow",4
+        
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",4,
+        "ACE_morphine",5,
+        "ACE_personalAidKit",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_IR_Strobe_Item",6,
+        "ACE_CableTie",2,
+
+        // Electronics
+        "ACE_microDAGR",
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_SpraypaintBlue",
+        "ACE_SpraypaintGreen",
+        "ACE_Fortify",
+        "ACE_EntrenchingTool"
+    };
+};
+
+class CAV_LOGI_GR : CAV_Logistics_Base {  // Logistics Team Leaders
+
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    backpack[] = {"B_Carryall_mcamo"};
+    binoculars[] = {"ACE_Vector"};
+
+    primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15side","rhsusf_acc_acog3"};
+    
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
+        "rhs_mag_M441_HE",6,
+        "rhs_mag_M716_yellow",4,
+        "rhs_mag_M662_red",4,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",4,
+        "SmokeShellBlue",4,
+        "SmokeShellGreen",4,
+        "SmokeShellRed",2,
+        "SmokeShellYellow",2,
+        "ACE_Chemlight_UltraHiOrange",6,
+        "B_IR_Grenade",6,
+        "ACE_HandFlare_Red",4,
+        "ACE_HandFlare_Yellow",4
+        
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",4,
+        "ACE_morphine",5,
+        "ACE_personalAidKit",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_IR_Strobe_Item",6,
+        "ACE_CableTie",2,
+
+        // Electronics
+        "ACE_microDAGR",
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_SpraypaintBlue",
+        "ACE_SpraypaintGreen",
+        "ACE_Fortify",
+        "ACE_EntrenchingTool"
+    };
+};
+
+class CAV_LOGI_MG : CAV_Logistics_Base {  // Logistics Team Leaders
+
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    backpack[] = {"B_Carryall_mcamo"};
+    binoculars[] = {"ACE_Vector"};
+
+    primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_anpeq15side","rhsusf_acc_ELCAN_ARD"};
+    
+    magazines[] = {
+        "rhsusf_200rnd_556x45_mixed_box",3,
+        "rhsusf_200rnd_556x45_box",2,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",4,
+        "SmokeShellBlue",4,
+        "SmokeShellGreen",4,
+        "SmokeShellRed",2,
+        "SmokeShellYellow",2,
+        "ACE_Chemlight_UltraHiOrange",6,
+        "B_IR_Grenade",6,
+        "ACE_HandFlare_Red",4,
+        "ACE_HandFlare_Yellow",4
+        
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",4,
+        "ACE_morphine",5,
+        "ACE_personalAidKit",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EarPlugs",2,
+        "ACE_MapTools",
+        "ACE_IR_Strobe_Item",6,
+        "ACE_CableTie",2,
+
+        // Electronics
+        "ACE_microDAGR",
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_SpraypaintBlue",
+        "ACE_SpraypaintGreen",
+        "ACE_Fortify",
+        "ACE_EntrenchingTool"
+    };
+};
