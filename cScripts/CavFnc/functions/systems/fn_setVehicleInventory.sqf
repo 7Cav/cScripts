@@ -52,6 +52,7 @@ if (typeOf _vehicle in _allVehicles) then {
     clearbackpackcargoGlobal _vehicle;
 
     _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
+    _vehicle addItemCargoGlobal ["Item_ToolKit"];
 };
 
 switch (true) do {
