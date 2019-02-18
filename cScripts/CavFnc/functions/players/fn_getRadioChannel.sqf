@@ -4,22 +4,20 @@
  * This function fetch a squad radio channel based on your squad name.
  *
  * Arguments:
- * 0: Player <OBJECT>
  *
  * Return Value:
  * Radio Channel <NUMBER>
  *
  * Example:
- * ["bob"] call cScripts_fnc_getRadioChannel
+ * [] call cScripts_fnc_getRadioChannel
  *
  * Public: No
  */
+ 
 #define DEBUG_MODE;
 
-params [["_player", objNull, [objNull]]];
-
 private _channel = 1;
-private _group = groupId (group _player);
+private _group = call FUNC(getCavSquadName);
 _group = toUpper(_group);
 
 if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
@@ -117,7 +115,101 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "ROUGHNECK-6": {_channel = 18};
         case "PHANTOM-1": {_channel = 18};
         case "PHANTOM-2": {_channel = 18};
+
+        // LETTER NAMING
+        case "GODFATHER FIVE": {_channel = 4};
+        case "GODFATHER SIX": {_channel = 4};
+        case "GODFATHER SEVEN": {_channel = 4};
+
+        case "MUSTANG ONE": {_channel = 2};
+        case "MUSTANG TWO": {_channel = 3};
+
+        case "APOLLO ONE": {_channel = 1};
+        case "APOLLO FIVE": {_channel = 1};
+        case "APOLLO SIX": {_channel = 1};
         
+        //Air
+        case "PEGASUS TWO": {_channel = 1};
+
+        case "BUFFALO ONE": {_channel = 113};
+        case "BUFFALO TWO": {_channel = 114};
+        case "BUFFALO THREE": {_channel = 115};
+        case "BUFFALO FOUR": {_channel = 116};
+
+        case "GRIZZLY ONE": {_channel = 117};
+        case "GRIZZLY TWO": {_channel = 118};
+        case "GRIZZLY THREE": {_channel = 119};
+
+        case "RAVEN ONE": {_channel = 120};
+        case "RAVEN TWO": {_channel = 121};
+        case "RAVEN THREE": {_channel = 122};
+        case "RAVEN FOUR": {_channel = 123};
+
+        case "EAGLE ONE": {_channel = 1};
+        case "EAGLE TWO": {_channel = 1};
+        case "EAGLE THREE": {_channel = 1};
+
+        case "HOG ONE": {_channel = 1};
+        case "HOG TWO": {_channel = 1};
+        case "HOG THREE": {_channel = 1};
+        case "HOG FOUR": {_channel = 1};
+
+        case "RAIDER ONE": {_channel = 124};
+        case "RAIDER TWO": {_channel = 125};
+
+        case "TITAN ONE": {_channel = 129};
+        case "TITAN TWO": {_channel = 130};
+        case "TITAN THREE": {_channel = 131};
+        case "TITAN FOUR": {_channel = 132};
+
+        // Ground
+        case "SABER ONE": {_channel = 97};
+        case "SABER TWO": {_channel = 98};
+        case "SABER THREE": {_channel = 99};
+        case "SABER FOUR": {_channel = 100};
+        case "SABER SEVEN": {_channel = 100};
+
+        case "VIKING ONE": {_channel = 65};
+        case "VIKING TWO": {_channel = 66};
+        case "VIKING THREE": {_channel = 67};
+        case "VIKING FOUR": {_channel = 68};
+        case "VIKING FIVE": {_channel = 69};
+        case "VIKING SIX": {_channel = 69};
+        case "VIKING SEVEN": {_channel = 69};
+
+        case "PUNISHER ONE": {_channel = 81};
+        case "PUNISHER TWO": {_channel = 82};
+        case "PUNISHER THREE": {_channel = 83};
+        case "PUNISHER FOUR": {_channel = 84};
+        case "PUNISHER FIVE": {_channel = 85};
+        case "PUNISHER SIX": {_channel = 85};
+        case "PUNISHER SEVEN": {_channel = 85};
+
+        case "BANDIT ONE": {_channel = 17};
+        case "BANDIT TWO": {_channel = 18};
+        case "BANDIT THREE": {_channel = 19};
+        case "BANDIT FOUR": {_channel = 20};
+        case "BANDIT FIVE": {_channel = 21};
+        case "BANDIT SIX": {_channel = 21};
+        case "BANDIT SEVEN": {_channel = 21};
+
+        case "MISFIT ONE": {_channel = 33};
+        case "MISFIT TWO": {_channel = 34};
+        case "MISFIT THREE": {_channel = 35};
+        case "MISFIT FOUR": {_channel = 36};
+        case "MISFIT FIVE": {_channel = 37};
+        case "MISFIT SIX": {_channel = 37};
+        case "MISFIT SEVEN": {_channel = 37};
+
+        // Ranger
+        case "ROUGHNECK ONE": {_channel = 18};
+        case "ROUGHNECK TWO": {_channel = 18};
+        case "ROUGHNECK THREE": {_channel = 18};
+        case "ROUGHNECK FOUR": {_channel = 18};
+        case "ROUGHNECK SIX": {_channel = 18};
+        case "PHANTOM ONE": {_channel = 18};
+        case "PHANTOM TWO": {_channel = 18};
+
         case "ZEUS": {_channel = 1};
 
         default {_channel = 1};
@@ -216,6 +308,101 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "ROUGHNECK-6": {_channel = 19};
         case "PHANTOM-1": {_channel = 19};
         case "PHANTOM-2": {_channel = 19};
+
+        // LETTER NAMING
+        case "GODFATHER FIVE": {_channel = 20};
+        case "GODFATHER SIX": {_channel = 20};
+        case "GODFATHER SEVEN": {_channel = 20};
+
+        case "MUSTANG ONE": {_channel = 15};
+        case "MUSTANG TWO": {_channel = 15};
+
+        case "APOLLO ONE": {_channel = 15};
+        case "APOLLO FIVE": {_channel = 15};
+        case "APOLLO SIX": {_channel = 15};
+        
+        //Air
+        case "PEGASUS TWO": {_channel = 2};
+
+        case "BUFFALO ONE": {_channel = 2};
+        case "BUFFALO TWO": {_channel = 2};
+        case "BUFFALO THREE": {_channel = 2};
+        case "BUFFALO FOUR": {_channel = 2};
+
+        case "GRIZZLY ONE": {_channel = 2};
+        case "GRIZZLY TWO": {_channel = 2};
+        case "GRIZZLY THREE": {_channel = 2};
+
+        case "RAVEN ONE": {_channel = 2};
+        case "RAVEN TWO": {_channel = 2};
+        case "RAVEN THREE": {_channel = 2};
+        case "RAVEN FOUR": {_channel = 2};
+
+        case "EAGLE ONE": {_channel = 2};
+        case "EAGLE TWO": {_channel = 2};
+        case "EAGLE THREE": {_channel = 2};
+
+        case "HOG ONE": {_channel = 2};
+        case "HOG TWO": {_channel = 2};
+        case "HOG THREE": {_channel = 2};
+        case "HOG FOUR": {_channel = 2};
+
+        case "RAIDER ONE": {_channel = 2};
+        case "RAIDER TWO": {_channel = 2};
+
+        case "TITAN ONE": {_channel = 2};
+        case "TITAN TWO": {_channel = 2};
+        case "TITAN THREE": {_channel = 2};
+        case "TITAN FOUR": {_channel = 2};
+
+        // Ground
+        case "SABER ONE": {_channel = 6};
+        case "SABER TWO": {_channel = 6};
+        case "SABER THREE": {_channel = 6};
+        case "SABER FOUR": {_channel = 6};
+        case "SABER SEVEN": {_channel = 6};
+
+        case "VIKING ONE": {_channel = 2};
+        case "VIKING TWO": {_channel = 2};
+        case "VIKING THREE": {_channel = 2};
+        case "VIKING FOUR": {_channel = 2};
+        case "VIKING FIVE": {_channel = 2};
+        case "VIKING SIX": {_channel = 2};
+        case "VIKING SEVEN": {_channel = 2};
+
+        case "PUNISHER ONE": {_channel = 3};
+        case "PUNISHER TWO": {_channel = 3};
+        case "PUNISHER THREE": {_channel = 3};
+        case "PUNISHER FOUR": {_channel = 3};
+        case "PUNISHER FIVE": {_channel = 3};
+        case "PUNISHER SIX": {_channel = 3};
+        case "PUNISHER SEVEN": {_channel = 3};
+
+        case "BANDIT ONE": {_channel = 7};
+        case "BANDIT TWO": {_channel = 7};
+        case "BANDIT THREE": {_channel = 7};
+        case "BANDIT FOUR": {_channel = 7};
+        case "BANDIT FIVE": {_channel = 7};
+        case "BANDIT SIX": {_channel = 7};
+        case "BANDIT SEVEN": {_channel = 7};
+
+        case "MISFIT ONE": {_channel = 8};
+        case "MISFIT TWO": {_channel = 8};
+        case "MISFIT THREE": {_channel = 8};
+        case "MISFIT FOUR": {_channel = 8};
+        case "MISFIT FIVE": {_channel = 8};
+        case "MISFIT SIX": {_channel = 8};
+        case "MISFIT SEVEN": {_channel = 8};
+
+        // Ranger
+        case "ROUGHNECK ONE": {_channel = 19};
+        case "ROUGHNECK TWO": {_channel = 19};
+        case "ROUGHNECK THREE": {_channel = 19};
+        case "ROUGHNECK FOUR": {_channel = 19};
+        case "ROUGHNECK SIX": {_channel = 19};
+        case "PHANTOM ONE": {_channel = 19};
+        case "PHANTOM TWO": {_channel = 19};
+
 
         case "ZEUS": {_channel = 18};
 
