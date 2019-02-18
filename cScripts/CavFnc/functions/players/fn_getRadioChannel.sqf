@@ -13,8 +13,6 @@
  *
  * Public: No
  */
- 
-#define DEBUG_MODE;
 
 private _channel = 1;
 private _group = call FUNC(getCavSquadName);
