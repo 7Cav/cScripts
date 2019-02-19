@@ -180,6 +180,9 @@ class CAV_Charlie_Base : CommonBlufor {
         "ACE_MapTools",
         "ACE_CableTie",
 
+        //Electronics
+        "ACE_DAGR",
+        
         // Tools
         "ACE_Canteen",
         "ACE_EntrenchingTool"
