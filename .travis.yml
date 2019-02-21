@@ -15,6 +15,7 @@ script:
 - python3 tools/config_style_checker.py
 #- python3 tools/sqf_linter.py
 deploy:
+  provider: script
   script:
   - TAG=$(python3 tools/deploy.py 2>&1) 
     if [ $TAG != 0 ] && [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ]; then
