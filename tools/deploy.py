@@ -90,11 +90,11 @@ def main():
         if True in update:
             return scriptVersion
         else:
-            print('Script version is lower then tag number {}.'.format(latestTag))
-            return 0
+            #print('Script version is lower then tag number {}.'.format(latestTag))
+            return '0'
     else:
-        print('Version {} number is same as release build.'.format(scriptVersion))
-        return 0
+        #print('Version {} number is same as release build.'.format(scriptVersion))
+        return '0'
 
 
 if __name__ == "__main__":
