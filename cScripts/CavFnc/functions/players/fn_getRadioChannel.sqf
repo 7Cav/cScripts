@@ -4,22 +4,20 @@
  * This function fetch a squad radio channel based on your squad name.
  *
  * Arguments:
- * 0: Player <OBJECT>
  *
  * Return Value:
  * Radio Channel <NUMBER>
  *
  * Example:
- * ["bob"] call cScripts_fnc_getRadioChannel
+ * [] call cScripts_fnc_getRadioChannel
  *
  * Public: No
  */
+ 
 #define DEBUG_MODE;
 
-params [["_player", objNull, [objNull]]];
-
 private _channel = 1;
-private _group = groupId (group _player);
+private _group = call FUNC(getCavSquadName);
 _group = toUpper(_group);
 
 if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {

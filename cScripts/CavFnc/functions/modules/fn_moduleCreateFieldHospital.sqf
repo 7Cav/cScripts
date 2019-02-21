@@ -34,4 +34,4 @@ private _crate = "C_IDAP_supplyCrate_F" createVehicle _crate;
 [_crate, true] call ace_dragging_fnc_setCarryable;
 
 // Add to curator so Zeus can manipulate it
-[_crate] call FUNC(addObjectToCurator);
+[_crate] remoteExec [QFUNC(addObjectToCurator), 2];
