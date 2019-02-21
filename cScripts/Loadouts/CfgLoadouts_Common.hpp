@@ -252,3 +252,29 @@ class CAV_Medical_Base : CommonBlufor {
     preLoadout = "[(_this select 0), 'medical', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
+
+class CAV_Logistics_Base : CommonBlufor {
+    backpack[] = {"B_Carryall_mcamo"};
+    //goggles[] = {"rhs_googles_clear"};
+    headgear[] = {"rhsusf_ach_bare_headset"};
+    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
+    vest[] = {"rhsusf_spcs_ocp_saw"};
+    binoculars[] = {"ACE_Vector"};
+
+    primary[] = {"rhs_weap_m4a1","rhsusf_acc_anpeq15side","rhsusf_acc_compm4","rhsusf_acc_grip1"};
+    secondary[] = {""};
+    launcher[] = {""};
+
+    magazines[] = {};
+
+    items[] = {};
+
+    compass[] = {"ItemCompass"};
+    gps[] = {"ItemAndroid"};
+    map[] = {"ItemMap"};
+    nvgs[] = {""};
+    watch[] = {"ItemWatch"};
+
+    preLoadout = "[(_this select 0), 'bravo', 2, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+};
