@@ -21,3 +21,10 @@ class rhsusf_army_ocp_medic : CAV_Bravo_CLS {};
 class rhsusf_army_ocp_machinegunnera : CAV_Bravo_Weapons_TL {};
 class rhsusf_army_ocp_machinegunner : CAV_Bravo_Weapons_MG {};
 class rhsusf_army_ocp_javelin : CAV_Bravo_Weapons_GNR {};
+
+// Logistics
+
+class rhsusf_usmc_marpat_wd_engineer : CAV_LOGI_OFFCR {};
+class rhsusf_usmc_marpat_wd_rifleman_m590 : CAV_LOGI_TL {};
+class rhsusf_usmc_marpat_wd_grenadier : CAV_LOGI_GR {};
+class rhsusf_usmc_marpat_wd_machinegunner : CAV_LOGI_MG {};
