@@ -57,6 +57,7 @@ class cScripts {
         class getPlayerRank {};
         class setPlayerRank {};
         class getPlayerName {};
+        
         class doPlayerAnnouncement {};
 
         class getRadioChannel {};
@@ -65,6 +66,7 @@ class cScripts {
         class getCompanyVariable {};
         class hasCompanyVariable {};
         
+        class getCavSquadName {};
         class getSquadInsignia {};
     };
     class systems {
