@@ -101,15 +101,19 @@ def strip_path_from_filename(pathfile=''):
     filename = str(filename)
     return filename
 
+
 def get_script_version_number(version_file='', return_type='arr'):
     file = open(version_file)
     for i, line in enumerate(file):
         if i == 1:
-            line = line.partition('"')[-1].rpartition('"')[0]
-            line = line.split(".")
-            version = line
-            version = list(map(int, version))
-    file.close()    
+            if not '"DEVBUILD"' in str(line):
+                line = line.partition('"')[-1].rpartition('"')[0]
+                line = line.split(".")
+                version = line
+                version = list(map(int, version))
+            else:
+                version = [-1]
+    file.close()
     if return_type == 'arr':
         return version
     elif return_type == 'str':
@@ -141,9 +145,11 @@ def set_package_name(package_name='', build_type='', release_candidate=0, public
             commit_hash = ''
     else:
         commit_hash = ''
-
-    if version_number:
-        version_number = '-{}{}'.format(version_number,commit_hash)
+    if not version_number == '-1':
+        if version_number:
+            version_number = '-{}{}'.format(version_number,commit_hash)
+        else:
+            version_number = ''
     else:
         version_number = ''
 
@@ -386,11 +392,11 @@ def main():
         description='This script build and pack the selected mission framework.',
         epilog='This build script is primarly built to pack 7th Cavalry Script package; cScripts.\nThe tool should be cross platform and can be used for other packages as well.'
     )
-
+    
     parser.add_argument('-b', '--buildtype',
         required=False,
         choices=['release', 'dev', 'test', 'custom'],
-        default='test',
+        default='test' if (not get_script_version_number(version_file,'str') == '-1') else 'dev',
         help="Add a additional tag to a to the build"
     )
     parser.add_argument("-p", "--public",
@@ -408,12 +414,16 @@ def main():
         help="Will instantly run untill done.",
         action="store_false"
     )
+    parser.add_argument("-d", "--dontopenfolder",
+        help="Don\'t open the release folder when the build is completed.",
+        action="store_false"
+    )
     parser.add_argument("--auto_color",
-        help="Enable collors in the script." if os.name == 'nt' else "Disable colors in the script.",
-        action="store_true" if os.name == 'nt' else "store_false"
+        help="Enable colors in the script.",
+        action="store_true"
     )
 
-    parser.add_argument('-v', '--version', action='version', version='Author: Andreas Broström <andreas.brostrom.ce@gmail.com>\nScript version: {}.'.format(__version__))
+    parser.add_argument('-v', '--version', action='version', version='Author: Andreas Broström <andreas.brostrom.ce@gmail.com>\nScript version: {}'.format(__version__))
 
     args = parser.parse_args()
 
@@ -532,7 +542,7 @@ def main():
 
     print('Build complet.')
 
-    if os.name == 'nt':
+    if os.name == 'nt' and args.dontopenfolder:
         os.system('explorer.exe {}\\release'.format(rootDir))
 
 if __name__ == "__main__":
