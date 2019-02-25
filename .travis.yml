@@ -17,6 +17,7 @@ script:
 deploy:
   provider: releases
   upload: releases/*
+  before_script: sed -i "s/#define VERSION.*/#define VERSION ${TAG}/" cScripts/script_component.hpp
   script: python3 tools/build.py -b release -d
   script: python3 tools/build.py -b release -p -d
   api_key:
