@@ -280,8 +280,9 @@ def build_release(package_name='', build_type='', release_candidate=0, public_ve
         print('Featching files {}...'.format(color_string(obj,'\033[96m',auto_color)))
         shutil.copy2(obj, temp)
 
-    if not os.path.isdir('release'):
-        relase_folder = os.mkdir('release')
+    relase_folder = 'release'                
+    if not os.path.isdir(relase_folder):     
+        os.mkdir(relase_folder)
 
     if public_version:
         public_build = ' public'
