@@ -526,7 +526,7 @@ def main():
 
     if args.buildtype == 'release':
         if not get_git_branch_name() == 'master':
-            if not args.deploy:
+            if args.deploy:
                 if args.fastbuild:
                     action = request_action('You are currently not on master branch. Do you wish to checkout master?')
                     if action:
