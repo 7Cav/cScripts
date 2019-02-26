@@ -281,12 +281,7 @@ def build_release(package_name='', build_type='', release_candidate=0, public_ve
         shutil.copy2(obj, temp)
 
     if not os.path.isdir('release'):
-        try:
-            relase_folder = os.stat('release')
-        except:
-            relase_folder = os.mkdir('release')
-    else:
-        relase_folder = 'release'
+        relase_folder = os.mkdir('release')
 
     if public_version:
         public_build = ' public'
