@@ -418,6 +418,10 @@ def main():
         help="Don\'t open the release folder when the build is completed.",
         action="store_false"
     )
+    parser.add_argument("--deploy",
+        help="Don\'t open the release folder when the build is completed.",
+        action="store_false"
+    )
     parser.add_argument("--auto_color",
         help="Enable colors in the script.",
         action="store_true"
@@ -519,22 +523,24 @@ def main():
     input('\nPress enter to start the build process...') if args.fastbuild else print('')
 
     # prep release
+
     if args.buildtype == 'release':
         if not get_git_branch_name() == 'master':
-            if args.fastbuild:
-                action = request_action('You are currently not on master branch. Do you wish to checkout master?')
-                if action:
+            if not args.deploy:
+                if args.fastbuild:
+                    action = request_action('You are currently not on master branch. Do you wish to checkout master?')
+                    if action:
+                        try:
+                            subprocess.check_output(['git', 'checkout', 'master'], shell=True)
+                        except:
+                            action = request_action('Do you wish to continue anyways?')
+                        if not action:
+                            sys.exit()
+                else:
                     try:
                         subprocess.check_output(['git', 'checkout', 'master'], shell=True)
                     except:
-                        action = request_action('Do you wish to continue anyways?')
-                    if not action:
-                        sys.exit()
-            else:
-                try:
-                    subprocess.check_output(['git', 'checkout', 'master'], shell=True)
-                except:
-                    print(color_string('Warning: Checkout was aborted. Your still on branch {}...'.format(get_git_branch_name()),'\033[91m',args.auto_color))
+                        print(color_string('Warning: Checkout was aborted. Your still on branch {}...'.format(get_git_branch_name()),'\033[91m',args.auto_color))
                 
     name = set_package_name(script_name,args.buildtype,args.releasecandidate)
 
