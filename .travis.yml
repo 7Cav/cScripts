@@ -1,16 +1,21 @@
-branches:
-  only:
-   - master
-   - release
 language: python
 python:
 - '3.5'
 before_script:
-- if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
-    pip install pygithub;
-    pip install pygithub3;
-  fi
+- if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}"
+  == "false" ]; then pip install pygithub; pip install pygithub3; fi
 script:
 - python3 tools/sqf_validator.py
 - python3 tools/config_style_checker.py
-#- python3 tools/sqf_linter.py
+before_deploy:
+- tools/deploy.sh
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: vYrJJQtncHPzN14sL2Kkl3m/6z7oqpq1CYkeqjf4z2VdFXaKEXz6kEco50tkHOQ2ZrZwP0BilPV4QR0YBwnHfQtlRIqtT05O8qKmkxNjgdyxqNymGDVGcu8+0+7GMI9/2SiRRDZyy23ijhRYWCTjgQHg1S8sGx2v8OQ28uVQmD8T4dCsWzwrDQxHpMt/V+JDFxUZxsSHBRbPg9zWQ0OzVlil9qyuu9wF0PMW0y8W5X9r0ZW61YKO6eqgNxXbYYwE5Tt6Sw3rOsxplcEk7jLeXKto8nYL3b3GxbGAr2oTrdFf4V6HuFkGBR00xVgUM0CqrfqP+JhpkBLZ6vLs28jcOd7EBp6hWKI8jj5B+nuT2U+dsCmMI9xzbTNZMjq1NzGhsJTF48/WwbOAIPS5hA4KLkTzV3ly1sa7a62dx8W17utphFsAuGz1PeJDfBaj/CDr1SQH2R/hsELBMMqCRZbMgPgV2dlXNsdIuwZASZ1UwFPA80bhEwjXJ/hG3lcGYrVHUlbNsF/JZgzuDeI05INJchKECBXjxgkkewA4hXPCURxoojF3lJqL6DNZRzyNCTtmV+vOY8ItmUeYDn6jbZCWS1uDl6ej2JRDkT8G+wkio4z8je72c7NXaVC8ci9M+ESaMVpStPyFbiPeAzbyC2NpOUoBx1cEMBQvTloc+zM2HgM=
+  file_glob: true
+  file: release/*.zip
+  on:
+    repo: 7Cav/cScripts
+    tags: true
