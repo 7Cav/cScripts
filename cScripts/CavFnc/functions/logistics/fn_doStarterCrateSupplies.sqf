@@ -43,8 +43,12 @@ if (_companySelector == "alpha") then {
     _crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",2];
     _crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",2];
     _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",6];
+    _crate addItemCargoGlobal ["acc_flashlight",50];
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_acog3",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
 
     //================== AMMO ==================\\
 
@@ -73,6 +77,7 @@ if (_companySelector == "alpha") then {
     _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",25];
     _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",25];
     _crate addMagazineCargoGlobal ["rhs_mag_M585_white",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
     _crate addMagazineCargoGlobal ["Chemlight_green",25];
     _crate addMagazineCargoGlobal ["Chemlight_red",25];
     _crate addMagazineCargoGlobal ["Chemlight_yellow",25];
@@ -120,7 +125,12 @@ if (_companySelector == "bravo") then {
 
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_accacog_mdo",50];
+    _crate addItemCargoGlobal ["acc_flashlight",50];
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_acog3",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
     _crate addItemCargoGlobal ["rhs_optic_maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
     _crate addWeaponCargoGlobal ["rhs_weap_maaws",10];
@@ -157,6 +167,7 @@ if (_companySelector == "bravo") then {
     _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
     _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
     _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
@@ -204,7 +215,11 @@ if (_companySelector == "charlie") then {
 
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["acc_flashlight",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_acog3",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
     _crate addItemCargoGlobal ["rhs_optic_maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",10];
@@ -238,6 +253,7 @@ if (_companySelector == "charlie") then {
     _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
     _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
     _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
@@ -271,6 +287,7 @@ if (_companySelector == "charlie") then {
 
     //================== HELMETS ==================\\
     _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
+    _crate addItemCargoGlobal ["rhsusf_ach_helmet_camo_ocp",50];
     _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
 };
 
@@ -287,7 +304,11 @@ if (_companySelector == "medical") then {
 
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",10];
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["acc_flashlight",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_acog3",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
 
     //================== AMMO ==================\\
 
@@ -307,6 +328,7 @@ if (_companySelector == "medical") then {
     _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
     _crate addMagazineCargoGlobal ["ACE_M84",25];
     _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
@@ -371,7 +393,12 @@ if (_companySelector == "heavyweapons") then {
 
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",50];
     _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["acc_flashlight",50];
     _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_acog3",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
+    _crate addItemCargoGlobal ["rhsusf_accacog_mdo",50];
     _crate addItemCargoGlobal ["rhs_optic_maaws",10];
     _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
     _crate addWeaponCargoGlobal ["rhs_weap_fim92",10];
@@ -412,6 +439,7 @@ if (_companySelector == "heavyweapons") then {
     _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
     _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
     _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
     _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
     _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 

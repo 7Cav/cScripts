@@ -4,23 +4,18 @@
  * This function fetch a squad radio channel based on your squad name.
  *
  * Arguments:
- * 0: Player <OBJECT>
  *
  * Return Value:
  * Radio Channel <NUMBER>
  *
  * Example:
- * ["bob"] call cScripts_fnc_getSquadInsignia
+ * [] call cScripts_fnc_getSquadInsignia
  *
  * Public: No
  */
-#define DEBUG_MODE;
-
-params [["_player", objNull, [objNull]]];
 
 private _return = "";
-private _channel = 0;
-private _group = groupId (group _player);
+private _group = call FUNC(getCavSquadName);
 _group = toUpper(_group);
 
 switch (_group) do {
@@ -117,6 +112,101 @@ switch (_group) do {
     case "PHANTOM-1": {_return = "Cav_Insignia_Specialized_Ranger"};
     case "PHANTOM-2": {_return = "Cav_Insignia_Specialized_Ranger"};
     
+
+    // Letter name variant
+    case "GODFATHER FIVE": {_return = ""};
+    case "GODFATHER SIX": {_return = ""};
+    case "GODFATHER SEVEN": {_return = ""};
+
+    case "MUSTANG ONE": {_return = ""};
+    case "MUSTANG TWO": {_return = ""};
+
+    case "APOLLO ONE": {_return = ""};
+    case "APOLLO FIVE": {_return = ""};
+    case "APOLLO SIX": {_return = ""};
+    
+    //Air
+    case "PEGASUS TWO": {_return = ""};
+
+    case "BUFFALO ONE": {_return = ""};
+    case "BUFFALO TWO": {_return = ""};
+    case "BUFFALO THREE": {_return = ""};
+    case "BUFFALO FOUR": {_return = ""};
+
+    case "GRIZZLY ONE": {_return = ""};
+    case "GRIZZLY TWO": {_return = ""};
+    case "GRIZZLY THREE": {_return = ""};
+
+    case "RAVEN ONE": {_return = ""};
+    case "RAVEN TWO": {_return = ""};
+    case "RAVEN THREE": {_return = ""};
+    case "RAVEN FOUR": {_return = ""};
+
+    case "EAGLE ONE": {_return = ""};
+    case "EAGLE TWO": {_return = ""};
+    case "EAGLE THREE": {_return = ""};
+
+    case "HOG ONE": {_return = ""};
+    case "HOG TWO": {_return = ""};
+    case "HOG THREE": {_return = ""};
+    case "HOG FOUR": {_return = ""};
+
+    case "RAIDER ONE": {_return = ""};
+    case "RAIDER TWO": {_return = ""};
+
+    case "TITAN ONE": {_return = ""};
+    case "TITAN TWO": {_return = ""};
+    case "TITAN THREE": {_return = ""};
+    case "TITAN FOUR": {_return = ""};
+
+    // Ground
+    case "SABER ONE": {_return = ""};
+    case "SABER TWO": {_return = ""};
+    case "SABER THREE": {_return = ""};
+    case "SABER FOUR": {_return = ""};
+    case "SABER SEVEN": {_return = ""};
+
+    case "VIKING ONE": {_return = "Cav_Insignia_Bravo_2_1"};
+    case "VIKING TWO": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING THREE": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING FOUR": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING FIVE": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING SIX": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING SEVEN": {_return = "Cav_Insignia_Bravo_2"};
+
+    case "PUNISHER ONE": {_return = ""};
+    case "PUNISHER TWO": {_return = ""};
+    case "PUNISHER THREE": {_return = ""};
+    case "PUNISHER FOUR": {_return = ""};
+    case "PUNISHER FIVE": {_return = ""};
+    case "PUNISHER SIX": {_return = ""};
+    case "PUNISHER SEVEN": {_return = ""};
+
+    case "BANDIT ONE": {_return = "Cav_Insignia_Charlie_1_1"};
+    case "BANDIT TWO": {_return = "Cav_Insignia_Charlie_1_2"};
+    case "BANDIT THREE": {_return = "Cav_Insignia_Charlie_1_3"};
+    case "BANDIT FOUR": {_return = "Cav_Insignia_Charlie_1_4"};
+    case "BANDIT FIVE": {_return = "Cav_Insignia_Charlie_1"};
+    case "BANDIT SIX": {_return = "Cav_Insignia_Charlie_1"};
+    case "BANDIT SEVEN": {_return = "Cav_Insignia_Charlie_1"};
+
+    case "MISFIT ONE": {_return = "Cav_Insignia_Charlie_2_1"};
+    case "MISFIT TWO": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT THREE": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT FOUR": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT FIVE": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT SIX": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT SEVEN": {_return = "Cav_Insignia_Charlie_2"};
+
+    // Ranger
+    case "ROUGHNECK ONE": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "ROUGHNECK TWO": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "ROUGHNECK THREE": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "ROUGHNECK FOUR": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "ROUGHNECK SIX": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "PHANTOM ONE": {_return = "Cav_Insignia_Specialized_Ranger"};
+    case "PHANTOM TWO": {_return = "Cav_Insignia_Specialized_Ranger"};
+
     case "ZEUS": {_return = "Curator"};
 
     default {_return = ""};
