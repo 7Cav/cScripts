@@ -50,4 +50,8 @@ private _arsenal = if (_dialogResult select 5 == 0) then {true} else {false};
 
 _crate = "B_supplyCrate_F" createVehicle _crate;
 [_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requireCompanyVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),0,true];
-[_crate] remoteExec [QFUNC(addObjectToCurator), 2];
+
+// Add to curator so Zeus can manipulate it
+[{(_this select 0) == vehicle (_this select 0)}, {
+     _this select 0 call FUNC(addObjectToCurator)
+}, [_crate]] call CBA_fnc_waitUntilAndExecute;
