@@ -166,20 +166,21 @@ private _cavGroup = [
     "ZEUS"
 ];
 
-private _group = groupId (group player);
+_group = groupId (group player);
 _group = toUpper(_group);
 
-private _groupVar = player getVariable QEGVAR(Player,Unit);
-_groupVar = toUpper(_groupVar);
-
-if ((_group in _cavGroup) or (_groupVar in _cavGroup)) then {
-    if (_groupVar in _cavGroup) then {
-        _return = _groupVar;
-    } else {
-        _return = _group;
-    };
-} else {
-    _return = "";
+private _groupVar = '';
+if !(isNil {player getVariable QEGVAR(Player,Unit)}) then {
+    _groupVar = player getVariable QEGVAR(Player,Unit);
+    _groupVar = toUpper(_groupVar);
 };
 
-_return;
+if (_groupVar in _cavGroup) exitWith {
+    _groupVar;
+};
+
+if (_group in _cavGroup) exitWith {
+    _group;
+};
+
+_return
