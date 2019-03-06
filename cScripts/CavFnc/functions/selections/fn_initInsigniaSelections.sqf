@@ -1,19 +1,21 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function contain insignia selection buttons and categorys.
+ * This function sets up a list of insignias as aceAction or addAction on a given object. (Ussaly the Starter Crate).
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
  * Example:
- * call cScripts_fnc_initInsigniaSelections;
+ * ["my_box"] call cScripts_fnc_initInsigniaSelections;
+ *
+ * Public: No 
  */
 
 params [["_object", objNull, [objNull]]];
 
 #ifdef DEBUG_MODE
-    [format["Setting up Insinia Selector on %1.",_object]] call FUNC(logInfo);
+    [format["Setting up insignia selecton list on %1...",_object]] call FUNC(logInfo);
 #endif
 
 // Make ACE Category
@@ -82,5 +84,5 @@ _object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5]
 //[_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","cScripts\Data\Insignia\Charlie_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 
 #ifdef DEBUG_MODE
-    [format["Setup Insinia Selector on %1 completed.",_object]] call FUNC(logInfo);
+    [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(logInfo);
 #endif
