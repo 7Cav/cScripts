@@ -268,6 +268,9 @@ class CAV_Charlie_GR : CAV_Charlie_Base {  // Grenadier 28.4kg
         "ACE_MapTools",
         "ACE_CableTie",
 
+        //Electronics
+        "ACE_DAGR",
+
         // Tools
         "ACE_EntrenchingTool"
     };
@@ -324,6 +327,9 @@ class CAV_Charlie_CLS : CAV_Charlie_Base {  // Combat Life Saver 24.3kg
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
+
+        //Electronics
+        "ACE_DAGR",
 
         // Tools
         "ACE_EntrenchingTool"
