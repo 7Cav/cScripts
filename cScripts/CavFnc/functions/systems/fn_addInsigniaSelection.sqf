@@ -16,6 +16,8 @@
  * [this,"Platoon Insignia 1/1/C/1-7","2C_17_Insignia","cScripts\Data\Insignia\2-C-17.paa"] call cScripts_fnc_addInsigniaSelection;
  */
 
+if !(isClass (configFile >> "CfgPatches" >> "cavmod_insignia")) exitWith {["cfgPatches for CavMod Insignias not detected, terminating insignia selection tab."] call FUNC(logWarning);};
+
 params [
     ["_object", objNull, [objNull]],
     ["_lable", "", [""]],
