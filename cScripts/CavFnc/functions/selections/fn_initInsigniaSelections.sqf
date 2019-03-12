@@ -12,6 +12,8 @@
  * Public: No 
  */
 
+if !(isClass (configFile >> "CfgPatches" >> "cavmod_insignia")) exitWith {["cfgPatches for CavMod Insignias not detected, terminating insignia selection tab on object."] call FUNC(logInfo);};
+
 params [["_object", objNull, [objNull]]];
 
 #ifdef DEBUG_MODE
