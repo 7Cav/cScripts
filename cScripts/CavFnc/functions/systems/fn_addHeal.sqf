@@ -15,6 +15,7 @@ params [["_object", objNull, [objNull]]];
 // Make addAction
 _object addAction ["   <t color='#ff3333'>Heal</t>", {
     [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+    [0] call ace_hearing_fnc_earRinging;
 }, [], 1.5, true, true, "", "true", 5];
 
 // Make ACE Interaction for ReGear
@@ -22,6 +23,7 @@ private _Icon = "Z\ACE\addons\medical\ui\icons\medical_cross.paa";
 private _reHealCondition = {true};
 private _reHealStatement = {
     [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+    [0] call ace_hearing_fnc_earRinging;
 };
 private _reHealAction = ["cScriptsHealAce", "Heal", _Icon, _reHealStatement, _reHealCondition] call ace_interact_menu_fnc_createAction;
 [_object, 0, ["ACE_MainActions"], _reHealAction] call ace_interact_menu_fnc_addActionToObject;
