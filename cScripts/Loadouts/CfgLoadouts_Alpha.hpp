@@ -116,7 +116,7 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
         "H_Cap_tan",
         "rhsusf_shemagh_tan"
     };
-    nvgs[] = {"NVGogglesB_grn_F"};
+    nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemAndroid"};
 
     preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
@@ -157,7 +157,7 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
         "H_Cap_tan",
         "rhsusf_shemagh_tan"
     };
-    nvgs[] = {"NVGogglesB_grn_F"};
+    nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemAndroid"};
 };
 
