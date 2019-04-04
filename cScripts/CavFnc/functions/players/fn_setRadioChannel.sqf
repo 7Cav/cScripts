@@ -15,8 +15,6 @@
  * Public: No
  */
 
-#define DEBUG_MODE
-
 params [["_player", objNull, [objNull]]];
 
 [{[] call acre_api_fnc_isInitialized}, {
