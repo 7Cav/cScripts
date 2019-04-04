@@ -1,14 +1,19 @@
-/* Gear Date 180930 */
 
-//  P E G A S U S   A N D   H E L I C O P T E R   C R E W
+//                A L P H A   C O M P A N Y
 
-class CAV_Alpha_Helo_PILOT : CAV_Alpha_Base {  // Use for Helo pilots and Pegasus
+class Cav_B_A_AirController_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
     nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemcTab"};
 };
 
-class CAV_Alpha_Helo_COPILOT : CAV_Alpha_Base {  // Use for CoPilots
+
+class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
+    backpack[] = {"B_Kitbag_mcamo"};
+    nvgs[] = {"rhsusf_ANPVS_15"};
+    gps[] = {"ItemcTab"};
+};
+class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
 
     magazines[] = {
@@ -64,8 +69,7 @@ class CAV_Alpha_Helo_COPILOT : CAV_Alpha_Base {  // Use for CoPilots
     nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemAndroid"};
 };
-
-class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
+class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
     headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     backpack[] = {"B_Carryall_cbr"};
     vest[] = {"rhsusf_mbav_mg"};
@@ -121,8 +125,7 @@ class CAV_Alpha_Helo_CHIEF : CAV_Alpha_Base {  // Crew Chief
 
     preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 };
-
-class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
+class Cav_B_A_Helicopter_Tra_DoorGunner_F : Cav_B_Alpha_base_F {
     headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     backpack[] = {"B_Kitbag_mcamo"};
 
@@ -161,14 +164,14 @@ class CAV_Alpha_Helo_GNR : CAV_Alpha_Base {  // Door Gunner
     gps[] = {"ItemAndroid"};
 };
 
-class CAV_Alpha_Helo_PILOT_ATT : CAV_Alpha_Base {  // Use for Attack Rotary
+
+class Cav_B_A_Helicopter_Att_Pilot_F : Cav_B_Alpha_base_F {
     headgear[] = {"rhsusf_ihadss"};
     backpack[] = {"B_Kitbag_mcamo"};
 
     gps[] = {"ItemAndroid"};
 };
-
-class CAV_Alpha_Helo_COPILOT_ATT : CAV_Alpha_Base {  // Use for Attack Rotary
+class Cav_B_A_Helicopter_Att_coPilot_F : Cav_B_Alpha_base_F {
     headgear[] = {"rhsusf_ihadss"};
     backpack[] = {"B_Kitbag_mcamo"};
 
@@ -227,12 +230,10 @@ class CAV_Alpha_Helo_COPILOT_ATT : CAV_Alpha_Base {  // Use for Attack Rotary
 };
 
 
-//  F I X E D   W I N G
-
-class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
+class Cav_B_A_Plane_Fighter_Pilot_F : Cav_B_Alpha_base_F {
     nvgs[] = {""};
     backpack[] = {"B_AssaultPack_mcamo"};
-    headgear[] = {"H_PilotHelmetFighter_B"};  // This has been tested by CPT.Blackburn.J
+    headgear[] = {"H_PilotHelmetFighter_B"};
     uniform[] = {"U_B_PilotCoveralls"};
     vest[] = {""};
 
@@ -278,4 +279,16 @@ class CAV_Alpha_Fixed_PILOT : CAV_Alpha_Base {
     gps[] = {"ItemAndroid"};
     preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 
+};
+
+
+class Cav_B_A_Plane_Transport_Pilot_F : Cav_B_Alpha_base_F {
+    backpack[] = {"B_Kitbag_mcamo"};
+    nvgs[] = {"rhsusf_ANPVS_15"};
+    gps[] = {"ItemcTab"};
+};
+class Cav_B_A_Plane_Transport_coPilot_F : Cav_B_Alpha_base_F {
+    backpack[] = {"B_Kitbag_mcamo"};
+    nvgs[] = {"rhsusf_ANPVS_15"};
+    gps[] = {"ItemcTab"};
 };

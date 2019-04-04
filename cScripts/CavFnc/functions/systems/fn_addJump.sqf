@@ -22,7 +22,7 @@ params [
 ];
 
 // Check so the options arent added twice.
-if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {};
+if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {[formatText["Aircraft jump setting already applied for %1.", _vehicle]] call FUNC(logWarning);};
 
 // Add hold action for jump
 [
@@ -43,5 +43,17 @@ if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {};
     25,
     false
 ] call BIS_fnc_holdActionAdd;
+
+// Ace status check
+ _condition = {
+    player == vehicle player
+};
+_statement = {
+    params ["_target", "_player", "_params"];
+    hint parseText format["<t color='#00cd00' size='1.2' shadow='1' shadowColor='#000000' align='center'>ALL GREEN!</t><br />This aircraft is equipped with static line jump equipment!<br /><br />Remember to keep within the safety speed of max <t color='#ffc61a'>%1 KPH</t>, between <t color='#ffc61a'>%2 to %3 METERS AGL</t> and have a door to jump out from open.", (_params select 2)-10, _params select 0, _params select 1];
+};
+_action = ["Jump_Check_Aircraft", "Check Aircraft", "", _statement, {true}, {}, [_minAltetude, _maxAltetude, _maxSpeed]] call ace_interact_menu_fnc_createAction;
+[_vehicle, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
 
 _vehicle setVariable [QEGVAR(Vehicle,Eject),"true"];
