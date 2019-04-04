@@ -15,13 +15,7 @@ private _playerName = [player, 'PROFILE'] call FUNC(getPlayerName);
 private _playerRank = [player, 'CAV'] call FUNC(getPlayerRank);
 private _playerRankFormal = [player, 'FORMAL'] call FUNC(getPlayerRank);
 
-private _playerRole = "trooper";
-if (isMultiplayer) then {
-    _playerRole = roleDescription player;
-    _playerRole = _playerRole splitString "@";
-    _playerRole = _playerRole select 0;
-    if (_playerRole == "") then {_playerRole = "trooper"};
-};
+private _playerRole = call FUNC(getPlayerRole);
 
 private _playerGroup = call FUNC(getCavSquadName);
 
