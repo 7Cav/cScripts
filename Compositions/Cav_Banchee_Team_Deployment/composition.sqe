@@ -1,0 +1,400 @@
+version=53;
+center[]={5616.0327,5,6904.7192};
+class items
+{
+	items=4;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.005859375,0.0014390945,3.3452148};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""BANCHEE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
+					isPlayable=1;
+				};
+				id=318;
+				type="Cav_B_B_Ifv_Commander_B_1_F";
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.49414063,0.0014390945,2.3452148};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
+					isPlayable=1;
+				};
+				id=319;
+				type="Cav_B_B_Ifv_Driver_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.50585938,0.0014390945,2.3452148};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
+					isPlayable=1;
+				};
+				id=320;
+				type="Cav_B_B_Ifv_Gunner_F";
+			};
+		};
+		class Attributes
+		{
+		};
+		id=317;
+	};
+	class Item1
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.0043945313,0.0014390945,1.3193359};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""BANCHEE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
+					isPlayable=1;
+				};
+				id=322;
+				type="Cav_B_B_Ifv_Commander_B_2_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male09ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.04;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.50390625,0.0014390945,0.31982422};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
+					isPlayable=1;
+				};
+				id=323;
+				type="Cav_B_B_Ifv_Driver_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.49609375,0.0014390945,0.31982422};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
+					isPlayable=1;
+				};
+				id=324;
+				type="Cav_B_B_Ifv_Gunner_F";
+			};
+		};
+		class Attributes
+		{
+		};
+		id=321;
+	};
+	class Item2
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.00390625,0.0014390945,-0.62158203};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""BANCHEE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
+					isPlayable=1;
+				};
+				id=326;
+				type="Cav_B_B_Ifv_Commander_B_3_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male03ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.05;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.49658203,0.0014390945,-1.621582};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
+					isPlayable=1;
+				};
+				id=327;
+				type="Cav_B_B_Ifv_Driver_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.50341797,0.0014390945,-1.621582};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
+					isPlayable=1;
+				};
+				id=328;
+				type="Cav_B_B_Ifv_Gunner_F";
+			};
+		};
+		class Attributes
+		{
+		};
+		id=325;
+	};
+	class Item3
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.0092773438,0.0014390945,-2.6992188};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""BANCHEE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
+					isPlayable=1;
+				};
+				id=330;
+				type="Cav_B_B_Ifv_Commander_B_4_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male11ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.97000003;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.50878906,0.0014390945,-3.6992188};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
+					isPlayable=1;
+				};
+				id=331;
+				type="Cav_B_B_Ifv_Driver_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.49121094,0.0014390945,-3.6992188};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
+					isPlayable=1;
+				};
+				id=332;
+				type="Cav_B_B_Ifv_Gunner_F";
+			};
+		};
+		class Attributes
+		{
+		};
+		id=329;
+	};
+};
