@@ -1,0 +1,1714 @@
+version=53;
+center[]={2930.0125,5,6945.8384};
+class items
+{
+	items=12;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-15.450439,0.13449907,-53.199219};
+			angles[]={-0,3.1415927,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;}";
+			description="TITAN-1";
+		};
+		id=137;
+		type="RHS_C130J";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-15.678467,0.13449907,-17.849609};
+			angles[]={-0,3.1415927,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""0"",""0"",""2""] call cScripts_fnc_setVehicleLable;}";
+			description="TITAN-2";
+		};
+		id=138;
+		type="RHS_C130J";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item2
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={-47.432373,0,-53.10791};
+		};
+		id=139;
+		type="ModuleRespawnVehicle_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ModuleRespawnVehicle_F_ForcedRespawn";
+				expression="_this setVariable ['ForcedRespawn',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ModuleRespawnVehicle_F_Init";
+				expression="_this setVariable ['Init',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[(_this select 0),""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ModuleRespawnVehicle_F_RespawnWhenDisabled";
+				expression="_this setVariable ['RespawnWhenDisabled',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute3
+			{
+				property="ModuleRespawnVehicle_F_DesertedDistance";
+				expression="_this setVariable ['DesertedDistance',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute4
+			{
+				property="ModuleRespawnVehicle_F_PositionType";
+				expression="_this setVariable ['PositionType',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute5
+			{
+				property="ModuleRespawnVehicle_F_RespawnCount";
+				expression="_this setVariable ['RespawnCount',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute6
+			{
+				property="ModuleRespawnVehicle_F_Position";
+				expression="_this setVariable ['Position',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute7
+			{
+				property="ModuleRespawnVehicle_F_Wreck";
+				expression="_this setVariable ['Wreck',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="1";
+					};
+				};
+			};
+			class Attribute8
+			{
+				property="ModuleRespawnVehicle_F_Delay";
+				expression="_this setVariable ['Delay',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="30";
+					};
+				};
+			};
+			class Attribute9
+			{
+				property="ModuleRespawnVehicle_F_ShowNotification";
+				expression="_this setVariable ['ShowNotification',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="1";
+					};
+				};
+			};
+			nAttributes=10;
+		};
+	};
+	class Item3
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={-47.886475,0,-17.260742};
+		};
+		id=140;
+		type="ModuleRespawnVehicle_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ModuleRespawnVehicle_F_ForcedRespawn";
+				expression="_this setVariable ['ForcedRespawn',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ModuleRespawnVehicle_F_Init";
+				expression="_this setVariable ['Init',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[(_this select 0),""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ModuleRespawnVehicle_F_RespawnWhenDisabled";
+				expression="_this setVariable ['RespawnWhenDisabled',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute3
+			{
+				property="ModuleRespawnVehicle_F_DesertedDistance";
+				expression="_this setVariable ['DesertedDistance',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute4
+			{
+				property="ModuleRespawnVehicle_F_PositionType";
+				expression="_this setVariable ['PositionType',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute5
+			{
+				property="ModuleRespawnVehicle_F_RespawnCount";
+				expression="_this setVariable ['RespawnCount',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute6
+			{
+				property="ModuleRespawnVehicle_F_Position";
+				expression="_this setVariable ['Position',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute7
+			{
+				property="ModuleRespawnVehicle_F_Wreck";
+				expression="_this setVariable ['Wreck',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="1";
+					};
+				};
+			};
+			class Attribute8
+			{
+				property="ModuleRespawnVehicle_F_Delay";
+				expression="_this setVariable ['Delay',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="30";
+					};
+				};
+			};
+			class Attribute9
+			{
+				property="ModuleRespawnVehicle_F_ShowNotification";
+				expression="_this setVariable ['ShowNotification',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="1";
+					};
+				};
+			};
+			nAttributes=10;
+		};
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-15.19751,0.13449907,17.65918};
+			angles[]={-0,3.1415927,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""0"",""0"",""3""] call cScripts_fnc_setVehicleLable;}";
+			description="TITAN-3";
+		};
+		id=141;
+		type="RHS_C130J";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-15.422607,0.13449907,53.058594};
+			angles[]={-0,3.1415927,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""0"",""0"",""4""] call cScripts_fnc_setVehicleLable;}";
+			description="TITAN-4";
+		};
+		id=142;
+		type="RHS_C130J";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item6
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={-47.565674,0,17.359863};
+		};
+		id=143;
+		type="ModuleRespawnVehicle_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ModuleRespawnVehicle_F_ForcedRespawn";
+				expression="_this setVariable ['ForcedRespawn',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ModuleRespawnVehicle_F_Init";
+				expression="_this setVariable ['Init',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[(_this select 0),""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ModuleRespawnVehicle_F_RespawnWhenDisabled";
+				expression="_this setVariable ['RespawnWhenDisabled',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute3
+			{
+				property="ModuleRespawnVehicle_F_DesertedDistance";
+				expression="_this setVariable ['DesertedDistance',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute4
+			{
+				property="ModuleRespawnVehicle_F_PositionType";
+				expression="_this setVariable ['PositionType',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute5
+			{
+				property="ModuleRespawnVehicle_F_RespawnCount";
+				expression="_this setVariable ['RespawnCount',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute6
+			{
+				property="ModuleRespawnVehicle_F_Position";
+				expression="_this setVariable ['Position',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute7
+			{
+				property="ModuleRespawnVehicle_F_Wreck";
+				expression="_this setVariable ['Wreck',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="1";
+					};
+				};
+			};
+			class Attribute8
+			{
+				property="ModuleRespawnVehicle_F_Delay";
+				expression="_this setVariable ['Delay',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="30";
+					};
+				};
+			};
+			class Attribute9
+			{
+				property="ModuleRespawnVehicle_F_ShowNotification";
+				expression="_this setVariable ['ShowNotification',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="1";
+					};
+				};
+			};
+			nAttributes=10;
+		};
+	};
+	class Item7
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={-47.262939,0,52.880859};
+		};
+		id=144;
+		type="ModuleRespawnVehicle_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ModuleRespawnVehicle_F_ForcedRespawn";
+				expression="_this setVariable ['ForcedRespawn',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ModuleRespawnVehicle_F_Init";
+				expression="_this setVariable ['Init',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[(_this select 0),""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ModuleRespawnVehicle_F_RespawnWhenDisabled";
+				expression="_this setVariable ['RespawnWhenDisabled',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute3
+			{
+				property="ModuleRespawnVehicle_F_DesertedDistance";
+				expression="_this setVariable ['DesertedDistance',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute4
+			{
+				property="ModuleRespawnVehicle_F_PositionType";
+				expression="_this setVariable ['PositionType',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute5
+			{
+				property="ModuleRespawnVehicle_F_RespawnCount";
+				expression="_this setVariable ['RespawnCount',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute6
+			{
+				property="ModuleRespawnVehicle_F_Position";
+				expression="_this setVariable ['Position',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="0";
+					};
+				};
+			};
+			class Attribute7
+			{
+				property="ModuleRespawnVehicle_F_Wreck";
+				expression="_this setVariable ['Wreck',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="1";
+					};
+				};
+			};
+			class Attribute8
+			{
+				property="ModuleRespawnVehicle_F_Delay";
+				expression="_this setVariable ['Delay',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="30";
+					};
+				};
+			};
+			class Attribute9
+			{
+				property="ModuleRespawnVehicle_F_ShowNotification";
+				expression="_this setVariable ['ShowNotification',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="1";
+					};
+				};
+			};
+			nAttributes=10;
+		};
+	};
+	class Item8
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={20.615479,0.0014390945,3.0595703};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setgroupID[""TITAN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
+					isPlayer=1;
+					isPlayable=1;
+				};
+				id=146;
+				type="Cav_B_A_Plane_Transport_Pilot_Titan_1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male05ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.03;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={21.615479,0.0014390945,3.0595703};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
+					isPlayable=1;
+				};
+				id=147;
+				type="Cav_B_A_Plane_Transport_coPilot_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.03;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=145;
+	};
+	class Item9
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={20.67749,0.0014390945,1.0786133};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setgroupID[""TITAN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
+					isPlayable=1;
+				};
+				id=149;
+				type="Cav_B_A_Plane_Transport_Pilot_Titan_2_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male04ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.02;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={21.67749,0.0014390945,1.0786133};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
+					isPlayable=1;
+				};
+				id=150;
+				type="Cav_B_A_Plane_Transport_coPilot_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male11ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.99000001;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=148;
+	};
+	class Item10
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={20.653564,0.0014390945,-0.94677734};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setgroupID[""TITAN-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-3""];}";
+					isPlayable=1;
+				};
+				id=152;
+				type="Cav_B_A_Plane_Transport_Pilot_Titan_3_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male10ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.97000003;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={21.653564,0.0014390945,-0.94677734};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-3""];}";
+					isPlayable=1;
+				};
+				id=153;
+				type="Cav_B_A_Plane_Transport_coPilot_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male09ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=151;
+	};
+	class Item11
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={20.686523,0.0014390945,-2.9746094};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setgroupID[""TITAN-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-4""];}";
+					isPlayable=1;
+				};
+				id=155;
+				type="Cav_B_A_Plane_Transport_Pilot_Titan_4_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male03ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.03;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={21.686523,0.0014390945,-2.9746094};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-4""];}";
+					isPlayable=1;
+				};
+				id=156;
+				type="Cav_B_A_Plane_Transport_coPilot_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male01ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=154;
+	};
+};
+class connections
+{
+	class LinkIDProvider
+	{
+		nextID=10;
+	};
+	class Links
+	{
+		items=10;
+		class Item0
+		{
+			linkID=0;
+			item0=56;
+			item1=87;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item1
+		{
+			linkID=1;
+			item0=93;
+			item1=89;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item2
+		{
+			linkID=2;
+			item0=94;
+			item1=91;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item3
+		{
+			linkID=3;
+			item0=95;
+			item1=92;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item4
+		{
+			linkID=4;
+			item0=96;
+			item1=90;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item5
+		{
+			linkID=5;
+			item0=97;
+			item1=88;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item6
+		{
+			linkID=6;
+			item0=138;
+			item1=140;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item7
+		{
+			linkID=7;
+			item0=142;
+			item1=144;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item8
+		{
+			linkID=8;
+			item0=137;
+			item1=139;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item9
+		{
+			linkID=9;
+			item0=141;
+			item1=143;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+	};
+};

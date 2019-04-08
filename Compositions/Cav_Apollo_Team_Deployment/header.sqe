@@ -1,4 +1,4 @@
 version=53;
-name="Cav_Apollo_Team_Deployment";
+name="Apollo Team Deployment";
 author="=7Cav=CPL.Broström.A | Evul";
-category="EdSubcat_WarningSigns";
+category="Cav_EdSubcat_Deploy_Platoon";
