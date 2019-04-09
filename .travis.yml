@@ -8,6 +8,7 @@ script:
 - python3 tools/sqf_validator.py
 - python3 tools/config_style_checker.py
 before_deploy:
+- apt-get install zip
 - tools/deploy.sh
 deploy:
   skip_cleanup: true
