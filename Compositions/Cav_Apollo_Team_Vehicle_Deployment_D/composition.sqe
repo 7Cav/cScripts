@@ -1,21 +1,21 @@
 version=53;
-center[]={4680.5864,5,1746.5737};
+center[]={1000.2769,5,4991.3862};
 class items
 {
-	items=20;
+	items=21;
 	class Item0
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-2.0166016,1.9550095,-12.555786};
+			position[]={-1.8648071,1.9550095,-11.706055};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=31;
+		id=12;
 		type="rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d";
 		class CustomAttributes
 		{
@@ -46,14 +46,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-6.8212891,1.2473021,-12.618286};
+			position[]={-6.6694946,1.2473021,-11.768555};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=32;
+		id=13;
 		type="rhsusf_M978A4_BKIT_usarmy_d";
 		class CustomAttributes
 		{
@@ -84,14 +84,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={2.7451172,1.9550095,-12.673462};
+			position[]={2.8969116,1.9550095,-11.82373};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=33;
+		id=14;
 		type="rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d";
 		class CustomAttributes
 		{
@@ -122,7 +122,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={5.8027344,0.38152885,-0.17248535};
+			position[]={5.9545288,0.38152885,0.67724609};
 			angles[]={-0,0.0019896752,0};
 		};
 		side="Empty";
@@ -132,7 +132,7 @@ class items
 			init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
 			description="Resupply Crate";
 		};
-		id=34;
+		id=15;
 		type="Box_NATO_Equip_F";
 		class CustomAttributes
 		{
@@ -163,7 +163,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={7.1933594,0.38152885,-0.12805176};
+			position[]={7.3451538,0.38152885,0.72167969};
 			angles[]={-0,0.0019896752,0};
 		};
 		side="Empty";
@@ -173,7 +173,7 @@ class items
 			init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
 			description="Resupply Crate";
 		};
-		id=35;
+		id=16;
 		type="Box_NATO_Equip_F";
 		class CustomAttributes
 		{
@@ -204,7 +204,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={5.8125,0.38152885,1.8865967};
+			position[]={5.9642944,0.38152885,2.7363281};
 			angles[]={-0,0.0019896752,0};
 		};
 		side="Empty";
@@ -214,7 +214,7 @@ class items
 			init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
 			description="Resupply Crate";
 		};
-		id=36;
+		id=17;
 		type="Box_NATO_Equip_F";
 		class CustomAttributes
 		{
@@ -245,7 +245,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={7.203125,0.38152885,1.9310303};
+			position[]={7.3549194,0.38152885,2.7807617};
 			angles[]={-0,0.0019896752,0};
 		};
 		side="Empty";
@@ -255,7 +255,7 @@ class items
 			init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
 			description="Resupply Crate";
 		};
-		id=37;
+		id=18;
 		type="Box_NATO_Equip_F";
 		class CustomAttributes
 		{
@@ -286,7 +286,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={5.8310547,0.38152885,4.27771};
+			position[]={5.9828491,0.38152885,5.1274414};
 			angles[]={-0,0.0019896752,0};
 		};
 		side="Empty";
@@ -296,7 +296,7 @@ class items
 			init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
 			description="Resupply Crate";
 		};
-		id=38;
+		id=19;
 		type="Box_NATO_Equip_F";
 		class CustomAttributes
 		{
@@ -327,7 +327,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={7.2480469,0.38152885,4.2567139};
+			position[]={7.3998413,0.38152885,5.1064453};
 			angles[]={-0,0.0019896752,0};
 		};
 		side="Empty";
@@ -337,7 +337,7 @@ class items
 			init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
 			description="Resupply Crate";
 		};
-		id=39;
+		id=20;
 		type="Box_NATO_Equip_F";
 		class CustomAttributes
 		{
@@ -368,7 +368,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={5.7988281,0.38152885,-2.3443604};
+			position[]={5.9506226,0.38152885,-1.4946289};
 			angles[]={-0,0.0019896752,0};
 		};
 		side="Empty";
@@ -378,7 +378,7 @@ class items
 			init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
 			description="Resupply Crate";
 		};
-		id=40;
+		id=21;
 		type="Box_NATO_Equip_F";
 		class CustomAttributes
 		{
@@ -409,7 +409,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={7.1894531,0.38152885,-2.2999268};
+			position[]={7.3412476,0.38152885,-1.4501953};
 			angles[]={-0,0.0019896752,0};
 		};
 		side="Empty";
@@ -419,7 +419,7 @@ class items
 			init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
 			description="Resupply Crate";
 		};
-		id=41;
+		id=22;
 		type="Box_NATO_Equip_F";
 		class CustomAttributes
 		{
@@ -450,14 +450,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-1.3662109,1.578362,-3.6778564};
+			position[]={-1.2144165,1.578362,-2.828125};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=42;
+		id=23;
 		type="rhsusf_mrzr4_d";
 		class CustomAttributes
 		{
@@ -507,14 +507,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-1.1679688,1.578362,1.1531982};
+			position[]={-1.0161743,1.578362,2.0029297};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=43;
+		id=24;
 		type="rhsusf_mrzr4_d";
 		class CustomAttributes
 		{
@@ -564,14 +564,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-1.1010742,1.578362,6.2640381};
+			position[]={-0.94927979,1.578362,7.1137695};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=44;
+		id=25;
 		type="rhsusf_mrzr4_d";
 		class CustomAttributes
 		{
@@ -621,14 +621,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={2.7548828,1.578362,-3.7086182};
+			position[]={2.9066772,1.578362,-2.8588867};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=45;
+		id=26;
 		type="rhsusf_mrzr4_d";
 		class CustomAttributes
 		{
@@ -678,14 +678,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={2.9970703,1.578362,1.3895264};
+			position[]={3.1488647,1.578362,2.2392578};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=46;
+		id=27;
 		type="rhsusf_mrzr4_d";
 		class CustomAttributes
 		{
@@ -735,14 +735,14 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={3.0888672,1.578362,6.2894287};
+			position[]={3.2406616,1.578362,7.1391602};
 		};
 		side="Empty";
 		flags=4;
 		class Attributes
 		{
 		};
-		id=47;
+		id=28;
 		type="rhsusf_mrzr4_d";
 		class CustomAttributes
 		{
@@ -799,7 +799,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.6835938,0.0014390945,5.1176758};
+					position[]={-6.3900146,0.0014390945,2.6523438};
 				};
 				side="West";
 				flags=7;
@@ -809,7 +809,7 @@ class items
 					init="call{this setgroupID[""APOLLO-5""];" \n "this setVariable [""cScripts_Player_Unit"", ""APOLLO-5""];}";
 					isPlayable=1;
 				};
-				id=49;
+				id=30;
 				type="Cav_B_B_LogisticsOpsNCO_Apollo_5_F";
 				class CustomAttributes
 				{
@@ -858,7 +858,7 @@ class items
 		class Attributes
 		{
 		};
-		id=48;
+		id=29;
 	};
 	class Item18
 	{
@@ -872,7 +872,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.699707,0.0014390945,5.1083984};
+					position[]={-4.4061279,0.0014390945,2.6430664};
 				};
 				side="West";
 				flags=7;
@@ -882,7 +882,7 @@ class items
 					init="call{this setgroupID[""APOLLO-6""];" \n "this setVariable [""cScripts_Player_Unit"", ""APOLLO-6""];}";
 					isPlayable=1;
 				};
-				id=51;
+				id=32;
 				type="Cav_B_B_LogisticsOpsOfficer_Apollo_6_F";
 				class CustomAttributes
 				{
@@ -931,7 +931,7 @@ class items
 		class Attributes
 		{
 		};
-		id=50;
+		id=31;
 	};
 	class Item19
 	{
@@ -945,7 +945,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-5.6845703,0.0014390945,3.1362305};
+					position[]={-5.3909912,0.0014390945,0.67089844};
 				};
 				side="West";
 				flags=7;
@@ -955,7 +955,7 @@ class items
 					init="call{this setgroupID[""APOLLO-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""APOLLO-1""];}";
 					isPlayable=1;
 				};
-				id=53;
+				id=34;
 				type="Cav_B_B_LogisticTeamLeader_Apollo_1_F";
 				class CustomAttributes
 				{
@@ -1005,7 +1005,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-5.1845703,0.0014390945,2.1362305};
+					position[]={-4.8909912,0.0014390945,-0.32910156};
 				};
 				side="West";
 				flags=5;
@@ -1015,7 +1015,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""APOLLO-1""];}";
 					isPlayable=1;
 				};
-				id=54;
+				id=35;
 				type="Cav_B_B_LogisticsTeamMember_F";
 			};
 			class Item2
@@ -1023,7 +1023,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.1845703,0.0014390945,2.1362305};
+					position[]={-5.8909912,0.0014390945,-0.32910156};
 				};
 				side="West";
 				flags=5;
@@ -1033,7 +1033,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""APOLLO-1""];}";
 					isPlayable=1;
 				};
-				id=55;
+				id=36;
 				type="Cav_B_B_LogisticsTeamMember_F";
 			};
 			class Item3
@@ -1041,7 +1041,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-5.1845703,0.0014390945,1.1362305};
+					position[]={-4.8909912,0.0014390945,-1.3291016};
 				};
 				side="West";
 				flags=5;
@@ -1051,7 +1051,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""APOLLO-1""];}";
 					isPlayable=1;
 				};
-				id=56;
+				id=37;
 				type="Cav_B_B_LogisticsTeamMember_F";
 			};
 			class Item4
@@ -1059,7 +1059,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.1845703,0.0014390945,1.1362305};
+					position[]={-5.8909912,0.0014390945,-1.3291016};
 				};
 				side="West";
 				flags=5;
@@ -1069,7 +1069,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""APOLLO-1""];}";
 					isPlayable=1;
 				};
-				id=57;
+				id=38;
 				type="Cav_B_B_LogisticsTeamMember_F";
 			};
 			class Item5
@@ -1077,7 +1077,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-5.6845703,0.0014390945,0.13623047};
+					position[]={-5.3909912,0.0014390945,-2.3291016};
 				};
 				side="West";
 				flags=5;
@@ -1087,34 +1087,53 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""APOLLO-1""];}";
 					isPlayable=1;
 				};
-				id=58;
+				id=39;
 				type="Cav_B_B_LogisticsTeamMember_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=52;
+		id=33;
 	};
-};
-class connections
-{
-	class LinkIDProvider
+	class Item20
 	{
-		nextID=1;
-	};
-	class Links
-	{
-		items=1;
-		class Item0
+		dataType="Object";
+		class PositionInfo
 		{
-			linkID=0;
-			item0=14;
-			item1=16;
-			class CustomData
+			position[]={-5.2446899,0.89242268,7.7182617};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""Apollo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			description="Starter Crate";
+		};
+		id=40;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
 			{
-				type="Sync";
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+					};
+				};
 			};
+			nAttributes=1;
 		};
 	};
 };

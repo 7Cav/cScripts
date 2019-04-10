@@ -1,8 +1,8 @@
 version=53;
-center[]={5616.0181,5,6883.3726};
+center[]={7088.001,5,6063.7314};
 class items
 {
-	items=1;
+	items=2;
 	class Item0
 	{
 		dataType="Group";
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0,0.0014390945,0.65039063};
+					position[]={0.0024414063,0.0014390945,0.20019531};
 				};
 				side="West";
 				flags=7;
@@ -25,7 +25,7 @@ class items
 					init="call{this setgroupID[""MUSTANG-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""MUSTANG-1""];}";
 					isPlayable=1;
 				};
-				id=267;
+				id=168;
 				type="Cav_B_B_TeamLeader_Mustang_1_F";
 				class CustomAttributes
 				{
@@ -75,7 +75,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.99951172,0.0014390945,-0.35009766};
+					position[]={1.0019531,0.0014390945,-0.80029297};
 				};
 				side="West";
 				flags=5;
@@ -85,7 +85,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""MUSTANG-1""];}";
 					isPlayable=1;
 				};
-				id=268;
+				id=169;
 				type="Cav_B_B_Mustang_CombatMedic_F";
 			};
 			class Item2
@@ -93,7 +93,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.00048828125,0.0014390945,-0.35009766};
+					position[]={0.001953125,0.0014390945,-0.80029297};
 				};
 				side="West";
 				flags=5;
@@ -103,7 +103,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""MUSTANG-1""];}";
 					isPlayable=1;
 				};
-				id=269;
+				id=170;
 				type="Cav_B_B_Mustang_CombatMedic_F";
 			};
 			class Item3
@@ -111,7 +111,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.0004883,0.0014390945,-0.35009766};
+					position[]={-0.99804688,0.0014390945,-0.80029297};
 				};
 				side="West";
 				flags=5;
@@ -121,13 +121,53 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""MUSTANG-1""];}";
 					isPlayable=1;
 				};
-				id=270;
+				id=171;
 				type="Cav_B_B_Mustang_CombatMedic_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=266;
+		id=167;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.013183594,0.89242268,2.2475586};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""Mustang"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			description="Starter Crate";
+		};
+		id=172;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 };

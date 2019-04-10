@@ -1,9 +1,169 @@
 version=53;
-center[]={5609.9087,5,6903.2671};
+center[]={7113.9746,5,6057.0679};
 class items
 {
-	items=7;
+	items=11;
 	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-5.2138672,0.89242268,1.550293};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""Viking"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			description="Starter Crate";
+		};
+		id=58;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={5.1713867,0.89242268,1.440918};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""Viking"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			description="Starter Crate";
+		};
+		id=59;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={5.1938477,0.89242268,-2.5014648};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""Viking"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			description="Starter Crate";
+		};
+		id=60;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-5.2158203,0.89242268,-2.5039063};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""Viking"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			description="Starter Crate";
+		};
+		id=61;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item4
 	{
 		dataType="Group";
 		side="West";
@@ -15,7 +175,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.0834961,0.0014390945,4.7197266};
+					position[]={2.0395508,0.0014390945,4.9394531};
 				};
 				side="West";
 				flags=7;
@@ -25,7 +185,7 @@ class items
 					init="call{this setgroupID[""VIKING-5""];" \n "this setVariable [""cScripts_Player_Unit"", ""VIKING-5""];}";
 					isPlayable=1;
 				};
-				id=272;
+				id=195;
 				type="Cav_B_B_PlatoonSergeant_2_5_F";
 				class CustomAttributes
 				{
@@ -74,9 +234,9 @@ class items
 		class Attributes
 		{
 		};
-		id=271;
+		id=194;
 	};
-	class Item1
+	class Item5
 	{
 		dataType="Group";
 		side="West";
@@ -88,7 +248,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.052246094,0.0014390945,4.730957};
+					position[]={0.0083007813,0.0014390945,4.9506836};
 				};
 				side="West";
 				flags=7;
@@ -98,7 +258,7 @@ class items
 					init="call{this setgroupID[""VIKING-6""];" \n "this setVariable [""cScripts_Player_Unit"", ""VIKING-6""];}";
 					isPlayable=1;
 				};
-				id=274;
+				id=197;
 				type="Cav_B_B_PlatoonLeader_2_6_F";
 				class CustomAttributes
 				{
@@ -147,9 +307,9 @@ class items
 		class Attributes
 		{
 		};
-		id=273;
+		id=196;
 	};
-	class Item2
+	class Item6
 	{
 		dataType="Group";
 		side="West";
@@ -161,7 +321,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.9575195,0.0014390945,4.7456055};
+					position[]={-2.0014648,0.0014390945,4.965332};
 				};
 				side="West";
 				flags=7;
@@ -171,7 +331,7 @@ class items
 					init="call{this setgroupID[""VIKING-7""];" \n "this setVariable [""cScripts_Player_Unit"", ""VIKING-7""];}";
 					isPlayable=1;
 				};
-				id=276;
+				id=199;
 				type="Cav_B_B_PlatoonMedic_2_7_F";
 				class CustomAttributes
 				{
@@ -220,9 +380,9 @@ class items
 		class Attributes
 		{
 		};
-		id=275;
+		id=198;
 	};
-	class Item3
+	class Item7
 	{
 		dataType="Group";
 		side="West";
@@ -234,7 +394,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.9545898,0.0014390945,2.6918945};
+					position[]={-1.9985352,0.0014390945,2.9116211};
 				};
 				side="West";
 				flags=7;
@@ -244,7 +404,7 @@ class items
 					init="call{this setgroupID[""VIKING-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=278;
+				id=201;
 				type="Cav_B_B_SquadLeader_2_1_F";
 				class CustomAttributes
 				{
@@ -294,7 +454,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.45507813,0.0014390945,1.6914063};
+					position[]={-0.49902344,0.0014390945,1.9111328};
 				};
 				side="West";
 				flags=5;
@@ -305,7 +465,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=279;
+				id=202;
 				type="Cav_B_B_Alpha_FireTeamLeader_F";
 			};
 			class Item2
@@ -313,7 +473,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.4550781,0.0014390945,1.6914063};
+					position[]={-1.4990234,0.0014390945,1.9111328};
 				};
 				side="West";
 				flags=5;
@@ -323,7 +483,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=280;
+				id=203;
 				type="Cav_B_B_Alpha_AutomaticRifleman_F";
 			};
 			class Item3
@@ -331,7 +491,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.4550781,0.0014390945,1.6914063};
+					position[]={-2.4990234,0.0014390945,1.9111328};
 				};
 				side="West";
 				flags=5;
@@ -341,7 +501,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=281;
+				id=204;
 				type="Cav_B_B_Alpha_Grenadier_F";
 			};
 			class Item4
@@ -349,7 +509,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.4550781,0.0014390945,1.6914063};
+					position[]={-3.4990234,0.0014390945,1.9111328};
 				};
 				side="West";
 				flags=5;
@@ -359,7 +519,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=282;
+				id=205;
 				type="Cav_B_B_Alpha_Rifleman_F";
 			};
 			class Item5
@@ -367,7 +527,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.45507813,0.0014390945,0.69140625};
+					position[]={-0.49902344,0.0014390945,0.91113281};
 				};
 				side="West";
 				flags=5;
@@ -378,7 +538,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=283;
+				id=206;
 				type="Cav_B_B_Bravo_FireTeamLeader_F";
 			};
 			class Item6
@@ -386,7 +546,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.4550781,0.0014390945,0.69140625};
+					position[]={-1.4990234,0.0014390945,0.91113281};
 				};
 				side="West";
 				flags=5;
@@ -396,7 +556,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=284;
+				id=207;
 				type="Cav_B_B_Bravo_AutomaticRifleman_F";
 			};
 			class Item7
@@ -404,7 +564,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.4550781,0.0014390945,0.69140625};
+					position[]={-2.4990234,0.0014390945,0.91113281};
 				};
 				side="West";
 				flags=5;
@@ -414,7 +574,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=285;
+				id=208;
 				type="Cav_B_B_Bravo_Grenadier_F";
 			};
 			class Item8
@@ -422,7 +582,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.4550781,0.0014390945,0.69140625};
+					position[]={-3.4990234,0.0014390945,0.91113281};
 				};
 				side="West";
 				flags=5;
@@ -432,16 +592,16 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
-				id=286;
+				id=209;
 				type="Cav_B_B_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=277;
+		id=200;
 	};
-	class Item4
+	class Item8
 	{
 		dataType="Group";
 		side="West";
@@ -453,7 +613,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.0541992,0.0014390945,2.7207031};
+					position[]={2.0102539,0.0014390945,2.9404297};
 				};
 				side="West";
 				flags=7;
@@ -463,7 +623,7 @@ class items
 					init="call{this setgroupID[""VIKING-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=288;
+				id=211;
 				type="Cav_B_B_SquadLeader_2_2_F";
 				class CustomAttributes
 				{
@@ -513,7 +673,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.5541992,0.0014390945,1.7207031};
+					position[]={3.5102539,0.0014390945,1.9404297};
 				};
 				side="West";
 				flags=5;
@@ -524,7 +684,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=289;
+				id=212;
 				type="Cav_B_B_Alpha_FireTeamLeader_F";
 			};
 			class Item2
@@ -532,7 +692,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.5541992,0.0014390945,1.7207031};
+					position[]={2.5102539,0.0014390945,1.9404297};
 				};
 				side="West";
 				flags=5;
@@ -542,7 +702,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=290;
+				id=213;
 				type="Cav_B_B_Alpha_AutomaticRifleman_F";
 			};
 			class Item3
@@ -550,7 +710,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.5541992,0.0014390945,1.7207031};
+					position[]={1.5102539,0.0014390945,1.9404297};
 				};
 				side="West";
 				flags=5;
@@ -560,7 +720,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=291;
+				id=214;
 				type="Cav_B_B_Alpha_Grenadier_F";
 			};
 			class Item4
@@ -568,7 +728,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.55419922,0.0014390945,1.7207031};
+					position[]={0.51025391,0.0014390945,1.9404297};
 				};
 				side="West";
 				flags=5;
@@ -578,7 +738,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=292;
+				id=215;
 				type="Cav_B_B_Alpha_Rifleman_F";
 			};
 			class Item5
@@ -586,7 +746,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.5541992,0.0014390945,0.72070313};
+					position[]={3.5102539,0.0014390945,0.94042969};
 				};
 				side="West";
 				flags=5;
@@ -597,7 +757,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=293;
+				id=216;
 				type="Cav_B_B_Bravo_FireTeamLeader_F";
 			};
 			class Item6
@@ -605,7 +765,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.5541992,0.0014390945,0.72070313};
+					position[]={2.5102539,0.0014390945,0.94042969};
 				};
 				side="West";
 				flags=5;
@@ -615,7 +775,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=294;
+				id=217;
 				type="Cav_B_B_Bravo_AutomaticRifleman_F";
 			};
 			class Item7
@@ -623,7 +783,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.5541992,0.0014390945,0.72070313};
+					position[]={1.5102539,0.0014390945,0.94042969};
 				};
 				side="West";
 				flags=5;
@@ -633,7 +793,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=295;
+				id=218;
 				type="Cav_B_B_Bravo_Grenadier_F";
 			};
 			class Item8
@@ -641,7 +801,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.55419922,0.0014390945,0.72070313};
+					position[]={0.51025391,0.0014390945,0.94042969};
 				};
 				side="West";
 				flags=5;
@@ -651,16 +811,16 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
-				id=296;
+				id=219;
 				type="Cav_B_B_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=287;
+		id=210;
 	};
-	class Item5
+	class Item9
 	{
 		dataType="Group";
 		side="West";
@@ -672,7 +832,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.9575195,0.0014390945,-1.2973633};
+					position[]={-2.0014648,0.0014390945,-1.0776367};
 				};
 				side="West";
 				flags=7;
@@ -682,7 +842,7 @@ class items
 					init="call{this setgroupID[""VIKING-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=298;
+				id=221;
 				type="Cav_B_B_SquadLeader_2_3_F";
 				class CustomAttributes
 				{
@@ -732,7 +892,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.45751953,0.0014390945,-2.296875};
+					position[]={-0.50146484,0.0014390945,-2.0771484};
 				};
 				side="West";
 				flags=5;
@@ -743,7 +903,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=299;
+				id=222;
 				type="Cav_B_B_Alpha_FireTeamLeader_F";
 			};
 			class Item2
@@ -751,7 +911,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.4575195,0.0014390945,-2.296875};
+					position[]={-1.5014648,0.0014390945,-2.0771484};
 				};
 				side="West";
 				flags=5;
@@ -761,7 +921,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=300;
+				id=223;
 				type="Cav_B_B_Alpha_AutomaticRifleman_F";
 			};
 			class Item3
@@ -769,7 +929,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.4575195,0.0014390945,-2.296875};
+					position[]={-2.5014648,0.0014390945,-2.0771484};
 				};
 				side="West";
 				flags=5;
@@ -779,7 +939,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=301;
+				id=224;
 				type="Cav_B_B_Alpha_Grenadier_F";
 			};
 			class Item4
@@ -787,7 +947,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.4575195,0.0014390945,-2.296875};
+					position[]={-3.5014648,0.0014390945,-2.0771484};
 				};
 				side="West";
 				flags=5;
@@ -797,7 +957,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=302;
+				id=225;
 				type="Cav_B_B_Alpha_Rifleman_F";
 			};
 			class Item5
@@ -805,7 +965,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.45751953,0.0014390945,-3.296875};
+					position[]={-0.50146484,0.0014390945,-3.0771484};
 				};
 				side="West";
 				flags=5;
@@ -816,7 +976,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=303;
+				id=226;
 				type="Cav_B_B_Bravo_FireTeamLeader_F";
 			};
 			class Item6
@@ -824,7 +984,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.4575195,0.0014390945,-3.296875};
+					position[]={-1.5014648,0.0014390945,-3.0771484};
 				};
 				side="West";
 				flags=5;
@@ -834,7 +994,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=304;
+				id=227;
 				type="Cav_B_B_Bravo_AutomaticRifleman_F";
 			};
 			class Item7
@@ -842,7 +1002,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.4575195,0.0014390945,-3.296875};
+					position[]={-2.5014648,0.0014390945,-3.0771484};
 				};
 				side="West";
 				flags=5;
@@ -852,7 +1012,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=305;
+				id=228;
 				type="Cav_B_B_Bravo_Grenadier_F";
 			};
 			class Item8
@@ -860,7 +1020,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.4575195,0.0014390945,-3.296875};
+					position[]={-3.5014648,0.0014390945,-3.0771484};
 				};
 				side="West";
 				flags=5;
@@ -870,16 +1030,16 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
-				id=306;
+				id=229;
 				type="Cav_B_B_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=297;
+		id=220;
 	};
-	class Item6
+	class Item10
 	{
 		dataType="Group";
 		side="West";
@@ -891,7 +1051,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.050293,0.0014390945,-1.2592773};
+					position[]={2.0063477,0.0014390945,-1.0395508};
 				};
 				side="West";
 				flags=7;
@@ -901,7 +1061,7 @@ class items
 					init="call{this setgroupID[""VIKING-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=308;
+				id=231;
 				type="Cav_B_B_SquadLeader_2_4_F";
 				class CustomAttributes
 				{
@@ -951,7 +1111,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.550293,0.0014390945,-2.2587891};
+					position[]={3.5063477,0.0014390945,-2.0390625};
 				};
 				side="West";
 				flags=5;
@@ -962,7 +1122,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=309;
+				id=232;
 				type="Cav_B_B_Alpha_FireTeamLeader_F";
 			};
 			class Item2
@@ -970,7 +1130,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.550293,0.0014390945,-2.2587891};
+					position[]={2.5063477,0.0014390945,-2.0390625};
 				};
 				side="West";
 				flags=5;
@@ -980,7 +1140,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=310;
+				id=233;
 				type="Cav_B_B_Alpha_AutomaticRifleman_F";
 			};
 			class Item3
@@ -988,7 +1148,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.550293,0.0014390945,-2.2587891};
+					position[]={1.5063477,0.0014390945,-2.0390625};
 				};
 				side="West";
 				flags=5;
@@ -998,7 +1158,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=311;
+				id=234;
 				type="Cav_B_B_Alpha_Grenadier_F";
 			};
 			class Item4
@@ -1006,7 +1166,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.55029297,0.0014390945,-2.2587891};
+					position[]={0.50634766,0.0014390945,-2.0390625};
 				};
 				side="West";
 				flags=5;
@@ -1016,7 +1176,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=312;
+				id=235;
 				type="Cav_B_B_Alpha_Rifleman_F";
 			};
 			class Item5
@@ -1024,7 +1184,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.550293,0.0014390945,-3.2587891};
+					position[]={3.5063477,0.0014390945,-3.0390625};
 				};
 				side="West";
 				flags=5;
@@ -1035,7 +1195,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=313;
+				id=236;
 				type="Cav_B_B_Bravo_FireTeamLeader_F";
 			};
 			class Item6
@@ -1043,7 +1203,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.550293,0.0014390945,-3.2587891};
+					position[]={2.5063477,0.0014390945,-3.0390625};
 				};
 				side="West";
 				flags=5;
@@ -1053,7 +1213,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=314;
+				id=237;
 				type="Cav_B_B_Bravo_AutomaticRifleman_F";
 			};
 			class Item7
@@ -1061,7 +1221,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.550293,0.0014390945,-3.2587891};
+					position[]={1.5063477,0.0014390945,-3.0390625};
 				};
 				side="West";
 				flags=5;
@@ -1071,7 +1231,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=315;
+				id=238;
 				type="Cav_B_B_Bravo_Grenadier_F";
 			};
 			class Item8
@@ -1079,7 +1239,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.55029297,0.0014390945,-3.2587891};
+					position[]={0.50634766,0.0014390945,-3.0390625};
 				};
 				side="West";
 				flags=5;
@@ -1089,13 +1249,13 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
-				id=316;
+				id=239;
 				type="Cav_B_B_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=307;
+		id=230;
 	};
 };
