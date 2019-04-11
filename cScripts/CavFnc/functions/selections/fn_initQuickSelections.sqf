@@ -46,6 +46,7 @@ if ((_companySelector == "full") or (_companySelector == "alpha")) then {
     [_object,"Pilot","CAV_Alpha_Helo_PILOT","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requireCompanyVariable,_addActionAllowedOnCompany] call FUNC(addQuickSelection);
     [_object,"CoPilot","CAV_Alpha_Helo_COPILOT","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requireCompanyVariable,_addActionAllowedOnCompany] call FUNC(addQuickSelection);
     [_object,"Crew Chief","CAV_Alpha_Helo_CHIEF","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requireCompanyVariable,_addActionAllowedOnCompany] call FUNC(addQuickSelection);
+    [_object,"Crew Chief M240","CAV_Alpha_Helo_CHIEF240","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requireCompanyVariable,_addActionAllowedOnCompany] call FUNC(addQuickSelection);
     [_object,"Door Gunner","CAV_Alpha_Helo_GNR","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requireCompanyVariable,_addActionAllowedOnCompany] call FUNC(addQuickSelection);
     
     //[_object,"Pilot (Attack Rotary)","CAV_Alpha_Helo_PILOT_ATT","",['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Alpha'],_requireCompanyVariable,_addActionAllowedOnCompany] call FUNC(addQuickSelection);
