@@ -1,0 +1,225 @@
+version=53;
+center[]={5607.9648,5,6882.8125};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=9;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0,0.0014390945,1.2504883};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""APOLLO-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""APOLLO-1""];}";
+					isPlayable=1;
+				};
+				id=235;
+				type="Cav_B_C_Weap_SquadLeader_Havoc_1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male11ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.5004883,0.0014390945,0.25};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
+					isPlayable=1;
+				};
+				id=236;
+				type="Cav_B_C_Weap_Alpha_FireTeamLeader_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.50048828,0.0014390945,0.25};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
+					isPlayable=1;
+				};
+				id=237;
+				type="Cav_B_C_Weap_Alpha_AutomaticRifleman_F";
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.49951172,0.0014390945,0.25};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
+					isPlayable=1;
+				};
+				id=238;
+				type="Cav_B_C_Weap_Alpha_Grenadier_F";
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.4995117,0.0014390945,0.25};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
+					isPlayable=1;
+				};
+				id=239;
+				type="Cav_B_C_Weap_Alpha_Rifleman_F";
+			};
+			class Item5
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.5004883,0.0014390945,-0.75};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
+					isPlayable=1;
+				};
+				id=240;
+				type="Cav_B_C_Weap_Bravo_FireTeamLeader_F";
+			};
+			class Item6
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.50048828,0.0014390945,-0.75};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
+					isPlayable=1;
+				};
+				id=241;
+				type="Cav_B_C_Weap_Bravo_AutomaticRifleman_F";
+			};
+			class Item7
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.49951172,0.0014390945,-0.75};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
+					isPlayable=1;
+				};
+				id=242;
+				type="Cav_B_C_Weap_Bravo_Grenadier_F";
+			};
+			class Item8
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.4995117,0.0014390945,-0.75};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
+					isPlayable=1;
+				};
+				id=243;
+				type="Cav_B_C_Weap_Bravo_CombatLifeSaver_F";
+			};
+		};
+		class Attributes
+		{
+		};
+		id=234;
+	};
+};

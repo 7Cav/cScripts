@@ -54,7 +54,6 @@
     };
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     #include "cScripts\ViewingDistance\GUI.h"
-    #include "cScripts\CfgUnitInsignia.hpp"
     #include "cScripts\CfgLoadouts.hpp"
 
 /*           OTHER            */
