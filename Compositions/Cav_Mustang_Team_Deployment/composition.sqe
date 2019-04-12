@@ -1,0 +1,133 @@
+version=53;
+center[]={5616.0181,5,6883.3726};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=4;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0,0.0014390945,0.65039063};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""MUSTANG-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""MUSTANG-1""];}";
+					isPlayable=1;
+				};
+				id=267;
+				type="Cav_B_B_TeamLeader_Mustang_1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male05ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.02;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.99951172,0.0014390945,-0.35009766};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""MUSTANG-1""];}";
+					isPlayable=1;
+				};
+				id=268;
+				type="Cav_B_B_Mustang_CombatMedic_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.00048828125,0.0014390945,-0.35009766};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""MUSTANG-1""];}";
+					isPlayable=1;
+				};
+				id=269;
+				type="Cav_B_B_Mustang_CombatMedic_F";
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.0004883,0.0014390945,-0.35009766};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.40000001;
+					init="call{this setVariable [""cScripts_Player_Unit"", ""MUSTANG-1""];}";
+					isPlayable=1;
+				};
+				id=270;
+				type="Cav_B_B_Mustang_CombatMedic_F";
+			};
+		};
+		class Attributes
+		{
+		};
+		id=266;
+	};
+};
