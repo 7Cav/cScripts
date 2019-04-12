@@ -141,7 +141,7 @@ class Cav_Alpha_Helo_CHIEF240 : Cav_B_Alpha_base_F {
         "SmokeShellBlue",2,
         "SmokeShellRed",2,
         "SmokeShellGreen",2,
-		"SmokeShellYellow",2,
+        "SmokeShellYellow",2,
 
         "Chemlight_green",2,
         "ACE_Chemlight_HiRed",2,
