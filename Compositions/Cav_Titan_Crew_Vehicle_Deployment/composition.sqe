@@ -1,5 +1,5 @@
 version=53;
-center[]={7040.436,5,6016.7124};
+center[]={513.54535,5,4136.2192};
 class items
 {
 	items=13;
@@ -8,7 +8,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-16.327637,0.13449907,-53.208984};
+			position[]={-16.327881,0.13449907,-53.209473};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
@@ -18,7 +18,7 @@ class items
 			init="call{[this,""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;}";
 			description="TITAN-1";
 		};
-		id=173;
+		id=122;
 		type="RHS_C130J";
 		class CustomAttributes
 		{
@@ -68,7 +68,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-16.556152,0.13449907,-17.859375};
+			position[]={-16.556396,0.13449907,-17.859863};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
@@ -78,7 +78,7 @@ class items
 			init="call{[this,""0"",""0"",""2""] call cScripts_fnc_setVehicleLable;}";
 			description="TITAN-2";
 		};
-		id=174;
+		id=123;
 		type="RHS_C130J";
 		class CustomAttributes
 		{
@@ -128,9 +128,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-48.310059,0,-53.117676};
+			position[]={-48.310303,0,-53.118164};
 		};
-		id=175;
+		id=124;
 		type="ModuleRespawnVehicle_F";
 		class CustomAttributes
 		{
@@ -320,7 +320,7 @@ class items
 								"STRING"
 							};
 						};
-						value="1";
+						value="0";
 					};
 				};
 			};
@@ -332,9 +332,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-48.76416,0,-17.270508};
+			position[]={-48.764343,0,-17.270996};
 		};
-		id=176;
+		id=125;
 		type="ModuleRespawnVehicle_F";
 		class CustomAttributes
 		{
@@ -372,7 +372,7 @@ class items
 								"STRING"
 							};
 						};
-						value="[(_this select 0),""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;";
+						value="[(_this select 0),""0"",""0"",""2""] call cScripts_fnc_setVehicleLable;";
 					};
 				};
 			};
@@ -524,7 +524,7 @@ class items
 								"STRING"
 							};
 						};
-						value="1";
+						value="0";
 					};
 				};
 			};
@@ -536,7 +536,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-16.074707,0.13449907,17.649414};
+			position[]={-16.074951,0.13449907,17.648926};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
@@ -546,7 +546,7 @@ class items
 			init="call{[this,""0"",""0"",""3""] call cScripts_fnc_setVehicleLable;}";
 			description="TITAN-3";
 		};
-		id=177;
+		id=126;
 		type="RHS_C130J";
 		class CustomAttributes
 		{
@@ -596,7 +596,7 @@ class items
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={-16.300293,0.13449907,53.048828};
+			position[]={-16.300537,0.13449907,53.04834};
 			angles[]={-0,3.1415927,0};
 		};
 		side="Empty";
@@ -606,7 +606,7 @@ class items
 			init="call{[this,""0"",""0"",""4""] call cScripts_fnc_setVehicleLable;}";
 			description="TITAN-4";
 		};
-		id=178;
+		id=127;
 		type="RHS_C130J";
 		class CustomAttributes
 		{
@@ -656,9 +656,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-48.442871,0,17.350098};
+			position[]={-48.443359,0,17.349609};
 		};
-		id=179;
+		id=128;
 		type="ModuleRespawnVehicle_F";
 		class CustomAttributes
 		{
@@ -696,7 +696,7 @@ class items
 								"STRING"
 							};
 						};
-						value="[(_this select 0),""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;";
+						value="[(_this select 0),""0"",""0"",""3""] call cScripts_fnc_setVehicleLable;";
 					};
 				};
 			};
@@ -848,7 +848,7 @@ class items
 								"STRING"
 							};
 						};
-						value="1";
+						value="0";
 					};
 				};
 			};
@@ -860,9 +860,9 @@ class items
 		dataType="Logic";
 		class PositionInfo
 		{
-			position[]={-48.140137,0,52.871094};
+			position[]={-48.14035,0,52.870605};
 		};
-		id=180;
+		id=129;
 		type="ModuleRespawnVehicle_F";
 		class CustomAttributes
 		{
@@ -900,7 +900,7 @@ class items
 								"STRING"
 							};
 						};
-						value="[(_this select 0),""0"",""0"",""1""] call cScripts_fnc_setVehicleLable;";
+						value="[(_this select 0),""0"",""0"",""4""] call cScripts_fnc_setVehicleLable;";
 					};
 				};
 			};
@@ -1052,7 +1052,7 @@ class items
 								"STRING"
 							};
 						};
-						value="1";
+						value="0";
 					};
 				};
 			};
@@ -1071,7 +1071,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={19.737793,0.0014390945,3.0498047};
+					position[]={19.737549,0.0014390945,3.0493164};
 				};
 				side="West";
 				flags=7;
@@ -1082,7 +1082,7 @@ class items
 					init="call{this setgroupID[""TITAN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
 					isPlayable=1;
 				};
-				id=182;
+				id=131;
 				type="Cav_B_A_Plane_Transport_Pilot_Titan_1_F";
 				class CustomAttributes
 				{
@@ -1132,7 +1132,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={20.737793,0.0014390945,3.0498047};
+					position[]={20.737549,0.0014390945,3.0493164};
 				};
 				side="West";
 				flags=5;
@@ -1143,7 +1143,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
 					isPlayable=1;
 				};
-				id=183;
+				id=132;
 				type="Cav_B_A_Plane_Transport_coPilot_F";
 				class CustomAttributes
 				{
@@ -1192,7 +1192,7 @@ class items
 		class Attributes
 		{
 		};
-		id=181;
+		id=130;
 	};
 	class Item9
 	{
@@ -1206,7 +1206,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={19.800293,0.0014390945,1.0688477};
+					position[]={19.800049,0.0014390945,1.0683594};
 				};
 				side="West";
 				flags=7;
@@ -1217,7 +1217,7 @@ class items
 					init="call{this setgroupID[""TITAN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
 					isPlayable=1;
 				};
-				id=185;
+				id=134;
 				type="Cav_B_A_Plane_Transport_Pilot_Titan_2_F";
 				class CustomAttributes
 				{
@@ -1267,7 +1267,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={20.800293,0.0014390945,1.0688477};
+					position[]={20.800049,0.0014390945,1.0683594};
 				};
 				side="West";
 				flags=5;
@@ -1278,7 +1278,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
 					isPlayable=1;
 				};
-				id=186;
+				id=135;
 				type="Cav_B_A_Plane_Transport_coPilot_F";
 				class CustomAttributes
 				{
@@ -1327,7 +1327,7 @@ class items
 		class Attributes
 		{
 		};
-		id=184;
+		id=133;
 	};
 	class Item10
 	{
@@ -1341,7 +1341,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={19.775879,0.0014390945,-0.95654297};
+					position[]={19.775635,0.0014390945,-0.95703125};
 				};
 				side="West";
 				flags=7;
@@ -1352,7 +1352,7 @@ class items
 					init="call{this setgroupID[""TITAN-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-3""];}";
 					isPlayable=1;
 				};
-				id=188;
+				id=137;
 				type="Cav_B_A_Plane_Transport_Pilot_Titan_3_F";
 				class CustomAttributes
 				{
@@ -1402,7 +1402,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={20.775879,0.0014390945,-0.95654297};
+					position[]={20.775635,0.0014390945,-0.95703125};
 				};
 				side="West";
 				flags=5;
@@ -1413,7 +1413,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-3""];}";
 					isPlayable=1;
 				};
-				id=189;
+				id=138;
 				type="Cav_B_A_Plane_Transport_coPilot_F";
 				class CustomAttributes
 				{
@@ -1462,7 +1462,7 @@ class items
 		class Attributes
 		{
 		};
-		id=187;
+		id=136;
 	};
 	class Item11
 	{
@@ -1476,7 +1476,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={19.809082,0.0014390945,-2.984375};
+					position[]={19.808838,0.0014390945,-2.9848633};
 				};
 				side="West";
 				flags=7;
@@ -1487,7 +1487,7 @@ class items
 					init="call{this setgroupID[""TITAN-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-4""];}";
 					isPlayable=1;
 				};
-				id=191;
+				id=140;
 				type="Cav_B_A_Plane_Transport_Pilot_Titan_4_F";
 				class CustomAttributes
 				{
@@ -1537,7 +1537,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={20.809082,0.0014390945,-2.984375};
+					position[]={20.808838,0.0014390945,-2.9848633};
 				};
 				side="West";
 				flags=5;
@@ -1548,7 +1548,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-4""];}";
 					isPlayable=1;
 				};
-				id=192;
+				id=141;
 				type="Cav_B_A_Plane_Transport_coPilot_F";
 				class CustomAttributes
 				{
@@ -1597,14 +1597,14 @@ class items
 		class Attributes
 		{
 		};
-		id=190;
+		id=139;
 	};
 	class Item12
 	{
 		dataType="Object";
 		class PositionInfo
 		{
-			position[]={17.562988,0.89242268,0.20654297};
+			position[]={17.562744,0.89242268,0.20605469};
 		};
 		side="Empty";
 		flags=4;
@@ -1613,7 +1613,7 @@ class items
 			init="call{[this,""Titan"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 			description="Starter Crate";
 		};
-		id=193;
+		id=142;
 		type="B_supplyCrate_F";
 		class CustomAttributes
 		{
@@ -1652,8 +1652,8 @@ class connections
 		class Item0
 		{
 			linkID=0;
-			item0=174;
-			item1=176;
+			item0=123;
+			item1=125;
 			class CustomData
 			{
 				type="Sync";
@@ -1662,8 +1662,8 @@ class connections
 		class Item1
 		{
 			linkID=1;
-			item0=178;
-			item1=180;
+			item0=127;
+			item1=129;
 			class CustomData
 			{
 				type="Sync";
@@ -1672,8 +1672,8 @@ class connections
 		class Item2
 		{
 			linkID=2;
-			item0=173;
-			item1=175;
+			item0=122;
+			item1=124;
 			class CustomData
 			{
 				type="Sync";
@@ -1682,8 +1682,8 @@ class connections
 		class Item3
 		{
 			linkID=3;
-			item0=177;
-			item1=179;
+			item0=126;
+			item1=128;
 			class CustomData
 			{
 				type="Sync";
