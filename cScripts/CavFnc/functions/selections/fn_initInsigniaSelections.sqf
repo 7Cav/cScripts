@@ -12,7 +12,7 @@
  * Public: No 
  */
 
-if !(isClass (configFile >> "CfgPatches" >> "cavmod_insignia")) exitWith {["cfgPatches for CavMod Insignias not detected, terminating insignia selection tab on object."] call FUNC(logInfo);};
+if !(isClass (configFile >> "CfgPatches" >> "cav_insignia")) exitWith {["cfgPatches for Cav Addon Insignias not detected, terminating insignia selection tab on object."] call FUNC(logInfo);};
 
 params [["_object", objNull, [objNull]]];
 
@@ -36,54 +36,54 @@ _object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5]
 
 
 // 7th Cavalry Gaming Insignias
-[_object,"7th Cavalry Insignia","Custom_Cav_7","z\cavmod\addons\insignia\data\Custom_Cav_7.paa"] call FUNC(addInsigniaSelection);
-[_object,"7th Cavalry Insignia (M81)","Custom_Cav_7_m81","z\cavmod\addons\insignia\data\Custom_Cav_7_m81.paa"] call FUNC(addInsigniaSelection);
-[_object,"7th Cavalry Insignia (OCP)","Custom_Cav_7_ocp","z\cavmod\addons\insignia\data\Custom_Cav_7_ocp.paa"] call FUNC(addInsigniaSelection);
+[_object,"7th Cavalry Insignia","Custom_Cav_7","z\cav\addons\insignia\data\Custom_Cav_7.paa"] call FUNC(addInsigniaSelection);
+[_object,"7th Cavalry Insignia (M81)","Custom_Cav_7_m81","z\cav\addons\insignia\data\Custom_Cav_7_m81.paa"] call FUNC(addInsigniaSelection);
+[_object,"7th Cavalry Insignia (OCP)","Custom_Cav_7_ocp","z\cav\addons\insignia\data\Custom_Cav_7_ocp.paa"] call FUNC(addInsigniaSelection);
 
 
 // Alpha Company 1st Platoon
-//[_object,"Platoon Insignia 1/A/1-7","Alpha_1","z\cavmod\addons\insignia\data\Alpha_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia A/1/A/1-7","Alpha_1_A","z\cavmod\addons\insignia\data\Alpha_1_A.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia B/1/A/1-7","Alpha_1_B","z\cavmod\addons\insignia\data\Alpha_1_B.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia C/1/A/1-7","Alpha_1_C","z\cavmod\addons\insignia\data\Alpha_1_C.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia D/1/A/1-7","Alpha_1_D","z\cavmod\addons\insignia\data\Alpha_1_D.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+//[_object,"Platoon Insignia 1/A/1-7","Alpha_1","z\cav\addons\insignia\data\Alpha_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia A/1/A/1-7","Alpha_1_A","z\cav\addons\insignia\data\Alpha_1_A.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia B/1/A/1-7","Alpha_1_B","z\cav\addons\insignia\data\Alpha_1_B.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia C/1/A/1-7","Alpha_1_C","z\cav\addons\insignia\data\Alpha_1_C.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia D/1/A/1-7","Alpha_1_D","z\cav\addons\insignia\data\Alpha_1_D.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
 
 // Alpha Company 2nd Platoon
-[_object,"Platoon Insignia 2/A/1-7","Alpha_2","z\cavmod\addons\insignia\data\Alpha_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia A/2/A/1-7","Alpha_2_A","z\cavmod\addons\insignia\data\Alpha_2_A.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia B/2/A/1-7","Alpha_2_B","z\cavmod\addons\insignia\data\Alpha_2_B.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia C/2/A/1-7","Alpha_2_C","z\cavmod\addons\insignia\data\Alpha_2_C.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia D/2/A/1-7","Alpha_2_D","z\cavmod\addons\insignia\data\Alpha_2_D.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+[_object,"Platoon Insignia 2/A/1-7","Alpha_2","z\cav\addons\insignia\data\Alpha_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia A/2/A/1-7","Alpha_2_A","z\cav\addons\insignia\data\Alpha_2_A.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia B/2/A/1-7","Alpha_2_B","z\cav\addons\insignia\data\Alpha_2_B.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia C/2/A/1-7","Alpha_2_C","z\cav\addons\insignia\data\Alpha_2_C.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia D/2/A/1-7","Alpha_2_D","z\cav\addons\insignia\data\Alpha_2_D.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionAlpha']] call FUNC(addInsigniaSelection);
 
 
 // Bravo Company 1st Platoon
-//[_object,"Platoon Insignia 1/B/1-7","Bravo_2","z\cavmod\addons\insignia\data\Bravo_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 1/1/B/1-7","Bravo_2_1","z\cavmod\addons\insignia\data\Bravo_1_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 2/1/B/1-7","Bravo_2_2","z\cavmod\addons\insignia\data\Bravo_1_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 3/1/B/1-7","Bravo_2_3","z\cavmod\addons\insignia\data\Bravo_1_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 4/1/B/1-7","Bravo_2_4","z\cavmod\addons\insignia\data\Bravo_1_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+//[_object,"Platoon Insignia 1/B/1-7","Bravo_2","z\cav\addons\insignia\data\Bravo_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 1/1/B/1-7","Bravo_2_1","z\cav\addons\insignia\data\Bravo_1_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 2/1/B/1-7","Bravo_2_2","z\cav\addons\insignia\data\Bravo_1_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 3/1/B/1-7","Bravo_2_3","z\cav\addons\insignia\data\Bravo_1_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 4/1/B/1-7","Bravo_2_4","z\cav\addons\insignia\data\Bravo_1_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
 
 // Bravo Company 2nd Platoon
-[_object,"Platoon Insignia 2/B/1-7","Bravo_2","z\cavmod\addons\insignia\data\Bravo_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia 1/2/B/1-7","Bravo_2_1","z\cavmod\addons\insignia\data\Bravo_2_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 2/2/B/1-7","Bravo_2_2","z\cavmod\addons\insignia\data\Bravo_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 3/2/B/1-7","Bravo_2_3","z\cavmod\addons\insignia\data\Bravo_2_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 4/2/B/1-7","Bravo_2_4","z\cavmod\addons\insignia\data\Bravo_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+[_object,"Platoon Insignia 2/B/1-7","Bravo_2","z\cav\addons\insignia\data\Bravo_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 1/2/B/1-7","Bravo_2_1","z\cav\addons\insignia\data\Bravo_2_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 2/2/B/1-7","Bravo_2_2","z\cav\addons\insignia\data\Bravo_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 3/2/B/1-7","Bravo_2_3","z\cav\addons\insignia\data\Bravo_2_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 4/2/B/1-7","Bravo_2_4","z\cav\addons\insignia\data\Bravo_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
 
 
 // Charlie Company  1st Platoon
-[_object,"Platoon Insignia 1/C/1-7","Charlie_1","z\cavmod\addons\insignia\data\Charlie_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia 1/1/C/1-7","Charlie_1_1","z\cavmod\addons\insignia\data\Charlie_1_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia 2/1/C/1-7","Charlie_1_2","z\cavmod\addons\insignia\data\Charlie_1_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia 3/1/C/1-7","Charlie_1_3","z\cavmod\addons\insignia\data\Charlie_1_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia 4/1/C/1-7","Charlie_1_4","z\cavmod\addons\insignia\data\Charlie_1_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Platoon Insignia 1/C/1-7","Charlie_1","z\cav\addons\insignia\data\Charlie_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 1/1/C/1-7","Charlie_1_1","z\cav\addons\insignia\data\Charlie_1_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 2/1/C/1-7","Charlie_1_2","z\cav\addons\insignia\data\Charlie_1_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 3/1/C/1-7","Charlie_1_3","z\cav\addons\insignia\data\Charlie_1_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 4/1/C/1-7","Charlie_1_4","z\cav\addons\insignia\data\Charlie_1_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 
 // Charlie Company  2nd Platoon
-[_object,"Platoon Insignia 2/C/1-7","Charlie_2","z\cavmod\addons\insignia\data\Charlie_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia 1/2/C/1-7","Charlie_2_1","z\cavmod\addons\insignia\data\Charlie_2_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 2/2/C/1-7","Charlie_2_2","z\cavmod\addons\insignia\data\Charlie_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 3/2/C/1-7","Charlie_2_3","z\cavmod\addons\insignia\data\Charlie_2_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","z\cavmod\addons\insignia\data\Charlie_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Platoon Insignia 2/C/1-7","Charlie_2","z\cav\addons\insignia\data\Charlie_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 1/2/C/1-7","Charlie_2_1","z\cav\addons\insignia\data\Charlie_2_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 2/2/C/1-7","Charlie_2_2","z\cav\addons\insignia\data\Charlie_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 3/2/C/1-7","Charlie_2_3","z\cav\addons\insignia\data\Charlie_2_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","z\cav\addons\insignia\data\Charlie_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 
 #ifdef DEBUG_MODE
     [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(logInfo);
