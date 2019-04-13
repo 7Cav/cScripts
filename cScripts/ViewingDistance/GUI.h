@@ -68,7 +68,7 @@ class RscListBox {
 		autoScrollSpeed = -1;
 		autoScrollDelay = 5;
 		autoScrollRewind = 0;
-	}
+	};
 };
 
 class RscCheckBox {
@@ -483,7 +483,7 @@ class TAW_VDMenu {
 			toolTip = "View distance while operating a UAV/UGV";
 			onSliderPosChanged = "[4, _this select 1] call TAWVD_fnc_onSliderChanged;";
 			y = .45 - (1 / 25);
-		}
+		};
 
 		//Values (RscEdit Butons)
 		class VD_onFoot_Edit : RscEdit {
