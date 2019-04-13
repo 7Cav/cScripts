@@ -36,4 +36,8 @@ private _cargoSize = _dialogResult select 1;
 
 private _crate = "B_CargoNet_01_ammo_F" createVehicle _crate;
 [_crate,_cargoType,_cargoSize] remoteExec [QFUNC(doSpecialWeaponsCrate),0,true];
-[_crate] call FUNC(addObjectToCurator);
+
+// Add to curator so Zeus can manipulate it
+[{(_this select 0) == vehicle (_this select 0)}, {
+     _this select 0 call FUNC(addObjectToCurator)
+}, [_crate]] call CBA_fnc_waitUntilAndExecute;
