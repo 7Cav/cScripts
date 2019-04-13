@@ -250,6 +250,63 @@ class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
 
     preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 };
+class Cav_Alpha_Helo_CHIEF240 : Cav_B_Alpha_base_F {
+    headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
+    backpack[] = {"B_Carryall_cbr"};
+    vest[] = {"rhsusf_mbav_mg"};
+
+    primary[] = {"rhs_weap_m240B","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ELCAN_ard"};
+
+    magazines[] = {
+        "rhsusf_100Rnd_762x51_m62_tracer",4,
+        "rhsusf_mag_15Rnd_9x19_JHP",2,
+
+        "B_IR_Grenade",1,
+        "SmokeShell",2,
+        "SmokeShellBlue",2,
+        "SmokeShellRed",2,
+        "SmokeShellGreen",2,
+        "SmokeShellYellow",2,
+
+        "Chemlight_green",2,
+        "ACE_Chemlight_HiRed",2,
+        "Chemlight_blue",2,
+
+        "DemoCharge_Remote_Mag",2
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_morphine",5,
+        "ACE_epinephrine",2,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EntrenchingTool",
+        "ACE_CableTie",2,
+        "ACE_MapTools",
+        "ACE_Flashlight_XL50",
+
+        // Electronics
+        "ACE_microDAGR",
+
+        // Tools
+        "ToolKit",
+        
+        // Misc
+        "H_Booniehat_mcamo",
+        "rhsusf_shemagh_tan"
+    };
+    nvgs[] = {"NVGogglesB_grn_F"};
+    gps[] = {"ItemAndroid"};
+
+    preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
+};
 class Cav_B_A_Helicopter_Tra_DoorGunner_F : Cav_B_Alpha_base_F {
     headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     backpack[] = {"B_Kitbag_mcamo"};
