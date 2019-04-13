@@ -29,13 +29,8 @@ params [
 private _player_name = [player,'PROFILE'] call FUNC(getPlayerName);
 private _player_rankFormal = [player,'FORMAL'] call FUNC(getPlayerRank);
 
-private _player_role = "trooper";
-if (isMultiplayer) then {
-    _player_role = roleDescription player;
-    _player_role = _player_role splitString "@";
-    _player_role = _player_role select 0;
-    if (_player_role == "") then {_player_role = "trooper"};
-};
+private _player_role = call FUNC(getPlayerRole);
+
 
 private _player_group = groupId (group player);
 if (_player_group == "") then { _player_group = "in your squad" } else { _player_group = format["under the callsign <t color='#ffc61a'>%1</t>", _player_group]};

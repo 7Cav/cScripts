@@ -29,7 +29,7 @@ params [
     ["_reGearOption", true],
     ["_reHealOption", true],
     ["_InsigniaSelectOption", true],
-    ["_requireCompanyVariable", true],
+    ["_allowOnlyForCompany", true],
     ["_arsenal", false]
 ];
 
@@ -60,7 +60,7 @@ if (_reHealOption) then {
 };
 
 // Call Quick Selection
-[_object,_quickSelectScale,_requireCompanyVariable] call FUNC(initQuickSelections);
+[_object, _quickSelectScale, _allowOnlyForCompany] call FUNC(initQuickSelections);
 
 // Call Insignia Selection
 if (_InsigniaSelectOption) then {
