@@ -5,8 +5,133 @@ class Cav_B_A_AirController_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
     nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemcTab"};
-};
 
+    preLoadout = "[(_this select 0), 'officer'] call cScripts_fnc_setPreInitPlayerSettings;";
+};
+class Cav_B_A_JFO_F : Cav_B_Alpha_base_F {
+    backpack[] = {"B_Carryall_mcamo"};
+    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    nvgs[] = {""};
+    vest[] = {"rhsusf_spcs_ocp_squadleader"};
+    binoculars[] = {"Laserdesignator"};
+
+    primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",4,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m67",2,
+
+        "B_IR_Grenade",2,
+        "SmokeShell",2,
+        "SmokeShellGreen",1,
+        "SmokeShellOrange",1,
+        "SmokeShellRed",2,
+        "SmokeShellYellow",1,
+
+        "rhs_mag_M441_HE",4,
+        "rhs_mag_m713_Red",2,
+        "UGL_FlareCIR_F",2,
+        "rhs_mag_m662_red",2,
+        "ACE_HuntIR_M203",4
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_Flashlight_MX991",
+
+        // Electronics
+        "ACE_IR_Strobe_Item",
+        "ACE_microDAGR",
+        "ACE_HuntIR_monitor",
+        "Laserbatteries",2,
+        "ACE_Vector",
+        "ItemcTabHCam",
+        "ACE_MX2A",
+        "rhsusf_ANPVS_15",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemcTab"};
+
+    preLoadout = "[(_this select 0), 'officer'] call cScripts_fnc_setPreInitPlayerSettings;";
+};
+class Cav_B_A_Officer_F  : Cav_B_Alpha_base_F {
+    backpack[] = {"B_Carryall_mcamo"};
+    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    nvgs[] = {""};
+    vest[] = {"rhsusf_spcs_ocp_squadleader"};
+    binoculars[] = {"Laserdesignator"};
+
+    primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",4,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m67",2,
+
+        "B_IR_Grenade",2,
+        "SmokeShell",2,
+        "SmokeShellGreen",1,
+        "SmokeShellOrange",1,
+        "SmokeShellRed",2,
+        "SmokeShellYellow",1,
+
+        "rhs_mag_M441_HE",4,
+        "rhs_mag_m713_Red",2,
+        "UGL_FlareCIR_F",2,
+        "rhs_mag_m662_red",2,
+        "ACE_HuntIR_M203",4
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_Flashlight_MX991",
+
+        // Electronics
+        "ACE_IR_Strobe_Item",
+        "ACE_microDAGR",
+        "ACE_HuntIR_monitor",
+        "Laserbatteries",2,
+        "ACE_Vector",
+        "ItemcTabHCam",
+        "ACE_MX2A",
+        "rhsusf_ANPVS_15",
+
+        // Tools
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemcTab"};
+
+    preLoadout = "[(_this select 0), 'officer'] call cScripts_fnc_setPreInitPlayerSettings;";
+};
 
 class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
