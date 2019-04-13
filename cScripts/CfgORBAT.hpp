@@ -89,7 +89,7 @@ class CfgORBAT {
                 commanderRank = "Lieutenant";
                 text = "%1 %3 (%2)";
                 textShort = "1/B/1-7CAV";
-            };		
+            };
 
             class 2PLT {
                 id = 2;
@@ -102,7 +102,7 @@ class CfgORBAT {
                 commanderRank = "Lieutenant";
                 text = "%1 %3 (%2)";
                 textShort = "2/B/1-7CAV";
-            };	
+            };
 
             class 3PLT {
                 id = 3;
@@ -115,7 +115,7 @@ class CfgORBAT {
                 commanderRank = "Lieutenant";
                 text = "%1 %3 (%2)";
                 textShort = "3/B/1-7CAV";
-            };	
+            };
         };
 
         class CCO {
