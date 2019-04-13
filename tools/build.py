@@ -1,53 +1,210 @@
 #!/usr/bin/env python3
-
 #
-# usage: build.py [-h] [-p] [-b {dev,test,custom}] [-rc RELEASECANDIDATE]
-#                 [-s | -sz]
+# usage: Build [-h] [-b {release,dev,test,custom}] [-p] [-rc RELEASECANDIDATE]
+#              [-y] [--auto_color] [-v]
+#
+# This script build and pack the selected mission framework.
 #
 # optional arguments:
 #   -h, --help            show this help message and exit
+#   -b {release,dev,test,custom}, --buildtype {release,dev,test,custom}
+#                         Add a additional tag to a to the build
 #   -p, --public          Create a "public" build to be used on non CavPack
 #                         Enviroment
-#   -b {dev,test,custom}, --build {dev,test,custom}
-#                         Add a additional tag to a to the build
 #   -rc RELEASECANDIDATE, --releasecandidate RELEASECANDIDATE
 #                         Set a release candidate number to the build ".RC1" for
-#                         exsample
-#   -s, --save            Save the build
-#   -sz, --savedontzip    Save the build and don't zip it
+#                         example.
+#   -y, --fastbuild       Will instantly run untill done.
+#   --auto_color          Enable collors in the script.
+#   -v, --version         show program's version number and exit
 #
-import sys, os
+# This build script is primarly built to pack 7th Cavalry Script package; cScripts.
+# The tool should be cross platform and can be used for other packages as well.
+#
+import sys, os, fnmatch, fileinput
 import argparse, shutil, subprocess, tempfile
-__version__ = 1.10
+import configparser
+
+__version__ = 2.0
 
 # GLOBALS #################################################################################
 
-exlude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'resourses','tools', 'tmp']
-version_File = 'cScripts\\script_component.hpp'
-script_Name = 'cScripts'
+exclude_content = ['.vscode', '.editorconfig', '.git', '.gitattributes', '.github', '.gitignore', '.travis.yml','mission.sqm', 'release', 'resourses', 'tools', 'tmp']
+version_file = 'cScripts//script_component.hpp'
+script_name = 'cScripts'
 
 # #########################################################################################
 
 # set projecty path
-scriptpath = os.path.realpath(__file__)
-projectpath = os.path.dirname(os.path.dirname(scriptpath))
-os.chdir(projectpath)
+scriptPath = os.path.realpath(__file__)
+scriptDir = os.path.dirname(scriptPath)
+rootDir = os.path.dirname(os.path.dirname(scriptPath))
+os.chdir(rootDir)
 
-def createFolder(folder):
-    # Get mission root
-    folderPath = projectpath +"\\" + folder
-    if not os.path.isdir(folderPath):
-        print('No ' + folder + ' folder was found creating...')
+# #########################################################################################
+
+# GLOBAL config handling
+config = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation())
+config.read('{}/build.ini'.format(scriptDir))
+
+exclude_content = config['DEFAULT']['exclude']
+exclude_content = exclude_content.replace(' ','')
+exclude_content = exclude_content.replace('\'','')
+exclude_content = exclude_content.replace('\n',',')
+exclude_content = exclude_content.split(',')
+exclude_content = [x for x in exclude_content if x] # Remove empty array object if exists.
+version_file = config['DEFAULT']['version_file']
+script_name = config['DEFAULT']['name']
+
+# #########################################################################################
+
+def color_string(string='', color='\033[0m', auto_color=False):
+    if auto_color:
+        return '\033[0m{}{}\033[0m'.format(color,string)
+    else:
+        return string
+
+def get_git_commit_hash(get_long=False):
+    commit_hash = ''
+    if get_long:
         try:
-            os.stat(folder)
+            commit_hash = subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip()
         except:
-            os.mkdir(folder)
-    return folderPath
+            commit_hash = ''
+    else: 
+        try:
+            commit_hash = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip()
+        except:
+            commit_hash = ''
+
+    commit_hash = commit_hash.decode("utf-8")
+
+    return commit_hash
 
 
-def listFileContent(exlude_content=[]):
-    # Get mission root
-    content = os.listdir(projectpath)
+
+def get_git_branch_name():
+    branch_name = ''
+    try:
+        branch_name = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD']).strip()
+    except:
+        branch_name = ''
+
+    branch_name = branch_name.decode("utf-8")
+
+    return branch_name
+
+
+def strip_path_from_filename(pathfile=''):
+    filenamepath = pathfile.split('/')
+    filename = filenamepath[-1]
+    filename = str(filename)
+    return filename
+
+
+def get_script_version_number(version_file='', return_type='arr'):
+    file = open(version_file)
+    for i, line in enumerate(file):
+        if i == 1:
+            if not '"DEVBUILD"' in str(line):
+                line = line.partition('"')[-1].rpartition('"')[0]
+                line = line.split(".")
+                version = line
+                version = list(map(int, version))
+            else:
+                version = [-1]
+    file.close()
+    if return_type == 'arr':
+        return version
+    elif return_type == 'str':
+        if len(version) == 1:
+            version = '{}'.format(version[0])
+        elif len(version) == 2:
+            version = '{}.{}'.format(version[0],version[1])
+        elif len(version) == 3:
+            version = '{}.{}.{}'.format(version[0],version[1],version[2])
+        elif len(version) == 4:
+            version = '{}.{}.{}.{}'.format(version[0],version[1],version[2],version[3])
+        else:
+            version = ''
+        return version
+    else:
+        return ''
+
+
+
+def set_package_name(package_name='', build_type='', release_candidate=0, public_version=False):
+    version_number = get_script_version_number(version_file,'str')
+    commit_hash = get_git_commit_hash(False)
+    branch_name = get_git_branch_name()
+
+    if commit_hash:
+        if not build_type == 'release':
+            commit_hash = '-{}'.format(commit_hash)
+        else:
+            commit_hash = ''
+    else:
+        commit_hash = ''
+    if not version_number == '-1':
+        if version_number:
+            version_number = '-{}{}'.format(version_number,commit_hash)
+        else:
+            version_number = ''
+    else:
+        version_number = ''
+
+    if branch_name:
+        if not build_type == 'release' and branch_name == 'master' :
+            branch_name = '-{}'.format(branch_name)
+        else:
+            branch_name = ''
+    else:
+        branch_name = ''
+
+    if (build_type == 'release'):
+        build_type = ''
+    elif (build_type == 'dev'):
+        build_type = '_DevBuild{}'.format(branch_name)
+    elif (build_type == 'test'):
+        build_type = '_TestBuild{}'.format(branch_name)
+    else:
+        build_type = ''
+
+    if public_version:
+        public_build = '_PUBLIC'
+    else:
+        public_build = ''
+
+    if release_candidate:
+        release_candidate = '_rc{}'.format(release_candidate)
+    else:
+        release_candidate = ''
+
+    name = '{}{}{}{}{}'.format(package_name,public_build,version_number,build_type,release_candidate)
+
+    return name
+
+
+
+def request_action(text='Continue?'):
+    Continue_Count = 0
+    while(True):
+        yes_no = input('{} (Yes or No)\n> '.format(text))
+        yes_no = yes_no.lower()
+        if (yes_no == 'yes' or yes_no == 'y'):
+            return True
+        elif (yes_no == 'no' or yes_no == 'n'):
+            return False
+        else:
+            pass
+        Continue_Count += 1
+        if Continue_Count >= 3:
+            sys.exit()
+
+
+
+def fetch_objects():
+    content = os.listdir(rootDir)
 
     objectList = []
 
@@ -56,354 +213,339 @@ def listFileContent(exlude_content=[]):
 
     for obj in content:
         if os.path.isfile(obj):
-            if obj not in exlude_content:
+            if obj not in exclude_content:
                 fileList.append(obj)
         elif os.path.isdir(obj):
-            if obj not in exlude_content:
+            if obj not in exclude_content:
                 folderList.append(obj)
         else:
-            print()
-            sys.exit('Issues occured when listing files.')
-    # add arrays to array
+            sys.exit('\nIssues occured when listing files.')
+
     objectList.append(folderList)
     objectList.append(fileList)
+    
     return objectList
 
 
-def getVersion(versionFile):
-    verFile = open(versionFile)
-    for i, line in enumerate(verFile):
-        if i == 1:
-            line = line.partition('"')[-1].rpartition('"')[0]
-            line = line.split(".")
-            version = line
-            version = list(map(int, version))
-    # get Revision hash
-    try:
-        hash = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip()
-        version.append (hash)
-    except:
-        version.append ('')
-    
-    return version
+
+def list_objects(objects, auto_color=False):
+    if objects == []:
+        sys.exit('No objects were found\nThis means that a build cant be created att all pleace check your paths and script location.')
+    else:
+        print(color_string('Found Objects:','\033[1m',auto_color))
+        for time, obj in enumerate(objects[0]):
+            print(color_string(''.join(obj),'\033[42m',auto_color),end='')
+            if not time == len(objects[0])-1:
+                print(', ', end='')
+            else:
+                if objects[1]:
+                    print(', ', end='')
+                else:
+                    print('', end='')
+        for time, obj in enumerate(objects[1]):
+            print(color_string(''.join(obj),'\033[96m',auto_color),end='')
+            if not time == len(objects[1])-1:
+                print(', ', end='')
+        print()
 
 
-def createBuild(folderList=[],fileList=[],tmpFolder='',releaseFolder=''):
+
+def build_release(package_name='', build_type='', release_candidate=0, public_version=False, public_file_paths=[], public_operations=[], auto_color=False):
+
+    def replace(file, searchExp, replaceExp):
+        for line in fileinput.input(file, inplace=1):
+            if searchExp in line:
+                line = line.replace(searchExp,replaceExp)
+            sys.stdout.write(line)
+
+    temp = tempfile.mkdtemp()
+
+    name = set_package_name(package_name,build_type,release_candidate,public_version)
+    dummy_name = '{}.md'.format(name)
+    version = get_script_version_number(version_file,'str')
+    branch_name = get_git_branch_name()
+    commit_hash = get_git_commit_hash(True)
+
     # copying files to release folder
     print('Starting build copying...')
-    for file in fileList:
-        print('Featching file \033[96m' + file + '\033[0m...')
-        try:
-            shutil.copy2(file, tmpFolder)
-        except:
-            shutil.rmtree(tmpFolder)
-            sys.exit('Issues occured when featching file ' + file + '.')
 
-    # copying directories to temp folder and create its folder in case of.
-    for dir in folderList:
-        print('Featching \033[42m' + dir + '\033[0m directory...')
-        newFolderPath = tmpFolder + '\\' + dir
-        createFolder(dir)
-        try:
-            shutil.copytree(dir, newFolderPath)
-        except:
-            shutil.rmtree(tmpFolder)
-            sys.exit('Issues occured when featching folder ' + dir + '.')
-    print('\033[0mFeatch complete.\033[0m')
+    content_list = fetch_objects()
+    folder_list = content_list[0]
+    file_list = content_list[1]
 
+    for obj in folder_list:
+        print('Featching directorys and files from {}...'.format(color_string(obj,'\033[42m',auto_color)))
+        shutil.copytree(obj, '{}/{}'.format(temp,obj))
+    for obj in file_list:
+        print('Featching files {}...'.format(color_string(obj,'\033[96m',auto_color)))
+        shutil.copy2(obj, temp)
 
-def copyTempToRelease(releaseFolder='', versionNumber=['','','',''], tag='_', build='', rc=''):
-    # Copying the temp directory to release
-    print('Moving build to release folder...')
-    if (versionNumber[3] != '') and (build != ''):
-        hash = str(versionNumber[3])[2:]
-        hash = hash[:-1]
-        folderName = '{}{}v{}.{}.{}-{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
+    relase_folder = 'release'                
+    if not os.path.isdir(relase_folder):     
+        os.mkdir(relase_folder)
+
+    if public_version:
+        public_build = ' public'
     else:
-        folderName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
+        public_build = ''
 
-    newFolderPath = releaseFolder + '\\{}'.format(folderName)
-    try:
-        shutil.rmtree(newFolderPath)
-    except:
-        pass
-    try:
-        shutil.copytree('tmp', newFolderPath)
-    except:
-        sys.exit('Issues occured when trying to copy build to release...')
-    print('\033[0mMove complete.\033[0m')
+    # creating public build from config
+    if public_version:
+        print('Creating public build...')
 
+        if not len(public_operations[0]) == 0:
+            print('Replacing gear...')
+            for file in public_file_paths[0]:
+                print('Checking config file {}...'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
+                for gear in public_operations[0]:
+                    print('Replacing {} with {}.'.format(color_string('{}'.format(gear[0]),'\033[95m',auto_color),color_string('{}'.format(gear[1]),'\033[95m',auto_color)))
+                    replace('{}/{}'.format(temp,file),gear[0],gear[1])
 
-def zipBuild(versionNumber=['','','',''],tag='_',build='',rc=''):
-    if (versionNumber[3] != '') and (build != ''):
-        hash = str(versionNumber[3])[2:]
-        hash = hash[:-1]
-        ZipName = '{}{}v{}.{}.{}-{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
-    else:
-        ZipName = '{}{}v{}.{}.{}{}{}'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
-    print('Creating archive...')
-    shutil.make_archive('release\\{}'.format(ZipName), 'zip', "tmp")
-    print('\033[0m{}.zip is created.\033[0m'.format(ZipName))
+            for file in public_file_paths[1]:
+                print('Checking script file {}...'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
+                for gear in public_operations[0]:
+                    print('Replacing {} with {}.'.format(color_string('{}'.format(gear[0]),'\033[95m',auto_color),color_string('{}'.format(gear[1]),'\033[95m',auto_color)))
+                    replace('{}/{}'.format(temp,file),gear[0],gear[1])
+                    
+            for file in public_file_paths[2]:
+                print('Checking ace arsena file {}...'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
+                for gear in public_operations[0]:
+                    print('Replacing {} with {}.'.format(color_string('{}'.format(gear[0]),'\033[95m',auto_color),color_string('{}'.format(gear[1]),'\033[95m',auto_color)))
+                    replace('{}/{}'.format(temp,file),gear[0],gear[1])
 
+        if not len(public_operations[1]) == 0:
+            print('Removing ', end='')
+            for time, gear in enumerate(public_operations[1]):
+                print(color_string(''.join(gear),'\033[95m',auto_color),end='')
+                if not time == len(public_operations[1])-1:
+                    print(', ', end='')
+                else:
+                    print(' from script and config files...')
+                
+            for file in public_file_paths[0]:
+                print('Checking config file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
+                for gear in public_operations[1]:
+                    #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',auto_color)))
+                    replace('{}/{}'.format(temp,file),gear, "\"\"")
+                    replace('{}/{}'.format(temp,file),"        \"\",", "")
 
-def makeDummyVersionFile(versionNumber=['','','',''],tag='_',build='',rc=''):
+            for file in public_file_paths[1]:
+                print('Checking script file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
+                for gear in public_operations[1]:
+                    #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',auto_color)))
+                    replace('{}/{}'.format(temp,file),gear, "\"\"")
+
+            for file in public_file_paths[2]:
+                print('Checking ace arsenal script file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',auto_color)))
+                for gear in public_operations[1]:
+                    #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',auto_color)))
+                    replace('{}/{}'.format(temp,file),gear, "\"\"")
+
+        if os.path.isfile('{}/cba_settings.sqf'.format(temp)):
+            if not len(public_operations[2]) == 0:
+                print('Applying adjustmetns to {}...'.format(color_string('cba_settings.sqf','\033[96m',auto_color)))
+                for setting in public_operations[2]:
+                    print('Replacing {} with {}'.format(color_string('{}'.format(setting[0]),'\033[95m',auto_color), color_string('{}'.format(setting[1]),'\033[95m',auto_color)))
+                    replace('{}/cba_settings.sqf'.format(temp),setting[0],setting[1])
+
+            if not len(public_operations[3]) == 0:
+                print('Adding new settings to {}...'.format(color_string('cba_settings.sqf','\033[96m',auto_color)))
+                with open('{}/cba_settings.sqf'.format(temp), 'a') as settings_file:
+                    settings_file.write('\n')
+                    for line in public_operations[3]:
+                        print('Adding {}'.format(color_string(line,'\033[95m',auto_color)))
+                        settings_file.write('\n{}'.format(line))
+                settings_file.close()
+        else:
+            print('No {} detected skipping changes...'.format(color_string('cba_settings.sqf','\033[96m',auto_color)))
+        
+        if os.path.isfile('{}/description.ext'.format(temp)):
+            #if not len(public_operations[4]) == 0:
+            if not 0 == 0:
+                print('Applying adjustmetns to {}...'.format(color_string('description.ext','\033[96m',auto_color)))
+        else:
+            print('No {} detected skipping changes...'.format(color_string('description.ext','\033[96m',auto_color)))
+
     print('Creating version dummy file...')
-    if (versionNumber[3] != '') and (build != ''):
-        hash = str(versionNumber[3])[2:]
-        hash = hash[:-1]
-        dummyName = 'tmp//{}{}v{}.{}.{}-{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),hash,rc,build)
-    else:
-        dummyName = 'tmp//{}{}v{}.{}.{}{}{}.md'.format(script_Name,tag,str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build)
-    dummy = open(dummyName,"w+")
-    #dummy.write('I\'am a dummy file that just show version numbers. I\'ve done my purpose yey!\n')
-    dummy.write('cScripts version {}.{}.{}{}{}\n'.format(str(versionNumber[0]),str(versionNumber[1]),str(versionNumber[2]),rc,build))
-    hash = subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip()
-    hash = str(hash)
-    hash = hash[:-1]
-    hash = hash[2:]
-    dummy.write('Rev: {}'.format(hash))
+    dummy = open('{}/{}'.format(temp,dummy_name),"w+")
+    dummy.write('{}{} version {}\nrev: {}\nbranch: {}'.format(script_name,public_build,version,commit_hash,branch_name))
+    dummy.close()
+
+    print('Building archive...')
+    archive_name = '{}'.format(name)
+    archive_type = 'zip'
+    shutil.make_archive('{}/{}'.format(relase_folder,archive_name), archive_type, temp)
+    print('Archive created you can find it in the release folder. ({})'.format(color_string('{}/{}.{}'.format(relase_folder,archive_name,archive_type),'\033[96m',auto_color)))
 
 
-def grep(file,string):
-    try:
-        os.stat('{}'.format(file))
-    except:
-        sys.exit('{} could not be found...'.format(file))
-
-    fileObject = open('{}'.format(file), "r")
-    for l in fileObject:
-        if (string in l):
-            string = l
-    fileObject.close()
-    return string
-
-
-def count(file,string):
-    try:
-        os.stat('{}'.format(file))
-    except:
-        sys.exit('{} could not be found...'.format(file))
-    count = 1
-    fileObject = open('{}'.format(file), "r")
-    for l in fileObject:
-        if (string in l):
-            count += 1
-    return count
-
-
-def replace(file_path, pattern, subst):
-    #Create temp file
-    fh, abs_path = tempfile.mkstemp()
-    with os.fdopen(fh,'w') as new_file:
-        with open(file_path) as old_file:
-            for line in old_file:
-                new_file.write(line.replace(pattern, subst))
-    #Remove original file
-    os.remove(file_path)
-    #Move new file
-    shutil.move(abs_path, file_path)
-
-
-def add(file, string):
-    fileObject = open('{}'.format(file), "a")
-    fileObject.write(string)
-
-
-def createModdedBuild(folder):      # This function is completely manual atm:
-    print('Starting construction of a public {} version...'.format(script_Name))
-
-    print('Adjusting \033[96mdescription.ext\033[0m...')
-    x = grep('{}\\description.ext'.format(folder),'    dev                 = "1SG Tully.B";')
-    replace('{}\\description.ext'.format(folder), x, '    dev                 = "CPL.Geki.T";\n')
-    x = grep('{}\\description.ext'.format(folder),'    author              = "1SG Tully.B";')
-    replace('{}\\description.ext'.format(folder), x, '    author              = "CPL.Geki.T";\n')
-    x = grep('{}\\description.ext'.format(folder),'    onLoadMission       = "7th Cavalry - S3 1BN Battle Staff Operation";')
-    replace('{}\\description.ext'.format(folder), x, '    onLoadMission       = "7th Cavalry - S3 Public Staff";\n')
-    x = grep('{}\\description.ext'.format(folder),'    onLoadIntro         = "S3 1BN Battle Staff Operation";')
-    replace('{}\\description.ext'.format(folder), x, '    onLoadIntro         = "S3 1BN Public Staff";\n')
-    x = grep('{}\\description.ext'.format(folder),'    forceRotorLibSimulation = 1;\n')
-    replace('{}\\description.ext'.format(folder), x, '    forceRotorLibSimulation = 0;\n')
-
-    print('Adjusting \033[96mcba_settings.sqf\033[0m...')
-
-    # Enableling blueforce tracker settings
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_Enabled')
-    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_Enabled = true;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_HideAiGroups')
-    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_HideAiGroups = true;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_map_BFT_Interval')
-    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_map_BFT_Interval = 5;\n')
-
-    # adjusting medical settings
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_medical_enableUnconsciousnessAI')
-    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_medical_enableUnconsciousnessAI = 0;\n')
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_medical_medicSetting_PAK')
-    replace('{}\\cba_settings.sqf'.format(folder), x, 'force force ace_medical_medicSetting_PAK = 1;\n')
-
-    # Allow players to edit down sight blur
-    x = grep('{}\\cba_settings.sqf'.format(folder),'ace_nightvision_aimDownSightsBlur')
-    replace('{}\\cba_settings.sqf'.format(folder), x, '//ace_nightvision_aimDownSightsBlur = 0.25;\n')
-
-    print('Adding cScripts settings to \033[96mcba_settings.sqf\033[0m...')
-    x = '{}\\cba_settings.sqf'.format(folder)
-    add(x, '\n')
-    add(x, '// cScripts Mission Settings\n')
-    add(x, 'force force cScripts_Settings_allowCustomInit = true;\n')
-    add(x, 'force force cScripts_Settings_allowCustomTagging = true;\n')
-    add(x, 'force force cScripts_Settings_enable7cavZeusModules = true;\n')
-    add(x, 'force force cScripts_Settings_enableStartHint = false;\n')
-    add(x, 'force force cScripts_Settings_setAiSystemDifficulty = 1;\n')
-    add(x, 'force force cScripts_Settings_setCustomHintText = "Public Mission";\n')
-    add(x, 'force force cScripts_Settings_setCustomHintTopic = "This is Tactical Realism. Be tactical and realistic.";\n')
-    add(x, 'force force cScripts_Settings_setMissionType = 3;\n')
-    add(x, 'force force cScripts_Settings_setRedLightTime = 30;\n')
-    add(x, 'force force cScripts_Settings_setTrainingHintTime = 20;\n')
-    add(x, 'force force cScripts_Settings_showDiaryRecords = true;\n')
-    add(x, 'force force cScripts_Settings_useCustomSupplyInventory = false;\n')
-    add(x, 'force force cScripts_Settings_useCustomVehicleInventory = true;\n')
-    add(x, 'force force cScripts_Settings_useCustomVehicleSettings = true;\n')
-
-
-    print('Starting to adjust Loadouts...')
-    loadoutFiles = ['CfgLoadouts_Common.hpp','CfgLoadouts_Alpha.hpp','CfgLoadouts_Bravo.hpp','CfgLoadouts_Charlie.hpp','CfgLoadouts_Medical.hpp','CfgLoadouts_Ranger.hpp','CfgLoadouts_Training.hpp','CfgLoadouts_S3.hpp']
-    for loadoutFile in loadoutFiles:
-        print('Searching for and replacing objects in \033[96m{}\033[0m...'.format(loadoutFile))
-        # finding object: ItemcTab
-        file = '{}\\cScripts\\Loadouts\\{}'.format(folder,loadoutFile)
-        c = count(file,'gps[] = {"ItemcTab"};')
-        for n in range(0,c):
-            x = grep(file,'gps[] = {"ItemcTab"};')
-            replace(file, x, '    gps[] = {""};\n')
-
-        # finding object: ItemAndroid
-        c = count(file,'gps[] = {"ItemAndroid"};')
-        for n in range(0,c):
-            x = grep(file,'gps[] = {"ItemAndroid"};')
-            replace(file, x, '    gps[] = {""};\n')
-
-        # finding object: Flagstack_Red
-        c = count(file,'"Flagstack_Red",')
-        for n in range(0,c):
-            x = grep(file,'"Flagstack_Red",')
-            replace(file, x, '')
-
-
-    print('Creating new loadouts...')
-    print('Adding new loadout \033[32mCAV_Alpha_Helo_CHIEF\033[0m to \033[96mCfgLoadouts_AlphaClass.hpp\033[0m...')
-    x = grep('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder),'class B_Helicrew_T : CAV_Alpha_Helo_CHIEF {{}};')
-    replace('{}\\cScripts\\Loadouts\\CfgLoadouts_AlphaClass.hpp'.format(folder), x, 'class B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {{}};\n')
-   
-   
-    print('Starting to adjust logistical crates...')
-    functionFiles = ['fn_doAmmoCrate.sqf','fn_doExplosivesCrate.sqf','fn_doGrenadesCrate.sqf','fn_doLaunchersCrate.sqf','fn_doSpecialWeaponsCrate.sqf','fn_doStarterCrateSupplies.sqf','fn_doSupplyCrate.sqf','fn_doWeaponsCrate.sqf']
-    for functionFile in functionFiles:
-        print('Searching for and replacing objects in \033[96m{}\033[0m...'.format(functionFile))
-        # finding object: ItemcTab
-        file = '{}\\cScripts\\CavFnc\\functions\\logistics\\{}'.format(folder,functionFile)
-        c = count(file,'"ItemcTab"')
-        for n in range(0,c):
-            x = grep(file,'"ItemcTab"')
-            replace(file, x, '')
-
-        # finding object: ItemAndroid
-        c = count(file,'"ItemAndroid"')
-        for n in range(0,c):
-            x = grep(file,'"ItemAndroid"')
-            replace(file, x, '')
-
-        # finding object: Flagstack_Red
-        c = count(file,'"Flagstack_Red"')
-        for n in range(0,c):
-            x = grep(file,'"Flagstack_Red"')
-            replace(file, x, '')
-
-    print('Adjusting radio presets...')
-    x = grep('{}\\cScripts\\Loadouts\\script\\CfgPoppy.hpp'.format(folder),'channelNames')
-    replace('{}\\cScripts\\Loadouts\\script\\CfgPoppy.hpp'.format(folder), x, '        channelNames[] = {"GUNSLINGER","AVIATION","VIKING","PUNISHER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","LOGISTICS","CONVOY-1","CONVOY-2","ZEUS","CAG","COMMAND"};\n')
-
-
-def setName(name): # WIP will handle naming.
-    return name
-
+# #########################################################################################
 
 def main():
-    print('Preparing a build for {}.\n'.format(script_Name))
+    # Handle arguments
+    parser = argparse.ArgumentParser(
+        prog='Build',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description='This script build and pack the selected mission framework.',
+        epilog='This build script is primarly built to pack 7th Cavalry Script package; cScripts.\nThe tool should be cross platform and can be used for other packages as well.'
+    )
+    
+    parser.add_argument('-b', '--buildtype',
+        required=False,
+        choices=['release', 'dev', 'test', 'custom'],
+        default='test' if (not get_script_version_number(version_file,'str') == '-1') else 'dev',
+        help="Add a additional tag to a to the build"
+    )
+    parser.add_argument("-p", "--public",
+        help="Create a \"public\" build to be used on non CavPack Enviroment",
+        required=False,
+        action="store_true"
+    )
+    parser.add_argument('-rc', '--releasecandidate',
+        type=int,
+        required=False,
+        help="Set a release candidate number to the build \".RC1\" for example."
+    )
 
-    # set up and handle arguments
-    parser = argparse.ArgumentParser()
+    parser.add_argument("-y", "--fastbuild",
+        help="Will instantly run untill done.",
+        action="store_false"
+    )
+    parser.add_argument("-d", "--dontopenfolder",
+        help="Don\'t open the release folder when the build is completed.",
+        action="store_false"
+    )
+    parser.add_argument("--deploy",
+        help="Don\'t open the release folder when the build is completed.",
+        action="store_false"
+    )
+    parser.add_argument("--auto_color",
+        help="Enable colors in the script.",
+        action="store_true"
+    )
 
-    group = parser.add_mutually_exclusive_group(required=False)
-
-    parser.add_argument("-p", "--public",           help="Create a \"public\" build to be used on non CavPack Enviroment",
-                        action="store_true")
-    parser.add_argument('-b', '--build', required=False, choices=['dev', 'test', 'custom'], help="Add a additional tag to a to the build")
-    parser.add_argument('-rc', '--releasecandidate', type=int, required=False,  help="Set a release candidate number to the build \".RC1\" for exsample")
-
-    group.add_argument("-s", "--save",              help="Save the build",
-                        action="store_true")
-    group.add_argument("-sz", "--savedontzip",      help="Save the build and don\'t zip it",
-                        action="store_true")
-    parser.add_argument('-v', '--version', action='version', version='Build script version {}.'.format(__version__))
+    parser.add_argument('-v', '--version', action='version', version='Author: Andreas Broström <andreas.brostrom.ce@gmail.com>\nScript version: {}'.format(__version__))
 
     args = parser.parse_args()
 
-    objectList = listFileContent(exlude_content)
-
-    # Print object list
-    print('\033[0m\033[1m' + 'Found object:' + '\033[0m')
-    print('\033[42m',end='')
-    print('\033[0m \033[42m'.join(objectList[0]) + '\033[42m',end='\033[0m \033[96m')
-    print('\033[0m \033[96m'.join(objectList[1]) + '\033[96m')
-    print('',end='\033[0m')
-
-    # Set som empty strings
-    tagString = '_'
-    buildString = ''
-    rcString = ''
-
-    # press enter to start build
-    input('\nPress enter to start the build process...')
-
-    # Remove tempfolder if it exist on start
-    if os.path.isdir('tmp'):
-        shutil.rmtree('tmp')
-
-    releaseFolder = createFolder("release")
-    tmpFolder = createFolder("tmp")
-
-    createBuild(objectList[0],objectList[1], tmpFolder, releaseFolder)
-    versionNumber = getVersion(version_File)
+    # Construct public build
+    public_file_paths = []
+    public_operations = []
     
     if args.public:
-        tagString = '_PUBLIC_'
-        createModdedBuild(tmpFolder)
+        config_gear_files = config['PATHS']['config_gear_files']
+        config_gear_files = config_gear_files.replace(' ','')
+        config_gear_files = config_gear_files.replace('\n',',')
+        config_gear_files = config_gear_files.split(',')
+        config_gear_files = [x for x in config_gear_files if x] # Remove empty array object if exists.
+        public_file_paths.append(config_gear_files)
 
-    if args.build:
-        if args.build == 'dev':
-            buildString = '_DevBuild'.format()
-        if args.build == 'test':
-            buildString = '_TestBuild'.format()
-        if args.build == 'custom':
-            buildString = '_CustomBuild'.format()
-    if args.releasecandidate:
-        rcString = '.RC{}'.format(str(args.releasecandidate))
+        script_gear_files = config['PATHS']['script_gear_files']
+        script_gear_files = script_gear_files.replace(' ','')
+        script_gear_files = script_gear_files.replace('\n',',')
+        script_gear_files = script_gear_files.split(',')
+        script_gear_files = [x for x in script_gear_files if x] # Remove empty array object if exists.
+        public_file_paths.append(script_gear_files)
 
-    makeDummyVersionFile(versionNumber,tagString,buildString,rcString)
+        acearsenal_files = config['PATHS']['acearsenal_files']
+        acearsenal_files = acearsenal_files.replace(' ','')
+        acearsenal_files = acearsenal_files.replace('\n',',')
+        acearsenal_files = acearsenal_files.split(',')
+        acearsenal_files = [x for x in acearsenal_files if x] # Remove empty array object if exists.
+        public_file_paths.append(acearsenal_files)
 
-    if args.save:
-        copyTempToRelease(releaseFolder, versionNumber,tagString,buildString,rcString)
+        # Replace Handler
+        replace = config['PUBLIC BUILD OPERATIONS']['Replace_gear']
+        replace = replace.replace(' ','')
+        replace = replace.replace('\n',',')
+        replace = replace.split(',')
+        replace = [x for x in replace if x] # Remove empty array object if exists.
+        replaces = []
+        replacesList = []
+        if not (len(replace) % 2) == 0:
+            sys.exit('Replace have a detected a uneven replace number. You can\'t replace anything in to nothing. Use the remove operation for this. \nBuild Aborted')
+        for x in replace:
+            replaces.append(x)
+            if len(replaces) == 2:
+                replacesList.append(replaces)
+                replaces = []
+        public_operations.append(replacesList)
 
-    if args.savedontzip:
-        copyTempToRelease(releaseFolder, versionNumber,tagString,buildString,rcString)
-    else:
-        zipBuild(versionNumber,tagString,buildString,rcString)
+        # Remove Handler
+        remove = config['PUBLIC BUILD OPERATIONS']['Remove_gear']
 
-    shutil.rmtree(tmpFolder)
+        remove = remove.replace(' ','')
+        remove = remove.replace('\n',',')
+        remove = remove.split(',')
+        remove = [x for x in remove if x] # Remove empty array object if exists.
+        removes = []
+        for x in remove:
+            removes.append(x)
+        public_operations.append(removes)
 
-    #input('\nBuild process is compleet press enter to exit...')
+        # Settings Change handler
+        change_setting = config['PUBLIC BUILD OPERATIONS']['Change_settings']
+        change_setting = change_setting.replace(', ',',')
+        change_setting = change_setting.replace('\n',',')
+        change_setting = change_setting.split(',')
+        change_setting = [x for x in change_setting if x] # Remove empty array object if exists.
+        change_settings = []
+        change_settings_list = []
+        if not (len(change_setting) % 2) == 0:
+            sys.exit('Settings changes have a detected a uneven change number. You can\'t change a settings in to nothing. \nBuild Aborted')
+        for x in change_setting:
+            change_settings.append(x)
+            if len(change_settings) == 2:
+                change_settings_list.append(change_settings)
+                change_settings = []
+        public_operations.append(change_settings_list)
 
-    if os.name == 'nt':
-        os.system('explorer.exe {}\\release'.format(projectpath))
+        # Settings Add handler
+        add_setting = config['PUBLIC BUILD OPERATIONS']['New_settings']
+        add_setting = add_setting.replace('\n',',')
+        add_setting = add_setting.split(',')
+        add_setting = [x for x in add_setting if x] # Remove empty array object if exists.
+        add_settings = []
+        for x in add_setting:
+            add_settings.append(x)
+        public_operations.append(add_settings)
+
+    # build handler
+    print(color_string('Preparing a build for {}\n'.format(script_name),'\033[1m',args.auto_color))
+
+    objects = fetch_objects()
+    list_objects(objects,args.auto_color)
+
+    # press enter to start build
+    input('\nPress enter to start the build process...') if args.fastbuild else print('')
+
+    # prep release
+
+    if args.buildtype == 'release':
+        if not get_git_branch_name() == 'master':
+            if args.deploy:
+                if args.fastbuild:
+                    action = request_action('You are currently not on master branch. Do you wish to checkout master?')
+                    if action:
+                        try:
+                            subprocess.check_output(['git', 'checkout', 'master'], shell=True)
+                        except:
+                            action = request_action('Do you wish to continue anyways?')
+                        if not action:
+                            sys.exit()
+                else:
+                    try:
+                        subprocess.check_output(['git', 'checkout', 'master'], shell=True)
+                    except:
+                        print(color_string('Warning: Checkout was aborted. Your still on branch {}...'.format(get_git_branch_name()),'\033[91m',args.auto_color))
+                
+    name = set_package_name(script_name,args.buildtype,args.releasecandidate)
+
+    build_release(script_name,args.buildtype,args.releasecandidate,args.public,public_file_paths,public_operations,args.auto_color)
+
+    print('Build complet.')
+
+    if os.name == 'nt' and args.dontopenfolder:
+        os.system('explorer.exe {}\\release'.format(rootDir))
 
 if __name__ == "__main__":
     sys.exit(main())
