@@ -1,8 +1,8 @@
 version=53;
-center[]={5616.0327,5,6904.7192};
+center[]={1007.8254,5,4972.4185};
 class items
 {
-	items=4;
+	items=5;
 	class Item0
 	{
 		dataType="Group";
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.005859375,0.0014390945,3.3452148};
+					position[]={0.17224121,0.0014390945,3.5859375};
 				};
 				side="West";
 				flags=7;
@@ -25,7 +25,7 @@ class items
 					init="call{this setgroupID[""BANCHEE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
 					isPlayable=1;
 				};
-				id=318;
+				id=116;
 				type="Cav_B_B_Ifv_Commander_B_1_F";
 			};
 			class Item1
@@ -33,7 +33,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.49414063,0.0014390945,2.3452148};
+					position[]={0.67224121,0.0014390945,2.5859375};
 				};
 				side="West";
 				flags=5;
@@ -43,7 +43,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
 					isPlayable=1;
 				};
-				id=319;
+				id=117;
 				type="Cav_B_B_Ifv_Driver_F";
 			};
 			class Item2
@@ -51,7 +51,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.50585938,0.0014390945,2.3452148};
+					position[]={-0.32775879,0.0014390945,2.5859375};
 				};
 				side="West";
 				flags=5;
@@ -61,14 +61,14 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
 					isPlayable=1;
 				};
-				id=320;
+				id=118;
 				type="Cav_B_B_Ifv_Gunner_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=317;
+		id=115;
 	};
 	class Item1
 	{
@@ -82,7 +82,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.0043945313,0.0014390945,1.3193359};
+					position[]={0.18249512,0.0014390945,1.5600586};
 				};
 				side="West";
 				flags=7;
@@ -92,7 +92,7 @@ class items
 					init="call{this setgroupID[""BANCHEE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
 					isPlayable=1;
 				};
-				id=322;
+				id=120;
 				type="Cav_B_B_Ifv_Commander_B_2_F";
 				class CustomAttributes
 				{
@@ -142,7 +142,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.50390625,0.0014390945,0.31982422};
+					position[]={0.68200684,0.0014390945,0.56054688};
 				};
 				side="West";
 				flags=5;
@@ -152,7 +152,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
 					isPlayable=1;
 				};
-				id=323;
+				id=121;
 				type="Cav_B_B_Ifv_Driver_F";
 			};
 			class Item2
@@ -160,7 +160,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.49609375,0.0014390945,0.31982422};
+					position[]={-0.31799316,0.0014390945,0.56054688};
 				};
 				side="West";
 				flags=5;
@@ -170,14 +170,14 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
 					isPlayable=1;
 				};
-				id=324;
+				id=122;
 				type="Cav_B_B_Ifv_Gunner_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=321;
+		id=119;
 	};
 	class Item2
 	{
@@ -191,7 +191,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.00390625,0.0014390945,-0.62158203};
+					position[]={0.17419434,0.0014390945,-0.38085938};
 				};
 				side="West";
 				flags=7;
@@ -201,7 +201,7 @@ class items
 					init="call{this setgroupID[""BANCHEE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
 					isPlayable=1;
 				};
-				id=326;
+				id=124;
 				type="Cav_B_B_Ifv_Commander_B_3_F";
 				class CustomAttributes
 				{
@@ -251,7 +251,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.49658203,0.0014390945,-1.621582};
+					position[]={0.67468262,0.0014390945,-1.3808594};
 				};
 				side="West";
 				flags=5;
@@ -261,7 +261,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
 					isPlayable=1;
 				};
-				id=327;
+				id=125;
 				type="Cav_B_B_Ifv_Driver_F";
 			};
 			class Item2
@@ -269,7 +269,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.50341797,0.0014390945,-1.621582};
+					position[]={-0.32531738,0.0014390945,-1.3808594};
 				};
 				side="West";
 				flags=5;
@@ -279,14 +279,14 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
 					isPlayable=1;
 				};
-				id=328;
+				id=126;
 				type="Cav_B_B_Ifv_Gunner_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=325;
+		id=123;
 	};
 	class Item3
 	{
@@ -300,7 +300,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.0092773438,0.0014390945,-2.6992188};
+					position[]={0.18737793,0.0014390945,-2.4584961};
 				};
 				side="West";
 				flags=7;
@@ -310,7 +310,7 @@ class items
 					init="call{this setgroupID[""BANCHEE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
 					isPlayable=1;
 				};
-				id=330;
+				id=128;
 				type="Cav_B_B_Ifv_Commander_B_4_F";
 				class CustomAttributes
 				{
@@ -360,7 +360,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.50878906,0.0014390945,-3.6992188};
+					position[]={0.68688965,0.0014390945,-3.4584961};
 				};
 				side="West";
 				flags=5;
@@ -370,7 +370,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
 					isPlayable=1;
 				};
-				id=331;
+				id=129;
 				type="Cav_B_B_Ifv_Driver_F";
 			};
 			class Item2
@@ -378,7 +378,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.49121094,0.0014390945,-3.6992188};
+					position[]={-0.31311035,0.0014390945,-3.4584961};
 				};
 				side="West";
 				flags=5;
@@ -388,13 +388,53 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
 					isPlayable=1;
 				};
-				id=332;
+				id=130;
 				type="Cav_B_B_Ifv_Gunner_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=329;
+		id=127;
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.866394,0.89242268,-0.43261719};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""Banchee"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			description="Starter Crate";
+		};
+		id=131;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 };
