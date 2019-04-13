@@ -1,6 +1,9 @@
 language: python
 python:
 - '3.5'
+before_install:
+- sudo apt-get update
+- sudo apt-get install zip
 before_script:
 - if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}"
   == "false" ]; then pip install pygithub; pip install pygithub3; fi
