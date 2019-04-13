@@ -1,8 +1,8 @@
 version=53;
-center[]={5607.9648,5,6882.8125};
+center[]={7082.021,5,6057.1196};
 class items
 {
-	items=1;
+	items=2;
 	class Item0
 	{
 		dataType="Group";
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0,0.0014390945,1.2504883};
+					position[]={0.0014648438,0.0014390945,0.96337891};
 				};
 				side="West";
 				flags=7;
@@ -25,7 +25,7 @@ class items
 					init="call{this setgroupID[""APOLLO-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""APOLLO-1""];}";
 					isPlayable=1;
 				};
-				id=235;
+				id=106;
 				type="Cav_B_C_Weap_SquadLeader_Havoc_1_F";
 				class CustomAttributes
 				{
@@ -75,7 +75,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.5004883,0.0014390945,0.25};
+					position[]={1.5019531,0.0014390945,-0.037109375};
 				};
 				side="West";
 				flags=5;
@@ -86,7 +86,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
 					isPlayable=1;
 				};
-				id=236;
+				id=107;
 				type="Cav_B_C_Weap_Alpha_FireTeamLeader_F";
 			};
 			class Item2
@@ -94,7 +94,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.50048828,0.0014390945,0.25};
+					position[]={0.50195313,0.0014390945,-0.037109375};
 				};
 				side="West";
 				flags=5;
@@ -104,7 +104,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
 					isPlayable=1;
 				};
-				id=237;
+				id=108;
 				type="Cav_B_C_Weap_Alpha_AutomaticRifleman_F";
 			};
 			class Item3
@@ -112,7 +112,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.49951172,0.0014390945,0.25};
+					position[]={-0.49804688,0.0014390945,-0.037109375};
 				};
 				side="West";
 				flags=5;
@@ -122,7 +122,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
 					isPlayable=1;
 				};
-				id=238;
+				id=109;
 				type="Cav_B_C_Weap_Alpha_Grenadier_F";
 			};
 			class Item4
@@ -130,7 +130,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.4995117,0.0014390945,0.25};
+					position[]={-1.4980469,0.0014390945,-0.037109375};
 				};
 				side="West";
 				flags=5;
@@ -140,7 +140,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
 					isPlayable=1;
 				};
-				id=239;
+				id=110;
 				type="Cav_B_C_Weap_Alpha_Rifleman_F";
 			};
 			class Item5
@@ -148,7 +148,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.5004883,0.0014390945,-0.75};
+					position[]={1.5019531,0.0014390945,-1.0371094};
 				};
 				side="West";
 				flags=5;
@@ -159,7 +159,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
 					isPlayable=1;
 				};
-				id=240;
+				id=111;
 				type="Cav_B_C_Weap_Bravo_FireTeamLeader_F";
 			};
 			class Item6
@@ -167,7 +167,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.50048828,0.0014390945,-0.75};
+					position[]={0.50195313,0.0014390945,-1.0371094};
 				};
 				side="West";
 				flags=5;
@@ -177,7 +177,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
 					isPlayable=1;
 				};
-				id=241;
+				id=112;
 				type="Cav_B_C_Weap_Bravo_AutomaticRifleman_F";
 			};
 			class Item7
@@ -185,7 +185,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.49951172,0.0014390945,-0.75};
+					position[]={-0.49804688,0.0014390945,-1.0371094};
 				};
 				side="West";
 				flags=5;
@@ -195,7 +195,7 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
 					isPlayable=1;
 				};
-				id=242;
+				id=113;
 				type="Cav_B_C_Weap_Bravo_Grenadier_F";
 			};
 			class Item8
@@ -203,7 +203,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.4995117,0.0014390945,-0.75};
+					position[]={-1.4980469,0.0014390945,-1.0371094};
 				};
 				side="West";
 				flags=5;
@@ -213,13 +213,53 @@ class items
 					init="call{this setVariable [""cScripts_Player_Unit"", ""HAVOC-1""];}";
 					isPlayable=1;
 				};
-				id=243;
+				id=114;
 				type="Cav_B_C_Weap_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
 		{
 		};
-		id=234;
+		id=105;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.019042969,0.89242268,2.8681641};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""Havoc"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			description="Starter Crate";
+		};
+		id=115;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
 	};
 };
