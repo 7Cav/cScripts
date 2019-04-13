@@ -125,7 +125,7 @@ class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
 
     preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 };
-class Cav_Alpha_Helo_CHIEF240 : Cav_B_Alpha_base_F {
+class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
     headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     backpack[] = {"B_Carryall_cbr"};
     vest[] = {"rhsusf_mbav_mg"};

@@ -53,7 +53,7 @@ class B_Helipilot_F : CAV_Alpha_Helo_PILOT {};
 class rhsusf_army_ocp_helipilot : CAV_Alpha_Helo_COPILOT {};
 class B_T_Helicrew_F : CAV_Alpha_Helo_CHIEF {};
 class B_Helicrew_F : CAV_Alpha_Helo_GNR {};
-class rhsusf_army_ocp_helicrew : CAV_Alpha_Helo_CHIEF240 {};
+class rhsusf_army_ocp_helicrew : Cav_B_A_Helicopter_Tra_CrewChiefM240_Local {};
 
 class B_T_Helipilot_F : CAV_Alpha_Helo_PILOT_ATT {};
 
