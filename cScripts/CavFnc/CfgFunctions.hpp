@@ -140,6 +140,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\helpers";
         class exportBoxToArsenal {};
         class exportLoadoutsToArsenal {};
+        class getAllPlayerVariables {};
     };
 
     class debug {
