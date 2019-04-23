@@ -1,0 +1,298 @@
+version=53;
+center[]={7457.0264,5,7416.0059};
+class items
+{
+	items=4;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.0556641,0.0014390945,0.062011719};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""INFIDEL-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""INFIDEL-1""];}";
+					isPlayable=1;
+				};
+				id=859;
+				type="Cav_B_A_JFO_Infidel_1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male01ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.02;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=858;
+	};
+	class Item1
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.99169922,0.0014390945,0.038085938};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""INFIDEL-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""INFIDEL-2""];}";
+					isPlayable=1;
+				};
+				id=861;
+				type="Cav_B_A_JFO_Infidel_2_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male12ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=860;
+	};
+	class Item2
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.0415039,0.0014390945,0.0390625};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""PEGASUS-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""PEGASUS-1""];}";
+					isPlayable=1;
+				};
+				id=863;
+				type="Cav_B_A_AirController_Pegasus_1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=862;
+	};
+	class Item3
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.0043945,0.0014390945,0.060058594};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setgroupID[""PEGASUS-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""PEGASUS-2""];}";
+					isPlayable=1;
+				};
+				id=865;
+				type="Cav_B_A_AirController_Pegasus_2_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male11ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.97000003;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=864;
+	};
+};
