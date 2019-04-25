@@ -28,7 +28,17 @@ if !(isNil {_player getVariable QEGVAR(Cav,Rank)}) exitWith {
     formatText["Applying rank to %1.", _player] call FUNC(logInfo);
 #endif
 
-private _getRank = [_player,'bis'] call FUNC(getPlayerRank);
+// featch clan tag if in multiplayer
+private _playerClan = "";
+if !(isNil {squadParams _player select 0 select 0}) then {
+    _playerClan = squadParams _player select 0 select 0;
+    _playerClan = toUpper(_playerClan);
+};
+
+private _getRank = 'PRIVATE';
+if (_playerClan == "7CAV") then {
+    _getRank = [_player,'bis'] call FUNC(getPlayerRank);
+};
 
 if (_getRank in ['PRIVATE','CORPORAL','SERGEANT','LIEUTENANT','CAPTAIN','MAJOR','COLONEL']) then {
     _player setRank _getRank;
