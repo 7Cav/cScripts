@@ -16,14 +16,13 @@
 cScripts is an easy to use framework for the ARMA3 S3 Operations staff and other mission makers. This framework contains functions and scripts that are easy to use and implement on a new mission. All scripts and functions are adapted to 7th Cavalry mission standards.
 
 ## Minimum Requirements
-- **CBA**                                    - [Link](https://github.com/CBATeam/CBA_A3)
-- **ACE3**                                   - [Link](https://ace3mod.com/)
-- **RHSUSAF**                                - [Link](http://www.rhsmods.org/)
-- **ACRE2**                                  - [Link](https://github.com/IDI-Systems/acre2)
-- **Project OPFOR**                          - [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
-- **cTab**                                   - [Link](https://github.com/Riouken/cTab)
-- **ACE 3 Extension (Placeables)**           - [Link](https://steamcommunity.com/sharedfiles/filedetails/?id=866772689)
-- **Ares Mod Achilles Expansion** (OPTIONAL) - [Link](https://github.com/ArmaAchilles/AresModAchillesExpansion)
+- [**CBA**](https://github.com/CBATeam/CBA_A3)
+- [**ACE3**](https://ace3mod.com/)
+- [**RHSUSAF**](http://www.rhsmods.org/)
+- [**ACRE2**](https://github.com/IDI-Systems/acre2)
+- [**Project OPFOR**](https://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+- [**cTab**](https://github.com/Riouken/cTab) (Requirment removed when on public)
+- [**Ares Mod Achilles Expansion** (OPTIONAL)](https://github.com/ArmaAchilles/AresModAchillesExpansion)
 
 *These are the minimum requirements to run the script framework due to weapons, equipment, and references being used.*
 
