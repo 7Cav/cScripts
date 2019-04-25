@@ -18,7 +18,17 @@ params ["_crate"];
 private _dialogResult = [
     "7th Cavalry Starter Crate",
     [
-        ["Company Crate Type",["None","Alpha","Bravo","Charlie","Heavy Weapons","Ranger","Sniper","Medical","All"],0],
+        ["Company Crate Type",[
+            "None",
+            "Alpha",
+            "Bravo",
+            "Bravo - Mustang",
+            "Charlie",
+            "Charlie - Havoc",
+            "Ranger",
+            "Sniper",
+            "All loadouts"
+        ],0],
         ["ReGear action",["true","false"],0],
         ["Heal action",["true","false"],0],
         ["Insignia Selection",["true","false"],0],
@@ -33,13 +43,13 @@ private _quickSelectScale = switch (_dialogResult select 0) do {
     case 0: {"none";};
     case 1: {"alpha";};
     case 2: {"bravo";};
-    case 3: {"charlie";};
-    case 4: {"heavyweapons";};
-    case 5: {"ranger";};
-    case 6: {"sniper";};
-    case 7: {"medical";};
+    case 3: {"mustang";};
+    case 4: {"charlie";};
+    case 5: {"havoc";};
+    case 6: {"ranger";};
+    case 7: {"sniper";};
 
-    case 8: {"full";};
+    case 8: {"all";};
 };
 
 private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};
