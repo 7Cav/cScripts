@@ -88,6 +88,7 @@ class cScripts {
         class addHeal {};
         class addArsenal {};
         class addAceCategory {};
+        class addLoadoutAction {}; // Public
 
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
