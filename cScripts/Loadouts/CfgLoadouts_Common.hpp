@@ -288,13 +288,13 @@ class Cav_B_Charlie_Weap_base_F : Cav_B_Charlie_base_F {
 
 // Not created yet
 class CAV_Ranger_Base : CommonBlufor {
-    backpack[] = {""};
-    //goggles[] = {"rhs_googles_clear"};
-    headgear[] = {"rhsusf_mich_bare_norotos_alt"};
-    uniform[] = {"rhs_uniform_g3_mc"};
-    vest[] = {"rhsusf_mbav_rifleman"};
+    backpack[] = {"B_AssaultPack_sgg"};
+    goggles[] = {"rhsusf_shemagh_grn"};
+    headgear[] = {"rhsusf_opscore_fg_pelt_nsw"};
+    uniform[] = {"LOP_U_ISTS_Fatigue_21"};
+    vest[] = {"V_PlateCarrier1_rgr"};
 
-    primary[] = {""};
+    primary[] = {"rhs_weap_m4a1_blockII","rhsusf_acc_eotech_552","rhsusf_acc_nt4_black","rhsusf_acc_anpeq15_bk_light"};
     secondary[] = {""};
     launcher[] = {""};
 

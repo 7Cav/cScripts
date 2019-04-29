@@ -22,7 +22,7 @@ class items
 				class Attributes
 				{
 					rank="SERGEANT";
-					init="call{this setgroupID[""BANCHEE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
+					init="call{this setgroupID[""BANSHEE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANSHEE-1""];}";
 					isPlayable=1;
 				};
 				id=116;
@@ -40,7 +40,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANSHEE-1""];}";
 					isPlayable=1;
 				};
 				id=117;
@@ -58,7 +58,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-1""];}";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANSHEE-1""];}";
 					isPlayable=1;
 				};
 				id=118;
@@ -89,7 +89,7 @@ class items
 				class Attributes
 				{
 					rank="SERGEANT";
-					init="call{this setgroupID[""BANCHEE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
+					init="call{this setgroupID[""BANSHEE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANSHEE-2""];}";
 					isPlayable=1;
 				};
 				id=120;
@@ -149,7 +149,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANSHEE-2""];}";
 					isPlayable=1;
 				};
 				id=121;
@@ -167,7 +167,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-2""];}";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANSHEE-2""];}";
 					isPlayable=1;
 				};
 				id=122;
@@ -198,7 +198,7 @@ class items
 				class Attributes
 				{
 					rank="SERGEANT";
-					init="call{this setgroupID[""BANCHEE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
+					init="call{this setgroupID[""BANSHEE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANSHEE-3""];}";
 					isPlayable=1;
 				};
 				id=124;
@@ -258,7 +258,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANSHEE-3""];}";
 					isPlayable=1;
 				};
 				id=125;
@@ -276,7 +276,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-3""];}";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANSHEE-3""];}";
 					isPlayable=1;
 				};
 				id=126;
@@ -307,7 +307,7 @@ class items
 				class Attributes
 				{
 					rank="SERGEANT";
-					init="call{this setgroupID[""BANCHEE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
+					init="call{this setgroupID[""BANSHEE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANSHEE-4""];}";
 					isPlayable=1;
 				};
 				id=128;
@@ -367,7 +367,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANSHEE-4""];}";
 					isPlayable=1;
 				};
 				id=129;
@@ -385,7 +385,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{this setVariable [""cScripts_Player_Unit"", ""BANCHEE-4""];}";
+					init="call{this setVariable [""cScripts_Player_Unit"", ""BANSHEE-4""];}";
 					isPlayable=1;
 				};
 				id=130;
@@ -408,7 +408,7 @@ class items
 		flags=4;
 		class Attributes
 		{
-			init="call{[this,""Banchee"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+			init="call{[this,""BANSHEE"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 			description="Starter Crate";
 		};
 		id=131;
