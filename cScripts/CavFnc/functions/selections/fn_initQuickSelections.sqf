@@ -40,6 +40,7 @@ private _officer = ["OFFICER"];
 private _alpha = ["ALPHA"];
 private _bravo = ["BRAVO", "VIKING", "APOLLO", "MUSTANG"];
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT", 'HAVOC'];
+private _ranger = ["RANGER", "SNIPER"];
 
 // Full selector handler
 private _alwaysAvalible = if (_companySelector == 'FULL' or _companySelector == 'ALL') then {true} else {false};
@@ -180,6 +181,40 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
         [_object,"Rifleman (LAT)", "Cav_B_C_Weap_Alpha_RiflemanLAT_F", "", _charlieHavocCoCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
         [_object,"Combat Life Saver", "Cav_B_C_Weap_Alpha_CombatLifeSaver_F", "", _charlieHavocCoCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     };
+};
+
+//          R A N G E R   C O M P A N Y   L O A D O U T S
+if (_companySelector in _ranger or _alwaysAvalible) then {
+    [_object,"cScriptQuickSelection_Ranger","Ranger",_icon,["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
+    private _charlieCoCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger'];
+
+    // Loadouts Ranger
+    [_object,"cScriptQuickSelection_Ranger_Squad","Ranger",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Ranger"]] call FUNC(addAceCategory);
+    private _rangerSquadCoCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger','cScriptQuickSelection_Ranger_Squad'];
+
+    [_object,"Roughneck-6", "rhsusf_socom_marsoc_elementleader", "", _rangerSquadCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Roughneck-5", "rhsusf_socom_marsoc_teamchief", "", _rangerSquadCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    
+    [_object,"Team Leader", "rhsusf_socom_marsoc_teamleader", "", _rangerSquadCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Automatic Rifleman", "rhsusf_socom_marsoc_cso_mechanic", "", _rangerSquadCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Grenadier", "rhsusf_socom_marsoc_cso_grenadier", "", _rangerSquadCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Rifleman", "rhsusf_socom_marsoc_cso", "", _rangerSquadCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Medic", "rhsusf_socom_marsoc_sarc", "", _rangerSquadCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    
+    // Loadouts Sniper
+    [_object,"cScriptQuickSelection_Ranger_Sniper","Sniper",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Ranger"]] call FUNC(addAceCategory);
+    private _rangerSniperCoCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Ranger','cScriptQuickSelection_Ranger_Sniper'];
+
+    [_object,"Sniper", "B_sniper_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Sniper Arid", "B_ghillie_ard_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Sniper Jungle", "B_T_ghillie_tna_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Sniper Lush", "B_ghillie_lsh_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Sniper Semi-Arid", "B_ghillie_sard_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Spotter", "B_spotter_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Spotter Arid", "B_CTRG_soldier_engineer_exp_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Spotter Jungle", "B_CTRG_soldier_M_medic_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Spotter Lush", "B_Captain_Jay_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"Spotter Semi-Arid", "B_Story_Protagonist_F", "", _rangerSniperCoCat, "Ranger", _allowOnlyForCompany] call FUNC(addQuickSelection);
 };
 
 #ifdef DEBUG_MODE
