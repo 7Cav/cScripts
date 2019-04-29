@@ -8,10 +8,12 @@
  * 1: Safe Mode <BOOL>
  * 2: Put in Earplugs <BOOL>
  * 3: Facewere blacklist <BOOL>
- * 4: Set Squad insignia <BOOL>
+ * 4: Set radio channel <BOOL>
+ * 5: Set Squad insignia <BOOL>
+ * 6: Set Team coloring at start <BOOL>
  *
  * Example:
- * ["bob",true,true,true] call cScripts_fnc_setPostInitPlayerSettings;
+ * ["bob",true,true,true,true,true,true] call cScripts_fnc_setPostInitPlayerSettings;
  */
 
 params [
@@ -20,7 +22,8 @@ params [
     ["_earPlugs", true],
     ["_facewere", true],
     ["_radio",true],
-    ["_squadInsignia",true]
+    ["_squadInsignia",true],
+    ["_squadTeamColor",true]
 ];
 
 #ifdef DEBUG_MODE
@@ -101,30 +104,46 @@ if (EGVAR(Settings,enforceEyewereBlacklist)) then {
 // Add squad insignia
 if (EGVAR(Settings,allowInsigniaApplication)) then {
     if (_squadInsignia) then {
-        if (isNil {_player getVariable QEGVAR(Cav,Insignia)}) then {
-            if ((_player call BIS_fnc_getUnitInsignia) != "") then {
-                _insignia = _player call BIS_fnc_getUnitInsignia;
-                _player setVariable [QEGVAR(Cav,Insignia), _insignia];
-                #ifdef DEBUG_MODE
-                    [format["%1 already have a insignia; %2 saving it.", _player, _insignia]] call FUNC(logInfo);
-                #endif
-            } else {
-                private _insignia = [_player] call FUNC(getSquadInsignia);
-                if (_insignia != "") then {
-                    [_player, _insignia] call BIS_fnc_setUnitInsignia;
-                    _player setVariable [QEGVAR(Cav,Insignia), _insignia];
-                    #ifdef DEBUG_MODE
-                        [format["%1 got assigned insignia; %2 based on squad name.", _player, _insignia]] call FUNC(logInfo);
-                    #endif
-                };
-            };
-        } else {
-            private _insignia = _player getVariable QEGVAR(Cav,Insignia);
-            [_player, _insignia] call BIS_fnc_setUnitInsignia;
+        private _insignia = "";
+        if !(isNil {profileNamespace getVariable QEGVAR(Cav,Insignia)}) then {
+            _insignia = profileNamespace getVariable QEGVAR(Cav,Insignia);
             #ifdef DEBUG_MODE
                 [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
             #endif
+        } else {
+            private _insignia = [_player] call FUNC(getSquadInsignia);
+            #ifdef DEBUG_MODE
+                [format["%1 got assigned insignia; %2 based on squad name if any.", _player, _insignia]] call FUNC(logInfo);
+            #endif
         };
+        [_player, _insignia] call BIS_fnc_setUnitInsignia;
+    };
+};
+
+// Assign team Blue or Red Based on name
+if (_squadTeamColor) then {
+    if (isNil {_player getVariable QEGVAR(Player,Team)}) then {
+        private _getTeamName = getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
+        _getTeamName = _getTeamName splitString " ";
+        _getTeamName = _getTeamName select 0;
+        
+        switch (_getTeamName) do {
+            case "Alpha": {
+                [_player, "RED"] call ace_interaction_fnc_joinTeam;
+                (_player) setVariable [QEGVAR(Player,Team), 'RED'];
+            };
+            case "Bravo": {
+                [_player, "BLUE"] call ace_interaction_fnc_joinTeam;
+                (_player) setVariable [QEGVAR(Player,Team), 'BLUE'];
+            };
+            default {
+                _getTeamName = 'WHITE';
+                (_player) setVariable [QEGVAR(Player,Team), 'WHITE'];
+            };
+        };
+        #ifdef DEBUG_MODE
+            [formatText["%1 was assigned as team %2 in postLoadout.", _player, _getTeamName]] call FUNC(logInfo);
+        #endif
     };
 };
 

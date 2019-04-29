@@ -31,6 +31,7 @@ _getType = toUpper(_getType);
 // Cav ranks
 if (_getType == 'CAV') then {
     switch (_getType == 'CAV') do {
+        case (_profileName in ['RES']): {_return = 'Reservist'};
         case (_profileName in ['RET']): {_return = 'Retire'};
         case (_profileName in ['RCT']): {_return = 'Recruit'};
         case (_profileName in ['PVT']): {_return = 'Private'};
@@ -66,6 +67,7 @@ if (_getType == 'CAV') then {
 //Cav Formal Ranks
 if (_getType == 'FORMAL') then {
     switch (_getType == 'FORMAL') do {
+        case (_profileName in ['RES']): {_return = 'Reservist'};
         case (_profileName in ['RET']): {_return = 'old man'};
         case (_profileName in ['RCT']): {_return = 'Recruit'};
         case (_profileName in ['PVT', 'PFC']): {_return = 'Private'};
@@ -83,7 +85,7 @@ if (_getType == 'FORMAL') then {
 // Arma rank translations
 if (_getType == 'BIS') then {
     switch (_getType == 'BIS') do {
-        case (_profileName in ['RCT','PVT','PFC']): {_return = 'PRIVATE'};
+        case (_profileName in ['RES','RCT','PVT','PFC']): {_return = 'PRIVATE'};
         case (_profileName in ['RET','SPC','CPL','WO1']): {_return = 'CORPORAL'};
         case (_profileName in ['SGT','SSG','SFC','MSG','1SG','SGM','CSM','CW2','CW3','CW4','CW5']): {_return = 'SERGEANT'};
         case (_profileName in ['2LT','1LT']): {_return = 'LIEUTENANT'};
