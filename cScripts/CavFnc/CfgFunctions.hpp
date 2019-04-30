@@ -15,7 +15,7 @@ class cScripts {
 
         class initCuratorObjectPlaced {};
     };
-    class DiaryRecord {
+    class documents {
         file = "cScripts\cavFnc\functions\documents";
         class Doc_Info {};
         class Doc_MissionControl {};
