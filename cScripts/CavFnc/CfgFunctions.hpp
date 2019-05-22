@@ -109,10 +109,8 @@ class cScripts {
         class sim_jump {};
     };
 
-    class misc {
+    class texture {
         file = "cScripts\cavFnc\functions\texture";
-        class flag {};
-
         class setVehicleLable {};
         class createVehicleLable {};
         class getVehicleLable {};

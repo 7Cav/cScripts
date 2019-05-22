@@ -1,3 +1,4 @@
+#include "cScripts\script_component.hpp"
 /*
  * Author: CPL.Brostrom.A
  * This is the mission init.sqf this is run witout exceptions on mission start.
@@ -5,11 +6,11 @@
  * Read more about Initzialisation order here: https://community.bistudio.com/wiki/Initialization_Order
  */
 
-#include "cScripts\script_component.hpp"
-
 #ifdef DEBUG_MODE
     ["init Initializing."] call FUNC(logInfo);
     [formatText["cScripts Version %1 is running.",VERSION]] call FUNC(logInfo);
+    [formatText["Debug mode is currently active."]] call FUNC(logWarning);
+    logEntities;
 #endif
 
 enableSaving [false, false];
@@ -18,12 +19,7 @@ tawvd_disablenone = true;
 ACE_maxWeightCarry = 7500;
 ACE_maxWeightDrag = 10000;
 
-// Check if the mission is running on multiplayer.
-if (!isMultiplayer) then {
-    ["Mission is running on singelplayer enviroment."] call FUNC(logWarning);
-};
-
-// Applying AI difficultlies
+// Applying AI difficultlies if on multiplayer
 if (isMultiplayer) then {
     switch (cScripts_Settings_setAiSystemDifficulty) do {
         // Day
@@ -58,16 +54,7 @@ if (isMultiplayer) then {
         };
     };
 } else {
-    ["Mission is running on singelplayer enviroment AI setting is not applied."] call FUNC(logWarning);
-};
-
-// Enable debug mode if on multiplayer.
-if (isMultiplayer) then {
-    #ifdef DEBUG_MODE
-        ["Debug mode is currently active."] call FUNC(logWarning);
-        titleText ["Warning! cScripts debug mode is active.", "PLAIN DOWN", 3];
-        logEntities;
-    #endif
+    ["Mission is running on singelplayer enviroment. Some systems may differ of have been turned off."] call FUNC(logWarning);
 };
 
 #ifdef DEBUG_MODE
