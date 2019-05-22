@@ -52,6 +52,57 @@ class Cav_B_B_PlatoonSergeant_F : Cav_B_Bravo_base_F {
     gps[] = {"ItemcTab"};
     preLoadout = "[(_this select 0), 'bravo', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
+class Cav_B_Bravo_Scout_PSG_F : Cav_B_Bravo_Scout_base_F {
+
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",4,
+        "SmokeShellBlue",1,
+        "SmokeShellGreen",1,
+        "SmokeShellRed",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+        "ACE_personalAidKit",
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_MX2A",
+        "ItemcTab",
+        "ACE_HuntIR_monitor",
+        
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemAndroid"};
+    preLoadout = "[(_this select 0), 'bravo', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
+};
 class Cav_B_B_PlatoonLeader_F : Cav_B_Bravo_base_F {
 
     //goggles[] = {"rhsusf_shemagh_gogg_tan"};
@@ -101,6 +152,57 @@ class Cav_B_B_PlatoonLeader_F : Cav_B_Bravo_base_F {
     };
 
     gps[] = {"ItemcTab"};
+    preLoadout = "[(_this select 0), 'bravo', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
+};
+class Cav_B_Bravo_Scout_PL_F : Cav_B_Bravo_Scout_base_F {
+
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",4,
+        "SmokeShellBlue",1,
+        "SmokeShellGreen",1,
+        "SmokeShellRed",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+        "ACE_personalAidKit",
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_MX2A",
+        "ItemcTab",
+        "ACE_HuntIR_monitor",
+        
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemAndroid"};
     preLoadout = "[(_this select 0), 'bravo', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
@@ -466,7 +568,154 @@ class Cav_B_B_Ifv_Gunner_F : Cav_B_Bravo_Crew_base_F {
     preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
+//Scout Crew
+class Cav_B_Bravo_Scout_VC_F : Cav_B_Bravo_Scout_base_F {
 
+    headgear[] = {"rhsusf_cvc_green_helmet"};
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    vest[] = {"rhsusf_spcs_ocp_crewman"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
+    binoculars[] = {"ACE_Vector"};
+
+    primary[] = {"rhs_weap_mk18_m320","rhsusf_acc_anpeq15side","rhsusf_acc_acog_rmr"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",2,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m714_White",
+        "rhs_mag_m713_Red",
+        "rhs_mag_m715_Green",
+        "rhs_mag_m662_red",
+        "rhs_mag_m661_green",
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",2,
+        "SmokeShellBlue",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",4,
+
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_MapTools",
+        "ACE_CableTie",
+        "ToolKit",
+
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
+
+        // Electronics
+        "ACE_microDAGR",
+        "ItemcTab",
+        "ACE_MX2A"
+    };
+
+    gps[] = {"ItemAndroid"};
+    preLoadout = "[(_this select 0), 'bravo', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
+};
+class Cav_B_Bravo_Scout_Driver_F : Cav_B_Bravo_Scout_base_F {
+
+    headgear[] = {"rhsusf_cvc_green_helmet"};
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    vest[] = {"rhsusf_spcs_ocp_crewman"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
+
+    primary[] = {"rhs_weap_mk18","rhsusf_acc_anpeq15side","rhsusf_acc_compm4"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",2,
+        "SmokeShellBlue",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+
+        // Medical Equipment
+        "ACE_personalAidKit",
+        "ACE_quikclot",20,
+        "ACE_tourniquet",6,
+        "ACE_morphine",6,
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
+
+        // Electronics
+        "ACE_microDAGR"
+    };
+
+    insignia[] = {"Cav_Insignia_Specialized_CLS"};
+    gps[] = {"ItemAndroid"};
+
+};
+class Cav_B_Bravo_Scout_Gunner_F : Cav_B_Bravo_Scout_base_F {
+
+    headgear[] = {"rhsusf_cvc_green_helmet"};
+    //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    vest[] = {"rhsusf_spcs_ocp_crewman"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
+
+    primary[] = {"rhs_weap_mk18","rhsusf_acc_anpeq15side","rhsusf_acc_compm4"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",4,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",2,
+        "SmokeShellBlue",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC152",
+
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_Canteen",
+        "ACE_MapTools",
+        "ACE_CableTie",
+        "ToolKit",
+        
+        // Clothing
+        "rhsusf_shemagh_gogg_tan", 
+
+        // Electronics
+        "ACE_microDAGR"
+    };
+
+    gps[] = {"ItemAndroid"};
+    preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
+};
 // S Q U A D
 class Cav_B_B_SquadLeader_F : Cav_B_Bravo_base_F {
 
@@ -512,6 +761,9 @@ class Cav_B_B_SquadLeader_F : Cav_B_Bravo_base_F {
     };
 
     gps[] = {"ItemAndroid"};
+};
+
+class Cav_B_Bravo_Scout_Infantry_F : Cav_B_Bravo_Scout_base_F {
 };
 
 class Cav_B_B_Alpha_FireTeamLeader_F : Cav_B_Bravo_base_F {
@@ -704,6 +956,7 @@ class Cav_B_B_Alpha_CombatLifeSaver_F : Cav_B_Bravo_base_F {
 
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
 };
+
 
 class Cav_B_B_Bravo_FireTeamLeader_F : Cav_B_B_Alpha_FireTeamLeader_F {
 };
