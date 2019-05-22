@@ -22,29 +22,29 @@
 [   "cScripts_tagging_cav_black",
     "Cav Black",
     "ACE_SpraypaintBlack",
-    ["cScripts\Data\Tagging\tag_cav_black_ca.paa"],
-    "cScripts\Data\Tagging\icon_action_black_ca.paa"
+    ["z\cav\addons\textures\data\tagging\tag_cav_black_ca.paa"],
+    "z\cav\addons\textures\data\tagging\icon_action_black_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
 
 [   "cScripts_tagging_cav_blue",
     "Cav Blue",
     "ACE_SpraypaintBlue",
-    ["cScripts\Data\Tagging\tag_cav_blue_ca.paa"],
-    "cScripts\Data\Tagging\icon_action_blue_ca.paa"
+    ["z\cav\addons\textures\data\tagging\tag_cav_blue_ca.paa"],
+    "z\cav\addons\textures\data\tagging\icon_action_blue_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
 
 [   "cScripts_tagging_cav_green",
     "Cav Green",
     "ACE_SpraypaintGreen",
-    ["cScripts\Data\Tagging\tag_cav_green_ca.paa"],
-    "cScripts\Data\Tagging\icon_action_green_ca.paa"
+    ["z\cav\addons\textures\data\tagging\tag_cav_green_ca.paa"],
+    "z\cav\addons\textures\data\tagging\icon_action_green_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
 
 [   "cScripts_tagging_cav_red",
     "Cav Red",
     "ACE_SpraypaintRed",
-    ["cScripts\Data\Tagging\tag_cav_red_ca.paa"],
-    "cScripts\Data\Tagging\icon_action_red_ca.paa"
+    ["z\cav\addons\textures\data\tagging\tag_cav_red_ca.paa"],
+    "z\cav\addons\textures\data\tagging\icon_action_red_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
 
 #ifdef DEBUG_MODE
