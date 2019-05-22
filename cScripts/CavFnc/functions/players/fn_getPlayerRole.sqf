@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function fetches your rank based on your name prefix.
+ * This function fetches your rank based on your name description prefix or unit config display text.
  *
  * Arguments:
  * None
@@ -23,7 +23,7 @@ private _playerRole = roleDescription player;
 if !(_playerRole == "") then {
     _playerRole = _playerRole splitString "@";
     _playerRole = _playerRole select 0;
-
+    _return = _playerRole;
 } else {
     _playerRole = getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
     _playerRole = _playerRole splitString " ";
