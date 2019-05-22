@@ -111,8 +111,6 @@ class cScripts {
 
     class texture {
         file = "cScripts\cavFnc\functions\texture";
-        class flag {};
-
         class setVehicleLable {};
         class createVehicleLable {};
         class getVehicleLable {};
