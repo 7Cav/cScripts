@@ -1,11 +1,13 @@
 ---
 name: Bug report
 about: Create a report to help us improve
+title: ''
+labels: bug
+assignees: ''
 
 ---
 
-**cScripts Version:** `x.xx` (stable / rc / dev)
-
+**cScripts Version:** `x.x.x` (stable / rc / dev)
 
 **Description:**
 - Add a detailed description of the error. This makes it easier for us to fix the issue.
