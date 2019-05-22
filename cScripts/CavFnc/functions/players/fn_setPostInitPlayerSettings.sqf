@@ -123,30 +123,11 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
 // Assign team Blue or Red Based on name
 if (_squadTeamColor) then {
     if (isNil {_player getVariable QEGVAR(Player,Team)}) then {
-        private _getTeamName = getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
-        _getTeamName = _getTeamName splitString " ";
-        _getTeamName = _getTeamName select 0;
-        
-        switch (_getTeamName) do {
-            case "Alpha": {
-                [_player, "RED"] call ace_interaction_fnc_joinTeam;
-                (_player) setVariable [QEGVAR(Player,Team), 'RED'];
-            };
-            case "Bravo": {
-                [_player, "BLUE"] call ace_interaction_fnc_joinTeam;
-                (_player) setVariable [QEGVAR(Player,Team), 'BLUE'];
-            };
-            default {
-                _getTeamName = 'WHITE';
-                (_player) setVariable [QEGVAR(Player,Team), 'WHITE'];
-            };
-        };
-        #ifdef DEBUG_MODE
-            [formatText["%1 was assigned as team %2 in postLoadout.", _player, _getTeamName]] call FUNC(logInfo);
-        #endif
+        call FUNC(setTeamColor);
     };
 };
 
+// Set radio channel
 if (EGVAR(Settings,setRadio)) then {
     if (_radio) then {
         [_player] call FUNC(setRadioChannel);
@@ -154,6 +135,11 @@ if (EGVAR(Settings,setRadio)) then {
             [format["%1 have got there radio channel schedueld to be changed in postLoadout.", _player]] call FUNC(logInfo);
         #endif
     };
+};
+
+// Handle player announcement
+if (EGVAR(Settings,setMissionType) != 3) then {
+    [_player] call FUNC(doPlayerAnnouncement);
 };
 
 #ifdef DEBUG_MODE
