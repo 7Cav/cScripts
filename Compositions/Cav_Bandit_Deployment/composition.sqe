@@ -360,7 +360,7 @@ class items
 					isPlayable=1;
 				};
 				id=11;
-				type="Cav_B_C_Alpha_Rifleman_F";
+				type="Cav_B_C_Alpha_RiflemanLAT_F";
 			};
 			class Item5
 			{
@@ -433,7 +433,7 @@ class items
 					isPlayable=1;
 				};
 				id=15;
-				type="Cav_B_C_Bravo_CombatLifeSaver_F";
+				type="Cav_B_C_Bravo_RiflemanLAT_F";
 			};
 		};
 		class Attributes
@@ -579,7 +579,7 @@ class items
 					isPlayable=1;
 				};
 				id=21;
-				type="Cav_B_C_Alpha_Rifleman_F";
+				type="Cav_B_C_Alpha_RiflemanLAT_F";
 			};
 			class Item5
 			{
@@ -652,7 +652,7 @@ class items
 					isPlayable=1;
 				};
 				id=25;
-				type="Cav_B_C_Bravo_CombatLifeSaver_F";
+				type="Cav_B_C_Bravo_RiflemanLAT_F";
 			};
 		};
 		class Attributes
@@ -798,7 +798,7 @@ class items
 					isPlayable=1;
 				};
 				id=31;
-				type="Cav_B_C_Alpha_Rifleman_F";
+				type="Cav_B_C_Alpha_RiflemanLAT_F";
 			};
 			class Item5
 			{
@@ -871,7 +871,7 @@ class items
 					isPlayable=1;
 				};
 				id=35;
-				type="Cav_B_C_Bravo_CombatLifeSaver_F";
+				type="Cav_B_C_Bravo_RiflemanLAT_F";
 			};
 		};
 		class Attributes
@@ -1017,7 +1017,7 @@ class items
 					isPlayable=1;
 				};
 				id=41;
-				type="Cav_B_C_Alpha_Rifleman_F";
+				type="Cav_B_C_Alpha_RiflemanLAT_F";
 			};
 			class Item5
 			{
@@ -1090,7 +1090,7 @@ class items
 					isPlayable=1;
 				};
 				id=45;
-				type="Cav_B_C_Bravo_CombatLifeSaver_F";
+				type="Cav_B_C_Bravo_RiflemanLAT_F";
 			};
 		};
 		class Attributes
