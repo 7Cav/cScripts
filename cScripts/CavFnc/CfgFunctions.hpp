@@ -126,7 +126,6 @@ class cScripts {
         class moduleApplyVehicleLable {};
         class moduleApplyVehicleInventory {};
 
-        class moduleApplyFlag {};
         class moduleMakeDoctor {};
         class moduleMakeEngineer {};
 
