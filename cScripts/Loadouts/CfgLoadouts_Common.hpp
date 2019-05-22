@@ -131,6 +131,50 @@ class Cav_B_Bravo_base_F : CommonBlufor {
     preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
+class Cav_B_Bravo_Scout_base_F : CommonBlufor {
+    backpack[] = {"B_AssaultPack_mcamo"};
+    //goggles[] = {"rhs_googles_clear"};
+    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    uniform[] = {"rhs_uniform_g3_mc"};
+    vest[] = {"rhsusf_spcs_ocp_squadleader"};
+
+    primary[] = {"rhs_weap_m4a1","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR","rhsusf_acc_tdstubby_blk"};
+    secondary[] = {""};
+    launcher[] = {""};
+
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {""};
+    items[] = {
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",2,
+
+        // Standard
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+
+        // Electronics
+        "ACE_microDAGR",
+        "ItemcTab",
+        "ACE_MX2A",
+
+        // Tools
+        "ACE_Canteen",
+        "ACE_EntrenchingTool"
+    };
+
+    compass[] = {"ItemCompass"};
+    gps[] = {"ItemAndroid"};
+    map[] = {"ItemMap"};
+    nvgs[] = {"rhsusf_ANPVS_15"};
+    watch[] = {"ItemWatch"};
+
+    insignia[] = {""};
+    preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+};
 class Cav_B_Bravo_Crew_base_F : Cav_B_Bravo_base_F {
     backpack[] = {"B_Carryall_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
