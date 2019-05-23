@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * Retun true or false if your a cav trooper and belong to the given company.
+ * Retun true or false if a player have the given company.
  *
  * Arguments:
  * 0: player <STRING>
@@ -23,7 +23,7 @@ params [
 private _return = false;
 if (_hasVariable == "") exitWith {_return};
 
-if (_player getVariable QEGVAR(Cav,Trooper)) then {
+if !(isNil {_player getVariable QEGVAR(Cav,Company)}) then {
     if ([_player] call FUNC(getCompanyVariable) == _hasVariable) then {
         _return = true;
     };
