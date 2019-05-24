@@ -111,7 +111,7 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
                 [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
             #endif
         } else {
-            private _insignia = [_player] call FUNC(getSquadInsignia);
+            _insignia = [_player] call FUNC(getSquadInsignia);
             #ifdef DEBUG_MODE
                 [format["%1 got assigned insignia; %2 based on squad name if any.", _player, _insignia]] call FUNC(logInfo);
             #endif
