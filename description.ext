@@ -51,6 +51,7 @@
         #include "cScripts\CavFnc\CfgFunctions.hpp"
         #include "cScripts\Loadouts\script\CfgFunctions.hpp"
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
+        #include "Fortify\CfgFunctions.hpp"
     };
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     #include "cScripts\ViewingDistance\GUI.h"
