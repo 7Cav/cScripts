@@ -383,9 +383,9 @@ class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
 };
 class Cav_B_A_Helicopter_Tra_DoorGunner_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
-    headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
-    goggles[] = {"rhsusf_shemagh_tan"};
-    nvgs[] = {"NVGogglesB_blk_F"};
+    //headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
+    //goggles[] = {"rhsusf_shemagh_tan"};
+    //nvgs[] = {"NVGogglesB_blk_F"};
     vest[] = {"rhsusf_mbav_light"};
     binoculars[] = {"Binocular"};
  
