@@ -8,26 +8,26 @@ class Cav_B_A_AirController_F : Cav_B_Alpha_base_F {
     preLoadout = "[(_this select 0), 'officer'] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class Cav_B_A_JFO_F : Cav_B_Alpha_base_F {
-    backpack[] = {"B_Carryall_mcamo"};
-    headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    backpack[] = {"B_TacticalPack_oli"};
+    headgear[] = {"rhsusf_opscore_ut_pelt_nsw_cam"};
     nvgs[] = {""};
-    vest[] = {"rhsusf_spcs_ocp_squadleader"};
+    vest[] = {"rhsusf_iotv_ocp_Grenadier"};
     binoculars[] = {"Laserdesignator"};
  
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
  
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",4,
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",6,
  
         "rhs_mag_m67",2,
  
         "B_IR_Grenade",2,
         "SmokeShell",2,
-        "SmokeShellGreen",1,
-        "SmokeShellOrange",1,
+        "SmokeShellGreen",2,
+        "SmokeShellOrange",2,
         "SmokeShellRed",2,
-        "SmokeShellYellow",1,
+        "SmokeShellYellow",2,
+        "ACE_HandFlare_Red",2,
  
         "rhs_mag_M441_HE",4,
         "rhs_mag_m713_Red",2,
@@ -39,7 +39,7 @@ class Cav_B_A_JFO_F : Cav_B_Alpha_base_F {
     items[] = {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC152",
+        "ACRE_PRC117F",
  
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -134,9 +134,9 @@ class Cav_B_A_Officer_F  : Cav_B_Alpha_base_F {
  
 class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
-    headgear[] = {"rhsusf_hgu56p_visor_green"};
+    //headgear[] = {"rhsusf_hgu56p_visor_green"};
     goggles[] = {"rhsusf_shemagh_tan"};
-    nvgs[] = {"NVGogglesB_grn_F"};
+    //nvgs[] = {"NVGogglesB_grn_F"};
     vest[] = {"rhsusf_mbav_light"};
     binoculars[] = {"Binocular"};
  
@@ -185,8 +185,11 @@ class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
         // Snacks
         "ACE_Banana",
          
-        // Hats
-        "H_Cap_tan"
+        // Main Equipment
+        "H_Cap_tan",
+        "rhsusf_shemagh_tan",
+        "NVGogglesB_grn_F",
+        "rhsusf_hgu56p_visor_green"
     };
  
     gps[] = {"ItemcTab"};
@@ -194,9 +197,9 @@ class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
 };
 class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
-    headgear[] = {"rhsusf_hgu56p_visor_green"};
-    goggles[] = {"rhsusf_shemagh_tan"};
-    nvgs[] = {"NVGogglesB_grn_F"};
+    //headgear[] = {"rhsusf_hgu56p_visor_green"};
+    //goggles[] = {"rhsusf_shemagh_tan"};
+    //nvgs[] = {"NVGogglesB_grn_F"};
     vest[] = {"rhsusf_mbav_light"};
     binoculars[] = {"Binocular"};
  
@@ -247,16 +250,19 @@ class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_Alpha_base_F {
         "ACE_Banana",
          
         // Hats
-        "H_Cap_tan"
+        "H_Cap_tan",
+        "rhsusf_shemagh_tan",
+        "NVGogglesB_grn_F",
+        "rhsusf_hgu56p_visor_green"
     };
  
     gps[] = {"ItemAndroid"};
 };
 class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Carryall_cbr"};
-    headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
-    goggles[] = {"rhsusf_shemagh_tan"};
-    nvgs[] = {"NVGogglesB_blk_F"};
+    //headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
+    //goggles[] = {"rhsusf_shemagh_tan"};
+    //nvgs[] = {"NVGogglesB_blk_F"};
     vest[] = {"rhsusf_mbav_mg"};
     binoculars[] = {"Binocular"};
  
@@ -308,13 +314,16 @@ class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
         "ACE_Banana",
          
         // Hats
-        "H_Booniehat_mcamo"
+        "H_Booniehat_mcamo",
+        "rhsusf_shemagh_tan",
+        "NVGogglesB_grn_F",
+        "rhsusf_hgu56p_visor_mask_Empire_black"
     };
  
     gps[] = {"ItemAndroid"};
 };
 class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
-    headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
+    //headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     backpack[] = {"B_Carryall_cbr"};
     vest[] = {"rhsusf_mbav_mg"};
  
@@ -363,9 +372,11 @@ class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
          
         // Misc
         "H_Booniehat_mcamo",
-        "rhsusf_shemagh_tan"
+        "rhsusf_shemagh_tan",
+        "NVGogglesB_grn_F",
+        "rhsusf_hgu56p_visor_mask_Empire_black"
     };
-    nvgs[] = {"NVGogglesB_grn_F"};
+    //nvgs[] = {"NVGogglesB_grn_F"};
     gps[] = {"ItemAndroid"};
  
     preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
@@ -425,7 +436,10 @@ class Cav_B_A_Helicopter_Tra_DoorGunner_F : Cav_B_Alpha_base_F {
         "ACE_Banana",
          
         // Hats
-        "H_Cap_tan"
+        "H_Cap_tan",
+        "rhsusf_shemagh_tan",
+        "NVGogglesB_grn_F",
+        "rhsusf_hgu56p_visor_mask_Empire_black"
     };
  
     gps[] = {"ItemAndroid"};
