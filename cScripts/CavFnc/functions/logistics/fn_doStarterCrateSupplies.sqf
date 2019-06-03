@@ -57,7 +57,7 @@ if (_companySelector == "alpha") then {
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
     _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
-    _crate addMagazineCargoGlobal ["rhs_100Rnd_762x51_m62_tracer",250];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",30];
 
     //================== GRENADES ==================\\
@@ -147,7 +147,7 @@ if (_companySelector == "bravo") then {
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
     _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
-    _crate addMagazineCargoGlobal ["rhs_100Rnd_762x51_m62_tracer",250];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
     _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
@@ -254,7 +254,7 @@ if (_companySelector == "charlie") then {
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
     _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
-    _crate addMagazineCargoGlobal ["rhs_100Rnd_762x51_m62_tracer",250];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
     _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
@@ -452,6 +452,7 @@ if (_companySelector == "heavyweapons") then {
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
     _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
     _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
     _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",50];
     _crate addMagazineCargoGlobal ["rhs_fim92_mag",50];
