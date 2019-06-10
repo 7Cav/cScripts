@@ -16,5 +16,5 @@ player createDiaryRecord["Chklists",
         "
 <img image='cScripts\Data\Images\CFF.jpg' width='367' height='587'/>
         "
-    ]
+    ], taskNull, "", false
 ];
