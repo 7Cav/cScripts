@@ -163,11 +163,11 @@ switch (_group) do {
     case "MISFIT ONE";
     case "MISFIT-1": {_return = "Cav_Insignia_Charlie_2_1"};
     case "MISFIT TWO";
-    case "MISFIT-2": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT-2": {_return = "Cav_Insignia_Charlie_2_2"};
     case "MISFIT THREE";
     case "MISFIT-3": {_return = "Cav_Insignia_Charlie_2"};
     case "MISFIT FOUR";
-    case "MISFIT-4": {_return = "Cav_Insignia_Charlie_2"};
+    case "MISFIT-4": {_return = "Cav_Insignia_Charlie_2_4"};
     case "MISFIT FIVE";
     case "MISFIT-5": {_return = "Cav_Insignia_Charlie_2"};
     case "MISFIT SIX";
