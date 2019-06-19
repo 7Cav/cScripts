@@ -24,7 +24,7 @@ params [
 ];
 
 // Set upper case
-_companySelector = toUpper("_companySelector");
+_companySelector = toUpper(_companySelector);
 
 // Create categories
 private _officer = ["OFFICER"];
