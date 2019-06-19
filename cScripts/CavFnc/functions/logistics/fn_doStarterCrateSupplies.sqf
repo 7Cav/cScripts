@@ -425,16 +425,16 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
 
     _crate addItemCargoGlobal ["DAR_Beret_Mar",25];
     _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",25];
-	_crate addItemCargoGlobal ["rhsusf_ach_helmet_ocp",25];
-	_crate addItemCargoGlobal ["rhsusf_ach_helmet_ESS_ocp",25];
-	_crate addItemCargoGlobal ["rhsusf_ach_helmet_headset_ocp",25];
-	_crate addItemCargoGlobal ["rhsusf_ach_helmet_headset_ess_ocp",25];
-	_crate addItemCargoGlobal ["rhsusf_ach_helmet_camo_ocp",25];
-	_crate addItemCargoGlobal ["rhsusf_ach_helmet_ocp_norotos",25];
-	_crate addItemCargoGlobal ["rhs_googles_black",25];
-	_crate addItemCargoGlobal ["rhs_googles_clear",25];
-	_crate addItemCargoGlobal ["rhsusf_oakley_goggles_blk",25];
-	_crate addItemCargoGlobal ["rhsusf_oakley_goggles_clr",25];
+    _crate addItemCargoGlobal ["rhsusf_ach_helmet_ocp",25];
+    _crate addItemCargoGlobal ["rhsusf_ach_helmet_ESS_ocp",25];
+    _crate addItemCargoGlobal ["rhsusf_ach_helmet_headset_ocp",25];
+    _crate addItemCargoGlobal ["rhsusf_ach_helmet_headset_ess_ocp",25];
+    _crate addItemCargoGlobal ["rhsusf_ach_helmet_camo_ocp",25];
+    _crate addItemCargoGlobal ["rhsusf_ach_helmet_ocp_norotos",25];
+    _crate addItemCargoGlobal ["rhs_googles_black",25];
+    _crate addItemCargoGlobal ["rhs_googles_clear",25];
+    _crate addItemCargoGlobal ["rhsusf_oakley_goggles_blk",25];
+    _crate addItemCargoGlobal ["rhsusf_oakley_goggles_clr",25];
 
     // TEMP REMOVED DUE TO EXPERIMENT
     // //================== RADIOS ==================\\
