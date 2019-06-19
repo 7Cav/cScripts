@@ -105,8 +105,8 @@ force force ace_interaction_enableTeamManagement = true;
 
 // ACE Logistics
 force force ace_cargo_enable = true;
-force force ace_cargo_loadTimeCoefficient = 2.5;
-force force ace_cargo_paradropTimeCoefficent = 1;
+force force ace_cargo_loadTimeCoefficient = 0.2;
+force force ace_cargo_paradropTimeCoefficent = 0.0;
 force force ace_rearm_level = 1;
 force force ace_rearm_supply = 0;
 force force ace_refuel_hoseLength = 15;
