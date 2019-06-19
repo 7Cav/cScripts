@@ -50,9 +50,9 @@ class CAV_Bravo_GR : Cav_B_B_Alpha_Grenadier_F {};
 class CAV_Bravo_RM : Cav_B_B_Alpha_Rifleman_F {};
 class CAV_Bravo_CLS : Cav_B_B_Alpha_CombatLifeSaver_F {};
 
-class CAV_Bravo_Weapons_TL : Cav_B_C_Weap_Alpha_FireTeamLeader_F {};
-class CAV_Bravo_Weapons_MG : Cav_B_C_Weap_Alpha_AutomaticRifleman_F {};
-class CAV_Bravo_Weapons_GNR : Cav_B_C_Weap_Alpha_Rifleman_F {};
+class CAV_Bravo_Weapons_TL : Cav_B_C_FireTeamLeader_F {};
+class CAV_Bravo_Weapons_MG : Cav_B_C_AutomaticRifleman_F {};
+class CAV_Bravo_Weapons_GNR : Cav_B_C_Rifleman_F {};
 
 class CAV_Medical_OFFCR : Cav_B_B_TeamLeader_Mustang_F {};
 class CAV_Medical_BONESAW : Cav_B_B_Mustang_CombatMedic_F {};
