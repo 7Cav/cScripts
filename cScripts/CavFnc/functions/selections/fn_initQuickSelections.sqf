@@ -37,7 +37,7 @@ private _icon = "cScripts\Data\Icon\icon_01.paa";
 
 // Create categories
 private _officer = ["OFFICER"];
-private _alpha = ["ALPHA"];
+private _alpha = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
 private _bravo = ["BRAVO", "VIKING", "APOLLO", "MUSTANG"];
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT", 'HAVOC'];
 private _ranger = ["RANGER", "SNIPER"];
@@ -46,6 +46,7 @@ private _ranger = ["RANGER", "SNIPER"];
 private _alwaysAvalible = if (_companySelector == 'FULL' or _companySelector == 'ALL') then {true} else {false};
 
 // Loadouts
+
 //          O F F I C E R   L O A D O U T S
 if (_companySelector in _officer or _alwaysAvalible) then {
     [_object,"cScriptQuickSelection_Officer", "Officers", _icon, ["ACE_MainActions","cScriptQuickSelectionMenu"]] call FUNC(addAceCategory);
