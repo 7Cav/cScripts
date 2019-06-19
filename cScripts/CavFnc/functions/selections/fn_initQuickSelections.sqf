@@ -15,7 +15,7 @@
  */
 params [
     ["_object", objNull, [objNull]],
-    ["_companySelectorType", "none"],
+    ["_companySelectorType", "NONE"],
     ["_allowOnlyForCompany", true]
 ];
 
