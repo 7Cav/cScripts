@@ -392,7 +392,7 @@ def main():
     parser.add_argument('-b', '--buildtype',
         required=False,
         choices=['release', 'dev', 'test', 'custom'],
-        default='test' if (not get_script_version_number(version_file,'str') == '-1') else 'dev',
+        default='test',
         help="Add a additional tag to a to the build"
     )
     parser.add_argument("-p", "--public",
