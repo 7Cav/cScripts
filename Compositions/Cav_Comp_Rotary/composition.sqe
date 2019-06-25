@@ -1,0 +1,1948 @@
+version=53;
+center[]={2380.9553,5,6560.7847};
+class items
+{
+	items=22;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-8.9553223,1.2473021,-18.784668};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=46;
+		type="rhsusf_M978A4_BKIT_usarmy_d";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={3.0446777,0.89242268,-4.784668};
+			angles[]={-0,4.7201166,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""alpha"",true,true,true] call cScripts_fnc_doStarterCrate;}";
+			description="Alpha Starter Crate";
+		};
+		id=49;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-6.9553223,1.9401751,1.215332};
+			angles[]={0,4.712389,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=50;
+		type="RHS_MELB_MH6M";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="rhs_MELB_TailNumber";
+				expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="NoChange";
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-44.955322,2.7938638,27.224609};
+			angles[]={-0,4.712389,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this] call cScripts_fnc_addGetOutHelo; [this,""B"",""1""] call cScripts_fnc_setVehicleLable;}";
+			name="b1";
+		};
+		id=51;
+		type="RHS_UH60M";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_fastroping_equipFRIES";
+				expression="[_this] call ace_fastroping_fnc_equipFRIES";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-44.955322,2.7938638,9.2246094};
+			angles[]={-0,4.712389,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this] call cScripts_fnc_addGetOutHelo; [this,""B"",""2""] call cScripts_fnc_setVehicleLable;}";
+			name="b2";
+		};
+		id=52;
+		type="RHS_UH60M";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_fastroping_equipFRIES";
+				expression="[_this] call ace_fastroping_fnc_equipFRIES";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-44.955322,2.7938638,-8.7753906};
+			angles[]={-0,4.712389,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this] call cScripts_fnc_addGetOutHelo; [this,""B"",""3""] call cScripts_fnc_setVehicleLable;}";
+			name="b3";
+		};
+		id=53;
+		type="RHS_UH60M";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_fastroping_equipFRIES";
+				expression="[_this] call ace_fastroping_fnc_equipFRIES";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item6
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-44.955322,2.7938638,-26.775391};
+			angles[]={-0,4.712389,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this] call cScripts_fnc_addGetOutHelo; [this,""B"",""4""] call cScripts_fnc_setVehicleLable;}";
+			name="b4";
+		};
+		id=54;
+		type="RHS_UH60M";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_fastroping_equipFRIES";
+				expression="[_this] call ace_fastroping_fnc_equipFRIES";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item7
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-20.955322,2.365972,-6.796875};
+			angles[]={-0,4.712389,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			lock="LOCKED";
+		};
+		id=55;
+		type="RHS_AH64D";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item8
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={3.0446777,0.89242268,9.215332};
+			angles[]={-0,1.5557754,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""alpha"",true,true,true] call cScripts_fnc_doStarterCrate;}";
+			description="Alpha Starter Crate";
+		};
+		id=56;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+	class Item9
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-20.955322,2.365972,9.203125};
+			angles[]={-0,4.712389,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			lock="LOCKED";
+		};
+		id=57;
+		type="RHS_AH64D";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item10
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-4.9553223,1.2473021,-18.784668};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=203;
+		type="rhsusf_M977A4_REPAIR_BKIT_usarmy_d";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item11
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.95532227,1.2473021,-18.784668};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=204;
+		type="rhsusf_M977A4_AMMO_BKIT_usarmy_d";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item12
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.0446777,0.0014390945,0.26513672};
+					angles[]={0,1.5707964,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupid [""INFIDEL-1""];}";
+					description="Forward Air Controller@INFIDEL-1";
+					isPlayable=1;
+				};
+				id=207;
+				type="Cav_B_A_JFO_Infidel_1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.0734863,0.0014390945,2.2861328};
+					angles[]={0,1.5707964,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupid [""INFIDEL-2""];}";
+					description="Assistant FAC";
+					isPlayable=1;
+				};
+				id=209;
+				type="Cav_B_A_JFO_Infidel_2_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male07ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.04;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+			name="INFI_1";
+		};
+		id=206;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="INFIDEL-1";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item13
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.0307617,0.0014390945,1.2792969};
+					angles[]={0,1.5707964,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupid [""PEGASUS-1""];}";
+					description="Air Traffic Controller@PEGASUS-1";
+					isPlayer=1;
+					isPlayable=1;
+				};
+				id=211;
+				type="Cav_B_A_AirController_Pegasus_1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.05;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=210;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="PEGASUS-1";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item14
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=4;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.0446777,0.0014390945,-2.7348633};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setGroupid [""BUFFALO-1""];}";
+					description="Transport Rotary Pilot@BUFFALO-1";
+					isPlayable=1;
+				};
+				id=218;
+				type="Cav_B_A_Helicopter_Tra_Pilot_B1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male01ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.03;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.0446777,0.0014390945,-1.7348633};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setGroupid [""BUFFALO-1""];}";
+					isPlayable=1;
+				};
+				id=219;
+				type="Cav_B_A_Helicopter_Tra_coPilot_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={6.0446777,0.0014390945,-2.7348633};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupid [""BUFFALO-1""];}";
+					isPlayable=1;
+				};
+				id=220;
+				type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={6.0446777,0.0014390945,-1.7348633};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+					init="call{this setGroupid [""BUFFALO-1""];}";
+					isPlayable=1;
+				};
+				id=221;
+				type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+			};
+		};
+		class Attributes
+		{
+			name="BUFF_1";
+		};
+		id=217;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="BUFFALO-1";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item15
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=4;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.0446777,0.0014390945,5.2651367};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setGroupid [""BUFFALO-2""];}";
+					description="Transport Rotary Pilot@BUFFALO-2";
+					isPlayable=1;
+				};
+				id=223;
+				type="Cav_B_A_Helicopter_Tra_Pilot_B2_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male12ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.04;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.045166,0.0014390945,6.2651367};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setGroupid [""BUFFALO-2""];}";
+					isPlayable=1;
+				};
+				id=224;
+				type="Cav_B_A_Helicopter_Tra_coPilot_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={6.045166,0.0014390945,5.2651367};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupid [""BUFFALO-2""];}";
+					isPlayable=1;
+				};
+				id=225;
+				type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={6.045166,0.0014390945,6.2651367};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+					init="call{this setGroupid [""BUFFALO-2""];}";
+					isPlayable=1;
+				};
+				id=226;
+				type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+			};
+		};
+		class Attributes
+		{
+			name="BUFF_2";
+		};
+		id=222;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="BUFFALO-2";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item16
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=4;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={7.041748,0.0014390945,-4.7319336};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setGroupid [""BUFFALO-3""];}";
+					description="Transport Rotary Pilot@BUFFALO-3";
+					isPlayable=1;
+				};
+				id=228;
+				type="Cav_B_A_Helicopter_Tra_Pilot_B3_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.99000001;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={7.0415039,0.0014390945,-3.7319336};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setGroupid [""BUFFALO-3""];}";
+					isPlayable=1;
+				};
+				id=229;
+				type="Cav_B_A_Helicopter_Tra_coPilot_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={8.0415039,0.0014390945,-4.7319336};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupid [""BUFFALO-3""];}";
+					isPlayable=1;
+				};
+				id=230;
+				type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={8.0415039,0.0014390945,-3.7319336};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+					init="call{this setGroupid [""BUFFALO-3""];}";
+					isPlayable=1;
+				};
+				id=231;
+				type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+			};
+		};
+		class Attributes
+		{
+			name="BUFF_3";
+		};
+		id=227;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="BUFFALO-3";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item17
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=4;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={7.0368652,0.0014390945,7.2578125};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setGroupid [""BUFFALO-4""];}";
+					description="Transport Rotary Pilot@BUFFALO-4";
+					isPlayable=1;
+				};
+				id=233;
+				type="Cav_B_A_Helicopter_Tra_Pilot_B4_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male08ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.04;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={7.0371094,0.0014390945,8.2583008};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setGroupid [""BUFFALO-4""];}";
+					isPlayable=1;
+				};
+				id=234;
+				type="Cav_B_A_Helicopter_Tra_coPilot_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={8.0371094,0.0014390945,7.2583008};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this setGroupid [""BUFFALO-4""];}";
+					isPlayable=1;
+				};
+				id=235;
+				type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={8.0371094,0.0014390945,8.2583008};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.44999999;
+					rank="CORPORAL";
+					init="call{this setGroupid [""BUFFALO-4""];}";
+					isPlayable=1;
+				};
+				id=236;
+				type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+			};
+		};
+		class Attributes
+		{
+			name="BUFF_4";
+		};
+		id=232;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="BUFFALO-4";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item18
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={9.0446777,0.0014390945,-0.73486328};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setGroupid [""RAIDER-1""];}";
+					description="Attack Rotary Pilot@RAIDER-1";
+					isPlayable=1;
+				};
+				id=238;
+				type="Cav_B_A_Helicopter_Att_Pilot_Raider_1_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male09ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={11.044678,0.0014390945,-0.73486328};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setGroupid [""RAIDER-1""];}";
+					isPlayable=1;
+				};
+				id=239;
+				type="Cav_B_A_Helicopter_Att_coPilot_F";
+			};
+		};
+		class Attributes
+		{
+			name="RAID_1";
+		};
+		id=237;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="RAIDER-1";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item19
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={9.0446777,0.0014390945,3.2651367};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setGroupid [""RAIDER-2""];}";
+					description="Attack Rotary Pilot@RAIDER-2";
+					isPlayable=1;
+				};
+				id=241;
+				type="Cav_B_A_Helicopter_Att_Pilot_Raider_2_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male02ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.02;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={11.044678,0.0014390945,3.2651367};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setGroupid [""RAIDER-2""];}";
+					isPlayable=1;
+				};
+				id=242;
+				type="Cav_B_A_Helicopter_Att_coPilot_F";
+			};
+		};
+		class Attributes
+		{
+			name="RAID_2";
+		};
+		id=240;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="RAIDER-2";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item20
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={13.044678,0.0014390945,0.26513672};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					skill=0.60000002;
+					rank="CAPTAIN";
+					init="call{this setGroupid [""RAVEN-1""];}";
+					isPlayable=1;
+				};
+				id=244;
+				type="Cav_B_A_Helicopter_Att_Pilot_Raven_1_F";
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={13.044678,0.0014390945,2.2651367};
+					angles[]={0,4.712389,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					skill=0.55000001;
+					rank="LIEUTENANT";
+					init="call{this setGroupid [""RAVEN-1""];}";
+					isPlayable=1;
+				};
+				id=245;
+				type="Cav_B_A_Helicopter_Att_coPilot_F";
+			};
+		};
+		class Attributes
+		{
+			name="RAVE_1";
+		};
+		id=243;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="groupID";
+				expression="[_this, _value] call CBA_fnc_setCallsign";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="RAVEN-1";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item21
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={7.0205078,0.89242268,1.2910156};
+			angles[]={-0,4.7201166,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{[this,""alpha"",true,true,true] call cScripts_fnc_doStarterCrate;}";
+			description="Alpha Starter Crate";
+		};
+		id=287;
+		type="B_supplyCrate_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag""],[4,4,4]],[[],[]],[[],[]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+};
