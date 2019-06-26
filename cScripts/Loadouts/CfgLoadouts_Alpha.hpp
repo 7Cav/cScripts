@@ -42,11 +42,10 @@ class Cav_B_A_JFO_F : Cav_B_Alpha_base_F {
         "ACRE_PRC117F",
  
         // Personal Medical Equipment
-        "ACE_quikclot",10,
-        "ACE_tourniquet",2,
+        "ACE_quikclot",16,
+        "ACE_tourniquet",4,
  
         // Standard
-        "ACE_Canteen",
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_Flashlight_MX991",
@@ -134,9 +133,9 @@ class Cav_B_A_Officer_F  : Cav_B_Alpha_base_F {
  
 class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
-    //headgear[] = {"rhsusf_hgu56p_visor_green"};
-    goggles[] = {"rhsusf_shemagh_tan"};
-    //nvgs[] = {"NVGogglesB_grn_F"};
+    headgear[] = {"rhsusf_hgu56p_visor_green"};
+    //goggles[] = {"rhsusf_shemagh_tan"};
+    nvgs[] = {"NVGogglesB_grn_F"};
     vest[] = {"rhsusf_mbav_light"};
     binoculars[] = {"Binocular"};
  
@@ -156,7 +155,7 @@ class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
         "SmokeShell",2,
         "B_IR_Grenade",
          
-        "rhsusf_m112x4_mag",
+        "SatchelCharge_Remote_Mag",
     };
  
     items[] = {
@@ -187,9 +186,7 @@ class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
          
         // Main Equipment
         "H_Cap_tan",
-        "rhsusf_shemagh_tan",
-        "NVGogglesB_grn_F",
-        "rhsusf_hgu56p_visor_green"
+        "rhsusf_shemagh_tan"
     };
  
     gps[] = {"ItemcTab"};
@@ -197,9 +194,9 @@ class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
 };
 class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
-    //headgear[] = {"rhsusf_hgu56p_visor_green"};
+    headgear[] = {"rhsusf_hgu56p_visor_green"};
     //goggles[] = {"rhsusf_shemagh_tan"};
-    //nvgs[] = {"NVGogglesB_grn_F"};
+    nvgs[] = {"NVGogglesB_grn_F"};
     vest[] = {"rhsusf_mbav_light"};
     binoculars[] = {"Binocular"};
  
@@ -219,7 +216,7 @@ class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_Alpha_base_F {
         "SmokeShell",2,
         "B_IR_Grenade",
          
-        "rhsusf_m112x4_mag",2
+        "SatchelCharge_Remote_Mag",2
     };
  
     items[] = {
@@ -251,18 +248,16 @@ class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_Alpha_base_F {
          
         // Hats
         "H_Cap_tan",
-        "rhsusf_shemagh_tan",
-        "NVGogglesB_grn_F",
-        "rhsusf_hgu56p_visor_green"
+        "rhsusf_shemagh_tan"
     };
  
     gps[] = {"ItemAndroid"};
 };
 class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Carryall_cbr"};
-    //headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
+    headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
     //goggles[] = {"rhsusf_shemagh_tan"};
-    //nvgs[] = {"NVGogglesB_blk_F"};
+    nvgs[] = {"NVGogglesB_blk_F"};
     vest[] = {"rhsusf_mbav_mg"};
     binoculars[] = {"Binocular"};
  
@@ -315,15 +310,14 @@ class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
          
         // Hats
         "H_Booniehat_mcamo",
-        "rhsusf_shemagh_tan",
-        "NVGogglesB_grn_F",
-        "rhsusf_hgu56p_visor_mask_Empire_black"
+        "rhsusf_shemagh_tan"
     };
  
     gps[] = {"ItemAndroid"};
 };
 class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
-    //headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
+    headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
+    nvgs[] = {"NVGogglesB_blk_F"};
     backpack[] = {"B_Carryall_cbr"};
     vest[] = {"rhsusf_mbav_mg"};
  
@@ -372,9 +366,7 @@ class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
          
         // Misc
         "H_Booniehat_mcamo",
-        "rhsusf_shemagh_tan",
-        "NVGogglesB_grn_F",
-        "rhsusf_hgu56p_visor_mask_Empire_black"
+        "rhsusf_shemagh_tan"
     };
     //nvgs[] = {"NVGogglesB_grn_F"};
     gps[] = {"ItemAndroid"};
@@ -383,9 +375,9 @@ class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
 };
 class Cav_B_A_Helicopter_Tra_DoorGunner_F : Cav_B_Alpha_base_F {
     backpack[] = {"B_Kitbag_mcamo"};
-    //headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
+    headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     //goggles[] = {"rhsusf_shemagh_tan"};
-    //nvgs[] = {"NVGogglesB_blk_F"};
+    nvgs[] = {"NVGogglesB_blk_F"};
     vest[] = {"rhsusf_mbav_light"};
     binoculars[] = {"Binocular"};
  
