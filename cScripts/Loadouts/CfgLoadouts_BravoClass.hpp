@@ -4,8 +4,8 @@
 class Cav_B_B_PlatoonSergeant_2_5_F : Cav_B_B_PlatoonSergeant_F {};
 class Cav_B_B_PlatoonLeader_2_6_F : Cav_B_B_PlatoonLeader_F {};
 class Cav_B_B_PlatoonMedic_2_7_F : Cav_B_B_PlatoonMedic_F {};
-class Cav_B_Bravo_Scout_PSG_3_5_F : Cav_B_Bravo_Scout_PSG_F {};
-class Cav_B_Bravo_Scout_PL_3_6_F : Cav_B_Bravo_Scout_PL_F {};
+class Cav_B_Bravo_Scout_PlatoonSergeant_L_4_F : Cav_B_Bravo_Scout_PlatoonSergeant_F {};
+class Cav_B_Bravo_Scout_PlatoonLeader_L_1_F : Cav_B_Bravo_Scout_PlatoonLeader_F {};
 
 class Cav_B_B_SquadLeader_1_1_F : Cav_B_B_SquadLeader_F {};
 class Cav_B_B_SquadLeader_1_2_F : Cav_B_B_SquadLeader_F {};
@@ -17,10 +17,10 @@ class Cav_B_B_SquadLeader_2_2_F : Cav_B_B_SquadLeader_F {};
 class Cav_B_B_SquadLeader_2_3_F : Cav_B_B_SquadLeader_F {};
 class Cav_B_B_SquadLeader_2_4_F : Cav_B_B_SquadLeader_F {};
 
-class Cav_B_Bravo_Scout_Infantry_3_1_F: Cav_B_Bravo_Scout_Infantry_F {};
-class Cav_B_Bravo_Scout_Infantry_3_2_F: Cav_B_Bravo_Scout_Infantry_F {};
-class Cav_B_Bravo_Scout_Infantry_3_3_F: Cav_B_Bravo_Scout_Infantry_F {};
-class Cav_B_Bravo_Scout_Infantry_3_4_F: Cav_B_Bravo_Scout_Infantry_F {};
+class Cav_B_Bravo_Scout_Dismount_3_1_F: Cav_B_Bravo_Scout_Infantry_F {};
+class Cav_B_Bravo_Scout_Dismount_3_2_F: Cav_B_Bravo_Scout_Infantry_F {};
+class Cav_B_Bravo_Scout_Dismount_3_3_F: Cav_B_Bravo_Scout_Infantry_F {};
+class Cav_B_Bravo_Scout_Dismount_3_4_F: Cav_B_Bravo_Scout_Infantry_F {};
 
 class Cav_B_B_Tank_Commander_Saber_1_F : Cav_B_B_Tank_Commander_F {};
 class Cav_B_B_Tank_Commander_Saber_2_F : Cav_B_B_Tank_Commander_F {};
@@ -31,10 +31,8 @@ class Cav_B_B_Ifv_Commander_B_1_F : Cav_B_B_Ifv_Commander_F {};
 class Cav_B_B_Ifv_Commander_B_2_F : Cav_B_B_Ifv_Commander_F {};
 class Cav_B_B_Ifv_Commander_B_3_F : Cav_B_B_Ifv_Commander_F {};
 class Cav_B_B_Ifv_Commander_B_4_F : Cav_B_B_Ifv_Commander_F {};
-class Cav_B_Bravo_Scout_VC_B_1_F : Cav_B_Bravo_Scout_VC_F {};
-class Cav_B_Bravo_Scout_VC_B_2_F : Cav_B_Bravo_Scout_VC_F {};
-class Cav_B_Bravo_Scout_VC_B_3_F : Cav_B_Bravo_Scout_VC_F {};
-class Cav_B_Bravo_Scout_VC_B_4_F : Cav_B_Bravo_Scout_VC_F {};
+class Cav_B_Bravo_Scout_VicCommander_L_2_F : Cav_B_Bravo_Scout_VC_F {};
+class Cav_B_Bravo_Scout_VicCommander_L_3_F : Cav_B_Bravo_Scout_VC_F {};
 
 class Cav_B_B_TeamLeader_Mustang_1_F : Cav_B_B_TeamLeader_Mustang_F {};
 class Cav_B_B_TeamLeader_Mustang_2_F : Cav_B_B_TeamLeader_Mustang_F {};
