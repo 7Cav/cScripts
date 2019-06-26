@@ -52,21 +52,30 @@ class Cav_B_B_PlatoonSergeant_F : Cav_B_Bravo_base_F {
     gps[] = {"ItemcTab"};
     preLoadout = "[(_this select 0), 'bravo', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
-class Cav_B_Bravo_Scout_PSG_F : Cav_B_Bravo_Scout_base_F {
+class Cav_B_Bravo_Scout_PlatoonSergeant_F : Cav_B_Bravo_Scout_base_F {
 
+    headgear[] = {"rhsusf_cvc_green_helmet"};
     //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    vest[] = {"rhsusf_spcs_ocp_crewman"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
+    primary[] = {"rhs_weap_mk18_m320","rhsusf_acc_anpeq15side","rhsusf_acc_acog_rmr"};
+
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",2,
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m714_White",
+        "rhs_mag_m713_Red",
+        "rhs_mag_m715_Green",
+        "rhs_mag_m662_red",
+        "rhs_mag_m661_green",
 
         "rhs_mag_m67",2,
 
-        "SmokeShell",4,
+        "SmokeShell",2,
         "SmokeShellBlue",1,
-        "SmokeShellGreen",1,
-        "SmokeShellRed",1,
         "SmokeShellYellow",1
     };
 
@@ -154,21 +163,30 @@ class Cav_B_B_PlatoonLeader_F : Cav_B_Bravo_base_F {
     gps[] = {"ItemcTab"};
     preLoadout = "[(_this select 0), 'bravo', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
-class Cav_B_Bravo_Scout_PL_F : Cav_B_Bravo_Scout_base_F {
+class Cav_B_Bravo_Scout_PlatoonLeader_F : Cav_B_Bravo_Scout_base_F {
 
+    headgear[] = {"rhsusf_cvc_green_helmet"};
     //goggles[] = {"rhsusf_shemagh_gogg_tan"};
+    vest[] = {"rhsusf_spcs_ocp_crewman"};
+    //backpack[] = {"B_AssaultPack_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
+    primary[] = {"rhs_weap_mk18_m320","rhsusf_acc_anpeq15side","rhsusf_acc_acog_rmr"};
+
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",2,
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",2,
+
+        "rhs_mag_m714_White",
+        "rhs_mag_m713_Red",
+        "rhs_mag_m715_Green",
+        "rhs_mag_m662_red",
+        "rhs_mag_m661_green",
 
         "rhs_mag_m67",2,
 
-        "SmokeShell",4,
+        "SmokeShell",2,
         "SmokeShellBlue",1,
-        "SmokeShellGreen",1,
-        "SmokeShellRed",1,
         "SmokeShellYellow",1
     };
 
@@ -569,7 +587,7 @@ class Cav_B_B_Ifv_Gunner_F : Cav_B_Bravo_Crew_base_F {
 };
 
 //Scout Crew
-class Cav_B_Bravo_Scout_VC_F : Cav_B_Bravo_Scout_base_F {
+class Cav_B_Bravo_Scout_VicCommander_F : Cav_B_Bravo_Scout_base_F {
 
     headgear[] = {"rhsusf_cvc_green_helmet"};
     //goggles[] = {"rhsusf_shemagh_gogg_tan"};
@@ -763,7 +781,7 @@ class Cav_B_B_SquadLeader_F : Cav_B_Bravo_base_F {
     gps[] = {"ItemAndroid"};
 };
 
-class Cav_B_Bravo_Scout_Infantry_F : Cav_B_Bravo_Scout_base_F {
+class Cav_B_Bravo_Scout_Dismount_F : Cav_B_Bravo_Scout_base_F {
 };
 
 class Cav_B_B_Alpha_FireTeamLeader_F : Cav_B_Bravo_base_F {
