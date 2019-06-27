@@ -136,6 +136,11 @@ class cScripts {
         class moduleCallEndex {};
     };
 
+    class training {
+        file = "cScripts\cavFnc\functions\training";
+        class freezMission {};
+    };
+
     class helpers {
         file = "cScripts\cavFnc\functions\helpers";
         class exportBoxToArsenal {};
