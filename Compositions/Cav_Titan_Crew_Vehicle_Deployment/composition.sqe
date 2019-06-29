@@ -19,7 +19,7 @@ class items
 			description="TITAN-1";
 		};
 		id=122;
-		type="RHS_C130J";
+		type="Cav_Alpha_C130J";
 		class CustomAttributes
 		{
 			class Attribute0
@@ -79,7 +79,7 @@ class items
 			description="TITAN-2";
 		};
 		id=123;
-		type="RHS_C130J";
+		type="Cav_Alpha_C130J";
 		class CustomAttributes
 		{
 			class Attribute0
@@ -547,7 +547,7 @@ class items
 			description="TITAN-3";
 		};
 		id=126;
-		type="RHS_C130J";
+		type="Cav_Alpha_C130J";
 		class CustomAttributes
 		{
 			class Attribute0
@@ -607,7 +607,7 @@ class items
 			description="TITAN-4";
 		};
 		id=127;
-		type="RHS_C130J";
+		type="Cav_Alpha_C130J";
 		class CustomAttributes
 		{
 			class Attribute0
