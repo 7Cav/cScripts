@@ -27,7 +27,8 @@ params [
     ["_isMedicClass", 0],
     ["_isEngineerClass", 0],
     ["_isEOD", false],
-    ["_setRank", true]
+    ["_setRank", true],
+    ["_zeusImmortality", false]
 ];
 
 #ifdef DEBUG_MODE
@@ -60,8 +61,8 @@ if ((_setRank) && (EGVAR(Settings,setPlayerRank))) then {
     [_player] call FUNC(setPlayerRank);
 };
 
-// Set ingame rank based on name rank prefix
-if (EGVAR(Settings,curatorImmortality)) then {
+// Make Zeus immortal
+if ((_zeusImmortality) && (EGVAR(Settings,curatorImmortality))) then {
     _player allowDamage false;
 };
 
