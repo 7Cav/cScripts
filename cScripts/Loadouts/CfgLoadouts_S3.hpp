@@ -6,9 +6,7 @@ class CAV_S3_Base : Cav_B_B_PlatoonSergeant_F {
     gps[] = {""};
 
     insignia[] = {"Curator"};
-    preLoadout = " \
-    [(_this select 0), 's3', 2, 2, true] call cScripts_fnc_setPreInitPlayerSettings; \
-    (_this select 0) allowDamage false;";
+    preLoadout = "[(_this select 0), 's3', 2, 2, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 
 class DEBUG : CAV_S3_Base {};

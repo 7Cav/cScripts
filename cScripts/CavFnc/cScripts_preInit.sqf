@@ -226,7 +226,6 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_Settings_fnc_init;
 
 
-
 // Aries Achilles Zeus Moduels
 [
     QEGVAR(Settings,enable7cavZeusModules),
@@ -237,6 +236,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     {}
 ] call CBA_Settings_fnc_init;
+
+[
+    QEGVAR(Settings,curatorImmortality),
+    "CHECKBOX",
+    ["Zeus Immortality","Make all curator units immortal.\n"],
+    [_cScriptSettings, "6; Zeus"],
+    true,
+    true,
+    {}
+] call CBA_fnc_addSetting;
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {

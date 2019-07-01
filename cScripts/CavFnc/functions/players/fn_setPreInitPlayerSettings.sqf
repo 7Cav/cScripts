@@ -60,6 +60,11 @@ if ((_setRank) && (EGVAR(Settings,setPlayerRank))) then {
     [_player] call FUNC(setPlayerRank);
 };
 
+// Set ingame rank based on name rank prefix
+if (EGVAR(Settings,curatorImmortality)) then {
+    _player allowDamage false;
+};
+
 #ifdef DEBUG_MODE
     [formatText["preLoadout application completed for %1.", _player]] call FUNC(logInfo);
 #endif
