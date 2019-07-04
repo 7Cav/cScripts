@@ -385,7 +385,6 @@ force force ace_zeus_zeusAscension = false;
 force force ace_zeus_zeusBird = false;
 
 // ACEX Field Rations
-// ACEX Field Rations
 force force acex_field_rations_affectAdvancedFatigue = true;
 force force acex_field_rations_enabled = false;
 force force acex_field_rations_hudShowLevel = 70;
@@ -428,19 +427,19 @@ force force acex_viewrestriction_preserveView = false;
 //acex_volume_showNotification = true;
 
 // Achilles - Available Factions
-//Achilles_var_BLU_CTRG_F = false;
-//Achilles_var_BLU_F = false;
+//Achilles_var_BLU_CTRG_F = true;
+//Achilles_var_BLU_F = true;
 //Achilles_var_BLU_G_F = true;
-//Achilles_var_BLU_GEN_F = false;
-//Achilles_var_BLU_T_F = false;
+//Achilles_var_BLU_GEN_F = true;
+//Achilles_var_BLU_T_F = true;
 //Achilles_var_BLU_USA_7CAV_F = true;
 //Achilles_var_CIV_F = true;
 //Achilles_var_CIV_IDAP_F = true;
-//Achilles_var_FIR_AWS_ENEMY_F = false;
-//Achilles_var_FIR_AWS_FRND_F = false;
-//Achilles_var_IND_C_F = false;
-//Achilles_var_IND_F = false;
-//Achilles_var_IND_G_F = false;
+//Achilles_var_FIR_AWS_ENEMY_F = true;
+//Achilles_var_FIR_AWS_FRND_F = true;
+//Achilles_var_IND_C_F = true;
+//Achilles_var_IND_F = true;
+//Achilles_var_IND_G_F = true;
 //Achilles_var_IND_USA_7CAV_F = true;
 //Achilles_var_Interactive_F = true;
 //Achilles_var_LOP_AA = true;
@@ -450,8 +449,8 @@ force force acex_viewrestriction_preserveView = false;
 //Achilles_var_LOP_AM = true;
 //Achilles_var_LOP_AM_OPF = true;
 //Achilles_var_LOP_BH = true;
-//Achilles_var_LOP_CDF = false;
-//Achilles_var_LOP_ChDKZ = false;
+//Achilles_var_LOP_CDF = true;
+//Achilles_var_LOP_ChDKZ = true;
 //Achilles_var_LOP_CHR_Civ = true;
 //Achilles_var_LOP_IA = true;
 //Achilles_var_LOP_IRA = true;
@@ -474,7 +473,7 @@ force force acex_viewrestriction_preserveView = false;
 //Achilles_var_OPF_F = true;
 //Achilles_var_OPF_G_F = true;
 //Achilles_var_OPF_T_F = true;
-//Achilles_var_OPF_V_F = fatruelse;
+//Achilles_var_OPF_V_F = true;
 //Achilles_var_rhs_faction_insurgents = true;
 //Achilles_var_rhs_faction_msv = true;
 //Achilles_var_rhs_faction_rva = true;
