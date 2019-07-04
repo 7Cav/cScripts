@@ -1,6 +1,4 @@
-//  S 3   I N S T R U C T O R S   A N D   S T U D E N T S
-
-class Cav_B_C_Unarmed_Local : CommonBlufor {
+class Cav_B_Unarmed_Local : CommonBlufor {
     backpack[] = {""};
     goggles[] = {""};
     headgear[] = {""};
@@ -26,6 +24,8 @@ class Cav_B_C_Unarmed_Local : CommonBlufor {
     preLoadout = "";
     postLoadout = "";
 };
+
+//  S 3   I N S T R U C T O R S   A N D   S T U D E N T S
 
 // SCHOOL OF INFANTRY
 
