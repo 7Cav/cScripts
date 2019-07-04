@@ -24,7 +24,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     [[0,1,2,3], ["Custom", "Operation", "Training", "Public"], 1],
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Ai setting
 [
@@ -35,7 +35,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     [[0,1], ["Day", "Night / Jungle"], 0],
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Mission startup hint settings
 [
@@ -46,7 +46,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,setStartupDelay),
     "SLIDER",
@@ -55,7 +55,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     [5, 180, 30, 0],
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,setCustomHintTopic),
     "EDITBOX",
@@ -64,7 +64,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "My custom Mission!",
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,setCustomHintText),
     "EDITBOX",
@@ -73,7 +73,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "I have design this mission! Yey for me!",
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Custom init
 [
@@ -84,7 +84,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Vehicle
 [
@@ -95,7 +95,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,useCustomVehicleInventory),
     "CHECKBOX",
@@ -104,7 +104,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 
 
@@ -117,7 +117,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     false,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 
 // Diary Records
@@ -129,7 +129,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Rank
 [
@@ -140,7 +140,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Tagging
 [
@@ -151,7 +151,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Eyewere
 [
@@ -162,7 +162,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Auto Insignia Application
 [
@@ -173,7 +173,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // Radio Switch
 [
@@ -184,7 +184,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 
 // JumpSimulation
@@ -196,7 +196,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     [[0,1,2], ["None", "Basic", "Advanced"], 1],
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,jumpSimulationNVG),
     "CHECKBOX",
@@ -205,7 +205,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,jumpSimulationGlasses),
     "CHECKBOX",
@@ -214,7 +214,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,jumpSimulationHat),
     "CHECKBOX",
@@ -223,7 +223,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 
 
@@ -236,7 +236,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {}
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
