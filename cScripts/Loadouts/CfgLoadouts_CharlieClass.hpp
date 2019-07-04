@@ -1,6 +1,9 @@
 
 //                C H A R L I E   C O M P A N Y
 
+class Cav_B_C_PlatoonSergeant_F : Cav_B_C_Officer_F {};
+class Cav_B_C_PlatoonLeader_F : Cav_B_C_Officer_F {};
+
 class Cav_B_C_PlatoonSergeant_Bandit_5_F : Cav_B_C_PlatoonSergeant_F {};
 class Cav_B_C_PlatoonLeader_Bandit_6_F : Cav_B_C_PlatoonLeader_F {};
 class Cav_B_C_PlatoonMedic_Bandit_7_F : Cav_B_C_PlatoonMedic_F {};
@@ -20,7 +23,20 @@ class Cav_B_C_SquadLeader_Misfit_2_F : Cav_B_C_SquadLeader_F {};
 class Cav_B_C_SquadLeader_Misfit_3_F : Cav_B_C_SquadLeader_F {};
 class Cav_B_C_SquadLeader_Misfit_4_F : Cav_B_C_SquadLeader_F {};
 
-class Cav_B_C_Weap_SquadLeader_Havoc_1_F : Cav_B_C_Weap_SquadLeader_F {};
+
+class Cav_B_C_Alpha_FireTeamLeader_F : Cav_B_C_FireTeamLeader_F {};
+class Cav_B_C_Alpha_AutomaticRifleman_F : Cav_B_C_AutomaticRifleman_F {};
+class Cav_B_C_Alpha_Grenadier_F : Cav_B_C_Grenadier_F {};
+class Cav_B_C_Alpha_Rifleman_F : Cav_B_C_Rifleman_F {};
+class Cav_B_C_Alpha_RiflemanLAT_F : Cav_B_C_RiflemanLAT_F {};
+class Cav_B_C_Alpha_CombatLifeSaver_F : Cav_B_C_CombatLifeSaver_F {};
+
+class Cav_B_C_Bravo_FireTeamLeader_F : Cav_B_C_FireTeamLeader_F {};
+class Cav_B_C_Bravo_AutomaticRifleman_F : Cav_B_C_AutomaticRifleman_F {};
+class Cav_B_C_Bravo_Grenadier_F : Cav_B_C_Grenadier_F {};
+class Cav_B_C_Bravo_Rifleman_F : Cav_B_C_Rifleman_F {};
+class Cav_B_C_Bravo_RiflemanLAT_F : Cav_B_C_RiflemanLAT_F {};
+class Cav_B_C_Bravo_CombatLifeSaver_F : Cav_B_C_CombatLifeSaver_F {};
 
 
 //                L E G A C Y
@@ -30,19 +46,19 @@ class Cav_B_C_Weap_SquadLeader_Havoc_1_F : Cav_B_C_Weap_SquadLeader_F {};
 class CAV_Charlie_OFFCR : Cav_B_C_PlatoonSergeant_F {};
 class CAV_Charlie_JFO : Cav_B_C_PlatoonSergeant_F {};
 
-class CAV_Charlie_SL : Cav_B_Charlie_base_F {};
-class CAV_Charlie_TL : Cav_B_C_Alpha_FireTeamLeader_F {};
-class CAV_Charlie_AR : Cav_B_C_Alpha_AutomaticRifleman_F {};
-class CAV_Charlie_GR : Cav_B_C_Alpha_Grenadier_F {};
-class CAV_Charlie_RM : Cav_B_C_Alpha_Rifleman_F {};
-class CAV_Charlie_CLS : Cav_B_C_Alpha_CombatLifeSaver_F {};
+class CAV_Charlie_SL : Cav_B_C_SquadLeader_F {};
+class CAV_Charlie_TL : Cav_B_C_FireTeamLeader_F {};
+class CAV_Charlie_AR : Cav_B_C_AutomaticRifleman_F {};
+class CAV_Charlie_GR : Cav_B_C_Grenadier_F {};
+class CAV_Charlie_RM : Cav_B_C_Rifleman_F {};
+class CAV_Charlie_CLS : Cav_B_C_CombatLifeSaver_F {};
 
-class CAV_Charlie_Weapons_SL : Cav_B_C_Weap_SquadLeader_F {};
-class CAV_Charlie_Weapons_TL : Cav_B_C_Weap_Alpha_FireTeamLeader_F {};
-class CAV_Charlie_Weapons_AR : Cav_B_C_Weap_Alpha_AutomaticRifleman_F {};
-class CAV_Charlie_Weapons_GR : Cav_B_C_Weap_Alpha_Grenadier_F {};
-class CAV_Charlie_Weapons_RM : Cav_B_C_Weap_Alpha_Rifleman_F {};
-class CAV_Charlie_Weapons_CLS : Cav_B_C_Weap_Alpha_CombatLifeSaver_F {};
+class CAV_Charlie_Weapons_SL : Cav_B_C_SquadLeader_F {};
+class CAV_Charlie_Weapons_TL : Cav_B_C_FireTeamLeader_F {};
+class CAV_Charlie_Weapons_AR : Cav_B_C_AutomaticRifleman_F {};
+class CAV_Charlie_Weapons_GR : Cav_B_C_Grenadier_F {};
+class CAV_Charlie_Weapons_RM : Cav_B_C_Rifleman_F {};
+class CAV_Charlie_Weapons_CLS : Cav_B_C_CombatLifeSaver_F {};
 
 
 // Older class structure
@@ -55,9 +71,9 @@ class rhsusf_army_ocp_arb_grenadier : CAV_Charlie_GR {};
 class rhsusf_army_ocp_arb_rifleman : CAV_Charlie_RM {};
 class rhsusf_army_ocp_arb_medic : CAV_Charlie_CLS {};
 
-class B_T_Soldier_SL_F : CAV_Charlie_Weapons_SL {};
-class B_T_Soldier_TL_F : CAV_Charlie_Weapons_TL {};
-class B_T_Engineer_F : CAV_Charlie_Weapons_AR {};
-class B_T_Soldier_Repair_F : CAV_Charlie_Weapons_GR {};
-class B_T_soldier_mine_F : CAV_Charlie_Weapons_RM {};
-class B_T_Soldier_Exp_F : CAV_Charlie_Weapons_CLS {};
+class B_T_Soldier_SL_F : Cav_B_C_SquadLeader_F {};
+class B_T_Soldier_TL_F : Cav_B_C_FireTeamLeader_F {};
+class B_T_Engineer_F : Cav_B_C_AutomaticRifleman_F {};
+class B_T_Soldier_Repair_F : Cav_B_C_Grenadier_F {};
+class B_T_soldier_mine_F : Cav_B_C_Rifleman_F {};
+class B_T_Soldier_Exp_F : Cav_B_C_CombatLifeSaver_F {};

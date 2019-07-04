@@ -248,32 +248,30 @@ class Cav_B_Charlie_base_F : CommonBlufor {
     //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_ocp"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
-    vest[] = {"rhsusf_spcs_ocp"};
+    //vest[] = {"rhsusf_spcs_ocp"};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
+    primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15_bk_light","rhsusf_acc_compm4"};
     secondary[] = {""};
     launcher[] = {""};
 
     binoculars[] = {""};
 
-    magazines[] = {};
-
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",8,
+        "rhs_mag_m67",4,
+        "SmokeShell",6
+    };
     items[] = {
+        "ACE_DAGR",
+        "ACE_IR_Strobe_Item",
+        "ACE_EntrenchingTool",
+        
         // Personal Medical Equipment
         "ACE_quikclot",10,
-        "ACE_tourniquet",2,
+        "ACE_tourniquet",4,
 
         // Standard
-        "ACE_EarPlugs",
-        "ACE_MapTools",
-        "ACE_CableTie",
-
-        //Electronics
-        "ACE_DAGR",
-        
-        // Tools
-        "ACE_Canteen",
-        "ACE_EntrenchingTool"
+        "ACE_MapTools"
     };
 
     compass[] = {"ItemCompass"};
@@ -287,45 +285,28 @@ class Cav_B_Charlie_base_F : CommonBlufor {
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_Charlie_Weap_base_F : Cav_B_Charlie_base_F {
-    backpack[] = {"B_AssaultPack_mcamo"};
-    //goggles[] = {"rhs_googles_clear"};
-    headgear[] = {"rhsusf_ach_helmet_ocp"};
-    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
-    vest[] = {"rhsusf_spcs_ocp"};
+    // backpack[] = {""};
+    // goggles[] = {"rhs_googles_clear"};
+    // headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
+    // uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
+    // vest[] = {""};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq15A","rhsusf_acc_ACOG_RMR"};
-    secondary[] = {""};
-    launcher[] = {""};
+    // primary[] = {""};
+    // secondary[] = {""};
+    // launcher[] = {""};
 
-    binoculars[] = {""};
+    // binoculars[] = {""};
 
-    magazines[] = {};
+    // magazines[] = {""};
+    // items[] = {""};
 
-    items[] = {
-        // Personal Medical Equipment
-        "ACE_quikclot",10,
-        "ACE_tourniquet",2,
+    // compass[] = {"ItemCompass"};
+    // gps[] = {""};
+    // map[] = {"ItemMap"};
+    // nvgs[] = {""};
+    // watch[] = {"itemWatch"};
 
-        // Standard
-        "ACE_EarPlugs",
-        "ACE_MapTools",
-        "ACE_CableTie",
-
-        //Electronics
-        "ACE_DAGR",
-        
-        // Tools
-        "ACE_Canteen",
-        "ACE_EntrenchingTool"
-    };
-
-    compass[] = {"ItemCompass"};
-    gps[] = {""};
-    map[] = {"ItemMap"};
-    nvgs[] = {""};
-    watch[] = {"ItemWatch"};
-
-    insignia[] = {""};
+    // insignia[] = {""};
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };

@@ -14,6 +14,8 @@
  *
  */
 
+waitUntil {!isNull player && player == player};
+
 params [
     ["_player",""]
 ];

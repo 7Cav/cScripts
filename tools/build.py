@@ -1,26 +1,5 @@
 #!/usr/bin/env python3
-#
-# usage: Build [-h] [-b {release,dev,test,custom}] [-p] [-rc RELEASECANDIDATE]
-#              [-y] [--auto_color] [-v]
-#
-# This script build and pack the selected mission framework.
-#
-# optional arguments:
-#   -h, --help            show this help message and exit
-#   -b {release,dev,test,custom}, --buildtype {release,dev,test,custom}
-#                         Add a additional tag to a to the build
-#   -p, --public          Create a "public" build to be used on non CavPack
-#                         Enviroment
-#   -rc RELEASECANDIDATE, --releasecandidate RELEASECANDIDATE
-#                         Set a release candidate number to the build ".RC1" for
-#                         example.
-#   -y, --fastbuild       Will instantly run untill done.
-#   --auto_color          Enable collors in the script.
-#   -v, --version         show program's version number and exit
-#
-# This build script is primarly built to pack 7th Cavalry Script package; cScripts.
-# The tool should be cross platform and can be used for other packages as well.
-#
+
 import sys, os, fnmatch, fileinput
 import argparse, shutil, subprocess, tempfile
 import configparser
@@ -110,9 +89,9 @@ def get_script_version_number(version_file='', return_type='arr'):
                 line = line.partition('"')[-1].rpartition('"')[0]
                 line = line.split(".")
                 version = line
-                version = list(map(int, version))
+                #version = list(map(int, version))
             else:
-                version = [-1]
+                version = ['DEVBUILD']
     file.close()
     if return_type == 'arr':
         return version
@@ -125,6 +104,8 @@ def get_script_version_number(version_file='', return_type='arr'):
             version = '{}.{}.{}'.format(version[0],version[1],version[2])
         elif len(version) == 4:
             version = '{}.{}.{}.{}'.format(version[0],version[1],version[2],version[3])
+        elif len(version) == 5:
+            version = '{}.{}.{}.{}.{}'.format(version[0],version[1],version[2],version[3],version[4])
         else:
             version = ''
         return version
@@ -133,7 +114,7 @@ def get_script_version_number(version_file='', return_type='arr'):
 
 
 
-def set_package_name(package_name='', build_type='', release_candidate=0, public_version=False):
+def set_package_name(package_name='', build_type='', public_version=False):
     version_number = get_script_version_number(version_file,'str')
     commit_hash = get_git_commit_hash(False)
     branch_name = get_git_branch_name()
@@ -175,12 +156,7 @@ def set_package_name(package_name='', build_type='', release_candidate=0, public
     else:
         public_build = ''
 
-    if release_candidate:
-        release_candidate = '_rc{}'.format(release_candidate)
-    else:
-        release_candidate = ''
-
-    name = '{}{}{}{}{}'.format(package_name,public_build,version_number,build_type,release_candidate)
+    name = '{}{}{}{}'.format(package_name,public_build,version_number,build_type)
 
     return name
 
@@ -250,7 +226,7 @@ def list_objects(objects, auto_color=False):
 
 
 
-def build_release(package_name='', build_type='', release_candidate=0, public_version=False, public_file_paths=[], public_operations=[], auto_color=False):
+def build_release(package_name='', build_type='', public_version=False, public_file_paths=[], public_operations=[], auto_color=False):
 
     def replace(file, searchExp, replaceExp):
         for line in fileinput.input(file, inplace=1):
@@ -260,14 +236,17 @@ def build_release(package_name='', build_type='', release_candidate=0, public_ve
 
     temp = tempfile.mkdtemp()
 
-    name = set_package_name(package_name,build_type,release_candidate,public_version)
+    name = set_package_name(package_name,build_type,public_version)
     dummy_name = '{}.md'.format(name)
     version = get_script_version_number(version_file,'str')
     branch_name = get_git_branch_name()
     commit_hash = get_git_commit_hash(True)
 
     # copying files to release folder
-    print('Starting build copying...')
+    if not version == '':
+        print('Starting build copying for {}...'.format(version))
+    else:
+        print('Starting build copying...')
 
     content_list = fetch_objects()
     folder_list = content_list[0]
@@ -276,6 +255,7 @@ def build_release(package_name='', build_type='', release_candidate=0, public_ve
     for obj in folder_list:
         print('Featching directorys and files from {}...'.format(color_string(obj,'\033[42m',auto_color)))
         shutil.copytree(obj, '{}/{}'.format(temp,obj))
+        
     for obj in file_list:
         print('Featching files {}...'.format(color_string(obj,'\033[96m',auto_color)))
         shutil.copy2(obj, temp)
@@ -392,18 +372,13 @@ def main():
     parser.add_argument('-b', '--buildtype',
         required=False,
         choices=['release', 'dev', 'test', 'custom'],
-        default='test' if (not get_script_version_number(version_file,'str') == '-1') else 'dev',
+        default='test',
         help="Add a additional tag to a to the build"
     )
     parser.add_argument("-p", "--public",
         help="Create a \"public\" build to be used on non CavPack Enviroment",
         required=False,
         action="store_true"
-    )
-    parser.add_argument('-rc', '--releasecandidate',
-        type=int,
-        required=False,
-        help="Set a release candidate number to the build \".RC1\" for example."
     )
 
     parser.add_argument("-y", "--fastbuild",
@@ -415,7 +390,7 @@ def main():
         action="store_false"
     )
     parser.add_argument("--deploy",
-        help="Don\'t open the release folder when the build is completed.",
+        help="Deploy mode used by CI deployment.",
         action="store_false"
     )
     parser.add_argument("--auto_color",
@@ -538,9 +513,9 @@ def main():
                     except:
                         print(color_string('Warning: Checkout was aborted. Your still on branch {}...'.format(get_git_branch_name()),'\033[91m',args.auto_color))
                 
-    name = set_package_name(script_name,args.buildtype,args.releasecandidate)
+    name = set_package_name(script_name,args.buildtype)
 
-    build_release(script_name,args.buildtype,args.releasecandidate,args.public,public_file_paths,public_operations,args.auto_color)
+    build_release(script_name,args.buildtype,args.public,public_file_paths,public_operations,args.auto_color)
 
     print('Build complet.')
 
