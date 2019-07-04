@@ -27,7 +27,8 @@ params [
     ["_isMedicClass", 0],
     ["_isEngineerClass", 0],
     ["_isEOD", false],
-    ["_setRank", true]
+    ["_setRank", true],
+    ["_zeusImmortality", false]
 ];
 
 #ifdef DEBUG_MODE
@@ -35,8 +36,10 @@ params [
 #endif
 
 // Set company Variables
-(_player) setVariable [QEGVAR(Cav,Trooper), true];
 (_player) setVariable [QEGVAR(Cav,Company), _setCompany];
+#ifdef DEBUG_MODE
+    if (_setCompany != "") then {[formatText["%1 have company variable set to %2 in preLoadout", _player, _setCompany]] call FUNC(logInfo);};
+#endif
 
 // Set player name
 _playerName = [_player,'PROFILE'] call FUNC(getPlayerName);
@@ -58,18 +61,10 @@ if ((_setRank) && (EGVAR(Settings,setPlayerRank))) then {
     [_player] call FUNC(setPlayerRank);
 };
 
-// Handle player announcement
-if (EGVAR(Settings,setMissionType) != 3) then {
-    [_player] call FUNC(doPlayerAnnouncement);
+// Make Zeus immortal
+if ((_zeusImmortality) && (EGVAR(Settings,curatorImmortality))) then {
+    _player allowDamage false;
 };
-
-#ifdef DEBUG_MODE
-    if (_setCompany != "") then {[formatText["%1 have got platoon variable %2 in preLoadout", _player, _setPlatoon]] call FUNC(logInfo);};
-    if (_MedicClass) then {[formatText["%1 medical ability is set to %2 in preLoadout", _player, _isMedicClass]] call FUNC(logInfo);};
-    if (_EngineerClass) then {[formatText["%1 is assigned engineer ability via preLoadout", _player]] call FUNC(logInfo);};
-    if (_isEOD) then {[formatText["%1 is assinged as eod specialist via preLoadout", _player]] call FUNC(logInfo);};
-#endif
-
 
 #ifdef DEBUG_MODE
     [formatText["preLoadout application completed for %1.", _player]] call FUNC(logInfo);

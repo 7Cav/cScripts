@@ -20,7 +20,7 @@ params [
 
 private _return = "none";
 
-if (_player getVariable QEGVAR(Cav,Trooper)) then {
+if !(isNil {_player getVariable QEGVAR(Cav,Company)}) then {
     _return = _player getVariable QEGVAR(Cav,Company);
 };
 

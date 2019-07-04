@@ -35,10 +35,3 @@
 #define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
 #define FUNC(var) TRIPLES(PREFIX,fnc,var)
 #define QFUNC(var) QUOTE(FUNC(var))
-
-#define MACRO_UNITINSIGNIA(var1,var2) \
-class TRIPLES(Cav,Insignia,var2) { \
-    displayName = QUOTE([7CAV] var1); \
-    author = QUOTE(7th Cavalry Gaming); \
-    texture = QUOTE(cScripts\Data\Insignia\var2.paa); \
-}
