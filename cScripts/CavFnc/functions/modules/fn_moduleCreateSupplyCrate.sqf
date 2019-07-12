@@ -12,28 +12,36 @@
  * Public: No
  */
 
-params ["_crate"];
+params ["_modulePos", "_objectPos"];
 
-private _dialogResult = [
-    "7th Cavalry Supply Crate",
+[
+    "7th Cavalry Supply Crate", 
     [
-        ["Supply Size","SLIDER",1]
-    ]
-] call Ares_fnc_ShowChooseDialog;
+        ["SLIDER:PERCENT", ["Supply size", "Regulate the total amount of supplies in the crate"], [0,1,1], false]
+    ], 
+    {
+        params ["_modulePos", "_size"];
+        private _crate = "B_CargoNet_01_ammo_F" createVehicle _modulePos;
+        [_crate, _size] remoteExec [QFUNC(doSupplyCrate),0,true];
 
-if (count _dialogResult == 0) exitWith {};
-
-private _supplieSize = _dialogResult select 0;
-
-private _crate = "B_CargoNet_01_ammo_F" createVehicle _crate;
-[_crate,_supplieSize] remoteExec [QFUNC(doSupplyCrate),0,true];
-
-// Change ace characteristics of crate
-[_crate, 1] call ace_cargo_fnc_setSize;
-[_crate, true] call ace_dragging_fnc_setDraggable;
-[_crate, true] call ace_dragging_fnc_setCarryable;
-
-// Add to curator so Zeus can manipulate it
-[{(_this select 0) == vehicle (_this select 0)}, {
-     _this select 0 call FUNC(addObjectToCurator)
-}, [_crate]] call CBA_fnc_waitUntilAndExecute;
+        // Change ace characteristics of crate
+        [_crate, 1] call ace_cargo_fnc_setSize;
+        [_crate, true] call ace_dragging_fnc_setDraggable;
+        [_crate, true] call ace_dragging_fnc_setCarryable;
+ 
+        // Add object to Zeus
+        [
+            {
+                params ["_crate"];
+                _crate == vehicle _crate;
+            },
+            {
+                params ["_crate"];
+                _crate call FUNC(addObjectToCurator);
+            },
+            [_crate]
+        ] call CBA_fnc_waitUntilAndExecute;
+    },
+    {},
+    ["_modulePos"]
+] call zen_dialog_fnc_create;
