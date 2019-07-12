@@ -435,6 +435,22 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     _crate addItemCargoGlobal ["rhs_googles_clear",25];
     _crate addItemCargoGlobal ["rhsusf_oakley_goggles_blk",25];
     _crate addItemCargoGlobal ["rhsusf_oakley_goggles_clr",25];
+    _crate addItemCargoGlobal ["acc_flashlight",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_acog_mdo",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
+    _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
+    
+    //================== AMMO ==================\\
+    
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",20];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",10];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",10];
+    _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
+    
 
     // TEMP REMOVED DUE TO EXPERIMENT
     // //================== RADIOS ==================\\
