@@ -57,6 +57,14 @@ if (isMultiplayer) then {
     ["Mission is running on singelplayer enviroment. Some systems may differ of have been turned off."] call FUNC(logWarning);
 };
 
+// Set up optional none relative path to mission folder
+MISSION_ROOT = call {
+    private "_arr";
+    _arr = toArray __FILE__;
+    _arr resize (count _arr - 8);
+    toString _arr
+};
+
 #ifdef DEBUG_MODE
     ["init initialization completed."] call FUNC(logInfo);
 #endif
