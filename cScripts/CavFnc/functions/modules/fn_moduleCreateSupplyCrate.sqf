@@ -4,15 +4,15 @@
  * This module function spawn a supply crate.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Moduel Position <Position>
  *
  * Example:
- * this call cScripts_fnc_moduleCreateSupplyCrate
+ * [x, y, z] call cScripts_fnc_moduleCreateSupplyCrate
  *
  * Public: No
  */
 
-params ["_modulePos", "_objectPos"];
+params ["_modulePos"];
 
 [
     "7th Cavalry Supply Crate", 
