@@ -23,52 +23,63 @@ if !(isClass (configFile >> "CfgPatches" >> "zen_main")) exitWith {["cfgPatches 
 #endif
 
 ["7Cav Logistics", "Starter Crate",{
-    [(_this select 0)] call FUNC(moduleCreateStarterCrate);    
+    params ["_modulePos", "_objectPos"];
+    [_modulePos] call FUNC(moduleCreateStarterCrate);    
 }] call zen_custom_modules_fnc_register;
 
 // Check if increase training on location is true then add option.
 if (ace_medical_treatment_locationsBoostTraining) then {
     ["7Cav Logistics", "Field Hospital",{
-        [(_this select 0)] call FUNC(moduleCreateFieldHospital);
+        params ["_modulePos", "_objectPos"];
+        [_modulePos] call FUNC(moduleCreateFieldHospital);
     }] call zen_custom_modules_fnc_register;
 };
 
 ["7Cav Logistics", "Re-supply Crate",{
-    [(_this select 0)] call FUNC(moduleCreateSupplyCrate);
+    params ["_modulePos", "_objectPos"];
+    [_modulePos] call FUNC(moduleCreateSupplyCrate);
 }] call zen_custom_modules_fnc_register;
 
 ["7Cav Logistics", "Medical Re-supply Crate",{
-    [(_this select 0)] call FUNC(moduleCreateMedicalCrate);
+    params ["_modulePos", "_objectPos"];
+    [_modulePos] call FUNC(moduleCreateMedicalCrate);
 }] call zen_custom_modules_fnc_register;
 
 ["7Cav Logistics", "Crew-Served Weapons Crate",{
-    [(_this select 0)] call FUNC(moduleCreateSpecialWeaponsCrate);
+    params ["_modulePos", "_objectPos"];
+    [_modulePos] call FUNC(moduleCreateSpecialWeaponsCrate);
 }] call zen_custom_modules_fnc_register;
 
 
 ["7Cav Vehicle", "Add Vehicle Lable",{
-    [(_this select 1)] call FUNC(moduleApplyVehicleLable);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(moduleApplyVehicleLable);
 }] call zen_custom_modules_fnc_register;
 
 ["7Cav Vehicle", "Add Vehicle Inventory",{
-    [(_this select 1)] call FUNC(moduleApplyVehicleInventory);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(moduleApplyVehicleInventory);
 }] call zen_custom_modules_fnc_register;
 
 ["7Cav Misc", "Assign Doctor",{
-    [(_this select 1)] call FUNC(moduleMakeDoctor);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(moduleMakeDoctor);
 }] call zen_custom_modules_fnc_register;
 
 ["7Cav Misc", "Assign Engineer",{
-    [(_this select 1)] call FUNC(moduleMakeEngineer);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(moduleMakeEngineer);
 }] call zen_custom_modules_fnc_register;
 
 
 ["7Cav Utilities", "Regerar Trooper",{
-    [(_this select 1)] call FUNC(moduleRegearTrooper);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(moduleRegearTrooper);
 }] call zen_custom_modules_fnc_register;
 
 
 ["7Cav Mission", "Call Endex",{
+    params ["_modulePos", "_objectPos"];
     call FUNC(moduleCallEndex);
 }] call zen_custom_modules_fnc_register;
 
