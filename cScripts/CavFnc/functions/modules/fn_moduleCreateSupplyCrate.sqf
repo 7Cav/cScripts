@@ -25,7 +25,10 @@ params ["_modulePos"];
         ]
     ], 
     {
-        params ["_modulePos", "_size"];
+        params ["_arg", "_pos"];
+        _arg params ["_size"];
+        _pos params ["_modulePos"];
+
         private _crate = "B_CargoNet_01_ammo_F" createVehicle _modulePos;
         [_crate, _size] remoteExec [QFUNC(doSupplyCrate),0,true];
 
@@ -33,7 +36,7 @@ params ["_modulePos"];
         [_crate, 1] call ace_cargo_fnc_setSize;
         [_crate, true] call ace_dragging_fnc_setDraggable;
         [_crate, true] call ace_dragging_fnc_setCarryable;
- 
+
         // Add object to Zeus
         [
             {
@@ -48,5 +51,5 @@ params ["_modulePos"];
         ] call CBA_fnc_waitUntilAndExecute;
     },
     {},
-    ["_modulePos"]
+    [_modulePos]
 ] call zen_dialog_fnc_create;
