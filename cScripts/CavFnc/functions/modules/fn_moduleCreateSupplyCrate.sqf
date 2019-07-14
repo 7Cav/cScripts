@@ -7,7 +7,7 @@
  * 0: Moduel Position <Position>
  *
  * Example:
- * [x, y, z] call cScripts_fnc_moduleCreateSupplyCrate
+ * [getPos logic] call cScripts_fnc_moduleCreateSupplyCrate
  *
  * Public: No
  */
@@ -17,7 +17,12 @@ params ["_modulePos"];
 [
     "7th Cavalry Supply Crate", 
     [
-        ["SLIDER:PERCENT", ["Supply size", "Regulate the total amount of supplies in the crate"], [0,1,1], false]
+        [
+            "SLIDER:PERCENT",
+            ["Supply size", "Regulate the total amount of supplies in the crate"],
+            [0,1,1],
+            false
+        ]
     ], 
     {
         params ["_modulePos", "_size"];
