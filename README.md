@@ -18,14 +18,14 @@ cScripts is an easy to use ARMA3 mission framework used by the 7th Cavalry Gamin
 ## Requirements
 - [CBA](https://github.com/CBATeam/CBA_A3)
 - [ACE3](https://ace3mod.com/)
-- [7th Cavalry Community Addon**](https://github.com/7Cav/7CavAddon)
+- [7th Cavalry Community Addon](https://github.com/7Cav/7CavAddon)
 - [RHSUSAF](http://www.rhsmods.org/)
 - [ACRE2](https://github.com/IDI-Systems/acre2)
 - [Project OPFOR](https://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
 - [cTab](https://github.com/Riouken/cTab) (Requirment removed when running the public build)
 - [Zeus Enhanced](https://github.com/zen-mod/ZEN) (OPTIONAL)
 
-*These are the minimum requirements to run the script framework due to weapons, equipment, and references being used.*
+*These are the requirements to run the script framework due to weapons, equipment and references being used.*
 
 ## Installation
 In order to install this script package you only need to [download the latest build](https://github.com/7Cav/cScripts/releases/latest) it and place the content in your mission folder located:
@@ -37,9 +37,9 @@ In order to install this script package you only need to [download the latest bu
 cScripts provides you with the basic scripts and functions for S3 Operation making.
 
 ### Scripts Installed
-- **CavFnc**                    -   [7th Cavalry Function Library](https://github.com/7Cav/cScripts/wiki/Features/)
-- **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
-- **ViewingDistance**           -   [taw_vd (v1.6)](http://www.armaholic.com/page.php?id=19751)
+- CavFnc                    -   [7th Cavalry Function Library](https://github.com/7Cav/cScripts/wiki/Features/)
+- Loadouts/Script           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
+- ViewingDistance           -   [taw_vd (v1.6)](http://www.armaholic.com/page.php?id=19751)
 
 ### AI Tweak (init.sqf)
 The AI in cScripts `init.sqf` have been changed to be more realistic and less ridiculous. The recommended default setting is the one provided, and it has been carefully tested, making it the best setting.
