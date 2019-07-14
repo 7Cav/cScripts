@@ -32,14 +32,7 @@ params [
 
 // Safety first
 if (_safemode) then {
-    private _weapon = currentWeapon player;
-    private _safedWeapons = _player getVariable ['ace_safemode_safedWeapons', []];
-    if !(_weapon in _safedWeapons) then { 
-        [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
-    };
-    #ifdef DEBUG_MODE
-        if (_safeMode) then {[formatText["%1 have got there weapon on safe in postLoadout.", _player]] call FUNC(logInfo);};
-    #endif
+    [_player, currentWeapon _player, currentMuzzle _player, true] call ace_safemode_fnc_safeWeapon;
 };
 
 // Add earplugs if you dont have them in.
