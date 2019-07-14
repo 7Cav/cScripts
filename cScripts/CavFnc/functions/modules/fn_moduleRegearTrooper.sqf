@@ -12,17 +12,16 @@
  * Public: No
  */
 
-params ["_unit"];
+params ["_objectPos"];
 
-_unit = [_logic, false] call Ares_fnc_GetUnitUnderCursor;
+private _unit = _objectPos;
 
-if (_unit isKindOf "Man") then {
+if (_unit isKindOf "Man") exitWith {
     if (vehicleVarName _unit == "") then {
         [_unit, typeOf _unit] remoteExec ["Poppy_fnc_applyLoadout", _unit];
     } else {
         [_unit, vehicleVarName _unit] remoteExec ["Poppy_fnc_applyLoadout", _unit];
     };
-} else {
-    ["Not a unit!"] call Ares_fnc_ShowZeusMessage;
-    playSound "FD_Start_F";
 };
+
+["Not a valid unit"] call zen_common_fnc_showMessage;
