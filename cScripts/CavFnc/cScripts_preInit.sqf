@@ -246,6 +246,15 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     {}
 ] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,PoppyEnabled),
+    "CHECKBOX",
+    ["Enable Loadout system","Allow you to turn off the loadout system.\n"],
+    [_cScriptSettings, "7; Loadouts"],
+    true,
+    true,
+    {}
+] call CBA_fnc_addSetting;
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
