@@ -218,7 +218,8 @@ class Cav_B_Charlie_base_F : CommonBlufor {
         "SmokeShell",4,
         "SmokeShellGreen",
         "ACE_Chemlight_HiRed",2,
-        "Chemlight_Blue",2
+        "Chemlight_Blue",2,
+        "B_IR_Grenade",2
         
     };
     items[] = {
