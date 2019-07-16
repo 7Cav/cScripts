@@ -32,7 +32,7 @@ params [
 
 // Safety first
 if (_safemode) then {
-    private _weapon = currentWeapon player;
+    private _weapon = currentWeapon _player;
     private _safedWeapons = _player getVariable ['ace_safemode_safedWeapons', []];
     if !(_weapon in _safedWeapons) then { 
         [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
