@@ -200,30 +200,32 @@ class Cav_B_Bravo_Logi_base_F : Cav_B_Bravo_base_F {
 };
 
 class Cav_B_Charlie_base_F : CommonBlufor {
-    backpack[] = {"B_AssaultPack_mcamo"};
+    backpack[] = {"B_AssaultPack_khk"};
     //goggles[] = {"rhs_googles_clear"};
-    headgear[] = {"rhsusf_ach_helmet_ocp"};
+    headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
     //vest[] = {"rhsusf_spcs_ocp"};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15_bk_light","rhsusf_acc_compm4"};
+    primary[] = {"rhs_weap_m4a1_mstock","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15_bk_light","rhsusf_acc_tdstubby_blk","rhsusf_acc_compm4"};
     secondary[] = {""};
     launcher[] = {""};
 
     binoculars[] = {""};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",8,
-        "rhs_mag_m67",4,
-        "SmokeShell",6
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",9,
+        "rhs_mag_m67",2,
+        "SmokeShell",4,
+        "SmokeShellGreen",
+        "ACE_Chemlight_HiRed",2,
+        "Chemlight_Blue",2
+        
     };
     items[] = {
         "ACE_DAGR",
-        "ACE_IR_Strobe_Item",
-        "ACE_EntrenchingTool",
         
         // Personal Medical Equipment
-        "ACE_quikclot",10,
+        "ACE_quikclot",16,
         "ACE_tourniquet",4,
 
         // Standard
