@@ -1,7 +1,5 @@
 #include "..\script_component.hpp"
 
-if !(cScripts_Settings_PoppyEnabled) exitwith {};
-
 Poppy = false;
 
 GVAR(log) = [];

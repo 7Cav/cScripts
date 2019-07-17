@@ -44,6 +44,10 @@ if (EGVAR(Settings,enableStartHint)) then {
     [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] call FUNC(initStartupHint);
 };
 
+if (EGVAR(Settings,PoppyEnabled)) then {
+    call Poppy_fnc_postInitProxy;
+};
+
 #ifdef DEBUG_MODE
     ["postInit initialization completed."] call FUNC(logInfo);
 #endif

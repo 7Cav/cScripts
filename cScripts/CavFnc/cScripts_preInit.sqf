@@ -191,7 +191,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     QEGVAR(Settings,jumpSimulation),
     "LIST",
-["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
+    ["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
     [_cScriptSettings, "5; Combat Jump Simulation"],
     [[0,1,2], ["None", "Basic", "Advanced"], 1],
     true,
@@ -302,6 +302,11 @@ if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
 };
 
+if (EGVAR(Settings,PoppyEnabled)) then {
+    call poppy_fnc_preInit;
+} else {
+    ["Poppy loadout system have been disabled."] call FUNC(logWarning);
+};
 
 #ifdef DEBUG_MODE
     ["postInit initialization completed."] call FUNC(logInfo);

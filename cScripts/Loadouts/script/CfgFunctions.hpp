@@ -1,8 +1,8 @@
 class Poppy {
     class main {
         file = "cScripts\Loadouts\script\functions\main";
-        class preInit { preInit = 1; };
-        class postInitProxy { postInit = 1; };
+        class preInit {};
+        class postInitProxy {};
         class postInit {};
         class addItemSorted {};
         class applyLoadout {};
