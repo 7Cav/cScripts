@@ -18,9 +18,9 @@ private _unit = _objectPos;
 
 if (_unit isKindOf "Man") exitWith {
     if (vehicleVarName _unit == "") then {
-        [_unit, typeOf _unit] call Poppy_fnc_applyLoadout;
+        [_unit, typeOf _unit] remoteExec ["Poppy_fnc_applyLoadout", _unit];
     } else {
-        [_unit, vehicleVarName _unit] call Poppy_fnc_applyLoadout;
+        [_unit, vehicleVarName _unit] remoteExec ["Poppy_fnc_applyLoadout", _unit];
     };
 };
 
