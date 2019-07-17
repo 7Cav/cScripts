@@ -734,6 +734,7 @@ class Cav_B_Bravo_Scout_Gunner_F : Cav_B_Bravo_Scout_base_F {
     gps[] = {"ItemAndroid"};
     preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
 };
+
 // S Q U A D
 class Cav_B_B_SquadLeader_F : Cav_B_Bravo_base_F {
 
