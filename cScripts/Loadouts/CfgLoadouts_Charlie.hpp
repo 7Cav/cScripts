@@ -207,7 +207,7 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
         "ACE_HuntIR_M203",2,
         "rhs_mag_M714_White",4,
         "rhs_mag_M713_Red",4,
-        "UGL_FlareCIR_F",2,
+        "rhs_mag_m662_red",2,
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",
@@ -221,7 +221,6 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
     items[] = {
         "ACE_microDAGR",
         "ACRE_PRC152",
-        "ACE_IR_Strobe_Item",
         "ACE_EntrenchingTool",
         
         // Personal Medical Equipment
