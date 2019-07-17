@@ -178,7 +178,6 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     [_object,"cScriptQuickSelection_Charlie_MMGTeam","Machine Gun Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
     private _charlieMMGTeamCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie','cScriptQuickSelection_Charlie_MMGTeam'];
     [_object,"MMG FTL", "CAV_Charlie_Machinegunner_TeamLeader_Local", "", _charlieMMGTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"MMG Assistant", "CAV_Charlie_Machinegunner_Assistant_Local", "", _charlieMMGTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"MMG Gunner", "CAV_Charlie_Machinegunner_Local", "", _charlieMMGTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
     // MAAWS Team
