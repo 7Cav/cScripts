@@ -131,7 +131,7 @@ class Cav_B_Bravo_base_F : CommonBlufor {
     preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
-class Cav_B_Bravo_Scout_base_F : CommonBlufor {
+class Cav_B_Bravo_Scout_base_F : Cav_B_Bravo_base_F {
     backpack[] = {"B_AssaultPack_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
