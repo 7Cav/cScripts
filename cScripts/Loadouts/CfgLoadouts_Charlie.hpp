@@ -166,7 +166,6 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_base_F { //General FTL : 25.3kg
     items[] = {
         "ACE_microDAGR",
         "ACRE_PRC152",
-        "ACE_IR_Strobe_Item",
         "ACE_EntrenchingTool",
         
         // Personal Medical Equipment
