@@ -17,7 +17,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 35.9kg
 
     magazines[] = {
         "rhsusf_200rnd_556x45_mixed_box",5,
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG",7
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",7,
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",
