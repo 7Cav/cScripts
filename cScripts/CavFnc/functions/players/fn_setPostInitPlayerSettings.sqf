@@ -32,7 +32,7 @@ params [
 
 // Safety first
 if (_safemode) then {
-    [_player, currentWeapon _player, true] call ace_safemode_fnc_safeWeapon;
+    [_player, currentWeapon _player, true] call ace_safemode_fnc_setWeaponSafety;
 };
 
 // Add earplugs if you dont have them in.
