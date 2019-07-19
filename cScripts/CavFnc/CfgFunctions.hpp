@@ -54,6 +54,9 @@ class cScripts {
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
 
+        class getPlayerClan {};
+        class isPlayerClan {};
+
         class getPlayerRank {};
         class setPlayerRank {};
         
