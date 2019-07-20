@@ -11,7 +11,7 @@
  *
  * Public: No
  */
- 
+
 //Module Options
 private _dialogResults = [
     "Endex Options",
@@ -33,10 +33,10 @@ private _holdFireMessage = _holdFireMessage isEqualTo 0;
 
 
 //systemChat Endex message
-"ENDEX ENDEX ENDEX" remoteExecCall ["systemChat", -2];
-"DEBRIEF" remoteExecCall ["systemChat", -2];
-"LEADERS DEBRIEF IN CHANNEL BELOW" remoteExecCall ["systemChat", -2];
-"Mission have been endex" remoteExecCall [FUNC(logInfo), 0];
+"ENDEX ENDEX ENDEX" remoteExecCall ["systemChat", 0];
+"DEBRIEF" remoteExecCall ["systemChat", 0];
+"LEADERS DEBRIEF IN CHANNEL BELOW" remoteExecCall ["systemChat", 0];
+"Mission have been endex" remoteExecCall [QFUNC(logInfo), 0];
 
 //hint Endex message
 private _title = "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENDEX ENDEX ENDEX!</t><br />";
@@ -45,7 +45,7 @@ private _text0 = "<t font='PuristaMedium' size='1.1'>Mission complete</t><br /><
 private _text1 = "Hold your fire and report to your Squad Leaders for debriefing.<br />";
 private _text3 = "<t font='PuristaMedium' size='1.1'>Please safe your weapons if you haven't already!</t>";
 
-parseText(_title + _text0 + _image + _text1 + _text3) remoteExecCall ["hint", -2];
+parseText(_title + _text0 + _image + _text1 + _text3) remoteExecCall ["hint", 0];
 
 //Set Safety to all Players
 if (_weaponsSafe) then {
@@ -77,15 +77,15 @@ if (_aiPacified) then {
 if (_holdFireMessage) then {
     [
         {
-            [player, 
-                ["fired", 
+            {
+                _x addEventHandler ["fired",
                     {                
-                        format ["Player %1 have discharge his weapon during endex.", name player] call [FUNC(logInfo), 0];
-                        format ["Hold your fire %1!", name player] remoteExecCall ["systemChat", -2];
+                        format ["Player %1 have discharge his weapon during endex.", name player] remoteExecCall [QFUNC(logInfo), 0];
+                        format ["Hold your fire %1!", name player] remoteExecCall ["systemChat", 0];
                         hint format ["%1 hold your Fire! Your not allowed to discharge your weapon during Endex.", name player];
                     }
-                ]
-            ] remoteExec ["addEventHandler", -2];
-        }, 
+                ];
+            } forEach (allPlayers);
+        },
     [], 10] call CBA_fnc_waitAndExecute;
 };
