@@ -148,11 +148,13 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_base_F { //General FTL : 27kg
     };
 
     items[] = {
-        "ACE_microDAGR",
         "ACRE_PRC152",
+        "ACE_microDAGR",
         "ACE_IR_Strobe_Item",
         "ACE_EntrenchingTool",
         "ACE_HuntIR_monitor",
+
+        "ACE_SpraypaintBlack",
         
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -172,6 +174,44 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_base_F { //General FTL : 27kg
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
+class Cav_B_C_Alpha_FireTeamLeader_F : Cav_B_C_FireTeamLeader_F {
+    items[] = {
+        "ACRE_PRC152",
+        "ACE_microDAGR",
+        "ACE_IR_Strobe_Item",
+        "ACE_EntrenchingTool",
+        "ACE_HuntIR_monitor",
+
+        "ACE_SpraypaintRed",
+        
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",4,
+
+        // Standard
+        "ACE_MapTools"
+    };
+};
+class Cav_B_C_Bravo_FireTeamLeader_F : Cav_B_C_FireTeamLeader_F {
+    items[] = {
+        "ACRE_PRC152",
+        "ACE_microDAGR",
+        "ACE_IR_Strobe_Item",
+        "ACE_EntrenchingTool",
+        "ACE_HuntIR_monitor",
+
+        "ACE_SpraypaintBlue",
+        
+        // Personal Medical Equipment
+        "ACE_quikclot",10,
+        "ACE_tourniquet",4,
+
+        // Standard
+        "ACE_MapTools"
+    };
+};
+
+
 class Cav_B_C_Grenadier_F : Cav_B_Charlie_base_F { //General GRN : 25kg
     //backpack[] = {"B_AssaultPack_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
@@ -247,7 +287,9 @@ class Cav_B_C_SquadLeader_F : Cav_B_Charlie_base_F { //General SL : 24kg
         "ACE_HuntIR_monitor",
         "ACE_Chemlight_HiGreen",
         "ACE_Chemlight_HiBlue",
-        
+
+        "ACE_SpraypaintBlack",
+
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",4,
@@ -1060,6 +1102,8 @@ class Cav_B_C_Officer_F : Cav_B_Charlie_base_F { //Platoon Staff : 27kg
         "ACE_Chemlight_HiGreen",
         "ACE_Chemlight_HiBlue",
         
+        "ACE_SpraypaintGreen",
+        
         // Personal Medical Equipment
         "ACE_quikclot",10,
         "ACE_tourniquet",4,
@@ -1165,6 +1209,8 @@ class CAV_Charlie_CompanyStaff_F : Cav_B_Charlie_base_F { //Company Staff : 27kg
         "ACE_HuntIR_monitor",
         "ACE_Chemlight_HiGreen",
         "ACE_Chemlight_HiBlue",
+        
+        "ACE_SpraypaintGreen",
         
         // Personal Medical Equipment
         "ACE_quikclot",10,
