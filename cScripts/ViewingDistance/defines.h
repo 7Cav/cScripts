@@ -30,10 +30,10 @@
 /* Namespace Macros */
 #define SVAR_MNS missionNamespace setVariable
 #define SVAR_UINS uiNamespace setVariable
-#define SVAR_PNS parsingNamespace setVariable
+#define SVAR_PNS profileNamespace setVariable
 #define GVAR_MNS missionNamespace getVariable
 #define GVAR_UINS uiNamespace getVariable
-#define GVAR_PNS parsingNamespace getVariable
+#define GVAR_PNS profileNamespace getVariable
 
 /* Condition Macros */
 #define EQUAL(condition1,condition2) condition1 isEqualTo condition2
