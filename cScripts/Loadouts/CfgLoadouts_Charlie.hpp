@@ -218,7 +218,6 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
     };
 
     items[] = {
-        "ACE_microDAGR",
         "ACRE_PRC152",
         "ACE_EntrenchingTool",
         
@@ -241,6 +240,7 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
+
 class Cav_B_C_Grenadier_F : Cav_B_Charlie_base_F { //General GRN : 29.7kg
     //backpack[] = {"B_AssaultPack_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
@@ -320,7 +320,7 @@ class Cav_B_C_SquadLeader_F : Cav_B_Charlie_base_F { //General SL : 26.14kg
         "ACE_microDAGR",
         "ACRE_PRC152",
         "ACE_HuntIR_monitor",
-        
+
         // Personal Medical Equipment
         "ACE_quikclot",16,
         "ACE_tourniquet",4,
@@ -1263,6 +1263,8 @@ class Cav_B_C_Officer_F : Cav_B_Charlie_base_F { //Platoon Staff : 27kg
         "ACE_IR_Strobe_Item",
         "ACE_EntrenchingTool",
         
+        "ACE_SpraypaintGreen",
+        
         // Personal Medical Equipment
         "ACE_quikclot",16,
         "ACE_tourniquet",4,
@@ -1371,6 +1373,8 @@ class CAV_Charlie_CompanyStaff_F : Cav_B_Charlie_base_F { //Company Staff : 27kg
         "ACE_microDAGR",
         "ACRE_PRC152",2,
         "ACE_EntrenchingTool",
+        
+        "ACE_SpraypaintGreen",
         
         // Personal Medical Equipment
         "ACE_quikclot",16,
