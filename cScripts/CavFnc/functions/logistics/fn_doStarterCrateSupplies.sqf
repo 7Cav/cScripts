@@ -444,12 +444,13 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     
     //================== AMMO ==================\\
     
-    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",20];
-    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",20];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",20];
     _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",10];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",10];
     _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
     
 
     // TEMP REMOVED DUE TO EXPERIMENT
