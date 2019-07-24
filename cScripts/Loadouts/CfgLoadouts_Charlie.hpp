@@ -437,7 +437,7 @@ class Cav_B_C_AAT_Local : Cav_B_Charlie_base_F { //MAAWS AT Assistant : 34.9kg
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
-class Cav_B_C_AHE_Local : Cav_B_Charlie_base_F { //MAAWS HE Assistant : 36.22kg
+class Cav_B_C_AAT_HE_Local : Cav_B_Charlie_base_F { //MAAWS HE Assistant : 36.22kg
     backpack[] = {"B_Kitbag_cbr"};
     //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
@@ -530,7 +530,7 @@ class Cav_B_C_AT_Local : Cav_B_Charlie_base_F { //MAAWS Gunner : 35.8kg
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
-class Cav_B_C_HE_Local : Cav_B_Charlie_base_F { //MAAWS Gunner : 34.4kg
+class Cav_B_C_AT_HE_Local : Cav_B_Charlie_base_F { //MAAWS Gunner : 34.4kg
     //backpack[] = {"B_AssaultPack_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_ocp"};
@@ -737,7 +737,7 @@ class CAV_Charlie_Machinegunner_TeamLeader_Local : Cav_B_Charlie_base_F { //GPMG
         "SmokeShell",4,
         "SmokeShellRed",
         "SmokeShellGreen",
-        "SmokeShellBlue,2,
+        "SmokeShellBlue",2,
         "ACE_Chemlight_HiRed",2,
         "Chemlight_Blue",2,
         "B_IR_Grenade",2,
