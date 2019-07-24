@@ -625,7 +625,7 @@ force force acre_sys_core_revealToAI = 1;
 force force acre_sys_core_terrainLoss = 0.5;
 force force acre_sys_core_ts3ChannelName = "";
 force force acre_sys_core_ts3ChannelPassword = "";
-force force acre_sys_core_ts3ChannelSwitch = true;
+force force acre_sys_core_ts3ChannelSwitch = false;
 force force acre_sys_core_unmuteClients = true;
 force force acre_sys_signal_signalModel = 2;
 
