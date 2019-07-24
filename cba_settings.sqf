@@ -614,18 +614,25 @@ force force Achilles_Debug_Output_Enabled = false;
 //Achilles_var_moduleTreeSearchPatch = false;
 
 // ACRE2
+force force acre_sys_core_automaticAntennaDirection = false;
 force force acre_sys_core_fullDuplex = false;
 force force acre_sys_core_ignoreAntennaDirection = false;
-force force acre_sys_core_interference = false;
-//acre_sys_core_postmixGlobalVolume = 3;
-//acre_sys_core_premixGlobalVolume = 3;
-force force acre_sys_core_revealToAI = true;
-//acre_sys_core_spectatorVolume = 1;
-force force acre_sys_core_terrainLoss = 0;
+force force acre_sys_core_interference = true;
+acre_sys_core_postmixGlobalVolume = 1;
+acre_sys_core_premixGlobalVolume = 1;
+force force acre_sys_core_revealToAI = 1;
+acre_sys_core_spectatorVolume = 1;
+force force acre_sys_core_terrainLoss = 0.5;
 force force acre_sys_core_ts3ChannelName = "";
 force force acre_sys_core_ts3ChannelPassword = "";
-force force acre_sys_core_ts3ChannelSwitch = false;
+force force acre_sys_core_ts3ChannelSwitch = true;
 force force acre_sys_core_unmuteClients = true;
+force force acre_sys_signal_signalModel = 2;
+
+// ACRE2 Zeus
+force force acre_sys_zeus_zeusCanSpectate = true;
+force force acre_sys_zeus_zeusDefaultVoiceSource = false;
+//acre_sys_zeus_zeusListenViaCamera = true;
 
 // CBA UI
 //cba_ui_StorePasswords = 1;
