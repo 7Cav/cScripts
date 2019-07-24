@@ -831,7 +831,7 @@ class Cav_B_C_Support_Mortar_AutomaticRifleman_Local : Cav_B_Charlie_base_F { //
         "SmokeShellGreen",
         "ACE_Chemlight_HiRed",2,
         "Chemlight_Blue",2,
-        "B_IR_Grenade",2
+        "B_IR_Grenade",2,
         "rhsusf_200rnd_556x45_mixed_box",5
     };
 
