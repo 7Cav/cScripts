@@ -81,8 +81,9 @@ def main():
         article.write('\n\n## {}\n'.format(category.capitalize()))
         for func_name in all_functions[category]['functions']:
             func_name_prity = func_name[:-4]
+            func_name_function = 'cScripts_fnc_' + func_name_prity
             article.write('\n\n### {}\n'.format(func_name_prity))
-            #article.write('[Go to the function file >](https://github.com/7Cav/cScripts/blob/master/cScripts/CavFnc/functions/{}/{})\n'.format(func_name_prity, category, func_name))
+            article.write('[`{}`](https://github.com/7Cav/cScripts/blob/master/cScripts/CavFnc/functions/{}/{})\n'.format(func_name_function, category, func_name))
 
             # Get and function file read file
             file = open('{}/{}/{}'.format(function_dir, category, func_name))
@@ -133,7 +134,7 @@ def main():
                         is_exam = False
                         is_code = False
                         info = info.replace('Author:','**Author:**').strip()
-                        article.write('{}\n\n\n'.format(info))
+                        article.write('\n\n{}\n\n\n'.format(info))
                         continue
                     if 'Edited:' in info:
                         is_quto = True
