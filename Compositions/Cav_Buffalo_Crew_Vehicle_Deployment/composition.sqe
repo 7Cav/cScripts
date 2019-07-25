@@ -1073,7 +1073,7 @@ class items
 			reportOwnPosition=1;
 		};
 		id=110;
-		type="RHS_UH60M_d";
+		type="Cav_Alpha_UH60M";
 		class CustomAttributes
 		{
 			class Attribute0
@@ -1133,7 +1133,7 @@ class items
 			reportOwnPosition=1;
 		};
 		id=111;
-		type="RHS_UH60M_d";
+		type="Cav_Alpha_UH60M";
 		class CustomAttributes
 		{
 			class Attribute0
@@ -1193,7 +1193,7 @@ class items
 			reportOwnPosition=1;
 		};
 		id=112;
-		type="RHS_UH60M_d";
+		type="Cav_Alpha_UH60M";
 		class CustomAttributes
 		{
 			class Attribute0
@@ -1253,7 +1253,7 @@ class items
 			reportOwnPosition=1;
 		};
 		id=113;
-		type="RHS_UH60M_d";
+		type="Cav_Alpha_UH60M";
 		class CustomAttributes
 		{
 			class Attribute0
@@ -1313,7 +1313,7 @@ class items
 			reportOwnPosition=1;
 		};
 		id=114;
-		type="RHS_UH60M_d";
+		type="Cav_Alpha_UH60M";
 		class CustomAttributes
 		{
 			class Attribute0
@@ -1373,7 +1373,7 @@ class items
 			reportOwnPosition=1;
 		};
 		id=115;
-		type="RHS_UH60M_d";
+		type="Cav_Alpha_UH60M";
 		class CustomAttributes
 		{
 			class Attribute0

@@ -28,10 +28,14 @@ private _vehicleTypeUH60 = [
     "RHS_UH60M_ESSS2", 
     "RHS_UH60M2", 
     "RHS_UH60M_MEV2", 
-    "RHS_UH60M_MEV"
+    "RHS_UH60M_MEV",
+    "Cav_Alpha_UH60M",
+    "Cav_Alpha_UH60M_MEV2",
+    "Cav_Alpha_UH60M2"
 ];
 private _vehicleTypeC130J = [
-    "RHS_C130J"
+    "RHS_C130J",
+    "Cav_Alpha_C130J"
 ];
 
 switch (_texturePath) do {
