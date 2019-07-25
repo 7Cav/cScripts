@@ -26,17 +26,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_fnc_addSetting;
 
-// Ai setting
-[
-    QEGVAR(Settings,setAiSystemDifficulty),
-    "LIST",
-    ["AI Setting", "This adjustes the ai and make them less godlike and more roleplay to play against.\n"],
-    [_cScriptSettings, "1; Mission"],
-    [[0,1], ["Day", "Night / Jungle"], 0],
-    true,
-    {}
-] call CBA_fnc_addSetting;
-
 // Mission startup hint settings
 [
     QEGVAR(Settings,enableStartHint),
