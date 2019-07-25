@@ -46,8 +46,6 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 35.9kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_RiflemanLAT_F : Cav_B_Charlie_base_F { //General Rifleman AT : 34.9kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -94,8 +92,6 @@ class Cav_B_C_RiflemanLAT_F : Cav_B_Charlie_base_F { //General Rifleman AT : 34.
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_Rifleman_F : Cav_B_Charlie_base_F { //General Rifleman : 27.5kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -135,8 +131,6 @@ class Cav_B_C_Rifleman_F : Cav_B_Charlie_base_F { //General Rifleman : 27.5kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_base_F { //General FTL : 25.3kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -184,8 +178,6 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_base_F { //General FTL : 25.3kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General Grenadier FTL : 30.5kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -237,8 +229,6 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 class Cav_B_C_Grenadier_F : Cav_B_Charlie_base_F { //General GRN : 29.7kg
@@ -287,8 +277,6 @@ class Cav_B_C_Grenadier_F : Cav_B_Charlie_base_F { //General GRN : 29.7kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_SquadLeader_F : Cav_B_Charlie_base_F { //General SL : 26.14kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -337,8 +325,6 @@ class Cav_B_C_SquadLeader_F : Cav_B_Charlie_base_F { //General SL : 26.14kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_Marksman_Local : Cav_B_Charlie_base_F { //DMR : 24kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -385,8 +371,6 @@ class Cav_B_C_Marksman_Local : Cav_B_Charlie_base_F { //DMR : 24kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // AT Team
@@ -434,8 +418,6 @@ class Cav_B_C_AAT_Local : Cav_B_Charlie_base_F { //MAAWS AT Assistant : 34.9kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_AAT_HE_Local : Cav_B_Charlie_base_F { //MAAWS HE Assistant : 36.22kg
     backpack[] = {"B_Kitbag_cbr"};
@@ -480,8 +462,6 @@ class Cav_B_C_AAT_HE_Local : Cav_B_Charlie_base_F { //MAAWS HE Assistant : 36.22
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_AT_Local : Cav_B_Charlie_base_F { //MAAWS Gunner : 35.8kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -527,8 +507,6 @@ class Cav_B_C_AT_Local : Cav_B_Charlie_base_F { //MAAWS Gunner : 35.8kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_AT_HE_Local : Cav_B_Charlie_base_F { //MAAWS Gunner : 34.4kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -574,8 +552,6 @@ class Cav_B_C_AT_HE_Local : Cav_B_Charlie_base_F { //MAAWS Gunner : 34.4kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // MK19 Team
@@ -624,8 +600,6 @@ class Cav_B_C_Support_MK19_TeamLeader_Local : Cav_B_Charlie_base_F { //Mk.19 FTL
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_Support_MK19_Gunner_Local : Cav_B_Charlie_base_F { //Mk.19 Gun : 35kg
     backpack[] = {"RHS_Mk19_Gun_Bag"};
@@ -668,8 +642,6 @@ class Cav_B_C_Support_MK19_Gunner_Local : Cav_B_Charlie_base_F { //Mk.19 Gun : 3
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_Support_MK19_Assistant_Local : Cav_B_Charlie_base_F { //Mk.19 Tri : 28kg
     backpack[] = {"RHS_Mk19_Tripod_Bag"};
@@ -713,8 +685,6 @@ class Cav_B_C_Support_MK19_Assistant_Local : Cav_B_Charlie_base_F { //Mk.19 Tri 
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // MMG Team
@@ -765,8 +735,6 @@ class CAV_Charlie_Machinegunner_TeamLeader_Local : Cav_B_Charlie_base_F { //GPMG
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class CAV_Charlie_Machinegunner_Local : Cav_B_Charlie_base_F { //GPMG Gunner : 36kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -807,8 +775,6 @@ class CAV_Charlie_Machinegunner_Local : Cav_B_Charlie_base_F { //GPMG Gunner : 3
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // Mortar Team
@@ -854,8 +820,6 @@ class Cav_B_C_Support_Mortar_AutomaticRifleman_Local : Cav_B_Charlie_base_F { //
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_Support_Mortar_TeamLeader_Local : Cav_B_Charlie_base_F { //Mortar FTL : 30kg
     backpack[] = {"B_Mortar_01_support_F"};
@@ -904,8 +868,6 @@ class Cav_B_C_Support_Mortar_TeamLeader_Local : Cav_B_Charlie_base_F { //Mortar 
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_Support_Mortar_Gunner_Local : Cav_B_Charlie_base_F { //Mortar Gunner : 38kg
     backpack[] = {"B_Mortar_01_weapon_F"};
@@ -949,8 +911,6 @@ class Cav_B_C_Support_Mortar_Gunner_Local : Cav_B_Charlie_base_F { //Mortar Gunn
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_Support_Mortar_SquadLeader_Local : Cav_B_Charlie_base_F { //Mortar SL : 24kg
     backpack[] = {"B_Mortar_01_weapon_F"};
@@ -1000,8 +960,6 @@ class Cav_B_C_Support_Mortar_SquadLeader_Local : Cav_B_Charlie_base_F { //Mortar
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // AA Team
@@ -1048,8 +1006,6 @@ class Cav_B_C_AAA_Local : Cav_B_Charlie_base_F { //Stinger Assist : 34.7kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_AA_Local : Cav_B_Charlie_base_F { //Stinger Gunner : 38kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -1094,8 +1050,6 @@ class Cav_B_C_AA_Local : Cav_B_Charlie_base_F { //Stinger Gunner : 38kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // TOW Team
@@ -1139,8 +1093,6 @@ class CAV_Charlie_TOWSFTL : Cav_B_Charlie_base_F { //TOWS FTL : 27kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class CAV_Charlie_TOWSGUN : Cav_B_Charlie_base_F { //TOWS Gunner : 35kg
     backpack[] = {"rhs_Tow_Gun_Bag"};
@@ -1182,8 +1134,6 @@ class CAV_Charlie_TOWSGUN : Cav_B_Charlie_base_F { //TOWS Gunner : 35kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class CAV_Charlie_TOWSTRI : Cav_B_Charlie_base_F { //TOWS Tripod : 28kg
     backpack[] = {"rhs_TOW_Tripod_Bag"};
@@ -1225,8 +1175,6 @@ class CAV_Charlie_TOWSTRI : Cav_B_Charlie_base_F { //TOWS Tripod : 28kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // Staff
@@ -1281,8 +1229,6 @@ class Cav_B_C_Officer_F : Cav_B_Charlie_base_F { //Platoon Staff : 27kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_base_F { //Platoon Medic : 34kg
     backpack[] = {"B_Kitbag_cbr"};
@@ -1338,8 +1284,7 @@ class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_base_F { //Platoon Medic : 34kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'charlie', 1, 0] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class CAV_Charlie_CompanyStaff_F : Cav_B_Charlie_base_F { //Company Staff : 27kg
     //backpack[] = {"B_AssaultPack_mcamo"};
@@ -1391,8 +1336,6 @@ class CAV_Charlie_CompanyStaff_F : Cav_B_Charlie_base_F { //Company Staff : 27kg
     //watch[] = {"ItemWatch"};
 
     //insignia[] = {""};
-    preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // Other
@@ -1439,5 +1382,4 @@ class Cav_B_C_CombatLifeSaver_F : Cav_B_Charlie_base_F {
 
     //insignia[] = {""};
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };

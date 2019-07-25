@@ -241,7 +241,7 @@ class Cav_B_Charlie_base_F : CommonBlufor {
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+    postLoadout = "[(_this select 0)] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_Charlie_Weap_base_F : Cav_B_Charlie_base_F {
     // backpack[] = {""};
@@ -267,7 +267,7 @@ class Cav_B_Charlie_Weap_base_F : Cav_B_Charlie_base_F {
 
     // insignia[] = {""};
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+    postLoadout = "[(_this select 0)] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // Not created yet
