@@ -101,3 +101,10 @@ if (_holdFireMessage) then {
         },
     [], 10] call CBA_fnc_waitAndExecute;
 };
+
+if (isNil{missionNamespace getVariable QEGVAR(Mission,Endex)}) then {
+    missionNamespace setVariable [QEGVAR(Mission,Endex), True];
+    #ifdef DEBUG_MODE
+        [formatText["Mission var %1 is set %2", QEGVAR(Mission,Endex), missionNamespace getVariable QEGVAR(Mission,Endex)]] call FUNC(logInfo);
+    #endif
+};
