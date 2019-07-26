@@ -43,5 +43,5 @@ player createDiaryRecord["radioReports",
     - Strobe<br/>
     - Other (Specify)<br/><br/>
         "
-    ]
+    ], taskNull, "", false
 ];
