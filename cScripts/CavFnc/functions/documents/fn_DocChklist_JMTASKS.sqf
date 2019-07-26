@@ -44,5 +44,5 @@ Conduct the briefing as follows:<br/><br/>
 
 6.	Take questions.
         "
-    ]
+    ], taskNull, "", false
 ];
