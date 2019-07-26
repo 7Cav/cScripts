@@ -103,6 +103,9 @@ class cScripts {
         class teleport {};
 
         class addObjectToCurator {};
+
+        class hasGasProtection {};
+        class doGasDamaged {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
