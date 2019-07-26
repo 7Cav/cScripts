@@ -57,5 +57,5 @@ player createDiaryRecord["radioReports",
     - Demo - black, MAAWS HEAT - red<br/>
     - 1 black, 1 red, 2 yellow (vehicles)<br/><br/>
         "
-    ], taskNull, "", false
+    ]
 ];

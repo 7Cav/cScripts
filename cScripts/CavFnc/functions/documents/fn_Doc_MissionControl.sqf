@@ -18,6 +18,6 @@ if !(_variableName in _missionController) exitWith {};
 
 player createDiaryRecord["7Cav",
     ["S3 Mission Control",
-        "<font size='20'>S3 Mission Control</font><br/>Oh! This tab is under redevelopment!"
-    ], taskNull, "", false
+        "Oh! This tab is under redevelopment!"
+    ]
 ];

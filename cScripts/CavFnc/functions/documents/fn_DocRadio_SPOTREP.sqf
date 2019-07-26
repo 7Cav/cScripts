@@ -40,5 +40,5 @@ player createDiaryRecord["radioReports",
     - Assaulting<br/>
     - Continuing to observe<br/><br/>
         "
-    ], taskNull, "", false
+    ]
 ];
