@@ -237,16 +237,16 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_fnc_addSetting;
 
 
-// Ai setting	
-[	
-    QEGVAR(Settings,enableVCOMAI),	
-    "CHECKBOX",	
-    ["Enable VCOM AI", "This allow you to toggle on and off the VCOM AI initialisation.\n"],	
-    [_cScriptSettings, "7; Third Party Scripts"],	
+// Ai setting
+[    
+    QEGVAR(Settings,enableVCOMAI),    
+    "CHECKBOX",    
+    ["Enable VCOM AI", "This allow you to toggle on and off the VCOM AI initialisation.\n"],
+    [_cScriptSettings, "7; Third Party Scripts"],    
     true,
     true,
     {}
-] call CBA_fnc_addSetting;	
+] call CBA_fnc_addSetting;    
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
