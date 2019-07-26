@@ -21,5 +21,5 @@ player createDiaryRecord["Chklists",
 <font color='#ffc61a'>INSERT CHECKLIST</font><br/><br/>
 <img image='cScripts\Data\Images\insertion-insert-checklist.paa' width='367' height='264'/>
         "
-    ]
+    ], taskNull, "", false
 ];
