@@ -1,12 +1,12 @@
 #include "defines.h"
 /*
     Author: Bryan "Tonic" Boardwine
-
+    
     Description:
     When a character is entered it is validated and changes the
     correct slider it is associated with. I probably over-complicated
     this more then I had to but onChar behaves weird.
-
+    
     PARAMS:
         0: CONTROL
         1: SCALAR (INT)
