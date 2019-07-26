@@ -1,9 +1,9 @@
 #include "defines.h"
 /*
     Author: Bryan "Tonic" Boardwine
-
+    
     Description:
-    Called when the slider is changed for any field and
+    Called when the slider is changed for any field and 
     updates the view distance for it.
 */
 private "_varData";

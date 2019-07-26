@@ -39,7 +39,7 @@ cScripts provides you with the basic scripts and functions for S3 Operation maki
 ### Scripts Installed
 - **CavFnc**                    -   [7th Cavalry Function Library](https://github.com/7Cav/cScripts/wiki/Features/)
 - **Loadouts/Script**           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
-- **ViewingDistance**           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
+- **ViewingDistance**           -   [taw_vd (v1.6)](http://www.armaholic.com/page.php?id=19751)
 
 ### AI Tweak (init.sqf)
 The AI in cScripts `init.sqf` have been changed to be more realistic and less ridiculous. The recommended default setting is the one provided, and it has been carefully tested, making it the best setting.
