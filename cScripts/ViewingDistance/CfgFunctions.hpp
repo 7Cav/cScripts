@@ -8,7 +8,7 @@ class TAW_VD {
             postInit = 1;
             headerType = -1;
         };
-
+            
         class onSliderChanged {};
         class onTerrainChanged {};
         class updateViewDistance {};
