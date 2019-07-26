@@ -3,3 +3,4 @@
 *.psd
 /.vscode/*
 /tmp
+/doc/*
