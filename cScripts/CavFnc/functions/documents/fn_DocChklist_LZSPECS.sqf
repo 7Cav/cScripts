@@ -23,5 +23,5 @@ player createDiaryRecord["Chklists",
 <font color='#ffc61a'>LZ / PZ MARKINGS</font><br/><br/>
 <img image='cScripts\Data\Images\LZ-MAP-MARKINGS.paa' width='367' height='245'/>
         "
-    ]
+    ], taskNull, "", false
 ];
