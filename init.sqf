@@ -21,26 +21,26 @@ ACE_maxWeightDrag = 10000;
 
 if (isMultiplayer) then {
     if EGVAR(Settings,enableVCOMAI) then {
-        #ifdef DEBUG_MODE	
+        #ifdef DEBUG_MODE
             ["Initializing VCOM AI..."] call FUNC(logInfo);
         #endif
         execVM "cScripts\Vcom\VcomInit.sqf";
     } else {
-        #ifdef DEBUG_MODE	
+        #ifdef DEBUG_MODE
             ["VCOM AI is disabled applying cScripts custom ai difficuly..."] call FUNC(logInfo);
         #endif
         {
-            _x setSkill ["aimingspeed",     0.420];	
-            _x setSkill ["aimingaccuracy",  1.000];	
-            _x setSkill ["aimingshake",     0.360];	
-            _x setSkill ["spottime",        1.000];	
-            _x setSkill ["spotdistance",    1.000];	
-            _x setSkill ["commanding",      1.0];	
-            _x setSkill ["general",         1.0];	
+            _x setSkill ["aimingspeed",     0.420];
+            _x setSkill ["aimingaccuracy",  1.000];
+            _x setSkill ["aimingshake",     0.360];
+            _x setSkill ["spottime",        1.000];
+            _x setSkill ["spotdistance",    1.000];
+            _x setSkill ["commanding",      1.0];
+            _x setSkill ["general",         1.0];
         } forEach allUnits;
     };
-} else {	
-    ["Mission is running on a singelplayer enviroment."] call FUNC(logWarning);	
+} else {
+    ["Mission is running on a singelplayer enviroment."] call FUNC(logWarning);
 };
 
 #ifdef DEBUG_MODE
