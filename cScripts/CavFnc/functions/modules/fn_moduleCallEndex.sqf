@@ -39,7 +39,6 @@ _holdFireMessage = _holdFireMessage isEqualTo 0;
 "ENDEX ENDEX ENDEX" remoteExecCall ["systemChat", 0];
 "DEBRIEF" remoteExecCall ["systemChat", 0];
 "LEADERS DEBRIEF IN CHANNEL BELOW" remoteExecCall ["systemChat", 0];
-"Mission have been endex" remoteExecCall [QFUNC(logInfo), 0];
 
 //hint Endex message
 private _title = "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENDEX ENDEX ENDEX!</t><br />";
@@ -53,19 +52,19 @@ parseText(_title + _text0 + _image + _text1 + _text3) remoteExecCall ["hint", 0]
 //Set Safety to all Players
 if (_weaponsSafe) then {
     {
-        private _weapon = currentWeapon _x; 
-        private _safedWeapons = _x getVariable ['ace_safemode_safedWeapons', []]; 
+        private _weapon = currentWeapon player; 
+        private _safedWeapons = player getVariable ['ace_safemode_safedWeapons', []]; 
         if !(_weapon in _safedWeapons) then {  
-            [_x, currentWeapon _x, currentMuzzle _x] call ace_safemode_fnc_lockSafety;
+            [player, currentWeapon player, currentMuzzle player] call ace_safemode_fnc_lockSafety;
             #ifdef DEBUG_MODE
-                [formatText["%1 weapon (%2) have been set to safe.", _x, _weapon]] call FUNC(logInfo);
+                [formatText["%1 weapon (%2) have been set to safe.", player, _weapon]] call FUNC(logInfo);
             #endif
         };
-    } forEach allPlayers;
+    } remoteExecCall ["bis_fnc_call", 0]; 
 };
 
 
-//Set all AI behavior to careless and combat behavior Blue (doesn't affected AI created after Endex)
+//Change AI to careless (doesn't affected AI created after Endex)
 if (_aiPacified) then { 
     {
         (group _x) setBehaviourStrong "CARELESS";
@@ -76,13 +75,12 @@ if (_aiPacified) then {
     } forEach ((allUnits) - (allPlayers));
 };
 
-//Adds a event handler that informs a players to hold fire
 if (_holdFireMessage) then {
     [
         {
             {
                 [
-                    _x,
+                    player,
                     "fired",
                     {
                         params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
@@ -97,8 +95,8 @@ if (_holdFireMessage) then {
                         hint parseText (_hftitle + _hfimage + _hftext);
                     }
                 ] call CBA_fnc_addBISEventHandler;
-            } forEach allPlayers;
-        },
+            } remoteExecCall ["bis_fnc_call", 0];
+        }, 
     [], 10] call CBA_fnc_waitAndExecute;
 };
 
