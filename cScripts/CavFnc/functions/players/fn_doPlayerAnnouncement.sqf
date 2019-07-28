@@ -20,6 +20,7 @@ params [
     ["_player",""]
 ];
 
+if !([_player, MAINCLANTAG] call FUNC(isPlayerClan)) exitWith {};
 if !(isNil {_player getVariable QEGVAR(Player,Announced)}) exitWith {
     #ifdef DEBUG_MODE
         [formatText["%1 already announced.", _player]] call FUNC(logInfo);
@@ -29,6 +30,8 @@ if !(isNil {_player getVariable QEGVAR(Player,Announced)}) exitWith {
 #ifdef DEBUG_MODE
     formatText["Announcing player %1.", _player] call FUNC(logInfo);
 #endif
+
+systemChat format['Welcome %1 %2!', [player,'CAV'] call FUNC(getPlayerRank), [player,'PROFILE'] call FUNC(getPlayerName)];
 
 private _profileName = profileName;
 _profileName = [_profileName, 0, 2] call BIS_fnc_trimString;
