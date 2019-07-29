@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Size Type <SIZE> ["none","all","officer","alpha","bravo","charlie","ranger" and Squad Names etc...]
+ * 1: Selection type <SIZE> ["none","all","officer","alpha","bravo","charlie","ranger" and Squad Names etc...]
  * 2: Require correct company to select loadout. <BOOL> (default: true)
  *
  * Example:

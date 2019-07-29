@@ -37,7 +37,7 @@ detach _chute;
 _player moveInDriver _chute;
 _chute setVelocity _velocity;
 
-[_player] call FUNC(sim_jump);
+[_player] call FUNC(handleJump);
 
 sleep 0.5;
 _player allowDamage true;
