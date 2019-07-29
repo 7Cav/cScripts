@@ -66,7 +66,8 @@
     #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     #include "cScripts\ViewingDistance\GUI.h"
     #include "cScripts\CfgLoadouts.hpp"
-
+    #include "cScripts\Vcom\userconfig\VCOM_AI\AISettingsV3.hpp"
+    
 class CfgRemoteExec {
     class Functions {
         mode = 2;
