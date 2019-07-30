@@ -446,10 +446,11 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",20];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",20];
-    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",10];
+    _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",10];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",10];
     _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
     
 
@@ -585,7 +586,7 @@ if (_companySelector in _ranger or _alwaysAvalible) then {
 
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",50];
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",50];
-        _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",50];
+        _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",50];
         _crate addMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",50];
         _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",10];
         _crate addMagazineCargoGlobal ["rhs_fim92_mag",10];
