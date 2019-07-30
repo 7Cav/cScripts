@@ -24,7 +24,6 @@ private _dialogResult = [
             "Bravo",
             "Bravo - Mustang",
             "Charlie",
-            "Charlie - Havoc",
             "Ranger",
             "Sniper",
             "All loadouts"
@@ -45,11 +44,10 @@ private _quickSelectScale = switch (_dialogResult select 0) do {
     case 2: {"bravo";};
     case 3: {"mustang";};
     case 4: {"charlie";};
-    case 5: {"havoc";};
-    case 6: {"ranger";};
-    case 7: {"sniper";};
+    case 5: {"ranger";};
+    case 6: {"sniper";};
 
-    case 8: {"all";};
+    case 7: {"all";};
 };
 
 private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};
