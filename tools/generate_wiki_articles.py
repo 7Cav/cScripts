@@ -94,6 +94,8 @@ def main():
             is_exam = False
             is_code = False
             for i, line in enumerate(file):
+                line = line.replace('<', '&#60;')
+                line = line.replace('>', '&#62;')
                 if ' */' in line:
                     break
                 if '/*' in line:
