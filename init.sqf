@@ -19,16 +19,12 @@ tawvd_disablenone = true;
 ACE_maxWeightCarry = 7500;
 ACE_maxWeightDrag = 10000;
 
-if (isMultiplayer) then {
+if (isMultiplayer || isDedicated) then {
     if EGVAR(Settings,enableVCOMAI) then {
-        #ifdef DEBUG_MODE
-            ["Initializing VCOM AI..."] call FUNC(logInfo);
-        #endif
+        ["Initializing VCOM AI..."] call FUNC(logInfo);
         execVM "cScripts\Vcom\VcomInit.sqf";
     } else {
-        #ifdef DEBUG_MODE
-            ["VCOM AI is disabled applying cScripts custom ai difficuly..."] call FUNC(logInfo);
-        #endif
+        ["VCOM AI is disabled applying cScripts custom ai difficuly..."] call FUNC(logInfo);
         {
             _x setSkill ["aimingspeed",     0.420];
             _x setSkill ["aimingaccuracy",  1.000];
