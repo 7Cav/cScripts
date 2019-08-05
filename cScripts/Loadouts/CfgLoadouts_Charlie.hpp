@@ -210,6 +210,7 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
     };
 
     items[] = {
+        "ACE_microDAGR",
         "ACRE_PRC152",
         "ACE_EntrenchingTool",
         
