@@ -49,9 +49,13 @@ private _transportRotary = [
     
     "rhs_uh1h_hidf",
     "rhs_uh1h_hidf_gunship",
-    "rhs_uh1h_hidf_unarmed"
+    "rhs_uh1h_hidf_unarmed",
+
+    "Cav_Alpha_UH60M",
+    "Cav_Alpha_UH60M2",
+    "Cav_Alpha_UH60M_MEV2"
 ];
-private _fixedWingTransport = ["RHS_C130J"];
+private _fixedWingTransport = ["RHS_C130J", "Cav_Alpha_C130J"];
 
 switch (true) do {
     case (typeOf _vehicle in _transportRotary): {
