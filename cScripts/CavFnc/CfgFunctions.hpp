@@ -103,6 +103,9 @@ class cScripts {
         class teleport {};
 
         class addObjectToCurator {};
+
+        class addFortifyArea {};
+        class handleFortify {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
