@@ -54,7 +54,7 @@ if !(_companySelector == 'NONE') then {
     // Magazines
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
-    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
 
     // Chemlights
     _crate addMagazineCargoGlobal ["ACE_Chemlight_HiBlue",100];
