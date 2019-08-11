@@ -159,7 +159,6 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     [_object,"Grenadier", "Cav_B_C_Grenadier_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Rifleman", "Cav_B_C_Rifleman_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Rifleman (LAT)", "Cav_B_C_RiflemanLAT_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"Designated Marksman", "Cav_B_C_Marksman_Local", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Combat Life Saver", "Cav_B_C_Alpha_CombatLifeSaver_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
 
@@ -178,29 +177,30 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     // MMG Team
     [_object,"cScriptQuickSelection_Charlie_MMGTeam","Machine Gun Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
     private _charlieMMGTeamCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie','cScriptQuickSelection_Charlie_MMGTeam'];
-    [_object,"MMG FTL", "CAV_Charlie_Machinegunner_TeamLeader_Local", "", _charlieMMGTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"MMG Team Leader", "CAV_Charlie_Machinegunner_TeamLeader_Local", "", _charlieMMGTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"MMG Gunner", "CAV_Charlie_Machinegunner_Local", "", _charlieMMGTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"MMG Assistant Gunner", "CAV_Charlie_Machinegunner_Assistant_Local", "", _charlieMMGTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
     // MAAWS Team
     [_object,"cScriptQuickSelection_Charlie_ATTeam","MAAWS Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
     private _charlieATTeamCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie','cScriptQuickSelection_Charlie_ATTeam'];
-    [_object,"HE MAAWS Gunner", "Cav_B_C_AT_HE_Local", "", _charlieATTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"HE MAAWS Assistant", "Cav_B_C_AAT_HE_Local", "", _charlieATTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"AT MAAWS Gunner", "Cav_B_C_AT_Local", "", _charlieATTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"AT MAAWS Assistant", "Cav_B_C_AAT_Local", "", _charlieATTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"MAAWS Team Leader", "Cav_B_C_MAAWS_TeamLeader_Local", "", _charlieATTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"MAAWS Specialist", "Cav_B_C_MAAWS_Local", "", _charlieATTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"MAAWS Ammo Handler", "Cav_B_C_MAAWS_AH_Local", "", _charlieATTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
     // AA Team
-    [_object,"cScriptQuickSelection_Charlie_AATeam","Stinger Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
+    [_object,"cScriptQuickSelection_Charlie_AATeam","MANPADS Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
     private _charlieAATeamCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie','cScriptQuickSelection_Charlie_AATeam'];
-    [_object,"Stinger Gunner", "Cav_B_C_AA_Local", "", _charlieAATeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"Stinger Assistant", "Cav_B_C_AAA_Local", "", _charlieAATeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"MANPADS Team Leader", "Cav_B_C_AATL_Local", "", _charlieAATeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"MANPADS Specialist", "Cav_B_C_AA_Local", "", _charlieAATeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"MANPADS Ammo Handler", "Cav_B_C_AAA_Local", "", _charlieAATeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
-    // MK19 Team
-    [_object,"cScriptQuickSelection_Charlie_MK19Team","MK19 Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
-    private _charlieMK19TeamCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie','cScriptQuickSelection_Charlie_MK19Team'];
-    [_object,"Mk.19 FTL", "Cav_B_C_Support_MK19_TeamLeader_Local", "", _charlieMK19TeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"Mk.19 Gun", "Cav_B_C_Support_MK19_Gunner_Local", "", _charlieMK19TeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"Mk.19 Tri", "Cav_B_C_Support_MK19_Assistant_Local", "", _charlieMK19TeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    // CCM Team
+    [_object,"cScriptQuickSelection_Charlie_JavelinTeam","CCM Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
+    private _charlieJavelinTeamCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie','cScriptQuickSelection_Charlie_JavelinTeam'];
+    [_object,"CCM Team Leader", "Cav_B_C_Javelin_TeamLeader_Local", "", _charlieJavelinTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"CCM Specialist", "Cav_B_C_Javelin_Gunner_Local", "", _charlieJavelinTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    [_object,"CCM Ammo Handler", "Cav_B_C_Javelin_Assistant_Local", "", _charlieJavelinTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
     // Mortar Team
     [_object,"cScriptQuickSelection_Charlie_MortarTeam","Mortar Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
