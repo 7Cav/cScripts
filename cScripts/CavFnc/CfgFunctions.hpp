@@ -116,6 +116,9 @@ class cScripts {
 
         class addObjectToCurator {};
 
+        class addFortifyArea {};
+        class handleFortify {};
+
         class createVehicleLable {};
         class getVehicleLable {};
     };

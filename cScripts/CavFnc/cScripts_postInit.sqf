@@ -44,6 +44,9 @@ if (EGVAR(Settings,enableStartHint)) then {
     [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] call FUNC(initStartupHint);
 };
 
+// Fortify
+call FUNC(handleFortify);
+
 #ifdef DEBUG_MODE
     ["postInit initialization completed."] call FUNC(logInfo);
 #endif
