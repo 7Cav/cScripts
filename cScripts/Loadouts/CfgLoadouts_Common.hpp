@@ -204,7 +204,7 @@ class Cav_B_Charlie_base_F : CommonBlufor {
     //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
-    //vest[] = {"rhsusf_spcs_ocp"};
+    vest[] = {"rhsusf_spcs_rifleman_ocp"};
 
     primary[] = {"rhs_weap_m4a1_mstock","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15_bk_light","rhsusf_acc_tdstubby_blk","rhsusf_acc_compm4"};
     secondary[] = {""};
@@ -213,17 +213,15 @@ class Cav_B_Charlie_base_F : CommonBlufor {
     binoculars[] = {""};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG",9,
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",15,
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",
-        "ACE_Chemlight_HiRed",2,
-        "Chemlight_Blue",2,
-        "B_IR_Grenade",2
         
     };
     items[] = {
         "ACE_DAGR",
+        "rhsusf_ANPVS_14",
         
         // Personal Medical Equipment
         "ACE_quikclot",16,
