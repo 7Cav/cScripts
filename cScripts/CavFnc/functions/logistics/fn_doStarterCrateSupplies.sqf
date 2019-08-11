@@ -454,7 +454,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",250];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",250];
-    _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",50];
+    _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_soft_pouch_coyote",50];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",50];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",50];
     _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
