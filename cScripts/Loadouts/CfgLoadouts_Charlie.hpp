@@ -158,7 +158,7 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
     //insignia[] = {""};
 };
 
-class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 35.1kg
+class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 33.8kg
     //backpack[] = {"B_AssaultPack_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
     headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
@@ -172,7 +172,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 35.1kg
     //binoculars[] = {""};
 
     magazines[] = {
-        "rhsusf_200rnd_556x45_mixed_box",7,
+        "rhsusf_200rnd_556x45_mixed_soft_pouch_coyote",7,
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",
