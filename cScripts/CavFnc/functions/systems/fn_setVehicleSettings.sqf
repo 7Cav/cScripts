@@ -57,12 +57,28 @@ private _transportRotary = [
 ];
 private _fixedWingTransport = ["RHS_C130J", "Cav_Alpha_C130J"];
 
+private _logisticalVehicles = [
+    "B_Truck_01_Repair_F",
+    "B_T_Truck_01_Repair_F",
+    "rhsusf_M977A4_REPAIR_usarmy_d",
+    "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
+    "rhsusf_M977A4_REPAIR_BKIT_usarmy_d",
+    "rhsusf_M977A4_REPAIR_usarmy_wd",
+    "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+    "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
+    "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy",
+    "rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy"
+];
+
 switch (true) do {
     case (typeOf _vehicle in _transportRotary): {
         [_vehicle] call FUNC(addGetOutHelo);
     };
     case (typeOf _vehicle in _fixedWingTransport): {
         [_vehicle] call FUNC(addJump);
+    };
+    case (typeOf _vehicle in _logisticalVehicles): {
+        [_vehicle] call FUNC(addFortifyArea);
     };
 };
 
