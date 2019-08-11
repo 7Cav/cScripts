@@ -651,6 +651,8 @@ class Cav_B_B_Alpha_RiflemanLAT_F : Cav_B_Bravo_base_F {
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
 
+    launcher[] = {"rhs_weap_M136_hp"};
+    
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",10,
 
