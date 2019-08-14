@@ -1,5 +1,5 @@
 // Charlie Company Loadouts
-// By SFC.Atherton.H, SSG.Geki.T                        version 0.2
+// By SFC.Atherton.H, SSG.Geki.T                        version 1.5
 
 // Squad
 
@@ -438,7 +438,7 @@ class CAV_Charlie_Machinegunner_TeamLeader_Local : Cav_B_Charlie_base_F { //MMG 
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8,
         "rhs_mag_m67",2,
         "SmokeShell",4,
-        "SmokeShellGreen",2
+        "SmokeShellGreen",2,
         "SmokeShellBlue",2,
         "ACE_Chemlight_HiRed",4,
         "ACE_Chemlight_HiGreen",4,
@@ -483,9 +483,9 @@ class CAV_Charlie_Machinegunner_Local : Cav_B_Charlie_base_F { //GPMG Gunner : 3
     //binoculars[] = {""};
 
     magazines[] = {
-    "SmokeShell",2,
-    "rhsusf_100Rnd_762x51_m62_tracer",5,
-    "rhsusf_100Rnd_762x51_m61_ap",2
+        "SmokeShell",2,
+        "rhsusf_100Rnd_762x51_m62_tracer",5,
+        "rhsusf_100Rnd_762x51_m61_ap",2
     };
 
     items[] = {
@@ -572,7 +572,7 @@ class Cav_B_C_MAAWS_TeamLeader_Local : Cav_B_Charlie_base_F { //MAAWS Team Leade
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8,
         "rhs_mag_m67",2,
         "SmokeShell",4,
-        "SmokeShellGreen",2
+        "SmokeShellGreen",2,
         "SmokeShellRed",
         "ACE_Chemlight_HiRed",1,
         "Chemlight_HiGreen",1,
@@ -710,7 +710,7 @@ class Cav_B_C_Javelin_TeamLeader_Local : Cav_B_Charlie_base_F { //CCM FTL : 38.3
         "rhs_fgm148_magazine_AT",
         "rhs_mag_m67",2,
         "SmokeShell",4,
-        "SmokeShellGreen",2
+        "SmokeShellGreen",2,
         "ACE_Chemlight_HiRed",2,
         "ACE_Chemlight_HiGreen",2,
         "B_IR_Grenade",
