@@ -216,7 +216,7 @@ class Cav_B_Charlie_base_F : CommonBlufor {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",15,
         "rhs_mag_m67",2,
         "SmokeShell",4,
-        "SmokeShellGreen",
+        "SmokeShellGreen"
         
     };
     items[] = {
