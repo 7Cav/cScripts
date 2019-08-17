@@ -220,11 +220,6 @@ class Cav_B_Charlie_base_F : CommonBlufor {
         
     };
     items[] = {
-        "ACE_DAGR",
-        "rhsusf_ANPVS_14",
-        "ACE_EntrenchingTool",
-        "ACE_Flashlight_XL50",
-        
         // Personal Medical Equipment
         "ACE_quikclot",16,
         "ACE_tourniquet",4,
