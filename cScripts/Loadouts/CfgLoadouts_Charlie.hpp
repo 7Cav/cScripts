@@ -29,19 +29,12 @@ class Cav_B_C_SquadLeader_F : Cav_B_Charlie_base_F { //General SL : 26.14kg
         "B_IR_Grenade",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",
         "ACE_Flashlight_XL50",
         "ACE_HuntIR_monitor",
-        "rhsusf_ANPVS_14",
-
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "rhsusf_ANPVS_14"
     };
 
     //compass[] = {"ItemCompass"};
@@ -77,21 +70,14 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_base_F { //General FTL : 24.6kg
         "B_IR_Grenade",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",
         "ACE_Flashlight_XL50",
         "ACE_EntrenchingTool",
         "rhsusf_ANPVS_14",
         "ACE_SpraypaintGreen",
-        "ACE_CableTie",4,
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_CableTie",4
     };
 
     //compass[] = {"ItemCompass"};
@@ -132,21 +118,14 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
         "B_IR_Grenade",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",
         "ACE_Flashlight_XL50",
         "ACE_EntrenchingTool",
         "ACE_SpraypaintGreen",
         "rhsusf_ANPVS_14",
-        "ACE_CableTie",4,
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_CableTie",4
     };
 
     //compass[] = {"ItemCompass"};
@@ -178,18 +157,11 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 33.8kg
         "SmokeShellGreen"
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "rhsusf_ANPVS_14",
         "ACE_Flashlight_XL50",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -226,18 +198,11 @@ class Cav_B_C_Grenadier_F : Cav_B_Charlie_base_F { //General GRN : 31.4kg
         "ACE_HuntIR_M203",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "rhsusf_ANPVS_14",
         "ACE_Flashlight_XL50",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -271,18 +236,11 @@ class Cav_B_C_RiflemanLAT_F : Cav_B_Charlie_base_F { //General Rifleman AT : 35.
         "SmokeShellGreen"
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_Flashlight_XL50",
         "ACE_EntrenchingTool",
-        "rhsusf_ANPVS_14",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "rhsusf_ANPVS_14"
     };
 
     //compass[] = {"ItemCompass"};
@@ -308,18 +266,11 @@ class Cav_B_C_Rifleman_F : Cav_B_Charlie_base_F { //General Rifleman : 27.5kg
         "SmokeShell",4,
         "SmokeShellGreen"
     };
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_Flashlight_XL50",
         "ACE_EntrenchingTool",
-        "rhsusf_ANPVS_14",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "rhsusf_ANPVS_14"
     };
 
     //compass[] = {"ItemCompass"};
@@ -351,18 +302,11 @@ class Cav_B_C_Rifleman_F : Cav_B_Charlie_base_F { //General Rifleman : 27.5kg
         //"SmokeShellGreen",
     //};
 
-    //items[] = {
+    //items[] += {
         //"ACE_DAGR",
         //"ACE_Flashlight_XL50",
         //"ACE_EntrenchingTool",
-        //"rhsusf_ANPVS_14",
-        
-        // Personal Medical Equipment
-        //"ACE_quikclot",16,
-        //"ACE_tourniquet",4,
-
-        // Standard
-        //"ACE_MapTools"
+        //"rhsusf_ANPVS_14"
     //};
 
     //compass[] = {"ItemCompass"};
@@ -387,18 +331,11 @@ class Cav_B_C_CombatLifeSaver_F : Cav_B_Charlie_base_F {
         "SmokeShell",4,
         "SmokeShellGreen"
     };
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_Flashlight_XL50",
         "ACE_EntrenchingTool",
         "rhsusf_ANPVS_14",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools",
 
         // Medical Equipment
         "ACE_quikclot",30,
@@ -444,17 +381,10 @@ class CAV_Charlie_Machinegunner_TeamLeader_Local : Cav_B_Charlie_base_F { //MMG 
         "rhsusf_100rnd_762x51_m61_ap",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",
-        "rhsusf_ANPVS_14",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "rhsusf_ANPVS_14"
     };
 
     //compass[] = {"ItemCompass"};
@@ -485,17 +415,10 @@ class CAV_Charlie_Machinegunner_Local : Cav_B_Charlie_base_F { //GPMG Gunner : 3
         "rhsusf_100Rnd_762x51_m61_ap",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_Flashlight_XL50",
-        "rhsusf_ANPVS_14",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "rhsusf_ANPVS_14"
     };
 
     //compass[] = {"ItemCompass"};
@@ -528,18 +451,11 @@ class CAV_Charlie_Machinegunner_Assistant_Local : Cav_B_Charlie_base_F { //MMG A
         "rhsusf_100rnd_762x51_m61_ap",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_SpareBarrel",
         "rhsusf_ANPVS_14",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -578,18 +494,11 @@ class Cav_B_C_MAAWS_TeamLeader_Local : Cav_B_Charlie_base_F { //MAAWS Team Leade
         "tf47_m3maaws_HE",3
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACE_Flashlight_XL50",
         "rhsusf_ANPVS_14",
-        "ACRE_PRC152",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACRE_PRC152"
     };
 
     //compass[] = {"ItemCompass"};
@@ -622,17 +531,10 @@ class Cav_B_C_MAAWS_Local : Cav_B_Charlie_base_F { //MAAWS Specialist : 35.8kg
         "Cav_m3maaws_HEAT_CS",1
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "rhsusf_ANPVS_14",
-        "ACE_Flashlight_XL50",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_Flashlight_XL50"
     };
 
     //compass[] = {"ItemCompass"};
@@ -665,18 +567,11 @@ class Cav_B_C_MAAWS_AH_Local : Cav_B_Charlie_base_F { //MAAWS Ammo Handler : 35.
         "Cav_m3maaws_HEAT_CS",
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_EntrenchingTool",
         "rhsusf_ANPVS_14",
-        "ACE_Flashlight_XL50",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_Flashlight_XL50"
     };
 
     //compass[] = {"ItemCompass"};
@@ -715,18 +610,11 @@ class Cav_B_C_Javelin_TeamLeader_Local : Cav_B_Charlie_base_F { //CCM FTL : 38.3
         "SmokeShellBlue",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",
         "rhsusf_ANPVS_14",
-        "ACE_Flashlight_XL50",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_Flashlight_XL50"
     };
 
     //compass[] = {"ItemCompass"};
@@ -756,17 +644,10 @@ class Cav_B_C_Javelin_Gunner_Local : Cav_B_Charlie_base_F { //CCM Specialist : 3
         "SmokeShell",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "rhsusf_ANPVS_14",
-        "ACE_Flashlight_XL50",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_Flashlight_XL50"
     };
 
     //compass[] = {"ItemCompass"};
@@ -797,18 +678,11 @@ class Cav_B_C_Javelin_Assistant_Local : Cav_B_Charlie_base_F { //CCM Ammo Handle
         "SmokeShell",4
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_EntrenchingTool",
         "rhsusf_ANPVS_14",
-        "ACE_Flashlight_XL50",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_Flashlight_XL50"
     };
 
     //compass[] = {"ItemCompass"};
@@ -844,16 +718,9 @@ class Cav_B_C_Support_Mortar_AutomaticRifleman_Local : Cav_B_Charlie_base_F { //
         "rhsusf_200rnd_556x45_mixed_box",5
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
-        "ACE_Flashlight_XL50",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_Flashlight_XL50"
     };
 
     //compass[] = {"ItemCompass"};
@@ -889,19 +756,14 @@ class Cav_B_C_Support_Mortar_TeamLeader_Local : Cav_B_Charlie_base_F { //Mortar 
         "B_IR_Grenade",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",
         "ACE_RangeTable_82mm",
         "ACE_EntrenchingTool",
         
         // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-        "ACE_personalAidKit",2,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_personalAidKit",2
     };
 
     //compass[] = {"ItemCompass"};
@@ -935,16 +797,9 @@ class Cav_B_C_Support_Mortar_Gunner_Local : Cav_B_Charlie_base_F { //Mortar Gunn
         "B_IR_Grenade",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
-        "ACE_RangeTable_82mm",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_RangeTable_82mm"
     };
 
     //compass[] = {"ItemCompass"};
@@ -1032,18 +887,11 @@ class Cav_B_C_AATL_Local : Cav_B_Charlie_base_F { //Stinger Assist : 34.7kg
         "rhs_fim92_mag",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",
         "rhsusf_ANPVS_14",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -1076,17 +924,10 @@ class Cav_B_C_AAA_Local : Cav_B_Charlie_base_F { //Stinger Assist : 34.7kg
         "rhs_fim92_mag",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "rhsusf_ANPVS_14",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -1122,16 +963,9 @@ class Cav_B_C_AA_Local : Cav_B_Charlie_base_F { //Stinger Gunner : 38kg
         "rhs_fim92_mag",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -1163,18 +997,11 @@ class CAV_Charlie_TOWSFTL : Cav_B_Charlie_base_F { //TOWS FTL : 27kg
         "SmokeShell",4
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",
         "ACE_IR_Strobe_Item",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -1204,18 +1031,11 @@ class CAV_Charlie_TOWSGUN : Cav_B_Charlie_base_F { //TOWS Gunner : 35kg
         "SmokeShell",6
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_IR_Strobe_Item",
         "Flagstack_Red",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -1245,18 +1065,11 @@ class CAV_Charlie_TOWSTRI : Cav_B_Charlie_base_F { //TOWS Tripod : 28kg
         "SmokeShell",6
     };
 
-    items[] = {
+    items[] += {
         "ACE_DAGR",
         "ACE_IR_Strobe_Item",
         "Flagstack_Red",
-        "ACE_EntrenchingTool",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_EntrenchingTool"
     };
 
     //compass[] = {"ItemCompass"};
@@ -1296,21 +1109,17 @@ class Cav_B_C_Officer_F : Cav_B_Charlie_base_F { //Platoon Staff : 27kg
         "B_IR_Grenade",3
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",2,
         "ACE_IR_Strobe_Item",
         "ACE_EntrenchingTool",
         
         "ACE_SpraypaintGreen",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-        "ACE_personalAidKit",
 
-        // Standard
-        "ACE_MapTools"
+        // Personal Medical Equipment
+        "ACE_personalAidKit"
+
     };
 
     //compass[] = {"ItemCompass"};
@@ -1346,30 +1155,24 @@ class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_base_F { //Platoon Medic : 34kg
     "B_IR_Grenade",2
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",2,
         "ACE_EntrenchingTool",
         "rhsusf_ANPVS_14",
-        "ItemAndroid",
+
         "ACE_SpraypaintRed",
         "ACE_SpraypaintBlack",
+
+        // Medical Equipment
         "ACE_surgicalKit",
         "ACE_salineIV",10,
         "ACE_morphine",15,
         "ACE_elasticBandage",40,
         "ACE_quikclot",40,
-        "ACE_personalAidKit",6,
+        "ACE_personalAidKit",7,
         "ACE_epinephrine",15,
-        "ACE_tourniquet",10,
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-        "ACE_personalAidKit",
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_tourniquet",10
     };
 
     //compass[] = {"ItemCompass"};
@@ -1406,23 +1209,15 @@ class CAV_Charlie_CompanyStaff_F : Cav_B_Charlie_base_F { //Company Staff : 27kg
         "ACE_Chemlight_HiRed",2,
         "Chemlight_Blue",2,
         "B_IR_Grenade",3
-        
     };
 
-    items[] = {
+    items[] += {
         "ACE_microDAGR",
         "ACRE_PRC152",2,
         "ACE_EntrenchingTool",
         "rhsusf_ANPVS_14",
         "ItemAndroid",
-        "ACE_SpraypaintGreen",
-        
-        // Personal Medical Equipment
-        "ACE_quikclot",16,
-        "ACE_tourniquet",4,
-
-        // Standard
-        "ACE_MapTools"
+        "ACE_SpraypaintGreen"
     };
 
     //compass[] = {"ItemCompass"};
