@@ -302,9 +302,7 @@ if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
 };
 
-if (EGVAR(Settings,PoppyEnabled)) then {
-    call poppy_fnc_preInit;
-} else {
+if !(EGVAR(Settings,PoppyEnabled)) then {
     ["Poppy loadout system have been disabled."] call FUNC(logWarning);
 };
 
