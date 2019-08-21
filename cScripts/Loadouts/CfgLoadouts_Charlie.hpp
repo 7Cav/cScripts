@@ -151,7 +151,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 33.8kg
     //binoculars[] = {""};
 
     magazines[] = {
-        "rhsusf_200rnd_556x45_mixed_soft_pouch_coyote",7,
+        "rhsusf_200rnd_556x45_mixed_soft_pouch_coyote",6,
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen"
