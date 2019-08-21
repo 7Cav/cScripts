@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /* 
  * Author: CPL.Brostrom.A
- * This function initzialises all the default mission loadouts.
+ * This function initzialise ace arsenal default loadouts in eden and in mission.
  *
  * Arguments:
  * None
