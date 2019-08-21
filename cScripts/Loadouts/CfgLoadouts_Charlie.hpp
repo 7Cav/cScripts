@@ -144,7 +144,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 33.8kg
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
     vest[] = {"rhsusf_spcs_ocp_saw"};
 
-    primary[] = {"rhs_weap_m249_light_S","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_elcan_ard"};
+    primary[] = {"rhs_weap_m249_light_S","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_elcan_ard","rhsusf_acc_saw_lw_bipod"};
     //secondary[] = {""};
     //launcher[] = {""};
 
