@@ -153,6 +153,17 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_fnc_addSetting;
 
+// Fortify
+[
+    QEGVAR(Settings,setFortifyRestriction),
+    "LIST",
+    ["Fortification restrictions", "Define hwo can use the fortify action.\n"],
+    [_cScriptSettings, "4; Player"],
+    [[0,1,2], ["Anyone", "Engineer", "Adv. Engineer"], 1],
+    true,
+    {}
+] call CBA_fnc_addSetting;
+
 // Eyewere
 [
     QEGVAR(Settings,enforceEyewereBlacklist),
@@ -226,12 +237,21 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_fnc_addSetting;
 
 
-
 // Aries Achilles Zeus Moduels
 [
     QEGVAR(Settings,enable7cavZeusModules),
     "CHECKBOX",
     ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
+    [_cScriptSettings, "6; Zeus"],
+    true,
+    true,
+    {}
+] call CBA_fnc_addSetting;
+
+[
+    QEGVAR(Settings,curatorImmortality),
+    "CHECKBOX",
+    ["Zeus Immortality","Make all curator units immortal.\n"],
     [_cScriptSettings, "6; Zeus"],
     true,
     true,
@@ -282,6 +302,27 @@ if (EGVAR(Settings,allowCustomTagging)) then {
 
 if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
+};
+
+switch (EGVAR(Settings,setFortifyRestriction)) do {
+    case (0): { // Anyone
+    };
+    case (1): { // Engineers
+        [{
+            params ["_unit"];
+            private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
+            if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer > 0};
+            _isEngineer;
+        }] call acex_fortify_fnc_addDeployHandler;
+    };
+    case (2): { // Adv Engineers
+        [{
+            params ["_unit"];
+            private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
+            if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer > 1};
+            _isEngineer;
+        }] call acex_fortify_fnc_addDeployHandler;
+    };
 };
 
 

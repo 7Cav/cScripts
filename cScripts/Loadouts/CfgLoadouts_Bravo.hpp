@@ -514,7 +514,7 @@ class Cav_B_B_SquadLeader_F : Cav_B_Bravo_base_F {
     gps[] = {"ItemAndroid"};
 };
 
-class Cav_B_B_Alpha_FireTeamLeader_F : Cav_B_Bravo_base_F {
+class Cav_B_B_FireTeamLeader_F : Cav_B_Bravo_base_F {
     backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
@@ -564,7 +564,7 @@ class Cav_B_B_Alpha_FireTeamLeader_F : Cav_B_Bravo_base_F {
     };
     gps[] = {"ItemAndroid"};
 };
-class Cav_B_B_Alpha_AutomaticRifleman_F : Cav_B_Bravo_base_F {
+class Cav_B_B_AutomaticRifleman_F : Cav_B_Bravo_base_F {
     vest[] = {"rhsusf_iotv_ocp_SAW"};
 
     primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR"};
@@ -577,7 +577,7 @@ class Cav_B_B_Alpha_AutomaticRifleman_F : Cav_B_Bravo_base_F {
         "SmokeShell",4
     };
 };
-class Cav_B_B_Alpha_Grenadier_F : Cav_B_Bravo_base_F {
+class Cav_B_B_Grenadier_F : Cav_B_Bravo_base_F {
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR"};
 
@@ -616,7 +616,7 @@ class Cav_B_B_Alpha_Grenadier_F : Cav_B_Bravo_base_F {
     };
 
 };
-class Cav_B_B_Alpha_Rifleman_F : Cav_B_Bravo_base_F {
+class Cav_B_B_Rifleman_F : Cav_B_Bravo_base_F {
 
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
@@ -631,7 +631,7 @@ class Cav_B_B_Alpha_Rifleman_F : Cav_B_Bravo_base_F {
         "rhs_200rnd_556x45_M_SAW",2
     };
 };
-class Cav_B_B_Alpha_RiflemanAT_F : Cav_B_Bravo_base_F {
+class Cav_B_B_RiflemanAT_F : Cav_B_Bravo_base_F {
 
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
@@ -646,11 +646,13 @@ class Cav_B_B_Alpha_RiflemanAT_F : Cav_B_Bravo_base_F {
         "rhs_200rnd_556x45_M_SAW",2
     };
 };
-class Cav_B_B_Alpha_RiflemanLAT_F : Cav_B_Bravo_base_F {
+class Cav_B_B_RiflemanLAT_F : Cav_B_Bravo_base_F {
 
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
 
+    launcher[] = {"rhs_weap_M136_hp"};
+    
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",10,
 
@@ -661,7 +663,7 @@ class Cav_B_B_Alpha_RiflemanLAT_F : Cav_B_Bravo_base_F {
         "rhs_200rnd_556x45_M_SAW",2
     };
 };
-class Cav_B_B_Alpha_CombatLifeSaver_F : Cav_B_Bravo_base_F {
+class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_base_F {
 
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
@@ -704,22 +706,6 @@ class Cav_B_B_Alpha_CombatLifeSaver_F : Cav_B_Bravo_base_F {
 
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
 };
-
-class Cav_B_B_Bravo_FireTeamLeader_F : Cav_B_B_Alpha_FireTeamLeader_F {
-};
-class Cav_B_B_Bravo_AutomaticRifleman_F : Cav_B_B_Alpha_AutomaticRifleman_F {
-};
-class Cav_B_B_Bravo_Grenadier_F : Cav_B_B_Alpha_Grenadier_F {
-};
-class Cav_B_B_Bravo_Rifleman_F : Cav_B_B_Alpha_Rifleman_F {
-};
-class Cav_B_B_Bravo_RiflemanAT_F : Cav_B_B_Alpha_RiflemanAT_F {
-};
-class Cav_B_B_Bravo_RiflemanLAT_F : Cav_B_B_Alpha_RiflemanLAT_F {
-};
-class Cav_B_B_Bravo_CombatLifeSaver_F : Cav_B_B_Alpha_CombatLifeSaver_F {
-};
-
 
 class Cav_B_B_TeamLeader_Mustang_F : Cav_B_Bravo_Logi_base_F {
     backpack[] = {"B_Carryall_mcamo"};

@@ -24,7 +24,7 @@ class cScripts {
         class DocRadio_MEDEVAC {};
         class DocRadio_ROTARYPICKUP {};
         class DocRadio_SPOTREP {};
-        
+
         class DocChklist_CFF {};
         class DocChklist_JMTASKS {};
         class DocChklist_LZSPECS {};
@@ -54,13 +54,16 @@ class cScripts {
         class setPreInitPlayerSettings {};
         class setPostInitPlayerSettings {};
 
+        class getPlayerClan {};
+        class isPlayerClan {};
+
         class getPlayerRank {};
         class setPlayerRank {};
-        
+
         class getPlayerRole {};
 
         class getPlayerName {};
-        
+
         class setTeamColor {};
 
         class doPlayerAnnouncement {};
@@ -70,9 +73,20 @@ class cScripts {
 
         class getCompanyVariable {};
         class hasCompanyVariable {};
-        
+
         class getCavSquadName {};
         class getSquadInsignia {};
+    };
+    class mission {
+        file = "cScripts\cavFnc\functions\mission";
+        class gate {};
+        class teleport {};
+
+        class addGetOutHelo {};
+
+        class addJump {};
+
+        class setVehicleLable {};
     };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
@@ -82,38 +96,30 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
-        class addJump {};
+       // Plane jump
         class doJump {};
+        class handleJump {};
 
         // Buttons and options
         class addReGear {};
         class addHeal {};
         class addArsenal {};
         class addAceCategory {};
-        class addLoadoutAction {}; // Public
+        class addLoadoutAction {};
 
-        class addGetOutHelo {};
+        // Helo get out
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
 
-        class gate {};
-        class teleport {};
+        class addQuickSelectionList {};
+        class addInsigniaSelectionList {};
 
         class addObjectToCurator {};
-    };
-    class selections {
-        file = "cScripts\cavFnc\functions\selections";
-        class initQuickSelections {};
-        class initInsigniaSelections {};
-    };
-    class simulation {
-        file = "cScripts\cavFnc\functions\simulation";
-        class sim_jump {};
-    };
 
-    class texture {
-        file = "cScripts\cavFnc\functions\texture";
-        class setVehicleLable {};
+
+        class addFortifyArea {};
+        class handleFortify {};
+
         class createVehicleLable {};
         class getVehicleLable {};
     };

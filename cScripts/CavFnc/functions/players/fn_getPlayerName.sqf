@@ -24,23 +24,16 @@ private _return = "";
 
 _getType = toUpper(_getType);
 
-private _playerClan = "";
-
-// featch clan tag if in multiplayer
-if !(isNil {squadParams _player select 0 select 0}) then {
-    _playerClan = squadParams _player select 0 select 0;
-};
-
 // Profile name
 if (_getType == 'PROFILE') then {
     private _profileName = profileName;
-    if (_playerClan == "7CAV") then {_profileName = [_profileName, 4] call BIS_fnc_trimString;};
+    if ([_player, MAINCLANTAG] call FUNC(isPlayerClan)) then {_profileName = [_profileName, 4] call BIS_fnc_trimString;};
     _return = _profileName;
 };
 
 if (_getType == 'STEAM') then {
     private _profileNameSteam = profileNameSteam; 
-    if (_playerClan == "7CAV") then {_profileNameSteam = [_profileNameSteam, 10] call BIS_fnc_trimString;};
+    if ([_player, MAINCLANTAG] call FUNC(isPlayerClan)) then {_profileNameSteam = [_profileNameSteam, 10] call BIS_fnc_trimString;};
     _return = _profileNameSteam;
 };
 
