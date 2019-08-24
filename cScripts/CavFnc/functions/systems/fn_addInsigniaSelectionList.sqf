@@ -82,9 +82,9 @@ _object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5]
 // Charlie Company  2nd Platoon
 [_object,"Platoon Insignia 2/C/1-7","Charlie_2","z\cav\addons\insignia\data\Charlie_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 1/2/C/1-7","Charlie_2_1","z\cav\addons\insignia\data\Charlie_2_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 2/2/C/1-7","Charlie_2_2","z\cav\addons\insignia\data\Charlie_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 2/2/C/1-7","Charlie_2_2","z\cav\addons\insignia\data\Charlie_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 3/2/C/1-7","Charlie_2_3","z\cav\addons\insignia\data\Charlie_2_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","z\cav\addons\insignia\data\Charlie_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","z\cav\addons\insignia\data\Charlie_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 
 // Special
 [_object,"Ranger","Specialized_Ranger","z\cav\addons\insignia\data\Specialized_Ranger.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionSpecial']] call FUNC(addInsigniaSelection);
