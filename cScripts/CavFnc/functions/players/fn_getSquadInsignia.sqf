@@ -15,7 +15,7 @@
  */
 
 private _return = "";
-private _group = call FUNC(getCavSquadName);
+private _group = call FUNC(getSquadName);
 _group = toUpper(_group);
 
 switch (_group) do {

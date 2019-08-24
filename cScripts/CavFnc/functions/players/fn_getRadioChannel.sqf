@@ -15,7 +15,7 @@
  */
 
 private _channel = 1;
-private _group = call FUNC(getCavSquadName);
+private _group = call FUNC(getSquadName);
 _group = toUpper(_group);
 
 if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
