@@ -17,19 +17,21 @@ private _playerRankFormal = [player, 'FORMAL'] call FUNC(getPlayerRank);
 
 private _playerRole = call FUNC(getPlayerRole);
 
-private _playerGroup = call FUNC(getCavSquadName);
-
+private _playerGroup = call FUNC(getSquadName);
 if (_playerGroup == "") then { _playerGroup = "in your squad" } else { _playerGroup = formatText["under the callsign <font color='#ffc61a'>%1</font>", _playerGroup]};
+
+private _worldName = getText (configFile >> "CfgWorlds" >> worldName >> "description");
+private _serverName = if (serverName != "") then {serverName} else {"localhost"}; 
 
 player createDiaryRecord["7Cav",
     ["Information",
-        format[
+        format [
 "Welcome <font color='#ffc61a'>%1</font> <font color='#ffc61a'>%2</font> to %3 on %4.<br/>Your currently on <font color='#ffc61a'>%5</font>.<br/><br/>
 You're currently slotted in as <font color='#ffc61a'>%6</font> %7.<br/><br/>
 Good luck and have fun %8!
 <br/><br/>
 -----------------------------------------------------------------
 <br/><br/>This mission is currently running cScripts version: <font color='#ffc61a'>%9</font>.
-", _playerRank, _playerName, briefingName, worldName, serverName, _playerRole, _playerGroup, _playerRankFormal, VERSION]
+", _playerRank, _playerName, briefingName, _worldName, _serverName, _playerRole, _playerGroup, _playerRankFormal, VERSION]
     ]
 ];
