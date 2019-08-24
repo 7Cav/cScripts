@@ -96,7 +96,7 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
-        // Plane jump
+       // Plane jump
         class doJump {};
         class handleJump {};
 
@@ -115,6 +115,7 @@ class cScripts {
         class addInsigniaSelectionList {};
 
         class addObjectToCurator {};
+
 
         class addFortifyArea {};
         class handleFortify {};
