@@ -13,7 +13,7 @@
 </a>
 
 </p>
-cScripts is an easy to use framework for the ARMA3 S3 Operations staff and other mission makers. This framework contains functions and scripts that are easy to use and implement on a new mission. All scripts and functions are adapted to 7th Cavalry mission standards.
+cScripts is an easy to use ARMA3 mission framework used by the 7th Cavalry Gaming Communitys. This framework contains functions and scripts that are easy to use and implement on a new mission. All scripts and functions are adapted to 7th Cavalry mission standards but can ofcause easily get re fitted to fitt other scenarios and needs.
 
 ## Minimum Requirements
 - [**CBA**](https://github.com/CBATeam/CBA_A3)

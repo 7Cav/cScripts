@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * ["bob"] call cScripts_fnc_sim_jump
+ * ["bob"] call cScripts_fnc_handleJump
  *
  * Public: No
  */
