@@ -2,7 +2,7 @@
 params ["_unit"];
 
 private _config       = missionConfigFile >> "CfgLoadouts";
-private _variable     = _unit getVariable ["cScripts_cav_loadouts", ""];
+private _variable     = _unit getVariable ["cScripts_Cav_Loadout", ""];
 private _variableName = vehicleVarName _unit;
 private _className    = typeOf _unit;
 private _sideConfig   = [side group _unit] call FUNC(getSideConfig);
