@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Size Type <SIZE> ["none","all","officer","alpha","bravo","charlie","ranger" and Squad Names etc...]
+ * 1: Selection type <SIZE> ["none","all","officer","alpha","bravo","charlie","ranger" and Squad Names etc...]
  * 2: Require correct company to select loadout. <BOOL> (default: true)
  *
  * Example:
@@ -175,6 +175,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     [_object,"Squad Leader", "Cav_B_C_SquadLeader_F", "", _charlieLeadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
     // MMG Team
+
     [_object,"cScriptQuickSelection_Charlie_MMGTeam","Machine Gun Team",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Charlie"]] call FUNC(addAceCategory);
     private _charlieMMGTeamCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Charlie','cScriptQuickSelection_Charlie_MMGTeam'];
     [_object,"MMG Team Leader", "CAV_Charlie_Machinegunner_TeamLeader_Local", "", _charlieMMGTeamCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
