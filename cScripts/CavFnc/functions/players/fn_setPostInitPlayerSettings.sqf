@@ -127,6 +127,12 @@ if (EGVAR(Settings,setRadio)) then {
     };
 };
 
+// Save loadout
+if (isNil {_player getVariable QEGVAR(Cav,Loadout)}) then {
+    private _loadout = [_player] call poppy_fnc_selectLoadout;
+    _player setVariable [QEGVAR(Cav,Loadout), QUOTE(_loadout)];
+};
+
 // Handle player announcement
 if (EGVAR(Settings,setMissionType) != 3) then {
     [_player] call FUNC(doPlayerAnnouncement);
