@@ -44,15 +44,24 @@ if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Eject)}) exitWith {[formatText["
     false
 ] call BIS_fnc_holdActionAdd;
 
-// Ace status check
- _condition = {
-    player == vehicle player
+// Add ace action for jump
+ _jumpCondition = {
+    (((_vehicle getCargoIndex player) != -1) && ((_vehicle animationPhase 'ramp_bottom' > 0.64) or (_vehicle animationPhase 'door_2_1' == 1) or (_vehicle animationPhase 'door_2_2' == 1)) && ((getPosVisual _vehicle) select 2 >= _params select 0) && ((getPosVisual _vehicle) select 2 <= _params select 1) && (speed _vehicle <= _params select 2))
 };
-_statement = {
+_jumpStatement = {
+    params ["_target", "_player", "_params"];
+    [_player, _vehicle, _chuteVehicleClass] call FUNC(doJump);
+};
+_action = ["Jump_Out_Aircraft", "Jump Out", "", _jumpStatement, _jumpCondition, {}, [_minAltetude, _maxAltetude, _maxSpeed]] call ace_interact_menu_fnc_createAction;
+[_vehicle, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+
+// Ace status check
+_checkStatement = {
     params ["_target", "_player", "_params"];
     hint parseText format["<t color='#00cd00' size='1.2' shadow='1' shadowColor='#000000' align='center'>ALL GREEN!</t><br />This aircraft is equipped with static line jump equipment!<br /><br />Remember to keep within the safety speed of max <t color='#ffc61a'>%1 KPH</t>, between <t color='#ffc61a'>%2 to %3 METERS AGL</t> and have a door to jump out from open.", (_params select 2)-10, _params select 0, _params select 1];
 };
-_action = ["Jump_Check_Aircraft", "Check Aircraft", "", _statement, {true}, {}, [_minAltetude, _maxAltetude, _maxSpeed]] call ace_interact_menu_fnc_createAction;
+_action = ["Jump_Check_Aircraft", "Check Aircraft", "", _checkStatement, {true}, {}, [_minAltetude, _maxAltetude, _maxSpeed]] call ace_interact_menu_fnc_createAction;
 [_vehicle, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 
