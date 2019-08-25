@@ -7,8 +7,8 @@
  * 0: Enable/Disable <BOOL>
  *
  * Example:
- * [true] call cScripts_fnc_freezMission;
- * [false] call cScripts_fnc_freezMission;
+ * [true] call cScripts_fnc_setMissionFreez;
+ * [false] call cScripts_fnc_setMissionFreez;
  */
 
 params [["_state", true, [true]]];

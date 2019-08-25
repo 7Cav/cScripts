@@ -144,7 +144,10 @@ class cScripts {
 
     class training {
         file = "cScripts\cavFnc\functions\training";
-        class freezMission {};
+        class setImmortality {};
+        class setMissionFreez {};
+        class healAllPlayers {};
+        class regearAllPlayers {};
     };
 
     class helpers {
