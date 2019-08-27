@@ -18,12 +18,9 @@ params [
 
 // Make addAction
 _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
-    if (vehicleVarName player == "") then {
-        [player, typeOf player] call Poppy_fnc_applyLoadout;
-    } else {
-        [player, vehicleVarName player] call Poppy_fnc_applyLoadout;
+    private _loadout = player getVariable ["poppy_loadout", ""];
+    [player, _loadout] call Poppy_fnc_applyLoadout;
 
-    };
     if (_this select 3) then {
         [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
     };
@@ -33,11 +30,9 @@ _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
 private _Icon = "cScripts\Data\Icon\icon_00.paa";
 private _reGearCondition = {true};
 private _reGearStatement = {
-    if (vehicleVarName player == "") then {
-        [player, typeOf player] call Poppy_fnc_applyLoadout;
-    } else {
-        [player, vehicleVarName player] call Poppy_fnc_applyLoadout;
-    };
+    private _loadout = player getVariable ["poppy_loadout", ""];
+    [player, _loadout] call Poppy_fnc_applyLoadout;
+
     if (_doHeal) then {
         [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
     };
