@@ -39,9 +39,7 @@ if (_allowOnlyForCompany) then {
 
 private _statement = {
     (_this select 2) params ["_className"];
-    player setVariable [QEGVAR(Cav,Loadout), _className];
     [player, _className] call Poppy_fnc_applyLoadout;
-
 };
 
 private _action = [format ["cScriptQuickSelection_%1", _className], _lable, _icon, _statement, _condition, nil, [_className, _platoon]] call ace_interact_menu_fnc_createAction;
