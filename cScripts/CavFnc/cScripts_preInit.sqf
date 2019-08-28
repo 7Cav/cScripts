@@ -313,32 +313,27 @@ if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
 };
 
-// switch (EGVAR(Settings,setFortifyRestriction)) do {
-//     case (0): { // Anyone
-//         [{
-//             params ["_unit"];
-//             private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
-//             if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer >= 0};
-//             _isEngineer;
-//         }] call acex_fortify_fnc_addDeployHandler;
-//     };
-//     case (1): { // Engineers
-//         [{
-//             params ["_unit"];
-//             private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
-//             if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer >= 1};
-//             _isEngineer;
-//         }] call acex_fortify_fnc_addDeployHandler;
-//     };
-//     case (2): { // Adv Engineers
-//         [{
-//             params ["_unit"];
-//             private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
-//             if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer >= 2};
-//             _isEngineer;
-//         }] call acex_fortify_fnc_addDeployHandler;
-//     };
-// };
+switch (EGVAR(Settings,setFortifyRestriction)) do {
+    case (0): { // Anyone
+        [{true}] call acex_fortify_fnc_addDeployHandler;
+    };
+    case (1): { // Engineers
+        [{
+            params ["_unit"];
+            private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
+            if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer >= 1};
+            _isEngineer;
+        }] call acex_fortify_fnc_addDeployHandler;
+    };
+    case (2): { // Adv Engineers
+        [{
+            params ["_unit"];
+            private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
+            if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer >= 2};
+            _isEngineer;
+        }] call acex_fortify_fnc_addDeployHandler;
+    };
+};
 
 
 #ifdef DEBUG_MODE
