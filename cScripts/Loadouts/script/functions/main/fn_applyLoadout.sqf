@@ -40,6 +40,9 @@ if (GVAR(usesACRE)) then {
 
 _unit selectWeapon (primaryWeapon _unit);
 
+// Save classname of selected loadout to variable.
+_unit setVariable [QGVAR(loadout), _loadout];
+
 if (_loadConfig) then {
     [_unit, _loadout] call compile (getText (_config >> "postLoadout"));
 };
