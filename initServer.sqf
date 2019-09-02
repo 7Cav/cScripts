@@ -7,4 +7,4 @@
  */
 
 // Fortify
-[cScripts_Settings_setFortifyBudget] call FUNC(handleFortify);
+[cScripts_Settings_setFortifyBudget] call FUNC(initFortify);
