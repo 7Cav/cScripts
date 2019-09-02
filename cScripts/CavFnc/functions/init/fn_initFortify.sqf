@@ -16,7 +16,7 @@
  * Public: No
  */
 
-if (!isServer) exitWith {};
+if !(isServer) exitWith {};
 
 #ifdef DEBUG_MODE
     [formatText["Adding Fortify registrated objects."]] call FUNC(logInfo);
@@ -27,7 +27,7 @@ params [
 ];
 
 _fortificationStructures = [
-    ["Land_HBarrier_1_F", 2],
+    ["Land_HBarrier_1_F", 1],
     ["Land_HBarrier_5_F", 5],
     ["Land_HBarrierWall4_F", 10],
     ["Land_HBarrierWall_corner_F", 10],
@@ -36,11 +36,13 @@ _fortificationStructures = [
     ["Land_BagBunker_Small_F", 25],
     ["Land_BagBunker_Large_F", 50],
     ["Land_CncBarrierMedium_F", 5],
+    ["Land_CncBarrierMedium4_F", 20],
     ["Land_HelipadCircle_F", 25],
-    ["Land_PortableLight_double_F", 1],
+    ["Land_PortableLight_double_F", 3],
     ["StorageBladder_01_fuel_forest_F", 175],
     ["StorageBladder_01_fuel_sand_F", 175],
-    ["Land_ClutterCutter_medium_F", 0]
+    ["Land_ClutterCutter_medium_F", 1],
+    ["land_hag_bridge_road", 250]
 ];
 
 [west, _budget, _fortificationStructures] call acex_fortify_fnc_registerObjects;
