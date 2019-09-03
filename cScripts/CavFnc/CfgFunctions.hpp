@@ -13,6 +13,8 @@ class cScripts {
         class initModules {};
         class initTagging {};
 
+        class initFortify {};
+
         class initCuratorObjectPlaced {};
     };
     class documents {
@@ -118,7 +120,6 @@ class cScripts {
 
 
         class addFortifyArea {};
-        class handleFortify {};
 
         class createVehicleLable {};
         class getVehicleLable {};
