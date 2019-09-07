@@ -67,7 +67,12 @@ private _logisticalVehicles = [
     "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
     "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
     "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy",
-    "rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy"
+    "rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy",
+    "rhsusf_M1239_socom_d",
+    "rhsusf_M1239_M2_socom_d",
+    "rhsusf_M1239_MK19_socom_d",
+    "rhsusf_M1239_M2_Deploy_socom_d",
+    "rhsusf_M1239_MK19_Deploy_socom_d"
 ];
 
 switch (true) do {
