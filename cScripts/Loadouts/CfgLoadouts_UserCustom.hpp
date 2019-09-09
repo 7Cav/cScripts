@@ -29,4 +29,4 @@ class My_Soldier_Classname_or_VariableName : CommonBlufor {
     insignia[] = {""};
     preLoadout = "";
     postLoadout = "";
-};
+};*/
