@@ -15,6 +15,14 @@ class Cav_B_B_SquadLeader_2_2_F : Cav_B_B_SquadLeader_F {};
 class Cav_B_B_SquadLeader_2_3_F : Cav_B_B_SquadLeader_F {};
 class Cav_B_B_SquadLeader_2_4_F : Cav_B_B_SquadLeader_F {};
 
+//Scout classes
+class Cav_B_B_ScoutLeader_2_1_F : Cav_B_B_CavScout_dismount {};
+class Cav_B_B_ScoutLeader_2_2_F : Cav_B_B_CavScout_dismount {};
+class Cav_B_B_ScoutLeader_2_3_F : Cav_B_B_CavScout_dismount {};
+class Cav_B_B_ScoutLeader_2_4_F : Cav_B_B_CavScout_dismount {};
+class Cav_B_B_ScoutLeader_2_5_F : Cav_B_B_CavScout_dismount {};
+class Cav_B_B_ScoutLeader_2_6_F : Cav_B_B_CavScout_dismount {};
+
 class Cav_B_B_Tank_Commander_Saber_1_F : Cav_B_B_Tank_Commander_F {};
 class Cav_B_B_Tank_Commander_Saber_2_F : Cav_B_B_Tank_Commander_F {};
 class Cav_B_B_Tank_Commander_Saber_3_F : Cav_B_B_Tank_Commander_F {};
