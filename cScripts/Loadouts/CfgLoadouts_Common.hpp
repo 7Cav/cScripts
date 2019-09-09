@@ -91,24 +91,24 @@ class Cav_B_Alpha_base_F : CommonBlufor {
 
 // CAVALRY SCOUT BASE CLASS
 class Cav_B_B_CavScout_base : CommonBlufor{
-	uniform[] = {"rhs_uniform_cu_ocp"};
-	vest[] = {""};
-	backpack[] = {""};
-	primary[] = {"","","","",""};
-	secondary[] = {"","","","",""};
-	launcher[] = {"","","","",""};
-	magazines[] = {};
-	items[] = {"ACE_EarPlugs","ACE_CableTie",2,"ACE_Flashlight_MX991","ACE_MapTools","ACE_microDAGR","ACE_quikclot",20,"ACE_tourniquet",2,"ACRE_PRC343"};
-	binoculars[] = {"ACE_Vector"};
-	compass[] = {"ItemCompass"};
-	goggles[] = {"rhsusf_shemagh_tan"};
-	gps[] = {"ItemcTab"};
-	headgear[] = {""};
-	map[] = {"ItemMap"};
-	nvgs[] = {"ACE_NVG_Wide"};
-	watch[] = {"ItemWatch"};
-	insignia[] = {"Cav_Insignia_Bravo_2"};
-	lrRadios[] = {};
+    uniform[] = {"rhs_uniform_cu_ocp"};
+    vest[] = {""};
+    backpack[] = {""};
+    primary[] = {"","","","",""};
+    secondary[] = {"","","","",""};
+    launcher[] = {"","","","",""};
+    magazines[] = {};
+    items[] = {"ACE_EarPlugs","ACE_CableTie",2,"ACE_Flashlight_MX991","ACE_MapTools","ACE_microDAGR","ACE_quikclot",20,"ACE_tourniquet",2,"ACRE_PRC343"};
+    binoculars[] = {"ACE_Vector"};
+    compass[] = {"ItemCompass"};
+    goggles[] = {"rhsusf_shemagh_tan"};
+    gps[] = {"ItemcTab"};
+    headgear[] = {""};
+    map[] = {"ItemMap"};
+    nvgs[] = {"ACE_NVG_Wide"};
+    watch[] = {"ItemWatch"};
+    insignia[] = {"Cav_Insignia_Bravo_2"};
+    lrRadios[] = {};
 };
 
 class Cav_B_Bravo_base_F : CommonBlufor {
