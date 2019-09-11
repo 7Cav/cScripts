@@ -118,6 +118,7 @@ class cScripts {
 
         class addObjectToCurator {};
 
+        class getChannelName {};
 
         class addFortifyArea {};
 
