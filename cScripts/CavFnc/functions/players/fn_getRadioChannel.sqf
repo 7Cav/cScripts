@@ -1,24 +1,30 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function fetch a squad radio channel based on your squad name.
+ * This function fetch a squad radio channel based on radio type and squad name.
  *
  * Arguments:
+ * 0: Group name <STRING>
+ * 1: Radio type <STRING> (Optional) (Default; ACRE_PRC343) 
  *
  * Return Value:
  * Radio Channel <NUMBER>
  *
  * Example:
- * [] call cScripts_fnc_getRadioChannel
+ * ["BANDIT-1", "ACRE_PRC343"] call cScripts_fnc_getRadioChannel
  *
  * Public: No
  */
 
+params [
+    ["_group", "", [""]],
+    ["_radio", "ACRE_PRC343", ["ACRE_PRC343"]]
+];
+
 private _channel = 1;
-private _group = call FUNC(getSquadName);
 _group = toUpper(_group);
 
-if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
+if (_radio == "ACRE_PRC343") then {
     switch (_group) do {
 
         case "GODFATHER-5": {_channel = 4};
@@ -408,6 +414,4 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
     };
 };
 
-private _return = _channel;
-
-_return;
+_channel;
