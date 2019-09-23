@@ -15,14 +15,26 @@ class Cav_B_B_SquadLeader_2_2_F : Cav_B_B_SquadLeader_F {};
 class Cav_B_B_SquadLeader_2_3_F : Cav_B_B_SquadLeader_F {};
 class Cav_B_B_SquadLeader_2_4_F : Cav_B_B_SquadLeader_F {};
 
-//Scout classes
-class Cav_B_B_ScoutLeader_2_1_F : Cav_B_B_CavScout_dismount {};
-class Cav_B_B_ScoutLeader_2_2_F : Cav_B_B_CavScout_dismount {};
-class Cav_B_B_ScoutLeader_2_3_F : Cav_B_B_CavScout_dismount {};
-class Cav_B_B_ScoutLeader_2_4_F : Cav_B_B_CavScout_dismount {};
-class Cav_B_B_ScoutLeader_2_5_F : Cav_B_B_CavScout_dismount {};
-class Cav_B_B_ScoutLeader_2_6_F : Cav_B_B_CavScout_dismount {};
 
+//Scout classes
+Cav_B_B_Scout_Platoon_Medic_F : Cav_B_B_PlatoonMedic_F {};
+Cav_B_B_Scout_Platoon_Medic_2_7_F : Cav_B_B_Scout_Platoon_Medic_F {};
+
+Cav_B_B_Scout_Trooper_F : Cav_B_B_CavScout_Dismount_Local {};
+Cav_B_B_Scout_Officer_F : Cav_B_B_CavScout_Dismount_Local {};
+
+Cav_B_B_Scout_Team_Leader_F  : Cav_B_B_CavScout_Dismount_Local {};
+Cav_B_B_Scout_Team_Leader_2_1_F : Cav_B_B_Scout_Team_Leader_F {};
+Cav_B_B_Scout_Team_Leader_2_2_F : Cav_B_B_Scout_Team_Leader_F {};
+Cav_B_B_Scout_Team_Leader_2_3_F : Cav_B_B_Scout_Team_Leader_F {};
+Cav_B_B_Scout_Team_Leader_2_4_F : Cav_B_B_Scout_Team_Leader_F {};
+
+Cav_B_B_Scout_Crew_F : Cav_B_B_CavScout_Crewman_Local {};
+Cav_B_B_Scout_Gunner_F : Cav_B_B_CavScout_Crewman_Local {}; 
+Cav_B_B_Scout_Driver_F : Cav_B_B_CavScout_Crewman_Local {};
+
+
+// Saber
 class Cav_B_B_Tank_Commander_Saber_1_F : Cav_B_B_Tank_Commander_F {};
 class Cav_B_B_Tank_Commander_Saber_2_F : Cav_B_B_Tank_Commander_F {};
 class Cav_B_B_Tank_Commander_Saber_3_F : Cav_B_B_Tank_Commander_F {};
