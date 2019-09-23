@@ -10,12 +10,12 @@
  * Squad Name <STRING>
  *
  * Example:
- * ["Bob"] call cScripts_fnc_getSquadName;
+ * [Bob] call cScripts_fnc_getSquadName;
  *
  * Public: No
  */
 
-params["_unit"];
+params[["_unit", "", [""]]];
 
 private _SquadGroupArray = [
     "GODFATHER-5",
@@ -167,6 +167,14 @@ private _SquadGroupArray = [
     "ZEUS"
 ];
 
+// Get Squad name based on variable
+private _groupVar = '';
+if !(isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
+    _groupVar = _unit getVariable QEGVAR(Player,Unit);
+    _groupVar = toUpper(_groupVar);
+};
+if (_groupVar in _SquadGroupArray) exitWith {_groupVar};
+
 // Get Squad name based on cav addon displayname
 private _nameDisplayGroup = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName"); 
 _nameDisplayGroup = _nameDisplayGroup splitString " ";
@@ -178,18 +186,9 @@ if (["(", _nameDisplayGroup] call BIS_fnc_inString) then {
 } else {
     _nameDisplayGroup = ''
 };
+if (_nameDisplayGroup in _SquadGroupArray) exitWith {_nameDisplayGroup};
 
 // Get Squad name based on group name
 private _group = groupId (group _unit);
 _group = toUpper(_group);
-
-// Get Squad name based on variable
-private _groupVar = '';
-if !(isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
-    _groupVar = _unit getVariable QEGVAR(Player,Unit);
-    _groupVar = toUpper(_groupVar);
-};
-
-if (_groupVar in _SquadGroupArray) exitWith {_groupVar};
-if (_nameDisplayGroup in _SquadGroupArray) exitWith {_nameDisplayGroup};
-if (_group in _SquadGroupArray) exitWith {_group};
+_group
