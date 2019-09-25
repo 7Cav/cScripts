@@ -475,7 +475,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
 				id=86;
@@ -493,7 +493,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
 				id=87;
@@ -511,7 +511,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
 				id=88;
@@ -530,7 +530,7 @@ class items
 				{
 					skill=0.44999999;
 					rank="CORPORAL";
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
 				id=89;
@@ -549,7 +549,7 @@ class items
 				{
 					skill=0.44999999;
 					rank="CORPORAL";
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-1""];}";
 					isPlayable=1;
 				};
 				id=90;
@@ -598,7 +598,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
 				id=93;
@@ -616,7 +616,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
 				id=94;
@@ -634,7 +634,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
 				id=95;
@@ -652,7 +652,7 @@ class items
 				class Attributes
 				{
 					skill=0.44999999;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					rank="CORPORAL";
 					isPlayable=1;
 				};
@@ -672,7 +672,7 @@ class items
 				{
 					skill=0.44999999;
 					rank="CORPORAL";
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-2""];}";
 					isPlayable=1;
 				};
 				id=97;
@@ -721,7 +721,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
 				id=100;
@@ -739,7 +739,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
 				id=101;
@@ -757,7 +757,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
 				id=102;
@@ -776,7 +776,7 @@ class items
 				{
 					skill=0.44999999;
 					rank="CORPORAL";
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
 				id=103;
@@ -795,7 +795,7 @@ class items
 				{
 					skill=0.44999999;
 					rank="CORPORAL";
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-3""];}";
 					isPlayable=1;
 				};
 				id=104;
@@ -844,7 +844,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
 				id=107;
@@ -862,7 +862,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
 				id=108;
@@ -880,7 +880,7 @@ class items
 				class Attributes
 				{
 					skill=0.40000001;
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
 				id=109;
@@ -899,7 +899,7 @@ class items
 				{
 					skill=0.44999999;
 					rank="CORPORAL";
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
 				id=110;
@@ -918,7 +918,7 @@ class items
 				{
 					skill=0.44999999;
 					rank="CORPORAL";
-					init="call{"this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
+					init="call\{this setVariable [""cScripts_Player_Unit"", ""VIKING-4""];}";
 					isPlayable=1;
 				};
 				id=111;
