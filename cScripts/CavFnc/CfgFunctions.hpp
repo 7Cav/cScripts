@@ -13,6 +13,8 @@ class cScripts {
         class initModules {};
         class initTagging {};
 
+        class initFortify {};
+
         class initCuratorObjectPlaced {};
     };
     class documents {
@@ -73,8 +75,8 @@ class cScripts {
 
         class getCompanyVariable {};
         class hasCompanyVariable {};
-
-        class getCavSquadName {};
+        
+        class getSquadName {};
         class getSquadInsignia {};
     };
     class mission {
@@ -116,9 +118,9 @@ class cScripts {
 
         class addObjectToCurator {};
 
+        class getChannelName {};
 
         class addFortifyArea {};
-        class handleFortify {};
 
         class createVehicleLable {};
         class getVehicleLable {};
