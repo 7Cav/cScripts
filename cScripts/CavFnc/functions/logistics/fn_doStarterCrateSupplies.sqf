@@ -219,6 +219,9 @@ if (_companySelector in _alpha or _alwaysAvalible) then {
 //          B R A V O   C O M P A N Y   C A R G O
 if (_companySelector in _bravo or _alwaysAvalible) then {
 
+    // Container Lancer
+    if (_companySelector in ['BRAVO', 'LANCER'] or _alwaysAvalible) then {
+    };
     // Container Viking
     if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
     };
@@ -320,7 +323,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     };
 
     // Old Container
-    if (_companySelector in ['BRAVO', "APOLLO", "SABER", "BANSHEE"] or _alwaysAvalible) then {
+    if (_companySelector in ['BRAVO', 'VIKING', 'LANCER', 'APOLLO', 'SABER', 'BANSHEE'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
         _crate addItemCargoGlobal ["ACRE_PRC152",50];
         _crate addItemCargoGlobal ["ACRE_PRC117F",10];
