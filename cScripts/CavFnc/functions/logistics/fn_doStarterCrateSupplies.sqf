@@ -219,6 +219,9 @@ if (_companySelector in _alpha or _alwaysAvalible) then {
 //          B R A V O   C O M P A N Y   C A R G O
 if (_companySelector in _bravo or _alwaysAvalible) then {
 
+    // Container Lancer
+    if (_companySelector in ['BRAVO', 'LANCER'] or _alwaysAvalible) then {
+    };
     // Container Viking
     if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
     };
@@ -320,7 +323,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     };
 
     // Old Container
-    if (_companySelector in ['BRAVO', "APOLLO", "SABER", "BANSHEE"] or _alwaysAvalible) then {
+    if (_companySelector in ['BRAVO', 'VIKING', 'LANCER', 'APOLLO', 'SABER', 'BANSHEE'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
         _crate addItemCargoGlobal ["ACRE_PRC152",50];
         _crate addItemCargoGlobal ["ACRE_PRC117F",10];
@@ -436,108 +439,101 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     _crate addItemCargoGlobal ["rhsusf_oakley_goggles_blk",25];
     _crate addItemCargoGlobal ["rhsusf_oakley_goggles_clr",25];
 
-    // TEMP REMOVED DUE TO EXPERIMENT
-    // //================== RADIOS ==================\\
+    //================== RADIOS ==================\\
 
-    // _crate addItemCargoGlobal ["ACRE_PRC152",50];
-    // _crate addItemCargoGlobal ["ACRE_PRC117F",10];
-    // _crate addItemCargoGlobal ["ACRE_PRC343",12];
+    _crate addItemCargoGlobal ["ACRE_PRC152",50];
+    _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+    _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
-    // //================== WEAPONS ==================\\
+    //================== WEAPONS ==================\\
 
-    // _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
-    // _crate addItemCargoGlobal ["acc_flashlight",50];
-    // _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
-    // _crate addItemCargoGlobal ["rhsusf_acc_acog_mdo",50];
-    // _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
-    // _crate addItemCargoGlobal ["rhsusf_acc_acog3",50];
-    // _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
-    // _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
-    // _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
-    // _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
-    // _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",10];
-    // _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
+    _crate addItemCargoGlobal ["acc_flashlight",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_acog_mdo",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_acog3",50];
+    _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
+    _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
+    _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
+    _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",10];
+    _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
 
-    // //================== AMMO ==================\\
+    //================== AMMO ==================\\
 
-    // _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
-    // _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
-    // _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
-    // _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
-    // _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
-    // _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
-    // _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
-    // _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
-    // _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
+    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEDP",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",50];
 
-    // //================== GRENADES ==================\\
+    //================== GRENADES ==================\\
 
-    // _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
-    // _crate addMagazineCargoGlobal ["SmokeShell",250];
-    // _crate addMagazineCargoGlobal ["SmokeShellRed",250];
-    // _crate addMagazineCargoGlobal ["SmokeShellBlue",250];
-    // _crate addMagazineCargoGlobal ["SmokeShellGreen",250];
-    // _crate addMagazineCargoGlobal ["SmokeShellOrange",250];
-    // _crate addMagazineCargoGlobal ["SmokeShellYellow",250];
-    // _crate addMagazineCargoGlobal ["SmokeShellPurple",250];
-    // _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
-    // _crate addMagazineCargoGlobal ["ACE_M84",25];
-    // _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",250];
-    // _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",250];
-    // _crate addMagazineCargoGlobal ["rhs_mag_m714_White",250];
-    // _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",250];
-    // _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
-    // _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
-    // _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
-    // _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
-    // _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
-    // _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
-    // _crate addMagazineCargoGlobal ["Chemlight_Red",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",250];
+    _crate addMagazineCargoGlobal ["SmokeShell",250];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",250];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",250];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",250];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",250];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",250];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",250];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",250];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
+    _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
+    _crate addMagazineCargoGlobal ["Chemlight_Red",250];
 
-    // //================== EXPLOSIVES ==================\\
+    //================== EXPLOSIVES ==================\\
 
-    // _crate addItemCargoGlobal ["ACE_M26_Clacker",20];
-    // _crate addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",50];
-    // _crate addMagazineCargoGlobal ["DemoCharge_Remote_Mag",50];
-    // _crate addMagazineCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",50];
-    // _crate addMagazineCargoGlobal ["APERSMine_Range_Mag",50];
-    // _crate addMagazineCargoGlobal ["APERSMineDispenser_Mag",50];
-    // _crate addMagazineCargoGlobal ["APERSBoundingMine_Range_Mag",50];
-    // _crate addMagazineCargoGlobal ["ACE_FlareTripMine_Mag",50];
-    // _crate addMagazineCargoGlobal ["SLAMDirectionalMine_Wire_Mag",50];
-    // _crate addMagazineCargoGlobal ["rhs_mine_M19_mag",50];
+    _crate addItemCargoGlobal ["ACE_M26_Clacker",20];
+    _crate addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",50];
+    _crate addMagazineCargoGlobal ["DemoCharge_Remote_Mag",50];
+    _crate addMagazineCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",50];
+    _crate addMagazineCargoGlobal ["APERSMine_Range_Mag",50];
+    _crate addMagazineCargoGlobal ["APERSMineDispenser_Mag",50];
+    _crate addMagazineCargoGlobal ["APERSBoundingMine_Range_Mag",50];
+    _crate addMagazineCargoGlobal ["ACE_FlareTripMine_Mag",50];
+    _crate addMagazineCargoGlobal ["SLAMDirectionalMine_Wire_Mag",50];
+    _crate addMagazineCargoGlobal ["rhs_mine_M19_mag",50];
 
-    // //================== ITEMS ==================\\
+    //================== ITEMS ==================\\
 
-    // _crate addItemCargoGlobal ["rhsusf_ANPVS_14",50];
-    // _crate addItemCargoGlobal ["ACE_Flashlight_MX991",50];
-    // _crate addItemCargoGlobal ["ACE_CableTie",100];
-    // _crate addItemCargoGlobal ["ACE_wirecutter",10];
-    // _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
-    // _crate addItemCargoGlobal ["ACE_IR_Strobe_Item",20];
-    // _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
-    // _crate addItemCargoGlobal ["ACE_VMH3",20];
-    // _crate addItemCargoGlobal ["ACE_VMM3",20];
-    // _crate addItemCargoGlobal ["Flagstack_Red",20];
-    // _crate addItemCargoGlobal ["Signpack_Mines",20];
+    _crate addItemCargoGlobal ["rhsusf_ANPVS_14",50];
+    _crate addItemCargoGlobal ["ACE_Flashlight_MX991",50];
+    _crate addItemCargoGlobal ["ACE_CableTie",100];
+    _crate addItemCargoGlobal ["ACE_wirecutter",10];
+    _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
+    _crate addItemCargoGlobal ["ACE_IR_Strobe_Item",20];
+    _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
+    _crate addItemCargoGlobal ["ACE_VMH3",20];
+    _crate addItemCargoGlobal ["ACE_VMM3",20];
+    _crate addItemCargoGlobal ["Flagstack_Red",20];
+    _crate addItemCargoGlobal ["Signpack_Mines",20];
 
-    // //================== MEDICAL ==================\\
+    //================== MEDICAL ==================\\
 
-    // _crate addItemCargoGlobal ["ACE_EarPlugs",100];
-    // _crate addItemCargoGlobal ["ACE_quikclot",250];
-    // _crate addItemCargoGlobal ["ACE_tourniquet",50];
-    // _crate addItemCargoGlobal ["ACE_surgicalKit",5];
-    // _crate addItemCargoGlobal ["ACE_morphine",20];
+    _crate addItemCargoGlobal ["ACE_EarPlugs",100];
+    _crate addItemCargoGlobal ["ACE_quikclot",250];
+    _crate addItemCargoGlobal ["ACE_tourniquet",50];
+    _crate addItemCargoGlobal ["ACE_surgicalKit",5];
+    _crate addItemCargoGlobal ["ACE_morphine",20];
 
-    // //================== BACKPACKS ==================\\
+    //================== BACKPACKS ==================\\
 
-    // _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
-
-    // //================== HELMETS ==================\\
-    // _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
-    // _crate addItemCargoGlobal ["rhsusf_ach_helmet_camo_ocp",50];
-    // _crate addItemCargoGlobal ["rhsusf_ach_helmet_headset_ocp",50];
-    // _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
+    _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
 
 };
 

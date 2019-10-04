@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Size Type <SIZE> ["none","all","officer","alpha","bravo","charlie","ranger" and Squad Names etc...]
+ * 1: Selection type <SIZE> ["none","all","officer","alpha","bravo","charlie","ranger" and Squad Names etc...]
  * 2: Require correct company to select loadout. <BOOL> (default: true)
  *
  * Example:
@@ -66,7 +66,7 @@ if (_companySelector in _alpha or _alwaysAvalible) then {
     [_object,"Rotary Pilot", "Cav_B_A_Helicopter_Tra_Pilot_F", "", _alphaCoCat, "Alpha", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Rotary CoPilot", "Cav_B_A_Helicopter_Tra_coPilot_F", "", _alphaCoCat, "Alpha", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Rotary Crew Chief", "Cav_B_A_Helicopter_Tra_CrewChief_F", "", _alphaCoCat, "Alpha", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"Crew Chief M240", "Cav_B_A_Helicopter_Tra_CrewChiefM240_Local", "", _alphaCoCat, "Alpha", _addActionAllowedOnCompany] call FUNC(addQuickSelection);
+    [_object,"Crew Chief M240", "Cav_B_A_Helicopter_Tra_CrewChiefM240_Local", "", _alphaCoCat, "Alpha", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Rotary Door Gunner", "Cav_B_A_Helicopter_Tra_DoorGunner_F", "", _alphaCoCat, "Alpha", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
     [_object,"Attack Rotary Pilot", "Cav_B_A_Helicopter_Tra_DoorGunner_F", "", _alphaCoCat, "Alpha", _allowOnlyForCompany] call FUNC(addQuickSelection);
@@ -97,7 +97,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         [_object,"Automatic Rifleman", "Cav_B_B_Alpha_AutomaticRifleman_F", "", _bravoVikingCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
         [_object,"Grenadier", "Cav_B_B_Alpha_Grenadier_F", "", _bravoVikingCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
         [_object,"Rifleman", "Cav_B_B_Alpha_Rifleman_F", "", _bravoVikingCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
-        [_object,"Rifleman (AT)", "Cav_B_B_Alpha_RiflemanAT_F", "", _bravoVikingCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
+        //[_object,"Rifleman (AT)", "Cav_B_B_Alpha_RiflemanAT_F", "", _bravoVikingCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
         [_object,"Rifleman (LAT)", "Cav_B_B_Alpha_RiflemanLAT_F", "", _bravoVikingCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
         [_object,"Combat Life Saver", "Cav_B_B_Alpha_CombatLifeSaver_F", "", _bravoVikingCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
     };

@@ -1,3 +1,30 @@
+class Cav_B_Unarmed_Local : CommonBlufor {
+    backpack[] = {""};
+    goggles[] = {""};
+    headgear[] = {""};
+    uniform[] = {"rhs_uniform_cu_ocp_1stcav"};
+    vest[] = {""};
+
+    primary[] = {""};
+    secondary[] = {""};
+    launcher[] = {""};
+
+    binoculars[] = {""};
+
+    magazines[] = {""};
+    items[] = {""};
+
+    compass[] = {"ItemCompass"};
+    gps[] = {""};
+    map[] = {"ItemMap"};
+    nvgs[] = {""};
+    watch[] = {"itemWatch"};
+
+    insignia[] = {""};
+    preLoadout = "";
+    postLoadout = "";
+};
+
 //  S 3   I N S T R U C T O R S   A N D   S T U D E N T S
 
 // SCHOOL OF INFANTRY
