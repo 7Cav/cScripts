@@ -10,7 +10,7 @@ class CfgPoppy {
     class ACRE {
         distributeGroupLeaderRadios = 0;
         groupLeaderRadio = "ACRE_PRC152";
-        channelNames[] = {"UNUSED","AVIATION","VIKING","PUNISHER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","LOGISTICS","FARP","CONVOY","ZEUS","CAG","COMMAND"};
+        channelNames[] = {"UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","LOGISTICS","FARP","CONVOY","ZEUS","CAG","COMMAND"};
     };
 };
 

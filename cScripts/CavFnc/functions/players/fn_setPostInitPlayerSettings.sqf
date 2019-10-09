@@ -132,6 +132,11 @@ if (EGVAR(Settings,setMissionType) != 3) then {
     [_player] call FUNC(doPlayerAnnouncement);
 };
 
+if (isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
+    [formatText["%1 have no unit variable defined.", _player]] call FUNC(logWarning);
+    if (!isMultiplayer || {is3DENMultiplayer}) then { systemChat format["WARNING: %1 have no unit variable defined.", _player] };
+};
+
 #ifdef DEBUG_MODE
     [formatText["postLoadout application completed for %1.", _player]] call FUNC(logInfo);
 #endif
