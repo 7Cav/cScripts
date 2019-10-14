@@ -464,7 +464,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
 
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
     _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",50];
-    _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
     _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
     _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
     _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
@@ -522,6 +522,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     _crate addItemCargoGlobal ["ACE_VMM3",20];
     _crate addItemCargoGlobal ["Flagstack_Red",20];
     _crate addItemCargoGlobal ["Signpack_Mines",20];
+    _crate addItemCargoGlobal ["ACE_SpareBarrel", 10];
 
     //================== MEDICAL ==================\\
 
