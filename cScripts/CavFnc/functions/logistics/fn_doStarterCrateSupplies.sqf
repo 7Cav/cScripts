@@ -123,29 +123,9 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 
     // Container Lancer
     if (_companySelector in ['BRAVO', 'LANCER'] or _alwaysAvalible) then {
-        //================== RADIOS ==================\\
-
-        //================== WEAPONS ==================\\
-
-        //================== AMMO ==================\\
+        
+        // Magazines
         _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
-
-        //================== GRENADES ==================\\
-
-        //================== EXPLOSIVES ==================\\
-
-        //================== ITEMS ==================\\
-        _crate addItemCargoGlobal ["ACE_SpareBarrel", 10];
-
-        //================== MEDICAL ==================\\
-
-        //================== BACKPACKS ==================\\
-
-        //================== HELMETS ==================\\
-
-    };
-    // Container Viking
-    if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
 
         // Launchers
         _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs", 50];
@@ -180,7 +160,14 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_CableTie", 50];
         _crate addItemCargoGlobal ["ACE_Chemlight_Shield", 50];
         _crate addItemCargoGlobal ["ACE_EntrenchingTool", 50];
-        
+
+        _crate addItemCargoGlobal ["ACE_SpareBarrel", 10];
+
+    };
+    // Container Viking
+    if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
+        // Gear and protection
+        _crate addItemCargoGlobal ["ToolKit", 50];
     };
 
     // Container Mustang
@@ -219,14 +206,13 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 
     // Container Sabre
     if (_companySelector in ['BRAVO', 'SABER'] or _alwaysAvalible) then {
+        // Gear and protection
         _crate addItemCargoGlobal ["ToolKit", 50];
     };
     // Container Banshee
     if (_companySelector in ['BRAVO', 'BANSHEE'] or _alwaysAvalible) then {
-<<<<<<< HEAD
-=======
+        // Gear and protection
         _crate addItemCargoGlobal ["ToolKit", 50];
->>>>>>> Adjustments and updates
     };
 };
 
@@ -234,8 +220,6 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 if (_companySelector in _charlie or _alwaysAvalible) then {
     // Container Bandit & Misfit
     if (_companySelector in ['CHARLIE', 'BANDIT', 'MISFIT'] or _alwaysAvalible) then {
-<<<<<<< HEAD
-=======
         // Magazines
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 250];
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 250];
@@ -287,35 +271,8 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_Chemlight_Shield", 50];
         _crate addItemCargoGlobal ["ACE_wirecutter", 50];
         _crate addItemCargoGlobal ["ACE_EntrenchingTool", 50];
-    };
-};
 
-//          R A N G E R   C O M P A N Y   C A R G O
-if (_companySelector in _ranger or _alwaysAvalible) then {
-
-    // Container Ranger
-    if (_companySelector in ['RANGER'] or _alwaysAvalible) then {
->>>>>>> Adjustments and updates
-        //================== RADIOS ==================\\
-
-        //================== WEAPONS ==================\\
-
-        //================== AMMO ==================\\
-        _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
-
-        //================== GRENADES ==================\\
-
-        //================== EXPLOSIVES ==================\\
-
-        //================== ITEMS ==================\\
         _crate addItemCargoGlobal ["ACE_SpareBarrel", 10];
-
-        //================== MEDICAL ==================\\
-
-        //================== BACKPACKS ==================\\
-
-        //================== HELMETS ==================\\
-        
     };
 };
 
@@ -324,44 +281,10 @@ if (_companySelector in _ranger or _alwaysAvalible) then {
 
     // Container Ranger
     if (_companySelector in ['RANGER'] or _alwaysAvalible) then {
-        //================== RADIOS ==================\\
-
-        //================== WEAPONS ==================\\
-
-        //================== AMMO ==================\\
-
-        //================== GRENADES ==================\\
-
-        //================== EXPLOSIVES ==================\\
-
-        //================== ITEMS ==================\\
-
-        //================== MEDICAL ==================\\
-
-        //================== BACKPACKS ==================\\
-
-        //================== HELMETS ==================\\
     };
 
     // Container Sniper
     if (_companySelector in ['SNIPER'] or _alwaysAvalible) then {
-        //================== RADIOS ==================\\
-
-        //================== WEAPONS ==================\\
-
-        //================== AMMO ==================\\
-
-        //================== GRENADES ==================\\
-
-        //================== EXPLOSIVES ==================\\
-
-        //================== ITEMS ==================\\
-
-        //================== MEDICAL ==================\\
-
-        //================== BACKPACKS ==================\\
-
-        //================== HELMETS ==================\\
     };
 };
 
