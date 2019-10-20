@@ -28,10 +28,10 @@ _companySelector = toUpper(_companySelector);
 
 // Create categories
 private _officer = ["OFFICER"];
-private _alpha = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
-private _bravo = ["BRAVO", "VIKING", "APOLLO", "MUSTANG"];
-private _charlie = ["CHARLIE", "BANDIT", "MISFIT", 'HAVOC'];
-private _ranger = ["RANGER", "SNIPER"];
+private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
+private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "APOLLO", "MUSTANG"];
+private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
+private _ranger  = ["RANGER", "SNIPER"];
 
 // Full selector handler
 private _alwaysAvalible = if (_companySelector == 'FULL' or _companySelector == 'ALL') then {true} else {false};
@@ -699,4 +699,9 @@ if (_companySelector in _ranger or _alwaysAvalible) then {
 
         //================== HELMETS ==================\\
     };
+};
+
+if !(_companySelector in (["FULL", "ALL"] + _officer + _alpha + _bravo + _charlie + _ranger)) then {
+    [formatText["%1 (Starter Crate) is using a unsupported cartegory '%2'.", _crate, _companySelector]] call FUNC(logError);
+    if (!isMultiplayer || {is3DENMultiplayer}) then { systemChat format["ERROR: %1 (Starter Crate) is using a unsupported cartegory '%2'. This will cause the crate to be empty.", _crate, _companySelector] };
 };

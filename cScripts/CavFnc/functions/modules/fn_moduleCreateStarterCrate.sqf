@@ -32,7 +32,7 @@ private _dialogResult = [
         ["Heal action",["true","false"],0],
         ["Insignia Selection",["true","false"],0],
         ["Company Variable Required",["true","false"],1],
-        ["Add full arsenal",["true","false"],1]
+        ["Add Cav Arsenal",["true","false"],1]
     ]
 ] call Ares_fnc_ShowChooseDialog;
 
