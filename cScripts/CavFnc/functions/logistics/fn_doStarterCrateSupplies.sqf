@@ -52,8 +52,10 @@ if !(_companySelector == 'NONE') then {
     _crate addItemCargoGlobal ["ACRE_PRC343", 50];
         
     // Magazines
-    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 250];
-    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 250];
+    if !(_companySelector in ['CHARLIE', 'BANDIT', 'MISFIT') then {
+        _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 250];
+        _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 250];
+    };
     _crate addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_box", 250];
     _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box", 250];
     
@@ -125,7 +127,6 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     if (_companySelector in ['BRAVO', 'LANCER'] or _alwaysAvalible) then {
         
         // Magazines
-        _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
 
         // Launchers
         _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs", 50];
@@ -220,6 +221,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 if (_companySelector in _charlie or _alwaysAvalible) then {
     // Container Bandit & Misfit
     if (_companySelector in ['CHARLIE', 'BANDIT', 'MISFIT'] or _alwaysAvalible) then {
+
         // Magazines
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 250];
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 250];
