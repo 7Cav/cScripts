@@ -52,7 +52,7 @@ if !(_companySelector == 'NONE') then {
     _crate addItemCargoGlobal ["ACRE_PRC343", 50];
         
     // Magazines
-    if !(_companySelector in ['CHARLIE', 'BANDIT', 'MISFIT') then {
+    if !(_companySelector in ['CHARLIE', 'BANDIT', 'MISFIT']) then {
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 250];
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 250];
     };
