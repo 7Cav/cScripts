@@ -39,6 +39,12 @@
 ["rhsusf_M1078A1P2_B_CP_fmtv_usarmy", "init", {
     (_this select 0) call FUNC(setVehicleSettings);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
+["rhsusf_M1239_M2_Deploy_socom_d", "init", {
+    (_this select 0) call FUNC(setVehicleSettings);
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+["rhsusf_M1239_MK19_Deploy_socom_d", "init", {
+    (_this select 0) call FUNC(setVehicleSettings);
+}, true, [], true] call CBA_fnc_addClassEventHandler;
 
 /*Mortar texturing for preplaced units, in honour of McGehee - Waldie.A & Brostrom
 B_Mortar_01_F = NATO MORTAR, B_G_Mortar_01_F = FIA MORTAR*/

@@ -75,8 +75,8 @@ class cScripts {
 
         class getCompanyVariable {};
         class hasCompanyVariable {};
-
-        class getCavSquadName {};
+        
+        class getSquadName {};
         class getSquadInsignia {};
     };
     class mission {
@@ -118,6 +118,7 @@ class cScripts {
 
         class addObjectToCurator {};
 
+        class getChannelName {};
 
         class addFortifyArea {};
 

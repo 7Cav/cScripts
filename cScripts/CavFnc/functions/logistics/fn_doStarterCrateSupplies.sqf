@@ -28,10 +28,10 @@ _companySelector = toUpper(_companySelector);
 
 // Create categories
 private _officer = ["OFFICER"];
-private _alpha = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
-private _bravo = ["BRAVO", "VIKING", "APOLLO", "MUSTANG"];
-private _charlie = ["CHARLIE", "BANDIT", "MISFIT", 'HAVOC'];
-private _ranger = ["RANGER", "SNIPER"];
+private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
+private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "APOLLO", "MUSTANG"];
+private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
+private _ranger  = ["RANGER", "SNIPER"];
 
 // Full selector handler
 private _alwaysAvalible = if (_companySelector == 'FULL' or _companySelector == 'ALL') then {true} else {false};
@@ -219,6 +219,9 @@ if (_companySelector in _alpha or _alwaysAvalible) then {
 //          B R A V O   C O M P A N Y   C A R G O
 if (_companySelector in _bravo or _alwaysAvalible) then {
 
+    // Container Lancer
+    if (_companySelector in ['BRAVO', 'LANCER'] or _alwaysAvalible) then {
+    };
     // Container Viking
     if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
     };
@@ -320,7 +323,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     };
 
     // Old Container
-    if (_companySelector in ['BRAVO', "APOLLO", "SABER", "BANSHEE"] or _alwaysAvalible) then {
+    if (_companySelector in ['BRAVO', 'VIKING', 'LANCER', 'APOLLO', 'SABER', 'BANSHEE'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
         _crate addItemCargoGlobal ["ACRE_PRC152",50];
         _crate addItemCargoGlobal ["ACRE_PRC117F",10];
@@ -741,4 +744,9 @@ if (_companySelector in _ranger or _alwaysAvalible) then {
 
         //================== HELMETS ==================\\
     };
+};
+
+if !(_companySelector in (["FULL", "ALL"] + _officer + _alpha + _bravo + _charlie + _ranger)) then {
+    [formatText["%1 (Starter Crate) is using a unsupported cartegory '%2'.", _crate, _companySelector]] call FUNC(logError);
+    if (!isMultiplayer || {is3DENMultiplayer}) then { systemChat format["ERROR: %1 (Starter Crate) is using a unsupported cartegory '%2'. This will cause the crate to be empty.", _crate, _companySelector] };
 };
