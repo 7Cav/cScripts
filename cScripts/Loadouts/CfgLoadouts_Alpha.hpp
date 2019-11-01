@@ -107,7 +107,7 @@ class Cav_B_A_Officer_F  : Cav_B_Alpha_base_F {
         "ACE_tourniquet",2,
  
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_Flashlight_MX991",
@@ -352,7 +352,7 @@ class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
         "ACE_tourniquet",2,
  
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EntrenchingTool",
         "ACE_CableTie",2,
         "ACE_MapTools",
@@ -483,7 +483,7 @@ class Cav_B_A_Helicopter_Att_coPilot_F : Cav_B_Alpha_base_F {
         "ACE_tourniquet",5,
  
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EntrenchingTool",
         "ACE_MapTools",
         "ACE_Flashlight_XL50",
@@ -539,7 +539,7 @@ class Cav_B_A_Plane_Fighter_Pilot_F : Cav_B_Alpha_base_F {
         "ACE_tourniquet",2,
  
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",
         "ACE_Flashlight_MX991",

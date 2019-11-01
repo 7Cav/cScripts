@@ -32,7 +32,7 @@ class Cav_B_B_PlatoonSergeant_F : Cav_B_Bravo_base_F {
         "ACE_personalAidKit",
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -83,7 +83,7 @@ class Cav_B_B_PlatoonLeader_F : Cav_B_Bravo_base_F {
         "ACE_personalAidKit",
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -144,7 +144,7 @@ class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -296,7 +296,7 @@ class Cav_B_B_Tank_Commander_F : Cav_B_Bravo_Crew_base_F {
 
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
@@ -345,7 +345,7 @@ class Cav_B_B_Tank_Gunner_F : Cav_B_Bravo_Crew_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
 
@@ -386,7 +386,7 @@ class Cav_B_B_Tank_Driver_F : Cav_B_Bravo_Crew_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
@@ -445,7 +445,7 @@ class Cav_B_B_Ifv_Commander_F : Cav_B_Bravo_Crew_base_F {
 
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
@@ -494,7 +494,7 @@ class Cav_B_B_Ifv_Driver_F : Cav_B_Bravo_Crew_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
 
@@ -537,7 +537,7 @@ class Cav_B_B_Ifv_Gunner_F : Cav_B_Bravo_Crew_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
@@ -584,7 +584,7 @@ class Cav_B_B_SquadLeader_F : Cav_B_Bravo_base_F {
         "ACE_personalAidKit",
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -636,7 +636,7 @@ class Cav_B_B_FireTeamLeader_F : Cav_B_Bravo_base_F {
         "ACE_personalAidKit",
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -690,7 +690,7 @@ class Cav_B_B_Grenadier_F : Cav_B_Bravo_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -780,7 +780,7 @@ class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -838,7 +838,7 @@ class Cav_B_B_TeamLeader_Mustang_F : Cav_B_Bravo_Logi_base_F {
         "ACE_salineIV",6,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -904,7 +904,7 @@ class Cav_B_B_Mustang_CombatMedic_F : Cav_B_Bravo_Logi_base_F {
         "ACE_salineIV",6,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -965,7 +965,7 @@ class Cav_B_B_LogisticsOpsOfficer_F : Cav_B_Bravo_Logi_base_F {
         "ACE_personalAidKit",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",6,
@@ -1021,7 +1021,7 @@ class Cav_B_B_LogisticsOpsNCO_F : Cav_B_Bravo_Logi_base_F {
         "ACE_personalAidKit",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",6,
@@ -1078,7 +1078,7 @@ class Cav_B_B_LogisticTeamLeader_F : Cav_B_Bravo_Logi_base_F {
         "ACE_personalAidKit",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",6,
@@ -1136,7 +1136,7 @@ class Cav_B_B_LogisticsTeamMember_F : Cav_B_Bravo_Logi_base_F {
         "ACE_personalAidKit",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",6,
