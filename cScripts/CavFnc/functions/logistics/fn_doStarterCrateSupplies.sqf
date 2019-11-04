@@ -701,7 +701,7 @@ if (_companySelector in _ranger or _alwaysAvalible) then {
     };
 };
 
-if !(_companySelector in (["FULL", "ALL"] + _officer + _alpha + _bravo + _charlie + _ranger)) then {
+if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo + _charlie + _ranger)) then {
     [formatText["%1 (Starter Crate) is using a unsupported cartegory '%2'.", _crate, _companySelector]] call FUNC(logError);
     if (!isMultiplayer || {is3DENMultiplayer}) then { systemChat format["ERROR: %1 (Starter Crate) is using a unsupported cartegory '%2'. This will cause the crate to be empty.", _crate, _companySelector] };
 };
