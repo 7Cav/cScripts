@@ -66,7 +66,7 @@ class Cav_B_Alpha_base_F : CommonBlufor {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EntrenchingTool",
         "ACE_MapTools",
         "ACE_Flashlight_MX991",
@@ -139,7 +139,7 @@ class Cav_B_Bravo_base_F : CommonBlufor {
         "ACE_microDAGR",
 
         // Tools
-        "ACE_Canteen",
+        
         "ACE_EntrenchingTool"
     };
 
@@ -181,7 +181,7 @@ class Cav_B_Bravo_Crew_base_F : Cav_B_Bravo_base_F {
         "ACE_microDAGR",
 
         // Tools
-        "ACE_Canteen",
+        
         "ACE_EntrenchingTool"
     };
 
