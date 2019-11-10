@@ -286,31 +286,3 @@ class Cav_B_Charlie_Weap_base_F : Cav_B_Charlie_base_F {
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0)] call cScripts_fnc_setPostInitPlayerSettings;";
 };
-
-// Not created yet
-class CAV_Ranger_Base : CommonBlufor {
-    backpack[] = {"B_AssaultPack_sgg"};
-    goggles[] = {"rhsusf_shemagh_grn"};
-    headgear[] = {"rhsusf_opscore_fg_pelt_nsw"};
-    uniform[] = {"LOP_U_ISTS_Fatigue_21"};
-    vest[] = {"V_PlateCarrier1_rgr"};
-
-    primary[] = {"rhs_weap_m4a1_blockII","rhsusf_acc_eotech_552","rhsusf_acc_nt4_black","rhsusf_acc_anpeq15_bk_light"};
-    secondary[] = {""};
-    launcher[] = {""};
-
-    binoculars[] = {""};
-
-    magazines[] = {""};
-    items[] = {""};
-
-    compass[] = {"ItemCompass"};
-    gps[] = {"ItemAndroid"};
-    map[] = {"ItemMap"};
-    nvgs[] = {""};
-    watch[] = {"ACE_Altimeter"};
-
-    insignia[] = {"Cav_Insignia_Specialized_Ranger"};
-    preLoadout = "[(_this select 0), 'ranger', 1, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
-};

@@ -5,7 +5,7 @@
  * The function also retun a array or strings as well as clipboard export.
  *
  * Arguments:
- * 0: Company <STRING>    ["cfgLoadoutsClassname","alpha","bravo","charlie","heavyweapons","ranger","medical","full"]
+ * 0: Company <STRING>    ["cfgLoadoutsClassname","alpha","bravo","charlie","heavyweapons","medical","full"]
  *
  * Return Value:
  * Equipment <ARRAY of STRINGS>
@@ -32,7 +32,7 @@ private _backpacksList = [];
 
 private _br = toString[13,10];
 
-_companyList = ["alpha","bravo","charlie","heavyweapons","medical","ranger","sniper"];
+_companyList = ["alpha","bravo","charlie","heavyweapons","medical"];
 
 if !(_loadout in _companyList) then {
     private _weaponsP = getArray (getMissionConfig "CfgLoadouts" >> _loadout >> "primary");
@@ -99,8 +99,6 @@ if (_loadout in _companyList) then {
     private _companyCh = ["CAV_Charlie_OFFCR","CAV_Charlie_JFO","CAV_Charlie_SL","CAV_Charlie_TL","CAV_Charlie_AR","CAV_Charlie_GR","CAV_Charlie_RM","CAV_Charlie_CLS","CAV_Charlie_Weapons_SL","CAV_Charlie_Weapons_TL","CAV_Charlie_Weapons_AR","CAV_Charlie_Weapons_GR","CAV_Charlie_Weapons_RM","CAV_Charlie_Weapons_CLS"];
     private _companyWe = ["CAV_Bravo_Weapons_TL","CAV_Bravo_Weapons_MG","CAV_Bravo_Weapons_GNR","CAV_Charlie_Weapons_SL","CAV_Charlie_Weapons_TL","CAV_Charlie_Weapons_AR","CAV_Charlie_Weapons_GR","CAV_Charlie_Weapons_RM","CAV_Charlie_Weapons_CLS"];
     private _companyMe = ["CAV_Medical_OFFCR","CAV_Medical_PLMEDIC","CAV_Medical_BONESAW"];
-    private _companyRa = ["CAV_Ranger_OIC","CAV_Ranger_2IC","CAV_Ranger_TL","CAV_Ranger_AR","CAV_Ranger_GR","CAV_Ranger_RM","CAV_Ranger_MEDIC"];
-    private _companySn = ["CAV_Sniper", "CAV_Spotter"];
 
     switch (_loadout) do {
         case "alpha": {_company = _companyAl};
@@ -108,8 +106,6 @@ if (_loadout in _companyList) then {
         case "charlie": {_company = _companyCh};
         case "heavyweapons": {_company = _companyWe};
         case "medical": {_company = _companyMe};
-        case "ranger": {_company = _companyRa};
-        case "sniper": {_company = _companySn};
     };
 
     {

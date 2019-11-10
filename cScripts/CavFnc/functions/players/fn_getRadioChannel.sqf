@@ -110,15 +110,7 @@ if (_radio == "ACRE_PRC343") then {
         case "MISFIT-5": {_channel = 37};
         case "MISFIT-6": {_channel = 37};
         case "MISFIT-7": {_channel = 37};
-
-        // Ranger
-        case "ROUGHNECK-1": {_channel = 18};
-        case "ROUGHNECK-2": {_channel = 18};
-        case "ROUGHNECK-3": {_channel = 18};
-        case "ROUGHNECK-4": {_channel = 18};
-        case "ROUGHNECK-6": {_channel = 18};
-        case "PHANTOM-1": {_channel = 18};
-        case "PHANTOM-2": {_channel = 18};
+		
 
         // LETTER NAMING
         case "GODFATHER FIVE": {_channel = 4};
@@ -205,14 +197,6 @@ if (_radio == "ACRE_PRC343") then {
         case "MISFIT SIX": {_channel = 37};
         case "MISFIT SEVEN": {_channel = 37};
 
-        // Ranger
-        case "ROUGHNECK ONE": {_channel = 18};
-        case "ROUGHNECK TWO": {_channel = 18};
-        case "ROUGHNECK THREE": {_channel = 18};
-        case "ROUGHNECK FOUR": {_channel = 18};
-        case "ROUGHNECK SIX": {_channel = 18};
-        case "PHANTOM ONE": {_channel = 18};
-        case "PHANTOM TWO": {_channel = 18};
 
         case "ZEUS": {_channel = 1};
 
@@ -304,14 +288,6 @@ if (_radio == "ACRE_PRC343") then {
         case "MISFIT-6": {_channel = 8};
         case "MISFIT-7": {_channel = 8};
 
-        // Ranger
-        case "ROUGHNECK-1": {_channel = 19};
-        case "ROUGHNECK-2": {_channel = 19};
-        case "ROUGHNECK-3": {_channel = 19};
-        case "ROUGHNECK-4": {_channel = 19};
-        case "ROUGHNECK-6": {_channel = 19};
-        case "PHANTOM-1": {_channel = 19};
-        case "PHANTOM-2": {_channel = 19};
 
         // LETTER NAMING
         case "GODFATHER FIVE": {_channel = 20};
@@ -397,15 +373,6 @@ if (_radio == "ACRE_PRC343") then {
         case "MISFIT FIVE": {_channel = 8};
         case "MISFIT SIX": {_channel = 8};
         case "MISFIT SEVEN": {_channel = 8};
-
-        // Ranger
-        case "ROUGHNECK ONE": {_channel = 19};
-        case "ROUGHNECK TWO": {_channel = 19};
-        case "ROUGHNECK THREE": {_channel = 19};
-        case "ROUGHNECK FOUR": {_channel = 19};
-        case "ROUGHNECK SIX": {_channel = 19};
-        case "PHANTOM ONE": {_channel = 19};
-        case "PHANTOM TWO": {_channel = 19};
 
 
         case "ZEUS": {_channel = 18};
