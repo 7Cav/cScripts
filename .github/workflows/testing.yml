@@ -1,0 +1,11 @@
+name: CI Testing
+on: [push, pull_request]
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Validating SQF
+      run: python3 tools/sqf_validator.py -m CavFnc
+    - name: Validating Config
+      run: python3 tools/config_style_checker.py

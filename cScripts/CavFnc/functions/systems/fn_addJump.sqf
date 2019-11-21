@@ -21,7 +21,7 @@
 params [
     ["_vehicle", objNull, [objNull]],
     ["_minAltetude", 180, [180]],
-    ["_maxAltetude", 350, [350] ],
+    ["_maxAltetude", 350, [350]],
     ["_maxSpeed", 310, [310]],
     ["_chuteVehicleClass", "rhs_d6_Parachute", ["rhs_d6_Parachute"]]
 ];

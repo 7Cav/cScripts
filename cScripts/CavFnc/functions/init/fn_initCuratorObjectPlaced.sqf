@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: SSG.Argus.J, CPL.Brostrom.A
- * This function adds a jump out action to a curator spawned C130.
+ * This function make sure that systems are added to a curator spawned objects.
  *
  * Arguments:
  * None
