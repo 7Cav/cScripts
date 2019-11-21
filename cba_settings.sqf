@@ -125,7 +125,7 @@ force force ace_repair_wheelRepairRequiredItems = 0;
 
 // ACE Magazine Repack
 force force ace_magazinerepack_timePerAmmo = 1.5;
-force force ace_magazinerepack_timePerBeltLink = 4.99732;
+force force ace_magazinerepack_timePerBeltLink = 1;
 force force ace_magazinerepack_timePerMagazine = 2;
 
 // ACE Map
