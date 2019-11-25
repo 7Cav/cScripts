@@ -110,7 +110,6 @@ if (_radio == "ACRE_PRC343") then {
         case "MISFIT-5": {_channel = 37};
         case "MISFIT-6": {_channel = 37};
         case "MISFIT-7": {_channel = 37};
-		
 
         // LETTER NAMING
         case "GODFATHER FIVE": {_channel = 4};
