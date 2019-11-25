@@ -18,4 +18,6 @@ jobs:
       uses: actions/checkout@master
     - name: Lint (sqflint)
       uses: arma-actions/sqflint@master
+      with:
+        args: --exit e --directory cScripts/CavFnc/functions
       continue-on-error: true # No failure due to many false-positives
