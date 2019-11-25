@@ -192,8 +192,6 @@ private _medical_arsenal = [
     "B_Carryall_mcamo"
 
 ];
-private _ranger_arsenal = [];
-private _sniper_arsenal = [];
 
 switch (_companySelector) do {
     case "alpha": {
@@ -222,18 +220,6 @@ switch (_companySelector) do {
         _medical_arsenal append _default_arsenal;
         _medical_arsenal arrayIntersect _medical_arsenal;
         [_object, _medical_arsenal] call ace_arsenal_fnc_initBox;
-    };
-    case "ranger": {
-        [_object, true] call ace_arsenal_fnc_initBox;
-        // _ranger_arsenal append _default_arsenal;
-        // _ranger_arsenal arrayIntersect _ranger_arsenal;
-        // [_object, _ranger_arsenal] call ace_arsenal_fnc_initBox;
-    };
-    case "sniper": {
-        [_object, true] call ace_arsenal_fnc_initBox;
-        // _sniper_arsenal append _default_arsenal;
-        // _sniper_arsenal arrayIntersect _sniper_arsenal;
-        // [_object, _sniper_arsenal] call ace_arsenal_fnc_initBox;
     };
     default {
         [_object, true] call ace_arsenal_fnc_initBox;

@@ -24,8 +24,6 @@ private _dialogResult = [
             "Bravo",
             "Bravo - Mustang",
             "Charlie",
-            "Ranger",
-            "Sniper",
             "All loadouts"
         ],0],
         ["ReGear action",["true","false"],0],
@@ -44,10 +42,7 @@ private _quickSelectScale = switch (_dialogResult select 0) do {
     case 2: {"bravo";};
     case 3: {"mustang";};
     case 4: {"charlie";};
-    case 5: {"ranger";};
-    case 6: {"sniper";};
-
-    case 7: {"all";};
+    case 5: {"all";};
 };
 
 private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};

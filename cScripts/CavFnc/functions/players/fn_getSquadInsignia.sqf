@@ -175,23 +175,6 @@ switch (_group) do {
     case "MISFIT SEVEN";
     case "MISFIT-7": {_return = "Cav_Insignia_Charlie_2"};
 
-    // Ranger
-    case "ROUGHNECK ONE";
-    case "ROUGHNECK-1": {_return = "Cav_Insignia_Specialized_Ranger"};
-    case "ROUGHNECK TWO";
-    case "ROUGHNECK-2": {_return = "Cav_Insignia_Specialized_Ranger"};
-    case "ROUGHNECK THREE";
-    case "ROUGHNECK-3": {_return = "Cav_Insignia_Specialized_Ranger"};
-    case "ROUGHNECK FOUR";
-    case "ROUGHNECK-4": {_return = "Cav_Insignia_Specialized_Ranger"};
-    case "ROUGHNECK FIVE";
-    case "ROUGHNECK-6": {_return = "Cav_Insignia_Specialized_Ranger"};
-
-    case "PHANTOM ONE";
-    case "PHANTOM-1": {_return = "Cav_Insignia_Specialized_Ranger"};
-    case "PHANTOM TWO";
-    case "PHANTOM-2": {_return = "Cav_Insignia_Specialized_Ranger"};
-    
     case "ZEUS": {_return = "Curator"};
 
     default {_return = ""};
