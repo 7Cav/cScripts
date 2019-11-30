@@ -2,11 +2,18 @@
 params ["_unit"];
 
 private _config       = missionConfigFile >> "CfgLoadouts";
+private _variable     = _unit getVariable [QGVAR(Loadout), ""];
 private _variableName = vehicleVarName _unit;
 private _className    = typeOf _unit;
 private _sideConfig   = [side group _unit] call FUNC(getSideConfig);
 
 switch (true) do {
+    case (isClass (_config >> _variable)): {
+        if !(_variable isKindOf [_sideConfig, _config]) then {
+            ["The loadout for """ + _variable + """ does not inherit from """ + _sideConfig + """."] call FUNC(logWarning);
+        };
+        _variable
+    };
     case (isClass (_config >> _variableName)): {
         if !(_variableName isKindOf [_sideConfig, _config]) then {
             ["The loadout for """ + _variableName + """ does not inherit from """ + _sideConfig + """."] call FUNC(logWarning);

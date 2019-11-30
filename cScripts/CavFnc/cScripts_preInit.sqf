@@ -153,6 +153,26 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_fnc_addSetting;
 
+// Fortify
+[
+    QEGVAR(Settings,setFortifyRestriction),
+    "LIST",
+    ["Fortification restrictions", "Define hwo can use the fortify action.\n"],
+    [_cScriptSettings, "4; Player"],
+    [[0,1,2], ["Anyone", "Engineer", "Adv. Engineer"], 1],
+    true,
+    {}
+] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,setFortifyBudget),
+    "SLIDER",
+    ["Fortification Budget","Define the budget per fortification site.\n"],
+    [_cScriptSettings, "4; Player"],
+    [50, 2500, 800, 0],
+    true,
+    {}
+] call CBA_fnc_addSetting;
+
 // Eyewere
 [
     QEGVAR(Settings,enforceEyewereBlacklist),
@@ -291,6 +311,28 @@ if (EGVAR(Settings,allowCustomTagging)) then {
 
 if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
+};
+
+switch (EGVAR(Settings,setFortifyRestriction)) do {
+    case (0): { // Anyone
+        [{true}] call acex_fortify_fnc_addDeployHandler;
+    };
+    case (1): { // Engineers
+        [{
+            params ["_unit"];
+            private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
+            if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer >= 1};
+            _isEngineer;
+        }] call acex_fortify_fnc_addDeployHandler;
+    };
+    case (2): { // Adv Engineers
+        [{
+            params ["_unit"];
+            private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
+            if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer >= 2};
+            _isEngineer;
+        }] call acex_fortify_fnc_addDeployHandler;
+    };
 };
 
 

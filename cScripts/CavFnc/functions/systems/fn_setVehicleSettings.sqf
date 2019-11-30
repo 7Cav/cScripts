@@ -49,9 +49,31 @@ private _transportRotary = [
     
     "rhs_uh1h_hidf",
     "rhs_uh1h_hidf_gunship",
-    "rhs_uh1h_hidf_unarmed"
+    "rhs_uh1h_hidf_unarmed",
+
+    "Cav_Alpha_UH60M",
+    "Cav_Alpha_UH60M2",
+    "Cav_Alpha_UH60M_MEV2"
 ];
-private _fixedWingTransport = ["RHS_C130J"];
+private _fixedWingTransport = ["RHS_C130J", "Cav_Alpha_C130J"];
+
+private _logisticalVehicles = [
+    "B_Truck_01_Repair_F",
+    "B_T_Truck_01_Repair_F",
+    "rhsusf_M977A4_REPAIR_usarmy_d",
+    "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
+    "rhsusf_M977A4_REPAIR_BKIT_usarmy_d",
+    "rhsusf_M977A4_REPAIR_usarmy_wd",
+    "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+    "rhsusf_M977A4_REPAIR_BKIT_usarmy_wd",
+    "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy",
+    "rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy",
+    "rhsusf_M1239_socom_d",
+    "rhsusf_M1239_M2_socom_d",
+    "rhsusf_M1239_MK19_socom_d",
+    "rhsusf_M1239_M2_Deploy_socom_d",
+    "rhsusf_M1239_MK19_Deploy_socom_d"
+];
 
 switch (true) do {
     case (typeOf _vehicle in _transportRotary): {
@@ -59,6 +81,9 @@ switch (true) do {
     };
     case (typeOf _vehicle in _fixedWingTransport): {
         [_vehicle] call FUNC(addJump);
+    };
+    case (typeOf _vehicle in _logisticalVehicles): {
+        [_vehicle] call FUNC(addFortifyArea);
     };
 };
 

@@ -17,12 +17,15 @@
 
 params [["_player", objNull, [objNull]]];
 
+if !(isPlayer _player) exitWith {};
+
 [{[] call acre_api_fnc_isInitialized}, {
     (_this select 0) setVariable [QEGVAR(Player,RadioChannel), []];
     private _playerRadios = [(_this select 0)] call acre_api_fnc_getCurrentRadioList;
     {
         if !(_x == "") then {
-            private _channel = [(_this select 0)] call FUNC(getRadioChannel);
+            private _radio = [_x] call acre_api_fnc_getBaseRadio;
+            private _channel = [[_this select 0] call FUNC(getSquadName), _radio] call FUNC(getRadioChannel);
 
             [_x, _channel] call acre_api_fnc_setRadioChannel;
             #ifdef DEBUG_MODE
@@ -35,7 +38,7 @@ params [["_player", objNull, [objNull]]];
             (_this select 0) setVariable [QEGVAR(Player,RadioChannel), _radioAndChannel];
 
             // Set 343 as current radio. (Not working but i leve it here cause it work kind of.)
-            if ([_x] call acre_api_fnc_getBaseRadio == 'ACRE_PRC343') then {
+            if (_radio == 'ACRE_PRC343') then {
                 [_x] call acre_api_fnc_setCurrentRadio;
                 #ifdef DEBUG_MODE
                     [format["%1 radio %2 is set to current radio.",(_this select 0), _x]] call FUNC(logInfo);

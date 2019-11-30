@@ -1,7 +1,7 @@
 #include "defines.h"
 /*
     Author: Bryan "Tonic" Boardwine
-
+    
     Description:
     Called via addAction and opens the TAW View Distance Menu
 */

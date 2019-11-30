@@ -32,7 +32,7 @@ class Cav_B_B_PlatoonSergeant_F : Cav_B_Bravo_base_F {
         "ACE_personalAidKit",
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -83,7 +83,7 @@ class Cav_B_B_PlatoonLeader_F : Cav_B_Bravo_base_F {
         "ACE_personalAidKit",
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -144,7 +144,7 @@ class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -165,6 +165,93 @@ class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
     preLoadout = "[(_this select 0), 'bravo', 1, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+};
+
+// CAVALRY SCOUTS
+class Cav_B_B_CavScout_Crewman_Local: Cav_B_B_CavScout_base {
+
+    headgear[] = {"rhsusf_cvc_ess"};
+    vest[] = {"rhsusf_spcs_ocp"};
+    backpack[] = {"B_Carryall_mcamo"};
+
+    primary[] = {"rhs_weap_m4a1","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_RMR",""};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",7,
+        "rhs_mag_an_m8hc",2,
+
+        "SmokeShellBlue"
+    };
+
+    items[] = {
+        "ACE_EarPlugs",2,
+        "ACE_CableTie",2,
+        "ACE_Flashlight_MX991",
+        "ACE_MapTools",
+        "ACE_microDAGR",
+        "ACE_quikclot",20,
+        "ACE_tourniquet",2,
+
+        "ACRE_PRC152",2,
+
+        "ACE_EntrenchingTool",
+        "ACE_personalAidKit",
+
+        "ToolKit"
+    };
+
+
+    preLoadout = "[(_this select 0), 'bravo', 1, 0] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0)] call cScripts_fnc_setPostInitPlayerSettings;";
+};
+class Cav_B_B_CavScout_Dismount_Local: Cav_B_B_CavScout_base {
+
+    headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
+    vest[] = {"rhsusf_spcs_ocp_squadleader"};
+    backpack[] = {"B_Carryall_mcamo"};
+
+    primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_RMR",""};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",10,
+
+        "rhs_mag_m67",2,
+        "rhs_mag_an_m8hc",2,
+        "rhs_mag_M441_HE",7,
+        "rhs_mag_m713_Red",2,
+        "rhs_mag_m714_White",2,
+
+        "ACE_HuntIR_M203",3,
+        
+        "SmokeShellBlue"
+    };
+
+    items[] = {
+        "ACRE_PRC152",2,
+
+        "ACE_EarPlugs",2,
+        "ACE_CableTie",2,
+
+        "ACE_quikclot",20,
+        "ACE_tourniquet",2,
+        "ACE_EntrenchingTool",
+        "ACE_personalAidKit",
+        "ACE_SpraypaintRed",
+        
+        "ACE_SpraypaintGreen",
+
+        "ACE_microDAGR",
+        "B_UavTerminal",
+        "ACE_HuntIR_monitor",
+        "ACE_UAVBattery",2,
+        "ACE_MX2A",
+        
+        "ACE_Flashlight_MX991",
+        "ACE_MapTools"
+    };
+
+    preLoadout = "[(_this select 0), 'bravo'] call cScripts_fnc_setPreInitPlayerSettings;";
+    postLoadout = "[(_this select 0)] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
 // C R E W
@@ -209,7 +296,7 @@ class Cav_B_B_Tank_Commander_F : Cav_B_Bravo_Crew_base_F {
 
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
@@ -258,7 +345,7 @@ class Cav_B_B_Tank_Gunner_F : Cav_B_Bravo_Crew_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
 
@@ -299,7 +386,7 @@ class Cav_B_B_Tank_Driver_F : Cav_B_Bravo_Crew_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
@@ -358,7 +445,7 @@ class Cav_B_B_Ifv_Commander_F : Cav_B_Bravo_Crew_base_F {
 
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
@@ -407,7 +494,7 @@ class Cav_B_B_Ifv_Driver_F : Cav_B_Bravo_Crew_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
 
@@ -450,7 +537,7 @@ class Cav_B_B_Ifv_Gunner_F : Cav_B_Bravo_Crew_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_MapTools",
         "ACE_CableTie",
         "ToolKit",
@@ -497,7 +584,7 @@ class Cav_B_B_SquadLeader_F : Cav_B_Bravo_base_F {
         "ACE_personalAidKit",
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -514,7 +601,7 @@ class Cav_B_B_SquadLeader_F : Cav_B_Bravo_base_F {
     gps[] = {"ItemAndroid"};
 };
 
-class Cav_B_B_Alpha_FireTeamLeader_F : Cav_B_Bravo_base_F {
+class Cav_B_B_FireTeamLeader_F : Cav_B_Bravo_base_F {
     backpack[] = {"B_Carryall_mcamo"};
     binoculars[] = {"ACE_Vector"};
 
@@ -549,7 +636,7 @@ class Cav_B_B_Alpha_FireTeamLeader_F : Cav_B_Bravo_base_F {
         "ACE_personalAidKit",
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -564,7 +651,7 @@ class Cav_B_B_Alpha_FireTeamLeader_F : Cav_B_Bravo_base_F {
     };
     gps[] = {"ItemAndroid"};
 };
-class Cav_B_B_Alpha_AutomaticRifleman_F : Cav_B_Bravo_base_F {
+class Cav_B_B_AutomaticRifleman_F : Cav_B_Bravo_base_F {
     vest[] = {"rhsusf_iotv_ocp_SAW"};
 
     primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR"};
@@ -577,7 +664,7 @@ class Cav_B_B_Alpha_AutomaticRifleman_F : Cav_B_Bravo_base_F {
         "SmokeShell",4
     };
 };
-class Cav_B_B_Alpha_Grenadier_F : Cav_B_Bravo_base_F {
+class Cav_B_B_Grenadier_F : Cav_B_Bravo_base_F {
 
     primary[] = {"rhs_weap_m4a1_m320","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR"};
 
@@ -603,7 +690,7 @@ class Cav_B_B_Alpha_Grenadier_F : Cav_B_Bravo_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -616,7 +703,7 @@ class Cav_B_B_Alpha_Grenadier_F : Cav_B_Bravo_base_F {
     };
 
 };
-class Cav_B_B_Alpha_Rifleman_F : Cav_B_Bravo_base_F {
+class Cav_B_B_Rifleman_F : Cav_B_Bravo_base_F {
 
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
@@ -631,7 +718,7 @@ class Cav_B_B_Alpha_Rifleman_F : Cav_B_Bravo_base_F {
         "rhs_200rnd_556x45_M_SAW",2
     };
 };
-class Cav_B_B_Alpha_RiflemanAT_F : Cav_B_Bravo_base_F {
+class Cav_B_B_RiflemanAT_F : Cav_B_Bravo_base_F {
 
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
@@ -646,11 +733,13 @@ class Cav_B_B_Alpha_RiflemanAT_F : Cav_B_Bravo_base_F {
         "rhs_200rnd_556x45_M_SAW",2
     };
 };
-class Cav_B_B_Alpha_RiflemanLAT_F : Cav_B_Bravo_base_F {
+class Cav_B_B_RiflemanLAT_F : Cav_B_Bravo_base_F {
 
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
 
+    launcher[] = {"rhs_weap_M136_hp"};
+    
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",10,
 
@@ -661,7 +750,7 @@ class Cav_B_B_Alpha_RiflemanLAT_F : Cav_B_Bravo_base_F {
         "rhs_200rnd_556x45_M_SAW",2
     };
 };
-class Cav_B_B_Alpha_CombatLifeSaver_F : Cav_B_Bravo_base_F {
+class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_base_F {
 
     backpack[] = {"B_Carryall_mcamo"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
@@ -691,7 +780,7 @@ class Cav_B_B_Alpha_CombatLifeSaver_F : Cav_B_Bravo_base_F {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -704,22 +793,6 @@ class Cav_B_B_Alpha_CombatLifeSaver_F : Cav_B_Bravo_base_F {
 
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
 };
-
-class Cav_B_B_Bravo_FireTeamLeader_F : Cav_B_B_Alpha_FireTeamLeader_F {
-};
-class Cav_B_B_Bravo_AutomaticRifleman_F : Cav_B_B_Alpha_AutomaticRifleman_F {
-};
-class Cav_B_B_Bravo_Grenadier_F : Cav_B_B_Alpha_Grenadier_F {
-};
-class Cav_B_B_Bravo_Rifleman_F : Cav_B_B_Alpha_Rifleman_F {
-};
-class Cav_B_B_Bravo_RiflemanAT_F : Cav_B_B_Alpha_RiflemanAT_F {
-};
-class Cav_B_B_Bravo_RiflemanLAT_F : Cav_B_B_Alpha_RiflemanLAT_F {
-};
-class Cav_B_B_Bravo_CombatLifeSaver_F : Cav_B_B_Alpha_CombatLifeSaver_F {
-};
-
 
 class Cav_B_B_TeamLeader_Mustang_F : Cav_B_Bravo_Logi_base_F {
     backpack[] = {"B_Carryall_mcamo"};
@@ -765,7 +838,7 @@ class Cav_B_B_TeamLeader_Mustang_F : Cav_B_Bravo_Logi_base_F {
         "ACE_salineIV",6,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -831,7 +904,7 @@ class Cav_B_B_Mustang_CombatMedic_F : Cav_B_Bravo_Logi_base_F {
         "ACE_salineIV",6,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",
         "ACE_MapTools",
         "ACE_CableTie",
@@ -892,7 +965,7 @@ class Cav_B_B_LogisticsOpsOfficer_F : Cav_B_Bravo_Logi_base_F {
         "ACE_personalAidKit",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",6,
@@ -948,7 +1021,7 @@ class Cav_B_B_LogisticsOpsNCO_F : Cav_B_Bravo_Logi_base_F {
         "ACE_personalAidKit",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",6,
@@ -1005,7 +1078,7 @@ class Cav_B_B_LogisticTeamLeader_F : Cav_B_Bravo_Logi_base_F {
         "ACE_personalAidKit",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",6,
@@ -1063,7 +1136,7 @@ class Cav_B_B_LogisticsTeamMember_F : Cav_B_Bravo_Logi_base_F {
         "ACE_personalAidKit",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EarPlugs",2,
         "ACE_MapTools",
         "ACE_IR_Strobe_Item",6,

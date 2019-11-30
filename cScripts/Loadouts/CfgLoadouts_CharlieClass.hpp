@@ -23,14 +23,14 @@ class Cav_B_C_SquadLeader_Misfit_2_F : Cav_B_C_SquadLeader_F {};
 class Cav_B_C_SquadLeader_Misfit_3_F : Cav_B_C_SquadLeader_F {};
 class Cav_B_C_SquadLeader_Misfit_4_F : Cav_B_C_SquadLeader_F {};
 
-//class Cav_B_C_Alpha_FireTeamLeader_F : Cav_B_C_FireTeamLeader_F {};
+class Cav_B_C_Alpha_FireTeamLeader_F : Cav_B_C_FireTeamLeader_F {};
 class Cav_B_C_Alpha_AutomaticRifleman_F : Cav_B_C_AutomaticRifleman_F {};
 class Cav_B_C_Alpha_Grenadier_F : Cav_B_C_Grenadier_F {};
 class Cav_B_C_Alpha_Rifleman_F : Cav_B_C_Rifleman_F {};
 class Cav_B_C_Alpha_RiflemanLAT_F : Cav_B_C_RiflemanLAT_F {};
 class Cav_B_C_Alpha_CombatLifeSaver_F : Cav_B_C_CombatLifeSaver_F {};
 
-//class Cav_B_C_Bravo_FireTeamLeader_F : Cav_B_C_FireTeamLeader_F {};
+class Cav_B_C_Bravo_FireTeamLeader_F : Cav_B_C_FireTeamLeader_F {};
 class Cav_B_C_Bravo_AutomaticRifleman_F : Cav_B_C_AutomaticRifleman_F {};
 class Cav_B_C_Bravo_Grenadier_F : Cav_B_C_Grenadier_F {};
 class Cav_B_C_Bravo_Rifleman_F : Cav_B_C_Rifleman_F {};

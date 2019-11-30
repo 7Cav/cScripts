@@ -47,33 +47,23 @@ if (_earPlugs) then {
 if (EGVAR(Settings,enforceEyewereBlacklist)) then {
     if (_facewere) then {
         private _blacklist_glasses = [
-            "rhs_balaclava",
-            "G_Balaclava_blk",
-            "G_Balaclava_combat",
-            "G_Balaclava_lowprofile",
-            "G_Balaclava_oli",
-            "rhs_balaclava1_olive",
-            "G_Bandanna_aviator",
-            "G_Bandanna_beast",
-            "G_Bandanna_blk",
-            "G_Bandanna_khk",
-            "G_Bandanna_oli",
-            "G_Bandanna_shades",
-            "G_Bandanna_sport",
-            "G_Bandanna_tan",
+            "G_AirPurifyingRespirator_02_black_F",
+            "G_AirPurifyingRespirator_02_olive_F",
+            "G_AirPurifyingRespirator_02_sand_F",
+            "G_AirPurifyingRespirator_01_F",
+            "G_Blindfold_01_black_F",
+            "G_Blindfold_01_white_F",
             "G_Diving",
             "G_I_Diving",
             "G_O_Diving",
             "G_B_Diving",
             "G_Lady_Blue",
+            "G_RegulatorMask_F",
             "G_Respirator_blue_F",
             "G_Respirator_white_F",
             "G_Respirator_yellow_F",
             "G_EyeProtectors_F",
             "G_EyeProtectors_Earpiece_F",
-            "rhs_scarf",
-            "G_Spectacles",
-            "G_Squares",
             "G_Balaclava_TI_blk_F",
             "G_Balaclava_TI_G_blk_F",
             "G_Balaclava_TI_tna_F",
@@ -133,6 +123,11 @@ if (EGVAR(Settings,setRadio)) then {
 // Handle player announcement
 if (EGVAR(Settings,setMissionType) != 3) then {
     [_player] call FUNC(doPlayerAnnouncement);
+};
+
+if (isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
+    [formatText["%1 have no unit variable defined.", _player]] call FUNC(logWarning);
+    if (!isMultiplayer || {is3DENMultiplayer}) then { systemChat format["WARNING: %1 have no unit variable defined.", _player] };
 };
 
 #ifdef DEBUG_MODE

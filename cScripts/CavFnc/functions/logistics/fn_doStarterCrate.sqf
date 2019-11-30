@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Quick Select Scale <STRING>   (Default: "none") ["none","alpha","bravo","charlie","ranger","medical","full"]
+ * 1: Selection type <STRING>       (Default: "none") ["none","all","officer","alpha","bravo","charlie"]
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
@@ -60,11 +60,11 @@ if (_reHealOption) then {
 };
 
 // Call Quick Selection
-[_object, _quickSelectScale, _allowOnlyForCompany] call FUNC(initQuickSelections);
+[_object, _quickSelectScale, _allowOnlyForCompany] call FUNC(addQuickSelectionList);
 
 // Call Insignia Selection
 if (_InsigniaSelectOption) then {
-    [_object] call FUNC(initInsigniaSelections);
+    [_object] call FUNC(addInsigniaSelectionList);
 };
 
 // Make end of options line.

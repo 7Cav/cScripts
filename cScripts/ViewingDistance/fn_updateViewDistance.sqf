@@ -18,7 +18,7 @@ switch (true) do {
         _dist = tawvd_foot;
     };
 
-    case ((vehicle player) isKindOf "LandVehicle"): {
+    case (((vehicle player) isKindOf "LandVehicle") || ((vehicle player) isKindOf "Ship")): {
         setViewDistance tawvd_car;
         _dist = tawvd_car;
     };
@@ -26,6 +26,10 @@ switch (true) do {
     case ((vehicle player) isKindOf "Air"): {
         setViewDistance tawvd_air;
         _dist = tawvd_air;
+    };
+    
+    default {
+        _dist = 1600;
     };
 };
 
