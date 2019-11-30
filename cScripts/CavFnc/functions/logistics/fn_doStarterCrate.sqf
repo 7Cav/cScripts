@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Selection type <STRING>       (Default: "none") ["none","all","officer","alpha","bravo","charlie","ranger" and Squad Names etc...]
+ * 1: Selection type <STRING>       (Default: "none") ["none","all","officer","alpha","bravo","charlie"]
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
