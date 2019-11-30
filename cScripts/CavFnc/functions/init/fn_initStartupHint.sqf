@@ -39,7 +39,6 @@ if (_player_group == "") then { _player_group = "in your squad" } else { _player
 // if (_player_company == "alpha") then {_player_company = "Alpha Company"};
 // if (_player_company == "bravo") then {_player_company = "Bravo Company"};
 // if (_player_company == "charlie") then {_player_company = "Charlie Company"};
-// if (_player_company == "ranger") then {_player_company = "a Ranger"};
 // if (_player_company == "s3") then {_player_company = "Mission Controll"};
 // if (_player_company == "s5") then {_player_company = "a combat reporter"};
 
