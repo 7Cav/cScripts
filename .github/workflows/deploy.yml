@@ -1,5 +1,6 @@
 name: Deploy
-on: release
+on:
+  push: tags
 jobs:
   build:
     name: Create And Upload Release
