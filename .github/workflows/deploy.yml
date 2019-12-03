@@ -1,6 +1,7 @@
 name: Deploy
 on:
-  push: tags
+  release:
+      types: [published]
 jobs:
   build:
     name: Create And Upload Release
