@@ -41,7 +41,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: https://uploads.github.com/repos/ColdEvul/cScripts/releases/download/${{ steps.get_version.outputs.VERSION }}/assets?name=cScripts-${{ steps.get_version.outputs.VERSION }}.zip
+          upload_url: https://uploads.github.com/repos/ColdEvul/cScripts/releases/${{ steps.get_version.outputs.VERSION }}/assets?name=cScripts-${{ steps.get_version.outputs.VERSION }}.zip
           asset_path: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
           asset_name: cScripts-${{ steps.get_version.outputs.VERSION }}.zip
           asset_content_type: application/zip
