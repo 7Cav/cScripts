@@ -1,7 +1,6 @@
+name: Release
 on: release
-
-name: Create Release
-
+    types: [created, edited]
 jobs:
   build:
     name: Create And Upload Release
