@@ -13,8 +13,11 @@ jobs:
           sudo apt install zip
       - name: Checkout code
         uses: actions/checkout@master
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: Build release
-        run: ./tools/deploy.sh ${{ github.ref }}
+        run: ./tools/deploy.sh ${{ steps.get_version.outputs.VERSION }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

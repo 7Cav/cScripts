@@ -2,7 +2,7 @@
 
 set -e
 
-Verions_NR = $*
+Verions_NR=$*
 
 sed -i "s/#define VERSION.*/#define VERSION \"${Verions_NR}\"/" cScripts/script_component.hpp
 
