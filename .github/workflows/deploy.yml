@@ -1,7 +1,5 @@
 name: Deploy
-on:
-  release:
-    types: [created, edited]
+on: release
 jobs:
   build:
     name: Create And Upload Release
