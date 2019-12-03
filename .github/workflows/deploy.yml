@@ -7,6 +7,10 @@ jobs:
     name: Create And Upload Release
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install zip
       - name: Checkout code
         uses: actions/checkout@master
       - name: Build release
