@@ -41,7 +41,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          #upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          upload_url: https://github.com/ColdEvul/cScripts/releases/download/${{ steps.get_version.outputs.VERSION }}/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
           asset_path: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
           asset_name: cScripts-${{ steps.get_version.outputs.VERSION }}.zip
           asset_content_type: application/zip
@@ -51,7 +51,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          #upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          upload_url: https://github.com/ColdEvul/cScripts/releases/download/${{ steps.get_version.outputs.VERSION }}/cScripts_PUBLIC-${{ steps.get_version.outputs.VERSION }}.zip
           asset_path: release/cScripts_PUBLIC-${{ steps.get_version.outputs.VERSION }}.zip
           asset_name: cScripts_PUBLIC-${{ steps.get_version.outputs.VERSION }}.zip
           asset_content_type: application/zip
@@ -61,7 +61,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          #upload_url: ${{ steps.create_release.outputs.upload_url }}
+          upload_url: https://github.com/ColdEvul/cScripts/releases/download/${{ steps.get_version.outputs.VERSION }}/Compositions-${{ steps.get_version.outputs.VERSION }}.zip
           asset_path: release/Compositions-${{ steps.get_version.outputs.VERSION }}.zip
           asset_name: Compositions-${{ steps.get_version.outputs.VERSION }}.zip
           asset_content_type: application/zip
