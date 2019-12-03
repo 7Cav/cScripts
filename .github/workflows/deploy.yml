@@ -47,7 +47,7 @@ jobs:
             # What is cScripts Public?
             cScriptsPublic is a special build that removed CavPack Unique stuff as well as changes some default settings in the script package. The build is NOT to be used for 7th Cavalry Gaming Operations.
             """
-          draft: true
+          draft: false
           prerelease: false
       - name: Upload Release cScripts
         id: upload-release-asset 
