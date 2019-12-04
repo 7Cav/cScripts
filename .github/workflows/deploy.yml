@@ -1,7 +1,7 @@
-name: Release
+name: Deploy
 on:
   release:
-    types: [created, edited]
+      types: [ published, prereleased ]
 jobs:
   build:
     name: Create And Upload Release
@@ -9,45 +9,43 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@master
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
       - name: Build release
-        run: deploy.sh
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+        run: ./tools/deploy.sh ${{ steps.get_version.outputs.VERSION }}
+
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     release_name: Release ${{ github.ref }}
+      #     body: |
+      #       Changes in this Release
+      #       - First Change
+      #       - Second Change
+      #     draft: false
+      #     prerelease: false
+
+      - name: Upload Release cScripts
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Release cScripts (PUBLIC)
+        uses: JasonEtco/upload-to-release@master
         with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          body: |
-            [![GitHub Releases](https://img.shields.io/github/downloads/7Cav/cScripts/${{ github.ref }}/total.svg?color=green&label=Downloads&style=for-the-badge)](https://github.com/7Cav/cScripts/releases/download/${{ github.ref }}/cScripts-${{ github.ref }}.zip)
-            """
-            # Changelog
-            - *No changes*
-
-            ## Loadouts and Inventory
-            - *No changes*
-
-            ## Public
-            - *No changes*
-
-            ## Compositions
-            - *No changes*
-
-            # What is cScripts Patch?
-            cScripts Patch is a version to version and ONLY contain the changed files from version to version. This allows you to have a controlled update easier.
-
-            # What is cScripts Public?
-            cScriptsPublic is a special build that removed CavPack Unique stuff as well as changes some default settings in the script package. The build is NOT to be used for 7th Cavalry Gaming Operations.
-            """
-          draft: true
-          prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1.0.1
+          args: release/cScripts_PUBLIC-${{ steps.get_version.outputs.VERSION }}.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Release cScripts (Compositions)
+        uses: JasonEtco/upload-to-release@master
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./release/*
-          asset_content_type: application/zip
+          args: release/Compositions-${{ steps.get_version.outputs.VERSION }}.zip application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
