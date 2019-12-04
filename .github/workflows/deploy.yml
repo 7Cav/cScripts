@@ -32,15 +32,11 @@ jobs:
       #     prerelease: false
 
       - name: Upload Release cScripts
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1.0.1
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: https://uploads.github.com/repos/ColdEvul/cScripts/releases/${{ steps.get_version.outputs.VERSION }}/assets?name=cScripts-${{ steps.get_version.outputs.VERSION }}.zip
-          asset_path: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
-          asset_name: cScripts-${{ steps.get_version.outputs.VERSION }}.zip
-          asset_content_type: application/zip
 
       - name: Upload Release cScripts (PUBLIC)
         uses: actions/upload-release-asset@v1.0.1
