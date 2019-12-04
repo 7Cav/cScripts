@@ -37,6 +37,18 @@ jobs:
           args: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Release cScripts (PUBLIC)
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: release/cScripts_PUBLIC-${{ steps.get_version.outputs.VERSION }}.zip application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Release cScripts (Compositions)
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: release/Compositions-${{ steps.get_version.outputs.VERSION }}.zip application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Release cScripts (PUBLIC)
         uses: actions/upload-release-asset@v1.0.1
