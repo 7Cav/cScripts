@@ -45,7 +45,56 @@ def fetch_objects(path=''):
 
     return objectList
 
+def get_author_link(author=''):
+    names = {
+        'Brostrom.A': 'ColdEvul',
+        'Dunn.W': 'VinoEtCaseus'
+    }
+    for akey in names:
+        author = author.replace(akey,'[{}](https://github.com/{})'.format(akey,names[akey]))
+        continue
+    return author
 
+def write_article(collection={}):
+    article = open('{}/Function-list.md'.format(outputDir),"w+")
+
+    # Write index
+    article.write('## Index\n')
+    for category in collection:
+        article.write('\n#### {}\n'.format(category.capitalize()))
+        for function in collection[category]:
+            for function_key, call in collection[category][function].items():
+                if not function_key == 'call':
+                    continue
+                article.write('- [[{}|Function-list#{}]]\n'.format(call, function))
+
+    # Write function articles
+    article.write('\n# Functions\n')
+    for category in collection:
+        article.write('\n## {}\n'.format(category.capitalize()))
+        for function in collection[category]:
+            try:
+                vAuthor = 'Written by: {}'.format(collection[category][function]['author'])
+                vAuthor = get_author_link(vAuthor)
+            except KeyError:
+                vAuthor = ''
+            vDesc   = collection[category][function]['description']
+            vLink   = collection[category][function]['link']
+            vCall   = collection[category][function]['call']
+            
+            article.write('### {}\n'.format(function))
+            article.write('[Go to {}]({}), {}\n\n'.format(vCall, vLink, vAuthor))
+            article.write('{}\n\n'.format(vDesc))
+
+            article.write('**Arguments:**\n\n')
+            for exsample in collection[category][function]['arguments']:
+                article.write('{}\n\n'.format(exsample))
+            article.write('\n')
+
+            article.write('**Exsamples:**\n\n')
+            for exsample in collection[category][function]['exsamples']:
+                article.write('```\n{}\n```\n'.format(exsample))
+            article.write('\n')
 def main():
     os.chdir(rootDir)
 
@@ -147,12 +196,14 @@ def main():
                 exsamples = [x for x in exsamples if x]
 
             description_text = '\n'.join(description)
+            description_text = description_text.lstrip()
             function_dict[function_category][function_name].update({'description': description_text})
 
             function_dict[function_category][function_name].update({'arguments': arguments})
             function_dict[function_category][function_name].update({'exsamples': exsamples})
-
-    print(json.dumps(function_dict))
+    
+    write_article(function_dict)
+    #print(json.dumps(function_dict))
 
 if __name__ == "__main__":
     sys.exit(main())
