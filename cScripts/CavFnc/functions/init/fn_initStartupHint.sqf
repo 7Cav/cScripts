@@ -73,6 +73,11 @@ private _text_Standby           = "<t font='PuristaMedium' size='1.1'>Standby!</
 private _image_Cross            = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
 private _image_Shield           = "<br /><br /><img size='5' image='cScripts\Data\Images\7CAV_LOGO_00.paa' align='center'/><br /><br />";
 
+// Tac2 Public
+private _tac2_welcome         = format["<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1</t><br /><br />", _operationName];
+private _tac2_body            = format["<t font='PuristaMedium' size='1.1'>Welcome, <t color='#ffc61a'>%1</t>, to the 7th Cavalry Tactical Realism 2 server! You are currently slotted in as <t color='#ffc61a'>%2</t> %3. Have fun and don't forget to read the rules!</t><br />", _player_name, _player_role, _player_group];
+private _tac2_standby         = "<t font='PuristaMedium' size='1.1'>Plese standby while we get things ready! </t>";
+private _tac2_easterEgg_1     = "<br /><br />Blame Citarelli if units don't spawn!<br />";
 
 // Run hints
 
@@ -122,5 +127,12 @@ switch (_missionType) do {
         hintSilent "";
     };
     case (3): {  // Public
+    };
+    case (4): {  // Tac2
+        hint parseText (_tac2_Welcome + _image_Cross + _tac2_standby);
+        sleep 4;
+        hintSilent parseText (_tac2_Welcome + _image_Cross + _tac2_body);
+        sleep (_delay * 2);
+        hintSilent "";
     };
 };
