@@ -554,7 +554,7 @@ class items
 					description="Bravo Rifleman";
 				};
 				id=136;
-				type="Cav_B_C_Bravo_RiflemanLAT_F";
+				type="Cav_B_C_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
@@ -775,7 +775,7 @@ class items
 					description="Bravo Rifleman";
 				};
 				id=146;
-				type="Cav_B_C_Bravo_RiflemanLAT_F";
+				type="Cav_B_C_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
@@ -996,7 +996,7 @@ class items
 					description="Bravo Rifleman";
 				};
 				id=156;
-				type="Cav_B_C_Bravo_RiflemanLAT_F";
+				type="Cav_B_C_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
@@ -1217,7 +1217,7 @@ class items
 					description="Bravo Rifleman";
 				};
 				id=166;
-				type="Cav_B_C_Bravo_RiflemanLAT_F";
+				type="Cav_B_C_Bravo_CombatLifeSaver_F";
 			};
 		};
 		class Attributes
