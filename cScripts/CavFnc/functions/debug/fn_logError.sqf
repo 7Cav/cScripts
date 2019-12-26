@@ -19,5 +19,5 @@ private _type = "ERROR";
 diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
 
 if (!isMultiplayer || {is3DENMultiplayer}) then {
-	systemChat formatText ["%1 %2: %3", _prefix, _type, _message];
+    systemChat formatText ["%1 %2: %3", _prefix, _type, _message];
 };
