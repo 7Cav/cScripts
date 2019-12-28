@@ -21,7 +21,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     ["Mission Type", "This will deside on what kind of startup hint you get on mission start.\n"],
     [_cScriptSettings, "1; Mission"],
-    [[0,1,2,3], ["Custom", "Operation", "Training", "Public"], 1],
+    [[0,1,2,3,4], ["Custom", "Operation", "Training", "Public", "Public ALiVE"], 1],
     true,
     {}
 ] call CBA_fnc_addSetting;
@@ -211,7 +211,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     QEGVAR(Settings,jumpSimulation),
     "LIST",
-["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
+    ["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
     [_cScriptSettings, "5; Combat Jump Simulation"],
     [[0,1,2], ["None", "Basic", "Advanced"], 1],
     true,
@@ -298,6 +298,8 @@ switch (EGVAR(Settings,setMissionType)) do {
     case (2): { // Training
     };
     case (3): { // Public
+    };
+    case (4): { // Public Alive
     };
 };
 
