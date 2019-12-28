@@ -8,8 +8,8 @@
  <a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=for-the-badge&label=Downloads" alt="cScripts Downloads"></a>
  <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=for-the-badge&label=Issues" alt="cScripts Issues"></a>
  <a href="https://github.com/7Cav/cScripts/wiki"><img src="https://img.shields.io/badge/help-wiki-lightgrey.svg?logo=Wikipedia&style=for-the-badge" alt="cScripts Wiki"></a>
-<a href="https://travis-ci.org/7Cav/cScripts">
-    <img src="https://img.shields.io/travis/7Cav/cScripts.svg?style=for-the-badge&logo=Travis-CI" alt="cScripts Build">
+<a href="https://github.com/7Cav/cScripts/actions?query=workflow%3AArma">
+    <img src="https://img.shields.io/github/workflow/status/7Cav/cScripts/Arma/master?logo=GitHub&style=for-the-badge" alt="cScripts Build">
 </a>
 
 </p>
