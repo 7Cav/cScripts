@@ -1,10 +1,13 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
- * This function give all players a hint on mission start only.
+ * Author: SGT.Brostrom.A, CPL.Citarelli.D
+ * This function give all players a hint on mission start or every join. Based on mission type.
  *
  * Arguments:
- * 0: Time <NUMBER> (Default; 60)
+ * 0: Time          <NUMBER>    (Default; 30)
+ * 0: Mission type  <NUMBER>    (Default; 1)
+ * 0: Custom Topic  <STRING>    (Default; "My custom Mission!")
+ * 0: Custom Text   <STRING>    (Default; "I have design this mission!")
  *
  * Return Value:
  * Nothing
@@ -19,7 +22,7 @@
 waitUntil {!isNull player && player == player};
 
 params [
-    ["_delay", 30, [0]],
+    ["_delay", 30, [30]],
     ["_missionType", 1, [1]],
     ["_setCustomTopic", "My custom Mission!", [""]],
     ["_setCustomText", "I have design this mission!", [""]]
@@ -31,16 +34,8 @@ private _player_rankFormal = [player,'FORMAL'] call FUNC(getPlayerRank);
 
 private _player_role = call FUNC(getPlayerRole);
 
-
 private _player_group = groupId (group player);
 if (_player_group == "") then { _player_group = "in your squad" } else { _player_group = format["under the callsign <t color='#ffc61a'>%1</t>", _player_group]};
-
-// private _player_company = [player] call FUNC(getCompanyVariable);
-// if (_player_company == "alpha") then {_player_company = "Alpha Company"};
-// if (_player_company == "bravo") then {_player_company = "Bravo Company"};
-// if (_player_company == "charlie") then {_player_company = "Charlie Company"};
-// if (_player_company == "s3") then {_player_company = "Mission Controll"};
-// if (_player_company == "s5") then {_player_company = "a combat reporter"};
 
 private _operationName = "Operation";
 if ((getText getMissionConfig "onLoadName") != "") then {
@@ -69,13 +64,15 @@ private _text_GL_P              = "<t font='PuristaMedium' size='1.1'>Good luck!
 private _text_HaveFun_P         = "<t font='PuristaMedium' size='1.1'>Have fun!</t>";
 private _text_Standby           = "<t font='PuristaMedium' size='1.1'>Standby!</t>";
 
+private _public_alive_welcome   = format["<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1</t><br /><br />", _operationName];
+private _public_alive_body      = format["<t font='PuristaMedium' size='1.1'>Welcome, <t color='#ffc61a'>%1</t>, to the 7th Cavalry Tactical Realism 2 server! You are currently slotted in as <t color='#ffc61a'>%2</t> %3. Have fun and don't forget to read the rules!</t><br />", _player_name, _player_role, _player_group];
+private _public_alive_standby   = "<t font='PuristaMedium' size='1.1'>Plese standby while we get things ready! </t>";
+
 // Images
 private _image_Cross            = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
 private _image_Shield           = "<br /><br /><img size='5' image='cScripts\Data\Images\7CAV_LOGO_00.paa' align='center'/><br /><br />";
 
-
 // Run hints
-
 #ifdef DEBUG_MODE
     ["Running mission startup hint."] call FUNC(logInfo);
 #endif
@@ -90,6 +87,7 @@ switch (_missionType) do {
         sleep 1.5;
         hintSilent "";
     };
+
     case (1): { // Operation
         if (didJIP) exitWith {
             #ifdef DEBUG_MODE
@@ -105,6 +103,7 @@ switch (_missionType) do {
         sleep 1.5;
         hintSilent "";
     };
+
     case (2): { // Training
         if (didJIP) exitWith {
             #ifdef DEBUG_MODE
@@ -121,6 +120,15 @@ switch (_missionType) do {
         sleep 1.5;
         hintSilent "";
     };
+
     case (3): {  // Public
+    };
+
+    case (4): {  // Public Alive
+        hint parseText (_public_alive_welcome + _image_Cross + _public_alive_standby);
+        sleep 4;
+        hintSilent parseText (_public_alive_welcome + _image_Cross + _public_alive_body);
+        sleep (_delay * 2);
+        hintSilent "";
     };
 };
