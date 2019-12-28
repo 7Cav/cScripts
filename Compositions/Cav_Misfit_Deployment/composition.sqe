@@ -551,7 +551,6 @@ class items
 					skill=0.40000001;
 					init="call{this setVariable [""cScripts_Player_Unit"", ""MISFIT-1""];}";
 					isPlayable=1;
-					description="Bravo Rifleman";
 				};
 				id=136;
 				type="Cav_B_C_Bravo_CombatLifeSaver_F";
@@ -772,7 +771,6 @@ class items
 					skill=0.40000001;
 					init="call{this setVariable [""cScripts_Player_Unit"", ""MISFIT-2""];}";
 					isPlayable=1;
-					description="Bravo Rifleman";
 				};
 				id=146;
 				type="Cav_B_C_Bravo_CombatLifeSaver_F";
@@ -993,7 +991,6 @@ class items
 					skill=0.40000001;
 					init="call{this setVariable [""cScripts_Player_Unit"", ""MISFIT-3""];}";
 					isPlayable=1;
-					description="Bravo Rifleman";
 				};
 				id=156;
 				type="Cav_B_C_Bravo_CombatLifeSaver_F";
@@ -1214,7 +1211,6 @@ class items
 					skill=0.40000001;
 					init="call{this setVariable [""cScripts_Player_Unit"", ""MISFIT-4""];}";
 					isPlayable=1;
-					description="Bravo Rifleman";
 				};
 				id=166;
 				type="Cav_B_C_Bravo_CombatLifeSaver_F";
