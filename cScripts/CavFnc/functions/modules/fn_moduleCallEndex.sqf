@@ -18,7 +18,8 @@ private _dialogResults = [
     [
         ["Set Player Weapons To Safe", ["Yes", "No"], 0],
         ["Pacify AI", ["Yes", "No"], 0],
-        ["Hint Players That Fire", ["Yes", "No"], 0]
+        ["Hint Players That Fire", ["Yes", "No"], 0], 
+        ["Heal all players", ["Yes", "No"], 0]
     ]
 ] call Ares_fnc_showChooseDialog;
 
@@ -33,6 +34,9 @@ _aiPacified = _aiPacified isEqualTo 0;
 
 private _holdFireMessage = _dialogResults select 2;
 _holdFireMessage = _holdFireMessage isEqualTo 0;
+
+private _healAllPlayers = _dialogResults select 3;
+_healAllPlayers = _healAllPlayers isEqualTo 0;
 
 
 //systemChat Endex message
@@ -63,6 +67,11 @@ if (_weaponsSafe) then {
     } remoteExecCall ["bis_fnc_call", 0]; 
 };
 
+if (_healAllPlayers) then {
+    {
+        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+    } remoteExecCall ["bis_fnc_call", 0]; 
+};
 
 //Change AI to careless (doesn't affected AI created after Endex)
 if (_aiPacified) then { 
