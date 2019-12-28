@@ -55,7 +55,19 @@ private _transportRotary = [
     "Cav_Alpha_UH60M2",
     "Cav_Alpha_UH60M_MEV2"
 ];
-private _fixedWingTransport = ["RHS_C130J", "Cav_Alpha_C130J"];
+
+private _transportRotaryPara = [
+    "RHS_CH_47F",
+    "RHS_CH_47F_10",
+    "RHS_CH_47F_light"
+];
+
+private _fixedWingTransport = [
+    "RHS_C130J",
+    "Cav_Alpha_C130J",
+    "USAF_C17",
+    "USAF_C130J"
+];
 
 private _logisticalVehicles = [
     "B_Truck_01_Repair_F",
@@ -78,6 +90,9 @@ private _logisticalVehicles = [
 switch (true) do {
     case (typeOf _vehicle in _transportRotary): {
         [_vehicle] call FUNC(addGetOutHelo);
+    };
+    case (typeOf _vehicle in _transportRotaryPara): {
+        [_vehicle] call FUNC(addJump);
     };
     case (typeOf _vehicle in _fixedWingTransport): {
         [_vehicle] call FUNC(addJump);
