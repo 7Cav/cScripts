@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: CPL.Brostrom.A
- *  This function print debug information in the RPT log and in the system chat in singelplayer or eden multiplayer
+ *  This function print debug information in the RPT log and in the system chat in eden multiplayer
  *
  * Arguments:
  * 0: Message <STRING>
@@ -19,5 +19,5 @@ private _type = "ERROR";
 diag_log formatText ["%1 %2: %3", _prefix, _type, _message];
 
 if (!isMultiplayer || {is3DENMultiplayer}) then {
-    systemChat formatText ["%1 %2: %3", _prefix, _type, _message];
+    systemChat format ["%1 %2: %3", _prefix, _type, _message];
 };
