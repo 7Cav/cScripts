@@ -482,12 +482,12 @@ force force STHud_Settings_SquadBar = true;
 STHud_Settings_UnconsciousFadeEnabled = true;
 
 // USAF
-usaf_serviceMenu_setting_allowHangarRearm = true;
-usaf_serviceMenu_setting_allowHangarRefuel = true;
-usaf_serviceMenu_setting_allowHangarRepair = true;
-usaf_serviceMenu_setting_allowLoadoutModification = true;
-usaf_serviceMenu_setting_enabled = true;
-usaf_serviceMenu_setting_refuelTime = "100";
-usaf_serviceMenu_setting_reloadTime = "2";
-usaf_serviceMenu_setting_repairTime = "100";
-usaf_serviceMenu_setting_replaceSources = false;
+force force usaf_serviceMenu_setting_allowHangarRearm = true;
+force force usaf_serviceMenu_setting_allowHangarRefuel = true;
+force force usaf_serviceMenu_setting_allowHangarRepair = true;
+force force usaf_serviceMenu_setting_allowLoadoutModification = true;
+force force usaf_serviceMenu_setting_enabled = true;
+force force usaf_serviceMenu_setting_refuelTime = "100";
+force force usaf_serviceMenu_setting_reloadTime = "2";
+force force usaf_serviceMenu_setting_repairTime = "100";
+force force usaf_serviceMenu_setting_replaceSources = false;
