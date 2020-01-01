@@ -18,7 +18,7 @@
 
 /* Add Settings to vehicles */
 
-["RHS_C130J_Base", "init", {
+["Plane_Base_F", "init", {
     (_this select 0) call FUNC(setVehicleSettings);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 

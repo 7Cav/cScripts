@@ -432,10 +432,9 @@ class items
 					skill=0.40000001;
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANDIT-1""];}";
 					isPlayable=1;
-					description="Bravo Rifleman";
 				};
 				id=15;
-				type="Cav_B_C_Bravo_RiflemanLAT_F";
+				type="Cav_B_C_Bravo_CombatLifeSaver_F ";
 			};
 		};
 		class Attributes
@@ -653,10 +652,9 @@ class items
 					skill=0.40000001;
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANDIT-2""];}";
 					isPlayable=1;
-					description="Bravo Rifleman";
 				};
 				id=25;
-				type="Cav_B_C_Bravo_RiflemanLAT_F";
+				type="Cav_B_C_Bravo_CombatLifeSaver_F ";
 			};
 		};
 		class Attributes
@@ -874,10 +872,9 @@ class items
 					skill=0.40000001;
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANDIT-3""];}";
 					isPlayable=1;
-					description="Bravo Rifleman";
 				};
 				id=35;
-				type="Cav_B_C_Bravo_RiflemanLAT_F";
+				type="Cav_B_C_Bravo_CombatLifeSaver_F ";
 			};
 		};
 		class Attributes
@@ -1095,10 +1092,9 @@ class items
 					skill=0.40000001;
 					init="call{this setVariable [""cScripts_Player_Unit"", ""BANDIT-4""];}";
 					isPlayable=1;
-					description="Bravo Rifleman";
 				};
 				id=45;
-				type="Cav_B_C_Bravo_RiflemanLAT_F";
+				type="Cav_B_C_Bravo_CombatLifeSaver_F ";
 			};
 		};
 		class Attributes

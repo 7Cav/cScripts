@@ -91,15 +91,16 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
         if !(isNil {profileNamespace getVariable QEGVAR(Cav,Insignia)}) then {
             _insignia = profileNamespace getVariable QEGVAR(Cav,Insignia);
             #ifdef DEBUG_MODE
-                [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
+                [format["%1 got assigned insignia; %2 based on stored insignia.", _player, _insignia]] call FUNC(logInfo);
             #endif
         } else {
             _insignia = [_player] call FUNC(getSquadInsignia);
             #ifdef DEBUG_MODE
-                [format["%1 got assigned insignia; %2 based on squad name if any.", _player, _insignia]] call FUNC(logInfo);
+                [format["%1 got assigned insignia; %2 based on squad name.", _player, _insignia]] call FUNC(logInfo);
             #endif
         };
-        [_player, _insignia] call BIS_fnc_setUnitInsignia;
+        
+        [{[_this select 0, _this select 1] call BIS_fnc_setUnitInsignia;}, [_player, _insignia]] call CBA_fnc_execNextFrame;
     };
 };
 
