@@ -10,7 +10,7 @@ for "_i" from 0 to (_arrayCount - 1) do {
 
     private _sorting = if (
         GVAR(usesACE)
-        && {[_unit] call ACE_Medical_fnc_isMedic}
+        && {[_unit] call ace_medical_treatment_fnc_isMedic}
         && {toLower _currentItem in ACE_MEDICAL_ITEMS}
     ) then {
         [BACKPACK, UNIFORM, VEST]
