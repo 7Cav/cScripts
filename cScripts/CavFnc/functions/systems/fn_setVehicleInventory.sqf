@@ -99,9 +99,16 @@ switch (true) do {
 
         _vehicle addItemCargoGlobal ["ACE_tourniquet", 2];
         _vehicle addItemCargoGlobal ["ACE_fieldDressing", 10];
+
+        // Ace Cargo
+        if !(typeOf _vehicle in ["rhsusf_stryker_m1126_m2_d"]) then {
+            ["ACE_Track", _vehicle] call ace_cargo_fnc_loadItem;
+        };
     };
     case (typeOf _vehicle in _armor): {
         _vehicle addItemCargoGlobal ["Toolkit", 2];
+        // Ace Cargo
+        ["ACE_Track", _vehicle] call ace_cargo_fnc_loadItem;
     };
     case (typeOf _vehicle in _medical): {
         _vehicle addItemCargoGlobal ["ACE_FieldDressing", 30];
