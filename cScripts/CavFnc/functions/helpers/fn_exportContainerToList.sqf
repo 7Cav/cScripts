@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function is used used to export objects to clipboard from a object to be used in the Cav Arsenal.
+ * This function is used to export objects to a readable clipboard from a given.
  * The function also retun a array or strings as well as clipboard export.
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * Equipment <ARRAY of STRINGS>
  *
  * Example:
- * [cursorTarget] call cScripts_fnc_exportBoxToArsenal
+ * [cursorTarget] call cScripts_fnc_exportContainerToList
  *
  * Public: Yes
  */
