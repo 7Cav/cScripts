@@ -115,8 +115,11 @@ switch (true) do {
         _vehicle addItemCargoGlobal ["ACE_packingBandage", 30];
         _vehicle addItemCargoGlobal ["ACE_elasticBandage", 30];
         _vehicle addItemCargoGlobal ["ACE_quikclot", 50];
+        
+        _vehicle addItemCargoGlobal ["ACE_tourniquet", 10];
 
         _vehicle addItemCargoGlobal ["ACE_personalAidKit", 10];
+        _vehicle addItemCargoGlobal ["ACE_splint",25];
 
         _vehicle addItemCargoGlobal ["ACE_salineIV", 6];
         _vehicle addItemCargoGlobal ["ACE_salineIV_500", 6];
