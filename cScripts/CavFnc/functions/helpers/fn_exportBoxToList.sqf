@@ -30,8 +30,8 @@ private _weapons = getWeaponCargo _object;
 _weapons = _weapons select 0;
 private _weaponNames = [];
 {
-	_weaponName = getText (configfile >> "CfgWeapons" >> _x >> "displayName");
-	_weaponNames append [_weaponName];
+    _weaponName = getText (configfile >> "CfgWeapons" >> _x >> "displayName");
+    _weaponNames append [_weaponName];
 } forEach _weapons;
 _exportList append _weaponNames;
 
@@ -40,8 +40,8 @@ private _magazines = getMagazineCargo _object;
 _magazines = _magazines select 0;
 private _magazineNames = [];
 {
-	_magazineName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
-	_magazineNames append [_magazineName];
+    _magazineName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
+    _magazineNames append [_magazineName];
 } forEach _magazines;
 _exportList append _magazineNames;
 
@@ -50,8 +50,8 @@ private _items = getItemCargo _object;
 _items = _items select 0;
 private _itemNames = [];
 {
-	_itemName = getText (configfile >> "CfgWeapons" >> _x >> "displayName");
-	_itemNames append [_itemName];
+    _itemName = getText (configfile >> "CfgWeapons" >> _x >> "displayName");
+    _itemNames append [_itemName];
 } forEach _items;
 _exportList append _itemNames;
 
@@ -60,8 +60,8 @@ private _backpacks = getBackpackCargo _object;
 _backpacks = _backpacks select 0;
 private _backpackNames = [];
 {
-	_backpackName = getText (configfile >> "CfgWeapons" >> _x >> "displayName");
-	_backpackNames append [_backpackName];
+    _backpackName = getText (configfile >> "CfgWeapons" >> _x >> "displayName");
+    _backpackNames append [_backpackName];
 } forEach _backpacks;
 _exportList append _backpackNames;
 
