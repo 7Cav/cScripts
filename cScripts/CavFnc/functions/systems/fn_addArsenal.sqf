@@ -27,10 +27,10 @@ private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "APOLLO", "
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
 // If inside of the category
-private _container = ""
-if (_companySelector in _alpha ) then {_container = "ALPHA"}
-if (_companySelector in _bravo ) then {_container = "BRAVO"}
-if (_companySelector in _charlie ) then {_container = "CHARLIE"}
+private _container = "";
+if (_companySelector in _alpha ) then {_container = "ALPHA"};
+if (_companySelector in _bravo ) then {_container = "BRAVO"};
+if (_companySelector in _charlie ) then {_container = "CHARLIE"};
 
 private _globalArsenalContainer = [
     "rhs_uniform_cu_ocp_1stcav",
