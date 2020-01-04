@@ -206,6 +206,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     {}
 ] call CBA_fnc_addSetting;
 
+// Item Replacement system
+[
+    QEGVAR(Settings,allowReplaceItem),
+    "CHECKBOX",
+    ["Custom Replace Objects","Allow objects to be replaced with working ones or swaped.\n"],
+    [_cScriptSettings, "4; Player"],
+    true,
+    true,
+    {}
+] call CBA_fnc_addSetting;
 
 // JumpSimulation
 [
