@@ -1,8 +1,8 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function is used used to export a companies loadouts to be used in the Cav Arsenal function.
- * The function also retun a array or strings as well as clipboard export.
+ * This function export a given company or a classname loadout. Primarly used for the Cav Arsenal function.
+ * The function retun a array or strings as well as clipboard export.
  *
  * Arguments:
  * 0: Company <STRING>    ["cfgLoadoutsClassname","alpha","bravo","charlie"]
