@@ -56,7 +56,6 @@ if (typeOf _vehicle in _allVehicles) then {
     clearitemcargoGlobal _vehicle;
     clearbackpackcargoGlobal _vehicle;
 
-    _vehicle addItemCargoGlobal ["ACE_EarPlugs",10];
     _vehicle addItemCargoGlobal ["Item_ToolKit"];
 };
 
@@ -73,8 +72,13 @@ switch (true) do {
 
         _vehicle addItemCargoGlobal ["ACE_tourniquet", 2];
         _vehicle addItemCargoGlobal ["ACE_fieldDressing", 10];
+
+        _vehicle addItemCargoGlobal ["ACE_wirecutter", 1];
     };
     case (typeOf _vehicle in _transport_rotary): {
+        if (!isNil {ace_fastroping_requireRopeItems}) then {
+            _vehicle addItemCargoGlobal ["ACE_rope18", 8];
+        };
         _vehicle addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 16];
         _vehicle addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_box", 2];
 
