@@ -23,7 +23,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "1; Mission"],
     [[0,1,2,3,4], ["Custom", "Operation", "Training", "Public", "Public ALiVE"], 1],
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Ai setting
@@ -34,7 +35,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "1; Mission"],
     [[0,1], ["Day", "Night / Jungle"], 0],
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Mission startup hint settings
@@ -45,7 +47,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "2; Mission Startup"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,setStartupDelay),
@@ -54,7 +57,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "2; Mission Startup"],
     [5, 180, 30, 0],
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,setCustomHintTopic),
@@ -63,7 +67,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "2; Mission Startup"],
     "My custom Mission!",
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,setCustomHintText),
@@ -72,7 +77,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "2; Mission Startup"],
     "I have design this mission! Yey for me!",
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Custom init
@@ -83,7 +89,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "3; Custom Initzialisation"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Vehicle
@@ -94,7 +101,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "3; Custom Initzialisation"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,useCustomVehicleInventory),
@@ -103,7 +111,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "3; Custom Initzialisation"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 
@@ -116,7 +125,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "3; Custom Initzialisation"],
     false,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 
@@ -128,7 +138,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "4; Player"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Rank
@@ -139,7 +150,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "4; Player"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Tagging
@@ -150,27 +162,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "4; Player"],
     true,
     true,
-    {}
-] call CBA_fnc_addSetting;
-
-// Fortify
-[
-    QEGVAR(Settings,setFortifyRestriction),
-    "LIST",
-    ["Fortification restrictions", "Define hwo can use the fortify action.\n"],
-    [_cScriptSettings, "4; Player"],
-    [[0,1,2], ["Anyone", "Engineer", "Adv. Engineer"], 1],
-    true,
-    {}
-] call CBA_fnc_addSetting;
-[
-    QEGVAR(Settings,setFortifyBudget),
-    "SLIDER",
-    ["Fortification Budget","Define the budget per fortification site.\n"],
-    [_cScriptSettings, "4; Player"],
-    [50, 2500, 800, 0],
-    true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Eyewere
@@ -181,7 +174,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "4; Player"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Auto Insignia Application
@@ -192,7 +186,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "4; Player"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 // Radio Switch
@@ -203,56 +198,128 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "4; Player"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
+
+
+// Fortify
+[
+    QEGVAR(Settings,setFortifyRestriction),
+    "LIST",
+    ["Fortification restrictions", "Define hwo can use the fortify action.\n"],
+    [_cScriptSettings, "5; Fortify"],
+    [[0,1,2], ["Anyone", "Engineer", "Adv. Engineer"], 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,setFortifyBudget),
+    "SLIDER",
+    ["Fortification Budget","Define the budget per fortification site.\n"],
+    [_cScriptSettings, "5; Fortify"],
+    [50, 2500, 800, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
 
 // Item Replacement system
 [
     QEGVAR(Settings,allowReplaceItem),
     "CHECKBOX",
-    ["Custom Replace Objects","Allow objects to be replaced with working ones or swaped.\n"],
-    [_cScriptSettings, "4; Player"],
+    ["Enable","Allow objects to be replaced with working ones or swaped.\n"],
+    [_cScriptSettings, "6; Item Replacement"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,replaceMedical),
+    "LIST",
+    ["Medical items","Allow medical items to be replaced with our custom ones.\nNote: this system will not be disabled if the ace medical convert items is enabled.\n"],
+    [_cScriptSettings, "6; Item Replacement"],
+    [[0,1], ["Disabled", "Convert medical equipment"], 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,replaceHandGrenades),
+    "LIST",
+    ["M67 Fragmentation Grenade","Force specific usage of sertain objects\n"],
+    [_cScriptSettings, "6; Item Replacement"],
+    [[0,1,2], ["Disabled", "Use ACE M67", "Use RHS M67"], 2],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,replaceStunGrenades),
+    "LIST",
+    ["M84 Stun Grenade","Force specific usage of sertain objects\n"],
+    [_cScriptSettings, "6; Item Replacement"],
+    [[0,1,2], ["Disabled", "Use ACE M84", "Use RHS M84"], 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,replaceSmokeGrenades),
+    "LIST",
+    ["Smoke Grenade","Force specific usage of sertain objects\n"],
+    [_cScriptSettings, "6; Item Replacement"],
+    [[0,1,2], ["Disabled", "Use ACE Smokes", "Use RHS Smokes"], 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+
 
 // JumpSimulation
 [
     QEGVAR(Settings,jumpSimulation),
     "LIST",
     ["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
-    [_cScriptSettings, "5; Combat Jump Simulation"],
+    [_cScriptSettings, "7; Combat Jump Simulation"],
     [[0,1,2], ["None", "Basic", "Advanced"], 1],
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,jumpSimulationNVG),
     "CHECKBOX",
     ["Include Night Vision Googles","Include equiped Night Vison Googles in the simulation.\n"],
-    [_cScriptSettings, "5; Combat Jump Simulation"],
+    [_cScriptSettings, "7; Combat Jump Simulation"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,jumpSimulationGlasses),
     "CHECKBOX",
     ["Include Non-combat Googles","Include Non-combat Googles in the simulation. This refere to sunshades and simular non-safety googles.\n"],
-    [_cScriptSettings, "5; Combat Jump Simulation"],
+    [_cScriptSettings, "7; Combat Jump Simulation"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,jumpSimulationHat),
     "CHECKBOX",
     ["Include Non-combat Headgear","Include Non-combat Headgear in the simulation. This refere to hats bandanas and baretes.\n"],
-    [_cScriptSettings, "5; Combat Jump Simulation"],
+    [_cScriptSettings, "7; Combat Jump Simulation"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 
@@ -261,20 +328,22 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,enable7cavZeusModules),
     "CHECKBOX",
     ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-    [_cScriptSettings, "6; Zeus"],
+    [_cScriptSettings, "8; Zeus"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
     QEGVAR(Settings,curatorImmortality),
     "CHECKBOX",
     ["Zeus Immortality","Make all curator units immortal.\n"],
-    [_cScriptSettings, "6; Zeus"],
+    [_cScriptSettings, "8; Zeus"],
     true,
     true,
-    {}
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 #ifdef DEBUG_MODE
