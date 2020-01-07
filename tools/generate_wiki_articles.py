@@ -47,8 +47,10 @@ def fetch_objects(path=''):
 
 def get_author_link(author=''):
     names = {
+        #CavName, GithubUser
         'Brostrom.A': 'ColdEvul',
-        'Dunn.W': 'VinoEtCaseus'
+        'Dunn.W': 'VinoEtCaseus',
+        'Citarelli.D': 'davidcit646'
     }
     for akey in names:
         author = author.replace(akey,'[{}](https://github.com/{})'.format(akey,names[akey]))
