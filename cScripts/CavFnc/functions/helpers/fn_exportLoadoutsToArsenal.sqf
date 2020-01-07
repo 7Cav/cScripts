@@ -1,11 +1,11 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function is used used to export a companies loadouts to be used in the Cav Arsenal function.
- * The function also retun a array or strings as well as clipboard export.
+ * This function export a given company or a classname loadout. Primarly used for the Cav Arsenal function.
+ * The function retun a array or strings as well as clipboard export.
  *
  * Arguments:
- * 0: Company <STRING>    ["cfgLoadoutsClassname","alpha","bravo","charlie","heavyweapons","medical","full"]
+ * 0: Company <STRING>    ["cfgLoadoutsClassname","alpha","bravo","charlie"]
  *
  * Return Value:
  * Equipment <ARRAY of STRINGS>
@@ -21,6 +21,8 @@ params[["_loadout","",[""]]];
 if !(isServer) exitWith {};
 if (_loadout == "") exitWith {};
 
+_loadout = toUpper(_loadout);
+
 private _return = [];
 private _exportList = [];
 
@@ -32,9 +34,12 @@ private _backpacksList = [];
 
 private _br = toString[13,10];
 
-_companyList = ["alpha","bravo","charlie","heavyweapons","medical"];
+_companyList = ["ALPHA","BRAVO","CHARLIE"];
 
+// Get specified loadout
 if !(_loadout in _companyList) then {
+    private _typeOfExport = _loadout;
+
     private _weaponsP = getArray (getMissionConfig "CfgLoadouts" >> _loadout >> "primary");
     _weaponsList append _weaponsP;
     private _weaponsS = getArray (getMissionConfig "CfgLoadouts" >> _loadout >> "secondary");
@@ -92,22 +97,28 @@ if !(_loadout in _companyList) then {
     _exportList append _backpacksList;
 };
 
+// Get all loadouts from given company based on cfgLoadouts
 if (_loadout in _companyList) then {
+    private _typeOfExport = _loadout;
     private _company = [];
-    private _companyAl = ["CAV_Alpha_Helo_PILOT","CAV_Alpha_Helo_COPILOT","CAV_Alpha_Helo_CHIEF","CAV_Alpha_Helo_GNR","CAV_Alpha_Helo_PILOT_ATT","CAV_Alpha_Helo_COPILOT_ATT","CAV_Alpha_Fixed_PILOT"];
-    private _companyBr = ["CAV_Bravo_OFFCR","CAV_Bravo_Crew_CDR","CAV_Bravo_Crew_GNR","CAV_Bravo_Crew_CREW","CAV_Bravo_SL","CAV_Bravo_TL","CAV_Bravo_AR","CAV_Bravo_GR","CAV_Bravo_RM","CAV_Bravo_CLS","CAV_Bravo_Weapons_TL","CAV_Bravo_Weapons_MG","CAV_Bravo_Weapons_GNR"];
-    private _companyCh = ["CAV_Charlie_OFFCR","CAV_Charlie_JFO","CAV_Charlie_SL","CAV_Charlie_TL","CAV_Charlie_AR","CAV_Charlie_GR","CAV_Charlie_RM","CAV_Charlie_CLS","CAV_Charlie_Weapons_SL","CAV_Charlie_Weapons_TL","CAV_Charlie_Weapons_AR","CAV_Charlie_Weapons_GR","CAV_Charlie_Weapons_RM","CAV_Charlie_Weapons_CLS"];
-    private _companyWe = ["CAV_Bravo_Weapons_TL","CAV_Bravo_Weapons_MG","CAV_Bravo_Weapons_GNR","CAV_Charlie_Weapons_SL","CAV_Charlie_Weapons_TL","CAV_Charlie_Weapons_AR","CAV_Charlie_Weapons_GR","CAV_Charlie_Weapons_RM","CAV_Charlie_Weapons_CLS"];
-    private _companyMe = ["CAV_Medical_OFFCR","CAV_Medical_PLMEDIC","CAV_Medical_BONESAW"];
+    private _companyName = "";
 
     switch (_loadout) do {
-        case "alpha": {_company = _companyAl};
-        case "bravo": {_company = _companyBr};
-        case "charlie": {_company = _companyCh};
-        case "heavyweapons": {_company = _companyWe};
-        case "medical": {_company = _companyMe};
+        case "ALPHA": {_companyName = "Cav_B_Alpha_base_F"};
+        case "BRAVO": {_companyName = "Cav_B_Bravo_base_F"};
+        case "CHARLIE": {_companyName = "Cav_B_Charlie_base_F"};
+        default {_companyName = "CommonBlufor"};
     };
 
+    // Get all classnames inherited from company name
+    private _company_raw = QUOTE(inheritsFrom _x == (missionConfigFile >> 'CfgLoadouts' >> _companyName)) configClasses (missionConfigFile >> "CfgLoadouts");
+    {
+        private _class = configName _x;
+        _class = configName (missionConfigFile >> 'CfgLoadouts' >> _class);
+        _company append [_class];
+    } forEach _company_raw;
+
+    // Sort all loadout objects
     {
         private _weaponsP = getArray (getMissionConfig "CfgLoadouts" >> _x >> "primary");
         _weaponsList append _weaponsP;
@@ -173,8 +184,10 @@ if (_loadout in _companyList) then {
     } forEach _company;
 };
 
+// Remove duplicate
 _exportList = _exportList arrayIntersect _exportList;
 
+// Remove empty
 { _weaponsList deleteAt (_weaponsList find _x) } forEach [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,""];
 { _binocularsList deleteAt (_binocularsList find _x) } forEach [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,""];
 { _magazinesList deleteAt (_magazinesList find _x) } forEach [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,""];
