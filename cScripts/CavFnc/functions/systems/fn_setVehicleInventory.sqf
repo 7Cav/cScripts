@@ -101,7 +101,9 @@ switch (true) do {
         _vehicle addItemCargoGlobal ["ACE_fieldDressing", 10];
 
         // Ace Cargo
-        if !(typeOf _vehicle in ["rhsusf_stryker_m1126_m2_d"]) then {
+        if (typeOf _vehicle in ["rhsusf_stryker_m1126_m2_d"]) then {
+            ["ACE_Wheel", _vehicle] call ace_cargo_fnc_loadItem;
+        } else {
             ["ACE_Track", _vehicle] call ace_cargo_fnc_loadItem;
         };
     };
