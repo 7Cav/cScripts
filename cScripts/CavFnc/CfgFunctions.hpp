@@ -146,8 +146,8 @@ class cScripts {
 
     class helpers {
         file = "cScripts\cavFnc\functions\helpers";
-        class exportBoxToArsenal {};
         class exportContainerToList {};
+        class exportContainerToArsenal {};
         class exportLoadoutsToArsenal {};
     };
 
