@@ -27,7 +27,7 @@ if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {[
 }] call Ares_fnc_RegisterCustomModule;
 
 // Check if increase training on location is true then add option.
-if (ace_medical_increaseTrainingInLocations) then {
+if (ace_medical_treatment_locationsBoostTraining) then {
     ["7Cav Logistics", "Field Hospital",{
         [(_this select 0)] call FUNC(moduleCreateFieldHospital);
     }] call Ares_fnc_RegisterCustomModule;

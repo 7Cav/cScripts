@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import sys, os, fnmatch, fileinput
-import argparse, shutil, subprocess, tempfile
+import argparse, shutil, subprocess, tempfile, json
 import configparser
 
 __version__ = 1.0
@@ -45,138 +45,167 @@ def fetch_objects(path=''):
 
     return objectList
 
+def get_author_link(author=''):
+    names = {
+        #CavName, GithubUser
+        'Brostrom.A': 'ColdEvul',
+        'Dunn.W': 'VinoEtCaseus',
+        'Citarelli.D': 'davidcit646'
+    }
+    for akey in names:
+        author = author.replace(akey,'[{}](https://github.com/{})'.format(akey,names[akey]))
+        continue
+    return author
 
+def write_article(collection={}):
+    article = open('{}/Function-list.md'.format(outputDir),"w+")
+
+    # Write index
+    article.write('## Index\n')
+    for category in collection:
+        article.write('\n#### {}\n'.format(category.capitalize()))
+        for function in collection[category]:
+            for function_key, call in collection[category][function].items():
+                if not function_key == 'call':
+                    continue
+                article.write('- [[{}|Function-list#{}]]\n'.format(call, function))
+
+    # Write function articles
+    article.write('\n# Functions\n')
+    for category in collection:
+        article.write('\n## {}\n'.format(category.capitalize()))
+        for function in collection[category]:
+            try:
+                vAuthor = 'Written by: {}'.format(collection[category][function]['author'])
+                vAuthor = get_author_link(vAuthor)
+            except KeyError:
+                vAuthor = ''
+            vDesc   = collection[category][function]['description']
+            vLink   = collection[category][function]['link']
+            vCall   = collection[category][function]['call']
+            
+            article.write('### {}\n'.format(function))
+            article.write('[Go to {}]({}), {}\n\n'.format(vCall, vLink, vAuthor))
+            article.write('{}\n\n'.format(vDesc))
+
+            article.write('**Arguments:**\n\n')
+            for exsample in collection[category][function]['arguments']:
+                article.write('{}\n\n'.format(exsample))
+            article.write('\n')
+
+            article.write('**Exsamples:**\n\n')
+            for exsample in collection[category][function]['exsamples']:
+                article.write('```\n{}\n```\n'.format(exsample))
+            article.write('\n')
 def main():
     os.chdir(rootDir)
 
+    #print('Featching all functions...')
+    function_dict = {}
+    function_categories = fetch_objects(function_dir)
+    function_categories = function_categories[0]
 
-    print('Featching all functions...')
-    all_functions = {}
-    func_categories = fetch_objects(function_dir)
-    func_categories = func_categories[0]
-
-    for func_cat in func_categories:
-
-        functions = fetch_objects('{}\{}'.format(function_dir, func_cat))
+    for function_category in function_categories:
+        functions = fetch_objects('{}/{}'.format(function_dir, function_category))
         functions = functions[1]
-        
-        all_functions[func_cat] = {'functions': functions}
-        
 
-    print('Writing Function list article...')
-    article = open('{}/Function-list.md'.format(outputDir),"w+")
-    article.write('\n## Index\n')
+        function_dict.update({function_category : {}})
+        
+        for function in functions:
+            function_file = function
+            function_name = function_file.replace('.sqf', '')
+            function_func = function_name.replace('fn_', 'cScripts_fnc_')
+            function_link = 'https://github.com/7Cav/cScripts/blob/master/cScripts/CavFnc/functions/{}/{}'.format(function_category,function_file)
+            function_path = './cScripts/CavFnc/functions/{}/{}'.format(function_category,function_file)
     
-    for category in all_functions:
-        article.write('\n\n#### {}\n'.format(category.capitalize()))
-        for func_name in all_functions[category]['functions']:
-            func_name_prity = func_name[:-4]
-            func_name_function = 'cScripts_fnc_' + func_name_prity
+            function_dict[function_category].update({function_name : {}})
+            function_dict[function_category][function_name].update({
+                'call': function_func,
+                'file': function_file,
+                'link': function_link,
+                'path': function_path,
+                'arguments': [],
+                'description': "",
+                'author': "",
+                'exsamples': []
+            })
 
-            article.write('- [[{}|Function-list#{}]]\n'.format(func_name_function, func_name_prity))
-
-    article.write('\n# Functions\n')
-
-    for category in all_functions:
-        article.write('\n\n## {}\n'.format(category.capitalize()))
-        for func_name in all_functions[category]['functions']:
-            func_name_prity = func_name[:-4]
-            func_name_function = 'cScripts_fnc_' + func_name_prity
-            article.write('\n\n### {}\n'.format(func_name_prity))
-            article.write('[`{}`](https://github.com/7Cav/cScripts/blob/master/cScripts/CavFnc/functions/{}/{})\n'.format(func_name_function, category, func_name))
-
-            # Get and function file read file
-            file = open('{}/{}/{}'.format(function_dir, category, func_name))
-            func_info = []
-            is_quto = False
-            is_list = False
-            is_argu = False
-            is_exam = False
-            is_code = False
+            file = open('{}/{}/{}'.format(function_dir, function_category, function_file))
+            script_header = []
             for i, line in enumerate(file):
-                line = line.replace('<', '&#60;')
-                line = line.replace('>', '&#62;')
                 if ' */' in line:
                     break
                 if '/*' in line:
                     continue
                 if ' *' in line:
-                    info = line.replace('*','').strip()
-                    if 'Arguments:' in info:
-                        is_quto = False
-                        is_list = False
-                        is_argu = True
-                        is_exam = False
-                        is_code = False
-                        info = info.replace('Arguments:','**Arguments:**').strip()
-                        article.write('\n\n\n{}\n'.format(info))
-                        continue
-                    if 'Return Value:' in info:
-                        is_quto = False
-                        is_list = False
-                        is_argu = False
-                        is_exam = False
-                        is_code = True
-                        info = info.replace('Return Value:','**Return Value:**').strip()
-                        article.write('\n\n\n{}\n'.format(info))
-                        continue
-                    if 'Example:' in info or 'Examples:' in info:
-                        is_quto = False
-                        is_list = False
-                        is_argu = False
-                        is_exam = True
-                        is_code = False
-                        info = info.replace('Example:','**Example:**').strip()
-                        article.write('\n\n\n{}\n'.format(info))
-                        continue
-                    if 'Author:' in info:
-                        is_quto = True
-                        is_list = False
-                        is_argu = False
-                        is_exam = False
-                        is_code = False
-                        info = info.replace('Author:','**Author:**').strip()
-                        article.write('\n\n{}\n\n\n'.format(info))
-                        continue
-                    if 'Edited:' in info:
-                        is_quto = True
-                        is_list = False
-                        is_argu = False
-                        is_exam = False
-                        is_code = False
-                        info = info.replace('Edited:','**Edited:**').strip()
-                        article.write('{}\n\n\n'.format(info))
-                        continue
-                    if 'Public:' in info:
-                        is_quto = True
-                        is_list = False
-                        is_argu = False
-                        is_exam = False
-                        is_code = False
-                        info = info.replace('Public:','**Public:**').strip()
-                        article.write('\n\n{}\n'.format(info))
-                        continue
-                    if info == '':
-                        continue
+                    line = line.replace(' * ', '')
+                    line = line.replace(' *', '')
+                    line = line.replace('\n', '')
+                    script_header.append(line)
+            
+            description = []
+            arguments = []
+            return_value = []
+            exsamples = []
+            block = [
+                False, # Description
+                False, # Arguments
+                False, # Return Value
+                False  # Exsample
+            ]
+            for i, line in enumerate(script_header):
+                if 'Author:' in line:
+                    author = line.replace('Author: ', '')
+                    function_dict[function_category][function_name].update({'author': author})
+                    block = [False,False,False,False]
+                    continue
+                if 'Public:' in line:
+                    author = line.replace('Public: ', '')
+                    function_dict[function_category][function_name].update({'public': author})
+                    block = [False,False,False,False]
+                    continue
+                if 'Arguments:' in line:
+                    block = [False,True,False,False]
+                if 'Return Value:' in line:
+                    block = [False,False,True,False]
+                if 'Example:' in line or 'Examples:' in line:
+                    block = [False,False,False,True]
 
-                    if is_quto:
-                        article.write('> {}<br>'.format(info))
-                        continue
-                    if is_list:
-                        article.write('\n- {}\n'.format(info))
-                        continue
-                    if is_argu:
-                        article.write('\n{}<br>'.format(info))
-                        continue
-                    if is_exam:
-                        article.write('\n```\n{}\n```\n'.format(info))
-                        continue
-                    if is_code:
-                        article.write('`{}`\n'.format(info))
-                        continue
-                    article.write('\n{}\n'.format(info))
-    article.close()
+                if block[0]:
+                    description.append(line)
+                    continue
+                if block[1]:
+                    arguments.append(line)
+                    continue
+                if block[2]:
+                    return_value.append(line)
+                    continue
+                if block[3]:
+                    exsamples.append(line)
+                    continue
+                
+                if not line == "":
+                    description.append(line)
 
+            if int(len(arguments)) >= 1:
+                arguments.remove(arguments[0])
+                arguments = [x for x in arguments if x]
+            if int(len(return_value)) >= 1:
+                return_value.remove(return_value[0])
+                return_value = [x for x in return_value if x]
+            if int(len(exsamples)) >= 1:
+                exsamples.remove(exsamples[0])
+                exsamples = [x for x in exsamples if x]
+
+            description_text = '\n'.join(description)
+            description_text = description_text.lstrip()
+            function_dict[function_category][function_name].update({'description': description_text})
+
+            function_dict[function_category][function_name].update({'arguments': arguments})
+            function_dict[function_category][function_name].update({'exsamples': exsamples})
+    
+    write_article(function_dict)
+    #print(json.dumps(function_dict))
 
 if __name__ == "__main__":
     sys.exit(main())

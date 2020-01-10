@@ -87,7 +87,6 @@ _object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5]
 [_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","z\cav\addons\insignia\data\Charlie_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionCharlie']] call FUNC(addInsigniaSelection);
 
 // Special
-[_object,"Ranger","Specialized_Ranger","z\cav\addons\insignia\data\Specialized_Ranger.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionSpecial']] call FUNC(addInsigniaSelection);
 [_object,"Airborn","Specialized_Airborne","z\cav\addons\insignia\data\Specialized_Airborne.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionSpecial']] call FUNC(addInsigniaSelection);
 [_object,"CLS","Specialized_CLS","z\cav\addons\insignia\data\Specialized_CLS.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionSpecial']] call FUNC(addInsigniaSelection);
 

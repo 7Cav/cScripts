@@ -32,14 +32,7 @@ params [
 
 // Safety first
 if (_safemode) then {
-    private _weapon = currentWeapon _player;
-    private _safedWeapons = _player getVariable ['ace_safemode_safedWeapons', []];
-    if !(_weapon in _safedWeapons) then { 
-        [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
-    };
-    #ifdef DEBUG_MODE
-        if (_safeMode) then {[formatText["%1 have got there weapon on safe in postLoadout.", _player]] call FUNC(logInfo);};
-    #endif
+    [_player, currentWeapon _player, true] call ace_safemode_fnc_setWeaponSafety;
 };
 
 // Add earplugs if you dont have them in.
@@ -98,15 +91,16 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
         if !(isNil {profileNamespace getVariable QEGVAR(Cav,Insignia)}) then {
             _insignia = profileNamespace getVariable QEGVAR(Cav,Insignia);
             #ifdef DEBUG_MODE
-                [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
+                [format["%1 got assigned insignia; %2 based on stored insignia.", _player, _insignia]] call FUNC(logInfo);
             #endif
         } else {
             _insignia = [_player] call FUNC(getSquadInsignia);
             #ifdef DEBUG_MODE
-                [format["%1 got assigned insignia; %2 based on squad name if any.", _player, _insignia]] call FUNC(logInfo);
+                [format["%1 got assigned insignia; %2 based on squad name.", _player, _insignia]] call FUNC(logInfo);
             #endif
         };
-        [_player, _insignia] call BIS_fnc_setUnitInsignia;
+        
+        [{[_this select 0, _this select 1] call BIS_fnc_setUnitInsignia;}, [_player, _insignia]] call CBA_fnc_execNextFrame;
     };
 };
 

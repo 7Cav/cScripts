@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Selection type <STRING>       (Default: "none") ["none","all","officer","alpha","bravo","charlie","ranger" and Squad Names etc...]
+ * 1: Selection type <STRING>       (Default: "none") ["none","all","officer","alpha","bravo","charlie"]
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
@@ -25,12 +25,12 @@
 
 params [
     ["_object", objNull, [objNull]],
-    ["_quickSelectScale", "none"],
-    ["_reGearOption", true],
-    ["_reHealOption", true],
-    ["_InsigniaSelectOption", true],
-    ["_allowOnlyForCompany", true],
-    ["_arsenal", false]
+    ["_quickSelectScale", "none", [""]],
+    ["_reGearOption", true, [true]],
+    ["_reHealOption", true, [true]],
+    ["_InsigniaSelectOption", true, [true]],
+    ["_allowOnlyForCompany", true, [true]],
+    ["_arsenal", false, [false]]
 ];
 
 #ifdef DEBUG_MODE
@@ -39,7 +39,7 @@ params [
 
 // If isServer call equipBase
 if (isServer) then {
-    [_object,_quickSelectScale] call FUNC(doStarterCrateSupplies);
+    [_object, _quickSelectScale] call FUNC(doStarterCrateSupplies);
 };
 
 // Make addAction Topic
@@ -51,7 +51,7 @@ if (_arsenal) then {
 
 // Call ReGear Option
 if (_reGearOption) then {
-    [_object,_reHealOption] call FUNC(addReGear);
+    [_object, _reHealOption] call FUNC(addReGear);
 };
 
 // Call addHeal option
