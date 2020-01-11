@@ -32,14 +32,7 @@ params [
 
 // Safety first
 if (_safemode) then {
-    private _weapon = currentWeapon _player;
-    private _safedWeapons = _player getVariable ['ace_safemode_safedWeapons', []];
-    if !(_weapon in _safedWeapons) then { 
-        [_player, currentWeapon _player, currentMuzzle _player] call ace_safemode_fnc_lockSafety;
-    };
-    #ifdef DEBUG_MODE
-        if (_safeMode) then {[formatText["%1 have got there weapon on safe in postLoadout.", _player]] call FUNC(logInfo);};
-    #endif
+    [_player, currentWeapon _player, true] call ace_safemode_fnc_setWeaponSafety;
 };
 
 // Add earplugs if you dont have them in.
@@ -54,33 +47,23 @@ if (_earPlugs) then {
 if (EGVAR(Settings,enforceEyewereBlacklist)) then {
     if (_facewere) then {
         private _blacklist_glasses = [
-            "rhs_balaclava",
-            "G_Balaclava_blk",
-            "G_Balaclava_combat",
-            "G_Balaclava_lowprofile",
-            "G_Balaclava_oli",
-            "rhs_balaclava1_olive",
-            "G_Bandanna_aviator",
-            "G_Bandanna_beast",
-            "G_Bandanna_blk",
-            "G_Bandanna_khk",
-            "G_Bandanna_oli",
-            "G_Bandanna_shades",
-            "G_Bandanna_sport",
-            "G_Bandanna_tan",
+            "G_AirPurifyingRespirator_02_black_F",
+            "G_AirPurifyingRespirator_02_olive_F",
+            "G_AirPurifyingRespirator_02_sand_F",
+            "G_AirPurifyingRespirator_01_F",
+            "G_Blindfold_01_black_F",
+            "G_Blindfold_01_white_F",
             "G_Diving",
             "G_I_Diving",
             "G_O_Diving",
             "G_B_Diving",
             "G_Lady_Blue",
+            "G_RegulatorMask_F",
             "G_Respirator_blue_F",
             "G_Respirator_white_F",
             "G_Respirator_yellow_F",
             "G_EyeProtectors_F",
             "G_EyeProtectors_Earpiece_F",
-            "rhs_scarf",
-            "G_Spectacles",
-            "G_Squares",
             "G_Balaclava_TI_blk_F",
             "G_Balaclava_TI_G_blk_F",
             "G_Balaclava_TI_tna_F",
@@ -108,15 +91,16 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
         if !(isNil {profileNamespace getVariable QEGVAR(Cav,Insignia)}) then {
             _insignia = profileNamespace getVariable QEGVAR(Cav,Insignia);
             #ifdef DEBUG_MODE
-                [format["%1 got assigned insignia; %2 based on stored variable.", _player, _insignia]] call FUNC(logInfo);
+                [format["%1 got assigned insignia; %2 based on stored insignia.", _player, _insignia]] call FUNC(logInfo);
             #endif
         } else {
             _insignia = [_player] call FUNC(getSquadInsignia);
             #ifdef DEBUG_MODE
-                [format["%1 got assigned insignia; %2 based on squad name if any.", _player, _insignia]] call FUNC(logInfo);
+                [format["%1 got assigned insignia; %2 based on squad name.", _player, _insignia]] call FUNC(logInfo);
             #endif
         };
-        [_player, _insignia] call BIS_fnc_setUnitInsignia;
+        
+        [{[_this select 0, _this select 1] call BIS_fnc_setUnitInsignia;}, [_player, _insignia]] call CBA_fnc_execNextFrame;
     };
 };
 
@@ -140,6 +124,11 @@ if (EGVAR(Settings,setRadio)) then {
 // Handle player announcement
 if (EGVAR(Settings,setMissionType) != 3) then {
     [_player] call FUNC(doPlayerAnnouncement);
+};
+
+if (isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
+    [formatText["%1 have no unit variable defined.", _player]] call FUNC(logWarning);
+    if (!isMultiplayer || {is3DENMultiplayer}) then { systemChat format["WARNING: %1 have no unit variable defined.", _player] };
 };
 
 #ifdef DEBUG_MODE

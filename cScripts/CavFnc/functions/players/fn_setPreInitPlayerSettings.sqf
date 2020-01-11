@@ -24,8 +24,8 @@
 params [
     ["_player",""],
     ["_setCompany",""],
-    ["_isMedicClass", 0],
-    ["_isEngineerClass", 0],
+    ["_isMedicLevel", 0],
+    ["_isEngineerLevel", 0],
     ["_isEOD", false],
     ["_setRank", true],
     ["_zeusImmortality", false]
@@ -46,12 +46,13 @@ _playerName = [_player,'PROFILE'] call FUNC(getPlayerName);
 (_player) setVariable [QEGVAR(Player,Name), _playerName];
 
 // Set MedicClass
-private _MedicClass = if (_isMedicClass > 1) then {true} else {false};
-(_player) setVariable ["ACE_medical_medicClass", _isMedicClass, _MedicClass];
+private _MedicClass = if (_isMedicLevel >= 1) then {true} else {false};
+(_player) setVariable ["ACE_medical_medicClass", _isMedicLevel, _MedicClass];
 
 // Set Engineer
-private _EngineerClass = if (_isEngineerClass > 1) then {true} else {false};
-(_player) setVariable ['ACE_isEngineer', _isEngineerClass, _EngineerClass];
+private _EngineerClass = if (_isEngineerLevel >= 1) then {true} else {false};
+(_player) setVariable ['ACE_isEngineer', _isEngineerLevel, _EngineerClass];
+if (_isEngineerClass >= 1) then {_player setUnitTrait "engineer"};
 
 // Set EOD capable
 (_player) setVariable ["ACE_isEOD", _isEOD];

@@ -66,7 +66,7 @@ class Cav_B_Alpha_base_F : CommonBlufor {
         "ACE_tourniquet",2,
 
         // Standard
-        "ACE_Canteen",
+        
         "ACE_EntrenchingTool",
         "ACE_MapTools",
         "ACE_Flashlight_MX991",
@@ -89,6 +89,7 @@ class Cav_B_Alpha_base_F : CommonBlufor {
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
+// CAVALRY SCOUT BASE CLASS
 class Cav_B_Bravo_base_F : CommonBlufor {
     backpack[] = {"B_Carryall_mcamo"};
     //goggles[] = {"rhs_googles_clear"};
@@ -117,7 +118,7 @@ class Cav_B_Bravo_base_F : CommonBlufor {
         "ACE_microDAGR",
 
         // Tools
-        "ACE_Canteen",
+        
         "ACE_EntrenchingTool"
     };
 
@@ -159,7 +160,7 @@ class Cav_B_Bravo_Crew_base_F : Cav_B_Bravo_base_F {
         "ACE_microDAGR",
 
         // Tools
-        "ACE_Canteen",
+        
         "ACE_EntrenchingTool"
     };
 
@@ -172,6 +173,25 @@ class Cav_B_Bravo_Crew_base_F : Cav_B_Bravo_base_F {
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+};
+class Cav_B_B_CavScout_base : Cav_B_Bravo_base_F {
+    uniform[] = {"rhs_uniform_cu_ocp"};
+    vest[] = {""};
+    backpack[] = {""};
+    primary[] = {"","","","",""};
+    secondary[] = {"","","","",""};
+    launcher[] = {"","","","",""};
+    magazines[] = {};
+    items[] = {"ACE_EarPlugs","ACE_CableTie",2,"ACE_Flashlight_MX991","ACE_MapTools","ACE_microDAGR","ACE_quikclot",20,"ACE_tourniquet",2,"ACRE_PRC343"};
+    binoculars[] = {"ACE_Vector"};
+    compass[] = {"ItemCompass"};
+    goggles[] = {"rhsusf_shemagh_tan"};
+    gps[] = {"ItemcTab"};
+    headgear[] = {""};
+    map[] = {"ItemMap"};
+    nvgs[] = {"ACE_NVG_Wide"};
+    watch[] = {"ItemWatch"};
+    insignia[] = {"Cav_Insignia_Bravo_2"};
 };
 class Cav_B_Bravo_Logi_base_F : Cav_B_Bravo_base_F {
     backpack[] = {"B_Carryall_mcamo"};
@@ -200,30 +220,28 @@ class Cav_B_Bravo_Logi_base_F : Cav_B_Bravo_base_F {
 };
 
 class Cav_B_Charlie_base_F : CommonBlufor {
-    backpack[] = {"B_AssaultPack_mcamo"};
+    backpack[] = {"B_AssaultPack_khk"};
     //goggles[] = {"rhs_googles_clear"};
-    headgear[] = {"rhsusf_ach_helmet_ocp"};
+    headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
-    //vest[] = {"rhsusf_spcs_ocp"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman"};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15_bk_light","rhsusf_acc_compm4"};
+    primary[] = {"rhs_weap_m4a1_mstock","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15_bk_light","rhsusf_acc_tdstubby_blk","rhsusf_acc_compm4"};
     secondary[] = {""};
     launcher[] = {""};
 
     binoculars[] = {""};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",8,
-        "rhs_mag_m67",4,
-        "SmokeShell",6
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",15,
+        "rhs_mag_m67",2,
+        "SmokeShell",4,
+        "SmokeShellGreen"
+        
     };
     items[] = {
-        "ACE_DAGR",
-        "ACE_IR_Strobe_Item",
-        "ACE_EntrenchingTool",
-        
         // Personal Medical Equipment
-        "ACE_quikclot",10,
+        "ACE_quikclot",16,
         "ACE_tourniquet",4,
 
         // Standard
@@ -238,7 +256,7 @@ class Cav_B_Charlie_base_F : CommonBlufor {
 
     insignia[] = {""};
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+    postLoadout = "[(_this select 0)] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_Charlie_Weap_base_F : Cav_B_Charlie_base_F {
     // backpack[] = {""};
@@ -264,33 +282,5 @@ class Cav_B_Charlie_Weap_base_F : Cav_B_Charlie_base_F {
 
     // insignia[] = {""};
     preLoadout = "[(_this select 0), 'charlie', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
-};
-
-// Not created yet
-class CAV_Ranger_Base : CommonBlufor {
-    backpack[] = {"B_AssaultPack_sgg"};
-    goggles[] = {"rhsusf_shemagh_grn"};
-    headgear[] = {"rhsusf_opscore_fg_pelt_nsw"};
-    uniform[] = {"LOP_U_ISTS_Fatigue_21"};
-    vest[] = {"V_PlateCarrier1_rgr"};
-
-    primary[] = {"rhs_weap_m4a1_blockII","rhsusf_acc_eotech_552","rhsusf_acc_nt4_black","rhsusf_acc_anpeq15_bk_light"};
-    secondary[] = {""};
-    launcher[] = {""};
-
-    binoculars[] = {""};
-
-    magazines[] = {""};
-    items[] = {""};
-
-    compass[] = {"ItemCompass"};
-    gps[] = {"ItemAndroid"};
-    map[] = {"ItemMap"};
-    nvgs[] = {""};
-    watch[] = {"ACE_Altimeter"};
-
-    insignia[] = {"Cav_Insignia_Specialized_Ranger"};
-    preLoadout = "[(_this select 0), 'ranger', 1, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
-    postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
+    postLoadout = "[(_this select 0)] call cScripts_fnc_setPostInitPlayerSettings;";
 };

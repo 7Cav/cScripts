@@ -38,6 +38,8 @@ switch (EGVAR(Settings,setMissionType)) do {
     };
     case (3): { // Public
     };
+    case (4): { // Public Alive
+    };
 };
 
 if (EGVAR(Settings,enableStartHint)) then {

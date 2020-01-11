@@ -8,12 +8,12 @@
  <a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/downloads/7cav/cScripts/total.svg?style=for-the-badge&label=Downloads" alt="cScripts Downloads"></a>
  <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=for-the-badge&label=Issues" alt="cScripts Issues"></a>
  <a href="https://github.com/7Cav/cScripts/wiki"><img src="https://img.shields.io/badge/help-wiki-lightgrey.svg?logo=Wikipedia&style=for-the-badge" alt="cScripts Wiki"></a>
-<a href="https://travis-ci.org/7Cav/cScripts">
-    <img src="https://img.shields.io/travis/7Cav/cScripts.svg?style=for-the-badge&logo=Travis-CI" alt="cScripts Build">
+<a href="https://github.com/7Cav/cScripts/actions?query=workflow%3AArma">
+    <img src="https://img.shields.io/github/workflow/status/7Cav/cScripts/Arma/master?logo=GitHub&style=for-the-badge" alt="cScripts Build">
 </a>
 
 </p>
-cScripts is an easy to use framework for the ARMA3 S3 Operations staff and other mission makers. This framework contains functions and scripts that are easy to use and implement on a new mission. All scripts and functions are adapted to 7th Cavalry mission standards.
+cScripts is an easy to use ARMA3 mission framework used by the 7th Cavalry Gaming Communitys. This framework contains functions and scripts that are easy to use and implement on a new mission. All scripts and functions are adapted to 7th Cavalry mission standards but can ofcause easily get re fitted to fitt other scenarios and needs.
 
 ## Requirements
 - [CBA](https://github.com/CBATeam/CBA_A3)
@@ -39,7 +39,7 @@ cScripts provides you with the basic scripts and functions for S3 Operation maki
 ### Scripts Installed
 - CavFnc                    -   [7th Cavalry Function Library](https://github.com/7Cav/cScripts/wiki/Features/)
 - Loadouts/Script           -   [Poppy (1.1.0)](https://github.com/BaerMitUmlaut/Poppy)
-- ViewingDistance           -   [taw_vd (v1.5)](http://www.armaholic.com/page.php?id=19751)
+- ViewingDistance           -   [taw_vd (v1.6)](http://www.armaholic.com/page.php?id=19751)
 
 ### AI Tweak (init.sqf)
 The AI in cScripts `init.sqf` have been changed to be more realistic and less ridiculous. The recommended default setting is the one provided, and it has been carefully tested, making it the best setting.
