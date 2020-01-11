@@ -12,7 +12,7 @@
  * Public: No
  */
 
-params ["_modulePos"];
+params ["_modulePos", "_objectPos"];
 
 [
     "7th Cavalry Supply Crate", 
