@@ -13,48 +13,100 @@
  * Public: No
  */
 
-params ["_crate"];
+params ["_modulePos", "_objectPos"];
 
-private _dialogResult = [
-    "7th Cavalry Starter Crate",
+[
+    "7th Cavalry Starter Crate", 
     [
-        ["Company Crate Type",[
-            "None",
-            "Alpha",
-            "Bravo",
-            "Bravo - Mustang",
-            "Charlie",
-            "All loadouts"
-        ],0],
-        ["ReGear action",["true","false"],0],
-        ["Heal action",["true","false"],0],
-        ["Insignia Selection",["true","false"],0],
-        ["Company Variable Required",["true","false"],1],
-        ["Add Cav Arsenal",["true","false"],1]
-    ]
-] call Ares_fnc_ShowChooseDialog;
+        [
+            "CHECKBOX",
+            ["Regear action", "Allow you to regear on the crate."],
+            true,
+            false
+        ],
+        [
+            "CHECKBOX",
+            ["Heal action", "Enables the crate to heal your wonds on regear as well as a separat action."],
+            true,
+            false
+        ],
+        [
+            "CHECKBOX",
+            ["Insignia Selection", "Allow the selection of our insignias"],
+            true,
+            false
+        ],
+        [
+            "LIST",
+            ["Company, squad or group", "Select the company, group or squad the crate should populate loadouts with."],
+            [
+                [
+                    'All',
+                    'Empty',
+                    'Alpha',
+                    'Bravo',
+                    'Lancer',
+                    'Apollo',
+                    'Mustang',
+                    'Charlie',
+                    'Bandit',
+                    'Misfit'
+                ],
+                [
+                    'Everything',
+                    'None',
+                    'Alpha Company',
+                    'Bravo Company',
+                    '        - Lancer',
+                    '        - Apollo',
+                    '        - Mustang',
+                    'Charlie Company',
+                    '        - Bandit',
+                    '        - Misfit'
+                ],1,12],
+            false
+        ],
+        [
+            "CHECKBOX",
+            ["Owned by category", "Loadouts only avalible for selected company if your not in this company you cant select the loadout."],
+            false,
+            false
+        ],
+        [
+            "CHECKBOX",
+            ["Arsenal", "Enable the 7Cav Arsenal. It is limited to only cav equipment used."],
+            false,
+            false
+        ]
+    ],
+    {
+        params ["_arg", "_pos"];
+        _arg params [
+            "_reGearOption",
+            "_reHealOption",
+            "_InsigniaSelectOption",
+            "_quickSelectScale",
+            "_requireCompanyVariable",
+            "_arsenal"
+        ];
+        _pos params ["_modulePos"];
 
-if (count _dialogResult == 0) exitWith {};
+        private _crate = "B_supplyCrate_F" createVehicle _modulePos;
+        [_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requireCompanyVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),0,true];
 
-private _quickSelectScale = switch (_dialogResult select 0) do {
-    case 0: {"none";};
-    case 1: {"alpha";};
-    case 2: {"bravo";};
-    case 3: {"mustang";};
-    case 4: {"charlie";};
-    case 5: {"all";};
-};
-
-private _reGearOption = if (_dialogResult select 1 == 0) then {true} else {false};
-private _reHealOption = if (_dialogResult select 2 == 0) then {true} else {false};
-private _InsigniaSelectOption = if (_dialogResult select 3 == 0) then {true} else {false};
-private _requireCompanyVariable = if (_dialogResult select 4 == 0) then {true} else {false};
-private _arsenal = if (_dialogResult select 5 == 0) then {true} else {false};
-
-_crate = "B_supplyCrate_F" createVehicle _crate;
-[_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requireCompanyVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),0,true];
-
-// Add to curator so Zeus can manipulate it
-[{(_this select 0) == vehicle (_this select 0)}, {
-     _this select 0 call FUNC(addObjectToCurator)
-}, [_crate]] call CBA_fnc_waitUntilAndExecute;
+        // Add object to Zeus
+        [
+            {
+                params ["_crate"];
+                _crate == vehicle _crate;
+            },
+            {
+                params ["_crate"];
+                _crate call FUNC(addObjectToCurator);
+            },
+            [_crate]
+        ] call CBA_fnc_waitUntilAndExecute;
+    },
+    {},
+    [_modulePos]
+] call zen_dialog_fnc_create;
