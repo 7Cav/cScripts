@@ -180,13 +180,13 @@ force force ace_maptools_rotateModifierKey = 1;
 force force ace_medical_ai_enabledFor = 2;
 force force ace_medical_AIDamageThreshold = 1;
 force force ace_medical_bleedingCoefficient = 1;
-force ace_medical_blood_bloodLifetime = 900;
-force ace_medical_blood_enabledFor = 2;
-force ace_medical_blood_maxBloodObjects = 500;
+force force ace_medical_blood_bloodLifetime = 900;
+force force ace_medical_blood_enabledFor = 2;
+force force ace_medical_blood_maxBloodObjects = 500;
 force force ace_medical_fatalDamageSource = 0;
 force force ace_medical_feedback_painEffectType = 0;
 force force ace_medical_fractures = 1;
-//ace_medical_gui_enableActions = 0;
+//ace_medical_gui_enableActions = 1;
 //ace_medical_gui_enableMedicalMenu = 1;
 //ace_medical_gui_enableSelfActions = true;
 force force ace_medical_gui_maxDistance = 3;
@@ -200,7 +200,7 @@ force force ace_medical_spontaneousWakeUpEpinephrineBoost = 1;
 force force ace_medical_statemachine_AIUnconsciousness = true;
 force force ace_medical_statemachine_cardiacArrestTime = 30;
 force force ace_medical_statemachine_fatalInjuriesAI = 0;
-force force ace_medical_statemachine_fatalInjuriesPlayer = 1;
+force force ace_medical_statemachine_fatalInjuriesPlayer = 2;
 force force ace_medical_treatment_advancedBandages = true;
 force force ace_medical_treatment_advancedDiagnose = true;
 force force ace_medical_treatment_advancedMedication = true;
@@ -225,6 +225,7 @@ force force ace_medical_treatment_medicPAK = 2;
 force force ace_medical_treatment_medicSurgicalKit = 1;
 force force ace_medical_treatment_timeCoefficientPAK = 1;
 force force ace_medical_treatment_woundReopening = true;
+
 
 // ACE Name Tags
 //ace_nametags_defaultNametagColor = [0.77,0.51,0.08,1];
