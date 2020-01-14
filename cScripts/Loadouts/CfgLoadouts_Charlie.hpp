@@ -151,7 +151,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 33.8kg
     //binoculars[] = {""};
 
     magazines[] = {
-        "rhsusf_200rnd_556x45_mixed_soft_pouch_coyote",6,
+        "rhsusf_200rnd_556x45_mixed_soft_pouch_coyote",5,
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen"
@@ -187,7 +187,7 @@ class Cav_B_C_Grenadier_F : Cav_B_Charlie_base_F { //General GRN : 31.4kg
     //binoculars[] = {"ACE_Vector"};
 
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG",10,
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",
