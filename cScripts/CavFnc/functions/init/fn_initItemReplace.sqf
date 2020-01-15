@@ -22,7 +22,7 @@
 
 
 if (!isNil {ace_medical_treatment_convertItems == 2}) then {
-    switch (EGVAR(Settings,replaceHandGrenades)) do {
+    switch (EGVAR(Settings,replaceMedical)) do {
         case (1): {
             ["FirstAidKit",[
                 "ACE_quikclot", "ACE_quikclot", "ACE_quikclot", "ACE_quikclot",
