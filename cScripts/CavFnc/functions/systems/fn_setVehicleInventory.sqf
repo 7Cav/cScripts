@@ -59,7 +59,7 @@ private _transport_fixed_wing = [
     "Cav_Alpha_C130J"
 ];
 private _rotary_attack = [
-    "RHS_AH1Z", "RHS_AH1Z_wd",
+    "RHS_AH1Z", "RHS_AH1Z_wd"
 ]
 private _empty = [
     "B_APC_Tracked_01_CRV_F",
