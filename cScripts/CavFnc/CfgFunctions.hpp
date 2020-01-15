@@ -14,7 +14,8 @@ class cScripts {
         class initTagging {};
 
         class initFortify {};
-
+        class initItemReplace {};
+        
         class initCuratorObjectPlaced {};
     };
     class documents {
