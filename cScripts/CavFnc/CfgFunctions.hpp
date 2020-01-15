@@ -41,14 +41,7 @@ class cScripts {
         class doFieldHospital {};
 
         class doSupplyCrate {};
-
-        class doAmmoCrate {};
-        class doExplosivesCrate {};
-        class doGrenadesCrate {};
-        class doLaunchersCrate {};
         class doMedicalCrate {};
-        class doSpecialWeaponsCrate {};
-        class doWeaponsCrate {};
 
         class doEmptyCrate {};
     };
