@@ -61,7 +61,7 @@ if !(_companySelector == 'NONE') then {
     // // Magazines
     // _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
     // _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
-    // _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    // _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
     // _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
 
     // // Grenades
@@ -348,7 +348,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         //================== AMMO ==================\\
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
-        _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+        _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
         _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
         _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
         _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
