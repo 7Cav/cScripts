@@ -479,9 +479,9 @@ force force acre_sys_signal_signalModel = 2;
 //acre_sys_list_ToggleHeadsetColor = [0.66,0.05,1,1];
 
 // ACRE2 Zeus
-force force acre_sys_zeus_zeusCanSpectate = true;
-force force acre_sys_zeus_zeusCommunicateViaCamera = true;
-force force acre_sys_zeus_zeusDefaultVoiceSource = false;
+//acre_sys_zeus_zeusCanSpectate = true;
+//acre_sys_zeus_zeusCommunicateViaCamera = true;
+//acre_sys_zeus_zeusDefaultVoiceSource = false;
 
 // CBA UI
 //cba_ui_notifyLifetime = 4;
