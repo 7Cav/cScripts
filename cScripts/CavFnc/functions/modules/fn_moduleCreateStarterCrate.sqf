@@ -42,7 +42,7 @@ params ["_modulePos", "_objectPos"];
             [
                 [
                     'All',
-                    'Empty',
+                    'None',
                     'Alpha',
                     'Bravo',
                     'Lancer',
