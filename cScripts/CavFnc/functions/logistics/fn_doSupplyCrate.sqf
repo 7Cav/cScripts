@@ -32,7 +32,7 @@ _crate addWeaponCargoGlobal ["rhs_weap_M136_hp", (_quaScale * 8)];
 
 _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag", (_quaScale * 100)];
 _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", (_quaScale * 25)];
-_crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW", (_quaScale * 25)];
+_crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box", (_quaScale * 25)];
 _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP", (_quaScale * 25)];
 
 _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT", (_quaScale * 8)];

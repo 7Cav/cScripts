@@ -64,7 +64,7 @@ private _bravoArsenalContainer = [
     // BRAVO Loadout Weapons Export
     "rhs_weap_m4a1_grip","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR","rhsusf_acc_grip1","rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_grip3","rhsusf_weap_m9","rhs_weap_m4a1_m320","rhs_weap_m249_pip_S","rhs_weap_M136_hp","rhs_weap_m4a1_carryhandle",
     // BRAVO Loadout Magazines Export
-    "rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_m67","SmokeShell","SmokeShellBlue","SmokeShellGreen","SmokeShellRed","SmokeShellYellow","rhsusf_mag_15Rnd_9x19_JHP","rhs_mag_M441_HE","rhs_mag_M433_HEDP","rhs_mag_m714_White","ACE_HuntIR_M203","rhs_200rnd_556x45_M_SAW","rhs_mag_m713_Red","rhs_mag_m715_Green","rhs_mag_m662_red","rhs_mag_m661_green",
+    "rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_m67","SmokeShell","SmokeShellBlue","SmokeShellGreen","SmokeShellRed","SmokeShellYellow","rhsusf_mag_15Rnd_9x19_JHP","rhs_mag_M441_HE","rhs_mag_M433_HEDP","rhs_mag_m714_White","ACE_HuntIR_M203","rhsusf_200rnd_556x45_mixed_box","rhs_mag_m713_Red","rhs_mag_m715_Green","rhs_mag_m662_red","rhs_mag_m661_green",
     // BRAVO Loadout Items Export
     "ACE_quikclot","ACE_tourniquet","ACE_EarPlugs","ACE_MapTools","ACE_CableTie","ACE_microDAGR","ACE_EntrenchingTool","ItemMap","ItemWatch","ACE_Flashlight_MX991","ACRE_PRC343","ItemcTab","ItemAndroid","ACRE_PRC152","ACE_personalAidKit","ACE_HuntIR_monitor","rhsusf_shemagh_gogg_tan","ACE_SpraypaintRed","ACE_surgicalKit",35,"ACE_salineIV","ACE_morphine","ACE_epinephrine","ACE_MicroDAGR","ToolKit",
     // BRAVO Loadout Gear Export
@@ -85,7 +85,7 @@ private _charlieArsenalContainer = [
     // BRAVO Loadout Weapons Export
     "rhs_weap_m4a1_grip","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR","rhsusf_acc_grip1","rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_grip3","rhsusf_weap_m9","rhs_weap_m4a1_m320","rhs_weap_m249_pip_S","rhs_weap_M136_hp","rhs_weap_m4a1_carryhandle",
     // BRAVO Loadout Magazines Export
-    "rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_m67","SmokeShell","SmokeShellBlue","SmokeShellGreen","SmokeShellRed","SmokeShellYellow","rhsusf_mag_15Rnd_9x19_JHP","rhs_mag_M441_HE","rhs_mag_M433_HEDP","rhs_mag_m714_White","ACE_HuntIR_M203","rhs_200rnd_556x45_M_SAW","rhs_mag_m713_Red","rhs_mag_m715_Green","rhs_mag_m662_red","rhs_mag_m661_green",
+    "rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_m67","SmokeShell","SmokeShellBlue","SmokeShellGreen","SmokeShellRed","SmokeShellYellow","rhsusf_mag_15Rnd_9x19_JHP","rhs_mag_M441_HE","rhs_mag_M433_HEDP","rhs_mag_m714_White","ACE_HuntIR_M203","rhsusf_200rnd_556x45_mixed_box","rhs_mag_m713_Red","rhs_mag_m715_Green","rhs_mag_m662_red","rhs_mag_m661_green",
     // BRAVO Loadout Items Export
     "ACE_quikclot","ACE_tourniquet","ACE_EarPlugs","ACE_MapTools","ACE_CableTie","ACE_microDAGR","ACE_EntrenchingTool","ItemMap","ItemWatch","ACE_Flashlight_MX991","ACRE_PRC343","ItemcTab","ItemAndroid","ACRE_PRC152","ACE_personalAidKit","ACE_HuntIR_monitor","rhsusf_shemagh_gogg_tan","ACE_SpraypaintRed","ACE_surgicalKit",35,"ACE_salineIV","ACE_morphine","ACE_epinephrine","ACE_MicroDAGR","ToolKit",
     // BRAVO Loadout Gear Export
