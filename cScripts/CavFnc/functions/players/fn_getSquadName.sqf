@@ -91,6 +91,13 @@ private _SquadGroupArray = [
     "ROUGHNECK-6",
     "PHANTOM-1",
     "PHANTOM-2",
+    "LANCER-1",
+    "LANCER-2",
+    "LANCER-3",
+    "LANCER-4",
+    "LANCER-5",
+    "LANCER-6",
+    "LANCER-7",
     "GODFATHER FIVE",
     "GODFATHER SIX",
     "GODFATHER SEVEN",
@@ -164,6 +171,13 @@ private _SquadGroupArray = [
     "ROUGHNECK SIX",
     "PHANTOM ONE",
     "PHANTOM TWO",
+    "LANCER ONE",
+    "LANCER TWO",
+    "LANCER THREE",
+    "LANCER FOUR",
+    "LANCER FIVE",
+    "LANCER SIX",
+    "LANCER SEVEN",
     "ZEUS"
 ];
 
