@@ -1,0 +1,3 @@
+[submodule "doc"]
+	path = doc
+	url = git@github.com:7Cav/cScripts.wiki.git
