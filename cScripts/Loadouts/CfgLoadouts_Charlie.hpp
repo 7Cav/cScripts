@@ -105,11 +105,11 @@ class Cav_B_C_FireTeamLeaderGrenadier_Local : Cav_B_Charlie_base_F { //General G
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8,
         "rhs_mag_M433_HEDP",3,
         "ACE_HuntIR_M203",2,
-        "rhs_mag_M714_White",3,
-        "rhs_mag_M713_Red",3,
+        "rhs_mag_M714_White",4,
+        "rhs_mag_M713_Red",4,
         "rhs_mag_m662_red",2,
         "rhs_mag_m67",2,
-        "SmokeShell",3,
+        "SmokeShell",4,
         "SmokeShellGreen",
         "SmokeShellBlue",2,
         "SmokeShellRed",
@@ -191,13 +191,14 @@ class Cav_B_C_Grenadier_F : Cav_B_Charlie_base_F { //General GRN : 31.4kg
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",
-        "rhs_mag_M433_HEDP",17,
+        "rhs_mag_M433_HEDP",16,
         "rhs_mag_M397_HET",4,
-        "rhs_mag_m714_White",6,
+        "rhs_mag_m714_White",5,
         "rhs_mag_m662_red",2,
         "ACE_HuntIR_M203",2
     };
 
+ 
     items[] += {
         "ACE_DAGR",
         "rhsusf_ANPVS_14",
