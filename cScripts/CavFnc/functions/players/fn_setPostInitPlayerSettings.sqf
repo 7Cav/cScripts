@@ -116,7 +116,14 @@ if (EGVAR(Settings,setRadio)) then {
     if (_radio) then {
         [_player] call FUNC(setRadioChannel);
         #ifdef DEBUG_MODE
-            [format["%1 have got there radio channel schedueld to be changed in postLoadout.", _player]] call FUNC(logInfo);
+            [format["%1 delayed action for radio channel assignation...", _player], "LoadoutPostInit"] call FUNC(logInfo);
+        #endif
+
+        // set current radio
+        private _activeRadio = "ACRE_PRC343";
+        [_activeRadio] call FUNC(setActiveRadio);
+        #ifdef DEBUG_MODE
+            [format["%1 delayed action to set active radio...", _player], "LoadoutPostInit"] call FUNC(logInfo);
         #endif
     };
 };
