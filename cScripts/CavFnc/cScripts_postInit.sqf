@@ -6,7 +6,7 @@
 if (is3DEN) exitWith {};
 
 #ifdef DEBUG_MODE
-    ["postInit Initializing."] call FUNC(logInfo);
+    ["Initializing...", "postInit"] call FUNC(logInfo);
 #endif
 
 // Add diary records on mission start
@@ -53,5 +53,5 @@ if (EGVAR(Settings,enableStartHint)) then {
 };
 
 #ifdef DEBUG_MODE
-    ["postInit initialization completed."] call FUNC(logInfo);
+    ["Initialization completed", "postInit"] call FUNC(logInfo);
 #endif
