@@ -39,7 +39,8 @@ if !(isPlayer _player) exitWith {};
 
             // Set 343 as current radio. (Not working but i leve it here cause it work kind of.)
             if (_radio == 'ACRE_PRC343') then {
-                [_x] call acre_api_fnc_setCurrentRadio;
+                private _radioId = ["ACRE_PRC343", (_this select 0)] call acre_api_fnc_getRadioByType;
+                [_radioId] call acre_api_fnc_setCurrentRadio;
                 #ifdef DEBUG_MODE
                     [format["%1 radio %2 is set to current radio.",(_this select 0), _x]] call FUNC(logInfo);
                 #endif
