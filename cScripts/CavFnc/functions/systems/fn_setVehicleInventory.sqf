@@ -60,7 +60,7 @@ private _transport_fixed_wing = [
 ];
 private _rotary_attack = [
     "RHS_AH1Z", "RHS_AH1Z_wd"
-]
+];
 private _empty = [
     "B_APC_Tracked_01_CRV_F",
 
@@ -76,7 +76,7 @@ private _empty = [
 ];
 
 private _allVehicles = [];
-{ _allVehicles append _x } forEach [ _transport_light, _transport_heavy, _transport_truck, _logistical, _transport_rotary, _transport_armored, _armor, _medical, _transport_fixed_wing, _rotary_attack, _empty ];
+{ _allVehicles append _x } forEach [ _transport_light, _transport_heavy, _logistical, _transport_rotary, _transport_armored, _armor, _medical, _transport_fixed_wing, _rotary_attack, _empty ];
 
 
 if (typeOf _vehicle in _allVehicles) then {
@@ -134,7 +134,7 @@ switch (true) do {
         _vehicle addItemCargoGlobal ["ACE_tourniquet", 2];
         _vehicle addItemCargoGlobal ["ACE_fieldDressing", 10];
     };
-    case (typeOf _vehicle in _armoredTransport): {
+    case (typeOf _vehicle in _transport_armored): {
         _vehicle addItemCargoGlobal ["Toolkit", 1];
 
         _vehicle addWeaponCargoGlobal ["rhs_weap_M136", 1];

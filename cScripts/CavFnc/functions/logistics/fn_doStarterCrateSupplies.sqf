@@ -61,7 +61,7 @@ if !(_companySelector == 'NONE') then {
     // // Magazines
     // _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
     // _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
-    // _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+    // _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
     // _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",250];
 
     // // Grenades
@@ -348,7 +348,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         //================== AMMO ==================\\
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",250];
-        _crate addMagazineCargoGlobal ["rhs_200rnd_556x45_M_SAW",250];
+        _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box",250];
         _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
         _crate addMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",150];
         _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
@@ -469,6 +469,26 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
     _crate addMagazineCargoGlobal ["rhs_fim92_mag",10];
     _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",10];
+    _crate addMagazineCargoGlobal ["rhs_mag_m67",50];
+    _crate addMagazineCargoGlobal ["SmokeShell",50];
+    _crate addMagazineCargoGlobal ["SmokeShellRed",25];
+    _crate addMagazineCargoGlobal ["SmokeShellBlue",25];
+    _crate addMagazineCargoGlobal ["SmokeShellGreen",25];
+    _crate addMagazineCargoGlobal ["SmokeShellOrange",25];
+    _crate addMagazineCargoGlobal ["SmokeShellYellow",25];
+    _crate addMagazineCargoGlobal ["SmokeShellPurple",25];
+    _crate addMagazineCargoGlobal ["B_IR_Grenade",25];
+    _crate addMagazineCargoGlobal ["ACE_M84",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_M441_HE",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",25];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
+    
     
 
     //================== RADIOS ==================\\

@@ -657,7 +657,7 @@ class Cav_B_B_AutomaticRifleman_F : Cav_B_Bravo_base_F {
     primary[] = {"rhs_weap_m249_pip_S","rhsusf_acc_anpeq15side","rhsusf_acc_ACOG_RMR"};
 
     magazines[] = {
-        "rhs_200rnd_556x45_M_SAW",4,
+        "rhsusf_200rnd_556x45_mixed_box",4,
 
         "rhs_mag_m67",4,
 
@@ -715,7 +715,7 @@ class Cav_B_B_Rifleman_F : Cav_B_Bravo_base_F {
 
         "SmokeShell",6,
 
-        "rhs_200rnd_556x45_M_SAW",2
+        "rhsusf_200rnd_556x45_mixed_box",2
     };
 };
 class Cav_B_B_RiflemanAT_F : Cav_B_Bravo_base_F {
@@ -730,7 +730,7 @@ class Cav_B_B_RiflemanAT_F : Cav_B_Bravo_base_F {
 
         "SmokeShell",6,
 
-        "rhs_200rnd_556x45_M_SAW",2
+        "rhsusf_200rnd_556x45_mixed_box",2
     };
 };
 class Cav_B_B_RiflemanLAT_F : Cav_B_Bravo_base_F {
@@ -747,7 +747,7 @@ class Cav_B_B_RiflemanLAT_F : Cav_B_Bravo_base_F {
 
         "SmokeShell",6,
 
-        "rhs_200rnd_556x45_M_SAW",2
+        "rhsusf_200rnd_556x45_mixed_box",2
     };
 };
 class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_base_F {
@@ -765,7 +765,7 @@ class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_base_F {
         "SmokeShellRed",
         "SmokeShellYellow",
 
-        "rhs_200rnd_556x45_M_SAW"
+        "rhsusf_200rnd_556x45_mixed_box"
     };
 
     items[] = {
