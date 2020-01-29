@@ -8,6 +8,7 @@
  *
  * Example:
  * ["Something is wrong here."] call cScripts_fnc_logError
+ * [formatText["%1 is a player.", player]] call cScripts_fnc_logError
  *
  */
 
