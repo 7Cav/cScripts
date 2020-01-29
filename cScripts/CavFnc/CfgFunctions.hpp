@@ -73,7 +73,8 @@ class cScripts {
 
         class getRadioChannel {};
         class setRadioChannel {};
-
+        class setActiveRadio {};
+        
         class getCompanyVariable {};
         class hasCompanyVariable {};
         

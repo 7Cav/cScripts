@@ -4,10 +4,10 @@
  * This function sets a player radio channels based on squad name. If -1 no radio will be set. 
  *
  * Arguments:
- * 0: Argument Name <OBJECT/BOOL/NUMBER/STRING/ARRAY/CODE> (Optional) (Default; MyDefaultValue)
+ * 0: Player <OBJECT>
  *
  * Return Value:
- * Return Name <BOOL/NUMBER/STRING>
+ * Nothing
  *
  * Example:
  * ["bob"] call cScripts_fnc_setRadioChannel
@@ -36,16 +36,8 @@ if !(isPlayer _player) exitWith {};
             private _radioAndChannel = (_this select 0) getVariable [QEGVAR(Player,RadioChannel), []];
             _radioAndChannel pushBack [[_x] call acre_api_fnc_getBaseRadio, _channel];
             (_this select 0) setVariable [QEGVAR(Player,RadioChannel), _radioAndChannel];
-
-            // Set 343 as current radio. (Not working but i leve it here cause it work kind of.)
-            if (_radio == 'ACRE_PRC343') then {
-                [_x] call acre_api_fnc_setCurrentRadio;
-                #ifdef DEBUG_MODE
-                    [format["%1 radio %2 is set to current radio.",(_this select 0), _x]] call FUNC(logInfo);
-                #endif
-            };
         } else {
-            [format["Empty radio is trying to get it's channel applied for %1.",(_this select 0)]] call FUNC(logWarning);
+            [format["Empty radio is trying to get it's channel applied for %1", (_this select 0)]] call FUNC(logWarning);
         };
     } forEach _playerRadios;
 }, [_player]] call CBA_fnc_waitUntilAndExecute;
