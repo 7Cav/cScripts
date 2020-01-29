@@ -5,9 +5,9 @@
  *
  * Arguments:
  * 0: Time          <NUMBER>    (Default; 30)
- * 0: Mission type  <NUMBER>    (Default; 1)
- * 0: Custom Topic  <STRING>    (Default; "My custom Mission!")
- * 0: Custom Text   <STRING>    (Default; "I have design this mission!")
+ * 1: Mission type  <NUMBER>    (Default; 1)
+ * 2: Custom Topic  <STRING>    (Default; "My custom Mission!")
+ * 3: Custom Text   <STRING>    (Default; "I have design this mission!")
  *
  * Return Value:
  * Nothing
