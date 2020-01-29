@@ -39,25 +39,25 @@ if (_getNameFrom == "variable") then {
 };
 if !(_getNameFrom in ["classname", "description", "variable"]) exitWith {
     [formatText["'%1' is a unsupported parameter in function setTeamColor", _getNameFrom]] call FUNC(logError);
-}
+};
 private _return = _getTeamName;
 
 switch (_getTeamName) do {
     case "Alpha": {
         [player, "RED"] call ace_interaction_fnc_joinTeam;
-        (player) setVariable [QEGVAR(Player,Team), 'RED'];
+        player setVariable [QEGVAR(Player,Team), 'RED'];
     };
     case "Bravo": {
         [player, "BLUE"] call ace_interaction_fnc_joinTeam;
-        (player) setVariable [QEGVAR(Player,Team), 'BLUE'];
+        player setVariable [QEGVAR(Player,Team), 'BLUE'];
     };
     case "Charlie": {
         [player, "YELLOW"] call ace_interaction_fnc_joinTeam;
-        (player) setVariable [QEGVAR(Player,Team), 'YELLOW'];
+        player setVariable [QEGVAR(Player,Team), 'YELLOW'];
     };
     case "Delta": {
         [player, "GREEN"] call ace_interaction_fnc_joinTeam;
-        (player) setVariable [QEGVAR(Player,Team), 'GREEN'];
+        player setVariable [QEGVAR(Player,Team), 'GREEN'];
     };
     default {
         _getTeamName = 'WHITE';
