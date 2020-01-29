@@ -8,8 +8,6 @@ jobs:
       uses: actions/checkout@master
     - name: Validate SQF
       run: python3 tools/sqf_validator.py
-    - name: SQF Linting
-      run: python3 tools/sqf_linter.py
     - name: Validate Config
       run: python3 tools/config_style_checker.py
       
@@ -18,6 +16,8 @@ jobs:
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
+    - name: Lint (sqf)
+      run: python3 tools/sqf_linter.py
     - name: Lint (sqflint)
       uses: arma-actions/sqflint@master
       with:
