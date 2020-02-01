@@ -872,7 +872,7 @@ class Cav_B_B_TeamLeader_Mustang_F : Cav_B_Bravo_Logi_base_F {
     watch[] = {"ItemWatch"};
 
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
-    preLoadout = "[(_this select 0), 'mustang', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_B_Mustang_CombatMedic_F : Cav_B_Bravo_Logi_base_F {
@@ -883,7 +883,7 @@ class Cav_B_B_Mustang_CombatMedic_F : Cav_B_Bravo_Logi_base_F {
     vest[] = {"rhsusf_mbav_medic"};
     binoculars[] = {"ACE_Vector"};
 
-    primary[] = {"rhs_weap_m4a1_carryhandle","rhsusf_acc_anpeq16a","rhsusf_acc_eotech_xps3","rhsusf_acc_rvg_blk"};
+    primary[] = {"rhs_weap_m4a1_carr yhandle","rhsusf_acc_anpeq16a","rhsusf_acc_eotech_xps3","rhsusf_acc_rvg_blk"};
     secondary[] = {""};
     launcher[] = {""};
 
@@ -940,7 +940,7 @@ class Cav_B_B_Mustang_CombatMedic_F : Cav_B_Bravo_Logi_base_F {
     watch[] = {"ItemWatch"};
 
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
-    preLoadout = "[(_this select 0), 'mustang', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
