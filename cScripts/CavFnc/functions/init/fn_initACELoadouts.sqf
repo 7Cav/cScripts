@@ -14,9 +14,9 @@
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-        ["Setting up CAV Default ACE Arsenal loadouts."] call FUNC(logInfo);
+        ["Setting up Default ACE Arsenal loadouts.", "Arsenal"] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "Setting up CAV Default ACE Arsenal loadouts in eden."];
+        diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Setting up Default ACE Arsenal loadouts."];
     };
 #endif
 
@@ -111,8 +111,8 @@ private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-            ["CAV Default ACE Arsenal loadouts completed."] call FUNC(logInfo);
+            ["Default ACE Arsenal loadouts setup completed.", "Arsenal"] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "CAV Default ACE Arsenal loadouts added in eden."];
+        diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Default ACE Arsenal loadouts setup completed."];
     };
 #endif
