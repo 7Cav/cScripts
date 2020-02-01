@@ -872,7 +872,7 @@ class Cav_B_B_TeamLeader_Mustang_F : Cav_B_Bravo_Logi_base_F {
     watch[] = {"ItemWatch"};
 
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
-    preLoadout = "[(_this select 0), 'bravo', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'mustang', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_B_Mustang_CombatMedic_F : Cav_B_Bravo_Logi_base_F {
@@ -940,7 +940,7 @@ class Cav_B_B_Mustang_CombatMedic_F : Cav_B_Bravo_Logi_base_F {
     watch[] = {"ItemWatch"};
 
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
-    preLoadout = "[(_this select 0), 'bravo', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'mustang', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
