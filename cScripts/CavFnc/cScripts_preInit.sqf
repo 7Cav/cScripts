@@ -6,9 +6,9 @@
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-        ["Initializing CBA Settings from preInit."] call FUNC(logInfo);
+            ["Initializing CBA Settings...", "preInit"] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "Initializing CBA Settings from preInit in eden."];
+        diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initializing CBA Settings..."];
     };
 #endif
 
@@ -348,11 +348,12 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-        ["CBA Settings initialization from preInit completed."] call FUNC(logInfo);
+            ["Initialization of CBA Settings completed...", "preInit"] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] %2: %3", QUOTE(PREFIX), "INFO", "CBA Settings initialization from preInit in eden completed."];
+        diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initialization of CBA Settings completed..."];
     };
 #endif
+
 
 if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
     if !(is3DEN) then {
@@ -366,7 +367,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
 if (is3DEN) exitWith {};
 
 #ifdef DEBUG_MODE
-    ["postInit Initializing."] call FUNC(logInfo);
+    ["Initializing...", "preInit"] call FUNC(logInfo);
 #endif
 
 switch (EGVAR(Settings,setMissionType)) do {
@@ -418,5 +419,5 @@ switch (EGVAR(Settings,setFortifyRestriction)) do {
 
 
 #ifdef DEBUG_MODE
-    ["postInit initialization completed."] call FUNC(logInfo);
+    ["Initialization completed", "preInit"] call FUNC(logInfo);
 #endif
