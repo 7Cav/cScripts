@@ -44,3 +44,7 @@ private _statement = {
 
 private _action = [format ["cScriptQuickSelection_%1", _className], _lable, _icon, _statement, _condition, nil, [_className, _platoon]] call ace_interact_menu_fnc_createAction;
 [_object, 0, _category, _action] call ace_interact_menu_fnc_addActionToObject;
+
+#ifdef DEBUG_MODE
+    [format["%1; selector '%2' added for '%3' crate.", _object, _lable, _platoon], "Quick Selection"] call FUNC(logInfo);
+#endif
