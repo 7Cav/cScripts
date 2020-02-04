@@ -354,7 +354,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     };
 #endif
 
-
 if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
     if !(is3DEN) then {
         call FUNC(initACELoadouts);
