@@ -4,14 +4,6 @@
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 
-// Check installed moduels
-EGVAR(patches,usesACE)      = isClass (configFile >> "CfgPatches" >> "ace_main");
-EGVAR(patches,usesACRE)     = isClass (configFile >> "CfgPatches" >> "acre_sys_core");
-EGVAR(patches,usesTFAR)     = isClass (configFile >> "CfgPatches" >> "task_force_radio");
-EGVAR(patches,usesAchilles) = isClass (configFile >> "CfgPatches" >> "achilles_data_f_achilles);
-EGVAR(patches,usesZen)      = isClass (configFile >> "CfgPatches" >> "zen_main");
-
-// Debug
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
             ["Initializing CBA Settings...", "preInit"] call FUNC(logInfo);
@@ -19,6 +11,13 @@ EGVAR(patches,usesZen)      = isClass (configFile >> "CfgPatches" >> "zen_main")
         diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initializing CBA Settings..."];
     };
 #endif
+
+// Check installed moduels
+EGVAR(patches,usesACE)      = isClass (configFile >> "CfgPatches" >> "ace_main");
+EGVAR(patches,usesACRE)     = isClass (configFile >> "CfgPatches" >> "acre_sys_core");
+EGVAR(patches,usesTFAR)     = isClass (configFile >> "CfgPatches" >> "task_force_radio");
+EGVAR(patches,usesAchilles) = isClass (configFile >> "CfgPatches" >> "achilles_data_f_achilles);
+EGVAR(patches,usesZen)      = isClass (configFile >> "CfgPatches" >> "zen_main");
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
