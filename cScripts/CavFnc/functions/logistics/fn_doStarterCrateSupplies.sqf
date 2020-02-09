@@ -439,8 +439,8 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     
     _crate addItemCargoGlobal ["rhsusf_acc_acog_rmr",10];
     _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",10];
-	
-	
+    
+    
     //================== HEAD GEAR ==================\\
     _crate addItemCargoGlobal ["rhsusf_ach_helmet_ocp",10];
     _crate addItemCargoGlobal ["rhsusf_ach_helmet_ESS_ocp",10];
@@ -452,7 +452,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     _crate addItemCargoGlobal ["rhsusf_oakley_goggles_blk",10];
     _crate addItemCargoGlobal ["rhsusf_oakley_goggles_clr",10];
 
-	
+    
     //================== RADIOS ==================\\
 
     _crate addItemCargoGlobal ["ACRE_PRC343",20];
@@ -460,45 +460,45 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     _crate addItemCargoGlobal ["ACRE_PRC117F",20];
 
 
-	//================== MEDICAL	==================\\
-	_crate addItemCargoGlobal ["ACE_quikclot",250];
-	_crate addItemCargoGlobal ["ACE_tourniquet",50];
+    //================== MEDICAL    ==================\\
+    _crate addItemCargoGlobal ["ACE_quikclot",250];
+    _crate addItemCargoGlobal ["ACE_tourniquet",50];
     
     
     //================== AMMO ==================\\
-	_crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",250];
-	_crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",250];
-	_crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m993_Mag",50];
-	_crate addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",100];
-	_crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",50];
-	_crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",50];
-	_crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",50];
-	_crate addMagazineCargoGlobal ["rhs_mag_m714_White",25];
-	_crate addMagazineCargoGlobal ["rhs_mag_m715_Green",25];
-	_crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",25];
-	_crate addMagazineCargoGlobal ["rhs_mag_m713_Red",25];
-	_crate addMagazineCargoGlobal ["rhs_mag_M585_white",25];
-	_crate addMagazineCargoGlobal ["rhs_mag_m661_green",25];
-	_crate addMagazineCargoGlobal ["rhs_mag_m662_red",25];
-	_crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",25];
-	_crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
-	_crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
-	_crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
-	_crate addMagazineCargoGlobal ["rhs_fim92_mag",10];
-	_crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",10];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",250];
+    _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",250];
+    _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m993_Mag",50];
+    _crate addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",100];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",50];
+    _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",50];
+    _crate addMagazineCargoGlobal ["rhs_mag_m714_White",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m715_Green",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_M585_white",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m661_green",25];
+    _crate addMagazineCargoGlobal ["rhs_mag_m662_red",25];
+    _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",25];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HE",50];
+    _crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",50];
+    _crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",50];
+    _crate addMagazineCargoGlobal ["rhs_fim92_mag",10];
+    _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",10];
 
 
    //================== ITEMS ==================\\
     _crate addItemCargoGlobal ["ACE_M26_Clacker",50];
     _crate addItemCargoGlobal ["ACE_DefusalKit",50];
-	_crate addItemCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",25];
-	_crate addItemCargoGlobal ["rhsusf_m112_mag",10];
-	_crate addItemCargoGlobal ["rhsusf_m112x4_mag",10];
+    _crate addItemCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",25];
+    _crate addItemCargoGlobal ["rhsusf_m112_mag",10];
+    _crate addItemCargoGlobal ["rhsusf_m112x4_mag",10];
     _crate addItemCargoGlobal ["ACE_EntrenchingTool",50];
     _crate addItemCargoGlobal ["ACE_wirecutter",50];
 
 
-	//================== BACKPACKS	==================\\
-	_crate addItemCargoGlobal ["B_TacticalPack_mcamo",10];
-	_crate addItemCargoGlobal ["B_Kitbag_mcamo",10];
+    //================== BACKPACKS    ==================\\
+    _crate addItemCargoGlobal ["B_TacticalPack_mcamo",10];
+    _crate addItemCargoGlobal ["B_Kitbag_mcamo",10];
 };
