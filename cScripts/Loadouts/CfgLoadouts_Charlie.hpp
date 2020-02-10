@@ -30,7 +30,7 @@ class Cav_B_Charlie_Trooper_Local : Cav_B_Charlie_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3_tan"}
         };
-        
+
     magazines[] = {
     };
 
@@ -88,7 +88,7 @@ class Cav_B_Charlie_Leader_Local : Cav_B_Charlie_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3_tan"}
         };
-        
+
     magazines[] = {
     };
 
@@ -137,9 +137,7 @@ class Cav_B_C_PlatoonLeader_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellYellow",2,
-        "ACE_Chemlight_HiYellow",2,
-        
-        "B_IR_Grenade",2
+        "ACE_Chemlight_IR",4
     };
 
     items[] += {
@@ -183,9 +181,7 @@ class Cav_B_C_PlatoonSergeant_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellYellow",2,
-        "ACE_Chemlight_HiYellow",2,
-        
-        "B_IR_Grenade",2
+        "ACE_Chemlight_IR",4
     };
 
     items[] += {
@@ -243,7 +239,7 @@ class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "ACE_Chemlight_HiRed",4,
-        "ACE_Chemlight_HiYellow",4
+        "ACE_Chemlight_HiYellow",
     };
 
     items[] += {
@@ -293,9 +289,7 @@ class Cav_B_C_SquadLeader_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellYellow",2,
-        "ACE_Chemlight_HiYellow",2,
-        
-        "B_IR_Grenade",2,
+        "ACE_Chemlight_IR",4
     };
 
     items[] += {
@@ -341,8 +335,7 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellBlue",2,
-        "ACE_Chemlight_HiBlue",2,
-        "B_IR_Grenade",2,
+        "ACE_Chemlight_IR",4
 
         "rhsusf_200Rnd_556x45_soft_pouch"};
     items[] += {
@@ -691,8 +684,7 @@ class Cav_B_C_MMGFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",2,
-        "ACE_Chemlight_HiGreen",2,
-        "B_IR_Grenade",2
+        "ACE_Chemlight_IR",4
     };
     items[] += {
 
@@ -767,7 +759,7 @@ class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
     // uniform[] = {"rhs_uniform_acu_oefcp"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
     backpack[] = {"B_Kitbag_mcamo","B_Kitbag_mcamo","B_Kitbag_cbr"};
 
     //primary[] = {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"};
@@ -779,6 +771,7 @@ class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
         "rhsusf_100Rnd_762x51_m61_ap",2,
         "rhsusf_100Rnd_762x51_m62_tracer",5,
+        "ACE_SpareBarrel"
 
         "rhs_mag_m67",2,
         "SmokeShell",4
@@ -789,7 +782,6 @@ class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
         "ACE_personalAidKit",
         
         // Tools
-        "ACE_SpareBarrel"
     };
 
     // compass[] = {"ItemCompass"};
@@ -825,8 +817,7 @@ class Cav_B_C_SLMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",2,
-        "ACE_Chemlight_HiGreen",2,
-        "B_IR_Grenade",2
+        "ACE_Chemlight_IR",4
     };
     items[] += {
 
@@ -846,7 +837,7 @@ class Cav_B_C_SLMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_SLMGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "MAAWS Gunner";
-    
+
     // nvgs[] = {""};
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
@@ -863,7 +854,7 @@ class Cav_B_C_SLMGunner_F : Cav_B_Charlie_Trooper_Local {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
         "tf47_m3maaws_HE",
         "Cav_m3maaws_HEAT_CS",
-        
+
         "rhs_mag_m67",2,
         "SmokeShell",4
     };
@@ -885,12 +876,12 @@ class Cav_B_C_SLMGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_SLMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "MAAWS Ammo Bearer";
-    
+
     // nvgs[] = {""};
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
     // uniform[] = {"rhs_uniform_acu_oefcp"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
     backpack[] = {"B_Kitbag_mcamo","B_Kitbag_mcamo","B_Kitbag_cbr"};
 
     //primary[] = {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"};
@@ -963,12 +954,12 @@ class Cav_B_C_FIMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_FIMGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Stinger Gunner";
-    
+
     // nvgs[] = {""};
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
     // uniform[] = {"rhs_uniform_acu_oefcp"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
     // backpack[] = {"B_AssaultPack_mcamo"};
 
     //primary[] = {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"};
@@ -1000,12 +991,12 @@ class Cav_B_C_FIMGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_FIMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Stinger Ammo Bearer";
-    
+
     // nvgs[] = {""};
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
     // uniform[] = {"rhs_uniform_acu_oefcp"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
     backpack[] = {"B_TacticalPack_mcamo"};
 
     //primary[] = {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"};
@@ -1058,8 +1049,7 @@ class Cav_B_C_CCMSFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",2,
-        "ACE_Chemlight_HiGreen",2,
-        "B_IR_Grenade",2
+        "ACE_Chemlight_IR",4
     };
     items[] += {
 
@@ -1079,12 +1069,12 @@ class Cav_B_C_CCMSFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_CCMSGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Javelin Gunner";
-    
+
     // nvgs[] = {""};
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
     // uniform[] = {"rhs_uniform_acu_oefcp"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
     backpack[] = {""};
 
     //primary[] = {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"};
@@ -1095,7 +1085,7 @@ class Cav_B_C_CCMSGunner_F : Cav_B_Charlie_Trooper_Local {
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
         "rhs_fgm148_magazine_AT",
-        
+
         "SmokeShell",4
     };
     items[] += {
@@ -1116,12 +1106,12 @@ class Cav_B_C_CCMSGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_CCMSAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Javelin Ammo Bearer";
-    
+
     // nvgs[] = {""};
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
     // uniform[] = {"rhs_uniform_acu_oefcp"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
 
     //primary[] = {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"};
@@ -1176,8 +1166,7 @@ class Cav_B_C_60mmFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",2,
-        "ACE_Chemlight_HiGreen",2,
-        "B_IR_Grenade",2
+        "ACE_Chemlight_IR",4
     };
     items[] += {
 
@@ -1200,12 +1189,12 @@ class Cav_B_C_60mmFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_60mmGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Mortar Gunner";
-    
+
     // nvgs[] = {""};
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
     // uniform[] = {"rhs_uniform_acu_oefcp"};
-    vest[] = {"rhsusf_spcs_ocp_machinegunner"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
     backpack[] = {"NDS_B_M224_mortar"};
 
     //primary[] = {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"};
@@ -1215,7 +1204,7 @@ class Cav_B_C_60mmGunner_F : Cav_B_Charlie_Trooper_Local {
 
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
-        
+
         "rhs_mag_m67",2,
         "SmokeShell",4
     };
@@ -1237,12 +1226,12 @@ class Cav_B_C_60mmGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_60mmAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Mortar Ammo Bearer";
-    
+
     // nvgs[] = {""};
     // headgear[] = {"rhsusf_ach_helmet_camo_ocp"};
     // goggles[] = {"rhs_googles_clear"};
     // uniform[] = {"rhs_uniform_acu_oefcp"};
-    vest[] = {"rhsusf_spcs_ocp_rifleman"};
+    vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
     backpack[] = {"B_TacticalPack_mcamo"};
 
     //primary[] = {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"};
