@@ -160,7 +160,7 @@ class Cav_B_C_SquadLeader_F : Cav_B_Charlie_Leader_Local {
         
         // Tools
         "ACE_SpraypaintBlack",
-        "rhs_weap_rsp30_green",2
+        "rhs_weap_rsp30_red",2
     };
 
     gps[] = {"ItemAndroid"};
