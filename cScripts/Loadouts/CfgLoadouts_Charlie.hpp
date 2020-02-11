@@ -1,8 +1,8 @@
 // Intermediate Classes
 class Cav_B_Charlie_Trooper_Local : Cav_B_Charlie_base_F {
-	
+    
     vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
-	
+    
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
 
@@ -15,9 +15,9 @@ class Cav_B_Charlie_Trooper_Local : Cav_B_Charlie_base_F {
         "ACE_DAGR"
     };
 };
-
+    
 class Cav_B_Charlie_Leader_Local : Cav_B_Charlie_base_F {
-	vest[] = {"rhsusf_spcs_ocp_squadleader"};
+    vest[] = {"rhsusf_spcs_ocp_squadleader"};
 
     primary[] = {
         {"rhs_weap_m4a1","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"},
@@ -46,7 +46,7 @@ class Cav_B_Charlie_Leader_Local : Cav_B_Charlie_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3_tan"}
         };
     binoculars[] = {"ACE_Vector"};
-	
+    
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8,
 
@@ -57,7 +57,7 @@ class Cav_B_Charlie_Leader_Local : Cav_B_Charlie_base_F {
     };
 
     items[] += {
-		// Radios
+        // Radios
         "ACRE_PRC152",
 
         // Electronics
@@ -79,7 +79,7 @@ class Cav_B_C_PlatoonStaff_F : Cav_B_Charlie_Leader_Local {
 
         // Tools
         "ACE_SpraypaintGreen",
-		
+        
         // Electronics
         "ACE_MX2A",
         "ACE_HuntIR_monitor"
@@ -148,7 +148,7 @@ class Cav_B_C_SquadLeader_F : Cav_B_Charlie_Leader_Local {
 
 
     items[] += {
-		// Radios
+        // Radios
         "ACRE_PRC152",
 
         // Medical Equipment
@@ -172,14 +172,14 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
     magazines[] += {"rhsusf_200Rnd_556x45_soft_pouch"};
-	
+    
     items[] += {
         // Medical Equipment
         "ACE_personalAidKit",
         
         // Electronics
         "ACE_HuntIR_monitor",
-		
+        
         // Tools
         "ACE_SpraypaintRed",
         "ACE_EntrenchingTool"
@@ -192,7 +192,7 @@ class Cav_B_C_Bravo_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
     magazines[] += {"rhsusf_200Rnd_556x45_soft_pouch"};
-	
+    
     items[] += {
         // Medical Equipment
         "ACE_personalAidKit",
@@ -246,10 +246,10 @@ class Cav_B_C_Grenadier_F : Cav_B_Charlie_Trooper_Local {
         "rhs_mag_m714_White",4,
         "ACE_40mm_Flare_ir",4,
         "ACE_HuntIR_M203",2,
-		
+        
         "rhs_mag_m67",2
     };
-	
+    
     items[] += {
 
         // Medical Equipment
@@ -269,7 +269,7 @@ class Cav_B_C_Rifleman_F : Cav_B_Charlie_Trooper_Local {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",2,
         "rhs_mag_m67",2
     };
-	
+    
     items[] += {
 
         // Medical Equipment
@@ -293,7 +293,7 @@ class Cav_B_C_CombatLifeSaver_F : Cav_B_Charlie_Trooper_Local {
         "ACE_Chemlight_HiRed",4,
         "rhs_mag_m67",2
     };
-	
+    
     items[] += {
 
         // Medical Equipment
@@ -305,7 +305,7 @@ class Cav_B_C_CombatLifeSaver_F : Cav_B_Charlie_Trooper_Local {
         // Tools
         "ACE_EntrenchingTool"
     };
-	
+    
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
 }
 
@@ -376,7 +376,7 @@ class Cav_B_C_MMGFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "SmokeShellGreen",2,
         "ACE_Chemlight_IR",4
     };
-	
+    
     items[] += {
 
         // Medical Equipment
@@ -427,13 +427,13 @@ class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
         "rhsusf_100Rnd_762x51_m61_ap",2,
         "rhsusf_100Rnd_762x51_m62_tracer",5,
-		
+        
         "ACE_SpareBarrel",
-		
+        
         "rhs_mag_m67",2,
         "SmokeShell",4,
     };
-	
+    
     items[] += {
         // Medical Equipment
         "ACE_personalAidKit"
@@ -452,7 +452,7 @@ class Cav_B_C_SLMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "tf47_m3maaws_HE",3,
         "Cav_m3maaws_HEAT_CS",
     };
-	
+    
     items[] += {
 
         // Medical Equipment
@@ -469,7 +469,7 @@ class Cav_B_C_SLMGunner_F : Cav_B_Charlie_Trooper_Local {
         "tf47_m3maaws_HE",
         "Cav_m3maaws_HEAT_CS"
     };
-	
+    
     items[] += {
 
         // Medical Equipment
@@ -506,7 +506,7 @@ class Cav_B_C_FIMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     magazines[] += {
         "rhs_fim92_mag",2,
     };
-	
+    
     items[] += {
 
         // Medical Equipment
@@ -542,7 +542,7 @@ class Cav_B_C_FIMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     magazines[] += {
         "rhs_fim92_mag",2,
     };
-	
+    
     items[] += {
         // Medical Equipment
         "ACE_personalAidKit"
@@ -560,7 +560,7 @@ class Cav_B_C_CCMSFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     magazines[] += {
         "rhs_fgm148_magazine_AT",
     };
-	
+    
     items[] += {
 
         // Medical Equipment
@@ -581,7 +581,7 @@ class Cav_B_C_CCMSGunner_F : Cav_B_Charlie_Trooper_Local {
 
         "SmokeShell",4
     };
-	
+    
     items[] += {
         // Medical Equipment
         "ACE_personalAidKit"
@@ -598,7 +598,7 @@ class Cav_B_C_CCMSAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     magazines[] += {
         "rhs_fgm148_magazine_AT"
     };
-	
+    
     items[] += {
         // Medical Equipment
         "ACE_personalAidKit"
@@ -618,7 +618,7 @@ class Cav_B_C_60mmFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "NDS_M_6Rnd_60mm_HE",
         "NDS_M_6Rnd_60mm_SMOKE"
     };
-	
+    
     items[] += {
         // Medical Equipment
         "ACE_personalAidKit",
