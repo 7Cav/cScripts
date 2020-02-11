@@ -227,7 +227,7 @@ class Cav_B_Charlie_base_F : CommonBlufor {
     uniform[] = {"rhs_uniform_acu_ocp","rhs_uniform_acu_oefcp","rhs_uniform_acu_oefcp"};
     vest[] = {""};
     backpack[] = {"B_AssaultPack_mcamo","B_AssaultPack_mcamo","B_AssaultPack_cbr","rhsusf_assault_eagleaiii_ocp"};
-	
+    
     primary[] = {
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"},
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2_tan"},
@@ -253,7 +253,7 @@ class Cav_B_Charlie_base_F : CommonBlufor {
     secondary[] = {""};
     launcher[] = {""};
     binoculars[] = {""};
-
+    
     magazines[] = {};
     items[] = {
         // Radio
