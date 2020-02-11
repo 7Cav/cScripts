@@ -335,7 +335,7 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellBlue",2,
-        "ACE_Chemlight_IR",4
+        "ACE_Chemlight_IR",4,
 
         "rhsusf_200Rnd_556x45_soft_pouch"};
     items[] += {
@@ -771,7 +771,7 @@ class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
         "rhsusf_100Rnd_762x51_m61_ap",2,
         "rhsusf_100Rnd_762x51_m62_tracer",5,
-        "ACE_SpareBarrel"
+        "ACE_SpareBarrel",
 
         "rhs_mag_m67",2,
         "SmokeShell",4
