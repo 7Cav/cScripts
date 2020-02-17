@@ -5,13 +5,13 @@
  *
  * Arguments:
  * 0: player <STRING>
- * 1: hasVariable <STRING>
+ * 1: Contition variable <STRING>
  *
  * Return Value:
- * HasVariable <BOOL>
+ * Is correct variable <BOOL>
  *
  * Example:
- * [player] call cScripts_fnc_hasCompanyVariable
+ * [player,'mustang'] call cScripts_fnc_hasCompanyVariable
  *
  */
 

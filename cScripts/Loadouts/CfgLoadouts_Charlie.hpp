@@ -151,7 +151,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_base_F { //General AR : 33.8kg
     //binoculars[] = {""};
 
     magazines[] = {
-        "rhsusf_200rnd_556x45_mixed_soft_pouch_coyote",5,
+        "rhsusf_200rnd_556x45_mixed_soft_pouch_coyote",4,
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen"
@@ -191,13 +191,14 @@ class Cav_B_C_Grenadier_F : Cav_B_Charlie_base_F { //General GRN : 31.4kg
         "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellGreen",
-        "rhs_mag_M433_HEDP",17,
+        "rhs_mag_M433_HEDP",16,
         "rhs_mag_M397_HET",4,
-        "rhs_mag_m714_White",6,
+        "rhs_mag_m714_White",5,
         "rhs_mag_m662_red",2,
         "ACE_HuntIR_M203",2
     };
 
+ 
     items[] += {
         "ACE_DAGR",
         "rhsusf_ANPVS_14",
@@ -411,7 +412,7 @@ class CAV_Charlie_Machinegunner_Local : Cav_B_Charlie_base_F { //GPMG Gunner : 3
 
     magazines[] = {
         "SmokeShell",2,
-        "rhsusf_100Rnd_762x51_m62_tracer",5,
+        "rhsusf_100Rnd_762x51_m62_tracer",4,
         "rhsusf_100Rnd_762x51_m61_ap",2
     };
 

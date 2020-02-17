@@ -20,7 +20,7 @@ params [
 
 if !(isNil {_player getVariable QEGVAR(Cav,Rank)}) exitWith {
     #ifdef DEBUG_MODE
-        [formatText["Rank %1 is already set for player %2, no need to change it.", _player getVariable QEGVAR(Cav,Rank), _player]] call FUNC(logInfo);
+        [formatText["Rank %1 is already set for player %2, no need to change it", _player getVariable QEGVAR(Cav,Rank), _player]] call FUNC(logInfo);
     #endif
 };
 
