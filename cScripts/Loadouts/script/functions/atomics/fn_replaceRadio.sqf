@@ -1,6 +1,8 @@
 #include "..\script_component.hpp"
 params ["_unit", "_radio"];
 
+if (getNumber (missionConfigFile >> "CfgPoppy" >> "handleRadioReplacements") == 0) exitWith {};
+
 switch (true) do {
     case GVAR(usesACRE): {
         _radio = [_radio] call acre_api_fnc_getBaseRadio;
