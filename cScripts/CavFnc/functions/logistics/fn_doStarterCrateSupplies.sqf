@@ -265,8 +265,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addMagazineCargoGlobal ["ACE_M84",25];
         _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
         _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
-        _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
-        _crate addMagazineCargoGlobal ["Chemlight_Red",250];
+        _crate addMagazineCargoGlobal ["ACE_Chemlight_HiYellow",250];
+        _crate addMagazineCargoGlobal ["ACE_Chemlight_HiRed",250];
 
         //================== EXPLOSIVES ==================\\
 
@@ -295,14 +295,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_personalAidKit",250];
         _crate addItemCargoGlobal ["ACE_surgicalKit",250];
 
-        _crate addItemCargoGlobal ["ACE_bloodIV",250];
-        _crate addItemCargoGlobal ["ACE_bloodIV_500",250];
         _crate addItemCargoGlobal ["ACE_salineIV",250];
         _crate addItemCargoGlobal ["ACE_salineIV_500",250];
-
-        _crate addItemCargoGlobal ["ACE_morphine",250];
-        _crate addItemCargoGlobal ["ACE_epinephrine",250];
-        _crate addItemCargoGlobal ["ACE_adenosine",250];
 
         _crate addItemCargoGlobal ["ACE_bodyBag",250];
 
@@ -343,7 +337,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
         _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
         _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
-        _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",10];
+        _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
 
         //================== AMMO ==================\\
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
@@ -377,8 +371,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203",250];
         _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
         _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
-        _crate addMagazineCargoGlobal ["Chemlight_Blue",250];
-        _crate addMagazineCargoGlobal ["Chemlight_Red",250];
+        _crate addMagazineCargoGlobal ["ACE_Chemlight_HiBlue",250];
+        _crate addMagazineCargoGlobal ["ACE_Chemlight_HiRed",250];
 
         //================== EXPLOSIVES ==================\\
         _crate addItemCargoGlobal ["ACE_M26_Clacker",20];
@@ -403,15 +397,11 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_Chemlight_Shield",25];
         _crate addItemCargoGlobal ["ACE_VMH3",20];
         _crate addItemCargoGlobal ["ACE_VMM3",20];
-        _crate addItemCargoGlobal ["Flagstack_Red",20];
-        _crate addItemCargoGlobal ["Signpack_Mines",20];
 
         //================== MEDICAL ==================\\
         _crate addItemCargoGlobal ["ACE_EarPlugs",100];
         _crate addItemCargoGlobal ["ACE_quikclot",250];
         _crate addItemCargoGlobal ["ACE_tourniquet",50];
-        _crate addItemCargoGlobal ["ACE_surgicalKit",5];
-        _crate addItemCargoGlobal ["ACE_morphine",20];
 
         //================== BACKPACKS ==================\\
         _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
