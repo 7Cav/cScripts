@@ -266,6 +266,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addMagazineCargoGlobal ["ACE_M84",25];
         _crate addMagazineCargoGlobal ["rhs_mag_M585_white",250];
         _crate addMagazineCargoGlobal ["rhs_mag_m662_red",250];
+        _crate addMagazineCargoGlobal ["ACE_Chemlight_HiYellow",250];
         _crate addMagazineCargoGlobal ["ACE_Chemlight_HiBlue",250];
         _crate addMagazineCargoGlobal ["ACE_Chemlight_HiRed",250];
 
