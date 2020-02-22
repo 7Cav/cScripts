@@ -139,7 +139,7 @@ class Cav_B_Bravo_base_F : CommonBlufor {
         // Medical Equipment
         "ACE_quikclot",20,
         "ACE_tourniquet",4,
-		"ACE_personalAidKit",
+        "ACE_personalAidKit",
 
         // Gear
         "rhsusf_ANPVS_14",
