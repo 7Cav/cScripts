@@ -28,11 +28,11 @@ class Cav_B_Bravo_Leader_Local : Cav_B_Bravo_base_F {
     items[] += {
         // Radios
         "ACRE_PRC152",
-		
+        
         // Electronics
         "ACE_HuntIR_monitor"
     };
-	
+    
     gps[] = {"ItemAndroid"};
 };
 
@@ -93,29 +93,29 @@ class Cav_B_Bravo_Crew_Base_Local : Cav_B_Scout_base_F {
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 class Cav_B_Bravo_CavScout_Base_Local : Cav_B_Scout_base_F {
-	
+    
     magazines[] += {
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",7,
-		"rhs_mag_m67",2,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",7,
+        "rhs_mag_m67",2,
         "SmokeShell",2,
     };
 
     gps[] = {""};
 };
 class Cav_B_Bravo_CavScout_Leader_Local : Cav_B_Bravo_CavScout_Base_Local {
-	
+    
     magazines[] += {
-		"B_IR_Grenade",2,
+        "B_IR_Grenade",2,
     };
-	
+    
     items[] += {
-		// Radios
-		"ACRE_PRC152",
-		"ACRE_PRC152",
-		
-		"ItemAndroid",
-		"ACE_MX2A",
-		"ACE_HuntIR_monitor",
+        // Radios
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+        
+        "ItemAndroid",
+        "ACE_MX2A",
+        "ACE_HuntIR_monitor",
         };
 
     gps[] = {"B_UavTerminal"};
@@ -127,7 +127,7 @@ class Cav_B_Mustang_Local_Local : Cav_B_Bravo_base_F {
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
     
     launcher[] = {""};
-	
+    
     items[] = {
         // Radio
         "acre_prc343",
@@ -319,7 +319,7 @@ class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
     preLoadout = "[(_this select 0), 'bravo', 1, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
-
+    
 // Infantry Squad
 
 class Cav_B_B_SquadLeader_F : Cav_B_Bravo_Leader_Local {
@@ -330,7 +330,7 @@ class Cav_B_B_SquadLeader_F : Cav_B_Bravo_Leader_Local {
     items[] += {
         // Radios
         "ACRE_PRC152",
-		
+        
         // Electronics
         "ACE_MX2A",
         
@@ -347,7 +347,7 @@ class Cav_B_B_FireTeamLeader_F : Cav_B_Bravo_Leader_Local {
     binoculars[] = {"ACE_Vector"};
 
     magazines[] += {
-		"rhsusf_200rnd_556x45_mixed_box",
+        "rhsusf_200rnd_556x45_mixed_box",
     };
 
     items[] += {
@@ -382,21 +382,21 @@ class Cav_B_B_Grenadier_F : Cav_B_Bravo_Trooper_Local {
         {"rhs_weap_m4a1_m320","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556",""},
         {"rhs_weap_m4a1_m320","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556",""}
         };
-		
+        
     binoculars[] = {"rhsusf_bino_m24","rhsusf_bino_m24_ARD"};
 
     magazines[] += {
         "rhs_mag_m67",2,
-		
+        
         "rhs_mag_M433_HEDP",12,
         "rhs_mag_m714_White",4,
         "ACE_40mm_Flare_ir",4,
         "ACE_HuntIR_M203",2,
     };
-	
-	items[] += {
+    
+    items[] += {
         "ACE_EntrenchingTool"
-	};
+    };
 };
 class Cav_B_B_Rifleman_F : Cav_B_Bravo_Trooper_Local {
     displayName = "Rifleman";
@@ -406,10 +406,10 @@ class Cav_B_B_Rifleman_F : Cav_B_Bravo_Trooper_Local {
     magazines[] += {
         "rhs_mag_m67",2
     };
-	
-	items[] += {
+    
+    items[] += {
         "ACE_EntrenchingTool"
-	};
+    };
 };
 class Cav_B_B_RiflemanAT_F : Cav_B_B_Rifleman_F {
 };
@@ -431,7 +431,7 @@ class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_Trooper_Local {
         "ACE_quikclot",20,
         "ACE_tourniquet",4,
         "ACE_Splint",8,
-		
+        
         "ACE_EntrenchingTool"
     };
 
@@ -444,29 +444,29 @@ class Cav_B_B_CavScout_PlatoonLead_F: Cav_B_Bravo_CavScout_Leader_Local {
     displayName = "Platoon Staff";
 
     magazines[] += {
-		"SmokeShell",4,
-		"SmokeShellBlue",3,
-		"SmokeShellRed",3,
-		"SmokeShellGreen",2,
-		"SmokeShellPurple",2,
-		"SmokeShellYellow",2
+        "SmokeShell",4,
+        "SmokeShellBlue",3,
+        "SmokeShellRed",3,
+        "SmokeShellGreen",2,
+        "SmokeShellPurple",2,
+        "SmokeShellYellow",2
     };
 };
 class Cav_B_B_CavScout_SquadLead_F: Cav_B_Bravo_CavScout_Leader_Local {
     displayName = "Squad Leader";
-	
+    
     magazines[] += {
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",1,
-		"SmokeShell",4,
-		"SmokeShellBlue",3,
-		"SmokeShellRed",3,
-		"SmokeShellGreen"
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",1,
+        "SmokeShell",4,
+        "SmokeShellBlue",3,
+        "SmokeShellRed",3,
+        "SmokeShellGreen"
     };
 
     items[] += {
-		"ACE_SpraypaintRed",
-		"ACE_SpraypaintGreen",
-		"ACE_EntrenchingTool"
+        "ACE_SpraypaintRed",
+        "ACE_SpraypaintGreen",
+        "ACE_EntrenchingTool"
     };
 };
 class Cav_B_B_CavScout_TeamLead_F: Cav_B_Bravo_CavScout_Leader_Local {
@@ -475,17 +475,17 @@ class Cav_B_B_CavScout_TeamLead_F: Cav_B_Bravo_CavScout_Leader_Local {
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
     magazines[] += {
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",1,
-		"SmokeShell",4,
-		"SmokeShellBlue",3,
-		"SmokeShellRed",3,
-		"SmokeShellGreen"
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",1,
+        "SmokeShell",4,
+        "SmokeShellBlue",3,
+        "SmokeShellRed",3,
+        "SmokeShellGreen"
     };
 
     items[] += {
-		"ACE_SpraypaintRed",
-		"ACE_SpraypaintGreen",
-		"ACE_EntrenchingTool"
+        "ACE_SpraypaintRed",
+        "ACE_SpraypaintGreen",
+        "ACE_EntrenchingTool"
     };
 };
 class Cav_B_B_CavScout_TeamLead320_F: Cav_B_Bravo_CavScout_Leader_Local {
@@ -494,42 +494,42 @@ class Cav_B_B_CavScout_TeamLead320_F: Cav_B_Bravo_CavScout_Leader_Local {
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
     magazines[] += {
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",2,
-		"rhs_mag_M441_HE",5,
-		"rhs_mag_m713_Red",2,
-		"rhs_mag_m714_White",2,
-		"ACE_HuntIR_M203",2,
-		"SmokeShellBlue",2,
-		"SmokeShellRed"
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",2,
+        "rhs_mag_M441_HE",5,
+        "rhs_mag_m713_Red",2,
+        "rhs_mag_m714_White",2,
+        "ACE_HuntIR_M203",2,
+        "SmokeShellBlue",2,
+        "SmokeShellRed"
     };
 
     items[] += {
-		"ACE_SpraypaintRed",
-		"ACE_SpraypaintGreen",
-		"ACE_EntrenchingTool"
+        "ACE_SpraypaintRed",
+        "ACE_SpraypaintGreen",
+        "ACE_EntrenchingTool"
     };
 };
 class Cav_B_B_CavScout_AutomaticRifleman_F: Cav_B_Bravo_CavScout_Base_Local {
     displayName = "Automatic Rifleman";
 
     vest[] = {"rhsusf_spcs_ocp_saw"};
-	
-	primary[] = {
+    
+    primary[] = {
         {"rhs_weap_m249_light_L","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15side_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"},
         {"rhs_weap_m249_light_L","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15side","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"}
         };
     magazines[] = {
-		"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",4,
+        "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",4,
         
-		"rhs_mag_m67",2,
+        "rhs_mag_m67",2,
         "SmokeShell",3,
-		"SmokeShellBlue",
-		"SmokeShellRed"
+        "SmokeShellBlue",
+        "SmokeShellRed"
     };
 
     items[] += {
-		"ACE_SpraypaintGreen",
-		"ACE_EntrenchingTool"
+        "ACE_SpraypaintGreen",
+        "ACE_EntrenchingTool"
     };
 };
 class Cav_B_B_CavScout_Grenadier_F: Cav_B_Bravo_CavScout_Base_Local {
@@ -541,21 +541,21 @@ class Cav_B_B_CavScout_Grenadier_F: Cav_B_Bravo_CavScout_Base_Local {
         {"rhs_weap_m4a1_m320","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556",""},
         {"rhs_weap_m4a1_m320","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556",""}
         };
-		
+        
     magazines[] += {
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",3,
-		"rhs_mag_M441_HE",10,
-		"rhs_mag_m713_Red",2,
-		"rhs_mag_m714_White",4,
-		"ACE_HuntIR_M203",3,
-		"SmokeShellBlue",
-		"SmokeShellRed"
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",3,
+        "rhs_mag_M441_HE",10,
+        "rhs_mag_m713_Red",2,
+        "rhs_mag_m714_White",4,
+        "ACE_HuntIR_M203",3,
+        "SmokeShellBlue",
+        "SmokeShellRed"
     };
 
     items[] += {
-		"ACE_SpraypaintGreen",
-		"ACE_HuntIR_monitor",
-		"ACE_EntrenchingTool"
+        "ACE_SpraypaintGreen",
+        "ACE_HuntIR_monitor",
+        "ACE_EntrenchingTool"
     };
 };
 class Cav_B_B_CavScout_Rifleman_F: Cav_B_Bravo_CavScout_Base_Local {
@@ -564,16 +564,16 @@ class Cav_B_B_CavScout_Rifleman_F: Cav_B_Bravo_CavScout_Base_Local {
     vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
 
     magazines[] += {
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",3,
-		"SmokeShell",4,
-		"rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
-		"SmokeShellRed",2,
-		"SmokeShellBlue",2
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",3,
+        "SmokeShell",4,
+        "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
+        "SmokeShellRed",2,
+        "SmokeShellBlue",2
     };
 
     items[] += {
-		"ACE_SpraypaintGreen",
-		"ACE_EntrenchingTool"
+        "ACE_SpraypaintGreen",
+        "ACE_EntrenchingTool"
     };
 };
 class Cav_B_B_CavScout_CombatLifeSaver_F: Cav_B_Bravo_CavScout_Base_Local {
@@ -582,38 +582,38 @@ class Cav_B_B_CavScout_CombatLifeSaver_F: Cav_B_Bravo_CavScout_Base_Local {
     vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
 
     magazines[] += {
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",3,
-		"SmokeShell",2,
-		"SmokeShellRed",2,
-		"SmokeShellBlue",2,
-		"SmokeShellGreen",2
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",3,
+        "SmokeShell",2,
+        "SmokeShellRed",2,
+        "SmokeShellBlue",2,
+        "SmokeShellGreen",2
     };
 
     items[] += {
-		"ACE_quikclot",20,
-		"ACE_tourniquet",6,
-		"ACE_SpraypaintGreen",
-		"ACE_EntrenchingTool",
-		"ACE_splint",8
+        "ACE_quikclot",20,
+        "ACE_tourniquet",6,
+        "ACE_SpraypaintGreen",
+        "ACE_EntrenchingTool",
+        "ACE_splint",8
     };
 };
 class Cav_B_B_CavScout_Crew_F: Cav_B_Bravo_CavScout_Leader_Local {
     displayName = "Cav Scout Crewman";
 
-	goggles[] = {"rhsusf_shemagh_tan"};
+    goggles[] = {"rhsusf_shemagh_tan"};
     headgear[] = {"rhsusf_cvc_green_helmet","rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"};
-	vest[] = {"rhsusf_spcs_ocp_crewman"};
+    vest[] = {"rhsusf_spcs_ocp_crewman"};
 
     magazines[] += {
-		"SmokeShellBlue",2,
-		"SmokeShellRed"
+        "SmokeShellBlue",2,
+        "SmokeShellRed"
     };
 
     items[] += {
-		"ACE_EntrenchingTool",
-		"ACE_UAVBattery",2,
-		"ToolKit",
-		"ACE_personalAidKit"
+        "ACE_EntrenchingTool",
+        "ACE_UAVBattery",2,
+        "ToolKit",
+        "ACE_personalAidKit"
     };
 };
 
