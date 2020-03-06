@@ -624,6 +624,7 @@ class Cav_B_C_60mmFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
         "ACE_personalAidKit",
         
         // Tools
+		"ACE_artilleryTable",
         "ACE_EntrenchingTool"
     };
 };
