@@ -42,7 +42,7 @@ private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "APOLLO", "
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
 if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo + _charlie)) exitWith {
-    [formatText["%1 is using a unsupported cartegory '%2'.", _object, _companySelector],"Quick Selection",true] call FUNC(logError);	
+    [formatText["%1 is using a unsupported cartegory '%2'.", _object, _companySelector],"Quick Selection",true] call FUNC(logError);
 };
 
 // Full selector handler
