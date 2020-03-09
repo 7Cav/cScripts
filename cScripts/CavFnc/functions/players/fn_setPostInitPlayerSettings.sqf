@@ -26,10 +26,6 @@ params [
     ["_squadTeamColor",true]
 ];
 
-#ifdef DEBUG_MODE
-    [formatText["Applying PostLoadout to %1.", _player]] call FUNC(logInfo);
-#endif
-
 // Safety first
 if (_safemode) then {
     [_player, currentWeapon _player, true] call ace_safemode_fnc_setWeaponSafety;
@@ -39,7 +35,7 @@ if (_safemode) then {
 if (_earPlugs) then {
     if !([_player] call ace_hearing_fnc_hasEarPlugsIn) then {[_player] call ace_hearing_fnc_putInEarplugs;};
     #ifdef DEBUG_MODE
-        if (_earPlugs) then {[formatText["%1 have got there earplugs assigned in postLoadout.", _player]] call FUNC(logInfo);};
+        [formatText["%1 have got earplugs assigned", _player], "LoadoutPostInit"] call FUNC(logInfo);
     #endif
 };
 
@@ -77,7 +73,7 @@ if (EGVAR(Settings,enforceEyewereBlacklist)) then {
         if (goggles _player in _blacklist_glasses) then {
             _player unlinkItem (goggles _player);
             #ifdef DEBUG_MODE
-                [format["%1 using un-authorized facewere it have been removed.", _player]] call FUNC(logInfo);
+                [format["%1 using un-authorized facewere it have been removed", _player], "LoadoutPostInit"] call FUNC(logInfo);
             #endif
         };
     };
@@ -91,16 +87,20 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
         if !(isNil {profileNamespace getVariable QEGVAR(Cav,Insignia)}) then {
             _insignia = profileNamespace getVariable QEGVAR(Cav,Insignia);
             #ifdef DEBUG_MODE
-                [format["%1 got assigned insignia; %2 based on stored insignia.", _player, _insignia]] call FUNC(logInfo);
+                [format["%1 insignia '%2' obtained based on saved variable...", _player, _insignia], "LoadoutPostInit"] call FUNC(logInfo);
             #endif
         } else {
             _insignia = [_player] call FUNC(getSquadInsignia);
             #ifdef DEBUG_MODE
-                [format["%1 got assigned insignia; %2 based on squad name.", _player, _insignia]] call FUNC(logInfo);
+                [format["%1 insignia '%2' obtained based on squad name...", _player, _insignia], "LoadoutPostInit"] call FUNC(logInfo);
             #endif
         };
-        
-        [{[_this select 0, _this select 1] call BIS_fnc_setUnitInsignia;}, [_player, _insignia]] call CBA_fnc_execNextFrame;
+        [{
+            [_this select 0, _this select 1] call BIS_fnc_setUnitInsignia;
+            #ifdef DEBUG_MODE
+                [format["%1 got insignia '%2' assinged", _this select 0, _this select 1], "LoadoutPostInit"] call FUNC(logInfo);
+            #endif
+        }, [_player, _insignia], 2] call CBA_fnc_waitAndExecute;
     };
 };
 
@@ -116,7 +116,14 @@ if (EGVAR(Settings,setRadio)) then {
     if (_radio) then {
         [_player] call FUNC(setRadioChannel);
         #ifdef DEBUG_MODE
-            [format["%1 have got there radio channel schedueld to be changed in postLoadout.", _player]] call FUNC(logInfo);
+            [format["%1 delayed action for radio channel assignation...", _player], "LoadoutPostInit"] call FUNC(logInfo);
+        #endif
+
+        // set current radio
+        private _activeRadio = "ACRE_PRC343";
+        [_activeRadio] call FUNC(setActiveRadio);
+        #ifdef DEBUG_MODE
+            [format["%1 delayed action to set active radio...", _player], "LoadoutPostInit"] call FUNC(logInfo);
         #endif
     };
 };
@@ -127,10 +134,5 @@ if (EGVAR(Settings,setMissionType) != 3) then {
 };
 
 if (isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
-    [formatText["%1 have no unit variable defined.", _player]] call FUNC(logWarning);
-    if (!isMultiplayer || {is3DENMultiplayer}) then { systemChat format["WARNING: %1 have no unit variable defined.", _player] };
+    [formatText["%1 have no unit variable defined", _player], "LoadoutPostInit", true] call FUNC(logWarning);
 };
-
-#ifdef DEBUG_MODE
-    [formatText["postLoadout application completed for %1.", _player]] call FUNC(logInfo);
-#endif
