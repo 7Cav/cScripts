@@ -25,7 +25,7 @@ _companySelector = toUpper(_companySelectorType);
 if (_companySelector == "" OR _companySelector == "NONE") exitWith {};
 
 #ifdef DEBUG_MODE
-    [format["Setting up %1 loadouts selecton list on %2...", _companySelector, _object]] call FUNC(logInfo);
+    [format["Setting up %1 loadouts selecton list on %2...", _companySelector, _object], "Quick Selection"] call FUNC(logInfo);
 #endif
 
 // Define the icon to be used
@@ -42,7 +42,7 @@ private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "APOLLO", "
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
 if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo + _charlie)) exitWith {
-    [formatText["%1 (Quick Selection) is using a unsupported cartegory '%2'.", _object, _companySelector]] call FUNC(logError);
+    [formatText["%1 is using a unsupported cartegory '%2'.", _object, _companySelector],"Quick Selection",true] call FUNC(logError);	
 };
 
 // Full selector handler
@@ -242,5 +242,5 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
 };
 
 #ifdef DEBUG_MODE
-    [format["Setup of %1 loadouts selecton list on %2 is completed.", _companySelector, _object]] call FUNC(logInfo);
+    [format["Setup of %1 loadouts selecton list on %2 is completed.", _companySelector, _object], "Quick Selection"] call FUNC(logInfo);
 #endif
