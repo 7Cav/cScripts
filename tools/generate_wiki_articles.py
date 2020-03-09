@@ -45,6 +45,40 @@ def fetch_objects(path=''):
 
     return objectList
 
+
+def get_article_link(function=''):
+    expanded_articles = {
+        'fn_moduleApplyVehicleInventory': '7Cav-Modules',
+        'fn_moduleApplyVehicleLable': '7Cav-Modules',
+        'fn_moduleCallEndex': '7Cav-Modules',
+        'fn_moduleCreateFieldHospital': '7Cav-Modules',
+        'fn_moduleCreateMedicalCrate': '7Cav-Modules',
+        'fn_moduleCreateSpecialWeaponsCrate': '7Cav-Modules',
+        'fn_moduleCreateStarterCrate': '7Cav-Modules',
+        'fn_moduleCreateSupplyCrate': '7Cav-Modules',
+        'fn_moduleMakeDoctor': '7Cav-Modules',
+        'fn_moduleMakeEngineer': '7Cav-Modules',
+        'fn_moduleRegearTrooper': '7Cav-Modules',
+        
+        'fn_doStarterCrate': 'Starter-Crate',
+        'fn_doStarterCrateSupplies': 'Starter-Crate',
+        'fn_teleport': 'Teleport',
+        'fn_gate': 'Gate',
+
+        'fn_setVehicleLable': 'Texture-Label',
+        'fn_createVehicleLable': 'Texture-Label',
+        'fn_getVehicleLable': 'Texture-Label',
+        
+        'fn_doFieldHospital': 'Field-Hospital'
+    }
+    article_link = ''
+    for ekey in expanded_articles:
+        if ekey == function:
+            article_link = "https://github.com/7Cav/cScripts/wiki/{}".format(expanded_articles[ekey])
+            continue
+    return article_link
+
+
 def get_author_link(author=''):
     names = {
         #CavName, GithubUser
@@ -57,7 +91,11 @@ def get_author_link(author=''):
         continue
     return author
 
+
 def write_article(collection={}):
+
+    if not os.path.isdir(outputDir):
+        os.mkdir(outputDir)
     article = open('{}/Function-list.md'.format(outputDir),"w+")
 
     # Write index
@@ -83,10 +121,14 @@ def write_article(collection={}):
             vDesc   = collection[category][function]['description']
             vLink   = collection[category][function]['link']
             vCall   = collection[category][function]['call']
+            vExAr   = collection[category][function]['expandedArticle']
             
             article.write('### {}\n'.format(function))
             article.write('[Go to {}]({}), {}\n\n'.format(vCall, vLink, vAuthor))
             article.write('{}\n\n'.format(vDesc))
+
+            if not vExAr == '':
+                article.write('You can read more about this function [here]({}).\n\n'.format(vExAr))
 
             article.write('**Arguments:**\n\n')
             for exsample in collection[category][function]['arguments']:
@@ -95,10 +137,19 @@ def write_article(collection={}):
 
             article.write('**Exsamples:**\n\n')
             for exsample in collection[category][function]['exsamples']:
-                article.write('```\n{}\n```\n'.format(exsample))
+                article.write('```cpp\n{}\n```\n'.format(exsample))
             article.write('\n')
+
+
+
 def main():
     os.chdir(rootDir)
+
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('--json', action='store_true',
+                    help='sum the integers (default: find the max)')
+
+    args = parser.parse_args()
 
     #print('Featching all functions...')
     function_dict = {}
@@ -127,7 +178,8 @@ def main():
                 'arguments': [],
                 'description': "",
                 'author': "",
-                'exsamples': []
+                'exsamples': [],
+                'expandedArticle': ""
             })
 
             file = open('{}/{}/{}'.format(function_dir, function_category, function_file))
@@ -200,12 +252,17 @@ def main():
             description_text = '\n'.join(description)
             description_text = description_text.lstrip()
             function_dict[function_category][function_name].update({'description': description_text})
+            
+            function_dict[function_category][function_name].update({'expandedArticle': get_article_link(function_name)})
 
             function_dict[function_category][function_name].update({'arguments': arguments})
             function_dict[function_category][function_name].update({'exsamples': exsamples})
+
+        
     
+    if args.json:
+        sys.exit(print(json.dumps(function_dict)))
     write_article(function_dict)
-    #print(json.dumps(function_dict))
 
 if __name__ == "__main__":
     sys.exit(main())
