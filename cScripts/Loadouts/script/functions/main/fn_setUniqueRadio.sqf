@@ -1,6 +1,10 @@
 #include "..\script_component.hpp"
 params ["_unit", "_radio"];
 
+if (getNumber (missionConfigFile >> "CfgPoppy" >> "handleRadioReplacements") == 0) exitWith {
+    if (GVAR(usesACRE)) then { _unit linkItem "ItemRadioAcreFlagged" };
+};
+
 switch (true) do {
     case (GVAR(usesACRE)): {
         _unit linkItem "ItemRadioAcreFlagged";
