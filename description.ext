@@ -19,7 +19,7 @@
     cba_settings_hasSettingsFile = 1;
     disabledAI               = true;
     disableChannels[]        = {{0,false,true},{1,false,true},{2,true,true},{6,true,true}};
-    cba_settings_whitelist[] = {"76561197962051582"}
+    cba_settings_whitelist[] = {"76561197962051582"};
 
     forceRotorLibSimulation  = 1;
 
