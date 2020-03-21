@@ -5,7 +5,7 @@ class Cav_B_Bravo_Trooper_Local : Cav_B_Bravo_base_F {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",10,
 
         "rhs_mag_m67",2,
-        "SmokeShell",4,
+        "SmokeShell",4
     };
 
     items[] += {
@@ -62,7 +62,7 @@ class Cav_B_Bravo_Crew_Base_Local : Cav_B_Scout_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_blk"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"}
-        };
+    };
         
     binoculars[] = {"ACE_Vector"};
     
@@ -97,7 +97,7 @@ class Cav_B_Bravo_CavScout_Base_Local : Cav_B_Scout_base_F {
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",7,
         "rhs_mag_m67",2,
-        "SmokeShell",2,
+        "SmokeShell",2
     };
 
     gps[] = {""};
@@ -105,7 +105,7 @@ class Cav_B_Bravo_CavScout_Base_Local : Cav_B_Scout_base_F {
 class Cav_B_Bravo_CavScout_Leader_Local : Cav_B_Bravo_CavScout_Base_Local {
     
     magazines[] += {
-        "B_IR_Grenade",2,
+        "B_IR_Grenade",2
     };
     
     items[] += {
@@ -115,8 +115,8 @@ class Cav_B_Bravo_CavScout_Leader_Local : Cav_B_Bravo_CavScout_Base_Local {
         
         "ItemAndroid",
         "ACE_MX2A",
-        "ACE_HuntIR_monitor",
-        };
+        "ACE_HuntIR_monitor"
+    };
 
     gps[] = {"B_UavTerminal"};
 };
@@ -151,7 +151,7 @@ class Cav_B_Mustang_Local : Cav_B_Mustang_Local_Local {
         "SmokeShell",4,
         "SmokeShellBlue",2,
         "ACE_Chemlight_HiYellow",4,
-        "ACE_Chemlight_HiRed",4,
+        "ACE_Chemlight_HiRed",4
     };
 
     items[] += {
@@ -205,7 +205,7 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_blk"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"}
-        };
+    };
         
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
@@ -216,7 +216,7 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_base_F {
         "SmokeShellGreen",2,
         "ACE_Chemlight_UltraHiOrange",6,
         "B_IR_Grenade",6
-        };
+    };
 
     items[] += {
         // Radios
@@ -230,7 +230,7 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_base_F {
         // Tools
         "ACE_Fortify",
         "ToolKit"
-        };
+    };
 
     gps[] = {"ItemAndroid"};
 
@@ -281,7 +281,7 @@ class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_blk"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"}
-        };
+    };
         
     binoculars[] = {"ACE_Vector"};
 
@@ -364,7 +364,7 @@ class Cav_B_B_AutomaticRifleman_F : Cav_B_Bravo_Trooper_Local {
     primary[] = {
         {"rhs_weap_m249_light_L","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15side_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"},
         {"rhs_weap_m249_light_L","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15side","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"}
-        };
+    };
 
     magazines[] = {
         "rhsusf_200rnd_556x45_mixed_box",5,
@@ -381,7 +381,7 @@ class Cav_B_B_Grenadier_F : Cav_B_Bravo_Trooper_Local {
     primary[] = {
         {"rhs_weap_m4a1_m320","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556",""},
         {"rhs_weap_m4a1_m320","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556",""}
-        };
+    };
         
     binoculars[] = {"rhsusf_bino_m24","rhsusf_bino_m24_ARD"};
 
@@ -659,7 +659,7 @@ class Cav_B_B_Ifv_Commander_F : Cav_B_Bravo_Crew_Base_Local {
     primary[] = {
         {"rhs_weap_m4a1_m320","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556",""},
         {"rhs_weap_m4a1_m320","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556",""}
-        };
+    };
 
     magazines[] += {
         "rhs_mag_m714_White",
@@ -717,7 +717,7 @@ class Cav_B_B_Mustang_CombatMedic_F : Cav_B_Mustang_Local {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_blk"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"}
-        };
+    };
         
     items[] += {
         "ACE_elasticBandage",10
@@ -742,7 +742,7 @@ class Cav_B_B_LogisticTeamLeader_F : Cav_B_Bravo_Logi_Base_Local {
     primary[] = {
         {"rhs_weap_m4a1_m320","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556",""},
         {"rhs_weap_m4a1_m320","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556",""}
-        };
+    };
         
     magazines[] += {
         "rhs_mag_m714_White",3,
