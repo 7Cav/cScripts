@@ -44,7 +44,7 @@ class Cav_B_Charlie_Leader_Local : Cav_B_Charlie_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3_tan"}
-        };
+    };
     binoculars[] = {"ACE_Vector"};
     
     magazines[] += {
@@ -104,7 +104,7 @@ class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_Leader_Local {
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"},
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3_tan"}
-        };
+    };
 
     vest[] = {"rhsusf_spcs_ocp_medic"};
     backpack[] = {"B_Kitbag_mcamo"};
@@ -213,7 +213,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_Trooper_Local {
         {"rhs_weap_m249_light_S","rhsusf_acc_elcan","rhsusf_acc_anpeq15side","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"},
         {"rhs_weap_m249_light_S","rhsusf_acc_elcan_ard","rhsusf_acc_anpeq15side_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"},
         {"rhs_weap_m249_light_S","rhsusf_acc_elcan_ard","rhsusf_acc_anpeq15side","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"}
-        };
+    };
 
     magazines[] = {
         "rhsusf_200Rnd_556x45_soft_pouch",5,
@@ -226,7 +226,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 class Cav_B_C_Grenadier_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Grenadier";
@@ -258,7 +258,7 @@ class Cav_B_C_Grenadier_F : Cav_B_Charlie_Trooper_Local {
         // Tools
         "ACE_EntrenchingTool"
     };
-}
+};
 
 class Cav_B_C_Rifleman_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Rifleman";
@@ -278,7 +278,7 @@ class Cav_B_C_Rifleman_F : Cav_B_Charlie_Trooper_Local {
         // Tools
         "ACE_EntrenchingTool"
     };
-}
+};
 
 // Specialized
 
@@ -307,7 +307,7 @@ class Cav_B_C_CombatLifeSaver_F : Cav_B_Charlie_Trooper_Local {
     };
     
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
-}
+};
 
 class Cav_B_C_Marksman_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Marksman";
@@ -315,10 +315,10 @@ class Cav_B_C_Marksman_F : Cav_B_Charlie_Trooper_Local {
     vest[] = {"rhsusf_spcs_ocp_sniper"};
 
     primary[] = {
-    {"rhs_weap_m14ebrri","rhsusf_acc_su230a","rhsusf_acc_anpeq15side_bk","","rhsusf_acc_harris_bipod"},
-    {"rhs_weap_m14ebrri","rhsusf_acc_su230a","rhsusf_acc_anpeq15side","","rhsusf_acc_harris_bipod"},
-    {"rhs_weap_m14ebrri","rhsusf_acc_su230a_c","rhsusf_acc_anpeq15side_bk","","rhsusf_acc_harris_bipod"},
-    {"rhs_weap_m14ebrri","rhsusf_acc_su230a_c","rhsusf_acc_anpeq15side","","rhsusf_acc_harris_bipod"}
+        {"rhs_weap_m14ebrri","rhsusf_acc_su230a","rhsusf_acc_anpeq15side_bk","","rhsusf_acc_harris_bipod"},
+        {"rhs_weap_m14ebrri","rhsusf_acc_su230a","rhsusf_acc_anpeq15side","","rhsusf_acc_harris_bipod"},
+        {"rhs_weap_m14ebrri","rhsusf_acc_su230a_c","rhsusf_acc_anpeq15side_bk","","rhsusf_acc_harris_bipod"},
+        {"rhs_weap_m14ebrri","rhsusf_acc_su230a_c","rhsusf_acc_anpeq15side","","rhsusf_acc_harris_bipod"}
     };
 
     magazines[] = {
@@ -332,7 +332,7 @@ class Cav_B_C_Marksman_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 class Cav_B_C_Crew_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Crew";
@@ -356,7 +356,7 @@ class Cav_B_C_Crew_F : Cav_B_Charlie_Trooper_Local {
         "ToolKit",
         "ACE_EntrenchingTool"
     };
-}
+};
 
 // Machinegun Team
 
@@ -414,7 +414,7 @@ class Cav_B_C_MMGMachineGunner_F : Cav_B_Charlie_Trooper_Local {
         "rhsusf_acc_acog_mdo",
         "rhsusf_acc_anpas13gv1"
     };
-}
+};
 
 class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Machinegun Ammo Bearer";
@@ -438,7 +438,7 @@ class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 // MAAWS Team
 
@@ -475,7 +475,7 @@ class Cav_B_C_SLMGunner_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 class Cav_B_C_SLMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "MAAWS Ammo Bearer";
@@ -493,7 +493,7 @@ class Cav_B_C_SLMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 // Stinger Team Team
 
@@ -530,7 +530,7 @@ class Cav_B_C_FIMGunner_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 class Cav_B_C_FIMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Stinger Ammo Bearer";
@@ -547,7 +547,7 @@ class Cav_B_C_FIMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 // Javelin Team
 
@@ -586,7 +586,7 @@ class Cav_B_C_CCMSGunner_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 class Cav_B_C_CCMSAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Javelin Ammo Bearer";
@@ -603,7 +603,7 @@ class Cav_B_C_CCMSAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 // 60mm Mortar Team
 
@@ -637,7 +637,7 @@ class Cav_B_C_60mmGunner_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};
 
 class Cav_B_C_60mmAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Mortar Ammo Bearer";
@@ -659,4 +659,4 @@ class Cav_B_C_60mmAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
         // Medical Equipment
         "ACE_personalAidKit"
     };
-}
+};

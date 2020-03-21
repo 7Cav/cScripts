@@ -5,13 +5,13 @@
  *
  * Arguments:
  * 0: player <STRING>
- * 1: Contition variable <STRING>
+ * 1: Compare string <STRING>
  *
  * Return Value:
- * Is correct variable <BOOL>
+ * Player company match <BOOL>
  *
  * Example:
- * [player,'mustang'] call cScripts_fnc_hasCompanyVariable
+ * [player] call cScripts_fnc_hasCompanyVariable
  *
  */
 
