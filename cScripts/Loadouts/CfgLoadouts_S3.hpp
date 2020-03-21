@@ -2,7 +2,7 @@
 GearVersionDate: 160801
 */
 
-class CAV_S3_Base : Cav_B_B_PlatoonSergeant_F {
+class CAV_S3_Base : Cav_B_B_PlatoonStaff_F {
     gps[] = {""};
 
     insignia[] = {"Curator"};

@@ -44,7 +44,7 @@ class Cav_B_Charlie_Leader_Local : Cav_B_Charlie_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_acog_rmr","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3_tan"}
-        };
+    };
     binoculars[] = {"ACE_Vector"};
     
     magazines[] += {
@@ -104,7 +104,7 @@ class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_Leader_Local {
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"},
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3_tan"}
-        };
+    };
 
     vest[] = {"rhsusf_spcs_ocp_medic"};
     backpack[] = {"B_Kitbag_mcamo"};
@@ -213,7 +213,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_Trooper_Local {
         {"rhs_weap_m249_light_S","rhsusf_acc_elcan","rhsusf_acc_anpeq15side","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"},
         {"rhs_weap_m249_light_S","rhsusf_acc_elcan_ard","rhsusf_acc_anpeq15side_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"},
         {"rhs_weap_m249_light_S","rhsusf_acc_elcan_ard","rhsusf_acc_anpeq15side","rhsusf_acc_sfmb556","rhsusf_acc_grip4_bipod"}
-        };
+    };
 
     magazines[] = {
         "rhsusf_200Rnd_556x45_soft_pouch",5,
@@ -315,10 +315,10 @@ class Cav_B_C_Marksman_F : Cav_B_Charlie_Trooper_Local {
     vest[] = {"rhsusf_spcs_ocp_sniper"};
 
     primary[] = {
-    {"rhs_weap_m14ebrri","rhsusf_acc_su230a","rhsusf_acc_anpeq15side_bk","","rhsusf_acc_harris_bipod"},
-    {"rhs_weap_m14ebrri","rhsusf_acc_su230a","rhsusf_acc_anpeq15side","","rhsusf_acc_harris_bipod"},
-    {"rhs_weap_m14ebrri","rhsusf_acc_su230a_c","rhsusf_acc_anpeq15side_bk","","rhsusf_acc_harris_bipod"},
-    {"rhs_weap_m14ebrri","rhsusf_acc_su230a_c","rhsusf_acc_anpeq15side","","rhsusf_acc_harris_bipod"}
+        {"rhs_weap_m14ebrri","rhsusf_acc_su230a","rhsusf_acc_anpeq15side_bk","","rhsusf_acc_harris_bipod"},
+        {"rhs_weap_m14ebrri","rhsusf_acc_su230a","rhsusf_acc_anpeq15side","","rhsusf_acc_harris_bipod"},
+        {"rhs_weap_m14ebrri","rhsusf_acc_su230a_c","rhsusf_acc_anpeq15side_bk","","rhsusf_acc_harris_bipod"},
+        {"rhs_weap_m14ebrri","rhsusf_acc_su230a_c","rhsusf_acc_anpeq15side","","rhsusf_acc_harris_bipod"}
     };
 
     magazines[] = {
