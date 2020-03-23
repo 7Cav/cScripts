@@ -21,6 +21,7 @@ if !(isClass (configFile >> "CfgPatches" >> "zen_main")) exitWith {["cfgPatches 
 #ifdef DEBUG_MODE
     ["Initializing 7Cav custom Zen Modules."] call FUNC(logInfo);
 #endif
+
 ["7Cav Logistics", "Starter Crate",
     {
         params ["_modulePos", "_objectPos"];
@@ -32,11 +33,11 @@ if !(isClass (configFile >> "CfgPatches" >> "zen_main")) exitWith {["cfgPatches 
 // Check if increase training on location is true then add option.
 if (ace_medical_treatment_locationsBoostTraining) then {
     ["7Cav Logistics", "Field Hospital",
-    {
-        params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call FUNC(moduleCreateFieldHospital);
-    },
-    "\z\ACE\addons\medical_gui\ui\cross.paa"
+        {
+            params ["_modulePos", "_objectPos"];
+            [_modulePos, _objectPos] call FUNC(moduleCreateFieldHospital);
+        },
+        "\z\ACE\addons\medical_gui\ui\cross.paa"
     ] call zen_custom_modules_fnc_register;
 };
 

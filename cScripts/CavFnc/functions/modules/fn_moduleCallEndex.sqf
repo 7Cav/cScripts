@@ -12,36 +12,15 @@
  * Public: No
  */
 
-
 params ["_modulePos", "_objectPos"];
 
 [
     "7th Cavalry Supply Crate", 
     [
-        [
-            "CHECKBOX",
-            ["Set Player Weapons To Safe", ""],
-            true,
-            false
-        ],
-        [
-            "CHECKBOX",
-            ["Pacify AI", ""],
-            true,
-            false
-        ],
-        [
-            "CHECKBOX",
-            ["Hint Players That Fire", ""],
-            true,
-            false
-        ],
-        [
-            "CHECKBOX",
-            ["Heal all players", ""],
-            true,
-            false
-        ]
+        ["CHECKBOX", ["Set Player Weapons To Safe", ""], true, false],
+        ["CHECKBOX", ["Pacify AI", ""], true, false],
+        ["CHECKBOX", ["Hint Players That Fire", ""], true, false],
+        ["CHECKBOX", ["Heal all players", ""], true, false]
     ], 
     {
         params ["_arg", "_pos"];
