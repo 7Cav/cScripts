@@ -67,7 +67,7 @@ _object addAction ["Insignia Selection", {}, [], 1.5, true, true, "", "true", 5]
 // Bravo Company 2nd Platoon
 [_object,"Platoon Insignia 2/B/1-7","Bravo_2","z\cav\addons\insignia\data\Bravo_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 1/2/B/1-7","Bravo_2_1","z\cav\addons\insignia\data\Bravo_2_1.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 2/2/B/1-7","Bravo_2_2","z\cav\addons\insignia\data\Bravo_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 2/2/B/1-7","Bravo_2_2","z\cav\addons\insignia\data\Bravo_2_2.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 3/2/B/1-7","Bravo_2_3","z\cav\addons\insignia\data\Bravo_2_3.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 4/2/B/1-7","Bravo_2_4","z\cav\addons\insignia\data\Bravo_2_4.paa",['ACE_MainActions','cScriptInsigniaSelectionMenu','cScriptInsigniaSelectionBravo']] call FUNC(addInsigniaSelection);
 
