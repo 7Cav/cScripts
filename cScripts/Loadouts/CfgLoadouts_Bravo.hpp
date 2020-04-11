@@ -440,7 +440,7 @@ class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_Trooper_Local {
 
 // Cavalry Scouts
 
-class Cav_B_B_CavScout_PlatoonLead_F: Cav_B_Bravo_CavScout_Leader_Local {
+class Cav_B_B_CavScout_PlatoonLeader_F: Cav_B_Bravo_CavScout_Leader_Local {
     displayName = "Platoon Staff";
 
     magazines[] += {
@@ -452,8 +452,22 @@ class Cav_B_B_CavScout_PlatoonLead_F: Cav_B_Bravo_CavScout_Leader_Local {
         "SmokeShellYellow",2
     };
 };
+
+class Cav_B_B_CavScout_PlatoonSergeant_F: Cav_B_Bravo_CavScout_Leader_Local {
+    displayName = "Platoon Staff";
+
+    magazines[] += {
+        "SmokeShell",4,
+        "SmokeShellBlue",3,
+        "SmokeShellRed",3,
+        "SmokeShellGreen",2,
+        "SmokeShellPurple",2,
+        "SmokeShellYellow",2
+    };
+};
+
 class Cav_B_B_CavScout_SquadLead_F: Cav_B_Bravo_CavScout_Leader_Local {
-    displayName = "Squad Leader";
+    displayName = "Scout Squad Leader";
     
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",1,
@@ -470,7 +484,7 @@ class Cav_B_B_CavScout_SquadLead_F: Cav_B_Bravo_CavScout_Leader_Local {
     };
 };
 class Cav_B_B_CavScout_TeamLead_F: Cav_B_Bravo_CavScout_Leader_Local {
-    displayName = "Team Leader";
+    displayName = "Scout Team Leader";
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
@@ -489,7 +503,7 @@ class Cav_B_B_CavScout_TeamLead_F: Cav_B_Bravo_CavScout_Leader_Local {
     };
 };
 class Cav_B_B_CavScout_TeamLead320_F: Cav_B_Bravo_CavScout_Leader_Local {
-    displayName = "Team Leader";
+    displayName = "Scout Team Leader";
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
@@ -510,7 +524,7 @@ class Cav_B_B_CavScout_TeamLead320_F: Cav_B_Bravo_CavScout_Leader_Local {
     };
 };
 class Cav_B_B_CavScout_AutomaticRifleman_F: Cav_B_Bravo_CavScout_Base_Local {
-    displayName = "Automatic Rifleman";
+    displayName = "Scout Automatic Rifleman";
 
     vest[] = {"rhsusf_spcs_ocp_saw"};
     
@@ -533,7 +547,7 @@ class Cav_B_B_CavScout_AutomaticRifleman_F: Cav_B_Bravo_CavScout_Base_Local {
     };
 };
 class Cav_B_B_CavScout_Grenadier_F: Cav_B_Bravo_CavScout_Base_Local {
-    displayName = "Grenadier";
+    displayName = "Scout Grenadier";
 
     vest[] = {"rhsusf_spcs_ocp_grenadier"};
 
@@ -559,7 +573,7 @@ class Cav_B_B_CavScout_Grenadier_F: Cav_B_Bravo_CavScout_Base_Local {
     };
 };
 class Cav_B_B_CavScout_Rifleman_F: Cav_B_Bravo_CavScout_Base_Local {
-    displayName = "Rifleman";
+    displayName = "Scout Rifleman";
 
     vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
 
@@ -577,7 +591,7 @@ class Cav_B_B_CavScout_Rifleman_F: Cav_B_Bravo_CavScout_Base_Local {
     };
 };
 class Cav_B_B_CavScout_CombatLifeSaver_F: Cav_B_Bravo_CavScout_Base_Local {
-    displayName = "Combat Lifesaver";
+    displayName = "Scout Combat Lifesaver";
 
     vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
 
