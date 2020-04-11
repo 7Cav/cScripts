@@ -1,9 +1,6 @@
 
 //                B R A V O   C O M P A N Y
 
-class Cav_B_B_PlatoonSergeant_F : Cav_B_B_CavScout_PlatoonLead_F {};    //Proxy
-class Cav_B_B_PlatoonLeader_F : Cav_B_B_CavScout_PlatoonLead_F {};      //Proxy
-
 class Cav_B_B_PlatoonSergeant_2_5_F : Cav_B_B_PlatoonSergeant_F {};
 class Cav_B_B_PlatoonLeader_2_6_F : Cav_B_B_PlatoonLeader_F {};
 class Cav_B_B_PlatoonMedic_2_7_F : Cav_B_B_PlatoonMedic_F {};
@@ -20,12 +17,15 @@ class Cav_B_B_SquadLeader_2_4_F : Cav_B_B_SquadLeader_F {};
 
 
 //Scout classes
-class Cav_B_B_Scout_Trooper_F : Cav_B_B_CavScout_Rifleman_F {};
-class Cav_B_B_Scout_Team_Leader_F : Cav_B_B_CavScout_Rifleman_F {};
+class Cav_B_B_CavScout_PlatoonSergeant_2_5_F : Cav_B_B_CavScout_PlatoonSergeant_F {};
+class Cav_B_B_CavScout_PlatoonLeader_2_6_F : Cav_B_B_CavScout_PlatoonLeader_F {};
+class Cav_B_B_CavScout_PlatoonMedic_2_7_F : Cav_B_B_CavScout_PlatoonMedic_F {};
 
-class Cav_B_B_Scout_Crew_F : Cav_B_B_CavScout_Crew_F {};
-class Cav_B_B_Scout_Gunner_F : Cav_B_B_CavScout_Crew_F {}; 
-class Cav_B_B_Scout_Driver_F : Cav_B_B_CavScout_Crew_F {};
+class Cav_B_B_CavScout_SquadLead_2_1_F : Cav_B_B_CavScout_SquadLead_F {};
+class Cav_B_B_CavScout_SquadLead_2_2_F : Cav_B_B_CavScout_SquadLead_F {};
+class Cav_B_B_CavScout_SquadLead_2_3_F : Cav_B_B_CavScout_SquadLead_F {};
+class Cav_B_B_CavScout_SquadLead_2_4_F : Cav_B_B_CavScout_SquadLead_F {};
+
 
 
 // Saber
