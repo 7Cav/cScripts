@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VERSION_TAG=$*
+
 mkdir -p tmp/cba_settings_userconfig
 
 cp cba_settings.sqf tmp/cba_settings_userconfig/
@@ -19,7 +21,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = 1.0;
         requiredAddons[] = {\"cba_settings\"};
-        version = 1.0;
+        version = ${VERSION_TAG};
         authors[] = {\"Brostrom.A\"};
     };
 };
