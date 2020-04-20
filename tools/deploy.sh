@@ -22,6 +22,6 @@ set -e
 # Pack Compositions
 zip release/Compositions-${VERSION_TAG}.zip -r Compositions
 
-./tools/build_settings_config.sh $VERSION_TAG
+./build_settings_config.sh $VERSION_TAG
 
 zip release/Compositions-${VERSION_TAG}.zip -r Compositions
