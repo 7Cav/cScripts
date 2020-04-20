@@ -29,4 +29,4 @@ class CfgPatches {
 
 armake build -f tmp/cba_settings_userconfig tmp/cba_settings_userconfig.pbo
 
-zip release/cba_settings_userconfig.zip tmp/cba_settings_userconfig.pbo
+zip -r release/cba_settings_userconfig.zip tmp cba_settings_userconfig.pbo -x "tmp" "cba_settings_userconfig"
