@@ -29,4 +29,4 @@ class CfgPatches {
 
 armake build -f @CBA_A3/addons/cba_settings_userconfig @CBA_A3/addons/cba_settings_userconfig.pbo
 
-zip -r release/cba_settings_userconfig-${VERSION_TAG}.zip @CBA_A3
+zip -r release/Server_Config-${VERSION_TAG}.zip @CBA_A3 -x '@CBA_A3/addons/cba_settings_userconfig/'
