@@ -2,14 +2,14 @@
 
 VERSION_TAG=$*
 
-mkdir -p @CBA_A3/addons/cba_settings_userconfig
+mkdir -p tmp/cba_settings_userconfig
 
-cp cba_settings.sqf @CBA_A3/addons/cba_settings_userconfig/
+cp cba_settings.sqf tmp/cba_settings_userconfig/
 
-touch @CBA_A3/addons/cba_settings_userconfig/\$PBOPREFIX\$
-echo "cba_settings_userconfig" > @CBA_A3/addons/cba_settings_userconfig/\$PBOPREFIX\$
+touch tmp/cba_settings_userconfig/\$PBOPREFIX\$
+echo "cba_settings_userconfig" > tmp/cba_settings_userconfig/\$PBOPREFIX\$
 
-touch @CBA_A3/addons/cba_settings_userconfig/config.cpp
+touch tmp/cba_settings_userconfig/config.cpp
 
 echo """
 class CfgPatches {
@@ -25,8 +25,8 @@ class CfgPatches {
         authors[] = {\"Brostrom.A\"};
     };
 };
-""" > @CBA_A3/addons/cba_settings_userconfig/config.cpp
+""" > tmp/cba_settings_userconfig/config.cpp
 
-armake build -f @CBA_A3/addons/cba_settings_userconfig @CBA_A3/addons/cba_settings_userconfig.pbo
+armake build -f tmp/cba_settings_userconfig cba_settings_userconfig.pbo
 
-zip -r release/Server_Config-${VERSION_TAG}.zip @CBA_A3 -x '@CBA_A3/addons/cba_settings_userconfig/'
+zip -0 release/Server_Config-${VERSION_TAG}.zip cba_settings_userconfig.pbo
