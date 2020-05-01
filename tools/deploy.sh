@@ -4,6 +4,8 @@ set -e
 
 VERSION_TAG=$*
 
+mkdir release/
+
 sed -i "s/#define VERSION.*/#define VERSION \"${VERSION_TAG}\"/" cScripts/script_component.hpp
 
 python3 tools/build.py -b release -d -y --deploy
@@ -18,9 +20,9 @@ PREV_TAG=$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-co
 echo "Creating patch build for ${PREV_TAG} to ${VERSION_TAG}"
 PREV_TAG=4.3.17;VERSION_TAG=4.3.18
 git diff --name-only ${PREV_TAG} ${VERSION_TAG} > pre_changed_file_list.txt
-sed '/tools/d;/Compositions/d;/resourses/d;/.*' pre_changed_file_list.txt > changed_file_list.txt
-zip archive -@ < changed_file_list.txt
-mv archive.zip release/Compositions-${VERSION_TAG}.zip
+sed '/tools/d;/Compositions/d;/resourses/d;/^[.]*/d' pre_changed_file_list.txt > changed_file_list.txt
+zip release/cScripts_PATCH_v${PREV_TAG}_to_v${VERSION_TAG}.zip -@ < changed_file_list.txt
+set -e
 
 # Pack Compositions
 zip release/Compositions-${VERSION_TAG}.zip -r Compositions
