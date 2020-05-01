@@ -16,8 +16,11 @@ sed -i "s/DEVBUILD/${VERSION_TAG}/g" Compositions/*/header.sqe
 set +e # allow fail
 PREV_TAG=$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
 echo "Creating patch build for ${PREV_TAG} to ${VERSION_TAG}"
-zip release/cScripts_PATCH_v${PREV_TAG}_to_v${VERSION_TAG}.zip `git diff --name-only tags/${VERSION_TAG}^ tags/${PREV_TAG}` -x=*Compositions* -x=*tools* -x=*resourses* -x=*.github* -x=*.travis.yml* -x=*.gitignore* -x=*.gitattributes* -x=*.editorconfig*
-set -e
+PREV_TAG=4.3.17;VERSION_TAG=4.3.18
+git diff --name-only ${PREV_TAG} ${VERSION_TAG} > pre_changed_file_list.txt
+sed '/tools/d;/Compositions/d;/resourses/d;/.*' pre_changed_file_list.txt > changed_file_list.txt
+zip archive -@ < changed_file_list.txt
+mv archive.zip release/Compositions-${VERSION_TAG}.zip
 
 # Pack Compositions
 zip release/Compositions-${VERSION_TAG}.zip -r Compositions
