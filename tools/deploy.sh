@@ -18,9 +18,8 @@ sed -i "s/DEVBUILD/${VERSION_TAG}/g" Compositions/*/header.sqe
 set +e # allow fail
 PREV_TAG=$(git describe --abbrev=0 --tags `git rev-list --tags --skip=1 --max-count=1`)
 echo "Creating patch build for ${PREV_TAG} to ${VERSION_TAG}"
-PREV_TAG=4.3.17;VERSION_TAG=4.3.18
 git diff --name-only ${PREV_TAG} ${VERSION_TAG} > pre_changed_file_list.txt
-sed '/tools/d;/Compositions/d;/resourses/d;/^[.]*/d' pre_changed_file_list.txt > changed_file_list.txt
+sed '/tools/d;/Compositions/d;/resourses/d;/^\.*/d' pre_changed_file_list.txt > changed_file_list.txt
 zip release/cScripts_PATCH_v${PREV_TAG}_to_v${VERSION_TAG}.zip -@ < changed_file_list.txt
 set -e
 
