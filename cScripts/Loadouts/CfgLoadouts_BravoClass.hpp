@@ -3,6 +3,7 @@
 
 class Cav_B_B_PlatoonSergeant_F : Cav_B_B_CavScout_PlatoonLead_F {};    //Proxy
 class Cav_B_B_PlatoonLeader_F : Cav_B_B_CavScout_PlatoonLead_F {};      //Proxy
+class Cav_B_B_Officer_F : Cav_B_B_PlatoonLeader_F {};
 
 class Cav_B_B_PlatoonSergeant_2_5_F : Cav_B_B_PlatoonSergeant_F {};
 class Cav_B_B_PlatoonLeader_2_6_F : Cav_B_B_PlatoonLeader_F {};
