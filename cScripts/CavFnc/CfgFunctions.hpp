@@ -108,6 +108,7 @@ class cScripts {
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
 
+        class setupQuickSelections {};
         class addQuickSelectionList {};
         class addInsigniaSelectionList {};
 

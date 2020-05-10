@@ -27,6 +27,9 @@ class CommonBlufor {
 };
 
 class Cav_B_Alpha_base_F : CommonBlufor {
+    company = "alpha";
+    category[] = {"ACE_MainActions", "cScriptQuickSelectionMenu", "cScriptQuickSelection_Alpha"};
+
     backpack[] = {""};
     //goggles[] = {""};
     headgear[] = {"rhsusf_hgu56p_visor_green"};
@@ -90,6 +93,7 @@ class Cav_B_Alpha_base_F : CommonBlufor {
 };
 
 class Cav_B_Bravo_base_F : CommonBlufor {
+    category[] = {"ACE_MainActions", "cScriptQuickSelectionMenu", "cScriptQuickSelection_Alpha"};
     company = "bravo";
 
     nvgs[] = {""};
@@ -216,6 +220,7 @@ class Cav_B_Scout_base_F : CommonBlufor {
 
 class Cav_B_Charlie_base_F : CommonBlufor {
     company = "charlie";
+    category[] = {"ACE_MainActions", "cScriptQuickSelectionMenu", "cScriptQuickSelection_Charlie"};
 
     nvgs[] = {""};
     headgear[] = {"rhsusf_ach_helmet_camo_ocp"};

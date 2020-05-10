@@ -69,7 +69,8 @@ class Cav_B_Charlie_Leader_Local : Cav_B_Charlie_base_F {
 
 class Cav_B_C_PlatoonStaff_F : Cav_B_Charlie_Leader_Local {
     displayName = "Platoon Leader";
-
+    category[] += {"cScriptQuickSelection_Charlie_Lead"};
+    
     items[] += {
         // Radio
         "ACRE_PRC152",
@@ -90,6 +91,7 @@ class Cav_B_C_PlatoonStaff_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_Leader_Local {
     displayName = "Platoon Medic";
+    category[] += {"cScriptQuickSelection_Charlie_Lead"};
 
     primary[] = {
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"},
@@ -145,7 +147,7 @@ class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_SquadLeader_F : Cav_B_Charlie_Leader_Local {
     displayName = "Squad Leader";
-
+    category[] += {"cScriptQuickSelection_Charlie_Lead"};
 
     items[] += {
         // Radios
@@ -168,6 +170,7 @@ class Cav_B_C_SquadLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     displayName = "Fire Team Leader";
+    category[] += {"cScriptQuickSelection_Charlie_Lead"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
@@ -187,7 +190,7 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 };
 
 class Cav_B_C_Bravo_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
-    displayName = "Fire Team Leader";
+    displayName = "";
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
@@ -205,6 +208,7 @@ class Cav_B_C_Bravo_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Automatic Rifleman";
+    category[] += {"cScriptQuickSelection_Charlie_Squad"};
 
     vest[] = {"rhsusf_spcs_ocp_saw"};
 
@@ -230,6 +234,7 @@ class Cav_B_C_AutomaticRifleman_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_Grenadier_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Grenadier";
+    category[] += {"cScriptQuickSelection_Charlie_Squad"};
 
     vest[] = {"rhsusf_spcs_ocp_grenadier"};
 
@@ -262,6 +267,7 @@ class Cav_B_C_Grenadier_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_Rifleman_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Rifleman";
+    category[] += {"cScriptQuickSelection_Charlie_Squad"};
 
     launcher[] = {"rhs_weap_M136_hp"};
 
@@ -284,6 +290,7 @@ class Cav_B_C_Rifleman_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_CombatLifeSaver_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Combat Life Saver";
+    category[] += {"cScriptQuickSelection_Charlie_Squad"};
 
     vest[] = {"rhsusf_spcs_ocp_medic"};
 
@@ -311,6 +318,7 @@ class Cav_B_C_CombatLifeSaver_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_Marksman_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Marksman";
+    category[] += {"cScriptQuickSelection_Charlie_Squad"};
 
     vest[] = {"rhsusf_spcs_ocp_sniper"};
 
@@ -336,6 +344,7 @@ class Cav_B_C_Marksman_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_Crew_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Crew";
+    category[] += {"cScriptQuickSelection_Charlie_Squad"};
 
     headgear[] = {"rhsusf_cvc_green_helmet","rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"};
     vest[] = {"rhsusf_spcs_ocp_crewman"};
@@ -362,6 +371,7 @@ class Cav_B_C_Crew_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_MMGFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     displayName = "Machinegun Team Leader";
+    category[] += {"cScriptQuickSelection_Charlie_MMGTeam"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
     backpack[] = {"B_Kitbag_mcamo"};
@@ -390,6 +400,7 @@ class Cav_B_C_MMGFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_MMGMachineGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Machinegunner";
+    category[] += {"cScriptQuickSelection_Charlie_MMGTeam"};
     
     vest[] = {"rhsusf_spcs_ocp_machinegunner"};
 
@@ -418,6 +429,7 @@ class Cav_B_C_MMGMachineGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Machinegun Ammo Bearer";
+    category[] += {"cScriptQuickSelection_Charlie_MMGTeam"};
     
     backpack[] = {"B_Kitbag_mcamo"};
 
@@ -444,6 +456,7 @@ class Cav_B_C_MMGAssistantGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_SLMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     displayName = "MAAWS Team Leader";
+    category[] += {"cScriptQuickSelection_Charlie_ATTeam"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
     backpack[] = {"B_Kitbag_mcamo"};
@@ -462,6 +475,7 @@ class Cav_B_C_SLMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_SLMGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "MAAWS Gunner";
+    category[] += {"cScriptQuickSelection_Charlie_ATTeam"};
 
     launcher[] = {"rhs_weap_maaws","rhs_optic_maaws"};
 
@@ -479,6 +493,7 @@ class Cav_B_C_SLMGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_SLMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "MAAWS Ammo Bearer";
+    category[] += {"cScriptQuickSelection_Charlie_ATTeam"};
 
     backpack[] = {"B_Kitbag_mcamo"};
 
@@ -499,6 +514,7 @@ class Cav_B_C_SLMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_FIMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     displayName = "Stinger Team Leader";
+    category[] += {"cScriptQuickSelection_Charlie_AATeam"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
     backpack[] = {"B_TacticalPack_mcamo"};
@@ -516,6 +532,7 @@ class Cav_B_C_FIMFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_FIMGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Stinger Gunner";
+    category[] += {"cScriptQuickSelection_Charlie_AATeam"};
 
     launcher[] = {"rhs_weap_fim92"};
 
@@ -534,6 +551,7 @@ class Cav_B_C_FIMGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_FIMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Stinger Ammo Bearer";
+    category[] += {"cScriptQuickSelection_Charlie_AATeam"};
 
     backpack[] = {"B_TacticalPack_mcamo"};
 
@@ -553,6 +571,7 @@ class Cav_B_C_FIMAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_CCMSFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     displayName = "Javelin Team Leader";
+    category[] += {"cScriptQuickSelection_Charlie_JavelinTeam"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
@@ -570,6 +589,7 @@ class Cav_B_C_CCMSFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_CCMSGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Javelin Gunner";
+    category[] += {"cScriptQuickSelection_Charlie_JavelinTeam"};
 
     backpack[] = {""};
 
@@ -590,6 +610,7 @@ class Cav_B_C_CCMSGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_CCMSAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Javelin Ammo Bearer";
+    category[] += {"cScriptQuickSelection_Charlie_JavelinTeam"};
 
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
 
@@ -609,6 +630,7 @@ class Cav_B_C_CCMSAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_60mmFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
     displayName = "Mortar Team Leader";
+    category[] += {"cScriptQuickSelection_Charlie_MortarTeam"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
     backpack[] = {"B_Kitbag_mcamo"};
@@ -630,6 +652,7 @@ class Cav_B_C_60mmFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 
 class Cav_B_C_60mmGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Mortar Gunner";
+    category[] += {"cScriptQuickSelection_Charlie_MortarTeam"};
 
     backpack[] = {"NDS_B_M224_mortar"};
 
@@ -641,6 +664,7 @@ class Cav_B_C_60mmGunner_F : Cav_B_Charlie_Trooper_Local {
 
 class Cav_B_C_60mmAmmoBearer_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Mortar Ammo Bearer";
+    category[] += {"cScriptQuickSelection_Charlie_MortarTeam"};
 
     backpack[] = {"B_TacticalPack_mcamo"};
 
