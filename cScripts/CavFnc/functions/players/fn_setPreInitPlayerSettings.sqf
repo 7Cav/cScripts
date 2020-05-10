@@ -54,7 +54,7 @@ private _MedicClass = if (_isMedicLevel >= 1) then {true} else {false};
 // Set Engineer
 private _EngineerClass = if (_isEngineerLevel >= 1) then {true} else {false};
 (_player) setVariable ['ACE_isEngineer', _isEngineerLevel, _EngineerClass];
-if (_isEngineerClass >= 1) then {_player setUnitTrait "engineer"};
+if (_isEngineerLevel >= 1) then {_player setUnitTrait "engineer"};
 #ifdef DEBUG_MODE
     if (_EngineerClass) then {[formatText["%1 engineerLevel is %2", _player, _EngineerClass], "LoadoutPreInit"] call FUNC(logInfo)};
 #endif
