@@ -117,6 +117,9 @@ class cScripts {
 
         class createVehicleLable {};
         class getVehicleLable {};
+
+        class requirePermissions {};
+        class checkPermissions {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
