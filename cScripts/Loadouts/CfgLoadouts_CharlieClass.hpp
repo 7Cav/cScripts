@@ -3,6 +3,7 @@
 
 class Cav_B_C_PlatoonSergeant_F : Cav_B_C_PlatoonStaff_F {};
 class Cav_B_C_PlatoonLeader_F : Cav_B_C_PlatoonStaff_F {};
+class Cav_B_C_Officer_F  : Cav_B_C_PlatoonStaff_F {};
 
 class Cav_B_C_PlatoonLeader_Bandit_6_F : Cav_B_C_PlatoonStaff_F {};
 class Cav_B_C_PlatoonSergeant_Bandit_5_F : Cav_B_C_PlatoonStaff_F {};
