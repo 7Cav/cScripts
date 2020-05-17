@@ -8,14 +8,11 @@ private _arrayCount = count _array;
 for "_i" from 0 to (_arrayCount - 1) do {
     private _currentItem = _array select _i;
 
-    private _sorting = if (
-        GVAR(usesACE)
-        && {[_unit] call ace_medical_treatment_fnc_isMedic}
-        && {toLower _currentItem in ACE_MEDICAL_ITEMS}
-    ) then {
-        [BACKPACK, UNIFORM, VEST]
-    } else {
-        [UNIFORM, BACKPACK, VEST]
+    private _sorting = switch true do {
+        case (GVAR(usesACE) && {[_unit] call ace_medical_treatment_fnc_isMedic} && {toLower _currentItem in ACE_MEDICAL_ITEMS}): {[BACKPACK, UNIFORM, VEST]};
+        case (GVAR(usesACRE) && {toLower _currentItem in ACRE_RADIO_ITEMS}): {[UNIFORM, VEST, BACKPACK]};
+        case (toLower _currentItem in GEAR_ITEMS): {[BACKPACK, VEST, UNIFORM]};
+        default {[UNIFORM, BACKPACK, VEST]};
     };
 
     // Check of next index is amount to add
