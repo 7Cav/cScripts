@@ -52,7 +52,7 @@ class CAV_SOI_INSTR : Cav_B_Charlie_base_F {
 
     items[] = {
         // Radios
-		"ACRE_PRC343",
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC152",
 
@@ -102,7 +102,7 @@ class CAV_SOI_BAS_INSTR : Cav_B_Charlie_base_F {
 
     items[] = {
         // Radios
-		"ACRE_PRC343",
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC152",
 
@@ -152,7 +152,7 @@ class CAV_SOI_C1_INSTR : Cav_B_Charlie_base_F {
 
     items[] = {
         // Radios
-		"ACRE_PRC343",
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC152",
 
@@ -202,7 +202,7 @@ class CAV_SOI_C2_INSTR : Cav_B_Charlie_base_F {
 
     items[] = {
         // Radios
-		"ACRE_PRC343",
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC152",
 
@@ -252,7 +252,7 @@ class CAV_JM_INSTR : Cav_B_Charlie_base_F {
 
     items[] = {
         // Radios
-		"ACRE_PRC343",
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Standard
@@ -290,13 +290,13 @@ class CAV_SOI_STUD : Cav_B_Charlie_base_F {
         "SmokeShell",6,
 
         "rhsusf_200Rnd_556x45_soft_pouch",2
-	};
-	
-	items[] = {
-		"ACRE_PRC343",
-		"ACE_MapTools",
-		"ACE_quikclot",12,
-		"ACE_tourniquet",2,
+    };
+    
+    items[] = {
+        "ACRE_PRC343",
+        "ACE_MapTools",
+        "ACE_quikclot",12,
+        "ACE_tourniquet",2,
         "ACE_EntrenchingTool"
     };
 
@@ -305,40 +305,40 @@ class CAV_SOI_STUD : Cav_B_Charlie_base_F {
 };
 
 class CAV_SOI_BAS_STUD : Cav_B_Charlie_base_F {
-	company = "charlie";
+    company = "charlie";
     primary[] = {"rhs_weap_m4a1"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
     backpack[] = {"B_Carryall_mcamo"};
 
     magazines[] = {""};
-	
-	items[] = {
-		"ACRE_PRC343",
-		"ACE_MapTools",
-		"ACE_quikclot",12,
-		"ACE_tourniquet",2
-	};
-		
+    
+    items[] = {
+        "ACRE_PRC343",
+        "ACE_MapTools",
+        "ACE_quikclot",12,
+        "ACE_tourniquet",2
+    };
+        
 
     preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage true;";
 };
 
 class CAV_SOI_C1_STUD : Cav_B_Charlie_base_F {
-	company = "charlie";
+    company = "charlie";
     primary[] = {"rhs_weap_m4a1"};
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
     backpack[] = {"B_Carryall_mcamo"};
 
     magazines[] = {""};
-	
-	items[] = {
-		"ACRE_PRC343",
-		"ACE_MapTools",
-		"ACE_quikclot",12,
-		"ACE_tourniquet",2
-	};
-		
+    
+    items[] = {
+        "ACRE_PRC343",
+        "ACE_MapTools",
+        "ACE_quikclot",12,
+        "ACE_tourniquet",2
+    };
+        
 
     preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage true;";
@@ -350,14 +350,14 @@ class CAV_SOI_C2_STUD : Cav_B_Charlie_base_F {
     backpack[] = {"B_Carryall_mcamo"};
 
     magazines[] = {""};
-	
-	items[] = {
-		"ACRE_PRC343",
-		"ACE_MapTools",
-		"ACE_quikclot",12,
-		"ACE_tourniquet",2
-	};
-		
+    
+    items[] = {
+        "ACRE_PRC343",
+        "ACE_MapTools",
+        "ACE_quikclot",12,
+        "ACE_tourniquet",2
+    };
+        
 
     preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage true;";
@@ -398,7 +398,7 @@ class CAV_TAS_INSTR : Cav_B_Bravo_base_F {
         // Radios
         "ACRE_PRC152",
         "ACRE_PRC152",
-		"ACRE_PRC343",
+        "ACRE_PRC343",
 
         // Personal Medical Equipment
         "ACE_quikclot",12,
@@ -441,7 +441,7 @@ class CAV_TAS_STUD : Cav_B_Bravo_base_F {
     items[] = {
         // Radios
         "ACRE_PRC152",
-		"ACRE_PRC343",
+        "ACRE_PRC343",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -521,7 +521,7 @@ class CAV_ACE_FIXED_INSTR : Cav_B_Alpha_base_F {
     items[] = {
         // Radios
         "ACRE_PRC152",
-		"ACRE_PRC343",
+        "ACRE_PRC343",
 
         // Personal Medical Equipment
         "ACE_quikclot",5,
@@ -571,7 +571,7 @@ class CAV_ACE_FIXED_STUD : Cav_B_Alpha_base_F {
     items[] = {
         // Radios
         "ACRE_PRC152",
-		"ACRE_PRC343",
+        "ACRE_PRC343",
 
         // Personal Medical Equipment
         "ACE_quikclot",5,
