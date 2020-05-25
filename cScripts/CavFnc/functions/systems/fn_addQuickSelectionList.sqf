@@ -103,6 +103,10 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         //[_object,"Rifleman (AT)", "Cav_B_B_Alpha_RiflemanAT_F", "", _bravoLancerCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
         //[_object,"Rifleman (LAT)", "Cav_B_B_RiflemanLAT_F", "", _bravoLancerCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
         [_object,"Combat Life Saver", "Cav_B_B_CombatLifeSaver_F", "", _bravoLancerCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
+
+        [_object,"MMG Team Leader", "Cav_B_B_MMGFireTeamLeader_Local", "", _bravoLancerCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
+        [_object,"MMG Gunner", "Cav_B_B_MMGMachineGunner_Local", "", _bravoLancerCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
+        [_object,"MMG Assistant Gunner", "Cav_B_C_MMGAssistantGunner_Local", "", _bravoLancerCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
     };
 
     // Loadouts Sabre
@@ -187,7 +191,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     [_object,"Grenadier", "Cav_B_C_Grenadier_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Rifleman", "Cav_B_C_Rifleman_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Combat Life Saver", "Cav_B_C_CombatLifeSaver_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"Marksman", "Cav_B_C_Marksman_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    //[_object,"Marksman", "Cav_B_C_Marksman_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Crew", "Cav_B_C_Crew_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
 
