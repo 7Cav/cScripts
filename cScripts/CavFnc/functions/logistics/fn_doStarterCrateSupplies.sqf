@@ -237,7 +237,11 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACRE_PRC117F",5];
         _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
-        //================== WEAPONS ==================\\
+        //================== OPTICS ==================\\
+        
+        _crate addWeaponCargoGlobal ["rhs_weap_M136_hedp",10];
+        
+        //================== OPTICS ==================\\
 
         _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",10];
         _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
@@ -286,8 +290,6 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 
         _crate addItemCargoGlobal ["ACE_EarPlugs",250];
 
-        _crate addItemCargoGlobal ["ACE_FieldDressing",250];
-        _crate addItemCargoGlobal ["ACE_packingBandage",250];
         _crate addItemCargoGlobal ["ACE_elasticBandage",250];
         _crate addItemCargoGlobal ["ACE_quikclot",250];
 
@@ -337,6 +339,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",50];
         _crate addWeaponCargoGlobal ["rhs_weap_m240B",5];
         _crate addItemCargoGlobal ["tf47_optic_m3maaws",10];
+        _crate addWeaponCargoGlobal ["rhs_weap_M136_hedp",10];
         _crate addWeaponCargoGlobal ["tf47_m3maaws",10];
         _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
 
@@ -420,12 +423,14 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     };
 
     //==================    WEAPONS    ==================\\
-        _crate addWeaponCargoGlobal ["tf47_at4_HP",20];
+        _crate addWeaponCargoGlobal ["tf47_at4_HP",10];
+        _crate addWeaponCargoGlobal ["rhs_weap_M136_hedp",10];
         _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
     
     //==================    HEAD GEAR    ==================\\
         _crate addItemCargoGlobal ["rhsusf_ach_helmet_ocp",10];
         _crate addItemCargoGlobal ["rhsusf_ach_helmet_camo_ocp",10];
+        _crate addItemCargoGlobal ["rhsusf_ach_helmet_headset_ocp",10];
         _crate addItemCargoGlobal ["rhs_googles_clear",10];
         _crate addItemCargoGlobal ["rhs_googles_black",10];
         _crate addItemCargoGlobal ["rhsusf_oakley_goggles_clr",10];
@@ -433,6 +438,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     
     //==================    OPTICS    ==================\\
         _crate addItemCargoGlobal ["rhsusf_acc_eotech_xps3",10];
+        _crate addItemCargoGlobal ["rhsusf_acc_compm4",10];
         _crate addItemCargoGlobal ["rhsusf_acc_acog_rmr",10];
     
     //==================    MEDICAL    ==================\\
@@ -442,7 +448,6 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     //==================    AMMO    ==================\\
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG",250];
         _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",250];
-        _crate addMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m993_Mag",50];
         _crate addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",100];
         _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",50];
         _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap",50];
@@ -486,13 +491,14 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     //==================    RADIOS    ==================\\
         _crate addItemCargoGlobal ["ACRE_PRC343",10];
         _crate addItemCargoGlobal ["ACRE_PRC152",10];
-
+    
    //==================    ITEMS    ==================\\
         _crate addItemCargoGlobal ["ACE_Clacker",10];
         _crate addItemCargoGlobal ["ACE_DefusalKit",10];
-        _crate addItemCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",25];
-        _crate addItemCargoGlobal ["rhsusf_m112_mag",10];
-        _crate addItemCargoGlobal ["rhsusf_m112x4_mag",10];
+        _crate addItemCargoGlobal ["ACE_M26_Clacker",20];
+        _crate addMagazineCargoGlobal ["SatchelCharge_Remote_Mag",50];
+        _crate addMagazineCargoGlobal ["DemoCharge_Remote_Mag",50];
+        _crate addMagazineCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",25];
         _crate addItemCargoGlobal ["ACE_CableTie",100];
         _crate addItemCargoGlobal ["rhsusf_ANPVS_14",50];
         _crate addItemCargoGlobal ["ACE_EntrenchingTool",10];

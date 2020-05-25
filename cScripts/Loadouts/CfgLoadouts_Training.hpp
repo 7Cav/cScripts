@@ -32,7 +32,7 @@ class Cav_B_Unarmed_Local : CommonBlufor {
 class CAV_SOI_INSTR : Cav_B_Charlie_base_F {
 
     uniform[] = {"LOP_U_ISTS_Fatigue_19"};
-    headgear[] = {"DAR_Beret_Mar"};
+    headgear[] = {"DAR_Beret_blk"};
     goggles[] = {""};
     vest[] = {"V_TacVest_khk"};
     backpack[] = {"B_Carryall_mcamo"};
@@ -52,6 +52,7 @@ class CAV_SOI_INSTR : Cav_B_Charlie_base_F {
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
         "ACRE_PRC152",
 
@@ -72,7 +73,157 @@ class CAV_SOI_INSTR : Cav_B_Charlie_base_F {
 
     gps[] = {"ItemAndroid"};
 
-    insignia[] = {"Follow_Me"};
+    insignia[] = {""};
+
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
+        (_this select 0) allowDamage false;";
+};
+
+class CAV_SOI_BAS_INSTR : Cav_B_Charlie_base_F {
+
+    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
+    headgear[] = {"DAR_Beret_Mar"};
+    goggles[] = {""};
+    vest[] = {"V_TacVest_khk"};
+    backpack[] = {"B_Carryall_mcamo"};
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",2,
+        "SmokeShellBlue",1,
+        "SmokeShellGreen",1,
+        "SmokeShellRed",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Standard
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+        "H_Cap_tan_specops_US",
+
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_HuntIR_monitor",
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemAndroid"};
+
+    insignia[] = {""};
+
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
+        (_this select 0) allowDamage false;";
+};
+
+class CAV_SOI_C1_INSTR : Cav_B_Charlie_base_F {
+
+    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
+    headgear[] = {"DAR_Beret_Mar"};
+    goggles[] = {""};
+    vest[] = {"V_TacVest_khk"};
+    backpack[] = {"B_Carryall_mcamo"};
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",2,
+        "SmokeShellBlue",1,
+        "SmokeShellGreen",1,
+        "SmokeShellRed",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Standard
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+        "H_Cap_tan_specops_US",
+
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_HuntIR_monitor",
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemAndroid"};
+
+    insignia[] = {""};
+
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
+        (_this select 0) allowDamage false;";
+};
+
+class CAV_SOI_C2_INSTR : Cav_B_Charlie_base_F {
+
+    uniform[] = {"LOP_U_ISTS_Fatigue_19"};
+    headgear[] = {"DAR_Beret_blk"};
+    goggles[] = {""};
+    vest[] = {"V_TacVest_khk"};
+    backpack[] = {"B_Carryall_mcamo"};
+    binoculars[] = {"ACE_Vector"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+
+        "rhs_mag_m67",2,
+
+        "SmokeShell",2,
+        "SmokeShellBlue",1,
+        "SmokeShellGreen",1,
+        "SmokeShellRed",1,
+        "SmokeShellYellow",1
+    };
+
+    items[] = {
+        // Radios
+        "ACRE_PRC343",
+        "ACRE_PRC152",
+        "ACRE_PRC152",
+
+        // Standard
+        "ACE_EarPlugs",
+        "ACE_MapTools",
+        "ACE_CableTie",
+        "H_Cap_tan_specops_US",
+
+        // Electronics
+        "ACE_microDAGR",
+        "ACE_HuntIR_monitor",
+
+        // Tools
+        "ACE_SpraypaintRed",
+        "ACE_EntrenchingTool"
+    };
+
+    gps[] = {"ItemAndroid"};
+
+    insignia[] = {""};
 
     preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
@@ -101,6 +252,7 @@ class CAV_JM_INSTR : Cav_B_Charlie_base_F {
 
     items[] = {
         // Radios
+        "ACRE_PRC343",
         "ACRE_PRC152",
 
         // Standard
@@ -120,12 +272,12 @@ class CAV_JM_INSTR : Cav_B_Charlie_base_F {
 
     gps[] = {"ItemAndroid"};
 
-    insignia[] = {"Cav_Insignia_Specialized_CAG"};
+    insignia[] = {""};
     preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
         (_this select 0) allowDamage false;";
 };
 
-class CAV_SOI_STUD : Cav_B_Bravo_base_F {
+class CAV_SOI_STUD : Cav_B_Charlie_base_F {
     
     vest[] = {"rhsusf_iotv_ocp_Rifleman"};
     backpack[] = {"B_Carryall_mcamo"};
@@ -133,15 +285,82 @@ class CAV_SOI_STUD : Cav_B_Bravo_base_F {
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",10,
 
-        "rhs_mag_m67",6,
+        "rhs_mag_m67",2,
 
         "SmokeShell",6,
 
-        "rhs_200rnd_556x45_M_SAW",2
+        "rhsusf_200Rnd_556x45_soft_pouch",2
+    };
+    
+    items[] = {
+        "ACRE_PRC343",
+        "ACE_MapTools",
+        "ACE_quikclot",12,
+        "ACE_tourniquet",2,
+        "ACE_EntrenchingTool"
     };
 
     preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
-        (_this select 0) allowDamage false;";
+        (_this select 0) allowDamage true;";
+};
+
+class CAV_SOI_BAS_STUD : Cav_B_Charlie_base_F {
+    company = "charlie";
+    primary[] = {"rhs_weap_m4a1"};
+    vest[] = {"rhsusf_iotv_ocp_Rifleman"};
+    backpack[] = {"B_Carryall_mcamo"};
+
+    magazines[] = {""};
+    
+    items[] = {
+        "ACRE_PRC343",
+        "ACE_MapTools",
+        "ACE_quikclot",12,
+        "ACE_tourniquet",2
+    };
+        
+
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
+        (_this select 0) allowDamage true;";
+};
+
+class CAV_SOI_C1_STUD : Cav_B_Charlie_base_F {
+    company = "charlie";
+    primary[] = {"rhs_weap_m4a1"};
+    vest[] = {"rhsusf_iotv_ocp_Rifleman"};
+    backpack[] = {"B_Carryall_mcamo"};
+
+    magazines[] = {""};
+    
+    items[] = {
+        "ACRE_PRC343",
+        "ACE_MapTools",
+        "ACE_quikclot",12,
+        "ACE_tourniquet",2
+    };
+        
+
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
+        (_this select 0) allowDamage true;";
+};
+
+class CAV_SOI_C2_STUD : Cav_B_Charlie_base_F {
+    primary[] = {"rhs_weap_m4a1"};
+    vest[] = {"rhsusf_iotv_ocp_Rifleman"};
+    backpack[] = {"B_Carryall_mcamo"};
+
+    magazines[] = {""};
+    
+    items[] = {
+        "ACRE_PRC343",
+        "ACE_MapTools",
+        "ACE_quikclot",12,
+        "ACE_tourniquet",2
+    };
+        
+
+    preLoadout = "[(_this select 0), 'training', 2, 2] call cScripts_fnc_setPreInitPlayerSettings; \
+        (_this select 0) allowDamage true;";
 };
 
 // THE ARMOR SCHOOL
@@ -179,9 +398,10 @@ class CAV_TAS_INSTR : Cav_B_Bravo_base_F {
         // Radios
         "ACRE_PRC152",
         "ACRE_PRC152",
+        "ACRE_PRC343",
 
         // Personal Medical Equipment
-        "ACE_quikclot",6,
+        "ACE_quikclot",12,
         "ACE_tourniquet",2,
 
         // Standard
@@ -221,6 +441,7 @@ class CAV_TAS_STUD : Cav_B_Bravo_base_F {
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC343",
 
         // Personal Medical Equipment
         "ACE_quikclot",10,
@@ -300,6 +521,7 @@ class CAV_ACE_FIXED_INSTR : Cav_B_Alpha_base_F {
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC343",
 
         // Personal Medical Equipment
         "ACE_quikclot",5,
@@ -349,6 +571,7 @@ class CAV_ACE_FIXED_STUD : Cav_B_Alpha_base_F {
     items[] = {
         // Radios
         "ACRE_PRC152",
+        "ACRE_PRC343",
 
         // Personal Medical Equipment
         "ACE_quikclot",5,
