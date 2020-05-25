@@ -191,7 +191,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     [_object,"Grenadier", "Cav_B_C_Grenadier_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Rifleman", "Cav_B_C_Rifleman_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Combat Life Saver", "Cav_B_C_CombatLifeSaver_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    [_object,"Marksman", "Cav_B_C_Marksman_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    //[_object,"Marksman", "Cav_B_C_Marksman_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
     [_object,"Crew", "Cav_B_C_Crew_F", "", _charlieSquadCat, "Charlie", _allowOnlyForCompany] call FUNC(addQuickSelection);
 
 

@@ -133,6 +133,9 @@ if (EGVAR(Settings,setMissionType) != 3) then {
     [_player] call FUNC(doPlayerAnnouncement);
 };
 
+// Reload a magazine if empty
+if (needReload _player == 1) then {reload _player};
+
 if (isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
     [formatText["%1 have no unit variable defined", _player], "LoadoutPostInit", true] call FUNC(logWarning);
 };
