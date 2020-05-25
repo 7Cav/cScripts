@@ -440,9 +440,7 @@ class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_Trooper_Local {
 
 // Cavalry Scouts
 
-class Cav_B_B_CavScout_PlatoonLeader_F: Cav_B_Bravo_CavScout_Leader_Local {
-    displayName = "Platoon Staff";
-
+class Cav_B_B_Scout_Officer_F: Cav_B_Bravo_CavScout_Leader_Local {
     magazines[] += {
         "SmokeShell",4,
         "SmokeShellBlue",3,
@@ -453,17 +451,10 @@ class Cav_B_B_CavScout_PlatoonLeader_F: Cav_B_Bravo_CavScout_Leader_Local {
     };
 };
 
-class Cav_B_B_CavScout_PlatoonSergeant_F: Cav_B_Bravo_CavScout_Leader_Local {
+class Cav_B_B_Scout_PlatoonLeader_F: Cav_B_B_Scout_Officer_F {
     displayName = "Platoon Staff";
-
-    magazines[] += {
-        "SmokeShell",4,
-        "SmokeShellBlue",3,
-        "SmokeShellRed",3,
-        "SmokeShellGreen",2,
-        "SmokeShellPurple",2,
-        "SmokeShellYellow",2
-    };
+};
+class Cav_B_B_Scout_PlatoonLead_F: Cav_B_B_Scout_Officer_F {
 };
 
 class Cav_B_B_CavScout_SquadLead_F: Cav_B_Bravo_CavScout_Leader_Local {
