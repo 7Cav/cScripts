@@ -438,6 +438,85 @@ class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_Trooper_Local {
     insignia[] = {"Cav_Insignia_Specialized_CLS"};
 };
 
+// Machinegun Team
+class Cav_B_B_MMGFireTeamLeader_Local : Cav_B_Bravo_Leader_Local {
+    displayName = "Machinegun Team Leader";
+
+    vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
+    backpack[] = {"B_Kitbag_mcamo"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8,
+        "rhsusf_100Rnd_762x51_m61_ap",2,
+        "rhsusf_100Rnd_762x51_m62_tracer",5,
+
+        "rhs_mag_m67",2,
+        "SmokeShell",4,
+        "SmokeShellGreen",2,
+        "ACE_Chemlight_IR",4
+    };
+    
+    items[] += {
+
+        // Medical Equipment
+        "ACE_personalAidKit",
+        
+        // Tools
+        "ACE_SpraypaintGreen",
+        "ACE_EntrenchingTool"
+    };
+};
+class Cav_B_B_MMGMachineGunner_Local : Cav_B_Bravo_Trooper_Local {
+    displayName = "Machinegunner";
+    
+    vest[] = {"rhsusf_spcs_ocp_machinegunner"};
+
+    primary[] = {
+        {"rhs_weap_m240B","rhsusf_acc_elcan","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ardec_m240",""},
+        {"rhs_weap_m240B","rhsusf_acc_elcan","rhsusf_acc_anpeq15side","rhsusf_acc_ardec_m240",""},
+        {"rhs_weap_m240B","rhsusf_acc_elcan_ard","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ardec_m240",""},
+        {"rhs_weap_m240B","rhsusf_acc_elcan_ard","rhsusf_acc_anpeq15side","rhsusf_acc_ardec_m240",""}
+    };
+    magazines[] = {
+        "rhsusf_100Rnd_762x51_m62_tracer",4,
+        "rhsusf_100Rnd_762x51_m61_ap",2,
+
+        "SmokeShell",2
+    };
+    items[] += {
+
+        // Medical Equipment
+        "ACE_personalAidKit",
+        
+        // Tools
+        "rhsusf_acc_acog_mdo",
+        "rhsusf_acc_anpas13gv1"
+    };
+};
+class Cav_B_C_MMGAssistantGunner_Local : Cav_B_Bravo_Trooper_Local {
+    displayName = "Machinegun Ammo Bearer";
+    
+    backpack[] = {"B_Kitbag_mcamo"};
+
+    binoculars[] = {"rhsusf_bino_m24","rhsusf_bino_m24_ARD"};
+
+    magazines[] = {
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",8,
+        "rhsusf_100Rnd_762x51_m61_ap",2,
+        "rhsusf_100Rnd_762x51_m62_tracer",5,
+        
+        "ACE_SpareBarrel",
+        
+        "rhs_mag_m67",2,
+        "SmokeShell",4,
+    };
+    
+    items[] += {
+        // Medical Equipment
+        "ACE_personalAidKit"
+    };
+};
+
 // Cavalry Scouts
 
 class Cav_B_B_CavScout_PlatoonLead_F: Cav_B_Bravo_CavScout_Leader_Local {
