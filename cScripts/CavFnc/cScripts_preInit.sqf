@@ -122,6 +122,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,restrictVehicleUsage),
+    "CHECKBOX",
+    ["Restrict Vehicle Usage", "Enable permission system for vehicle usage.\n"],
+    [_cScriptSettings, "3; Custom Initzialisation"],
+    false,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
 
 

@@ -24,7 +24,40 @@
 ["Helicopter_Base_F", "init", {
     (_this select 0) call FUNC(setVehicleSettings);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
-["MBT_01_base_F", "init", {
+
+// Permission System
+if (EGVAR(Settings,restrictVehicleUsage)) then {
+    #ifdef DEBUG_MODE
+        ["Applying Event Handers (getIn) to require permission to operate...", "initVehicle"] call FUNC(logInfo);
+    #endif
+    ["Plane_Base_F", "GetIn", {
+        (_this select 0) call FUNC(requirePermissions);
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["Plane_Base_F", "SeatSwitched", {
+        (_this select 0) call FUNC(requirePermissions);
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["Helicopter_Base_F", "GetIn", {
+        (_this select 0) call FUNC(requirePermissions);
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["Helicopter_Base_F", "SeatSwitched", {
+        (_this select 0) call FUNC(requirePermissions);
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["MBT_01_base_F", "GetIn", {
+        (_this select 0) call FUNC(requirePermissions);
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["MBT_01_base_F", "SeatSwitched", {
+        (_this select 0) call FUNC(requirePermissions);
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["Wheeled_APC_F", "GetIn", {
+        (_this select 0) call FUNC(requirePermissions);
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    ["Wheeled_APC_F", "SeatSwitched", {
+        (_this select 0) call FUNC(requirePermissions);
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+};
+
+// Fortification Vehicles 
+["rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd", "init", {
     (_this select 0) call FUNC(setVehicleSettings);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
