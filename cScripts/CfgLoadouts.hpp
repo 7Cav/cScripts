@@ -4,6 +4,9 @@ class CfgLoadouts {
 
     #include "Loadouts\CfgLoadouts_Alpha.hpp"
     #include "Loadouts\CfgLoadouts_Bravo.hpp"
+    #include "Loadouts\CfgLoadouts_Bravo_Atlas.hpp"
+    #include "Loadouts\CfgLoadouts_Bravo_Scouts.hpp"
+
     #include "Loadouts\CfgLoadouts_Charlie.hpp"
 
     #include "Loadouts\CfgLoadouts_Training.hpp"        // Not compleeted
