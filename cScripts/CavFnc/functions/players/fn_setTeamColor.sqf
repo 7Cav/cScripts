@@ -14,11 +14,14 @@
  *
  */
 
-private _getTeamName = getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
+private _getTeamName = "";
+if !(roleDescription player == "") then {
+    _getTeamName = roleDescription player;
+} else {
+    _getTeamName = getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
+};
 _getTeamName = _getTeamName splitString " ";
 _getTeamName = _getTeamName select 0;
-
-private _return = _getTeamName;
 
 switch (_getTeamName) do {
     case "Alpha": {
@@ -29,11 +32,20 @@ switch (_getTeamName) do {
         [player, "BLUE"] call ace_interaction_fnc_joinTeam;
         (player) setVariable [QEGVAR(Player,Team), 'BLUE'];
     };
+    case "Charlie": {
+        [player, "GREEN"] call ace_interaction_fnc_joinTeam;
+        (player) setVariable [QEGVAR(Player,Team), 'GREEN'];
+    };
+    case "Delta": {
+        [player, "YELLOW"] call ace_interaction_fnc_joinTeam;
+        (player) setVariable [QEGVAR(Player,Team), 'YELLOW'];
+    };
     default {
         _getTeamName = 'WHITE';
         (player) setVariable [QEGVAR(Player,Team), 'WHITE'];
     };
 };
+private _return = _getTeamName;
 
 #ifdef DEBUG_MODE
     [formatText["%1 was assigned as team %2.", player, _getTeamName]] call FUNC(logInfo);
