@@ -16,7 +16,7 @@
     if !(is3DEN) then {
         ["Setting up Default ACE Arsenal loadouts.", "Arsenal"] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Setting up Default ACE Arsenal loadouts."];
+        diag_log formatText ["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Setting up Default ACE Arsenal loadouts."];
     };
 #endif
 
@@ -113,6 +113,6 @@ private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     if !(is3DEN) then {
             ["Default ACE Arsenal loadouts setup completed.", "Arsenal"] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Default ACE Arsenal loadouts setup completed."];
+        diag_log formatText ["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Default ACE Arsenal loadouts setup completed."];
     };
 #endif

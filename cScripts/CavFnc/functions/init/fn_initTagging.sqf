@@ -16,10 +16,10 @@
  */
 
 if (!isServer) exitWith {};
-if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Tagging already applied."] call FUNC(logWarning)};
+if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Tagging already applied.", "InitTagging"] call FUNC(logWarning)};
 
 #ifdef DEBUG_MODE
-    ["Initializing custom spray tags."] call FUNC(logInfo);
+    ["Initializing custom spray tags.", "InitTagging"] call FUNC(logInfo);
 #endif
 
 [   "cScripts_tagging_cav_black",
@@ -53,5 +53,5 @@ if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Ta
 missionNamespace setVariable [QEGVAR(mission,tagging), true];
 
 #ifdef DEBUG_MODE
-    ["Custom spray tags initialization complete."] call FUNC(logInfo);
+    ["Custom spray tags initialization complete.", "InitTagging"] call FUNC(logInfo);
 #endif

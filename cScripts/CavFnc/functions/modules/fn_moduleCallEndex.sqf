@@ -93,15 +93,17 @@ if (_holdFireMessage) then {
                     "fired",
                     {
                         params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
-                        format ["Player %1 have discharge his weapon (%2) during endex.", name _unit, _muzzle] remoteExecCall [QFUNC(logInfo), 0];
-                    
-                        format ["Hold your fire %1 %2!", [_unit,'CAV'] call FUNC(getPlayerRank), [_unit,'PROFILE'] call FUNC(getPlayerName)] remoteExecCall ["systemChat", 0];
-                        
+
                         private _hftitle = format["<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1 %2<br />hold your Fire!</t><br /><br />", [_unit, 'CAV'] call FUNC(getPlayerRank), [_unit, 'PROFILE'] call FUNC(getPlayerName)];
                         private _hfimage = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
                         private _hftext = "Your not allowed to discharge your weapon during Endex.<br />";
-                        
+
                         hint parseText (_hftitle + _hfimage + _hftext);
+                        format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(logInfo), 0];
+                        if ( _unit getVariable [QEGVAR(player,endexFiredWeapon), ""] != _muzzle ) then {
+                            format ["Hold your fire %1 %2!", [_unit,'CAV'] call FUNC(getPlayerRank), [_unit,'PROFILE'] call FUNC(getPlayerName)] remoteExecCall ["systemChat", 0];
+                            _unit setVariable [QEGVAR(player,endexFiredWeapon), _muzzle];
+                        };
                     }
                 ] call CBA_fnc_addBISEventHandler;
             } remoteExecCall ["bis_fnc_call", 0];
