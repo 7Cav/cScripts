@@ -1,35 +1,6 @@
 
 //                B R A V O   C O M P A N Y
 
-class Cav_B_B_PlatoonSergeant_F : Cav_B_B_CavScout_PlatoonLead_F {};    //Proxy
-class Cav_B_B_PlatoonLeader_F : Cav_B_B_CavScout_PlatoonLead_F {};      //Proxy
-class Cav_B_B_Officer_F : Cav_B_B_PlatoonLeader_F {};
-
-class Cav_B_B_PlatoonSergeant_2_5_F : Cav_B_B_PlatoonSergeant_F {};
-class Cav_B_B_PlatoonLeader_2_6_F : Cav_B_B_PlatoonLeader_F {};
-class Cav_B_B_PlatoonMedic_2_7_F : Cav_B_B_PlatoonMedic_F {};
-
-class Cav_B_B_SquadLeader_1_1_F : Cav_B_B_SquadLeader_F {};
-class Cav_B_B_SquadLeader_1_2_F : Cav_B_B_SquadLeader_F {};
-class Cav_B_B_SquadLeader_1_3_F : Cav_B_B_SquadLeader_F {};
-class Cav_B_B_SquadLeader_1_4_F : Cav_B_B_SquadLeader_F {};
-
-class Cav_B_B_SquadLeader_2_1_F : Cav_B_B_SquadLeader_F {};
-class Cav_B_B_SquadLeader_2_2_F : Cav_B_B_SquadLeader_F {};
-class Cav_B_B_SquadLeader_2_3_F : Cav_B_B_SquadLeader_F {};
-class Cav_B_B_SquadLeader_2_4_F : Cav_B_B_SquadLeader_F {};
-
-
-//Scout classes
-class Cav_B_B_Scout_Trooper_F : Cav_B_B_CavScout_Rifleman_F {};
-class Cav_B_B_Scout_Team_Leader_F : Cav_B_B_CavScout_Rifleman_F {};
-
-class Cav_B_B_Scout_Crew_F : Cav_B_B_CavScout_Crew_F {};
-class Cav_B_B_Scout_Gunner_F : Cav_B_B_CavScout_Crew_F {}; 
-class Cav_B_B_Scout_Driver_F : Cav_B_B_CavScout_Crew_F {};
-
-
-// Saber
 class Cav_B_B_Tank_Commander_Saber_1_F : Cav_B_B_Tank_Commander_F {};
 class Cav_B_B_Tank_Commander_Saber_2_F : Cav_B_B_Tank_Commander_F {};
 class Cav_B_B_Tank_Commander_Saber_3_F : Cav_B_B_Tank_Commander_F {};
@@ -63,11 +34,3 @@ class Cav_B_B_Bravo_Rifleman_F : Cav_B_B_Rifleman_F {};
 class Cav_B_B_Bravo_RiflemanAT_F : Cav_B_B_RiflemanAT_F {};
 class Cav_B_B_Bravo_RiflemanLAT_F : Cav_B_B_RiflemanLAT_F {};
 class Cav_B_B_Bravo_CombatLifeSaver_F : Cav_B_B_CombatLifeSaver_F {};
-
-//                L E G A C Y
-//                Saved for backwards compability
-
-// Older class structure
-class Cav_B_B_Scout_Trooper_F : Cav_B_B_Scout_Rifleman_F { displayName = ""; };
-class Cav_B_B_Scout_Team_Leader_F : Cav_B_B_Scout_Rifleman_F { displayName = ""; };
-class Cav_B_B_Scout_Platoon_Medic_F : Cav_B_B_Scout_SquadLeader_F { displayName = ""; };
