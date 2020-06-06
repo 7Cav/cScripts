@@ -8,7 +8,7 @@
     if !(is3DEN) then {
             ["Initializing CBA Settings...", "preInit"] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initializing CBA Settings..."];
+        diag_log formatText ["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initializing CBA Settings..."];
     };
 #endif
 
@@ -93,7 +93,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,allowCustomInit),
     "CHECKBOX",
     ["Custom object init", "Allow the mission to be able to apply custom init to vehicles and objects pressent on mission start.\n"],
-    [_cScriptSettings, "3; Custom Initzialisation"],
+    [_cScriptSettings, "3; Custom Initialization"],
     true,
     true,
     {},
@@ -105,7 +105,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,useCustomVehicleSettings),
     "CHECKBOX",
     ["Vehicle Settings", "Allow mission to apply custom settings, including change inventory, to vehicles.\nC130 jump action and Helicopter Get out right and Left is Included here.\n"],
-    [_cScriptSettings, "3; Custom Initzialisation"],
+    [_cScriptSettings, "3; Custom Initialization"],
     true,
     true,
     {},
@@ -115,7 +115,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,useCustomVehicleInventory),
     "CHECKBOX",
     ["Vehicle Inventory", "Allow mission to change the vehicles inventory.\n"],
-    [_cScriptSettings, "3; Custom Initzialisation"],
+    [_cScriptSettings, "3; Custom Initialization"],
     true,
     true,
     {},
@@ -129,7 +129,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,useCustomSupplyInventory),
     "CHECKBOX",
     ["Custom supplies Crates","Allow mission to adjust crate content.\n"],
-    [_cScriptSettings, "3; Custom Initzialisation"],
+    [_cScriptSettings, "3; Custom Initialization"],
     false,
     true,
     {},
@@ -331,16 +331,18 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 
 // Aries Achilles Zeus Moduels
-[
-    QEGVAR(Settings,enable7cavZeusModules),
-    "CHECKBOX",
-    ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-    [_cScriptSettings, "8; Zeus"],
-    true,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
+if (EGVAR(patches,usesAchilles)) then {
+    [
+        QEGVAR(Settings,enable7cavZeusModules),
+        "CHECKBOX",
+        ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
+        [_cScriptSettings, "8; Zeus"],
+        true,
+        true,
+        {},
+        true
+    ] call CBA_fnc_addSetting;
+};
 
 [
     QEGVAR(Settings,curatorImmortality),
@@ -357,7 +359,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     if !(is3DEN) then {
             ["Initialization of CBA Settings completed...", "preInit"] call FUNC(logInfo);
     } else {
-        diag_log format["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initialization of CBA Settings completed..."];
+        diag_log formatText ["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initialization of CBA Settings completed..."];
     };
 #endif
 
