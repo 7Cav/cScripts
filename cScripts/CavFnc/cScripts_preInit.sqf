@@ -401,6 +401,7 @@ if (EGVAR(Settings,allowCustomTagging)) then {
 
 if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModulesAchilles);
+    call FUNC(initModulesZen);
 };
 
 switch (EGVAR(Settings,setFortifyRestriction)) do {

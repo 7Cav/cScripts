@@ -12,7 +12,9 @@ class cScripts {
 
         class initStartupHint {};
 
-        class initModules {};
+        class initModulesAchilles {};
+        class initModulesZen {};
+
         class initTagging {};
 
         class initFortify {};
@@ -147,18 +149,13 @@ class cScripts {
         class achillesModuleRegearTrooper {};
 
         class achillesModuleCallEndex {};
+        class achillesModuleAddToAlive {};
 
+        // Zen
+        class zenModuleCreateStarterCrate {};
+        class zenModuleCreateSupplyCrate {};
 
-        class moduleApplyVehicleLable {};
-        class moduleApplyVehicleInventory {};
-
-        class moduleMakeDoctor {};
-        class moduleMakeEngineer {};
-
-        class moduleRegearTrooper {};
-
-        class moduleCallEndex {};
-        class moduleAddToAlive {};
+        class zenModuleCallEndex {};
     };
 
     class helpers {

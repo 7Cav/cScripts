@@ -16,8 +16,8 @@
  */
 
 // Check if Achilles is active else terminate
+if !(EGVAR(patches,usesAchilles)) exitWith {};
 if (EGVAR(patches,usesZen)) exitWith {["Zen mod detected, terminating Achilies modules.", "initModulesAchilles"] call FUNC(logInfo);};
-if !(EGVAR(patches,usesAchilles)) exitWith {["Achilles not detected, terminating modules."] call FUNC(logInfo);};
 
 #ifdef DEBUG_MODE
     ["Initializing 7Cav custom Achilles Modules."] call FUNC(logInfo);
