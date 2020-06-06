@@ -131,11 +131,23 @@ class cScripts {
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
-        class moduleCreateStarterCrate {};
-        class moduleCreateFieldHospital {};
-        class moduleCreateMedicalCrate {};
-        class moduleCreateSupplyCrate {};
-        class moduleCreateSpecialWeaponsCrate {};
+        // Achilles
+        class achillesModuleCreateStarterCrate {};
+        class achillesModuleCreateFieldHospital {};
+        class achillesModuleCreateMedicalCrate {};
+        class achillesModuleCreateSupplyCrate {};
+        class achillesModuleCreateSpecialWeaponsCrate {};
+
+        class achillesModuleApplyVehicleLable {};
+        class achillesModuleApplyVehicleInventory {};
+
+        class achillesModuleMakeDoctor {};
+        class achillesModuleMakeEngineer {};
+
+        class achillesModuleRegearTrooper {};
+
+        class achillesModuleCallEndex {};
+
 
         class moduleApplyVehicleLable {};
         class moduleApplyVehicleInventory {};
