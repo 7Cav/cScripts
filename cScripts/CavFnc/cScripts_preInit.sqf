@@ -331,18 +331,16 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 
 // Aries Achilles Zeus Moduels
-if (EGVAR(patches,usesAchilles)) then {
-    [
-        QEGVAR(Settings,enable7cavZeusModules),
-        "CHECKBOX",
-        ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-        [_cScriptSettings, "8; Zeus"],
-        true,
-        true,
-        {},
-        true
-    ] call CBA_fnc_addSetting;
-};
+[
+    QEGVAR(Settings,enable7cavZeusModules),
+    "CHECKBOX",
+    ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
+    [_cScriptSettings, "8; Zeus"],
+    true,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
 [
     QEGVAR(Settings,curatorImmortality),
