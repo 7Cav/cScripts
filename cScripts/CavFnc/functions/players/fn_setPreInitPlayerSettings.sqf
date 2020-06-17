@@ -31,6 +31,8 @@ params [
     ["_zeusImmortality", false]
 ];
 
+if (!isPlayer _player) exitWith {};
+
 // Set company Variables
 (_player) setVariable [QEGVAR(Cav,Company), _setCompany];
 #ifdef DEBUG_MODE

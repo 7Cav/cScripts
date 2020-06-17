@@ -35,7 +35,7 @@ class Cav_B_Bravo_Scout_base_F : Cav_B_Bravo_base_F {
     launcher[] = {""};
     binoculars[] = {"ACE_Vector"};
     
-    magazines[] = {displayName = "";};
+    magazines[] = {};
     items[] = {
         // Radio
         "acre_prc343",
