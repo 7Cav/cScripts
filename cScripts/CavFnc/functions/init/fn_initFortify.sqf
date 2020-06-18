@@ -41,8 +41,7 @@ _fortificationStructures = [
     ["Land_PortableLight_double_F", 3],
     ["StorageBladder_01_fuel_forest_F", 175],
     ["StorageBladder_01_fuel_sand_F", 175],
-    ["Land_ClutterCutter_medium_F", 1],
-    ["land_hag_bridge_road", 250]
-];
+    ["Land_ClutterCutter_medium_F", 1]
+]
 
 [west, _budget, _fortificationStructures] call acex_fortify_fnc_registerObjects;
