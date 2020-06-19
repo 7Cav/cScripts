@@ -54,7 +54,7 @@ switch (_texturePath) do {
         if (typeOf _vehicle in _vehicleTypeUH60) then {_texturePath = "\z\cav\addons\textures\data\vehicles\label\letters\c_C_ca.paa";};
     };
     case ("S"): {
-        _texturePath = "\z\cav\addons\textures\data\vehicles\label\letters\default_D_ca.paa";
+        _texturePath = "\z\cav\addons\textures\data\vehicles\label\letters\default_S_ca.paa";
         if (typeOf _vehicle in _vehicleTypeUH60) then {_texturePath = "\z\cav\addons\textures\data\vehicles\label\letters\c_S_ca.paa";};
     };
 
