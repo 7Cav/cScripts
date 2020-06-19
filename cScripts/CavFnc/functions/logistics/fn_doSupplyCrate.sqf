@@ -36,10 +36,10 @@ _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 
 _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box", (_quaScale * 10)];
 _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap", (_quaScale * 8)];
-_crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",4];
-_crate addMagazineCargoGlobal ["cav_m3maaws_heat_cs",4];
-_crate addMagazineCargoGlobal ["tf47_m3maaws_HE",8];
-_crate addMagazineCargoGlobal ["tf47_m3maaws_ILLUM",4];
+_crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",4];
+_crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",4];
+_crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",8];
+_crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",4];
 _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT", (_quaScale * 3)];
 _crate addMagazineCargoGlobal ["rhs_fim92_mag", (_quaScale * 4)];
 
