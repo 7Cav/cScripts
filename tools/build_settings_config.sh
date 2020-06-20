@@ -5,6 +5,7 @@ VERSION_TAG=$*
 mkdir -p tmp/cba_settings_userconfig
 
 cp cba_settings.sqf tmp/cba_settings_userconfig/
+set 'g/force force /force /' tmp/cba_settings_userconfig/cba_settings.sqf
 
 touch tmp/cba_settings_userconfig/\$PBOPREFIX\$
 echo "cba_settings_userconfig" > tmp/cba_settings_userconfig/\$PBOPREFIX\$
