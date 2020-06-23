@@ -2,7 +2,6 @@ class Cav_B_Bravo_Atlas_base_F : Cav_B_Bravo_base_F {
     displayName = "";
     company = "bravo";
     platoon = "3";
-
 };
 
 class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
@@ -11,9 +10,8 @@ class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
     
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",7,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
 
-        "rhs_mag_m67",2,
         "SmokeShell",4,
         "SmokeShellBlue",2,
         "ACE_Chemlight_HiYellow",4,
@@ -82,16 +80,14 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_Atlas_base_F {
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_tdstubby_tan"},
         {"rhs_weap_m4a1_mstock","rhsusf_acc_compm4","rhsusf_acc_anpeq15","rhsusf_acc_sfmb556","rhsusf_acc_grip3"}
     };
-        
+
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
-        
-        "rhs_mag_m67",2,
 
         "SmokeShell",2,
         "SmokeShellGreen",2,
-        "ACE_Chemlight_UltraHiOrange",6,
-        "B_IR_Grenade",6
+        "ACE_Chemlight_UltraHiOrange",5,
+        "B_IR_Grenade",4
     };
 
     items[] += {
@@ -155,9 +151,36 @@ class Cav_B_B_Atlas_Medic_CombatMedic_F : Cav_B_Bravo_Medical_Base_Local {
 };
 
 class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
+    headgear[] = {"rhsusf_ach_bare_headset","rhsusf_ach_bare_headset","rhsusf_ach_bare_headset_ess"};
+    vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
+    backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
+    binoculars[] = {"ACE_Vector"};
+    
+    magazines[] += {
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+        
+        "rhs_mag_m67",2,
+
+        "SmokeShell",2,
+        "SmokeShellGreen",2,
+        "ACE_Chemlight_UltraHiOrange",6,
+        "B_IR_Grenade",6
+    };
     items[] += {
+
+        // Personal Medical Equipment
+        "ACE_elasticBandage",10,
+        "ACE_Splint",2,
+        "ACE_morphine",2,
+        
         // Radios
-        "ACRE_PRC117F"
+        "ACRE_PRC117F",
+
+        // Tools
+        "ACE_MapTools",
+        "ACE_Flashlight_XL50",
+        "ACE_microDAGR",
+        "ACE_EarPlugs",
     };
 
     gps[] = {"ItemcTab"};
@@ -167,9 +190,10 @@ class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
 class Cav_B_B_Atlas_Logistics_OpsOfficer_F : Cav_B_B_Atlas_Logistics_Officer_F {
     displayName = "Ops Officer";
 };
-class Cav_B_B_Atlas_Logistics_OpsNCO_F : Cav_B_Bravo_Logi_Base_Local {
+class Cav_B_B_Atlas_Logistics_OpsNCO_F : Cav_B_B_Atlas_Logistics_Officer_F {
     displayName = "Ops NCO";
 };
+
 class Cav_B_B_Atlas_Logistics_TeamLeader_F : Cav_B_Bravo_Logi_Base_Local {
     displayName = "Logistical Team Leader";
 
@@ -179,7 +203,7 @@ class Cav_B_B_Atlas_Logistics_TeamLeader_F : Cav_B_Bravo_Logi_Base_Local {
     };
         
     magazines[] += {
-        "rhs_mag_m714_White",3,
+        "rhs_mag_m714_White",2,
         "ACE_HuntIR_M203",3
     };
 
