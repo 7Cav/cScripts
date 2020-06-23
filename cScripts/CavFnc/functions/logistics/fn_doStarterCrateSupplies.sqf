@@ -29,7 +29,7 @@ _companySelector = toUpper(_companySelector);
 // Create categories
 private _officer = ["OFFICER"];
 private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
-private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "APOLLO", "MUSTANG"];
+private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "ATLAS"];
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
 if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo + _charlie)) exitWith {
@@ -229,8 +229,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     // Container Viking
     if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
     };
-    // Container Mustang
-    if (_companySelector in ['BRAVO', 'MUSTANG'] or _alwaysAvalible) then {
+    // Container ATLAS
+    if (_companySelector in ['BRAVO', 'ATLAS'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
 
         _crate addItemCargoGlobal ["ACRE_PRC152",10];
@@ -312,8 +312,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
         _crate addItemCargoGlobal ["rhsusf_patrolcap_ocp",50];
     };
-    // Container Apollo
-    if (_companySelector in ['BRAVO', 'APOLLO'] or _alwaysAvalible) then {
+    // Container ATLAS
+    if (_companySelector in ['BRAVO', 'ATLAS'] or _alwaysAvalible) then {
     };
     // Container Sabre
     if (_companySelector in ['BRAVO', 'SABER'] or _alwaysAvalible) then {
@@ -323,7 +323,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     };
 
     // Old Container
-    if (_companySelector in ['BRAVO', 'VIKING', 'LANCER', 'APOLLO', 'SABER', 'BANSHEE'] or _alwaysAvalible) then {
+    if (_companySelector in ['BRAVO', 'VIKING', 'LANCER', 'ATLAS', 'SABER', 'BANSHEE'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
         _crate addItemCargoGlobal ["ACRE_PRC152",50];
         _crate addItemCargoGlobal ["ACRE_PRC117F",10];
