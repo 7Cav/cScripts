@@ -233,6 +233,14 @@ def build_release(package_name='', build_type='', public_version=False, public_f
                 line = line.replace(searchExp,replaceExp)
             sys.stdout.write(line)
 
+    def removeLine(file, searchExp):
+        with open(file, "r") as f:
+            lines = f.readlines()
+        with open(file, "w") as f:
+            for line in lines:
+                if not searchExp in line.strip("\n"):
+                    f.write(line)
+                    
     temp = tempfile.mkdtemp()
 
     name = set_package_name(package_name,build_type,public_version)
@@ -305,14 +313,13 @@ def build_release(package_name='', build_type='', public_version=False, public_f
                 print('Checking config file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',color)))
                 for gear in public_operations[1]:
                     #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',color)))
-                    replace('{}/{}'.format(temp,file),gear, "\"\"")
-                    replace('{}/{}'.format(temp,file),"        \"\",", "")
+                    removeLine('{}/{}'.format(temp,file),gear)
 
             for file in public_file_paths[1]:
                 print('Checking script file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',color)))
                 for gear in public_operations[1]:
                     #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',color)))
-                    replace('{}/{}'.format(temp,file),gear, "\"\"")
+                    removeLine('{}/{}'.format(temp,file),gear)
 
             for file in public_file_paths[2]:
                 print('Checking ace arsenal script file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',color)))
