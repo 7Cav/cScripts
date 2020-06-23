@@ -114,7 +114,7 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_Atlas_base_F {
     postLoadout = "[(_this select 0),true,true] call cScripts_fnc_setPostInitPlayerSettings;";
 };
 
-class Cav_B_B_Atlas_Medic_TeamLeader_F : Cav_B_Bravo_Atlas_base_F {
+class Cav_B_B_Atlas_Medic_TeamLeader_F : Cav_B_Bravo_Medical_Base_Local {
     displayName = "Medical Team Leader";
 
     binoculars[] = {"ACE_Vector"};
@@ -124,7 +124,7 @@ class Cav_B_B_Atlas_Medic_TeamLeader_F : Cav_B_Bravo_Atlas_base_F {
         "ACRE_PRC152"
     };
 };
-class Cav_B_B_Atlas_Medic_CombatMedic_F : Cav_B_Bravo_Atlas_base_F {
+class Cav_B_B_Atlas_Medic_CombatMedic_F : Cav_B_Bravo_Medical_Base_Local {
     displayName = "Combat Medic";
     primary[] = {
         {"rhs_weap_m4a1","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556","rhsusf_acc_grip2"},
@@ -153,6 +153,7 @@ class Cav_B_B_Atlas_Medic_CombatMedic_F : Cav_B_Bravo_Atlas_base_F {
         "ACE_elasticBandage",10
     };
 };
+
 class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
     items[] += {
         // Radios
@@ -169,7 +170,7 @@ class Cav_B_B_Atlas_Logistics_OpsOfficer_F : Cav_B_B_Atlas_Logistics_Officer_F {
 class Cav_B_B_Atlas_Logistics_OpsNCO_F : Cav_B_Bravo_Logi_Base_Local {
     displayName = "Ops NCO";
 };
-class Cav_B_B_Atlas_Logistics_TeamLeader_F : Cav_B_Bravo_Atlas_base_F {
+class Cav_B_B_Atlas_Logistics_TeamLeader_F : Cav_B_Bravo_Logi_Base_Local {
     displayName = "Logistical Team Leader";
 
     primary[] = {
@@ -187,7 +188,7 @@ class Cav_B_B_Atlas_Logistics_TeamLeader_F : Cav_B_Bravo_Atlas_base_F {
         "ACRE_PRC152"
     };
 };
-class Cav_B_B_Atlas_Logistics_TeamMember_F : Cav_B_Bravo_Atlas_base_F {
+class Cav_B_B_Atlas_Logistics_TeamMember_F : Cav_B_Bravo_Logi_Base_Local {
     displayName = "Logistical Team Member";
     
     items[] += {
