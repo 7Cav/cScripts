@@ -169,7 +169,7 @@ class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
     items[] += {
 
         // Personal Medical Equipment
-        "ACE_elasticBandage",10,
+        "ACE_quikclot",10,
         "ACE_Splint",2,
         "ACE_morphine",2,
         
@@ -214,7 +214,7 @@ class Cav_B_B_Atlas_Logistics_TeamLeader_F : Cav_B_Bravo_Logi_Base_Local {
 };
 class Cav_B_B_Atlas_Logistics_TeamMember_F : Cav_B_Bravo_Logi_Base_Local {
     displayName = "Logistical Team Member";
-    
+
     items[] += {
         // Radios
         "ACRE_PRC152",
