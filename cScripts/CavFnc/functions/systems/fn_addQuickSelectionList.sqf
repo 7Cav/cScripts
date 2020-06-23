@@ -38,7 +38,7 @@ private _icon = "cScripts\Data\Icon\icon_01.paa";
 // Create categories
 private _officer = ["OFFICER"];
 private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
-private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "APOLLO", "MUSTANG"];
+private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "ATLAS"];
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
 if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo + _charlie)) exitWith {
@@ -145,27 +145,21 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         [_object,"Combat Lifesaver", "Cav_B_B_Scout_CombatLifeSaver_F", "", _bravoVikingCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
         [_object,"Crewman/UAV Operator", "Cav_B_B_Scout_Crew_F", "", _bravoVikingCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
     };
-    
-    // Loadouts Apollo
-    if (_companySelector in ['BRAVO', 'APOLLO'] or _alwaysAvalible) then {
-        [_object,"cScriptQuickSelection_Bravo_Apollo","Apollo",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Bravo"]] call FUNC(addAceCategory);
-        private _bravoApoCoCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo','cScriptQuickSelection_Bravo_Apollo'];
 
-        [_object,"Ops Officer", "Cav_B_B_LogisticsOpsOfficer_F", "", _bravoApoCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
-        [_object,"Ops NCO", "Cav_B_B_LogisticsOpsNCO_F", "", _bravoApoCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
-        [_object,"Team Leader", "Cav_B_B_LogisticTeamLeader_F", "", _bravoApoCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
-        [_object,"Team Member", "Cav_B_B_LogisticsTeamMember_F", "", _bravoApoCoCat, "Bravo", _allowOnlyForCompany] call FUNC(addQuickSelection);
+    // Loadouts Atlas
+    if (_companySelector in ['BRAVO', 'ATLAS'] or _alwaysAvalible) then {
+        [_object,"cScriptQuickSelection_Bravo_Atlas","Atlas",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Bravo"]] call FUNC(addAceCategory);
+        private _bravoAtlasCoCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo','cScriptQuickSelection_Bravo_Atlas'];
+
+        [_object,"Medical Team Leader", "Cav_B_B_Atlas_Medic_TeamLeader_F", "", _bravoAtlasCoCat, "Atlas", _allowOnlyForCompany] call FUNC(addQuickSelection);
+        [_object,"Combat Medic", "Cav_B_B_Atlas_Medic_CombatMedic_F", "", _bravoAtlasCoCat, "Atlas", _allowOnlyForCompany] call FUNC(addQuickSelection);
+
+        [_object,"Ops Officer", "Cav_B_B_Atlas_Logistics_OpsOfficer_F", "", _bravoAtlasCoCat, "Atlas", _allowOnlyForCompany] call FUNC(addQuickSelection);
+        [_object,"Ops NCO", "Cav_B_B_Atlas_Logistics_OpsNCO_F", "", _bravoAtlasCoCat, "Atlas", _allowOnlyForCompany] call FUNC(addQuickSelection);
+
+        [_object,"Logistical Team Leader", "Cav_B_B_Atlas_Logistics_TeamLeader_F", "", _bravoAtlasCoCat, "Atlas", _allowOnlyForCompany] call FUNC(addQuickSelection);
+        [_object,"Logistical Team Member", "Cav_B_B_Atlas_Logistics_TeamMember_F", "", _bravoAtlasCoCat, "Atlas", _allowOnlyForCompany] call FUNC(addQuickSelection);
     };
-
-    // Loadouts Mustang
-    if (_companySelector in ['BRAVO', 'MUSTANG'] or _alwaysAvalible) then {
-        [_object,"cScriptQuickSelection_Bravo_Mustang","Mustang",_icon,["ACE_MainActions","cScriptQuickSelectionMenu","cScriptQuickSelection_Bravo"]] call FUNC(addAceCategory);
-        private _bravoMustCoCat = ['ACE_MainActions','cScriptQuickSelectionMenu','cScriptQuickSelection_Bravo','cScriptQuickSelection_Bravo_Mustang'];
-        
-        [_object,"Team Leader", "Cav_B_B_TeamLeader_Mustang_F", "", _bravoMustCoCat, "Mustang", _allowOnlyForCompany] call FUNC(addQuickSelection);
-        [_object,"Combat Medic", "Cav_B_B_Mustang_CombatMedic_F", "", _bravoMustCoCat, "Mustang", _allowOnlyForCompany] call FUNC(addQuickSelection);
-    };
-
 };
 
 //          C H A R L I E   C O M P A N Y   L O A D O U T S
