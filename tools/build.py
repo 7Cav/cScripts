@@ -228,17 +228,20 @@ def list_objects(objects, color=False):
 def build_release(package_name='', build_type='', public_version=False, public_file_paths=[], public_operations=[], color=False):
 
     def replace(file, searchExp, replaceExp):
+        searchExp = searchExp.lower()
         for line in fileinput.input(file, inplace=1):
-            if searchExp in line:
-                line = line.replace(searchExp,replaceExp)
+            if searchExp.lower() in line.lower():
+                lowerline = line.lower()
+                line = lowerline.replace(searchExp,replaceExp)
             sys.stdout.write(line)
 
     def removeLine(file, searchExp):
+        searchExp = searchExp.lower()
         with open(file, "r") as f:
             lines = f.readlines()
         with open(file, "w") as f:
             for line in lines:
-                if not searchExp in line.strip("\n"):
+                if not searchExp.lower() in line.lower().strip("\n"):
                     f.write(line)
                     
     temp = tempfile.mkdtemp()
@@ -295,7 +298,7 @@ def build_release(package_name='', build_type='', public_version=False, public_f
                     replace('{}/{}'.format(temp,file),gear[0],gear[1])
                     
             for file in public_file_paths[2]:
-                print('Checking ace arsena file {}...'.format(color_string(strip_path_from_filename(file),'\033[96m',color)))
+                print('Checking ace arsenal file {}...'.format(color_string(strip_path_from_filename(file),'\033[96m',color)))
                 for gear in public_operations[0]:
                     print('Replacing {} with {}.'.format(color_string('{}'.format(gear[0]),'\033[95m',color),color_string('{}'.format(gear[1]),'\033[95m',color)))
                     replace('{}/{}'.format(temp,file),gear[0],gear[1])
