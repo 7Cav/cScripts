@@ -19,7 +19,7 @@ private _compatibleMagWell = getArray (configfile >> "CfgWeapons" >> _weapon >> 
        _b = [_x] call BIS_fnc_getCfgDataArray;
 
        for "_i" from 0 to (count _b) -1 do {
-            _compatibleMags pushback (_b select _i);;	
+           _compatibleMags pushback (_b select _i);
        };
 
   } forEach _z;
