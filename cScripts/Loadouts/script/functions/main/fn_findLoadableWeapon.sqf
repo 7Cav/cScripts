@@ -8,9 +8,27 @@ if (_weapons isEqualTo []) then {
 
 private _weapon = _weapons deleteAt 0;
 private _loadedMagazines = _magazines deleteAt 0;
-private _compatibleMagsFirstMuzzle = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-private _compatibleMagsSecondMuzzle = [];
 
+private _compatibleMags = [];
+private _compatibleMagWell = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazineWell");
+
+{
+  _z = configProperties [configFile >> "cfgMagazineWells" >> _x];
+
+  {
+       _b = [_x] call BIS_fnc_getCfgDataArray;
+
+       for "_i" from 0 to (count _b) -1 do {
+            _compatibleMags pushback (_b select _i);;	
+       };
+
+  } forEach _z;
+
+} forEach _compatibleMagWell;
+
+_compatibleMagsFirstMuzzle = _compatibleMags;
+
+private _compatibleMagsSecondMuzzle = [];
 private _secondMuzzle = (getArray (configfile >> "CfgWeapons" >> _weapon >> "muzzles") - ["this"]) param [0, ""];
 if (_secondMuzzle != "") then {
     _compatibleMagsSecondMuzzle = getArray (configfile >> "CfgWeapons" >> _weapon >> _secondMuzzle >> "magazines");
