@@ -16,7 +16,7 @@
  */
 
 // Check if Achilles is active else terminate
-if !(isClass (configFile >> "CfgPatches" >> "achilles_data_f_ares")) exitWith {["cfgPatches for Achilles not detected, terminating modules."] call FUNC(logInfo);};
+if !(EGVAR(patches,usesAchilles)) exitWith {["cfgPatches for Achilles not detected, terminating modules."] call FUNC(logInfo);};
 
 #ifdef DEBUG_MODE
     ["Initializing 7Cav custom Achilles Modules."] call FUNC(logInfo);

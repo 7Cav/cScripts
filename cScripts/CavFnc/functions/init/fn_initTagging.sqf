@@ -15,8 +15,11 @@
  * Public: No
  */
 
+if (!isServer) exitWith {};
+if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Tagging already applied.", "InitTagging"] call FUNC(logWarning)};
+
 #ifdef DEBUG_MODE
-    ["Initializing custom spray tags."] call FUNC(logInfo);
+    ["Initializing custom spray tags.", "InitTagging"] call FUNC(logInfo);
 #endif
 
 [   "cScripts_tagging_cav_black",
@@ -47,6 +50,8 @@
     "z\cav\addons\textures\data\tagging\icon_action_red_ca.paa"
 ] call ace_tagging_fnc_addCustomTag;
 
+missionNamespace setVariable [QEGVAR(mission,tagging), true];
+
 #ifdef DEBUG_MODE
-    ["Custom spray tags initialization complete."] call FUNC(logInfo);
+    ["Custom spray tags initialization complete.", "InitTagging"] call FUNC(logInfo);
 #endif

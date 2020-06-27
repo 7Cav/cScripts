@@ -14,7 +14,8 @@ class cScripts {
         class initTagging {};
 
         class initFortify {};
-
+        class initItemReplace {};
+        
         class initCuratorObjectPlaced {};
     };
     class documents {
@@ -40,14 +41,7 @@ class cScripts {
         class doFieldHospital {};
 
         class doSupplyCrate {};
-
-        class doAmmoCrate {};
-        class doExplosivesCrate {};
-        class doGrenadesCrate {};
-        class doLaunchersCrate {};
         class doMedicalCrate {};
-        class doSpecialWeaponsCrate {};
-        class doWeaponsCrate {};
 
         class doEmptyCrate {};
     };
@@ -72,7 +66,8 @@ class cScripts {
 
         class getRadioChannel {};
         class setRadioChannel {};
-
+        class setActiveRadio {};
+        
         class getCompanyVariable {};
         class hasCompanyVariable {};
         

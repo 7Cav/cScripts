@@ -5,10 +5,10 @@
  *
  * Arguments:
  * 0: player <STRING>
- * 1: hasVariable <STRING>
+ * 1: Compare string <STRING>
  *
  * Return Value:
- * HasVariable <BOOL>
+ * Player company match <BOOL>
  *
  * Example:
  * [player] call cScripts_fnc_hasCompanyVariable

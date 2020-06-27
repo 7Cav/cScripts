@@ -18,6 +18,6 @@ if !(_variableName in _missionController) exitWith {};
 
 player createDiaryRecord["7Cav",
     ["S3 Mission Control",
-        "Oh! This tab is under redevelopment!"
+        '<executeClose expression="openCuratorInterface">Open Zeus Interface</executeClose>'
     ]
 ];

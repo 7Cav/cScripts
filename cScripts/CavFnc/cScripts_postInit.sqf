@@ -6,7 +6,7 @@
 if (is3DEN) exitWith {};
 
 #ifdef DEBUG_MODE
-    ["postInit Initializing."] call FUNC(logInfo);
+    ["Initializing...", "postInit"] call FUNC(logInfo);
 #endif
 
 // Add diary records on mission start
@@ -42,10 +42,16 @@ switch (EGVAR(Settings,setMissionType)) do {
     };
 };
 
+// item replacement
+if (EGVAR(Settings,allowReplaceItem)) then {
+    call FUNC(initItemReplace);
+};
+
+
 if (EGVAR(Settings,enableStartHint)) then {
     [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] call FUNC(initStartupHint);
 };
 
 #ifdef DEBUG_MODE
-    ["postInit initialization completed."] call FUNC(logInfo);
+    ["Initialization completed", "postInit"] call FUNC(logInfo);
 #endif

@@ -28,8 +28,8 @@ _companySelector = toUpper(_companySelector);
 
 // Container Category
 private _officer = ["OFFICER"];
-private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW", "EAGLE", "HOG"];
-private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "APOLLO", "MUSTANG"];
+private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
+private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "ATLAS"];
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
 if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo + _charlie)) exitWith {
@@ -153,6 +153,7 @@ if (_companySelector in _alpha or _alwaysAvalible) then {
     };
 };
 
+
 //          B R A V O   C O M P A N Y   C A R G O
 if (_companySelector in _bravo or _alwaysAvalible) then {
 
@@ -168,14 +169,15 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     // Container Lancer
     if (_companySelector in ['BRAVO', 'LANCER'] or _alwaysAvalible) then {
 
-        // Weapons
-        _crate addWeaponCargoGlobal ["tf47_m3maaws",25];
-        _crate addItemCargoGlobal ["tf47_optic_m3maaws",25];
-
         _crate addWeaponCargoGlobal ["rhs_weap_m240B",25];
         _crate addWeaponCargoGlobal ["rhs_weap_fim92",50];
         _crate addWeaponCargoGlobal ["rhs_weap_M136_hp",50];
         _crate addWeaponCargoGlobal ["rhs_weap_m72a7",50];
+
+        // Basic Rifle attachments
+        _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light", 25];
+        _crate addItemCargoGlobal ["rhsusf_acc_m952v", 25];
+        _crate addItemCargoGlobal ["rhsusf_acc_anpeq15side_bk", 25];
 
         // Magazines
         _crate addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_box",250];
@@ -224,15 +226,15 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 
         // Misc
         _crate addItemCargoGlobal ["ACE_CableTie",250];
-
     };
+    
     // Container Viking
     if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ToolKit",50];
     };
 
-    // Container Mustang
-    if (_companySelector in ['BRAVO', 'MUSTANG'] or _alwaysAvalible) then {
+    // Container Atlas Medical
+    if (_companySelector in ['BRAVO', 'ATLAS'] or _alwaysAvalible) then {
 
         // Medical Equipment
         _crate addItemCargoGlobal ["ACE_tourniquet",50];
@@ -263,8 +265,9 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_personalAidKit",75];
         _crate addItemCargoGlobal ["ACE_bodyBag",50];
     };
-    // Container Apollo
-    if (_companySelector in ['BRAVO', 'APOLLO'] or _alwaysAvalible) then {
+
+    // Container Atlas Logistic
+    if (_companySelector in ['BRAVO', 'ATLAS'] or _alwaysAvalible) then {
         
         // Demolition
         _crate addItemCargoGlobal ["ACE_M26_Clacker",25];
@@ -278,12 +281,14 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ToolKit",50];
         _crate addItemCargoGlobal ["ACE_wirecutter",50];
         _crate addItemCargoGlobal ["ACE_EntrenchingTool",50];
+        
     };
 
     // Container Sabre
     if (_companySelector in ['BRAVO', 'SABER'] or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ToolKit",50];
     };
+    
     // Container Banshee
     if (_companySelector in ['BRAVO', 'BANSHEE'] or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ToolKit",50];
