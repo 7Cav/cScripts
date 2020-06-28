@@ -9,7 +9,7 @@ if (_weapons isEqualTo []) then {
 private _weapon = _weapons deleteAt 0;
 private _loadedMagazines = _magazines deleteAt 0;
 
-_compatibleMagsFirstMuzzle = [_weapon] call FUNC(getMagwellMagazines);
+private _compatibleMagsFirstMuzzle = [_weapon] call FUNC(getMagwellMagazines);
 
 private _compatibleMagsSecondMuzzle = [];
 private _secondMuzzle = (getArray (configfile >> "CfgWeapons" >> _weapon >> "muzzles") - ["this"]) param [0, ""];
