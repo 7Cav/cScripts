@@ -1,8 +1,14 @@
 #include "..\script_component.hpp";
-params ["_weapon"];
+params ["_weapon", ["_muzzle", "SAFE"]];
 
 private _compatibleMags = [];
-private _compatibleMagWell = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazineWell");
+private _compatibleMagWell = [];
+
+if (_muzzle != "SAFE") then {
+  _compatibleMagWell = getArray (configfile >> "CfgWeapons" >> _weapon >> _muzzle >> "magazineWell");
+} else {
+  _compatibleMagWell = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazineWell");
+};
 
 {
   _z = configProperties [configFile >> "cfgMagazineWells" >> _x];

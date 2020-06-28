@@ -14,7 +14,7 @@ _compatibleMagsFirstMuzzle = [_weapon] call FUNC(getMagwellMagazines);
 private _compatibleMagsSecondMuzzle = [];
 private _secondMuzzle = (getArray (configfile >> "CfgWeapons" >> _weapon >> "muzzles") - ["this"]) param [0, ""];
 if (_secondMuzzle != "") then {
-    _compatibleMagsSecondMuzzle = getArray (configfile >> "CfgWeapons" >> _weapon >> _secondMuzzle >> "magazines");
+    _compatibleMagsSecondMuzzle = [_weapon, _secondMuzzle] call FUNC(getMagwellMagazines);
 };
 
 _loadedMagazines            = _loadedMagazines apply {toLower _x};
