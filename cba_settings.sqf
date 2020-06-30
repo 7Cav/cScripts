@@ -169,7 +169,7 @@ force force ace_markers_moveRestriction = 0;
 //ace_map_gestures_defaultLeadColor = [1,0.88,0,0.95];
 force force ace_map_gestures_enabled = true;
 force force ace_map_gestures_interval = 0.03;
-force force ace_map_gestures_maxRange = 10;
+force force ace_map_gestures_maxRange = 12;
 //ace_map_gestures_nameTextColor = [0.2,0.2,0.2,0.3];
 
 // ACE Map Tools
@@ -184,9 +184,10 @@ force force ace_medical_blood_bloodLifetime = 900;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_blood_maxBloodObjects = 500;
 force force ace_medical_fatalDamageSource = 1;
+force force ace_medical_feedback_bloodVolumeEffectType = 0;
 force force ace_medical_feedback_painEffectType = 0;
-force force ace_medical_fractures = 2;
 force force ace_medical_fractureChance = 0.65;
+force force ace_medical_fractures = 2;
 //ace_medical_gui_enableActions = 1;
 //ace_medical_gui_enableMedicalMenu = 1;
 //ace_medical_gui_enableSelfActions = true;
@@ -207,6 +208,7 @@ force force ace_medical_treatment_advancedDiagnose = true;
 force force ace_medical_treatment_advancedMedication = true;
 //ace_medical_treatment_allowLitterCreation = true;
 force force ace_medical_treatment_allowSelfIV = 1;
+force force ace_medical_treatment_allowSelfPAK = 1;
 force force ace_medical_treatment_allowSelfStitch = 1;
 force force ace_medical_treatment_allowSharedEquipment = 0;
 force force ace_medical_treatment_clearTraumaAfterBandage = false;
@@ -222,11 +224,10 @@ force force ace_medical_treatment_locationsBoostTraining = true;
 force force ace_medical_treatment_locationSurgicalKit = 0;
 //ace_medical_treatment_maxLitterObjects = 500;
 force force ace_medical_treatment_medicEpinephrine = 1;
+force force ace_medical_treatment_medicIV = 1;
 force force ace_medical_treatment_medicPAK = 2;
 force force ace_medical_treatment_medicSurgicalKit = 1;
 force force ace_medical_treatment_timeCoefficientPAK = 1;
-force force ace_medical_treatment_woundReopening = true;
-
 
 // ACE Name Tags
 //ace_nametags_defaultNametagColor = [0.77,0.51,0.08,1];
@@ -373,6 +374,7 @@ force force ace_vehiclelock_vehicleStartingLockState = -1;
 // ACE Vehicles
 force force ace_vehicles_hideEjectAction = true;
 force force ace_vehicles_keepEngineRunning = true;
+//ace_vehicles_speedLimiterStep = 5;
 
 // ACE View Distance Limiter
 force force ace_viewdistance_enabled = false;
@@ -386,7 +388,7 @@ force force ace_viewdistance_viewDistanceOnFoot = 4;
 force force ace_common_persistentLaserEnabled = false;
 force force ace_laserpointer_enabled = true;
 force force ace_reload_displayText = true;
-//ace_reload_showCheckAmmoSelf = false;
+force force ace_reload_showCheckAmmoSelf = false;
 force force ace_weaponselect_displayText = true;
 
 // ACE Weather
@@ -416,9 +418,11 @@ force force acex_field_rations_hudShowLevel = 70;
 //acex_field_rations_hudTransparency = -1;
 //acex_field_rations_hudType = 0;
 force force acex_field_rations_hungerSatiated = 1;
+force force acex_field_rations_terrainObjectActions = false;
 force force acex_field_rations_thirstQuenched = 1;
 force force acex_field_rations_timeWithoutFood = 504;
 force force acex_field_rations_timeWithoutWater = 168;
+force force acex_field_rations_waterSourceActions = 2;
 
 // ACEX Fortify
 force force acex_fortify_settingHint = 1;
@@ -442,12 +446,12 @@ force force acex_viewrestriction_modeSelectiveSea = 0;
 force force acex_viewrestriction_preserveView = false;
 
 // ACEX Volume
-acex_volume_enabled = false;
-acex_volume_fadeDelay = 1;
-acex_volume_lowerInVehicles = false;
-acex_volume_reduction = 5;
-acex_volume_remindIfLowered = false;
-acex_volume_showNotification = true;
+//acex_volume_enabled = false;
+//acex_volume_fadeDelay = 1;
+//acex_volume_lowerInVehicles = false;
+//acex_volume_reduction = 5;
+//acex_volume_remindIfLowered = false;
+//acex_volume_showNotification = true;
 
 // ACRE2
 force force acre_sys_core_automaticAntennaDirection = false;
@@ -459,12 +463,12 @@ force force acre_sys_core_interference = true;
 //acre_sys_core_premixGlobalVolume = 3;
 force force acre_sys_core_revealToAI = 1;
 //acre_sys_core_spectatorVolume = 1;
-force force acre_sys_core_terrainLoss = 0.5;
+force force acre_sys_core_terrainLoss = 0.3;
 force force acre_sys_core_ts3ChannelName = "";
 force force acre_sys_core_ts3ChannelPassword = "";
 force force acre_sys_core_ts3ChannelSwitch = false;
 force force acre_sys_core_unmuteClients = true;
-force force acre_sys_signal_signalModel = 1;
+force force acre_sys_signal_signalModel = 0;
 
 // ACRE2 UI
 //acre_sys_gui_volumeColorScale = [[1,1,0,0.5],[1,0.83,0,0.5],[1,0.65,0,0.5],[1,0.44,0,0.5],[1,0,0,0.5]];
@@ -494,9 +498,76 @@ force force cba_disposable_replaceDisposableLauncher = true;
 //cba_events_repetitionMode = 1;
 //cba_optics_usePipOptics = true;
 
+// GRAD Trenches
+force force grad_trenches_functions_allowBigEnvelope = true;
+force force grad_trenches_functions_allowCamouflage = true;
+force force grad_trenches_functions_allowDigging = true;
+force force grad_trenches_functions_allowGiantEnvelope = true;
+force force grad_trenches_functions_allowLongEnvelope = true;
+force force grad_trenches_functions_allowShortEnvelope = true;
+force force grad_trenches_functions_allowSmallEnvelope = true;
+force force grad_trenches_functions_allowVehicleEnvelope = true;
+force force grad_trenches_functions_bigEnvelopeDigTime = 20;
+force force grad_trenches_functions_buildFatigueFactor = 1;
+force force grad_trenches_functions_camouflageRequireEntrenchmentTool = true;
+force force grad_trenches_functions_giantEnvelopeDigTime = 60;
+force force grad_trenches_functions_LongEnvelopeDigTime = 50;
+force force grad_trenches_functions_shortEnvelopeDigTime = 15;
+force force grad_trenches_functions_smallEnvelopeDigTime = 20;
+force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
+force force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
+
+// LAMBS Danger
+force force lambs_danger_combatShareRange = 200;
+force force lambs_danger_CQB_formations_COLUMN = false;
+force force lambs_danger_CQB_formations_DIAMOND = true;
+force force lambs_danger_CQB_formations_ECH LEFT = false;
+force force lambs_danger_CQB_formations_ECH RIGHT = false;
+force force lambs_danger_CQB_formations_FILE = true;
+force force lambs_danger_CQB_formations_LINE = false;
+force force lambs_danger_CQB_formations_STAG COLUMN = false;
+force force lambs_danger_CQB_formations_VEE = false;
+force force lambs_danger_CQB_formations_WEDGE = false;
+force force lambs_danger_CQB_range = 60;
+force force lambs_danger_debug_Drawing = false;
+force force lambs_danger_debug_FSM = false;
+force force lambs_danger_debug_FSM_civ = false;
+force force lambs_danger_debug_functions = false;
+force force lambs_danger_disableAIAutonomousManoeuvres = false;
+force force lambs_danger_disableAICallouts = false;
+force force lambs_danger_disableAIDeployStaticWeapons = false;
+force force lambs_danger_disableAIFindStaticWeapons = false;
+force force lambs_danger_disableAIFleeing = false;
+force force lambs_danger_disableAIGestures = false;
+force force lambs_danger_disableAIHideFromTanksAndAircraft = false;
+force force lambs_danger_disableAIImediateAction = false;
+force force lambs_danger_disableAIPlayerGroup = false;
+force force lambs_danger_disableAIPlayerGroupReaction = false;
+force force lambs_danger_disableAIPlayerGroupSuppression = false;
+force force lambs_danger_disableAutonomousFlares = false;
+force force lambs_danger_disableAutonomousSmokeGrenades = false;
+force force lambs_danger_maxRevealValue = 1;
+force force lambs_danger_minFriendlySuppressionDistance = 5;
+force force lambs_danger_minSuppression_range = 20;
+force force lambs_danger_panic_chance = 10;
+force force lambs_danger_radio_backpack = 2000;
+force force lambs_danger_radio_disabled = false;
+force force lambs_danger_radio_EAST = 500;
+force force lambs_danger_radio_GUER = 500;
+force force lambs_danger_radio_shout = 100;
+force force lambs_danger_radio_WEST = 500;
+force force lambs_danger_RenderExpectedDestination = false;
+
+// LAMBS Danger Eventhandlers
+force force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
+force force lambs_eventhandlers_ExplosionReactionTime = 9;
+
+// LAMBS Danger WP
+force force lambs_wp_autoAddArtillery = false;
+
 // STUI Settings
-STGI_Settings_Enabled = true;
-STGI_Settings_UnconsciousFadeEnabled = true;
+force force STGI_Settings_Enabled = true;
+force force STGI_Settings_UnconsciousFadeEnabled = true;
 //STHud_Settings_ColourBlindMode = "Normal";
 //STHud_Settings_Font = "PuristaSemibold";
 //STHud_Settings_HUDMode = 3;
@@ -505,45 +576,4 @@ force force STHud_Settings_RemoveDeadViaProximity = true;
 force force STHud_Settings_SquadBar = true;
 //STHud_Settings_TextShadow = 1;
 force force STHud_Settings_UnconsciousFadeEnabled = true;
-
-// USAF
-force usaf_serviceMenu_setting_allowHangarRearm = true;
-force usaf_serviceMenu_setting_allowHangarRefuel = true;
-force usaf_serviceMenu_setting_allowHangarRepair = true;
-force usaf_serviceMenu_setting_allowLoadoutModification = true;
-force usaf_serviceMenu_setting_enabled = true;
-force usaf_serviceMenu_setting_refuelTime = "100";
-force usaf_serviceMenu_setting_reloadTime = "2";
-force usaf_serviceMenu_setting_repairTime = "100";
-force usaf_serviceMenu_setting_replaceSources = false;
-
-// VCOM SETTINGS
-force force VCM_ActivateAI = true;
-force force VCM_ADVANCEDMOVEMENT = true;
-force force VCM_AIDISTANCEVEHPATH = 10;
-force force VCM_AIMagLimit = 3.0;
-force force VCM_AISNIPERS = true;
-force force VCM_AISUPPRESS = true;
-force force VCM_ARTYDELAY = 60;
-force force VCM_ARTYENABLE = true;
-//force force VCM_ARTYSIDES = ["WEST","EAST","GUER"];
-force force VCM_CARGOCHNG = true;
-force force VCM_ClassSteal = false;
-force force VCM_Debug = false;
-force force VCM_DISEMBARKRANGE = 200;
-force force Vcm_DrivingActivated = true;
-force force VCM_ForceSpeed = true;
-force force VCM_FRMCHANGE = true;
-force force VCM_HEARINGDISTANCE = 1200;
-force force VCM_MINECHANCE = 75;
-force force Vcm_PlayerAISkills = true;
-force force VCM_RAGDOLL = true;
-force force VCM_RAGDOLLCHC = 50;
-//force force VCM_SIDEENABLED = ["WEST","EAST","GUER"];
-force force VCM_SKILLCHANGE = true;
-force force VCM_STATICARMT = 300;
-force force VCM_StealVeh = false;
-force force VCM_TURRETUNLOAD = true;
-force force VCM_USECBASETTINGS = true;
-force force VCM_WARNDELAY = 30;
-force force VCM_WARNDIST = 1000;
+//STNT_Settings_Enabled = true;
