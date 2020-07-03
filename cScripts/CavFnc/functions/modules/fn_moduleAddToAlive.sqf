@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: AR.Zlobin.N
+ * Author: AR.Zlobin.N, 1LT.Sweetwater.I
  * This module function add object to Alive
  *
  * Arguments:
