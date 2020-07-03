@@ -137,6 +137,7 @@ class cScripts {
         class moduleRegearTrooper {};
 
         class moduleCallEndex {};
+        class moduleAddToAlive {};
     };
 
     class helpers {
