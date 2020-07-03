@@ -2,12 +2,13 @@
 /*
  * Author: AR.Zlobin.N, 1LT.Sweetwater.I
  * This module function add object to Alive
+ * Grants unit authorization to speak to civilians
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Example:
- * this call cScripts_fnc_moduleRegearTrooper
+ * bob call cScripts_fnc_moduleAddToAlive
  *
  * Public: No
  */
