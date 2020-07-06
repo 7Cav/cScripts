@@ -83,3 +83,6 @@ if ((_zeusImmortality) && (EGVAR(Settings,curatorImmortality))) then {
         [formatText["%1 is immortal", _player], "LoadoutPreInit"] call FUNC(logInfo);
     #endif
 };
+
+// Players always wake up dynamic simulated units
+_player triggerDynamicSimulation true;

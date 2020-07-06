@@ -3,6 +3,8 @@ class cScripts {
         file = "cScripts\cavFnc\functions\init";
         class initACELoadouts {};
 
+        class initSimulation {};
+
         class initSupply {};
         class initVehicle {};
 

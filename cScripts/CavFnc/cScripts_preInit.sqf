@@ -329,13 +329,24 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
+// Dynamic Simulation
+[
+    QEGVAR(Settings,dynamicSimulation),
+    "LIST",
+    ["Dynamic Simulation","Enable Dynamic Simulation for Eden and zeus spawned objects automaticly\n"],
+    [_cScriptSettings, "8; Preformence"],
+    [[0,1,2,3], ["Disabled", "Enabled", "Enabled (Only Eden Objects)", "Enabled (Only Zeus Spawned Objects)"], 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
 // Aries Achilles Zeus Moduels
 [
     QEGVAR(Settings,enable7cavZeusModules),
     "CHECKBOX",
     ["Use 7Cav Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles framework.\n"],
-    [_cScriptSettings, "8; Zeus"],
+    [_cScriptSettings, "9; Zeus"],
     true,
     true,
     {},
@@ -346,7 +357,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,curatorImmortality),
     "CHECKBOX",
     ["Zeus Immortality","Make all curator units immortal.\n"],
-    [_cScriptSettings, "8; Zeus"],
+    [_cScriptSettings, "9; Zeus"],
     true,
     true,
     {},
@@ -424,6 +435,18 @@ switch (EGVAR(Settings,setFortifyRestriction)) do {
     };
 };
 
+// Dynamic Simulation handler
+if (EGVAR(Settings,dynamicSimulation) >= 1) then {
+    #ifdef DEBUG_MODE
+        [format["Dynamic Simulation set to: %1",EGVAR(Settings,dynamicSimulation)], "dynamicSimulation"] call FUNC(logInfo);
+    #endif
+    "Group" setDynamicSimulationDistance 1800;
+    "Vehicle" setDynamicSimulationDistance 2400;
+    "EmptyVehicle" setDynamicSimulationDistance 250;
+    "Prop" setDynamicSimulationDistance 50;
+    enableDynamicSimulationSystem true;
+    call FUNC(initSimulation);
+};
 
 #ifdef DEBUG_MODE
     ["Initialization completed", "preInit"] call FUNC(logInfo);
