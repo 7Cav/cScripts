@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys, os, fnmatch, fileinput
+import sys, os, fnmatch, fileinput, re
 import argparse, shutil, subprocess, tempfile
 import configparser
 
@@ -228,12 +228,12 @@ def list_objects(objects, color=False):
 def build_release(package_name='', build_type='', public_version=False, public_file_paths=[], public_operations=[], color=False):
 
     def replace(file, searchExp, replaceExp):
-        searchExp = searchExp.lower()
         for line in fileinput.input(file, inplace=1):
             if searchExp.lower() in line.lower():
-                lowerline = line.lower()
-                line = lowerline.replace(searchExp,replaceExp)
+                pattern = re.compile(searchExp, re.IGNORECASE)
+                line = pattern.sub(replaceExp, line)
             sys.stdout.write(line)
+
 
     def removeLine(file, searchExp):
         searchExp = searchExp.lower()
