@@ -28,7 +28,7 @@ _companySelector = toUpper(_companySelector);
 
 // Container Category
 private _officer = ["OFFICER"];
-private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
+private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW", "EAGLE", "HOG"];
 private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "ATLAS"];
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
