@@ -17,7 +17,7 @@
 params ["_modulePos", "_objectPos"];
 
 [
-    "7th Cavalry Supply Crate", 
+    "Call Endex", 
     [
         ["CHECKBOX", ["Set Player Weapons To Safe", ""], true, false],
         ["CHECKBOX", ["Pacify AI", ""], true, false],
