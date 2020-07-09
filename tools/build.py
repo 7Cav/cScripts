@@ -230,7 +230,7 @@ def build_release(package_name='', build_type='', public_version=False, public_f
     def replace(file, searchExp, replaceExp):
         for line in fileinput.input(file, inplace=1):
             if searchExp.lower() in line.lower():
-                pattern = re.compile(searchExp, re.IGNORECASE)
+                pattern = re.compile(re.escape(searchExp), re.IGNORECASE)
                 line = pattern.sub(replaceExp, line)
             sys.stdout.write(line)
 
@@ -329,6 +329,13 @@ def build_release(package_name='', build_type='', public_version=False, public_f
                 for gear in public_operations[1]:
                     #print('Removing {}.'.format(color_string('{}'.format(gear),'\033[95m',color)))
                     replace('{}/{}'.format(temp,file),gear, "\"\"")
+
+        # ACE Loadouts Public Prefix
+        for file in public_file_paths[2]:
+            print('Checking ace arsenal script file {}'.format(color_string(strip_path_from_filename(file),'\033[96m',color)))
+            replace('{}/{}'.format(temp,file), '[7CAV] Alpha', '[7CAV] Alpha (P)')
+            replace('{}/{}'.format(temp,file), '[7CAV] Bravo', '[7CAV] Bravo (P)')
+            replace('{}/{}'.format(temp,file), '[7CAV] Charlie', '[7CAV] Charlie (P)')
 
         if os.path.isfile('{}/cba_settings.sqf'.format(temp)):
             if not len(public_operations[2]) == 0:
