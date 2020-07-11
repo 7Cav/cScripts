@@ -20,7 +20,7 @@
 [format["%1 staging options is setup.", player], "Staging"] call FUNC(logInfo);
 
 private _condition = {
-	[12] call FUNC(getStagingZone);
+    [12] call FUNC(getStagingZone);
 };
 private _stagingCat = [QEGVAR(Actions,StagingCategory), "Staging Zone", "cScripts\Data\Icon\icon_00.paa", {true}, _condition] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _stagingCat] call ace_interact_menu_fnc_addActionToObject;
