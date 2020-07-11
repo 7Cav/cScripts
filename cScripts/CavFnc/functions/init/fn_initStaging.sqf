@@ -31,3 +31,4 @@ private _category = ["ACE_SelfActions", QEGVAR(Actions,StagingCategory)];
 [player, true, _category] call FUNC(addReGear);
 [player, _category] call FUNC(addHeal);
 [player, _category] call FUNC(addInsigniaSelectionList);
+[player, "full", true, ["ACE_SelfActions"]] call FUNC(addQuickSelectionsList);
