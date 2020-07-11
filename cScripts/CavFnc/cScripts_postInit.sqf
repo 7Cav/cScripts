@@ -47,6 +47,7 @@ if (EGVAR(Settings,allowReplaceItem)) then {
     call FUNC(initItemReplace);
 };
 
+call FUNC(initStaging); 
 
 if (EGVAR(Settings,enableStartHint)) then {
     [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] call FUNC(initStartupHint);

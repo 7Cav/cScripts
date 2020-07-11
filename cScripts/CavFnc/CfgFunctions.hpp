@@ -6,6 +6,8 @@ class cScripts {
         class initSupply {};
         class initVehicle {};
 
+        class initStaging {};
+
         class initDocuments {};
 
         class initStartupHint {};
@@ -93,7 +95,10 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
-       // Plane jump
+        // Staging
+        class getStagingZone {};
+
+        // Plane jump
         class doJump {};
         class handleJump {};
 
