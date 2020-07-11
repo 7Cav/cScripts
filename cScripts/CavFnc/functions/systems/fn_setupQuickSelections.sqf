@@ -21,7 +21,8 @@
 params[
     ["_object", objNull, [objNull]],
     ["_loadoutCompany", "", [""]],
-    ["_allowOnlyForCompany", true, [true]]
+    ["_allowOnlyForCompany", true, [true]],
+    ["_aceCategory", ["ACE_MainActions"], [["ACE_MainActions"]]]
 ];
 
 #ifdef DEBUG_MODE
@@ -37,6 +38,8 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     private _classname = configName (missionConfigFile >> 'CfgLoadouts' >> _class);
     private _company = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "company");
     private _category = getArray (missionConfigFile >> 'CfgLoadouts' >> _class >> "category");
+    _category = _aceCategory + _category;
+
     if (_loadoutCompany == _company) then {
         [_object, _displayName, _classname, "", _category, _company, _allowOnlyForCompany] call FUNC(addQuickSelection);
     };

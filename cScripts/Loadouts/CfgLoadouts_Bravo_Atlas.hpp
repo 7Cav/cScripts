@@ -5,6 +5,8 @@ class Cav_B_Bravo_Atlas_base_F : Cav_B_Bravo_base_F {
 };
 
 class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
+    category[] += {"cScriptQuickSelection_Bravo_Atlas_Medical"};
+
     headgear[] = {"rhsusf_ach_bare_tan_headset","rhsusf_ach_bare_tan_headset","rhsusf_ach_bare_tan_headset_ess"};
     vest[] = {"rhsusf_mbav_medic"};
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
@@ -53,6 +55,8 @@ class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
     preLoadout = "[(_this select 0), 'bravo', 2, 0] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_Atlas_base_F {
+    category[] += {"cScriptQuickSelection_Bravo_Atlas_Logistics"};
+
     headgear[] = {"rhsusf_ach_bare_headset","rhsusf_ach_bare_headset","rhsusf_ach_bare_headset_ess"};
     vest[] = {"rhsusf_spcs_ocp_saw"};
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
@@ -151,6 +155,8 @@ class Cav_B_B_Atlas_Medic_CombatMedic_F : Cav_B_Bravo_Medical_Base_Local {
 };
 
 class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
+    category[] += {"cScriptQuickSelection_Bravo_Atlas"};
+    
     headgear[] = {"rhsusf_ach_bare_headset","rhsusf_ach_bare_headset","rhsusf_ach_bare_headset_ess"};
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
@@ -225,17 +231,17 @@ class Cav_B_B_Atlas_Logistics_TeamMember_F : Cav_B_Bravo_Logi_Base_Local {
 };
 
 // Named
-class Cav_B_B_Atlas_Medic_TeamLeader_3_1_F : Cav_B_B_Atlas_Medic_TeamLeader_F {};
-class Cav_B_B_Atlas_Medic_TeamLeader_3_2_F : Cav_B_B_Atlas_Medic_TeamLeader_F {};
-class Cav_B_B_Atlas_Logistics_TeamLeader_3_3_F : Cav_B_B_Atlas_Logistics_TeamLeader_F {};
-class Cav_B_B_Atlas_Logistics_TeamLeader_3_4_F : Cav_B_B_Atlas_Logistics_TeamLeader_F {};
-class Cav_B_B_Atlas_Logistics_OpsNCO_3_5_F : Cav_B_B_Atlas_Logistics_OpsNCO_F {};
-class Cav_B_B_Atlas_Logistics_OpsOfficer_3_6_F : Cav_B_B_Atlas_Logistics_OpsOfficer_F {};
+class Cav_B_B_Atlas_Medic_TeamLeader_3_1_F : Cav_B_B_Atlas_Medic_TeamLeader_F {displayName = "";};
+class Cav_B_B_Atlas_Medic_TeamLeader_3_2_F : Cav_B_B_Atlas_Medic_TeamLeader_F {displayName = "";};
+class Cav_B_B_Atlas_Logistics_TeamLeader_3_3_F : Cav_B_B_Atlas_Logistics_TeamLeader_F {displayName = "";};
+class Cav_B_B_Atlas_Logistics_TeamLeader_3_4_F : Cav_B_B_Atlas_Logistics_TeamLeader_F {displayName = "";};
+class Cav_B_B_Atlas_Logistics_OpsNCO_3_5_F : Cav_B_B_Atlas_Logistics_OpsNCO_F {displayName = "";};
+class Cav_B_B_Atlas_Logistics_OpsOfficer_3_6_F : Cav_B_B_Atlas_Logistics_OpsOfficer_F {displayName = "";};
 
 // Depircated
-class Cav_B_B_TeamLeader_Mustang_F : Cav_B_B_Atlas_Medic_TeamLeader_F {};
-class Cav_B_B_Mustang_CombatMedic_F : Cav_B_B_Atlas_Medic_TeamLeader_F {};
-class Cav_B_B_LogisticsOpsOfficer_F : Cav_B_B_Atlas_Logistics_OpsOfficer_F {};
-class Cav_B_B_LogisticsOpsNCO_F : Cav_B_B_Atlas_Logistics_OpsNCO_F {};
-class Cav_B_B_LogisticTeamLeader_F : Cav_B_B_Atlas_Logistics_TeamLeader_F {};
-class Cav_B_B_LogisticsTeamMember_F : Cav_B_B_Atlas_Logistics_TeamMember_F {};
+class Cav_B_B_TeamLeader_Mustang_F : Cav_B_B_Atlas_Medic_TeamLeader_F {displayName = "";};
+class Cav_B_B_Mustang_CombatMedic_F : Cav_B_B_Atlas_Medic_TeamLeader_F {displayName = "";};
+class Cav_B_B_LogisticsOpsOfficer_F : Cav_B_B_Atlas_Logistics_OpsOfficer_F {displayName = "";};
+class Cav_B_B_LogisticsOpsNCO_F : Cav_B_B_Atlas_Logistics_OpsNCO_F {displayName = "";};
+class Cav_B_B_LogisticTeamLeader_F : Cav_B_B_Atlas_Logistics_TeamLeader_F {displayName = "";};
+class Cav_B_B_LogisticsTeamMember_F : Cav_B_B_Atlas_Logistics_TeamMember_F {displayName = "";};

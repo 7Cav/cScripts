@@ -97,6 +97,7 @@ class Cav_B_Bravo_Crew_Base_Local : Cav_B_Scout_base_F {
 
 class Cav_B_B_PlatoonStaff_F : Cav_B_Bravo_Leader_Local {
     displayName = "Platoon Staff";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
 
     items[] += {
         // Radio
@@ -111,6 +112,7 @@ class Cav_B_B_PlatoonStaff_F : Cav_B_Bravo_Leader_Local {
 };
 class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
     displayName = "Platoon Medic";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
     
     vest[] = {"rhsusf_mbav_medic"};
     backpack[] = {"B_Kitbag_mcamo"};
@@ -179,6 +181,7 @@ class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
 
 class Cav_B_B_SquadLeader_F : Cav_B_Bravo_Leader_Local {
     displayName = "Squad Leader";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
     
     vest[] = {"rhsusf_iotv_ocp_Squadleader"};
 
@@ -196,6 +199,7 @@ class Cav_B_B_SquadLeader_F : Cav_B_Bravo_Leader_Local {
 };
 class Cav_B_B_FireTeamLeader_F : Cav_B_Bravo_Leader_Local {
     displayName = "Fire Team Leader";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
     
     vest[] = {"rhsusf_iotv_ocp_Teamleader"};
 
@@ -213,6 +217,7 @@ class Cav_B_B_FireTeamLeader_F : Cav_B_Bravo_Leader_Local {
 };
 class Cav_B_B_AutomaticRifleman_F : Cav_B_Bravo_Trooper_Local {
     displayName = "Automatic Rifleman";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
     
     vest[] = {"rhsusf_iotv_ocp_SAW"};
 
@@ -230,6 +235,7 @@ class Cav_B_B_AutomaticRifleman_F : Cav_B_Bravo_Trooper_Local {
 };
 class Cav_B_B_Grenadier_F : Cav_B_Bravo_Trooper_Local {
     displayName = "Grenadier";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
 
     vest[] = {"rhsusf_iotv_ocp_Grenadier"};
     
@@ -255,6 +261,7 @@ class Cav_B_B_Grenadier_F : Cav_B_Bravo_Trooper_Local {
 };
 class Cav_B_B_Rifleman_F : Cav_B_Bravo_Trooper_Local {
     displayName = "Rifleman";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
 
     launcher[] = {"rhs_weap_M136_hp"};
 
@@ -267,11 +274,14 @@ class Cav_B_B_Rifleman_F : Cav_B_Bravo_Trooper_Local {
     };
 };
 class Cav_B_B_RiflemanAT_F : Cav_B_B_Rifleman_F {   // Not Used
+    displayName = "";
 };
 class Cav_B_B_RiflemanLAT_F : Cav_B_B_Rifleman_F {  // Not Used
+    displayName = "";
 };
 class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_Trooper_Local {
     displayName = "Combat Life Saver";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
 
     vest[] = {"rhsusf_iotv_ocp_Medic"};
 
@@ -296,6 +306,7 @@ class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_Trooper_Local {
 // Machinegun Team
 class Cav_B_B_MMGFireTeamLeader_Local : Cav_B_Bravo_Leader_Local {
     displayName = "Machinegun Team Leader";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
     backpack[] = {"B_Kitbag_mcamo"};
@@ -323,6 +334,7 @@ class Cav_B_B_MMGFireTeamLeader_Local : Cav_B_Bravo_Leader_Local {
 };
 class Cav_B_B_MMGMachineGunner_Local : Cav_B_Bravo_Trooper_Local {
     displayName = "Machinegunner";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
     
     vest[] = {"rhsusf_spcs_ocp_machinegunner"};
 
@@ -350,6 +362,7 @@ class Cav_B_B_MMGMachineGunner_Local : Cav_B_Bravo_Trooper_Local {
 };
 class Cav_B_C_MMGAssistantGunner_Local : Cav_B_Bravo_Trooper_Local {
     displayName = "Machinegun Ammo Bearer";
+    category[] += {"cScriptQuickSelection_Bravo_Lancer"};
     
     backpack[] = {"B_Kitbag_mcamo"};
 
@@ -376,6 +389,7 @@ class Cav_B_C_MMGAssistantGunner_Local : Cav_B_Bravo_Trooper_Local {
 
 class Cav_B_B_Tank_Commander_F : Cav_B_Bravo_Crew_Base_Local {
     displayName = "Commander";
+    category[] += {"cScriptQuickSelection_Bravo_Saber"};
 
     primary[] = {
         {"rhs_weap_m4a1_m320","rhsusf_acc_compm4","rhsusf_acc_anpeq15_bk","rhsusf_acc_sfmb556",""},
@@ -392,6 +406,7 @@ class Cav_B_B_Tank_Commander_F : Cav_B_Bravo_Crew_Base_Local {
 };
 class Cav_B_B_Tank_Gunner_F : Cav_B_Bravo_Crew_Base_Local {
     displayName = "Gunner";
+    category[] += {"cScriptQuickSelection_Bravo_Saber"};
 
     items[] += {
         // Personal Medical Equipment
@@ -408,6 +423,7 @@ class Cav_B_B_Tank_Loader_F : Cav_B_B_Tank_Gunner_F {
 
 class Cav_B_B_Ifv_Commander_F : Cav_B_Bravo_Crew_Base_Local {
     displayName = "Commander";
+    category[] += {"cScriptQuickSelection_Bravo_IFV"};
 
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
 
@@ -426,6 +442,7 @@ class Cav_B_B_Ifv_Commander_F : Cav_B_Bravo_Crew_Base_Local {
 };
 class Cav_B_B_Ifv_Driver_F : Cav_B_Bravo_Crew_Base_Local {
     displayName = "Driver";
+    category[] += {"cScriptQuickSelection_Bravo_IFV"};
 
     items[] += {
         // Personal Medical Equipment

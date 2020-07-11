@@ -58,10 +58,9 @@ class Cav_B_Bravo_Scout_base_F : Cav_B_Bravo_base_F {
 
     preLoadout = "[(_this select 0), 'bravo', 0, 0] call cScripts_fnc_setPreInitPlayerSettings;";
     postLoadout = "[(_this select 0)] call cScripts_fnc_setPostInitPlayerSettings;";
-}
+};
 
 class Cav_B_Bravo_Scout_Base_Local : Cav_B_Scout_base_F {
-    category[] += {"cScriptQuickSelection_Bravo_Viking_Squad"};
     
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",7,
@@ -72,7 +71,6 @@ class Cav_B_Bravo_Scout_Base_Local : Cav_B_Scout_base_F {
     gps[] = {""};
 };
 class Cav_B_Bravo_Scout_Leader_Local : Cav_B_Bravo_Scout_Base_Local {
-    category[] += {"cScriptQuickSelection_Bravo_Viking_Lead"};
 
     magazines[] += {
         "B_IR_Grenade",2
@@ -91,9 +89,6 @@ class Cav_B_Bravo_Scout_Leader_Local : Cav_B_Bravo_Scout_Base_Local {
     gps[] = {"B_UavTerminal"};
 };
 class Cav_B_Bravo_Scout_Crew_Base_Local : Cav_B_Scout_base_F {
-    category[] += {"cScriptQuickSelection_Bravo_Viking_Crew"};
-
-    
     headgear[] = {"rhsusf_cvc_green_helmet","rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"};
     
     vest[] = {"rhsusf_iotv_ocp_Repair"};
@@ -152,6 +147,7 @@ class Cav_B_Bravo_Scout_Crew_Base_Local : Cav_B_Scout_base_F {
 
 class Cav_B_B_Scout_Officer_F : Cav_B_Bravo_Scout_Leader_Local {
     displayName = "Officer";
+    category[] += {"cScriptQuickSelection_Bravo_Viking_Lead"};
 
     magazines[] += {
         "SmokeShell",4,
@@ -176,6 +172,7 @@ class Cav_B_B_Scout_PlatoonLead_F : Cav_B_B_Scout_Officer_F {
 };
 class Cav_B_B_Scout_PlatoonMedic_F : Cav_B_Bravo_Scout_base_F {
     displayName = "Platoon Medic";
+    category[] += {"cScriptQuickSelection_Bravo_Viking_Lead"};
     
     vest[] = {"rhsusf_mbav_medic"};
     backpack[] = {"B_Kitbag_mcamo"};
@@ -242,6 +239,7 @@ class Cav_B_B_Scout_PlatoonMedic_F : Cav_B_Bravo_Scout_base_F {
 
 class Cav_B_B_Scout_SquadLeader_F : Cav_B_Bravo_Scout_Leader_Local {
     displayName = "Squad Leader";
+    category[] += {"cScriptQuickSelection_Bravo_Viking_Lead"};
     
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",1,
@@ -259,6 +257,7 @@ class Cav_B_B_Scout_SquadLeader_F : Cav_B_Bravo_Scout_Leader_Local {
 };
 class Cav_B_B_Scout_TeamLead_F : Cav_B_Bravo_Scout_Leader_Local {
     displayName = "Team Leader";
+    category[] += {"cScriptQuickSelection_Bravo_Viking"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
@@ -278,6 +277,7 @@ class Cav_B_B_Scout_TeamLead_F : Cav_B_Bravo_Scout_Leader_Local {
 };
 class Cav_B_B_Scout_TeamLead_320_F : Cav_B_Bravo_Scout_Leader_Local {
     displayName = "Team Leader (320)";
+    category[] += {"cScriptQuickSelection_Bravo_Viking"};
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
@@ -299,6 +299,7 @@ class Cav_B_B_Scout_TeamLead_320_F : Cav_B_Bravo_Scout_Leader_Local {
 };
 class Cav_B_B_Scout_AutomaticRifleman_F : Cav_B_Bravo_Scout_Base_Local {
     displayName = "Automatic Rifleman";
+    category[] += {"cScriptQuickSelection_Bravo_Viking"};
 
     vest[] = {"rhsusf_spcs_ocp_saw"};
     
@@ -322,6 +323,7 @@ class Cav_B_B_Scout_AutomaticRifleman_F : Cav_B_Bravo_Scout_Base_Local {
 };
 class Cav_B_B_Scout_Grenadier_F : Cav_B_Bravo_Scout_Base_Local {
     displayName = "Grenadier";
+    category[] += {"cScriptQuickSelection_Bravo_Viking"};
 
     vest[] = {"rhsusf_spcs_ocp_grenadier"};
 
@@ -348,6 +350,7 @@ class Cav_B_B_Scout_Grenadier_F : Cav_B_Bravo_Scout_Base_Local {
 };
 class Cav_B_B_Scout_Rifleman_F : Cav_B_Bravo_Scout_Base_Local {
     displayName = "Rifleman";
+    category[] += {"cScriptQuickSelection_Bravo_Viking"};
 
     vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
 
@@ -366,6 +369,7 @@ class Cav_B_B_Scout_Rifleman_F : Cav_B_Bravo_Scout_Base_Local {
 };
 class Cav_B_B_Scout_CombatLifeSaver_F : Cav_B_Bravo_Scout_Base_Local {
     displayName = "Combat Lifesaver";
+    category[] += {"cScriptQuickSelection_Bravo_Viking"};
 
     vest[] = {"rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman","rhsusf_spcs_ocp_rifleman_alt"};
 
@@ -388,6 +392,7 @@ class Cav_B_B_Scout_CombatLifeSaver_F : Cav_B_Bravo_Scout_Base_Local {
 
 class Cav_B_B_Scout_Crew_F : Cav_B_Bravo_Scout_Crew_Base_Local {
     displayName = "Crewman";
+    category[] += {"cScriptQuickSelection_Bravo_Viking_Crew"};
 
     goggles[] = {"rhsusf_shemagh_tan"};
     headgear[] = {"rhsusf_cvc_green_helmet","rhsusf_cvc_green_alt_helmet","rhsusf_cvc_green_ess"};
