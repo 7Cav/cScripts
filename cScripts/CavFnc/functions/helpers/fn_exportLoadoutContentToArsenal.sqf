@@ -11,7 +11,7 @@
  * Equipment <ARRAY of STRINGS>
  *
  * Example:
- * ["charlie"] call cScripts_fnc_exportLoadoutsToArsenal
+ * ["charlie"] call cScripts_fnc_exportLoadoutContentToArsenal
  *
  * Public: Yes
  */
