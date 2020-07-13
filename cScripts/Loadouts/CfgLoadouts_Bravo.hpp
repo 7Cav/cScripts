@@ -267,8 +267,10 @@ class Cav_B_B_Rifleman_F : Cav_B_Bravo_Trooper_Local {
     };
 };
 class Cav_B_B_RiflemanAT_F : Cav_B_B_Rifleman_F {   // Not Used
+    displayName = "";
 };
 class Cav_B_B_RiflemanLAT_F : Cav_B_B_Rifleman_F {  // Not Used
+    displayName = "";
 };
 class Cav_B_B_CombatLifeSaver_F : Cav_B_Bravo_Trooper_Local {
     displayName = "Combat Life Saver";

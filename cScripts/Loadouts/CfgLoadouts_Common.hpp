@@ -27,6 +27,8 @@ class CommonBlufor {
 };
 
 class Cav_B_Alpha_base_F : CommonBlufor {
+    company = "alpha";
+
     backpack[] = {""};
     //goggles[] = {""};
     headgear[] = {"rhsusf_hgu56p_visor_green"};
