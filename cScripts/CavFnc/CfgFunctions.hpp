@@ -104,9 +104,7 @@ class cScripts {
         class addAceCategory {};
         class addLoadoutAction {};
 
-        // Helo get out
-        class doGetOutHeloLeft {};
-        class doGetOutHeloRight {};
+        class doGetOutHeloSide {};
 
         class addQuickSelectionList {};
         class addInsigniaSelectionList {};
