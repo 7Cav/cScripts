@@ -51,7 +51,7 @@ if (!(isNil {player getUnitTrait "engineer"}) && !(isNil {player getVariable "AC
 private _ability = "";
 if (_abilityMedic != "" || _abilityEngineer != "") then {
     private _separateMedicEngineer = if ( (_abilityEngineer == "") && (_abilityMedic == "") ) then { ", " } else {""};
-    private _ability = formatText["You have%1%2%3.<br/><br/>", _abilityMedic, _separateMedicEngineer, _abilityEngineer];
+    _ability = formatText["You have%1%2%3.<br/><br/>", _abilityMedic, _separateMedicEngineer, _abilityEngineer];
 };
 
 private _document = format [
