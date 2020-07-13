@@ -1,6 +1,8 @@
 //                A L P H A   C O M P A N Y
  
 class Cav_B_A_AirController_F : Cav_B_Alpha_base_F {
+    displayName = "Air Controller";
+
     backpack[] = {"B_Kitbag_mcamo"};
     nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemcTab"};
@@ -8,6 +10,8 @@ class Cav_B_A_AirController_F : Cav_B_Alpha_base_F {
     preLoadout = "[(_this select 0), 'officer'] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class Cav_B_A_JFO_F : Cav_B_Alpha_base_F {
+    displayName = "Joint Fires Observer";
+
     backpack[] = {"B_TacticalPack_oli"};
     headgear[] = {"rhsusf_opscore_ut_pelt_nsw_cam"};
     nvgs[] = {""};
@@ -69,6 +73,8 @@ class Cav_B_A_JFO_F : Cav_B_Alpha_base_F {
     preLoadout = "[(_this select 0), 'officer'] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class Cav_B_A_Officer_F  : Cav_B_Alpha_base_F {
+    displayName = "Officer";
+
     backpack[] = {"B_Carryall_mcamo"};
     headgear[] = {"rhsusf_ach_helmet_headset_ocp"};
     nvgs[] = {""};
@@ -132,6 +138,8 @@ class Cav_B_A_Officer_F  : Cav_B_Alpha_base_F {
 };
  
 class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
+    displayName = "Transport Helicopter Pilot";
+
     backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_green"};
     //goggles[] = {"rhsusf_shemagh_tan"};
@@ -193,6 +201,8 @@ class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
  
 };
 class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_Alpha_base_F {
+    displayName = "Transport Helicopter coPilot";
+
     backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_green"};
     //goggles[] = {"rhsusf_shemagh_tan"};
@@ -254,6 +264,8 @@ class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_Alpha_base_F {
     gps[] = {"ItemAndroid"};
 };
 class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
+    displayName = "Transport Helicopter Crew Chief";
+
     backpack[] = {"B_Carryall_cbr"};
     headgear[] = {"rhsusf_hgu56p_visor_mask_Empire_black"};
     //goggles[] = {"rhsusf_shemagh_tan"};
@@ -316,6 +328,8 @@ class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
     gps[] = {"ItemAndroid"};
 };
 class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
+    displayName = "Transport Helicopter Crew Chief (M240)";
+
     headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     nvgs[] = {"NVGogglesB_blk_F"};
     backpack[] = {"B_Carryall_cbr"};
@@ -374,6 +388,8 @@ class Cav_B_A_Helicopter_Tra_CrewChiefM240_Local : Cav_B_Alpha_base_F {
     preLoadout = "[(_this select 0), 'alpha', 0, 1] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class Cav_B_A_Helicopter_Tra_DoorGunner_F : Cav_B_Alpha_base_F {
+    displayName = "Transport Helicopter Door Gunner";
+
     backpack[] = {"B_Kitbag_mcamo"};
     headgear[] = {"rhsusf_hgu56p_visor_mask_black"};
     //goggles[] = {"rhsusf_shemagh_tan"};
@@ -439,12 +455,16 @@ class Cav_B_A_Helicopter_Tra_DoorGunner_F : Cav_B_Alpha_base_F {
  
  
 class Cav_B_A_Helicopter_Att_Pilot_F : Cav_B_Alpha_base_F {
+    displayName = "Attack Helicopter Pilot";
+
     headgear[] = {"rhsusf_ihadss"};
     backpack[] = {"B_Kitbag_mcamo"};
  
     gps[] = {"ItemAndroid"};
 };
 class Cav_B_A_Helicopter_Att_coPilot_F : Cav_B_Alpha_base_F {
+    displayName = "Attack Helicopter coPilot";
+
     headgear[] = {"rhsusf_ihadss"};
     backpack[] = {"B_Kitbag_mcamo"};
  
@@ -504,6 +524,8 @@ class Cav_B_A_Helicopter_Att_coPilot_F : Cav_B_Alpha_base_F {
  
  
 class Cav_B_A_Plane_Fighter_Pilot_F : Cav_B_Alpha_base_F {
+    displayName = "Fixed Wing Fighter Pilot";
+
     nvgs[] = {""};
     backpack[] = {"B_AssaultPack_mcamo"};
     headgear[] = {"H_PilotHelmetFighter_B"};
@@ -555,11 +577,15 @@ class Cav_B_A_Plane_Fighter_Pilot_F : Cav_B_Alpha_base_F {
  
  
 class Cav_B_A_Plane_Transport_Pilot_F : Cav_B_Alpha_base_F {
+    displayName = "Fixed Wing Transport Pilot";
+
     backpack[] = {"B_Kitbag_mcamo"};
     nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemcTab"};
 };
 class Cav_B_A_Plane_Transport_coPilot_F : Cav_B_Alpha_base_F {
+    displayName = "Fixed Wing Transport coPilot";
+
     backpack[] = {"B_Kitbag_mcamo"};
     nvgs[] = {"rhsusf_ANPVS_15"};
     gps[] = {"ItemcTab"};
