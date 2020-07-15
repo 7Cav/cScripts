@@ -52,9 +52,16 @@ if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo +
 private _alwaysAvalible = if (_companySelector == 'FULL' or _companySelector == 'ALL') then {true} else {false};
 
 // Loadouts
+if (_companySelector in _officer or _alwaysAvalible) then {
+    private _officerCategory = _defaultCategory + ["cScriptQuickSelection_Officer"];
+    [_object, "cScriptQuickSelection_Officer", "Officer", _icon, _defaultCategory] call FUNC(addAceCategory);
+
+    [_object, "Officer", _allowOnlyForCompany, _officerCategory] call FUNC(setupQuickSelections);
+};
+
 if (_companySelector in _alpha or _alwaysAvalible) then {
     private _alphaCategory = _defaultCategory + ["cScriptQuickSelection_Alpha"];
-    [_object, "cScriptQuickSelection_Alpha", "Alpha", _icon, _defaultCategory] call FUNC(addAceCategory);
+    [_object, "cScriptQuickSelection_Alpha", "Alpha", _icon, _alphaCategory] call FUNC(addAceCategory);
 
     [_object, "Alpha", _allowOnlyForCompany, _defaultCategory] call FUNC(setupQuickSelections);
 };
