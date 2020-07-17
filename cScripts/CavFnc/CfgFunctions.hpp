@@ -78,6 +78,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\mission";
         class gate {};
         class teleport {};
+        class teleportToGroup {};
 
         class addGetOutHelo {};
 
