@@ -28,9 +28,9 @@ _object addAction [
     format["<t color='#C9FFC9'>%1</t>", "Teleport to Group"], {
         params ["","","","_dest"];
         private _height = [0,0,0];
-		private _dest = leader (group (vehicle player)) ;
+        private _dest = leader (group (vehicle player)) ;
 
-		_height = getPosASL _dest;
+        _height = getPosASL _dest;
         _height = _height select 2;
 
         if (alive _dest) then {
@@ -41,14 +41,14 @@ _object addAction [
 
                 if (!usedTeleport) then {
        
-		            if (vehicle _dest != _dest) then 
-		            {
-			            player moveInCargo objectParent _dest;
-		        
+                    if (vehicle _dest != _dest) then 
+                    {
+                        player moveInCargo objectParent _dest;
+
                     } else {
                         [player, _dest] call CBA_fnc_setPos;
                         [player, _height] call CBA_fnc_setHeight;
-		            };
+                    };
 
                 titleText ["", "BLACK IN", 3];
                 #ifdef DEBUG_MODE
