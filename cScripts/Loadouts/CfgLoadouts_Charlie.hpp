@@ -15,7 +15,7 @@ class Cav_B_Charlie_Trooper_Local : Cav_B_Charlie_base_F {
         "ACE_DAGR"
     };
 };
-    
+
 class Cav_B_Charlie_Leader_Local : Cav_B_Charlie_base_F {
     vest[] = {"rhsusf_spcs_ocp_squadleader"};
 
@@ -187,7 +187,7 @@ class Cav_B_C_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 };
 
 class Cav_B_C_Bravo_FireTeamLeader_F : Cav_B_Charlie_Leader_Local {
-    displayName = "Fire Team Leader";
+    displayName = "";
 
     vest[] = {"rhsusf_spcs_ocp_teamleader","rhsusf_spcs_ocp_teamleader_alt"};
 
@@ -571,7 +571,7 @@ class Cav_B_C_CCMSFireTeamLeader_F : Cav_B_Charlie_Leader_Local {
 class Cav_B_C_CCMSGunner_F : Cav_B_Charlie_Trooper_Local {
     displayName = "Javelin Gunner";
 
-    backpack[] = {""};
+    backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
 
     launcher[] = {"rhs_weap_fgm148"};
 
