@@ -3,8 +3,6 @@
  * This teleports the player to his group leader.
  * If group leader is in a vehicle, player is teleported into the vehicle.
  * Can only be used once per session
- * Can only teleport to alive player
- * Can't teleport to yourself
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -22,15 +20,16 @@ params [
     ["_object", objNull, [objNull]]
 ];
 
-usedTeleport = false;
+missionNamespace setVariable ["usedTeleport",false];
 
 _object addAction [
     format["<t color='#C9FFC9'>%1</t>", "Teleport to Group"], {
         params ["","","","_dest"];
         private _height = [0,0,0];
-        private _dest = leader (group (vehicle player)) ;
+		private _dest = leader (group (vehicle player)) ;
+        private _usedTeleport = missionNamespace getVariable "usedTeleport";
 
-        _height = getPosASL _dest;
+		_height = getPosASL _dest;
         _height = _height select 2;
 
         if (alive _dest) then {
@@ -39,23 +38,23 @@ _object addAction [
                 hint "You are group leader, can't teleport to yourself";
             } else {
 
-                if (!usedTeleport) then {
+                if (!_usedTeleport) then {
        
-                    if (vehicle _dest != _dest) then 
-                    {
-                        player moveInCargo objectParent _dest;
-
+		            if (vehicle _dest != _dest) then 
+		            {
+			            player moveInCargo objectParent _dest;
+		        
                     } else {
                         [player, _dest] call CBA_fnc_setPos;
                         [player, _height] call CBA_fnc_setHeight;
-                    };
+		            };
 
                 titleText ["", "BLACK IN", 3];
                 #ifdef DEBUG_MODE
                     [format["%1 have been teleportet to %2 at height %3.", name player, _dest, _height]] call FUNC(logInfo);
                 #endif
 
-                usedTeleport = true;
+                missionNamespace setVariable ["usedTeleport", true];
          
                 } else {
                     hint "Teleport has already been used";
