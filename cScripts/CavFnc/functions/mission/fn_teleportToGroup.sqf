@@ -22,13 +22,19 @@ params [
     ["_object", objNull, [objNull]]
 ];
 
-usedTeleport = false;
-
 _object addAction [
     format["<t color='#C9FFC9'>%1</t>", "Teleport to Group"], {
         params ["","","","_dest"];
         private _height = [0,0,0];
         private _dest = leader (group (vehicle player)) ;
+        private _usedTeleport = missionNamespace getVariable "usedTeleport";
+        private _uid = getPlayerUID player;
+
+        if (isNil "_usedTeleport") then
+        {
+            _usedTeleport = [];
+            missionNamespace setVariable ["usedTeleport", _usedTeleport, true]; 
+        };
 
         _height = getPosASL _dest;
         _height = _height select 2;
@@ -39,8 +45,11 @@ _object addAction [
                 hint "You are group leader, can't teleport to yourself";
             } else {
 
-                if (!usedTeleport) then {
-       
+                if (_uid in _usedTeleport) then {
+
+                    hint "Teleport has already been used";
+         
+                } else {
                     if (vehicle _dest != _dest) then 
                     {
                         player moveInCargo objectParent _dest;
@@ -50,15 +59,14 @@ _object addAction [
                         [player, _height] call CBA_fnc_setHeight;
                     };
 
-                titleText ["", "BLACK IN", 3];
-                #ifdef DEBUG_MODE
-                    [format["%1 have been teleportet to %2 at height %3.", name player, _dest, _height]] call FUNC(logInfo);
-                #endif
+                    _usedTeleport pushBack _uid;
+                    missionNamespace setVariable ["usedTeleport", _usedTeleport, true];
 
-                usedTeleport = true;
-         
-                } else {
-                    hint "Teleport has already been used";
+                    titleText ["", "BLACK IN", 3];
+                    #ifdef DEBUG_MODE
+                        [format["%1 have been teleported to %2 at height %3.", name player, _dest, _height]] call FUNC(logInfo);
+                    #endif
+
                 };
             };
 
