@@ -1,4 +1,6 @@
 class Cav_B_Unarmed_Local : CommonBlufor {
+    displayName = "";
+    
     backpack[] = {""};
     goggles[] = {""};
     headgear[] = {""};
