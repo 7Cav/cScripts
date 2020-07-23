@@ -23,6 +23,6 @@ _object addEventHandler ["ContainerClosed", {
     params ["_object", "_unit"];
 
     private _radius = _object getVariable "_deleteRadius";
-	{ deleteVehicle _x; } forEach nearestObjects [getpos _object,["WeaponHolder","GroundWeaponHolder"],_radius]
+    { deleteVehicle _x; } forEach nearestObjects [getpos _object,["WeaponHolder","GroundWeaponHolder"],_radius]
 
 }];
