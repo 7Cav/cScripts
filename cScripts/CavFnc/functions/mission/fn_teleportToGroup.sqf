@@ -71,7 +71,7 @@ _object addAction [
             };
 
         } else {
-            hint "Group leader is dead";
+            "Group leader is dead" call CBA_fnc_notify;
         };
 
     }, _dest, 1.5, true, true, "", "true", 10
