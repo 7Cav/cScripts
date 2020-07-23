@@ -14,15 +14,15 @@
 
 params [
     ["_object", objNull, [objNull]],
-	["_radius", 50]
+    ["_radius", 50]
 ];
 
 _object setVariable ["_deleteRadius", _radius];
 
 _object addEventHandler ["ContainerClosed", {
-	params ["_object", "_unit"];
+    params ["_object", "_unit"];
 
-	private _radius = _object getVariable "_deleteRadius";
+    private _radius = _object getVariable "_deleteRadius";
 	{ deleteVehicle _x; } forEach nearestObjects [getpos _object,["WeaponHolder","GroundWeaponHolder"],_radius]
 
 }];
