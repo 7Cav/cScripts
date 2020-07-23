@@ -93,6 +93,8 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
+        class deleteDroppedObjects {};
+
        // Plane jump
         class doJump {};
         class handleJump {};
