@@ -10,7 +10,7 @@ class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
     
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
     
         "rhs_mag_m67",
         
@@ -84,7 +84,7 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_Atlas_base_F {
     };
 
     magazines[] += {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
         
         "rhs_mag_m67",2,
 
@@ -170,7 +170,7 @@ class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
     binoculars[] = {"ACE_Vector"};
     
     magazines[] += {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
         
         "rhs_mag_m67",2,
 
