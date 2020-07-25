@@ -11,7 +11,9 @@ class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
     
     magazines[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
-
+	
+        "rhs_mag_m67",
+		
         "SmokeShell",4,
         "SmokeShellBlue",2,
         "ACE_Chemlight_HiYellow",4,
@@ -21,7 +23,6 @@ class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
     items[] += {
         // Radio
         "ACRE_PRC152",
-        "acre_prc343",
 
         // Tools
         "ACE_MapTools",
@@ -43,7 +44,8 @@ class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
         "ACE_SurgicalKit",
 
         // Gear
-        "rhsusf_ANPVS_14"
+        "rhsusf_ANPVS_14",		
+		"ACE_EntrenchingTool"
     };
     
     gps[] = {"ItemAndroid"};
@@ -83,24 +85,35 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_Atlas_base_F {
 
     magazines[] += {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+		
+        "rhs_mag_m67",2,
 
         "SmokeShell",2,
-        "SmokeShellGreen",2,
-        "ACE_Chemlight_UltraHiOrange",5,
-        "B_IR_Grenade",4
+        "SmokeShellblue",2,
+        "ACE_Chemlight_UltraHiOrange",6,
+		"ACE_Chemlight_HiRed",4,
+        "B_IR_Grenade",6
     };
 
     items[] += {
         // Radios
         "ACRE_PRC152",
-        "ACRE_PRC152",
         
         // Personal Medical Equipment
         "ACE_Splint",2,
         "ACE_morphine",2,
+		"ACE_epinephrine",2,
+        "ACE_quikclot",18,
+        "ACE_tourniquet",4,
+		"ACE_CableTie",2,
         
         // Tools
+        "rhsusf_ANPVS_14",
+		"ACE_MapTools",
+        "ACE_Flashlight_XL50",
+        "ACE_microDAGR",
         "ACE_Fortify",
+		"ACE_EntrenchingTool",
         "ToolKit"
     };
 
@@ -164,6 +177,7 @@ class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
         "SmokeShell",2,
         "SmokeShellGreen",2,
         "ACE_Chemlight_UltraHiOrange",6,
+		"ACE_Chemlight_HiRed",4,
         "B_IR_Grenade",6
     };
     items[] += {
@@ -180,7 +194,7 @@ class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
         "ACE_MapTools",
         "ACE_Flashlight_XL50",
         "ACE_microDAGR",
-        "ACE_EarPlugs",
+        "ACE_EarPlugs"
     };
 
     gps[] = {"ItemcTab"};
@@ -209,7 +223,10 @@ class Cav_B_B_Atlas_Logistics_TeamLeader_F : Cav_B_Bravo_Logi_Base_Local {
 
     items[] += {
         // Radios
-        "ACRE_PRC152"
+        "ACRE_PRC152",
+
+		// Tools
+		"ACE_HuntIR_monitor"
     };
 };
 class Cav_B_B_Atlas_Logistics_TeamMember_F : Cav_B_Bravo_Logi_Base_Local {
