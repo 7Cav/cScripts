@@ -47,9 +47,6 @@ class cScripts {
     };
     class players {
         file = "cScripts\cavFnc\functions\players";
-        class setPreInitPlayerSettings {};
-        class setPostInitPlayerSettings {};
-
         class getPlayerClan {};
         class isPlayerClan {};
 
