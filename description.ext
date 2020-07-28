@@ -60,10 +60,8 @@
 
     class CfgFunctions {
         #include "cScripts\CavFnc\CfgFunctions.hpp"
-        #include "cScripts\Loadouts\script\CfgFunctions.hpp"
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
     };
-    #include "cScripts\Loadouts\script\CfgPoppy.hpp"
     #include "cScripts\ViewingDistance\GUI.h"
     #include "cScripts\CfgLoadouts.hpp"
 
