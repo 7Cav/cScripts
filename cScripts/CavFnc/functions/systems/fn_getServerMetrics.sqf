@@ -1,5 +1,20 @@
 #include "..\script_component.hpp";
-
+/*
+ * Author: Liber.N
+ * This function allow you to get statistics from the server.
+ *
+ * Arguments:
+ * 0: Client ID <NUMBER>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [owner player] call cScripts_fnc_getServerMetrics
+ *
+ * Public: No
+ */
+ 
 params ["_clientID"];
 
 private _countUnits = ({ local _x } count allUnits);
