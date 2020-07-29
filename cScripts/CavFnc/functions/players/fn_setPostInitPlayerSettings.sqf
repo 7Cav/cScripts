@@ -143,8 +143,7 @@ if (isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
 };
 
 //Server metrics
-_adminState = call BIS_fnc_admin;
-if (_adminState != 0) then {
+if ((call BIS_fnc_admin) >= 2) then {
     player addAction ["Server Metrics", {
         [owner player] call FUNC(getServerMetrics);
     }, [], 0, false, true];
