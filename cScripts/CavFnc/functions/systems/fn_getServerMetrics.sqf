@@ -15,7 +15,7 @@
  * Public: No
  */
  
-params ["_player"];
+params ["_clientID"];
 
 private _countUnits = ({ local _x } count allUnits);
 private _countGroups = ({ local _x } count allGroups);
