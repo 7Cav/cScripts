@@ -141,3 +141,11 @@ if !(weaponLowered _player) then {_player action ["WeaponOnBack", _player]};
 if (isNil {_unit getVariable QEGVAR(Player,Unit)}) then {
     [formatText["%1 have no unit variable defined", _player], "LoadoutPostInit", true] call FUNC(logWarning);
 };
+
+//Server metrics
+_adminState = call BIS_fnc_admin;
+if (_adminState != 0) then {
+    player addAction ["Server Metrics", {
+        [owner player] call FUNC(getServerMetrics);
+    }, [], 0, false, true];
+};

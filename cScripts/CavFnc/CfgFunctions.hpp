@@ -117,6 +117,8 @@ class cScripts {
 
         class createVehicleLable {};
         class getVehicleLable {};
+
+        class getServerMetrics {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
