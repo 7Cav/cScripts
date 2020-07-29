@@ -1,24 +1,5 @@
 #include "..\script_component.hpp";
-<<<<<<< HEAD
 
-=======
-/*
- * Author: Liber.N
- * This function allow you to get statistics from the server.
- *
- * Arguments:
- * 0: Client ID <NUMBER>
- *
- * Return Value:
- * Nothing
- *
- * Example:
- * [owner player] call cScripts_fnc_getServerMetrics
- *
- * Public: No
- */
- 
->>>>>>> ae28597b8f02eb0e1c09b1773dfffb8f8926b924
 params ["_clientID"];
 
 private _countUnits = ({ local _x } count allUnits);
@@ -45,8 +26,4 @@ private _global_units = format ["<t align='center'><br />- Global -<br /> Units:
 private _scripts = format ["<t align='center'><br />- Scripts -<br /> Spawn: %1 <br />execVM: %2 <br />Exec: %3 <br />execFSM: %4 </t><br />",_countUnits,_countGroups,_countVehicles];
 private _fps_all = format ["<t align='center'><br />- Performance -<br />FPS: %1 <br />FpsMin: %2 <br />Uptime: %3 <br />MissionTime: %4 </t><br />",_fps,_fpsMin,_upTime,_missionTime];
 
-<<<<<<< HEAD
 parseText (_local_units + _global_units + _scripts + _fps_all) remoteExec ["hint", _clientID]; 
-=======
-parseText (_local_units + _global_units + _scripts + _fps_all) remoteExec ["hint", _player]; 
->>>>>>> ae28597b8f02eb0e1c09b1773dfffb8f8926b924
