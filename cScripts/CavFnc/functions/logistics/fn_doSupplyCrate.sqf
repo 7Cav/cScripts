@@ -128,8 +128,8 @@ private _largeBox = [
     "B_CargoNet_01_ammo_F"
 ];
 if (typeOf _crate in _smallBox) then {
-    _crate setObjectTextureGlobal  [0, "cScripts\Data\Objects\Ammobox_7CAV_co.paa"];
+    _crate setObjectTextureGlobal  [0, "\z\cav\addons\supplies\data\Ammobox_7CAV_co.paa"];
 };
 if (typeOf _crate in _largeBox) then {
-    _crate setObjectTextureGlobal  [1, "cScripts\Data\Objects\Ammobox_7CAV_co.paa"];
+    _crate setObjectTextureGlobal  [1, "\z\cav\addons\supplies\data\Ammobox_7CAV_co.paa"];
 };
