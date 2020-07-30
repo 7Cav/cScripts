@@ -17,12 +17,7 @@ params [
     ["_radius", 50]
 ];
 
-_object setVariable ["_deleteRadius", _radius];
-
-_object addEventHandler ["ContainerClosed", {
+[_object, "ContainerClosed", {
     params ["_object", "_unit"];
-
-    private _radius = _object getVariable "_deleteRadius";
-    { deleteVehicle _x; } forEach nearestObjects [getpos _object,["WeaponHolder","GroundWeaponHolder"],_radius]
-
-}];
+    { deleteVehicle _x; } forEach nearestObjects [getpos _object, ["WeaponHolder", "GroundWeaponHolder"], _thisArgs];
+}, _radius] call CBA_fnc_addBISEventHandler;
