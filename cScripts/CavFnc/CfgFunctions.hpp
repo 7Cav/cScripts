@@ -95,10 +95,10 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
-        // Staging
         class getStagingZone {};
+        class deleteDroppedObjects {};
 
-        // Plane jump
+       // Plane jump
         class doJump {};
         class handleJump {};
 
@@ -122,10 +122,12 @@ class cScripts {
 
         class createVehicleLable {};
         class getVehicleLable {};
+
+        class getServerMetrics {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
-        class moduleCreateStarterCrate {};
+        class moduleCreateStartgetStagingZoneerCrate {};
         class moduleCreateFieldHospital {};
         class moduleCreateMedicalCrate {};
         class moduleCreateSupplyCrate {};
