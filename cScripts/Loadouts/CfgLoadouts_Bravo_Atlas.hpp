@@ -183,7 +183,7 @@ class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
         // Tools
         "ACE_Fortify",
         "ACE_SpraypaintBlue",
-        "ACE_SpraypaintRed",
+        "ACE_SpraypaintRed"
     };
 
     gps[] = {"ItemcTab"};
