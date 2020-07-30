@@ -93,6 +93,8 @@ class cScripts {
         class addQuickSelection {};
         class addInsigniaSelection {};
 
+        class deleteDroppedObjects {};
+
        // Plane jump
         class doJump {};
         class handleJump {};
@@ -120,6 +122,8 @@ class cScripts {
 
         class requirePermissions {};
         class checkPermissions {};
+
+        class getServerMetrics {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
