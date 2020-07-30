@@ -127,7 +127,7 @@ class cScripts {
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
-        class moduleCreateStartgetStagingZoneerCrate {};
+        class moduleCreateStarterCrate {};
         class moduleCreateFieldHospital {};
         class moduleCreateMedicalCrate {};
         class moduleCreateSupplyCrate {};
