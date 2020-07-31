@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Selection type <STRING>       (Default: "none") ["none","all","officer","alpha","bravo","charlie"]
+ * 1: Selection type <STRING>       (Default: "none")
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
@@ -58,7 +58,8 @@ private _crateName = if ( !(_fullLableCheck) ) then {
 _object addAction [format ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry%1Equipment Crate", _crateName], {}, [], 1.5, true, true, "", "true", 5];
 
 if (_arsenal) then {
-    [_object, _quickSelectScale] call FUNC(addArsenal);
+    private _arsenalContainer = if (_fullLableCheck && (EGVAR(Settings,setMissionType) >= 3)) then {'PUBLIC'} else {_quickSelectScale};
+    [_object, _arsenalContainer] call FUNC(addArsenal);
 };
 
 // Call ReGear Option
