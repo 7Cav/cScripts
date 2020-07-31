@@ -159,6 +159,13 @@ if (isPlayer _unit) then {
             [formatText["%1 have got earplugs assigned", _unit], "LoadoutPostInit"] call FUNC(logInfo);
         #endif
     };
+
+    //Server metrics
+    if ((call BIS_fnc_admin) >= 2) then {
+        player addAction ["Server Metrics", {
+            [owner player] call FUNC(getServerMetrics);
+        }, [], 0, false, true];
+    };
 };
 
 // Select weapon
