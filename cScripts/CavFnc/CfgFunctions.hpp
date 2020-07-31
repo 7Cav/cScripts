@@ -146,6 +146,21 @@ class cScripts {
         class exportLoadoutToArsenal {};
     };
 
+    class gear {
+        file = "cScripts\cavFnc\functions\gear";
+        class preInit { preInit = 1; };
+        class postInitProxy { postInit = 1; };
+        class postInit {};
+        class applyLoadout {};
+        class applyAbilities {};
+        class selectLoadout {};
+        class synchGroupIDs {};   
+        class getSideConfig {};
+        
+        // ACRE
+        class setupRadios {};
+    };
+
     class debug {
         file = "cScripts\cavFnc\functions\debug";
         class logError {};

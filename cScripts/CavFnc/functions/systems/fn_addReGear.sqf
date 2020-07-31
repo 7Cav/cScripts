@@ -20,20 +20,20 @@ params [
 _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
     params ["_target", "_caller", "_actionId", "_arguments"];
     _arguments params ["_doHeal"];
-    private _loadout = _caller getVariable ["poppy_loadout", ""];
-    [_caller, _loadout] call Poppy_fnc_applyLoadout;
+    private _loadout = _caller getVariable [QEGVAR(Gear,Loadout), ""];
+    [player, _loadout] call FUNC(applyLoadout);
 
     if (_doHeal) then {
         [_target, _caller] call ace_medical_treatment_fnc_fullHeal;
     };
-}, [_doHeal], 1.5, true, true, "", "true", 5];
+}, [_doHeal], 1.5, true, true, "", "_this getVariable ['cScripts_Gear_Loadout', ''] != 'cScripts_Gear_SavedArsenalLoadout'", 5];
 
 // Make ACE Interaction for ReGear
 private _Icon = "cScripts\Data\Icon\icon_00.paa";
-private _reGearCondition = {true};
+private _reGearCondition = { player getVariable QEGVAR(Gear,Loadout) != QEGVAR(Gear,SavedArsenalLoadout) };
 private _reGearStatement = {
-    private _loadout = player getVariable ["poppy_loadout", ""];
-    [player, _loadout] call Poppy_fnc_applyLoadout;
+    private _loadout = player getVariable [QEGVAR(Gear,Loadout), ""];
+    [player, _loadout] call FUNC(applyLoadout);
 
     if (_doHeal) then {
         [_this select 0, player] call ace_medical_treatment_fnc_fullHeal;
