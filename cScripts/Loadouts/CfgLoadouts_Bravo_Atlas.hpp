@@ -10,42 +10,38 @@ class Cav_B_Bravo_Medical_Base_Local : Cav_B_Bravo_Atlas_base_F {
     backpack[] = {"B_Carryall_mcamo","B_Carryall_mcamo","B_Carryall_cbr"};
     
     magazines[] = {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
     
         "rhs_mag_m67",
         
         "SmokeShell",4,
         "SmokeShellBlue",2,
+        "SmokeShellGreen",2,
         "ACE_Chemlight_HiYellow",4,
-        "ACE_Chemlight_HiRed",4
+        "ACE_Chemlight_HiRed",4,
+        "B_IR_Grenade",2
     };
 
     items[] += {
         // Radio
         "ACRE_PRC152",
 
-        // Tools
-        "ACE_MapTools",
-        "ACE_Flashlight_XL50",
-        "ACE_microDAGR",
-        "ACE_EarPlugs",
-
         // Medical Equipment
-        "ACE_quikclot",30,
-        "ACE_tourniquet",10,
+        "ACE_tourniquet",6,
         "ACE_salineIV",10,
-        "ACE_personalAidKit",5,
+        "ACE_salineIV_500",4,
+        "ACE_personalAidKit",7,
         "ACE_elasticBandage",40,
-        "ACE_morphine",20,
-        "ACE_epinephrine",20,
-        "ACE_adenosine",6,
+        "ACE_morphine",14,
+        "ACE_epinephrine",14,
+        "ACE_adenosine",2,
         "ACE_splint",8,
         "ACE_CableTie",2,
         "ACE_SurgicalKit",
 
-        // Gear
-        "rhsusf_ANPVS_14",		
-        "ACE_EntrenchingTool"
+        // Gear    
+        "ACE_EntrenchingTool",
+        "ACE_SpraypaintBlue"
     };
     
     gps[] = {"ItemAndroid"};
@@ -88,8 +84,9 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_Atlas_base_F {
         
         "rhs_mag_m67",2,
 
-        "SmokeShell",2,
+        "SmokeShell",4,
         "SmokeShellblue",2,
+        "SmokeShellGreen",2,
         "ACE_Chemlight_UltraHiOrange",6,
         "ACE_Chemlight_HiRed",4,
         "B_IR_Grenade",6
@@ -101,17 +98,9 @@ class Cav_B_Bravo_Logi_Base_Local : Cav_B_Bravo_Atlas_base_F {
         
         // Personal Medical Equipment
         "ACE_Splint",2,
-        "ACE_morphine",2,
-        "ACE_epinephrine",2,
-        "ACE_quikclot",18,
-        "ACE_tourniquet",4,
         "ACE_CableTie",2,
         
         // Tools
-        "rhsusf_ANPVS_14",
-        "ACE_MapTools",
-        "ACE_Flashlight_XL50",
-        "ACE_microDAGR",
         "ACE_Fortify",
         "ACE_EntrenchingTool",
         "ToolKit"
@@ -170,12 +159,12 @@ class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
     binoculars[] = {"ACE_Vector"};
     
     magazines[] += {
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",6,
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag",5,
         
-        "rhs_mag_m67",2,
+        "rhs_mag_m67",
 
         "SmokeShell",2,
-        "SmokeShellGreen",2,
+        "SmokeShellBlue",2,
         "ACE_Chemlight_UltraHiOrange",6,
         "ACE_Chemlight_HiRed",4,
         "B_IR_Grenade",6
@@ -183,23 +172,23 @@ class Cav_B_B_Atlas_Logistics_Officer_F : Cav_B_Bravo_Atlas_base_F {
     items[] += {
 
         // Personal Medical Equipment
-        "ACE_quikclot",10,
         "ACE_Splint",2,
         "ACE_morphine",2,
+        "ACE_epinephrine",
         
         // Radios
         "ACRE_PRC117F",
-
+        "ACRE_PRC117F",
+        
         // Tools
-        "ACE_MapTools",
-        "ACE_Flashlight_XL50",
-        "ACE_microDAGR",
-        "ACE_EarPlugs"
+        "ACE_Fortify",
+        "ACE_SpraypaintBlue",
+        "ACE_SpraypaintRed"
     };
 
     gps[] = {"ItemcTab"};
     
-    preLoadout = "[(_this select 0), 'bravo', 0, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
+    preLoadout = "[(_this select 0), 'bravo', 1, 1, true] call cScripts_fnc_setPreInitPlayerSettings;";
 };
 class Cav_B_B_Atlas_Logistics_OpsOfficer_F : Cav_B_B_Atlas_Logistics_Officer_F {
     displayName = "Ops Officer";
@@ -226,7 +215,8 @@ class Cav_B_B_Atlas_Logistics_TeamLeader_F : Cav_B_Bravo_Logi_Base_Local {
         "ACRE_PRC152",
 
         // Tools
-        "ACE_HuntIR_monitor"
+        "ACE_HuntIR_monitor",
+        "ACE_SpraypaintRed"
     };
 };
 class Cav_B_B_Atlas_Logistics_TeamMember_F : Cav_B_Bravo_Logi_Base_Local {
