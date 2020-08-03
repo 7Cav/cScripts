@@ -88,3 +88,6 @@ _object enableRopeAttach false;
 
 // Make object not loadable in ACE
 [_object, -1] call ace_cargo_fnc_setSize;
+
+// Make Starter crate clean junk around it
+[_object, 100] call FUNC(deleteDroppedObjects);
