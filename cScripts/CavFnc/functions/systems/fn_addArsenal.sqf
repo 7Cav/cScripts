@@ -102,6 +102,64 @@ private _charlieArsenalContainer = [
     // Crate Backpacks Export
 ];
 
+private _privateBlacklist = [
+    "launch_I_Titan_F",
+    "launch_O_Titan_ghex_F",
+    "launch_O_Titan_F",
+    "launch_B_Titan_tna_F",
+    "launch_B_Titan_F",
+    "launch_O_Titan_short_F",
+    "launch_O_Titan_short_ghex_F",
+    "launch_I_Titan_short_F",
+    "launch_B_Titan_short_F",
+    "launch_B_Titan_short_tna_F",
+    "launch_B_Titan_olive_F",
+    "launch_I_Titan_eaf_F",
+    "rhsusf_5Rnd_HE",
+    "rhsusf_5Rnd_FRAG",
+    "rhsusf_8Rnd_HE",
+    "rhsusf_8Rnd_FRAG",
+    "H_HelmetO_ViperSP_ghex_F",
+    "H_HelmetO_ViperSP_hex_F",
+    "arifle_ARX_hex_F",
+    "arifle_ARX_ghex_F",
+    "arifle_ARX_blk_F",
+    "U_O_V_Soldier_Viper_hex_F",
+    "U_O_V_Soldier_Viper_F",
+    "U_B_Protagonist_VR",
+    "U_O_Protagonist_VR",
+    "U_C_Protagonist_VR",
+    "U_I_Protagonist_VR",
+    "kka3_ace_extension_Campfire_burning_F",
+    "ACRE_SEM52SL",
+    "ACRE_SEM70",
+    "B_Respawn_Sleeping_bag_blue_F",
+    "B_Respawn_Sleeping_bag_brown_F",
+    "B_Respawn_TentDome_F",
+    "B_Patrol_Respawn_bag_F",
+    "B_Respawn_Sleeping_bag_F",
+    "B_Respawn_TentA_F",
+    "I_AA_01_weapon_F",
+    "O_AA_01_weapon_F",
+    "O_AT_01_weapon_F",
+    "I_AT_01_weapon_F",
+    "B_AT_01_weapon_F",
+    "B_AA_01_weapon_F",
+    "I_E_AT_01_weapon_F",
+    "I_E_AA_01_weapon_F",
+    "ace_csw_staticATCarry",
+    "ace_csw_staticAACarry",
+    "I_E_UavTerminal",
+    "O_UavTerminal",
+    "I_UavTerminal",
+    "ALIVE_Terminal",
+    "ACE_CTS9",
+    "rhsusf_acc_tacsac_blk",
+    "rhsusf_acc_tacsac_blue",
+    "rhsusf_acc_tacsac_tan",
+    "ALIVE_Tablet"
+];
+
 switch (_container) do {
     case "ALPHA": {
         _alphaArsenalContainer append _globalArsenalContainer;
@@ -117,6 +175,10 @@ switch (_container) do {
         _charlieArsenalContainer append _globalArsenalContainer;
         _charlieArsenalContainer arrayIntersect _charlieArsenalContainer;
         [_object, _charlieArsenalContainer] call ace_arsenal_fnc_initBox;
+    };
+    case "PUBLIC": {
+        [_object, true] call ace_arsenal_fnc_initBox;
+        [_object, _privateBlacklist, true] call ace_arsenal_fnc_removeVirtualItems
     };
     default {
         [_object, true] call ace_arsenal_fnc_initBox;
