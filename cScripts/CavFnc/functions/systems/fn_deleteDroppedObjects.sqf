@@ -20,6 +20,6 @@ params [
 [_object, "ContainerClosed", {
    params ["_object", "_unit"];
    if ( count (_object nearEntities ["Man", _thisArgs]) < 2) then {
-       { deleteVehicle _x; } forEach nearestObjects [getpos _object, ["WeaponHolder", "GroundWeaponHolder"], _thisArgs];
+        { deleteVehicle _x; } forEach nearestObjects [getpos _object, ["WeaponHolder", "GroundWeaponHolder"], _thisArgs];
    };
 }, _radius] call CBA_fnc_addBISEventHandler;
