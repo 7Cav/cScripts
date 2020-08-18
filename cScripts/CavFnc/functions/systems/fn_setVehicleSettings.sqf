@@ -150,15 +150,20 @@ private _logisticalVehicles = [
 switch (true) do {
     case (typeOf _vehicle in _transportRotary): {
         [_vehicle] call FUNC(addGetOutHelo);
+        [_vehicle] call FUNC(checkVehicle);
     };
     case (typeOf _vehicle in _transportRotaryPara): {
         [_vehicle] call FUNC(addJump);
+        [_vehicle] call FUNC(checkVehicle);
     };
     case (typeOf _vehicle in _fixedWingTransport): {
         [_vehicle] call FUNC(addJump);
+        [_vehicle] call FUNC(addHaloJump);
+        [_vehicle] call FUNC(checkVehicle);
     };
     case (typeOf _vehicle in _logisticalVehicles): {
         [_vehicle] call FUNC(addFortifyArea);
+        [_vehicle] call FUNC(checkVehicle);
     };
 };
 
