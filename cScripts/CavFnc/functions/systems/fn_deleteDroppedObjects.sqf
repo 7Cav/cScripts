@@ -7,17 +7,17 @@
  * 1: Radius
  *
  * Example:
- * [this,100] call cScripts_fnc_deleteDroppedObjects
- * [_object,100] call cScripts_fnc_deleteDroppedObjects
+ * [this,5] call cScripts_fnc_deleteDroppedObjects
+ * [_object,5] call cScripts_fnc_deleteDroppedObjects
  *
  */
 
 params [
     ["_object", objNull, [objNull]],
-    ["_radius", 50]
+    ["_radius", 5]
 ];
 
 [_object, "ContainerClosed", {
     params ["_object", "_unit"];
-    { deleteVehicle _x; } forEach nearestObjects [getpos _object, ["WeaponHolder", "GroundWeaponHolder"], _thisArgs];
+    [{(count ((_this select 0) nearEntities ["Man", (_this select 1)]) < 1)}, {{ deleteVehicle _x; } forEach nearestObjects [getpos (_this select 0), ["WeaponHolder", "GroundWeaponHolder"], (_this select 1)];}, [_object, _thisArgs]] call CBA_fnc_waitUntilAndExecute;
 }, _radius] call CBA_fnc_addBISEventHandler;
