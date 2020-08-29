@@ -79,6 +79,7 @@ class cScripts {
         class addGetOutHelo {};
 
         class addJump {};
+        class addHaloJump {};
 
         class setVehicleLable {};
     };
@@ -94,6 +95,7 @@ class cScripts {
 
        // Plane jump
         class doJump {};
+        class doHaloJump {};
         class handleJump {};
 
         // Buttons and options
@@ -116,6 +118,8 @@ class cScripts {
 
         class createVehicleLable {};
         class getVehicleLable {};
+
+        class checkVehicle {};
 
         class getServerMetrics {};
     };
