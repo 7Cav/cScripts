@@ -31,16 +31,38 @@ if !(_radioChannel == "ERROR" ) then {
     _radioChannel = "";
 };
 
-player createDiaryRecord["7Cav",
-    ["Information",
-        format [
-"Welcome <font color='#ffc61a'>%1</font> <font color='#ffc61a'>%2</font> to %3 on %4.<br/>Your currently on <font color='#ffc61a'>%5</font>.<br/><br/>
+private _abilityMedic = "";
+if (!(isNil {player getUnitTrait "medic"}) && !(isNil {player getVariable "ACE_medical_medicClass"})) then {
+    switch (player getVariable "ACE_medical_medicClass") do {
+        case 1: { _abilityMedic = " <font color='#ffc61a'>medic</font> training" };
+        case 2: { _abilityMedic = " <font color='#ffc61a'>doctor</font> training" };
+        default { _abilityMedic = "" };
+    };
+};
+
+private _abilityEngineer = "";
+if (!(isNil {player getUnitTrait "engineer"}) && !(isNil {player getVariable "ACE_isEngineer"})) then {
+    switch (player getVariable "ACE_isEngineer") do {
+        case 1: { _abilityEngineer = " <font color='#ffc61a'>engineer</font> training" };
+        case 2: { _abilityEngineer = " <font color='#ffc61a'>advanced engineer</font> training" };
+        default { _abilityEngineer = "" };
+    };
+};
+private _ability = "";
+if (_abilityMedic != "" || _abilityEngineer != "") then {
+    private _separateMedicEngineer = if ( (_abilityEngineer == "") && (_abilityMedic == "") ) then { ", " } else {""};
+    _ability = formatText["You have%1%2%3.<br/><br/>", _abilityMedic, _separateMedicEngineer, _abilityEngineer];
+};
+
+private _document = format [
+"<br/><br/>Welcome <font color='#ffc61a'>%1</font> <font color='#ffc61a'>%2</font> to %3 on %4.<br/>Your currently on <font color='#ffc61a'>%5</font>.<br/><br/>
 You're currently slotted in as <font color='#ffc61a'>%6</font> %7.<br/><br/>
+%10
 %9
 Good luck and have fun %8!
 <br/><br/>
 -----------------------------------------------------------------
-<br/><br/>This mission is currently running cScripts version: <font color='#ffc61a'>%10</font>.
-", _playerRank, _playerName, briefingName, _worldName, _serverName, _playerRole, _playerGroup, _playerRankFormal, _radiochannel, VERSION]
-    ]
-];
+<br/><br/>This mission is currently running cScripts version: <font color='#ffc61a'>%11</font>.
+", _playerRank, _playerName, briefingName, _worldName, _serverName, _playerRole, _playerGroup, _playerRankFormal, _radiochannel, _ability ,VERSION];
+
+player createDiaryRecord["7Cav", ["Information", _document], taskNull, "", false];

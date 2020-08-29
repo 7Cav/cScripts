@@ -1,6 +1,8 @@
 //Waldie.A - Added 10/10/18 - sets up S5 cameraman
 
 class CAV_S5_Base : CommonBlufor {
+    displayName = "";
+    
     uniform[] = {"U_C_Journalist"};
     vest[] = {"V_Press_F"};
     backpack[] = {"B_AssaultPack_blk"};

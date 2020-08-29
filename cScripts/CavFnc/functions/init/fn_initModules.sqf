@@ -68,9 +68,17 @@ if (ace_medical_treatment_locationsBoostTraining) then {
 }] call Ares_fnc_RegisterCustomModule;
 
 
-["7Cav Mission", "Call Endex",{
-    call FUNC(moduleCallEndex);
-}] call Ares_fnc_RegisterCustomModule;
+if !(EGVAR(patches,usesAlive)) then {
+    ["7Cav Mission", "Call Endex",{
+        call FUNC(moduleCallEndex);
+    }] call Ares_fnc_RegisterCustomModule;
+};
+
+if (EGVAR(patches,usesAlive)) then {
+    ["7Cav Mission", "Add to alive",{
+        call FUNC(moduleAddToAlive);
+    }] call Ares_fnc_RegisterCustomModule;
+};
 
 #ifdef DEBUG_MODE
     ["7Cav Custom Achilles Modules initialization complete"] call FUNC(logInfo);
