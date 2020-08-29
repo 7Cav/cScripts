@@ -19,7 +19,7 @@ params [
 ];
 
 private _prefix = formatText["[%1]", QUOTE(PREFIX)];
-private _type = "INFO";
+private _type = "WARNING";
 if !(_topic == "") then {_topic = formatText[" (%1)", _topic]};
 
 diag_log formatText ["%1%2 %3: %4", _prefix, _topic, _type, _message];
