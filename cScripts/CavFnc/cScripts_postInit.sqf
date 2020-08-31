@@ -47,10 +47,13 @@ if (EGVAR(Settings,allowReplaceItem)) then {
     call FUNC(initItemReplace);
 };
 
+call FUNC(initStaging);
+
 // Handle player announcement
 if !(EGVAR(Settings,setMissionType) >= 3) then {
     [player] call FUNC(doPlayerAnnouncement);
 };
+
 
 // Handle hint
 if (EGVAR(Settings,enableStartHint)) then {
