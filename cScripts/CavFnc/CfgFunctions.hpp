@@ -90,8 +90,11 @@ class cScripts {
         class setVehicleInventory {};
         class setVehicleSettings {};
 
-        class addQuickSelection {};
         class addInsigniaSelection {};
+        class addInsigniaSelectionList {};
+
+        class setupLoadoutSelection {};
+        class addLoadoutSelection {};
 
         class getStagingZone {};
         class deleteDroppedObjects {};
@@ -109,9 +112,6 @@ class cScripts {
         class addLoadoutAction {};
 
         class doGetOutHeloSide {};
-
-        class addQuickSelectionList {};
-        class addInsigniaSelectionList {};
 
         class addObjectToCurator {};
 

@@ -73,7 +73,7 @@ if (_reHealOption) then {
 };
 
 // Call Quick Selection
-[_object, _quickSelectScale, _allowOnlyForCompany] call FUNC(addQuickSelectionList);
+[_object, _allowOnlyForCompany] call FUNC(setupLoadoutSelection);
 
 // Call Insignia Selection
 if (_InsigniaSelectOption) then {

@@ -15,8 +15,6 @@
  * Public: No
  */
 
-//if (!isServer) exitWith {};
-
 [format["%1 staging options is setup.", player], "Staging"] call FUNC(logInfo);
 
 private _condition = {
@@ -31,4 +29,4 @@ private _category = ["ACE_SelfActions", QEGVAR(Actions,StagingCategory)];
 [player, true, _category] call FUNC(addReGear);
 [player, _category] call FUNC(addHeal);
 [player, _category] call FUNC(addInsigniaSelectionList);
-[player, "full", true, ["ACE_SelfActions"]] call FUNC(addQuickSelectionsList);
+[player, true, "ACE_SelfActions"] call FUNC(setupLoadoutSelection);

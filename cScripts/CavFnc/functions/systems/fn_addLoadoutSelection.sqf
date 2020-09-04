@@ -13,9 +13,9 @@
  * 6: Require Company Variable <BOOL>                       (Optional)  [Default: false]
  *
  * Example:
- * [this,"Rifleman","Class_Rifleman"] call cScripts_fnc_addQuickSelection;
- * [this,"Rifleman","Class_Rifleman","",["ACE_MainActions","cScriptQuickSelectionMenu"],""] call cScripts_fnc_addQuickSelection;
- * [this,"Rifleman","Class_Rifleman","",["ACE_MainActions","cScriptQuickSelectionMenu"],"", false] call cScripts_fnc_addQuickSelection;
+ * [this,"Rifleman","Class_Rifleman"] call cScripts_fnc_addLoadoutSelection;
+ * [this,"Rifleman","Class_Rifleman","",["ACE_MainActions","cScripts_Loadout_Cat_Main"],""] call cScripts_fnc_addLoadoutSelection;
+ * [this,"Rifleman","Class_Rifleman","",["ACE_MainActions","cScripts_Loadout_Cat_Main"],"", false] call cScripts_fnc_addLoadoutSelection;
  */
 
 params [
@@ -23,7 +23,7 @@ params [
     ["_lable", "", [""]],
     ["_className", "", [""]],
     ["_icon", "", [""]],
-    ["_category", ["ACE_MainActions","cScriptQuickSelectionMenu"], [[]]],
+    ["_category", ["ACE_MainActions", "cScripts_Loadout_Cat_Main"], [[]]],
     ["_platoon", "", [""]],
     ["_allowOnlyForCompany", true]
 ];
@@ -39,11 +39,12 @@ if (_allowOnlyForCompany) then {
 
 private _statement = {
     (_this select 2) params ["_className"];
-    [player, _className] call Poppy_fnc_applyLoadout;
+    [player, _className] call FUNC(applyLoadout);
 };
 
-private _action = [format ["cScriptQuickSelection_%1", _className], _lable, _icon, _statement, _condition, nil, [_className, _platoon]] call ace_interact_menu_fnc_createAction;
-[_object, 0, _category, _action] call ace_interact_menu_fnc_addActionToObject;
+private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, _statement, _condition, nil, [_className, _platoon]] call ace_interact_menu_fnc_createAction;
+private _actionType = if (isPlayer _object) then {1} else {0};
+[_object, _actionType, _category, _action] call ace_interact_menu_fnc_addActionToObject;
 
 #ifdef DEBUG_MODE
     [format["%1; selector '%2' added for '%3' crate.", _object, _lable, _platoon], "Quick Selection"] call FUNC(logInfo);
