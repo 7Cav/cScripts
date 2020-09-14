@@ -32,6 +32,7 @@ if !(isNil {_player getVariable QEGVAR(Player,Announced)}) exitWith {
 #endif
 
 systemChat format['Welcome %1 %2!', [player,'CAV'] call FUNC(getPlayerRank), [player,'PROFILE'] call FUNC(getPlayerName)];
+systemChat format['You are slotted in as %1 and are assigned to %2!', call FUNC(getPlayerRole), groupId (group player)];
 
 private _profileName = profileName;
 _profileName = [_profileName, 0, 2] call BIS_fnc_trimString;
