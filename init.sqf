@@ -7,9 +7,9 @@
  */
 
 #ifdef DEBUG_MODE
-    ["init Initializing."] call FUNC(logInfo);
-    [formatText["cScripts Version %1 is running.",VERSION]] call FUNC(logInfo);
-    [formatText["Debug mode is currently active."]] call FUNC(logWarning);
+    ["init Initializing.", "init"] call FUNC(logInfo);
+    [formatText["cScripts Version %1 is running.",VERSION], "init"] call FUNC(logInfo);
+    [formatText["Debug mode is currently active."], "init"] call FUNC(logWarning);
     logEntities;
 #endif
 
@@ -58,7 +58,7 @@ if (isMultiplayer) then {
 };
 
 #ifdef DEBUG_MODE
-    ["init initialization completed."] call FUNC(logInfo);
+    ["init initialization completed.", "init"] call FUNC(logInfo);
 #endif
 
 /* APPLY STUFF ONLY BELOW THIS LINE */
