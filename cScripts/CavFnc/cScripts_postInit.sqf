@@ -57,7 +57,7 @@ if !(EGVAR(Settings,setMissionType) >= 3) then {
 
 // Handle hint
 if (EGVAR(Settings,enableStartHint)) then {
-    [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] call FUNC(initStartupHint);
+    { [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] spawn FUNC(initStartupHint) } call CBA_fnc_directCall;
 };
 
 #ifdef DEBUG_MODE
