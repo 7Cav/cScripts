@@ -173,5 +173,7 @@ class cScripts {
         class logError {};
         class logInfo {};
         class logWarning {};
+
+        class diag_dumpPlayer {};
     };
 };
