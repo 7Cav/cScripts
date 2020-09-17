@@ -36,7 +36,7 @@ if (!([] call _condition)) then {
     _allowCavBucksSpawn = false;
     _reason = "Unavailable";
 };
-	
+    
 if (_allowRegularSpawn) then {
     _spawnButton ctrlEnable true;
     _spawnButton ctrlSetText "Spawn";

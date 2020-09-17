@@ -16,18 +16,18 @@ if (!isNull VehicleSpawn && _spawnLocation == "air") then {
 if (count _emptyPos == 0) then { hint "Vehicle cannot be spawned here"; }
 else
 {	
-	_veh = createVehicle [(_vehicleClass), _emptyPos, [], 0,""];
+    _veh = createVehicle [(_vehicleClass), _emptyPos, [], 0,""];
 
     if ((lbData [13, lbCurSel 13]) != "") then {
-		_vehicleTextures = parseSimpleArray (lbData [13, lbCurSel 13]);
-		{_veh setObjectTextureGlobal [ _forEachIndex, _x ] } forEach _vehicleTextures;
-	};
+        _vehicleTextures = parseSimpleArray (lbData [13, lbCurSel 13]);
+        {_veh setObjectTextureGlobal [ _forEachIndex, _x ] } forEach _vehicleTextures;
+    };
 
-	missionNamespace setVariable [getPlayerUID player + "VehicleSpawn_Cooldown", (_cooldownCost * 60)];
-	missionNamespace setVariable [getPlayerUID player + "VehicleSpawn_LastSpawnTime", serverTime];
+    missionNamespace setVariable [getPlayerUID player + "VehicleSpawn_Cooldown", (_cooldownCost * 60)];
+    missionNamespace setVariable [getPlayerUID player + "VehicleSpawn_LastSpawnTime", serverTime];
 
-	[_veh] call _callBack;
-	player setPos (getPos _veh vectorAdd (boundingBoxReal _veh select 0));	
+    [_veh] call _callBack;
+    player setPos (getPos _veh vectorAdd (boundingBoxReal _veh select 0));	
 };
 
 closeDialog 1601;
