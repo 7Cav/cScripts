@@ -1,7 +1,6 @@
 class CommonBlufor {
     //regiment = "";
     //company = "";
-    //platoon = 0;
 
     //displayName = "";
     //scope = 0;

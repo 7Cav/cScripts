@@ -23,6 +23,7 @@ class cScripts {
     class documents {
         file = "cScripts\cavFnc\functions\documents";
         class Doc_Info {};
+        class Doc_Radio {};
         class Doc_MissionControl {};
 
         class DocRadio_LACEACE {};

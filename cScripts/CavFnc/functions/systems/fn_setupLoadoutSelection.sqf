@@ -33,13 +33,17 @@ params[
 private _icon      = "cScripts\Data\Icon\icon_01.paa";
 private _squadIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
 private _leadIcon  = "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa";
+private _pilotIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa";
 
-[_object, "cScripts_Loadout_Cat_Main",               "Loadouts", _icon,       [_aceCategory]] call FUNC(addAceCategory);
-[_object, "cScripts_Loadout_Cat_Alpha",              "Alpha Co.", "",         [_aceCategory, "cScripts_Loadout_Cat_Main"]] call FUNC(addAceCategory);
-[_object, "cScripts_Loadout_Cat_Bravo",              "Bravo Co.", "",         [_aceCategory, "cScripts_Loadout_Cat_Main"]] call FUNC(addAceCategory);
-[_object, "cScripts_Loadout_Cat_Charlie",            "Charlie Co.", "",       [_aceCategory, "cScripts_Loadout_Cat_Main"]] call FUNC(addAceCategory);
-[_object, "cScripts_Loadout_Cat_Charlie_Leadership", "Leadership", _leadIcon, [_aceCategory, "cScripts_Loadout_Cat_Main", "cScripts_Loadout_Cat_Charlie"]] call FUNC(addAceCategory);
-[_object, "cScripts_Loadout_Cat_Charlie_Squad",      "Squad", _squadIcon,     [_aceCategory, "cScripts_Loadout_Cat_Main", "cScripts_Loadout_Cat_Charlie"]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Main",               "Loadouts", _icon,        [_aceCategory]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Alpha",              "Alpha Co.", "",          [_aceCategory, "cScripts_Loadout_Cat_Main"]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Alpha_Leadership",   "Leadership", _leadIcon,  [_aceCategory, "cScripts_Loadout_Cat_Main", "cScripts_Loadout_Cat_Alpha"]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Alpha_FixedWing",    "Fixed Wing", _pilotIcon, [_aceCategory, "cScripts_Loadout_Cat_Main", "cScripts_Loadout_Cat_Alpha"]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Alpha_Rotary",       "Rotary", _pilotIcon,     [_aceCategory, "cScripts_Loadout_Cat_Main", "cScripts_Loadout_Cat_Alpha"]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Bravo",              "Bravo Co.", "",          [_aceCategory, "cScripts_Loadout_Cat_Main"]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Charlie",            "Charlie Co.", "",        [_aceCategory, "cScripts_Loadout_Cat_Main"]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Charlie_Leadership", "Leadership", _leadIcon,  [_aceCategory, "cScripts_Loadout_Cat_Main", "cScripts_Loadout_Cat_Charlie"]] call FUNC(addAceCategory);
+[_object, "cScripts_Loadout_Cat_Charlie_Squad",      "Squad", _squadIcon,      [_aceCategory, "cScripts_Loadout_Cat_Main", "cScripts_Loadout_Cat_Charlie"]] call FUNC(addAceCategory);
 
 // Setup loadouts
 private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "getNumber (_x >> 'scope') >= 2", true];
