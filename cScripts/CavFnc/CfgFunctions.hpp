@@ -164,4 +164,13 @@ class cScripts {
 
         class diag_dumpPlayer {};
     };
+
+    class garage {
+        file = "cScripts\cavFnc\functions\garage";
+        class openGarage {};
+        class loadVehicle {};
+        class vehicleInfo {};
+        class createVehicle {};
+        class showSpawnButton {};
+    };
 };
