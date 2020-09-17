@@ -15,7 +15,7 @@ if (!isNull VehicleSpawn && _spawnLocation == "air") then {
 
 if (count _emptyPos == 0) then { hint "Vehicle cannot be spawned here"; }
 else
-{	
+{
     _veh = createVehicle [(_vehicleClass), _emptyPos, [], 0,""];
 
     if ((lbData [13, lbCurSel 13]) != "") then {
@@ -27,7 +27,7 @@ else
     missionNamespace setVariable [getPlayerUID player + "VehicleSpawn_LastSpawnTime", serverTime];
 
     [_veh] call _callBack;
-    player setPos (getPos _veh vectorAdd (boundingBoxReal _veh select 0));	
+    player setPos (getPos _veh vectorAdd (boundingBoxReal _veh select 0));
 };
 
 closeDialog 1601;

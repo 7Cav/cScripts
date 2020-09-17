@@ -35,7 +35,7 @@ if (_defaultSpawn == "air") then { _spawnLocationDropDown lbSetCurSel _airIndex;
 
 _spawnLocationDropDown ctrlShow true;
 
-_textCbo = ((findDisplay 1601) displayCtrl (8));	
+_textCbo = ((findDisplay 1601) displayCtrl (8));
 _textCbo ctrlSetStructuredText parseText format 
 [
     "
