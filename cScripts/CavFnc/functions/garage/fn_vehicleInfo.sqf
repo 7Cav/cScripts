@@ -35,12 +35,12 @@ if (_defaultSpawn == "air") then { _spawnLocationDropDown lbSetCurSel _airIndex;
 
 _spawnLocationDropDown ctrlShow true;
 
-_textCbo = ((findDisplay 1601) displayCtrl (8));
+_textCbo = ((findDisplay 1601) displayCtrl (8));	
 _textCbo ctrlSetStructuredText parseText format 
 [
     "
     <t align='left'>Name: %1</t><br/>
-    <t align='left' size='0.7'>%5</t>",
+    <t align='left'>%3</t>",
     getText (configFile >> "CfgVehicles" >> _vehicleClass >> "displayName"),
     _cooldownCost,
     _message
