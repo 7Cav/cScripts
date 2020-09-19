@@ -13,7 +13,7 @@ _serverTitleCbo = ((findDisplay 1601) displayCtrl (12));
 private _spawnButton = (findDisplay 1601) displayCtrl 6;
 
 _spawnButton ctrlShow false;
-_spawnButton ctrlEnable false;	
+_spawnButton ctrlEnable false;
 
 private _dropDown = ((findDisplay 1601) displayCtrl (13));
 _dropDown ctrlShow false;
