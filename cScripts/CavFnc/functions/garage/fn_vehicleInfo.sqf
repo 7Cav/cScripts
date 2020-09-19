@@ -1,24 +1,24 @@
 disableSerialization;
 
-_vehicleIndex = parseNumber (lbData [7, lbCurSel 7]);
-_vehicle = GarageVehicles select _vehicleIndex;
+private _vehicleIndex = parseNumber (lbData [7, lbCurSel 7]);
+private _vehicle = GarageVehicles select _vehicleIndex;
 _vehicle params ["_vehicleClass", "_cooldownCost", "_maxVehicles", "_message", "_defaultSpawn", "_condition", "_callBack"];
 
-_dropDown = ((findDisplay 1601) displayCtrl (13));
+private _dropDown = ((findDisplay 1601) displayCtrl (13));
 lbCLear _dropDown;
 
 {
-    _textureIndex = _dropDown lbAdd format ["%1", getText (_x >> "displayName")];
+    private _textureIndex = _dropDown lbAdd format ["%1", getText (_x >> "displayName")];
     _dropDown lbSetData [_textureIndex, str getArray (_x >> "textures")];
 } foreach ("true" configClasses (configfile >> "CfgVehicles" >>_vehicleClass >> "textureSources"));
 
 _dropDown ctrlShow true;
 
-_spawnLocationDropDown = ((findDisplay 1601) displayCtrl (15));
+private _spawnLocationDropDown = ((findDisplay 1601) displayCtrl (15));
 lbCLear _spawnLocationDropDown;
 
-_landIndex = -1;
-_airIndex = -1;
+private _landIndex = -1;
+private _airIndex = -1;
 
 if (!isNull VehicleSpawn) then { 
     _landIndex = _spawnLocationDropDown lbAdd "Land Vehicle Spawn";
@@ -35,7 +35,7 @@ if (_defaultSpawn == "air") then { _spawnLocationDropDown lbSetCurSel _airIndex;
 
 _spawnLocationDropDown ctrlShow true;
 
-_textCbo = ((findDisplay 1601) displayCtrl (8));
+private _textCbo = ((findDisplay 1601) displayCtrl (8));	
 _textCbo ctrlSetStructuredText parseText format 
 [
     "

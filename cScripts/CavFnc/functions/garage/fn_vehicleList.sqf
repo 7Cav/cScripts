@@ -2,7 +2,7 @@
 // [classname, cooldown (minutes), max # available at once, "message", "default spawn location (land/air)", {conditions}, {after create callback}]
 
 GarageVehicles = [
-    
+
     // MRZR 4
     ["rhsusf_mrzr4_d", 5, -1, "", "land", {}, {}],
 

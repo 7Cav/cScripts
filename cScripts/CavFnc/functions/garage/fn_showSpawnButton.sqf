@@ -1,15 +1,14 @@
 _this select 0 params ["_vehicleClass", "_cooldownCost", "_maxVehicles", "_message", "_defaultSpawn", "_condition", "_callBack"];
 
-_spawnButton = (findDisplay 1601) displayCtrl 6;
-_spawnButtonCavBucks = (findDisplay 1601) displayCtrl 14;
+private _spawnButton = (findDisplay 1601) displayCtrl 6;
 _spawnButton ctrlShow true;
 
-_lastSpawnTime = missionNamespace getVariable [getPlayerUID player + "VehicleSpawn_LastSpawnTime", 0];
-_lastCooldownLength = missionNamespace getVariable [getPlayerUID player + "VehicleSpawn_Cooldown", 0];
+private _lastSpawnTime = missionNamespace getVariable [getPlayerUID player + "VehicleSpawn_LastSpawnTime", 0];
+private _lastCooldownLength = missionNamespace getVariable [getPlayerUID player + "VehicleSpawn_Cooldown", 0];
 
-_allowRegularSpawn = true;
-_allowCavBucksSpawn = true;
-_reason = "";
+private _allowRegularSpawn = true;
+private _allowCavBucksSpawn = true;
+private _reason = "";
 
 if (_lastSpawnTime + _lastCooldownLength > serverTime) then {
     _allowRegularSpawn = false;
@@ -17,7 +16,7 @@ if (_lastSpawnTime + _lastCooldownLength > serverTime) then {
     _reason = format ["Cooldown for another %1 minutes", round (((_lastSpawnTime + _lastCooldownLength) - serverTime) / 60)];
 };
 
-_vehicleInstances = 0;
+private _vehicleInstances = 0;
 
 {
     if ((_x isKindOf _vehicleClass) && (alive _x)) then {

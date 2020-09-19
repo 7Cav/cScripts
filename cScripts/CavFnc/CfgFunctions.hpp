@@ -161,7 +161,7 @@ class cScripts {
         class logError {};
         class logInfo {};
         class logWarning {};
-
+        
         class diag_dumpPlayer {};
     };
 
@@ -169,6 +169,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\garage";
         class openGarage {};
         class loadVehicle {};
+        class vehicleList {};
         class vehicleInfo {};
         class createVehicle {};
         class showSpawnButton {};
