@@ -22,7 +22,7 @@ _unit setVariable [QEGVAR(Gear,Loadout), _loadout];
 _unit setVariable [QEGVAR(Gear,savedLoadout), true];
 
 #ifdef DEBUG_MODE
-	["Saved current loadout.", "Gear"] call FUNC(logInfo);
+    ["Saved current loadout.", "Gear"] call FUNC(logInfo);
 #endif
 
 _unit getVariable [QEGVAR(Gear,savedLoadout), false];

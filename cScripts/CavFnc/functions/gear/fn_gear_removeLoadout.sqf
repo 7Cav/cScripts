@@ -18,16 +18,16 @@
 params [["_unit", objNull, [objNull]]];
 
 if (_unit setVariable [QEGVAR(Gear,savedLoadout), false]) then {
-	#ifdef DEBUG_MODE
-		["No loadout to remove.", "Gear"] call FUNC(logInfo);
-	#endif
+    #ifdef DEBUG_MODE
+        ["No loadout to remove.", "Gear"] call FUNC(logInfo);
+    #endif
 };
 
 _unit setVariable [QEGVAR(Gear,Loadout), [[],[],[],[],[],[],"","",[],["","","","","",""]]];
 _unit setVariable [QEGVAR(Gear,savedLoadout), false];
 
 #ifdef DEBUG_MODE
-	["Saved loadout removed.", "Gear"] call FUNC(logInfo);
+    ["Saved loadout removed.", "Gear"] call FUNC(logInfo);
 #endif
 
 true
