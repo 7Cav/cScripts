@@ -25,20 +25,28 @@ if (!isPlayer _object) then {
     _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
         params ["_target", "_caller", "_actionId", "_arguments"];
         _arguments params ["_doHeal"];
-        private _loadout = _caller getVariable [QEGVAR(Gear,Loadout), ""];
-        [player, _loadout] call FUNC(applyLoadout);
+        if (_caller call EFUNC(gear,hasSavedLoadout)) then {
+            [_caller] call EFUNC(gear,loadLoadout);
+        } else {
+            private _loadout = [_caller] call EFUNC(gear,selectLoadout);
+            [_caller, _loadout] call EFUNC(gear,applyLoadout);
+        };
 
         if (_doHeal) then {
             [_target, _caller] call ace_medical_treatment_fnc_fullHeal;
         };
-    }, [_doHeal], 1.5, true, true, "", "_this getVariable ['cScripts_Gear_Loadout', ''] != 'cScripts_Gear_SavedArsenalLoadout'", 5];
+    }, [_doHeal], 1.5, true, true, "", "true", 5];
 };
 
 // Make ACE Interaction for ReGear
 private _Icon = "cScripts\Data\Icon\icon_00.paa";
 private _regearStatement = {
-    private _loadout = player getVariable ["poppy_loadout", ""];
-    [player, _loadout] call Poppy_fnc_applyLoadout;
+        if (player call EFUNC(gear,hasSavedLoadout)) then {
+            [player] call EFUNC(gear,loadLoadout);
+        } else {
+            private _loadout = [player] call EFUNC(gear,selectLoadout);
+            [player, _loadout] call EFUNC(gear,applyLoadout);
+        };
 
     if (_doHeal) then {
         [_this select 0, player] call ace_medical_treatment_fnc_fullHeal;

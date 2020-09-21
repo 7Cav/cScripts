@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * [player, "B_Soldier_F"] call cScripts_fnc_applyAbilities
+ * [player, "B_Soldier_F"] call cScripts_fnc_gear_applyAbilities
  *
  */
 
@@ -20,12 +20,16 @@ params [
     "_config"
 ];
 
-if (_unit getVariable QEGVAR(Gear,Loadout) == QEGVAR(Gear,SavedArsenalLoadout)) exitWith {};
+// Keep current abilities if true
+if ([_unit] call cScripts_fnc_gear_hasSaveLoadout) exitWith {
+    #ifdef DEBUG_MODE
+        ["Saved current loadout.", "Gear"] call FUNC(logInfo);
+    #endif
+};
 
-
-private _abilityMedicLevel    = _config >> "abilityMedic";
-private _abilityEngineerLevel = _config >> "abilityEngineer";
-private _abilityEOD           = _config >> "abilityEOD";
+private _abilityMedicLevel            = _config >> "abilityMedic";
+private _abilityEngineerLevel         = _config >> "abilityEngineer";
+private _abilityEOD                   = _config >> "abilityEOD";
 
 private _loadMedicConfig    = _abilityMedicLevel isEqualType 0;
 private _loadEngineerConfig = _abilityEngineerLevel isEqualType 0;
@@ -55,3 +59,5 @@ if (_loadEngineerConfig) then {
 if (EGVAR(Settings,curatorImmortality)) then {
     //_unit allowDamage false;
 };
+
+_unit setVariable [QEGVAR(Player,Abilities), [_abilityMedicLevel, _abilityEngineerLevel, _abilityEOD]];

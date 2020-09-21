@@ -29,7 +29,7 @@ if !(isPlayer _player) exitWith {};
 
             [_x, _channel] call acre_api_fnc_setRadioChannel;
             #ifdef DEBUG_MODE
-                [format["%1 radio (%2) have its channel set to %3",(_this select 0), _x, _channel]] call FUNC(logInfo);
+                [format["%1 radio (%2) have its channel set to %3",(_this select 0), _x, _channel], "Radio"] call FUNC(logInfo);
             #endif
 
             // Store radio channels in variable.
@@ -37,7 +37,7 @@ if !(isPlayer _player) exitWith {};
             _radioAndChannel pushBack [[_x] call acre_api_fnc_getBaseRadio, _channel];
             (_this select 0) setVariable [QEGVAR(Player,RadioChannel), _radioAndChannel];
         } else {
-            [format["Empty radio is trying to get it's channel applied for %1", (_this select 0)]] call FUNC(logWarning);
+            [format["Empty radio is trying to get it's channel applied for %1", (_this select 0)], "Radio"] call FUNC(logWarning);
         };
     } forEach _playerRadios;
 }, [_player]] call CBA_fnc_waitUntilAndExecute;

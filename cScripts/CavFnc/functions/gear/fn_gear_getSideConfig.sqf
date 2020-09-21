@@ -10,7 +10,8 @@
  * Loadout side config name <STRING>
  *
  * Example:
- * [west] call cScripts_fnc_getSideConfig
+ * [west] call cScripts_fnc_gear_getSideConfig
+ * [independent] call cScripts_fnc_gear_getSideConfig
  *
  */
 params ["_side"];

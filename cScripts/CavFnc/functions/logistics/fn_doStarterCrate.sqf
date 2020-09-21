@@ -91,3 +91,8 @@ _object enableRopeAttach false;
 
 // Make Starter crate clean junk around it
 [_object, 100] call FUNC(deleteDroppedObjects);
+
+// Add save gear eventHandler
+[player, "ContainerClosed", {
+    player call EGVAR(gear,saveLoadout)
+}] call CBA_fnc_addBISEventHandler;

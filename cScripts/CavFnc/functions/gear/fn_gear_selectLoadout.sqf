@@ -2,16 +2,12 @@
 params ["_unit"];
 
 private _config        = missionConfigFile >> "CfgLoadouts";
-private _variableArray = _unit getVariable [QEGVAR(Gear,savedLoadout), false];
 private _variable      = _unit getVariable [QEGVAR(Gear,Loadout), ""];
 private _variableName  = vehicleVarName _unit;
 private _className     = typeOf _unit;
-private _sideConfig    = [side group _unit] call FUNC(getSideConfig);
+private _sideConfig    = [side group _unit] call EFUNC(gear,getSideConfig);
 
 switch (true) do {
-    case (_variableArray isEqualType []): {
-        _variableArray
-    };
     case (isClass (_config >> _variable)): {
         if !(_variable isKindOf [_sideConfig, _config]) then {
             ["The loadout for """ + _variable + """ does not inherit from """ + _sideConfig + """.", "Gear", true] call FUNC(logWarning);

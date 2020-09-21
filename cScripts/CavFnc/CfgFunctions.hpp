@@ -156,17 +156,22 @@ class cScripts {
 
     class gear {
         file = "cScripts\cavFnc\functions\gear";
-        class preInit { preInit = 1; };
-        class postInitProxy { postInit = 1; };
-        class postInit {};
-        class applyLoadout {};
-        class applyAbilities {};
-        class selectLoadout {};
-        class synchGroupIDs {};   
-        class getSideConfig {};
+        class gear_preInit { preInit = 1; };
+        class gear_postInitProxy { postInit = 1; };
+        class gear_postInit {};
+        class gear_applyLoadout {};
+        class gear_applyAbilities {};
+        class gear_selectLoadout {};
+        class gear_synchGroupIDs {};   
+        class gear_getSideConfig {};
+
+        // Save and Load
+        class gear_saveLoadout {};
+        class gear_loadLoadout {};
+        class gear_hasSavedLoadout {};
         
         // ACRE
-        class setupRadios {};
+        class gear_setupRadios {};
     };
 
     class debug {

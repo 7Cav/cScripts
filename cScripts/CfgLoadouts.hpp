@@ -5,8 +5,12 @@ class CfgLoadouts {
     #include "Loadouts\CfgLoadouts_Alpha_Rotary.hpp"
     #include "Loadouts\CfgLoadouts_Alpha_FixedWing.hpp"
 
+    #include "Loadouts\CfgLoadouts_Bravo.hpp"
+    #include "Loadouts\CfgLoadouts_Bravo_Atlas.hpp"
+    #include "Loadouts\CfgLoadouts_Bravo_Viking.hpp"
+
     #include "Loadouts\CfgLoadouts_Charlie.hpp"
-    #include "Loadouts\CfgLoadouts_Charlie_BanditMisfit.hpp"
+    #include "Loadouts\CfgLoadouts_Charlie_Squad.hpp"
 
     #include "Loadouts\CfgLoadouts_UserCustom.hpp"
 };

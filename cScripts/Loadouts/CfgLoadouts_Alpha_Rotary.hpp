@@ -64,10 +64,22 @@ class Cav_B_A_Helicopter_Tra_Pilot_Grizzly_4_F : Cav_B_A_Helicopter_Tra_Pilot_F 
 class Cav_B_A_Helicopter_Tra_Pilot_Grizzly_5_F : Cav_B_A_Helicopter_Tra_Pilot_F { scope = 1; }; // Don't exist yet
 class Cav_B_A_Helicopter_Tra_Pilot_Grizzly_6_F : Cav_B_A_Helicopter_Tra_Pilot_F { scope = 1; }; // Don't exist yet
 
-class Cav_B_A_Helicopter_Att_Pilot_Raider_1_F : Cav_B_A_Helicopter_Att_Pilot_F { scope = 1; };
-class Cav_B_A_Helicopter_Att_Pilot_Raider_2_F : Cav_B_A_Helicopter_Att_Pilot_F { scope = 1; };
-class Cav_B_A_Helicopter_Att_Pilot_Raider_3_F : Cav_B_A_Helicopter_Att_Pilot_F { scope = 1; };
-class Cav_B_A_Helicopter_Att_Pilot_Raider_4_F : Cav_B_A_Helicopter_Att_Pilot_F { scope = 1; };
+class Cav_B_A_Helicopter_Att_Pilot_Raider_1_F : Cav_B_A_Helicopter_Att_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_c";
+};
+class Cav_B_A_Helicopter_Att_Pilot_Raider_2_F : Cav_B_A_Helicopter_Att_Pilot_F {
+    scope = 1; 
+    insignia = "cav_insignia_alpha_2_c";
+};
+class Cav_B_A_Helicopter_Att_Pilot_Raider_3_F : Cav_B_A_Helicopter_Att_Pilot_F {
+    scope = 1; 
+    insignia = "cav_insignia_alpha_2_c";
+};
+class Cav_B_A_Helicopter_Att_Pilot_Raider_4_F : Cav_B_A_Helicopter_Att_Pilot_F {
+    scope = 1; 
+    insignia = "cav_insignia_alpha_2_c";
+};
 
 class Cav_B_A_Helicopter_Att_Pilot_Raven_1_F : Cav_B_A_Helicopter_Att_Pilot_F { scope = 1; };
 class Cav_B_A_Helicopter_Att_Pilot_Raven_2_F : Cav_B_A_Helicopter_Att_Pilot_F { scope = 1; };

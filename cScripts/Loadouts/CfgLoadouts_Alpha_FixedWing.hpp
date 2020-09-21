@@ -35,12 +35,39 @@ class Cav_B_A_Plane_Fighter_Pilot_Eagle_7_F : Cav_B_A_Plane_Fighter_Pilot_F { sc
 class Cav_B_A_Plane_Fighter_Pilot_Eagle_8_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; }; // Don't exist yet
 class Cav_B_A_Plane_Fighter_Pilot_Eagle_9_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; }; // Don't exist yet
 
-class Cav_B_A_Plane_Fighter_Pilot_Hog_1_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
-class Cav_B_A_Plane_Fighter_Pilot_Hog_2_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
-class Cav_B_A_Plane_Fighter_Pilot_Hog_3_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
-class Cav_B_A_Plane_Fighter_Pilot_Hog_4_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
-class Cav_B_A_Plane_Fighter_Pilot_Hog_5_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
-class Cav_B_A_Plane_Fighter_Pilot_Hog_6_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
-class Cav_B_A_Plane_Fighter_Pilot_Hog_7_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
-class Cav_B_A_Plane_Fighter_Pilot_Hog_8_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
-class Cav_B_A_Plane_Fighter_Pilot_Hog_9_F : Cav_B_A_Plane_Fighter_Pilot_F { scope = 1; };
+class Cav_B_A_Plane_Fighter_Pilot_Hog_1_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};
+class Cav_B_A_Plane_Fighter_Pilot_Hog_2_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};
+class Cav_B_A_Plane_Fighter_Pilot_Hog_3_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};
+class Cav_B_A_Plane_Fighter_Pilot_Hog_4_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};
+class Cav_B_A_Plane_Fighter_Pilot_Hog_5_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};
+class Cav_B_A_Plane_Fighter_Pilot_Hog_6_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};
+class Cav_B_A_Plane_Fighter_Pilot_Hog_7_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};
+class Cav_B_A_Plane_Fighter_Pilot_Hog_8_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};
+class Cav_B_A_Plane_Fighter_Pilot_Hog_9_F : Cav_B_A_Plane_Fighter_Pilot_F {
+    scope = 1;
+    insignia = "cav_insignia_alpha_2_b";
+};

@@ -7,7 +7,7 @@
  * none
  *
  * Example:
- * call cScripts_fnc_groupIDsSynched
+ * call cScripts_fnc_gear_groupIDsSynched
  *
  */
  
@@ -16,5 +16,5 @@
     false
 } count allGroups;
 
-GVAR(groupIDsSynched) = true;
-publicVariable QGVAR(groupIDsSynched);
+EGVAR(gear,groupIDsSynched) = true;
+publicVariable QEGVAR(gear,groupIDsSynched);

@@ -39,7 +39,7 @@ if (_allowOnlyForCompany) then {
 
 private _statement = {
     (_this select 2) params ["_className"];
-    [player, _className] call FUNC(applyLoadout);
+    [player, _className] call EFUNC(gear,applyLoadout);
 };
 
 private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, _statement, _condition, nil, [_className, _platoon]] call ace_interact_menu_fnc_createAction;
