@@ -5,7 +5,6 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Loadout <STRING / ARRAY>
  *
  * Return Value:
  * Nothing
@@ -15,14 +14,12 @@
  *
  */
 
-params [
-    ["_unit", objNull, [objNull]],
-];
+params [["_unit", objNull, [objNull]]];
 
 // Player Name without rank prefix
 if (!isNil{_vehicle getVariable QEGVAR(Player,Name)}) then {
     private _unitName = [_unit, 'PROFILE'] call FUNC(getPlayerName);
-    (_unit) setVariable [QEGVAR(Player,Name), _unitName];
+    _unit setVariable [QEGVAR(Player,Name), _unitName];
     #ifdef DEBUG_MODE
         [formatText["%1 name is %2", _unit, _unitName], "Gear"] call FUNC(logInfo);
     #endif
@@ -97,7 +94,7 @@ if (EGVAR(Settings,enforceEyewereBlacklist)) then {
     if (goggles _unit in _blacklist_glasses) then {
         _unit unlinkItem (goggles _unit);
         #ifdef DEBUG_MODE
-            [format["%1 using un-authorized facewere it have been removed", _unit], "LoadoutPostInit"] call FUNC(logInfo);
+            [format["%1 using un-authorized facewere it have been removed", _unit], "Gear"] call FUNC(logInfo);
         #endif
     };
 };

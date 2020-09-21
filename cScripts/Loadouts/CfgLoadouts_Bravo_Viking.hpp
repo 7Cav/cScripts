@@ -61,7 +61,7 @@ class Cav_B_B_Scout_CombatLifeSaver_F : Cav_B_Bravo_base_F {
 };
 
 class Cav_B_B_Scout_Crew_F : Cav_B_Bravo_base_F {
-    displayName = "$str_cav_troops_bravo_viking_b_scout_crew";
+    displayName = "$STR_cav_troops_bravo_viking_b_scout_crew";
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
     loadout = [["rhs_weap_m4a1","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15","rhsusf_acc_compm4",["rhs_mag_30Rnd_556x45_M855A1_Stanag",30],[],"rhsusf_acc_tdstubby_blk"],[],[],["rhs_uniform_acu_oefcp",[["ACRE_PRC343",1],["ACE_MapTools",1],["ACE_Flashlight_XL50",1],["ACE_microDAGR",1],["ACE_CableTie",2],["ACE_quikclot",20],["ACE_tourniquet",4]]],["rhsusf_spcs_ocp_crewman",[["ACRE_PRC152",2],["rhs_mag_30Rnd_556x45_M855A1_Stanag",5,30],["SmokeShell",2,1],["rhs_mag_m67",2,1],["SmokeShellBlue",3,1],["SmokeShellYellow",1,1],["SmokeShellRed",1,1]]],["B_AssaultPack_mcamo",[["rhsusf_shemagh_gogg_tan",1],["ToolKit",1],["ACE_EntrenchingTool",1],["ACE_UAVBattery",2],["ACE_personalAidKit",1]]],"rhsusf_cvc_green_helmet","rhsusf_shemagh_tan",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ItemWatch","rhsusf_ANPVS_14"]];

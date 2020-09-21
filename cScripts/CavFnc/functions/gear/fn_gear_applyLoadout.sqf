@@ -5,7 +5,6 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Loadout <STRING / ARRAY>
  *
  * Return Value:
  * Nothing
@@ -41,20 +40,23 @@ switch (true) do {
     };
     case _loadConfig: {
         _unit setUnitLoadout parseSimpleArray getText (_config >> "loadout");
+        _unit setVariable [QEGVAR(Gear,LoadoutClass), _loadout];
         #ifdef DEBUG_MODE
             [format["Loadout %1 applied to %2", _loadout, _unit], "Gear"] call FUNC(logInfo);
         #endif
     };
 };
 
-// Apply Abilities
-[_unit, _config] call EFUNC(gear,applyAbilities);
+// Abilities
+if !([_unit] call EFUNC(gear,hasSavedLoadout)) then {
+    [_unit, _config] call EFUNC(gear,applyAbilities);
+};
 
 // Functions
-if (isPlayer _unit) then {
+if (_unit == player) then {
     // Company
     private _company = getText (_config >> "company");
-    (_unit) setVariable [QEGVAR(Cav,Company), _company];
+    _unit setVariable [QEGVAR(Cav,Company), _company];
     #ifdef DEBUG_MODE
         if (_company != "") then {[formatText["%1 have company variable set to %2", _unit, _company], "Gear"] call FUNC(logInfo);};
     #endif

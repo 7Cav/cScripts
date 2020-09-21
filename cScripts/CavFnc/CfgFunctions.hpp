@@ -97,7 +97,10 @@ class cScripts {
         class setupLoadoutSelection {};
         class addLoadoutSelection {};
 
+        class addStagingZone {};
         class getStagingZone {};
+        class inStagingZone {};
+        
         class deleteDroppedObjects {};
 
        // Plane jump
@@ -159,19 +162,23 @@ class cScripts {
         class gear_preInit { preInit = 1; };
         class gear_postInitProxy { postInit = 1; };
         class gear_postInit {};
+
         class gear_applyLoadout {};
+        class gear_applyCosmetics {};
         class gear_applyAbilities {};
+
         class gear_selectLoadout {};
         class gear_synchGroupIDs {};   
         class gear_getSideConfig {};
+        
+        class gear_setupRadios {};
 
         // Save and Load
         class gear_saveLoadout {};
         class gear_loadLoadout {};
+        class gear_removeLoadout {};
         class gear_hasSavedLoadout {};
         
-        // ACRE
-        class gear_setupRadios {};
     };
 
     class debug {

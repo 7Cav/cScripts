@@ -2,7 +2,7 @@
 params ["_unit"];
 
 private _config        = missionConfigFile >> "CfgLoadouts";
-private _variable      = _unit getVariable [QEGVAR(Gear,Loadout), ""];
+private _variable      = _unit getVariable [QEGVAR(Gear,LoadoutClass), ""];
 private _variableName  = vehicleVarName _unit;
 private _className     = typeOf _unit;
 private _sideConfig    = [side group _unit] call EFUNC(gear,getSideConfig);

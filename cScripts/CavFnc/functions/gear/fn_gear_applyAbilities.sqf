@@ -5,13 +5,13 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Loadout <STRING / ARRAY>
+ * 1: Config <CONFIG>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player, "B_Soldier_F"] call cScripts_fnc_gear_applyAbilities
+ * [player, (missionConfigFile >> "CfgLoadouts" >> "Cav_B_B_Atlas_Medic_TeamLeader_F")] call cScripts_fnc_gear_applyAbilities
  *
  */
 
@@ -20,44 +20,28 @@ params [
     "_config"
 ];
 
-// Keep current abilities if true
-if ([_unit] call cScripts_fnc_gear_hasSaveLoadout) exitWith {
-    #ifdef DEBUG_MODE
-        ["Saved current loadout.", "Gear"] call FUNC(logInfo);
-    #endif
-};
+private _abilityMedicLevel    = getNumber (_config >> "abilityMedic");
+private _abilityEngineerLevel = getNumber (_config >> "abilityEngineer");
+private _abilityEOD           = getNumber (_config >> "abilityEOD");
 
-private _abilityMedicLevel            = _config >> "abilityMedic";
-private _abilityEngineerLevel         = _config >> "abilityEngineer";
-private _abilityEOD                   = _config >> "abilityEOD";
+// Set Medic ability
+private _isMedic = (_abilityMedicLevel > 0);
+_unit setVariable ["ACE_medical_medicClass", _abilityMedicLevel, _isMedic];
+_unit setUnitTrait ["medic", _isMedic];
 
-private _loadMedicConfig    = _abilityMedicLevel isEqualType 0;
-private _loadEngineerConfig = _abilityEngineerLevel isEqualType 0;
-private _loadEODConfig      = _abilityEngineerLevel isEqualType 0;
+// Set Engineer ability
+private _isEngineer = (_abilityEngineerLevel > 0);
+_unit setVariable ["ACE_isEngineer", _abilityEngineerLevel, _isEngineer];
+_unit setUnitTrait ["engineer", _isEngineer];
 
-// Set medic ability
-if (_loadMedicConfig) then {
-    private _isMedic = _abilityMedicLevel >= 1;
-    _unit setVariable ["ACE_medical_medicClass", _abilityMedicLevel, _isMedic];
-    _unit setUnitTrait ["medic", _isMedic]
-};
-
-// Set engineer ability
-if (_loadEngineerConfig) then {
-    private _isEngineer = _abilityEngineerLevel >= 1;
-    _unit setVariable ["ACE_medical_medicClass", _abilityEngineerLevel, _isEngineer];
-    _unit setUnitTrait ["medic", _isEngineer]
-};
-
-// Set eod ability
-if (_loadEngineerConfig) then {
-    private _isEOD = _loadEODConfig >= 1;
-    _unit setVariable ["ACE_isEOD", _isEOD];
-};
+// Set EOD ability
+private _isEOD = (_abilityEOD > 0);
+_unit setVariable ["ACE_isEOD", _abilityEOD, _isEOD];
+_unit setUnitTrait ["explosiveSpecialist", _isEOD];
 
 // Immortal
 if (EGVAR(Settings,curatorImmortality)) then {
     //_unit allowDamage false;
 };
 
-_unit setVariable [QEGVAR(Player,Abilities), [_abilityMedicLevel, _abilityEngineerLevel, _abilityEOD]];
+_unit setVariable [QEGVAR(Player,Abilities), [[_abilityMedicLevel,_isMedic], [_abilityEngineerLevel, _isEngineer], [_abilityEOD, _isEOD]]];
