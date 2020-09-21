@@ -95,6 +95,7 @@ class cScripts {
         class addInsigniaSelectionList {};
 
         class setupLoadoutSelection {};
+        class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
         class addStagingZone {};
@@ -112,7 +113,8 @@ class cScripts {
         class addReGear {};
         class addHeal {};
         class addArsenal {};
-        class addAceCategory {};
+        class addAceCategory {}; // depricated => createActionCategory
+        class createActionCategory {};
         class addLoadoutAction {};
 
         class doGetOutHeloSide {};
