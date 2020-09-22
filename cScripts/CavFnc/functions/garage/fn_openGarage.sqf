@@ -1,4 +1,15 @@
 #include "..\script_component.hpp";
+/*
+ * Author: CPL.Liber.N
+ * This fuction displays garage UI.
+ *
+ * Arguments:
+ * None.
+ *
+ * Example:
+ * [] spawn cScripts_fnc_openVehicle
+ *
+ */
 
 [] call cScripts_fnc_vehicleList;
 

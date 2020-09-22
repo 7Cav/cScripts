@@ -1,3 +1,15 @@
+/*
+ * Author: CPL.Liber.N
+ * This fuction displays addtitional vehicle properties (Skins, Spawn type) for vehicles selected in garage.
+ *
+ * Arguments:
+ * None.
+ *
+ * Example:
+ * [] spawn cScripts_fnc_vehicleInfo
+ *
+ */
+
 disableSerialization;
 
 private _vehicleIndex = parseNumber (lbData [7, lbCurSel 7]);

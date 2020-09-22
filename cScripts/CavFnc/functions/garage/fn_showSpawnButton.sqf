@@ -1,3 +1,16 @@
+/*
+ * Author: CPL.Liber.N
+ * This fuction displays garage spawn button. It will check for cooldown and max vehicles before displaying the button.
+ *
+ * Arguments:
+ * None.
+ *
+ * Example:
+ * [] spawn cScripts_fnc_showSpawnButton
+ *
+ */
+
+
 _this select 0 params ["_vehicleClass", "_cooldownCost", "_maxVehicles", "_message", "_defaultSpawn", "_condition", "_callBack"];
 
 private _spawnButton = (findDisplay 1601) displayCtrl 6;

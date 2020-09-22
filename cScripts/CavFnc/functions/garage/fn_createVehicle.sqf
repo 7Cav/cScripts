@@ -1,3 +1,15 @@
+/*
+ * Author: CPL.Liber.N
+ * This fuction creates a vehicle selected from garage vehicle list.
+ *
+ * Arguments:
+ * None.
+ *
+ * Example:
+ * [] spawn cScripts_fnc_createVehicle
+ *
+ */
+
 private _vehicleIndex = parseNumber (lbData [7, lbCurSel 7]);
 private _vehicle = GarageVehicles select _vehicleIndex;
 _vehicle params ["_vehicleClass", "_cooldownCost", "_maxVehicles", "_message", "_defaultSpawn", "_condition", "_callBack"];

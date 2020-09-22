@@ -1,3 +1,15 @@
+/*
+ * Author: CPL.Liber.N
+ * This fuction displays vehicle information (Full name and icon) for vehicles selected in garage.
+ *
+ * Arguments:
+ * None.
+ *
+ * Example:
+ * [] spawn cScripts_fnc_loadVehicle
+ *
+ */
+
 private _cbo = ((findDisplay 1601) displayCtrl (7));
 
 lbCLear _cbo;
