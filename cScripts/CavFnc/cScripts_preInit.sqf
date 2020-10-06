@@ -54,7 +54,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "EDITBOX",
     ["Long Range Radio Channels","Array of radio channels used for ACRE\n"],
     [_cScriptSettings, "4; Player"],
-    '"UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","LOGISTICS","FARP","CONVOY","ZEUS","CAG","COMMAND"',
+    '"UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","ATLAS","FARP","CONVOY","ZEUS","CAG","COMMAND"',
     true,
     {},
     true
