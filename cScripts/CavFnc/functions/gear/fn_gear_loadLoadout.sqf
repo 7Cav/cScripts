@@ -8,7 +8,7 @@
  * 1: Loadout <STRING / ARRAY>
  *
  * Return Value:
- * Nothing
+ * true or false based on successful load <BOOL>
  *
  * Example:
  * [player] call cScripts_fnc_gear_loadLoadout
