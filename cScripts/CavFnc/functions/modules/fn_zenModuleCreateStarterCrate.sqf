@@ -5,10 +5,11 @@
  * This module function spawn a 7th Cavalry Starter Crate.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: modulePos <POSITION>
+ * 1: objectPos <OBJECT>
  *
  * Example:
- * this call cScripts_fnc_moduleCreateStarterCrate;
+ * [getPos logic, this] call cScripts_fnc_moduleCreateStarterCrate;
  *
  * Public: No
  */
@@ -82,7 +83,7 @@ params ["_modulePos", "_objectPos"];
         _pos params ["_modulePos"];
 
         private _crate = "B_supplyCrate_F" createVehicle _modulePos;
-        [_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requireCompanyVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),0,true];
+        [_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requireCompanyVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),2,true];
 
         // Add object to Zeus
         [

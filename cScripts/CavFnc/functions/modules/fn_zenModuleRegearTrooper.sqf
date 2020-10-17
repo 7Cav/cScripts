@@ -4,10 +4,11 @@
  * This module function regear to a given unit.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: modulePos <POSITION>
+ * 1: objectPos <OBJECT>
  *
  * Example:
- * this call cScripts_fnc_moduleRegearTrooper
+ * [getPos logic, this] call cScripts_fnc_moduleRegearTrooper
  *
  * Public: No
  */

@@ -23,6 +23,11 @@ if (EGVAR(patches,usesZen)) exitWith {["Zen mod detected, terminating Achilies m
     ["Initializing 7Cav custom Achilles Modules."] call FUNC(logInfo);
 #endif
 
+["7Cav AI", "Enable Unit Simulation",{
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(achillesModuleEnableUnitSimulation);    
+}] call Ares_fnc_RegisterCustomModule;
+
 ["7Cav Logistics", "Starter Crate",{
     [(_this select 0)] call FUNC(achillesModuleCreateStarterCrate);    
 }] call Ares_fnc_RegisterCustomModule;

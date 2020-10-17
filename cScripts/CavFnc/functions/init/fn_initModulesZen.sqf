@@ -22,6 +22,15 @@ if !(EGVAR(patches,usesZen)) exitWith {};
     ["Initializing 7Cav custom Zen Modules.", "initModulesZen"] call FUNC(logInfo);
 #endif
 
+["7Cav AI", "Enable Unit Simulation",
+    {
+        params ["_modulePos", "_objectPos"];
+        [_modulePos, _objectPos] call FUNC(zenModuleEnableUnitSimulation);    
+    },
+    "\A3\ui_f\data\map\vehicleicons\iconManVirtual_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+
 ["7Cav Logistics", "Starter Crate",
     {
         params ["_modulePos", "_objectPos"];
@@ -31,7 +40,7 @@ if !(EGVAR(patches,usesZen)) exitWith {};
 ] call zen_custom_modules_fnc_register;
 
 // Check if increase training on location is true then add option.
-/* if (ace_medical_treatment_locationsBoostTraining) then {
+if (ace_medical_treatment_locationsBoostTraining) then {
     ["7Cav Logistics", "Field Hospital",
         {
             params ["_modulePos", "_objectPos"];
@@ -39,7 +48,7 @@ if !(EGVAR(patches,usesZen)) exitWith {};
         },
         "\z\ACE\addons\medical_gui\ui\cross.paa"
     ] call zen_custom_modules_fnc_register;
-}; */
+};
 
 ["7Cav Logistics", "Re-supply Crate",
     {

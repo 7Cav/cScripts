@@ -4,8 +4,8 @@
  * This module function can disable ai set player weapon to safe and print some hints and spam the chat with ENDEX. 
  *
  * Arguments:
- * 0: Module position <ARRAY>
- * 1: Object position <OBJECT>
+ * 0: modulePos <POSITION>
+ * 1: objectPos <OBJECT>
  * 
  *
  * Example:
@@ -35,9 +35,9 @@ params ["_modulePos", "_objectPos"];
         _pos params ["_modulePos"];
 
         //systemChat Endex message
-        "ENDEX ENDEX ENDEX" remoteExecCall ["systemChat", 0];
-        "DEBRIEF" remoteExecCall ["systemChat", 0];
-        "LEADERS DEBRIEF IN CHANNEL BELOW" remoteExecCall ["systemChat", 0];
+        "ENDEX ENDEX ENDEX" remoteExecCall ["systemChat", -2];
+        "DEBRIEF" remoteExecCall ["systemChat", -2];
+        "LEADERS DEBRIEF IN CHANNEL BELOW" remoteExecCall ["systemChat", -2];
 
         //hint Endex message
         private _title = "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENDEX ENDEX ENDEX!</t><br />";
@@ -46,7 +46,7 @@ params ["_modulePos", "_objectPos"];
         private _text1 = "Hold your fire and report to your Squad Leaders for debriefing.<br />";
         private _text3 = "<t font='PuristaMedium' size='1.1'>Please safe your weapons if you haven't already!</t>";
 
-        parseText(_title + _text0 + _image + _text1 + _text3) remoteExecCall ["hint", 0];
+        parseText(_title + _text0 + _image + _text1 + _text3) remoteExecCall ["hint", -2];
 
         //Set Safety to all Players
         if (_weaponsSafe) then {
@@ -59,13 +59,13 @@ params ["_modulePos", "_objectPos"];
                         [formatText["%1 weapon (%2) have been set to safe.", player, _weapon]] call FUNC(logInfo);
                     #endif
                 };
-            } remoteExecCall ["bis_fnc_call", 0]; 
+            } remoteExecCall ["bis_fnc_call", -2]; 
         };
 
         if (_healAllPlayers) then {
             {
                 [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
-            } remoteExecCall ["bis_fnc_call", 0]; 
+            } remoteExecCall ["bis_fnc_call", -2]; 
         };
 
         //Change AI to careless (doesn't affected AI created after Endex)

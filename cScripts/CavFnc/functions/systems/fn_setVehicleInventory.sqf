@@ -13,6 +13,7 @@
 params [["_vehicle", objNull, [objNull]]];
 
 if (didJIP) exitWith {};
+if (!isServer) exitWith {};
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle]] call FUNC(logWarning);};
 
 

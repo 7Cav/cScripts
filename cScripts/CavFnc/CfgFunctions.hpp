@@ -152,6 +152,8 @@ class cScripts {
         class achillesModuleAddToAlive {};
 
         // Zen
+        class zenModuleEnableUnitSimulation {};
+
         class zenModuleCreateStarterCrate {};
         class zenModuleCreateSupplyCrate {};
 
