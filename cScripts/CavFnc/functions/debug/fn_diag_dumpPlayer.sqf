@@ -11,8 +11,6 @@
  *
  */
 
-//if (isServer) exitWith {};
-
 {
     private _data = [];
     private _player = _x;

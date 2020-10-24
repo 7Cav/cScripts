@@ -1,34 +1,22 @@
 /* This file is for mission makers to set up Custom Loadouts for players.
-   If you need help setting up the loadout vissit the link provided:
-   https://github.com/BaerMitUmlaut/Poppy#creating-basic-loadouts
-
-    Here is a copy paste friendly empty template:
     
+    Here is a copy paste friendly empty template:
+
 class My_Soldier_Classname_or_VariableName : CommonBlufor {
-    backpack[] = {""};
-    goggles[] = {""};
-    headgear[] = {""};
-    uniform[] = {""};
-    vest[] = {""};
+    //regiment = "";
+    //company = "";
 
-    primary[] = {""};
-    secondary[] = {""};
-    launcher[] = {""};
+    //displayName = "";
+    //scope = 0;
+    //category[] = {"cScripts_Loadout_Cat_Other"};
+    //loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
+    //insignia = "";
 
-    binoculars[] = {""};
+    //abilityMedic = 0;
+    //abilityEngineer = 0;
+    //abilityEOD = 0;
 
-    magazines[] = {""};
-    items[] = {""};
-
-    compass[] = {"ItemCompass"};
-    gps[] = {""};
-    map[] = {"ItemMap"};
-    nvgs[] = {""};
-    watch[] = {"itemWatch"};
-
-    insignia[] = {""};
-    preLoadout = "";
-    postLoadout = "";
+    //preLoadout = "";
+    //postLoadout = "";
 };
-
 */
