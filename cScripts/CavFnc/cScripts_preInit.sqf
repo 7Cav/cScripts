@@ -41,9 +41,9 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     QEGVAR(Settings,setAiSystemDifficulty),
     "LIST",
-    ["AI Setting", "This adjustes the ai and make them less godlike and more roleplay to play against.\n"],
+    ["AI Setting", "This adjustes the ai and make them less godlike and more arcade to play against.\n"],
     [_cScriptSettings, "1; Mission"],
-    [[0,1], ["Day", "Night / Jungle"], 0],
+    [[0,1], ["Arma Default", "Faction Based"], 1],
     true,
     {},
     true
@@ -414,6 +414,10 @@ if (EGVAR(Settings,allowCustomTagging)) then {
 
 if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModules);
+};
+
+if (EGVAR(Settings,setAiSystemDifficulty) == 1 ) then {
+    call FUNC(initAI);
 };
 
 switch (EGVAR(Settings,setFortifyRestriction)) do {

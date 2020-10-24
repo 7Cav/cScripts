@@ -2,7 +2,8 @@ class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
         class initACELoadouts {};
-
+        class initAI {};
+        
         class initSupply {};
         class initVehicle {};
 
