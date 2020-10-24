@@ -168,7 +168,6 @@ class cScripts {
     class garage {
         file = "cScripts\cavFnc\functions\garage";
         class openGarage {};
-        class loadVehicle {};
         class vehicleList {};
         class vehicleInfo {};
         class createVehicle {};

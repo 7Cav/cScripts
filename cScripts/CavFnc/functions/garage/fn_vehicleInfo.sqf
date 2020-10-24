@@ -1,3 +1,4 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Liber.N
  * This fuction displays addtitional vehicle properties (Skins, Spawn type) for vehicles selected in garage.
@@ -6,15 +7,18 @@
  * None.
  *
  * Example:
- * [] spawn cScripts_fnc_vehicleInfo
+ * call cScripts_fnc_vehicleInfo
  *
  */
+
+#define DEBUG_MODE
 
 disableSerialization;
 
 private _vehicleIndex = parseNumber (lbData [7, lbCurSel 7]);
-private _vehicle = GarageVehicles select _vehicleIndex;
-_vehicle params ["_vehicleClass", "_cooldownCost", "_maxVehicles", "_message", "_defaultSpawn", "_condition", "_callBack"];
+private _vehicle = call FUNC(vehicleList);
+_vehicle = _vehicle select _vehicleIndex;
+_vehicle params ["_vehicleClass", "_cooldownCost", "", "_message", "_defaultSpawn", "", "_callBack"];
 
 private _dropDown = ((findDisplay 1601) displayCtrl (13));
 lbCLear _dropDown;
@@ -32,12 +36,12 @@ lbCLear _spawnLocationDropDown;
 private _landIndex = -1;
 private _airIndex = -1;
 
-if (!isNull VehicleSpawn) then { 
+if (!isNil {VehicleSpawn}) then {
     _landIndex = _spawnLocationDropDown lbAdd "Land Vehicle Spawn";
     _spawnLocationDropDown lbSetData [_landIndex, "land"];
 };
     
-if (!isNull VehicleAirSpawn) then { 
+if (!isNil {VehicleAirSpawn}) then {
     _airIndex = _spawnLocationDropDown lbAdd "Air Vehicle Spawn";
     _spawnLocationDropDown lbSetData [_airIndex, "air"];
 };
@@ -58,4 +62,4 @@ _textCbo ctrlSetStructuredText parseText format
     _message
 ];
 
-[_vehicle] call cScripts_fnc_showSpawnButton;
+[_vehicle] call FUNC(showSpawnButton);

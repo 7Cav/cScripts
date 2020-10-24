@@ -1,33 +1,41 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Liber.N
  * This fuction creates a vehicle selected from garage vehicle list.
  *
  * Arguments:
- * None.
+ * None
  *
  * Example:
- * [] spawn cScripts_fnc_createVehicle
+ * call cScripts_fnc_createVehicle
  *
  */
 
+#define DEBUG_MODE
+
 private _vehicleIndex = parseNumber (lbData [7, lbCurSel 7]);
-private _vehicle = GarageVehicles select _vehicleIndex;
+private _vehicle = call FUNC(vehicleList);
+_vehicle = _vehicle select _vehicleIndex;
 _vehicle params ["_vehicleClass", "_cooldownCost", "_maxVehicles", "_message", "_defaultSpawn", "_condition", "_callBack"];
+
+#ifdef DEBUG_MODE
+    [format["Vehicle %1 spawned.", _vehicle], "Garage"] call FUNC(logInfo);
+#endif
 
 private _spawnLocation = lbData [15, lbCurSel 15];
 private _emptyPos = (getPos player) findEmptyPosition [5, 50, (_vehicleClass)];
 
-if (!isNull VehicleSpawn && _spawnLocation == "land") then { 
+if (!isNil {VehicleSpawn} && _spawnLocation == "land") then {
     _emptyPos = (getPos VehicleSpawn) findEmptyPosition [5, 50, (_vehicleClass)];
 };
 
-if (!isNull VehicleSpawn && _spawnLocation == "air") then { 
+if (!isNil {VehicleSpawn} && _spawnLocation == "air") then {
     _emptyPos = (getPos VehicleAirSpawn) findEmptyPosition [5, 50, (_vehicleClass)];
 };
 
-if (count _emptyPos == 0) then { hint "Vehicle cannot be spawned here"; }
-else
-{
+if (count _emptyPos == 0) then {
+    hint "Vehicle cannot be spawned here";
+} else {
     private _veh = createVehicle [(_vehicleClass), _emptyPos, [], 0,""];
 
     if ((lbData [13, lbCurSel 13]) != "") then {

@@ -1,17 +1,21 @@
+#include "..\script_component.hpp";
 /*
  * Author: CPL.Liber.N
  * This fuction displays garage spawn button. It will check for cooldown and max vehicles before displaying the button.
  *
  * Arguments:
- * None.
+ * 0; Vehicle Array Object
  *
  * Example:
- * [] spawn cScripts_fnc_showSpawnButton
+ * [] call cScripts_fnc_showSpawnButton
+ * [["rhsusf_mrzr4_d", 5, -1, "", "land", {}, {}]] call cScripts_fnc_showSpawnButton
  *
  */
 
+#define DEBUG_MODE
 
-_this select 0 params ["_vehicleClass", "_cooldownCost", "_maxVehicles", "_message", "_defaultSpawn", "_condition", "_callBack"];
+params [["_vehicleArrayObject", [], [[]]]];
+_vehicleArrayObject params ["_vehicleClass", "", "_maxVehicles", "", "", "_condition", "_callBack"];
 
 private _spawnButton = (findDisplay 1601) displayCtrl 6;
 _spawnButton ctrlShow true;
@@ -56,3 +60,7 @@ if (_allowRegularSpawn) then {
     _spawnButton ctrlEnable false;
     _spawnButton ctrlSetText _reason;
 };
+
+#ifdef DEBUG_MODE
+    [format["Spawn button set for %1.", _vehicleArrayObject], "Garage"] call FUNC(logInfo);
+#endif

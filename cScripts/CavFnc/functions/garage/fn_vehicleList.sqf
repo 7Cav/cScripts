@@ -1,7 +1,23 @@
-// vehicle is defined by
-// [classname, cooldown (minutes), max # available at once, "message", "default spawn location (land/air)", {conditions}, {after create callback}]
+/*
+ * Author: CPL.Liber.N
+ * Tis function return a list of allowed garage vehicles.
+ *
+ * Arguments:
+ * None
+ *
+ * Return:
+ * List of vehicles <ARRAY>
+ *
+ * Example:
+ * call cScripts_fnc_vehicleList
+ *
+ */
 
-GarageVehicles = [
+private _garageVehicles = [
+    
+    // vehicle is defined by
+    // [classname, cooldown (minutes), max # available at once, "message", "default spawn location (land/air)", {conditions}, {after create callback}]
+    //_vehicle params ["_vehicleClass", "_cooldownCost", "_maxVehicles", "_message", "_defaultSpawn", "_condition", "_callBack"];
 
     // MRZR 4
     ["rhsusf_mrzr4_d", 5, -1, "", "land", {}, {}],
@@ -148,3 +164,5 @@ GarageVehicles = [
     ["FIR_A10C_Blank", 5, -1, "Must be in Eagle/Hog to fly", "air", {}, {}]
 
 ];
+
+_garageVehicles;
