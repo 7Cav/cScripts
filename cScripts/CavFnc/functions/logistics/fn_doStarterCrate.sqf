@@ -12,6 +12,7 @@
  * 4: Insignia Selection <BOOL>     (Default: true)
  * 5: Company variable <BOOL>       (Default: true)
  * 6: Arsenal <BOOL>                (Default: false)
+ * 6: Staging <BOOL>                (Default: true)
  *
  * Return Value:
  * Nothing
@@ -20,6 +21,7 @@
  * [this] call cScripts_fnc_doStarterCrate;
  * [this,"none",true] call cScripts_fnc_doStarterCrate;
  * [this,"none",true,true,true,true,false] call cScripts_fnc_doStarterCrate;
+ * [this,"none",true,true,true,true,false,true] call cScripts_fnc_doStarterCrate;
  *
  */
 
@@ -30,7 +32,8 @@ params [
     ["_reHealOption", true, [true]],
     ["_InsigniaSelectOption", true, [true]],
     ["_allowOnlyForCompany", true, [true]],
-    ["_arsenal", false, [false]]
+    ["_arsenal", false, [false]],
+    ["_hasStagingZone", true, [true]]
 ];
 
 #ifdef DEBUG_MODE
@@ -73,7 +76,7 @@ if (_reHealOption) then {
 };
 
 // Call Quick Selection
-[_object, _quickSelectScale, _allowOnlyForCompany] call FUNC(addQuickSelectionList);
+[_object, _allowOnlyForCompany] call FUNC(setupLoadoutSelection);
 
 // Call Insignia Selection
 if (_InsigniaSelectOption) then {
@@ -91,3 +94,14 @@ _object enableRopeAttach false;
 
 // Make Starter crate clean junk around it
 [_object, 100] call FUNC(deleteDroppedObjects);
+
+// Add stageing zone
+if (_hasStagingZone) then {
+    [_object, 12] call FUNC(addStageingZone);
+};
+
+
+// Add save gear eventHandler
+[_object, "ContainerClosed", {
+    player call EFUNC(gear,saveLoadout);
+}] call CBA_fnc_addBISEventHandler;

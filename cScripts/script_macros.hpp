@@ -44,3 +44,5 @@
 #define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
 #define FUNC(var) TRIPLES(PREFIX,fnc,var)
 #define QFUNC(var) QUOTE(FUNC(var))
+#define EFUNC(var1,var2) FUNC(DOUBLES(var1,var2))
+#define QEFUNC(var1,var2) QUOTE(EFUNC(var1,var2))

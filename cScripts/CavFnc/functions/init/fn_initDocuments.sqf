@@ -29,6 +29,7 @@ if !(player diarySubjectExists "7Cav") then {
 
     // Load diary records (NOTE! The load order is reversed. So the top will be at the bottom after load.)
     call FUNC(Doc_MissionControl);
+    call FUNC(Doc_Radio);
     call FUNC(Doc_Info);
 
     // debug
