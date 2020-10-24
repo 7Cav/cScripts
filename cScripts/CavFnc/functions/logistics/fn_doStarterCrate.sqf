@@ -12,7 +12,7 @@
  * 4: Insignia Selection <BOOL>     (Default: true)
  * 5: Company variable <BOOL>       (Default: true)
  * 6: Arsenal <BOOL>                (Default: false)
- * 6: Staging <BOOL>                (Default: true)
+ * 7: Staging <BOOL>                (Default: true)
  *
  * Return Value:
  * Nothing
@@ -94,12 +94,6 @@ _object enableRopeAttach false;
 
 // Make Starter crate clean junk around it
 [_object, 100] call FUNC(deleteDroppedObjects);
-
-// Add stageing zone
-if (_hasStagingZone) then {
-    [_object, 12] call FUNC(addStageingZone);
-};
-
 
 // Add save gear eventHandler
 [_object, "ContainerClosed", {

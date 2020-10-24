@@ -101,7 +101,6 @@ class cScripts {
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
-        class addStagingZone {};
         class getStagingZone {};
         class inStagingZone {};
         
@@ -138,6 +137,8 @@ class cScripts {
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         // Achilles
+        class achillesModuleEnableUnitSimulation {};
+
         class achillesModuleCreateStarterCrate {};
         class achillesModuleCreateFieldHospital {};
         class achillesModuleCreateMedicalCrate {};
@@ -158,9 +159,13 @@ class cScripts {
         // Zen
         class zenModuleEnableUnitSimulation {};
 
+        class zenModuleCreateFieldHospital {};
+        class zenModuleCreateMedicalCrate {};
         class zenModuleCreateStarterCrate {};
         class zenModuleCreateSupplyCrate {};
 
+        class zenModuleRegearTrooper {};
+        
         class zenModuleCallEndex {};
     };
 

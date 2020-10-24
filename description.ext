@@ -63,7 +63,6 @@
         #include "cScripts\ViewingDistance\CfgFunctions.hpp"
     };
     #include "cScripts\ViewingDistance\GUI.h"
-    #include "cScripts\CfgcScripts.hpp"
     #include "cScripts\CfgLoadouts.hpp"
 
 /*           OTHER            */

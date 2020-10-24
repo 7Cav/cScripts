@@ -8,7 +8,7 @@
  * 0: objectPos <OBJECT>
  *
  * Example:
- * this call cScripts_fnc_zenModuleEnableUnitSimulation
+ * this call cScripts_fnc_achillesModuleEnableUnitSimulation
  *
  * Public: No
  */
