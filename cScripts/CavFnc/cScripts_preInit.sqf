@@ -20,6 +20,8 @@ EGVAR(patches,usesAlive)    = isClass (configFile >> "CfgPatches" >> "ALiVE_main
 EGVAR(patches,usesAchilles) = isClass (configFile >> "CfgPatches" >> "achilles_data_f_achilles");
 EGVAR(patches,usesZen)      = isClass (configFile >> "CfgPatches" >> "zen_main");
 
+EGVAR(patches,usesCavPack)  = isClass (configFile >> "CfgPatches" >> "cavx_main");
+
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
 
@@ -39,9 +41,20 @@ private _cScriptSettings = "cScripts Mission Settings";
 [
     QEGVAR(Settings,setAiSystemDifficulty),
     "LIST",
-    ["AI Setting", "This adjustes the ai and make them less godlike and more roleplay to play against.\n"],
+    ["AI Setting", "This adjustes the ai and make them less godlike and more arcade to play against.\n"],
     [_cScriptSettings, "1; Mission"],
-    [[0,1], ["Day", "Night / Jungle"], 0],
+    [[0,1], ["Arma Default", "Faction Based"], 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+// Acre Radio
+[
+    QEGVAR(Settings,setRadioChannelNames),
+    "EDITBOX",
+    ["Long Range Radio Channels","Array of radio channels used for ACRE\n"],
+    [_cScriptSettings, "4; Player"],
+    '"UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","ATLAS","FARP","CONVOY","ZEUS","CAG","COMMAND"',
     true,
     {},
     true
@@ -402,6 +415,10 @@ if (EGVAR(Settings,allowCustomTagging)) then {
 if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModulesAchilles);
     call FUNC(initModulesZen);
+};
+
+if (EGVAR(Settings,setAiSystemDifficulty) == 1 ) then {
+    call FUNC(initAI);
 };
 
 switch (EGVAR(Settings,setFortifyRestriction)) do {
