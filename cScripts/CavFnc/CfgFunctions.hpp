@@ -13,7 +13,9 @@ class cScripts {
 
         class initStartupHint {};
 
-        class initModules {};
+        class initModulesAchilles {};
+        class initModulesZen {};
+
         class initTagging {};
 
         class initFortify {};
@@ -135,22 +137,31 @@ class cScripts {
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
-        class moduleCreateStarterCrate {};
-        class moduleCreateFieldHospital {};
-        class moduleCreateMedicalCrate {};
-        class moduleCreateSupplyCrate {};
-        class moduleCreateSpecialWeaponsCrate {};
+        // Achilles
+        class achillesModuleCreateStarterCrate {};
+        class achillesModuleCreateFieldHospital {};
+        class achillesModuleCreateMedicalCrate {};
+        class achillesModuleCreateSupplyCrate {};
+        class achillesModuleCreateSpecialWeaponsCrate {};
 
-        class moduleApplyVehicleLable {};
-        class moduleApplyVehicleInventory {};
+        class achillesModuleApplyVehicleLable {};
+        class achillesModuleApplyVehicleInventory {};
 
-        class moduleMakeDoctor {};
-        class moduleMakeEngineer {};
+        class achillesModuleMakeDoctor {};
+        class achillesModuleMakeEngineer {};
 
-        class moduleRegearTrooper {};
+        class achillesModuleRegearTrooper {};
 
-        class moduleCallEndex {};
-        class moduleAddToAlive {};
+        class achillesModuleCallEndex {};
+        class achillesModuleAddToAlive {};
+
+        // Zen
+        class zenModuleEnableUnitSimulation {};
+
+        class zenModuleCreateStarterCrate {};
+        class zenModuleCreateSupplyCrate {};
+
+        class zenModuleCallEndex {};
     };
 
     class helpers {

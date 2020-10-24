@@ -24,10 +24,11 @@ cScripts is an easy to use ARMA3 mission framework used by the 7th Cavalry Gamin
 - [Project OPFOR](https://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
 - [cTab](https://github.com/Riouken/cTab) (Requirment removed when running the public build)
 
-*These are the minimum requirements to run the script framework due to weapons, equipment, and references being used.*
+*These are the requirements to run the script framework due to weapons, equipment and references being used.*
 
 ### Optional moduels
 - [Ares Mod Achilles Expansion](https://github.com/ArmaAchilles/AresModAchillesExpansion)
+- [Zeus Enhanced](https://github.com/zen-mod/ZEN)
 
 ## Installation
 In order to install this script package you only need to [download the latest build](https://github.com/7Cav/cScripts/releases/latest) it and place the content in your mission folder located:
