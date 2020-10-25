@@ -21,12 +21,12 @@
 
     if !(isPlayer _unit) then {
         if (EGVAR(Settings,setAiSystemDifficulty) == 1) then {
-            _unit setSkill ["aimingspeed",     0.420];	
-            _unit setSkill ["aimingaccuracy",  1.000];	
-            _unit setSkill ["aimingshake",     0.360];	
-            _unit setSkill ["spottime",        1.000];	
-            _unit setSkill ["spotdistance",    1.000];	
-            _unit setSkill ["commanding",      1.0];	
+            _unit setSkill ["aimingspeed",     0.420];
+            _unit setSkill ["aimingaccuracy",  1.000];
+            _unit setSkill ["aimingshake",     0.360];
+            _unit setSkill ["spottime",        1.000];
+            _unit setSkill ["spotdistance",    1.000];
+            _unit setSkill ["commanding",      1.0];
             _unit setSkill ["general",         1.0];
         };
         if (EGVAR(Settings,setAiSystemDifficulty) == 2) then {
