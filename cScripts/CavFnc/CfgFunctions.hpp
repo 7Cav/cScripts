@@ -134,6 +134,7 @@ class cScripts {
         class checkVehicle {};
 
         class getServerMetrics {};
+        class checkFile {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
