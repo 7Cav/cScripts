@@ -29,48 +29,58 @@ if (EGVAR(patches,usesZen)) exitWith {["Zen mod detected, terminating Achilies m
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Starter Crate",{
-    [(_this select 0)] call FUNC(achillesModuleCreateStarterCrate);    
+    params ["_modulePos", "_objectPos"];
+    [_modulePos] call FUNC(achillesModuleCreateStarterCrate);    
 }] call Ares_fnc_RegisterCustomModule;
 
 // Check if increase training on location is true then add option.
 if (ace_medical_treatment_locationsBoostTraining) then {
     ["7Cav Logistics", "Field Hospital",{
-        [(_this select 0)] call FUNC(achillesModuleCreateFieldHospital);
+        params ["_modulePos", "_objectPos"];
+        [_modulePos] call FUNC(achillesModuleCreateFieldHospital);
     }] call Ares_fnc_RegisterCustomModule;
 };
 
 ["7Cav Logistics", "Re-supply Crate",{
-    [(_this select 0)] call FUNC(achillesModuleCreateSupplyCrate);
+    params ["_modulePos", "_objectPos"];
+    [_modulePos] call FUNC(achillesModuleCreateSupplyCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Medical Re-supply Crate",{
-    [(_this select 0)] call FUNC(achillesModuleCreateMedicalCrate);
+    params ["_modulePos", "_objectPos"];
+    [_modulePos] call FUNC(achillesModuleCreateMedicalCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Logistics", "Crew-Served Weapons Crate",{
-    [(_this select 0)] call FUNC(achillesModuleCreateSpecialWeaponsCrate);
+    params ["_modulePos", "_objectPos"];
+    [_modulePos] call FUNC(achillesModuleCreateSpecialWeaponsCrate);
 }] call Ares_fnc_RegisterCustomModule;
 
 
 ["7Cav Vehicle", "Add Vehicle Lable",{
-    [(_this select 1)] call FUNC(achillesModuleApplyVehicleLable);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(achillesModuleApplyVehicleLable);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Vehicle", "Add Vehicle Inventory",{
-    [(_this select 1)] call FUNC(achillesModuleApplyVehicleInventory);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(achillesModuleApplyVehicleInventory);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Misc", "Assign Doctor",{
-    [(_this select 1)] call FUNC(achillesModuleMakeDoctor);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(achillesModuleMakeDoctor);
 }] call Ares_fnc_RegisterCustomModule;
 
 ["7Cav Misc", "Assign Engineer",{
-    [(_this select 1)] call FUNC(achillesModuleMakeEngineer);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(achillesModuleMakeEngineer);
 }] call Ares_fnc_RegisterCustomModule;
 
 
 ["7Cav Utilities", "Regerar Trooper",{
-    [(_this select 1)] call FUNC(achillesModuleRegearTrooper);
+    params ["_modulePos", "_objectPos"];
+    [_objectPos] call FUNC(achillesModuleRegearTrooper);
 }] call Ares_fnc_RegisterCustomModule;
 
 
