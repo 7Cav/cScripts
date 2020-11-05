@@ -507,15 +507,15 @@ force force grad_trenches_functions_allowLongEnvelope = true;
 force force grad_trenches_functions_allowShortEnvelope = true;
 force force grad_trenches_functions_allowSmallEnvelope = true;
 force force grad_trenches_functions_allowVehicleEnvelope = true;
-force force grad_trenches_functions_bigEnvelopeDigTime = 20;
-force force grad_trenches_functions_buildFatigueFactor = 1;
+force force grad_trenches_functions_bigEnvelopeDigTime = 100;
+force force grad_trenches_functions_buildFatigueFactor = 0.75;
 force force grad_trenches_functions_camouflageRequireEntrenchmentTool = true;
-force force grad_trenches_functions_giantEnvelopeDigTime = 120;
-force force grad_trenches_functions_LongEnvelopeDigTime = 60;
-force force grad_trenches_functions_shortEnvelopeDigTime = 30;
-force force grad_trenches_functions_smallEnvelopeDigTime = 40;
+force force grad_trenches_functions_giantEnvelopeDigTime = 240;
+force force grad_trenches_functions_LongEnvelopeDigTime = 120;
+force force grad_trenches_functions_shortEnvelopeDigTime = 60;
+force force grad_trenches_functions_smallEnvelopeDigTime = 80;
 force force grad_trenches_functions_stopBuildingAtFatigueMax = true;
-force force grad_trenches_functions_vehicleEnvelopeDigTime = 180;
+force force grad_trenches_functions_vehicleEnvelopeDigTime = 360;
 
 // LAMBS Danger
 force force lambs_danger_combatShareRange = 200;
