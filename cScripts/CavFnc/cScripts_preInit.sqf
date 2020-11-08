@@ -142,20 +142,6 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_fnc_addSetting;
 
 
-
-// Supply
-[
-    QEGVAR(Settings,useCustomSupplyInventory),
-    "CHECKBOX",
-    ["Custom supplies Crates","Allow mission to adjust crate content.\n"],
-    [_cScriptSettings, "3; Custom Initialization"],
-    false,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
-
 // Diary Records
 [
     QEGVAR(Settings,showDiaryRecords),
