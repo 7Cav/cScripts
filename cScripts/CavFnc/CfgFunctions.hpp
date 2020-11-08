@@ -101,8 +101,8 @@ class cScripts {
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
-        class getStagingZone {};
-        class inStagingZone {};
+        class addStagingZone {};
+        class checkStagingZone {};
         
         class deleteDroppedObjects {};
 
