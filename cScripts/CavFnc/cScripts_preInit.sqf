@@ -22,6 +22,10 @@ EGVAR(patches,usesZen)      = isClass (configFile >> "CfgPatches" >> "zen_main")
 
 EGVAR(patches,usesCavPack)  = isClass (configFile >> "CfgPatches" >> "cavx_main");
 
+// Global Variables
+EGVAR(Staging,ZoneStatus) = false;
+
+
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
 
@@ -43,18 +47,19 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     ["AI Setting", "This adjustes the ai and make them less godlike and more arcade to play against.\n"],
     [_cScriptSettings, "1; Mission"],
-    [[0,1], ["Arma Default", "Faction Based"], 1],
+    [[0,1,2], ["Arma Default", "Adjusted", "Faction Based"], 2],
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
+
 // Acre Radio
 [
     QEGVAR(Settings,setRadioChannelNames),
     "EDITBOX",
     ["Long Range Radio Channels","Array of radio channels used for ACRE\n"],
     [_cScriptSettings, "4; Player"],
-    '"UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","ATLAS","FARP","CONVOY","ZEUS","CAG","COMMAND"',
+    '["UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","ATLAS","FARP","CONVOY","ZEUS","CAG","COMMAND"]',
     true,
     {},
     true
@@ -131,20 +136,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     ["Vehicle Inventory", "Allow mission to change the vehicles inventory.\n"],
     [_cScriptSettings, "3; Custom Initialization"],
     true,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
-
-
-// Supply
-[
-    QEGVAR(Settings,useCustomSupplyInventory),
-    "CHECKBOX",
-    ["Custom supplies Crates","Allow mission to adjust crate content.\n"],
-    [_cScriptSettings, "3; Custom Initialization"],
-    false,
     true,
     {},
     true
@@ -307,7 +298,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     ["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed.\n"],
     [_cScriptSettings, "7; Combat Jump Simulation"],
-    [[0,1,2], ["None", "Basic", "Advanced"], 1],
+    [[0,1,2], ["None", "Basic", "Advanced"], 2],
     true,
     {},
     true
@@ -417,7 +408,7 @@ if (EGVAR(Settings,enable7cavZeusModules)) then {
     call FUNC(initModulesZen);
 };
 
-if (EGVAR(Settings,setAiSystemDifficulty) == 1 ) then {
+if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
     call FUNC(initAI);
 };
 

@@ -4,7 +4,6 @@ class cScripts {
         class initACELoadouts {};
         class initAI {};
         
-        class initSupply {};
         class initVehicle {};
 
         class initStaging {};
@@ -102,8 +101,7 @@ class cScripts {
         class addLoadoutSelection {};
 
         class addStagingZone {};
-        class getStagingZone {};
-        class inStagingZone {};
+        class checkStagingZone {};
         
         class deleteDroppedObjects {};
 
@@ -134,10 +132,13 @@ class cScripts {
         class checkVehicle {};
 
         class getServerMetrics {};
+        class checkFile {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         // Achilles
+        class achillesModuleEnableUnitSimulation {};
+
         class achillesModuleCreateStarterCrate {};
         class achillesModuleCreateFieldHospital {};
         class achillesModuleCreateMedicalCrate {};
@@ -158,9 +159,13 @@ class cScripts {
         // Zen
         class zenModuleEnableUnitSimulation {};
 
+        class zenModuleCreateFieldHospital {};
+        class zenModuleCreateMedicalCrate {};
         class zenModuleCreateStarterCrate {};
         class zenModuleCreateSupplyCrate {};
 
+        class zenModuleRegearTrooper {};
+        
         class zenModuleCallEndex {};
     };
 

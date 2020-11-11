@@ -1,18 +1,30 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function add eventhandelers chaning the inventory of all crates.
+ * This function adds a given object or marker to the missionNamespace listing staging zones.
  *
  * Arguments:
- * None
+ * 0: Zone <OBJECT/STRING>
+ * 1: Zone Size <NUMBER> (Optional) [Default; 12]
  *
- * Return Value:
+ * Return:
  * Nothing
  *
  * Example:
- * call cScripts_fnc_addStageingZone
- *
- * Public: No
+ * [this] call cScripts_fnc_addStagingZone
+ * [bob, 2] call cScripts_fnc_addStagingZone
+ * [TruckMcTruckFace, 12] call cScripts_fnc_addStagingZone
+ * ["respawn_west", 12] call cScripts_fnc_addStagingZone
  */
+#include "..\script_component.hpp";
 
-["'cScripts_fnc_addStageingZone' function is not yet implemented...", "Stageing"] call FUNC(logWarning);
+params [
+    "_zone",
+    ["_size", 12]
+];
+
+private _stageingZones = missionNamespace getVariable [QEGVAR(Stageing,Zones), []];
+
+_stageingZones pushBack [_zone, _size];
+
+missionNamespace setVariable [QEGVAR(Stageing,Zones), _stageingZones];

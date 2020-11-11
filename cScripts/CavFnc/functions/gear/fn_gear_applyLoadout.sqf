@@ -15,7 +15,6 @@
  * [player, [[],[],[],[],[],[],"","",[],["","","","","",""]]] call cScripts_fnc_gear_applyLoadout
  *
  */
-
 params [
     ["_unit", objNull, [objNull]],
     "_loadout"
@@ -25,8 +24,21 @@ private _config     = configNull;
 private _loadArray  = _loadout isEqualType [];
 private _loadConfig = _loadout isEqualType "";
 
+// Check Scope
+private _scope = 1;
 if (_loadConfig) then {
     _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
+    _scope = getNumber (_config >> "scope");
+    #ifdef DEBUG_MODE
+        [formatText["Scope for %1 is set %2", _unit, _scope], "Gear"] call FUNC(logInfo);
+    #endif
+};
+if (_scope == 0) exitWith {
+    [formatText["Scope for loadout %1 for %2 is %3 loadout will not be applied.", _unit, _loadout, _scope], "Gear", true] call FUNC(logWarning);
+};
+
+// preLoadout
+if (_loadConfig) then {
     [_unit, _loadout] call compile (getText (_config >> "preLoadout"));
 };
 
@@ -73,7 +85,7 @@ if (_unit == player) then {
     if (ace_hearing_autoAddEarplugsToUnits) then {
         if !([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {[_unit] call ace_hearing_fnc_putInEarplugs;};
         #ifdef DEBUG_MODE
-            [formatText["%1 have got earplugs assigned", _unit], "LoadoutPostInit"] call FUNC(logInfo);
+            [formatText["%1 have got earplugs assigned", _unit], "Gear"] call FUNC(logInfo);
         #endif
     };
 

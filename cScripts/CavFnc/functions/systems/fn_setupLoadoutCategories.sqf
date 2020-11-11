@@ -32,7 +32,7 @@ private _pilotIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa";
 
 private _mainCategory = "";
 if (_aceCategory == "ACE_SelfActions") then {
-    [_object, "cScripts_Loadout_Cat_MainStage", "Stageing Zone Loadouts", _icon, [_aceCategory], { [50] call FUNC(getStagingZone) }] call FUNC(createActionCategory);
+    [_object, "cScripts_Loadout_Cat_MainStage", "Stageing Zone Loadouts", _icon, [_aceCategory], { call FUNC(checkStagingZone) && EGVAR(Staging,ZoneStatus) }] call FUNC(createActionCategory);
     _mainCategory = "cScripts_Loadout_Cat_MainStage";
 } else {
     [_object, "cScripts_Loadout_Cat_Main", "Loadouts", _icon, [_aceCategory]] call FUNC(createActionCategory);
