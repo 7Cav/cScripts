@@ -22,6 +22,10 @@ EGVAR(patches,usesZen)      = isClass (configFile >> "CfgPatches" >> "zen_main")
 
 EGVAR(patches,usesCavPack)  = isClass (configFile >> "CfgPatches" >> "cavx_main");
 
+// Global Variables
+EGVAR(Staging,ZoneStatus) = false;
+
+
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
 
@@ -132,20 +136,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     ["Vehicle Inventory", "Allow mission to change the vehicles inventory.\n"],
     [_cScriptSettings, "3; Custom Initialization"],
     true,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
-
-
-// Supply
-[
-    QEGVAR(Settings,useCustomSupplyInventory),
-    "CHECKBOX",
-    ["Custom supplies Crates","Allow mission to adjust crate content.\n"],
-    [_cScriptSettings, "3; Custom Initialization"],
-    false,
     true,
     {},
     true

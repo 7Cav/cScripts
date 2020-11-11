@@ -4,7 +4,6 @@ class cScripts {
         class initACELoadouts {};
         class initAI {};
         
-        class initSupply {};
         class initVehicle {};
 
         class initStaging {};
@@ -101,8 +100,8 @@ class cScripts {
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
-        class getStagingZone {};
-        class inStagingZone {};
+        class addStagingZone {};
+        class checkStagingZone {};
         
         class deleteDroppedObjects {};
 
