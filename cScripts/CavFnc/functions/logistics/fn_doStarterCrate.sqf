@@ -95,6 +95,9 @@ _object enableRopeAttach false;
 // Make Starter crate clean junk around it
 [_object, 100] call FUNC(deleteDroppedObjects);
 
+// Stageing zone
+[_object, 12] call FUNC(addStagingZone);
+
 // Add save gear eventHandler
 [_object, "ContainerClosed", {
     player call EFUNC(gear,saveLoadout);
