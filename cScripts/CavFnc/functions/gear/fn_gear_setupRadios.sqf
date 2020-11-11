@@ -16,6 +16,7 @@ params [["_unit", objNull]];
  *
  */
 
+if !(EGVAR(patches,usesACRE)) exitWith {};
 if (QEGVAR(Settings,setRadioChannelNames) == "")               exitWith {};
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
 if (count allMissionObjects "acre_api_nameChannels" > 0)       exitWith {};
