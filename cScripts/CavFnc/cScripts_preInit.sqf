@@ -22,6 +22,10 @@ EGVAR(patches,usesZen)      = isClass (configFile >> "CfgPatches" >> "zen_main")
 
 EGVAR(patches,usesCavPack)  = isClass (configFile >> "CfgPatches" >> "cavx_main");
 
+// Global Variables
+EGVAR(Staging,ZoneStatus) = false;
+
+
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
 
