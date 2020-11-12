@@ -17,6 +17,7 @@
 
 params [["_radio", 'ACRE_PRC343', ['ACRE_PRC343']]];
 
+if !(EGVAR(patches,usesACRE)) exitWith {};
 if (!isPlayer player) exitWith {};
 
 [{[] call acre_api_fnc_isInitialized}, {
