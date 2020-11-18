@@ -7,7 +7,7 @@ VERSION_TAG=$*
 mkdir release/
 
 sed -i "s/#define VERSION.*/#define VERSION \"${VERSION_TAG}\"/" cScripts/script_component.hpp
-sed -i "s/DevBuild.*\"${VERSION_TAG}\"/" tools/config.json
+sed -i "s/DevBuild/${VERSION_TAG}/" tools/config.json
 
 python3 tools/build.py --deploy
 
