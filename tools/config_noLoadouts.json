@@ -2,17 +2,17 @@
     "build" : {
         "scriptName": "cScripts No Loadouts"
     },
-    "patch" : "tools\\build\\NoLoadouts.patch",
-    "cScripts\\Loadouts\\CfgLoadouts_Alpha_FixedWing.hpp" : "REMOVE",
-    "cScripts\\Loadouts\\CfgLoadouts_Alpha_Rotary.hpp" : "REMOVE",
-    "cScripts\\Loadouts\\CfgLoadouts_Alpha.hpp" : "REMOVE",
-    "cScripts\\Loadouts\\CfgLoadouts_Bravo_Atlas.hpp" : "REMOVE",
-    "cScripts\\Loadouts\\CfgLoadouts_Bravo_Viking.hpp" : "REMOVE",
-    "cScripts\\Loadouts\\CfgLoadouts_Bravo.hpp" : "REMOVE",
-    "cScripts\\Loadouts\\CfgLoadouts_Charlie_Squad.hpp" : "REMOVE",
-    "cScripts\\Loadouts\\CfgLoadouts_Charlie.hpp" : "REMOVE",
-    "cScripts\\Loadouts\\CfgLoadouts_UserCustom.hpp" : "REMOVE",
-    "cScripts\\CavFnc\\functions\\logistics\\fn_doStarterCrateSupplies.sqf": {
+    "patch" : "tools/build/NoLoadouts.patch",
+    "cScripts/Loadouts/CfgLoadouts_Alpha_FixedWing.hpp" : "REMOVE",
+    "cScripts/Loadouts/CfgLoadouts_Alpha_Rotary.hpp" : "REMOVE",
+    "cScripts/Loadouts/CfgLoadouts_Alpha.hpp" : "REMOVE",
+    "cScripts/Loadouts/CfgLoadouts_Bravo_Atlas.hpp" : "REMOVE",
+    "cScripts/Loadouts/CfgLoadouts_Bravo_Viking.hpp" : "REMOVE",
+    "cScripts/Loadouts/CfgLoadouts_Bravo.hpp" : "REMOVE",
+    "cScripts/Loadouts/CfgLoadouts_Charlie_Squad.hpp" : "REMOVE",
+    "cScripts/Loadouts/CfgLoadouts_Charlie.hpp" : "REMOVE",
+    "cScripts/Loadouts/CfgLoadouts_UserCustom.hpp" : "REMOVE",
+    "cScripts/CavFnc/functions/logistics/fn_doStarterCrateSupplies.sqf": {
         "rem": [
             "ItemAndroid",
             "ItemcTab",
@@ -36,7 +36,7 @@
             "Cav_m3maaws_HEAT_CS"
         ]
     },
-    "cScripts\\CavFnc\\functions\\systems\\fn_setVehicleInventory.sqf": {
+    "cScripts/CavFnc/functions/systems/fn_setVehicleInventory.sqf": {
         "rem": [
             "ItemAndroid",
             "ItemcTab",
@@ -60,7 +60,7 @@
             "Cav_m3maaws_HEAT_CS"
         ]
     },
-    "cScripts\\CavFnc\\functions\\logistics\\fn_doSupplyCrate.sqf": {
+    "cScripts/CavFnc/functions/logistics/fn_doSupplyCrate.sqf": {
         "rem": [
             "ItemAndroid",
             "ItemcTab",
