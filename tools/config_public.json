@@ -2,7 +2,7 @@
     "build" : {
         "scriptName": "cScripts Public"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_Common.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_Common.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -23,7 +23,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_UserCustom.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_UserCustom.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -44,7 +44,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_Alpha.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_Alpha.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -65,7 +65,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_Alpha_Rotary.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_Alpha_Rotary.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -86,7 +86,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_Bravo.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_Bravo.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -107,7 +107,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_Bravo_Viking.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_Bravo_Viking.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -128,7 +128,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_Bravo_Atlas.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_Bravo_Atlas.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -149,7 +149,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_Charlie.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_Charlie.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -170,7 +170,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\Loadouts\\CfgLoadouts_Charlie_Squad.hpp" : {
+    "cScripts/Loadouts/CfgLoadouts_Charlie_Squad.hpp" : {
         "ItemAndroid" : "",
         "ItemcTab" : "",
         ",[\"ItemcTabHCam\",1]" : "",
@@ -191,7 +191,7 @@
         "tf47_m3maaws_HEAT" : "rhs_mag_maaws_HEAT",
         "Cav_m3maaws_HEAT_CS" : "rhs_mag_maaws_HEAT"
     },
-    "cScripts\\CavFnc\\functions\\logistics\\fn_doStarterCrateSupplies.sqf": {
+    "cScripts/CavFnc/functions/logistics/fn_doStarterCrateSupplies.sqf": {
         "rem": [
             "ItemAndroid",
             "ItemcTab",
@@ -215,7 +215,7 @@
             "Cav_m3maaws_HEAT_CS"
         ]
     },
-    "cScripts\\CavFnc\\functions\\systems\\fn_setVehicleInventory.sqf": {
+    "cScripts/CavFnc/functions/systems/fn_setVehicleInventory.sqf": {
         "rem": [
             "ItemAndroid",
             "ItemcTab",
@@ -239,7 +239,7 @@
             "Cav_m3maaws_HEAT_CS"
         ]
     },
-    "cScripts\\CavFnc\\functions\\logistics\\fn_doSupplyCrate.sqf": {
+    "cScripts/CavFnc/functions/logistics/fn_doSupplyCrate.sqf": {
         "rem": [
             "ItemAndroid",
             "ItemcTab",
