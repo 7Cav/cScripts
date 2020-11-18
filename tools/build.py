@@ -158,20 +158,29 @@ def manipulate_build(config):
     for filename in config:
         if filename == 'build':
             continue
-        
-        print("Applying adjustmetns to", end=' ')
-        printC(filename, color='\033[96m', end='')
-        print("...")
-
-        filePath = os.path.join(tmpFolder, filename)
+        if filename == 'patch':
+            print("Applying patch file", end=' ')
+            printC(config[filename], color='\033[96m', end='')
+            print("...")
+            filePath = os.path.join(ProjectRoot, config[filename])
+            os.chdir(tmpFolder)
+            subprocess.call(['git','apply', filePath, '--verbose'])
+            os.chdir(ProjectRoot)
+            continue
         if (type(config[filename])) is str:
-            if config[filename] == 'rep':
-                print(config[filename])
-                continue
-            if config[filename] == 'rem':
-                print(config[filename])
-                continue
+            filePath = os.path.join(tmpFolder, filename)
+            if config[filename] == 'REMOVE':
+                print("Removing", end=' ')
+                printC(filename, color='\033[96m', end='')
+                print("...")
+                if os.path.exists(filePath):
+                    os.remove(filePath)
+            continue
         else:
+            print("Applying adjustmetns to", end=' ')
+            printC(filename, color='\033[96m', end='')
+            print("...")
+            filePath = os.path.join(tmpFolder, filename)
             for key in config[filename]:
                 value = config[filename][key]
                 if (type(config[filename][key])) is list:
@@ -268,8 +277,6 @@ def main():
 
     check_or_create_folder(releaseFolder)
     make_archive(config_name, config_version, git_commit_shash)
-
-    print(tmpFolder)
 
 if __name__ == "__main__":
     sys.exit(main())

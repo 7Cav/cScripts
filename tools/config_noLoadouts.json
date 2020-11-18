@@ -1,0 +1,87 @@
+{
+    "build" : {
+        "scriptName": "cScripts No Loadouts"
+    },
+    "patch" : "tools\\build\\NoLoadouts.patch",
+    "cScripts\\Loadouts\\CfgLoadouts_Alpha_FixedWing.hpp" : "REMOVE",
+    "cScripts\\Loadouts\\CfgLoadouts_Alpha_Rotary.hpp" : "REMOVE",
+    "cScripts\\Loadouts\\CfgLoadouts_Alpha.hpp" : "REMOVE",
+    "cScripts\\Loadouts\\CfgLoadouts_Bravo_Atlas.hpp" : "REMOVE",
+    "cScripts\\Loadouts\\CfgLoadouts_Bravo_Viking.hpp" : "REMOVE",
+    "cScripts\\Loadouts\\CfgLoadouts_Bravo.hpp" : "REMOVE",
+    "cScripts\\Loadouts\\CfgLoadouts_Charlie_Squad.hpp" : "REMOVE",
+    "cScripts\\Loadouts\\CfgLoadouts_Charlie.hpp" : "REMOVE",
+    "cScripts\\Loadouts\\CfgLoadouts_UserCustom.hpp" : "REMOVE",
+    "cScripts\\CavFnc\\functions\\logistics\\fn_doStarterCrateSupplies.sqf": {
+        "rem": [
+            "ItemAndroid",
+            "ItemcTab",
+            "DAR_Beret_Mar",
+            "ItemcTabHCam",
+            "NDS_M_6Rnd_60mm_HE_0",
+            "NDS_M_6Rnd_60mm_HE",
+            "NDS_M_6Rnd_60mm_SMOKE",
+            "NDS_M_6Rnd_60mm_ILLUM",
+            "NDS_B_M224_mortar",
+            "tf47_at4_heat",
+            "tf47_at4_HEDP",
+            "tf47_at4_HP",
+            "tf47_m3maaws",
+            "tf47_optic_m3maaws",
+            "tf47_m3maaws_HE",
+            "tf47_m3maaws_SMOKE",
+            "tf47_m3maaws_HEDP",
+            "tf47_m3maaws_ILLUM",
+            "tf47_m3maaws_HEAT",
+            "Cav_m3maaws_HEAT_CS"
+        ]
+    },
+    "cScripts\\CavFnc\\functions\\systems\\fn_setVehicleInventory.sqf": {
+        "rem": [
+            "ItemAndroid",
+            "ItemcTab",
+            "DAR_Beret_Mar",
+            "ItemcTabHCam",
+            "NDS_M_6Rnd_60mm_HE_0",
+            "NDS_M_6Rnd_60mm_HE",
+            "NDS_M_6Rnd_60mm_SMOKE",
+            "NDS_M_6Rnd_60mm_ILLUM",
+            "NDS_B_M224_mortar",
+            "tf47_at4_heat",
+            "tf47_at4_HEDP",
+            "tf47_at4_HP",
+            "tf47_m3maaws",
+            "tf47_optic_m3maaws",
+            "tf47_m3maaws_HE",
+            "tf47_m3maaws_SMOKE",
+            "tf47_m3maaws_HEDP",
+            "tf47_m3maaws_ILLUM",
+            "tf47_m3maaws_HEAT",
+            "Cav_m3maaws_HEAT_CS"
+        ]
+    },
+    "cScripts\\CavFnc\\functions\\logistics\\fn_doSupplyCrate.sqf": {
+        "rem": [
+            "ItemAndroid",
+            "ItemcTab",
+            "DAR_Beret_Mar",
+            "ItemcTabHCam",
+            "NDS_M_6Rnd_60mm_HE_0",
+            "NDS_M_6Rnd_60mm_HE",
+            "NDS_M_6Rnd_60mm_SMOKE",
+            "NDS_M_6Rnd_60mm_ILLUM",
+            "NDS_B_M224_mortar",
+            "tf47_at4_heat",
+            "tf47_at4_HEDP",
+            "tf47_at4_HP",
+            "tf47_m3maaws",
+            "tf47_optic_m3maaws",
+            "tf47_m3maaws_HE",
+            "tf47_m3maaws_SMOKE",
+            "tf47_m3maaws_HEDP",
+            "tf47_m3maaws_ILLUM",
+            "tf47_m3maaws_HEAT",
+            "Cav_m3maaws_HEAT_CS"
+        ]
+    }
+}
