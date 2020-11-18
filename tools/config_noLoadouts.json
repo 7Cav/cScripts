@@ -1,6 +1,6 @@
 {
     "build" : {
-        "scriptName": "cScripts No Loadouts"
+        "scriptName": "cScripts NoLoadouts"
     },
     "patch" : "tools/build/NoLoadouts.patch",
     "cScripts/Loadouts/CfgLoadouts_Alpha_FixedWing.hpp" : "REMOVE",
