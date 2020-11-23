@@ -15,10 +15,12 @@ class CommonBlufor {
     //preLoadout = "";
     //postLoadout = "";
 };
+
 class Cav_B_Seventh_Cavalry_Base_F : CommonBlufor {
     regiment = "7th Cavalry";
     scope = 0;
 };
+
 class Cav_B_Alpha_base_F : Cav_B_Seventh_Cavalry_Base_F {
     category[] = {"cScripts_Loadout_Cat_Alpha"};
     company = "alpha";
