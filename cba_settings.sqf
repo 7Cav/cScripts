@@ -90,7 +90,7 @@ force force ace_goggles_effects = 2;
 //ace_goggles_showInThirdPerson = false;
 
 // ACE Hearing
-force force ace_hearing_autoAddEarplugsToUnits = false;
+force force ace_hearing_autoAddEarplugsToUnits = true;
 force force ace_hearing_disableEarRinging = false;
 force force ace_hearing_earplugsVolume = 0.5;
 force force ace_hearing_enableCombatDeafness = true;
