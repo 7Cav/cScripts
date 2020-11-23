@@ -1,4 +1,3 @@
-
 class Cav_B_A_Officer_F : Cav_B_Alpha_base_F {
     displayName = "$STR_Cav_Alpha_Characters_A_Officer";
     category[] += {"cScripts_Loadout_Cat_Alpha_Leadership"};
