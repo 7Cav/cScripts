@@ -1,20 +1,17 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function adds a Jump out option to a vehicle.
+ * This function adds a HALO Jump out option to a vehicle.
  *
  * Arguments:
  * 0: Vehicle             <OBJECT>
  * 1: Minimum altetude    <NUMBER> (Optional) (Default; 180)
- * 2: Maximum altetude    <NUMBER> (Optional) (Default; 350)
- * 3: Maximum speed       <NUMBER> (Optional) (Default; 310)
- * 4: Chute Vehicle Class <OBJECT> (Optional) (Default; "rhs_d6_Parachute")
+ * 4: Chute Vehicle Class <OBJECT> (Optional) (Default; "B_Parachute")
  *
  * Example:
  * ["my_c130"] call cScripts_fnc_addHaloJump
- * ["my_c130", 180] call cScripts_fnc_addHaloJump
- * ["my_c130", 180, 350, 300] call cScripts_fnc_addHaloJump
- * ["my_c130", 180, 350, 300, "rhs_d6_Parachute"] call cScripts_fnc_addHaloJump
+ * ["my_c130", 5000] call cScripts_fnc_addHaloJump
+ * ["my_c130", 5000, "B_Parachute"] call cScripts_fnc_addHaloJump
  *
  */
 
