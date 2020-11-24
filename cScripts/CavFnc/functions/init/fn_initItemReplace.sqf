@@ -70,13 +70,6 @@ switch (EGVAR(Settings,replaceSmokeGrenades)) do {
     };
 };
 
-// Special replacement removed on detection
-if (getPlayerUID player == "76561198063591075") then {
-    ["ACE_SpraypaintBlack", "ACE_SpraypaintGreen"] call ace_common_fnc_registerItemReplacement;
-    ["ACE_SpraypaintBlue", "ACE_SpraypaintGreen"] call ace_common_fnc_registerItemReplacement;
-    ["ACE_SpraypaintRed", "ACE_SpraypaintGreen"] call ace_common_fnc_registerItemReplacement;
-};
-
 #ifdef DEBUG_MODE
     ["Item replacement initialization completed."] call FUNC(logInfo);
 #endif

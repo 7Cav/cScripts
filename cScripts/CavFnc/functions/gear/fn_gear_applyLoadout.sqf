@@ -82,7 +82,7 @@ if (_unit == player) then {
     };
 
     // Earplugs
-    if (ace_hearing_autoAddEarplugsToUnits) then {
+    if (EGVAR(Settings,addEarplugs)) then {
         if !([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {[_unit] call ace_hearing_fnc_putInEarplugs;};
         #ifdef DEBUG_MODE
             [formatText["%1 have got earplugs assigned", _unit], "Gear"] call FUNC(logInfo);
