@@ -26,7 +26,6 @@ if (!isNil{_vehicle getVariable QEGVAR(Player,Name)}) then {
 };
 
 // Player Rank to ingame rank
-
 if (EGVAR(Settings,setPlayerRank)) then {
     if !(isNil {_player getVariable QEGVAR(Cav,Rank)}) then {
         [_unit] call FUNC(setPlayerRank);
@@ -59,42 +58,4 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
             [format["%1 got insignia '%2' assinged", _this select 0, _this select 1], "Gear"] call FUNC(logInfo);
         #endif
     }, [_unit, _insignia], 2] call CBA_fnc_waitAndExecute;
-};
-
-// Eyewere Blacklist
-if (EGVAR(Settings,enforceEyewereBlacklist)) then {
-    private _blacklist_glasses = [
-        "G_AirPurifyingRespirator_02_black_F",
-        "G_AirPurifyingRespirator_02_olive_F",
-        "G_AirPurifyingRespirator_02_sand_F",
-        "G_AirPurifyingRespirator_01_F",
-        "G_Blindfold_01_black_F",
-        "G_Blindfold_01_white_F",
-        "G_Diving",
-        "G_I_Diving",
-        "G_O_Diving",
-        "G_B_Diving",
-        "G_Lady_Blue",
-        "G_RegulatorMask_F",
-        "G_Respirator_blue_F",
-        "G_Respirator_white_F",
-        "G_Respirator_yellow_F",
-        "G_EyeProtectors_F",
-        "G_EyeProtectors_Earpiece_F",
-        "G_Balaclava_TI_blk_F",
-        "G_Balaclava_TI_G_blk_F",
-        "G_Balaclava_TI_tna_F",
-        "G_Balaclava_TI_G_tna_F",
-        "G_Tactical_Clear",
-        "G_Tactical_Black",
-        "G_Goggles_VR",
-        "G_WirelessEarpiece_F"
-    ];
-
-    if (goggles _unit in _blacklist_glasses) then {
-        _unit unlinkItem (goggles _unit);
-        #ifdef DEBUG_MODE
-            [format["%1 using un-authorized facewere it have been removed", _unit], "Gear"] call FUNC(logInfo);
-        #endif
-    };
 };
