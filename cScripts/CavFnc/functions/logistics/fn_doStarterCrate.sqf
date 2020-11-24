@@ -96,7 +96,7 @@ _object enableRopeAttach false;
 [_object, 100] call FUNC(deleteDroppedObjects);
 
 // Stageing zone
-[_object, 12] call FUNC(addStagingZone);
+[_object, 25] call FUNC(addStagingZone);
 
 // Add save gear eventHandler
 [_object, "ContainerClosed", {
