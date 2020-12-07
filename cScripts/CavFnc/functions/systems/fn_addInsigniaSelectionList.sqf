@@ -79,7 +79,7 @@ if (!isPlayer _object) then {
 [_object,"Platoon Insignia 2/B/1-7","Bravo_2","z\cav\addons\insignia\data\Bravo_2.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 1/2/B/1-7","Bravo_2_1","z\cav\addons\insignia\data\Bravo_2_1.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 2/2/B/1-7","Bravo_2_2","z\cav\addons\insignia\data\Bravo_2_2.paa",_bravoCategory] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 3/2/B/1-7","Bravo_2_3","z\cav\addons\insignia\data\Bravo_2_3.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 3/2/B/1-7","Bravo_2_3","z\cav\addons\insignia\data\Bravo_2_3.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 4/2/B/1-7","Bravo_2_4","z\cav\addons\insignia\data\Bravo_2_4.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 
 
