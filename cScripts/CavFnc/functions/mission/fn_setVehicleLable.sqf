@@ -97,13 +97,13 @@ private _vehicleTypeC130J = [
     "Cav_Alpha_C130J"
 ];
 if (typeOf _vehicle in _vehicleTypeC130J) then {
-    if (_lable1 != "") then { [_vehicle,[-0.205,-10.9,8.920],90,_lableTexture1,[0.05,0,1]] call FUNC(createVehicleLable); };
-    if (_lable2 != "") then { [_vehicle,[-0.205,-11.4,8.920],90,_lableTexture2,[0.05,0,1]] call FUNC(createVehicleLable); };
-    if (_lable3 != "") then { [_vehicle,[-0.205,-11.9,8.920],90,_lableTexture3,[0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable1 != "") then { [_vehicle,[-0.205,-10.9,2.920],90,_lableTexture1,[0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable2 != "") then { [_vehicle,[-0.205,-11.4,2.920],90,_lableTexture2,[0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable3 != "") then { [_vehicle,[-0.205,-11.9,2.920],90,_lableTexture3,[0.05,0,1]] call FUNC(createVehicleLable); };
 
-    if (_lable1 != "") then { [_vehicle,[0.205,-11.9,8.920],-90,_lableTexture1,[-0.05,0,1]] call FUNC(createVehicleLable); };
-    if (_lable2 != "") then { [_vehicle,[0.205,-11.4,8.920],-90,_lableTexture2,[-0.05,0,1]] call FUNC(createVehicleLable); };
-    if (_lable3 != "") then { [_vehicle,[0.205,-10.9,8.920],-90,_lableTexture3,[-0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable1 != "") then { [_vehicle,[0.205,-11.9,2.920],-90,_lableTexture1,[-0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable2 != "") then { [_vehicle,[0.205,-11.4,2.920],-90,_lableTexture2,[-0.05,0,1]] call FUNC(createVehicleLable); };
+    if (_lable3 != "") then { [_vehicle,[0.205,-10.9,2.920],-90,_lableTexture3,[-0.05,0,1]] call FUNC(createVehicleLable); };
 };
 
 

@@ -1,0 +1,829 @@
+version=53;
+center[]={3965.2253,5,1123.0057};
+class items
+{
+	items=5;
+	class Item0
+	{
+		dataType="Comment";
+		class PositionInfo
+		{
+			position[]={1.6381836,0,-0.3359375};
+		};
+		title="Mission Controllers & Zeus";
+		id=150;
+	};
+	class Item1
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={3.920166,0,5.7524414};
+		};
+		id=158;
+		type="ModuleRespawnPositionWest_F";
+	};
+	class Item2
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={3.7875977,0,-0.23510742};
+		};
+		id=159;
+		type="ModuleCuratorAddEditableObjects";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ModuleCuratorAddEditableObjects_Curator";
+				expression="_this setVariable ['Curator',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="Z1,Z2,Z3";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ModuleCuratorAddEditableObjects_AddCrew";
+				expression="_this setVariable ['AddCrew',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item3
+	{
+		dataType="Logic";
+		class PositionInfo
+		{
+			position[]={-0.23901367,0,-4.2451172};
+			angles[]={0,3.1985602,0};
+		};
+		id=160;
+		type="ModuleCurator_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ModuleCurator_F_Owner";
+				expression="_this setVariable ['Owner',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="#AdminLogged";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ModuleCurator_F_Forced";
+				expression="_this setVariable ['Forced',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ModuleCurator_F_Name";
+				expression="_this setVariable ['Name',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="";
+					};
+				};
+			};
+			class Attribute3
+			{
+				property="ModuleCurator_F_Addons";
+				expression="_this setVariable ['Addons',_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=3;
+					};
+				};
+			};
+			nAttributes=4;
+		};
+	};
+	class Item4
+	{
+		dataType="Layer";
+		name="Zeus Gamemaster Setup [DEVBUILD]";
+		class Entities
+		{
+			items=4;
+			class Item0
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-0.16601563,0,1.5738525};
+					angles[]={0,3.1985602,0};
+				};
+				id=151;
+				type="ModuleCurator_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="S3";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=3;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item1
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-0.18994141,0,-0.37316895};
+					angles[]={0,3.1985602,0};
+				};
+				id=152;
+				type="ModuleCurator_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="S3_1";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=3;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item2
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-0.18505859,0,-2.3861084};
+					angles[]={0,3.1985602,0};
+				};
+				id=153;
+				type="ModuleCurator_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="S3_2";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=3;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item3
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-2.1430664,0.0014390945,1.6229248};
+							angles[]={-0,4.6973796,0};
+						};
+						side="West";
+						flags=6;
+						class Attributes
+						{
+							init="call{this setgroupID[""ZEUS""];" \n "this setVariable [""cScripts_Player_Unit"", ""ZEUS""];}";
+							name="S3_3";
+							description="Mission Controller@MISSION CONTROLLERS";
+							isPlayable=1;
+						};
+						id=155;
+						type="Cav_B_A_Officer_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="acex_headless_blacklist";
+								expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=0;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male05ENG";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.98000002;
+									};
+								};
+							};
+							nAttributes=3;
+						};
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-2.1689453,0.0014390945,-0.40612793};
+							angles[]={-0,4.6973796,0};
+						};
+						side="West";
+						flags=4;
+						class Attributes
+						{
+							init="call{this setVariable [""cScripts_Player_Unit"", ""ZEUS""];}";
+							name="S3_4";
+							description="Mission Controller";
+							isPlayable=1;
+						};
+						id=156;
+						type="Cav_B_A_Officer_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="acex_headless_blacklist";
+								expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=0;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male05ENG";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.98000002;
+									};
+								};
+							};
+							nAttributes=3;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-2.1120605,0.0014390945,-2.3920898};
+							angles[]={-0,4.6973796,0};
+						};
+						side="West";
+						flags=4;
+						class Attributes
+						{
+							init="call{this setVariable [""cScripts_Player_Unit"", ""ZEUS""];}";
+							name="S3_5";
+							description="Mission Controller";
+							isPlayable=1;
+						};
+						id=157;
+						type="Cav_B_A_Officer_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="acex_headless_blacklist";
+								expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"BOOL"
+											};
+										};
+										value=0;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="Male05ENG";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0.98000002;
+									};
+								};
+							};
+							nAttributes=3;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=154;
+			};
+		};
+		id=161;
+	};
+};
+class connections
+{
+	class LinkIDProvider
+	{
+		nextID=11;
+	};
+	class Links
+	{
+		items=11;
+		class Item0
+		{
+			linkID=0;
+			item0=30;
+			item1=33;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item1
+		{
+			linkID=1;
+			item0=31;
+			item1=33;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item2
+		{
+			linkID=2;
+			item0=32;
+			item1=33;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item3
+		{
+			linkID=3;
+			item0=35;
+			item1=33;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item4
+		{
+			linkID=4;
+			item0=36;
+			item1=33;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item5
+		{
+			linkID=5;
+			item0=37;
+			item1=33;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item6
+		{
+			linkID=6;
+			item0=151;
+			item1=159;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item7
+		{
+			linkID=7;
+			item0=152;
+			item1=159;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item8
+		{
+			linkID=8;
+			item0=153;
+			item1=159;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item9
+		{
+			linkID=9;
+			item0=159;
+			item1=158;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+		class Item10
+		{
+			linkID=10;
+			item0=160;
+			item1=159;
+			class CustomData
+			{
+				type="Sync";
+			};
+		};
+	};
+};

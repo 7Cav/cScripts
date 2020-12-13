@@ -22,9 +22,8 @@ params [
     ["_lable", "", [""]],
     ["_icon", "", [""]],
     ["_category", ["ACE_MainActions"], [[]]],
-    ["_condistion",true]
+    ["_condition", true]
 ];
 
-// Make ACE Category
-private _aceInteractionAction = [_name, _lable, _Icon, {}, {_condistion}] call ace_interact_menu_fnc_createAction;
-[_object, 0, _category, _aceInteractionAction] call ace_interact_menu_fnc_addActionToObject;
+[formatText["Function 'addAceCategory' on %1 is depricated (addAceCategory => createActionCategory)...", _object], "DEPRICATED"] call FUNC(logWarning);
+[_object, _name, _lable, _icon, _category, {_condition}] call FUNC(createActionCategory);

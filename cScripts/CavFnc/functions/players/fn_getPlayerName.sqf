@@ -20,21 +20,26 @@ params [
     ["_getType", 'PROFILE', ['']]
 ];
 
-private _return = "";
+if !(hasInterface) exitWith {};
+if !(isServer) exitWith {};
 
 _getType = toUpper(_getType);
 
+if (!isMultiplayer) then {
+    [formatText["Singelplayer missions can't obtain clan tags name for %1 is %2", _player, profileName], "getPlayerName"] call FUNC(logWarning);
+};
+
 // Profile name
-if (_getType == 'PROFILE') then {
+if (_getType == 'PROFILE') exitWith {
     private _profileName = profileName;
     if ([_player, MAINCLANTAG] call FUNC(isPlayerClan)) then {_profileName = [_profileName, 4] call BIS_fnc_trimString;};
-    _return = _profileName;
+    _profileName;
 };
 
-if (_getType == 'STEAM') then {
+if (_getType == 'STEAM') exitWith {
     private _profileNameSteam = profileNameSteam; 
     if ([_player, MAINCLANTAG] call FUNC(isPlayerClan)) then {_profileNameSteam = [_profileNameSteam, 10] call BIS_fnc_trimString;};
-    _return = _profileNameSteam;
+    _profileNameSteam;
 };
 
-_return;
+profileName

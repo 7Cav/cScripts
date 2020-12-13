@@ -1,24 +1,30 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function fetch a squad radio channel based on your squad name.
+ * This function fetch a squad radio channel based on radio type and squad name.
  *
  * Arguments:
+ * 0: Group name <STRING>
+ * 1: Radio type <STRING> (Optional) (Default; ACRE_PRC343) 
  *
  * Return Value:
  * Radio Channel <NUMBER>
  *
  * Example:
- * [] call cScripts_fnc_getRadioChannel
+ * ["BANDIT-1", "ACRE_PRC343"] call cScripts_fnc_getRadioChannel
  *
  * Public: No
  */
 
+params [
+    ["_group", "", [""]],
+    ["_radio", "ACRE_PRC343", ["ACRE_PRC343"]]
+];
+
 private _channel = 1;
-private _group = call FUNC(getCavSquadName);
 _group = toUpper(_group);
 
-if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
+if (_radio == "ACRE_PRC343") then {
     switch (_group) do {
 
         case "GODFATHER-5": {_channel = 4};
@@ -31,6 +37,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "APOLLO-1": {_channel = 1};
         case "APOLLO-5": {_channel = 1};
         case "APOLLO-6": {_channel = 1};
+        
+        case "ATLAS-1": {_channel = 2};
+        case "ATLAS-2": {_channel = 3};
+        case "ATLAS-3": {_channel = 1};
+        case "ATLAS-4": {_channel = 1};
+        case "ATLAS-5": {_channel = 1};
+        case "ATLAS-6": {_channel = 1};
         
         //Air
         case "PEGASUS-2": {_channel = 1};
@@ -81,13 +94,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "VIKING-6": {_channel = 69};
         case "VIKING-7": {_channel = 69};
 
-        case "PUNISHER-1": {_channel = 81};
-        case "PUNISHER-2": {_channel = 82};
-        case "PUNISHER-3": {_channel = 83};
-        case "PUNISHER-4": {_channel = 84};
-        case "PUNISHER-5": {_channel = 85};
-        case "PUNISHER-6": {_channel = 85};
-        case "PUNISHER-7": {_channel = 85};
+        case "LANCER-1": {_channel = 81};
+        case "LANCER-2": {_channel = 82};
+        case "LANCER-3": {_channel = 83};
+        case "LANCER-4": {_channel = 84};
+        case "LANCER-5": {_channel = 85};
+        case "LANCER-6": {_channel = 85};
+        case "LANCER-7": {_channel = 85};
 
         case "BANDIT-1": {_channel = 17};
         case "BANDIT-2": {_channel = 18};
@@ -105,14 +118,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "MISFIT-6": {_channel = 37};
         case "MISFIT-7": {_channel = 37};
 
-        // Ranger
-        case "ROUGHNECK-1": {_channel = 18};
-        case "ROUGHNECK-2": {_channel = 18};
-        case "ROUGHNECK-3": {_channel = 18};
-        case "ROUGHNECK-4": {_channel = 18};
-        case "ROUGHNECK-6": {_channel = 18};
-        case "PHANTOM-1": {_channel = 18};
-        case "PHANTOM-2": {_channel = 18};
+        case "GUNSLINGER-1": {_channel = 1};
+        case "GUNSLINGER-2": {_channel = 1};
+        case "GUNSLINGER-3": {_channel = 1};
+        case "GUNSLINGER-4": {_channel = 1};
+        case "GUNSLINGER-5": {_channel = 1};
+        case "GUNSLINGER-6": {_channel = 1};
+        case "GUNSLINGER-7": {_channel = 1};
 
         // LETTER NAMING
         case "GODFATHER FIVE": {_channel = 4};
@@ -125,6 +137,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "APOLLO ONE": {_channel = 1};
         case "APOLLO FIVE": {_channel = 1};
         case "APOLLO SIX": {_channel = 1};
+        
+        case "ATLAS ONE": {_channel = 2};
+        case "ATLAS TWO": {_channel = 3};
+        case "ATLAS THREE": {_channel = 1};
+        case "ATLAS FOUR": {_channel = 1};
+        case "ATLAS FIVE": {_channel = 1};
+        case "ATLAS SIX": {_channel = 1};
         
         //Air
         case "PEGASUS TWO": {_channel = 1};
@@ -175,13 +194,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "VIKING SIX": {_channel = 69};
         case "VIKING SEVEN": {_channel = 69};
 
-        case "PUNISHER ONE": {_channel = 81};
-        case "PUNISHER TWO": {_channel = 82};
-        case "PUNISHER THREE": {_channel = 83};
-        case "PUNISHER FOUR": {_channel = 84};
-        case "PUNISHER FIVE": {_channel = 85};
-        case "PUNISHER SIX": {_channel = 85};
-        case "PUNISHER SEVEN": {_channel = 85};
+        case "LANCER ONE": {_channel = 81};
+        case "LANCER TWO": {_channel = 82};
+        case "LANCER THREE": {_channel = 83};
+        case "LANCER FOUR": {_channel = 84};
+        case "LANCER FIVE": {_channel = 85};
+        case "LANCER SIX": {_channel = 85};
+        case "LANCER SEVEN": {_channel = 85};
 
         case "BANDIT ONE": {_channel = 17};
         case "BANDIT TWO": {_channel = 18};
@@ -199,14 +218,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "MISFIT SIX": {_channel = 37};
         case "MISFIT SEVEN": {_channel = 37};
 
-        // Ranger
-        case "ROUGHNECK ONE": {_channel = 18};
-        case "ROUGHNECK TWO": {_channel = 18};
-        case "ROUGHNECK THREE": {_channel = 18};
-        case "ROUGHNECK FOUR": {_channel = 18};
-        case "ROUGHNECK SIX": {_channel = 18};
-        case "PHANTOM ONE": {_channel = 18};
-        case "PHANTOM TWO": {_channel = 18};
+        case "GUNSLINGER ONE": {_channel = 1};
+        case "GUNSLINGER TWO": {_channel = 1};
+        case "GUNSLINGER THREE": {_channel = 1};
+        case "GUNSLINGER FOUR": {_channel = 1};
+        case "GUNSLINGER FIVE": {_channel = 1};
+        case "GUNSLINGER SIX": {_channel = 1};
+        case "GUNSLINGER SEVEN": {_channel = 1};
 
         case "ZEUS": {_channel = 1};
 
@@ -224,6 +242,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "APOLLO-1": {_channel = 15};
         case "APOLLO-5": {_channel = 15};
         case "APOLLO-6": {_channel = 15};
+        
+        case "ATLAS-1": {_channel = 15};
+        case "ATLAS-2": {_channel = 15};
+        case "ATLAS-3": {_channel = 15};
+        case "ATLAS-4": {_channel = 15};
+        case "ATLAS-5": {_channel = 15};
+        case "ATLAS-6": {_channel = 15};
         
         //Air
         case "PEGASUS-2": {_channel = 2};
@@ -274,13 +299,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "VIKING-6": {_channel = 2};
         case "VIKING-7": {_channel = 2};
 
-        case "PUNISHER-1": {_channel = 3};
-        case "PUNISHER-2": {_channel = 3};
-        case "PUNISHER-3": {_channel = 3};
-        case "PUNISHER-4": {_channel = 3};
-        case "PUNISHER-5": {_channel = 3};
-        case "PUNISHER-6": {_channel = 3};
-        case "PUNISHER-7": {_channel = 3};
+        case "LANCER-1": {_channel = 3};
+        case "LANCER-2": {_channel = 3};
+        case "LANCER-3": {_channel = 3};
+        case "LANCER-4": {_channel = 3};
+        case "LANCER-5": {_channel = 3};
+        case "LANCER-6": {_channel = 3};
+        case "LANCER-7": {_channel = 3};
 
         case "BANDIT-1": {_channel = 7};
         case "BANDIT-2": {_channel = 7};
@@ -298,14 +323,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "MISFIT-6": {_channel = 8};
         case "MISFIT-7": {_channel = 8};
 
-        // Ranger
-        case "ROUGHNECK-1": {_channel = 19};
-        case "ROUGHNECK-2": {_channel = 19};
-        case "ROUGHNECK-3": {_channel = 19};
-        case "ROUGHNECK-4": {_channel = 19};
-        case "ROUGHNECK-6": {_channel = 19};
-        case "PHANTOM-1": {_channel = 19};
-        case "PHANTOM-2": {_channel = 19};
+        case "GUNSLINGER-1": {_channel = 8};
+        case "GUNSLINGER-2": {_channel = 8};
+        case "GUNSLINGER-3": {_channel = 8};
+        case "GUNSLINGER-4": {_channel = 8};
+        case "GUNSLINGER-5": {_channel = 8};
+        case "GUNSLINGER-6": {_channel = 8};
+        case "GUNSLINGER-7": {_channel = 8};
 
         // LETTER NAMING
         case "GODFATHER FIVE": {_channel = 20};
@@ -318,6 +342,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "APOLLO ONE": {_channel = 15};
         case "APOLLO FIVE": {_channel = 15};
         case "APOLLO SIX": {_channel = 15};
+        
+        case "ATLAS ONE": {_channel = 15};
+        case "ATLAS TWO": {_channel = 15};
+        case "ATLAS THREE": {_channel = 15};
+        case "ATLAS FOUR": {_channel = 15};
+        case "ATLAS FIVE": {_channel = 15};
+        case "ATLAS SIX": {_channel = 15};
         
         //Air
         case "PEGASUS TWO": {_channel = 2};
@@ -368,13 +399,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "VIKING SIX": {_channel = 2};
         case "VIKING SEVEN": {_channel = 2};
 
-        case "PUNISHER ONE": {_channel = 3};
-        case "PUNISHER TWO": {_channel = 3};
-        case "PUNISHER THREE": {_channel = 3};
-        case "PUNISHER FOUR": {_channel = 3};
-        case "PUNISHER FIVE": {_channel = 3};
-        case "PUNISHER SIX": {_channel = 3};
-        case "PUNISHER SEVEN": {_channel = 3};
+        case "LANCER ONE": {_channel = 3};
+        case "LANCER TWO": {_channel = 3};
+        case "LANCER THREE": {_channel = 3};
+        case "LANCER FOUR": {_channel = 3};
+        case "LANCER FIVE": {_channel = 3};
+        case "LANCER SIX": {_channel = 3};
+        case "LANCER SEVEN": {_channel = 3};
 
         case "BANDIT ONE": {_channel = 7};
         case "BANDIT TWO": {_channel = 7};
@@ -392,15 +423,13 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
         case "MISFIT SIX": {_channel = 8};
         case "MISFIT SEVEN": {_channel = 8};
 
-        // Ranger
-        case "ROUGHNECK ONE": {_channel = 19};
-        case "ROUGHNECK TWO": {_channel = 19};
-        case "ROUGHNECK THREE": {_channel = 19};
-        case "ROUGHNECK FOUR": {_channel = 19};
-        case "ROUGHNECK SIX": {_channel = 19};
-        case "PHANTOM ONE": {_channel = 19};
-        case "PHANTOM TWO": {_channel = 19};
-
+        case "GUNSLINGER ONE": {_channel = 0};
+        case "GUNSLINGER TWO": {_channel = 0};
+        case "GUNSLINGER THREE": {_channel = 0};
+        case "GUNSLINGER FOUR": {_channel = 0};
+        case "GUNSLINGER FIVE": {_channel = 0};
+        case "GUNSLINGER SIX": {_channel = 0};
+        case "GUNSLINGER SEVEN": {_channel = 0};
 
         case "ZEUS": {_channel = 18};
 
@@ -408,6 +437,4 @@ if ([_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343") then {
     };
 };
 
-private _return = _channel;
-
-_return;
+_channel;

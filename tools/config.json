@@ -1,0 +1,7 @@
+{
+    "build" : {
+        "scriptName": "cScripts",
+        "version": "DevBuild",
+        "notlist": ["doc", "tools", "release", "resourses", "Compositions", "mission.sqm"]
+    }
+}

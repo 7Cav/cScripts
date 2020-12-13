@@ -4,19 +4,28 @@
 #define DOUBLES(var1,var2) ##var1##_##var2
 #define TRIPLES(var1,var2,var3) ##var1##_##var2##_##var3
 
-#define _QUA0(a)
-#define _QUA1(a) a
-#define _QUA2(a) a, a
-#define _QUA3(a) a, a, a
-#define _QUA4(a) a, a, a, a
-#define _QUA5(a) a, a, a, a, a
-#define _QUA6(a) a, a, a, a, a, a
-#define _QUA7(a) a, a, a, a, a, a, a
-#define _QUA8(a) a, a, a, a, a, a, a, a
-#define _QUA9(a) a, a, a, a, a, a, a, a, a
-#define _QUA10(a) a, a, a, a, a, a, a, a, a, a
-#define _QUA11(a) a, a, a, a, a, a, a, a, a, a, a
-#define _QUA12(a) a, a, a, a, a, a, a, a, a, a, a, a
+#define MULT0(a)
+#define MULT1(a) a
+#define MULT2(a) MULT1(a), a
+#define MULT3(a) MULT2(a), a
+#define MULT4(a) MULT3(a), a
+#define MULT5(a) MULT4(a), a
+#define MULT6(a) MULT5(a), a
+#define MULT7(a) MULT6(a), a
+#define MULT8(a) MULT7(a), a
+#define MULT9(a) MULT8(a), a
+#define MULT10(a) MULT9(a), a
+#define MULT11(a) MULT10(a), a
+#define MULT12(a) MULT11(a), a
+#define MULT13(a) MULT12(a), a
+#define MULT14(a) MULT13(a), a
+#define MULT15(a) MULT14(a), a
+#define MULT16(a) MULT15(a), a
+#define MULT17(a) MULT16(a), a
+#define MULT18(a) MULT17(a), a
+#define MULT19(a) MULT18(a), a
+#define MULT20(a) MULT19(a), a
+
 
 #define ARR_1(ARG1) ARG1
 #define ARR_2(ARG1,ARG2) ARG1, ARG2
@@ -35,3 +44,5 @@
 #define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
 #define FUNC(var) TRIPLES(PREFIX,fnc,var)
 #define QFUNC(var) QUOTE(FUNC(var))
+#define EFUNC(var1,var2) FUNC(DOUBLES(var1,var2))
+#define QEFUNC(var1,var2) QUOTE(EFUNC(var1,var2))

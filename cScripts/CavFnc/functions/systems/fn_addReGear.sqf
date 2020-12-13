@@ -5,42 +5,54 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Allow Heal <BOOL>
+ * 1: Allow Heal <BOOL> (Optional)
+ * 2: ACE Category <ARRAY> (Optional)
  *
  * Example:
- * [this,true] call cScripts_fnc_addReGear
+ * [this] call cScripts_fnc_addReGear
+ * [this, true] call cScripts_fnc_addReGear
+ * [this, true, ["ACE_MainActions"]] call cScripts_fnc_addReGear
  */
 
 params [
     ["_object", objNull, [objNull]],
-    ["_doHeal", true]
+    ["_doHeal", true],
+    ["_category", ["ACE_MainActions"], [["ACE_MainActions"]]]
 ];
 
 // Make addAction
-_object addAction ["   <t color='#ffcc33'>ReGear</t>", {
-    if (vehicleVarName player == "") then {
-        [player, typeOf player] call Poppy_fnc_applyLoadout;
-    } else {
-        [player, vehicleVarName player] call Poppy_fnc_applyLoadout;
+if (!isPlayer _object) then {
+    _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
+        params ["_target", "_caller", "_actionId", "_arguments"];
+        _arguments params ["_doHeal"];
+        if (_caller call EFUNC(gear,hasSavedLoadout)) then {
+            [_caller] call EFUNC(gear,loadLoadout);
+        } else {
+            private _loadout = [_caller] call EFUNC(gear,selectLoadout);
+            [_caller, _loadout] call EFUNC(gear,applyLoadout);
+        };
 
-    };
-    if (_this select 3) then {
-        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
-    };
-}, _doHeal, 1.5, true, true, "", "true", 5];
+        if (_doHeal) then {
+            [_target, _caller] call ace_medical_treatment_fnc_fullHeal;
+        };
+    }, [_doHeal], 1.5, true, true, "", "true", 5];
+};
 
 // Make ACE Interaction for ReGear
 private _Icon = "cScripts\Data\Icon\icon_00.paa";
-private _reGearCondition = {true};
-private _reGearStatement = {
-    if (vehicleVarName player == "") then {
-        [player, typeOf player] call Poppy_fnc_applyLoadout;
-    } else {
-        [player, vehicleVarName player] call Poppy_fnc_applyLoadout;
-    };
+private _regearStatement = {
+        if (player call EFUNC(gear,hasSavedLoadout)) then {
+            [player] call EFUNC(gear,loadLoadout);
+        } else {
+            private _loadout = [player] call EFUNC(gear,selectLoadout);
+            [player, _loadout] call EFUNC(gear,applyLoadout);
+        };
+
     if (_doHeal) then {
-        [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
+        [_this select 0, player] call ace_medical_treatment_fnc_fullHeal;
     };
 };
-private _reGearAction = ["cScriptsReGearAce", "ReGear", _Icon, _reGearStatement, _reGearCondition] call ace_interact_menu_fnc_createAction;
-[_object, 0, ["ACE_MainActions"], _reGearAction] call ace_interact_menu_fnc_addActionToObject;
+private _actionType = if (isPlayer _object) then {1} else {0};
+
+private _regearAction = ["cScriptsReGearAce", "ReGear", _Icon, _regearStatement, {true}] call ace_interact_menu_fnc_createAction;
+[_object, _actionType, _category, _regearAction] call ace_interact_menu_fnc_addActionToObject;
