@@ -26,8 +26,8 @@ clearbackpackcargoGlobal _crate;
 
 //================== WEAPONS ==================\\
 
-_crate addWeaponCargoGlobal ["rhs_weap_M136_hp", (_quaScale * 4)];
-_crate addWeaponCargoGlobal ["rhs_weap_M136_hedp", (_quaScale * 4)];
+_crate addWeaponCargoGlobal ["tf47_at4_hp", (_quaScale * 4)];
+_crate addWeaponCargoGlobal ["tf47_at4_hedp", (_quaScale * 4)];
 
 //================== AMMO ==================\\
 
@@ -36,10 +36,8 @@ _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 
 _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_box", (_quaScale * 10)];
 _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m61_ap", (_quaScale * 8)];
-_crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",4];
-_crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",4];
-_crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",8];
-_crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",4];
+_crate addMagazineCargoGlobal ["tf47_m3maaws_HEAT",4];
+_crate addMagazineCargoGlobal ["tf47_m3maaws_HE",8];
 _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT", (_quaScale * 3)];
 _crate addMagazineCargoGlobal ["rhs_fim92_mag", (_quaScale * 4)];
 
@@ -52,12 +50,13 @@ _crate addMagazineCargoGlobal ["SmokeShellBlue", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["SmokeShellGreen", (_quaScale * 18)];
 _crate addMagazineCargoGlobal ["B_IR_Grenade", (_quaScale * 10)];
 _crate addMagazineCargoGlobal ["ACE_M84", (_quaScale * 25)];
-_crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP", (_quaScale * 40)];
-_crate addMagazineCargoGlobal ["rhs_mag_M397_HET", (_quaScale * 40)];
+_crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP", (_quaScale * 30)];
+_crate addMagazineCargoGlobal ["rhs_mag_M397_HET", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["rhs_mag_m714_White", (_quaScale * 20)];
-_crate addMagazineCargoGlobal ["rhs_mag_m662_Red", (_quaScale * 20)];
+_crate addMagazineCargoGlobal ["ACE_40mm_Flare_Red", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203", (_quaScale * 10)];
-_crate addMagazineCargoGlobal ["rhs_mag_M585_white", (_quaScale * 20)];
+_crate addMagazineCargoGlobal ["ACE_40mm_Flare_white", (_quaScale * 20)];
+_crate addMagazineCargoGlobal ["ACE_40mm_Flare_IR", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["ACE_Chemlight_HiRed", (_quaScale * 25)];
 _crate addMagazineCargoGlobal ["ACE_Chemlight_HiBlue", (_quaScale * 25)];
 _crate addMagazineCargoGlobal ["ACE_Chemlight_IR", (_quaScale * 25)];
@@ -92,7 +91,7 @@ _crate addItemCargoGlobal ["ACE_personalAidKit", (_quaScale * 20)];
 
 //================== BACKPACKS ==================\\
 
-_crate addItemCargoGlobal ["B_Kitbag_cbr", (_quaScale * 2)];
+_crate addItemCargoGlobal ["B_Kitbag_cbr",2)];
 
 // Change ace logistics size of crate
 [_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];
