@@ -91,7 +91,7 @@ _crate addItemCargoGlobal ["ACE_personalAidKit", (_quaScale * 20)];
 
 //================== BACKPACKS ==================\\
 
-_crate addItemCargoGlobal ["B_Kitbag_cbr",2)];
+_crate addItemCargoGlobal ["B_Kitbag_cbr",2];
 
 // Change ace logistics size of crate
 [_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];
