@@ -97,10 +97,11 @@ if (!isPlayer _object) then {
 [_object,"Squad Insignia 3/2/C/1-7","Charlie_2_3","z\cav\addons\insignia\data\Charlie_2_3.paa",_charlieCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","z\cav\addons\insignia\data\Charlie_2_4.paa",_charlieCategory] call FUNC(addInsigniaSelection);
 
+
 // Special
 [_object,"Airborn","Specialized_Airborne","z\cav\addons\insignia\data\Specialized_Airborne.paa",_specialCategory] call FUNC(addInsigniaSelection);
 [_object,"CLS","Specialized_CLS","z\cav\addons\insignia\data\Specialized_CLS.paa",_specialCategory] call FUNC(addInsigniaSelection);
-
+[_object,"Ranger","Specialized_Ranger","z\cav\addons\insignia\data\specialized_ranger.paa",_specialCategory] call FUNC(addInsigniaSelection);
 
 #ifdef DEBUG_MODE
     [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(logInfo);
