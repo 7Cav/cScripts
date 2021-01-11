@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: BaerMitUmlaut, CPL.Brostrom.A
+ * Author: CPL.Brostrom.A
  * This function apply abilities to a player based on config entries
  *
  * Arguments:
@@ -38,10 +38,5 @@ _unit setUnitTrait ["engineer", _isEngineer];
 private _isEOD = (_abilityEOD > 0);
 _unit setVariable ["ACE_isEOD", _abilityEOD, _isEOD];
 _unit setUnitTrait ["explosiveSpecialist", _isEOD];
-
-// Immortal
-if (EGVAR(Settings,curatorImmortality)) then {
-    //_unit allowDamage false;
-};
 
 _unit setVariable [QEGVAR(Player,Abilities), [[_abilityMedicLevel,_isMedic], [_abilityEngineerLevel, _isEngineer], [_abilityEOD, _isEOD]]];
