@@ -33,8 +33,13 @@ if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup cor
     [_radio, "default", QEGVAR(Radio,Preset)] call acre_api_fnc_copyPreset;
     {
         [_radio, QEGVAR(Radio,Preset), _forEachIndex + 1, "label", _x] call acre_api_fnc_setPresetChannelField;
+        [_radio, QEGVAR(Radio,Preset), _forEachIndex + 1, "frequencyTX", _forEachIndex + 10.242] call acre_api_fnc_setPresetChannelField;
+        [_radio, QEGVAR(Radio,Preset), _forEachIndex + 1, "frequencyRX", _forEachIndex + 10.242] call acre_api_fnc_setPresetChannelField;
     } forEach _lrChannels;
     [_radio, QEGVAR(Radio,Preset)] call acre_api_fnc_setPreset;
+
+    private _preset = [_radio] call acre_api_fnc_getPreset;
+
 
     false
 } count ["ACRE_PRC152", "ACRE_PRC148", "ACRE_PRC117F"];
