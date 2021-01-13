@@ -12,6 +12,7 @@ sed -i "s/DevBuild/${VERSION_TAG}/" tools/config.json
 python3 tools/build.py --deploy
 
 # Special Builds
+python3 tools/build.py --build config_debug.json --deploy
 python3 tools/build.py --build config_public.json --deploy
 python3 tools/build.py --build config_noLoadouts.json --deploy
 
