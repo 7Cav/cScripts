@@ -36,7 +36,7 @@ _unit setUnitTrait ["engineer", _isEngineer];
 
 // Set EOD ability
 private _isEOD = (_abilityEOD > 0);
-_unit setVariable ["ACE_isEOD", _abilityEOD, _isEOD];
+_unit setVariable ["ACE_isEOD", _isEOD, _isEOD];
 _unit setUnitTrait ["explosiveSpecialist", _isEOD];
 
-_unit setVariable [QEGVAR(Player,Abilities), [[_abilityMedicLevel,_isMedic], [_abilityEngineerLevel, _isEngineer], [_abilityEOD, _isEOD]]];
+_unit setVariable [QEGVAR(Player,Abilities), [["Medic", _abilityMedicLevel, _isMedic], ["Engineer", _abilityEngineerLevel, _isEngineer], ["EOD", _isEOD, _isEOD]]];
