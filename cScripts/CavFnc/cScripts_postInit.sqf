@@ -65,11 +65,6 @@ if (EGVAR(Settings,showDiaryRecords)) then {
     call FUNC(initDocuments);
 };
 
-// Handle hint
-if (EGVAR(Settings,enableStartHint)) then {
-    { [EGVAR(Settings,setStartupDelay), EGVAR(Settings,setMissionType), EGVAR(Settings,setCustomHintTopic), EGVAR(Settings,setCustomHintText)] spawn FUNC(initStartupHint) } call CBA_fnc_directCall;
-};
-
 #ifdef DEBUG_MODE
     ["Initialization completed", "postInit"] call FUNC(logInfo);
 #endif

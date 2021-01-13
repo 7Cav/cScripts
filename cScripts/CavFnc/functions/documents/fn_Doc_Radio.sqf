@@ -17,8 +17,8 @@ private _channelsSr = if (EGVAR(Settings,setMissionType) >= 3) then {["ATLAS-1",
 private _number = 0;
 _channelsLr = _channelsLr apply { 
     _number = _number + 1; 
-    private _name = _x; 
-    _x = format ["    <font color='#ffc61a'>%1</font> - %2", _number, _name]; 
+    private _name = _x;
+    _x = format ["    <font color='#ffc61a'>%1</font> - %2<br/>                <font color='#808080'>Frequency: TX %3, RX %3</font>", _number, _name, 9.242 + _number]; 
     _x
 };
 
