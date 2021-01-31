@@ -18,9 +18,9 @@ params ["_modulePos", "_objectPos"];
 if (_objectPos isKindOf "Man") exitWith {
     private _unit = _objectPos;
     if (vehicleVarName _unit == "") then {
-        [_unit, typeOf _unit] remoteExec ["Poppy_fnc_applyLoadout", _unit];
+        [_unit, typeOf _unit] remoteExec [QEFUNC(gear,applyLoadout), _unit];
     } else {
-        [_unit, vehicleVarName _unit] remoteExec ["Poppy_fnc_applyLoadout", _unit];
+        [_unit, vehicleVarName _unit] remoteExec [QEFUNC(gear,applyLoadout), _unit];
     };
 };
 
