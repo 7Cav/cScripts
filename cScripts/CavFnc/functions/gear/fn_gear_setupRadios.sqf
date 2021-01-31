@@ -2,25 +2,25 @@
 params [["_unit", objNull]];
 /*
  * Author: BaerMitUmlaut, CPL.Brostrom.A
- * This function setup radio preset and apply a set radio channel to them.
+ * This function setup radio preset and apply a set radio channel to them on server and player.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Loadout <STRING / ARRAY>
+ * None
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player] call cScripts_fnc_setupRadios
+ * [] call cScripts_fnc_gear_setupRadios
  *
  */
 
 if !(EGVAR(patches,usesACRE)) exitWith {};
-if (QEGVAR(Settings,setRadioChannelNames) == "")               exitWith {};
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
 if (count allMissionObjects "acre_api_nameChannels" > 0)       exitWith {};
 
+[format["Skipping ACRE preset (%1) due to bug...", QEGVAR(Radio,Preset)], "Radio"] call FUNC(logInfo);
+/* TEMPORARLY REMOVED (https://github.com/IDI-Systems/acre2/issues/1056)
 private _lrChannels = parseSimpleArray EGVAR(Settings,setRadioChannelNames);
 
 if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup correctly.", "Gear"] call FUNC(logError);};
@@ -38,18 +38,21 @@ if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup cor
     } forEach _lrChannels;
     [_radio, QEGVAR(Radio,Preset)] call acre_api_fnc_setPreset;
 } count ["ACRE_PRC152", "ACRE_PRC148", "ACRE_PRC117F"];
+*/
 
 // Set radio channel
-if (EGVAR(Settings,setRadio)) then {
-    [_unit] call FUNC(setRadioChannel);
-    #ifdef DEBUG_MODE
-        [format["%1 delayed action for radio channel assignation...", _unit], "Radio"] call FUNC(logInfo);
-    #endif
+if (isPlayer) then {
+    if (EGVAR(Settings,setRadio)) then {
+        [_unit] call FUNC(setRadioChannel);
+        #ifdef DEBUG_MODE
+            [format["%1 delayed action for radio channel assignation...", _unit], "Radio"] call FUNC(logInfo);
+        #endif
 
-    // set current radio
-    private _activeRadio = "ACRE_PRC343";
-    [_activeRadio] call FUNC(setActiveRadio);
-    #ifdef DEBUG_MODE
-        [format["%1 delayed action to set active radio...", _unit], "Radio"] call FUNC(logInfo);
-    #endif
+        // set current radio
+        private _activeRadio = "ACRE_PRC343";
+        [_activeRadio] call FUNC(setActiveRadio);
+        #ifdef DEBUG_MODE
+            [format["%1 delayed action to set active radio...", _unit], "Radio"] call FUNC(logInfo);
+        #endif
+    };
 };
