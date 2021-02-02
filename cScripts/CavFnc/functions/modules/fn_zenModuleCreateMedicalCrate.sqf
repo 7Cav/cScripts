@@ -26,7 +26,7 @@ params ["_modulePos", "_objectPos"];
         _pos params ["_modulePos"];
 
         private _crate = "ACE_medicalSupplyCrate" createVehicle _modulePos;
-        [_crate, _size] remoteExec [QFUNC(doMedicalCrate),0,true];
+        [_crate, _size] remoteExec [QFUNC(doMedicalCrate), 2, true];
 
         // Change ace characteristics of crate
         [_crate, 1] call ace_cargo_fnc_setSize;

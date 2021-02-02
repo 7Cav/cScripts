@@ -10,10 +10,6 @@
  * call cScripts_fnc_Doc_Info
  */
 
-private _playerName = [player, 'PROFILE'] call FUNC(getPlayerName);
-private _playerRank = [player, 'CAV'] call FUNC(getPlayerRank);
-private _playerRankFormal = [player, 'FORMAL'] call FUNC(getPlayerRank);
-
 private _playerRole = call FUNC(getPlayerRole);
 
 private _group = [player] call FUNC(getSquadName);
@@ -55,14 +51,14 @@ if (_abilityMedic != "" || _abilityEngineer != "") then {
 };
 
 private _document = format [
-"<br/><br/>Welcome <font color='#ffc61a'>%1</font> <font color='#ffc61a'>%2</font> to %3 on %4.<br/>Your currently on <font color='#ffc61a'>%5</font>.<br/><br/>
-You're currently slotted in as <font color='#ffc61a'>%6</font> %7.<br/><br/>
-%10
-%9
-Good luck and have fun %8!
+"<br/><br/>Welcome to %1 on %2.<br/>Your currently on <font color='#ffc61a'>%3</font>.<br/><br/>
+You're currently slotted in as <font color='#ffc61a'>%4</font> %5.<br/><br/>
+%6
+%7
+Good luck and have fun!
 <br/><br/>
 -----------------------------------------------------------------
-<br/><br/>This mission is currently running cScripts version: <font color='#ffc61a'>%11</font>.
-", _playerRank, _playerName, briefingName, _worldName, _serverName, _playerRole, _playerGroup, _playerRankFormal, _radiochannel, _ability ,VERSION];
+<br/><br/>This mission is currently running cScripts version: <font color='#ffc61a'>%8</font>.
+", briefingName, _worldName, _serverName, _playerRole, _playerGroup, _radiochannel, _ability, VERSION];
 
 player createDiaryRecord["7Cav", ["Information", _document], taskNull, "", false];

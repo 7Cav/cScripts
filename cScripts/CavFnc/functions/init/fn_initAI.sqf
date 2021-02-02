@@ -16,6 +16,8 @@
     ["Applying Event Handers (init) to all non player characters...", "InitAI"] call FUNC(logInfo);
 #endif
 
+if !(isServer) exitWith {};
+
 ["CAManBase", "init", {
     params ["_unit"];
 

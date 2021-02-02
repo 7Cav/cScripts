@@ -10,8 +10,6 @@ class cScripts {
 
         class initDocuments {};
 
-        class initStartupHint {};
-
         class initModulesAchilles {};
         class initModulesZen {};
 
@@ -132,7 +130,6 @@ class cScripts {
         class checkVehicle {};
 
         class getServerMetrics {};
-        class checkFile {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
