@@ -26,7 +26,7 @@ params ["_modulePos", "_objectPos"];
         _pos params ["_modulePos"];
 
         private _crate = "C_IDAP_supplyCrate_F" createVehicle _modulePos;
-        [_crate, _size] remoteExec [QFUNC(doFieldHospital),2,true];
+        [_crate, _size] remoteExec [QFUNC(doFieldHospital), 0, true];
 
         // Change ace characteristics of crate
         [_crate, 1] call ace_cargo_fnc_setSize;

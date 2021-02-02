@@ -13,7 +13,7 @@
     logEntities;
 #endif
 
-if (isMultiplayer) then {["Mission is running on singelplayer enviroment."] call FUNC(logWarning)};
+if !(isMultiplayer) then {["Mission is running on singelplayer enviroment."] call FUNC(logWarning)};
 
 enableSaving [false, false];
 tawvd_disablenone = true;

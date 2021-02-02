@@ -10,8 +10,6 @@ class cScripts {
 
         class initDocuments {};
 
-        class initStartupHint {};
-
         class initModulesAchilles {};
         class initModulesZen {};
 

@@ -83,7 +83,7 @@ params ["_modulePos", "_objectPos"];
         _pos params ["_modulePos"];
 
         private _crate = "B_supplyCrate_F" createVehicle _modulePos;
-        [_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requireCompanyVariable,_arsenal] remoteExec [QFUNC(doStarterCrate),2,true];
+        [_crate,_quickSelectScale,_reGearOption,_reHealOption,_InsigniaSelectOption,_requireCompanyVariable,_arsenal] remoteExec [QFUNC(doStarterCrate), 0, true];
 
         // Add object to Zeus
         [
