@@ -15,7 +15,6 @@ class cScripts {
 
         class initTagging {};
 
-        class initFortify {};
         class initItemReplace {};
         
         class initCuratorObjectPlaced {};
@@ -121,8 +120,6 @@ class cScripts {
         class addObjectToCurator {};
 
         class getChannelName {};
-
-        class addFortifyArea {};
 
         class createVehicleLable {};
         class getVehicleLable {};
