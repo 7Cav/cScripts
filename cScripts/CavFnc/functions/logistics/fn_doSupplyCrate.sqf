@@ -28,8 +28,8 @@ clearbackpackcargoGlobal _crate;
 
 //================== WEAPONS ==================\\
 
-_crate addWeaponCargoGlobal ["tf47_at4_hp", (_quaScale * 4)];
-_crate addWeaponCargoGlobal ["tf47_at4_hedp", (_quaScale * 4)];
+_crate addWeaponCargoGlobal ["rhs_weap_M136_hp", (_quaScale * 4)];
+_crate addWeaponCargoGlobal ["rhs_weap_M136_hedp", (_quaScale * 4)];
 
 //================== AMMO ==================\\
 
