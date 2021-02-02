@@ -15,7 +15,9 @@
 
 if (!isServer) exitWith {};
 
-params [["_crate", objNull, [objNull]],["_quaScale",1]];
+params [["_crate", objNull, [objNull]]];
+
+private _quaScale = 1;
 
 clearweaponcargoGlobal _crate;
 clearmagazinecargoGlobal _crate;
@@ -52,12 +54,13 @@ _crate addMagazineCargoGlobal ["SmokeShellBlue", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["SmokeShellGreen", (_quaScale * 18)];
 _crate addMagazineCargoGlobal ["B_IR_Grenade", (_quaScale * 10)];
 _crate addMagazineCargoGlobal ["ACE_M84", (_quaScale * 25)];
-_crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP", (_quaScale * 40)];
-_crate addMagazineCargoGlobal ["rhs_mag_M397_HET", (_quaScale * 40)];
+_crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP", (_quaScale * 30)];
+_crate addMagazineCargoGlobal ["rhs_mag_M397_HET", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["rhs_mag_m714_White", (_quaScale * 20)];
-_crate addMagazineCargoGlobal ["rhs_mag_m662_Red", (_quaScale * 20)];
+_crate addMagazineCargoGlobal ["ACE_40mm_Flare_Red", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["ACE_HUNTIR_M203", (_quaScale * 10)];
-_crate addMagazineCargoGlobal ["rhs_mag_M585_white", (_quaScale * 20)];
+_crate addMagazineCargoGlobal ["ACE_40mm_Flare_white", (_quaScale * 20)];
+_crate addMagazineCargoGlobal ["ACE_40mm_Flare_IR", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["ACE_Chemlight_HiRed", (_quaScale * 25)];
 _crate addMagazineCargoGlobal ["ACE_Chemlight_HiBlue", (_quaScale * 25)];
 _crate addMagazineCargoGlobal ["ACE_Chemlight_IR", (_quaScale * 25)];
@@ -92,7 +95,7 @@ _crate addItemCargoGlobal ["ACE_personalAidKit", (_quaScale * 20)];
 
 //================== BACKPACKS ==================\\
 
-_crate addItemCargoGlobal ["B_Kitbag_cbr", (_quaScale * 2)];
+_crate addItemCargoGlobal ["B_Kitbag_cbr",2];
 
 // Change ace logistics size of crate
 [_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];
