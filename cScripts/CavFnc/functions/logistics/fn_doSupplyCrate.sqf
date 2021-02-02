@@ -15,7 +15,9 @@
 
 if (!isServer) exitWith {};
 
-params [["_crate", objNull, [objNull]],["_quaScale",1]];
+params [["_crate", objNull, [objNull]]];
+
+private _quaScale = 1;
 
 clearweaponcargoGlobal _crate;
 clearmagazinecargoGlobal _crate;
