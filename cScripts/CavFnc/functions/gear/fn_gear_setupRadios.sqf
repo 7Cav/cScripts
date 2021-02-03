@@ -1,5 +1,4 @@
 #include "..\script_component.hpp"
-params [["_unit", objNull]];
 /*
  * Author: BaerMitUmlaut, CPL.Brostrom.A
  * This function setup radio preset and apply a set radio channel to them on server and player.
@@ -14,6 +13,8 @@ params [["_unit", objNull]];
  * [] call cScripts_fnc_gear_setupRadios
  *
  */
+ 
+params [["_unit", objNull, [objNull]]];
 
 if !(EGVAR(patches,usesACRE)) exitWith {};
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
@@ -41,7 +42,7 @@ if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup cor
 */
 
 // Set radio channel
-if (isPlayer) then {
+if (isPlayer _unit) then {
     if (EGVAR(Settings,setRadio)) then {
         [_unit] call FUNC(setRadioChannel);
         #ifdef DEBUG_MODE
