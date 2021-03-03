@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Loadout <CLASSNAME / VARIABLE / LOADOUT ARRAY>
  *
  * Return Value:
  * Nothing
