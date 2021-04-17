@@ -81,7 +81,7 @@ class cScripts {
 
         class addGetOutHelo {};
 
-        class addJump {};
+        class addLineJump {};
         class addHaloJump {};
 
         class setVehicleLable {};
@@ -104,9 +104,10 @@ class cScripts {
         class deleteDroppedObjects {};
 
        // Plane jump
-        class doJump {};
-        class doHaloJump {};
-        class handleJump {};
+        class para_lineJump {};
+        class para_haloJump {};
+        class para_equipment {};
+        class para_backpack {};
 
         // Buttons and options
         class addReGear {};
