@@ -32,15 +32,15 @@ _player addBackpack _chuteBackpackClass;
 _player forceWalk true;
 
 [
-	_player,
-	"Put on backpack",
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloadDevice_ca.paa",
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloadDevice_ca.paa",
-	"(_this getVariable [QEGVAR(player,backpack), []] > 1) && getPosATL _this < 2",
-	"(_caller getVariable [QEGVAR(player,backpack), []] > 1) && getPosATL _this < 5",
-	{},
-	{},
-	{
+    _player,
+    "Put on backpack",
+    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloadDevice_ca.paa",
+    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloadDevice_ca.paa",
+    "(_this getVariable [QEGVAR(player,backpack), []] > 1) && getPosATL _this < 2",
+    "(_caller getVariable [QEGVAR(player,backpack), []] > 1) && getPosATL _this < 5",
+    {},
+    {},
+    {
         params ["_target", "_caller", "_actionId", "_arguments"];
         private _backpackAndContent = _caller getVariable [QEGVAR(player,backpack), []];
         _backpackAndContent params [
@@ -60,10 +60,10 @@ _player forceWalk true;
 
         _caller forceWalk false;
     },
-	{},
-	[],
-	12,
-	0,
-	false,
-	false
+    {},
+    [],
+    12,
+    0,
+    false,
+    false
 ] call BIS_fnc_holdActionAdd;
