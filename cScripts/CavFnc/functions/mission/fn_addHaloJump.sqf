@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Vehicle             <OBJECT>
- * 1: Minimum altetude    <NUMBER> (Optional) (Default; 180)
+ * 1: Minimum altetude    <NUMBER> (Optional) (Default; 5000)
  * 4: Chute Vehicle Class <OBJECT> (Optional) (Default; "B_Parachute")
  *
  * Example:
@@ -37,7 +37,9 @@ private _conditionHoldAction = format ["((_target getCargoIndex player) != -1) &
     {},
     {},
     {
-        [(_this select 1),(_this select 0),(_this select 3) select 0] call FUNC(doHaloJump)
+        params ["_target", "_caller", "_actionId", "_arguments"];
+        _arguments params ["_chuteBackpackClass"];
+        [_caller, _target, _chuteBackpackClass] call EFUNC(para,haloJump)
     },
     {},
     [_chuteBackpackClass],
