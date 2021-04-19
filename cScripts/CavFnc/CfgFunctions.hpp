@@ -77,6 +77,7 @@ class cScripts {
         file = "cScripts\cavFnc\functions\mission";
         class gate {};
         class teleport {};
+        class addLoadoutAction {};
 
         class addGetOutHelo {};
 
@@ -114,7 +115,6 @@ class cScripts {
         class addArsenal {};
         class addAceCategory {}; // depricated => createActionCategory
         class createActionCategory {};
-        class addLoadoutAction {};
 
         class doGetOutHeloSide {};
 
