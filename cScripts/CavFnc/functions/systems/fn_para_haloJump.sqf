@@ -1,23 +1,23 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This jump throw a player out of a aircraft and ataches a parashoot.
+ * This function throw a player out from a airplane and replaces their current backpack with a parachute.
  *
  * Arguments:
- * 0: Player <PLAYER>
+ * 0: Player <player>
  * 1: Vehicle <OBJECT>
- * 1: Chute Vehicle <OBJECT> (Optional) [Default; "NonSteerable_Parachute_F"]
+ * 2: Chute Vehicle <OBJECT> (Optional) [Default; "NonSteerable_Parachute_F"]
  *
  * Example:
- * ["bob","my_C130"] call cScripts_fnc_doHaloJump
- * ["bob","my_C130", "NonSteerable_Parachute_F"] call cScripts_fnc_doHaloJump
+ * ["bob","my_C130"] call cScripts_fnc_para_haloJump
+ * ["bob","my_C130", "NonSteerable_Parachute_F"] call cScripts_fnc_para_haloJump
  *
  */
 
 params [
     ["_player", objNull, [objNull]],
     ["_vehicle", objNull, [objNull]],
-    ["_chuteVehicleClass", "B_Parachute"]
+    ["_chuteBackpackClass", "B_Parachute"]
 ];
 
 _player allowDamage false;
@@ -29,17 +29,13 @@ _pos = [_pos select 0, _pos select 1, ((getPosATL _vehicle) select 2)];
 _player setPosATL _pos;
 _player setDir _dir - 140;
 
-sleep 0.5;
+sleep 1.5;
 
-[_player] call FUNC(handleJump);
-
-sleep 0.5;
-
-[_player] call zade_boc_fnc_actionOnChest;
+[_player] call EFUNC(para,equipment);
 
 sleep 0.5;
 
-_player addBackpackGlobal _chuteVehicleClass;
+[_player] call EFUNC(para,backpack);
 
 sleep 0.5;
 
