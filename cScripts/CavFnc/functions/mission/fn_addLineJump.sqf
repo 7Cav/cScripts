@@ -11,10 +11,10 @@
  * 4: Chute Vehicle Class <OBJECT> (Optional) (Default; "rhs_d6_Parachute")
  *
  * Example:
- * ["my_c130"] call cScripts_fnc_addJump
- * ["my_c130", 180] call cScripts_fnc_addJump
- * ["my_c130", 180, 350, 300] call cScripts_fnc_addJump
- * ["my_c130", 180, 350, 300, "rhs_d6_Parachute"] call cScripts_fnc_addJump
+ * ["my_c130"] call cScripts_fnc_addLineJump
+ * ["my_c130", 180] call cScripts_fnc_addLineJump
+ * ["my_c130", 180, 350, 300] call cScripts_fnc_addLineJump
+ * ["my_c130", 180, 350, 300, "rhs_d6_Parachute"] call cScripts_fnc_addLineJump
  *
  */
 
@@ -42,7 +42,9 @@ private _conditionHoldAction = format ["((_target getCargoIndex player) != -1) &
     {},
     {},
     {
-        [(_this select 1),(_this select 0),(_this select 3) select 0] call FUNC(doJump)
+        params ["_target", "_caller", "_actionId", "_arguments"];
+        _arguments params ["_chuteVehicleClass"];
+        [_caller, _target, _chuteVehicleClass] call EFUNC(para,lineJump)
     },
     {},
     [_chuteVehicleClass],
