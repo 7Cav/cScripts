@@ -1,16 +1,16 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This jump throw a player out of a aircraft and ataches a parashoot.
+ * This jump throw a player out of a aircraft and attaches a parashoot.
  *
  * Arguments:
  * 0: Player <PLAYER>
  * 1: Vehicle <OBJECT>
- * 1: Chute Vehicle <OBJECT> (Optional) [Default; "NonSteerable_Parachute_F"]
+ * 2: Chute Vehicle <OBJECT> (Optional) [Default; "NonSteerable_Parachute_F"]
  *
  * Example:
- * ["bob","my_C130"] call cScripts_fnc_doJump
- * ["bob","my_C130", "NonSteerable_Parachute_F"] call cScripts_fnc_doJump
+ * ["bob","my_C130"] call cScripts_fnc_para_lineJump
+ * ["bob","my_C130", "NonSteerable_Parachute_F"] call cScripts_fnc_para_lineJump
  *
  */
 
@@ -37,7 +37,7 @@ detach _chute;
 _player moveInDriver _chute;
 _chute setVelocity _velocity;
 
-[_player] call FUNC(handleJump);
+[_player] call EFUNC(para,equipment);
 
 sleep 0.5;
 _player allowDamage true;

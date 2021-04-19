@@ -54,8 +54,8 @@ if (!isPlayer _object) then {
 
 
 // Alpha Company 1st Platoon
-//[_object,"Platoon Insignia 1/A/1-7","Alpha_1","z\cav\addons\insignia\data\Alpha_1.paa",_alphaCategory] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia A/1/A/1-7","Alpha_1_A","z\cav\addons\insignia\data\Alpha_1_A.paa",_alphaCategory] call FUNC(addInsigniaSelection);
+[_object,"Platoon Insignia 1/A/1-7","Alpha_1","z\cav\addons\insignia\data\Alpha_1.paa",_alphaCategory] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia A/1/A/1-7","Alpha_1_A","z\cav\addons\insignia\data\Alpha_1_A.paa",_alphaCategory] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia B/1/A/1-7","Alpha_1_B","z\cav\addons\insignia\data\Alpha_1_B.paa",_alphaCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia C/1/A/1-7","Alpha_1_C","z\cav\addons\insignia\data\Alpha_1_C.paa",_alphaCategory] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia D/1/A/1-7","Alpha_1_D","z\cav\addons\insignia\data\Alpha_1_D.paa",_alphaCategory] call FUNC(addInsigniaSelection);
