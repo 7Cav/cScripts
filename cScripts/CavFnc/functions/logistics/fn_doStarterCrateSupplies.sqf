@@ -506,6 +506,7 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_wirecutter",10];
         _crate addItemCargoGlobal ["rhs_mag_rsp30_green",10];
         _crate addItemCargoGlobal ["rhs_weap_rsp30_red",10];
+        _crate addItemCargoGlobal ["dzn_MG_Tripod_M122A1_M240Mount_Carry",5];
     
     //==================    BACKPACKS    ==================\\
         _crate addItemCargoGlobal ["B_TacticalPack_mcamo",10];
