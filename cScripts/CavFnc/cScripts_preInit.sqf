@@ -203,18 +203,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-
-// Fortify
-[
-    QEGVAR(Settings,setFortifyRestriction),
-    "LIST",
-    ["Fortification Restrictions", "Define hwo can use the fortify action."],
-    [_cScriptSettings, "5; Fortify"],
-    [[0,1,2], ["Anyone", "Engineer", "Adv. Engineer"], 1],
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
 [
     QEGVAR(Settings,setFortifyBudget),
     "SLIDER",
