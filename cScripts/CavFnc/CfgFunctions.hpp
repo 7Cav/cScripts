@@ -61,8 +61,6 @@ class cScripts {
 
         class setTeamColor {};
 
-        class doPlayerAnnouncement {};
-
         class getRadioChannel {};
         class setRadioChannel {};
         class setActiveRadio {};
