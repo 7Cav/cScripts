@@ -24,11 +24,6 @@ if (EGVAR(Settings,allowReplaceItem)) then {
 
 call FUNC(initStaging);
 
-// Handle player announcement
-if !(EGVAR(Settings,setMissionType) >= 3) then {
-    [player] call FUNC(doPlayerAnnouncement);
-};
-
 // Add diary records on mission start
 if (EGVAR(Settings,showDiaryRecords)) then {
     call FUNC(initDocuments);
