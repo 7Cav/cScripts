@@ -29,7 +29,7 @@ if (_getRank in ['PRIVATE','CORPORAL','SERGEANT','LIEUTENANT','CAPTAIN','MAJOR',
     _player setRank _getRank;
 };
 
-(_player) setVariable [QEGVAR(Cav,Rank), _getRank];
+_player setVariable [QEGVAR(Cav,Rank), _getRank];
 
 
 #ifdef DEBUG_MODE
