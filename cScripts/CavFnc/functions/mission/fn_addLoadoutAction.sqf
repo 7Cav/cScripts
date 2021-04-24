@@ -32,7 +32,7 @@ if (_className == "") exitWith {};
 
 private _id = _object addAction [format ["<t color='#ffffcc'>%1</t>", _lable], {
     params ["_target", "_caller", "_actionId", "_arguments"];
-    _arguments params ["_loadout"]
+    _arguments params ["_loadout"];
     [_caller, _loadout] call EFUNC(gear,applyLoadout);
 }, _loadout, 1.5, true, true, "", "", 5];
 
