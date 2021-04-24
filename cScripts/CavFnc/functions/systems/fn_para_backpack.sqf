@@ -16,7 +16,7 @@
 
 params [
     ["_player", objNull, [objNull]],
-    ["_chuteBackpackClass", "B_Parachute", ["B_Parachute"]],
+    ["_chuteBackpackClass", "B_Parachute", ["B_Parachute"]]
 ];
 
 private _backpack = backpack _player;
@@ -56,7 +56,7 @@ _player forceWalk true;
             _player addItemToBackpack _x;
         } forEach _cargo;
 
-        _caller setVariable [QEGVAR(player,backpack), []];
+        _caller setVariable [QEGVAR(player,backpack), nil];
 
         _caller forceWalk false;
     },
