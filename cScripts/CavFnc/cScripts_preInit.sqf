@@ -213,17 +213,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-[
-    QEGVAR(Settings,setFortifyBudget),
-    "SLIDER",
-    ["Fortification Budget","Define the budget per fortification site."],
-    [_cScriptSettings, "5; Fortify"],
-    [50, 2500, 800, 0],
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
 
 // Item Replacement system
 [
