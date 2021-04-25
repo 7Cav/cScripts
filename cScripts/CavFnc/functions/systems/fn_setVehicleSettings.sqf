@@ -152,12 +152,12 @@ switch (true) do {
         [_vehicle] call FUNC(addGetOutHelo);
     };
     case (typeOf _vehicle in _transportRotaryPara): {
-        [_vehicle] call FUNC(addJump);
+        [_vehicle] call EFUNC(para,lineJump);
         [_vehicle] call FUNC(checkVehicle);
     };
     case (typeOf _vehicle in _fixedWingTransport): {
-        [_vehicle] call FUNC(addJump);
-        [_vehicle] call FUNC(addHaloJump);
+        [_vehicle] call EFUNC(para,lineJump);
+        [_vehicle] call EFUNC(para,haloJump);
         [_vehicle] call FUNC(checkVehicle);
     };
     case (typeOf _vehicle in _logisticalVehicles): {};
