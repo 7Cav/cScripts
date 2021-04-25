@@ -13,14 +13,14 @@
 #endif
 
 // Check installed moduels
-EGVAR(patches,usesACE)      = isClass (configFile >> "CfgPatches" >> "ace_main");
-EGVAR(patches,usesACRE)     = isClass (configFile >> "CfgPatches" >> "acre_sys_core");
-EGVAR(patches,usesTFAR)     = isClass (configFile >> "CfgPatches" >> "task_force_radio");
-EGVAR(patches,usesAlive)    = isClass (configFile >> "CfgPatches" >> "ALiVE_main");
-EGVAR(patches,usesAchilles) = isClass (configFile >> "CfgPatches" >> "achilles_data_f_achilles");
-EGVAR(patches,usesZen)      = isClass (configFile >> "CfgPatches" >> "zen_main");
-
-EGVAR(patches,usesCavPack)  = isClass (configFile >> "CfgPatches" >> "cavx_main");
+EGVAR(patches,usesACE)          = isClass (configFile >> "CfgPatches" >> "ace_main");
+EGVAR(patches,usesACEArsenal)   = isClass (configFile >> "CfgPatches" >> "ace_arsenal");
+EGVAR(patches,usesACEX)         = isClass (configFile >> "CfgPatches" >> "acex_main");
+EGVAR(patches,usesACRE)         = isClass (configFile >> "CfgPatches" >> "acre_sys_core");
+EGVAR(patches,usesTFAR)         = isClass (configFile >> "CfgPatches" >> "task_force_radio");
+EGVAR(patches,usesAlive)        = isClass (configFile >> "CfgPatches" >> "ALiVE_main");
+EGVAR(patches,usesAchilles)     = isClass (configFile >> "CfgPatches" >> "achilles_data_f_achilles");
+EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_main");
 
 // Global Variables
 EGVAR(Staging,ZoneStatus) = false;
@@ -60,6 +60,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     ["Long Range Radio Channels","Array of radio channels used for ACRE"],
     [_cScriptSettings, "3; Player Radio"],
     '["UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","ATLAS","FARP","CONVOY","ZEUS","CAG","COMMAND"]',
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+[
+    QEGVAR(Settings,removeRadios),
+    "CHECKBOX",
+    ["Remove Radios", "Removes player radios on spawn. Radios need to be manually collected. Note that saving a loadout will not give you a radio."],
+    [_cScriptSettings, "3; Player Radio"],
+    false,
     true,
     {},
     true
@@ -322,8 +332,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     };
 #endif
 
-
-if (isClass (configFile >> "CfgPatches" >> "ace_arsenal")) then {
+if (EGVAR(patches,usesACEArsenal)) then { 
     if !(is3DEN) then {
         call FUNC(initACELoadouts);
     } else {
@@ -363,7 +372,6 @@ if (EGVAR(Settings,enable7cavZeusModules)) then {
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
     call FUNC(initAI);
 };
-
 
 #ifdef DEBUG_MODE
     ["Initialization completed", "preInit"] call FUNC(logInfo);
