@@ -424,9 +424,6 @@ force force acex_field_rations_timeWithoutFood = 504;
 force force acex_field_rations_timeWithoutWater = 168;
 force force acex_field_rations_waterSourceActions = 2;
 
-// ACEX Fortify
-force force acex_fortify_settingHint = 1;
-
 // ACEX Headless
 force force acex_headless_delay = 15;
 force force acex_headless_enabled = false;
