@@ -18,7 +18,7 @@ private _hasHalo    = _vehicle getVariable [QEGVAR(Vehicle,Halo),[]];
 
 private _statement = {
     params ["_target", "_player", "_args"];
-    _args params ["_hasJump", "_hasHalo", "_hasFortify"];
+    _args params ["_hasJump", "_hasHalo"];
 
     if !(count _hasJump == 0) then {
         [
@@ -51,5 +51,5 @@ private _statement = {
 
 private _checkLabel = if (_vehicle isKindOf "Air") then {"Check Aircraft"} else {"Check Vehicle"};
 
-_action = [QEGVAR(Action,Check), _checkLabel, "", _statement, {true}, {}, [_hasJump, _hasHalo, _hasFortify]] call ace_interact_menu_fnc_createAction;
+_action = [QEGVAR(Action,Check), _checkLabel, "", _statement, {true}, {}, [_hasJump, _hasHalo]] call ace_interact_menu_fnc_createAction;
 [_vehicle, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;

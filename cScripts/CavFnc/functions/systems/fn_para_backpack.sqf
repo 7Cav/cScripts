@@ -19,7 +19,8 @@ params [
     ["_chuteBackpackClass", "B_Parachute", ["B_Parachute"]]
 ];
 
-private _backpack = backpack _player;
+private _backpack = backpack _player call BIS_fnc_basicBackpack;
+
 private _cargo = backpackItems _player;
 
 private _backpackAndContent = [_backpack, _cargo];
@@ -36,8 +37,8 @@ _player forceWalk true;
     "Put on backpack",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloadDevice_ca.paa",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unloadDevice_ca.paa",
-    "(_this getVariable [QEGVAR(player,backpack), []] > 1) && getPosATL _this < 2",
-    "(_caller getVariable [QEGVAR(player,backpack), []] > 1) && getPosATL _this < 5",
+    format["((count (_this getVariable ['%1', []])) > 1) && ((getPosATL _this)#2 < 2)", QEGVAR(player,backpack)],
+    format["((count (_caller getVariable ['%1', []])) > 1) && ((getPosATL _caller)#2 < 5)", QEGVAR(player,backpack)],
     {},
     {},
     {
@@ -53,7 +54,7 @@ _player forceWalk true;
 
         {
             diag_log format["Adding %1",_x];
-            _player addItemToBackpack _x;
+            _caller addItemToBackpack _x;
         } forEach _cargo;
 
         _caller setVariable [QEGVAR(player,backpack), nil];
@@ -62,7 +63,7 @@ _player forceWalk true;
     },
     {},
     [],
-    12,
+    5,
     0,
     false,
     false
