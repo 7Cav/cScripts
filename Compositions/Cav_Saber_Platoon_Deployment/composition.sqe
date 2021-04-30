@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="SABER Platoon Deployment";
+		name="SABRE Platoon Deployment";
 		class Entities
 		{
 			items=17;
@@ -29,8 +29,8 @@ class items
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="call{this setgroupID[""SABER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
-							description="Tank Commander@SABER-1";
+							init="call{this setgroupID[""SABRE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
+							description="Tank Commander@SABRE-1";
 							isPlayable=1;
 						};
 						id=259;
@@ -152,12 +152,12 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""vic4""] call cScripts_fnc_setVehicleLable;}";
+					init="call{[this,""vic4""] call cScripts_fnc_setVehicleLable;" \n "this addMagazine ""rhs_mag_M1147"";" \n "[this,[],[""Miles_Hide"",1]] call BIS_fnc_initVehicle;}";
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
 				id=283;
-				type="rhsusf_m1a2sep1tuskiid_usarmy";
+				type="rhsusf_m1a2sep2d_usarmy";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -288,12 +288,12 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""vic2""] call cScripts_fnc_setVehicleLable;}";
+					init="call{[this,""vic2""] call cScripts_fnc_setVehicleLable;" \n "this addMagazine ""rhs_mag_M1147"";" \n "[this,[],[""Miles_Hide"",1]] call BIS_fnc_initVehicle;}";
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
 				id=284;
-				type="rhsusf_m1a2sep1tuskiid_usarmy";
+				type="rhsusf_m1a2sep2d_usarmy";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -424,12 +424,12 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""vic3""] call cScripts_fnc_setVehicleLable;}";
+					init="call{[this,""vic3""] call cScripts_fnc_setVehicleLable;" \n "this addMagazine ""rhs_mag_M1147"";" \n "[this,[],[""Miles_Hide"",1]] call BIS_fnc_initVehicle;}";
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
 				id=285;
-				type="rhsusf_m1a2sep1tuskiid_usarmy";
+				type="rhsusf_m1a2sep2d_usarmy";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -560,12 +560,12 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""vic1""] call cScripts_fnc_setVehicleLable;}";
+					init="call{[this,""vic1""] call cScripts_fnc_setVehicleLable;" \n "this addMagazine ""rhs_mag_M1147"";" \n "[this,[],[""Miles_Hide"",1]] call BIS_fnc_initVehicle;}";
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
 				id=286;
-				type="rhsusf_m1a2sep1tuskiid_usarmy";
+				type="rhsusf_m1a2sep2d_usarmy";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -696,12 +696,12 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""vic4""] call cScripts_fnc_setVehicleLable;}";
+					init="call{[this,""vic4""] call cScripts_fnc_setVehicleLable;" \n "this addMagazine ""rhs_mag_M1147"";" \n "[this,[],[""Miles_Hide"",1]] call BIS_fnc_initVehicle;}";
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
 				id=287;
-				type="rhsusf_m1a2sep1tuskiiwd_usarmy";
+				type="rhsusf_m1a2sep2wd_usarmy";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -832,12 +832,12 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""vic2""] call cScripts_fnc_setVehicleLable;}";
+					init="call{[this,""vic2""] call cScripts_fnc_setVehicleLable;" \n "this addMagazine ""rhs_mag_M1147"";" \n "[this,[],[""Miles_Hide"",1]] call BIS_fnc_initVehicle;}";
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
 				id=288;
-				type="rhsusf_m1a2sep1tuskiiwd_usarmy";
+				type="rhsusf_m1a2sep2wd_usarmy";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -968,12 +968,12 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""vic3""] call cScripts_fnc_setVehicleLable;}";
+					init="call{[this,""vic3""] call cScripts_fnc_setVehicleLable;" \n "this addMagazine ""rhs_mag_M1147"";" \n "[this,[],[""Miles_Hide"",1]] call BIS_fnc_initVehicle;}";
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
 				id=289;
-				type="rhsusf_m1a2sep1tuskiiwd_usarmy";
+				type="rhsusf_m1a2sep2wd_usarmy";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -1104,12 +1104,12 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""vic1""] call cScripts_fnc_setVehicleLable;}";
+					init="call{[this,""vic1""] call cScripts_fnc_setVehicleLable;" \n "this addMagazine ""rhs_mag_M1147"";" \n "[this,[],[""Miles_Hide"",1]] call BIS_fnc_initVehicle;}";
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
 				id=290;
-				type="rhsusf_m1a2sep1tuskiiwd_usarmy";
+				type="rhsusf_m1a2sep2wd_usarmy";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -1560,8 +1560,8 @@ class items
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="call{this setgroupID[""SABER-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
-							description="Tank Commander@SABER-2";
+							init="call{this setgroupID[""SABRE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
+							description="Tank Commander@SABRE-2";
 							isPlayable=1;
 						};
 						id=264;
@@ -1691,8 +1691,8 @@ class items
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="call{this setgroupID[""SABER-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
-							description="Tank Commander@SABER-3";
+							init="call{this setgroupID[""SABRE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
+							description="Tank Commander@SABRE-3";
 							isPlayable=1;
 						};
 						id=269;
@@ -1864,8 +1864,8 @@ class items
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="call{this setgroupID[""SABER-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
-							description="Tank Commander@SABER-4";
+							init="call{this setgroupID[""SABRE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
+							description="Tank Commander@SABRE-4";
 							isPlayable=1;
 						};
 						id=274;
