@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="SABER Platoon Deployment";
+		name="SABRE Platoon Deployment";
 		class Entities
 		{
 			items=17;
@@ -29,8 +29,8 @@ class items
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="call{this setgroupID[""SABER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
-							description="Tank Commander@SABER-1";
+							init="call{this setgroupID[""SABRE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
+							description="Tank Commander@SABRE-1";
 							isPlayable=1;
 						};
 						id=259;
@@ -1560,8 +1560,8 @@ class items
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="call{this setgroupID[""SABER-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
-							description="Tank Commander@SABER-2";
+							init="call{this setgroupID[""SABRE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
+							description="Tank Commander@SABRE-2";
 							isPlayable=1;
 						};
 						id=264;
@@ -1691,8 +1691,8 @@ class items
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="call{this setgroupID[""SABER-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
-							description="Tank Commander@SABER-3";
+							init="call{this setgroupID[""SABRE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
+							description="Tank Commander@SABRE-3";
 							isPlayable=1;
 						};
 						id=269;
@@ -1864,8 +1864,8 @@ class items
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="call{this setgroupID[""SABER-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
-							description="Tank Commander@SABER-4";
+							init="call{this setgroupID[""SABRE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
+							description="Tank Commander@SABRE-4";
 							isPlayable=1;
 						};
 						id=274;
