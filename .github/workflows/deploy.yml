@@ -28,12 +28,6 @@ jobs:
           args: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload Release cScripts (PUBLIC)
-        uses: JasonEtco/upload-to-release@master
-        with:
-          args: release/cScripts_Public-${{ steps.get_version.outputs.VERSION }}.zip application/zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Release cScripts (NoLoadouts)
         uses: JasonEtco/upload-to-release@master
         with:

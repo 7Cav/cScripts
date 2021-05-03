@@ -30,7 +30,6 @@ set -e
 # Pack Compositions
 zip release/Compositions-${VERSION_TAG}.zip -r Compositions
 
-chmod +x ./tools/build_settings_config.sh
-./tools/build_settings_config.sh $VERSION_TAG
-
-zip release/Compositions-${VERSION_TAG}.zip -r Compositions
+# Disabled
+#chmod +x ./tools/build_settings_config.sh
+#./tools/build_settings_config.sh $VERSION_TAG
