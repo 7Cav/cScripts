@@ -1,5 +1,6 @@
 #include "..\script_component.hpp"
 
+GVAR(Radio) = false;
 GVAR(Gear) = false;
 
 EGVAR(gear,groupIDsSynched) = false;

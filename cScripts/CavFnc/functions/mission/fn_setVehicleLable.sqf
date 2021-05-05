@@ -61,22 +61,7 @@ private _lableTexture9 = [toUpper(_lable9)] call FUNC(getVehicleLable);
 
 private _lableTextureLine = ["LINE"] call FUNC(getVehicleLable);
 
-
-
-
-// UH-60 blackhawk
-private _vehicleTypeUH60 = [
-    "RHS_UH60M_d",
-    "RHS_UH60M_MEV2_d",
-    "RHS_UH60M_MEV_d",
-    "RHS_UH60M",
-    "RHS_UH60M_MEV2",
-    "RHS_UH60M_MEV",
-    "Cav_Alpha_UH60M",
-    "Cav_Alpha_UH60M_MEV2",
-    "Cav_Alpha_UH60M2"
-];
-if (typeOf _vehicle in _vehicleTypeUH60) then {
+if (_vehicle iskindOf "RHS_UH60_Base") then {
     if (_lable1 != "") then { [_vehicle,[-0.49,-2.45,-1.3],87,_lableTexture1] call FUNC(createVehicleLable); };
     if (_lable1 != "" && (_lable2 != "")) then { [_vehicle,[-0.49,-2.45,-1.3],87,_lableTextureLine] call FUNC(createVehicleLable); };
     if (_lable2 != "") then { [_vehicle,[-0.49,-2.45,-1.3],87,_lableTexture2] call FUNC(createVehicleLable); };
@@ -88,15 +73,7 @@ if (typeOf _vehicle in _vehicleTypeUH60) then {
     //if (_lable3 != "") then { [_vehicle,[0.49,-2.45,-1.3],-87,""] call FUNC(createVehicleLable); };
 };
 
-
-
-
-// C-130
-private _vehicleTypeC130J = [
-    "RHS_C130J",
-    "Cav_Alpha_C130J"
-];
-if (typeOf _vehicle in _vehicleTypeC130J) then {
+if (_vehicle iskindOf "RHS_C130J_Base") then {
     if (_lable1 != "") then { [_vehicle,[-0.205,-10.9,2.920],90,_lableTexture1,[0.05,0,1]] call FUNC(createVehicleLable); };
     if (_lable2 != "") then { [_vehicle,[-0.205,-11.4,2.920],90,_lableTexture2,[0.05,0,1]] call FUNC(createVehicleLable); };
     if (_lable3 != "") then { [_vehicle,[-0.205,-11.9,2.920],90,_lableTexture3,[0.05,0,1]] call FUNC(createVehicleLable); };
@@ -105,9 +82,6 @@ if (typeOf _vehicle in _vehicleTypeC130J) then {
     if (_lable2 != "") then { [_vehicle,[0.205,-11.4,2.920],-90,_lableTexture2,[-0.05,0,1]] call FUNC(createVehicleLable); };
     if (_lable3 != "") then { [_vehicle,[0.205,-10.9,2.920],-90,_lableTexture3,[-0.05,0,1]] call FUNC(createVehicleLable); };
 };
-
-
-
 
 // MRAP
 private _vehicleTypeMRAP = [
@@ -164,59 +138,12 @@ if (typeOf _vehicle in _vehicleTypeMRAP) then {
     if (_lable2 != "") then { [_vehicle,[1.494,-0.269,-1.25],-90,_lableTexture5] call FUNC(createVehicleLable); };
 };
 
-
-
-
 // STRYKER
-private _vehicleTypeStriker = [
-    "M1126_ICV_M134_DG1_NOSLATDES",
-    "M1126_ICV_M134_DG1_NOSLATWOOD",
-    "M1126_ICV_M2_DG1_NOSLATDES",
-    "M1126_ICV_M2_DG1_NOSLATWOOD",
-    "M1126_ICV_M2NEST_DG1_NOSLATWOOD",
-    "M1126_ICV_M2NEST_DG1_NOSLATDES",
-    "M1126_ICV_mk19_DG1_NOSLATWOOD",
-    "M1126_ICV_mk19_DG1_NOSLATDES",
-    "M1128_MGS_DG1_NOSLATWOOD",
-    "M1126_ICV_mk19_DG1_NOSLATDES",
-    "M1128_MGS_DG1_NOSLATWOOD",
-    "M1128_MGS_DG1_NOSLATDES",
-    "M1129_MC_DG1_NOSLATWOOD",
-    "M1129_MC_DG1_NOSLATDES",
-    "M1130_CV_DG1_NOSLATWOOD",
-    "M1130_CV_DG1_NOSLATDES",
-    "M1133_MEV_DG1_NOSLATWOOD",
-    "M1135_ATGMV_DG1_NOSLATWOOD",
-    "M1133_MEV_DG1_NOSLATDES",
-    "M1135_ATGMV_DG1_NOSLATDES"
-];
-if (typeOf _vehicle in _vehicleTypeStriker) then {
-    // Always added
-    private _strykerLable = ["STRYKER"] call FUNC(getVehicleLable);
-    [_vehicle,[0.420521,3.50066,1.35656],180,_strykerLable] call FUNC(createVehicleLable);
+if (_vehicle iskindOf "rhsusf_stryker_base") then {
+    
 };
 
-
-
-
-// M1A1 Abrams
-private _vehicleTypeAbrams = [
-    "rhsusf_m1a1aimd_usarmy",
-    "rhsusf_m1a1aim_tuski_d",
-    "rhsusf_m1a2sep1d_usarmy",
-    "rhsusf_m1a2sep1tuskid_usarmy",
-    "rhsusf_m1a2sep1tuskiid_usarmy",
-    "rhsusf_m1a1aimwd_usarmy",
-    "rhsusf_m1a1aim_tuski_wd",
-    "rhsusf_m1a2sep1wd_usarmy",
-    "rhsusf_m1a2sep1tuskiwd_usarmy",
-    "rhsusf_m1a2sep1tuskiiwd_usarmy",
-    "rhsusf_m1a1fep_d",
-    "rhsusf_m1a1fep_wd",
-    "rhsusf_m1a1fep_od",
-    "rhsusf_m1a1hc_wd"
-];
-if (typeOf _vehicle in _vehicleTypeAbrams) then {
+if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     //Front
     if (_lable1 != "") then { [_vehicle,[-0.5,2.53,-0.64],180,_lableTexture1,[0,0.9,1]] call FUNC(createVehicleLable); };
 
