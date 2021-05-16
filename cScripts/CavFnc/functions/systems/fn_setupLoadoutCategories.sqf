@@ -1,4 +1,3 @@
-
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
@@ -24,11 +23,14 @@ params[
 ];
 
 // Setup category
-private _icon      = "cScripts\Data\Icon\icon_01.paa";
-private _squadIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-private _speciIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa";
-private _leadIcon  = "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa";
-private _pilotIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa";
+private _icon      = "cScripts\Data\Icon\icon_01.paa" call FUNC(getIcon);
+private _squadIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa" call FUNC(getIcon);
+private _speciIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa" call FUNC(getIcon);
+private _leadIcon  = "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa" call FUNC(getIcon);
+private _pilotIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" call FUNC(getIcon);
+private _iconTank  = "iconTank" call FUNC(getIcon);
+private _iconIfv   = "iconAPC" call FUNC(getIcon);
+private _iconCrate = "iconCrateWpns" call FUNC(getIcon);
 
 private _mainCategory = "";
 if (_aceCategory == "ACE_SelfActions") then {
@@ -44,12 +46,12 @@ if (_aceCategory == "ACE_SelfActions") then {
 [_object, "cScripts_Loadout_Cat_Alpha_FixedWing",         "Fixed Wing", _pilotIcon,       [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Alpha"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Alpha_Rotary",            "Rotary", _pilotIcon,           [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Alpha"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo",                   "Bravo Co.", "",                [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Bravo_Leadership",        "Leadership", "_leadIcon",      [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_Leadership",        "Leadership", _leadIcon,        [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Viking_Leadership", "Viking Leadership", _leadIcon, [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Viking_Squad",      "Viking Squad", _squadIcon,     [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Bravo_Atlas",             "Atlas", _squadIcon,            [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Bravo_Tank",              "Tank", _squadIcon,             [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Bravo_IFV",               "IFV", _squadIcon,              [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_Atlas",             "Atlas", _iconCrate,            [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_Tank",              "Tank", _iconTank,              [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_IFV",               "IFV", _iconIfv,                [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Weapons",           "Weapons", _squadIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Special",           "Special", _speciIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Charlie",                 "Charlie Co.", "",              [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
