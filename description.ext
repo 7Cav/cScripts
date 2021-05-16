@@ -2,67 +2,76 @@
 
 /*=================== O N L Y   E D I T   B E T W E E N   T H E S E   L I N E S====================*/
 
-    dev                 = "1SG Tully.B";
-    author              = "1SG Tully.B";
+dev                 = "1SG Tully.B";
+author              = "1SG Tully.B";
 
-    onLoadName          = "MyMissionName";
-    onLoadMission       = "7th Cavalry - S3 1BN Battle Staff Operation";
-    onLoadIntro         = "S3 1BN Battle Staff Operation";
+onLoadName          = "MyMissionName";
+onLoadMission       = "7th Cavalry - S3 1BN Battle Staff Operation";
+onLoadIntro         = "S3 1BN Battle Staff Operation";
 
-    loadScreen          = "Data\MissionLogo.paa";
-    overviewPicture     = "Data\MissionLogo.paa";
+loadScreen          = "Data\MissionLogo.paa";
+overviewPicture     = "Data\MissionLogo.paa";
 
 /*=================== D O   N O T   E D I T   B E L O W   T H E S E   L I N E S====================*/
 
 /*           RULES            */
 
-    cba_settings_hasSettingsFile = 1;
-    disabledAI               = true;
-    disableChannels[]        = {{0,false,true},{1,false,true},{2,true,true},{6,true,true}};
-    cba_settings_whitelist[] = {"76561197962051582"};
+disabledAI               = true;
+disableChannels[]        = {{0,false,true},{1,false,true},{2,true,true},{6,true,true}};
 
-    forceRotorLibSimulation  = 1;
+cba_settings_hasSettingsFile = 1;
+cba_settings_whitelist[] = {
+    "76561197962051582",    // Brostrom.A
+    "76561198099828056"     // Whitsel.M
+};
+
+enableTargetDebug = 1;
+enableDebugConsole[] = {
+    "76561197962051582",    // Brostrom.A
+    "76561198099828056"     // Whitsel.M
+};
+
+forceRotorLibSimulation  = 1;
 
 /*     GARBADGE COLLECTIOR    */
 
-    corpseManagerMode = 3;
-    corpseLimit = 25;
-    corpseRemovalMinTime = 60;
-    corpseRemovalMaxTime = 7200;
-    minPlayerDistance = 250;
+corpseManagerMode = 3;
+corpseLimit = 25;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 7200;
+minPlayerDistance = 250;
 
 /*          RESPAWN           */
 
-    // Name a marker "respawn_west" to set spawn.
-    // See https://community.bistudio.com/wiki/Arma_3_Respawn for more info on respawn.
-    respawn                = BASE;
-    respawnDelay           = 4;
-    //respawnDelay           = 30000;               // Enable for 1 life operations and disable the other.
-    respawnOnStart         = -1;
-    respawnTemplatesWest[] = {"MenuPosition"};
-    //respawnTemplates[] = {"ace_spectator"};       // Enable for 1 life operations and disable the other.
+// Name a marker "respawn_west" to set spawn.
+// See https://community.bistudio.com/wiki/Arma_3_Respawn for more info on respawn.
+respawn                = BASE;
+respawnDelay           = 4;
+//respawnDelay           = 30000;               // Enable for 1 life operations and disable the other.
+respawnOnStart         = -1;
+respawnTemplatesWest[] = {"MenuPosition"};
+//respawnTemplates[] = {"ace_spectator"};       // Enable for 1 life operations and disable the other.
 
 /*          SYSTEMS           */
 
-    class Header
-    {
-        gameType = Coop;
-        minPlayers = 1;
-        maxPlayers = 100;
-     };
+class Header {
+    gameType = Coop;
+    minPlayers = 1;
+    maxPlayers = 100;
+};
 
-    class Extended_PreInit_EventHandlers {
-        cScripts_preInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_preInit.sqf'";
-    };
-    class Extended_PostInit_EventHandlers {
-        cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_postInit.sqf'";
-    };
+class Extended_PreInit_EventHandlers {
+    cScripts_preInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_preInit.sqf'";
+};
+class Extended_PostInit_EventHandlers {
+    cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_postInit.sqf'";
+};
 
-    class CfgFunctions {
-        #include "cScripts\CavFnc\CfgFunctions.hpp"
-        #include "cScripts\ViewingDistance\CfgFunctions.hpp"
-    };
-    #include "cScripts\ViewingDistance\GUI.h"
-    #include "cScripts\CfgLoadouts.hpp"
+class CfgFunctions {
+    #include "cScripts\CavFnc\CfgFunctions.hpp"
+    #include "cScripts\ViewingDistance\CfgFunctions.hpp"
+};
+#include "cScripts\ViewingDistance\GUI.h"
+#include "cScripts\CfgLoadouts.hpp"
 
 /*           OTHER            */
