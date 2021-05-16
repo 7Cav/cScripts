@@ -53,7 +53,6 @@ _player forceWalk true;
         _caller addBackpack _backpack;
 
         {
-            diag_log format["Adding %1",_x];
             _caller addItemToBackpack _x;
         } forEach _cargo;
 

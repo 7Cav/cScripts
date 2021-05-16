@@ -190,7 +190,6 @@ class cScripts {
         class gear_loadLoadout {};
         class gear_removeLoadout {};
         class gear_hasSavedLoadout {};
-        
     };
 
     class debug {
