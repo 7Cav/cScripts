@@ -275,9 +275,11 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addMagazineCargoGlobal ["ACE_M84",25];
         _crate addMagazineCargoGlobal ["rhs_mag_M433_HEDP",100];
         _crate addMagazineCargoGlobal ["rhs_mag_M397_HET",25];
+        _crate addMagazineCargoGlobal ["rhs_mag_m716_yellow",250];
+        _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
         _crate addMagazineCargoGlobal ["ACE_40mm_Flare_white",250];
         _crate addMagazineCargoGlobal ["ACE_40mm_Flare_red",250];
-        _crate addMagazineCargoGlobal ["rhs_mag_m713_Red",250];
+        _crate addMagazineCargoGlobal ["rhs_mag_m664_red_cluster",250];
         _crate addMagazineCargoGlobal ["ACE_Chemlight_HiYellow",250];
         _crate addMagazineCargoGlobal ["ACE_Chemlight_HiBlue",250];
         _crate addMagazineCargoGlobal ["ACE_Chemlight_HiRed",250];
