@@ -15,7 +15,10 @@
  * Public: No
  */
 
-params [["_player", objNull, [objNull]]];
+params [
+    ["_player", objNull, [objNull]],
+    ["_showMessage", false, [false]]
+];
 
 if !(isPlayer _player) exitWith {};
 
@@ -29,7 +32,7 @@ if !(isPlayer _player) exitWith {};
 
             [_x, _channel] call acre_api_fnc_setRadioChannel;
             #ifdef DEBUG_MODE
-                [format["%1 radio (%2) have its channel set to %3",(_this select 0), _x, _channel], "Radio"] call FUNC(logInfo);
+                [format["%1 radio (%2) have its channel set to %3", (_this select 0), _x, _channel], "Radio"] call FUNC(logInfo);
             #endif
 
             // Store radio channels in variable.
@@ -41,3 +44,7 @@ if !(isPlayer _player) exitWith {};
         };
     } forEach _playerRadios;
 }, [_player]] call CBA_fnc_waitUntilAndExecute;
+
+if (_showMessage) then {
+    "Your radios have been reprogrammed" call CBA_fnc_notify;
+};
