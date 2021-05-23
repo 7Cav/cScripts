@@ -32,11 +32,11 @@ private _specialCategory = _aceCategory + ["cScriptInsigniaSelectionMenu", "cScr
 
 // Make ACE Category
 private _icon = "cScripts\Data\Icon\icon_00.paa";
-[_object, "cScriptInsigniaSelectionMenu", "Insignia", _Icon, _aceCategory] call FUNC(addAceCategory);
-[_object, "cScriptInsigniaSelectionAlpha", "Alpha Co.", _Icon, _defaultCategory] call FUNC(addAceCategory);
-[_object, "cScriptInsigniaSelectionBravo", "Bravo Co.", _Icon, _defaultCategory] call FUNC(addAceCategory);
-[_object, "cScriptInsigniaSelectionCharlie", "Charlie Co.", _Icon, _defaultCategory] call FUNC(addAceCategory);
-[_object, "cScriptInsigniaSelectionSpecial", "Special", _Icon, _defaultCategory] call FUNC(addAceCategory);
+[_object, "cScriptInsigniaSelectionMenu",    "Insignia",    _Icon, _aceCategory] call FUNC(createActionCategory);
+[_object, "cScriptInsigniaSelectionAlpha",   "Alpha Co.",   _Icon, _defaultCategory] call FUNC(createActionCategory);
+[_object, "cScriptInsigniaSelectionBravo",   "Bravo Co.",   _Icon, _defaultCategory] call FUNC(createActionCategory);
+[_object, "cScriptInsigniaSelectionCharlie", "Charlie Co.", _Icon, _defaultCategory] call FUNC(createActionCategory);
+[_object, "cScriptInsigniaSelectionSpecial", "Special",     _Icon, _defaultCategory] call FUNC(createActionCategory);
 
 // Make addAction Topic.
 if (!isPlayer _object) then {
