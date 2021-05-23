@@ -111,7 +111,6 @@ class cScripts {
         class addReGear {};
         class addHeal {};
         class addArsenal {};
-        class addAceCategory {}; // depricated => createActionCategory
         class createActionCategory {};
 
         class doGetOutHeloSide {};
@@ -192,15 +191,20 @@ class cScripts {
         class gear_loadLoadout {};
         class gear_removeLoadout {};
         class gear_hasSavedLoadout {};
-        
     };
-
-    class debug {
-        file = "cScripts\cavFnc\functions\debug";
-        class logError {};
-        class logInfo {};
-        class logWarning {};
-
-        class diag_dumpPlayer {};
+        
+    class diag {
+        file = "cScripts\cavFnc\functions\diag";
+        class error {};
+        class info {};
+        class log {};
+        class warning {};
+    };
+    class depricated {
+        file = "cScripts\cavFnc\functions\depricated";
+        class logError {}; // depricated => error
+        class logInfo {}; // depricated => info
+        class logWarning {}; // depricated => warning
+        class addAceCategory {}; // depricated => createActionCategory
     };
 };
