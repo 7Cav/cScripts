@@ -15,10 +15,7 @@
  * Public: No
  */
 
-params [
-    ["_player", objNull, [objNull]],
-    ["_showMessage", false, [false]]
-];
+params [["_player", objNull, [objNull]]];
 
 if !(isPlayer _player) exitWith {};
 
@@ -44,7 +41,3 @@ if !(isPlayer _player) exitWith {};
         };
     } forEach _playerRadios;
 }, [_player]] call CBA_fnc_waitUntilAndExecute;
-
-if (_showMessage) then {
-    "Your radios have been reprogrammed" call CBA_fnc_notify;
-};

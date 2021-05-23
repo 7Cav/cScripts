@@ -18,9 +18,10 @@
 params [
     ["_message", ""],
     ["_componant", "", [""]],
-    ["_showInChat", true, [true]]
+    ["_showInChat", true, [true]],
+    ["_sendToServer", false, [false]]
 ];
 
 private _type = "ERROR";
 
-[_message, _componant, _showInChat, _type] call FUNC(log);
+[_message, _componant, _showInChat, _sendToServer, _type] call FUNC(log);
