@@ -112,6 +112,7 @@ params ["_modulePos", "_objectPos"];
                 [formatText["Mission var %1 is set %2", QEGVAR(Mission,Endex), missionNamespace getVariable QEGVAR(Mission,Endex)]] call FUNC(logInfo);
             #endif
         };
+        ["Endex called"] call zen_common_fnc_showMessage;
     },
     {},
     [_modulePos]
