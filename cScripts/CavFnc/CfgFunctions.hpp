@@ -123,6 +123,8 @@ class cScripts {
         class getVehicleLable {};
 
         class checkVehicle {};
+        
+        class getIcon {};
 
         class getServerMetrics {};
     };
