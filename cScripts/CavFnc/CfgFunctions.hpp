@@ -98,7 +98,7 @@ class cScripts {
 
         class addStagingZone {};
         class checkStagingZone {};
-        
+
         class deleteDroppedObjects {};
 
        // Plane jump
@@ -123,7 +123,7 @@ class cScripts {
         class getVehicleLable {};
 
         class checkVehicle {};
-        
+
         class getIcon {};
 
         class getServerMetrics {};
@@ -162,14 +162,12 @@ class cScripts {
         
         class zenModuleCallEndex {};
     };
-
     class helpers {
         file = "cScripts\cavFnc\functions\helpers";
         class exportContainerToArsenal {};
         class exportLoadoutContentToArsenal {};
         class exportLoadoutToArsenal {};
     };
-
     class gear {
         file = "cScripts\cavFnc\functions\gear";
         class gear_preInit { preInit = 1; };
@@ -192,7 +190,6 @@ class cScripts {
         class gear_removeLoadout {};
         class gear_hasSavedLoadout {};
     };
-        
     class diag {
         file = "cScripts\cavFnc\functions\diag";
         class error {};
