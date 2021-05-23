@@ -32,7 +32,7 @@ params [
     ["_reHealOption", true, [true]],
     ["_InsigniaSelectOption", true, [true]],
     ["_allowOnlyForCompany", true, [true]],
-    ["_arsenal", false, [false]],
+    ["_arsenal", false, [false]],   // not used
     ["_hasStagingZone", true, [true]]
 ];
 
@@ -59,11 +59,6 @@ private _crateName = if ( !(_fullLableCheck) ) then {
     };
 } else { ' ' };
 _object addAction [format ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry%1Equipment Crate", _crateName], {}, [], 1.5, true, true, "", "true", 5];
-
-if (_arsenal) then {
-    private _arsenalContainer = if (_fullLableCheck && (EGVAR(Settings,setMissionType) >= 3)) then {'PUBLIC'} else {_quickSelectScale};
-    [_object, _arsenalContainer] call FUNC(addArsenal);
-};
 
 // Call ReGear Option
 if (_reGearOption) then {

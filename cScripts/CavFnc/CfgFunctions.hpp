@@ -11,7 +11,6 @@ class cScripts {
         class init_message {};
         
         class initVehicle {};
-
         class init_staging {};
 
         class initModulesAchilles {};
@@ -115,6 +114,9 @@ class cScripts {
         class addReGear {};
         class addHeal {};
         class addArsenal {};
+        class getArsenalWhitelist {};
+        class getUnitArsenalDefault {};
+        
         class createActionCategory {};
 
         class doGetOutHeloSide {};
@@ -171,6 +173,10 @@ class cScripts {
         class gear_loadLoadout {};
         class gear_removeLoadout {};
         class gear_hasSavedLoadout {};
+
+        // other
+        class gear_getLoadoutRole {};
+        class gear_getCurrentLoadout {};
     };
     class diag {
         file = "cScripts\cavFnc\functions\diag";

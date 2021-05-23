@@ -17,10 +17,21 @@
 params [["_unit", objNull, [objNull]]];
 
 private _loadout = getUnitLoadout _unit;
+if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
 
-_unit setVariable [QEGVAR(Gear,Loadout), _loadout];
-_unit setVariable [QEGVAR(Gear,savedLoadout), true];
+_unit setVariable [QEGVAR(gear,Loadout), _loadout];
+_unit setVariable [QEGVAR(gear,savedLoadout), true];
 
-"Loadout have been saved" call CBA_fnc_notify;
+private _insignia = _unit call BIS_fnc_getUnitInsignia;
+if (_insignia != "") then {
+    profileNamespace setVariable [QEGVAR(Cav,Insignia), _insignia];
+};
 
-_unit getVariable [QEGVAR(Gear,savedLoadout), false];
+[
+    [],
+    ["Loadout have been saved"],
+    [""],
+    [""]
+] call CBA_fnc_notify;
+
+_unit getVariable [QEGVAR(gear,savedLoadout), false];

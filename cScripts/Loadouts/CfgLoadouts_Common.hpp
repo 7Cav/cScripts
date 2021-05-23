@@ -15,6 +15,7 @@ class CommonBlufor {
     //preLoadout = "";
     //postLoadout = "";
 
+    //role = "";
     //icon = "";
 };
 

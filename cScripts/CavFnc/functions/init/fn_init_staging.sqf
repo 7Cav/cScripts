@@ -61,7 +61,7 @@ private _stagingMarkers = [
 
 if !(hasInterface) exitWith {};
 
-private _condition = { EGVAR(Staging,ZoneStatus) && call cScripts_fnc_checkStagingZone };
+private _condition = { EGVAR(Staging,ZoneStatus) && call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions,StagingCategory), "Staging Zone", "cScripts\Data\Icon\icon_00.paa", {true}, _condition] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _stagingCat] call ace_interact_menu_fnc_addActionToObject;
 
@@ -87,10 +87,19 @@ player addAction [
     0
 ];
 
+// Inventory event handler to save loadout within stadgeing zone
+player addEventHandler ["InventoryClosed", {
+    params ["_unit", "_container"];
+    if (EGVAR(Staging,ZoneStatus) && call FUNC(checkStagingZone)) then {
+        [player] call EFUNC(gear,saveLoadout);
+    };
+}];
+
 // Menu option
 [player, true, _category] call FUNC(addReGear);
 [player, _category] call FUNC(addHeal);
 [player, _category] call FUNC(addInsigniaSelectionList);
 [player, true, "ACE_SelfActions"] call FUNC(setupLoadoutSelection);
+[_category] call FUNC(addArsenal);
 
 [format["Staging options for %1 have been setup.", name player], "Staging"] call FUNC(info);

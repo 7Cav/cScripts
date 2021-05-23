@@ -19,9 +19,9 @@ params [
     ["_unit", objNull, [objNull]]
 ];
 
-if !(_unit getVariable [QEGVAR(Gear,savedLoadout), false]) exitWith {false};
+if !(_unit getVariable [QEGVAR(gear,savedLoadout), false]) exitWith {false};
 
-private _loadout = _unit getVariable QEGVAR(Gear,Loadout);
+private _loadout = _unit getVariable QEGVAR(gear,Loadout);
 [_unit, _loadout] call EFUNC(gear,applyLoadout);
 
 #ifdef DEBUG_MODE
