@@ -14,11 +14,15 @@ class CommonBlufor {
 
     //preLoadout = "";
     //postLoadout = "";
+
+    //icon = "";
 };
 
 class Cav_B_Seventh_Cavalry_Base_F : CommonBlufor {
     regiment = "7th Cavalry";
     scope = 0;
+
+    icon = "iconMan";
 };
 
 class Cav_B_Alpha_base_F : Cav_B_Seventh_Cavalry_Base_F {

@@ -20,15 +20,14 @@ if !(EGVAR(patches,usesACRE)) exitWith {};
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
 if (count allMissionObjects "acre_api_nameChannels" > 0)       exitWith {};
 
-[format["Skipping ACRE preset (%1) due to bug...", QEGVAR(Radio,Preset)], "Radio"] call FUNC(logInfo);
 private _lrChannels = parseSimpleArray EGVAR(Settings,setRadioChannelNames);
 
-if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup correctly.", "Gear"] call FUNC(logError);};
+if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup correctly.", "Gear"] call FUNC(error);};
 
 // Set LR radio labels and frequency
 {
     #ifdef DEBUG_MODE
-        [format["Radio preset setup for %1", _unit], "Gear"] call FUNC(logInfo);
+        [format["Adjusting default preset setup for %1", _unit], "Gear"] call FUNC(info);
     #endif
     private _radio = _x;
     {
@@ -44,14 +43,14 @@ if (isPlayer _unit) then {
     if (EGVAR(Settings,setRadio)) then {
         [_unit] call FUNC(setRadioChannel);
         #ifdef DEBUG_MODE
-            [format["%1 delayed action for radio channel assignation...", _unit], "Radio"] call FUNC(logInfo);
+            [format["%1 delayed action for radio channel assignation...", _unit], "Radio"] call FUNC(info);
         #endif
 
         // set current radio
         private _activeRadio = "ACRE_PRC343";
         [_activeRadio] call FUNC(setActiveRadio);
         #ifdef DEBUG_MODE
-            [format["%1 delayed action to set active radio...", _unit], "Radio"] call FUNC(logInfo);
+            [format["%1 delayed action to set active radio...", _unit], "Radio"] call FUNC(info);
         #endif
     };
 };
