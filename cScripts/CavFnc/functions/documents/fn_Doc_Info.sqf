@@ -51,7 +51,7 @@ if (_abilityMedic != "" || _abilityEngineer != "") then {
 };
 
 private _document = format [
-"<br/><br/>Welcome to %1 on %2.<br/>Your currently on <font color='#ffc61a'>%3</font>.<br/><br/>
+"<font size=20>Information</font><br/>Welcome to %1 on %2.<br/>Your currently on <font color='#ffc61a'>%3</font>.<br/><br/>
 You're currently slotted in as <font color='#ffc61a'>%4</font> %5.<br/><br/>
 %6
 %7
