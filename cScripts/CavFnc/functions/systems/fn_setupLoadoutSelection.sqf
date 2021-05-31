@@ -38,13 +38,15 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     private _class = configName _x;
     private _displayName = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "displayName");
     private _classname = configName (missionConfigFile >> 'CfgLoadouts' >> _class);
+    private _icon = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "icon") call FUNC(getIcon);
     private _company = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "company");
     private _category = getArray (missionConfigFile >> 'CfgLoadouts' >> _class >> "category");
+    
     #ifdef DEBUG_MODE
         [formatText["Setting up %1 loadout on %2.", _displayName, _object], "LoadoutSelector"] call FUNC(logInfo);
     #endif
     _category = [_aceCategory, _mainCategory] + _category;
-    [_object, _displayName, _classname, "", _category, _company, _allowOnlyForCompany] call FUNC(addLoadoutSelection);
+    [_object, _displayName, _classname, _icon, _category, _company, _allowOnlyForCompany] call FUNC(addLoadoutSelection);
 } forEach _classnameList;
 
 #ifdef DEBUG_MODE
