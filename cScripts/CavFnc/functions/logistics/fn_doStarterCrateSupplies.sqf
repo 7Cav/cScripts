@@ -235,7 +235,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACRE_PRC343",12];
 
         //================== LAUNCHERS ==================\\
-        
+
         _crate addWeaponCargoGlobal ["rhs_weap_M136_hedp",10];
         _crate addWeaponCargoGlobal ["dzn_MG_Tripod_M122A1_M240Mount_Carry",5];
 
