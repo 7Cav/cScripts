@@ -19,6 +19,7 @@ params [
     ["_message", ""],
     ["_componant", "", [""]],
     ["_showInChat", false, [false]],
+    ["_sendToServer", false, [false]],
     ["_type", "LOG", [""]]
 ];
 
@@ -31,6 +32,10 @@ _type = formatText ["%1", _type];
 private _logMessage = formatText ["%1%2%3: %4", _prefix, _componant, _type, _message];
 
 diag_log _logMessage;
+
+if (_sendToServer) then {
+    [_logMessage] remoteExecCall ["diag_log", 2];
+};
 
 if (_showInChat && (!isMultiplayer || {is3DENMultiplayer})) then {
     systemChat str _logMessage;
