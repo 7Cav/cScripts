@@ -44,3 +44,4 @@ player setVariable [QEGVAR(document,shortrange_channels), compileFinal str _chan
 
 player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Long Range Radio", call (player getVariable QEGVAR(document,longrange_channels))]], taskNull, "", false];
 player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Radio Channels", call (player getVariable QEGVAR(document,shortrange_channels))]], taskNull, "", false];
+player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Radio", "    <execute expression='[player, true] call cScripts_fnc_gear_setupRadios'>Reprogram Radio</execute> - Use to reset your radios frequencies and channels."]], taskNull, "", false];

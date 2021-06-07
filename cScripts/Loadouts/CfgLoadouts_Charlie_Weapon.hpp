@@ -10,6 +10,7 @@ class Cav_B_C_Weapons_M240B_Machinegunner_F : Cav_B_Charlie_Weapons_base_F {
     displayName = "$STR_cav_troops_charlie_weapons_m240b_machinegunner";
     scope = 2;
     loadout = [["rhs_weap_m240B","","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ELCAN_ard",["rhsusf_100Rnd_762x51_m62_tracer",100],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_acu_oefcp",[["ACE_EarPlugs",1],["ACE_MapTools",1],["ACE_quikclot",15],["ACE_tourniquet",5],["ACRE_PRC343",1],["ACE_DAGR",1]]],["rhsusf_mbav_mg",[["ACE_CableTie",1],["ACE_quikclot",5],["ACE_Flashlight_XL50",1],["SmokeShell",5,1],["rhs_mag_m67",2,1],["ACE_Chemlight_IR",2,1],["B_IR_Grenade",1,1],["rhsusf_100Rnd_762x51_m62_tracer",1,100],["rhsusf_mag_15Rnd_9x19_FMJ",1,15]]],["rhsusf_assault_eagleaiii_ocp",[["ACE_personalAidKit",1],["rhsusf_100Rnd_762x51_m62_tracer",4,100]]],"rhsusf_ach_helmet_headset_ocp_alt","",["rhsusf_bino_m24_ARD","","","",[],[],""],["ItemMap","","","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_14"]];
+    icon = "iconManMG";
 };
 class Cav_B_C_Weapons_M240B_MachinegunnerAmmoBearer_F : Cav_B_Charlie_Weapons_base_F {
     displayName = "$STR_cav_troops_charlie_weapons_m240b_machinegunnerammobearer";
@@ -21,6 +22,7 @@ class Cav_B_C_Weapons_MAAWS_MAAWSGunner_F : Cav_B_Charlie_Weapons_base_F {
     displayName = "$STR_cav_troops_charlie_weapons_maaws_maawsgunner";
     scope = 2;
     loadout = [["rhs_weap_m4a1","","rhsusf_acc_anpeq15_bk_light","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],""],["rhs_weap_maaws","","","rhs_optic_maaws",["rhs_mag_maaws_HE",1],[],""],[],["rhs_uniform_acu_oefcp",[["ACE_EarPlugs",1],["ACE_MapTools",1],["ACE_quikclot",15],["ACE_tourniquet",5],["ACRE_PRC343",1],["ACE_DAGR",1]]],["rhsusf_mbav_mg",[["ACE_CableTie",1],["ACE_Flashlight_XL50",1],["SmokeShell",5,1],["rhs_mag_m67",2,1],["ACE_Chemlight_IR",2,1],["B_IR_Grenade",1,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",8,30]]],["rhsusf_assault_eagleaiii_ocp",[["ACE_personalAidKit",1],["rhs_mag_maaws_HE",3,1]]],"rhsusf_ach_helmet_headset_ocp_alt","",["rhsusf_bino_m24_ARD","","","",[],[],""],["ItemMap","","","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_14"]];
+    icon = "iconManAT";
 };
 class Cav_B_C_Weapons_MAAWS_MAAWSAssistant_F : Cav_B_Charlie_Weapons_base_F {
     displayName = "$STR_cav_troops_charlie_weapons_maaws_maawsassistant";
@@ -42,6 +44,7 @@ class Cav_B_C_Weapons_Mortar_Assistant_F : Cav_B_Charlie_Weapons_base_F {
     displayName = "$STR_cav_troops_charlie_weapons_mortar_assistant";
     scope = 2;
     loadout = [["rhs_weap_m4a1","","rhsusf_acc_anpeq15_bk_light","rhsusf_acc_compm4",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],[],["rhs_uniform_acu_oefcp",[["ACE_EarPlugs",1],["ACE_microDAGR",1],["ACE_MapTools",1],["ACRE_PRC343",1],["ACE_quikclot",20],["ACE_tourniquet",5]]],["rhsusf_mbav_rifleman",[["ACE_CableTie",1],["ACE_artilleryTable",1],["ACE_Flashlight_XL50",1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8,30],["SmokeShell",6,1],["rhs_mag_m67",2,1],["ACE_Chemlight_IR",2,1]]],["B_Kitbag_mcamo",[["ACE_EntrenchingTool",1],["NDS_M_6Rnd_60mm_HE_0",1,6],["NDS_M_6Rnd_60mm_HE",3,6]]],"rhsusf_ach_helmet_camo_ocp","",["ACE_Vector","","","",[],[],""],["ItemMap","","","ItemCompass","ItemWatch","rhsusf_ANPVS_14"]];
+    icon = "iconStaticMortar";
 };
 class Cav_B_C_Weapons_Mortar_AutomaticRifleman_F : Cav_B_Charlie_Weapons_base_F {
     displayName = "$STR_cav_troops_charlie_weapons_mortar_automaticrifleman";
