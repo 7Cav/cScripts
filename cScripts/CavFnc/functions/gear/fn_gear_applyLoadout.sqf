@@ -66,7 +66,7 @@ if !([_unit] call EFUNC(gear,hasSavedLoadout)) then {
 };
 
 // Functions
-if (_unit == player) then {
+if (isPlayer _unit) then {
     // Company
     private _company = getText (_config >> "company");
     _unit setVariable [QEGVAR(Cav,Company), _company];
@@ -79,6 +79,7 @@ if (_unit == player) then {
 
     // Radios
     if (EGVAR(patches,usesACRE)) then {
+        [format["Setting up ACRE preset and radio channels for %1...", name _unit], "Gear Radio", false, true] call FUNC(info);
         [_unit] call EFUNC(gear,setupRadios);
     };
 

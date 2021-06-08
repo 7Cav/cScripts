@@ -15,8 +15,6 @@
  * Public: No
  */
 
-[format["%1 staging options is setup.", player], "Staging"] call FUNC(logInfo);
-
 private _respawnMarkers = [
     "respawn_west",
     "respawn_west_0",
@@ -47,3 +45,5 @@ private _category = ["ACE_SelfActions", QEGVAR(Actions,StagingCategory)];
 [player, _category] call FUNC(addHeal);
 [player, _category] call FUNC(addInsigniaSelectionList);
 [player, true, "ACE_SelfActions"] call FUNC(setupLoadoutSelection);
+
+[format["Staging options for %1 have been setup.", name player], "Staging"] call FUNC(info);
