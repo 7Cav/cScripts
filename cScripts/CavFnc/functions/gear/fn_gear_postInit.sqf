@@ -2,10 +2,11 @@
 
 if (isServer) then {
     call EFUNC(gear,synchGroupIDs);
-    if (EGVAR(patches,usesACRE)) then {
-        ["Setting up ACRE preset for server...", "Gear Radio"] call FUNC(info);
-        call EFUNC(gear,setupRadios);
-    };
+    // DONT TOUCH MY RADIOS
+    //if (EGVAR(patches,usesACRE)) then {
+    //    ["Setting up ACRE preset for server...", "Gear Radio"] call FUNC(info);
+    //    call EFUNC(gear,setupRadios);
+    //};
 };
 
 if (!hasInterface) exitWith {};

@@ -78,10 +78,11 @@ if (isPlayer _unit) then {
     [_unit] call EFUNC(gear,applyCosmetics);
 
     // Radios
-    if (EGVAR(patches,usesACRE)) then {
-        [format["Setting up ACRE preset and radio channels for %1...", name _unit], "Gear Radio", false, true] call FUNC(info);
-        [_unit] call EFUNC(gear,setupRadios);
-    };
+    // DONT TOUCH MY RADIOS
+    //if (EGVAR(patches,usesACRE)) then {
+    //    [format["Setting up ACRE preset and radio channels for %1...", name _unit], "Gear Radio", false, true] call FUNC(info);
+    //    [_unit] call EFUNC(gear,setupRadios);
+    //};
 
     // Earplugs
     if (EGVAR(Settings,addEarplugs)) then {
