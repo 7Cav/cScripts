@@ -704,9 +704,9 @@ force force emr_main_whitelistStr = "";
 force force js_jc_fa18_atflirRequire = true;
 force force js_jc_fa18_canopyLoss = true;
 force force js_jc_fa18_cursorSensitivity = 1;
-force force js_jc_fa18_interactCursor = false;
-force force js_jc_fa18_interactionRadiusMod = 1;
-force force js_jc_fa18_mav_tdcDepressRequiredForMove = false;
+//js_jc_fa18_interactCursor = false;
+//js_jc_fa18_interactionRadiusMod = 1;
+// js_jc_fa18_mav_tdcDepressRequiredForMove = false;
 //js_jc_fa18_showLabels = true;
 
 // GRAD Trenches
