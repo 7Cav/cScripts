@@ -122,7 +122,7 @@ force force ace_hearing_unconsciousnessVolume = 0.4;
 force force ace_interaction_disableNegativeRating = true;
 force force ace_interaction_enableMagazinePassing = true;
 force force ace_interaction_enableTeamManagement = true;
-force force ace_interaction_enableWeaponAttachments = true;
+//ace_interaction_enableWeaponAttachments = true;
 
 // ACE Interaction Menu
 //ace_gestures_showOnInteractionMenu = 2;
