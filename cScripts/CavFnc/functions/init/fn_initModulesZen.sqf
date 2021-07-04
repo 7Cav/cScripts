@@ -116,6 +116,14 @@ if (ace_medical_treatment_locationsBoostTraining) then {
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
+["7Cav Utilities", "Reset Radio",
+    {
+        params ["_modulePos", "_objectPos"];
+        [_modulePos, _objectPos] call FUNC(zenModuleResetPlayerRadio);
+    },
+    "\a3\modules_f\data\portraitmodule_ca.paa"
+] call zen_custom_modules_fnc_register;
+
 
 ["7Cav Mission", "Call Endex",
     {
