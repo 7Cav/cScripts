@@ -15,11 +15,10 @@
  * Public: No
  */
 
-// Check if Zen is active else terminate
 if !(EGVAR(patches,usesZen)) exitWith {};
 
 #ifdef DEBUG_MODE
-    ["Initializing 7Cav custom Zen Modules.", "initModulesZen"] call FUNC(logInfo);
+    ["Initializing 7Cav custom Zen Modules.", "initModulesZen"] call FUNC(info);
 #endif
 
 ["7Cav AI", "Enable Unit Simulation",
@@ -58,56 +57,6 @@ if (ace_medical_treatment_locationsBoostTraining) then {
     "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-/* ["7Cav Logistics", "Medical Re-supply Crate",
-    {
-        params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call FUNC(zenModuleCreateMedicalCrate);
-    },
-    "\z\ACE\addons\medical_gui\ui\cross.paa"
-] call zen_custom_modules_fnc_register; */
-
-/* ["7Cav Logistics", "Crew-Served Weapons Crate",
-    {
-        params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call FUNC(zenModuleCreateSpecialWeaponsCrate);
-    },
-    "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
-] call zen_custom_modules_fnc_register; */
-
-
-/* ["7Cav Vehicle", "Add Vehicle Lable",
-    {
-        params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call FUNC(zenModuleApplyVehicleLable);
-    },
-    "\a3\modules_f\data\portraitmodule_ca.paa"
-] call zen_custom_modules_fnc_register; */
-
-/* ["7Cav Vehicle", "Add Vehicle Inventory",
-    {
-        params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call FUNC(zenModuleApplyVehicleInventory);
-    },
-    "\a3\modules_f\data\portraitmodule_ca.paa"
-] call zen_custom_modules_fnc_register; */
-
-/* ["7Cav Misc", "Assign Doctor",
-    {
-        params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call FUNC(zenModuleMakeDoctor);
-    },
-    "\a3\modules_f\data\portraitmodule_ca.paa"
-] call zen_custom_modules_fnc_register; */
-
-/* ["7Cav Misc", "Assign Engineer",
-    {
-        params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call FUNC(zenModuleMakeEngineer);
-    },
-    "\a3\modules_f\data\portraitmodule_ca.paa"
-] call zen_custom_modules_fnc_register; */
-
-
 ["7Cav Utilities", "Regerar Trooper",
     {
         params ["_modulePos", "_objectPos"];
@@ -115,7 +64,6 @@ if (ace_medical_treatment_locationsBoostTraining) then {
     },
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;
-
 
 ["7Cav Mission", "Call Endex",
     {
@@ -126,5 +74,5 @@ if (ace_medical_treatment_locationsBoostTraining) then {
 ] call zen_custom_modules_fnc_register;
 
 #ifdef DEBUG_MODE
-    ["7Cav Custom Zen Modules initialization complete", "initModulesZen"] call FUNC(logInfo);
+    ["7Cav Custom Zen Modules initialization complete", "initModulesZen"] call FUNC(info);
 #endif

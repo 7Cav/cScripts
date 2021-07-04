@@ -10,7 +10,7 @@ if (is3DEN) exitWith {};
 #endif
 
 // Change inventory content of supply crates on mission start.
-if (EGVAR(Settings,useCustomVehicleSettings)) then {
+if (EGVAR(Settings,useCustomVehicleSystem)) then {
     call FUNC(initVehicle);
 
     // Make sure curator object gets its functions reapplied.
