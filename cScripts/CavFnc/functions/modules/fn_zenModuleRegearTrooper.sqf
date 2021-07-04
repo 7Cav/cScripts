@@ -22,6 +22,7 @@ if (_objectPos isKindOf "Man") exitWith {
     } else {
         [_unit, vehicleVarName _unit] remoteExec [QEFUNC(gear,applyLoadout), _unit];
     };
+    [format["Regeared %1", name _unit]] call zen_common_fnc_showMessage;
 };
 
 ["Not a valid unit"] call zen_common_fnc_showMessage;

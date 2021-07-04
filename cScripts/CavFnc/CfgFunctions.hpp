@@ -159,7 +159,8 @@ class cScripts {
         class zenModuleCreateSupplyCrate {};
 
         class zenModuleRegearTrooper {};
-        
+        class zenModuleResetPlayerRadio {};
+
         class zenModuleCallEndex {};
     };
     class helpers {
