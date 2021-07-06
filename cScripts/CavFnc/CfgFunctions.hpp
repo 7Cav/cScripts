@@ -83,6 +83,8 @@ class cScripts {
         class addHaloJump {};
 
         class setVehicleLable {};
+        
+        class addStagingZone {};
     };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
@@ -96,7 +98,6 @@ class cScripts {
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
-        class addStagingZone {};
         class checkStagingZone {};
 
         class deleteDroppedObjects {};
@@ -159,7 +160,8 @@ class cScripts {
         class zenModuleCreateSupplyCrate {};
 
         class zenModuleRegearTrooper {};
-        
+        class zenModuleResetPlayerRadio {};
+
         class zenModuleCallEndex {};
     };
     class helpers {

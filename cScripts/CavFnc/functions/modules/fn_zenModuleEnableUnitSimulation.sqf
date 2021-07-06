@@ -32,3 +32,5 @@ group _objectPos enableDynamicSimulation false;
     [_x, true] remoteExec ["enableSimulationGlobal", 2];
     [_x, false] remoteExec ["hideObjectGlobal", 2];
 } forEach units group _objectPos;
+
+["Unit have been activated"] call zen_common_fnc_showMessage;

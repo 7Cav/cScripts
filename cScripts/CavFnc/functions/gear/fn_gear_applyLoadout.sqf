@@ -35,7 +35,7 @@ if (_loadConfig) then {
     #endif
 };
 if (_scope == 0) exitWith {
-    [formatText["Scope for loadout %1 for %2 is %3 loadout will not be applied.", _unit, _loadout, _scope], "Gear", true] call FUNC(logWarning);
+    [formatText["Scope for loadout %1 for %2 is %3 loadout will not be applied.", _unit, _loadout, _scope], "Gear", true] call FUNC(warning);
 };
 
 // preLoadout

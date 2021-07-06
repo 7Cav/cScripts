@@ -10,28 +10,28 @@ private _sideConfig    = [side group _unit] call EFUNC(gear,getSideConfig);
 switch (true) do {
     case (isClass (_config >> _variable)): {
         if !(_variable isKindOf [_sideConfig, _config]) then {
-            ["The loadout for """ + _variable + """ does not inherit from """ + _sideConfig + """.", "Gear", true] call FUNC(logWarning);
+            ["The loadout for """ + _variable + """ does not inherit from """ + _sideConfig + """.", "Gear", true] call FUNC(warning);
         };
         _variable
     };
     case (isClass (_config >> _variableName)): {
         if !(_variableName isKindOf [_sideConfig, _config]) then {
-            ["The loadout for """ + _variableName + """ does not inherit from """ + _sideConfig + """.", "Gear", true] call FUNC(logWarning);
+            ["The loadout for """ + _variableName + """ does not inherit from """ + _sideConfig + """.", "Gear", true] call FUNC(warning);
         };
         _variableName
     };
     case (isClass (_config >> _className)): {
         if !(_className isKindOf [_sideConfig, _config]) then {
-            ["The loadout for """ + _className + """ does not inherit from """ + _sideConfig + """.", "Gear", true] call FUNC(logWarning);
+            ["The loadout for """ + _className + """ does not inherit from """ + _sideConfig + """.", "Gear", true] call FUNC(warning);
         };
         _className
     };
     case (isClass (_config >> _sideConfig)): {
-        ["""" + _className + """ does not have a class specific loadout. Applying """ + _sideConfig + """ loadout.", "Gear", true] call FUNC(logWarning);
+        ["""" + _className + """ does not have a class specific loadout. Applying """ + _sideConfig + """ loadout.", "Gear", true] call FUNC(warning);
         _sideConfig
     };
     default {
-        ["""" + _className + """ does not have a class specific loadout. Applying default loadout.", "Gear", true] call FUNC(logWarning);
+        ["""" + _className + """ does not have a class specific loadout. Applying default loadout.", "Gear", true] call FUNC(warning);
         ""
     };
 };

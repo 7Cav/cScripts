@@ -15,7 +15,6 @@
  * Public: No
  */
 
-// Check if Achilles is active else terminate
 if !(EGVAR(patches,usesAchilles)) exitWith {};
 if (EGVAR(patches,usesZen)) exitWith {["Zen mod detected, terminating Achilies modules.", "initModulesAchilles"] call FUNC(logInfo);};
 
