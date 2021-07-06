@@ -100,7 +100,7 @@ class Cav_B_B_Scout_MMG_F_Local : Cav_B_Bravo_base_F {
     displayName = "M240 Gunner";
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
-    loadout = [["rhs_weap_m240B","rhsusf_acc_ARDEC_M240","rhsusf_acc_anpeq16a","rhsusf_acc_ACOG_MDO",["rhsusf_100Rnd_762x51_m62_tracer",100],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_acu_ocp",[["ACRE_PRC343",1],["ACE_quikclot",16],["ACE_EarPlugs",1],["ACE_splint",2],["ACE_tourniquet",4],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1]]],["rhsusf_spcs_ocp_machinegunner",[["SmokeShellGreen",1,1],["HandGrenade",1,1],["SmokeShell",2,1],["rhsusf_100Rnd_762x51_m62_tracer",3,100],["rhsusf_mag_15Rnd_9x19_FMJ",2,15]]],["rhsusf_assault_eagleaiii_ocp",[]],"rhsusf_ach_helmet_headset_ocp_alt","rhsusf_shemagh2_gogg_od",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch","rhsusf_ANPVS_14"]]
+    loadout = [["rhs_weap_m240B","rhsusf_acc_ARDEC_M240","rhsusf_acc_anpeq16a","rhsusf_acc_ACOG_MDO",["rhsusf_100Rnd_762x51_m62_tracer",100],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_acu_ocp",[["ACRE_PRC343",1],["ACE_quikclot",16],["ACE_EarPlugs",1],["ACE_splint",2],["ACE_tourniquet",4],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1]]],["rhsusf_spcs_ocp_machinegunner",[["SmokeShellGreen",1,1],["HandGrenade",1,1],["SmokeShell",2,1],["rhsusf_100Rnd_762x51_m62_tracer",3,100],["rhsusf_mag_15Rnd_9x19_FMJ",2,15]]],["rhsusf_assault_eagleaiii_ocp",[]],"rhsusf_ach_helmet_headset_ocp_alt","rhsusf_shemagh2_gogg_od",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch","rhsusf_ANPVS_14"]];
 };
 
 
