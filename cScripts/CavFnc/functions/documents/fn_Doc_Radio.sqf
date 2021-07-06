@@ -27,7 +27,6 @@ _channelsSr = _channelsSr apply {
     private _channel = [_x, "ACRE_PRC343"] call FUNC(getRadioChannel);
     _channelName = [_channel] call FUNC(getChannelName);
     private _name = _x; 
-    //private _openChannel = format ["<execute expression='[[""ACRE_PRC343""] call acre_api_fnc_getRadioByType, %1] call acre_api_fnc_setRadioChannel; ""Channel changed<br/>%2"" call CBA_fnc_notify;'>%3</execute>", _channel, _channelName, _squadName]; 
     _x = if !(_squadName == "") then {
         format ["    <font color='#ffc61a'>%1</font> - %2", _squadName, _channelName]; 
     } else {
@@ -44,4 +43,9 @@ player setVariable [QEGVAR(document,shortrange_channels), compileFinal str _chan
 
 player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Long Range Radio", call (player getVariable QEGVAR(document,longrange_channels))]], taskNull, "", false];
 player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Radio Channels", call (player getVariable QEGVAR(document,shortrange_channels))]], taskNull, "", false];
-player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Radio", "    <execute expression='[player, true] call cScripts_fnc_gear_setupRadios'>Reprogram Radio</execute> - Use to reset your radios frequencies and channels."]], taskNull, "", false];
+
+if !(EGVAR(patches,usesACRE)) then {
+    if !(EGVAR(Settings,enableACRE)) then {
+        player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Radio", "    <execute expression='[player, true] call cScripts_fnc_gear_setupRadios'>Reprogram Radio</execute> - Use to reset your radios frequencies and channels."]], taskNull, "", false];
+    };
+};

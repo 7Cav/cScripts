@@ -29,20 +29,18 @@ EGVAR(Staging,ZoneStatus) = false;
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
 
-// Mission type
-[
+// 1; Mission
+[ // Mission Type
     QEGVAR(Settings,setMissionType),
     "LIST",
     ["Mission Type", "This will deside on what kind of startup hint you get on mission start."],
     [_cScriptSettings, "1; Mission"],
-    [[0,1,2,3,4], ["Custom", "Operation", "Training", "Public", "Public ALiVE"], 1],
+    [[0,1,2,3], ["Custom", "Operation", "Training", "Public"], 1],
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
-
-// Ai setting
-[
+[ // Ai setting
     QEGVAR(Settings,setAiSystemDifficulty),
     "LIST",
     ["AI Setting", "This adjustes the ai and make them less godlike and more arcade to play against."],
@@ -53,74 +51,41 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-// Acre Radio
-[
+//2; ACRE Radios
+[ // Enable
+    QEGVAR(Settings,enableACRE),
+    "CHECKBOX",
+    ["Enable","Allow cScripts to set up and handle radio distrubution"],
+    [_cScriptSettings, "2; ACRE Radios"],
+    true,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+[ // Long Range Radio Channels
     QEGVAR(Settings,setRadioChannelNames),
     "EDITBOX",
     ["Long Range Radio Channels","Array of radio channels used for ACRE"],
-    [_cScriptSettings, "3; Player Radio"],
+    [_cScriptSettings, "2; ACRE Radios"],
     '["UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","ATLAS","FARP","CONVOY","ZEUS","CAG","COMMAND"]',
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
-[
-    QEGVAR(Settings,removeRadios),
+[ // Squad Radio Channels
+    QEGVAR(Settings,setRadio),
     "CHECKBOX",
-    ["Remove Radios", "Removes player radios on spawn. Radios need to be manually collected. Note that saving a loadout will not give you a radio."],
-    [_cScriptSettings, "3; Player Radio"],
-    false,
+    ["Squad Radio Channels","Allow radio channels to be changed based on player squadname."],
+    [_cScriptSettings, "2; ACRE Radios"],
     true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
-// Mission startup hint settings
-[
-    QEGVAR(Settings,enableStartHint),
-    "CHECKBOX",
-    ["Startup Hint", "Enable or disable startup hints on mission start."],
-    [_cScriptSettings, "2; Mission Startup"],
-    true,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-[
-    QEGVAR(Settings,setStartupDelay),
-    "SLIDER",
-    ["Startup delay time","Define in seconds for how long the startup hint is shown or be enected."],
-    [_cScriptSettings, "2; Mission Startup"],
-    [5, 180, 30, 0],
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-[
-    QEGVAR(Settings,setCustomHintTopic),
-    "EDITBOX",
-    ["Custom hint topic", "When mission is set to Custom this topic will be shown.\nIt will look something like this:\n\n               Welcome!\n      My Custom Topic!\n                 [IMAGE]\n  My custom mission text...\n               Have fun!"],
-    [_cScriptSettings, "2; Mission Startup"],
-    "My custom Mission!",
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-[
-    QEGVAR(Settings,setCustomHintText),
-    "EDITBOX",
-    ["Custom hint text", "When mission is set to Custom this text will be shown.\nIt will look something like this:\n\n               Welcome!\n      My Custom Topic!\n                 [IMAGE]\n  My custom mission text...\n               Have fun!"],
-    [_cScriptSettings, "2; Mission Startup"],
-    "I have design this mission! Yey for me!",
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
 
 
-
-// Diary Records
-[
+// 3; Player
+[ // Documents
     QEGVAR(Settings,showDiaryRecords),
     "CHECKBOX",
     ["Documents","Allow the mission to write diary help documents."],
@@ -130,21 +95,17 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-
-// Rank
-[
+[ // Rank
     QEGVAR(Settings,setPlayerRank),
     "CHECKBOX",
-    ["Rank Based on Prefix","Allow mission to apply rank based on clan name prefixes."],
+    ["Rank","Allow mission to apply arma rank based on name rank prefixes."],
     [_cScriptSettings, "3; Player"],
     true,
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
-
-// Tagging
-[
+[ // Tagging
     QEGVAR(Settings,allowCustomTagging),
     "CHECKBOX",
     ["Custom Tagging","Allow players to spray custom taggs."],
@@ -154,33 +115,17 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-
-// Auto Insignia Application
-[
+[ // Insignia
     QEGVAR(Settings,allowInsigniaApplication),
     "CHECKBOX",
-    ["Apply Insignia","Automaticly apply insignias based on squad name."],
+    ["Insignia","Automaticly apply insignias based on squad name."],
     [_cScriptSettings, "3; Player"],
     true,
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
-
-// Radio Switch
-[
-    QEGVAR(Settings,setRadio),
-    "CHECKBOX",
-    ["Apply Radio Channel","Allow radio channels to be changed based on player squadname."],
-    [_cScriptSettings, "3; Player Radio"],
-    true,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
-// Automatic Earplugs
-[
+[ // Apply Earplugs
     QEGVAR(Settings,addEarplugs),
     "CHECKBOX",
     ["Apply Earplugs","Automaticly apply earplugs to players on spawn and respawn."],
@@ -191,31 +136,41 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-// Vehicle
-[
-    QEGVAR(Settings,useCustomVehicleSettings),
+
+// 4; Vehicle
+[ // Enable
+    QEGVAR(Settings,useCustomVehicleSystem),
     "CHECKBOX",
-    ["Vehicle Systems", "Enables scripted settings and functions to apply to vehicles."],
+    ["Enable", "Enables scripted settings and functions to apply to vehicles."],
     [_cScriptSettings, "4; Vehicle"],
     true,
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
-[
+[ // Loadouts
     QEGVAR(Settings,useCustomVehicleInventory),
     "CHECKBOX",
-    ["Vehicle Loadouts", "Enables scripted loadouts to be applied to vehicles on mission init."],
+    ["Loadouts", "Enables scripted loadouts to be applied to vehicles based on faction"],
     [_cScriptSettings, "4; Vehicle"],
     true,
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
-
+[ // Factions
+    QEGVAR(Settings,vehicleFactions),
+    "EDITBOX",
+    ["Factions","Array of factions allowing loadout changes"],
+    [_cScriptSettings, "4; Vehicle"],
+    '["BLU_F", "BLU_CTRG_F", "BLU_T_F", "BLU_USA_7CAV_F", "rhs_faction_usaf", "rhs_faction_usarmy", "rhs_faction_usarmy_d", "rhs_faction_usarmy_wd", "rhs_faction_usmc", "rhs_faction_usmc_d", "rhs_faction_usmc_wd", "rhs_faction_usn"]',
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
 // Item Replacement system
-[
+[ // Enable
     QEGVAR(Settings,allowReplaceItem),
     "CHECKBOX",
     ["Enable","Allow objects to be replaced with streamlined gear for consistency."],
@@ -225,7 +180,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[
+[ // Medical Items
     QEGVAR(Settings,replaceMedical),
     "LIST",
     ["Medical Items","Allow medical items to be replaced with our custom ones.\nNote: this system will not be disabled if the ace medical convert items is enabled."],
@@ -235,7 +190,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[
+[ // M67 Fragmentation Grenade
     QEGVAR(Settings,replaceHandGrenades),
     "LIST",
     ["M67 Fragmentation Grenade","Force specific usage of sertain objects"],
@@ -245,7 +200,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[
+[ // M84 Stun Grenade
     QEGVAR(Settings,replaceStunGrenades),
     "LIST",
     ["M84 Stun Grenade","Force specific usage of sertain objects"],
@@ -255,7 +210,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[
+[ // Smoke Grenade
     QEGVAR(Settings,replaceSmokeGrenades),
     "LIST",
     ["Smoke Grenade","Force specific usage of sertain objects"],
@@ -267,9 +222,8 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_fnc_addSetting;
 
 
-
-// JumpSimulation
-[
+// 7; Combat Jump Simulation
+[ // Simulation Type
     QEGVAR(Settings,jumpSimulation),
     "LIST",
     ["Simulation Type","Combat jump simulation is a system that checks for lose equiped gear in the form of;\nnight vision googles, hats or glasses and make you lose the on a combat jump.\n    None: No simulation is done.\n    Basic: Lose gear unassigned.\n    Advanced: Lose gear is removed."],
@@ -279,7 +233,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[
+[ // Include Night Vision Googles
     QEGVAR(Settings,jumpSimulationNVG),
     "CHECKBOX",
     ["Include Night Vision Googles","Include equiped Night Vison Googles in the simulation."],
@@ -289,7 +243,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[
+[ // Include Non-combat Googles
     QEGVAR(Settings,jumpSimulationGlasses),
     "CHECKBOX",
     ["Include Non-combat Googles","Include Non-combat Googles in the simulation. This refere to sunshades and simular non-safety googles."],
@@ -299,7 +253,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[
+[ // Include Non-combat Headgear
     QEGVAR(Settings,jumpSimulationHat),
     "CHECKBOX",
     ["Include Non-combat Headgear","Include Non-combat Headgear in the simulation. This refere to hats bandanas and baretes."],
@@ -310,10 +264,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-
-
-// Zeus Moduels
-[
+// 8; Zeus
+[ // Enable Custom Zeus Moduels
     QEGVAR(Settings,enable7cavZeusModules),
     "CHECKBOX",
     ["Enable Custom Zeus Moduels","Allow mission to add 7Cav moduels using the Achilles or ZEN framework."],
@@ -324,11 +276,12 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
+
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-            ["Initialization of CBA Settings completed...", "preInit"] call FUNC(logInfo);
+            ["Initialization of CBA Settings completed...", "preInit"] call FUNC(info);
     } else {
-        diag_log formatText ["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initialization of CBA Settings completed..."];
+        ["Initialization of CBA Settings completed...", "EDEN"] call FUNC(info);
     };
 #endif
 
@@ -336,7 +289,8 @@ if (EGVAR(patches,usesACEArsenal)) then {
     if !(is3DEN) then {
         call FUNC(initACELoadouts);
     } else {
-        0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\functions\init\fn_initACELoadouts.sqf';
+        call FUNC(initACELoadouts);
+        //0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\functions\init\fn_initACELoadouts.sqf';
     };
 };
 
@@ -344,21 +298,8 @@ if (EGVAR(patches,usesACEArsenal)) then {
 if (is3DEN) exitWith {};
 
 #ifdef DEBUG_MODE
-    ["Initializing...", "preInit"] call FUNC(logInfo);
+    ["Initializing...", "preInit"] call FUNC(info);
 #endif
-
-switch (EGVAR(Settings,setMissionType)) do {
-    case (0): { // Custom
-    };
-    case (1): { // Operation
-    };
-    case (2): { // Training
-    };
-    case (3): { // Public
-    };
-    case (4): { // Public Alive
-    };
-};
 
 if (EGVAR(Settings,allowCustomTagging)) then {
     call FUNC(initTagging);
@@ -374,5 +315,5 @@ if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
 };
 
 #ifdef DEBUG_MODE
-    ["Initialization completed", "preInit"] call FUNC(logInfo);
+    ["Initialization completed", "preInit"] call FUNC(info);
 #endif
