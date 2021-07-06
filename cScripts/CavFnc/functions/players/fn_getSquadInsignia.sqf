@@ -122,7 +122,7 @@ switch (_group) do {
     case "VIKING THREE";
     case "VIKING-3": {_return = "Cav_Insignia_Bravo_2_3"};
     case "VIKING FOUR";
-    case "VIKING-4": {_return = "Cav_Insignia_Bravo_2"};
+    case "VIKING-4": {_return = "Cav_Insignia_Bravo_2_4"};
     case "VIKING FIVE";
     case "VIKING-5": {_return = "Cav_Insignia_Bravo_2"};
     case "VIKING SIX";
