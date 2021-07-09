@@ -119,6 +119,7 @@ class cScripts {
         class addObjectToCurator {};
 
         class getChannelName {};
+        class clearRadioIds {};
 
         class createVehicleLable {};
         class getVehicleLable {};

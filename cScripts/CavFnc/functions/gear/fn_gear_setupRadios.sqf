@@ -16,12 +16,11 @@
  */
 
 params [
-    ["_player", objNull, [objNull]],
-    ["_isReprogramming", false, [false]]
+    ["_player", objNull, [objNull]]
 ];
 
-if !(EGVAR(patches,usesACRE)) exitWith {};
 if !(EGVAR(Settings,enableACRE)) exitWith {};
+if !(EGVAR(patches,usesACRE)) exitWith {};
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
 if (count allMissionObjects "acre_api_nameChannels" > 0)       exitWith {};
 
@@ -40,7 +39,6 @@ if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup cor
     [_radio, "default"] call acre_api_fnc_setPreset;
 } count ["ACRE_PRC152", "ACRE_PRC148", "ACRE_PRC117F"];
 
-
 // Set radio channel
 if (isPlayer _player) then {
     if (EGVAR(Settings,setRadio)) then {
@@ -49,10 +47,4 @@ if (isPlayer _player) then {
         private _activeRadio = "ACRE_PRC343";
         [_activeRadio] call FUNC(setActiveRadio);
     };
-};
-
-// Reprogramming message and logging
-if (_isReprogramming) then {
-    "Your radios have been reprogrammed" call CBA_fnc_notify;
-    [format["%1 (%2) have reset the radios", name _player, getPlayerUID _player], "Gear Radio", false, true] call FUNC(info);
 };
