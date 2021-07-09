@@ -28,14 +28,20 @@ private _loadConfig = _loadout isEqualType "";
 // Check Scope
 private _scope = 1;
 if (_loadConfig) then {
-    _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
+    private _classname = _loadout;
+    _config = missionConfigFile >> "CfgLoadouts" >> _classname;
     _scope = getNumber (_config >> "scope");
+    if (_scope == 0) exitWith {
+        [format["Scope for loadout %1 for loadout %2 is %3 loadout will not be applied.", _unit, _classname, _scope], "Gear", true] call FUNC(warning);
+    };
+    _unit setVariable [QEGVAR(Gear,LoadoutClass), _classname];
+
+    // Company
+    private _company = getText (_config >> "company");
+    _unit setVariable [QEGVAR(Cav,Company), _company];
     #ifdef DEBUG_MODE
-        [formatText["Scope for %1 is set %2", _unit, _scope], "Gear"] call FUNC(logInfo);
+        if (_company != "") then {[format["%1 have company variable set to %2", name _unit, _company], "Gear"] call FUNC(info);};
     #endif
-};
-if (_scope == 0) exitWith {
-    [formatText["Scope for loadout %1 for %2 is %3 loadout will not be applied.", _unit, _loadout, _scope], "Gear", true] call FUNC(warning);
 };
 
 // preLoadout
@@ -46,16 +52,17 @@ if (_loadConfig) then {
 // Set loadout
 switch (true) do {
     case _loadArray: {
+        _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
         _unit setUnitLoadout _loadout;
         #ifdef DEBUG_MODE
-            [format["Loadout array applied to %1", _unit], "Gear"] call FUNC(logInfo);
+            [format["Loadout array applied to %1", name _unit], "Gear"] call FUNC(info);
         #endif
     };
     case _loadConfig: {
-        _unit setUnitLoadout parseSimpleArray getText (_config >> "loadout");
-        _unit setVariable [QEGVAR(Gear,LoadoutClass), _loadout];
+        _loadout = parseSimpleArray getText (_config >> "loadout");
+        _unit setUnitLoadout _loadout;
         #ifdef DEBUG_MODE
-            [format["Loadout %1 applied to %2", _loadout, _unit], "Gear"] call FUNC(logInfo);
+            [format["Loadout %1 applied to %2", _classname, name _unit], "Gear"] call FUNC(info);
         #endif
     };
 };
@@ -67,27 +74,23 @@ if !([_unit] call EFUNC(gear,hasSavedLoadout)) then {
 
 // Functions
 if (isPlayer _unit) then {
-    // Company
-    private _company = getText (_config >> "company");
-    _unit setVariable [QEGVAR(Cav,Company), _company];
-    #ifdef DEBUG_MODE
-        if (_company != "") then {[formatText["%1 have company variable set to %2", _unit, _company], "Gear"] call FUNC(logInfo);};
-    #endif
-
     // Handle Cosmetics
     [_unit] call EFUNC(gear,applyCosmetics);
 
     // Radios
-    if (EGVAR(patches,usesACRE)) then {
-        [format["Setting up ACRE preset and radio channels for %1...", name _unit], "Gear Radio", false, true] call FUNC(info);
-        [_unit] call EFUNC(gear,setupRadios);
+    if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
+        [{GVAR(Radio)}, {
+            _this params ["_unit"];
+            [format["Setting up ACRE preset and radio channels for %1...", name _unit], "Gear Radio", false, true] call FUNC(info);
+            [_unit] call EFUNC(gear,setupRadios);
+        }, [_unit]] call CBA_fnc_waitUntilAndExecute;
     };
 
     // Earplugs
     if (EGVAR(Settings,addEarplugs)) then {
         if !([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {[_unit] call ace_hearing_fnc_putInEarplugs;};
         #ifdef DEBUG_MODE
-            [formatText["%1 have got earplugs assigned", _unit], "Gear"] call FUNC(logInfo);
+            [format["%1 have got earplugs assigned", name _unit], "Gear"] call FUNC(info);
         #endif
     };
 
