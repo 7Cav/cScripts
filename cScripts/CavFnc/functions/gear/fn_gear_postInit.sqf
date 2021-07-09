@@ -4,8 +4,12 @@ if (isServer) then {
     call EFUNC(gear,synchGroupIDs);
     if (EGVAR(patches,usesACRE)) then {
         if (EGVAR(Settings,enableACRE)) then {
-            ["Setting up ACRE preset for server...", "Gear Radio"] call FUNC(info);
-            call EFUNC(gear,setupRadios);
+            [{[] call acre_api_fnc_isInitialized}, {
+                GVAR(Radio) = false;
+                ["Setting up ACRE preset for server...", "Gear Radio"] call FUNC(info);
+                call EFUNC(gear,setupRadios);
+                GVAR(Radio) = true;
+            }, [_player]] call CBA_fnc_waitUntilAndExecute;
         };
     };
 };

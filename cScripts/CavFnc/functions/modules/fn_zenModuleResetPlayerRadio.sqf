@@ -17,8 +17,8 @@ params ["_modulePos", "_objectPos"];
 
 if (_objectPos isKindOf "Man") exitWith {
     private _unit = _objectPos;
-    [_unit] remoteExec [QEFUNC(gear,setupRadios), _unit];
-
+    [] remoteExec [QFUNC(clearRadioIds), _unit];
+    [format["Player %1 (%2) radio have been reset", name _unit, getPlayerUID _unit], "Gear Radio", false, true] call FUNC(info);
     [format["Radio reset for %1", name _unit]] call zen_common_fnc_showMessage;
 };
 
@@ -34,7 +34,8 @@ if (_objectPos isKindOf "Man") exitWith {
 
 
         if (_sure) exitWith {
-            [player] remoteExec [QEFUNC(gear,setupRadios), 0];
+            [] remoteExec [QFUNC(clearRadioIds), -2];
+            ["All players radio have been reset in this mission", "Gear Radio", true, true] call FUNC(warning);
             ["Radio have been reset for all players called"] call zen_common_fnc_showMessage;
         };
         ["Nothing have been done"] call zen_common_fnc_showMessage;
@@ -42,3 +43,5 @@ if (_objectPos isKindOf "Man") exitWith {
     {},
     [_modulePos]
 ] call zen_dialog_fnc_create;
+
+["Nothing have been done"] call zen_common_fnc_showMessage;
