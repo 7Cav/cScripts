@@ -28,13 +28,12 @@ private _loadConfig = _loadout isEqualType "";
 // Check Scope
 private _scope = 1;
 if (_loadConfig) then {
-    private _classname = _loadout;
-    _config = missionConfigFile >> "CfgLoadouts" >> _classname;
+    _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
     _scope = getNumber (_config >> "scope");
     if (_scope == 0) exitWith {
-        [format["Scope for loadout %1 for loadout %2 is %3 loadout will not be applied.", _unit, _classname, _scope], "Gear", true] call FUNC(warning);
+        [format["Scope for loadout %1 is %2 and will not be applied to %3", _loadout, _scope, _unit], "Gear", true] call FUNC(warning);
     };
-    _unit setVariable [QEGVAR(Gear,LoadoutClass), _classname];
+    _unit setVariable [QEGVAR(Gear,LoadoutClass), _loadout];
 
     // Company
     private _company = getText (_config >> "company");
@@ -55,15 +54,21 @@ switch (true) do {
         _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
         _unit setUnitLoadout _loadout;
         #ifdef DEBUG_MODE
-            [format["Loadout array applied to %1", name _unit], "Gear"] call FUNC(info);
+            [format["Loadout array applied to %1", _unit], "Gear"] call FUNC(info);
         #endif
     };
     case _loadConfig: {
-        _loadout = parseSimpleArray getText (_config >> "loadout");
-        _unit setUnitLoadout _loadout;
-        #ifdef DEBUG_MODE
-            [format["Loadout %1 applied to %2", _classname, name _unit], "Gear"] call FUNC(info);
-        #endif
+        _loadout = getText (_config >> "loadout");
+        if (_loadout != "") then {
+            _loadout = parseSimpleArray _loadout;
+            _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
+            _unit setUnitLoadout _loadout;
+            #ifdef DEBUG_MODE
+                [format["Loadout %1 applied to %2", _classname, _unit], "Gear"] call FUNC(info);
+            #endif
+        } else {
+            [format["No loadout discoverd nothing will be applied for %1.", _unit], "Gear", true] call FUNC(warning);
+        };
     };
 };
 
@@ -88,10 +93,11 @@ if (isPlayer _unit) then {
 
     // Earplugs
     if (EGVAR(Settings,addEarplugs)) then {
-        if !([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {[_unit] call ace_hearing_fnc_putInEarplugs;};
-        #ifdef DEBUG_MODE
-            [format["%1 have got earplugs assigned", name _unit], "Gear"] call FUNC(info);
-        #endif
+        if !([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {
+            [{
+                [_this select 0] call ace_hearing_fnc_putInEarplugs;
+            }, [_unit]] call CBA_fnc_execNextFrame;
+        };
     };
 
     //Server metrics
