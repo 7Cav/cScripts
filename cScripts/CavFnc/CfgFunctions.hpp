@@ -17,6 +17,8 @@ class cScripts {
 
         class initItemReplace {};
         
+        class initEvents {};
+
         class initCuratorObjectPlaced {};
     };
     class documents {
@@ -202,9 +204,6 @@ class cScripts {
     };
     class depricated {
         file = "cScripts\cavFnc\functions\depricated";
-        class logError {}; // depricated => error
-        class logInfo {}; // depricated => info
-        class logWarning {}; // depricated => warning
         class addAceCategory {}; // depricated => createActionCategory
     };
 };

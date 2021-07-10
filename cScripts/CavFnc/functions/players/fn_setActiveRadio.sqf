@@ -26,7 +26,7 @@ if (!isPlayer player) exitWith {};
         private _radioId = [_this select 0] call acre_api_fnc_getRadioByType;
         [_radioId] call acre_api_fnc_setCurrentRadio;
         #ifdef DEBUG_MODE
-            [format["%1 radio %2 is current radio", player, call acre_api_fnc_getCurrentRadio], "Radio"] call FUNC(logInfo);
+            [format["%1 radio %2 is current radio", player, call acre_api_fnc_getCurrentRadio], "Radio"] call FUNC(info);
         #endif
         [] call acre_api_fnc_getCurrentRadio;
     }, [_this select 0], 1] call CBA_fnc_waitAndExecute;

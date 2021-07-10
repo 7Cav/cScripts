@@ -14,7 +14,7 @@ params [["_vehicle", objNull, [objNull]]];
 
 if (didJIP) exitWith {};
 if (!isServer) exitWith {};
-if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle]] call FUNC(logWarning);};
+if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[format["Vehicle inventory already applied for %1.", _vehicle]] call FUNC(warning);};
 
 private _useAceRopes = if (!isNil {ace_fastroping_requireRopeItems}) then {ace_fastroping_requireRopeItems} else {false};
 
@@ -157,7 +157,7 @@ private _allEmpty = [];
 
 if (typeOf _vehicle in _allVehicles) then {
     #ifdef DEBUG_MODE
-        [formatText["Added vehicle inventory to %1.", _vehicle]] call FUNC(logInfo);
+        [format["Added vehicle inventory to %1.", _vehicle]] call FUNC(info);
     #endif
     clearweaponcargoGlobal _vehicle;
     clearmagazinecargoGlobal _vehicle;
@@ -420,7 +420,7 @@ switch (true) do {
 
     case (typeOf _vehicle in _empty): {
         #ifdef DEBUG_MODE
-            [formatText["Emptying vehicle inventory for %1.", _vehicle]] call FUNC(logInfo);
+            [format["Emptying vehicle inventory for %1.", _vehicle]] call FUNC(info);
         #endif
         clearweaponcargoGlobal _vehicle;
         clearmagazinecargoGlobal _vehicle;

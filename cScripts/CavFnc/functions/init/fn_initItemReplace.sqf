@@ -17,7 +17,7 @@
 
 
 #ifdef DEBUG_MODE
-    ["Initializing Item replacement system."] call FUNC(logInfo);
+    ["Initializing Item replacement system."] call FUNC(info);
 #endif
 
 
@@ -71,5 +71,5 @@ switch (EGVAR(Settings,replaceSmokeGrenades)) do {
 };
 
 #ifdef DEBUG_MODE
-    ["Item replacement initialization completed."] call FUNC(logInfo);
+    ["Item replacement initialization completed."] call FUNC(info);
 #endif

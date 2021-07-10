@@ -37,7 +37,7 @@ params [
 ];
 
 #ifdef DEBUG_MODE
-    [formatText["Starter Crate system applied to %1.", _object]] call FUNC(logInfo);
+    [format["Starter Crate system applied to %1.", _object]] call FUNC(info);
 #endif
 
 // Lowercase

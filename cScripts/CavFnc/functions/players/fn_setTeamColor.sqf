@@ -48,7 +48,7 @@ switch (_getTeamName) do {
 private _return = _getTeamName;
 
 #ifdef DEBUG_MODE
-    [format ["%1 was assigned as team %2.", player, _getTeamName], "SetTeamColor"] call FUNC(logInfo);
+    [format ["%1 was assigned as team %2.", player, _getTeamName], "SetTeamColor"] call FUNC(info);
 #endif
 
 _return;

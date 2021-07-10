@@ -27,10 +27,10 @@ params [
     ["_dest", nil, [objNull, grpNull, "", locationNull, taskNull, []]]
 ];
 
-if (isNil "_dest") exitWith {[formatText["No valid destination given for teleporter %1 (Action named; %2).", _object, _action]] call FUNC(logError)};
+if (isNil "_dest") exitWith {[format["No valid destination given for teleporter %1 (Action named; %2).", _object, _action]] call FUNC(error)};
 
 #ifdef DEBUG_MODE
-    [format["Teleporter action, named '%1', added to %2 with destination: %3.", _action, _object, _dest]] call FUNC(logInfo);
+    [format["Teleporter action, named '%1', added to %2 with destination: %3.", _action, _object, _dest]] call FUNC(info);
 #endif
 
 _object addAction [
@@ -65,7 +65,7 @@ _object addAction [
         [player, _height] call CBA_fnc_setHeight;
         titleText ["", "BLACK IN", 3];
         #ifdef DEBUG_MODE
-            [format["%1 have been teleportet to %2 at height %3.", name player, _dest, _height]] call FUNC(logInfo);
+            [format["%1 have been teleportet to %2 at height %3.", name player, _dest, _height]] call FUNC(info);
         #endif
 
     }, _dest, 1.5, true, true, "", "true", 10

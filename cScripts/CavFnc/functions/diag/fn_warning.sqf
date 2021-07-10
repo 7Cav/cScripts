@@ -10,7 +10,7 @@
  *
  * Example:
  * ["Something is wrong here."] call FUNC(warning)
- * [formatText["%1 is a player.", player]] call FUNC(warning)
+ * [format["%1 is a player.", player]] call FUNC(warning)
  *
  */
 

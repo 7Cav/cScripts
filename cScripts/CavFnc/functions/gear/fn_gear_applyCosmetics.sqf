@@ -21,7 +21,7 @@ if (!isNil{_vehicle getVariable QEGVAR(Player,Name)}) then {
     private _unitName = [_unit, 'PROFILE'] call FUNC(getPlayerName);
     _unit setVariable [QEGVAR(Player,Name), _unitName];
     #ifdef DEBUG_MODE
-        [formatText["%1 name is %2", _unit, _unitName], "Gear"] call FUNC(info);
+        [format["%1 name is %2", _unit, _unitName], "Gear"] call FUNC(info);
     #endif
 };
 

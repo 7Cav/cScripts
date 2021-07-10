@@ -56,7 +56,7 @@ params ["_modulePos", "_objectPos"];
                 if !(_weapon in _safedWeapons) then {  
                     [player, currentWeapon player, currentMuzzle player] call ace_safemode_fnc_lockSafety;
                     #ifdef DEBUG_MODE
-                        [formatText["%1 weapon (%2) have been set to safe.", player, _weapon]] call FUNC(logInfo);
+                        [format["%1 weapon (%2) have been set to safe.", player, _weapon]] call FUNC(info);
                     #endif
                 };
             } remoteExecCall ["bis_fnc_call", -2]; 
@@ -74,7 +74,7 @@ params ["_modulePos", "_objectPos"];
                 (group _x) setBehaviourStrong "CARELESS";
                 (group _x) setCombatMode "BLUE";
                 #ifdef DEBUG_MODE
-                    [formatText["AI %1 group (%2) have been set to careless and blue.", _x, group _x]] call FUNC(logInfo);
+                    [format["AI %1 group (%2) have been set to careless and blue.", _x, group _x]] call FUNC(info);
                 #endif
             } forEach ((allUnits) - (allPlayers));
         };
@@ -94,7 +94,7 @@ params ["_modulePos", "_objectPos"];
                                 private _hftext = "Your not allowed to discharge your weapon during Endex.<br />";
 
                                 hint parseText (_hftitle + _hfimage + _hftext);
-                                format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(logInfo), 0];
+                                format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(info), 0];
                                 if ( _unit getVariable [QEGVAR(player,endexFiredWeapon), ""] != _muzzle ) then {
                                     format ["Hold your fire %1 %2!", [_unit,'CAV'] call FUNC(getPlayerRank), [_unit,'PROFILE'] call FUNC(getPlayerName)] remoteExecCall ["systemChat", 0];
                                     _unit setVariable [QEGVAR(player,endexFiredWeapon), _muzzle];
@@ -109,7 +109,7 @@ params ["_modulePos", "_objectPos"];
         if (isNil{missionNamespace getVariable QEGVAR(Mission,Endex)}) then {
             missionNamespace setVariable [QEGVAR(Mission,Endex), True];
             #ifdef DEBUG_MODE
-                [formatText["Mission var %1 is set %2", QEGVAR(Mission,Endex), missionNamespace getVariable QEGVAR(Mission,Endex)]] call FUNC(logInfo);
+                [format["Mission var %1 is set %2", QEGVAR(Mission,Endex), missionNamespace getVariable QEGVAR(Mission,Endex)]] call FUNC(info);
             #endif
         };
         ["Endex called"] call zen_common_fnc_showMessage;

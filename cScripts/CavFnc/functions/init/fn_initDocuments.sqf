@@ -18,10 +18,10 @@
 waitUntil {!isNull player && player == player};
 waitUntil {profileName != ""};
 
-if (!isNil{player getVariable QEGVAR(player,documents)}) exitWith {[formatText["Diary Records already applied for %1.", player]] call FUNC(logWarning);};
+if (!isNil{player getVariable QEGVAR(player,documents)}) exitWith {[format["Diary Records already applied for %1.", player]] call FUNC(warning);};
 
 #ifdef DEBUG_MODE
-    [format["Applying Diary Records to %1...", player]] call FUNC(logInfo);
+    [format["Applying Diary Records to %1...", player]] call FUNC(info);
 #endif
 
 // Add New Topic (7th Cavalry)
@@ -36,7 +36,7 @@ if !(player diarySubjectExists "7Cav") then {
 
     // debug
     #ifdef DEBUG_MODE
-        [format["Added Diary Records and 7th Cavalry category to %1.", player]] call FUNC(logInfo);
+        [format["Added Diary Records and 7th Cavalry category to %1.", player]] call FUNC(info);
     #endif
 };
 
@@ -53,7 +53,7 @@ if !(player diarySubjectExists "Chklists") then {
 
     // debug
     #ifdef DEBUG_MODE
-        [format["Added Diary Records and Checklists category to %1.", player]] call FUNC(logInfo);
+        [format["Added Diary Records and Checklists category to %1.", player]] call FUNC(info);
     #endif
 };
 
@@ -69,7 +69,7 @@ if !(player diarySubjectExists "radioReports") then {
 
     // debug
     #ifdef DEBUG_MODE
-        [format["Added Diary Records and Radio Reports category to %1.", player]] call FUNC(logInfo);
+        [format["Added Diary Records and Radio Reports category to %1.", player]] call FUNC(info);
     #endif
 };
 

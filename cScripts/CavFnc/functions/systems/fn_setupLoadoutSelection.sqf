@@ -26,7 +26,7 @@ params[
 ];
 
 #ifdef DEBUG_MODE
-    [formatText["Setting up loadout selections on %1.", _object], "LoadoutSelector"] call FUNC(logInfo);
+    [format["Setting up loadout selections on %1.", _object], "LoadoutSelector"] call FUNC(info);
 #endif
 
 // Setup categories
@@ -43,12 +43,12 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     private _category = getArray (missionConfigFile >> 'CfgLoadouts' >> _class >> "category");
     
     #ifdef DEBUG_MODE
-        [formatText["Setting up %1 loadout on %2.", _displayName, _object], "LoadoutSelector"] call FUNC(logInfo);
+        [format["Setting up %1 loadout on %2.", _displayName, _object], "LoadoutSelector"] call FUNC(info);
     #endif
     _category = [_aceCategory, _mainCategory] + _category;
     [_object, _displayName, _classname, _icon, _category, _company, _allowOnlyForCompany] call FUNC(addLoadoutSelection);
 } forEach _classnameList;
 
 #ifdef DEBUG_MODE
-    [formatText["Done setting up quick selections on %1.", _object]] call FUNC(logInfo);
+    [format["Done setting up quick selections on %1.", _object]] call FUNC(info);
 #endif 

@@ -16,10 +16,10 @@
  */
 
 if !(EGVAR(patches,usesAchilles)) exitWith {};
-if (EGVAR(patches,usesZen)) exitWith {["Zen mod detected, terminating Achilies modules.", "initModulesAchilles"] call FUNC(logInfo);};
+if (EGVAR(patches,usesZen)) exitWith {["Zen mod detected, terminating Achilies modules.", "initModulesAchilles"] call FUNC(warning);};
 
 #ifdef DEBUG_MODE
-    ["Initializing 7Cav custom Achilles Modules."] call FUNC(logInfo);
+    ["Initializing 7Cav custom Achilles Modules."] call FUNC(info);
 #endif
 
 ["7Cav AI", "Enable Unit Simulation",{
@@ -96,5 +96,5 @@ if (EGVAR(patches,usesAlive)) then {
 };
 
 #ifdef DEBUG_MODE
-    ["7Cav Custom Achilles Modules initialization complete"] call FUNC(logInfo);
+    ["7Cav Custom Achilles Modules initialization complete"] call FUNC(info);
 #endif

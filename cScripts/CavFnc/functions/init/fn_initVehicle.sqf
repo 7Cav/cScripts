@@ -13,7 +13,7 @@
  */
 
 #ifdef DEBUG_MODE
-    ["Applying Event Handers (init) to vehicles for function expantions...", "InitVehicle"] call FUNC(logInfo);
+    ["Applying Event Handers (init) to vehicles for function expantions...", "InitVehicle"] call FUNC(info);
 #endif
 
 /* Add Settings to vehicles */
@@ -48,7 +48,7 @@
 /* Add inventory to all map vehicles */
 if (EGVAR(Settings,useCustomVehicleInventory)) then {
     #ifdef DEBUG_MODE
-        ["Applying inventory to vehicles...", "InitVehicle"] call FUNC(logInfo);
+        ["Applying inventory to vehicles...", "InitVehicle"] call FUNC(info);
     #endif
     {[_x] call FUNC(setVehicleInventory);} forEach vehicles;
 };

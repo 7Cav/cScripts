@@ -7,13 +7,13 @@
  */
 
 #ifdef DEBUG_MODE
-    ["init Initializing.", "init"] call FUNC(logInfo);
-    [formatText["cScripts Version %1 is running.",VERSION], "init"] call FUNC(logInfo);
-    [formatText["Debug mode is currently active."], "init"] call FUNC(logWarning);
+    ["init Initializing.", "init"] call FUNC(info);
+    [format["cScripts Version %1 is running.",VERSION], "init"] call FUNC(info);
+    [format["Debug mode is currently active."], "init"] call FUNC(warning);
     logEntities;
 #endif
 
-if !(isMultiplayer) then {["Mission is running on singelplayer enviroment."] call FUNC(logWarning)};
+if !(isMultiplayer) then {["Mission is running on singelplayer enviroment."] call FUNC(warning)};
 
 enableSaving [false, false];
 tawvd_disablenone = true;
@@ -23,7 +23,7 @@ ACE_maxWeightDrag = 10000;
 
 
 #ifdef DEBUG_MODE
-    ["init initialization completed.", "init"] call FUNC(logInfo);
+    ["init initialization completed.", "init"] call FUNC(info);
 #endif
 
 /* APPLY STUFF ONLY BELOW THIS LINE */

@@ -12,10 +12,10 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Settings)}) exitWith {[formatText["Vehicle settings already applied for %1.", _vehicle]] call FUNC(logWarning);};
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Settings)}) exitWith {[format["Vehicle settings already applied for %1.", _vehicle]] call FUNC(warning);};
 
 #ifdef DEBUG_MODE
-    [formatText["Applying vehicle settings to %1.", _vehicle]] call FUNC(logInfo);
+    [format["Applying vehicle settings to %1.", _vehicle]] call FUNC(info);
 #endif
 
 private _transportRotary = [
