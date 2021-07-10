@@ -6,7 +6,7 @@
 if (is3DEN) exitWith {};
 
 #ifdef DEBUG_MODE
-    ["Initializing...", "postInit"] call FUNC(logInfo);
+    ["Initializing...", "postInit"] call FUNC(info);
 #endif
 
 // Change inventory content of supply crates on mission start.
@@ -30,5 +30,5 @@ if (EGVAR(Settings,showDiaryRecords)) then {
 };
 
 #ifdef DEBUG_MODE
-    ["Initialization completed", "postInit"] call FUNC(logInfo);
+    ["Initialization completed", "postInit"] call FUNC(info);
 #endif

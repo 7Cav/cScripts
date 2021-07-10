@@ -21,7 +21,7 @@ params [
 ];
 
 #ifdef DEBUG_MODE
-    [formatText["Fieald Hostiptal applied to %1.", _crate]] call FUNC(logInfo);
+    [format["Fieald Hostiptal applied to %1.", _crate]] call FUNC(info);
 #endif
 
 // Make addAction Topic

@@ -33,7 +33,7 @@ private _loadoutList = "getText (_x >> 'displayName') != ''" configClasses (miss
     private _br = toString[13,10];
     _string = formatText["[""[7CAV] %1 - %2"", %3] call ace_arsenal_fnc_addDefaultLoadout; //%4%5", _unitCompany, _unitName, _loadoutArray, _loadout, _br];
 
-    [_string, "Export"] call FUNC(logInfo);
+    [_string, "Export"] call FUNC(info);
     LOADOUTARRAY pushBack _string;
 } forEach _loadoutList;
 

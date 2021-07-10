@@ -5,11 +5,7 @@
  */
 
 #ifdef DEBUG_MODE
-    if !(is3DEN) then {
-            ["Initializing CBA Settings...", "preInit"] call FUNC(logInfo);
-    } else {
-        diag_log formatText ["[%1] (%2) %3: %4", QUOTE(PREFIX), "INFO", "EDEN", "Initializing CBA Settings..."];
-    };
+    ["Initializing CBA Settings...", "preInit"] call FUNC(info);
 #endif
 
 // Check installed moduels
@@ -279,7 +275,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
-            ["Initialization of CBA Settings completed...", "preInit"] call FUNC(info);
+        ["Initialization of CBA Settings completed...", "preInit"] call FUNC(info);
     } else {
         ["Initialization of CBA Settings completed...", "EDEN"] call FUNC(info);
     };
@@ -313,6 +309,8 @@ if (EGVAR(Settings,enable7cavZeusModules)) then {
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
     call FUNC(initAI);
 };
+
+call FUNC(initEvents);
 
 #ifdef DEBUG_MODE
     ["Initialization completed", "preInit"] call FUNC(info);

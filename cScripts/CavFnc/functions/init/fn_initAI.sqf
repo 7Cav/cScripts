@@ -13,7 +13,7 @@
  */
 
 #ifdef DEBUG_MODE
-    ["Applying Event Handers (init) to all non player characters...", "InitAI"] call FUNC(logInfo);
+    ["Applying Event Handers (init) to all non player characters...", "InitAI"] call FUNC(info);
 #endif
 
 if !(isServer) exitWith {};
@@ -99,7 +99,7 @@ if !(isServer) exitWith {};
                     ["reloadSpeed", _unit skill "reloadSpeed"],
                     ["spottime", _unit skill "spottime"],
                     ["spotdistance", _unit skill "spotdistance"]
-                ]], "InitAI"] call FUNC(logInfo);
+                ]], "InitAI"] call FUNC(info);
             #endif
         };
     };

@@ -26,7 +26,7 @@ if !(isServer) exitWith {};
 _getType = toUpper(_getType);
 
 if (!isMultiplayer) then {
-    [formatText["Singelplayer missions can't obtain clan tags name for %1 is %2", _player, profileName], "getPlayerName"] call FUNC(logWarning);
+    [format["Singelplayer missions can't obtain clan tags name for %1 is %2", _player, profileName], "getPlayerName"] call FUNC(warning);
 };
 
 // Profile name

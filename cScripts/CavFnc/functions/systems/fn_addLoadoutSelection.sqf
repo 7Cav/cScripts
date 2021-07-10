@@ -48,5 +48,5 @@ private _actionType = if (isPlayer _object) then {1} else {0};
 [_object, _actionType, _category, _action] call ace_interact_menu_fnc_addActionToObject;
 
 #ifdef DEBUG_MODE
-    [format["%1; selector '%2' added for '%3' crate.", _object, _lable, _platoon], "LoadoutSelector"] call FUNC(logInfo);
+    [format["%1; selector '%2' added for '%3' crate.", _object, _lable, _platoon], "LoadoutSelector"] call FUNC(info);
 #endif

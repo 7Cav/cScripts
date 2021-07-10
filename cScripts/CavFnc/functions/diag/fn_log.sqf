@@ -11,7 +11,7 @@
  *
  * Example:
  * ["Something is wrong here."] call FUNC(log)
- * [formatText["%1 is a player.", player]] call FUNC(log)
+ * [format["%1 is a player.", player]] call FUNC(log)
  *
  */
 
@@ -23,20 +23,20 @@ params [
     ["_type", "LOG", [""]]
 ];
 
-private _prefix = formatText ["[%1] ", QUOTE(PREFIX)];
+private _prefix = format ["[%1] ", QUOTE(PREFIX)];
 
-_componant = if ( _componant != "" ) then {formatText["(%1) ", _componant]} else {""};
+_componant = if ( _componant != "" ) then {format["(%1) ", _componant]} else {""};
 
-_type = formatText ["%1", _type];
+_type = format ["%1", _type];
 
 private _logMessage = formatText ["%1%2%3: %4", _prefix, _componant, _type, _message];
 
 diag_log _logMessage;
 
 if (_sendToServer) then {
-    [_logMessage] remoteExecCall ["diag_log", 2];
+    [QEGVAR(event,logServer), _logMessage] call CBA_fnc_serverEvent;
 };
 
 if (_showInChat && (!isMultiplayer || {is3DENMultiplayer})) then {
-    systemChat str _logMessage;
+    systemChat _logMessage;
 };

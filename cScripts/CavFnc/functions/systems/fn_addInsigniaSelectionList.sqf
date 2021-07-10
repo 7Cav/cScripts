@@ -13,7 +13,7 @@
  * Public: No 
  */
 
-if !(isClass (configFile >> "CfgPatches" >> "cav_insignia")) exitWith {["cfgPatches for Cav Addon Insignias not detected, terminating insignia selection tab on object."] call FUNC(logInfo);};
+if !(isClass (configFile >> "CfgPatches" >> "cav_insignia")) exitWith {["cfgPatches for Cav Addon Insignias not detected, terminating insignia selection tab on object."] call FUNC(info);};
 
 params [
     ["_object", objNull, [objNull]],
@@ -21,7 +21,7 @@ params [
 ];
 
 #ifdef DEBUG_MODE
-    [format["Setting up insignia selecton list on %1...",_object]] call FUNC(logInfo);
+    [format["Setting up insignia selecton list on %1...",_object]] call FUNC(info);
 #endif
 
 private _defaultCategory = _aceCategory + ["cScriptInsigniaSelectionMenu"];
@@ -104,5 +104,5 @@ if (!isPlayer _object) then {
 [_object,"Ranger","Specialized_Ranger","z\cav\addons\insignia\data\specialized_ranger.paa",_specialCategory] call FUNC(addInsigniaSelection);
 
 #ifdef DEBUG_MODE
-    [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(logInfo);
+    [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(info);
 #endif

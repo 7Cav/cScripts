@@ -33,5 +33,5 @@ _player setVariable [QEGVAR(Cav,Rank), _getRank];
 
 
 #ifdef DEBUG_MODE
-    [format ["Rank %1 is applied to %2", _getRank, _player], "SetPlayerRank"] call FUNC(logInfo);
+    [format ["Rank %1 is applied to %2", _getRank, _player], "SetPlayerRank"] call FUNC(info);
 #endif

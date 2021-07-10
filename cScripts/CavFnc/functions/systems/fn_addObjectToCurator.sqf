@@ -15,7 +15,7 @@
 params [["_object", objNull, [objNull]]];
 
 #ifdef DEBUG_MODE
-    [format["%1 have been added to all curators.", _object]] call FUNC(logInfo);
+    [format["%1 have been added to all curators.", _object]] call FUNC(info);
 #endif
 
 [{

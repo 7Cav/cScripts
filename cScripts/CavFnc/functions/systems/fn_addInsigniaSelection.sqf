@@ -31,7 +31,7 @@ if (_className != '') then {
 };
 
 #ifdef DEBUG_MODE
-    [format["Created insignia selection for '%1' on '%2'", _className, _object]] call FUNC(logInfo);
+    [format["Created insignia selection for '%1' on '%2'", _className, _object]] call FUNC(info);
 #endif
 
 //add addAction

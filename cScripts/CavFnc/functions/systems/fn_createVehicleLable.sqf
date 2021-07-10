@@ -25,7 +25,7 @@ params [
 ];
 
 #ifdef DEBUG_MODE
-    [formatText["Texture label ""%1"" is being created for %2.", _texture, _vehicle]] call FUNC(logInfo);
+    [format["Texture label ""%1"" is being created for %2.", _texture, _vehicle]] call FUNC(info);
 #endif
 
 if (!isServer) exitWith {};

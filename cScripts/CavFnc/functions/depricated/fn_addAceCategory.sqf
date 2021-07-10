@@ -25,5 +25,5 @@ params [
     ["_condition", true]
 ];
 
-[formatText["Function 'addAceCategory' on %1 is depricated (addAceCategory => createActionCategory)...", _object], true, "DEPRICATED"] call FUNC(log);
+[format["Function 'addAceCategory' on %1 is depricated (addAceCategory => createActionCategory)...", _object], true, "DEPRICATED"] call FUNC(warning);
 [_object, _name, _lable, _icon, _category, {_condition}] call FUNC(createActionCategory);
