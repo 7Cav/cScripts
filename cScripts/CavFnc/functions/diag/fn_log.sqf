@@ -38,5 +38,5 @@ if (_sendToServer) then {
 };
 
 if (_showInChat && (!isMultiplayer || {is3DENMultiplayer})) then {
-    systemChat _logMessage;
+    systemChat str _logMessage;
 };
