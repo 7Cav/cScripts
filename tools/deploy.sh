@@ -13,7 +13,6 @@ python3 tools/build.py --deploy
 
 # Special Builds
 python3 tools/build.py --build config_debug.json --deploy
-python3 tools/build.py --build config_public.json --deploy
 python3 tools/build.py --build config_noLoadouts.json --deploy
 
 sed -i "s/DEVBUILD/${VERSION_TAG}/g" Compositions/*/header.sqe
