@@ -19,7 +19,7 @@ private _playerRadios = [] call acre_api_fnc_getCurrentRadioList;
 {
     private _base = [_x] call acre_api_fnc_getBaseRadio;
     player removeItem _x;
-    player addItem _x;
+    player addItem _base;
 } forEach _playerRadios;
 
 [{[player] call EGVAR(gear,setupRadios);}] call CBA_fnc_execNextFrame;
