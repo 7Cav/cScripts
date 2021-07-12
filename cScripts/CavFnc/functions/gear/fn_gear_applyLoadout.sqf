@@ -78,21 +78,18 @@ if !([_unit] call EFUNC(gear,hasSavedLoadout)) then {
 };
 
 // Functions
-if (isPlayer _unit) then {
+if (hasInterface || {_unit == player}) then {
     // Handle Cosmetics
     [_unit] call EFUNC(gear,applyCosmetics);
 
     // Radios
     if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
-        [{GVAR(Radio)}, {
-            _this params ["_unit"];
-            [format["Setting up ACRE preset for %1...", name _unit], "Gear Radio", false, true] call FUNC(info);
-            [_unit] call EFUNC(gear,setupRadios);
-        }, [_unit]] call CBA_fnc_waitUntilAndExecute;
+        [format["Setting up ACRE preset for %1...", name _unit], "Gear Radio", false, true] call FUNC(info);
+        [_unit] call EFUNC(gear,setupRadios);
 
         // Channels and active radio
         if (EGVAR(Settings,setRadio)) then {
-            [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
+            [{[] call acre_api_fnc_isInitialized}, {
                 _this params ["_unit"];
                 [format["Setting up ACRE primary radio and channels for %1...", name _unit], "Gear Radio"] call FUNC(info);
                 [_unit] call FUNC(setRadioChannel);
