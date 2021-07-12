@@ -15,6 +15,8 @@
  * Public: No
  */
 
+if (isServer) exitWith {};
+
 private _respawnMarkers = [
     "respawn_west",
     "respawn_west_0",
