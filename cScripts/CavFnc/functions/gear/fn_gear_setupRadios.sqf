@@ -4,23 +4,16 @@
  * This function setup radios and apply radio channel to them on server and player.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Show Message For radio reprogramming <BOOL> (Optional)
+ * Nothing
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player] call cScripts_fnc_gear_setupRadios
+ * [] call cScripts_fnc_gear_setupRadios
  *
  */
 
-params [
-    ["_player", objNull, [objNull]]
-];
-
-if !(EGVAR(Settings,enableACRE)) exitWith {};
-if !(EGVAR(patches,usesACRE)) exitWith {};
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
 if (count allMissionObjects "acre_api_nameChannels" > 0)       exitWith {};
 
@@ -38,13 +31,3 @@ if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup cor
     } forEach _lrChannels;
     [_radio, "default"] call acre_api_fnc_setPreset;
 } count ["ACRE_PRC152", "ACRE_PRC148", "ACRE_PRC117F"];
-
-// Set radio channel
-if (isPlayer _player) then {
-    if (EGVAR(Settings,setRadio)) then {
-        [_player] call FUNC(setRadioChannel);
-
-        private _activeRadio = "ACRE_PRC343";
-        [_activeRadio] call FUNC(setActiveRadio);
-    };
-};
