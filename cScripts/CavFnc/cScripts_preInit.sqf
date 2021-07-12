@@ -19,8 +19,8 @@ EGVAR(patches,usesAchilles)     = isClass (configFile >> "CfgPatches" >> "achill
 EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_main");
 
 // Global Variables
+GVAR(Radio) = false;
 EGVAR(Staging,ZoneStatus) = false;
-
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";

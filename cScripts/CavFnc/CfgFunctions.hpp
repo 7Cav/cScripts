@@ -184,7 +184,6 @@ class cScripts {
         class gear_applyAbilities {};
 
         class gear_selectLoadout {};
-        class gear_synchGroupIDs {};   
         class gear_getSideConfig {};
         
         class gear_setupRadios {};
