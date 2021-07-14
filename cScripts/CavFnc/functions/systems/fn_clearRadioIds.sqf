@@ -23,7 +23,6 @@ private _playerRadios = [] call acre_api_fnc_getCurrentRadioList;
 } forEach _playerRadios;
 
 [{
-    [player] call EGVAR(gear,setupRadios);
     [player] call FUNC(setRadioChannel);
     ["ACRE_PRC343"] call FUNC(setActiveRadio);
 }] call CBA_fnc_execNextFrame;
