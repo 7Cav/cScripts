@@ -21,6 +21,13 @@ tawvd_disablenone = true;
 ACE_maxWeightCarry = 7500;
 ACE_maxWeightDrag = 10000;
 
+// ACRE radio init
+if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
+    GVAR(Radio) = false;
+    ["Setting up ACRE preset...", "Gear Radio"] call FUNC(info);
+    call EFUNC(gear,setupRadios);
+    GVAR(Radio) = true;
+};
 
 #ifdef DEBUG_MODE
     ["init initialization completed.", "init"] call FUNC(info);
