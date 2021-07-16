@@ -29,9 +29,9 @@ _componant = if ( _componant != "" ) then {format["(%1) ", _componant]} else {""
 
 _type = format ["%1", _type];
 
-private _logMessage = formatText ["%1%2%3: %4", _prefix, _componant, _type, _message];
+private _logMessage = format ["%1%2%3: %4", _prefix, _componant, _type, _message];
 
-diag_log _logMessage;
+diag_log text _logMessage;
 
 if (_sendToServer) then {
     [QEGVAR(event,logServer), _logMessage] call CBA_fnc_serverEvent;
