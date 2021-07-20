@@ -295,6 +295,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_wirecutter",10];
         _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
         _crate addItemCargoGlobal ["ACE_IR_Strobe_Item",20];
+        _crate addItemCargoGlobal ["ItemAndroid", 10];
+        _crate addItemCargoGlobal ["ItemcTab", 10];
         
 
         //================== MEDICAL ==================\\
@@ -319,6 +321,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 
         _crate addBackpackCargoGlobal ["B_Carryall_mcamo",10];
         _crate addBackpackCargoGlobal ["B_UAV_01_backpack_F",10];
+        _crate addBackpackCargoGlobal ["B_Kitbag_mcamo",10];
+        _crate addBackpackCargoGlobal ["NDS_B_M224_mortar",10];
 
         //================== HELMETS ==================\\
         _crate addItemCargoGlobal ["DAR_Beret_Mar",50];
