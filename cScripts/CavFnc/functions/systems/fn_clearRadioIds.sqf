@@ -22,7 +22,10 @@ private _playerRadios = [] call acre_api_fnc_getCurrentRadioList;
     player addItem _base;
 } forEach _playerRadios;
 
-[{[player] call EGVAR(gear,setupRadios);}] call CBA_fnc_execNextFrame;
+[{
+    [player] call FUNC(setRadioChannel);
+    ["ACRE_PRC343"] call FUNC(setActiveRadio);
+}] call CBA_fnc_execNextFrame;
 
 "Your radios have been reset" call CBA_fnc_notify;
 [format["%1: Your radios have been reset", name player], "ACRE", true] call FUNC(info);
