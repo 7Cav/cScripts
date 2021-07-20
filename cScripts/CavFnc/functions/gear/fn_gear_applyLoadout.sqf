@@ -84,12 +84,8 @@ if (hasInterface || {_unit == player}) then {
 
     // Radios
     if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
-        [format["Setting up ACRE preset for %1...", name _unit], "Gear Radio", false, true] call FUNC(info);
-        [_unit] call EFUNC(gear,setupRadios);
-
-        // Channels and active radio
         if (EGVAR(Settings,setRadio)) then {
-            [{[] call acre_api_fnc_isInitialized}, {
+            [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
                 _this params ["_unit"];
                 [format["Setting up ACRE primary radio and channels for %1...", name _unit], "Gear Radio"] call FUNC(info);
                 [_unit] call FUNC(setRadioChannel);
