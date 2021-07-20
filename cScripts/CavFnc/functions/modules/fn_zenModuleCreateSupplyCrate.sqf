@@ -26,7 +26,12 @@ params ["_modulePos", "_objectPos"];
         _pos params ["_modulePos"];
 
         private _crate = "B_CargoNet_01_ammo_F" createVehicle _modulePos;
-        [_crate, _size] remoteExec [QFUNC(doSupplyCrate), 2, true];
+        
+        [{
+            _this params ["_crate", "_size"];
+            [_crate, _size] remoteExec [QFUNC(doSupplyCrate), 2, true];
+        }, ["_crate", "_size"]] call CBA_fnc_execNextFrame;
+
 
         // Change ace characteristics of crate
         [_crate, 1] call ace_cargo_fnc_setSize;
@@ -34,17 +39,7 @@ params ["_modulePos", "_objectPos"];
         [_crate, true] call ace_dragging_fnc_setCarryable;
 
         // Add object to Zeus
-        [
-            {
-                params ["_crate"];
-                _crate == vehicle _crate;
-            },
-            {
-                params ["_crate"];
-                _crate call FUNC(addObjectToCurator);
-            },
-            [_crate]
-        ] call CBA_fnc_waitUntilAndExecute;
+        [_crate] call ace_zeus_fnc_addObjectToCurator;
     },
     {},
     [_modulePos]
