@@ -20,5 +20,5 @@
 if !(isServer) exitWith {};
 
 [QEGVAR(event,logServer), {
-    diag_log _this;
+    diag_log text _this;
 }] call CBA_fnc_addEventHandler;
