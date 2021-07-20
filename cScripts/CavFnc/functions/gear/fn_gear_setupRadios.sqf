@@ -2,6 +2,7 @@
 /*
  * Author: BaerMitUmlaut, CPL.Brostrom.A
  * This function setup radios and apply radio channel to them on server and player.
+ * Needs to be in init.sqf
  *
  * Arguments:
  * Nothing
