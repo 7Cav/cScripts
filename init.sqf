@@ -6,21 +6,31 @@
  * Read more about Initzialisation order here: https://community.bistudio.com/wiki/Initialization_Order
  */
 
+if (!isMultiplayer) then {["Mission is running on singelplayer enviroment!", "", true] call FUNC(warning)};
 #ifdef DEBUG_MODE
     ["init Initializing.", "init"] call FUNC(info);
     [format["cScripts Version %1 is running.",VERSION], "init"] call FUNC(info);
-    [format["Debug mode is currently active."], "init"] call FUNC(warning);
+    [format["Debug mode is currently active."], "init", true] call FUNC(warning);
     logEntities;
 #endif
 
-if !(isMultiplayer) then {["Mission is running on singelplayer enviroment."] call FUNC(warning)};
+// ACRE radio init
+if (isMultiplayer) then {
+    if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
+        GVAR(Radio) = false;
+        ["Setting up ACRE preset...", "init"] call FUNC(info);
+        call EFUNC(gear,setupRadios);
+        GVAR(Radio) = true;
+    };
+} else {
+    ["Mission in singelplayer enviroment ACRE radio preset will not be set!", "init", true] call FUNC(warning);
+};
 
 enableSaving [false, false];
 tawvd_disablenone = true;
 
 ACE_maxWeightCarry = 7500;
 ACE_maxWeightDrag = 10000;
-
 
 #ifdef DEBUG_MODE
     ["init initialization completed.", "init"] call FUNC(info);
