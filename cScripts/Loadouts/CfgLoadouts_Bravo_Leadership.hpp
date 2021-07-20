@@ -7,11 +7,9 @@ class Cav_B_B_Officer_F : Cav_B_Bravo_base_F {
 
 class Cav_B_B_PlatoonSergeant_F : Cav_B_B_Officer_F {
     displayName = "$STR_cav_Bravo_Characters_B_PlatoonSergeant";
-    scope = 2;
 };
 class Cav_B_B_PlatoonLeader_F : Cav_B_B_Officer_F {
     displayName = "$STR_cav_Bravo_Characters_B_PlatoonLeader";
-    scope = 2;
 };
 class Cav_B_B_PlatoonMedic_F : Cav_B_Bravo_base_F {
     displayName = "$STR_cav_Bravo_Characters_B_PlatoonMedic";
