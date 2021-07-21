@@ -21,8 +21,8 @@ params [
 if (!isPlayer player) exitWith {};
 
 private _getRank = 'PRIVATE';
-if ([_player, MAINCLANTAG] call FUNC(isPlayerClan)) then {
-    _getRank = [_player,'bis'] call FUNC(getPlayerRank);
+if ([_player, EGVAR(Settings,primaryClanTag)] call FUNC(isPlayerClan)) then {
+    _getRank = [_player, 'bis'] call FUNC(getPlayerRank);
 };
 
 if (_getRank in ['PRIVATE','CORPORAL','SERGEANT','LIEUTENANT','CAPTAIN','MAJOR','COLONEL']) then {
@@ -30,8 +30,3 @@ if (_getRank in ['PRIVATE','CORPORAL','SERGEANT','LIEUTENANT','CAPTAIN','MAJOR',
 };
 
 _player setVariable [QEGVAR(Cav,Rank), _getRank];
-
-
-#ifdef DEBUG_MODE
-    [format ["Rank %1 is applied to %2", _getRank, _player], "SetPlayerRank"] call FUNC(info);
-#endif

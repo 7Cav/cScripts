@@ -23,7 +23,7 @@ params [
 private _return = "";
 
 private _profileName = profileName;
-if ([_player, MAINCLANTAG] call FUNC(isPlayerClan)) then {
+if ([_player, EGVAR(Settings,primaryClanTag)] call FUNC(isPlayerClan)) then {
     _profileName = [_profileName, 0, 2] call BIS_fnc_trimString;
     _profileName = toUpper(_profileName);
 };
