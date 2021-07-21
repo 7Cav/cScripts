@@ -28,7 +28,7 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     private _displayName = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "displayName");
     private _loadout = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "loadout");
     _loadout = parseSimpleArray _loadout;
-    private _name = format["[%1] %2 - %3", MAINCLANTAG, _company, _displayName];
+    private _name = format["[%1] %2 - %3", EGVAR(Settings,primaryClanTag), _company, _displayName];
 
     #ifdef DEBUG_MODE
         [format["Setting up default arsenal loadout '%1'.", _displayName], if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}] call FUNC(info);
