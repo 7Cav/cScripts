@@ -18,7 +18,8 @@ params [
     ["_player", objNull, [objNull]]
 ];
 
-if (!isPlayer player) exitWith {};
+if (!GVAR(isPlayer)) exitWith {};
+waitUntil {!isNull player && player == player};
 
 private _getRank = 'PRIVATE';
 if ([_player, EGVAR(Settings,primaryClanTag)] call FUNC(isPlayerClan)) then {
@@ -30,3 +31,5 @@ if (_getRank in ['PRIVATE','CORPORAL','SERGEANT','LIEUTENANT','CAPTAIN','MAJOR',
 };
 
 _player setVariable [QEGVAR(Cav,Rank), _getRank];
+
+true

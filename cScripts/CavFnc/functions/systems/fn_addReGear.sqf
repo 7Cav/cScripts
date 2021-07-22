@@ -25,8 +25,8 @@ if (!isPlayer _object) then {
     _object addAction ["   <t color='#ffcc33'>ReGear</t>", {
         params ["_target", "_caller", "_actionId", "_arguments"];
         _arguments params ["_doHeal"];
-        private _loadout = [_caller] call EFUNC(gear,selectLoadout);
-        [_caller, _loadout] call EFUNC(gear,applyLoadout);
+        [QEGVAR(gear,applyLoadout)] call CBA_fnc_localEvent;
+
 
         if (_doHeal) then {
             [_target, player] call ace_medical_treatment_fnc_fullHeal;
@@ -37,8 +37,7 @@ if (!isPlayer _object) then {
 // Make ACE Interaction for ReGear
 private _Icon = "cScripts\Data\Icon\icon_00.paa";
 private _regearStatement = {
-    private _loadout = [player] call EFUNC(gear,selectLoadout);
-    [player, _loadout] call EFUNC(gear,applyLoadout);
+    [QEGVAR(gear,applyLoadout)] call CBA_fnc_localEvent;
 
     if (_doHeal) then {
         [_this select 0, player] call ace_medical_treatment_fnc_fullHeal;

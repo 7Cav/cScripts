@@ -17,7 +17,7 @@
 
 params [["_radio", 'ACRE_PRC343', ['ACRE_PRC343']]];
 
-if (!isPlayer player) exitWith {};
+if (!GVAR(isPlayer)) exitWith {};
 
 [{
     _this params ["_radio"];

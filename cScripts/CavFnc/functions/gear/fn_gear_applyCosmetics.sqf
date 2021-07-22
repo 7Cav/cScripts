@@ -27,7 +27,7 @@ if (!isNil{_vehicle getVariable QEGVAR(Player,Name)}) then {
 
 // Player Rank to ingame rank
 if (EGVAR(Settings,setPlayerRank)) then {
-    if !(isNil {_player getVariable QEGVAR(Cav,Rank)}) then {
+    if (isNil {_player getVariable QEGVAR(Cav,Rank)}) then {
         [_unit] call FUNC(setPlayerRank);
     };
 };

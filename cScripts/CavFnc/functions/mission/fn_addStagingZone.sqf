@@ -19,12 +19,25 @@
 #include "..\script_component.hpp";
 
 params [
-    "_zone",
-    ["_size", 12]
+    ["_zone", objNull, [objNull, ""]],
+    ["_size", 12, [0]]
 ];
 
-private _stageingZones = missionNamespace getVariable [QEGVAR(Stageing,Zones), []];
+private _stagingZones = missionNamespace getVariable [QEGVAR(Staging,Zones), []];
 
-_stageingZones pushBack [_zone, _size];
+if (_zone isEqualType "") then {
+    private _markerPos = getMarkerPos _zone;
+    _zone = "UserTexture1m_F" createVehicle _markerPos;
+};
 
-missionNamespace setVariable [QEGVAR(Stageing,Zones), _stageingZones];
+_stagingZones pushBack [_zone, _size];
+
+missionNamespace setVariable [QEGVAR(Staging,Zones), _stagingZones];
+
+if (!isMultiplayer) then {
+    private _debugMarker = createMarkerLocal [format["DebugStadgeingMarker_%1", count _stagingZones], _zone];
+    _debugMarker setMarkerShapeLocal "ELLIPSE";
+    _debugMarker setMarkerSizeLocal [_size, _size];
+    _debugMarker setMarkerColorLocal "colorCivilian";
+    [format["Staging zone %1 created.", count _stagingZones], "Staging"] call FUNC(info);
+};

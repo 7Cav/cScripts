@@ -34,9 +34,9 @@ private _logMessage = format ["%1%2%3: %4", _prefix, _componant, _type, _message
 diag_log text _logMessage;
 
 if (_sendToServer) then {
-    [QEGVAR(event,logServer), _logMessage] call CBA_fnc_serverEvent;
+    [QEGVAR(log,text), _logMessage] call CBA_fnc_serverEvent;
 };
 
 if (_showInChat && (!isMultiplayer || {is3DENMultiplayer})) then {
-    systemChat str _logMessage;
+    systemChat _logMessage;
 };

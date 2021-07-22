@@ -3,17 +3,16 @@
  * Author: CPL.Brostrom.A
  * This function initzialise ace arsenal default loadouts in eden and in mission.
  *
- * Arguments:
- * None
- *
  * Example:
- * call cScripts_fnc_initAceLoadouts
+ * call cScripts_fnc_init_aceArsenalDefault
  *
  * Public: No
  */
 
+if (!EGVAR(patches,usesACEArsenal)) exitWith {};
+
 #ifdef DEBUG_MODE
-        ["Setting up Default ACE Arsenal loadouts.", if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}] call FUNC(info);
+    ["Setting up Default ACE Arsenal loadouts.", if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}] call FUNC(info);
 #endif
 
 private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
@@ -42,9 +41,5 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
 } forEach _classnameList;
 
 #ifdef DEBUG_MODE
-    if !(is3DEN) then {
-        ["Default ACE Arsenal loadouts setup completed.", "Arsenal"] call FUNC(info);
-    } else {
-        ["Default ACE Arsenal loadouts setup completed.", "EDEN Arsenal"] call FUNC(info);
-    };
+    ["Default ACE Arsenal loadouts setup completed.", if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}] call FUNC(info);
 #endif

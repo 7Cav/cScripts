@@ -78,7 +78,7 @@ if !([_unit] call EFUNC(gear,hasSavedLoadout)) then {
 };
 
 // Functions
-if (hasInterface || {_unit == player}) then {
+if (GVAR(isPlayer)) then {
     // Handle Cosmetics
     [_unit] call EFUNC(gear,applyCosmetics);
 
@@ -116,6 +116,7 @@ _unit selectWeapon (primaryWeapon _unit);
 
 // Lower the weapon
 if !(weaponLowered _unit) then {_unit action ["WeaponOnBack", _unit]};
+
 
 if (_loadConfig) then {
     [_unit, _loadout] call compile (getText (_config >> "postLoadout"));

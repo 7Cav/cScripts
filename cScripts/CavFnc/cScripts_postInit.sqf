@@ -11,22 +11,22 @@ if (is3DEN) exitWith {};
 
 // Change inventory content of supply crates on mission start.
 if (EGVAR(Settings,useCustomVehicleSystem)) then {
-    call FUNC(initVehicle);
+    [] call FUNC(initVehicle);
 
     // Make sure curator object gets its functions reapplied.
-    call  FUNC(initCuratorObjectPlaced);
+    [] call  FUNC(initCuratorObjectPlaced);
 };
 
 // item replacement
 if (EGVAR(Settings,allowReplaceItem)) then {
-    call FUNC(initItemReplace);
+    [] call EFUNC(init,aceItemReplace);
 };
 
-call FUNC(initStaging);
+[] call EFUNC(init,staging);
 
 // Add diary records on mission start
 if (EGVAR(Settings,showDiaryRecords)) then {
-    call FUNC(initDocuments);
+    [] call EFUNC(init,diary);
 };
 
 onPlayerConnected { 
