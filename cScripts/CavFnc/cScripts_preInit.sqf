@@ -47,6 +47,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
+
 //2; ACRE Radios
 [ // Enable
     QEGVAR(Settings,enableACRE),
@@ -165,7 +166,8 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-// Item Replacement system
+
+// 6; Item Replacement system
 [ // Enable
     QEGVAR(Settings,allowReplaceItem),
     "CHECKBOX",
@@ -272,6 +274,18 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
+
+// 9; Other
+[ // Primary Clan Tag
+    QEGVAR(Settings,primaryClanTag),
+    "EDITBOX",
+    ["Primary Clantag","Primary clan tag to to check for"],
+    [_cScriptSettings, "9; Other"],
+    '7CAV',
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
