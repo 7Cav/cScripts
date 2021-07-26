@@ -33,7 +33,7 @@ class Cav_B_B_Scout_SquadLeader_F : Cav_B_Bravo_base_F {
     icon = "iconManLeader";
 
 };
-class Cav_B_B_Scout_FireTeamLeader_F : Cav_B_Bravo_base_F {
+class Cav_B_B_Scout_TeamLeader_F : Cav_B_Bravo_base_F {
     displayName = "Scout Team Leader";
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
@@ -127,19 +127,19 @@ class Cav_B_B_Ifv_Commander_F : Cav_B_B_Crew_F {
 };
 
 // Named
-class Cav_B_B_SquadLeader_2_1_F : Cav_B_B_Scout_SquadLeader_F {
+class Cav_B_B_Scout_SquadLeader_2_1_F : Cav_B_B_Scout_SquadLeader_F {
     scope = 1;
     insignia = "cav_insignia_charlie_1_1";
 };
-class Cav_B_B_SquadLeader_2_2_F : Cav_B_B_Scout_SquadLeader_F {
+class Cav_B_B_Scout_SquadLeader_2_2_F : Cav_B_B_Scout_SquadLeader_F {
     scope = 1;
     insignia = "cav_insignia_charlie_1_2";
 };
-class Cav_B_B_SquadLeader_2_3_F : Cav_B_B_Scout_SquadLeader_F {
+class Cav_B_B_Scout_SquadLeader_2_3_F : Cav_B_B_Scout_SquadLeader_F {
     scope = 1;
     //insignia = "cav_insignia_charlie_1_3";
 };
-class Cav_B_B_SquadLeader_2_4_F : Cav_B_B_Scout_SquadLeader_F {
+class Cav_B_B_Scout_SquadLeader_2_4_F : Cav_B_B_Scout_SquadLeader_F {
     scope = 1;
     //insignia = "cav_insignia_charlie_1_4";
 };
@@ -155,14 +155,14 @@ class Cav_B_B_Scout_PlatoonLead_2_6_F : Cav_B_B_Scout_PlatoonLeader_F {
 };
 class Cav_B_B_Scout_PlatoonMedic_2_7_F : Cav_B_B_Scout_PlatoonMedic_F { scope = 1; };
 
-class Cav_B_B_Scout_Alpha_FireTeamLeader_F : Cav_B_B_Scout_FireTeamLeader_F { scope = 1; };
+class Cav_B_B_Scout_Alpha_TeamLeader_F : Cav_B_B_Scout_TeamLeader_F { scope = 1; };
 class Cav_B_B_Scout_Alpha_AutomaticRifleman_F : Cav_B_B_Scout_AutomaticRifleman_F { scope = 1; };
 class Cav_B_B_Scout_Alpha_Grenadier_F : Cav_B_B_Scout_Grenadier_UGL_F_Local { scope = 1; };
 class Cav_B_B_Scout_Alpha_Rifleman_F : Cav_B_B_Scout_Rifleman_F { scope = 1; };
 class Cav_B_B_Scout_Alpha_RiflemanAT_F : Cav_B_B_Scout_RiflemanAT_F { scope = 1; };
 class Cav_B_B_Scout_Alpha_CombatLifeSaver_F : Cav_B_B_Scout_CombatLifeSaver_F { scope = 1; };
 
-class Cav_B_B_Scout_Bravo_FireTeamLeader_F : Cav_B_B_Scout_FireTeamLeader_F { scope = 1; };
+class Cav_B_B_Scout_Bravo_TeamLeader_F : Cav_B_B_Scout_TeamLeader_F { scope = 1; };
 class Cav_B_B_Scout_Bravo_AutomaticRifleman_F  : Cav_B_B_Scout_AutomaticRifleman_F { scope = 1; };
 class Cav_B_B_Scout_Bravo_Grenadier_F  : Cav_B_B_Scout_Grenadier_UGL_F_Local { scope = 1; };
 class Cav_B_B_Scout_Bravo_Rifleman_F  : Cav_B_B_Scout_Rifleman_F { scope = 1; };
