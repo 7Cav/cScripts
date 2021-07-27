@@ -8,6 +8,7 @@ class cScripts {
         class init_skillAdjustment {};
 
         class init_diary {};
+        class init_message {};
         
         class initVehicle {};
 

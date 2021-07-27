@@ -22,9 +22,13 @@ if (EGVAR(Settings,allowReplaceItem)) then {
     [] call EFUNC(init,aceItemReplace);
 };
 
+// staging
 [] call EFUNC(init,staging);
 
-// Add diary records on mission start
+// messages 
+[] call EFUNC(init,message);
+
+// diary records
 if (EGVAR(Settings,showDiaryRecords)) then {
     [] call EFUNC(init,diary);
 };
