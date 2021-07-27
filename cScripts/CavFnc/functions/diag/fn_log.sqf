@@ -6,8 +6,9 @@
  * Arguments:
  * 0: message <STRING>
  * 1: componant <STRING>
- * 2: type <STRING>
- * 3: showInChat <BOOL>
+ * 2: showInChat <BOOL>
+ * 3: sendToServer <BOOL>
+ * 4: typePrefix <STRING>
  *
  * Example:
  * ["Something is wrong here."] call FUNC(log)
