@@ -11,7 +11,7 @@
 
 waitUntil {!isNull player && player == player};
 waitUntil {profileName != ""};
-if (!isNil{player getVariable QEGVAR(player,documents)}) exitWith {[format["Diary Records already applied for %1.", player]] call FUNC(warning);};
+if (!isNil{player getVariable QEGVAR(player,documents)}) exitWith {[format["Diary Records already applied for %1.", player], "init"] call FUNC(warning);};
 
 #ifdef DEBUG_MODE
     [format["Applying Diary Records to %1...", player]] call FUNC(info);

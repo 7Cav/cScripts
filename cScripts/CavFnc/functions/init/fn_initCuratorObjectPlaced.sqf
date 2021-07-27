@@ -16,7 +16,7 @@
  */
 
 #ifdef DEBUG_MODE
-    [format["Executing Curator Object Placed event handler."]] call FUNC(info);
+    ["Applying Curator Object Placed Event Handler.", "init"] call FUNC(info);
 #endif
 
 {

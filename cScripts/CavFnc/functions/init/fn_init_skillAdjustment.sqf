@@ -10,7 +10,7 @@
  */
 
 #ifdef DEBUG_MODE
-    ["Applying Event Handers (init) to all non player characters...", "AI"] call FUNC(info);
+    ["Applying AI Event Handler to units...", "init"] call FUNC(info);
 #endif
 
 if !(isServer) exitWith {};
@@ -96,7 +96,7 @@ if !(isServer) exitWith {};
                     ["reloadSpeed", _unit skill "reloadSpeed"],
                     ["spottime", _unit skill "spottime"],
                     ["spotdistance", _unit skill "spotdistance"]
-                ]], "AI"] call FUNC(info);
+                ]], "init"] call FUNC(info);
             #endif
         };
     };

@@ -19,7 +19,7 @@ if !(EGVAR(patches,usesZen)) exitWith {};
 if !(EGVAR(Settings,enable7cavZeusModules)) exitWith {};
 
 #ifdef DEBUG_MODE
-    ["Initializing 7Cav custom Zen Modules.", "initModulesZen"] call FUNC(info);
+    ["Initializing 7Cav custom Zen Modules.", "init"] call FUNC(info);
 #endif
 
 ["7Cav AI", "Enable Unit Simulation",
@@ -95,5 +95,5 @@ if (EGVAR(Settings,enableACRE)) then {
 ] call zen_custom_modules_fnc_register;
 
 #ifdef DEBUG_MODE
-    ["7Cav Custom Zen Modules initialization complete", "initModulesZen"] call FUNC(info);
+    ["7Cav Custom Zen Modules initialization complete", "init"] call FUNC(info);
 #endif

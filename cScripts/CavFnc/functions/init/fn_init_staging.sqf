@@ -15,6 +15,10 @@
  * Public: No
  */
 
+#ifdef DEBUG_MODE
+    ["Setting up Staging", "staging"] call FUNC(info);
+#endif
+
 private _respawnMarkers = [
     "respawn_west",
     "respawn_west_0",

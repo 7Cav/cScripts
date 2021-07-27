@@ -11,7 +11,7 @@
 
 if (!isServer) exitWith {};
 if (!EGVAR(patches,usesACETagging)) exitWith {};
-if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Tagging already applied.", "InitTagging"] call FUNC(warning)};
+if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Tagging already applied.", "init"] call FUNC(warning)};
 
 [   "cScripts_tagging_cav_black",
     "Cav Black",
