@@ -32,13 +32,13 @@ if (!isMultiplayer) then {
 // Profile name
 if (_getType == 'PROFILE') exitWith {
     private _profileName = profileName;
-    if ([_player, MAINCLANTAG] call FUNC(isPlayerClan)) then {_profileName = [_profileName, 4] call BIS_fnc_trimString;};
+    if ([_player, EGVAR(Settings,primaryClanTag)] call FUNC(isPlayerClan)) then {_profileName = [_profileName, 4] call BIS_fnc_trimString;};
     _profileName;
 };
 
 if (_getType == 'STEAM') exitWith {
     private _profileNameSteam = profileNameSteam; 
-    if ([_player, MAINCLANTAG] call FUNC(isPlayerClan)) then {_profileNameSteam = [_profileNameSteam, 10] call BIS_fnc_trimString;};
+    if ([_player, EGVAR(Settings,primaryClanTag)] call FUNC(isPlayerClan)) then {_profileNameSteam = [_profileNameSteam, 10] call BIS_fnc_trimString;};
     _profileNameSteam;
 };
 
