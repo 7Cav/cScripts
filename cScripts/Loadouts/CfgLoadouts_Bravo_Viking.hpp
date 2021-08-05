@@ -168,3 +168,7 @@ class Cav_B_B_Scout_Bravo_Grenadier_F  : Cav_B_B_Scout_Grenadier_UGL_F_Local { s
 class Cav_B_B_Scout_Bravo_Rifleman_F  : Cav_B_B_Scout_Rifleman_F { scope = 1; };
 class Cav_B_B_Scout_Bravo_RiflemanAT_F : Cav_B_B_Scout_RiflemanAT_F { scope = 1; };
 class Cav_B_B_Scout_Bravo_CombatLifeSaver_F  : Cav_B_B_Scout_CombatLifeSaver_F { scope = 1; };
+
+// Depricated (Will be removed eventually)
+class Cav_B_B_Scout_Bravo_TeamLead_F : Cav_B_B_Scout_Bravo_TeamLeader_F {};
+class Cav_B_B_Scout_Alpha_TeamLead_F : Cav_B_B_Scout_Alpha_TeamLeader_F {};
