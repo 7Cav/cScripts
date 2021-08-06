@@ -29,6 +29,10 @@ if (EGVAR(Settings,showDiaryRecords)) then {
     call FUNC(initDocuments);
 };
 
+onPlayerConnected { 
+    [QEGVAR(log,player), [name player]] call CBA_fnc_serverEvent;
+};
+
 #ifdef DEBUG_MODE
     ["Initialization completed", "postInit"] call FUNC(info);
 #endif
