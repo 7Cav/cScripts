@@ -84,6 +84,15 @@ if (EGVAR(Settings,enableACRE)) then {
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
+["7Cav Mission", "Copy attendees to clipboard",
+    {
+        private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
+        copyToClipboard str _playerLog;
+        ["All attended players have been saved to your clipboard"] call zen_common_fnc_showMessage;
+    },
+    "\a3\modules_f\data\portraitmodule_ca.paa"
+] call zen_custom_modules_fnc_register;
+
 #ifdef DEBUG_MODE
     ["7Cav Custom Zen Modules initialization complete", "initModulesZen"] call FUNC(info);
 #endif
