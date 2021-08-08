@@ -241,6 +241,11 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["rhsusf_acc_eotech_552",10];
         _crate addItemCargoGlobal ["rhsusf_acc_anpeq15_bk_light",50];
         _crate addItemCargoGlobal ["acc_flashlight",50];
+        _crate addItemCargoGlobal ["optic_hamr",50];
+        _crate addItemCargoGlobal ["rhsusf_acc_g33_xps3",50];
+        _crate addItemCargoGlobal ["rhsusf_acc_g33_t1",50];
+        _crate addItemCargoGlobal ["rhsusf_acc_t1_high",50];
+        _crate addItemCargoGlobal ["rhsusf_acc_su230_mrds",50];
         _crate addItemCargoGlobal ["rhsusf_acc_ELCAN",50];
         _crate addItemCargoGlobal ["rhsusf_acc_compm4",50];
         _crate addItemCargoGlobal ["rhsusf_acc_acog3",50];
