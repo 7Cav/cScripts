@@ -22,8 +22,8 @@
     _vehicle call EFUNC(vehicle,addFunctions);
     _vehicle call EFUNC(vehicle,addInventory);
     _vehicle call EFUNC(vehicle,addCosmetics);
-    _vehicle call EFUNC(vehicle,addRadio);
     _vehicle call EFUNC(vehicle,addStagingActions);
+    _vehicle call EFUNC(vehicle,addRadio);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 {
@@ -32,7 +32,7 @@
         _vehicle call EFUNC(vehicle,addFunctions);
         _vehicle call EFUNC(vehicle,addInventory);
         _vehicle call EFUNC(vehicle,addCosmetics);
-        _vehicle call EFUNC(vehicle,addRadio);
         _vehicle call EFUNC(vehicle,addStagingActions);
+        _vehicle call EFUNC(vehicle,addRadio);
     }];
 } forEach allCurators;

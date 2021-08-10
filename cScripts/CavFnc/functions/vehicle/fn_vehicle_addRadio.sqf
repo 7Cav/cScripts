@@ -12,17 +12,16 @@
 #define DEBUG_MODE
 
 params [["_vehicle", objNull, [objNull]]];
-
-if (didJIP) exitWith {};
 if (!isServer) exitWith {};
 if !(EGVAR(patches,usesACRE)) exitWith {};
 if !(EGVAR(Settings,enableACRE)) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
-if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Radio);}) exitWith {[format["Vehicle Radio already applied for %1.", _vehicle], "Vehicle"] call FUNC(warning);};
-waitUntil {GVAR(Radio)};
+if (!isMultiplayer) exitWith { [format["Vehicle rack initzialized for %1 (%2) is stopped due to being in a SP enviroment.", _vehicle, typeOf _vehicle], "Vehicle Radio"] call FUNC(warning); };
+if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Radio);}) exitWith {[format["Vehicle Radio already applied for %1.", _vehicle], "Vehicle Radio"] call FUNC(warning);};
+waitUntil {GVAR(Radio) && [] call acre_api_fnc_isInitialized};
 
 private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
-if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle"] call FUNC(error);};
+if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle Radio"] call FUNC(error);};
 if (!(faction _vehicle in _factionArray));
 
 if (_vehicle iskindOf "MRAP_01_base_F") then {
