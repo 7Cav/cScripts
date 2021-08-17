@@ -34,17 +34,9 @@ params ["_modulePos", "_objectPos"];
         [_crate, true] call ace_dragging_fnc_setCarryable;
 
         // Add object to Zeus
-        [
-            {
-                params ["_crate"];
-                _crate == vehicle _crate;
-            },
-            {
-                params ["_crate"];
-                _crate call FUNC(addObjectToCurator);
-            },
-            [_crate]
-        ] call CBA_fnc_waitUntilAndExecute;
+        [{
+            _this call ace_zeus_fnc_addObjectToCurator;
+        }, _crate] call CBA_fnc_execNextFrame;
     },
     {},
     [_modulePos]
