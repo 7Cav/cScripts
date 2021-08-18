@@ -81,16 +81,13 @@ params ["_modulePos", "_objectPos"];
             "_arsenal"
         ];
         _pos params ["_modulePos"];
-
         private _crate = "B_supplyCrate_F" createVehicle _modulePos;
-        [_crate, _quickSelectScale, _reGearOption, _reHealOption, _InsigniaSelectOption, _requireCompanyVariable, _arsenal] remoteExec [QFUNC(doStarterCrate), -2, true];
-        [{
-            _this params ["_crate", "_quickSelectScale"];
-            [_crate, _quickSelectScale] remoteExec [QFUNC(doStarterCrateSupplies), 2, true];
-        }, ["_crate", "_quickSelectScale"]] call CBA_fnc_execNextFrame;
+        [_crate, _quickSelectScale, _reGearOption, _reHealOption, _InsigniaSelectOption, _requireCompanyVariable, _arsenal] remoteExec [QFUNC(doStarterCrate), 0, true];
 
         // Add object to Zeus
-        [_crate] call ace_zeus_fnc_addObjectToCurator;
+        [{
+            _this call ace_zeus_fnc_addObjectToCurator;
+        }, _crate] call CBA_fnc_execNextFrame;
     },
     {},
     [_modulePos]

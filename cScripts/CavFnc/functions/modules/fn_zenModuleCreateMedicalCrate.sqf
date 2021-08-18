@@ -26,7 +26,7 @@ params ["_modulePos", "_objectPos"];
         _pos params ["_modulePos"];
 
         private _crate = "ACE_medicalSupplyCrate" createVehicle _modulePos;
-        [_crate, _size] remoteExec [QFUNC(doMedicalCrate), 2, true];
+        [_crate, _size] remoteExec [QFUNC(doMedicalCrate), 0, true];
 
         // Change ace characteristics of crate
         [_crate, 1] call ace_cargo_fnc_setSize;
@@ -34,17 +34,9 @@ params ["_modulePos", "_objectPos"];
         [_crate, true] call ace_dragging_fnc_setCarryable;
 
         // Add object to Zeus
-        [
-            {
-                params ["_crate"];
-                _crate == vehicle _crate;
-            },
-            {
-                params ["_crate"];
-                _crate call FUNC(addObjectToCurator);
-            },
-            [_crate]
-        ] call CBA_fnc_waitUntilAndExecute;
+        [{
+            _this call ace_zeus_fnc_addObjectToCurator;
+        }, _crate] call CBA_fnc_execNextFrame;
     },
     {},
     [_modulePos]
