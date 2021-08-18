@@ -142,9 +142,9 @@ if (_companySelector in _alpha or _alwaysAvalible) then {
     // Old Container
     if (_companySelector in ['ALPHA', 'BUFFALO', 'TITAN', 'RAIDER', 'SPARROW' ] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
-        _crate addItemCargoGlobal ["ACRE_PRC152",50];
-        _crate addItemCargoGlobal ["ACRE_PRC117F",10];
-        _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        //_crate addItemCargoGlobal ["ACRE_PRC152",50];
+        //_crate addItemCargoGlobal ["ACRE_PRC117F",10];
+        //_crate addItemCargoGlobal ["ACRE_PRC343",12];
 
         //================== WEAPONS ==================\\
         _crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",2];
@@ -227,9 +227,9 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
     //================== RADIOS ==================\\
 
-        _crate addItemCargoGlobal ["ACRE_PRC152",10];
-        _crate addItemCargoGlobal ["ACRE_PRC117F",5];
-        _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        //_crate addItemCargoGlobal ["ACRE_PRC152",10];
+        //_crate addItemCargoGlobal ["ACRE_PRC117F",5];
+        //_crate addItemCargoGlobal ["ACRE_PRC343",12];
 
         //================== LAUNCHERS ==================\\
 
@@ -330,9 +330,9 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     if (_companySelector in ['BRAVO', 'ATLAS'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
 
-        _crate addItemCargoGlobal ["ACRE_PRC152",10];
-        _crate addItemCargoGlobal ["ACRE_PRC117F",5];
-        _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        //_crate addItemCargoGlobal ["ACRE_PRC152",10];
+        //_crate addItemCargoGlobal ["ACRE_PRC117F",5];
+        //_crate addItemCargoGlobal ["ACRE_PRC343",12];
 
         //================== LAUNCHERS ==================\\
 
@@ -508,8 +508,8 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
 
 
     //==================    RADIOS    ==================\\
-        _crate addItemCargoGlobal ["ACRE_PRC343",10];
-        _crate addItemCargoGlobal ["ACRE_PRC152",10];
+        //_crate addItemCargoGlobal ["ACRE_PRC343",10];
+        //_crate addItemCargoGlobal ["ACRE_PRC152",10];
 
    //==================    ITEMS    ==================\\
         _crate addItemCargoGlobal ["ACE_Clacker",10];
