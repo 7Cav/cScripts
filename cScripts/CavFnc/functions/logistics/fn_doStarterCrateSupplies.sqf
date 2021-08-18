@@ -395,6 +395,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_wirecutter",10];
         _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
         _crate addItemCargoGlobal ["ACE_IR_Strobe_Item",20];
+
         _crate addItemCargoGlobal ["ItemAndroid", 10];
         _crate addItemCargoGlobal ["ItemcTab", 10];
         
@@ -403,15 +404,23 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 
         _crate addItemCargoGlobal ["ACE_EarPlugs",250];
 
-        _crate addItemCargoGlobal ["ACE_elasticBandage",250];
         _crate addItemCargoGlobal ["ACE_quikclot",250];
+        _crate addItemCargoGlobal ["ACE_packingBandage",250];
+        _crate addItemCargoGlobal ["ACE_elasticBandage",250];
+        _crate addItemCargoGlobal ["ACE_fieldDressing",250];
 
         _crate addItemCargoGlobal ["ACE_tourniquet",250];
+        _crate addItemCargoGlobal ["ACE_splint",250];
+
+        _crate addItemCargoGlobal ["ACE_adenosine",250];
+        _crate addItemCargoGlobal ["ACE_epinephrine",250];
+        _crate addItemCargoGlobal ["ACE_morphine",250];
 
         _crate addItemCargoGlobal ["ACE_personalAidKit",250];
         _crate addItemCargoGlobal ["ACE_surgicalKit",250];
 
         _crate addItemCargoGlobal ["ACE_salineIV",250];
+        _crate addItemCargoGlobal ["ACE_salineIV_250",250];
         _crate addItemCargoGlobal ["ACE_salineIV_500",250];
 
         _crate addItemCargoGlobal ["ACE_bodyBag",250];
