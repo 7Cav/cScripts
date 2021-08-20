@@ -19,6 +19,8 @@ if (!(faction _vehicle in ["BLU_F", "BLU_CTRG_F", "BLU_T_F", "BLU_USA_7CAV_F", "
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
+private _textureMed = "\z\cav\addons\textures\data\vehicles\label\special\medic_s_ca.paa";
+
 if (_vehicle iskindOf "rhsusf_hmmwe_base") then { // MRAP_01_base_F
     _vehicle animateSource ["iff_hide", 1, true];
     _vehicle animateSource ["hide_CIP", 1, true];
@@ -27,8 +29,8 @@ if (_vehicle iskindOf "rhsusf_hmmwe_base") then { // MRAP_01_base_F
 
     if (_vehicleType == "MED") then {
         if (_vehicle isKindOf "rhsusf_m998_w_2dr") then {
-            [_vehicle, [-1.1,-0.28,-0.91] , false, "\z\cav\addons\textures\data\vehicles\label\special\reddiamond_s_ca.paa", [[1,0,0], [0,0,1]]] call FUNC(createVehicleLable);
-            [_vehicle, [1.1,-0.28,-0.91] , false, "\z\cav\addons\textures\data\vehicles\label\special\reddiamond_s_ca.paa", [[-1,0,0], [0,0,1]]] call FUNC(createVehicleLable);
+            [_vehicle, [-1.1,-0.28,-0.91] , false, _textureMed, [[1,0,0], [0,0,1]]] call FUNC(createVehicleLable);
+            [_vehicle, [1.1,-0.28,-0.91] , false, _textureMed, [[-1,0,0], [0,0,1]]] call FUNC(createVehicleLable);
         };
     };
 };
@@ -52,8 +54,8 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
     _vehicle animateSource ["Hide_CIP", 1, true];
 
     if (_vehicleType == "MED") then {
-        [_vehicle, [-0.98,-1.32,-0.42] , false, "\z\cav\addons\textures\data\vehicles\label\special\reddiamond_s_ca.paa", [[1,0,-0.145], [1,0,0]]] call FUNC(createVehicleLable);
-        [_vehicle, [1.666,-1.32,-0.42] , false, "\z\cav\addons\textures\data\vehicles\label\special\reddiamond_s_ca.paa", [[-1,0,-0.152], [0,0,1]]] call FUNC(createVehicleLable);
+        [_vehicle, [-0.98,-1.32,-0.42] , false, _textureMed, [[1,0,-0.145], [1,0,0]]] call FUNC(createVehicleLable);
+        [_vehicle, [1.666,-1.32,-0.42] , false, _textureMed, [[-1,0,-0.152], [0,0,1]]] call FUNC(createVehicleLable);
     };
 
     _vehicle setObjectTextureGlobal [12, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\2_ca.paa"];
