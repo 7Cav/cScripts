@@ -27,7 +27,23 @@ if (!(faction _vehicle in _factionArray)) exitWith {};
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
 if (_vehicle iskindOf "MRAP_01_base_F") then {
-    [_vehicle, 4, 40, false, false] call FUNC(setSpaceSize);
+    
+    // Cargo
+    switch (true) do {
+        case (_vehicle iskindOf "rhsusf_m998_w_2dr"): {
+            [_vehicle, 8, 40, false, false] call FUNC(setSpaceSize);
+        };
+        case (_vehicle iskindOf "rhsusf_m1152_base"): {
+            [_vehicle, 20, 40, false, false] call FUNC(setSpaceSize);
+        };
+        default {
+            [_vehicle, 4, 40, false, false] call FUNC(setSpaceSize);
+        };
+    };
+    
+    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+
+    // Interior
     switch (_vehicleType) do {
         case "MED": {
             [_vehicle, [
@@ -57,25 +73,65 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
         };
         default {
             [_vehicle, [
-                ["rhs_weap_M136_hp", 2],
-                ["ACE_quikclot", 60],
-                ["ACE_splint", 8],
-                ["ToolKit", 1],
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 32],
-                ["rhsusf_200rnd_556x45_mixed_soft_pouch", 6],
-                ["rhs_mag_m67", 8],
-                ["SmokeShell", 16],
-                ["SmokeShellBlue", 2],
-                ["ACE_Chemlight_IR", 4],
-                ["rhs_mag_M433_HEDP", 16],
-                ["rhs_mag_m713_Red", 4],
-                ["ACE_40mm_Flare_ir", 4],
-                ["ACE_HuntIR_M203", 2]]
+                ["ACE_Chemlight_HiGreen", 16],
+                ["ACE_Chemlight_HiRed", 16],
+                ["SmokeShellBlue", 5],
+                ["SmokeShellGreen", 5],
+                ["rhs_mag_maaws_HE", 4],
+                ["rhs_mag_maaws_HEAT", 2],
+                ["rhs_fgm148_magazine_AT", 2],
+                ["rhs_weap_fgm148", 1],
+                ["rhsusf_mag_6Rnd_M433_HEDP", 20],
+                ["rhsusf_100Rnd_762x51_m62_tracer", 20],
+                ["ACE_Chemlight_IR", 12],
+                ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 20],
+                ["ACE_SpareBarrel", 1],
+                ["ACE_HuntIR_M203", 4],
+                ["ACE_40MM_FLARE_IR", 4],
+                ["SmokeShell", 20],
+                ["rhs_mag_m67", 20],
+                ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 5],
+                ["rhs_mag_m714_White", 20]
+                ]
             ] call FUNC(addCargo);
+
+            ["Box_T_NATO_Wps_F", [
+                ["ACE_Chemlight_HiGreen", 20],
+                ["ACE_Chemlight_HiRed", 20],
+                ["SmokeShellBlue", 5],
+                ["SmokeShellGreen", 5],
+                ["SmokeShellGreen", 5],
+                ["SmokeShellRed", 5],
+                ["SmokeShellYellow", 5],
+                ["SmokeShellOrange", 5],
+                ["SmokeShellPurple", 5],
+                ["SmokeShell", 20],
+                ["rhs_mag_maaws_HE", 10],
+                ["rhs_mag_maaws_HEAT", 10],
+                ["rhs_fgm148_magazine_AT", 6],
+                ["rhsusf_mag_6Rnd_M433_HEDP", 30],
+                ["rhsusf_100Rnd_762x51_m62_tracer", 30],
+                ["ACE_Chemlight_IR", 20],
+                ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red", 40],
+                ["ACE_SpareBarrel", 2],
+                ["ACE_HuntIR_M203", 19],
+                ["ACE_40MM_FLARE_IR", 10],
+                ["rhs_mag_m67", 20],
+                ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 10],
+                ["ACE_splint", 16],
+                ["ACE_tourniquet", 16],
+                ["ACE_SpraypaintRed", 2],
+                ["ACE_salineIV", 10],
+                ["ACE_EarPlugs", 12],
+                ["ACE_CableTie", 12],
+                ["ACE_quikclot", 60],
+                ["dzn_MG_Tripod_M122A1_M240Mount_RHS", 1],
+                ["NDS_M_6Rnd_60mm_HE", 8],
+                ["NDS_M_6Rnd_60mm_HE_0", 8],
+                ["rhs_mag_m714_White", 20]
+            ], _vehicle] call FUNC(makeCargoCrate);
         };
     };
-
-    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
 };
 
 if (_vehicle iskindOf "rhsusf_fmtv_base") then {
