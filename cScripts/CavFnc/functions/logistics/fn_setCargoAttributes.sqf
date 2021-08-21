@@ -5,34 +5,35 @@
  *
  * Arguments:
  * 0: Vehicle       <OBJECT>
- * 1: Cargo Space   <NUMBER> (-2 to keep default value)
- * 2: Cargo Size    <NUMBER> (-2 to keep default value)
+ * 1: Cargo Space   <NUMBER> (nil to keep default value)
+ * 2: Cargo Size    <NUMBER> (nil to keep default value)
  * 3: Draggable     <BOOLEAN> (Default; true)
  * 4: Carryable     <BOOLEAN> (Default; true)
  *
  * Example:
- * [myTruck] call cScripts_fnc_setSpaceSize;
- * [myTruck, 30, -1] call cScripts_fnc_setSpaceSize;
- * [myCrate, -1, 2] call cScripts_fnc_setSpaceSize;
- * [myCrate, -1, 2, true, false] call cScripts_fnc_setSpaceSize;
+ * [myTruck] call cScripts_fnc_setCargoAttributes;
+ * [myTruck, 30, -1] call cScripts_fnc_setCargoAttributes;
+ * [myCrate, -1, 2] call cScripts_fnc_setCargoAttributes;
+ * [myCrate, -1, 2, true, false] call cScripts_fnc_setCargoAttributes;
+ * [myCrate, nil, nil, true, false] call cScripts_fnc_setCargoAttributes;
  *
  * Public: Yes
  */
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_space", -2, [0]],
-    ["_size", -2, [0]],
+    ["_space", nil, [0, nil]],
+    ["_size", nil, [0, nil]],
     ["_draggable", true, [true]],
     ["_carryable", true, [true]]
 ];
 
 if !(isServer) exitWith {};
 
-if (_space != -2) then {
+if (!isNil{_space}) then {
     [_vehicle, _space] call ace_cargo_fnc_setSpace;
 };
-if (_size != -2) then {
+if (!isNil{_size}) then {
     [_vehicle, _size] call ace_cargo_fnc_setSize;
 };
 

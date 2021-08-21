@@ -41,9 +41,9 @@ class cScripts {
     class logistics {
         file = "cScripts\cavFnc\functions\logistics";
         class addCargo {};
-        class setSpaceSize {};
+        class setCargoAttributes {};
         class checkItemValidity {};
-        class makeCargoCrate {};
+        class createCargoCrate {};
 
         class doStarterCrate {};
         class doStarterCrateSupplies {};

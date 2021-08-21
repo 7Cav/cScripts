@@ -60,7 +60,7 @@ if (_vehicle iskindOf "RHS_C130J_Base") then {
 };
 
 if (_vehicle iskindOf "MRAP_01_base_F") then {
-    [_vehicle, 4, 40, false, false] call FUNC(setSpaceSize);
+    [_vehicle, 4, 40, false, false] call FUNC(setCargoAttributes);
     switch (_vehicleType) do {
         case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
         default {};

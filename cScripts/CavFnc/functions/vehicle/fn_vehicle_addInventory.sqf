@@ -31,13 +31,13 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
     // Cargo
     switch (true) do {
         case (_vehicle iskindOf "rhsusf_m998_w_2dr"): {
-            [_vehicle, 8, 40, false, false] call FUNC(setSpaceSize);
+            [_vehicle, 8, 40, false, false] call FUNC(setCargoAttributes);
         };
         case (_vehicle iskindOf "rhsusf_m1152_base"): {
-            [_vehicle, 20, 40, false, false] call FUNC(setSpaceSize);
+            [_vehicle, 20, 40, false, false] call FUNC(setCargoAttributes);
         };
         default {
-            [_vehicle, 4, 40, false, false] call FUNC(setSpaceSize);
+            [_vehicle, 4, 40, false, false] call FUNC(setCargoAttributes);
         };
     };
     
@@ -69,7 +69,7 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 ["ACE_Splint", 20],
                 ["ACE_tourniquet", 20],
                 ["ACE_surgicalKit", 2]
-            ], _vehicle] call FUNC(makeCargoCrate);
+            ], _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, [
@@ -129,7 +129,7 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 ["NDS_M_6Rnd_60mm_HE", 8],
                 ["NDS_M_6Rnd_60mm_HE_0", 8],
                 ["rhs_mag_m714_White", 20]
-            ], _vehicle] call FUNC(makeCargoCrate);
+            ], _vehicle] call FUNC(createCargoCrate);
         };
     };
 };
@@ -166,7 +166,7 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
                 ["ACE_Splint", 20],
                 ["ACE_tourniquet", 20],
                 ["ACE_surgicalKit", 2]
-            ], _vehicle] call FUNC(makeCargoCrate);
+            ], _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, []] call FUNC(addCargo);
@@ -175,7 +175,7 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
-    [_vehicle, 6, 80, false, false] call FUNC(setSpaceSize);
+    [_vehicle, 6, 80, false, false] call FUNC(setCargoAttributes);
 
     switch (_vehicleType) do {
         case "MED": {
@@ -202,7 +202,7 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
                 ["ACE_Splint", 20],
                 ["ACE_tourniquet", 20],
                 ["ACE_surgicalKit", 2]
-            ], _vehicle] call FUNC(makeCargoCrate);
+            ], _vehicle] call FUNC(createCargoCrate);
         };
         case "rhsusf_stryker_m1126_m2_d";
         case "rhsusf_stryker_m1126_m2_wd": {
@@ -239,7 +239,7 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
                 ["ClaymoreDirectionalMine_Remote_Mag", 4],
                 ["ACE_Clacker", 3],
                 ["B_Kitbag_cbr", 2]
-            ], _vehicle] call FUNC(makeCargoCrate);
+            ], _vehicle] call FUNC(createCargoCrate);
         };
         case "rhsusf_stryker_m1126_mk19_d";
         case "rhsusf_stryker_m1126_mk19_wd": {
@@ -278,13 +278,13 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
                 ["ClaymoreDirectionalMine_Remote_Mag", 4],
                 ["ACE_Clacker", 3],
                 ["B_Kitbag_cbr", 2]
-            ], _vehicle] call FUNC(makeCargoCrate);
+            ], _vehicle] call FUNC(createCargoCrate);
 
             ["Box_NATO_Support_F", [
                 ["NDS_M_6Rnd_60mm_HE_0", 5],
                 ["NDS_M_6Rnd_60mm_HE", 5],
                 ["NDS_M_6Rnd_60mm_SMOKE", 5]
-            ], _vehicle] call FUNC(makeCargoCrate);
+            ], _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, [
@@ -299,11 +299,11 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
         };
     };
     
-    ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(makeCargoCrate);
+    ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
 };
 
 if (_vehicle iskindOf "RHS_M2A2_Base") then {
-    [_vehicle, 4, -1, false, false] call FUNC(setSpaceSize);
+    [_vehicle, 4, -1, false, false] call FUNC(setCargoAttributes);
 
     [_vehicle, [
         ["rhs_weap_M136_hp", 2],
@@ -326,7 +326,7 @@ if (_vehicle iskindOf "RHS_M2A2_Base") then {
 };
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
-    [_vehicle, 4, -1, false, false] call FUNC(setSpaceSize);
+    [_vehicle, 4, -1, false, false] call FUNC(setCargoAttributes);
 
     [_vehicle, [
         ["ToolKit", 2],
@@ -376,7 +376,7 @@ if (_vehicle iskindOf "RHS_UH60_Base") then {
                 ["ACE_Splint", 20],
                 ["ACE_tourniquet", 20],
                 ["ACE_surgicalKit", 2]
-            ], _vehicle] call FUNC(makeCargoCrate);
+            ], _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, [

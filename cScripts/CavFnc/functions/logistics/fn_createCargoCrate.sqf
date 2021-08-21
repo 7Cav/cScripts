@@ -7,18 +7,19 @@
  * 0: Classname             <STRING>
  * 1: Inventory             <ARRAY/BOOL>
  * 2: Vehicle or Position   <OBJECT, ARRAY>
+ * 3: Crate Size            <NUMBER> (Optional)
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * ["B_supplyCrate_F"] call cScripts_fnc_makeCargoCrate;
- * ["B_supplyCrate_F", false] call cScripts_fnc_makeCargoCrate;
- * ["B_supplyCrate_F", false, MyTruck] call cScripts_fnc_makeCargoCrate;
- * ["B_supplyCrate_F", false, [255,300,2]] call cScripts_fnc_makeCargoCrate;
- * ["B_supplyCrate_F", [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]]] call cScripts_fnc_makeCargoCrate;
- * ["B_supplyCrate_F", [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]], MyTruck] call cScripts_fnc_makeCargoCrate;
- * ["B_supplyCrate_F", [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]], [255,300,2]] call cScripts_fnc_makeCargoCrate;
+ * ["B_supplyCrate_F"] call cScripts_fnc_createCargoCrate;
+ * ["B_supplyCrate_F", false] call cScripts_fnc_createCargoCrate;
+ * ["B_supplyCrate_F", false, MyTruck] call cScripts_fnc_createCargoCrate;
+ * ["B_supplyCrate_F", false, [255,300,2]] call cScripts_fnc_createCargoCrate;
+ * ["B_supplyCrate_F", [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]]] call cScripts_fnc_createCargoCrate;
+ * ["B_supplyCrate_F", [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]], MyTruck] call cScripts_fnc_createCargoCrate;
+ * ["B_supplyCrate_F", [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]], [255,300,2]] call cScripts_fnc_createCargoCrate;
  *
  * Public: Yes
  */
@@ -27,7 +28,7 @@ params [
     ["_classname", "B_supplyCrate_F", [""]],
     ["_inventory", false, [[], false]],
     ["_destination", objNull, [objNull, []]], 
-    ["_resize", -2, [-2]]
+    ["_resize", nil, [2, nil]]
 ];
 
 if (!isServer) exitwith {};
@@ -43,8 +44,8 @@ if (_destination isEqualType []) then {
 
 private _crate = createVehicle [_classname, _position, [], _random, "NONE"];
 
-if (_resize != -2) then {
-    [_crate, -1, _resize] call cScripts_fnc_setSpaceSize;
+if (!isNil{_resize}) then {
+    [_crate, -1, _resize] call cScripts_fnc_setCargoAttributes;
 };
 
 if (_cargoCheck) then {
