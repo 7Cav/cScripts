@@ -14,8 +14,8 @@
  */
 
 private _loadout = [player] call EFUNC(gear,getCurrentLoadout);
-private _unitItems = parseSimpleArray getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "loadout");
-_unitItems = str _unitItems splitString "[]," joinString ",";
+private _loadout = parseSimpleArray getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "loadout");
+private _unitItems = str _loadout splitString "[]," joinString ",";
 _unitItems = parseSimpleArray ("[" + _unitItems + "]");
 _unitItems = _unitItems arrayIntersect _unitItems select {_x isEqualType "" && {_x != ""}};
 
@@ -219,18 +219,6 @@ private _companyItems = switch (_company) do {
         "rhsusf_acc_sfmb556",
         "rhsusf_acc_sf3p556",
 
-        "rhsusf_acc_grip2",
-        "rhsusf_acc_grip2_tan",
-        "rhsusf_acc_grip2_wd",
-        "rhsusf_acc_kac_grip",
-        "rhsusf_acc_grip1",
-        "rhsusf_acc_rvg_blk",
-        "rhsusf_acc_rvg_de",
-        "rhsusf_acc_tdstubby_blk",
-        "rhsusf_acc_tdstubby_tan",
-        "rhsusf_acc_grip3",
-        "rhsusf_acc_grip3_tan",
-
         "rhsusf_acc_eotech_552",
         "rhsusf_acc_compm4",
 
@@ -317,18 +305,6 @@ private _companyItems = switch (_company) do {
         "rhsusf_acc_acog3",
         "rhsusf_acc_eotech_xps3",
         "rhsusf_acc_eotech",
-
-        "rhsusf_acc_grip2",
-        "rhsusf_acc_grip2_tan",
-        "rhsusf_acc_grip2_wd",
-        "rhsusf_acc_kac_grip",
-        "rhsusf_acc_grip1",
-        "rhsusf_acc_rvg_blk",
-        "rhsusf_acc_rvg_de",
-        "rhsusf_acc_tdstubby_blk",
-        "rhsusf_acc_tdstubby_tan",
-        "rhsusf_acc_grip3",
-        "rhsusf_acc_grip3_tan",
 
         "acc_flashlight",
         "rhsusf_acc_compm4",
@@ -507,9 +483,45 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     default {[]};
 };
 
+private _primaryWeapon = if (!isNil{_loadout#0#0}) then {_loadout#0#0} else {""};
+
 private _weaponSystemSpecific = switch (true) do {
-    case (primaryWeapon player isKindof ['rhs_weap_m4a1_m320', configFile >> 'CfgWeapons']
-            || primaryWeapon player isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {[
+
+    case (_primaryWeapon isKindof ['rhs_weap_hk416d10', configFile >> 'CfgWeapons']
+            || _primaryWeapon isKindof ['rhs_weap_hk416d145', configFile >> 'CfgWeapons']): {[
+        "rhs_weap_hk416d10",
+        "rhs_weap_hk416d10_LMT",
+        "rhs_weap_hk416d10_LMT_d",
+        "rhs_weap_hk416d10_LMT_wd",
+
+        "rhs_weap_hk416d145",
+        "rhs_weap_hk416d145_d",
+        "rhs_weap_hk416d145_d_2",
+        "rhs_weap_hk416d145_wd",
+        "rhs_weap_hk416d145_wd_2",
+
+        // Attachements
+        "rhsusf_acc_grip2",
+        "rhsusf_acc_grip2_tan",
+        "rhsusf_acc_grip2_wd",
+        "rhsusf_acc_kac_grip",
+        "rhsusf_acc_grip1",
+        "rhsusf_acc_rvg_blk",
+        "rhsusf_acc_rvg_de",
+        "rhsusf_acc_tdstubby_blk",
+        "rhsusf_acc_tdstubby_tan",
+        "rhsusf_acc_grip3",
+        "rhsusf_acc_grip3_tan"
+    ]};
+
+    case (_primaryWeapon isKindof ['rhs_weap_hk416d145_m320', configFile >> 'CfgWeapons']
+            || _primaryWeapon isKindof ['rhs_weap_hk416d10_m320', configFile >> 'CfgWeapons']): {[
+        "rhs_weap_hk416d145_m320",
+        "rhs_weap_hk416d10_m320"
+    ]};
+
+    case (_primaryWeapon isKindof ['rhs_weap_m4a1_m320', configFile >> 'CfgWeapons']
+            || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {[
         "rhs_weap_m16a4_carryhandle_M203",
         "rhs_weap_m16a4_imod_M203",
 
@@ -519,6 +531,10 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_m4a1_carryhandle_m203",
         "rhs_weap_m4a1_m203s_d",
         "rhs_weap_m4a1_m203s_wd",
+
+        "rhs_weap_m4a1_blockII_M203_bk",
+        "rhs_weap_m4a1_blockII_M203_d",
+        "rhs_weap_m4a1_blockII_M203_wd",
 
         "rhs_mag_M397_HET",
         "rhs_mag_M433_HEDP",
@@ -533,11 +549,24 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_mag_m713_Red",
         "rhs_mag_m714_White",
         "rhs_mag_m715_Green",
-        "rhs_mag_m716_yellow"
+        "rhs_mag_m716_yellow",
+
+        // Attachements
+        "rhsusf_acc_grip2",
+        "rhsusf_acc_grip2_tan",
+        "rhsusf_acc_grip2_wd",
+        "rhsusf_acc_kac_grip",
+        "rhsusf_acc_grip1",
+        "rhsusf_acc_rvg_blk",
+        "rhsusf_acc_rvg_de",
+        "rhsusf_acc_tdstubby_blk",
+        "rhsusf_acc_tdstubby_tan",
+        "rhsusf_acc_grip3",
+        "rhsusf_acc_grip3_tan"
     ]};
 
-    case (primaryWeapon player isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
-            || primaryWeapon player isKindof ['rhs_weap_m16a4', configFile >> 'CfgWeapons']): {[
+    case (_primaryWeapon isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
+            || _primaryWeapon isKindof ['rhs_weap_m16a4', configFile >> 'CfgWeapons']): {[
         "rhs_weap_m16a4",
         "rhs_weap_m16a4_carryhandle",
         "rhs_weap_m16a4_imod",
@@ -549,14 +578,44 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_m4a1_d",
         "rhs_weap_m4a1_d_mstock",
         "rhs_weap_m4a1_wd",
-        "rhs_weap_m4a1_wd_mstock"
+        "rhs_weap_m4a1_wd_mstock",
+
+        "rhs_weap_m4a1_blockII",
+        "rhs_weap_m4a1_blockII_KAC",
+        "rhs_weap_m4a1_blockII_bk",
+        "rhs_weap_m4a1_blockII_KAC_bk",
+        "rhs_weap_m4a1_blockII_d",
+        "rhs_weap_m4a1_blockII_KAC_d",
+        "rhs_weap_m4a1_blockII_wd",
+        "rhs_weap_m4a1_blockII_KAC_wd",
+        
+        // Attachements
+        "rhsusf_acc_grip2",
+        "rhsusf_acc_grip2_tan",
+        "rhsusf_acc_grip2_wd",
+        "rhsusf_acc_kac_grip",
+        "rhsusf_acc_grip1",
+        "rhsusf_acc_rvg_blk",
+        "rhsusf_acc_rvg_de",
+        "rhsusf_acc_tdstubby_blk",
+        "rhsusf_acc_tdstubby_tan",
+        "rhsusf_acc_grip3",
+        "rhsusf_acc_grip3_tan"
     ]};
+
+    case (_primaryWeapon isKindof ['rhs_weap_m4', configFile >> 'CfgWeapons']): {[
+        "rhs_weap_m4_carryhandle",
+        "rhs_weap_m4_carryhandle_mstock",
+        "rhs_weap_m4_mstock"
+    ]};
+
     case (primaryWeapon player isKindof ['rhs_weap_m240B', configFile >> 'CfgWeapons']): {[
         "rhs_weap_m240B"
     ]};
+
     case (primaryWeapon player isKindof ['rhs_weap_m249_pip', configFile >> 'CfgWeapons']
-            || primaryWeapon player isKindof ['rhs_weap_m249_pip_L', configFile >> 'CfgWeapons']
-            || primaryWeapon player isKindof ['rhs_weap_m249_pip_S', configFile >> 'CfgWeapons']): {[
+            || _primaryWeapon isKindof ['rhs_weap_m249_pip_L', configFile >> 'CfgWeapons']
+            || _primaryWeapon isKindof ['rhs_weap_m249_pip_S', configFile >> 'CfgWeapons']): {[
         "rhs_weap_m249_pip",
         "rhs_weap_m249_light_L",
         "rhs_weap_m249_pip_L_para",
@@ -564,13 +623,15 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_m249_pip_ris",
         "rhs_weap_m249_light_S",
         "rhs_weap_m249_pip_S_para",
-        "rhs_weap_m249_pip_S"
+        "rhs_weap_m249_pip_S",
+
+        // Attachements
+        "rhsusf_acc_kac_grip_saw_bipod",
+        "rhsusf_acc_grip4",
+        "rhsusf_acc_grip4_bipod",
+        "rhsusf_acc_saw_lw_bipod"
     ]};
-    case (primaryWeapon player isKindof ['rhs_weap_m4', configFile >> 'CfgWeapons']): {[
-        "rhs_weap_m4_carryhandle",
-        "rhs_weap_m4_carryhandle_mstock",
-        "rhs_weap_m4_mstock"
-    ]};
+
     default {[]};
 };
 

@@ -30,7 +30,7 @@ private _arsenalStatement = {
             private _name = getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "displayName");
             private _company = getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "company");
             [(findDisplay 1127001), format["Arsenal for %1 Co. %2 loaded", [_company] call CBA_fnc_capitalize, _name]] call ace_arsenal_fnc_message;
-        }, [], 0.5] call CBA_fnc_waitAndExecute;
+        }, [], 0.35] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_execNextFrame;
 
     [{
