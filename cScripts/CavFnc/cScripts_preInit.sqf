@@ -315,10 +315,7 @@ if (EGVAR(Settings,allowCustomTagging)) then {
     call FUNC(initTagging);
 };
 
-if (EGVAR(Settings,enable7cavZeusModules)) then {
-    call FUNC(initModulesAchilles);
-    call FUNC(initModulesZen);
-};
+call FUNC(initModulesZen);
 
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
     call FUNC(initAI);

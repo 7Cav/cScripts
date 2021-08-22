@@ -8,7 +8,7 @@
  * 1: objectPos <OBJECT>
  *
  * Example:
- * [getPos logic, this] call cScripts_fnc_moduleCreateSupplyCrate
+ * [getPos logic, this] call cScripts_fnc_zenModule_createFieldHospital
  *
  * Public: No
  */

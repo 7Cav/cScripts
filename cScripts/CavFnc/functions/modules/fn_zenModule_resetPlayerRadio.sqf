@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A, CPL.Dunn.W
+ * Author: CPL.Brostrom.A
  * This module resets the player radio.
  *
  * Arguments:
@@ -8,7 +8,7 @@
  * 1: objectPos <OBJECT>
  * 
  * Example:
- * [getPos logic, this] call cScripts_fnc_zenModuleSetPlayerRadio;
+ * [getPos logic, this] call cScripts_fnc_zenModule_resetPlayerRadio;
  *
  * Public: No
  */

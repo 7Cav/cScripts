@@ -8,7 +8,7 @@
  * 1: objectPos <OBJECT>
  *
  * Example:
- * [getPos logic, this] call cScripts_fnc_moduleRegearTrooper
+ * [getPos logic, this] call cScripts_fnc_zenModule_regearTrooper
  *
  * Public: No
  */

@@ -9,7 +9,7 @@
  * 
  *
  * Example:
- * [getPos logic, this] call cScripts_fnc_moduleCallEndex;
+ * [getPos logic, this] call cScripts_fnc_zenModule_callEndex;
  *
  * Public: No
  */
