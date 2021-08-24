@@ -56,6 +56,8 @@ private _commonGear = [
 
     // Headgear
     "DAR_Beret_Mar",
+    "rhsusf_patrolcap_ocp",
+    "rhs_Booniehat_ocp",
 
     // Uniforms
     "rhs_uniform_cu_ocp",
@@ -110,13 +112,9 @@ private _commonGear = [
     "rhsusf_bino_m24",
     "rhsusf_bino_m24_ARD",
 
-    "ItemMap",
-    "ItemWatch",
-    "ItemCompass",
     "ACE_Altimeter",
     "ACE_DAGR",
     "ACE_MapTools",
-
     "ACE_Flashlight_MX991",
 
     "ACE_IR_Strobe_Item",
@@ -127,7 +125,11 @@ private _commonGear = [
     "ACE_CableTie",
 
     // NVG
-    "rhsusf_ANPVS_14"
+    "rhsusf_ANPVS_14",
+
+    "ItemMap",
+    "ItemWatch",
+    "ItemCompass"
 ];
 
 private _company = call FUNC(getCompanyVariable);
@@ -151,9 +153,6 @@ private _companyItems = switch (_company) do {
     ]};
     case "charlie": {[
         // Helmets
-        "rhsusf_patrolcap_ocp",
-        "rhs_Booniehat_ocp",
-
         "rhsusf_ach_helmet_ocp",
         "rhsusf_ach_helmet_ocp_alt",
         "rhsusf_ach_helmet_ESS_ocp",
@@ -172,6 +171,7 @@ private _companyItems = switch (_company) do {
         // Backpack
         "B_AssaultPack_mcamo",
         "B_Kitbag_mcamo",
+        "rhsusf_assault_eagleaiii_ocp",
 
         // Weapons
         "rhs_weap_M136",
@@ -231,9 +231,6 @@ private _companyItems = switch (_company) do {
     ]};
     case "bravo": {[
         // Helmets
-        "rhsusf_patrolcap_ocp",
-        "rhs_Booniehat_ocp",
-
         "rhsusf_ach_helmet_ocp",
         "rhsusf_ach_helmet_ocp_alt",
         "rhsusf_ach_helmet_ESS_ocp",
@@ -249,7 +246,6 @@ private _companyItems = switch (_company) do {
         "B_Carryall_mcamo",
         "B_UAV_01_backpack_F",
         "B_Kitbag_mcamo",
-        "NDS_B_M224_mortar",
 
         // Weapons
         "rhs_weap_M136",
@@ -284,13 +280,6 @@ private _companyItems = switch (_company) do {
 
         "rhsusf_200Rnd_556x45_box",
         "rhsusf_200rnd_556x45_mixed_box",
-
-        "rhs_fgm148_magazine_AT",
-
-        "NDS_M_6Rnd_60mm_HE_0",
-        "NDS_M_6Rnd_60mm_HE",
-        "NDS_M_6Rnd_60mm_SMOKE",
-        "NDS_M_6Rnd_60mm_ILLUM",
 
         // Attachements
         "rhsusf_acc_anpeq15side_bk",
@@ -479,12 +468,22 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "FIR_JHMCS_II",
         "FIR_JHMCS_Type2"
     ]};
+    case "weapons": {[
+        "NDS_M_6Rnd_60mm_HE_0",
+        "NDS_M_6Rnd_60mm_HE",
+        "NDS_M_6Rnd_60mm_SMOKE",
+        "NDS_M_6Rnd_60mm_ILLUM",
+
+        "rhs_fgm148_magazine_AT",
+
+        // Backpack
+        "NDS_B_M224_mortar"
+    ]};
 
     default {[]};
 };
 
 private _primaryWeapon = if (!isNil{_loadout#0#0}) then {_loadout#0#0} else {""};
-
 private _weaponSystemSpecific = switch (true) do {
 
     case (_primaryWeapon isKindof ['rhs_weap_hk416d10', configFile >> 'CfgWeapons']
@@ -549,20 +548,7 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_mag_m713_Red",
         "rhs_mag_m714_White",
         "rhs_mag_m715_Green",
-        "rhs_mag_m716_yellow",
-
-        // Attachements
-        "rhsusf_acc_grip2",
-        "rhsusf_acc_grip2_tan",
-        "rhsusf_acc_grip2_wd",
-        "rhsusf_acc_kac_grip",
-        "rhsusf_acc_grip1",
-        "rhsusf_acc_rvg_blk",
-        "rhsusf_acc_rvg_de",
-        "rhsusf_acc_tdstubby_blk",
-        "rhsusf_acc_tdstubby_tan",
-        "rhsusf_acc_grip3",
-        "rhsusf_acc_grip3_tan"
+        "rhs_mag_m716_yellow"
     ]};
 
     case (_primaryWeapon isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
@@ -609,8 +595,9 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_m4_mstock"
     ]};
 
-    case (primaryWeapon player isKindof ['rhs_weap_m240B', configFile >> 'CfgWeapons']): {[
-        "rhs_weap_m240B"
+    case (primaryWeapon player isKindof ['rhs_weap_m240_base', configFile >> 'CfgWeapons']): {[
+        "rhs_weap_m240B",
+        "rhs_weap_m240G"
     ]};
 
     case (primaryWeapon player isKindof ['rhs_weap_m249_pip', configFile >> 'CfgWeapons']
