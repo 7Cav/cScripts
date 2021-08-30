@@ -140,9 +140,10 @@ def manipulate_build(config):
         printC(filename, color='\033[96m', end=' ')
         print("...")
         with open(file, 'a') as add:
-            add.write('\n')
-            for line in searchExp:
-                add.write('\n{}'.format(line))
+            for n, line in enumerate(searchExp):
+                add.write('{}'.format(line))
+                if n != (len(searchExp)-1):
+                    add.write('\n')
         add.close()
 
     def remove(file, searchExp=[]):
