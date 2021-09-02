@@ -21,7 +21,7 @@ if (isNull _vehicle) exitWith {};
 
 private _icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa" call FUNC(getIcon);
 
-private _condition = { EGVAR(Staging,ZoneStatus) && call FUNC(checkStagingZone) };
+private _condition = { EGVAR(Staging,ZoneStatus) || call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions_Vehicle,Repair), "Repair and Refuel", _icon, {
      params ["_vehicle", "_caller", "_params"];
      ["", _vehicle] call ace_repair_fnc_doFullRepair;

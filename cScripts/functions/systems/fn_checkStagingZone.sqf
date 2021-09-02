@@ -29,8 +29,7 @@ if (count _stagingZones == 0) exitWith {false};
     };
     private _distance = player distance _zonePos;
 
-    if (_distance <= _maxDistance) exitWith { EGVAR(Staging,ZoneStatus) = true };
-    EGVAR(Staging,ZoneStatus) = false;
+    if (_distance <= _maxDistance) exitWith { true };
 } forEach _stagingZones;
 
-true
+false
