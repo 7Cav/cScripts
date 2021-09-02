@@ -16,12 +16,10 @@ if (!isMultiplayer) then {["Mission is running on singelplayer enviroment!", "",
 
 // ACRE radio init
 if (isMultiplayer) then {
-    if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
-        GVAR(Radio) = false;
-        ["Setting up ACRE preset...", "init"] call FUNC(info);
-        call EFUNC(gear,setupRadios);
-        GVAR(Radio) = true;
-    };
+    GVAR(Radio) = false;
+    ["Setting up ACRE preset...", "init"] call FUNC(info);
+    call EFUNC(gear,setupRadios);
+    GVAR(Radio) = true;
 } else {
     ["Mission in singelplayer enviroment ACRE radio preset will not be set!", "init", true] call FUNC(warning);
 };

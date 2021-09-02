@@ -15,6 +15,8 @@
  *
  */
 
+if !(EGVAR(patches,usesACRE) exitWith {};
+if !(EGVAR(Settings,enableACRE) exitWith {};
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
 if (count allMissionObjects "acre_api_nameChannels" > 0)       exitWith {};
 
