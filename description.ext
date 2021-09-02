@@ -69,9 +69,7 @@ class Extended_PostInit_EventHandlers {
 
 class CfgFunctions {
     #include "cScripts\CavFnc\CfgFunctions.hpp"
-    #include "cScripts\ViewingDistance\CfgFunctions.hpp"
 };
-#include "cScripts\ViewingDistance\GUI.h"
 #include "cScripts\CfgLoadouts.hpp"
 
 /*           OTHER            */
