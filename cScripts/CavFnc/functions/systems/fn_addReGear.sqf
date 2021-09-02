@@ -31,6 +31,14 @@ if (!isPlayer _object) then {
         if (_doHeal) then {
             [_target, player] call ace_medical_treatment_fnc_fullHeal;
         };
+
+        [
+            [],
+            ["You have rearmed"],
+            [""],
+            [""]
+        ] call CBA_fnc_notify;
+
     }, [_doHeal], 1.5, true, true, "", "true", 5];
 };
 
@@ -42,6 +50,13 @@ private _regearStatement = {
     if (_doHeal) then {
         [_this select 0, player] call ace_medical_treatment_fnc_fullHeal;
     };
+
+    [
+        [],
+        ["You have rearmed"],
+        [""],
+        [""]
+    ] call CBA_fnc_notify;
 };
 private _actionType = if (isPlayer _object) then {1} else {0};
 

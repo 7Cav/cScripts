@@ -51,7 +51,7 @@ if (_loadConfig) then {
 // Set loadout
 switch (true) do {
     case _loadArray: {
-        _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
+        if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
         _unit setUnitLoadout _loadout;
         #ifdef DEBUG_MODE
             [format["Loadout array applied to %1", _unit], "Gear"] call FUNC(info);
@@ -61,7 +61,7 @@ switch (true) do {
         _loadout = getText (_config >> "loadout");
         if (_loadout != "") then {
             _loadout = parseSimpleArray _loadout;
-            _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
+            if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
             _unit setUnitLoadout _loadout;
             #ifdef DEBUG_MODE
                 [format["Loadout %1 applied to %2", _classname, _unit], "Gear"] call FUNC(info);
@@ -73,9 +73,7 @@ switch (true) do {
 };
 
 // Abilities
-if !([_unit] call EFUNC(gear,hasSavedLoadout)) then {
-    [_unit, _config] call EFUNC(gear,applyAbilities);
-};
+[_unit, _config] call EFUNC(gear,applyAbilities);
 
 // Functions
 if (GVAR(isPlayer)) then {
@@ -113,6 +111,9 @@ if (GVAR(isPlayer)) then {
 
 // Select weapon
 _unit selectWeapon (primaryWeapon _unit);
+
+// Apply googles effect after loadout applications
+[_unit, goggles _unit] call ace_goggles_fnc_applyGlassesEffect;
 
 // Lower the weapon
 if !(weaponLowered _unit) then {_unit action ["WeaponOnBack", _unit]};

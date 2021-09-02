@@ -10,7 +10,7 @@
  * True you have a saved loadout <BOOL>
  *
  * Example:
- * ["bob"] call cScripts_fnc_gear_hasSaveLoadout
+ * ["bob"] call cScripts_fnc_gear_hasSavedLoadout
  *
  */
 

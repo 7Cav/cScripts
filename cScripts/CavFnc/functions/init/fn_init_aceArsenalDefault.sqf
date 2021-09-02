@@ -27,6 +27,7 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     private _displayName = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "displayName");
     private _loadout = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "loadout");
     _loadout = parseSimpleArray _loadout;
+    if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
     private _name = format["[%1] %2 - %3", EGVAR(Settings,primaryClanTag), _company, _displayName];
 
     #ifdef DEBUG_MODE
