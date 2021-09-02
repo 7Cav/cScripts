@@ -9,7 +9,7 @@
  * 1: objectPos <OBJECT>
  *
  * Example:
- * [getPos logic, this] call cScripts_fnc_zenModuleEnableUnitSimulation
+ * [getPos logic, this] call cScripts_fnc_zenModule_enableUnitSimulation
  *
  * Public: No
  */

@@ -15,7 +15,6 @@ EGVAR(patches,usesACEX)         = isClass (configFile >> "CfgPatches" >> "acex_m
 EGVAR(patches,usesACRE)         = isClass (configFile >> "CfgPatches" >> "acre_sys_core");
 EGVAR(patches,usesTFAR)         = isClass (configFile >> "CfgPatches" >> "task_force_radio");
 EGVAR(patches,usesAlive)        = isClass (configFile >> "CfgPatches" >> "ALiVE_main");
-EGVAR(patches,usesAchilles)     = isClass (configFile >> "CfgPatches" >> "achilles_data_f_achilles");
 EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_main");
 
 // Global Variables
@@ -315,10 +314,7 @@ if (EGVAR(Settings,allowCustomTagging)) then {
     call FUNC(initTagging);
 };
 
-if (EGVAR(Settings,enable7cavZeusModules)) then {
-    call FUNC(initModulesAchilles);
-    call FUNC(initModulesZen);
-};
+call FUNC(initModulesZen);
 
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
     call FUNC(initAI);

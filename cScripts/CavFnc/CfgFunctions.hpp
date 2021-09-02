@@ -134,38 +134,17 @@ class cScripts {
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
-        // Achilles
-        class achillesModuleEnableUnitSimulation {};
+        class zenModule_EnableUnitSimulation {};
 
-        class achillesModuleCreateStarterCrate {};
-        class achillesModuleCreateFieldHospital {};
-        class achillesModuleCreateMedicalCrate {};
-        class achillesModuleCreateSupplyCrate {};
-        class achillesModuleCreateSpecialWeaponsCrate {};
+        class zenModule_CreateFieldHospital {};
+        class zenModule_CreateMedicalCrate {};
+        class zenModule_CreateStarterCrate {};
+        class zenModule_CreateSupplyCrate {};
 
-        class achillesModuleApplyVehicleLable {};
-        class achillesModuleApplyVehicleInventory {};
+        class zenModule_RegearTrooper {};
+        class zenModule_ResetPlayerRadio {};
 
-        class achillesModuleMakeDoctor {};
-        class achillesModuleMakeEngineer {};
-
-        class achillesModuleRegearTrooper {};
-
-        class achillesModuleCallEndex {};
-        class achillesModuleAddToAlive {};
-
-        // Zen
-        class zenModuleEnableUnitSimulation {};
-
-        class zenModuleCreateFieldHospital {};
-        class zenModuleCreateMedicalCrate {};
-        class zenModuleCreateStarterCrate {};
-        class zenModuleCreateSupplyCrate {};
-
-        class zenModuleRegearTrooper {};
-        class zenModuleResetPlayerRadio {};
-
-        class zenModuleCallEndex {};
+        class zenModule_CallEndex {};
     };
     class helpers {
         file = "cScripts\cavFnc\functions\helpers";
