@@ -329,7 +329,7 @@ if (EGVAR(Settings,allowCustomTagging)) then {
     [] call EFUNC(init,aceTagging);
 };
 
-call FUNC(initModulesZen);
+call EFUNC(init,zenModuels);
 
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
     [] call EFUNC(init,skillAdjustment);

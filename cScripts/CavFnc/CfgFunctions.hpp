@@ -7,19 +7,14 @@ class cScripts {
         
         class init_skillAdjustment {};
         class init_vehicle {};
+        class init_staging {};
 
         class init_diary {};
         class init_message {};
-        
-        class init_staging {};
-
-        class initModulesAchilles {};
-        class initModulesZen {};
-
 
         class init_eventHandlers {};
 
-        class initCuratorObjectPlaced {};
+        class init_zenModuels {};
     };
     class documents {
         file = "cScripts\cavFnc\functions\documents";

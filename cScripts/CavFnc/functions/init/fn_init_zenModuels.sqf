@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * call cScripts_fnc_initModulesZen
+ * call cScripts_fnc_init_zenModuels
  *
  * Public: No
  */

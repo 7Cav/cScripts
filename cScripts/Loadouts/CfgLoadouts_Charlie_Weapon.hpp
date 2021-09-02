@@ -1,6 +1,6 @@
 class Cav_B_Charlie_Weapons_base_F : Cav_B_Charlie_base_F {
     category[] += {"cScripts_Loadout_Cat_Charlie_Weapons"};
-    role = "weapons"
+    role = "weapons";
 };
 
 class Cav_B_C_Weapons_SquadLeader_F : Cav_B_C_SquadLeader_F {
