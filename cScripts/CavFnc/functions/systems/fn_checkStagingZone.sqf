@@ -14,7 +14,7 @@
  */
 #include "..\script_component.hpp";
 
-private _stagingZones = missionNamespace getVariable [QEGVAR(Stageing,Zones), []];
+private _stagingZones = missionNamespace getVariable [QEGVAR(Staging,Zones), []];
 if (count _stagingZones == 0) exitWith {false};
 {
     _x params ["_zone", "_maxDistance"];

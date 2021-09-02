@@ -1,23 +1,24 @@
 class cScripts {
     class init {
         file = "cScripts\cavFnc\functions\init";
-        class initACELoadouts {};
-        class initAI {};
+        class init_aceArsenalDefault {};
+        class init_aceTagging {};
+        class init_aceItemReplace {};
+        
+        class init_skillAdjustment {};
+
+        class init_diary {};
+        class init_message {};
         
         class initVehicle {};
 
-        class initStaging {};
-
-        class initDocuments {};
+        class init_staging {};
 
         class initModulesAchilles {};
         class initModulesZen {};
 
-        class initTagging {};
 
-        class initItemReplace {};
-        
-        class initEvents {};
+        class init_eventHandlers {};
 
         class initCuratorObjectPlaced {};
     };
@@ -125,8 +126,6 @@ class cScripts {
 
         class createVehicleLable {};
         class getVehicleLable {};
-
-        class checkVehicle {};
 
         class getIcon {};
 

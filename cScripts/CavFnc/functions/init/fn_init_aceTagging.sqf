@@ -3,24 +3,15 @@
  * Author: CPL.Brostrom.A
  * This adds custom spray tags to all units.
  *
- * Arguments:
- * None
- *
- * Return Value:
- * Nothing
- *
  * Example:
- * call cScripts_fnc_initTagging
+ * call cScripts_fnc_init_aceTagging
  *
  * Public: No
  */
 
 if (!isServer) exitWith {};
-if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Tagging already applied.", "InitTagging"] call FUNC(warning)};
-
-#ifdef DEBUG_MODE
-    ["Initializing custom spray tags.", "InitTagging"] call FUNC(info);
-#endif
+if (!EGVAR(patches,usesACETagging)) exitWith {};
+if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Tagging already applied.", "init"] call FUNC(warning)};
 
 [   "cScripts_tagging_cav_black",
     "Cav Black",
@@ -51,7 +42,3 @@ if (!isNil{missionNamespace getVariable QEGVAR(mission,tagging)}) exitWith {["Ta
 ] call ace_tagging_fnc_addCustomTag;
 
 missionNamespace setVariable [QEGVAR(mission,tagging), true];
-
-#ifdef DEBUG_MODE
-    ["Custom spray tags initialization complete.", "InitTagging"] call FUNC(info);
-#endif

@@ -1,25 +1,19 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * Thius function handle item convertions
- *
- * Arguments:
- * None
- *
- * Return Value:
- * Nothing
+ * This function enables standardization of item use by swaping items to desired item.
  *
  * Example:
- * call cScripts_fnc_initItemReplace
+ * call cScripts_fnc_init_aceItemReplace
  *
  * Public: No
  */
 
+if (!EGVAR(patches,usesACE)) exitWith {};
 
 #ifdef DEBUG_MODE
-    ["Initializing Item replacement system."] call FUNC(info);
+    ["Initializing Item replacement system.", "init"] call FUNC(info);
 #endif
-
 
 if (!isNil {ace_medical_treatment_convertItems == 2}) then {
     switch (EGVAR(Settings,replaceMedical)) do {
@@ -71,5 +65,5 @@ switch (EGVAR(Settings,replaceSmokeGrenades)) do {
 };
 
 #ifdef DEBUG_MODE
-    ["Item replacement initialization completed."] call FUNC(info);
+    ["Item replacement initialization completed.", "init"] call FUNC(info);
 #endif

@@ -17,11 +17,7 @@ params ["_modulePos", "_objectPos"];
 
 if (_objectPos isKindOf "Man") exitWith {
     private _unit = _objectPos;
-    if (vehicleVarName _unit == "") then {
-        [_unit, typeOf _unit] remoteExec [QEFUNC(gear,applyLoadout), _unit];
-    } else {
-        [_unit, vehicleVarName _unit] remoteExec [QEFUNC(gear,applyLoadout), _unit];
-    };
+    [QEGVAR(gear,applyLoadout), [], _unit] call CBA_fnc_targetEvent;
     [format["Regeared %1", name _unit]] call zen_common_fnc_showMessage;
 };
 

@@ -1,19 +1,16 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function add eventhandelers to all units.
- *
- * Return Value:
- * Nothing
+ * This function changes AI skill values
  *
  * Example:
- * call cScripts_fnc_initAI
+ * call cScripts_fnc_init_skillAdjustment
  *
  * Public: No
  */
 
 #ifdef DEBUG_MODE
-    ["Applying Event Handers (init) to all non player characters...", "InitAI"] call FUNC(info);
+    ["Applying AI Event Handler to units...", "init"] call FUNC(info);
 #endif
 
 if !(isServer) exitWith {};
@@ -99,7 +96,7 @@ if !(isServer) exitWith {};
                     ["reloadSpeed", _unit skill "reloadSpeed"],
                     ["spottime", _unit skill "spottime"],
                     ["spotdistance", _unit skill "spotdistance"]
-                ]], "InitAI"] call FUNC(info);
+                ]], "init"] call FUNC(info);
             #endif
         };
     };

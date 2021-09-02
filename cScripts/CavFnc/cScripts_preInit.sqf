@@ -11,6 +11,7 @@
 // Check installed moduels
 EGVAR(patches,usesACE)          = isClass (configFile >> "CfgPatches" >> "ace_main");
 EGVAR(patches,usesACEArsenal)   = isClass (configFile >> "CfgPatches" >> "ace_arsenal");
+EGVAR(patches,usesACETagging)   = isClass (configFile >> "CfgPatches" >> "ace_tagging");
 EGVAR(patches,usesACEX)         = isClass (configFile >> "CfgPatches" >> "acex_main");
 EGVAR(patches,usesACRE)         = isClass (configFile >> "CfgPatches" >> "acre_sys_core");
 EGVAR(patches,usesTFAR)         = isClass (configFile >> "CfgPatches" >> "task_force_radio");
@@ -20,6 +21,7 @@ EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_ma
 // Global Variables
 GVAR(Radio) = false;
 EGVAR(Staging,ZoneStatus) = false;
+GVAR(isPlayer) = hasInterface || {_unit == player};
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
@@ -294,14 +296,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     };
 #endif
 
-if (EGVAR(patches,usesACEArsenal)) then { 
-    if !(is3DEN) then {
-        call FUNC(initACELoadouts);
-    } else {
-        call FUNC(initACELoadouts);
-        //0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\functions\init\fn_initACELoadouts.sqf';
-    };
-};
+[] call EFUNC(init,aceArsenalDefault);
 
 // Load preInit mission settings
 if (is3DEN) exitWith {};
@@ -311,16 +306,16 @@ if (is3DEN) exitWith {};
 #endif
 
 if (EGVAR(Settings,allowCustomTagging)) then {
-    call FUNC(initTagging);
+    [] call EFUNC(init,aceTagging);
 };
 
 call FUNC(initModulesZen);
 
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
-    call FUNC(initAI);
+    [] call EFUNC(init,skillAdjustment);
 };
 
-call FUNC(initEvents);
+[] call EFUNC(init,eventHandlers);
 
 #ifdef DEBUG_MODE
     ["Initialization completed", "preInit"] call FUNC(info);

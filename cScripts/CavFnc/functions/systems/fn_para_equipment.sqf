@@ -35,7 +35,7 @@ switch (EGVAR(Settings,jumpSimulation)) do {
             [["You almost lost"], [getText (configfile >> "CfgWeapons" >> _baseHmd >> "picture"), 2], ["during your jump, it is in your inventory"]] call CBA_fnc_notify;
 
             #ifdef DEBUG_MODE
-                [format["Jump simulation %1 lost NVG (%2>4)", _player, _nvgRandom]] call FUNC(log);
+                [format["Jump simulation %1 lost NVG (%2>4)", _player, _nvgRandom]] call FUNC(info);
             #endif
         };
 
@@ -45,7 +45,7 @@ switch (EGVAR(Settings,jumpSimulation)) do {
             [["You almost lost"], [getText (configfile >> "CfgWeapons" >> _baseHeadgear >> "picture"), 2], ["during your jump, it is in your inventory"]] call CBA_fnc_notify;
 
             #ifdef DEBUG_MODE
-                [format["Jump simulation %1 lost Hat (%2>32)", _player, _hatRandom]] call FUNC(log);
+                [format["Jump simulation %1 lost Hat (%2>32)", _player, _hatRandom]] call FUNC(info);
             #endif
         };
 
@@ -55,7 +55,7 @@ switch (EGVAR(Settings,jumpSimulation)) do {
             [["You almost lost"], [getText (configfile >> "CfgGlasses" >> _baseGoggles >> "picture"), 2], ["during your jump, it is in your inventory"]] call CBA_fnc_notify;
             
             #ifdef DEBUG_MODE
-                [format["Jump simulation %1 lost Glasses (%2>2)", _player, _glaRandom]] call FUNC(log);
+                [format["Jump simulation %1 lost Glasses (%2>2)", _player, _glaRandom]] call FUNC(info);
             #endif
         };
     };
@@ -67,7 +67,7 @@ switch (EGVAR(Settings,jumpSimulation)) do {
             [["You lost"], [getText (configfile >> "CfgWeapons" >> _advHmd >> "picture"), 2], ["during your jump"]] call CBA_fnc_notify;
             
             #ifdef DEBUG_MODE
-                [format["Jump simulation %1 lost NVG (%2>4)", _player, _nvgRandom]] call FUNC(log);
+                [format["Jump simulation %1 lost NVG (%2>4)", _player, _nvgRandom]] call FUNC(info);
             #endif
         };
 
@@ -77,7 +77,7 @@ switch (EGVAR(Settings,jumpSimulation)) do {
             [["You lost"], [getText (configfile >> "CfgWeapons" >> _advHeadgear >> "picture"), 2], ["during your jump"]] call CBA_fnc_notify;
             
             #ifdef DEBUG_MODE
-                [format["Jump simulation %1 lost Hat (%2>3)", _player, _hatRandom]] call FUNC(log);
+                [format["Jump simulation %1 lost Hat (%2>3)", _player, _hatRandom]] call FUNC(info);
             #endif
         };
 
@@ -87,7 +87,7 @@ switch (EGVAR(Settings,jumpSimulation)) do {
             [["You lost"], [getText (configfile >> "CfgGlasses" >> _advGoggles >> "picture"), 2], ["during your jump"]] call CBA_fnc_notify;
             
             #ifdef DEBUG_MODE
-                [format["Jump simulation %1 lost Glasses (%2>2)", _player, _glaRandom]] call FUNC(log);
+                [format["Jump simulation %1 lost Glasses (%2>2)", _player, _glaRandom]] call FUNC(info);
             #endif
         };
     };

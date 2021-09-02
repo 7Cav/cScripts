@@ -1,25 +1,19 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function add eventhandelers
- *
- * Return Value:
- * Nothing
+ * This function add eventhandlers.
  *
  * Example:
- * call cScripts_fnc_initEvents
+ * call cScripts_fnc_init_eventHandlers
  *
  * Public: No
  */
 
 
-
-
-
 // Server Events
 if !(isServer) exitWith {};
 
-[QEGVAR(event,logServer), {
+[QEGVAR(log,text), {
     diag_log text _this;
 }] call CBA_fnc_addEventHandler;
 

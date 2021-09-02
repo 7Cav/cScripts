@@ -20,8 +20,7 @@ params [
     ["_getType", 'PROFILE', ['']]
 ];
 
-if !(hasInterface) exitWith {};
-if !(isServer) exitWith {};
+if (!GVAR(isPlayer)) exitWith {};
 
 _getType = toUpper(_getType);
 

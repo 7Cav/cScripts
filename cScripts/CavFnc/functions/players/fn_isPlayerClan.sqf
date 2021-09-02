@@ -20,6 +20,8 @@ params [
     ["_clanTag", "", [""]]
 ];
 
+if (!GVAR(isPlayer)) exitWith {};
+
 private _playerClan = [_player] call FUNC(getPlayerClan);
 _clanTag = toUpper(_clanTag);
 
