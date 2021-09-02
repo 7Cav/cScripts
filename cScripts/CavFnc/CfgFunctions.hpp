@@ -6,11 +6,11 @@ class cScripts {
         class init_aceItemReplace {};
         
         class init_skillAdjustment {};
+        class init_vehicle {};
 
         class init_diary {};
         class init_message {};
         
-        class initVehicle {};
         class init_staging {};
 
         class initModulesAchilles {};
@@ -40,6 +40,11 @@ class cScripts {
     };
     class logistics {
         file = "cScripts\cavFnc\functions\logistics";
+        class addCargo {};
+        class setCargoAttributes {};
+        class checkItemValidity {};
+        class createCargoCrate {};
+
         class doStarterCrate {};
         class doStarterCrateSupplies {};
         class doFieldHospital {};
@@ -90,9 +95,6 @@ class cScripts {
     };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
-        class setVehicleInventory {};
-        class setVehicleSettings {};
-
         class addInsigniaSelection {};
         class addInsigniaSelectionList {};
 
@@ -132,6 +134,26 @@ class cScripts {
         class getIcon {};
 
         class getServerMetrics {};
+    };
+    class vehicle {
+        file = "cScripts\cavFnc\functions\vehicle";
+        class vehicle_addInventory {};
+        class vehicle_addFunctions {};
+        class vehicle_addCosmetics {};
+        class vehicle_addRadio {};
+        class vehicle_setRadio {};
+
+        class vehicle_addMagazines {};
+        class vehicle_clearAllMagazines {};
+
+        // Staging
+        class vehicle_addStagingActions {};
+
+        class vehicle_addRegearAction {};
+        class vehicle_addRepairAction {};
+
+        class vehicle_addPylonSelection {};
+        class vehicle_setupPylonCategories {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";

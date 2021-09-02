@@ -146,10 +146,30 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+[ // Pylon
+    QEGVAR(Settings,useCustomVehiclePylon),
+    "CHECKBOX",
+    ["Pylon", "Enables scripted loadouts or pylon to be applied to vehicles based on faction"],
+    [_cScriptSettings, "4; Vehicle"],
+    true,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 [ // Loadouts
     QEGVAR(Settings,useCustomVehicleInventory),
     "CHECKBOX",
-    ["Loadouts", "Enables scripted loadouts to be applied to vehicles based on faction"],
+    ["Inventory", "Enables scripted inventory to be applied to vehicles based on faction"],
+    [_cScriptSettings, "4; Vehicle"],
+    true,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+[ // Radio
+    QEGVAR(Settings,useCustomVehicleRadio),
+    "CHECKBOX",
+    ["Radio", "Enables vehicles radio to be enabled and set on vehicles"],
     [_cScriptSettings, "4; Vehicle"],
     true,
     true,
@@ -159,7 +179,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [ // Factions
     QEGVAR(Settings,vehicleFactions),
     "EDITBOX",
-    ["Factions","Array of factions allowing loadout changes"],
+    ["Factions","Array of factions allowing system loadout and pylon changes"],
     [_cScriptSettings, "4; Vehicle"],
     '["BLU_F", "BLU_CTRG_F", "BLU_T_F", "BLU_USA_7CAV_F", "rhs_faction_usaf", "rhs_faction_usarmy", "rhs_faction_usarmy_d", "rhs_faction_usarmy_wd", "rhs_faction_usmc", "rhs_faction_usmc_d", "rhs_faction_usmc_wd", "rhs_faction_usn"]',
     true,
