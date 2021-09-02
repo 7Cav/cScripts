@@ -1,6 +1,6 @@
 class cScripts {
     class init {
-        file = "cScripts\cavFnc\functions\init";
+        file = "cScripts\functions\init";
         class init_aceArsenalDefault {};
         class init_aceTagging {};
         class init_aceItemReplace {};
@@ -17,7 +17,7 @@ class cScripts {
         class init_zenModuels {};
     };
     class documents {
-        file = "cScripts\cavFnc\functions\documents";
+        file = "cScripts\functions\documents";
         class Doc_Info {};
         class Doc_Radio {};
         class Doc_MissionControl {};
@@ -34,7 +34,7 @@ class cScripts {
         class DocChklist_LZEXTRACT {};
     };
     class logistics {
-        file = "cScripts\cavFnc\functions\logistics";
+        file = "cScripts\functions\logistics";
         class addCargo {};
         class setCargoAttributes {};
         class checkItemValidity {};
@@ -50,7 +50,7 @@ class cScripts {
         class doEmptyCrate {};
     };
     class players {
-        file = "cScripts\cavFnc\functions\players";
+        file = "cScripts\functions\players";
         class getPlayerClan {};
         class isPlayerClan {};
 
@@ -74,7 +74,7 @@ class cScripts {
         class getSquadInsignia {};
     };
     class mission {
-        file = "cScripts\cavFnc\functions\mission";
+        file = "cScripts\functions\mission";
         class gate {};
         class teleport {};
         class addLoadoutAction {};
@@ -89,7 +89,7 @@ class cScripts {
         class addStagingZone {};
     };
     class systems {
-        file = "cScripts\cavFnc\functions\systems";
+        file = "cScripts\functions\systems";
         class addInsigniaSelection {};
         class addInsigniaSelectionList {};
 
@@ -131,7 +131,7 @@ class cScripts {
         class getServerMetrics {};
     };
     class vehicle {
-        file = "cScripts\cavFnc\functions\vehicle";
+        file = "cScripts\functions\vehicle";
         class vehicle_addInventory {};
         class vehicle_addFunctions {};
         class vehicle_addCosmetics {};
@@ -151,7 +151,7 @@ class cScripts {
         class vehicle_setupPylonCategories {};
     };
     class modules {
-        file = "cScripts\cavFnc\functions\modules";
+        file = "cScripts\functions\modules";
         class zenModule_EnableUnitSimulation {};
 
         class zenModule_CreateFieldHospital {};
@@ -165,13 +165,13 @@ class cScripts {
         class zenModule_CallEndex {};
     };
     class helpers {
-        file = "cScripts\cavFnc\functions\helpers";
+        file = "cScripts\functions\helpers";
         class exportContainerToArsenal {};
         class exportLoadoutContentToArsenal {};
         class exportLoadoutToArsenal {};
     };
     class gear {
-        file = "cScripts\cavFnc\functions\gear";
+        file = "cScripts\functions\gear";
         class gear_preInit { preInit = 1; };
         class gear_postInitProxy { postInit = 1; };
         class gear_postInit {};
@@ -196,14 +196,14 @@ class cScripts {
         class gear_getCurrentLoadout {};
     };
     class diag {
-        file = "cScripts\cavFnc\functions\diag";
+        file = "cScripts\functions\diag";
         class error {};
         class info {};
         class log {};
         class warning {};
     };
     class depricated {
-        file = "cScripts\cavFnc\functions\depricated";
+        file = "cScripts\functions\depricated";
         class addAceCategory {}; // depricated => createActionCategory
     };
 };
