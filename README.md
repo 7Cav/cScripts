@@ -34,10 +34,10 @@ In order to install this script package you only need to [download the latest bu
 ## What do cScripts provide?
 cScripts provides you with a automated mission making experience, scripts and functions for 7th Cavalry S3 Operation making. Making a cool or exciting mission without fiddling around with scripts have never been easier.
 
-### AI Tweak (init.sqf)
-The AI in cScripts `init.sqf` have been changed to be more realistic and less ridiculous. The recommended default setting is the one provided, and it has been carefully tested, making it the best setting.
+### AI Tweak
+cScripts have a faction and unit skill system allowing the ai to be more fun to play agains. A regular army units are more skilld then a militia, snipers are more skilled in spotting and machineguns are less acurate but fire more. The system only adjust a unit skill level and does not interfere with any FSM mods.
 
-### Custom mission customization and initialization
+### Mission options and customization
 All cScripts options, actions and initialization are optional and can be toggled on or off. They can be tweaked via CBA settings in an easy manner, this is to make the script as flexible as possible. Read more about how to use and change settings [here](https://github.com/7Cav/cScripts/wiki/CBA-Mission-Settings).
 
 ### Custom mission modules (Zen)
