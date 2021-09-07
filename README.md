@@ -17,7 +17,6 @@ cScripts is an easy to use ARMA3 mission framework used by the 7th Cavalry Gamin
 ## Minimum Requirements
 - [CBA](https://github.com/CBATeam/CBA_A3)
 - [ACE3](https://ace3mod.com/)
-*These are the requirements to run the script framework due to weapons, equipment and references being used.*
 
 ### Optional moduels
 - [ACRE2](https://github.com/IDI-Systems/acre2)
