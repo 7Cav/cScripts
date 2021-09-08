@@ -475,9 +475,19 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "NDS_M_6Rnd_60mm_ILLUM",
 
         "rhs_fgm148_magazine_AT",
+        "ace_compat_rhs_usf3_mag_TOW2b_aero",
+        "ace_compat_rhs_usf3_mag_TOW2bb",
+        "ace_compat_rhs_usf3_48Rnd_40mm_MK19_M430A1",
 
-        // Backpack
-        "NDS_B_M224_mortar"
+        // Backpacks
+        "B_Carryall_mcamo",
+
+        "NDS_B_M224_mortar",
+        
+        "ace_compat_rhs_usf3_tow_carry",
+        "ace_csw_m3CarryTripodLow",
+        "ace_compat_rhs_usf3_mk19_carry",
+        "ace_csw_m220CarryTripod"
     ]};
 
     default {[]};
