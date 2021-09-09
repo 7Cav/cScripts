@@ -1,4 +1,8 @@
-class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_Alpha_base_F {
+class Cav_B_A_PilotBase_F : Cav_B_Alpha_base_F {
+    scope = 0;
+    abilityEngineer = 1;
+};
+class Cav_B_A_Helicopter_Tra_Pilot_F : Cav_B_A_PilotBase_F {
     displayName = "$STR_Cav_Alpha_Characters_A_Helicopter_Tra_Pilot";
     category[] += {"cScripts_Loadout_Cat_Alpha_Rotary"};
     scope = 2;
@@ -10,7 +14,7 @@ class Cav_B_A_Helicopter_Tra_coPilot_F : Cav_B_A_Helicopter_Tra_Pilot_F {
     scope = 2;
     loadout = [["rhs_weap_m4","","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_Stanag",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],["rhs_uniform_cu_ocp_1stcav",[["ACRE_PRC343",1],["ACRE_PRC152",1],["ACE_quikclot",10],["ACE_morphine",2],["ACE_epinephrine",2],["ACE_tourniquet",2],["ACE_EarPlugs",2],["ACE_microDAGR",1],["ACE_Flashlight_MX991",1]]],["rhsusf_mbav_light",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",3,30],["rhsusf_mag_15Rnd_9x19_JHP",2,15],["SmokeShellBlue",2,1],["SmokeShellRed",2,1],["SmokeShellGreen",2,1],["Chemlight_green",2,1],["ACE_Chemlight_HiRed",2,1],["Chemlight_blue",2,1],["SmokeShell",2,1],["B_IR_Grenade",1,1]]],["B_Kitbag_mcamo",[["ACRE_PRC117F",1],["ACE_MapTools",1],["ACE_EntrenchingTool",1],["ACE_Clacker",1],["ACE_Banana",1],["H_Cap_tan",1],["rhsusf_shemagh_tan",1],["SatchelCharge_Remote_Mag",1,1]]],"rhsusf_hgu56p_visor_green","",["Binocular","","","",[],[],""],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter","NVGogglesB_grn_F"]];
 };
-class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_Alpha_base_F {
+class Cav_B_A_Helicopter_Tra_CrewChief_F : Cav_B_A_PilotBase_F {
     displayName = "Helicopter Crew Chief";
     category[] += {"cScripts_Loadout_Cat_Alpha_Rotary"};
     scope = 2;
