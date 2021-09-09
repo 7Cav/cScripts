@@ -34,7 +34,7 @@ private _iconIfv   = "iconAPC" call FUNC(getIcon);
 private _iconCrate = "iconCrateWpns" call FUNC(getIcon);
 
 private _mainCategory = ["ACE_SelfActions", QEGVAR(Actions_Vehicle,Main_Cat)];
-private _vehiclePylon = [QEGVAR(Actions_Vehicle,Pylon_Cat), "Vehicle Loadouts", _icon, {true}, { call FUNC(checkStagingZone) && EGVAR(Staging,ZoneStatus) }] call ace_interact_menu_fnc_createAction;
+private _vehiclePylon = [QEGVAR(Actions_Vehicle,Pylon_Cat), "Vehicle Loadouts", _icon, {true}, { call FUNC(checkStagingZone) || EGVAR(Staging,ZoneStatus) }] call ace_interact_menu_fnc_createAction;
 [_vehicle, 1, _mainCategory, _vehiclePylon] call ace_interact_menu_fnc_addActionToObject;
 
 _mainCategory
