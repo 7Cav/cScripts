@@ -344,7 +344,7 @@ if (_vehicle iskindOf "RHS_MELB_base") then {
     [_vehicle, []] call FUNC(addCargo);
 };
 
-if (_vehicle iskindOf "RHS_UH60_Base") then {
+if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
     switch (_vehicleType) do {
         case "RHS_UH60M_MEV2_d";
         case "RHS_UH60M_MEV_d";
@@ -393,7 +393,7 @@ if (_vehicle iskindOf "RHS_UH60_Base") then {
     };
 };
 
-if (_vehicle iskindOf "RHS_CH_47F_base") then {
+if (_vehicle iskindOf "Heli_Transport_02_base_F") then {
     [_vehicle, [
         ["ACE_rope18", 4],
         ["ACE_rope27", 4],
