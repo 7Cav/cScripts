@@ -14,8 +14,10 @@ params [["_vehicle", objNull, [objNull]]];
 
 if (!isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
-if (!EGVAR(Settings,useCustomVehicleInventory)) exitWith {};
+if (!EGVAR(Settings,enableVehicleInventory)) exitWith {};
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle], "Vehicle"] call FUNC(warning);};
+
+// Is valid vehicle
 private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
 if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle"] call FUNC(error);};
 if (!(faction _vehicle in _factionArray)) exitWith {};
@@ -92,8 +94,7 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 ["rhs_mag_m67", 20],
                 ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 5],
                 ["rhs_mag_m714_White", 20]
-                ]
-            ] call FUNC(addCargo);
+            ]] call FUNC(addCargo);
 
             ["Box_T_NATO_Wps_F", [
                 ["ACE_Chemlight_HiGreen", 20],

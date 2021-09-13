@@ -100,4 +100,20 @@ if (_vehicle iskindOf "RHS_C130J_Base") then {
 
 _vehicle setPlateNumber "1/7 Cav";
 
+// Add eventHandlers to handle death and deletion.
+_vehicle addEventHandler ["Killed", {
+    params["_vehicle"];
+    private _labels = _vehicle getVariable [QEGVAR(Vehicle,Labels), []];
+    if (count _labels != 0) then {
+        {deleteVehicle _x} forEach _labels;
+    };
+}];
+_vehicle addEventHandler ["Deleted", {
+    params["_vehicle"];
+    private _labels = _vehicle getVariable [QEGVAR(Vehicle,Labels), []];
+    if (count _labels != 0) then {
+        {deleteVehicle _x} forEach _labels;
+    };
+}];
+
 _vehicle setVariable [QEGVAR(Vehicle,Cosmetics), true];

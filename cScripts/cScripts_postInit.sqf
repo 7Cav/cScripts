@@ -10,9 +10,7 @@ if (is3DEN) exitWith {};
 #endif
 
 // Change inventory content of supply crates on mission start.
-if (EGVAR(Settings,useCustomVehicleSystem)) then {
-    [] call EFUNC(init,vehicle);
-};
+[] call EFUNC(init,vehicle);
 
 // item replacement
 if (EGVAR(Settings,allowReplaceItem)) then {

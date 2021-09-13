@@ -59,9 +59,9 @@ private _stagingMarkers = [
     };
 } forEach _respawnMarkers + _stagingMarkers;
 
-if !(hasInterface) exitWith {};
+if !(GVAR(isPlayer)) exitWith {};
 
-private _condition = { EGVAR(Staging,ZoneStatus) || call FUNC(checkStagingZone) };
+private _condition = { call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions,StagingCategory), "Staging Zone", "cScripts\Data\Icon\icon_00.paa", {true}, _condition] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _stagingCat] call ace_interact_menu_fnc_addActionToObject;
 
@@ -83,14 +83,14 @@ player addAction [
         ] call CBA_fnc_notify;
         playSound "hint";
     }, nil, 10, false, false, "",
-    QUOTE(EGVAR(Staging,ZoneStatus) || call FUNC(checkStagingZone)),
+    QUOTE(call FUNC(checkStagingZone)),
     0
 ];
 
 // Inventory event handler to save loadout within stadgeing zone
 player addEventHandler ["InventoryClosed", {
     params ["_unit", "_container"];
-    if (EGVAR(Staging,ZoneStatus) || call FUNC(checkStagingZone)) then {
+    if (call FUNC(checkStagingZone)) then {
         [player] call EFUNC(gear,saveLoadout);
     };
 }];

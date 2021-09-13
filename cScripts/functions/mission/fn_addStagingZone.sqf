@@ -34,10 +34,10 @@ _stagingZones pushBack [_zone, _size];
 
 missionNamespace setVariable [QEGVAR(Staging,Zones), _stagingZones];
 
-if (!isMultiplayer) then {
+#ifdef DEBUG_MODE
     private _debugMarker = createMarkerLocal [format["DebugStadgeingMarker_%1", count _stagingZones], _zone];
     _debugMarker setMarkerShapeLocal "ELLIPSE";
     _debugMarker setMarkerSizeLocal [_size, _size];
     _debugMarker setMarkerColorLocal "colorCivilian";
     [format["Staging zone %1 created.", count _stagingZones], "Staging"] call FUNC(info);
-};
+#endif
