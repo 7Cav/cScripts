@@ -16,6 +16,8 @@
     ["Applying Event Handers (init) to vehicles for function expantions...", "InitVehicle"] call FUNC(info);
 #endif
 
+if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
+
 ["AllVehicles", "init", {
     _this params ["_vehicle"];
     if (_vehicle iskindOf "man") exitWith {};

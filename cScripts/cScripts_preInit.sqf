@@ -137,7 +137,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 // 4; Vehicle
 [ // Enable
-    QEGVAR(Settings,useCustomVehicleSystem),
+    QEGVAR(Settings,enableVehicleSystem),
     "CHECKBOX",
     ["Enable", "Enables scripted settings and functions to apply to vehicles."],
     [_cScriptSettings, "4; Vehicle"],
@@ -147,7 +147,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 [ // Pylon
-    QEGVAR(Settings,useCustomVehiclePylon),
+    QEGVAR(Settings,enableVehiclePylon),
     "CHECKBOX",
     ["Pylon", "Enables scripted loadouts or pylon to be applied to vehicles based on faction"],
     [_cScriptSettings, "4; Vehicle"],
@@ -157,7 +157,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 [ // Loadouts
-    QEGVAR(Settings,useCustomVehicleInventory),
+    QEGVAR(Settings,enableVehicleInventory),
     "CHECKBOX",
     ["Inventory", "Enables scripted inventory to be applied to vehicles based on faction"],
     [_cScriptSettings, "4; Vehicle"],
@@ -167,11 +167,11 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 [ // Radio
-    QEGVAR(Settings,useCustomVehicleRadio),
+    QEGVAR(Settings,enableVehicleRadios),
     "CHECKBOX",
     ["Radio", "Enables vehicles radio to be enabled and set on vehicles"],
     [_cScriptSettings, "4; Vehicle"],
-    true,
+    false,
     true,
     {},
     true

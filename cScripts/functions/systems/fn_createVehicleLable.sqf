@@ -50,6 +50,6 @@ if (_checkDirType) then {
 };
 
 // Collect lables in to variable
-private _labels = _vehicle getVariable [QEGVAR(Vehicle,Label), []];
+private _labels = _vehicle getVariable [QEGVAR(Vehicle,Labels), []];
 _labels pushBack _label;
-_vehicle setVariable [QEGVAR(Vehicle,Label), _labels, true];
+_vehicle setVariable [QEGVAR(Vehicle,Labels), _labels, true];

@@ -31,10 +31,12 @@ private _pilotIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" call FUNC(getI
 private _iconTank  = "iconTank" call FUNC(getIcon);
 private _iconIfv   = "iconAPC" call FUNC(getIcon);
 private _iconCrate = "iconCrateWpns" call FUNC(getIcon);
+private _iconMedic = "\z\ACE\addons\medical_gui\ui\cross.paa" call FUNC(getIcon);
+
 
 private _mainCategory = "";
 if (_aceCategory == "ACE_SelfActions") then {
-    [_object, "cScripts_Loadout_Cat_MainStage", "Staging Zone Loadouts", _icon, [_aceCategory], { call FUNC(checkStagingZone) || EGVAR(Staging,ZoneStatus) }] call FUNC(createActionCategory);
+    [_object, "cScripts_Loadout_Cat_MainStage", "Staging Zone Loadouts", _icon, [_aceCategory], { call FUNC(checkStagingZone) }] call FUNC(createActionCategory);
     _mainCategory = "cScripts_Loadout_Cat_MainStage";
 } else {
     [_object, "cScripts_Loadout_Cat_Main", "Loadouts", _icon, [_aceCategory]] call FUNC(createActionCategory);
@@ -50,7 +52,7 @@ if (_aceCategory == "ACE_SelfActions") then {
 [_object, "cScripts_Loadout_Cat_Bravo_Viking_Leadership", "Viking Leadership", _leadIcon, [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Viking_Squad",      "Viking Squad", _squadIcon,     [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Viking_Weapons",    "Viking Weapons", _speciIcon,   [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Bravo_Atlas",             "Atlas", _iconCrate,            [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_Atlas",             "Atlas", _iconMedic,            [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Tank",              "Tank", _iconTank,              [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_IFV",               "IFV", _iconIfv,                [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Weapons",           "Weapons", _squadIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
