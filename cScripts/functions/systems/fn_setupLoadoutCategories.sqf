@@ -49,6 +49,7 @@ if (_aceCategory == "ACE_SelfActions") then {
 [_object, "cScripts_Loadout_Cat_Bravo_Leadership",        "Leadership", _leadIcon,        [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Viking_Leadership", "Viking Leadership", _leadIcon, [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Viking_Squad",      "Viking Squad", _squadIcon,     [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_Viking_Weapons",    "Viking Weapons", _speciIcon,   [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Atlas",             "Atlas", _iconCrate,            [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Tank",              "Tank", _iconTank,              [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_IFV",               "IFV", _iconIfv,                [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);

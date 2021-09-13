@@ -13,8 +13,8 @@
  * [] call cScripts_fnc_getArsenalWhitelist;
  */
 
-private _loadout = [player] call EFUNC(gear,getCurrentLoadout);
-private _loadout = parseSimpleArray getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "loadout");
+private _classname = [player] call EFUNC(gear,getCurrentLoadout);
+private _loadout = parseSimpleArray getText (missionConfigFile >> "CfgLoadouts" >> _classname >> "loadout");
 private _unitItems = str _loadout splitString "[]," joinString ",";
 _unitItems = parseSimpleArray ("[" + _unitItems + "]");
 _unitItems = _unitItems arrayIntersect _unitItems select {_x isEqualType "" && {_x != ""}};
@@ -281,6 +281,21 @@ private _companyItems = switch (_company) do {
         "rhsusf_200Rnd_556x45_box",
         "rhsusf_200rnd_556x45_mixed_box",
 
+        "rhs_mag_M397_HET",
+        "rhs_mag_M433_HEDP",
+        "ACE_HuntIR_M203",
+
+        "rhs_mag_M583A1_white",
+        "rhs_mag_M585_white_cluster",
+        "rhs_mag_m661_green",
+        "rhs_mag_m662_red",
+        "rhs_mag_M663_green_cluster",
+        "rhs_mag_M664_red_cluster",
+        "rhs_mag_m713_Red",
+        "rhs_mag_m714_White",
+        "rhs_mag_m715_Green",
+        "rhs_mag_m716_yellow",
+
         // Attachements
         "rhsusf_acc_anpeq15side_bk",
         "rhsusf_acc_anpeq15_bk_top",
@@ -325,6 +340,42 @@ private _companyItems = switch (_company) do {
     ]};
 };
 
+private _medicRole = getNumber (missionConfigFile >> "CfgLoadouts" >> _classname >> "abilityMedic");
+_medicGear = if (_medicRole >= 1) then {[
+        "ACE_microDAGR",
+        "ItemAndroid",
+
+        "ACE_bodyBag",
+
+        "ACE_quikclot",
+        "ACE_packingBandage",
+        "ACE_elasticBandage",
+        "ACE_fieldDressing",
+        "ACE_tourniquet",
+
+        "ACE_adenosine",
+        "ACE_epinephrine",
+        "ACE_morphine",
+
+        "ACE_salineIV",
+        "ACE_salineIV_500",
+        "ACE_salineIV_250",
+
+        "ACE_splint",
+
+        "ACE_surgicalKit",
+        "ACE_personalAidKit",
+
+        "vtx_stretcher_item",
+
+        "kat_naloxone",
+        "kat_carbonate",
+        "kat_X_AED",
+        "kat_AED",
+        "kat_IV_16"
+        
+]} else {[]};
+
 private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "officer": {[
         "ACE_microDAGR",
@@ -364,31 +415,6 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "fireteamleader": {[
         "ACE_microDAGR",
         "ACE_HuntIR_monitor"
-    ]};
-    case "medic": {[
-        "ACE_microDAGR",
-        "ItemAndroid",
-
-        "ACE_bodyBag",
-
-        "ACE_quikclot",
-        "ACE_packingBandage",
-        "ACE_elasticBandage",
-        "ACE_fieldDressing",
-        "ACE_tourniquet",
-
-        "ACE_adenosine",
-        "ACE_epinephrine",
-        "ACE_morphine",
-
-        "ACE_salineIV",
-        "ACE_salineIV_500",
-        "ACE_salineIV_250",
-
-        "ACE_splint",
-
-        "ACE_surgicalKit",
-        "ACE_personalAidKit"
     ]};
     case "pilot";
     case "rotarypilot": {[
@@ -474,10 +500,32 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "NDS_M_6Rnd_60mm_SMOKE",
         "NDS_M_6Rnd_60mm_ILLUM",
 
+        // Launchers
+        "rhs_weap_fgm148",
         "rhs_fgm148_magazine_AT",
+        
+        "rhs_weap_fim92",
+        "rhs_fim92_mag",
+        
+        "rhs_weap_maaws",
+        "rhs_optic_maaws",
+        "rhs_mag_maaws_HE",
+        "rhs_mag_maaws_HEDP",
+        "rhs_mag_maaws_HEAT",
 
-        // Backpack
-        "NDS_B_M224_mortar"
+        "ace_compat_rhs_usf3_mag_TOW2b_aero",
+        "ace_compat_rhs_usf3_mag_TOW2bb",
+        "ace_compat_rhs_usf3_48Rnd_40mm_MK19_M430A1",
+
+        // Backpacks
+        "B_Carryall_mcamo",
+
+        "NDS_B_M224_mortar",
+        
+        "ace_compat_rhs_usf3_tow_carry",
+        "ace_csw_m3CarryTripodLow",
+        "ace_compat_rhs_usf3_mk19_carry",
+        "ace_csw_m220CarryTripod"
     ]};
 
     default {[]};
@@ -622,6 +670,6 @@ private _weaponSystemSpecific = switch (true) do {
     default {[]};
 };
 
-private _whitelist = _commonGear + _unitItems + _companyItems + _roleSpecific + _weaponSystemSpecific;
+private _whitelist = _commonGear + _unitItems + _companyItems + _roleSpecific + _medicGear + _weaponSystemSpecific;
 
 _whitelist

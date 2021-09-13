@@ -4,24 +4,14 @@
  * Show you your current company variable.
  *
  * Arguments:
- * 0: player <STRING>
+ * none
  *
  * Return Value:
- * Company variable <STRING>
+ * player company variable <STRING>
  *
  * Example:
  * [player] call cScripts_fnc_getCompanyVariable
  *
  */
 
-params [
-    ["_player", objNull, [objNull]]
-];
-
-private _return = "none";
-
-if !(isNil {_player getVariable QEGVAR(Cav,Company)}) then {
-    _return = _player getVariable QEGVAR(Cav,Company);
-};
-
-_return;
+player getVariable [QEGVAR(Cav,Company), "none"];
