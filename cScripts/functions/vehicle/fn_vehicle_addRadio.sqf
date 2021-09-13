@@ -26,10 +26,30 @@ if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup
 if (!(faction _vehicle in _factionArray));
 
 if (_vehicle iskindOf "MRAP_01_base_F") then {
-    [_vehicle, [17]] call EFUNC(vehicle,setRadio);
+    switch (_vehicleType) do {
+        case "MED": {
+            [_vehicle, [15]] call EFUNC(vehicle,setRadio);
+        };
+        default {
+            [_vehicle, [17]] call EFUNC(vehicle,setRadio);
+        };
+    };
 };
 
 if (_vehicle iskindOf "rhsusf_fmtv_base") then {
+};
+
+if (_vehicle iskindOf "Truck_01_base_F") then {
+    switch (_vehicleType) do {
+        case "rhsusf_M1230a1_usarmy_wd";
+        case "rhsusf_M1230a1_usarmy_d";
+        case "MED": {
+            [_vehicle, [15]] call EFUNC(vehicle,setRadio);
+        };
+        default {
+            [_vehicle, [17]] call EFUNC(vehicle,setRadio);
+        };
+    };
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
