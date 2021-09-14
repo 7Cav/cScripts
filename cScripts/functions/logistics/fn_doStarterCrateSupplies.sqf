@@ -234,6 +234,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         //================== LAUNCHERS ==================\\
 
         _crate addWeaponCargoGlobal ["rhs_weap_M136_hedp",10];
+        _crate addWeaponCargoGlobal ["rhs_weap_maaws",10];
+        _crate addWeaponCargoGlobal ["rhs_weap_fgm148",10];
         _crate addWeaponCargoGlobal ["dzn_MG_Tripod_M122A1_M240Mount_Carry",5];
 
         //================== OPTICS ==================\\
@@ -259,6 +261,8 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",100];
         _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",250];
         _crate addMagazineCargoGlobal ["rhs_fgm148_magazine_AT",10];
+        _crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",10];
+        _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",10];
         _crate addMagazineCargoGlobal ["NDS_M_6Rnd_60mm_HE_0",10];
         _crate addMagazineCargoGlobal ["NDS_M_6Rnd_60mm_HE",10];
         _crate addMagazineCargoGlobal ["NDS_M_6Rnd_60mm_SMOKE",10];
@@ -296,7 +300,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
         _crate addItemCargoGlobal ["ACE_CableTie",100];
         _crate addItemCargoGlobal ["ACE_wirecutter",10];
         _crate addItemCargoGlobal ["ACE_EntrenchingTool",20];
-        _crate addItemCargoGlobal ["ACE_IR_Strobe_Item",20];
+        _crate addItemCargoGlobal ["B_UavTerminal",20];
         _crate addItemCargoGlobal ["ItemAndroid", 10];
         _crate addItemCargoGlobal ["ItemcTab", 10];
         
