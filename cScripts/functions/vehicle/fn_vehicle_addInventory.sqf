@@ -28,6 +28,10 @@ if (!(faction _vehicle in _factionArray)) exitWith {};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
+_vehicle setVariable [QEGVAR(Vehicle,Inventory), true];
+
+if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
+
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     
     // Cargo
@@ -430,5 +434,3 @@ if (_vehicle iskindOf "NDS_M224_mortar_base") then {
 if (_vehicle iskindOf "RHS_C130J_Base") then {
     [_vehicle, []] call FUNC(addCargo);
 };
-
-_vehicle setVariable [QEGVAR(Vehicle,Inventory), true];
