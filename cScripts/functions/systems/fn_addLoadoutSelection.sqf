@@ -33,7 +33,11 @@ private _condition = { true };
 if (_allowOnlyForCompany) then {
     _condition = {
         (_this select 2) params ["", "_platoon"];
-        [player, _platoon] call FUNC(hasCompanyVariable);
+        if !(EGVAR(Staging,OverrideCompanyVar)) then {
+            [player, _platoon] call FUNC(hasCompanyVariable);
+        } else {
+            true;
+        };
     };
 };
 
