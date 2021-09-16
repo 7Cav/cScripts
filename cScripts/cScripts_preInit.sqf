@@ -21,6 +21,7 @@ EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_ma
 // Global Variables
 GVAR(Radio) = false;
 EGVAR(Staging,ZoneStatus) = false;
+EGVAR(Staging,OverrideCompanyVar) = false;
 GVAR(isPlayer) = hasInterface || {_unit == player};
 
 // Make settings name
@@ -135,12 +136,28 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_fnc_addSetting;
 
 
-// 4; Vehicle
+// 4; Staging
+[ // Show all loadouts
+    QEGVAR(Settings,showAllLoadouts),
+    "CHECKBOX",
+    ["Show all loadouts","Allow the selection of any loadouts from the personal selection menu."],
+    [_cScriptSettings, "4; Staging"],
+    false,
+    true,
+    {
+        params ["_value"];
+        { EGVAR(Staging,OverrideCompanyVar) = _value; } remoteExecCall ["call"];
+    },
+    false
+] call CBA_fnc_addSetting;
+
+
+// 5; Vehicle
 [ // Enable
     QEGVAR(Settings,enableVehicleSystem),
     "CHECKBOX",
     ["Enable", "Enables scripted settings and functions to apply to vehicles."],
-    [_cScriptSettings, "4; Vehicle"],
+    [_cScriptSettings, "5; Vehicle"],
     true,
     true,
     {},
@@ -150,7 +167,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,enableVehiclePylon),
     "CHECKBOX",
     ["Pylon", "Enables scripted loadouts or pylon to be applied to vehicles based on faction"],
-    [_cScriptSettings, "4; Vehicle"],
+    [_cScriptSettings, "5; Vehicle"],
     true,
     true,
     {},
@@ -160,7 +177,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,enableVehicleInventory),
     "CHECKBOX",
     ["Inventory", "Enables scripted inventory to be applied to vehicles based on faction"],
-    [_cScriptSettings, "4; Vehicle"],
+    [_cScriptSettings, "5; Vehicle"],
     true,
     true,
     {},
@@ -170,7 +187,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,enableVehicleRadios),
     "CHECKBOX",
     ["Radio", "Enables vehicles radio to be enabled and set on vehicles"],
-    [_cScriptSettings, "4; Vehicle"],
+    [_cScriptSettings, "5; Vehicle"],
     false,
     true,
     {},
@@ -180,7 +197,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,vehicleFactions),
     "EDITBOX",
     ["Factions","Array of factions allowing system loadout and pylon changes"],
-    [_cScriptSettings, "4; Vehicle"],
+    [_cScriptSettings, "5; Vehicle"],
     '["BLU_F", "BLU_CTRG_F", "BLU_T_F", "BLU_USA_7CAV_F", "rhs_faction_usaf", "rhs_faction_usarmy", "rhs_faction_usarmy_d", "rhs_faction_usarmy_wd", "rhs_faction_usmc", "rhs_faction_usmc_d", "rhs_faction_usmc_wd", "rhs_faction_usn"]',
     true,
     {},
