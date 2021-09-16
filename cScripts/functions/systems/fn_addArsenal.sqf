@@ -23,6 +23,14 @@ private _arsenalStatement = {
 
     private _items = call FUNC(getArsenalWhitelist);
     [player, _items] call ace_arsenal_fnc_initBox;
+    if (count _items == 0) exitWith {
+        [
+            [],
+            ["Arsenal is not avalible for your."],
+            [""],
+            [""]
+        ] call CBA_fnc_notify;
+    };
     [{
         [player, player, false] call ace_arsenal_fnc_openBox;
         [{
