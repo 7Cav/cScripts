@@ -13,7 +13,12 @@
  * [] call cScripts_fnc_getArsenalWhitelist;
  */
 
-private _classname = [player] call EFUNC(gear,getCurrentLoadout);
+private _classname = call EFUNC(gear,getCurrentLoadout);
+if !(isClass (missionConfigFile >> "CfgLoadouts" >> _classname)) exitWith {
+    [format["Loadout '%1' does not exist inside of mission config. No whitelist will be created.", _classname], "Arsenal Whitelist", true] call FUNC(warning);
+    [];
+};
+
 private _loadout = parseSimpleArray getText (missionConfigFile >> "CfgLoadouts" >> _classname >> "loadout");
 private _unitItems = str _loadout splitString "[]," joinString ",";
 _unitItems = parseSimpleArray ("[" + _unitItems + "]");
