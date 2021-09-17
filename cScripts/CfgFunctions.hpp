@@ -149,6 +149,9 @@ class cScripts {
 
         class vehicle_addPylonSelection {};
         class vehicle_setupPylonCategories {};
+
+        // Other
+        class vehicle_addFlagAction {};
     };
     class modules {
         file = "cScripts\functions\modules";

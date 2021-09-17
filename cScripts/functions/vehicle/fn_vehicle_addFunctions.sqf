@@ -76,6 +76,10 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
     };
 };
 
+if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
+    [_vehicle] call FUNC(vehicle_addFlagAction);
+};
+
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
     switch (_vehicleType) do {
         case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
