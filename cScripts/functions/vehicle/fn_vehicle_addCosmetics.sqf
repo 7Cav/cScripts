@@ -71,7 +71,46 @@ if (_vehicle iskindOf "RHS_MELB_base") then {
 };
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
-    _vehicle animateSource ["Miles_Hide", 1, true];
+    _vehicle setVariable ["RHS_Decal_Enabled", false];
+
+    [{
+        (_this select 0) animateSource ["Miles_Hide", 1, true];
+        (_this select 0) animateSource ["IFF_Panels_Hide", 1, true];
+    }, [_vehicle]] call CBA_fnc_execNextFrame;
+
+    switch (typeOf _vehicle) do {
+        case "rhsusf_m1a1aimd_usarmy";
+        case "rhsusf_m1a1aim_tuski_d";
+        case "rhsusf_m1a2sep1d_usarmy";
+        case "rhsusf_m1a2sep1tuskid_usarmy";
+        case "rhsusf_m1a2sep1tuskiid_usarmy";
+        case "rhsusf_m1a2sep2d_usarmy": {
+            _vehicle setObjectTextureGlobal [12, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\BarrelArt_Abrams_D\30_ca.paa"];
+
+            switch (_vehicle getVariable [QEGVAR(Vehicle,Squad), 0]) do {
+                case 1: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];};
+                case 2: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];};
+                case 3: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];};
+                case 4: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];};
+                default {
+                    _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\0_ca.paa"];
+                };
+            };
+        };
+        default {
+            _vehicle setObjectTextureGlobal [12, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\BarrelArt_Abrams_WD\17_ca.paa"];
+
+            switch (_vehicle getVariable [QEGVAR(Vehicle,Squad), 0]) do {
+                case 1: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\1_ca.paa"];};
+                case 2: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\2_ca.paa"];};
+                case 3: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\3_ca.paa"];};
+                case 4: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\4_ca.paa"];};
+                default {
+                    _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\0_ca.paa"];
+                };
+            };
+        };
+    };
 };
 
 if (_vehicle iskindOf "RHS_UH60_Base") then {
