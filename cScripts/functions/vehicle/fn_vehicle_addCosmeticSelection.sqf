@@ -23,6 +23,12 @@ private _textures = [
         [12, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\BarrelArt_Abrams_D\30_ca.paa"],
         [12, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\BarrelArt_Abrams_WD\17_ca.paa"]
     ]],
+    ["rhsusf_m1a1tank_base", "Barrel - Thunderbolt IX", [
+        [12, "\rhsusf\addons\rhsusf_decals\Data\Labels\BarrelArt_Abrams_WD\0_ca.paa"]
+    ]],
+    ["rhsusf_m1a1tank_base", "Barrel - 120mm IV", [
+        [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"]
+    ]],
     ["rhsusf_m1a1tank_base", "Saber-1", [
         [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"],
         [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\1_ca.paa"],
