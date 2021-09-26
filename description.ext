@@ -73,5 +73,6 @@ class CfgFunctions {
 };
 #include "cScripts\ViewingDistance\GUI.h"
 #include "cScripts\CfgLoadouts.hpp"
+#include "cScripts\cfgOrbat.hpp"
 
 /*           OTHER            */
