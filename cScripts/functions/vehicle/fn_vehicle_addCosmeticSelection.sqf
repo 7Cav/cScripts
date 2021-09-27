@@ -55,7 +55,7 @@ private _textures = [
         {
             _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];
             _vehicle setObjectTextureGlobal [12, ""];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 1];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -1];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-2", [
@@ -63,7 +63,7 @@ private _textures = [
         {
             _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];
             _vehicle setObjectTextureGlobal [12, ""];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 2];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -2];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-3", [
@@ -71,7 +71,7 @@ private _textures = [
         {
             _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];
             _vehicle setObjectTextureGlobal [12, ""];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 3];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -3];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-4", [
@@ -79,7 +79,7 @@ private _textures = [
         {
             _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];
             _vehicle setObjectTextureGlobal [12, ""];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4];
         }
     ]]
 ];
