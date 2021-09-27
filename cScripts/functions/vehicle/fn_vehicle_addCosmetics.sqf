@@ -78,37 +78,60 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
         (_this select 0) animateSource ["IFF_Panels_Hide", 1, true];
     }, [_vehicle]] call CBA_fnc_execNextFrame;
 
-    switch (typeOf _vehicle) do {
-        case "rhsusf_m1a1aimd_usarmy";
-        case "rhsusf_m1a1aim_tuski_d";
-        case "rhsusf_m1a2sep1d_usarmy";
-        case "rhsusf_m1a2sep1tuskid_usarmy";
-        case "rhsusf_m1a2sep1tuskiid_usarmy";
-        case "rhsusf_m1a2sep2d_usarmy": {
-            _vehicle setObjectTextureGlobal [12, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\BarrelArt_Abrams_D\30_ca.paa"];
-
-            switch (_vehicle getVariable [QEGVAR(Vehicle,Squad), 0]) do {
-                case 1: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];};
-                case 2: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];};
-                case 3: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];};
-                case 4: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];};
-                default {
-                    _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\0_ca.paa"];
-                };
-            };
+    switch (_vehicle getVariable [QEGVAR(Vehicle,Callsign), 0]) do {
+        case 1: {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 1];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-1"];
+        };
+        case 2: {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa"];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 2];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-2"];
+        };
+        case 3: {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa"];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 3];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-3"];
+        };
+        case 4: {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa"];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-4"];
+        };
+        case -1: {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -1];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-1"];
+        };
+        case -2: {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -2];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-2"];
+        };
+        case -3: {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -3];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-3"];
+        };
+        case -4: {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-4"];
         };
         default {
-            _vehicle setObjectTextureGlobal [12, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\BarrelArt_Abrams_WD\17_ca.paa"];
-
-            switch (_vehicle getVariable [QEGVAR(Vehicle,Squad), 0]) do {
-                case 1: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\1_ca.paa"];};
-                case 2: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\2_ca.paa"];};
-                case 3: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\3_ca.paa"];};
-                case 4: {_vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\4_ca.paa"];};
-                default {
-                    _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\0_ca.paa"];
-                };
-            };
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\0_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 0];
+            _vehicle setVariable [QEGVAR(Vehicle,Name), ""];
         };
     };
 };
