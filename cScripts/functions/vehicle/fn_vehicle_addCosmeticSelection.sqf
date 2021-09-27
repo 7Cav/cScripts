@@ -17,37 +17,70 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-// [className, displayName, [[0, Desert], [0, Woodland], {code}]]
 private _textures = [
-    ["rhsusf_m1a1tank_base", "Barrel - Diplomacy Failed", [
-        [12, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\BarrelArt_Abrams_D\30_ca.paa"],
-        [12, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\BarrelArt_Abrams_WD\17_ca.paa"]
+    ["rhsusf_m1a1tank_base", "Saber-1 (120mm IV)", [
+        "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa",
+        {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 1];
+        }
     ]],
-    ["rhsusf_m1a1tank_base", "Barrel - Thunderbolt IX", [
-        [12, "\rhsusf\addons\rhsusf_decals\Data\Labels\BarrelArt_Abrams_WD\0_ca.paa"]
+    ["rhsusf_m1a1tank_base", "Saber-2 (Bounty Hunters)", [
+        "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa",
+        {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa"];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 2];
+        }
     ]],
-    ["rhsusf_m1a1tank_base", "Barrel - 120mm IV", [
-        [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"]
+    ["rhsusf_m1a1tank_base", "Saber-3 (Iron Clad Lads)", [
+        "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa",
+        {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa"];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 3];
+        }
     ]],
-    ["rhsusf_m1a1tank_base", "Saber-1", [
-        [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"],
-        [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\1_ca.paa"],
-        {_vehicle setVariable [QEGVAR(Vehicle,Squad), 1]}
+    ["rhsusf_m1a1tank_base", "Saber-4 (War Saw)", [
+        "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa",
+        {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa"];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4];
+        }
+    ]],
+        ["rhsusf_m1a1tank_base", "Saber-1", [
+        "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa",
+        {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 1];
+        }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-2", [
-        [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"],
-        [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\2_ca.paa"],
-        {_vehicle setVariable [QEGVAR(Vehicle,Squad), 2]}
+        "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa",
+        {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 2];
+        }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-3", [
-        [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"],
-        [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\3_ca.paa"],
-        {_vehicle setVariable [QEGVAR(Vehicle,Squad), 3]}
+        "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa",
+        {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 3];
+        }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-4", [
-        [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
-        [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_WD\4_ca.paa"],
-        {_vehicle setVariable [QEGVAR(Vehicle,Squad), 4]}
+        "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa",
+        {
+            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];
+            _vehicle setObjectTextureGlobal [12, ""];
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4];
+        }
     ]]
 ];
 
@@ -57,32 +90,15 @@ private _textures = [
 
         private _statement = {
             params ["_vehicle", "_player", "_params"];
-            _params params [["_desert", []], ["_woodland", []], ["_code", {}, [{}]]];
+            _params params [["_texture", "", [""]], ["_code", {}, [{}]]];
 
-            if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
-                switch (typeOf _vehicle) do {
-                    case "rhsusf_m1a1aimd_usarmy";
-                    case "rhsusf_m1a1aim_tuski_d";
-                    case "rhsusf_m1a2sep1d_usarmy";
-                    case "rhsusf_m1a2sep1tuskid_usarmy";
-                    case "rhsusf_m1a2sep1tuskiid_usarmy";
-                    case "rhsusf_m1a2sep2d_usarmy": {_vehicle setObjectTextureGlobal _desert;};
-                    default {
-                        if (count _woodland == 0) then {
-                            _vehicle setObjectTextureGlobal _desert;
-                        } else {
-                            _vehicle setObjectTextureGlobal _woodland;
-                        };
-                    };
-                };
-                call _code;
-                [
-                    [],
-                    ["Vehicle Art have been changed"],
-                    [if (count _woodland == 0) then {_desert#1} else {_woodland#1}, 10],
-                    [""]
-                ] call CBA_fnc_notify;
-            };
+            call _code;
+            [
+                [],
+                ["Vehicle art have been changed"],
+                [_texture, 10],
+                [""]
+            ] call CBA_fnc_notify;
         };
 
         private _category = ["ACE_SelfActions", QEGVAR(Actions_Vehicle,Main_Cat), QEGVAR(Actions_Vehicle,Cosmetic_Cat)];
