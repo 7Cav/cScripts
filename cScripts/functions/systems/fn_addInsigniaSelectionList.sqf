@@ -102,6 +102,8 @@ if (!isPlayer _object) then {
 [_object,"Airborn","Specialized_Airborne","z\cav\addons\insignia\data\Specialized_Airborne.paa",_specialCategory] call FUNC(addInsigniaSelection);
 [_object,"CLS","Specialized_CLS","z\cav\addons\insignia\data\Specialized_CLS.paa",_specialCategory] call FUNC(addInsigniaSelection);
 [_object,"Ranger","Specialized_Ranger","z\cav\addons\insignia\data\specialized_ranger.paa",_specialCategory] call FUNC(addInsigniaSelection);
+[_object,"Medic","Specialized_Medic0","z\cav\addons\insignia\data\specialized_medic0.paa",_specialCategory] call FUNC(addInsigniaSelection);
+
 
 #ifdef DEBUG_MODE
     [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(info);
