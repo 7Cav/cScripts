@@ -41,7 +41,7 @@ class Cav_B_Bravo_base_F : Cav_B_Seventh_Cavalry_Base_F {
     company = "bravo";
     insignia = "";
     loadout = [["rhs_weap_m16a4_carryhandle","","","",["rhs_mag_30Rnd_556x45_M855A1_Stanag",30],[],""],[],[],["rhs_uniform_cu_ocp_1stcav",[["ACE_MapTools",1],["ACE_fieldDressing",1],["ACE_quikclot",4],["ACE_splint",1],["ACE_tourniquet",1]]],["rhsusf_iotv_ocp",[["ACRE_PRC343",1],["rhs_mag_30Rnd_556x45_M855A1_Stanag",1,30]]],[],"rhsusf_patrolcap_ocp","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
-
+    
     preLoadout = "";
     postLoadout = "";
 };
