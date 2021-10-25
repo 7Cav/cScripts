@@ -81,9 +81,9 @@ if (_radio == "ACRE_PRC343") then {
 
         // Ground
         case "SABER-1": {_channel = 97};
-        case "SABER-2": {_channel = 98};
-        case "SABER-3": {_channel = 99};
-        case "SABER-4": {_channel = 100};
+        case "SABER-2": {_channel = 97};
+        case "SABER-3": {_channel = 98};
+        case "SABER-4": {_channel = 98};
         case "SABER-7": {_channel = 100};
 
         case "VIKING-1": {_channel = 65};
