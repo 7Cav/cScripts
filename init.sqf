@@ -27,7 +27,6 @@ if (isMultiplayer) then {
 };
 
 enableSaving [false, false];
-tawvd_disablenone = true;
 
 ACE_maxWeightCarry = 7500;
 ACE_maxWeightDrag = 10000;
