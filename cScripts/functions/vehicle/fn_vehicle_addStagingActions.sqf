@@ -26,7 +26,10 @@ private _condition = { call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions_Vehicle,Main_Cat), "Vehicle Staging Zone", "cScripts\Data\Icon\icon_00.paa", {true}, _condition] call ace_interact_menu_fnc_createAction;
 [_vehicle, 1, ["ACE_SelfActions"], _stagingCat] call ace_interact_menu_fnc_addActionToObject;
 
+private _stagingCat = [QEGVAR(Actions_Vehicle,Cosmetic_Cat), "Vehicle Cosmetics", "cScripts\Data\Icon\icon_00.paa", {true}, {true}] call ace_interact_menu_fnc_createAction;
+[_vehicle, 1, ["ACE_SelfActions", QEGVAR(Actions_Vehicle,Main_Cat)], _stagingCat] call ace_interact_menu_fnc_addActionToObject;
+
 [_vehicle] call EFUNC(vehicle,addRegearAction);
 [_vehicle] call EFUNC(vehicle,addRepairAction);
-
+[_vehicle] call EFUNC(vehicle,addCosmeticSelection);
 //_vehicle call EFUNC(vehicle,setupPylonSelection);
