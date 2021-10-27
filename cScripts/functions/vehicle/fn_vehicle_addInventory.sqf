@@ -37,13 +37,13 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
     // Cargo
     switch (true) do {
         case (_vehicle iskindOf "rhsusf_m998_w_2dr"): {
-            [_vehicle, 8, 40, false, false] call FUNC(setCargoAttributes);
+            [_vehicle, 8, 20, false, false] call FUNC(setCargoAttributes);
         };
         case (_vehicle iskindOf "rhsusf_m1152_base"): {
-            [_vehicle, 20, 40, false, false] call FUNC(setCargoAttributes);
+            [_vehicle, 20, 20, false, false] call FUNC(setCargoAttributes);
         };
         default {
-            [_vehicle, 4, 40, false, false] call FUNC(setCargoAttributes);
+            [_vehicle, 4, 20, false, false] call FUNC(setCargoAttributes);
         };
     };
     
@@ -180,7 +180,7 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
-    [_vehicle, 6, 80, false, false] call FUNC(setCargoAttributes);
+    [_vehicle, 6, 38, false, false] call FUNC(setCargoAttributes);
 
     switch (_vehicleType) do {
         case "MED": {
@@ -432,5 +432,7 @@ if (_vehicle iskindOf "NDS_M224_mortar_base") then {
 };
 
 if (_vehicle iskindOf "RHS_C130J_Base") then {
+    [_vehicle, 45, -1, false, false] call FUNC(setCargoAttributes);
+
     [_vehicle, []] call FUNC(addCargo);
 };
