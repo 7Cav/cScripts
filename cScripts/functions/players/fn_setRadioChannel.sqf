@@ -17,7 +17,9 @@
 
 params [["_player", objNull, [objNull]]];
 
-if !(isPlayer _player) exitWith {};
+if !(EGVAR(patches,usesACRE)) exitWith {};
+if !(EGVAR(Settings,enableACRE)) exitWith {};
+if !(isPlayer player) exitWith {};
 
 _player setVariable [QEGVAR(Player,RadioChannel), []];
 private _playerRadios = [_player] call acre_api_fnc_getCurrentRadioList;
