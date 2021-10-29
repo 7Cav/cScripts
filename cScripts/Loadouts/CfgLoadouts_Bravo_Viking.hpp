@@ -84,12 +84,12 @@ class Cav_B_B_Scout_CombatLifeSaver_F : Cav_B_Bravo_Base_F {
     abilityMedic = 0;
     icon = "iconManMedic";
 };
-class Cav_B_B_Scout_Marksman_F_Local : Cav_B_Bravo_base_F {
-    displayName = "Designated Marksman";
-    scope = 2;
-    category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
-    loadout = [["rhs_weap_sr25_ec","rhsusf_acc_aac_762sdn6_silencer","rhsusf_acc_anpeq15side_bk","rhsusf_acc_M8541_mrds",["rhsusf_20Rnd_762x51_SR25_m993_Mag",20],[],"rhsusf_acc_harris_bipod"],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],["rhs_uniform_acu_ocp",[["ACE_quikclot",16],["ACE_EarPlugs",1],["ACE_splint",2],["ACE_tourniquet",4],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_RangeCard",1]]],["rhsusf_spcs_ocp_sniper",[["ACE_Chemlight_IR",2,1],["SmokeShellGreen",1,1],["HandGrenade",2,1],["SmokeShell",4,1],["rhsusf_mag_15Rnd_9x19_JHP",2,15],["rhsusf_20Rnd_762x51_SR25_m993_Mag",5,20]]],["rhsusf_assault_eagleaiii_ocp",[["ACE_EntrenchingTool",1]]],"rhsusf_ach_helmet_headset_ocp_alt","rhsusf_shemagh2_gogg_od",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch","rhsusf_ANPVS_14"]];
-};
+//class Cav_B_B_Scout_Marksman_F_Local : Cav_B_Bravo_base_F {
+    //displayName = "Designated Marksman";
+    //scope = 2;
+    //category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
+    //loadout = [["rhs_weap_sr25_ec","rhsusf_acc_aac_762sdn6_silencer","rhsusf_acc_anpeq15side_bk","rhsusf_acc_M8541_mrds",["rhsusf_20Rnd_762x51_SR25_m993_Mag",20],[],"rhsusf_acc_harris_bipod"],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],["rhs_uniform_acu_ocp",[["ACE_quikclot",16],["ACE_EarPlugs",1],["ACE_splint",2],["ACE_tourniquet",4],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_RangeCard",1]]],["rhsusf_spcs_ocp_sniper",[["ACE_Chemlight_IR",2,1],["SmokeShellGreen",1,1],["HandGrenade",2,1],["SmokeShell",4,1],["rhsusf_mag_15Rnd_9x19_JHP",2,15],["rhsusf_20Rnd_762x51_SR25_m993_Mag",5,20]]],["rhsusf_assault_eagleaiii_ocp",[["ACE_EntrenchingTool",1]]],"rhsusf_ach_helmet_headset_ocp_alt","rhsusf_shemagh2_gogg_od",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch","rhsusf_ANPVS_14"]];
+//};
 
 class Cav_B_B_Scout_M4_Marksman_F_Local : Cav_B_Bravo_base_F {
     displayName = "M4 Marksman";
