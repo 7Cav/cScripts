@@ -17,6 +17,7 @@
 
 params [["_radio", 'ACRE_PRC343', ['ACRE_PRC343']]];
 
+if !(EGVAR(Settings,enableACRE)) exitWith {};
 if (!GVAR(isPlayer)) exitWith {};
 
 [{
