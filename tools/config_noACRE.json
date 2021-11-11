@@ -1,0 +1,12 @@
+{
+    "build" : {
+        "scriptName": "cScripts NoACRE"
+    },
+    "cba_settings.sqf" : {
+        "add": [
+            "// cScripts Mission Settings",
+            "force force cScripts_Settings_enableACRE = false;"
+        ]
+    }
+}
+
