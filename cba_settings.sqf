@@ -505,12 +505,12 @@ force force acex_headless_transferLoadout = 1;
 force force acex_sitting_enable = true;
 
 // ACEX View Restriction
-force force acex_viewrestriction_mode = 0;
-force force acex_viewrestriction_modeSelectiveAir = 0;
-force force acex_viewrestriction_modeSelectiveFoot = 0;
-force force acex_viewrestriction_modeSelectiveLand = 0;
-force force acex_viewrestriction_modeSelectiveSea = 0;
-force force acex_viewrestriction_preserveView = false;
+// force force acex_viewrestriction_mode = 0;
+// force force acex_viewrestriction_modeSelectiveAir = 0;
+// force force acex_viewrestriction_modeSelectiveFoot = 0;
+// force force acex_viewrestriction_modeSelectiveLand = 0;
+// force force acex_viewrestriction_modeSelectiveSea = 0;
+// force force acex_viewrestriction_preserveView = false;
 
 // ACEX Volume
 //acex_volume_enabled = false;
