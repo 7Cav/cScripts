@@ -97,6 +97,7 @@ player addEventHandler ["InventoryClosed", {
 
 // Menu option
 [player, _category] call FUNC(addReGear);
+if !(GVAR(OneLife)) then {[player, _category] call FUNC(addHeal)};
 [player, _category] call FUNC(addInsigniaSelectionList);
 [player, true, "ACE_SelfActions"] call FUNC(setupLoadoutSelection);
 [_category] call FUNC(addArsenal);
