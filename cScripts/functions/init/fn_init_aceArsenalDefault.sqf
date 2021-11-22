@@ -9,6 +9,7 @@
  * Public: No
  */
 
+if (isServer) exitWith {};
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};
 
 #ifdef DEBUG_MODE
