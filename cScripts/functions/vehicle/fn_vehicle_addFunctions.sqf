@@ -18,7 +18,7 @@ if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {[formatTex
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
 #ifdef DEBUG_MODE
-    [formatText["Applying vehicle functions to %1.", _vehicle]] call FUNC(logInfo);
+    [formatText["Applying vehicle functions to %1.", _vehicle]] call FUNC(info);
 #endif
 
 if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
