@@ -9,10 +9,20 @@
 if (!isMultiplayer) then {["Mission is running on singelplayer enviroment!", "", true] call FUNC(warning)};
 #ifdef DEBUG_MODE
     ["init Initializing.", "init"] call FUNC(info);
-    [format["cScripts Version %1 is running.", VERSION], "init"] call FUNC(info);
+    [format["cScripts Version %1 is running.",VERSION], "init"] call FUNC(info);
     [format["Debug mode is currently active."], "init", true] call FUNC(warning);
     logEntities;
 #endif
+
+// ACRE radio init
+if (isMultiplayer) then {
+    GVAR(Radio) = false;
+    ["Setting up ACRE preset...", "init"] call FUNC(info);
+    call EFUNC(gear,setupRadios);
+    GVAR(Radio) = true;
+} else {
+    ["Mission in singelplayer enviroment ACRE radio preset will not be set!", "init", true] call FUNC(warning);
+};
 
 enableSaving [false, false];
 

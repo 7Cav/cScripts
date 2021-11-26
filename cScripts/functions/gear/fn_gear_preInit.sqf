@@ -1,15 +1,10 @@
 #include "..\script_component.hpp"
 
+GVAR(Radio) = false;
 GVAR(Gear) = false;
 
 EGVAR(gear,groupIDsSynched) = false;
 EGVAR(gear,playerLoadoutGiven) = false;
-
-// Acre init
-GVAR(Radio) = false;
-["Setting up ACRE preset...", "Gear"] call FUNC(info);
-call EFUNC(gear,setupRadios);
-GVAR(Radio) = true;
 
 if (isClass (missionConfigFile >> "CfgLoadouts")) then {
     ["CAManBase", "InitPost", {
