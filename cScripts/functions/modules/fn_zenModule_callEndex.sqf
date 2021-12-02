@@ -91,7 +91,7 @@ params ["_modulePos", "_objectPos"];
 
                                 private _hftitle = format["<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1 %2<br />hold your Fire!</t><br /><br />", [_unit, 'CAV'] call FUNC(getPlayerRank), [_unit, 'PROFILE'] call FUNC(getPlayerName)];
                                 private _hfimage = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
-                                private _hftext = "Your not allowed to discharge your weapon during Endex.<br />";
+                                private _hftext = "You are not allowed to discharge your weapon during Endex.<br />";
 
                                 hint parseText (_hftitle + _hfimage + _hftext);
                                 format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(info), 0];
