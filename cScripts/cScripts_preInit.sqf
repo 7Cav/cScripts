@@ -346,6 +346,8 @@ if (EGVAR(Settings,allowCustomTagging)) then {
     [] call EFUNC(init,aceTagging);
 };
 
+call EFUNC(init,chatCommands);
+
 call EFUNC(init,zenModuels);
 
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
