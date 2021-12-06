@@ -9,9 +9,29 @@
  * Public: No
  */
 
+#ifdef DEBUG_MODE
+    ["Setting Up Event Handlers", "EH"] call FUNC(log);
+#endif
+
+if (hasInterface) then {
+    ["acre_remoteStartedSpeaking", {
+        _this params ["_unit"];
+        _netId = objectFromNetId _netId; // will be objNull if not found.
+        if (isNull _netId) exitWith {
+            [format ["Player %1 have issues recing remote message.", name player], "ACRE", true, true] call FUNC(error);
+        };
+        #ifdef DEBUG_MODE
+            [format ["Player %1 [%2] is talking remote", name _unit, _netId], "ACRE"] call FUNC(log);
+        #endif
+    }] call CBA_fnc_addEventHandler;
+};
 
 // Server Events
 if !(isServer) exitWith {};
+
+#ifdef DEBUG_MODE
+    ["Setting Up Server Event Handlers", "EH"] call FUNC(log);
+#endif
 
 [QEGVAR(log,text), {
     diag_log text _this;
