@@ -22,7 +22,7 @@ EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_ma
 GVAR(Radio) = false;
 EGVAR(Staging,ZoneStatus) = false;
 EGVAR(Staging,OverrideCompanyVar) = false;
-GVAR(isPlayer) = hasInterface || {_unit == player};
+GVAR(isPlayer) = hasInterface || {isPlayer player};
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
