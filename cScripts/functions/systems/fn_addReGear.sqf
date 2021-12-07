@@ -5,8 +5,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Allow Heal <BOOL> (Optional)      // No longer in use
- * 2: ACE Category <ARRAY> (Optional)
+ * 1: ACE Category <ARRAY> (Optional)
  *
  * Example:
  * [this] call cScripts_fnc_addReGear
