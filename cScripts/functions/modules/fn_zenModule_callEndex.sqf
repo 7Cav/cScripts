@@ -112,8 +112,9 @@ params ["_modulePos", "_objectPos"];
                 [format["Mission var %1 is set %2", QEGVAR(Mission,Endex), missionNamespace getVariable QEGVAR(Mission,Endex)]] call FUNC(info);
             #endif
         };
-        private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
-        copyToClipboard str _playerLog;
+        
+        [QGVAR(getAttendance)] call CBA_fnc_localEvent;
+
         ["Endex called (All attended players have been saved to your clipboard)"] call zen_common_fnc_showMessage;
     },
     {},

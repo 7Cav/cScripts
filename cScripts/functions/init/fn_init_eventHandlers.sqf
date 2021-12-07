@@ -10,6 +10,10 @@
  */
 
 
+[QGVAR(getAttendance), {
+    call FUNC(getAttendance);
+}] call CBA_fnc_addEventHandler;
+
 // Server Events
 if !(isServer) exitWith {};
 
