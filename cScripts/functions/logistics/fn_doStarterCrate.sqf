@@ -62,9 +62,8 @@ _object addAction [format ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th C
 
 // Call ReGear Option
 if (_reGearOption) then {
-    [_object, _reHealOption] call FUNC(addReGear);
+    [_object] call FUNC(addReGear);
 };
-
 // Call addHeal option
 if (_reHealOption) then {
     [_object] call FUNC(addHeal);

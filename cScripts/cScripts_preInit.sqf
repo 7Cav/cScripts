@@ -23,6 +23,8 @@ GVAR(Radio) = false;
 EGVAR(Staging,ZoneStatus) = false;
 EGVAR(Staging,OverrideCompanyVar) = false;
 GVAR(isPlayer) = hasInterface || {isPlayer player};
+GVAR(OneLife) = !isNil{(getArray (missionconfigfile >> "respawnTemplates") select 0) == "ace_spectator"};
+
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
