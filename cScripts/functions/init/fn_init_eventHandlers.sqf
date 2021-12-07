@@ -16,7 +16,7 @@
 if (hasInterface) then {
     ["acre_remoteStartedSpeaking", {
         _this params ["_unit"];
-        _netId = objectFromNetId _netId; // will be objNull if not found.
+        private _netId = objectFromNetId _unit; // will be objNull if not found.
         if (isNull _netId) exitWith {
             [format ["Player %1 have issues recing remote message.", name player], "ACRE", true, true] call FUNC(error);
         };
