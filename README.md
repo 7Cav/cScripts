@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/7Cav/cScripts/blob/master/resourses/logo.png" width="600">
+<img src="https://github.com/7Cav/cScripts/blob/main/resourses/logo.png" width="600">
 </p>
 <p align="center">
 <a href="https://github.com/7Cav/cScripts/releases/latest"><img src="https://img.shields.io/github/release/7Cav/cScripts.svg?style=for-the-badge&label=Release%20Build" alt="Release Build Version"></a>

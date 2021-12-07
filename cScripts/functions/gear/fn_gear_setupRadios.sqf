@@ -14,7 +14,7 @@
  * [] call cScripts_fnc_gear_setupRadios
  *
  */
- 
+
 if !(EGVAR(patches,usesACRE)) exitWith {};
 if !(EGVAR(Settings,enableACRE)) exitWith {["ACRE Radio init have been disabled.", "Gear Radio"] call FUNC(info);};
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
@@ -33,4 +33,4 @@ if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup cor
         [_radio, "default", _forEachIndex + 1, "frequencyRX", _forEachIndex + 10.242] call acre_api_fnc_setPresetChannelField;
     } forEach _lrChannels;
     [_radio, "default"] call acre_api_fnc_setPreset;
-} count ["ACRE_PRC152", "ACRE_PRC148", "ACRE_PRC117F"];
+} forEach ["ACRE_PRC152", "ACRE_PRC148", "ACRE_PRC117F"];

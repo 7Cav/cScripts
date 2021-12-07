@@ -11,6 +11,7 @@ class cScripts {
 
         class init_diary {};
         class init_message {};
+        class init_chatCommands {};
 
         class init_eventHandlers {};
 
@@ -128,6 +129,7 @@ class cScripts {
 
         class getIcon {};
 
+        class getAttendance {};
         class getServerMetrics {};
     };
     class vehicle {

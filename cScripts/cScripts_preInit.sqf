@@ -22,8 +22,9 @@ EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_ma
 GVAR(Radio) = false;
 EGVAR(Staging,ZoneStatus) = false;
 EGVAR(Staging,OverrideCompanyVar) = false;
-GVAR(isPlayer) = hasInterface || {_unit == player};
+GVAR(isPlayer) = hasInterface || {isPlayer player};
 GVAR(OneLife) = !isNil{(getArray (missionconfigfile >> "respawnTemplates") select 0) == "ace_spectator"};
+
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
@@ -346,6 +347,8 @@ if (is3DEN) exitWith {};
 if (EGVAR(Settings,allowCustomTagging)) then {
     [] call EFUNC(init,aceTagging);
 };
+
+call EFUNC(init,chatCommands);
 
 call EFUNC(init,zenModuels);
 
