@@ -32,4 +32,4 @@ private _stagingCat = [QEGVAR(Actions_Vehicle,Cosmetic_Cat), "Vehicle Cosmetics"
 [_vehicle] call EFUNC(vehicle,addRegearAction);
 [_vehicle] call EFUNC(vehicle,addRepairAction);
 [_vehicle] call EFUNC(vehicle,addCosmeticSelection);
-//_vehicle call EFUNC(vehicle,setupPylonSelection);
+[_vehicle] call EFUNC(vehicle,setupPylonCategories);

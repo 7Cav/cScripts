@@ -30,7 +30,6 @@ private _putFlag = [QEGVAR(Actions_Vehicle,PutFlag), "Put up flag", _icon, {
      private _flagTexture = "z\cav\addons\flag\data\flag_01_ca.paa"; //"\A3\Data_F\Flags\Flag_red_CO.paa"
     _vehicle forceFlagTexture _flagTexture;
     _vehicle setVariable [QEGVAR(Vehicle,hasFlag), true];
-
 }, _addCondition] call ace_interact_menu_fnc_createAction;
 [_vehicle, 1, ["ACE_SelfActions"], _putFlag] call ace_interact_menu_fnc_addActionToObject;
 
