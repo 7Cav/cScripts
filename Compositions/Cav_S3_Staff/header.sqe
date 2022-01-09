@@ -1,0 +1,11 @@
+version=54;
+name="S3 Mission Controllers [5.0]";
+author="=7Cav=2LT.Mazinski.H";
+category="Cav_EdSubcat_Deploy_Platoon";
+requiredAddons[]=
+{
+	"A3_Modules_F_Curator_Respawn",
+	"A3_Modules_F_Curator_Curator",
+	"cav_alpha_characters",
+	"Desert"
+};

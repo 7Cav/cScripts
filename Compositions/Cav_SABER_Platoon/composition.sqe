@@ -1,46 +1,158 @@
-version=53;
-center[]={5913.7227,5,6420.7783};
+version=54;
+center[]={5441.9473,5,2046.2336};
 class items
 {
 	items=1;
 	class Item0
 	{
 		dataType="Layer";
-		name="SABRE Platoon Deployment";
+		name="SABER Platoon [5.0]";
 		class Entities
 		{
-			items=17;
+			items=15;
 			class Item0
 			{
-				dataType="Group";
-				side="West";
+				dataType="Layer";
+				name="3.4 - SABER";
 				class Entities
 				{
 					items=4;
 					class Item0
 					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-2.9946289,0.0014390945,1.8208008};
-						};
+						dataType="Group";
 						side="West";
-						flags=7;
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.9897461,0.0014390945,2.2768555};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""SABRE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
+									description="Tank Commander@SABRE-1";
+									isPlayable=1;
+								};
+								id=544;
+								type="Cav_B_B_Tank_Commander_Saber_1_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="Male08ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-1.9892578,0.0014390945,1.2767334};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=545;
+								type="Cav_B_B_Tank_Driver_F";
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.9892578,0.0014390945,1.2767334};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=546;
+								type="Cav_B_B_Tank_Gunner_F";
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.9892578,0.0014390945,1.2767334};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=547;
+								type="Cav_B_B_Tank_Loader_F";
+							};
+						};
 						class Attributes
 						{
-							rank="SERGEANT";
-							init="call{this setgroupID[""SABRE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
-							description="Tank Commander@SABRE-1";
-							isPlayable=1;
 						};
-						id=259;
-						type="Cav_B_B_Tank_Commander_Saber_1_F";
+						id=543;
 						class CustomAttributes
 						{
 							class Attribute0
 							{
-								property="speaker";
-								expression="_this setspeaker _value;";
+								property="groupID";
+								expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 								class Value
 								{
 									class data
@@ -52,14 +164,149 @@ class items
 												"STRING"
 											};
 										};
-										value="Male08ENG";
+										value="SABER-1";
 									};
 								};
 							};
-							class Attribute1
+							nAttributes=1;
+						};
+					};
+					class Item1
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
 							{
-								property="pitch";
-								expression="_this setpitch _value;";
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={3.0063477,0.0014390945,2.1635742};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""SABRE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
+									description="Tank Commander@SABRE-2";
+									isPlayable=1;
+								};
+								id=549;
+								type="Cav_B_B_Tank_Commander_Saber_2_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0.94999999;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={4.0068359,0.0014390945,1.1634521};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=550;
+								type="Cav_B_B_Tank_Driver_F";
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={3.0068359,0.0014390945,1.1634521};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=551;
+								type="Cav_B_B_Tank_Gunner_F";
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={2.0068359,0.0014390945,1.1634521};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=552;
+								type="Cav_B_B_Tank_Loader_F";
+							};
+						};
+						class Attributes
+						{
+						};
+						id=548;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="groupID";
+								expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 								class Value
 								{
 									class data
@@ -68,85 +315,375 @@ class items
 										{
 											type[]=
 											{
-												"SCALAR"
+												"STRING"
 											};
 										};
-										value=0.95999998;
+										value="SABER-2";
 									};
 								};
 							};
-							nAttributes=2;
+							nAttributes=1;
 						};
-					};
-					class Item1
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-1.9941406,0.0014390945,0.82080078};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=260;
-						type="Cav_B_B_Tank_Driver_F";
 					};
 					class Item2
 					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-2.9941406,0.0014390945,0.82080078};
-						};
+						dataType="Group";
 						side="West";
-						flags=5;
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.0253906,0.0014390945,-1.9576416};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""SABRE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
+									description="Tank Commander@SABRE-3";
+									isPlayable=1;
+								};
+								id=554;
+								type="Cav_B_B_Tank_Commander_Saber_3_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="Male08ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.0253906,0.0014390945,-2.9576416};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=555;
+								type="Cav_B_B_Tank_Driver_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0.98000002;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.0253906,0.0014390945,-2.9571533};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=556;
+								type="Cav_B_B_Tank_Gunner_F";
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.0253906,0.0014390945,-2.9571533};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=557;
+								type="Cav_B_B_Tank_Loader_F";
+							};
+						};
 						class Attributes
 						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
-							description="Crew";
-							isPlayable=1;
 						};
-						id=261;
-						type="Cav_B_B_Tank_Gunner_F";
+						id=553;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="groupID";
+								expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="SABER-3";
+									};
+								};
+							};
+							nAttributes=1;
+						};
 					};
 					class Item3
 					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-3.9941406,0.0014390945,0.82080078};
-						};
+						dataType="Group";
 						side="West";
-						flags=5;
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={3.1054688,0.0014390945,-1.7823486};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""SABRE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
+									description="Tank Commander@SABRE-4";
+									isPlayable=1;
+								};
+								id=559;
+								type="Cav_B_B_Tank_Commander_Saber_4_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={4.1054688,0.0014390945,-2.7823486};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=560;
+								type="Cav_B_B_Tank_Driver_F";
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={3.1054688,0.0014390945,-2.7823486};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=561;
+								type="Cav_B_B_Tank_Gunner_F";
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={2.1054688,0.0014390945,-2.7823486};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=562;
+								type="Cav_B_B_Tank_Loader_F";
+							};
+						};
 						class Attributes
 						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-1""];}";
-							description="Crew";
-							isPlayable=1;
 						};
-						id=262;
-						type="Cav_B_B_Tank_Loader_F";
+						id=558;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="groupID";
+								expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
+								class Value
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"STRING"
+											};
+										};
+										value="SABER-4";
+									};
+								};
+							};
+							nAttributes=1;
+						};
 					};
 				};
-				class Attributes
-				{
-				};
-				id=258;
+				id=542;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={17.445801,1.5661535,-4.1469727};
+					position[]={17.450684,1.5667458,-3.69104};
 				};
 				side="Empty";
 				flags=4;
@@ -156,7 +693,7 @@ class items
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
-				id=283;
+				id=563;
 				type="rhsusf_m1a2sep2d_usarmy";
 				class CustomAttributes
 				{
@@ -282,7 +819,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={17.456055,1.5661535,7.3603516};
+					position[]={17.460938,1.5667458,7.8164063};
 				};
 				side="Empty";
 				flags=4;
@@ -292,7 +829,7 @@ class items
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
-				id=284;
+				id=564;
 				type="rhsusf_m1a2sep2d_usarmy";
 				class CustomAttributes
 				{
@@ -418,7 +955,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={9.2441406,1.5661535,-4.0639648};
+					position[]={9.2490234,1.5667458,-3.6080322};
 				};
 				side="Empty";
 				flags=4;
@@ -428,7 +965,7 @@ class items
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
-				id=285;
+				id=565;
 				type="rhsusf_m1a2sep2d_usarmy";
 				class CustomAttributes
 				{
@@ -554,7 +1091,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={9.2539063,1.5661535,7.4433594};
+					position[]={9.2587891,1.5667458,7.8994141};
 				};
 				side="Empty";
 				flags=4;
@@ -564,7 +1101,7 @@ class items
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
-				id=286;
+				id=566;
 				type="rhsusf_m1a2sep2d_usarmy";
 				class CustomAttributes
 				{
@@ -690,7 +1227,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-9.4267578,1.5661535,-4.59375};
+					position[]={-9.421875,1.5667458,-4.1378174};
 				};
 				side="Empty";
 				flags=4;
@@ -700,7 +1237,7 @@ class items
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
-				id=287;
+				id=567;
 				type="rhsusf_m1a2sep2wd_usarmy";
 				class CustomAttributes
 				{
@@ -826,7 +1363,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-9.4169922,1.5661535,6.9135742};
+					position[]={-9.4121094,1.5667458,7.3696289};
 				};
 				side="Empty";
 				flags=4;
@@ -836,7 +1373,7 @@ class items
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
-				id=288;
+				id=568;
 				type="rhsusf_m1a2sep2wd_usarmy";
 				class CustomAttributes
 				{
@@ -962,7 +1499,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-17.628906,1.5661535,-4.5107422};
+					position[]={-17.624023,1.5667458,-4.0548096};
 				};
 				side="Empty";
 				flags=4;
@@ -972,7 +1509,7 @@ class items
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
-				id=289;
+				id=569;
 				type="rhsusf_m1a2sep2wd_usarmy";
 				class CustomAttributes
 				{
@@ -1098,7 +1635,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-17.618652,1.5661535,6.996582};
+					position[]={-17.61377,1.5667458,7.4526367};
 				};
 				side="Empty";
 				flags=4;
@@ -1108,7 +1645,7 @@ class items
 					dynamicSimulation=1;
 					reportOwnPosition=1;
 				};
-				id=290;
+				id=570;
 				type="rhsusf_m1a2sep2wd_usarmy";
 				class CustomAttributes
 				{
@@ -1234,7 +1771,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.046875,0.89242268,-0.20166016};
+					position[]={3.0517578,0.89242268,0.25427246};
 				};
 				side="Empty";
 				flags=4;
@@ -1243,14 +1780,14 @@ class items
 					init="call{[this,""Saber"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=278;
+				id=571;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -1288,7 +1825,7 @@ class items
 					class Attribute2
 					{
 						property="ace_isMedicalFacility";
-						expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+						expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
 						class Value
 						{
 							class data
@@ -1312,7 +1849,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.9931641,0.89242268,-0.14648438};
+					position[]={-2.9882813,0.89242268,0.30944824};
 				};
 				side="Empty";
 				flags=4;
@@ -1321,14 +1858,14 @@ class items
 					init="call{[this,""Saber"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=279;
+				id=572;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -1366,7 +1903,7 @@ class items
 					class Attribute2
 					{
 						property="ace_isMedicalFacility";
-						expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+						expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
 						class Value
 						{
 							class data
@@ -1390,7 +1927,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.0087891,0.89242268,3.7832031};
+					position[]={-3.0039063,0.89242268,4.2390137};
 				};
 				side="Empty";
 				flags=4;
@@ -1399,14 +1936,14 @@ class items
 					init="call{[this,""Saber"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=280;
+				id=573;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -1444,7 +1981,7 @@ class items
 					class Attribute2
 					{
 						property="ace_isMedicalFacility";
-						expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+						expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
 						class Value
 						{
 							class data
@@ -1468,7 +2005,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.012207,0.89242268,3.8544922};
+					position[]={3.0170898,0.89242268,4.3103027};
 				};
 				side="Empty";
 				flags=4;
@@ -1477,14 +2014,14 @@ class items
 					init="call{[this,""Saber"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=281;
+				id=574;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -1522,7 +2059,7 @@ class items
 					class Attribute2
 					{
 						property="ace_isMedicalFacility";
-						expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+						expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
 						class Value
 						{
 							class data
@@ -1543,451 +2080,222 @@ class items
 			};
 			class Item13
 			{
-				dataType="Group";
-				side="West";
-				class Entities
+				dataType="Logic";
+				class PositionInfo
 				{
-					items=4;
-					class Item0
+					position[]={-0.15039063,0,-15.019165};
+				};
+				id=576;
+				type="ModuleRespawnVehicle_F";
+				class CustomAttributes
+				{
+					class Attribute0
 					{
-						dataType="Object";
-						class PositionInfo
+						property="ModuleRespawnVehicle_F_ForcedRespawn";
+						expression="_this setVariable ['ForcedRespawn',_value,true];";
+						class Value
 						{
-							position[]={3.0014648,0.0014390945,1.7075195};
-						};
-						side="West";
-						flags=7;
-						class Attributes
-						{
-							rank="SERGEANT";
-							init="call{this setgroupID[""SABRE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
-							description="Tank Commander@SABRE-2";
-							isPlayable=1;
-						};
-						id=264;
-						type="Cav_B_B_Tank_Commander_Saber_2_F";
-						class CustomAttributes
-						{
-							class Attribute0
+							class data
 							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
+								class type
 								{
-									class data
+									type[]=
 									{
-										class type
-										{
-											type[]=
-											{
-												"STRING"
-											};
-										};
-										value="Male10ENG";
+										"STRING"
 									};
 								};
+								value="0";
 							};
-							class Attribute1
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleRespawnVehicle_F_Init";
+						expression="_this setVariable ['Init',_value,true];";
+						class Value
+						{
+							class data
 							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
+								class type
 								{
-									class data
+									type[]=
 									{
-										class type
-										{
-											type[]=
-											{
-												"SCALAR"
-											};
-										};
-										value=0.94999999;
+										"STRING"
 									};
 								};
+								value="";
 							};
-							nAttributes=2;
 						};
 					};
-					class Item1
+					class Attribute2
 					{
-						dataType="Object";
-						class PositionInfo
+						property="ModuleRespawnVehicle_F_RespawnWhenDisabled";
+						expression="_this setVariable ['RespawnWhenDisabled',_value,true];";
+						class Value
 						{
-							position[]={4.0019531,0.0014390945,0.70751953};
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
 						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=265;
-						type="Cav_B_B_Tank_Driver_F";
 					};
-					class Item2
+					class Attribute3
 					{
-						dataType="Object";
-						class PositionInfo
+						property="ModuleRespawnVehicle_F_DesertedDistance";
+						expression="_this setVariable ['DesertedDistance',_value,true];";
+						class Value
 						{
-							position[]={3.0019531,0.0014390945,0.70751953};
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
 						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=266;
-						type="Cav_B_B_Tank_Gunner_F";
 					};
-					class Item3
+					class Attribute4
 					{
-						dataType="Object";
-						class PositionInfo
+						property="ModuleRespawnVehicle_F_PositionType";
+						expression="_this setVariable ['PositionType',_value,true];";
+						class Value
 						{
-							position[]={2.0019531,0.0014390945,0.70751953};
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="0";
+							};
 						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-2""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=267;
-						type="Cav_B_B_Tank_Loader_F";
 					};
+					class Attribute5
+					{
+						property="ModuleRespawnVehicle_F_RespawnCount";
+						expression="_this setVariable ['RespawnCount',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="";
+							};
+						};
+					};
+					class Attribute6
+					{
+						property="ModuleRespawnVehicle_F_Position";
+						expression="_this setVariable ['Position',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="0";
+							};
+						};
+					};
+					class Attribute7
+					{
+						property="ModuleRespawnVehicle_F_Wreck";
+						expression="_this setVariable ['Wreck',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="2";
+							};
+						};
+					};
+					class Attribute8
+					{
+						property="ModuleRespawnVehicle_F_Delay";
+						expression="_this setVariable ['Delay',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="50";
+							};
+						};
+					};
+					class Attribute9
+					{
+						property="ModuleRespawnVehicle_F_ShowNotification";
+						expression="_this setVariable ['ShowNotification',_value,true];";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="0";
+							};
+						};
+					};
+					nAttributes=10;
 				};
-				class Attributes
-				{
-				};
-				id=263;
 			};
 			class Item14
-			{
-				dataType="Group";
-				side="West";
-				class Entities
-				{
-					items=4;
-					class Item0
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-3.0302734,0.0014390945,-2.4135742};
-						};
-						side="West";
-						flags=7;
-						class Attributes
-						{
-							rank="SERGEANT";
-							init="call{this setgroupID[""SABRE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
-							description="Tank Commander@SABRE-3";
-							isPlayable=1;
-						};
-						id=269;
-						type="Cav_B_B_Tank_Commander_Saber_3_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"STRING"
-											};
-										};
-										value="Male08ENG";
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"SCALAR"
-											};
-										};
-										value=0.99000001;
-									};
-								};
-							};
-							nAttributes=2;
-						};
-					};
-					class Item1
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-2.0302734,0.0014390945,-3.4135742};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=270;
-						type="Cav_B_B_Tank_Driver_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"STRING"
-											};
-										};
-										value="Male04ENG";
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"SCALAR"
-											};
-										};
-										value=0.98000002;
-									};
-								};
-							};
-							nAttributes=2;
-						};
-					};
-					class Item2
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-3.0302734,0.0014390945,-3.4130859};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=271;
-						type="Cav_B_B_Tank_Gunner_F";
-					};
-					class Item3
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-4.0302734,0.0014390945,-3.4130859};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-3""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=272;
-						type="Cav_B_B_Tank_Loader_F";
-					};
-				};
-				class Attributes
-				{
-				};
-				id=268;
-			};
-			class Item15
-			{
-				dataType="Group";
-				side="West";
-				class Entities
-				{
-					items=4;
-					class Item0
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={3.1005859,0.0014390945,-2.2382813};
-						};
-						side="West";
-						flags=7;
-						class Attributes
-						{
-							rank="SERGEANT";
-							init="call{this setgroupID[""SABRE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
-							description="Tank Commander@SABRE-4";
-							isPlayable=1;
-						};
-						id=274;
-						type="Cav_B_B_Tank_Commander_Saber_4_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"STRING"
-											};
-										};
-										value="Male11ENG";
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"SCALAR"
-											};
-										};
-										value=1.02;
-									};
-								};
-							};
-							nAttributes=2;
-						};
-					};
-					class Item1
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={4.1005859,0.0014390945,-3.2382813};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=275;
-						type="Cav_B_B_Tank_Driver_F";
-					};
-					class Item2
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={3.1005859,0.0014390945,-3.2382813};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=276;
-						type="Cav_B_B_Tank_Gunner_F";
-					};
-					class Item3
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={2.1005859,0.0014390945,-3.2382813};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.40000001;
-							init="call{this setVariable [""cScripts_Player_Unit"", ""SABER-4""];}";
-							description="Crew";
-							isPlayable=1;
-						};
-						id=277;
-						type="Cav_B_B_Tank_Loader_F";
-					};
-				};
-				class Attributes
-				{
-				};
-				id=273;
-			};
-			class Item16
 			{
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={0.22998047,0,-0.020019531};
+					position[]={0.23486328,1.9073486e-005,0.43591309};
 				};
 				title="Saber";
-				id=282;
+				id=575;
+				atlOffset=1.9073486e-005;
 			};
 		};
-		id=292;
+		id=577;
+		atlOffset=9.5367432e-006;
 	};
 };
 class connections
@@ -2002,8 +2310,8 @@ class connections
 		class Item0
 		{
 			linkID=0;
-			item0=1104;
-			item1=1124;
+			item0=567;
+			item1=576;
 			class CustomData
 			{
 				type="Sync";
@@ -2012,8 +2320,8 @@ class connections
 		class Item1
 		{
 			linkID=1;
-			item0=1105;
-			item1=1124;
+			item0=568;
+			item1=576;
 			class CustomData
 			{
 				type="Sync";
@@ -2022,8 +2330,8 @@ class connections
 		class Item2
 		{
 			linkID=2;
-			item0=1106;
-			item1=1124;
+			item0=569;
+			item1=576;
 			class CustomData
 			{
 				type="Sync";
@@ -2032,8 +2340,8 @@ class connections
 		class Item3
 		{
 			linkID=3;
-			item0=1107;
-			item1=1124;
+			item0=570;
+			item1=576;
 			class CustomData
 			{
 				type="Sync";
@@ -2042,8 +2350,8 @@ class connections
 		class Item4
 		{
 			linkID=4;
-			item0=1096;
-			item1=1124;
+			item0=563;
+			item1=576;
 			class CustomData
 			{
 				type="Sync";
@@ -2052,8 +2360,8 @@ class connections
 		class Item5
 		{
 			linkID=5;
-			item0=1097;
-			item1=1124;
+			item0=564;
+			item1=576;
 			class CustomData
 			{
 				type="Sync";
@@ -2062,8 +2370,8 @@ class connections
 		class Item6
 		{
 			linkID=6;
-			item0=1098;
-			item1=1124;
+			item0=565;
+			item1=576;
 			class CustomData
 			{
 				type="Sync";
@@ -2072,8 +2380,8 @@ class connections
 		class Item7
 		{
 			linkID=7;
-			item0=1099;
-			item1=1124;
+			item0=566;
+			item1=576;
 			class CustomData
 			{
 				type="Sync";

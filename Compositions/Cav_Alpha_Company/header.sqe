@@ -1,4 +1,16 @@
-version=53;
-name="Alpha Company [DEVBUILD]";
-author="=7CAV=CPT.Waldie.A";
-category="Cav_EdSubcat_Deploy_Platoon";
+version=54;
+name="ALPHA Company [5.0]";
+author="=7Cav=2LT.Mazinski.H";
+category="Cav_EdSubcat_Personnel_Alpha";
+requiredAddons[]=
+{
+	"A3_Weapons_F_Ammoboxes",
+	"ace_cargo",
+	"A3_Modules_F_Multiplayer",
+	"RHS_US_A2_AirImport",
+	"rhsusf_c_melb",
+	"ace_compat_rhs_usf3",
+	"FIR_A10C_F",
+	"vtx_uh60",
+	"vtx_uh60_config"
+};
