@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="SABER Platoon [5.0]";
+		name="SABER Platoon [DevBuild]";
 		class Entities
 		{
 			items=15;
