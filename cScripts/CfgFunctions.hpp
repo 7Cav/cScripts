@@ -102,6 +102,10 @@ class cScripts {
 
         class deleteDroppedObjects {};
 
+        // Training scripts
+        class training_addHitIndicator {};
+        class training_clearhitIndicator {};
+
        // Plane jump
         class para_lineJump {};
         class para_haloJump {};
