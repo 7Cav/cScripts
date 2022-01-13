@@ -32,25 +32,21 @@ private _condition = { true };
 
 if (_allowOnlyForCompany) then {
     _condition = {
-        (_this select 2) params ["", "_platoon"];
-        if !(EGVAR(Staging,OverrideCompanyVar)) then {
-            [player, _platoon] call FUNC(hasCompanyVariable);
-        } else {
-            true;
-        };
+        _this#2 params ["", "_platoon"];
+        if !(EGVAR(Staging,OverrideCompanyVar)) exitWith {[player, _platoon] call FUNC(hasCompanyVariable);};
+        true
     };
 };
 
-private _statement = {
-    (_this select 2) params ["_className"];
+private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, {
+    _this#2 params ["_className"];
     [player] call EFUNC(gear,removeLoadout);
     [player, _className] call EFUNC(gear,applyLoadout);
-};
+}, _condition, {}, [_className, _platoon]] call ace_interact_menu_fnc_createAction;
 
-private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, _statement, _condition, nil, [_className, _platoon]] call ace_interact_menu_fnc_createAction;
 private _actionType = if (isPlayer _object) then {1} else {0};
 [_object, _actionType, _category, _action] call ace_interact_menu_fnc_addActionToObject;
 
 #ifdef DEBUG_MODE
-    [format["%1; selector '%2' added for '%3' crate.", _object, _lable, _platoon], "LoadoutSelector"] call FUNC(info);
+    [format["%1; selector '%2' with type %3 added for '%4' crate.", _object, _lable, _actionType, _platoon], "LoadoutSelector"] call FUNC(info);
 #endif
