@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="ALPHA Company [DevBuild]";
+		name="ALPHA Company [DEVBUILD]";
 		class Entities
 		{
 			items=45;

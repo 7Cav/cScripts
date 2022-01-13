@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="BANDIT Platoon [DevBuild]";
+		name="BANDIT Platoon [DEVBUILD]";
 		class Entities
 		{
 			items=40;
