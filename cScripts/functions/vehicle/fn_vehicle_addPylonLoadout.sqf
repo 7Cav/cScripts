@@ -49,8 +49,6 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
         ["rhs_mag_762x51_M240_200",[0,2]],
         ["rhs_mag_762x51_M240_200",[0,2]]
     ]] call EFUNC(vehicle,applyLoadout);
-    [_vehicle] call EFUNC(vehicle,addFlagAction);
 };
 
 _vehicle setVariable [QEGVAR(Vehicle,PylonApplyed), true];
-diff --git a/cScripts/functions/vehicle/fn_vehicle_applyLoadout.sqf b/cScripts/functions/vehicle/fn_vehicle_applyLoadout.sqf
