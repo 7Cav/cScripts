@@ -67,32 +67,7 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
         ["rhs_mag_762x51_M240_200",[0,2]],
         ["rhs_mag_762x51_M240_200",[0,2]]
     ], ""] call cScripts_fnc_vehicle_addPylonSelection;
-    [_vehicle, "Default",   "rhsusf_m1a1tank_base", "default", [
-        ["rhs_mag_smokegen",[-1],999],
-        ["rhs_mag_M829A3",[0],28],
-        ["rhs_mag_M830A1",[0],8],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_mag_762x51_M240_1200",[0],1200],
-        ["rhs_LaserFCSMag",[0],99],
-        ["rhs_LaserFCSMag",[0],99],
-        ["rhs_mag_400rnd_127x99_mag_Tracer_Red",[0,0],400],
-        ["rhs_mag_400rnd_127x99_mag_Tracer_Red",[0,0],400],
-        ["rhs_mag_400rnd_127x99_mag_Tracer_Red",[0,0],400],
-        ["rhs_mag_400rnd_127x99_mag_Tracer_Red",[0,0],400],
-        ["rhsusf_mag_L8A3_12",[0,0],12],
-        ["rhsusf_mag_duke",[0,0],1],
-        ["rhs_mag_762x51_M240_200",[0,2],200],
-        ["rhs_mag_762x51_M240_200",[0,2],200],
-        ["rhs_mag_762x51_M240_200",[0,2],200]
-    ], ""] call cScripts_fnc_vehicle_addPylonSelection;
-    [_vehicle, "Mixed",     "rhsusf_m1a1tank_base", "mixed", [
+    [_vehicle, "Default",     "rhsusf_m1a1tank_base", "default", [
         ["rhs_mag_smokegen",[-1],999],
         ["rhs_mag_M829A3_max",[0],28],
         ["rhs_mag_M830A1_max",[0],16],

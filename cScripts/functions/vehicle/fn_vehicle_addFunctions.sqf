@@ -77,7 +77,7 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
 };
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
-    [_vehicle] call FUNC(vehicle_addFlagAction);
+    [_vehicle] call EFUNC(vehicle,addFlagAction);
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {

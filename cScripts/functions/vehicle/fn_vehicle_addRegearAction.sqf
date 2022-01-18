@@ -25,8 +25,12 @@ private _condition = { call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions_Vehicle,Repair), "Regear", _icon, {
      params ["_vehicle", "_caller", "_params"];
      ["", _vehicle] call ace_repair_fnc_doFullRepair;
-     _vehicle setVehicleAmmo 1;
+
+     private _vehicleLoadout = _vehicle getVariable [QEVAR(vehicle,pylon), ["", []]];
+     [_vehicle, _vehicleLoadout#0, _vehicleLoadout#1] call EFUNC(vehicle,applyLoadout);
+
      _vehicle setFuel 1;
+
      [
           [],
           ["Vehicle have been rearmed, refueld and repaired."],
