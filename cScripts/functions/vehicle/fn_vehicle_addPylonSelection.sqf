@@ -35,7 +35,7 @@ private _statement = {
     params ["_vehicle", "_player", "_params"];
     _params params ["", "_loadoutName", "_pylon"];
     if (count _pylon == 0) exitWith {};
-    ["_vehicle", _loadoutName, _pylon] call EFUNC(vehicle,applyPylon);
+    ["_vehicle", _loadoutName, _pylon] call EFUNC(vehicle,applyLoadout);
 };
 
 private _action = [format ["cScripts_Pylon_%1_%2", _classname, _loadoutName], _displayName, _icon, _statement, _condition, nil, [_className, _loadoutName, _pylon]] call ace_interact_menu_fnc_createAction;
