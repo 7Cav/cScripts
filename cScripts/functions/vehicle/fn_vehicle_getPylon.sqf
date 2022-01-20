@@ -13,6 +13,7 @@
  * Example:
  * ["vic", "default"] call cScripts_fnc_vehicle_getPylon;
  */
+
 params [
     ["_vehicle", objNull, [objNull]],
     ["_loadout", "default", [""]]
@@ -33,7 +34,7 @@ if (_loadout == "") exitWith {
 
 private _vehicleKind = _vehicle iskindOf "rhsusf_m1a1tank_base";
 
-# rhsusf_m1a1tank_base
+// rhsusf_m1a1tank_base
 private _rhsusf_m1a1tank_base = createHashMapFromArray [
     ["hard", [
         ["rhs_mag_smokegen",[-1],999],
@@ -127,7 +128,7 @@ private _rhsusf_m1a1tank_base = createHashMapFromArray [
     ]]
 ];
 
-# Loadout vehicle list
+// Loadout vehicle list
 private _pylons = createHashMapFromArray [
     ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base]
 ];
