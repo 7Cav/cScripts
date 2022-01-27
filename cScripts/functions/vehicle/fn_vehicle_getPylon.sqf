@@ -4,31 +4,21 @@
  * This function return a vehicle loadout based on loadout name and vehicle kind.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
- * 1: VehicleKind <STRING>
- * 2: LoadoutName <STRING> (Default; "default")
+ * 0: VehicleKind <STRING>
+ * 1: LoadoutName <STRING> (Default; "default")
  *
  * Return Value:
  * Vehicle loadout Array <ARRAY>
  *
  * Example:
- * [_vehicle, "rhsusf_m1a1tank_base", "default"] call cScripts_fnc_vehicle_getPylon;
+ * ["rhsusf_m1a1tank_base", "default"] call cScripts_fnc_vehicle_getPylon;
  */
 
 params [
-    ["_vehicle", objNull, [objNull]],
     ["_vehicleKind", "", [""]],
     ["_loadout", "default", [""]]
 ];
 
-if (_vehicle iskindOf "man") exitWith {
-    [format["Vehicle; %1 is a man object", _vehicle], "Vehicle Pylon"] call FUNC(error);
-    [];
-};
-if (isNull _vehicle) exitWith {
-    ["Vehicle is null", "Vehicle Pylon"] call FUNC(error);
-    [];
-};
 if (_vehicleKind == "") exitWith {
     ["No kind of vehicle is defined", "Vehicle Pylon"] call FUNC(warning);
     [];
