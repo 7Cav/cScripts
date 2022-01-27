@@ -5,17 +5,19 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: LoadoutName <STRING> (Default; "default")
+ * 1: VehicleKind <STRING>
+ * 2: LoadoutName <STRING> (Default; "default")
  *
  * Return Value:
  * Vehicle loadout Array <ARRAY>
  *
  * Example:
- * ["vic", "default"] call cScripts_fnc_vehicle_getPylon;
+ * [_vehicle, "rhsusf_m1a1tank_base", "default"] call cScripts_fnc_vehicle_getPylon;
  */
 
 params [
     ["_vehicle", objNull, [objNull]],
+    ["_vehicleKind", "", [""]],
     ["_loadout", "default", [""]]
 ];
 
@@ -27,12 +29,14 @@ if (isNull _vehicle) exitWith {
     ["Vehicle is null", "Vehicle Pylon"] call FUNC(error);
     [];
 };
+if (_vehicleKind == "") exitWith {
+    ["No kind of vehicle is defined", "Vehicle Pylon"] call FUNC(warning);
+    [];
+};
 if (_loadout == "") exitWith {
     ["No vehicle loadout is defined", "Vehicle Pylon"] call FUNC(warning);
     [];
 };
-
-private _vehicleKind = _vehicle iskindOf "rhsusf_m1a1tank_base";
 
 // rhsusf_m1a1tank_base
 private _rhsusf_m1a1tank_base = createHashMapFromArray [
@@ -133,8 +137,8 @@ private _pylons = createHashMapFromArray [
     ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base]
 ];
 
-private _getVehiclePylons = _pylons getOrDefault ["_vehicleKind", []];
+private _getVehiclePylons = _pylons getOrDefault [_vehicleKind, []];
 if (count _getVehiclePylons == 0) exitWith {[]};
-private _pylon = _getVehiclePylons getOrDefault ["_loadout", []];
+private _pylon = _getVehiclePylons getOrDefault [_loadout, []];
 
 _pylon;

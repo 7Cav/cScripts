@@ -14,13 +14,17 @@
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_loadoutName", "", ""],
+    ["_loadoutName", "", [""]],
     ["_vehicleLoadout", [], [[]]]
 ];
 
 if (_vehicle iskindOf "man") exitWith {};
 if (_loadoutName == "") exitWith {};
 if (count _vehicleLoadout == 0) exitWith {};
+
+#ifdef DEBUG_MODE
+    [format ["Applying pylon '%1' to %2 (%3)", _loadoutName, _vehicle, typeOf _vehicle], "Vehicle Pylon"] call FUNC(info);
+#endif
 
 // Rearm vehicle first
 _vehicle setVehicleAmmo 1;
@@ -34,13 +38,13 @@ _vehicle setVehicleAmmo 1;
 // Add magazine
 {
     _x params [
-        ["_magazineClassname", "",[""]],
+        ["_magazineClassname", "", [""]],
         ["_turretPath", [], [[]]],
         ["_amount", -1, [0]]
     ];
 
     if (_amount != 0) then {
-        [format["Adding magazine %1 (%2)", _magazineClassname, _amount]] call FUNC(log);
+        //[format["Adding magazine %1 (%2)", _magazineClassname, _amount]] call FUNC(log);
         _vehicle addMagazineTurret [
             _magazineClassname,
             _turretPath,
@@ -49,4 +53,4 @@ _vehicle setVehicleAmmo 1;
     };
 } forEach _vehicleLoadout;
 
-_vehicle setVariable [QEVAR(vehicle,pylon), [_loadoutName, _vehicleLoadout]];
+_vehicle setVariable [QEGVAR(vehicle,pylon), [_loadoutName, _vehicleLoadout]];

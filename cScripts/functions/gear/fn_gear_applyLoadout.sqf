@@ -16,6 +16,7 @@
  * [player, [[],[],[],[],[],[],"","",[],["","","","","",""]]] call cScripts_fnc_gear_applyLoadout
  *
  */
+#define DEBUG_MODE
 params [
     ["_unit", objNull, [objNull]],
     "_loadout"
@@ -59,6 +60,7 @@ switch (true) do {
     };
     case _loadConfig: {
         _loadout = getText (_config >> "loadout");
+        private _classname = configName _config;
         if (_loadout != "") then {
             _loadout = parseSimpleArray _loadout;
             if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
