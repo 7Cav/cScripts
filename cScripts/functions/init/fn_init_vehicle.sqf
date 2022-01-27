@@ -23,6 +23,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     if (_vehicle iskindOf "man") exitWith {};
     _vehicle call EFUNC(vehicle,addFunctions);
     _vehicle call EFUNC(vehicle,addInventory);
+    _vehicle call EFUNC(vehicle,addPylonLoadouts);
     _vehicle call EFUNC(vehicle,addCosmetics);
     _vehicle call EFUNC(vehicle,addStagingActions);
     _vehicle call EFUNC(vehicle,addRadio);
@@ -31,8 +32,10 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 {
     _x addEventHandler ["CuratorObjectPlaced", {
         params ["", "_vehicle"];
+        if (_vehicle iskindOf "man") exitWith {};
         _vehicle call EFUNC(vehicle,addFunctions);
         _vehicle call EFUNC(vehicle,addInventory);
+        _vehicle call EFUNC(vehicle,addPylonLoadouts);
         _vehicle call EFUNC(vehicle,addCosmetics);
         _vehicle call EFUNC(vehicle,addStagingActions);
         _vehicle call EFUNC(vehicle,addRadio);

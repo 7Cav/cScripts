@@ -139,6 +139,7 @@ class cScripts {
     class vehicle {
         file = "cScripts\functions\vehicle";
         class vehicle_addInventory {};
+        class vehicle_addPylonLoadout {};
         class vehicle_addFunctions {};
         class vehicle_addCosmetics {};
         class vehicle_addRadio {};
@@ -154,6 +155,8 @@ class cScripts {
         class vehicle_addPylonSelection {};
         class vehicle_setupPylonCategories {};
         class vehicle_getPylon {};
+
+        class vehicle_applyLoadout {};
 
         // Other
         class vehicle_addFlagAction {};
