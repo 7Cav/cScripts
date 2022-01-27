@@ -153,6 +153,7 @@ class cScripts {
         class vehicle_addCosmeticSelection {};
         class vehicle_addPylonSelection {};
         class vehicle_setupPylonCategories {};
+        class vehicle_getPylon {};
 
         // Other
         class vehicle_addFlagAction {};
