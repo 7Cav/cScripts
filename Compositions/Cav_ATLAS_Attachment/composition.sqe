@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="ATLAS Platoon [DevBuild]";
+		name="ATLAS Platoon [DEVBUILD]";
 		class Entities
 		{
 			items=35;

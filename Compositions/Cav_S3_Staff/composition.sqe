@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="S3 MIssion Controllers [DevBuild]";
+		name="S3 MIssion Controllers [DEVBUILD]";
 		class Entities
 		{
 			items=5;
