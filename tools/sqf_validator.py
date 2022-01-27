@@ -165,14 +165,15 @@ def main():
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default="")
     args = parser.parse_args()
 
-    # Allow running from root directory as well as from inside the tools directory
-    rootDir = "../cScripts"
-    if (os.path.exists("cScripts")):
-        rootDir = "cScripts"
+    for folder in ['cScripts']:
+        # Allow running from root directory as well as from inside the tools directory
+        rootDir = "../" + folder
+        if (os.path.exists(folder)):
+            rootDir = folder
 
-    for root, dirnames, filenames in os.walk(rootDir + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
+        for root, dirnames, filenames in os.walk(rootDir + '/' + args.module):
+            for filename in fnmatch.filter(filenames, '*.sqf'):
+                sqf_list.append(os.path.join(root, filename))
 
     for filename in sqf_list:
         bad_count = bad_count + check_sqf_syntax(filename)
