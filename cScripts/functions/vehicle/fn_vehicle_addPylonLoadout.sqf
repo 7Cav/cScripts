@@ -23,7 +23,7 @@ if (!isNil{_vehicle getVariable QEGVAR(Vehicle,PylonApplyed)}) exitWith {[format
 private _pylon = [];
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
-    _pylon = [_vehicle, "rhsusf_m1a1tank_base", "default"] call EFUNC(vehicle,getPylon);
+    _pylon = ["rhsusf_m1a1tank_base", "default"] call EFUNC(vehicle,getPylon);
     [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
 };
 
