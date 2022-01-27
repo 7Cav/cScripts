@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function add stadgeing to vehicles
+ * This function add a regear action to a vehicle inside of a staging zone.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -23,17 +23,16 @@ private _icon = "cScripts\Data\Icon\icon_00.paa" call FUNC(getIcon);
 
 private _condition = { call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions_Vehicle,Repair), "Regear", _icon, {
-     params ["_vehicle", "_caller", "_params"];
-     ["", _vehicle] call ace_repair_fnc_doFullRepair;
+     params ["_vehicle"];
 
-     private _vehicleLoadout = _vehicle getVariable [QEVAR(vehicle,pylon), ["", []]];
-     [_vehicle, _vehicleLoadout#0, _vehicleLoadout#1] call EFUNC(vehicle,applyLoadout);
+     private _vehicleLoadout = _vehicle getVariable [QEGVAR(vehicle,pylon), ["", []]];
+     _vehicleLoadout params ["_loadoutName", "_pylon"];
 
+     [_vehicle, _loadoutName, _pylon] call EFUNC(vehicle,applyLoadout);
      _vehicle setFuel 1;
-
      [
           [],
-          ["Vehicle have been rearmed, refueld and repaired."],
+          ["Vehicle have been rearmed and refueld."],
           [""],
           [""]
      ] call CBA_fnc_notify;

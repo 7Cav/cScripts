@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function add stadgeing to vehicles
+ * This function add a repair action to a vehicle inside of a staging zone.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -25,6 +25,7 @@ private _condition = { call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions_Vehicle,Repair), "Repair and Refuel", _icon, {
      params ["_vehicle", "_caller", "_params"];
      ["", _vehicle] call ace_repair_fnc_doFullRepair;
+     _vehicle setFuel 1;
      [
           [],
           ["Vehicle have been refueld and repaired."],

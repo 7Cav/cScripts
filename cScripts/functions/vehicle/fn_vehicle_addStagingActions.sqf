@@ -22,6 +22,10 @@ private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
 if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle"] call FUNC(error);};
 if (!(faction _vehicle in _factionArray)) exitWith {};
 
+#ifdef DEBUG_MODE
+    ["Adding vehicle staging actions", "Vehicle Staging"] call FUNC(info);
+#endif
+
 private _condition = { call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions_Vehicle,Main_Cat), "Vehicle Staging Zone", "cScripts\Data\Icon\icon_00.paa", {true}, _condition] call ace_interact_menu_fnc_createAction;
 [_vehicle, 1, ["ACE_SelfActions"], _stagingCat] call ace_interact_menu_fnc_addActionToObject;
