@@ -28,9 +28,16 @@ if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup cor
 {
     private _radio = _x;
     {
-        [_radio, "default", _forEachIndex + 1, "label", _x] call acre_api_fnc_setPresetChannelField;
-        [_radio, "default", _forEachIndex + 1, "frequencyTX", _forEachIndex + 10.242] call acre_api_fnc_setPresetChannelField;
-        [_radio, "default", _forEachIndex + 1, "frequencyRX", _forEachIndex + 10.242] call acre_api_fnc_setPresetChannelField;
+        _x = if (_x isEqualType "") then { [_x] } else { _x };
+        _x params [
+            ["_label", _x, [""]],
+            ["_channel", _forEachIndex + 1, [0]],
+            ["_frequencyTX", _forEachIndex + 10.242, [0]],
+            ["_frequencyRX", _forEachIndex + 10.242, [0]]
+        ];
+        [_radio, "default", _channel, "label", _label] call acre_api_fnc_setPresetChannelField;
+        [_radio, "default", _channel, "frequencyTX",_frequencyTX] call acre_api_fnc_setPresetChannelField;
+        [_radio, "default", _channel, "frequencyRX", _frequencyRX] call acre_api_fnc_setPresetChannelField;
     } forEach _lrChannels;
     [_radio, "default"] call acre_api_fnc_setPreset;
 } forEach ["ACRE_PRC152", "ACRE_PRC148", "ACRE_PRC117F"];
