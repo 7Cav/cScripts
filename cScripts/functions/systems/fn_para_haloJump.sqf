@@ -31,7 +31,7 @@ _player setDir _dir - 140;
 
 sleep 1.5;
 
-[_player] call EFUNC(para,equipment);
+[_player, true] call EFUNC(para,equipment);
 
 sleep 0.5;
 
