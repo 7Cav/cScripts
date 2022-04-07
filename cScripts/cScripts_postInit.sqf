@@ -20,6 +20,10 @@ if (EGVAR(Settings,allowReplaceItem)) then {
 // staging
 [] call EFUNC(init,staging);
 
+// Virtual Backpack
+if (EGVAR(Settings,allowVirtualBackpacks)) then {
+    [] call EFUNC(init,virtualBackpacks);
+};
 // messages 
 [] call EFUNC(init,message);
 

@@ -326,6 +326,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+[ // Virtual Backpack
+    QEGVAR(Settings,allowVirtualBackpacks),
+    "CHECKBOX",
+    ["Enable Virtual Backpacks","Allow usage of virtual backpacks"],
+    [_cScriptSettings, "9; Other"],
+    true,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
 #ifdef DEBUG_MODE
     if !(is3DEN) then {
