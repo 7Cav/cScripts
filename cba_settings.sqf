@@ -1,11 +1,11 @@
 // A3TI
 force force A3TI_ACE_JAVELIN = false;
-force force A3TI_ALLOW_TANK_DRIVER = false;
-force force A3TI_ALLOW_VANILLA_TI = true;
+force force A3TI_ALLOW_TANK_DRIVER = true;
+force force A3TI_ALLOW_VANILLA_TI = false;
 force force A3TI_ENABLE_ZEUS = true;
-force force A3TI_HD_VISION_FIGHTER = false;
+force force A3TI_HD_VISION_FIGHTER = true;
 force force A3TI_HD_VISION_LANDVEH = true;
-force force A3TI_HD_VISION_SHIP = false;
+force force A3TI_HD_VISION_SHIP = true;
 force force A3TI_HD_VISION_UAV = true;
 force force A3TI_REMOVE_FILMGRAIN_RHS = true;
 
@@ -21,11 +21,11 @@ force force ace_advanced_ballistics_simulationInterval = 0.05;
 force force ace_advanced_fatigue_enabled = true;
 //ace_advanced_fatigue_enableStaminaBar = true;
 //ace_advanced_fatigue_fadeStaminaBar = true;
-force force ace_advanced_fatigue_loadFactor = 1;
-force force ace_advanced_fatigue_performanceFactor = 1.40374;
-force force ace_advanced_fatigue_recoveryFactor = 3.03773;
+force force ace_advanced_fatigue_loadFactor = 0;
+force force ace_advanced_fatigue_performanceFactor = 1;
+force force ace_advanced_fatigue_recoveryFactor = 3;
 force force ace_advanced_fatigue_swayFactor = 1;
-force force ace_advanced_fatigue_terrainGradientFactor = 1;
+force force ace_advanced_fatigue_terrainGradientFactor = 0.7;
 
 // ACE Advanced Throwing
 force force force force ace_advanced_throwing_enabled = true;
@@ -36,7 +36,7 @@ force force force force ace_advanced_throwing_showThrowArc = true;
 
 // ACE Advanced Vehicle Damage
 force force ace_vehicle_damage_enableCarDamage = false;
-force force ace_vehicle_damage_enabled = true;
+force force ace_vehicle_damage_enabled = false;
 force force ace_vehicle_damage_removeAmmoDuringCookoff = true;
 
 // ACE Arsenal
@@ -50,11 +50,11 @@ force force ace_arsenal_enableIdentityTabs = true;
 
 // ACE Artillery
 force force ace_artillerytables_advancedCorrections = false;
-force force ace_artillerytables_disableArtilleryComputer = false;
+force force ace_artillerytables_disableArtilleryComputer = true;
 force force ace_mk6mortar_airResistanceEnabled = false;
 force force ace_mk6mortar_allowCompass = true;
 force force ace_mk6mortar_allowComputerRangefinder = false;
-force force ace_mk6mortar_useAmmoHandling = false;
+force force ace_mk6mortar_useAmmoHandling = true;
 
 // ACE Captives
 force force ace_captives_allowHandcuffOwnSide = true;
@@ -110,22 +110,24 @@ force force acex_field_rations_hudShowLevel = 70;
 force force acex_field_rations_hungerSatiated = 1;
 force force acex_field_rations_terrainObjectActions = false;
 force force acex_field_rations_thirstQuenched = 1;
-force force acex_field_rations_timeWithoutFood = 504;
-force force acex_field_rations_timeWithoutWater = 168;
+force force acex_field_rations_timeWithoutFood = 72;
+force force acex_field_rations_timeWithoutWater = 24;
 force force acex_field_rations_waterSourceActions = 2;
 
 // ACE Fire
 force force ace_fire_enabled = true;
 force force ace_fire_enableFlare = false;
+force force ace_fire_dropWeapons = true;
+force force ace_fire_enableScreams = true;
 
 // ACE Fortify
-//acex_fortify_settingHint = 2;
+force force acex_fortify_settingHint = 1;
 
 // ACE Fragmentation Simulation
-force force ace_frag_enabled = true;
+force force ace_frag_enabled = false;
 force force ace_frag_maxTrack = 10;
 force force ace_frag_maxTrackPerFrame = 10;
-force force ace_frag_reflectionsEnabled = true;
+force force ace_frag_reflectionsEnabled = false;
 force force ace_frag_spallEnabled = false;
 
 // ACE G-Forces
@@ -189,7 +191,7 @@ force force ace_interaction_interactWithTerrainObjects = false;
 force force ace_cargo_enable = true;
 force force ace_cargo_enableRename = true;
 force force ace_cargo_loadTimeCoefficient = 0.2;
-force force ace_cargo_openAfterUnload = 0;
+force force ace_cargo_openAfterUnload = 3;
 force force ace_cargo_paradropTimeCoefficent = 0;
 force force ace_rearm_distance = 20;
 force force ace_rearm_level = 1;
@@ -203,12 +205,12 @@ force force ace_repair_displayTextOnRepair = true;
 force force ace_repair_engineerSetting_fullRepair = 2;
 force force ace_repair_engineerSetting_repair = 1;
 force force ace_repair_engineerSetting_wheel = 0;
-force force ace_repair_fullRepairLocation = 0;
+force force ace_repair_fullRepairLocation = 3;
 force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_locationsBoostTraining = true;
 force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
-force force ace_repair_repairDamageThreshold = 0.800653;
-force force ace_repair_repairDamageThreshold_engineer = 0.904635;
+force force ace_repair_repairDamageThreshold = 0.7;
+force force ace_repair_repairDamageThreshold_engineer = 1;
 force force ace_repair_wheelRepairRequiredItems = [];
 
 // ACE Magazine Repack
@@ -237,7 +239,7 @@ force force ace_markers_timestampHourFormat = 24;
 //ace_map_gestures_allowCurator = true;
 //ace_map_gestures_allowSpectator = true;
 //ace_map_gestures_briefingMode = 0;
-//ace_map_gestures_defaultColor = [1,0.88,0,0.7];
+//ace_map_gestures_defaultColor = [0,1,0,1];
 //ace_map_gestures_defaultLeadColor = [1,0.88,0,0.95];
 force force ace_map_gestures_enabled = true;
 force force ace_map_gestures_interval = 0.03;
@@ -251,20 +253,24 @@ force force ace_maptools_drawStraightLines = true;
 force force ace_maptools_rotateModifierKey = 1;
 
 // ACE Medical
-force force ace_medical_ai_enabledFor = 2;
-force force ace_medical_AIDamageThreshold = 0.6;
-force force ace_medical_bleedingCoefficient = 0.75;
-force force ace_medical_blood_bloodLifetime = 900;
-force force ace_medical_blood_enabledFor = 2;
-force force ace_medical_blood_maxBloodObjects = 500;
-force force ace_medical_deathChance = 0.4;
-force force ace_medical_enableVehicleCrashes = true;
+force force ace_medical_enableVehicleCrashes = false;
+force force ace_medical_limping = 1;
+force force ace_medical_fractures = 2;
+force force ace_medical_fractureChance = 0.35;
+force force ace_medical_spontaneousWakeUpChance = 0.4;
+force force ace_medical_spontaneousWakeUpEpinephrineBoost = 1.4;
 force force ace_medical_fatalDamageSource = 1;
+force force ace_medical_playerDamageThreshold = 6;
+force force ace_medical_AIDamageThreshold = 0.6;
+force force ace_medical_painUnconsciousChance = 0.2;
+force force ace_medical_deathChance = 0;
+force force ace_medical_ai_enabledFor = 2;
+force force ace_medical_blood_enabledFor = 1;
+force force ace_medical_blood_bloodLifetime = 900;
+force force ace_medical_blood_maxBloodObjects = 500;
+force force ace_medical_feedback_painEffectType = 0;
 force force ace_medical_feedback_bloodVolumeEffectType = 0;
 //ace_medical_feedback_enableHUDIndicators = true;
-force force ace_medical_feedback_painEffectType = 0;
-force force ace_medical_fractureChance = 0.5;
-force force ace_medical_fractures = 2;
 //ace_medical_gui_bloodLossColor_0 = [1,1,1,1];
 //ace_medical_gui_bloodLossColor_1 = [1,0.95,0.64,1];
 //ace_medical_gui_bloodLossColor_2 = [1,0.87,0.46,1];
@@ -289,56 +295,52 @@ force force ace_medical_fractures = 2;
 //ace_medical_gui_enableMedicalMenu = 1;
 //ace_medical_gui_enableSelfActions = true;
 force force ace_medical_gui_interactionMenuShowTriage = 1;
-force force ace_medical_gui_maxDistance = 3.4;
+force force ace_medical_gui_maxDistance = 4;
 //ace_medical_gui_openAfterTreatment = true;
-force force ace_medical_ivFlowRate = 1.4;
-force force ace_medical_limping = 1;
-force force ace_medical_painCoefficient = 1;
-force force ace_medical_painUnconsciousChance = 0.2;
-force force ace_medical_playerDamageThreshold = 6;
-force force ace_medical_spontaneousWakeUpChance = 0.4;
-force force ace_medical_spontaneousWakeUpEpinephrineBoost = 1.4;
-force force ace_medical_statemachine_AIUnconsciousness = false;
-force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
-force force ace_medical_statemachine_cardiacArrestTime = 270;
-force force ace_medical_statemachine_fatalInjuriesAI = 0;
+force force ace_medical_treatment_allowLitterCreation = true;
+force force ace_medical_treatment_maxLitterObjects = 100;
+force force ace_medical_treatment_litterCleanupDelay = 600;
 force force ace_medical_statemachine_fatalInjuriesPlayer = 2;
-force force ace_medical_treatment_advancedBandages = 2;
+force force ace_medical_statemachine_fatalInjuriesAI = 0;
+force force ace_medical_statemachine_AIUnconsciousness = false;
+force force ace_medical_statemachine_cardiacArrestTime = 270;
+force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
+force force ace_medical_bleedingCoefficient = 0.75;
+force force ace_medical_painCoefficient = 1;
+force force ace_medical_ivFlowRate = 1.2;
 force force ace_medical_treatment_advancedDiagnose = 2;
 force force ace_medical_treatment_advancedMedication = true;
-force force ace_medical_treatment_allowBodyBagUnconscious = false;
-force force ace_medical_treatment_allowLitterCreation = true;
-force force ace_medical_treatment_allowSelfIV = 1;
-force force ace_medical_treatment_allowSelfPAK = 1;
-force force ace_medical_treatment_allowSelfStitch = 1;
-force force ace_medical_treatment_allowSharedEquipment = 0;
-force force ace_medical_treatment_clearTrauma = 1;
-force force ace_medical_treatment_consumePAK = 1;
-force force ace_medical_treatment_consumeSurgicalKit = 0;
-force force ace_medical_treatment_convertItems = 2;
-force force ace_medical_treatment_cprSuccessChanceMax = 0.4;
-force force ace_medical_treatment_cprSuccessChanceMin = 0.4;
-force force ace_medical_treatment_holsterRequired = 0;
-force force ace_medical_treatment_litterCleanupDelay = 600;
-force force ace_medical_treatment_locationEpinephrine = 0;
-force force ace_medical_treatment_locationIV = 0;
-force force ace_medical_treatment_locationPAK = 0;
-force force ace_medical_treatment_locationsBoostTraining = true;
-force force ace_medical_treatment_locationSurgicalKit = 0;
-force force ace_medical_treatment_maxLitterObjects = 100;
-force force ace_medical_treatment_medicEpinephrine = 1;
-force force ace_medical_treatment_medicIV = 1;
-force force ace_medical_treatment_medicPAK = 2;
-force force ace_medical_treatment_medicSurgicalKit = 1;
-force force ace_medical_treatment_timeCoefficientPAK = 0.7;
-force force ace_medical_treatment_treatmentTimeAutoinjector = 5;
-force force ace_medical_treatment_treatmentTimeBodyBag = 10;
-force force ace_medical_treatment_treatmentTimeCPR = 15;
-force force ace_medical_treatment_treatmentTimeIV = 12;
-force force ace_medical_treatment_treatmentTimeSplint = 7;
-force force ace_medical_treatment_treatmentTimeTourniquet = 7;
+force force ace_medical_treatment_advancedBandages = 2;
 force force ace_medical_treatment_woundReopenChance = 1;
+force force ace_medical_treatment_clearTrauma = 1;
+force force ace_medical_treatment_locationsBoostTraining = true;
+force force ace_medical_treatment_allowSharedEquipment = 0;
+force force ace_medical_treatment_convertItems = 2;
+force force ace_medical_treatment_treatmentTimeAutoinjector = 5;
+force force ace_medical_treatment_treatmentTimeTourniquet = 7;
+force force ace_medical_treatment_treatmentTimeSplint = 7;
+force force ace_medical_treatment_treatmentTimeBodyBag = 10;
+force force ace_medical_treatment_medicEpinephrine = 1;
+force force ace_medical_treatment_locationEpinephrine = 0;
+force force ace_medical_treatment_medicPAK = 2;
+force force ace_medical_treatment_locationPAK = 0;
+force force ace_medical_treatment_consumePAK = 0;
+force force ace_medical_treatment_allowSelfPAK = 1;
+force force ace_medical_treatment_timeCoefficientPAK = 0.7;
+force force ace_medical_treatment_medicSurgicalKit = 1;
+force force ace_medical_treatment_locationSurgicalKit = 0;
+force force ace_medical_treatment_consumeSurgicalKit = 0;
+force force ace_medical_treatment_allowSelfStitch = 1;
 force force ace_medical_treatment_woundStitchTime = 5;
+force force ace_medical_treatment_medicIV = 1;
+force force ace_medical_treatment_locationIV = 0;
+force force ace_medical_treatment_allowSelfIV = 1;
+force force ace_medical_treatment_treatmentTimeIV = 12;
+force force ace_medical_treatment_cprSuccessChanceMin = 0.4;
+force force ace_medical_treatment_cprSuccessChanceMax = 0.4;
+force force ace_medical_treatment_treatmentTimeCPR = 15;
+force force ace_medical_treatment_allowBodyBagUnconscious = false;
+force force ace_medical_treatment_holsterRequired = 0;
 
 // ACE Name Tags
 //ace_nametags_ambientBrightnessAffectViewDist = 1;
@@ -361,45 +363,58 @@ force force ace_nametags_playerNamesViewDistance = 6;
 // ACE Nightvision
 force force ace_nightvision_aimDownSightsBlur = 0;
 force force ace_nightvision_disableNVGsWithSights = false;
-force force ace_nightvision_effectScaling = 0.101011;
+force force ace_nightvision_effectScaling = 0.2;
 force force ace_nightvision_fogScaling = 0;
-force force ace_nightvision_noiseScaling = 0.0713011;
-force force ace_nightvision_shutterEffects = true;
+force force ace_nightvision_noiseScaling = 0.15;
+force force ace_nightvision_shutterEffects = false;
 
 // ACE Overheating
-force force ace_overheating_cookoffCoef = 1;
-force force ace_overheating_displayTextOnJam = true;
 force force ace_overheating_enabled = true;
 force force ace_overheating_heatCoef = 1;
+force force ace_overheating_coolingCoef = 2;
+force force ace_overheating_overheatingDispersion = false;
+force force ace_overheating_overheatingRateOfFire = false;
+force force ace_overheating_displayTextOnJam = true;
 force force ace_overheating_jamChanceCoef = 1;
-force force ace_overheating_overheatingDispersion = true;
-force force ace_overheating_overheatingRateOfFire = true;
-force force ace_overheating_particleEffectsAndDispersionDistance = 3000;
-//ace_overheating_showParticleEffects = false;
-//ace_overheating_showParticleEffectsForEveryone = false;
+force force ace_overheating_showParticleEffects = false;
+force force ace_overheating_showParticleEffectsForEveryone = false;
 force force ace_overheating_unJamFailChance = 0.1;
-force force ace_overheating_unJamOnreload = false;
 force force ace_overheating_unJamOnSwapBarrel = true;
+force force ace_overheating_unJamOnReload = false;
+force force ace_overheating_cookoffCoef = 5;
 
-// ACE Pharmacy
-force force aceP_circulation_carboApp = 5;
-force force aceP_circulation_carbonateActive = true;
-force force aceP_circulation_CPR_Chance_Default = 25;
-force force aceP_circulation_CPR_Chance_Doctor = 40;
-force force aceP_circulation_CPR_Chance_RegularMedic = 35;
-force force aceP_circulation_DeactMon_whileAED_X = true;
-force force aceP_circulation_distanceLimit_AEDX = 30;
-force force aceP_circulation_enable = true;
-force force aceP_circulation_enable_CPR_Chances = true;
-force force aceP_circulation_IVestablish = 6;
-force force aceP_circulation_medLvl_AED_X = 1;
-force force aceP_circulation_naloApp = 5;
-force force aceP_circulation_naloxoneActive = true;
-force force aceP_circulation_SuccesCh_AED = 60;
-force force aceP_circulation_SuccesCh_AED_X = 80;
-force force aceP_circulation_timeLimit_AEDX = 1800;
-force force aceP_circulation_txaActive = true;
-force force aceP_circulation_useLocation_AED = 0;
+// ACE Pharmacy - AED
+force force acep_circulation_useLocation_AED = 0;
+force force acep_circulation_SuccesCh_AED_X = 75;
+force force acep_circulation_SuccesCh_AED = 60;
+force force acep_circulation_medLvl_AED_X = 0;
+force force acep_circulation_distanceLimit_AEDX = 30;
+force force acep_circulation_timeLimit_AEDX = 1800;
+force force acep_circulation_DeactMon_whileAED_X = false;
+force force acep_circulation_CPR_Chance_Doctor = 40;
+force force acep_circulation_CPR_Chance_RegularMedic = 30;
+force force acep_circulation_CPR_Chance_Default = 30;
+
+// ACE Pharmacy - Fracture
+force force acep_circulation_simpleChance = 75;
+force force acep_circulation_compoundChance = 50;
+force force acep_circulation_enable_fracture = true;
+force force acep_circulation_etomidateTime = 45;
+force force acep_circulation_closedTime = 8;
+force force acep_circulation_openTime = 15;
+force force acep_circulation_surgicalTime = 8;
+force force acep_circulation_incisionTime = 10;
+force force acep_circulation_fractureCheck = 0;
+force force acep_circulation_closedReduction = 1;
+force force acep_circulation_surgicalAction = 1;
+force force acep_circulation_closedLocation = 0;
+force force acep_circulation_surgicalLocation = 0;
+
+// ACE Pharmacy - Medications
+force force acep_circulation_IVmedic = 0;
+force force acep_circulation_IVestablish = 7;
+force force acep_circulation_IOestablish = 4;
+force force acep_circulation_PushTime = 3;
 
 // ACE Pointing
 force force ace_finger_enabled = true;
@@ -471,7 +486,7 @@ force force ace_hitreactions_minDamageToTrigger = 0.363636;
 //ace_inventory_inventoryDisplaySize = 0;
 force force ace_laser_dispersionCount = 2;
 force force ace_microdagr_mapDataAvailable = 2;
-force force ace_microdagr_waypointPrecision = 3;
+force force ace_microdagr_waypointPrecision = 2;
 //ace_optionsmenu_showNewsOnMainMenu = true;
 force force ace_overpressure_distanceCoefficient = 1;
 force force ace_parachute_failureChance = 0;
@@ -595,6 +610,16 @@ force force acre_sys_core_ts3ChannelSwitch = false;
 force force acre_sys_core_unmuteClients = true;
 force force acre_sys_signal_signalModel = 0;
 
+// ACRE2 Animations
+force force radioAnims_cba_main = true;
+force force radioAnims_cba_ads = true;
+force force radioAnims_cba_vehicles = true;
+force force radioAnims_cba_preference_PRC343 = "Ear";
+force force radioAnims_cba_preference_PRC152 = "Vest";
+force force radioAnims_cba_preference_PRC148 = "Vest";
+force force radioAnims_cba_preference_SEM52SL = "Vest";
+force force radioAnims_cba_preference_Others = "Ears";
+
 // ACRE2 Gestures
 force force acre_sys_gestures_enabled = true;
 force force acre_sys_gestures_stopADS = false;
@@ -625,7 +650,10 @@ force force acre_sys_zeus_zeusCommunicateViaCamera = true;
 force force acre_sys_zeus_zeusDefaultVoiceSource = false;
 
 // BettIR
-force force BettIR_ViewDistance = 300;
+force force BettIR_ViewDistance = 1000;
+
+// Brush Clearing
+force force ClearBrush_requireEntrenchingTool = true;
 
 // Community Base Addons
 //cba_diagnostic_ConsoleIndentType = -1;
@@ -741,8 +769,8 @@ force force cba_network_loadoutValidation = 1;
 //diwako_dui_use_layout_editor = false;
 
 // dzn MG Tripod
-force force dzn_MG_Tripod_DeployedAimCoef = 0.1;
-force force dzn_MG_Tripod_DeployedRecoilCoef = 0.1;
+force force dzn_MG_Tripod_DeployedAimCoef = 0.05;
+force force dzn_MG_Tripod_DeployedRecoilCoef = 0.05;
 force force dzn_MG_Tripod_Enabled = true;
 force force dzn_MG_Tripod_Enabled_CrouchGesture = true;
 force force dzn_MG_Tripod_Enabled_ProneGesture = true;
@@ -829,6 +857,30 @@ force force lambs_main_radioEast = 500;
 force force lambs_main_radioGuer = 500;
 force force lambs_main_radioShout = 100;
 force force lambs_main_radioWest = 500;
+
+// Simple Suppress
+force force simplesuppress_suppress_overlayOpacity = 0.5;
+force force simplesuppress_suppress_overlayTexture = 0;
+force force simplesuppress_suppress_overlayFadeoutTime = 6.0;
+force force simplesuppress_suppress_projectileMaxDistance = 6.0;
+force force simplesuppress_suppress_shooterMinDistance = 0.4;
+force force simplesuppress_suppress_checkLOS = false;
+
+// Training Magazines
+force force Silence_TrainingMags = 0;
+force force Silence_TrainingMags_2 = 0;
+force force Silence_TrainingMags_3 = 0;
+
+// Turret Enhanced
+force force Fat_Lurch_ShowNorth = true;
+force force Fat_Lurch_ShowAz = true;
+force force Fat_Lurch_ShowEl = true;
+force force Fat_Lurch_ShowTarget = true;
+force force Fat_Lurch_MapSlew = true;
+force force Fat_Lurch_Markers = true;
+force force Fat_Lurch_Grid = true;
+force force Fat_Lurch_Measure = true;
+force force Fat_Lurch_GridNum = 8;
 
 // UH-60M
 //vtx_uh60_anvishud_defaultMode = -1;
@@ -1027,3 +1079,4 @@ force force zen_compat_ace_hideModules = true;
 //zen_faction_filter_3_UK3CB_ADC_C = true;
 //zen_faction_filter_3_UK3CB_CHC_C = true;
 //zen_faction_filter_3_UK3CB_TKC_C = true;
+
