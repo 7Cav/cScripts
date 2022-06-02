@@ -1,13 +1,13 @@
 // A3TI
-A3TI_ACE_JAVELIN = false;
-A3TI_ALLOW_TANK_DRIVER = false;
-A3TI_ALLOW_VANILLA_TI = true;
-A3TI_ENABLE_ZEUS = true;
-A3TI_HD_VISION_FIGHTER = false;
-A3TI_HD_VISION_LANDVEH = true;
-A3TI_HD_VISION_SHIP = false;
-A3TI_HD_VISION_UAV = true;
-A3TI_REMOVE_FILMGRAIN_RHS = true;
+//A3TI_ACE_JAVELIN = false;
+//A3TI_ALLOW_TANK_DRIVER = false;
+//A3TI_ALLOW_VANILLA_TI = true;
+//A3TI_ENABLE_ZEUS = true;
+//A3TI_HD_VISION_FIGHTER = false;
+//A3TI_HD_VISION_LANDVEH = true;
+//A3TI_HD_VISION_SHIP = false;
+//A3TI_HD_VISION_UAV = true;
+//A3TI_REMOVE_FILMGRAIN_RHS = true;
 
 // ACE Advanced Ballistics
 force force ace_advanced_ballistics_ammoTemperatureEnabled = true;
