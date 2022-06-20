@@ -92,6 +92,8 @@ private _commonGear = [
     "SmokeShellRed",
     "SmokeShellYellow",
     "SmokeShell",
+    "HandGrenade",
+    "B_IR_Grenade",
 
     // Radios
     "ACRE_PRC343",
@@ -246,16 +248,79 @@ private _companyItems = switch (_company) do {
         "rhsusf_ach_helmet_headset_ess_ocp_alt",
         "rhsusf_ach_helmet_camo_ocp",
         "rhsusf_ach_helmet_ocp_norotos",
+        "H_HelmetSpecB_paint2",
+        "H_HelmetSpecB_paint1",
+        "H_HelmetSpecB_sand",
+        "H_HelmetSpecB_snakeskin",
+        "H_HelmetHBK_ocp_headset_F",
+        "UK3CB_BAF_H_Boonie_MTP_PRR",
+        "H_HelmetB_camo",
+        "rhsusf_opscore_coy_cover_pelt",
+        "rhsusf_opscore_mc_cover_pelt_nsw",
+        "rhsusf_opscore_mc_cover_pelt_cam",
+        "rhsusf_opscore_paint_pelt_nsw",
+        "rhsusf_opscore_paint_pelt_nsw_cam",
+        "rhsusf_opscore_rg_cover_pelt",
+        
+        //Vests
+        "LV119",
+        "LV1192",
+        "LV1193",
+        "V_CarrierRigKBT_01_light_OCP_F",
+        "V_CarrierRigKBT_01_heavy_OCP_F",
+        "JPC23",
+        "JPC25",
+        "JPC24",
+        "JPC2_MC",
+        "JPC22",
+        
+        //Items
+        "rhsusf_ANPVS_15",
+        "ACE_NVG_Wide",
+        "ItemcTab",
+        "ItemAndroid",
+        "ACE_Vector",
+        "Rev_darter_item",
+        "B_UavTerminal",
+        "ACE_SpareBarrel",
+        "ACE_MX2A",
+        "Rev_pelican_item",
 
         // Backpack
         "B_Carryall_mcamo",
         "B_UAV_01_backpack_F",
         "B_Kitbag_mcamo",
+        "UK3CB_BAF_B_Bergen_MTP_Rifleman_H_A",
+        "UK3CB_BAF_B_Bergen_MTP_Rifleman_H_B",
+        "UK3CB_BAF_B_Bergen_MTP_Rifleman_H_C",
+        "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
+        "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
+        "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
+        "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D",
+        "UK3CB_BAF_B_Bergen_MTP_Radio_H_A",
+        "UK3CB_BAF_B_Bergen_MTP_Radio_H_B",
+        "UK3CB_BAF_B_Bergen_MTP_Radio_L_A",
+        "UK3CB_BAF_B_Bergen_MTP_Radio_L_B",
+        "UK3CB_BAF_B_Bergen_MTP_JTAC_H_A",
+        "UK3CB_BAF_B_Bergen_MTP_JTAC_L_A",
+        "UK3CB_BAF_B_Bergen_MTP_Engineer_H_A",
+        "UK3CB_BAF_B_Bergen_MTP_Engineer_L_A",
+        "UK3CB_BAF_B_Bergen_MTP_SL_H_A",
+        "UK3CB_BAF_B_Bergen_MTP_SL_L_A",
+        "UK3CB_B_Backpack_Pocket_OLI",
+        "UK3CB_B_Backpack_Pocket",
+        "B_rhsusf_B_BACKPACK",
 
         // Weapons
         "rhs_weap_M136",
         "rhs_weap_M136_hedp",
         "rhs_weap_M136_hp",
+        "rhs_weap_fgm148",
+        "rhs_weap_maaws",
+        "dzn_MG_Tripod_M122A1_M240Mount_Carry",
+        "ace_csw_carryMortarBaseplate",
+        "ace_compat_rhs_usf3_m252_carry",
+        
 
         // Grenades
         "rhs_mag_m67",
@@ -266,18 +331,8 @@ private _companyItems = switch (_company) do {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
-
-        "rhsusf_100Rnd_556x45_soft_pouch",
-        "rhsusf_100Rnd_556x45_soft_pouch_coyote",
-        "rhsusf_100Rnd_556x45_soft_pouch_ucp",
-
-        "rhsusf_100Rnd_556x45_mixed_soft_pouch",
-        "rhsusf_100Rnd_556x45_mixed_soft_pouch_ucp",
-        "rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote",
-
-        "rhsusf_200Rnd_556x45_soft_pouch_coyote",
-        "rhsusf_200Rnd_556x45_soft_pouch",
-        "rhsusf_200Rnd_556x45_soft_pouch_ucp",
+        "rhs_mag_30Rnd_556x45_Mk262_PMAG",
+        "rhsusf_mag_15Rnd_9x19_JHP",
 
         "rhsusf_200Rnd_556x45_mixed_soft_pouch",
         "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
@@ -285,21 +340,31 @@ private _companyItems = switch (_company) do {
 
         "rhsusf_200Rnd_556x45_box",
         "rhsusf_200rnd_556x45_mixed_box",
+        
+        "rhsusf_100Rnd_762x51_m62_tracer",
 
         "rhs_mag_M397_HET",
         "rhs_mag_M433_HEDP",
         "ACE_HuntIR_M203",
 
-        "rhs_mag_M583A1_white",
-        "rhs_mag_M585_white_cluster",
-        "rhs_mag_m661_green",
-        "rhs_mag_m662_red",
-        "rhs_mag_M663_green_cluster",
-        "rhs_mag_M664_red_cluster",
+        "ACE_40mm_Flare_white",
+        "ACE_40mm_Flare_red",
+        "rhs_mag_m664_red_cluster",
         "rhs_mag_m713_Red",
-        "rhs_mag_m714_White",
-        "rhs_mag_m715_Green",
         "rhs_mag_m716_yellow",
+        
+        "rhs_mag_maaws_HE",
+        "rhs_mag_maaws_HEAT",
+        "NDS_M_6Rnd_60mm_HE_0",
+        "NDS_M_6Rnd_60mm_HE",
+        "NDS_M_6Rnd_60mm_SMOKE",
+        "NDS_M_6Rnd_60mm_ILLUM",
+        
+        "ACE_1Rnd_82mm_Mo_HE",
+        "ACE_1Rnd_82mm_Mo_Illum",
+        "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
+        "ACE_1Rnd_82mm_Mo_Smoke",
+        
 
         // Attachements
         "rhsusf_acc_anpeq15side_bk",
@@ -309,22 +374,27 @@ private _companyItems = switch (_company) do {
         "rhsusf_acc_anpeq15_bk",
         "rhsusf_acc_anpeq15_bk_light",
         "rhsusf_acc_m952v",
+        "acc_flashlight",
 
+        "rhsusf_acc_eotech_552",
+        "optic_hamr",
+        "rhsusf_acc_g33_xps3",
+        "rhsusf_acc_compm4",
+        "rhsusf_acc_eotech_552",
+        "rhsusf_acc_g33_t1",
+        "rhsusf_acc_su230_mrds",
         "rhsusf_acc_ELCAN",
         "rhsusf_acc_acog3",
         "rhsusf_acc_eotech_xps3",
         "rhsusf_acc_eotech",
-
-        "acc_flashlight",
-        "rhsusf_acc_compm4",
-        "rhsusf_acc_eotech_552",
+        "optic_MRCO",
 
         // Explosives
         "ACE_Clacker",
         "ClaymoreDirectionalMine_Remote_Mag",
-        "rhsusf_m112_mag",
-        "rhsusf_m112x4_mag",
+        "DemoCharge_Remote_Mag",
         "SatchelCharge_Remote_Mag",
+        "AMP_Breaching_Charge_Mag",
         
         // Radios
         "ACRE_PRC117F"
@@ -372,7 +442,16 @@ _medicGear = if (_medicRole >= 1) then {[
         "ACE_personalAidKit",
 
         "vtx_stretcher_item",
-
+        
+        "UK3CB_BAF_B_Bergen_MTP_Medic_H_A",
+        "UK3CB_BAF_B_Bergen_MTP_Medic_H_B",
+        "UK3CB_BAF_B_Bergen_MTP_Medic_L_A",
+        "UK3CB_BAF_B_Bergen_MTP_Medic_L_B",       
+        "UK3CB_B_Backpack_Med_OLI",
+        "UK3CB_B_Backpack_Med",
+        "UK3CB_B_TacticalPack_Med_Oli",
+        "kat_TXA",
+        "kat_IO_FAST",
         "kat_naloxone",
         "kat_carbonate",
         "kat_X_AED",
@@ -388,7 +467,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "ItemAndroid",
         "ItemcTab",
 
-        "ACE_VectorDay",
+        "ACE_Vector",
 
         "rhsusf_acc_acog",
         "rhsusf_acc_acog2",
@@ -404,9 +483,10 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "ACE_microDAGR",
         "ACE_HuntIR_monitor",
         "ItemAndroid",
-
-        "ACE_VectorDay",
-
+        "rhsusf_weap_m9",
+        "ACE_Vector",
+        "UK3CB_BAF_B_Bergen_MTP_SL_L_A",
+        "UK3CB_BAF_B_Bergen_MTP_SL_H_A",
         "rhsusf_acc_acog",
         "rhsusf_acc_acog2",
         "rhsusf_acc_acog3",
@@ -419,6 +499,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     ]};
     case "fireteamleader": {[
         "ACE_microDAGR",
+        "rhsusf_weap_m9",
         "ACE_HuntIR_monitor"
     ]};
     case "pilot";
