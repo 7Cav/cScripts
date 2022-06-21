@@ -65,8 +65,8 @@ private _commonGear = [
     "rhs_Booniehat_ocp",
 
     // Uniforms
-    "rhs_uniform_cu_ocp",
-    "rhs_uniform_cu_ocp_1stcav",
+    "B_ACU_crye_ocp_SH_1",
+    "B_ACU_crye_ocp_SH_vest_1",
 
     //Chemlights
     "Chemlight_blue",
@@ -146,8 +146,8 @@ private _companyItems = switch (_company) do {
         "H_Cap_tan",
 
         // Uniform
-        "rhs_uniform_acu_ocp",
-        "rhs_uniform_acu_oefcp",
+        "B_ACU_crye_ocp_SH_1",
+        "B_ACU_crye_ocp_SH_vest_1",
 
         // Magazines
         "rhs_mag_20Rnd_556x45_M855A1_Stanag",
@@ -655,19 +655,9 @@ private _weaponSystemSpecific = switch (true) do {
 
     case (_primaryWeapon isKindof ['rhs_weap_m4a1_m320', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {[
-        "rhs_weap_m16a4_carryhandle_M203",
-        "rhs_weap_m16a4_imod_M203",
 
         "rhs_weap_m4a1_m320",
-        "rhs_weap_m4a1_m203s",
-        "rhs_weap_m4a1_carryhandle_m203S",
-        "rhs_weap_m4a1_carryhandle_m203",
-        "rhs_weap_m4a1_m203s_d",
-        "rhs_weap_m4a1_m203s_wd",
-
-        "rhs_weap_m4a1_blockII_M203_bk",
-        "rhs_weap_m4a1_blockII_M203_d",
-        "rhs_weap_m4a1_blockII_M203_wd",
+        "rhs_weap_mk18_m320",
 
         "rhs_mag_M397_HET",
         "rhs_mag_M433_HEDP",
@@ -687,9 +677,6 @@ private _weaponSystemSpecific = switch (true) do {
 
     case (_primaryWeapon isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m16a4', configFile >> 'CfgWeapons']): {[
-        "rhs_weap_m16a4",
-        "rhs_weap_m16a4_carryhandle",
-        "rhs_weap_m16a4_imod",
 
         "rhs_weap_m4a1_carryhandle",
         "rhs_weap_m4a1_carryhandle_mstock",
@@ -708,6 +695,15 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_m4a1_blockII_KAC_d",
         "rhs_weap_m4a1_blockII_wd",
         "rhs_weap_m4a1_blockII_KAC_wd",
+        
+        "rhs_weap_mk18",
+        "rhs_weap_mk18_bk",
+        "rhs_weap_mk18_KAC_bk",
+        "rhs_weap_mk18_d",
+        "rhs_weap_mk18_KAC_d",
+        "rhs_weap_mk18_KAC",
+        "rhs_weap_mk18_wd",
+        "rhs_weap_mk18_KAC_wd",
         
         // Attachements
         "rhsusf_acc_grip2",
