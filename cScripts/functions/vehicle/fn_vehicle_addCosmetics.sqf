@@ -15,7 +15,12 @@ params [["_vehicle", objNull, [objNull]]];
 if (!isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Cosmetics);}) exitWith {[formatText["Vehicle cosmetics already applied for %1.", _vehicle]] call FUNC(warning);};
-if (!(faction _vehicle in ["BLU_F", "BLU_CTRG_F", "BLU_T_F", "BLU_USA_7CAV_F", "rhs_faction_usaf", "rhs_faction_usarmy", "rhs_faction_usarmy_d", "rhs_faction_usarmy_wd", "rhs_faction_usmc", "rhs_faction_usmc_d", "rhs_faction_usmc_wd", "rhs_faction_usn"]));
+
+// Is valid vehicle
+private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
+if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle"] call FUNC(error);};
+if (!(faction _vehicle in _factionArray)) exitWith {};
+
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
