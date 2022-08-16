@@ -308,7 +308,7 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_m1132_m2_base") then {
-    [_vehicle, 60, 38, false, false] call FUNC(setCargoAttributes);
+    [_vehicle, 40, 38, false, false] call FUNC(setCargoAttributes);
 
     switch (_vehicleType) do {
         case "MED": {
