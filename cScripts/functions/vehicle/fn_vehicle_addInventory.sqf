@@ -307,6 +307,134 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
     ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
 };
 
+if (_vehicle iskindOf "rhsusf_stryker_m1132_m2_base") then {
+    [_vehicle, 60, 38, false, false] call FUNC(setCargoAttributes);
+
+    switch (_vehicleType) do {
+        case "MED": {
+            [_vehicle, [
+                ["ACE_quikclot", 100],
+                ["ACE_elasticBandage", 100],
+                ["ACE_salineIV", 30],
+                ["ACE_salineIV_500", 20],
+                ["ACE_personalaidkit", 20],
+                ["ACE_epinephrine", 30],
+                ["ACE_Splint", 20],
+                ["ACE_tourniquet", 20],
+                ["ACE_surgicalKit", 2],
+                ["B_Carryall_mcamo", 4]
+            ]] call FUNC(addCargo);
+
+            ["ace_medicalSupplyCrate", [
+                ["ACE_quikclot", 100],
+                ["ACE_elasticBandage", 100],
+                ["ACE_salineIV", 30],
+                ["ACE_salineIV_500", 20],
+                ["ACE_personalaidkit", 20],
+                ["ACE_epinephrine", 30],
+                ["ACE_Splint", 20],
+                ["ACE_tourniquet", 20],
+                ["ACE_surgicalKit", 2]
+            ], _vehicle] call FUNC(createCargoCrate);
+        };
+        case "rhsusf_stryker_m1132_m2_np_d";
+        case "rhsusf_stryker_m1132_m2_np_wd": {
+            [_vehicle, [
+                ["rhs_weap_fgm148", 1],
+                ["rhs_fgm148_magazine_AT", 3],
+                ["rhs_weap_M136_heat", 4],
+                ["B_UAV_01_backpack_F", 2],
+                ["B_UavTerminal", 1],
+                ["ACE_UAVBattery", 4],
+                ["ACE_wirecutter", 1]
+            ]] call FUNC(addCargo);
+
+            ["Box_NATO_Equip_F", [
+                ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 56],
+                ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 28],
+                ["rhsusf_200rnd_556x45_mixed_soft_pouch", 10],
+                ["rhs_fgm148_magazine_AT", 3],
+                ["rhs_mag_m67", 20],
+                ["SmokeShell", 36],
+                ["SmokeShellRed", 10],
+                ["SmokeShellBlue", 10],
+                ["SmokeShellYellow", 10],
+                ["SmokeShellGreen", 20],
+                ["B_IR_Grenade", 10],
+                ["rhs_mag_m433_HEDP", 30],
+                ["rhs_mag_m397_HET", 20],
+                ["rhs_mag_M664_red_cluster", 10],
+                ["rhs_mag_m714_White", 10],
+                ["ACE_40mm_Flare_IR", 20],
+                ["ACE_HUNTIR_M203", 20],
+                ["ACE_quikclot", 100],
+                ["ACE_tourniquet", 36],
+                ["ClaymoreDirectionalMine_Remote_Mag", 4],
+                ["ACE_Clacker", 3],
+                ["B_Kitbag_cbr", 2]
+            ], _vehicle] call FUNC(createCargoCrate);
+        };
+        case "rhsusf_stryker_m1132_m2_d";
+        case "rhsusf_stryker_m1132_m2_wd": {
+            [_vehicle, [
+                ["NDS_B_M224_mortar", 4],
+                ["rhs_weap_fgm148", 1],
+                ["rhs_fgm148_magazine_AT", 1],
+                ["rhs_weap_M136_heat", 2],
+                ["B_UAV_01_backpack_F", 1],
+                ["B_UavTerminal", 1],
+                ["ACE_UAVBattery", 2],
+                ["ACE_wirecutter", 1]
+            ]] call FUNC(addCargo);
+
+            ["Box_NATO_Equip_F", [
+                ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 56],
+                ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 28],
+                ["rhsusf_200rnd_556x45_mixed_soft_pouch", 10],
+                ["rhsusf_100Rnd_762x51_m62_tracer", 10],
+                ["rhs_fgm148_magazine_AT", 2],
+                ["rhs_mag_m67", 20],
+                ["SmokeShell", 36],
+                ["SmokeShellRed", 10],
+                ["SmokeShellBlue", 10],
+                ["SmokeShellYellow", 10],
+                ["SmokeShellGreen", 20],
+                ["B_IR_Grenade", 10],
+                ["rhs_mag_m433_HEDP", 30],
+                ["rhs_mag_m397_HET", 20],
+                ["rhs_mag_M664_red_cluster", 10],
+                ["rhs_mag_m714_White", 10],
+                ["ACE_40mm_Flare_IR", 20],
+                ["ACE_HUNTIR_M203", 20],
+                ["ACE_quikclot", 100],
+                ["ACE_tourniquet", 36],
+                ["ClaymoreDirectionalMine_Remote_Mag", 4],
+                ["ACE_Clacker", 3],
+                ["B_Kitbag_cbr", 2]
+            ], _vehicle] call FUNC(createCargoCrate);
+
+            ["Box_NATO_Support_F", [
+                ["NDS_M_6Rnd_60mm_HE_0", 5],
+                ["NDS_M_6Rnd_60mm_HE", 5],
+                ["NDS_M_6Rnd_60mm_SMOKE", 5]
+            ], _vehicle] call FUNC(createCargoCrate);
+        };
+        default {
+            [_vehicle, [
+                ["rhs_weap_fgm148", 1],
+                ["rhs_fgm148_magazine_AT", 3],
+                ["rhs_weap_M136_heat", 4],
+                ["B_UAV_01_backpack_F", 2],
+                ["B_UavTerminal", 1],
+                ["ACE_UAVBattery", 4],
+                ["ACE_wirecutter", 1]
+            ]] call FUNC(addCargo);
+        };
+    };
+    
+    ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
+};
+
 if (_vehicle iskindOf "RHS_M2A2_Base") then {
     [_vehicle, 4, -1, false, false] call FUNC(setCargoAttributes);
 
