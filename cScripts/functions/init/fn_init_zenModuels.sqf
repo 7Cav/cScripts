@@ -94,6 +94,14 @@ if (EGVAR(Settings,enableACRE)) then {
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
+["7Cav Mission", "Staging Zones",
+    {
+        params ["_modulePos", "_objectPos"];
+        [_modulePos, _objectPos] call EFUNC(zenModule,stagingZones);
+    },
+    "\a3\modules_f\data\portraitmodule_ca.paa"
+] call zen_custom_modules_fnc_register;
+
 #ifdef DEBUG_MODE
     ["7Cav Custom Zen Modules initialization complete", "init"] call FUNC(info);
 #endif

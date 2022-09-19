@@ -173,6 +173,8 @@ class cScripts {
         class zenModule_RegearTrooper {};
         class zenModule_ResetPlayerRadio {};
 
+        class zenModule_stagingZones {};
+
         class zenModule_CallEndex {};
     };
     class helpers {
