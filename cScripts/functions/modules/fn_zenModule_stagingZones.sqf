@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A, CPL.Dunn.W
+ * Author: CPL.Brostrom.A
  * This module function can disable the staging zones mid mission.
  *
  * Arguments:
@@ -9,7 +9,7 @@
  * 
  *
  * Example:
- * [getPos logic, this] call cScripts_fnc_zenModule_callEndex;
+ * [getPos logic, this] call cScripts_fnc_zenModule_stagingZones;
  *
  * Public: No
  */
@@ -19,7 +19,7 @@ params ["_modulePos", "_objectPos"];
 [
     "Staging zones", 
     [
-        ["CHECKBOX", ["Allow access to staging zones", ""], true, false],
+        ["CHECKBOX", ["Allow access to staging zones", ""], true, false]
     ], 
     {
         params ["_arg", "_pos"];
