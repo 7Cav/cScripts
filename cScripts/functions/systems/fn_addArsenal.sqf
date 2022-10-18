@@ -42,7 +42,7 @@ private _arsenalStatement = {
     }] call CBA_fnc_execNextFrame;
 
     [{
-        [player, false] call ace_arsenal_fnc_removeBox;
+        [player, true] call ace_arsenal_fnc_removeBox;
     }] call CBA_fnc_execNextFrame;
 };
 
