@@ -233,7 +233,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     ["M67 Fragmentation Grenade","Force specific usage of sertain objects"],
     [_cScriptSettings, "6; Item Replacement"],
-    [[0,1,2], ["Disabled", "Use ACE M67", "Use RHS M67"], 2],
+    [[0,1,2], ["Disabled", "Use ACE M67", "Use RHS M67"], 1],
     true,
     {},
     true
