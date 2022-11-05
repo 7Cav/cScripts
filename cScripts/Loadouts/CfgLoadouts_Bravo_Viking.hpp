@@ -6,7 +6,7 @@ class Cav_B_B_Scout_Base_F : Cav_B_Bravo_base_F {
 class Cav_B_B_Scout_Officer_F : Cav_B_B_Scout_Base_F {
     displayName = "Viking Platoon Staff";
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
-    scope = 0;
+    scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",1]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["ItemcTabHCam",1],["ACE_EarPlugs",1],["HandGrenade",2,1],["SmokeShellGreen",2,1],["SmokeShell",4,1],["B_IR_Grenade",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",3,30],["SmokeShellBlue",4,1],["SmokeShellYellow",2,1],["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["ACE_HandFlare_Yellow",2,1],["rhs_mag_mk3a2",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",4,30]]],["USP_TACTICAL_PACK_CCT6",[["ACE_HuntIR_monitor",1],["ACE_splint",8],["ACE_tourniquet",8],["ACE_SpraypaintGreen",1],["ACE_artilleryTable",1],["ACE_CableTie",5],["ACE_EarPlugs",2],["kat_Painkiller",2,10],["B_IR_Grenade",2,1],["SmokeShellGreen",2,1],["SmokeShellYellow",2,1],["ACE_Chemlight_IR",2,1]]],"USP_OPS_FASTXP_TAN_MC_03","USP_DETCORD_SMG1_BLK2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemcTab","ItemRadioAcreFlagged","ItemCompass","ItemWatch","USP_PVS31_LOW"]];
     icon = "iconManOfficer";
     role = "officer";
@@ -22,7 +22,7 @@ class Cav_B_B_Scout_PlatoonLeader_F : Cav_B_B_Scout_Officer_F {
 class Cav_B_B_Scout_PlatoonSergeant_F : Cav_B_B_Scout_Officer_F {
     displayName = "Viking Platoon Sergeant";
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
-    scope = 2;
+    scope = 0;
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",1]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["ItemcTabHCam",1],["ACE_EarPlugs",1],["HandGrenade",2,1],["SmokeShellGreen",2,1],["SmokeShell",4,1],["B_IR_Grenade",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",3,30],["SmokeShellBlue",4,1],["SmokeShellYellow",2,1],["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["ACE_HandFlare_Yellow",2,1],["rhs_mag_mk3a2",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",4,30]]],["USP_TACTICAL_PACK_CCT6",[["ACE_HuntIR_monitor",1],["ACE_splint",8],["ACE_tourniquet",8],["ACE_SpraypaintGreen",1],["ACE_artilleryTable",1],["ACE_CableTie",5],["ACE_EarPlugs",2],["kat_Painkiller",2,10],["B_IR_Grenade",2,1],["SmokeShellGreen",2,1],["SmokeShellYellow",2,1],["ACE_Chemlight_IR",2,1]]],"USP_OPS_FASTXP_TAN_MC_03","USP_DETCORD_SMG1_BLK2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemcTab","ItemRadioAcreFlagged","ItemCompass","ItemWatch","USP_PVS31_LOW"]];
     abilityEngineer = 1;
 };
