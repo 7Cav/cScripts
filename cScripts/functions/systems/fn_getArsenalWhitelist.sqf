@@ -95,6 +95,8 @@ private _commonGear = [
     "SmokeShellYellow",
     "SmokeShell",
     "HandGrenade",
+    "ACE_M84",
+    "rhs_mag_mk3a2",
     "B_IR_Grenade",
 
     // Radios
@@ -134,8 +136,10 @@ private _commonGear = [
     "ACE_CableTie",
 
     // NVG
-    "rhsusf_ANPVS_14",
-
+    "USP_PVS14",
+    "USP_PVS15",
+    "USP_L4G24",
+    "USP_RHINO",
     "ItemMap",
     "ItemWatch",
     "ItemCompass"
@@ -157,8 +161,10 @@ private _companyItems = switch (_company) do {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 
         // NVG
-        "rhsusf_ANPVS_15",
-        "NVGogglesB_blk_F"
+        "USP_PVS14",
+        "USP_PVS15",
+        "USP_L4G24",
+        "USP_RHINO"
     ]};
     case "charlie": {[
         // Uniforms
@@ -209,6 +215,11 @@ private _companyItems = switch (_company) do {
 
         "rhsusf_acc_eotech_552",
         "rhsusf_acc_compm4",
+        "USP_PVS14",
+        "USP_PVS15",
+        "USP_L4G24",
+        "USP_RHINO",
+        
 
         // Explosives
         "ACE_Clacker",
@@ -244,8 +255,16 @@ private _companyItems = switch (_company) do {
         "JPC22",
         
         //Items
-        "USP_PVS15",
         "USP_PVS14",
+        "USP_PVS15",
+        "USP_L4G24",
+        "USP_RHINO",
+        "USP_PVS31",
+        "USP_PVS31_COMPACT",
+        "USP_PVS31_HIGH",
+        "USP_PVS31_LOW",
+        "USP_PVS31_MONOL",
+        "USP_PVS31_MONOR",
         "ItemcTab",
         "ItemAndroid",
         "ACE_Vector",
@@ -297,6 +316,7 @@ private _companyItems = switch (_company) do {
         // Grenades
         "HandGrenade",
         "ACE_M84",
+        "rhs_mag_mk3a2",
 
         // Magazines
         "rhs_mag_30Rnd_556x45_M855A1_PMAG",
@@ -378,12 +398,11 @@ private _companyItems = switch (_company) do {
         "rhsusf_ach_helmet_ocp_alt",
 
         // Grenades
-        "rhs_mag_m67",
+        "HandGrenade",
         "ACE_M84",
 
         // Magazines
         "rhs_mag_20Rnd_556x45_M855A1_Stanag",
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
     ]};
 };
@@ -393,43 +412,51 @@ _medicGear = if (_medicRole >= 1) then {[
         "ACE_microDAGR",
         "ItemAndroid",
 
-        "ACE_bodyBag",
-
-        "ACE_quikclot",
-        "ACE_packingBandage",
-        "ACE_elasticBandage",
-        "ACE_fieldDressing",
-        "ACE_tourniquet",
-
+        "kat_IV_16",
         "ACE_adenosine",
+        "kat_AED","kat_X_AED",
+        "ACE_packingBandage",
+        "ACE_quikclot","ACE_elasticBandage",
+        "ACE_bloodIV",
+        "ACE_bloodIV_250",
+        "ACE_bloodIV_500",
+        "ACE_bodyBag",
+        "kat_plate",
+        "ACE_CableTie",
+        "ACE_Chemlight_Shield",
+        "kat_clamp",
+        "Rev_pelican_item",
+        "kat_vacuum",
+        "kat_EACA",
+        "ACE_EarPlugs",
+        "ACE_EntrenchingTool",
         "ACE_epinephrine",
-        "ACE_morphine",
-
-        "ACE_salineIV",
-        "ACE_salineIV_500",
-        "ACE_salineIV_250",
-
-        "ACE_splint",
-
-        "ACE_surgicalKit",
-        "ACE_personalAidKit",
-
-        "vtx_stretcher_item",
-        
-        "UK3CB_BAF_B_Bergen_MTP_Medic_H_A",
-        "UK3CB_BAF_B_Bergen_MTP_Medic_H_B",
-        "UK3CB_BAF_B_Bergen_MTP_Medic_L_A",
-        "UK3CB_BAF_B_Bergen_MTP_Medic_L_B",       
-        "UK3CB_B_Backpack_Med_OLI",
-        "UK3CB_B_Backpack_Med",
-        "UK3CB_B_TacticalPack_Med_Oli",
-        "kat_TXA",
+        "kat_etomidate",
         "kat_IO_FAST",
+        "kat_flumazenil",
+        "kat_lidocaine",
+        "kat_lorazepam",
+        "ACE_morphine",
         "kat_naloxone",
-        "kat_carbonate",
-        "kat_X_AED",
-        "kat_AED",
-        "kat_IV_16"
+        "kat_nitroglycerin",
+        "kat_norepinephrine",
+        "ACE_personalAidKit",
+        "kat_phenylephrine",
+        "kat_phenylephrine_inject",
+        "ACE_plasmaIV",
+        "ACE_plasmaIV_250",
+        "ACE_plasmaIV_500",
+        "kat_retractor",
+        "ACE_salineIV",
+        "ACE_salineIV_250",
+        "ACE_salineIV_500",
+        "kat_scalpel",
+        "ACE_splint",
+        "ACE_surgicalKit",
+        "ACE_tourniquet",
+        "kat_TXA",
+        "kat_Carbonate",
+        "kat_Painkiller"
         
 ]} else {[]};
 
@@ -447,7 +474,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "rhsusf_acc_acog3",
         "rhsusf_acc_acog_rmr",
         "rhsusf_acc_acog_d",
-        "rhsusf_acc_acog_wd",
+        "rhsusf_acc_acog_wd"
     ]};
     case "squadleader": {[
         "ACE_microDAGR",
