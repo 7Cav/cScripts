@@ -3,7 +3,7 @@ class Cav_B_Bravo_Weapons_base_F : Cav_B_Bravo_base_F {
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Weapons"};
 };
 
-class Cav_B_B_Scout_WSL_F_Local : Cav_B_Weapons_base_F {
+class Cav_B_B_Scout_WSL_F_Local : Cav_B_Bravo_base_F {
     displayName = "Weapons Squad Leader";
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
