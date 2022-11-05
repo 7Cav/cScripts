@@ -489,7 +489,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "rhsusf_acc_acog3",
         "rhsusf_acc_acog_rmr",
         "rhsusf_acc_acog_d",
-        "rhsusf_acc_acog_wd",
+        "rhsusf_acc_acog_wd"
     ]};
     case "fireteamleader": {[
         "ACE_microDAGR",
