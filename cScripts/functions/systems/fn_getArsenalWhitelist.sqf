@@ -63,7 +63,7 @@ private _commonGear = [
     // Headgear
     "DAR_Beret_Mar",
     "rhsusf_patrolcap_ocp",
-    "rhs_Booniehat_ocp",
+    "USP_BOONIE_HAT_MC",
 
     // Uniforms
     "USP_G3C_RS_KP_OR_MC",
@@ -157,9 +157,12 @@ private _companyItems = switch (_company) do {
         "B_ACU_crye_ocp_SH_vest_1",
 
         // Magazines
-        "rhs_mag_20Rnd_556x45_M855A1_Stanag",
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag",
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
+        "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
+        "rhs_mag_30Rnd_556x45_Mk262_PMAG",
 
         // NVG
         "USP_PVS14",
@@ -200,6 +203,7 @@ private _companyItems = switch (_company) do {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
+        "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
         "rhs_mag_30Rnd_556x45_Mk262_PMAG",
         "rhsusf_mag_17Rnd_9x19_FMJ",
 
@@ -239,6 +243,7 @@ private _companyItems = switch (_company) do {
         "rhsusf_acc_sf3p556",
 
         "rhsusf_acc_eotech_552",
+        "rhsusf_acc_su230_mrds",
         "rhsusf_acc_compm4",
         "USP_PVS14",
         "USP_PVS15",
@@ -328,11 +333,6 @@ private _companyItems = switch (_company) do {
         "USP_PACK_HYDRATION",
 
         // Weapons
-        "rhs_weap_M136",
-        "rhs_weap_M136_hedp",
-        "rhs_weap_M136_hp",
-        "rhs_weap_fgm148",
-        "launch_MRAWS_olive_F",
         "dzn_MG_Tripod_M122A1_M240Mount_Carry",
         "ace_csw_carryMortarBaseplate",
         "ace_compat_rhs_usf3_m252_carry",
@@ -349,16 +349,15 @@ private _companyItems = switch (_company) do {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
         "rhs_mag_30Rnd_556x45_Mk262_PMAG",
+        "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
         "rhsusf_mag_17Rnd_9x19_FMJ",
-
         "rhsusf_200Rnd_556x45_mixed_soft_pouch",
-        
         "rhsusf_100Rnd_762x51_m62_tracer",
 
         "rhs_mag_M397_HET",
         "rhs_mag_M433_HEDP",
         "ACE_HuntIR_M203",
-
+        "ACE_40mm_Flare_ir",
         "ACE_40mm_Flare_white",
         "ACE_40mm_Flare_red",
         "rhs_mag_m664_red_cluster",
@@ -419,8 +418,7 @@ private _companyItems = switch (_company) do {
     ]};
     default {[
         // Helmets
-        "rhsusf_ach_helmet_ocp",
-        "rhsusf_ach_helmet_ocp_alt",
+        "USP_OPSCORE_FASTMTC_CGW",
 
         // Grenades
         "HandGrenade",
