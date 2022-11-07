@@ -381,25 +381,50 @@ force force ace_overheating_unJamFailChance = 0.1;
 force force ace_overheating_unJamOnreload = false;
 force force ace_overheating_unJamOnSwapBarrel = true;
 
-// ACE Pharmacy
-force force aceP_circulation_carboApp = 5;
-force force aceP_circulation_carbonateActive = true;
+// ACE Pharmacy - AED
 force force aceP_circulation_CPR_Chance_Default = 25;
 force force aceP_circulation_CPR_Chance_Doctor = 40;
 force force aceP_circulation_CPR_Chance_RegularMedic = 35;
 force force aceP_circulation_DeactMon_whileAED_X = true;
 force force aceP_circulation_distanceLimit_AEDX = 30;
-force force aceP_circulation_enable = true;
 force force aceP_circulation_enable_CPR_Chances = true;
-force force aceP_circulation_IVestablish = 6;
 force force aceP_circulation_medLvl_AED_X = 1;
-force force aceP_circulation_naloApp = 5;
-force force aceP_circulation_naloxoneActive = true;
 force force aceP_circulation_SuccesCh_AED = 60;
 force force aceP_circulation_SuccesCh_AED_X = 80;
 force force aceP_circulation_timeLimit_AEDX = 1800;
-force force aceP_circulation_txaActive = true;
 force force aceP_circulation_useLocation_AED = 0;
+
+// ACE Pharmacy - Fractures
+force force aceP_circulation_closedLocation = 0;
+force force aceP_circulation_closedReduction = 1;
+force aceP_circulation_closedTime = 10;
+force aceP_circulation_compoundChance = 30;
+force aceP_circulation_enable_fracture = true;
+force aceP_circulation_etomidateTime = 45;
+force force aceP_circulation_fractureCheck_Level = 0;
+force force aceP_circulation_incisionTime = 10;
+force force aceP_circulation_openTime = 15;
+force aceP_circulation_simpleChance = 60;
+force force aceP_circulation_surgicalAction = 2;
+force force aceP_circulation_surgicalLocation = 0;
+force force aceP_circulation_surgicalTime = 8;
+
+// ACE Pharmacy - Medications
+force aceP_circulation_aiEnableAdvanced = false;
+force aceP_circulation_blockChance = 20;
+force aceP_circulation_coagulation = true;
+force aceP_circulation_factorDrugs = 2;
+force aceP_circulation_IOestablish = 7;
+force aceP_circulation_IVdrop = 600;
+force aceP_circulation_IVdropEnable = true;
+force force aceP_circulation_IVestablish = 6;
+force aceP_circulation_IVmedic = 2;
+force aceP_circulation_IVreuse = false;
+force aceP_circulation_kidneyAction = false;
+force aceP_circulation_maxStack = 5;
+force aceP_circulation_PushTime = 7;
+force aceP_circulation_surgicalDrugs = 2;
+force aceP_circulation_vasoDrugs = 1;
 
 // ACE Pointing
 force force ace_finger_enabled = true;
