@@ -55,6 +55,7 @@ private _commonGear = [
     "rhsusf_oakley_goggles_blk",
     "rhsusf_oakley_goggles_clr",
     "rhsusf_oakley_goggles_ylw",
+    
     "G_Spectacles",
     "G_Spectacles_Tinted",
     "G_AirPurifyingRespirator_01_F",
@@ -151,7 +152,7 @@ private _companyItems = switch (_company) do {
         // Helmets
         "H_Cap_tan",
 
-        // Uniform
+        // Vest
         "B_ACU_crye_ocp_SH_1",
         "B_ACU_crye_ocp_SH_vest_1",
 
@@ -172,6 +173,9 @@ private _companyItems = switch (_company) do {
         "USP_G3F_OR_MC",
         "USP_PCU_G3C_KP_OR_MC",
         "USP_SOFTSHELL_G3C_OR_MC",
+        
+        //Helmets
+        "USP_OPSCORE_FASTMTC_CGW",
 
         // Backpack
         "B_AssaultPack_mcamo",
@@ -196,11 +200,32 @@ private _companyItems = switch (_company) do {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
+        "rhs_mag_30Rnd_556x45_Mk262_PMAG",
+        "rhsusf_mag_17Rnd_9x19_FMJ",
 
         "rhsusf_200Rnd_556x45_mixed_soft_pouch",
+        
+        "rhsusf_100Rnd_762x51_m62_tracer",
 
-        "rhsusf_200rnd_556x45_mixed_box",
+        "rhs_mag_M397_HET",
+        "rhs_mag_M433_HEDP",
+        "ACE_HuntIR_M203",
 
+        "ACE_40mm_Flare_white",
+        "ACE_40mm_Flare_red",
+        "rhs_mag_m664_red_cluster",
+        "rhs_mag_m713_Red",
+        "rhs_mag_m716_yellow",
+        
+        "rhs_mag_maaws_HE",
+        "rhs_mag_maaws_HEAT",
+        "MAA_MAAWS_ASM509",
+        "MAA_MAAWS_GMM_MT",
+        "NDS_M_6Rnd_60mm_HE_0",
+        "NDS_M_6Rnd_60mm_HE",
+        "NDS_M_6Rnd_60mm_SMOKE",
+        "NDS_M_6Rnd_60mm_ILLUM",
+ 
         // Attachements
         "rhsusf_acc_anpeq15side_bk",
         "rhsusf_acc_anpeq15_bk_top",
@@ -404,6 +429,30 @@ private _companyItems = switch (_company) do {
         // Magazines
         "rhs_mag_20Rnd_556x45_M855A1_Stanag",
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
+        
+        "rhsusf_acc_anpeq15side_bk",
+        "rhsusf_acc_anpeq15_bk_top",
+        "rhsusf_acc_anpeq15",
+        "rhsusf_acc_anpeq15_light",
+        "rhsusf_acc_anpeq15_bk",
+        "rhsusf_acc_anpeq15_bk_light",
+        "rhsusf_acc_m952v",
+        "acc_flashlight",
+
+        "rhsusf_acc_eotech_552",
+        "optic_hamr",
+        "rhsusf_acc_anpas13gv1",
+        "rhsusf_acc_t1_high",
+        "rhsusf_acc_g33_xps3",
+        "rhsusf_acc_compm4",
+        "rhsusf_acc_eotech_552",
+        "rhsusf_acc_g33_t1",
+        "rhsusf_acc_su230_mrds",
+        "rhsusf_acc_ELCAN",
+        "rhsusf_acc_acog3",
+        "rhsusf_acc_eotech_xps3",
+        "rhsusf_acc_eotech",
+        "optic_MRCO"
     ]};
 };
 
@@ -468,7 +517,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "ItemcTab",
 
         "ACE_Vector",
-
+        "ACE_MX2A",
         "rhsusf_acc_acog",
         "rhsusf_acc_acog2",
         "rhsusf_acc_acog3",
@@ -482,17 +531,13 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "ItemAndroid",
         "rhsusf_weap_glock17g4",
         "ACE_Vector",
+        "ACE_MX2A",
         "UK3CB_BAF_B_Bergen_MTP_SL_L_A",
-        "UK3CB_BAF_B_Bergen_MTP_SL_H_A",
-        "rhsusf_acc_acog",
-        "rhsusf_acc_acog2",
-        "rhsusf_acc_acog3",
-        "rhsusf_acc_acog_rmr",
-        "rhsusf_acc_acog_d",
-        "rhsusf_acc_acog_wd"
+        "UK3CB_BAF_B_Bergen_MTP_SL_H_A"
     ]};
     case "fireteamleader": {[
         "ACE_microDAGR",
+        "ACE_MX2A",
         "rhsusf_weap_glock17g4",
         "ACE_HuntIR_monitor"
     ]};
@@ -599,7 +644,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
 
         // Backpacks
         "B_Carryall_mcamo",
-
+        "ACE_Vector",
         "NDS_B_M224_mortar",
         
         "ace_compat_rhs_usf3_tow_carry",
@@ -628,17 +673,29 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_hk416d145_wd_2",
 
         // Attachements
-        "rhsusf_acc_grip2",
-        "rhsusf_acc_grip2_tan",
-        "rhsusf_acc_grip2_wd",
-        "rhsusf_acc_kac_grip",
-        "rhsusf_acc_grip1",
-        "rhsusf_acc_rvg_blk",
-        "rhsusf_acc_rvg_de",
-        "rhsusf_acc_tdstubby_blk",
-        "rhsusf_acc_tdstubby_tan",
-        "rhsusf_acc_grip3",
-        "rhsusf_acc_grip3_tan"
+        "rhsusf_acc_anpeq15side_bk",
+        "rhsusf_acc_anpeq15_bk_top",
+        "rhsusf_acc_anpeq15",
+        "rhsusf_acc_anpeq15_light",
+        "rhsusf_acc_anpeq15_bk",
+        "rhsusf_acc_anpeq15_bk_light",
+        "rhsusf_acc_m952v",
+        "acc_flashlight",
+
+        "rhsusf_acc_eotech_552",
+        "optic_hamr",
+        "rhsusf_acc_anpas13gv1",
+        "rhsusf_acc_t1_high",
+        "rhsusf_acc_g33_xps3",
+        "rhsusf_acc_compm4",
+        "rhsusf_acc_eotech_552",
+        "rhsusf_acc_g33_t1",
+        "rhsusf_acc_su230_mrds",
+        "rhsusf_acc_ELCAN",
+        "rhsusf_acc_acog3",
+        "rhsusf_acc_eotech_xps3",
+        "rhsusf_acc_eotech",
+        "optic_MRCO"
     ]};
 
     case (_primaryWeapon isKindof ['rhs_weap_hk416d145_m320', configFile >> 'CfgWeapons']
@@ -699,18 +756,29 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_mk18_wd",
         "rhs_weap_mk18_KAC_wd",
         
-        // Attachements
-        "rhsusf_acc_grip2",
-        "rhsusf_acc_grip2_tan",
-        "rhsusf_acc_grip2_wd",
-        "rhsusf_acc_kac_grip",
-        "rhsusf_acc_grip1",
-        "rhsusf_acc_rvg_blk",
-        "rhsusf_acc_rvg_de",
-        "rhsusf_acc_tdstubby_blk",
-        "rhsusf_acc_tdstubby_tan",
-        "rhsusf_acc_grip3",
-        "rhsusf_acc_grip3_tan"
+        "rhsusf_acc_anpeq15side_bk",
+        "rhsusf_acc_anpeq15_bk_top",
+        "rhsusf_acc_anpeq15",
+        "rhsusf_acc_anpeq15_light",
+        "rhsusf_acc_anpeq15_bk",
+        "rhsusf_acc_anpeq15_bk_light",
+        "rhsusf_acc_m952v",
+        "acc_flashlight",
+
+        "rhsusf_acc_eotech_552",
+        "optic_hamr",
+        "rhsusf_acc_anpas13gv1",
+        "rhsusf_acc_t1_high",
+        "rhsusf_acc_g33_xps3",
+        "rhsusf_acc_compm4",
+        "rhsusf_acc_eotech_552",
+        "rhsusf_acc_g33_t1",
+        "rhsusf_acc_su230_mrds",
+        "rhsusf_acc_ELCAN",
+        "rhsusf_acc_acog3",
+        "rhsusf_acc_eotech_xps3",
+        "rhsusf_acc_eotech",
+        "optic_MRCO"
     ]};
 
     case (_primaryWeapon isKindof ['rhs_weap_m4', configFile >> 'CfgWeapons']): {[
