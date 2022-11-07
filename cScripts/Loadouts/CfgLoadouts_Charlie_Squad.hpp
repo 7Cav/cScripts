@@ -70,13 +70,14 @@ class Cav_B_C_RiflemanAT_F : Cav_B_Charlie_base_F {
     displayName = "$STR_Cav_Charlie_Characters_C_RiflemanAT";
     scope = 0;
     category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
+    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_splint",2],["ACE_EarPlugs",1],["ACE_Chemlight_IR",2,1]]],["USP_CRYE_JPC_ASLTB",[["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1],["SmokeShellGreen",1,1]]],["USP_45L_RUCKSACK_MC",[["USP_PVS15",1],["ACE_EntrenchingTool",1]]],"USP_OPSCORE_FASTMTC_GSW","USP_MFRAME_TAN",[],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
     icon = "iconManAT";
 };
 class Cav_B_C_RiflemanLAT_F : Cav_B_Charlie_base_F {
     displayName = "$STR_Cav_Charlie_Characters_C_RiflemanLAT";
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
-    loadout = [["rhs_weap_m4a1_mstock","rhsusf_acc_SFMB556","rhsusf_acc_anpeq15","rhsusf_acc_compm4",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_grip2_tan"],["rhs_weap_M136_hp","","","",[],[],""],[],["rhs_uniform_acu_ocp",[["ACE_MapTools",1],["ACE_Flashlight_XL50",1],["ACE_quikclot",14],["ACE_tourniquet",4],["ACE_DAGR",1],["ACRE_PRC343",1]]],["rhsusf_spcs_ocp_rifleman_alt",[["rhs_mag_30Rnd_556x45_M855A1_PMAG",9,30],["HandGrenade",4,1],["SmokeShell",4,1]]],["B_AssaultPack_mcamo",[["rhsusf_ANPVS_14",1],["ACE_personalAidKit",1],["ACE_EntrenchingTool",1]]],"rhsusf_ach_helmet_camo_ocp","rhs_googles_black",[],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
+    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_splint",2],["ACE_EarPlugs",1],["ACE_Chemlight_IR",2,1]]],["USP_CRYE_JPC_ASLTB",[["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1],["SmokeShellGreen",1,1]]],["USP_45L_RUCKSACK_MC",[["USP_PVS15",1],["ACE_EntrenchingTool",1]]],"USP_OPSCORE_FASTMTC_GSW","USP_MFRAME_TAN",[],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
     icon = "iconManAT";
 };
 class Cav_B_C_CombatLifeSaver_F : Cav_B_Charlie_base_F {
