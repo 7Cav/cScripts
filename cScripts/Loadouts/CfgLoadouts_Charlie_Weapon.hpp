@@ -4,7 +4,7 @@ class Cav_B_Charlie_Weapons_base_F : Cav_B_Charlie_base_F {
 };
 
 class Cav_B_C_Weapons_SquadLeader_F : Cav_B_C_SquadLeader_F {
-    displayName = "$STR_cav_troops_charlie_weapons_squadleader";
+    displayName = "Weapons Squad Leader";
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_EarPlugs",1],["ACE_microDAGR",1],["ACE_CableTie",2]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["ACE_IR_Strobe_Item",1],["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["SmokeShellRed",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1],["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["SmokeShellGreen",1,1]]],["USP_45L_RUCKSACK_MC",[["ACE_HuntIR_monitor",1],["USP_PVS15",1],["ACE_splint",2],["ACE_SpraypaintRed",1],["ACE_EntrenchingTool",1]]],"USP_OPSCORE_FASTMTC_MGSW","USP_MFRAME_TAN",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
 };
@@ -44,23 +44,23 @@ class Cav_B_C_Weapons_MAAWS_MAAWSAmmoBearer_F_Local : Cav_B_Charlie_Weapons_base
 };
 
 class Cav_B_C_Weapons_Mortar_FireTeamLeader_F : Cav_B_Charlie_Weapons_base_F {
-    displayName = "$STR_cav_troops_charlie_weapons_mortar_fireteamleader";
+    displayName = "Mortar Team Leader";
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],""],[],["rhs_weap_rsp30_red","","","",[],[],""],["USP_G3C_RS2_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_EarPlugs",1]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["ACE_artilleryTable",1],["ACE_IR_Strobe_Item",1],["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1],["SmokeShellBlue",2,1],["SmokeShellGreen",1,1]]],["B_Kitbag_mcamo",[["ACE_SpraypaintRed",1],["ACE_EntrenchingTool",1],["ACE_splint",2],["USP_PVS15",1],["avm224_M_6Rnd_60mm_ILLUM_IR",1,6],["NDS_M_6Rnd_60mm_HE_0",1,6],["NDS_M_6Rnd_60mm_SMOKE",1,6],["NDS_M_6Rnd_60mm_HE",1,6]]],"USP_OPSCORE_FASTMTC_CGW","USP_MFRAME_TAN",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
 };
 class Cav_B_C_Weapons_Mortar_M224_F : Cav_B_Charlie_Weapons_base_F {
-    displayName = "$STR_cav_troops_charlie_weapons_mortar_m224";
+    displayName = "Mortar Gunner";
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],""],[],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_EarPlugs",1],["ACE_microDAGR",1],["ACE_packingBandage",10]]],["USP_CRYE_CPC_WEAPON_BELT_MC",[["ACE_splint",2],["USP_PVS15",1],["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1],["SmokeShellGreen",1,1]]],["NDS_B_M224_mortar",[]],"USP_OPSCORE_FASTMTC_CGW","USP_MFRAME_TAN",[],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
     icon = "iconStaticMortar";
 };
 class Cav_B_C_Weapons_Mortar_Assistant_F : Cav_B_Charlie_Weapons_base_F {
-    displayName = "$STR_cav_troops_charlie_weapons_mortar_assistant";
+    displayName = "Mortar Assistant";
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],""],[],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",10],["ACE_EarPlugs",1]]],["USP_CRYE_CPC_FAST_BELT_MC",[["ACE_artilleryTable",1],["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1],["SmokeShellGreen",1,1]]],["B_Kitbag_mcamo",[["ACE_EntrenchingTool",1],["ACE_splint",2],["USP_PVS15",1],["NDS_M_6Rnd_60mm_HE",3,6],["NDS_M_6Rnd_60mm_HE_0",1,6]]],"USP_OPSCORE_FASTMTC_CGW","USP_MFRAME_TAN",["ACE_Vector","","","",[],[],""],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
 };
 class Cav_B_C_Weapons_Mortar_AutomaticRifleman_F : Cav_B_Charlie_Weapons_base_F {
-    displayName = "$STR_cav_troops_charlie_weapons_mortar_automaticrifleman";
+    displayName = "Mortar SAW Gunner";
     scope = 2;
     loadout = [["rhs_weap_m249_light_S_vfg2","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ELCAN_ard",["rhsusf_200Rnd_556x45_mixed_soft_pouch",200],[],"rhsusf_acc_grip4_bipod"],[],[],["USP_G3C_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_splint",2],["ACE_Chemlight_IR",2,1]]],["USP_CRYE_JPC_MGB",[["SmokeShell",4,1],["rhs_mag_m67",2,1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",3,200],["SmokeShellGreen",1,1]]],["USP_45L_RUCKSACK_MC",[["USP_PVS15",1],["ACE_EarPlugs",1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",1,200]]],"USP_OPSCORE_FASTMTC_CGSW","USP_MFRAME_TAN",[],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
     icon = "iconManMG";
