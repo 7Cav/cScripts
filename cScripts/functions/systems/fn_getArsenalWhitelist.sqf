@@ -426,7 +426,7 @@ private _companyItems = switch (_company) do {
 
         // Magazines
         "rhs_mag_20Rnd_556x45_M855A1_Stanag",
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
+        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
         
         "rhsusf_acc_anpeq15side_bk",
         "rhsusf_acc_anpeq15_bk_top",
