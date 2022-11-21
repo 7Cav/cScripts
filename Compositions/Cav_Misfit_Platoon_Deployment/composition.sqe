@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="Misfit Platoon Deployment [4.3.4]";
+		name="Misfit Platoon Deployment [DEVBUILD]";
 		class Entities
 		{
 			items=7;

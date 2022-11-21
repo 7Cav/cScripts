@@ -1,5 +1,5 @@
 version=54;
-name="JTAC Teams [4.3.4]";
+name="JTAC Teams [DEVBUILD]";
 author="=7CAV=1SG.Geki.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=

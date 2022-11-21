@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="JTAC Teams [4.3.4]";
+		name="JTAC Teams [DEVBUILD]";
 		class Entities
 		{
 			items=3;

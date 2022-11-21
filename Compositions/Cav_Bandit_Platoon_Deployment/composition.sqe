@@ -6,14 +6,14 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="BANDIT Platoon Deployment [4.3.4]";
+		name="BANDIT Platoon Deployment [DEVBUILD]";
 		class Entities
 		{
 			items=1;
 			class Item0
 			{
 				dataType="Layer";
-				name="BANDIT Platoon Deployment [4.3.4]";
+				name="BANDIT Platoon Deployment [DEVBUILD]";
 				class Entities
 				{
 					items=7;
