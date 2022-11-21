@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="Stryker Scout Platoon [4.3.4]";
+		name="Stryker Scout Platoon [DEVBUILD]";
 		class Entities
 		{
 			items=1;

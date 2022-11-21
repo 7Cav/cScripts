@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="Fixed Wing Aviation [4.3.4]";
+		name="Fixed Wing Aviation [DEVBUILD]";
 		class Entities
 		{
 			items=1;

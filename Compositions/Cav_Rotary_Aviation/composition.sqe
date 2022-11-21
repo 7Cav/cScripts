@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="Rotary Aviation [4.3.4]";
+		name="Rotary Aviation [DEVBUILD]";
 		class Entities
 		{
 			items=5;
