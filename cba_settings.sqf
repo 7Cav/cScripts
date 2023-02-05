@@ -13,7 +13,7 @@
 force force ace_advanced_ballistics_ammoTemperatureEnabled = true;
 force force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
 force force ace_advanced_ballistics_bulletTraceEnabled = true;
-force force ace_advanced_ballistics_enabled = false;
+force force ace_advanced_ballistics_enabled = true;
 force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force force ace_advanced_ballistics_simulationInterval = 0.05;
 
@@ -76,12 +76,12 @@ force force ace_common_checkPBOsWhitelist = "[]";
 force force ace_noradio_enabled = true;
 
 // ACE Cook off
-force force ace_cookoff_ammoCookoffDuration = 1;
+force force ace_cookoff_ammoCookoffDuration = 0;
 force force ace_cookoff_enable = 0;
 force force ace_cookoff_enableAmmobox = false;
 force force ace_cookoff_enableAmmoCookoff = false;
 force force ace_cookoff_enableFire = true;
-force force ace_cookoff_probabilityCoef = 1;
+force force ace_cookoff_probabilityCoef = 0;
 
 // ACE Crew Served Weapons
 force force ace_csw_ammoHandling = 2;
@@ -362,16 +362,16 @@ force force ace_nametags_playerNamesViewDistance = 6;
 force force ace_nightvision_aimDownSightsBlur = 0;
 force force ace_nightvision_disableNVGsWithSights = false;
 force force ace_nightvision_effectScaling = 0.101011;
-force force ace_nightvision_fogScaling = 0;
+force force ace_nightvision_fogScaling = 0.105;
 force force ace_nightvision_noiseScaling = 0.0713011;
 force force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
-force force ace_overheating_cookoffCoef = 1;
+force force ace_overheating_cookoffCoef = 0.1;
 force force ace_overheating_displayTextOnJam = true;
 force force ace_overheating_enabled = true;
 force force ace_overheating_heatCoef = 1;
-force force ace_overheating_jamChanceCoef = 1;
+force force ace_overheating_jamChanceCoef = 0.5;
 force force ace_overheating_overheatingDispersion = true;
 force force ace_overheating_overheatingRateOfFire = true;
 force force ace_overheating_particleEffectsAndDispersionDistance = 3000;
@@ -645,9 +645,9 @@ force force acre_sys_gestures_stopADS = false;
 //acre_sys_list_ToggleHeadsetColor = [0.66,0.05,1,1];
 
 // ACRE2 Zeus
-force force acre_sys_zeus_zeusCanSpectate = true;
-force force acre_sys_zeus_zeusCommunicateViaCamera = true;
-force force acre_sys_zeus_zeusDefaultVoiceSource = false;
+//force force acre_sys_zeus_zeusCanSpectate = true;
+//force force acre_sys_zeus_zeusCommunicateViaCamera = true;
+//force force acre_sys_zeus_zeusDefaultVoiceSource = false;
 
 // BettIR
 force force BettIR_ViewDistance = 300;
