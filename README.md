@@ -9,7 +9,7 @@
 <a href="https://github.com/7Cav/cScripts/issues"><img src="https://img.shields.io/github/issues-raw/7cav/cScripts.svg?style=for-the-badge&label=Issues" alt="cScripts Issues"></a>
 <a href="https://github.com/7Cav/cScripts/wiki"><img src="https://img.shields.io/badge/help-wiki-lightgrey.svg?logo=Wikipedia&style=for-the-badge" alt="cScripts Wiki"></a>
 <a href="https://github.com/7Cav/cScripts/actions?query=workflow%3AArma">
-    <img src="https://img.shields.io/github/workflow/status/7Cav/cScripts/Arma/master?logo=GitHub&style=for-the-badge" alt="cScripts Build">
+    <img src="https://img.shields.io/github/actions/workflow/status/7Cav/cScripts/testing.yml?logo=GitHub&style=for-the-badge" alt="cScripts Build">
 </a>
 </p>
 cScripts is an easy to use ARMA3 mission framework used by the 7th Cavalry Gaming Communitys. This framework contains functions and scripts that are easy to use and implement on a new mission. All scripts and functions are adapted to 7th Cavalry mission standards but can ofcause easily get re fitted to fitt other scenarios and needs.
