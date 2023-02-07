@@ -59,6 +59,16 @@ if (_vehicle iskindOf "RHS_C130J_Base") then {
     [_vehicle] call FUNC(addHaloJump);
 };
 
+if (_vehicle iskindOf "USAF_C130J") then {
+    [_vehicle] call FUNC(addLineJump);
+    [_vehicle] call FUNC(addHaloJump);
+};
+
+if (_vehicle iskindOf "USAF_C17") then {
+    [_vehicle] call FUNC(addLineJump);
+    [_vehicle] call FUNC(addHaloJump);
+};
+
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     [_vehicle, 4, 40, false, false] call FUNC(setCargoAttributes);
     switch (_vehicleType) do {
