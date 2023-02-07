@@ -215,6 +215,9 @@ class cScripts {
         class log {};
         class warning {};
     };
+    class testing {
+        class testing_loadoutArrays {};
+    };
     class depricated {
         file = "cScripts\functions\depricated";
         class addAceCategory {}; // depricated => createActionCategory
