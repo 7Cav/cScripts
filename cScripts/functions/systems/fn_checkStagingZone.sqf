@@ -37,4 +37,4 @@ if (count _stagingZones > 0) then {
         if (_distance <= _maxDistance) exitWith { true };
         false;
     } forEach _stagingZones;
-};
+} else { false };
