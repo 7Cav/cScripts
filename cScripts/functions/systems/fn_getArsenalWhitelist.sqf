@@ -110,7 +110,16 @@ private _commonGear = [
     "ACE_M84",
     "rhs_mag_mk3a2",
     "B_IR_Grenade",
-
+    
+    // Explosives
+    "ACE_M26_Clacker",
+    "ACE_DefusalKit",
+    "ACE_Clacker",
+    "SatchelCharge_Remote_Mag",
+    "DemoCharge_Remote_Mag",
+    "ClaymoreDirectionalMine_Remote_Mag",
+    
+    
     // Radios
     "ACRE_PRC343",
     "ACRE_PRC152",
@@ -270,11 +279,13 @@ private _companyItems = switch (_company) do {
         
 
         // Explosives
+        "ACE_M26_Clacker",
+        "ACE_DefusalKit",
         "ACE_Clacker",
-        "ClaymoreDirectionalMine_Remote_Mag",
-        "rhsusf_m112_mag",
-        "rhsusf_m112x4_mag",
-        "SatchelCharge_Remote_Mag"
+        "SatchelCharge_Remote_Mag",
+        "DemoCharge_Remote_Mag",
+        "AMP_Breaching_Charge_Mag",
+        "ClaymoreDirectionalMine_Remote_Mag"
     ]};
     case "bravo": {[
         // Helmets
@@ -429,10 +440,12 @@ private _companyItems = switch (_company) do {
         "rhsusf_acc_acog_wd",
 
         // Explosives
+        "ACE_M26_Clacker",
+        "ACE_DefusalKit",
         "ACE_Clacker",
-        "ClaymoreDirectionalMine_Remote_Mag",
-        "DemoCharge_Remote_Mag",
         "SatchelCharge_Remote_Mag",
+        "DemoCharge_Remote_Mag",
+        "ClaymoreDirectionalMine_Remote_Mag",
         "AMP_Breaching_Charge_Mag",
         
         // Radios
@@ -729,11 +742,38 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_hk416d10_m320"
     ]};
 
-    case (_primaryWeapon isKindof ['rhs_weap_m4a1_m320', configFile >> 'CfgWeapons']
+    case (_primaryWeapon isKindof ['rhs_weap_mk18_m320', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {[
 
         "rhs_weap_m4a1_m320",
         "rhs_weap_mk18_m320",
+        "rhs_weap_M320",
+        "rhs_weap_m4a1_carryhandle",
+        "rhs_weap_m4a1_carryhandle_mstock",
+        "rhs_weap_m4a1",
+        "rhs_weap_m4a1_mstock",
+        "rhs_weap_m4a1_d",
+        "rhs_weap_m4a1_d_mstock",
+        "rhs_weap_m4a1_wd",
+        "rhs_weap_m4a1_wd_mstock",
+
+        "rhs_weap_m4a1_blockII",
+        "rhs_weap_m4a1_blockII_KAC",
+        "rhs_weap_m4a1_blockII_bk",
+        "rhs_weap_m4a1_blockII_KAC_bk",
+        "rhs_weap_m4a1_blockII_d",
+        "rhs_weap_m4a1_blockII_KAC_d",
+        "rhs_weap_m4a1_blockII_wd",
+        "rhs_weap_m4a1_blockII_KAC_wd",
+        
+        "rhs_weap_mk18",
+        "rhs_weap_mk18_bk",
+        "rhs_weap_mk18_KAC_bk",
+        "rhs_weap_mk18_d",
+        "rhs_weap_mk18_KAC_d",
+        "rhs_weap_mk18_KAC",
+        "rhs_weap_mk18_wd",
+        "rhs_weap_mk18_KAC_wd",
 
         "rhs_mag_M397_HET",
         "rhs_mag_M433_HEDP",

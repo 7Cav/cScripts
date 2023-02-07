@@ -101,7 +101,7 @@ class Cav_B_B_Scout_CombatLifeSaver_F : Cav_B_Bravo_Base_F {
 //Stryker Crew
 class Cav_B_B_Crew_F : Cav_B_Bravo_base_F {
     displayName = "Crew";
-    scope = 0;
+    scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
     abilityEngineer = 1;
 };
