@@ -53,7 +53,7 @@ if (_loadConfig) then {
 switch (true) do {
     case _loadArray: {
         if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
-        _unit setUnitLoadout _loadout;
+        [_unit, _loadout] call CBA_fnc_setLoadout;
         #ifdef DEBUG_MODE
             [format["Loadout array applied to %1", _unit], "Gear"] call FUNC(info);
         #endif
@@ -64,7 +64,7 @@ switch (true) do {
         if (_loadout != "") then {
             _loadout = parseSimpleArray _loadout;
             if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
-            _unit setUnitLoadout _loadout;
+            [_unit, _loadout] call CBA_fnc_setLoadout;
             #ifdef DEBUG_MODE
                 [format["Loadout %1 applied to %2", _classname, _unit], "Gear"] call FUNC(info);
             #endif

@@ -16,7 +16,7 @@
 
 params [["_unit", objNull, [objNull]]];
 
-private _loadout = getUnitLoadout _unit;
+private _loadout = [_unit] call CBA_fnc_getLoadout;
 if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
 
 _unit setVariable [QEGVAR(gear,Loadout), _loadout];

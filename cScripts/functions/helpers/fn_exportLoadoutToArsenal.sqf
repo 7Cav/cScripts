@@ -28,7 +28,7 @@ private _loadoutList = "getText (_x >> 'displayName') != ''" configClasses (miss
     private _unitName = getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "displayName"); 
  
     [player, _loadout] call Poppy_fnc_applyLoadout;
-    private _loadoutArray = getUnitLoadout player;
+    private _loadoutArray = [_unit] call CBA_fnc_getLoadout;
     
     private _br = toString[13,10];
     _string = formatText["[""[7CAV] %1 - %2"", %3] call ace_arsenal_fnc_addDefaultLoadout; //%4%5", _unitCompany, _unitName, _loadoutArray, _loadout, _br];
