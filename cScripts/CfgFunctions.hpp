@@ -216,6 +216,7 @@ class cScripts {
         class warning {};
     };
     class testing {
+        file = "cScripts\functions\testing";
         class testing_loadoutArrays {};
     };
     class depricated {
