@@ -17,7 +17,6 @@ if (!isMultiplayer) then {["Mission is running on singelplayer enviroment!", "",
 // ACRE radio init
 if (isMultiplayer) then {
     GVAR(Radio) = false;
-    ["Setting up ACRE preset...", "init"] call FUNC(info);
     call EFUNC(gear,setupRadios);
     GVAR(Radio) = true;
 } else {

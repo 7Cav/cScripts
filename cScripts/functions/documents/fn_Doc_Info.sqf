@@ -19,12 +19,15 @@ if (_group == "") then { _playerGroup = "in your squad" } else { _playerGroup = 
 private _worldName = getText (configFile >> "CfgWorlds" >> worldName >> "description");
 private _serverName = if (serverName != "") then {serverName} else {"localhost"}; 
 
-private _radioChannel = [_group, "ACRE_PRC343"] call FUNC(getRadioChannel);
-_radioChannel = [_radioChannel] call FUNC(getChannelName);
-if !(_radioChannel == "ERROR" ) then {
-    _radioChannel = formatText["Your squad radio is <font color='#ffc61a'>%1</font>.<br/><br/>", _radioChannel];
-} else {
-    _radioChannel = "";
+private _radioChannel = "";
+if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
+    _radioChannel = [_group, "ACRE_PRC343"] call FUNC(getRadioChannel);
+    _radioChannel = [_radioChannel] call FUNC(getChannelName);
+    if !(_radioChannel == "ERROR" ) then {
+        _radioChannel = formatText["Your squad radio is <font color='#ffc61a'>%1</font>.<br/><br/>", _radioChannel];
+    } else {
+        _radioChannel = "";
+    };
 };
 
 private _abilityMedic = "";

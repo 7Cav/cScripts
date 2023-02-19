@@ -219,8 +219,4 @@ class cScripts {
         file = "cScripts\functions\testing";
         class testing_loadoutArrays {};
     };
-    class depricated {
-        file = "cScripts\functions\depricated";
-        class addAceCategory {}; // depricated => createActionCategory
-    };
 };
