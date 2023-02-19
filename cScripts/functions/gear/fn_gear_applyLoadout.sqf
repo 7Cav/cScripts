@@ -52,7 +52,6 @@ if (_loadConfig) then {
 // Set loadout
 switch (true) do {
     case _loadArray: {
-        if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
         [_unit, _loadout] call CBA_fnc_setLoadout;
         #ifdef DEBUG_MODE
             [format["Loadout array applied to %1", _unit], "Gear"] call FUNC(info);
