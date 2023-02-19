@@ -20,6 +20,8 @@ if !(EGVAR(Settings,enableACRE)) exitWith {["ACRE Radio init have been disabled.
 if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
 if (count allMissionObjects "acre_api_nameChannels" > 0)       exitWith {};
 
+["Setting up ACRE preset...", "Gear Radio"] call FUNC(info);
+
 // Handle Radio preset from cba settings
 private _lrChannels = parseSimpleArray EGVAR(Settings,setRadioChannelNames);
 if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup correctly.", "Gear Radio"] call FUNC(error);};
