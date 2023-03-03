@@ -5,6 +5,8 @@ class cScripts {
         class init_aceTagging {};
         class init_aceItemReplace {};
 
+        class init_simulation {};
+
         class init_skillAdjustment {};
         class init_vehicle {};
         class init_staging {};
@@ -67,7 +69,7 @@ class cScripts {
         class getRadioChannel {};
         class setRadioChannel {};
         class setActiveRadio {};
-        
+
         class getCompanyVariable {};
         class hasCompanyVariable {};
 
@@ -87,7 +89,7 @@ class cScripts {
         class addHaloJump {};
 
         class setVehicleLable {};
-        
+
         class addBaseCrate {};
         class addStagingZone {};
 
@@ -123,7 +125,7 @@ class cScripts {
         class addArsenal {};
         class getArsenalWhitelist {};
         class getUnitArsenalDefault {};
-        
+
         class createActionCategory {};
 
         class doGetOutHeloSide {};
@@ -136,13 +138,13 @@ class cScripts {
         class getRadioBase {};
 
         class isValidFaction {};
-        
+
         class createVehicleLable {};
         class getVehicleLable {};
 
         class renameObject {};
         class getIcon {};
-        
+
         class getAttendance {};
         class getServerMetrics {};
     };

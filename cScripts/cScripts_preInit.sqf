@@ -340,13 +340,25 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
+// 9; Preformence
+[ // Dynamic Simulation
+    QEGVAR(Settings,dynamicSimulation),
+    "LIST",
+    ["Dynamic Simulation (Experimental)","Enable Dynamic Simulation for Eden and zeus spawned objects automaticly\n"],
+    [_cScriptSettings, "9; Preformence"],
+    [[0,1,2,3], ["Disabled", "Enabled", "Enabled (Only Eden Objects)", "Enabled (Only Zeus Spawned Objects)"], 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
-// 9; Other
+
+// 10; Other
 [ // Primary Clan Tag
     QEGVAR(Settings,primaryClanTag),
     "EDITBOX",
     ["Primary Clantag","Primary clan tag to to check for"],
-    [_cScriptSettings, "9; Other"],
+    [_cScriptSettings, "10; Other"],
     '7CAV',
     true,
     {},
@@ -379,5 +391,18 @@ if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
 };
 
 call EFUNC(init,eventHandlers);
+
+// Dynamic Simulation handler
+if (EGVAR(Settings,dynamicSimulation) >= 1) then {
+    #ifdef DEBUG_MODE
+        [format["Dynamic Simulation set to: %1",EGVAR(Settings,dynamicSimulation)], "dynamicSimulation"] call FUNC(logInfo);
+    #endif
+    "Group" setDynamicSimulationDistance 1800;
+    "Vehicle" setDynamicSimulationDistance 2400;
+    "EmptyVehicle" setDynamicSimulationDistance 250;
+    "Prop" setDynamicSimulationDistance 50;
+    enableDynamicSimulationSystem true;
+    call FUNC(initSimulation);
+};
 
 INFO("preInit", "Initialization completed.");
