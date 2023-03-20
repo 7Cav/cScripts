@@ -10,10 +10,10 @@
  * Loadout name <STRING>
  *
  * Example:
- * [] call cScripts_fnc_gear_getCurrentLoadout
+ * call cScripts_fnc_gear_getCurrentLoadout
  *
  */
 
-private _return = player getVariable [QEGVAR(gear,loadoutClass), typeOf player];
+private _return = player getVariable [QEGVAR(Gear,loadoutClass), typeOf player];
 
 _return

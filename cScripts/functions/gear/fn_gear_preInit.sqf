@@ -1,6 +1,19 @@
-#include "..\script_component.hpp"
+#include "..\script_component.hpp";
+/*
+ * Author: BaerMitUmlaut, CPL.Brostrom.A
+ * This function runs on preInit and setup the gear system using CBA addClassEventHandler.
+ *
+ * Arguments:
+ * none
+ *
+ * Return Value:
+ * nothing
+ *
+ * Example:
+ * call cScripts_fnc_gear_postInit
+ *
+ */
 
-GVAR(Radio) = false;
 GVAR(Gear) = false;
 
 EGVAR(gear,groupIDsSynched) = false;
