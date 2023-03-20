@@ -2,7 +2,7 @@
 /*
  * Author: CPL.Brostrom.A
  * This function return players that haev connected to the server.
- * It will print it to your RPT and add it to your clipboard.
+ * It will print it to your RPT log.
  *
  * Arguments:
  * None
@@ -16,9 +16,6 @@
  */
 
 private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
-
-// Clipboard
-copyToClipboard str _playerLog;
 
 // Rpt 
 ["=================================================== START", "Attendance"] call FUNC(info);
@@ -34,8 +31,7 @@ copyToClipboard str _playerLog;
 [
     [],
     ["All attended players have been"],
-    ["saved to your clipboard"],
-    ["and to your RPT log..."],
+    ["to your RPT log..."],
     [""],
     [""]
 ] call CBA_fnc_notify;

@@ -85,11 +85,10 @@ if (EGVAR(Settings,enableACRE)) then {
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-["7Cav Mission", "Copy attendees to clipboard",
+["7Cav Mission", "Take attendence",
     {
         private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
-        copyToClipboard str _playerLog;
-        ["All attended players have been saved to your clipboard"] call zen_common_fnc_showMessage;
+        ["All attended players have been saved to your RPT log"] call zen_common_fnc_showMessage;
     },
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;
