@@ -394,15 +394,7 @@ call EFUNC(init,eventHandlers);
 
 // Dynamic Simulation handler
 if (EGVAR(Settings,dynamicSimulation) >= 1) then {
-    #ifdef DEBUG_MODE
-        [format["Dynamic Simulation set to: %1",EGVAR(Settings,dynamicSimulation)], "dynamicSimulation"] call FUNC(logInfo);
-    #endif
-    "Group" setDynamicSimulationDistance 1800;
-    "Vehicle" setDynamicSimulationDistance 2400;
-    "EmptyVehicle" setDynamicSimulationDistance 250;
-    "Prop" setDynamicSimulationDistance 50;
-    enableDynamicSimulationSystem true;
-    call FUNC(initSimulation);
+    call EFUNC(init,simulation);
 };
 
 INFO("preInit", "Initialization completed.");
