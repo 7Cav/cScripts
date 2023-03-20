@@ -177,12 +177,6 @@ class cScripts {
 
         class zenModule_CallEndex {};
     };
-    class helpers {
-        file = "cScripts\functions\helpers";
-        class exportContainerToArsenal {};
-        class exportLoadoutContentToArsenal {};
-        class exportLoadoutToArsenal {};
-    };
     class gear {
         file = "cScripts\functions\gear";
         class gear_preInit { preInit = 1; };
