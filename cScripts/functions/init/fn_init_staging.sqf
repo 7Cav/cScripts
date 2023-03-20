@@ -15,6 +15,8 @@
  * Public: No
  */
 
+if !(EGVAR(Settings,enableStagingSystem)) exitWith {};
+
 #ifdef DEBUG_MODE
     ["Setting up Staging", "staging"] call FUNC(info);
 #endif

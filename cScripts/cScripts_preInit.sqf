@@ -139,6 +139,16 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 
 // 4; Staging
+[ // Enable
+    QEGVAR(Settings,enableStagingSystem),
+    "CHECKBOX",
+    ["Enable","Enables the staging system."],
+    [_cScriptSettings, "4; Staging"],
+    true,
+    true,
+    {},
+    false
+] call CBA_fnc_addSetting;
 [ // Show all loadouts
     QEGVAR(Settings,showAllLoadouts),
     "CHECKBOX",
@@ -301,6 +311,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+
 
 // 8; Zeus
 [ // Enable Custom Zeus Moduels
