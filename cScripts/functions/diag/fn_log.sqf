@@ -34,7 +34,7 @@ private _logMessage = format ["%1%2%3: %4", _prefix, _componant, _type, _message
 
 diag_log text _logMessage;
 
-if (_sendToServer) then {
+if (_sendToServer && !isServer) then {
     [QEGVAR(log,text), _logMessage] call CBA_fnc_serverEvent;
 };
 
