@@ -76,11 +76,46 @@ private _commonGear = [
     "USP_BOONIE_HAT_MC",
 
     // Uniforms
+    "USP_G3C_MC",
+    "USP_G3C_KP_MC",
+    "USP_G3C_KP_MX_MC",
+    "USP_G3C_KP_OR_MC",
+    "USP_G3C_MX_MC",
+    "USP_G3C_OR_MC",
+    "USP_G3C_RS_MC",
+    "USP_G3C_RS_KP_MC",
+    "USP_G3C_RS_KP_MX_MC",
     "USP_G3C_RS_KP_OR_MC",
+    "USP_G3C_RS_MX_MC",
+    "USP_G3C_RS_MX_MC",
+    "USP_G3C_RS2_MC",
+    "USP_G3C_RS2_KP_MC",
+    "USP_G3C_RS2_KP_MX_MC",
+    "USP_G3C_RS2_KP_OR_MC",
+    "USP_G3C_RS2_MX_MC",
+    "USP_G3C_RS2_OR_MC",
+    "USP_G3F_MC",
+    "USP_G3F_MX_MC",
     "USP_G3F_OR_MC",
+    "USP_PCU_G3C_MX_MC",
+    "USP_PCU_G3C_OR_MC",
+    "USP_PCU_G3C_KP_MX_MC",
     "USP_PCU_G3C_KP_OR_MC",
+    "USP_SOFTSHELL_G3C_MC",
+    "USP_SOFTSHELL_G3C_KP_MC",
+    "USP_SOFTSHELL_G3C_KP_MX_MC",
+    "USP_SOFTSHELL_G3C_KP_OR_MC",
+    "USP_SOFTSHELL_G3C_MX_MC",
     "USP_SOFTSHELL_G3C_OR_MC",
+    "USP_G3F_MX_MCA",
+    "USP_G3F_OR_MCA",
+    "USP_G3F_G3C_KP_MX_MCA",
+    "USP_G3F_G3C_KP_OR_MCA",
+    "USP_OVERWHITE_G3C_KP_MX_MCA_MC",
     "USP_OVERWHITE_G3C_KP_OR_MCA_MC",
+    "USP_OVERWHITE_G3C_MX_MCA_MC",
+    "USP_OVERWHITE_G3C_OR_MCA_MC",
+    
 
     //Chemlights
     "Chemlight_blue",
@@ -191,15 +226,19 @@ private _companyItems = switch (_company) do {
         "USP_RHINO"
     ]};
     case "charlie": {[
-        // Uniforms
-        "USP_G3C_RS_KP_OR_MC",
-        "USP_G3F_OR_MC",
-        "USP_PCU_G3C_KP_OR_MC",
-        "USP_SOFTSHELL_G3C_OR_MC",
-        "USP_OVERWHITE_G3C_KP_OR_MCA_MC",
         
         //Helmets
         "USP_OPSCORE_FASTMTC_CGW",
+        "USP_OPSCORE_FASTMTC_CMW",
+        "USP_OPSCORE_FASTMTC_CMGSW",
+        "USP_OPSCORE_FASTMTC_CMGTW",
+        "USP_OPSCORE_FASTMTC_CMSW",
+        "USP_OPSCORE_FASTMTC_CMTW",
+        "USP_OPSCORE_FASTMTC_CW",
+        "USP_OPSCORE_FASTMTC_CGSW",
+        "USP_OPSCORE_FASTMTC_CGTW",
+        "USP_OPSCORE_FASTMTC_CSW",
+        "USP_OPSCORE_FASTMTC_CTW",
         "rhsusf_ach_helmet_camo_ocp",
         "H_HelmetHBK_ocp_headset_F",
         "H_HelmetB_camo",
@@ -255,22 +294,7 @@ private _companyItems = switch (_company) do {
         "NDS_M_6Rnd_60mm_SMOKE",
         "NDS_M_6Rnd_60mm_ILLUM",
  
-        // Attachements
-        "rhsusf_acc_anpeq15side_bk",
-        "rhsusf_acc_anpeq15_bk_top",
-        "rhsusf_acc_anpeq15",
-        "rhsusf_acc_anpeq15_light",
-        "rhsusf_acc_anpeq15_bk",
-        "rhsusf_acc_anpeq15_bk_light",
-        "rhsusf_acc_m952v",
 
-        "rhsusf_acc_sfmb556",
-        "rhsusf_acc_sf3p556",
-
-        "rhsusf_acc_eotech_552",
-        "rhsusf_acc_su230_mrds",
-        "rhsusf_acc_compm4",
-        
         //Night Vision
         "USP_PVS14",
         "USP_PVS15",
@@ -370,7 +394,6 @@ private _companyItems = switch (_company) do {
         "ace_csw_carryMortarBaseplate",
         "ace_compat_rhs_usf3_m252_carry",
         
-
         // Grenades
         "HandGrenade",
         "ACE_M84",
@@ -411,34 +434,6 @@ private _companyItems = switch (_company) do {
         "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
         "ACE_1Rnd_82mm_Mo_Smoke",
         
-
-        //Attachements
-        "rhsusf_acc_anpeq15side_bk",
-        "rhsusf_acc_anpeq15_bk_top",
-        "rhsusf_acc_anpeq15",
-        "rhsusf_acc_anpeq15_light",
-        "rhsusf_acc_anpeq15_bk",
-        "rhsusf_acc_anpeq15_bk_light",
-        "rhsusf_acc_m952v",
-        "acc_flashlight",
-        "rhsusf_acc_eotech_552",
-        "optic_hamr",
-        "rhsusf_acc_anpas13gv1",
-        "rhsusf_acc_t1_high",
-        "rhsusf_acc_g33_xps3",
-        "rhsusf_acc_compm4",
-        "rhsusf_acc_eotech_552",
-        "rhsusf_acc_g33_t1",
-        "rhsusf_acc_su230_mrds",
-        "rhsusf_acc_ELCAN",
-        "rhsusf_acc_acog3",
-        "rhsusf_acc_eotech_xps3",
-        "rhsusf_acc_eotech",
-        "optic_MRCO",
-        "rhsusf_acc_acog_rmr",
-        "rhsusf_acc_acog_d",
-        "rhsusf_acc_acog_wd",
-
         // Explosives
         "ACE_M26_Clacker",
         "ACE_DefusalKit",
@@ -454,16 +449,44 @@ private _companyItems = switch (_company) do {
         "ACRE_PRC117F"
     ]};
     default {[
-        // Helmets
-        "USP_OPSCORE_FASTMTC_CGW",
-
         // Grenades
         "HandGrenade",
         "ACE_M84",
 
         // Magazines
-        "rhs_mag_20Rnd_556x45_M855A1_Stanag",
-        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
+        "rhs_mag_30Rnd_556x45_Mk262_PMAG",
+        "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
+        "rhsusf_mag_17Rnd_9x19_FMJ",
+        "rhsusf_200Rnd_556x45_mixed_soft_pouch",
+        "rhsusf_100Rnd_762x51_m62_tracer",
+
+        "rhs_mag_M397_HET",
+        "rhs_mag_M433_HEDP",
+        "ACE_HuntIR_M203",
+        "ACE_40mm_Flare_ir",
+        "ACE_40mm_Flare_white",
+        "ACE_40mm_Flare_red",
+        "rhs_mag_m664_red_cluster",
+        "rhs_mag_m713_Red",
+        "rhs_mag_m716_yellow",
+        
+        "rhs_mag_maaws_HE",
+        "rhs_mag_maaws_HEAT",
+        "MAA_MAAWS_ASM509",
+        "MAA_MAAWS_GMM_MT",
+        "NDS_M_6Rnd_60mm_HE_0",
+        "NDS_M_6Rnd_60mm_HE",
+        "NDS_M_6Rnd_60mm_SMOKE",
+        "NDS_M_6Rnd_60mm_ILLUM",
+        
+        "ACE_1Rnd_82mm_Mo_HE",
+        "ACE_1Rnd_82mm_Mo_Illum",
+        "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
+        "ACE_1Rnd_82mm_Mo_Smoke",
         
         //Attachements
         "rhsusf_acc_anpeq15side_bk",
@@ -476,7 +499,6 @@ private _companyItems = switch (_company) do {
         "acc_flashlight",
         "rhsusf_acc_eotech_552",
         "optic_hamr",
-        "rhsusf_acc_anpas13gv1",
         "rhsusf_acc_t1_high",
         "rhsusf_acc_g33_xps3",
         "rhsusf_acc_compm4",
