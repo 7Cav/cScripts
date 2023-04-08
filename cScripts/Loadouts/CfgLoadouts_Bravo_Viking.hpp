@@ -95,7 +95,7 @@ class Cav_B_B_Scout_RiflemanAT_F : Cav_B_B_Scout_Base_F {
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_su230_mrds",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_grip2"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",1]]],["USP_VEST_STRANDHOGG2_MC",[["HandGrenade",4,1],["SmokeShellGreen",1,1],["SmokeShell",4,1],["B_IR_Grenade",1,1],["ACE_Chemlight_IR",2,1],["rhs_mag_mk3a2",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",8,30],[["ACE_MX2A","","","",[],[],""],1]]],["USP_45L_RUCKSACK_MC",[["ACE_EntrenchingTool",1],["Rev_darter_item",1],["ACE_UAVBattery",1],["rhs_mag_100Rnd_556x45_M855A1_cmag_mixed",2,100]]],"USP_OPS_FASTXP_TAN_MC_03","USP_MFRAME_SMC1_TAN2",["ACE_Vector","","","",[],[],""],["ItemMap","B_UavTerminal","ItemRadioAcreFlagged","ItemCompass","ItemWatch","USP_PVS15"]];
 };
-class Cav_B_B_Scout_CombatLifeSaver_F : Cav_B_Scout_Base_F {
+class Cav_B_B_Scout_CombatLifeSaver_F : Cav_B_B_Scout_Base_F {
     displayName = "Scout Combat Lifesaver";
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
