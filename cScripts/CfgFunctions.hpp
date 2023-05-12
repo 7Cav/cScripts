@@ -87,6 +87,7 @@ class cScripts {
 
         class setVehicleLable {};
         
+        class addBaseCrate {};
         class addStagingZone {};
     };
     class systems {
