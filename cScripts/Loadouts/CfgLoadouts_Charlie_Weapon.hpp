@@ -4,9 +4,15 @@ class Cav_B_Charlie_Weapons_base_F : Cav_B_Charlie_base_F {
 };
 
 class Cav_B_C_Weapons_SquadLeader_F : Cav_B_C_SquadLeader_F {
-    displayName = "Weapons Squad Leader";
+    displayName = "Charlie Weapons Squad Leader";
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_EarPlugs",1],["ACE_microDAGR",1],["ACE_CableTie",2]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["ACE_IR_Strobe_Item",1],["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["SmokeShellRed",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1],["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["SmokeShellGreen",1,1]]],["USP_45L_RUCKSACK_MC",[["ACE_HuntIR_monitor",1],["USP_PVS15",1],["ACE_splint",2],["ACE_SpraypaintRed",1],["ACE_EntrenchingTool",1]]],"USP_OPSCORE_FASTMTC_MGSW","USP_MFRAME_TAN",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
+};
+class Cav_B_C_Weapons_M240B_FireTeamLeader_F : Cav_B_Charlie_Weapons_base_F {
+    displayName = "Charlie Weapons Fireteam Leader";
+    scope = 2;
+    loadout = [["rhs_weap_m240B","rhsusf_acc_ARDEC_M240","","rhsusf_acc_ACOG_MDO",["rhsusf_100Rnd_762x51_m62_tracer",100],[],""],[],["rhsusf_weap_glock17g4","","","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_EarPlugs",1],["ACE_microDAGR",1],["ACE_packingBandage",10]]],["USP_CRYE_JPC_MGB",[["SmokeShell",4,1],["rhsusf_100Rnd_762x51_m62_tracer",4,100],["rhsusf_mag_17Rnd_9x19_FMJ",1,17],["ACE_Chemlight_IR",2,1],["HandGrenade",2,1]]],["USP_45L_RUCKSACK_MC",[["USP_PVS15",1],["ACE_splint",2],["rhsusf_100Rnd_762x51_m62_tracer",2,100],["SmokeShellGreen",1,1]]],"USP_OPSCORE_FASTMTC_CW","USP_MFRAME_TAN",[],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
+    icon = "iconManLeader";
 };
 class Cav_B_C_Weapons_M240B_Machinegunner_F : Cav_B_Charlie_Weapons_base_F {
     displayName = "Charlie Machine Gunner";
