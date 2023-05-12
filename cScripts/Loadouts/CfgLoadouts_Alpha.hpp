@@ -2,7 +2,7 @@ class Cav_B_A_Officer_F : Cav_B_Alpha_base_F {
     displayName = "$STR_Cav_Alpha_Characters_A_Officer";
     category[] += {"cScripts_Loadout_Cat_Alpha_Leadership"};
     scope = 2;
-    loadout = [[],[],[],["rhs_uniform_acu_oefcp",[["ACE_quikclot",14],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_Flashlight_XL50",1],[],[],"rhsusf_patrolcap_ocp","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+    loadout = [[],[],[],["rhs_uniform_acu_oefcp",[["ACE_quikclot",14],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_Flashlight_XL50",1]]],[],[],"rhsusf_patrolcap_ocp","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
     role = "officer";
 };
 class Cav_B_A_AirController_F : Cav_B_Alpha_base_F {
