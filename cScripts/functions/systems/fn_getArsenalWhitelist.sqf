@@ -547,7 +547,7 @@ _medicGear = if (_medicRole >= 1) then {[
         
 ]} else {[]};
 
-private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
+private _roleSpecific = switch (call EFUNC(gear,getLoadoutRole)) do {
     case "officer": {[
         "ACE_microDAGR",
         "ACE_HuntIR_monitor",

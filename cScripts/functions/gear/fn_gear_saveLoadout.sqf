@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * true or false <BOOL>
  *
  * Example:
  * [player] call cScripts_fnc_gear_saveLoadout

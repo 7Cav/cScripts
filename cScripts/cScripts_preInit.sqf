@@ -19,7 +19,6 @@ EGVAR(patches,usesAlive)        = isClass (configFile >> "CfgPatches" >> "ALiVE_
 EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_main");
 
 // Global Variables
-GVAR(Radio) = false;
 EGVAR(Staging,ZoneStatus) = false;
 EGVAR(Staging,OverrideCompanyVar) = false;
 GVAR(isPlayer) = hasInterface || {isPlayer player};

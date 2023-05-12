@@ -4,27 +4,22 @@
  * This function return your role
  *
  * Arguments:
- * 0: Loadout <STRING>
+ * None
  *
  * Return Value:
  * Role <STRING>
  *
  * Example:
- * [player] call cScripts_fnc_gear_getLoadoutRole
+ * call cScripts_fnc_gear_getLoadoutRole
  *
  */
-params ["_player"];
 
 private _return = "trooper";
 
-private _loadout = if (!isNil {player getVariable "cScripts_gear_loadoutClass"}) then {
-    player getVariable "cScripts_gear_loadoutClass";
-} else {
-    typeOf player;
-};
+private _loadout = player getVariable [QEGVAR(Gear,loadoutClass), typeOf player];
 
-_config = missionConfigFile >> "CfgLoadouts" >> _loadout;
-_role = getText (_config >> "role");
+private _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
+private _role = getText (_config >> "role");
 if (_role != "") then {_return = _role};
 
 _return
