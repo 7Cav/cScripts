@@ -115,7 +115,7 @@ params ["_modulePos", "_objectPos"];
         
         [QGVAR(getAttendance)] call CBA_fnc_localEvent;
 
-        ["Endex called (All attended players have been saved to your clipboard)"] call zen_common_fnc_showMessage;
+        ["Endex called (All attended players have been saved to your RPT log)"] call zen_common_fnc_showMessage;
     },
     {},
     [_modulePos]
