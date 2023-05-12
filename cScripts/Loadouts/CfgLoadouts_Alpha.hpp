@@ -2,14 +2,14 @@ class Cav_B_A_Officer_F : Cav_B_Alpha_base_F {
     displayName = "$STR_Cav_Alpha_Characters_A_Officer";
     category[] += {"cScripts_Loadout_Cat_Alpha_Leadership"};
     scope = 2;
-    loadout = [[],[],[],["rhs_uniform_acu_oefcp",[["ACE_quikclot",14],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_Flashlight_XL50",1],["ACRE_PRC343",1],["ACRE_PRC152",1]]],[],[],"rhsusf_patrolcap_ocp","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+    loadout = [[],[],[],["rhs_uniform_acu_oefcp",[["ACE_quikclot",14],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_Flashlight_XL50",1],[],[],"rhsusf_patrolcap_ocp","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
     role = "officer";
 };
 class Cav_B_A_AirController_F : Cav_B_Alpha_base_F {
     displayName = "$STR_Cav_Alpha_Characters_A_AirController";
     category[] += {"cScripts_Loadout_Cat_Alpha_Leadership"};
     scope = 2;
-    loadout = [["rhs_weap_m4","","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],["rhs_uniform_cu_ocp_1stcav",[["ACRE_PRC152",1],["ACE_quikclot",10],["ACE_morphine",2],["ACE_epinephrine",2],["ACE_tourniquet",2],["ACE_MapTools",1],["ACE_Flashlight_MX991",1],["ACE_microDAGR",1],["H_Cap_tan",1],["rhsusf_shemagh_tan",1]]],["rhsusf_mbav_light",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",3,30],["rhsusf_mag_15Rnd_9x19_JHP",2,15],["B_IR_Grenade",1,1],["SmokeShell",2,1],["SmokeShellBlue",2,1],["SmokeShellRed",2,1],["SmokeShellGreen",2,1],["Chemlight_green",2,1],["ACE_Chemlight_HiRed",2,1],["Chemlight_blue",2,1]]],["B_Kitbag_mcamo",[["ACRE_PRC117F",1],["ACE_EntrenchingTool",1]]],"rhsusf_hgu56p_visor_green","",["Binocular","","","",[],[],""],["ItemMap","ItemcTab","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]];
+    loadout = [["rhs_weap_m4","","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_JHP",15],[],""],["rhs_uniform_cu_ocp_1stcav",[["ACE_quikclot",10],["ACE_morphine",2],["ACE_epinephrine",2],["ACE_tourniquet",2],["ACE_MapTools",1],["ACE_Flashlight_MX991",1],["ACE_microDAGR",1],["H_Cap_tan",1],["rhsusf_shemagh_tan",1]]],["rhsusf_mbav_light",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",3,30],["rhsusf_mag_15Rnd_9x19_JHP",2,15],["B_IR_Grenade",1,1],["SmokeShell",2,1],["SmokeShellBlue",2,1],["SmokeShellRed",2,1],["SmokeShellGreen",2,1],["Chemlight_green",2,1],["ACE_Chemlight_HiRed",2,1],["Chemlight_blue",2,1]]],["B_Kitbag_mcamo",[["ACE_EntrenchingTool",1]]],"rhsusf_hgu56p_visor_green","",["Binocular","","","",[],[],""],["ItemMap","ItemcTab","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]];
     role = "officer";
 };
 class Cav_B_A_JFO_F : Cav_B_Alpha_base_F {
