@@ -90,7 +90,7 @@ _object enableRopeAttach false;
 [_object, 100] call FUNC(deleteDroppedObjects);
 
 // Stageing zone
-if (_hasStagingZone && (EGVAR(Settings,enableStagingSystem))) then {
+if (_hasStagingZone) then {
     [_object, 25] call FUNC(addStagingZone);
 };
 
