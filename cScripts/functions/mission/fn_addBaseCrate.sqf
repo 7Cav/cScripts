@@ -24,7 +24,6 @@ params [
     ["_type", "none", [""]]
 ];
 
-if (!isServer) exitWith {false};
 if (!isPlayer _object) exitWith {false};
 if (_object isKindOf "Man") exitWith {false};
 
