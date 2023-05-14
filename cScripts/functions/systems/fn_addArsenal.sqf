@@ -1,15 +1,14 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function crates a arsenal on the given object with items used in each company.
- * If full, none, or empty value is given the arsenal will be "full".
+ * This function creates a "CavArsenal".
+ * This arsenal is created and destroyed on usage to maek sure the items inside are populated with correct items.
  *
  * Arguments:
- * 0: Object <OBJECT>
- * 1: Company <STRING>
+ * 0: aceCategory <ARRAY> (Default: ["ACE_MainActions"])
  *
  * Example:
- * ["box", "full"] call cScripts_fnc_addArsenal
+ * call cScripts_fnc_addArsenal
  */
 
 params [
@@ -26,7 +25,7 @@ private _arsenalStatement = {
     if (count _items == 0) exitWith {
         [
             [],
-            ["Arsenal is not avalible for your."],
+            ["Arsenal is not avalible for your class."],
             [""],
             [""]
         ] call CBA_fnc_notify;

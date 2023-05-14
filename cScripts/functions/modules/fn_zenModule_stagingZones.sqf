@@ -19,7 +19,7 @@ params ["_modulePos", "_objectPos"];
 [
     "Staging zones", 
     [
-        ["CHECKBOX", ["Allow access to staging zones", ""], true, false]
+        ["CHECKBOX", ["Allow access to staging zones", "This allow or deny access for staging zones globaly on all zones."], true, false]
     ], 
     {
         params ["_arg", "_pos"];
