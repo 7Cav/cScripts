@@ -1,10 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: CPL.Brostrom.A
- * This function return a funtion icon path or path provided.
+ * This function return a icon from config or path provided. It also allow a fallback icon
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Fallback Icon <OBJECT>
  *
  * Return Value:
  * Path of icon <STRING>

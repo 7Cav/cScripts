@@ -16,7 +16,7 @@
  * [player, [[],[],[],[],[],[],"","",[],["","","","","",""]]] call cScripts_fnc_gear_applyLoadout
  *
  */
-#define DEBUG_MODE
+
 params [
     ["_unit", objNull, [objNull]],
     "_loadout"

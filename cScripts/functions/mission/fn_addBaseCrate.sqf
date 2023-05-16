@@ -1,7 +1,8 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This is a quick function to create a start crate.
+ * This function creates a base create contining staging zone and everythig.
+ * (This is a quick function for the starter create)
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -13,7 +14,9 @@
  * Example:
  * [this] call cScripts_fnc_addBaseCrate;
  * [this, "charlie"] call cScripts_fnc_addBaseCrate;
+ * [this, "all"] call cScripts_fnc_addBaseCrate;
  *
+ * Public: Yes
  */
 
 params [
@@ -21,7 +24,6 @@ params [
     ["_type", "none", [""]]
 ];
 
-if (!isServer) exitWith {false};
 if (!isPlayer _object) exitWith {false};
 if (_object isKindOf "Man") exitWith {false};
 

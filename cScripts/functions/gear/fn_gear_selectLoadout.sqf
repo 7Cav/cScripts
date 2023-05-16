@@ -7,11 +7,12 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * nothing
+ * variable, variableName, classname, sideConfig or empty string.
  *
  * Example:
- * call cScripts_fnc_gear_postInit
+ * player call cScripts_fnc_gear_selectLoadout;
  *
+ * Public: No
  */
 
 params ["_unit"];

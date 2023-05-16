@@ -9,7 +9,6 @@
  * Example:
  * ["vic"] call cScripts_fnc_vehicle_addRadio;
  */
-#define DEBUG_MODE
 
 params [["_vehicle", objNull, [objNull]]];
 if (!isServer) exitWith {};
