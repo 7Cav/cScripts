@@ -32,14 +32,14 @@ if (_useColor) then {
 _vehicle addAction [
     _leftSide,
     {[_this select 0, true] call FUNC(doGetOutHeloSide)},
-    0, 1.5, true, true, "User1",
+    0, 1.5, true, true, "User12",
     "(_target getCargoIndex _this) != -1"
 ];
 
 _vehicle addAction [
     _rightSide,
     {[_this select 0, false] call FUNC(doGetOutHeloSide)},
-    0, 1.5, true, true, "User2",
+    0, 1.5, true, true, "User13",
     "(_target getCargoIndex _this) != -1"
 ];
 
