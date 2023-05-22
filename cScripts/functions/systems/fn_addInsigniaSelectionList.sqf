@@ -71,7 +71,7 @@ if (!isPlayer _object) then {
 
 // Bravo Company 1st Platoon
 [_object,"Platoon Insignia 1/B/1-7","Bravo_1","z\cav\addons\insignia\data\Bravo_1.paa",_bravoCategory] call FUNC(addInsigniaSelection);
-[_object,"Squad Insignia 1/1/B/1-7","Bravo_1_1","z\cav\addons\insignia\data\Bravo_1_1b.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 1/1/B/1-7","Bravo_1_1","z\cav\addons\insignia\data\Bravo_1_1.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 2/1/B/1-7","Bravo_1_2","z\cav\addons\insignia\data\Bravo_1_2.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 3/1/B/1-7","Bravo_1_3","z\cav\addons\insignia\data\Bravo_1_3.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 4/1/B/1-7","Bravo_1_4","z\cav\addons\insignia\data\Bravo_1_4.paa",_bravoCategory] call FUNC(addInsigniaSelection);
