@@ -20,8 +20,6 @@ cScripts is an easy to use ARMA3 mission framework used by the 7th Cavalry Gamin
 
 ### Optional moduels
 - [ACRE2](https://github.com/IDI-Systems/acre2)
-- [cTab](https://github.com/Riouken/cTab)
-- [RHSUSAF](http://www.rhsmods.org/)
 - [Zeus Enhanced](https://github.com/zen-mod/ZEN)
 
 ## Installation
