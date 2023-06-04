@@ -26,7 +26,7 @@ clearbackpackcargoGlobal _crate;
 
 // Add items to the crate in order of category. Items in crate vary depending on crate type selected.
 switch (_crateType) do {
-    case "atlasTeam": {
+    case "atlas": {
 
         // AEDs
         _crate addItemCargoGlobal ["kat_AED",(_quaScale * 2)];
@@ -96,7 +96,7 @@ switch (_crateType) do {
         _crate addItemCargoGlobal ["SmokeShellGreen",(_quaScale * 8)];
         _crate addItemCargoGlobal ["SmokeShellPurple",(_quaScale * 8)];
     };
-    case "infantryPlatoon": {
+    case "platoon": {
         // Bandages
         _crate addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 60)];
         _crate addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 90)];

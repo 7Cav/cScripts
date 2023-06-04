@@ -33,7 +33,7 @@ if (_isFacility) then {
 
 // If isServer add medical equipment
 if (isServer) then {
-    [_crate,_quaScale,"atlasTeam"] call FUNC(doMedicalCrate);
+    [_crate,_quaScale,"atlas"] call FUNC(doMedicalCrate);
 };
 
 // Change ace logistics size of crate

@@ -22,8 +22,8 @@ params ["_modulePos", "_objectPos"];
         ["LIST", ["Crate Type", "Select the type of unit you are supplying with this crate"],
             [
                 [
-                    'atlasTeam',
-                    'infantryPlatoon'
+                    'atlas',
+                    'platoon'
                 ],
                 [
                     ['Atlas Team', "Contains enough supplies to sustain two Atlas teams as well supplementing one infantry platoon."],
