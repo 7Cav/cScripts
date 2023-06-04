@@ -32,8 +32,8 @@ switch (_crateType) do {
 		_crate addItemCargoGlobal ["kat_X_AED",(_quaScale * 2)];
 
 		// Bandages
-		_crate addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 120)];
-		_crate addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 120)];
+		_crate addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 160)];
+		_crate addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 90)];
 		_crate addItemCargoGlobal ["ACE_quikclot",(_quaScale * 200)];
 
 		// Tourniquets
@@ -97,8 +97,8 @@ switch (_crateType) do {
 	};
 	case "infantryPlatoon": {
 		// Bandages
-		_crate addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 120)];
-		_crate addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 120)];
+		_crate addItemCargoGlobal ["ACE_elasticBandage",(_quaScale * 60)];
+		_crate addItemCargoGlobal ["ACE_packingBandage",(_quaScale * 90)];
 		_crate addItemCargoGlobal ["ACE_quikclot",(_quaScale * 200)];
 		
 		// Tourniquets
@@ -109,8 +109,8 @@ switch (_crateType) do {
 		_crate addItemCargoGlobal ["ACE_plasmaIV_500",(_quaScale * 20)];
 		
 		// IV & IO Catheters
-		_crate addItemCargoGlobal ["kat_IO_FAST",(_quaScale * 20)];
-		_crate addItemCargoGlobal ["kat_IV_16",(_quaScale * 40)];
+		_crate addItemCargoGlobal ["kat_IO_FAST",(_quaScale * 10)];
+		_crate addItemCargoGlobal ["kat_IV_16",(_quaScale * 20)];
 		
 		// Autoinjector Medication
 		_crate addItemCargoGlobal ["kat_naloxone",(_quaScale * 20)];
