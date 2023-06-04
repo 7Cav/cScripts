@@ -1,15 +1,16 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, SPC.Turn.J
  * This function resupply a crate and changes it's texture.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Scale <AMMOUNT>
+ * 2: Crate Type <STRING>
  *
  * Example:
- * [this,0.5] call cScripts_fnc_doMedicalCrate;
- * [this,1] call cScripts_fnc_doMedicalCrate;
+ * [this,0.5,"atlasTeam"] call cScripts_fnc_doMedicalCrate;
+ * [this,1,"infantryPlatoon"] call cScripts_fnc_doMedicalCrate;
  */
 
 if (!isServer) exitWith {};

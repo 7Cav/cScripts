@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, SPC.Turn.J
  * This function load all Cav modules. Requires Zen Mod to run propperly. The function will terminate if not.
  *
  * Arguments:

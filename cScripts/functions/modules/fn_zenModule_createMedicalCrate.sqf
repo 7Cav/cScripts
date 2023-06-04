@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, SPC.Turn.J
  * This module function spawn a supply medical crate.
  *
  * Arguments:
@@ -8,7 +8,7 @@
  * 1: objectPos <OBJECT>
  *
  * Example:
- * [getPos logic, this] call cScripts_fnc_zenModule_createFieldHospital
+ * [getPos logic, this] call cScripts_fnc_zenModule_createMedicalCrate
  *
  * Public: No
  */
