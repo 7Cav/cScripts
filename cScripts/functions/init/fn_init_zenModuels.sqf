@@ -31,7 +31,7 @@ if !(EGVAR(Settings,enable7cavZeusModules)) exitWith {};
 ] call zen_custom_modules_fnc_register;
 
 
-["7Cav Logistics", "Starter Crate",
+["7Cav Logistics", "Spawn Starter Crate",
     {
         params ["_modulePos", "_objectPos"];
         [_modulePos, _objectPos] call EFUNC(zenModule,CreateStarterCrate);    
@@ -50,7 +50,7 @@ if (ace_medical_treatment_locationsBoostTraining) then {
     ] call zen_custom_modules_fnc_register;
 };
 
-["7Cav Logistics", "Re-supply Crate",
+["7Cav Logistics", "Spawn Re-supply Crate",
     {
         params ["_modulePos", "_objectPos"];
         [_modulePos, _objectPos] call EFUNC(zenModule,CreateSupplyCrate);
@@ -58,7 +58,15 @@ if (ace_medical_treatment_locationsBoostTraining) then {
     "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-["7Cav Utilities", "Regerar Trooper",
+["7Cav Logistics", "Spawn Medical Crate",
+    {
+        params ["_modulePos", "_objectPos"];
+        [_modulePos, _objectPos] call EFUNC(zenModule,CreateMedicalCrate);
+    },
+    "\z\ACE\addons\medical_gui\ui\cross.paa"
+] call zen_custom_modules_fnc_register;
+
+["7Cav Utilities", "Regear Trooper",
     {
         params ["_modulePos", "_objectPos"];
         [_modulePos, _objectPos] call EFUNC(zenModule,RegearTrooper);
