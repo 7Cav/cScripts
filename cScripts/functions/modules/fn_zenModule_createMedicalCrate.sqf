@@ -18,15 +18,28 @@ params ["_modulePos", "_objectPos"];
 [
     "7th Cavalry Medical Crate", 
     [
-        ["SLIDER:PERCENT", ["Supply size", "Regulate the total amount of supplies in the crate"], [0, 1, 1], false]
+        ["SLIDER:PERCENT", ["Supply size", "Regulate the total amount of supplies in the crate"], [0, 1, 1], false],
+        ["LIST", ["Crate Type", "Select the type of unit you are supplying with this crate"],
+            [
+                [
+                    'atlasTeam',
+                    'infantryPlatoon'
+                ],
+                [
+                    ['Atlas Team', "Contains enough supplies to sustain two Atlas teams as well supplementing one infantry platoon."],
+                    ['Infantry Plt', "Contains enough medical supplies for one infantry platoon."]
+                ],
+                0,
+                2
+            ], false]
     ], 
     {
         params ["_arg", "_pos"];
-        _arg params ["_size"];
+        _arg params ["_size", "_crateType"];
         _pos params ["_modulePos"];
-
+        
         private _crate = "ACE_medicalSupplyCrate" createVehicle _modulePos;
-        [_crate, _size] remoteExec [QFUNC(doMedicalCrate), 0, true];
+        [_crate, _size, _crateType] remoteExec [QFUNC(doMedicalCrate), 0, true];
 
         // Change ace characteristics of crate
         [_crate, 1] call ace_cargo_fnc_setSize;
