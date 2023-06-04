@@ -127,7 +127,7 @@ switch (_crateType) do {
 		_crate addItemCargoGlobal ["kat_lidocaine",(_quaScale * 16)];
 
 		// Surgical Kits
-		_crate addItemCargoGlobal ["ACE_surgicalKit",(_quaScale * 16)];
+		_crate addItemCargoGlobal ["ACE_surgicalKit",(_quaScale * 2)];
 
 		// Body Bags
 		_crate addItemCargoGlobal ["ACE_bodyBag", (_quaScale * 20)];
