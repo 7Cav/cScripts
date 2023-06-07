@@ -20,7 +20,7 @@ params [
 private _return = true;
 
 if EGVAR(patches,usesACE) then {
-    if (_item in ["ACE_rope12", "ACE_rope15", "ACE_rope18", "ACE_rope27", "ACE_rope36"]) then {
+    if (_item isKindOf "ACE_ropeBase") then {
         _return = if (!isNil {ace_fastroping_requireRopeItems}) then {ace_fastroping_requireRopeItems} else {false};
     };
     if EGVAR(patches,usesACEX) then {
