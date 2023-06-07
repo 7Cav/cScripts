@@ -20,6 +20,9 @@ params [
 private _return = true;
 
 if EGVAR(patches,usesACE) then {
+    if (_item isKindOf "ACE_EarPlugs") then {
+        _return = if (!isNil {ace_hearing_disableEarRinging}) then {ace_hearing_disableEarRinging} else {false};
+    };
     if (_item isKindOf "ACE_ropeBase") then {
         _return = if (!isNil {ace_fastroping_requireRopeItems}) then {ace_fastroping_requireRopeItems} else {false};
     };
