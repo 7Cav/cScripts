@@ -18,7 +18,7 @@ class Cav_B_C_PlatoonLeader_F : Cav_B_C_Officer_F {
 class Cav_B_C_Drone_Operator_F_Local : Cav_B_C_Officer_F {
     displayName = "Platoon Drone Operator";
     scope = 2;
-    loadout = [[["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["kat_Painkiller",2,10],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_splint",2],["ACE_EarPlugs",1]]],["USP_CRYE_JPC_TLB",[["USP_PVS15",1],["ACE_EntrenchingTool",1],["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1],["SmokeShellBlue",2,1],["SmokeShellPurple",1,1]]],["B_rhsusf_B_BACKPACK",[]],"USP_OPSCORE_FASTMTC_CGSW","USP_MFRAME_TAN",[],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
+    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["kat_Painkiller",2,10],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_splint",2],["ACE_EarPlugs",1]]],["USP_CRYE_JPC_TLB",[["USP_PVS15",1],["ACE_EntrenchingTool",1],["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1],["SmokeShellBlue",2,1],["SmokeShellPurple",1,1]]],["B_rhsusf_B_BACKPACK",[]],"USP_OPSCORE_FASTMTC_CGSW","USP_MFRAME_TAN",[],["ItemMap","ItemAndroid","ItemRadioAcreFlagged","ItemCompass","ACE_Altimeter",""]];
 };
 class Cav_B_C_PlatoonMedic_F : Cav_B_Charlie_base_F {
     displayName = "$STR_Cav_Charlie_Characters_C_PlatoonMedic";
