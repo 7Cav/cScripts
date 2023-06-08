@@ -16,8 +16,7 @@
 
 params [
     ["_crate", objNull, [objNull]],
-    ["_isFacility", true],
-    ["_quaScale", 1]
+    ["_isFacility", true]
 ];
 
 #ifdef DEBUG_MODE
@@ -33,7 +32,7 @@ if (_isFacility) then {
 
 // If isServer add medical equipment
 if (isServer) then {
-    [_crate,_quaScale,"atlas"] call FUNC(doMedicalCrate);
+    [_crate,"atlas"] call FUNC(doMedicalCrate);
 };
 
 // Change ace logistics size of crate
