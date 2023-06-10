@@ -26,5 +26,6 @@ params [
     ["_action", "Teleport"],
     ["_dest", nil, [objNull, grpNull, "", locationNull, taskNull, []]]
 ];
-format["Function 'cScripts_fnc_teleport' on %1 is depricated (cScripts_fnc_teleport => cav_mission_fnc_teleport)...", _object], true, "DEPRICATED"] call FUNC(warning);
+
+[format["Function 'cScripts_fnc_teleport' on %1 is depricated (cScripts_fnc_teleport => cav_mission_fnc_teleport)...", _object], true, "DEPRICATED"] call FUNC(warning);
 [_object, _action, _dest] call cav_mission_fnc_teleport;
