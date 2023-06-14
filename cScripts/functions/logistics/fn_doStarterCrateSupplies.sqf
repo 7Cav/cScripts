@@ -54,9 +54,11 @@ if !(_companySelector == 'NONE') then {
     // TEMP REMOVED THIS RELEASE
 
     // // Radios
-    // _crate addItemCargoGlobal ["ACRE_PRC152",10];
-    // _crate addItemCargoGlobal ["ACRE_PRC117F",10];
-    // _crate addItemCargoGlobal ["ACRE_PRC343",20];
+    // if (EGVAR(Settings,enableACRE)) then {
+    //      _crate addItemCargoGlobal ["ACRE_PRC152",10];
+    //      _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+    //      _crate addItemCargoGlobal ["ACRE_PRC343",20];
+    // };
 
     // // Magazines
     // _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag",250];
@@ -142,10 +144,12 @@ if (_companySelector in _alpha or _alwaysAvalible) then {
     // Old Container
     if (_companySelector in ['ALPHA', 'BUFFALO', 'TITAN', 'RAIDER', 'SPARROW' ] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
-        //_crate addItemCargoGlobal ["ACRE_PRC152",50];
-        //_crate addItemCargoGlobal ["ACRE_PRC117F",10];
-        //_crate addItemCargoGlobal ["ACRE_PRC343",12];
-
+        if (EGVAR(Settings,enableACRE)) then {
+            _crate addItemCargoGlobal ["ACRE_PRC152",50];
+            _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+            _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        };
+        
         //================== WEAPONS ==================\\
         _crate addWeaponCargoGlobal ["rhs_weap_m4a1_m320",2];
         _crate addWeaponCargoGlobal ["rhs_weap_m249_pip_L",2];
@@ -233,7 +237,12 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     // Container Viking
     if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
-
+        if (EGVAR(Settings,enableACRE)) then {
+            _crate addItemCargoGlobal ["ACRE_PRC152",50];
+            _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+            _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        };
+        
         //================== LAUNCHERS ==================\\
 
         _crate addWeaponCargoGlobal ["rhs_weap_M136_hedp",1];
@@ -321,11 +330,12 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     // Container ATLAS
     if (_companySelector in ['BRAVO', 'ATLAS'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
-
-        _crate addItemCargoGlobal ["ACRE_PRC152",10];
-        _crate addItemCargoGlobal ["ACRE_PRC117F",5];
-        _crate addItemCargoGlobal ["ACRE_PRC343",12];
-
+        if (EGVAR(Settings,enableACRE)) then {
+            _crate addItemCargoGlobal ["ACRE_PRC152",50];
+            _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+            _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        };
+        
         //================== ITEMS ==================\\
         
         _crate addItemCargoGlobal ["ACE_wirecutter",10];
@@ -344,6 +354,13 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
 if (_companySelector in _charlie or _alwaysAvalible) then {
     // Loadouts Bandit & Misfit
     if (_companySelector in ['CHARLIE', 'BANDIT', 'MISFIT'] or _alwaysAvalible) then {
+    };
+    
+
+    //================== RADIOS ==================\\
+    if (EGVAR(Settings,enableACRE)) then {
+        _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        _crate addItemCargoGlobal ["ACRE_PRC152",10];
     };
 
     //==================    WEAPONS    ==================\\
@@ -396,10 +413,6 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
         _crate addMagazineCargoGlobal ["ACE_Chemlight_IR",25];
         _crate addMagazineCargoGlobal ["ACE_M84",50];
 
-
-    //==================    RADIOS    ==================\\
-        //_crate addItemCargoGlobal ["ACRE_PRC343",10];
-        //_crate addItemCargoGlobal ["ACRE_PRC152",10];
 
    //==================    ITEMS    ==================\\
         _crate addItemCargoGlobal ["ACE_Clacker",10];
