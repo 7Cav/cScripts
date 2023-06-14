@@ -28,6 +28,6 @@ private _company = [_company] call CBA_fnc_capitalize;
 
 _name = format["[7CAV] %1 %2 (Default)", _company, _name];
 private _loadout = parseSimpleArray getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "loadout");
-if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
+if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
 
 [_name, _loadout, false] call ace_arsenal_fnc_addDefaultLoadout;
