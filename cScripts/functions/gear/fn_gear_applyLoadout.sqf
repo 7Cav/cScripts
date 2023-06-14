@@ -62,7 +62,7 @@ switch (true) do {
         private _classname = configName _config;
         if (_loadout != "") then {
             _loadout = parseSimpleArray _loadout;
-            if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
+            if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
             [_unit, _loadout] call CBA_fnc_setLoadout;
             #ifdef DEBUG_MODE
                 [format["Loadout %1 applied to %2", _classname, _unit], "Gear"] call FUNC(info);
