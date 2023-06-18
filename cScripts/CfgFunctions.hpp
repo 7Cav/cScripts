@@ -172,6 +172,7 @@ class cScripts {
         class zenModule_CreateSupplyCrate {};
 
         class zenModule_RegearTrooper {};
+        class zenModule_RekitVehicle {};
         class zenModule_ResetPlayerRadio {};
 
         class zenModule_stagingZones {};

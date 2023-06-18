@@ -39,6 +39,14 @@ if !(EGVAR(Settings,enable7cavZeusModules)) exitWith {};
     "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
+["7Cav Logistics", "Rekit Vehicle",
+    {
+        params ["_modulePos", "_objectPos"];
+        [_modulePos, _objectPos] call EFUNC(zenModule,RekitVehicle);    
+    },
+    "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
+] call zen_custom_modules_fnc_register;
+
 // Check if increase training on location is true then add option.
 if (ace_medical_treatment_locationsBoostTraining) then {
     ["7Cav Logistics", "Field Hospital",
