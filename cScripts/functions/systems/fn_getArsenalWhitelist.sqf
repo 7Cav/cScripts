@@ -306,9 +306,7 @@ private _commonGear = [
     "G_Spectacles_Tinted",
 
     // Headgear
-    "DAR_Beret_Mar",
     "rhsusf_patrolcap_ocp",
-    "USP_BOONIE_HAT_MC",
     "rhsusf_ach_helmet_camo_ocp",
     "H_HelmetHBK_ocp_headset_F",
     "H_HelmetB_camo",
@@ -431,6 +429,7 @@ private _commonGear = [
     "rhsusf_acc_anpeq15_bk_light",
     "rhsusf_acc_m952v",
     "acc_flashlight",
+    "rhsusf_acc_sf3p556",
     "rhsusf_acc_eotech",
     "rhsusf_acc_g33_t1",
     "rhsusf_acc_g33_xps3",
@@ -452,6 +451,17 @@ private _commonGear = [
     "rhsusf_acc_acog_rmr",
     "rhsusf_acc_acog_d",
     "rhsusf_acc_acog_wd",
+    "rhsusf_acc_grip2",
+    "rhsusf_acc_grip2_tan",
+    "rhsusf_acc_grip2_wd",
+    "rhsusf_acc_grip1",
+    "rhsusf_acc_kac_grip",
+    "rhsusf_acc_rvg_blk",
+    "rhsusf_acc_rvg_de",
+    "rhsusf_acc_tdstubby_blk",
+    "rhsusf_acc_tdstubby_tan",
+    "rhsusf_acc_grip3",
+    "rhsusf_acc_grip3_tan",
     "rhsusf_acc_eotech_xps3"
     
 ];
@@ -483,6 +493,7 @@ private _companyItems = switch (_company) do {
     case "charlie": {[
         
         //Helmets
+        "DAR_Beret_Mar",
         "USP_OPSCORE_FASTMTC_CGW",
         "USP_OPSCORE_FASTMTC_CMW",
         "USP_OPSCORE_FASTMTC_CMGSW",
@@ -561,9 +572,6 @@ private _companyItems = switch (_company) do {
         "UK3CB_BAF_H_Mk7_Scrim_A",
         "UK3CB_BAF_H_Mk7_Scrim_B",
         "UK3CB_BAF_H_Mk7_Scrim_C",
-        "rhsusf_ach_helmet_camo_ocp",
-        "H_HelmetHBK_ocp_headset_F",
-        "H_HelmetB_camo",
         "USP_OPS_FASTXP_TAN_MC_02",
         "USP_OPS_FASTXP_TAN_MC_03",
         "USP_OPS_FASTXP_TAN_MC_04",
@@ -579,7 +587,6 @@ private _companyItems = switch (_company) do {
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
         "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
         "rhs_mag_30Rnd_556x45_Mk262_PMAG",
-        "rhsusf_mag_17Rnd_9x19_FMJ",
         "rhsusf_200Rnd_556x45_mixed_soft_pouch",
         "rhsusf_100Rnd_762x51_m62_tracer",
         "rhs_mag_M397_HET",
