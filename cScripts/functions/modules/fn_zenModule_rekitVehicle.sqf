@@ -15,6 +15,8 @@
 
  params ["_modulePos", "_objectPos"];
 
+
+
 [
     "7th Cavalry Rekit Vehicle", 
     [
@@ -23,25 +25,33 @@
     {
         params ["_arg", "_pos"];
         _arg params ["_medVehicle"];
-        _pos params ["_modulePos", "_objectPos"];
-		
-		private _vehicle = _objectPos;
+        _pos params ["_objectPos"];
 
-		if (_medVehicle) then {
-			_vehicle setVariable [QEGVAR(Vehicle,Type), "MED", true];
-		} else {
-			_vehicle setVariable [QEGVAR(Vehicle,Type), nil, true];
-		};
+        if (_medVehicle) then {
+            _objectPos setVariable [QEGVAR(Vehicle,Type), "MED", true];
+        } else {
+            _objectPos setVariable [QEGVAR(Vehicle,Type), nil, true];
+        };
 
-		_vehicle setVariable [QEGVAR(Vehicle,Inventory), nil, true];
+        _objectPos setVariable [QEGVAR(Vehicle,Inventory), nil, true];
 
-		_vehicle call EFUNC(vehicle,addFunctions);
-        _vehicle call EFUNC(vehicle,addInventory);
-        _vehicle call EFUNC(vehicle,addPylonLoadout);
-        _vehicle call EFUNC(vehicle,addCosmetics);
-        _vehicle call EFUNC(vehicle,addStagingActions);
-        _vehicle call EFUNC(vehicle,addRadio);
+        
+        private _cargoArray = _objectPos getVariable "ace_cargo_loaded";
+
+        {   
+            [_x, _objectPos] call ace_cargo_fnc_removeCargoItem;
+            
+        } forEach _cargoArray;
+
+        _objectPos call EFUNC(vehicle,addFunctions);
+        _objectPos call EFUNC(vehicle,addInventory);
+        _objectPos call EFUNC(vehicle,addPylonLoadout);
+        _objectPos call EFUNC(vehicle,addCosmetics);
+        _objectPos call EFUNC(vehicle,addStagingActions);
+        _objectPos call EFUNC(vehicle,addRadio);
+        
     },
     {},
-    [_modulePos]
+    [_objectPos]
 ] call zen_dialog_fnc_create;
+
