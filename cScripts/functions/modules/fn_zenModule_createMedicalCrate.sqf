@@ -49,14 +49,14 @@ private _displayTextList =
         [_crate, _crateType] remoteExec [QFUNC(doMedicalCrate), 0, true];
 
         // Change ace characteristics of crate
-        /*
+        
         [_crate, 1] call ace_cargo_fnc_setSize;
         [_crate, true] call ace_dragging_fnc_setDraggable;
         [_crate, true] call ace_dragging_fnc_setCarryable;
-        */
+        
 
         // Use existing function to set ACE3 characteristics.
-        [_crate, -1, 1] remoteExec [QEFUNC(setCargoAttributes), 0, true];
+        //[_crate, -1, 1] remoteExec [QEFUNC(setCargoAttributes), 0, true];
         // Add object to Zeus
         [{
             _this call ace_zeus_fnc_addObjectToCurator;
