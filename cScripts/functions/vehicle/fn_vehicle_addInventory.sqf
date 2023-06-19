@@ -96,6 +96,9 @@ private _medCrateContents = [
     // Body Bags
     ["ACE_bodyBag", 10],
 
+    // E-Tools
+    ["ACE_EntrenchingTool", 4]
+
     // Signalling equipment
     ["SmokeShell",16],
     ["SmokeShellBlue",8],
