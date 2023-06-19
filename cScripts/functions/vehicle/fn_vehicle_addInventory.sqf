@@ -32,6 +32,80 @@ _vehicle setVariable [QEGVAR(Vehicle,Inventory), true];
 
 if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
+
+private _medCrateContents = [
+    // AEDs
+    ["kat_AED",2],
+    ["kat_X_AED",2],
+
+    // Bandages
+    ["ACE_elasticBandage",160],
+    ["ACE_packingBandage",90],
+    ["ACE_quikclot",200],
+
+    // Tourniquets
+    ["ACE_tourniquet",20],
+
+    // Fluids
+    ["ACE_plasmaIV",30],
+    ["ACE_plasmaIV_500",30],
+    ["ACE_salineIV_250",20],
+
+    // IV & IO Catheters
+    ["kat_IO_FAST",20],
+    ["kat_IV_16",40],
+
+    // Blood Pressure Medication
+    ["kat_nitroglycerin",40],
+    ["kat_phenylephrine",40],
+    ["kat_norepinephrine",40],
+
+    // Hemorrhage Control Medication
+    ["kat_EACA",40],
+    ["kat_TXA",40],
+
+    // Oral Medication
+    ["kat_carbonate",20],
+    ["kat_Painkiller",40],
+
+    // Autoinjector & Nasal Spray Medication
+    ["kat_naloxone",20],
+    ["ACE_morphine",20],
+    ["ACE_epinephrine",40],
+    ["ACE_phenylephrine_inject",40],
+
+    // Splints
+    ["ACE_splint",40],
+
+    // Surgical Equipment
+    ["kat_scalpel",30],
+    ["kat_plate",10],
+    ["kat_clamp",4],
+    ["kat_retractor",4],
+    ["kat_vacuum",2],
+
+    // Surgical Medication
+    ["kat_lidocaine",20],
+    ["kat_lorazepam",10],
+    ["kat_etomidate",20],
+    ["kat_flumazenil",10],
+
+    // Surgical Kits
+    ["ACE_surgicalKit",8],
+
+    // Body Bags
+    ["ACE_bodyBag", 10],
+
+    // Signalling equipment
+    ["SmokeShell",16],
+    ["SmokeShellBlue",8],
+    ["SmokeShellGreen",8],
+    ["SmokeShellPurple",8]
+];
+
+
+
+
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     
     // Cargo
@@ -65,75 +139,7 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 ["B_Carryall_mcamo", 4]
             ]] call FUNC(addCargo);
 
-            ["ace_medicalSupplyCrate", [
-                // AEDs
-                ["kat_AED",2],
-                ["kat_X_AED",2],
-
-                // Bandages
-                ["ACE_elasticBandage",160],
-                ["ACE_packingBandage",90],
-                ["ACE_quikclot",200],
-
-                // Tourniquets
-                ["ACE_tourniquet",20],
-
-                // Fluids
-                ["ACE_plasmaIV",30],
-                ["ACE_plasmaIV_500",30],
-                ["ACE_salineIV_250",20],
-
-                // IV & IO Catheters
-                ["kat_IO_FAST",20],
-                ["kat_IV_16",40],
-
-                // Blood Pressure Medication
-                ["kat_nitroglycerin",40],
-                ["kat_phenylephrine",40],
-                ["kat_norepinephrine",40],
-
-                // Hemorrhage Control Medication
-                ["kat_EACA",40],
-                ["kat_TXA",40],
-
-                // Oral Medication
-                [kat_carbonate",20],
-                ["kat_Painkiller",40],
-
-                // Autoinjector & Nasal Spray Medication
-                ["kat_naloxone",20],
-                ["ACE_morphine",20],
-                ["ACE_epinephrine",40],
-                ["ACE_phenylephrine_inject",40],
-
-                // Splints
-                ["ACE_splint",40],
-
-                // Surgical Equipment
-                ["kat_scalpel",30],
-                ["kat_plate",10],
-                ["kat_clamp",4],
-                ["kat_retractor",4],
-                ["kat_vacuum",2],
-
-                // Surgical Medication
-                ["kat_lidocaine",20],
-                ["kat_lorazepam",10],
-                ["kat_etomidate",20],
-                ["kat_flumazenil",10],
-
-                // Surgical Kits
-                ["ACE_surgicalKit",8],
-
-                // Body Bags
-                ["ACE_bodyBag", 10],
-
-                // Signalling equipment
-                ["SmokeShell",16],
-                ["SmokeShellBlue",8],
-                ["SmokeShellGreen",8],
-                ["SmokeShellPurple",8]
-            ], _vehicle] call FUNC(createCargoCrate);
+            ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, [
@@ -219,75 +225,7 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
                 ["B_Carryall_mcamo", 4]
             ]] call FUNC(addCargo);
 
-            ["ace_medicalSupplyCrate", [
-                // AEDs
-                ["kat_AED",2],
-                ["kat_X_AED",2],
-
-                // Bandages
-                ["ACE_elasticBandage",160],
-                ["ACE_packingBandage",90],
-                ["ACE_quikclot",200],
-
-                // Tourniquets
-                ["ACE_tourniquet",20],
-
-                // Fluids
-                ["ACE_plasmaIV",30],
-                ["ACE_plasmaIV_500",30],
-                ["ACE_salineIV_250",20],
-
-                // IV & IO Catheters
-                ["kat_IO_FAST",20],
-                ["kat_IV_16",40],
-
-                // Blood Pressure Medication
-                ["kat_nitroglycerin",40],
-                ["kat_phenylephrine",40],
-                ["kat_norepinephrine",40],
-
-                // Hemorrhage Control Medication
-                ["kat_EACA",40],
-                ["kat_TXA",40],
-
-                // Oral Medication
-                [kat_carbonate",20],
-                ["kat_Painkiller",40],
-
-                // Autoinjector & Nasal Spray Medication
-                ["kat_naloxone",20],
-                ["ACE_morphine",20],
-                ["ACE_epinephrine",40],
-                ["ACE_phenylephrine_inject",40],
-
-                // Splints
-                ["ACE_splint",40],
-
-                // Surgical Equipment
-                ["kat_scalpel",30],
-                ["kat_plate",10],
-                ["kat_clamp",4],
-                ["kat_retractor",4],
-                ["kat_vacuum",2],
-
-                // Surgical Medication
-                ["kat_lidocaine",20],
-                ["kat_lorazepam",10],
-                ["kat_etomidate",20],
-                ["kat_flumazenil",10],
-
-                // Surgical Kits
-                ["ACE_surgicalKit",8],
-
-                // Body Bags
-                ["ACE_bodyBag", 10],
-
-                // Signalling equipment
-                ["SmokeShell",16],
-                ["SmokeShellBlue",8],
-                ["SmokeShellGreen",8],
-                ["SmokeShellPurple",8]
-            ], _vehicle] call FUNC(createCargoCrate);
+            ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, []] call FUNC(addCargo);
@@ -313,75 +251,7 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
                 ["B_Carryall_mcamo", 4]
             ]] call FUNC(addCargo);
 
-            ["ace_medicalSupplyCrate", [
-                // AEDs
-                ["kat_AED",2],
-                ["kat_X_AED",2],
-
-                // Bandages
-                ["ACE_elasticBandage",160],
-                ["ACE_packingBandage",90],
-                ["ACE_quikclot",200],
-
-                // Tourniquets
-                ["ACE_tourniquet",20],
-
-                // Fluids
-                ["ACE_plasmaIV",30],
-                ["ACE_plasmaIV_500",30],
-                ["ACE_salineIV_250",20],
-
-                // IV & IO Catheters
-                ["kat_IO_FAST",20],
-                ["kat_IV_16",40],
-
-                // Blood Pressure Medication
-                ["kat_nitroglycerin",40],
-                ["kat_phenylephrine",40],
-                ["kat_norepinephrine",40],
-
-                // Hemorrhage Control Medication
-                ["kat_EACA",40],
-                ["kat_TXA",40],
-
-                // Oral Medication
-                [kat_carbonate",20],
-                ["kat_Painkiller",40],
-
-                // Autoinjector & Nasal Spray Medication
-                ["kat_naloxone",20],
-                ["ACE_morphine",20],
-                ["ACE_epinephrine",40],
-                ["ACE_phenylephrine_inject",40],
-
-                // Splints
-                ["ACE_splint",40],
-
-                // Surgical Equipment
-                ["kat_scalpel",30],
-                ["kat_plate",10],
-                ["kat_clamp",4],
-                ["kat_retractor",4],
-                ["kat_vacuum",2],
-
-                // Surgical Medication
-                ["kat_lidocaine",20],
-                ["kat_lorazepam",10],
-                ["kat_etomidate",20],
-                ["kat_flumazenil",10],
-
-                // Surgical Kits
-                ["ACE_surgicalKit",4],
-
-                // Body Bags
-                ["ACE_bodyBag", 10],
-
-                // Signalling equipment
-                ["SmokeShell",16],
-                ["SmokeShellBlue",8],
-                ["SmokeShellGreen",8],
-                ["SmokeShellPurple",8]
-            ], _vehicle] call FUNC(createCargoCrate);
+            ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
         case "rhsusf_stryker_m1126_m2_d";
         case "rhsusf_stryker_m1126_m2_wd": {
@@ -487,7 +357,6 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
             ]] call FUNC(addCargo);
         };
     };
-    
     ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
 };
 
@@ -555,75 +424,7 @@ if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
                 ["B_Carryall_mcamo", 4]
             ]] call FUNC(addCargo);
 
-            ["ace_medicalSupplyCrate", [
-                // AEDs
-                ["kat_AED",2],
-                ["kat_X_AED",2],
-
-                // Bandages
-                ["ACE_elasticBandage",160],
-                ["ACE_packingBandage",90],
-                ["ACE_quikclot",200],
-
-                // Tourniquets
-                ["ACE_tourniquet",20],
-
-                // Fluids
-                ["ACE_plasmaIV",30],
-                ["ACE_plasmaIV_500",30],
-                ["ACE_salineIV_250",20],
-
-                // IV & IO Catheters
-                ["kat_IO_FAST",20],
-                ["kat_IV_16",40],
-
-                // Blood Pressure Medication
-                ["kat_nitroglycerin",40],
-                ["kat_phenylephrine",40],
-                ["kat_norepinephrine",40],
-
-                // Hemorrhage Control Medication
-                ["kat_EACA",40],
-                ["kat_TXA",40],
-
-                // Oral Medication
-                [kat_carbonate",20],
-                ["kat_Painkiller",40],
-
-                // Autoinjector & Nasal Spray Medication
-                ["kat_naloxone",20],
-                ["ACE_morphine",20],
-                ["ACE_epinephrine",40],
-                ["ACE_phenylephrine_inject",40],
-
-                // Splints
-                ["ACE_splint",40],
-
-                // Surgical Equipment
-                ["kat_scalpel",30],
-                ["kat_plate",10],
-                ["kat_clamp",4],
-                ["kat_retractor",4],
-                ["kat_vacuum",2],
-
-                // Surgical Medication
-                ["kat_lidocaine",20],
-                ["kat_lorazepam",10],
-                ["kat_etomidate",20],
-                ["kat_flumazenil",10],
-
-                // Surgical Kits
-                ["ACE_surgicalKit",8],
-
-                // Body Bags
-                ["ACE_bodyBag", 10],
-
-                // Signalling equipment
-                ["SmokeShell",16],
-                ["SmokeShellBlue",8],
-                ["SmokeShellGreen",8],
-                ["SmokeShellPurple",8]
-            ], _vehicle] call FUNC(createCargoCrate);
+            ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, [
