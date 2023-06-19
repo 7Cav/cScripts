@@ -9,132 +9,140 @@
  * 2: Crate Type <STRING>
  *
  * Example:
- * [this,0.5,"atlasTeam"] call cScripts_fnc_doMedicalCrate;
- * [this,1,"infantryPlatoon"] call cScripts_fnc_doMedicalCrate;
+ * ["atlasTeam"] call cScripts_fnc_doMedicalCrate;
+ * ["infantryPlatoon"] call cScripts_fnc_doMedicalCrate;
  */
 
 if (!isServer) exitWith {};
 
-params ["_crate","_crateType"];
-
-// Remove all items from crate
-clearweaponcargoGlobal _crate;
-clearmagazinecargoGlobal _crate;
-clearitemcargoGlobal _crate;
-clearbackpackcargoGlobal _crate;
-
-
+params ["_crateType"];
+private _crateContents = [];
 // Add items to the crate in order of category. Items in crate vary depending on crate type selected.
 switch (_crateType) do {
     case "atlas": {
+        _crateContents = [
+            // AEDs
+            ["kat_AED",1],
+            ["kat_X_AED",1],
 
-        // AEDs
-        _crate addItemCargoGlobal ["kat_AED",2];
-        _crate addItemCargoGlobal ["kat_X_AED",2];
+            // Bandages
+            ["ACE_elasticBandage",150],
+            ["ACE_packingBandage",90],
+            ["ACE_quikclot",150],
 
-        // Bandages
-        _crate addItemCargoGlobal ["ACE_elasticBandage",160];
-        _crate addItemCargoGlobal ["ACE_packingBandage",90];
-        _crate addItemCargoGlobal ["ACE_quikclot",200];
+            // Tourniquets
+            ["ACE_tourniquet",20],
 
-        // Tourniquets
-        _crate addItemCargoGlobal ["ACE_tourniquet",20];
+            // Fluids
+            ["ACE_plasmaIV",30],
+            ["ACE_plasmaIV_500",30],
+            ["ACE_salineIV_250",20],
 
-        // Fluids
-        _crate addItemCargoGlobal ["ACE_plasmaIV",30];
-        _crate addItemCargoGlobal ["ACE_plasmaIV_500",30];
-        _crate addItemCargoGlobal ["ACE_salineIV_250",20];
+            // IV & IO Catheters
+            ["kat_IO_FAST",20],
+            ["kat_IV_16",40],
 
-        // IV & IO Catheters
-        _crate addItemCargoGlobal ["kat_IO_FAST",20];
-        _crate addItemCargoGlobal ["kat_IV_16",40];
+            // Blood Pressure Medication
+            ["kat_nitroglycerin",40],
+            ["kat_phenylephrine",40],
+            ["kat_norepinephrine",40],
 
-        // Blood Pressure Medication
-        _crate addItemCargoGlobal ["kat_nitroglycerin",40];
-        _crate addItemCargoGlobal ["kat_phenylephrine",40];
-        _crate addItemCargoGlobal ["kat_norepinephrine",40];
+            // Hemorrhage Control Medication
+            ["kat_EACA",40],
+            ["kat_TXA",40],
 
-        // Hemorrhage Control Medication
-        _crate addItemCargoGlobal ["kat_EACA",40];
-        _crate addItemCargoGlobal ["kat_TXA",40];
+            // Oral Medication
+            ["kat_carbonate",20],
+            ["kat_Painkiller",40],
 
-        // Oral Medication
-        _crate addMagazineCargoGlobal ["kat_carbonate",20];
-        _crate addMagazineCargoGlobal ["kat_Painkiller",40];
+            // Autoinjector & Nasal Spray Medication
+            ["kat_naloxone",20],
+            ["ACE_morphine",20],
+            ["ACE_epinephrine",40],
+            ["ACE_phenylephrine_inject",40],
 
-        // Autoinjector & Nasal Spray Medication
-        _crate addItemCargoGlobal ["kat_naloxone",20];
-        _crate addItemCargoGlobal ["ACE_morphine",20];
-        _crate addItemCargoGlobal ["ACE_epinephrine",40];
-        _crate addItemCargoGlobal ["ACE_phenylephrine_inject",40];
+            // Splints
+            ["ACE_splint",40],
 
-        // Splints
-        _crate addItemCargoGlobal ["ACE_splint",40];
+            // Surgical Equipment
+            ["kat_scalpel",40],
+            ["kat_plate",10],
+            ["kat_clamp",4],
+            ["kat_retractor",4],
+            ["kat_vacuum",1],
 
-        // Surgical Equipment
-        _crate addItemCargoGlobal ["kat_scalpel",30];
-        _crate addItemCargoGlobal ["kat_plate",10];
-        _crate addItemCargoGlobal ["kat_clamp",4];
-        _crate addItemCargoGlobal ["kat_retractor",4];
-        _crate addItemCargoGlobal ["kat_vacuum",2];
+            // Surgical Medication
+            ["kat_lidocaine",20],
+            ["kat_lorazepam",10],
+            ["kat_etomidate",20],
+            ["kat_flumazenil",10],
 
-        // Surgical Medication
-        _crate addItemCargoGlobal ["kat_lidocaine",20];
-        _crate addItemCargoGlobal ["kat_lorazepam",10];
-        _crate addItemCargoGlobal ["kat_etomidate",20];
-        _crate addItemCargoGlobal ["kat_flumazenil",10];
+            // Surgical Kits
+            ["ACE_surgicalKit",8],
 
-        // Surgical Kits
-        _crate addItemCargoGlobal ["ACE_surgicalKit",8];
+            // Body Bags
+            ["ACE_bodyBag",10],
 
-        // Body Bags
-        _crate addItemCargoGlobal ["ACE_bodyBag", 10];
+            // E-Tools
+            ["ACE_EntrenchingTool",4],
 
-        // Signalling equipment
-        _crate addItemCargoGlobal ["SmokeShell",16];
-        _crate addItemCargoGlobal ["SmokeShellBlue",8];
-        _crate addItemCargoGlobal ["SmokeShellGreen",8];
-        _crate addItemCargoGlobal ["SmokeShellPurple",8];
+            // Signalling equipment //
+
+            // Smokes
+            ["SmokeShell",16],
+            ["SmokeShellBlue",8],
+            ["SmokeShellGreen",8],
+            ["SmokeShellPurple",8],
+
+            // Flags and Paint
+            ["ace_marker_flags_green",4],
+            ["ace_marker_flags_red",4],
+            ["ace_marker_flags_blue",4],
+            ["ACE_SpraypaintBlue",1],
+            ["ACE_SpraypaintRed",1]
+        ];
     };
     case "platoon": {
-        // Bandages
-        _crate addItemCargoGlobal ["ACE_elasticBandage",60];
-        _crate addItemCargoGlobal ["ACE_packingBandage",90];
-        _crate addItemCargoGlobal ["ACE_quikclot",200];
-        
-        // Tourniquets
-        _crate addItemCargoGlobal ["ACE_tourniquet",50];
+        _crateContents = [
+            // Bandages
+            ["ACE_elasticBandage",60],
+            ["ACE_packingBandage",90],
+            ["ACE_quikclot",150],
 
-        // Fluids
-        _crate addItemCargoGlobal ["ACE_plasmaIV",20];
-        _crate addItemCargoGlobal ["ACE_plasmaIV_500",20];
-        
-        // IV & IO Catheters
-        _crate addItemCargoGlobal ["kat_IO_FAST",10];
-        _crate addItemCargoGlobal ["kat_IV_16",20];
-        
-        // Autoinjector Medication
-        _crate addItemCargoGlobal ["kat_naloxone",20];
-        _crate addItemCargoGlobal ["ACE_epinephrine",20];
-        _crate addItemCargoGlobal ["kat_phenylephrine_inject",24];
+            // Tourniquets
+            ["ACE_tourniquet",50],
 
-        // Oral Medication
-        _crate addMagazineCargoGlobal ["kat_Painkiller",60];
+            // Fluids
+            ["ACE_plasmaIV",20],
+            ["ACE_plasmaIV_500",20],
 
-        // Splints
-        _crate addItemCargoGlobal ["ACE_splint",40];
+            // IV & IO Catheters
+            ["kat_IO_FAST",10],
+            ["kat_IV_16",20],
 
-        // Surgical Medication
-        _crate addItemCargoGlobal ["kat_lidocaine",16];
+            // Autoinjector Medication
+            ["kat_naloxone",20],
+            ["ACE_epinephrine",20],
+            ["kat_phenylephrine_inject",24],
 
-        // Surgical Kits
-        _crate addItemCargoGlobal ["ACE_surgicalKit",2];
+            // Oral Medication
+            ["kat_Painkiller",60],
 
-        // Body Bags
-        _crate addItemCargoGlobal ["ACE_bodyBag", 20];
+            // Splints
+            ["ACE_splint",40],
+
+            // Surgical Medication
+            ["kat_lidocaine",16],
+
+            // Surgical Kits
+            ["ACE_surgicalKit",2],
+
+            // Body Bags
+            ["ACE_bodyBag", 20]
+        ];
     };
     // TO-DO: Crate for resupplying surgical equipment only
     default {};
 };
 
-
+_crateContents;

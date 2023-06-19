@@ -48,15 +48,15 @@ if !(EGVAR(Settings,enable7cavZeusModules)) exitWith {};
 // ] call zen_custom_modules_fnc_register;
 
 // Check if increase training on location is true then add option.
-if (ace_medical_treatment_locationsBoostTraining) then {
-    ["7Cav Logistics", "Field Hospital",
-        {
-            params ["_modulePos", "_objectPos"];
-            [_modulePos, _objectPos] call EFUNC(zenModule,CreateFieldHospital);
-        },
-        "\z\ACE\addons\medical_gui\ui\cross.paa"
-    ] call zen_custom_modules_fnc_register;
-};
+// if (ace_medical_treatment_locationsBoostTraining) then {
+//     ["7Cav Logistics", "Field Hospital",
+//         {
+//             params ["_modulePos", "_objectPos"];
+//             [_modulePos, _objectPos] call EFUNC(zenModule,CreateFieldHospital);
+//         },
+//         "\z\ACE\addons\medical_gui\ui\cross.paa"
+//     ] call zen_custom_modules_fnc_register;
+// };
 
 ["7Cav Logistics", "Spawn Re-supply Crate",
     {

@@ -45,22 +45,9 @@ private _displayTextList =
         _arg params ["_crateType"];
         _pos params ["_modulePos"];
         
-        private _crate = "ACE_medicalSupplyCrate" createVehicle _modulePos;
-        [_crate, _crateType] remoteExec [QFUNC(doMedicalCrate), 0, true];
-
-        // Change ace characteristics of crate
-        
-        [_crate, 1] call ace_cargo_fnc_setSize;
-        [_crate, true] call ace_dragging_fnc_setDraggable;
-        [_crate, true] call ace_dragging_fnc_setCarryable;
-        
-
-        // Use existing function to set ACE3 characteristics.
-        //[_crate, -1, 1] remoteExec [QEFUNC(setCargoAttributes), 0, true];
-        // Add object to Zeus
-        [{
-            _this call ace_zeus_fnc_addObjectToCurator;
-        }, _crate] call CBA_fnc_execNextFrame;
+        private _groundLevel = ASLToAGL _modulePos;
+        private _medCrateContents = [_crateType] call FUNC(doMedicalCrate);
+        ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] call FUNC(createCargoCrate);
     },
     {},
     [_modulePos]
