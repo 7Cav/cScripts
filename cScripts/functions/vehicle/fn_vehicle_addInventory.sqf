@@ -139,7 +139,7 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
     switch (_vehicleType) do {
         case "MED": {
             [_vehicle, _medVicInv] call FUNC(addCargo);
-            private _medCrateContents = ["atlas"] call FUNC(doMedicalCrate);
+            private _medCrateContents = ["atlas"] call FUNC(getMedicalCrate);
             ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
         default {
@@ -215,7 +215,7 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
         case "MED": {
             [_vehicle, _medVicInv] call FUNC(addCargo);
 
-            private _medCrateContents = ["atlas"] call FUNC(doMedicalCrate);
+            private _medCrateContents = ["atlas"] call FUNC(getMedicalCrate);
             ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
         default {
@@ -231,7 +231,7 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
         case "MED": {
             [_vehicle, _medVicInv] call FUNC(addCargo);
             
-            private _medCrateContents = ["atlas"] call FUNC(doMedicalCrate);
+            private _medCrateContents = ["atlas"] call FUNC(getMedicalCrate);
             ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
         case "rhsusf_stryker_m1126_m2_d";
@@ -392,7 +392,7 @@ if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
         case "MED": {
             [_vehicle, _medVicInv] call FUNC(addCargo);
 
-            private _medCrateContents = ["atlas"] call FUNC(doMedicalCrate);
+            private _medCrateContents = ["atlas"] call FUNC(getMedicalCrate);
             ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
         default {

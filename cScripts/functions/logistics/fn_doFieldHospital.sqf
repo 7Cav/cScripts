@@ -32,7 +32,8 @@ if (_isFacility) then {
 
 // If isServer add medical equipment
 if (isServer) then {
-    [_crate,"atlas"] call FUNC(doMedicalCrate);
+    private _crateContent = ["atlas"] call FUNC(getMedicalCrate);
+    [_crate, _crateContent] call FUNC(addCargo);
 };
 
 // Change ace logistics size of crate

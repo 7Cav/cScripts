@@ -1,22 +1,23 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A, SPC.Turn.J
- * This function resupply a crate and changes it's texture.
+ * This function return a array of content
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Scale <AMMOUNT>
- * 2: Crate Type <STRING>
+ * 0: Crate type <STRING>
+ *
+ * Return:
+ * ARRAY of items or empty
  *
  * Example:
- * ["atlasTeam"] call cScripts_fnc_doMedicalCrate;
- * ["infantryPlatoon"] call cScripts_fnc_doMedicalCrate;
+ * ["atlas"] call cScripts_fnc_getMedicalCrate;
+ * ["platoon"] call cScripts_fnc_getMedicalCrate;
  */
 
-if (!isServer) exitWith {};
-
 params ["_crateType"];
+
 private _crateContents = [];
+
 // Add items to the crate in order of category. Items in crate vary depending on crate type selected.
 switch (_crateType) do {
     case "atlas": {
@@ -142,7 +143,7 @@ switch (_crateType) do {
         ];
     };
     // TO-DO: Crate for resupplying surgical equipment only
-    default {};
+    default {_crateContents = []};
 };
 
 _crateContents;
