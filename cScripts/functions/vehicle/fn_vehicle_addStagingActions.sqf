@@ -17,6 +17,7 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
+if !(EGVAR(Settings,enableStagingSystem)) exitWith {};
 if (isNull _vehicle) exitWith {};
 private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
 if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle"] call FUNC(error);};

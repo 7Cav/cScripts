@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, SPC.Turn.J
  * This function load all Cav modules. Requires Zen Mod to run propperly. The function will terminate if not.
  *
  * Arguments:
@@ -31,7 +31,7 @@ if !(EGVAR(Settings,enable7cavZeusModules)) exitWith {};
 ] call zen_custom_modules_fnc_register;
 
 
-["7Cav Logistics", "Starter Crate",
+["7Cav Logistics", "Spawn Starter Crate",
     {
         params ["_modulePos", "_objectPos"];
         [_modulePos, _objectPos] call EFUNC(zenModule,CreateStarterCrate);    
@@ -39,18 +39,26 @@ if !(EGVAR(Settings,enable7cavZeusModules)) exitWith {};
     "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-// Check if increase training on location is true then add option.
-if (ace_medical_treatment_locationsBoostTraining) then {
-    ["7Cav Logistics", "Field Hospital",
-        {
-            params ["_modulePos", "_objectPos"];
-            [_modulePos, _objectPos] call EFUNC(zenModule,CreateFieldHospital);
-        },
-        "\z\ACE\addons\medical_gui\ui\cross.paa"
-    ] call zen_custom_modules_fnc_register;
-};
+// ["7Cav Logistics", "Rekit Vehicle",
+//     {
+//         params ["_modulePos", "_objectPos"];
+//         [_modulePos, _objectPos] call EFUNC(zenModule,RekitVehicle);    
+//     },
+//     "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
+// ] call zen_custom_modules_fnc_register;
 
-["7Cav Logistics", "Re-supply Crate",
+// Check if increase training on location is true then add option.
+// if (ace_medical_treatment_locationsBoostTraining) then {
+//     ["7Cav Logistics", "Field Hospital",
+//         {
+//             params ["_modulePos", "_objectPos"];
+//             [_modulePos, _objectPos] call EFUNC(zenModule,CreateFieldHospital);
+//         },
+//         "\z\ACE\addons\medical_gui\ui\cross.paa"
+//     ] call zen_custom_modules_fnc_register;
+// };
+
+["7Cav Logistics", "Spawn Re-supply Crate",
     {
         params ["_modulePos", "_objectPos"];
         [_modulePos, _objectPos] call EFUNC(zenModule,CreateSupplyCrate);
@@ -58,7 +66,15 @@ if (ace_medical_treatment_locationsBoostTraining) then {
     "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-["7Cav Utilities", "Regerar Trooper",
+["7Cav Logistics", "Spawn Medical Crate",
+    {
+        params ["_modulePos", "_objectPos"];
+        [_modulePos, _objectPos] call EFUNC(zenModule,CreateMedicalCrate);
+    },
+    "\z\ACE\addons\medical_gui\ui\cross.paa"
+] call zen_custom_modules_fnc_register;
+
+["7Cav Utilities", "Regear Trooper",
     {
         params ["_modulePos", "_objectPos"];
         [_modulePos, _objectPos] call EFUNC(zenModule,RegearTrooper);
@@ -85,11 +101,18 @@ if (EGVAR(Settings,enableACRE)) then {
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-["7Cav Mission", "Copy attendees to clipboard",
+["7Cav Mission", "Take attendence",
     {
         private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
-        copyToClipboard str _playerLog;
-        ["All attended players have been saved to your clipboard"] call zen_common_fnc_showMessage;
+        ["All attended players have been saved to your RPT log"] call zen_common_fnc_showMessage;
+    },
+    "\a3\modules_f\data\portraitmodule_ca.paa"
+] call zen_custom_modules_fnc_register;
+
+["7Cav Mission", "Staging Zones",
+    {
+        params ["_modulePos", "_objectPos"];
+        [_modulePos, _objectPos] call EFUNC(zenModule,stagingZones);
     },
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;

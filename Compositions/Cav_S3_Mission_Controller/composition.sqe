@@ -1,0 +1,664 @@
+version=54;
+center[]={2661.791,5,3664.2813};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="S3 MIssion Controllers [4.3.39]";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Layer";
+				name="Zeus Gamemaster Setup";
+				class Entities
+				{
+					items=7;
+					class Item0
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={0.18603516,0,2.2197266};
+							angles[]={0,3.1985602,0};
+						};
+						id=5588;
+						type="ModuleCurator_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ModuleCurator_F_Owner";
+								expression="_this setVariable ['Owner',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="S3";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ModuleCurator_F_Forced";
+								expression="_this setVariable ['Forced',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ModuleCurator_F_Name";
+								expression="_this setVariable ['Name',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ModuleCurator_F_Addons";
+								expression="_this setVariable ['Addons',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+					class Item1
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={0.16186523,0,0.27270508};
+							angles[]={0,3.1985602,0};
+						};
+						id=5589;
+						type="ModuleCurator_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ModuleCurator_F_Owner";
+								expression="_this setVariable ['Owner',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="S3_1";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ModuleCurator_F_Forced";
+								expression="_this setVariable ['Forced',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ModuleCurator_F_Name";
+								expression="_this setVariable ['Name',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ModuleCurator_F_Addons";
+								expression="_this setVariable ['Addons',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+					class Item2
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={0.16699219,0,-1.7402344};
+							angles[]={0,3.1985602,0};
+						};
+						id=5590;
+						type="ModuleCurator_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ModuleCurator_F_Owner";
+								expression="_this setVariable ['Owner',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="S3_2";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ModuleCurator_F_Forced";
+								expression="_this setVariable ['Forced',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ModuleCurator_F_Name";
+								expression="_this setVariable ['Name',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ModuleCurator_F_Addons";
+								expression="_this setVariable ['Addons',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+					class Item3
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-1.8168945,0.0014390945,0.23974609};
+									angles[]={0,4.6973796,0};
+								};
+								side="West";
+								flags=4;
+								class Attributes
+								{
+									init="this setGroupid [""ZEUS""];";
+									name="S3_1";
+									description="Mission Controller";
+									isPlayable=1;
+								};
+								id=5597;
+								type="Cav_B_B_Scout_PlatoonLead_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="acex_headless_blacklist";
+										expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male05ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.98000002;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-1.7600098,0.0014390945,-1.7460938};
+									angles[]={0,4.6973796,0};
+								};
+								side="West";
+								flags=4;
+								class Attributes
+								{
+									init="this setGroupid [""ZEUS""];";
+									name="S3_2";
+									description="Mission Controller";
+									isPlayable=1;
+								};
+								id=5598;
+								type="Cav_B_C_PlatoonLeader_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="acex_headless_blacklist";
+										expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male05ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.98000002;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-1.7910156,0.0014390945,2.2687988};
+									angles[]={0,4.6973796,0};
+								};
+								side="West";
+								flags=6;
+								class Attributes
+								{
+									init="this setGroupid [""ZEUS""];";
+									name="S3";
+									description="Mission Controller@MISSION CONTROLLERS";
+									isPlayable=1;
+								};
+								id=5603;
+								type="Cav_B_A_JFO_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="acex_headless_blacklist";
+										expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male05ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.98000002;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=5591;
+					};
+					class Item4
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={3.217041,0,0.28979492};
+						};
+						id=5599;
+						type="acre_api_nameChannels";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="acre_api_nameChannels_Channel_1";
+								expression="_this setVariable ['Channel_1',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="CONVOY";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="acre_api_nameChannels_Channel_2";
+								expression="_this setVariable ['Channel_2',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="AVIATION";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="acre_api_nameChannels_Channel_3";
+								expression="_this setVariable ['Channel_3',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="PLTNET";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="acre_api_nameChannels_Channel_4";
+								expression="_this setVariable ['Channel_4',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="PLTNET 2";
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="acre_api_nameChannels_Channel_5";
+								expression="_this setVariable ['Channel_5',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="COYNET";
+									};
+								};
+							};
+							class Attribute5
+							{
+								property="acre_api_nameChannels_SideSelect";
+								expression="_this setVariable ['SideSelect',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+							class Attribute6
+							{
+								property="acre_api_nameChannels_Channel_6";
+								expression="_this setVariable ['Channel_6',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="MEDICAL";
+									};
+								};
+							};
+							class Attribute7
+							{
+								property="acre_api_nameChannels_Channel_7";
+								expression="_this setVariable ['Channel_7',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="IDF";
+									};
+								};
+							};
+							class Attribute8
+							{
+								property="acre_api_nameChannels_Channel_8";
+								expression="_this setVariable ['Channel_8',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="CAS";
+									};
+								};
+							};
+							class Attribute9
+							{
+								property="acre_api_nameChannels_Channel_9";
+								expression="_this setVariable ['Channel_9',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="GROUND TO AIR";
+									};
+								};
+							};
+							class Attribute10
+							{
+								property="acre_api_nameChannels_Channel_10";
+								expression="_this setVariable ['Channel_10',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="COMMAND";
+									};
+								};
+							};
+							nAttributes=11;
+						};
+					};
+					class Item5
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={0.11303711,0,-3.5993652};
+							angles[]={0,3.1985602,0};
+						};
+						id=5586;
+						type="ModuleCurator_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ModuleCurator_F_Owner";
+								expression="_this setVariable ['Owner',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="#AdminLogged";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ModuleCurator_F_Forced";
+								expression="_this setVariable ['Forced',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ModuleCurator_F_Name";
+								expression="_this setVariable ['Name',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ModuleCurator_F_Addons";
+								expression="_this setVariable ['Addons',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+					class Item6
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={1.9899902,0,0.30981445};
+						};
+						title="Mission Controllers & Zeus (Tooltip)";
+						description="Do NOT delete things from this composition. All of these tools are vital for missions";
+						id=5583;
+					};
+				};
+				id=5587;
+			};
+		};
+		id=5595;
+	};
+};

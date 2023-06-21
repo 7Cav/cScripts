@@ -1,4 +1,20 @@
-#include "..\script_component.hpp"
+#include "..\script_component.hpp";
+/*
+ * Author: BaerMitUmlaut, CPL.Brostrom.A
+ * This function selects a loadout based on if you have a save variable loadout or config.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * variable, variableName, classname, sideConfig or empty string.
+ *
+ * Example:
+ * player call cScripts_fnc_gear_selectLoadout;
+ *
+ * Public: No
+ */
+
 params ["_unit"];
 
 private _config        = missionConfigFile >> "CfgLoadouts";

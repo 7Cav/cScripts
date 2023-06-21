@@ -56,9 +56,9 @@ if (!isPlayer _object) then {
 // Alpha Company 1st Platoon
 [_object,"Platoon Insignia 1/A/1-7","Alpha_1","z\cav\addons\insignia\data\Alpha_1.paa",_alphaCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia A/1/A/1-7","Alpha_1_A","z\cav\addons\insignia\data\Alpha_1_A.paa",_alphaCategory] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia B/1/A/1-7","Alpha_1_B","z\cav\addons\insignia\data\Alpha_1_B.paa",_alphaCategory] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia B/1/A/1-7","Alpha_1_B","z\cav\addons\insignia\data\Alpha_1_B.paa",_alphaCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia C/1/A/1-7","Alpha_1_C","z\cav\addons\insignia\data\Alpha_1_C.paa",_alphaCategory] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia D/1/A/1-7","Alpha_1_D","z\cav\addons\insignia\data\Alpha_1_D.paa",_alphaCategory] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia D/1/A/1-7","Alpha_1_D","z\cav\addons\insignia\data\Alpha_1_D.paa",_alphaCategory] call FUNC(addInsigniaSelection);
 
 // Alpha Company 2nd Platoon
 [_object,"Platoon Insignia 2/A/1-7","Alpha_2","z\cav\addons\insignia\data\Alpha_2.paa",_alphaCategory] call FUNC(addInsigniaSelection);
@@ -68,11 +68,12 @@ if (!isPlayer _object) then {
 //[_object,"Squad Insignia D/2/A/1-7","Alpha_2_D","z\cav\addons\insignia\data\Alpha_2_D.paa",_alphaCategory] call FUNC(addInsigniaSelection);
 
 
+
 // Bravo Company 1st Platoon
 [_object,"Platoon Insignia 1/B/1-7","Bravo_1","z\cav\addons\insignia\data\Bravo_1.paa",_bravoCategory] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 1/1/B/1-7","Bravo_1_1","z\cav\addons\insignia\data\Bravo_1_1b.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 1/1/B/1-7","Bravo_1_1","z\cav\addons\insignia\data\Bravo_1_1.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 //[_object,"Squad Insignia 2/1/B/1-7","Bravo_1_2","z\cav\addons\insignia\data\Bravo_1_2.paa",_bravoCategory] call FUNC(addInsigniaSelection);
-//[_object,"Squad Insignia 3/1/B/1-7","Bravo_1_3","z\cav\addons\insignia\data\Bravo_1_3.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 3/1/B/1-7","Bravo_1_3","z\cav\addons\insignia\data\Bravo_1_3.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 4/1/B/1-7","Bravo_1_4","z\cav\addons\insignia\data\Bravo_1_4.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 
 // Bravo Company 2nd Platoon
@@ -81,6 +82,16 @@ if (!isPlayer _object) then {
 [_object,"Squad Insignia 2/2/B/1-7","Bravo_2_2","z\cav\addons\insignia\data\Bravo_2_2.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 3/2/B/1-7","Bravo_2_3","z\cav\addons\insignia\data\Bravo_2_3.paa",_bravoCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 4/2/B/1-7","Bravo_2_4","z\cav\addons\insignia\data\Bravo_2_4.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+
+// Bravo Co. 3st platoon
+[_object,"Platoon Insignia 3/B/1-7","Bravo_3","z\cav\addons\insignia\data\Bravo_3.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 1/3/B/1-7","Bravo_3_1","z\cav\addons\insignia\data\Bravo_3_1.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 2/3/B/1-7","Bravo_3_2","z\cav\addons\insignia\data\Bravo_3_2.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 3/3/B/1-7","Bravo_3_3","z\cav\addons\insignia\data\Bravo_3_3.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+//[_object,"Squad Insignia 4/3/B/1-7","Bravo_3_4","z\cav\addons\insignia\data\Bravo_3_4.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+[_object,"Apollo","specialized_apollo","z\cav\addons\insignia\data\specialized_apollo.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+[_object,"Mustang","specialized_mustang","z\cav\addons\insignia\data\specialized_mustang.paa",_bravoCategory] call FUNC(addInsigniaSelection);
+
 
 
 // Charlie Company  1st Platoon
@@ -98,12 +109,17 @@ if (!isPlayer _object) then {
 [_object,"Squad Insignia 4/2/C/1-7","Charlie_2_4","z\cav\addons\insignia\data\Charlie_2_4.paa",_charlieCategory] call FUNC(addInsigniaSelection);
 
 
+
 // Special
+[_object,"Pegasus","specialized_pegasus","z\cav\addons\insignia\data\specialized_pegasus.paa",_specialCategory] call FUNC(addInsigniaSelection);
 [_object,"Airborn","Specialized_Airborne","z\cav\addons\insignia\data\Specialized_Airborne.paa",_specialCategory] call FUNC(addInsigniaSelection);
 [_object,"CLS","Specialized_CLS","z\cav\addons\insignia\data\Specialized_CLS.paa",_specialCategory] call FUNC(addInsigniaSelection);
 [_object,"Ranger","Specialized_Ranger","z\cav\addons\insignia\data\specialized_ranger.paa",_specialCategory] call FUNC(addInsigniaSelection);
-[_object,"Medic","Specialized_Medic0","z\cav\addons\insignia\data\specialized_medic0.paa",_specialCategory] call FUNC(addInsigniaSelection);
+[_object,"Follow me","specialized_followme","z\cav\addons\insignia\data\specialized_followme.paa",_specialCategory] call FUNC(addInsigniaSelection);
+[_object,"Medic (v1)","Specialized_Medic0","z\cav\addons\insignia\data\specialized_medic0.paa",_specialCategory] call FUNC(addInsigniaSelection);
+[_object,"Medic (v2)","Specialized_Medic1","z\cav\addons\insignia\data\Specialized_Medic1.paa",_specialCategory] call FUNC(addInsigniaSelection);
 
+[_object,"S3","specialized_s3","z\cav\addons\insignia\data\specialized_s3.paa",_specialCategory] call FUNC(addInsigniaSelection);
 
 #ifdef DEBUG_MODE
     [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(info);

@@ -1,0 +1,13 @@
+version=54;
+name="S3 MIssion Controllers [DEVBUILD]";
+author="=7CAV=1SG.Geki.T";
+category="Cav_EdSubcat_Deploy_Platoon";
+requiredAddons[]=
+{
+	"A3_Modules_F_Curator_Curator",
+	"cav_troops_bravo_viking",
+	"cav_charlie_characters",
+	"cav_alpha_characters",
+	"acre_api",
+	"Desert"
+};

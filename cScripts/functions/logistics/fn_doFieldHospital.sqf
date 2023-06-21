@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, SPC.Turn.J
  * This scripts crate the 7th cavalry field hostpital.
  * It adds equipment and some optional selections to a given object.
  *
@@ -16,12 +16,11 @@
 
 params [
     ["_crate", objNull, [objNull]],
-    ["_isFacility", true],
-    ["_quaScale", 1]
+    ["_isFacility", true]
 ];
 
 #ifdef DEBUG_MODE
-    [format["Fieald Hostiptal applied to %1.", _crate]] call FUNC(info);
+    [format["Field Hostiptal applied to %1.", _crate]] call FUNC(info);
 #endif
 
 // Make addAction Topic
@@ -33,7 +32,8 @@ if (_isFacility) then {
 
 // If isServer add medical equipment
 if (isServer) then {
-    [_crate,_quaScale] call FUNC(doMedicalCrate);
+    private _crateContent = ["atlas"] call FUNC(getMedicalCrate);
+    [_crate, _crateContent] call FUNC(addCargo);
 };
 
 // Change ace logistics size of crate

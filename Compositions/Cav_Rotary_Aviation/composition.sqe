@@ -1,0 +1,5136 @@
+version=54;
+center[]={2809.2417,4.6875,3608.6357};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="Rotary Aviation [DEVBUILD]";
+		class Entities
+		{
+			items=5;
+			class Item0
+			{
+				dataType="Layer";
+				name="Rotary Transport (MH-60M)";
+				class Entities
+				{
+					items=5;
+					class Item0
+					{
+						dataType="Layer";
+						name="MH-60 Buffalo-1";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=4;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={32.150391,0.31393909,28.721191};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""BUFF-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];}";
+											description="Pilot@BUFFALO-1";
+											isPlayable=1;
+										};
+										id=2998;
+										type="Cav_B_A_Helicopter_Tra_Pilot_B1_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male04ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.02;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={33.150391,0.31393909,28.722168};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=2999;
+										type="Cav_B_A_Helicopter_Tra_coPilot_F";
+									};
+									class Item2
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={32.150391,0.31393909,27.722168};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											rank="SERGEANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];}";
+											description="Crew Chief";
+											isPlayable=1;
+										};
+										id=3000;
+										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+									};
+									class Item3
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={33.150391,0.31393909,27.722168};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.44999999;
+											rank="CORPORAL";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];}";
+											description="Crew";
+											isPlayable=1;
+										};
+										id=3001;
+										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=2997;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="BUFF-1";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={32.758301,1.2049227,31.364258};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3024;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={37.501953,2.3367615,28.152832};
+									angles[]={0,0.0050614546,0};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									textures="mh60m";
+									dynamicSimulation=1;
+									reportOwnPosition=1;
+									pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
+								};
+								id=3029;
+								type="vtx_MH60M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="VehicleCustomization";
+										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+										class Value
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="mh60m";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+															};
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=30;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Cockpitdoors_Hide";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item2
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="RADAR_HIDE";
+																	};
+																};
+																class Item3
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item4
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FLIR_HIDE";
+																	};
+																};
+																class Item5
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item6
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FuelProbe_show";
+																	};
+																};
+																class Item7
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item8
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MAWS_Tubes_Show";
+																	};
+																};
+																class Item9
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item10
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="ERFS_show";
+																	};
+																};
+																class Item11
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item12
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MH60MMisc_show";
+																	};
+																};
+																class Item13
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item14
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Hoist_hide";
+																	};
+																};
+																class Item15
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item16
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Skis_show";
+																	};
+																};
+																class Item17
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item18
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60Flares_show";
+																	};
+																};
+																class Item19
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item20
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GRadar_show";
+																	};
+																};
+																class Item21
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item22
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GFlir_show";
+																	};
+																};
+																class Item23
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item24
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="GunnerSeats_Hide";
+																	};
+																};
+																class Item25
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item26
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_L_hide";
+																	};
+																};
+																class Item27
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item28
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_R_hide";
+																	};
+																};
+																class Item29
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="vtx_attribute_doorNumbers";
+										expression="[_this, _value] call vtx_uh60_misc_fnc_setDoorNumbers;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="01";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="ace_fastroping_equipFRIES";
+										expression="if (_value) then {[_this] call ace_fastroping_fnc_equipFRIES}";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="vtx_attribute_markings";
+										expression="_this setObjectTextureGlobal [19, _value];";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="\z\vtx\addons\uh60_misc\data\markings\markings_venom_ca.paa";
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+						};
+						id=3031;
+					};
+					class Item1
+					{
+						dataType="Layer";
+						name="MH-60 Buffalo-2";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=4;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={13.610352,0.31393909,28.959229};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""BUFF-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
+											description="Pilot@BUFFALO-2";
+											isPlayable=1;
+										};
+										id=3003;
+										type="Cav_B_A_Helicopter_Tra_Pilot_B2_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male03ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.02;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={14.609375,0.31393909,28.959961};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3004;
+										type="Cav_B_A_Helicopter_Tra_coPilot_F";
+									};
+									class Item2
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={13.608887,0.31393909,27.960449};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											rank="SERGEANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
+											description="Crew Chief";
+											isPlayable=1;
+										};
+										id=3005;
+										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male01ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.99000001;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item3
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={14.609375,0.31393909,27.959961};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.44999999;
+											rank="CORPORAL";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
+											description="Crew";
+											isPlayable=1;
+										};
+										id=3006;
+										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3002;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="BUFF-2";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={9.230957,2.3367615,28.587891};
+									angles[]={0,0.0050614546,0};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									textures="mh60m";
+									dynamicSimulation=1;
+									reportOwnPosition=1;
+									pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
+								};
+								id=3028;
+								type="vtx_MH60M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="VehicleCustomization";
+										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+										class Value
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="mh60m";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+															};
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=30;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Cockpitdoors_Hide";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item2
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="RADAR_HIDE";
+																	};
+																};
+																class Item3
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item4
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FLIR_HIDE";
+																	};
+																};
+																class Item5
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item6
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FuelProbe_show";
+																	};
+																};
+																class Item7
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item8
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MAWS_Tubes_Show";
+																	};
+																};
+																class Item9
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item10
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="ERFS_show";
+																	};
+																};
+																class Item11
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item12
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MH60MMisc_show";
+																	};
+																};
+																class Item13
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item14
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Hoist_hide";
+																	};
+																};
+																class Item15
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item16
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Skis_show";
+																	};
+																};
+																class Item17
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item18
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60Flares_show";
+																	};
+																};
+																class Item19
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item20
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GRadar_show";
+																	};
+																};
+																class Item21
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item22
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GFlir_show";
+																	};
+																};
+																class Item23
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item24
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="GunnerSeats_Hide";
+																	};
+																};
+																class Item25
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item26
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_L_hide";
+																	};
+																};
+																class Item27
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item28
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_R_hide";
+																	};
+																};
+																class Item29
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="vtx_attribute_doorNumbers";
+										expression="[_this, _value] call vtx_uh60_misc_fnc_setDoorNumbers;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="02";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="ace_fastroping_equipFRIES";
+										expression="if (_value) then {[_this] call ace_fastroping_fnc_equipFRIES}";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="vtx_attribute_markings";
+										expression="_this setObjectTextureGlobal [19, _value];";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="\z\vtx\addons\uh60_misc\data\markings\markings_thrasher_ca.paa";
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={14.258301,1.2049227,31.364258};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3021;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3037;
+					};
+					class Item2
+					{
+						dataType="Layer";
+						name="MH-60 Buffalo-3";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=4;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={32.299316,0.31393909,6.767334};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""BUFF-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
+											description="Pilot@BUFFALO-3";
+											isPlayable=1;
+										};
+										id=3008;
+										type="Cav_B_A_Helicopter_Tra_Pilot_B3_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male07ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.04;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={33.299561,0.31393909,6.7675781};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3009;
+										type="Cav_B_A_Helicopter_Tra_coPilot_F";
+									};
+									class Item2
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={32.299561,0.31393909,5.7675781};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											rank="SERGEANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
+											description="Crew Chief";
+											isPlayable=1;
+										};
+										id=3010;
+										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+									};
+									class Item3
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={33.299561,0.31393909,5.7675781};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.44999999;
+											rank="CORPORAL";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
+											description="Crew";
+											isPlayable=1;
+										};
+										id=3011;
+										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3007;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="BUFF-3";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={37.271973,2.3367615,6.3908691};
+									angles[]={0,0.0050614546,0};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									textures="mh60m";
+									dynamicSimulation=1;
+									reportOwnPosition=1;
+									pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
+								};
+								id=3030;
+								type="vtx_MH60M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="VehicleCustomization";
+										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+										class Value
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="mh60m";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+															};
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=30;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Cockpitdoors_Hide";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item2
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="RADAR_HIDE";
+																	};
+																};
+																class Item3
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item4
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FLIR_HIDE";
+																	};
+																};
+																class Item5
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item6
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FuelProbe_show";
+																	};
+																};
+																class Item7
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item8
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MAWS_Tubes_Show";
+																	};
+																};
+																class Item9
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item10
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="ERFS_show";
+																	};
+																};
+																class Item11
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item12
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MH60MMisc_show";
+																	};
+																};
+																class Item13
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item14
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Hoist_hide";
+																	};
+																};
+																class Item15
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item16
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Skis_show";
+																	};
+																};
+																class Item17
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item18
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60Flares_show";
+																	};
+																};
+																class Item19
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item20
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GRadar_show";
+																	};
+																};
+																class Item21
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item22
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GFlir_show";
+																	};
+																};
+																class Item23
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item24
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="GunnerSeats_Hide";
+																	};
+																};
+																class Item25
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item26
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_L_hide";
+																	};
+																};
+																class Item27
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item28
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_R_hide";
+																	};
+																};
+																class Item29
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="vtx_attribute_doorNumbers";
+										expression="[_this, _value] call vtx_uh60_misc_fnc_setDoorNumbers;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="03";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="ace_fastroping_equipFRIES";
+										expression="if (_value) then {[_this] call ace_fastroping_fnc_equipFRIES}";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="vtx_attribute_markings";
+										expression="_this setObjectTextureGlobal [19, _value];";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="\z\vtx\addons\uh60_misc\data\markings\markings_gunslinger_ca.paa";
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={32.758301,1.2049227,9.3642578};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3023;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3038;
+					};
+					class Item3
+					{
+						dataType="Layer";
+						name="MH-60 Buffalo-4";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=4;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={14.201904,0.31393909,8.8198242};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+											description="Pilot@BUFFALO-4";
+											isPlayable=1;
+										};
+										id=3013;
+										type="Cav_B_A_Helicopter_Tra_Pilot_B4_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male06ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.99000001;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={15.201904,0.31393909,8.8198242};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3014;
+										type="Cav_B_A_Helicopter_Tra_coPilot_F";
+									};
+									class Item2
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={14.201904,0.31393909,7.8198242};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											rank="SERGEANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+											description="Crew Chief";
+											isPlayable=1;
+										};
+										id=3015;
+										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+									};
+									class Item3
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={15.201904,0.31393909,7.8198242};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.44999999;
+											rank="CORPORAL";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+											description="Crew";
+											isPlayable=1;
+										};
+										id=3016;
+										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3012;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="BUFF-4";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={9.0009766,2.3367615,6.8259277};
+									angles[]={0,0.0050614546,0};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									textures="mh60m";
+									dynamicSimulation=1;
+									reportOwnPosition=1;
+									pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
+								};
+								id=3027;
+								type="vtx_MH60M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="VehicleCustomization";
+										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+										class Value
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="mh60m";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+															};
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=30;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Cockpitdoors_Hide";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item2
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="RADAR_HIDE";
+																	};
+																};
+																class Item3
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item4
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FLIR_HIDE";
+																	};
+																};
+																class Item5
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item6
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FuelProbe_show";
+																	};
+																};
+																class Item7
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item8
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MAWS_Tubes_Show";
+																	};
+																};
+																class Item9
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item10
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="ERFS_show";
+																	};
+																};
+																class Item11
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item12
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MH60MMisc_show";
+																	};
+																};
+																class Item13
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item14
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Hoist_hide";
+																	};
+																};
+																class Item15
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item16
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Skis_show";
+																	};
+																};
+																class Item17
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item18
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60Flares_show";
+																	};
+																};
+																class Item19
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item20
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GRadar_show";
+																	};
+																};
+																class Item21
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item22
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GFlir_show";
+																	};
+																};
+																class Item23
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item24
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="GunnerSeats_Hide";
+																	};
+																};
+																class Item25
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item26
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_L_hide";
+																	};
+																};
+																class Item27
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item28
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_R_hide";
+																	};
+																};
+																class Item29
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="vtx_attribute_doorNumbers";
+										expression="[_this, _value] call vtx_uh60_misc_fnc_setDoorNumbers;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="04";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="ace_fastroping_equipFRIES";
+										expression="if (_value) then {[_this] call ace_fastroping_fnc_equipFRIES}";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="vtx_attribute_markings";
+										expression="_this setObjectTextureGlobal [19, _value];";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="\z\vtx\addons\uh60_misc\data\markings\markings_grimreaper_ca.paa";
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={14.758301,1.2049227,11.364258};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3022;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3034;
+					};
+					class Item4
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={22.750244,0.3125,22.073242};
+						};
+						title="Rotary Transport (Tooltip)";
+						description="These are MH-60Ms, they can lift the entire platoon, but it is going to be tight to have too many additional attachments to the platoon. You may be able to swap for the UH-60M for one more seat per bird, but that's about it. It's also less cool sitting in a seat vs the side of the helicopter... A good rule of thumb is to include some form of Attack Rotary escort with the Serial.";
+						id=3330;
+					};
+				};
+				id=3036;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="Rotary Attack (AH-64D)";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Layer";
+						name="AH-64D Raider-1";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-15.687744,1.2049227,27.755371};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3060;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-11.190918,2.6784716,22.90625};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									dynamicSimulation=1;
+									reportRemoteTargets=1;
+									receiveRemoteTargets=1;
+									reportOwnPosition=1;
+								};
+								id=3053;
+								type="RHS_AH64D_wd";
+							};
+							class Item2
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-16.158447,0.31393909,24.930176};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""RAIDER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""RAIDER-1""];}";
+											description="Pilot@RAIDER-1";
+											isPlayable=1;
+										};
+										id=3042;
+										type="Cav_B_A_Helicopter_Att_Pilot_Raider_1_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male10ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.02;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-15.158447,0.31393909,24.930176};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""RAIDER-1""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3043;
+										type="Cav_B_A_Helicopter_Att_coPilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male07ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3041;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="RAIDER-1";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3063;
+					};
+					class Item1
+					{
+						dataType="Layer";
+						name="AH-64D Raider-2";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-22.883301,1.2049227,28.175049};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3057;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-27.580811,2.6784716,22.575684};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									dynamicSimulation=1;
+									reportRemoteTargets=1;
+									receiveRemoteTargets=1;
+									reportOwnPosition=1;
+								};
+								id=3054;
+								type="RHS_AH64D_wd";
+							};
+							class Item2
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-23.687744,0.31393909,25.30542};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""RAIDER-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""RAIDER-2""];}";
+											description="Pilot@RAIDER-2";
+											isPlayable=1;
+										};
+										id=3045;
+										type="Cav_B_A_Helicopter_Att_Pilot_Raider_2_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male09ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.95999998;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-22.6875,0.31393909,25.304932};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""RAIDER-2""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3046;
+										type="Cav_B_A_Helicopter_Att_coPilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male12ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.04;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3044;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Raider-2";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3064;
+					};
+					class Item2
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={-19.741699,0.3125,26.364258};
+						};
+						title="Rotary Attack (Tooltip)";
+						description="The Apache functions much differently compared to what you may think attack rotary does. This is a glass cannon. It uses ATGMs and it's cannon from stand-off distances to achieve effects. These can also function largely without a JTAC and are much easier for a PLTHQ to call for fire if needed compared to Fixed Wing Attack. The Apaches can also theoretically be Airborne Forward Air Controllers (FAC-A) but it's usually not recommended depending on scale.";
+						id=3332;
+					};
+				};
+				id=3040;
+			};
+			class Item2
+			{
+				dataType="Layer";
+				name="Rotary Hybrid (MH-60 DAP MLASS)";
+				class Entities
+				{
+					items=5;
+					class Item0
+					{
+						dataType="Layer";
+						name="DAP MLASS Bison-1";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={33.258789,0.31393909,-17.928223};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3091;
+										type="Cav_B_A_Helicopter_Tra_coPilot_F";
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={32.258301,0.31393909,-17.928711};
+										};
+										side="West";
+										flags=6;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="this setgroupid [""BISON-1""];";
+											description="DAP Pilot@BISON-1";
+											isPlayable=1;
+										};
+										id=3121;
+										type="Cav_B_A_Helicopter_Tra_Pilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="ace_isEngineer";
+												expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male04ENG";
+													};
+												};
+											};
+											class Attribute2
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.02;
+													};
+												};
+											};
+											nAttributes=3;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3089;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="BISON-1";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={32.866699,1.2049227,-15.286133};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3094;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={37.609863,2.3367615,-18.49707};
+									angles[]={0,0.0050614546,0};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									textures="mh60m";
+									dynamicSimulation=1;
+									reportOwnPosition=1;
+									pylons="VTX_4Rnd_ACE_Hellfire_AGM114K;VTX_M230_Chaingun_R;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;VTX_PylonRack_M261_DAGR;VTX_PylonRack_M261_M229;;";
+								};
+								id=3119;
+								type="vtx_MH60M_DAP_MLASS";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="VehicleCustomization";
+										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+										class Value
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="mh60m";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+															};
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=30;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Cockpitdoors_Hide";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item2
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="RADAR_HIDE";
+																	};
+																};
+																class Item3
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item4
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FLIR_HIDE";
+																	};
+																};
+																class Item5
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item6
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FuelProbe_show";
+																	};
+																};
+																class Item7
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item8
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MAWS_Tubes_Show";
+																	};
+																};
+																class Item9
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item10
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="ERFS_show";
+																	};
+																};
+																class Item11
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item12
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MH60MMisc_show";
+																	};
+																};
+																class Item13
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item14
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Hoist_hide";
+																	};
+																};
+																class Item15
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item16
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Skis_show";
+																	};
+																};
+																class Item17
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item18
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60Flares_show";
+																	};
+																};
+																class Item19
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item20
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GRadar_show";
+																	};
+																};
+																class Item21
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item22
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GFlir_show";
+																	};
+																};
+																class Item23
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item24
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="GunnerSeats_Hide";
+																	};
+																};
+																class Item25
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item26
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_L_hide";
+																	};
+																};
+																class Item27
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item28
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_R_hide";
+																	};
+																};
+																class Item29
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="vtx_attribute_doorNumbers";
+										expression="[_this, _value] call vtx_uh60_misc_fnc_setDoorNumbers;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="01";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="ace_fastroping_equipFRIES";
+										expression="if (_value) then {[_this] call ace_fastroping_fnc_equipFRIES}";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="vtx_attribute_markings";
+										expression="_this setObjectTextureGlobal [19, _value];";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="\z\vtx\addons\uh60_misc\data\markings\markings_venom_ca.paa";
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+						};
+						id=3125;
+					};
+					class Item1
+					{
+						dataType="Layer";
+						name="DAP MLASS Bison-2";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={14.717773,0.31393909,-17.69043};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3098;
+										type="Cav_B_A_Helicopter_Tra_coPilot_F";
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={13.718262,0.31393909,-17.690674};
+										};
+										side="West";
+										flags=6;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="this setgroupid [""BISON-2""];";
+											description="DAP Pilot@BISON-2";
+											isPlayable=1;
+										};
+										id=3122;
+										type="Cav_B_A_Helicopter_Tra_Pilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="ace_isEngineer";
+												expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male03ENG";
+													};
+												};
+											};
+											class Attribute2
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.02;
+													};
+												};
+											};
+											nAttributes=3;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3096;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="BISON-2";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={14.366699,1.2049227,-15.286133};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3102;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={9.3388672,2.3367615,-18.062012};
+									angles[]={0,0.0050614546,0};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									textures="mh60m";
+									dynamicSimulation=1;
+									reportOwnPosition=1;
+									pylons="VTX_4Rnd_ACE_Hellfire_AGM114K;VTX_M230_Chaingun_R;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;VTX_PylonRack_M261_DAGR;VTX_PylonRack_M261_M229;;";
+								};
+								id=3118;
+								type="vtx_MH60M_DAP_MLASS";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="VehicleCustomization";
+										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+										class Value
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=2;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="mh60m";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+															};
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="ARRAY";
+															class value
+															{
+																items=30;
+																class Item0
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Cockpitdoors_Hide";
+																	};
+																};
+																class Item1
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item2
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="RADAR_HIDE";
+																	};
+																};
+																class Item3
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item4
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FLIR_HIDE";
+																	};
+																};
+																class Item5
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item6
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="FuelProbe_show";
+																	};
+																};
+																class Item7
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item8
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MAWS_Tubes_Show";
+																	};
+																};
+																class Item9
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item10
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="ERFS_show";
+																	};
+																};
+																class Item11
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item12
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="MH60MMisc_show";
+																	};
+																};
+																class Item13
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item14
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Hoist_hide";
+																	};
+																};
+																class Item15
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item16
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Skis_show";
+																	};
+																};
+																class Item17
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item18
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60Flares_show";
+																	};
+																};
+																class Item19
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=1;
+																	};
+																};
+																class Item20
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GRadar_show";
+																	};
+																};
+																class Item21
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item22
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="HH60GFlir_show";
+																	};
+																};
+																class Item23
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item24
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="GunnerSeats_Hide";
+																	};
+																};
+																class Item25
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item26
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_L_hide";
+																	};
+																};
+																class Item27
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+																class Item28
+																{
+																	class data
+																	{
+																		singleType="STRING";
+																		value="Minigun_Sight_R_hide";
+																	};
+																};
+																class Item29
+																{
+																	class data
+																	{
+																		singleType="SCALAR";
+																		value=0;
+																	};
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="vtx_attribute_doorNumbers";
+										expression="[_this, _value] call vtx_uh60_misc_fnc_setDoorNumbers;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="02";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="ace_fastroping_equipFRIES";
+										expression="if (_value) then {[_this] call ace_fastroping_fnc_equipFRIES}";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="vtx_attribute_markings";
+										expression="_this setObjectTextureGlobal [19, _value];";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="\z\vtx\addons\uh60_misc\data\markings\markings_thrasher_ca.paa";
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+						};
+						id=3126;
+					};
+					class Item2
+					{
+						dataType="Layer";
+						name="DAP MLASS Bison-3";
+						id=3127;
+					};
+					class Item3
+					{
+						dataType="Layer";
+						name="DAP MLASS Bison-4";
+						id=3128;
+					};
+					class Item4
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={22.758301,0.3125,-24.635742};
+						};
+						title="Rotary Hybrid (Tooltip)";
+						description="While the DAPs can transport infantry, it is NOT their primary purpose. The DAPs provide a great option for escort with MH-60s due to being pretty much the same bird, and you can also flex additional personnel on here if needed. Think about using this if the mission calls for closer support and less armor-focused when comparing to the AH-64. This isn't going to replace CAS, it works great for escort of the birds, but that's it. It's going to struggle to deal with large concentrations of OPFOR.";
+						id=3331;
+					};
+				};
+				id=3066;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="Rotary Light Attack (AH-6)";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Layer";
+						name="AH-6 Sparrow-1";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-12.351807,1.2049227,8.0712891};
+									angles[]={-0,3.1415925,0};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3152;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-12.777832,0.31393909,10.58252};
+											angles[]={0,3.1415927,0};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""RAVEN-1""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3131;
+										type="Cav_B_A_Helicopter_Att_coPilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male08ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.95999998;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-11.777832,0.31393909,10.582275};
+											angles[]={-0,3.1415927,0};
+										};
+										side="West";
+										flags=6;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""SPARROW-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SPARROW-1""];}";
+											description="Pilot@SPARROW-1";
+											isPlayable=1;
+										};
+										id=3155;
+										type="Cav_B_A_Helicopter_Att_Pilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male11ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.04;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3129;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="SPARROW-1";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-12.351807,2.2526751,3.0712891};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									dynamicSimulation=1;
+									reportRemoteTargets=1;
+									receiveRemoteTargets=1;
+									reportOwnPosition=1;
+								};
+								id=3158;
+								type="RHS_MELB_AH6M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="rhs_MELB_TailNumber";
+										expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="NoChange";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ToolKit"",""ItemGPS"",""ItemRadio""],[1,1,1]],[[],[]]],false]";
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						id=3157;
+					};
+					class Item1
+					{
+						dataType="Layer";
+						name="AH-6 Sparrow-2";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-22.851807,1.2049227,8.0712891};
+									angles[]={-0,3.1415925,0};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3149;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-22.851807,2.2526751,3.0712891};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									dynamicSimulation=1;
+									reportRemoteTargets=1;
+									receiveRemoteTargets=1;
+									reportOwnPosition=1;
+								};
+								id=3147;
+								type="RHS_MELB_AH6M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ToolKit"",""ItemGPS"",""ItemRadio""],[1,1,1]],[[],[]]],false]";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="rhs_MELB_TailNumber";
+										expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="NoChange";
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-23.325684,0.31393909,10.731934};
+											angles[]={0,3.1415927,0};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""RAVEN-2""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3134;
+										type="Cav_B_A_Helicopter_Att_coPilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male11ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-22.325928,0.31393909,10.732422};
+											angles[]={-0,3.1415927,0};
+										};
+										side="West";
+										flags=6;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""SPARROW-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SPARROW-2""];}";
+											description="Pilot@SPARROW-2";
+											isPlayable=1;
+										};
+										id=3156;
+										type="Cav_B_A_Helicopter_Att_Pilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male11ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3132;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="SPARROW-2";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3159;
+					};
+					class Item2
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={-17.741699,0.3125,4.3642578};
+						};
+						title="Rotary Light Attack (Tooltip)";
+						description="Not as long distance as the AH-64, the AH-6s function closer in reality to Fixed Wing, they come in low and fast, do a run, and get out. They can conversely be used as observation aircraft due to the FLIR camera as well and can pick off targets, but they will go down quite easily due to being entirely open. It's recommended to avoid using these in operations that have armor heavier than BTRs.";
+						id=3333;
+					};
+				};
+				id=3154;
+			};
+			class Item4
+			{
+				dataType="Layer";
+				name="Rotary Light Transport (MH-6)";
+				class Entities
+				{
+					items=5;
+					class Item0
+					{
+						dataType="Layer";
+						name="MH-6 Raven-1";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-11.741699,1.2049227,-8.1357422};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3183;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-11.741699,2.2526751,-14.635742};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									dynamicSimulation=1;
+									reportRemoteTargets=1;
+									receiveRemoteTargets=1;
+									reportOwnPosition=1;
+								};
+								id=3174;
+								type="RHS_MELB_MH6M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="rhs_MELB_TailNumber";
+										expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="NoChange";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item2
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-12.241699,0.31393909,-10.585693};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""RAVEN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""RAVEN-1""];}";
+											description="Pilot@RAVEN-1";
+											isPlayable=1;
+										};
+										id=3161;
+										type="Cav_B_A_Helicopter_Att_Pilot_Raven_1_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male11ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.04;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-11.241455,0.31393909,-10.585693};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""RAVEN-1""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3162;
+										type="Cav_B_A_Helicopter_Att_coPilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male08ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.95999998;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3160;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="RAVEN-1";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3186;
+					};
+					class Item1
+					{
+						dataType="Layer";
+						name="MH-6 Raven-2";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-22.741699,1.2049227,-8.1357422};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3180;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-22.741699,2.2526751,-14.635742};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									dynamicSimulation=1;
+									reportRemoteTargets=1;
+									receiveRemoteTargets=1;
+									reportOwnPosition=1;
+								};
+								id=3175;
+								type="RHS_MELB_MH6M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="rhs_MELB_TailNumber";
+										expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="NoChange";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item2
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-22.741699,0.31393909,-10.585693};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""RAVEN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""RAVEN-2""];}";
+											description="Pilot@RAVEN-2";
+											isPlayable=1;
+										};
+										id=3164;
+										type="Cav_B_A_Helicopter_Att_Pilot_Raven_2_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male11ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-21.741699,0.31393909,-10.585693};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""RAVEN-2""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3165;
+										type="Cav_B_A_Helicopter_Att_coPilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male11ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3163;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="RAVEN-2";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3187;
+					};
+					class Item2
+					{
+						dataType="Layer";
+						name="MH-6 Raven-3";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-24.241699,0.31393909,-24.585693};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""RAVEN-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""RAVEN-3""];}";
+											description="Pilot@RAVEN-3";
+											isPlayable=1;
+										};
+										id=3167;
+										type="Cav_B_A_Helicopter_Att_Pilot_Raven_3_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male01ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-23.241943,0.31393909,-24.585205};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""RAVEN-3""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3168;
+										type="Cav_B_A_Helicopter_Att_coPilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male05ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3166;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="RAVEN-3";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-23.741699,1.2049227,-22.635742};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3182;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-23.741699,2.2526751,-28.635742};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									dynamicSimulation=1;
+									reportRemoteTargets=1;
+									receiveRemoteTargets=1;
+									reportOwnPosition=1;
+								};
+								id=3173;
+								type="RHS_MELB_MH6M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="rhs_MELB_TailNumber";
+										expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="NoChange";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3284;
+					};
+					class Item3
+					{
+						dataType="Layer";
+						name="MH-6 Raven-4";
+						class Entities
+						{
+							items=3;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-12.403809,0.31393909,-24.902832};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											skill=0.60000002;
+											rank="CAPTAIN";
+											init="call{this setgroupID[""RAVEN-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""RAVEN-4""];}";
+											description="Pilot@RAVEN-4";
+											isPlayable=1;
+										};
+										id=3170;
+										type="Cav_B_A_Helicopter_Att_Pilot_Raven_4_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male01ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={-11.404297,0.31393909,-24.902832};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											skill=0.55000001;
+											rank="LIEUTENANT";
+											init="call{this setVariable [""cScripts_Player_Unit"", ""RAVEN-4""];}";
+											description="Co-Pilot";
+											isPlayable=1;
+										};
+										id=3171;
+										type="Cav_B_A_Helicopter_Att_coPilot_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male11ENG";
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.95999998;
+													};
+												};
+											};
+											nAttributes=2;
+										};
+									};
+								};
+								class Attributes
+								{
+									dynamicSimulation=1;
+								};
+								id=3169;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="groupID";
+										expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="RAVEN-4";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-11.741699,1.2049227,-22.635742};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									description="Starter Crate";
+									dynamicSimulation=1;
+								};
+								id=3181;
+								type="B_supplyCrate_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ammoBox";
+										expression="[_this,_value] call bis_fnc_initAmmoBox;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-11.741699,2.2526751,-29.135742};
+								};
+								side="Empty";
+								flags=4;
+								class Attributes
+								{
+									dynamicSimulation=1;
+									reportRemoteTargets=1;
+									receiveRemoteTargets=1;
+									reportOwnPosition=1;
+								};
+								id=3172;
+								type="RHS_MELB_MH6M";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="rhs_MELB_TailNumber";
+										expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="NoChange";
+											};
+										};
+									};
+									nAttributes=1;
+								};
+							};
+						};
+						id=3285;
+					};
+					class Item4
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={-17.241699,0.3125,-23.135742};
+						};
+						title="Rotary Light Transport (Tooltip)";
+						description="IOT lift an entire platoon (with 2x 4-man Atlas teams), you will need up to 3 lifts. Separate the squads into one fireteam per bird, SL rides with one team, PL member with the other. You may be able to squeeze one Atlas team in the second lift. Best practice would be to use half a platoon (2 squads) with one 4-man medical team and then bring additional assets along for fun and variety.";
+						id=3300;
+					};
+				};
+				id=3185;
+			};
+		};
+		id=3026;
+		atlOffset=-0.3125;
+	};
+};

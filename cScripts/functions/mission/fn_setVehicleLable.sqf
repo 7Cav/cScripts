@@ -94,31 +94,7 @@ private _vehicleTypeMRAP = [
     "rhsusf_M1230_MK19_usarmy_wd",
     "rhsusf_M1230a1_usarmy_wd",
     "rhsusf_M1237_M2_usarmy_wd",
-    "rhsusf_M1237_MK19_usarmy_wd",
-    "Cav_Charlie_M1220_usarmy_d",
-    "Cav_Charlie_M1220_M153_M2_usarmy_d",
-    "Cav_Charlie_M1220_M2_usarmy_d",
-    "Cav_Charlie_M1220_MK19_usarmy_d",
-    "Cav_Charlie_M1230_M2_usarmy_d",
-    "Cav_Charlie_M1230_MK19_usarmy_d",
-    "Cav_Charlie_M1230a1_usarmy_d",
-    "Cav_Charlie_M1232_usarmy_d",
-    "Cav_Charlie_M1232_M2_usarmy_d",
-    "Cav_Charlie_M1232_MK19_usarmy_d",
-    "Cav_Charlie_M1237_M2_usarmy_d",
-    "Cav_Charlie_M1237_MK19_usarmy_d",
-    "Cav_Charlie_M1220_usarmy_wd",
-    "Cav_Charlie_M1220_M153_M2_usarmy_wd",
-    "Cav_Charlie_M1220_M2_usarmy_wd",
-    "Cav_Charlie_M1220_MK19_usarmy_wd",
-    "Cav_Charlie_M1230_M2_usarmy_wd",
-    "Cav_Charlie_M1230_MK19_usarmy_wd",
-    "Cav_Charlie_M1230a1_usarmy_wd",
-    "Cav_Charlie_M1232_usarmy_wd",
-    "Cav_Charlie_M1232_M2_usarmy_wd",
-    "Cav_Charlie_M1232_MK19_usarmy_wd",
-    "Cav_Charlie_M1237_M2_usarmy_wd",
-    "Cav_Charlie_M1237_MK19_usarmy_wd"
+    "rhsusf_M1237_MK19_usarmy_wd"
 ];
 if (typeOf _vehicle in _vehicleTypeMRAP) then {
 

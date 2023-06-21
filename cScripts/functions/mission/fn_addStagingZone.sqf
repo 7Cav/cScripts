@@ -16,7 +16,6 @@
  * [TruckMcTruckFace, 12] call cScripts_fnc_addStagingZone
  * ["respawn_west", 12] call cScripts_fnc_addStagingZone
  */
-#include "..\script_component.hpp";
 
 params [
     ["_zone", objNull, [objNull, ""]],

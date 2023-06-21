@@ -13,13 +13,13 @@ EGVAR(patches,usesACE)          = isClass (configFile >> "CfgPatches" >> "ace_ma
 EGVAR(patches,usesACEArsenal)   = isClass (configFile >> "CfgPatches" >> "ace_arsenal");
 EGVAR(patches,usesACETagging)   = isClass (configFile >> "CfgPatches" >> "ace_tagging");
 EGVAR(patches,usesACEX)         = isClass (configFile >> "CfgPatches" >> "acex_main");
+EGVAR(patches,usesKat)          = isClass (configFile >> "CfgPatches" >> "kat_main");
 EGVAR(patches,usesACRE)         = isClass (configFile >> "CfgPatches" >> "acre_sys_core");
 EGVAR(patches,usesTFAR)         = isClass (configFile >> "CfgPatches" >> "task_force_radio");
 EGVAR(patches,usesAlive)        = isClass (configFile >> "CfgPatches" >> "ALiVE_main");
 EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_main");
 
 // Global Variables
-GVAR(Radio) = false;
 EGVAR(Staging,ZoneStatus) = false;
 EGVAR(Staging,OverrideCompanyVar) = false;
 GVAR(isPlayer) = hasInterface || {isPlayer player};
@@ -139,6 +139,16 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 
 // 4; Staging
+[ // Enable
+    QEGVAR(Settings,enableStagingSystem),
+    "CHECKBOX",
+    ["Enable","Enables the staging system."],
+    [_cScriptSettings, "4; Staging"],
+    true,
+    true,
+    {},
+    false
+] call CBA_fnc_addSetting;
 [ // Show all loadouts
     QEGVAR(Settings,showAllLoadouts),
     "CHECKBOX",
@@ -233,7 +243,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     ["M67 Fragmentation Grenade","Force specific usage of sertain objects"],
     [_cScriptSettings, "6; Item Replacement"],
-    [[0,1,2], ["Disabled", "Use ACE M67", "Use RHS M67"], 2],
+    [[0,1,2], ["Disabled", "Use ACE M67", "Use RHS M67"], 1],
     true,
     {},
     true
@@ -301,6 +311,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+
 
 // 8; Zeus
 [ // Enable Custom Zeus Moduels

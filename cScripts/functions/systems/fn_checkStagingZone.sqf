@@ -14,9 +14,12 @@
  */
 
 false;
+private _stagingZones        = missionNamespace getVariable [QEGVAR(Staging,Zones), []];
+private _stagingZonesEnabled = missionNamespace getVariable [QEGVAR(mission,stagingZonesEnabled), true];
 
-private _stagingZones = missionNamespace getVariable [QEGVAR(Staging,Zones), []];
+if !(_stagingZonesEnabled) exitWith { false };
 if (EGVAR(Staging,ZoneStatus)) exitWith { true };
+
 if (count _stagingZones > 0) then {
     {
         _x params ["_zone", "_maxDistance"];
@@ -34,4 +37,4 @@ if (count _stagingZones > 0) then {
         if (_distance <= _maxDistance) exitWith { true };
         false;
     } forEach _stagingZones;
-};
+} else { false };

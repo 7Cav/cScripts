@@ -1,4 +1,18 @@
-#include "..\script_component.hpp"
+#include "..\script_component.hpp";
+/*
+ * Author: BaerMitUmlaut, CPL.Brostrom.A
+ * This function runs on postInit unsceduled via made sure by postInitProxy
+ *
+ * Arguments:
+ * none
+ *
+ * Return Value:
+ * nothing
+ *
+ * Example:
+ * call cScripts_fnc_gear_postInit
+ *
+ */
 
 if (hasInterface) then {
     ["ace_arsenal_displayClosed", {

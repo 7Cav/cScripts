@@ -20,10 +20,16 @@ if (!isNil{_vehicle getVariable QEGVAR(Vehicle,PylonApplyed)}) exitWith {[format
     [formatText["Applying vehicle functions to %1.", _vehicle]] call FUNC(info);
 #endif
 
+// Default pylon applied
 private _pylon = [];
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     _pylon = ["rhsusf_m1a1tank_base", "default"] call EFUNC(vehicle,getPylon);
+    [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
+};
+
+if (_vehicle iskindOf ""APC_Wheeled_03_base_F"") then {
+    _pylon = ["APC_Wheeled_03_base_F", "default"] call EFUNC(vehicle,getPylon);
     [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
 };
 

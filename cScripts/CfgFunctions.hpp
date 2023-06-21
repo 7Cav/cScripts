@@ -40,13 +40,14 @@ class cScripts {
         class setCargoAttributes {};
         class checkItemValidity {};
         class createCargoCrate {};
+        
+        class getMedicalCrate {};
 
         class doStarterCrate {};
         class doStarterCrateSupplies {};
         class doFieldHospital {};
 
         class doSupplyCrate {};
-        class doMedicalCrate {};
 
         class doEmptyCrate {};
     };
@@ -87,6 +88,7 @@ class cScripts {
 
         class setVehicleLable {};
         
+        class addBaseCrate {};
         class addStagingZone {};
     };
     class systems {
@@ -171,15 +173,12 @@ class cScripts {
         class zenModule_CreateSupplyCrate {};
 
         class zenModule_RegearTrooper {};
+        // class zenModule_RekitVehicle {};
         class zenModule_ResetPlayerRadio {};
 
+        class zenModule_stagingZones {};
+
         class zenModule_CallEndex {};
-    };
-    class helpers {
-        file = "cScripts\functions\helpers";
-        class exportContainerToArsenal {};
-        class exportLoadoutContentToArsenal {};
-        class exportLoadoutToArsenal {};
     };
     class gear {
         file = "cScripts\functions\gear";
@@ -213,8 +212,8 @@ class cScripts {
         class log {};
         class warning {};
     };
-    class depricated {
-        file = "cScripts\functions\depricated";
-        class addAceCategory {}; // depricated => createActionCategory
+    class testing {
+        file = "cScripts\functions\testing";
+        class testing_loadoutArrays {};
     };
 };
