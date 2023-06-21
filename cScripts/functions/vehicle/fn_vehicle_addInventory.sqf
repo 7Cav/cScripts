@@ -32,6 +32,8 @@ _vehicle setVariable [QEGVAR(Vehicle,Inventory), true];
 
 if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
+
+// Inventories
 private _medVicInv = [
     // AEDs
     ["kat_AED",1],
@@ -118,6 +120,7 @@ private _medVicInv = [
 ];
 
 
+// Vehicles
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     
     // Cargo
