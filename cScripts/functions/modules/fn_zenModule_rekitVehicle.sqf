@@ -36,7 +36,7 @@
         _objectPos setVariable [QEGVAR(Vehicle,Inventory), nil, true];
 
         
-        private _cargoArray = _objectPos getVariable "ace_cargo_loaded";
+        private _cargoArray = _objectPos getVariable ["ace_cargo_loaded",[]];
 
         {   
             [_x, _objectPos] call ace_cargo_fnc_removeCargoItem;
