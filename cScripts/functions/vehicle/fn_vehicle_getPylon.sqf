@@ -28,6 +28,101 @@ if (_loadout == "") exitWith {
     [];
 };
 
+
+// rhsusf_m1a1tank_base
+private _rhsusf_m1a1tank_base = createHashMapFromArray [
+    ["hard", [
+        ["rhs_mag_smokegen",[-1],999],
+        ["rhs_mag_M829A3_max",[0],44],
+        ["rhs_mag_M830A1_max",[0],8],
+        ["rhs_mag_762x51_M240_1200",[0],0],
+        ["rhs_mag_762x51_M240_1200",[0],0],
+        ["rhs_mag_762x51_M240_1200",[0],0],
+        ["rhs_mag_762x51_M240_1200",[0],0],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_LaserFCSMag",[0],99],
+        ["rhs_LaserFCSMag",[0],99],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhsusf_mag_L8A3_12",[0,0],12],
+        ["rhs_mag_762x51_M240_200",[0,2]],
+        ["rhs_mag_762x51_M240_200",[0,2]],
+        ["rhs_mag_762x51_M240_200",[0,2]]
+    ]],
+    [ "default", [
+        ["rhs_mag_smokegen",[-1],999],
+        ["rhs_mag_M829A3_max",[0],28],
+        ["rhs_mag_M830A1_max",[0],16],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_LaserFCSMag",[0],99],
+        ["rhs_LaserFCSMag",[0],99],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhsusf_mag_L8A3_12",[0,0],12],
+        ["rhs_mag_762x51_M240_200",[0,2]],
+        ["rhs_mag_762x51_M240_200",[0,2]],
+        ["rhs_mag_762x51_M240_200",[0,2]]
+    ]],
+    ["soft",[
+        ["rhs_mag_smokegen",[-1],999],
+        ["rhs_mag_M829A3_max",[0],4],
+        ["rhs_mag_M1028_max",[0],10],
+        ["rhs_mag_M1069_max",[0],22],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_mag_762x51_M240_1200",[0],1200],
+        ["rhs_LaserFCSMag",[0],99],
+        ["rhs_LaserFCSMag",[0],99],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0,0]],
+        ["rhsusf_mag_L8A3_12",[0,0],12],
+        ["rhs_mag_762x51_M240_200",[0,2]],
+        ["rhs_mag_762x51_M240_200",[0,2]],
+        ["rhs_mag_762x51_M240_200",[0,2]]
+    ]]
+];
+
 // _APC_Wheeled_03_base_F
 private _APC_Wheeled_03_base_F = createHashMapFromArray [
     ["AntiArmor", [
@@ -77,6 +172,7 @@ private _APC_Wheeled_03_base_F = createHashMapFromArray [
 
 // Loadout vehicle list
 private _pylons = createHashMapFromArray [
+    ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base],
     ["APC_Wheeled_03_base_F", _APC_Wheeled_03_base_F]
 ];
 

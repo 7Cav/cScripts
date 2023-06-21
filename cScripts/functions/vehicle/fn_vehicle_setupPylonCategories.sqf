@@ -17,28 +17,31 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-// Setup category
-private _icon      = "cScripts\Data\Icon\icon_01.paa" call FUNC(getIcon);
-//private _squadIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa" call FUNC(getIcon);
-//private _speciIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\lieutenant_gs.paa" call FUNC(getIcon);
-//private _leadIcon  = "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa" call FUNC(getIcon);
-//private _pilotIcon = "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" call FUNC(getIcon);
-//private _iconTank  = "iconTank" call FUNC(getIcon);
-//private _iconIfv   = "iconAPC" call FUNC(getIcon);
-//private _iconCrate = "iconCrateWpns" call FUNC(getIcon);
+// Icons
+//private _icon  = "iconTank" call FUNC(getIcon);
 
 // Loadout action setup
 private _pylonList = [];
 
-if (_vehicle iskindOf ""APC_Wheeled_03_base_F"") then {
+if (_vehicle iskindOf ""rhsusf_m1a1tank_base"") then {
     _pylonList = [
-        // TypeOf, DisplayName, Name, Icon
-        ["APC_Wheeled_03_base_F", "AntiArmor",    "AntiArmor",     ""],
-        ["APC_Wheeled_03_base_F", "AntiAir",    "AnitAir",     ""],
-        ["APC_Wheeled_03_base_F", "Assault",    "Assault",     ""],
-        ["APC_Wheeled_03_base_F", "Default", "default",  ""]
+        // TypeOf,               DisplayName,   Name,           Icon
+        ["rhsusf_m1a1tank_base", "Hard",        "hard",         ""],
+        ["rhsusf_m1a1tank_base", "Soft",        "soft",         ""],
+        ["rhsusf_m1a1tank_base", "Default",     "default",      ""]
     ];
 };
+
+if (_vehicle iskindOf ""APC_Wheeled_03_base_F"") then {
+    _pylonList = [
+        // TypeOf,                DisplayName,  Name,           Icon
+        ["APC_Wheeled_03_base_F", "AntiArmor",  "AntiArmor",    ""],
+        ["APC_Wheeled_03_base_F", "AntiAir",    "AnitAir",      ""],
+        ["APC_Wheeled_03_base_F", "Assault",    "Assault",      ""],
+        ["APC_Wheeled_03_base_F", "Default",    "default",      ""]
+    ];
+};
+
 
 if (count _pylonList == 0) exitWith {false};
 
