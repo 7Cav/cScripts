@@ -1,18 +1,18 @@
 version=54;
-name="BANDIT Platoon Deployment [DEVBUILD]";
-author="=7CAV=1SG.Geki.T";
+name="BANDIT_Platoon_Deployment_[DEVBUILD]";
+author="=7Cav=2LT.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
 	"cav_charlie_characters_units",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
-	"cav_troops_bravo_atlas",
 	"cav_charlie_characters",
 	"cav_troops_charlie_weapons",
-	"Desert",
+	"cav_troops_bravo_atlas",
 	"rhsusf_c_m11xx",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_dragging",
-	"rhsusf_vehicles"
+	"rhsusf_vehicles",
+	"Desert"
 };
