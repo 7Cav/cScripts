@@ -40,13 +40,14 @@ class cScripts {
         class setCargoAttributes {};
         class checkItemValidity {};
         class createCargoCrate {};
+        
+        class getMedicalCrate {};
 
         class doStarterCrate {};
         class doStarterCrateSupplies {};
         class doFieldHospital {};
 
         class doSupplyCrate {};
-        class doMedicalCrate {};
 
         class doEmptyCrate {};
     };
@@ -172,6 +173,7 @@ class cScripts {
         class zenModule_CreateSupplyCrate {};
 
         class zenModule_RegearTrooper {};
+        // class zenModule_RekitVehicle {};
         class zenModule_ResetPlayerRadio {};
 
         class zenModule_stagingZones {};

@@ -13,6 +13,7 @@ EGVAR(patches,usesACE)          = isClass (configFile >> "CfgPatches" >> "ace_ma
 EGVAR(patches,usesACEArsenal)   = isClass (configFile >> "CfgPatches" >> "ace_arsenal");
 EGVAR(patches,usesACETagging)   = isClass (configFile >> "CfgPatches" >> "ace_tagging");
 EGVAR(patches,usesACEX)         = isClass (configFile >> "CfgPatches" >> "acex_main");
+EGVAR(patches,usesKat)          = isClass (configFile >> "CfgPatches" >> "kat_main");
 EGVAR(patches,usesACRE)         = isClass (configFile >> "CfgPatches" >> "acre_sys_core");
 EGVAR(patches,usesTFAR)         = isClass (configFile >> "CfgPatches" >> "task_force_radio");
 EGVAR(patches,usesAlive)        = isClass (configFile >> "CfgPatches" >> "ALiVE_main");
