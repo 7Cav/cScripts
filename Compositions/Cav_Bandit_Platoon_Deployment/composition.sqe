@@ -5770,6 +5770,7 @@ class items
 								flags=4;
 								class Attributes
 								{
+									init="call{this setVariable [""cScripts_Vehicle_Type"", ""MED""];}";
 								};
 								id=4802;
 								type="rhsusf_m998_w_2dr_fulltop";
@@ -5785,6 +5786,7 @@ class items
 								flags=4;
 								class Attributes
 								{
+									init="call{this setVariable [""cScripts_Vehicle_Type"", ""MED""];}";
 								};
 								id=4803;
 								type="rhsusf_m998_w_2dr_fulltop";
