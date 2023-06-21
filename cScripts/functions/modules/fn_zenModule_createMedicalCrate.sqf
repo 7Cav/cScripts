@@ -46,7 +46,7 @@ private _displayTextList =
         _pos params ["_modulePos"];
         
         private _groundLevel = ASLToAGL _modulePos;
-        private _medCrateContents = [_crateType] call FUNC(doMedicalCrate);
+        private _medCrateContents = [_crateType] call FUNC(getMedicalCrate);
         ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] call FUNC(createCargoCrate);
     },
     {},
