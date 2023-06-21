@@ -24,11 +24,11 @@
 params [
     ["_object", objNull, [objNull]],
     ["_lable", "", [""]],
-    ["_loadout", "", [""]]
+    ["_loadout", "", ["", []]]
 ];
 
 if (_lable == "") exitWith {};
-if (_className == "") exitWith {};
+if (_loadout == "") exitWith {};
 
 private _id = _object addAction [format ["<t color='#ffffcc'>%1</t>", _lable], {
     params ["_target", "_caller", "_actionId", "_arguments"];
