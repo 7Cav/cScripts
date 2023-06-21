@@ -25,7 +25,6 @@ params ["_modulePos", "_objectPos"];
         ["LIST", ["Company, squad or group", "Select the company, group or squad the crate should populate loadouts with."],
             [
                 [
-                    'All',
                     'None',
                     'Alpha',
                     'Buffalo',
