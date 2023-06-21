@@ -119,7 +119,7 @@ if (!isPlayer _object) then {
 [_object,"Medic (v1)","Specialized_Medic0","z\cav\addons\insignia\data\specialized_medic0.paa",_specialCategory] call FUNC(addInsigniaSelection);
 [_object,"Medic (v2)","Specialized_Medic1","z\cav\addons\insignia\data\Specialized_Medic1.paa",_specialCategory] call FUNC(addInsigniaSelection);
 
-[_object,"S3","bravo_3","z\cav\addons\insignia\data\bravo_3.paa",_specialCategory] call FUNC(addInsigniaSelection);
+[_object,"S3","specialized_s3","z\cav\addons\insignia\data\specialized_s3.paa",_specialCategory] call FUNC(addInsigniaSelection);
 
 #ifdef DEBUG_MODE
     [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(info);
