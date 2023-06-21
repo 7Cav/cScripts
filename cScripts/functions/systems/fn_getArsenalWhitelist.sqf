@@ -56,24 +56,260 @@ private _commonGear = [
     "rhsusf_oakley_goggles_clr",
     "rhsusf_oakley_goggles_ylw",
     "USP_RAID_BLK2",
-    "USP_BALACLAVA2",
-    "USP_BALACLAVA_BLK",
+    "USP_RAID_BLK",
+    "USP_RAID_SMC1_BLK2",
+    "USP_RAID_SMC1_BLK",
+    "USP_RAID_SMC2_BLK2",
+    "USP_RAID_SMC2_BLK",
+    "USP_RAID_SMC3_BLK2",
+    "USP_RAID_SMC3_BLK",
+    "USP_RAID_SMG1_BLK2",
+    "USP_RAID_SMG1_BLK",
+    "USP_RAID_SMG2_BLK2",
+    "USP_RAID_SMG2_BLK",
+    "USP_RAID_SMG3_BLK2",
+    "USP_RAID_SMG3_BLK",
+    "USP_BALACLAVA_CBR",
+    "USP_BALACLAVA_GRY",
+    "USP_BALACLAVA_MCA",
+    "USP_BALACLAVA_RGR",
+    "USP_BALACLAVA2_CBR",
+    "USP_BALACLAVA2_GRY",
+    "USP_BALACLAVA2_MCA",
+    "USP_BALACLAVA2_RGR",
+    "USP_BALACLAVA_ADV_CBR",
+    "USP_BALACLAVA_ADV_GRY",
+    "USP_BALACLAVA_ADV_MCA",
+    "USP_BALACLAVA_ADV_RGR",
+    "USP_BALACLAVA_ADV_CBR2",
+    "USP_BALACLAVA_ADV_GRY2",
+    "USP_BALACLAVA_ADV_MCA2",
+    "USP_BALACLAVA_ADV_RGR2",
+    "USP_BALACLAVA_ADV_SMC1_CBR",
+    "USP_BALACLAVA_ADV_SMC1_GRY",
+    "USP_BALACLAVA_ADV_SMC1_MCA",
+    "USP_BALACLAVA_ADV_SMC1_RGR",
+    "USP_BALACLAVA_ADV_SMC1_CBR2",
+    "USP_BALACLAVA_ADV_SMC1_GRY2",
+    "USP_BALACLAVA_ADV_SMC1_MCA2",
+    "USP_BALACLAVA_ADV_SMC1_RGR2",
+    "USP_BALACLAVA_ADV_SMG1_CBR",
+    "USP_BALACLAVA_ADV_SMG1_GRY",
+    "USP_BALACLAVA_ADV_SMG1_MCA",
+    "USP_BALACLAVA_ADV_SMG1_RGR",
+    "USP_BALACLAVA_ADV_SMG1_CBR2",
+    "USP_BALACLAVA_ADV_SMG1_GRY2",
+    "USP_BALACLAVA_ADV_SMG1_MCA2",
+    "USP_BALACLAVA_ADV_SMG1_RGR2",
+    "USP_BALACLAVA_ESS_CBR",
+    "USP_BALACLAVA_ESS_GRY",
+    "USP_BALACLAVA_ESS_MCA",
+    "USP_BALACLAVA_ESS_RGR",
+    "USP_BALACLAVA_ESS_CBR2",
+    "USP_BALACLAVA_ESS_GRY2",
+    "USP_BALACLAVA_ESS_MCA2",
+    "USP_BALACLAVA_ESS_RGR2",
+    "USP_BALACLAVA_ESS_CBR3",
+    "USP_BALACLAVA_ESS_GRY3",
+    "USP_BALACLAVA_ESS_MCA3",
+    "USP_BALACLAVA_ESS_RGR3",
+    "USP_BALACLAVA_ESS_SMC1_CBR",
+    "USP_BALACLAVA_ESS_SMC1_GRY",
+    "USP_BALACLAVA_ESS_SMC1_MCA",
+    "USP_BALACLAVA_ESS_SMC1_RGR",
+    "USP_BALACLAVA_ESS_SMC1_CBR2",
+    "USP_BALACLAVA_ESS_SMC1_GRY2",
+    "USP_BALACLAVA_ESS_SMC1_MCA2",
+    "USP_BALACLAVA_ESS_SMC1_RGR2",
+    "USP_BALACLAVA_ESS_SMG1_CBR",
+    "USP_BALACLAVA_ESS_SMG1_GRY",
+    "USP_BALACLAVA_ESS_SMG1_MCA",
+    "USP_BALACLAVA_ESS_SMG1_RGR",
+    "USP_BALACLAVA_ESS_SMG1_CBR2",
+    "USP_BALACLAVA_ESS_SMG1_GRY2",
+    "USP_BALACLAVA_ESS_SMG1_MCA2",
+    "USP_BALACLAVA_ESS_SMG1_RGR2",
+    "USP_BALACLAVA_ESS_SMG1_CBR3",
+    "USP_BALACLAVA_ESS_SMG1_GRY3",
+    "USP_BALACLAVA_ESS_SMG1_MCA3",
+    "USP_BALACLAVA_ESS_SMG1_RGR3",
+    "USP_BALACLAVA_OAK_CBR",
+    "USP_BALACLAVA_OAK_GRY",
+    "USP_BALACLAVA_OAK_MCA",
+    "USP_BALACLAVA_OAK_RGR",
+    "USP_BALACLAVA_OAK_CBR2",
+    "USP_BALACLAVA_OAK_GRY2",
+    "USP_BALACLAVA_OAK_MCA2",
+    "USP_BALACLAVA_OAK_RGR2",
+    "USP_BALACLAVA_OAK_SMC1_CBR",
+    "USP_BALACLAVA_OAK_SMC1_GRY",
+    "USP_BALACLAVA_OAK_SMC1_MCA",
+    "USP_BALACLAVA_OAK_SMC1_RGR",
+    "USP_BALACLAVA_OAK_SMC1_CBR2",
+    "USP_BALACLAVA_OAK_SMC1_GRY2",
+    "USP_BALACLAVA_OAK_SMC1_MCA2",
+    "USP_BALACLAVA_OAK_SMC1_RGR2",
+    "USP_BALACLAVA_OAK_SMG1_CBR",
+    "USP_BALACLAVA_OAK_SMG1_GRY",
+    "USP_BALACLAVA_OAK_SMG1_MCA",
+    "USP_BALACLAVA_OAK_SMG1_RGR",
+    "USP_BALACLAVA_OAK_SMG1_CBR2",
+    "USP_BALACLAVA_OAK_SMG1_GRY2",
+    "USP_BALACLAVA_OAK_SMG1_MCA2",
+    "USP_BALACLAVA_OAK_SMG1_RGR2",
+    "USP_ADVANCER_CLR",
     "USP_ADVANCER",
+    "USP_ADVANCER_SF2",
+    "USP_ADVANCER_SF3",
+    "USP_ADVANCER_SFL2",
+    "USP_ADVANCER_SFL3",
+    "USP_ADVANCER_SL2",
+    "USP_ADVANCER_SL3",
+    "USP_ADVANCER_SN2",
+    "USP_ADVANCER_SN3",
+    "USP_ADVANCER_SNL2",
+    "USP_ADVANCER_SNL3",
+    "USP_ADVANCER_ST2",
+    "USP_ADVANCER_ST3",
+    "USP_ADVANCER_STL2",
+    "USP_ADVANCER_STL3",
+    "USP_CROSSBOW_BLK2",
     "USP_CROSSBOW_BLK",
+    "USP_CROSSBOW_TAN2",
+    "USP_CROSSBOW_TAN",
+    "USP_CROSSBOW_SMC1_BLK2",
+    "USP_CROSSBOW_SMC1_BLK",
+    "USP_CROSSBOW_SMC2_BLK2",
+    "USP_CROSSBOW_SMC2_BLK",
+    "USP_CROSSBOW_SMC3_BLK2",
+    "USP_CROSSBOW_SMC3_BLK",
+    "USP_CROSSBOW_SMG1_BLK2",
+    "USP_CROSSBOW_SMG1_BLK",
+    "USP_CROSSBOW_SMG2_BLK2",
+    "USP_CROSSBOW_SMG2_BLK",
+    "USP_CROSSBOW_SMG3_BLK2",
+    "USP_CROSSBOW_SMG3_BLK",
+    "USP_CROSSBOW_SMC1_TAN2",
+    "USP_CROSSBOW_SMC1_TAN",
+    "USP_CROSSBOW_SMC2_TAN2",
+    "USP_CROSSBOW_SMC2_TAN",
+    "USP_CROSSBOW_SMC3_TAN2",
+    "USP_CROSSBOW_SMC3_TAN",
+    "USP_CROSSBOW_SMG1_TAN2",
+    "USP_CROSSBOW_SMG1_TAN",
+    "USP_CROSSBOW_SMG2_TAN2",
+    "USP_CROSSBOW_SMG2_TAN",
+    "USP_CROSSBOW_SMG3_TAN2",
+    "USP_CROSSBOW_SMG3_TAN",
+    "USP_GATORZ_BLK2",
     "USP_GATORZ_BLK",
+    "USP_GATORZ_SMC1_BLK2",
+    "USP_GATORZ_SMC1_BLK",
+    "USP_GATORZ_SMC2_BLK2",
+    "USP_GATORZ_SMC2_BLK",
+    "USP_GATORZ_SMC3_BLK2",
+    "USP_GATORZ_SMC3_BLK",
+    "USP_GATORZ_SMG1_BLK2",
+    "USP_GATORZ_SMG1_BLK",
+    "USP_GATORZ_SMG2_BLK2",
+    "USP_GATORZ_SMG2_BLK",
+    "USP_GATORZ_SMG3_BLK2",
+    "USP_GATORZ_SMG3_BLK",
     "USP_OAKLEY_SI2",
+    "USP_OAKLEY_SI2_MC",
+    "USP_OAKLEY_SI2_TAN",
+    "USP_DETCORD_BLK2",
     "USP_DETCORD_BLK",
+    "USP_DETCORD_SMC1_BLK2",
+    "USP_DETCORD_SMC1_BLK",
+    "USP_DETCORD_SMC2_BLK2",
+    "USP_DETCORD_SMC2_BLK",
+    "USP_DETCORD_SMC3_BLK2",
+    "USP_DETCORD_SMC3_BLK",
+    "USP_DETCORD_SMG1_BLK2",
+    "USP_DETCORD_SMG1_BLK",
+    "USP_DETCORD_SMG2_BLK2",
+    "USP_DETCORD_SMG2_BLK",
+    "USP_DETCORD_SMG3_BLK2",
+    "USP_DETCORD_SMG3_BLK",
+    "USP_DETCORD_TAN2",
+    "USP_DETCORD_TAN",
+    "USP_DETCORD_SMC1_TAN2",
+    "USP_DETCORD_SMC1_TAN",
+    "USP_DETCORD_SMC2_TAN2",
+    "USP_DETCORD_SMC2_TAN",
+    "USP_DETCORD_SMC3_TAN2",
+    "USP_DETCORD_SMC3_TAN",
+    "USP_DETCORD_SMG1_TAN2",
+    "USP_DETCORD_SMG1_TAN",
+    "USP_DETCORD_SMG2_TAN2",
+    "USP_DETCORD_SMG2_TAN",
+    "USP_DETCORD_SMG3_TAN2",
+    "USP_DETCORD_SMG3_TAN",
+    "USP_MFRAME_BLK2",
     "USP_MFRAME_BLK",
+    "USP_MFRAME_TAN2",
+    "USP_MFRAME_TAN",
+    "USP_MFRAME_SMC1_BLK2",
+    "USP_MFRAME_SMC1_BLK",
+    "USP_MFRAME_SMC2_BLK2",
+    "USP_MFRAME_SMC2_BLK",
+    "USP_MFRAME_SMC3_BLK2",
+    "USP_MFRAME_SMC3_BLK",
+    "USP_MFRAME_SMG1_BLK2",
+    "USP_MFRAME_SMG1_BLK",
+    "USP_MFRAME_SMG2_BLK2",
+    "USP_MFRAME_SMG2_BLK",
+    "USP_MFRAME_SMG3_BLK2",
+    "USP_MFRAME_SMG3_BLK",
+    "USP_MFRAME_SMC1_TAN2",
+    "USP_MFRAME_SMC1_TAN",
+    "USP_MFRAME_SMC2_TAN2",
+    "USP_MFRAME_SMC2_TAN",
+    "USP_MFRAME_SMC3_TAN2",
+    "USP_MFRAME_SMC3_TAN",
+    "USP_MFRAME_SMG1_TAN2",
+    "USP_MFRAME_SMG1_TAN",
+    "USP_MFRAME_SMG2_TAN2",
+    "USP_MFRAME_SMG2_TAN",
+    "USP_MFRAME_SMG3_TAN2",
+    "USP_MFRAME_SMG3_TAN",
+    "USP_STRAIGHTJACKET_BLK2",
     "USP_STRAIGHTJACKET_BLK",
-    "USP_SHEMAGH_HEAD_CBR",
+    "USP_STRAIGHTJACKET_TAN2",
+    "USP_STRAIGHTJACKET_TAN",
+    "USP_STRAIGHTJACKET_SMC1_BLK2",
+    "USP_STRAIGHTJACKET_SMC1_BLK",
+    "USP_STRAIGHTJACKET_SMC2_BLK2",
+    "USP_STRAIGHTJACKET_SMC2_BLK",
+    "USP_STRAIGHTJACKET_SMC3_BLK2",
+    "USP_STRAIGHTJACKET_SMC3_BLK",
+    "USP_STRAIGHTJACKET_SMG1_BLK2",
+    "USP_STRAIGHTJACKET_SMG1_BLK",
+    "USP_STRAIGHTJACKET_SMG2_BLK2",
+    "USP_STRAIGHTJACKET_SMG2_BLK",
+    "USP_STRAIGHTJACKET_SMG3_BLK2",
+    "USP_STRAIGHTJACKET_SMG3_BLK",
+    "USP_STRAIGHTJACKET_SMC1_TAN2",
+    "USP_STRAIGHTJACKET_SMC1_TAN",
+    "USP_STRAIGHTJACKET_SMC2_TAN2",
+    "USP_STRAIGHTJACKET_SMC2_TAN",
+    "USP_STRAIGHTJACKET_SMC3_TAN2",
+    "USP_STRAIGHTJACKET_SMC3_TAN",
+    "USP_STRAIGHTJACKET_SMG1_TAN2",
+    "USP_STRAIGHTJACKET_SMG1_TAN",
+    "USP_STRAIGHTJACKET_SMG2_TAN2",
+    "USP_STRAIGHTJACKET_SMG2_TAN",
+    "USP_STRAIGHTJACKET_SMG3_TAN2",
+    "USP_STRAIGHTJACKET_SMG3_TAN",
     "G_Spectacles",
     "G_Spectacles_Tinted",
-    "USP_M50_BLK2",
 
     // Headgear
-    "DAR_Beret_Mar",
     "rhsusf_patrolcap_ocp",
-    "USP_BOONIE_HAT_MC",
+    "rhsusf_ach_helmet_camo_ocp",
+    "H_HelmetHBK_ocp_headset_F",
+    "H_HelmetB_camo",
 
     // Uniforms
     "USP_G3C_MC",
@@ -116,6 +352,23 @@ private _commonGear = [
     "USP_OVERWHITE_G3C_MX_MCA_MC",
     "USP_OVERWHITE_G3C_OR_MCA_MC",
     
+    // Backpack
+    "B_AssaultPack_mcamo",
+    "B_Kitbag_mcamo",
+    "rhsusf_assault_eagleaiii_ocp",
+    "USP_PACK_BREACHER_MC",
+    "USP_PACK_FASTHAWK",
+    "USP_PACK_POINTMAN",
+    "USP_45L_RUCKSACK_MC",
+    "USP_PATROL_PACK",
+    "USP_ZIPON_PANEL_MC",
+    "USP_PACK_HYDRATION",
+    
+    //Launchers
+    "rhs_weap_M136",
+    "rhs_weap_M136_hedp",
+    "rhs_weap_M136_hp",
+    "rhs_weap_m72a7",
 
     //Chemlights
     "Chemlight_blue",
@@ -132,28 +385,6 @@ private _commonGear = [
     "ACE_Chemlight_White",
     "Chemlight_yellow",
     "ACE_Chemlight_Shield",
-
-    // Grenades
-    "SmokeShellBlue",
-    "SmokeShellGreen",
-    "SmokeShellOrange",
-    "SmokeShellPurple",
-    "SmokeShellRed",
-    "SmokeShellYellow",
-    "SmokeShell",
-    "HandGrenade",
-    "ACE_M84",
-    "rhs_mag_mk3a2",
-    "B_IR_Grenade",
-    
-    // Explosives
-    "ACE_M26_Clacker",
-    "ACE_DefusalKit",
-    "ACE_Clacker",
-    "SatchelCharge_Remote_Mag",
-    "DemoCharge_Remote_Mag",
-    "ClaymoreDirectionalMine_Remote_Mag",
-    
     
     // Radios
     "ACRE_PRC343",
@@ -162,30 +393,19 @@ private _commonGear = [
     // Medical
     "ACE_EarPlugs",
 
-    "ACE_quikclot",
-    "ACE_packingBandage",
-    "ACE_elasticBandage",
-    "ACE_fieldDressing",
-    "ACE_tourniquet",
-
     // Tools
     "ACE_SpareBarrel",
-
     "ACE_SpraypaintBlack",
     "ACE_SpraypaintBlue",
     "ACE_SpraypaintGreen",
     "ACE_SpraypaintRed",
-
     "rhsusf_bino_m24",
     "rhsusf_bino_m24_ARD",
-
     "ACE_Altimeter",
     "ACE_DAGR",
     "ACE_MapTools",
     "ACE_Flashlight_MX991",
-
     "ACE_IR_Strobe_Item",
-
     "ToolKit",
     "ACE_wirecutter",
     "ACE_EntrenchingTool",
@@ -198,7 +418,52 @@ private _commonGear = [
     "USP_RHINO",
     "ItemMap",
     "ItemWatch",
-    "ItemCompass"
+    "ItemCompass",
+
+    //Attachements
+    "rhsusf_acc_anpeq15side_bk",
+    "rhsusf_acc_anpeq15_bk_top",
+    "rhsusf_acc_anpeq15",
+    "rhsusf_acc_anpeq15_light",
+    "rhsusf_acc_anpeq15_bk",
+    "rhsusf_acc_anpeq15_bk_light",
+    "rhsusf_acc_m952v",
+    "acc_flashlight",
+    "rhsusf_acc_sf3p556",
+    "rhsusf_acc_eotech",
+    "rhsusf_acc_g33_t1",
+    "rhsusf_acc_g33_xps3",
+    "rhsusf_acc_g33_xps3_tan",
+    "rhsusf_acc_elcan",
+    "rhsusf_acc_elcan_ard",
+    "rhsusf_acc_acog",
+    "rhsusf_acc_acog2",
+    "rhsusf_acc_acog3",
+    "rhsusf_acc_eotech_552",
+    "rhsusf_acc_eotech_552_d",
+    "rhsusf_acc_eotech_552_wd",
+    "rhsusf_acc_compm4",
+    "rhsusf_acc_su230",
+    "rhsusf_acc_su230_c",
+    "rhsusf_acc_su230_mrds",
+    "rhsusf_acc_su230_mrds_c",
+    "rhsusf_acc_t1_high",
+    "rhsusf_acc_acog_rmr",
+    "rhsusf_acc_acog_d",
+    "rhsusf_acc_acog_wd",
+    "rhsusf_acc_grip2",
+    "rhsusf_acc_grip2_tan",
+    "rhsusf_acc_grip2_wd",
+    "rhsusf_acc_grip1",
+    "rhsusf_acc_kac_grip",
+    "rhsusf_acc_rvg_blk",
+    "rhsusf_acc_rvg_de",
+    "rhsusf_acc_tdstubby_blk",
+    "rhsusf_acc_tdstubby_tan",
+    "rhsusf_acc_grip3",
+    "rhsusf_acc_grip3_tan",
+    "rhsusf_acc_eotech_xps3"
+    
 ];
 
 private _company = call FUNC(getCompanyVariable);
@@ -228,6 +493,7 @@ private _companyItems = switch (_company) do {
     case "charlie": {[
         
         //Helmets
+        "DAR_Beret_Mar",
         "USP_OPSCORE_FASTMTC_CGW",
         "USP_OPSCORE_FASTMTC_CMW",
         "USP_OPSCORE_FASTMTC_CMGSW",
@@ -239,9 +505,6 @@ private _companyItems = switch (_company) do {
         "USP_OPSCORE_FASTMTC_CGTW",
         "USP_OPSCORE_FASTMTC_CSW",
         "USP_OPSCORE_FASTMTC_CTW",
-        "rhsusf_ach_helmet_camo_ocp",
-        "H_HelmetHBK_ocp_headset_F",
-        "H_HelmetB_camo",
 
         // Backpack
         "B_AssaultPack_mcamo",
@@ -254,11 +517,6 @@ private _companyItems = switch (_company) do {
         "USP_PATROL_PACK",
         "USP_ZIPON_PANEL_MC",
         "USP_PACK_HYDRATION",
-
-        // Weapons
-        "rhs_weap_M136",
-        "rhs_weap_M136_hedp",
-        "rhs_weap_M136_hp",
 
         // Grenades
         "HandGrenade",
@@ -300,7 +558,6 @@ private _companyItems = switch (_company) do {
         "USP_PVS15",
         "USP_L4G19",
         "USP_RHINO",
-        
 
         // Explosives
         "ACE_M26_Clacker",
@@ -308,7 +565,6 @@ private _companyItems = switch (_company) do {
         "ACE_Clacker",
         "SatchelCharge_Remote_Mag",
         "DemoCharge_Remote_Mag",
-        "AMP_Breaching_Charge_Mag",
         "ClaymoreDirectionalMine_Remote_Mag"
     ]};
     case "bravo": {[
@@ -316,9 +572,6 @@ private _companyItems = switch (_company) do {
         "UK3CB_BAF_H_Mk7_Scrim_A",
         "UK3CB_BAF_H_Mk7_Scrim_B",
         "UK3CB_BAF_H_Mk7_Scrim_C",
-        "rhsusf_ach_helmet_camo_ocp",
-        "H_HelmetHBK_ocp_headset_F",
-        "H_HelmetB_camo",
         "USP_OPS_FASTXP_TAN_MC_02",
         "USP_OPS_FASTXP_TAN_MC_03",
         "USP_OPS_FASTXP_TAN_MC_04",
@@ -328,17 +581,23 @@ private _companyItems = switch (_company) do {
         "USP_OPS_FASTXP_TAN_MC_08",
         "USP_BOONIE_HAT_MC",
         
-        //Vests
-        "LV119",
-        "LV1192",
-        "LV1193",
-        "USP_VEST_STRANDHOGG2_MC",
-        "USP_VEST_STRANDHOGG2_CBR",
-        "JPC23",
-        "JPC25",
-        "JPC24",
-        "JPC2_MC",
-        "JPC22",
+        // Magazines
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
+        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
+        "rhs_mag_30Rnd_556x45_Mk262_PMAG",
+        "rhsusf_200Rnd_556x45_mixed_soft_pouch",
+        "rhsusf_100Rnd_762x51_m62_tracer",
+        "rhs_mag_M397_HET",
+        "rhs_mag_M433_HEDP",
+        "ACE_HuntIR_M203",
+        "ACE_40mm_Flare_white",
+        "ACE_40mm_Flare_red",
+        "ACE_40mm_Flare_ir",
+        "rhs_mag_m664_red_cluster",
+        "rhs_mag_m713_Red",
+        "rhs_mag_m716_yellow",
         
         //Items
         "USP_PVS14",
@@ -353,7 +612,6 @@ private _companyItems = switch (_company) do {
         "Rev_darter_item",
         "B_UavTerminal",
         "ACE_SpareBarrel",
-        "ACE_MX2A",
         "Rev_pelican_item",
         "kat_Painkiller",
 
@@ -381,7 +639,7 @@ private _companyItems = switch (_company) do {
         "UK3CB_B_Backpack_Pocket_OLI",
         "UK3CB_B_Backpack_Pocket",
         "B_rhsusf_B_BACKPACK",
-        "USP_PACK_BREACHER",
+        "USP_PACK_BREACHER_MC",
         "USP_PACK_FASTHAWK",
         "USP_PACK_POINTMAN",
         "USP_45L_RUCKSACK_MC",
@@ -393,126 +651,34 @@ private _companyItems = switch (_company) do {
         "dzn_MG_Tripod_M122A1_M240Mount_Carry",
         "ace_csw_carryMortarBaseplate",
         "ace_compat_rhs_usf3_m252_carry",
+        "avm224_W_M224_mortar_carry",
         
-        // Grenades
-        "HandGrenade",
-        "ACE_M84",
-        "rhs_mag_mk3a2",
-
-        // Magazines
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG",
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
-        "rhs_mag_30Rnd_556x45_Mk262_PMAG",
-        "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
-        "rhsusf_mag_17Rnd_9x19_FMJ",
-        "rhsusf_200Rnd_556x45_mixed_soft_pouch",
-        "rhsusf_100Rnd_762x51_m62_tracer",
-
-        "rhs_mag_M397_HET",
-        "rhs_mag_M433_HEDP",
-        "ACE_HuntIR_M203",
-        "ACE_40mm_Flare_ir",
-        "ACE_40mm_Flare_white",
-        "ACE_40mm_Flare_red",
-        "rhs_mag_m664_red_cluster",
-        "rhs_mag_m713_Red",
-        "rhs_mag_m716_yellow",
-        
-        "rhs_mag_maaws_HE",
-        "rhs_mag_maaws_HEAT",
-        "MAA_MAAWS_ASM509",
-        "MAA_MAAWS_GMM_MT",
-        "NDS_M_6Rnd_60mm_HE_0",
-        "NDS_M_6Rnd_60mm_HE",
-        "NDS_M_6Rnd_60mm_SMOKE",
-        "NDS_M_6Rnd_60mm_ILLUM",
+        "avm224_M_6Rnd_60mm_HE_csw",
+        "avm224_M_6Rnd_60mm_HE_0_csw",
+        "avm224_M_6Rnd_60mm_ILLUM_IR_csw",
+        "avm224_M_6Rnd_60mm_SMOKE_csw",
         
         "ACE_1Rnd_82mm_Mo_HE",
         "ACE_1Rnd_82mm_Mo_Illum",
         "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
-        "ACE_1Rnd_82mm_Mo_Smoke",
-        
-        // Explosives
-        "ACE_M26_Clacker",
-        "ACE_DefusalKit",
-        "ACE_Clacker",
-        "SatchelCharge_Remote_Mag",
-        "DemoCharge_Remote_Mag",
-        "ClaymoreDirectionalMine_Remote_Mag",
-        "AMP_Breaching_Charge_Mag",
-        
-        // Radios
-        "ACRE_PRC152",
-        "ACRE_PRC343",
-        "ACRE_PRC117F"
+        "ACE_1Rnd_82mm_Mo_Smoke"
     ]};
     default {[
-        // Grenades
-        "HandGrenade",
-        "ACE_M84",
-
         // Magazines
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG",
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
-        "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
-        "rhs_mag_30Rnd_556x45_Mk262_PMAG",
-        "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
-        "rhsusf_mag_17Rnd_9x19_FMJ",
-        "rhsusf_200Rnd_556x45_mixed_soft_pouch",
-        "rhsusf_100Rnd_762x51_m62_tracer",
-
-        "rhs_mag_M397_HET",
-        "rhs_mag_M433_HEDP",
-        "ACE_HuntIR_M203",
-        "ACE_40mm_Flare_ir",
-        "ACE_40mm_Flare_white",
-        "ACE_40mm_Flare_red",
-        "rhs_mag_m664_red_cluster",
-        "rhs_mag_m713_Red",
-        "rhs_mag_m716_yellow",
-        
-        "rhs_mag_maaws_HE",
-        "rhs_mag_maaws_HEAT",
-        "MAA_MAAWS_ASM509",
-        "MAA_MAAWS_GMM_MT",
         "NDS_M_6Rnd_60mm_HE_0",
         "NDS_M_6Rnd_60mm_HE",
         "NDS_M_6Rnd_60mm_SMOKE",
         "NDS_M_6Rnd_60mm_ILLUM",
         
+        "avm224_M_6Rnd_60mm_HE_csw",
+        "avm224_M_6Rnd_60mm_HE_0_csw",
+        "avm224_M_6Rnd_60mm_ILLUM_IR_csw",
+        "avm224_M_6Rnd_60mm_SMOKE_csw",
+        
         "ACE_1Rnd_82mm_Mo_HE",
         "ACE_1Rnd_82mm_Mo_Illum",
         "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
-        "ACE_1Rnd_82mm_Mo_Smoke",
-        
-        //Attachements
-        "rhsusf_acc_anpeq15side_bk",
-        "rhsusf_acc_anpeq15_bk_top",
-        "rhsusf_acc_anpeq15",
-        "rhsusf_acc_anpeq15_light",
-        "rhsusf_acc_anpeq15_bk",
-        "rhsusf_acc_anpeq15_bk_light",
-        "rhsusf_acc_m952v",
-        "acc_flashlight",
-        "rhsusf_acc_eotech_552",
-        "optic_hamr",
-        "rhsusf_acc_t1_high",
-        "rhsusf_acc_g33_xps3",
-        "rhsusf_acc_compm4",
-        "rhsusf_acc_eotech_552",
-        "rhsusf_acc_g33_t1",
-        "rhsusf_acc_su230_mrds",
-        "rhsusf_acc_ELCAN",
-        "rhsusf_acc_acog3",
-        "rhsusf_acc_eotech_xps3",
-        "rhsusf_acc_eotech",
-        "optic_MRCO",
-        "rhsusf_acc_acog_rmr",
-        "rhsusf_acc_acog_d",
-        "rhsusf_acc_acog_wd"
+        "ACE_1Rnd_82mm_Mo_Smoke"
     ]};
 };
 
@@ -569,27 +735,24 @@ _medicGear = if (_medicRole >= 1) then {[
         
 ]} else {[]};
 
-private _roleSpecific = switch (call EFUNC(gear,getLoadoutRole)) do {
+private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "officer": {[
         "ACE_microDAGR",
         "ACE_HuntIR_monitor",
         "ItemAndroid",
         "ItemcTab",
-
+        "USP_VEST_STRANDHOGG2_MC",
+        "USP_VEST_STRANDHOGG2_CBR",
         "ACE_Vector",
-        "ACE_MX2A",
-        "rhsusf_acc_acog",
-        "rhsusf_acc_acog2",
-        "rhsusf_acc_acog3",
-        "rhsusf_acc_acog_rmr",
-        "rhsusf_acc_acog_d",
-        "rhsusf_acc_acog_wd"
+        "ACE_MX2A"
     ]};
     case "squadleader": {[
         "ACE_microDAGR",
         "ACE_HuntIR_monitor",
         "ItemAndroid",
         "rhsusf_weap_glock17g4",
+        "USP_VEST_STRANDHOGG2_MC",
+        "USP_VEST_STRANDHOGG2_CBR",
         "ACE_Vector",
         "ACE_MX2A",
         "UK3CB_BAF_B_Bergen_MTP_SL_L_A",
@@ -599,6 +762,8 @@ private _roleSpecific = switch (call EFUNC(gear,getLoadoutRole)) do {
         "ACE_microDAGR",
         "ACE_MX2A",
         "rhsusf_weap_glock17g4",
+        "USP_VEST_STRANDHOGG2_MC",
+        "USP_VEST_STRANDHOGG2_CBR",
         "ACE_HuntIR_monitor"
     ]};
     case "pilot";
@@ -626,8 +791,6 @@ private _roleSpecific = switch (call EFUNC(gear,getLoadoutRole)) do {
     ]};
     case "rotarycrew": {[
         "H_CrewHelmetHeli_B",
-        "FIR_HGU56P_Skull_Death",
-        "FIR_HGU56P_Skull",
 
         "rhsusf_hgu56p_mask_black",
         "rhsusf_hgu56p_mask_black_skull",
@@ -654,63 +817,16 @@ private _roleSpecific = switch (call EFUNC(gear,getLoadoutRole)) do {
         "rhsusf_hgu56p_visor_mask_smiley"
     ]};
     case "pilotfighter": {[
-        "RHS_jetpilot_usaf",
-
-        "FIR_hgu26p",
-        "FIR_hgu26p_camo",
-        "FIR_HGU33P",
-        "FIR_HGU33P_VF1",
-        "FIR_HGU33P_VF111",
-        "FIR_HGU33P_VF84",
-        "FIR_USHelmetType2",
-        "FIR_USHelmetType2_USMC",
-        "FIR_USHelmetType2_Navy",
-        "FIR_USHelmetType2_USAF_80s",
-        "FIR_USHelmetType2_VF103",
-        "FIR_USHelmetType2_VF154",
-        "FIR_USHelmetType1",
-        "FIR_USHelmetType1_Navy",
-        "FIR_USHelmetType1_USMC",
-        "FIR_USHelmetType1_VF31",
-        "FIR_USHelmetType1_Agg",
-        "FIR_HGU55PJ",
-
-        "FIR_JHMCS",
-        "FIR_JHMCS_II",
-        "FIR_JHMCS_Type2"
+        "RHS_jetpilot_usaf"
     ]};
     case "weapons": {[
-        "NDS_M_6Rnd_60mm_HE_0",
-        "NDS_M_6Rnd_60mm_HE",
-        "NDS_M_6Rnd_60mm_SMOKE",
-        "NDS_M_6Rnd_60mm_ILLUM",
+
 
         // Launchers
-        "rhs_weap_fgm148",
-        "rhs_fgm148_magazine_AT",
-        
-        "rhs_weap_fim92",
-        "rhs_fim92_mag",
-        
-        "rhs_weap_maaws",
-        "rhs_optic_maaws",
-        "rhs_mag_maaws_HE",
-        "rhs_mag_maaws_HEDP",
-        "rhs_mag_maaws_HEAT",
-
-        "ace_compat_rhs_usf3_mag_TOW2b_aero",
-        "ace_compat_rhs_usf3_mag_TOW2bb",
-        "ace_compat_rhs_usf3_48Rnd_40mm_MK19_M430A1",
 
         // Backpacks
         "B_Carryall_mcamo",
-        "ACE_Vector",
-        "NDS_B_M224_mortar",
-        
-        "ace_compat_rhs_usf3_tow_carry",
-        "ace_csw_m3CarryTripodLow",
-        "ace_compat_rhs_usf3_mk19_carry",
-        "ace_csw_m220CarryTripod"
+        "ACE_Vector"
     ]};
 
     default {[]};
@@ -718,51 +834,6 @@ private _roleSpecific = switch (call EFUNC(gear,getLoadoutRole)) do {
 
 private _primaryWeapon = if (!isNil{_loadout#0#0}) then {_loadout#0#0} else {""};
 private _weaponSystemSpecific = switch (true) do {
-
-    case (_primaryWeapon isKindof ['rhs_weap_hk416d10', configFile >> 'CfgWeapons']
-            || _primaryWeapon isKindof ['rhs_weap_hk416d145', configFile >> 'CfgWeapons']): {[
-        "rhs_weap_hk416d10",
-        "rhs_weap_hk416d10_LMT",
-        "rhs_weap_hk416d10_LMT_d",
-        "rhs_weap_hk416d10_LMT_wd",
-
-        "rhs_weap_hk416d145",
-        "rhs_weap_hk416d145_d",
-        "rhs_weap_hk416d145_d_2",
-        "rhs_weap_hk416d145_wd",
-        "rhs_weap_hk416d145_wd_2",
-
-        // Attachements
-        "rhsusf_acc_anpeq15side_bk",
-        "rhsusf_acc_anpeq15_bk_top",
-        "rhsusf_acc_anpeq15",
-        "rhsusf_acc_anpeq15_light",
-        "rhsusf_acc_anpeq15_bk",
-        "rhsusf_acc_anpeq15_bk_light",
-        "rhsusf_acc_m952v",
-        "acc_flashlight",
-
-        "rhsusf_acc_eotech_552",
-        "optic_hamr",
-        "rhsusf_acc_anpas13gv1",
-        "rhsusf_acc_t1_high",
-        "rhsusf_acc_g33_xps3",
-        "rhsusf_acc_compm4",
-        "rhsusf_acc_eotech_552",
-        "rhsusf_acc_g33_t1",
-        "rhsusf_acc_su230_mrds",
-        "rhsusf_acc_ELCAN",
-        "rhsusf_acc_acog3",
-        "rhsusf_acc_eotech_xps3",
-        "rhsusf_acc_eotech",
-        "optic_MRCO"
-    ]};
-
-    case (_primaryWeapon isKindof ['rhs_weap_hk416d145_m320', configFile >> 'CfgWeapons']
-            || _primaryWeapon isKindof ['rhs_weap_hk416d10_m320', configFile >> 'CfgWeapons']): {[
-        "rhs_weap_hk416d145_m320",
-        "rhs_weap_hk416d10_m320"
-    ]};
 
     case (_primaryWeapon isKindof ['rhs_weap_mk18_m320', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {[
@@ -795,22 +866,7 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_mk18_KAC_d",
         "rhs_weap_mk18_KAC",
         "rhs_weap_mk18_wd",
-        "rhs_weap_mk18_KAC_wd",
-
-        "rhs_mag_M397_HET",
-        "rhs_mag_M433_HEDP",
-        "ACE_HuntIR_M203",
-
-        "rhs_mag_M583A1_white",
-        "rhs_mag_M585_white_cluster",
-        "rhs_mag_m661_green",
-        "rhs_mag_m662_red",
-        "rhs_mag_M663_green_cluster",
-        "rhs_mag_M664_red_cluster",
-        "rhs_mag_m713_Red",
-        "rhs_mag_m714_White",
-        "rhs_mag_m715_Green",
-        "rhs_mag_m716_yellow"
+        "rhs_weap_mk18_KAC_wd"
     ]};
 
     case (_primaryWeapon isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
@@ -841,42 +897,36 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_mk18_KAC_d",
         "rhs_weap_mk18_KAC",
         "rhs_weap_mk18_wd",
-        "rhs_weap_mk18_KAC_wd",
+        "rhs_weap_mk18_KAC_wd"
         
-        "rhsusf_acc_anpeq15side_bk",
-        "rhsusf_acc_anpeq15_bk_top",
-        "rhsusf_acc_anpeq15",
-        "rhsusf_acc_anpeq15_light",
-        "rhsusf_acc_anpeq15_bk",
-        "rhsusf_acc_anpeq15_bk_light",
-        "rhsusf_acc_m952v",
-        "acc_flashlight",
-
-        "rhsusf_acc_eotech_552",
-        "optic_hamr",
-        "rhsusf_acc_anpas13gv1",
-        "rhsusf_acc_t1_high",
-        "rhsusf_acc_g33_xps3",
-        "rhsusf_acc_compm4",
-        "rhsusf_acc_eotech_552",
-        "rhsusf_acc_g33_t1",
-        "rhsusf_acc_su230_mrds",
-        "rhsusf_acc_ELCAN",
-        "rhsusf_acc_acog3",
-        "rhsusf_acc_eotech_xps3",
-        "rhsusf_acc_eotech",
-        "optic_MRCO"
     ]};
 
-    case (_primaryWeapon isKindof ['rhs_weap_m4', configFile >> 'CfgWeapons']): {[
-        "rhs_weap_m4_carryhandle",
-        "rhs_weap_m4_carryhandle_mstock",
-        "rhs_weap_m4_mstock"
+    case (_primaryWeapon isKindof ['rhs_weap_sr25_ec', configFile >> 'CfgWeapons']): {[
+        "rhs_weap_sr25_ec",
+        "rhs_weap_sr25_ec_d",
+        "rhs_weap_sr25_ec_wd",
+        
+        //Magazines
+        "rhsusf_20Rnd_762x51_SR25_m118_special_Mag",
+        
+        //Attachments
+        "rhsusf_acc_harris_bipod",
+        "rhsusf_acc_m8541_d",
+        "rhsusf_acc_m8541_mrds",
+        "rhsusf_acc_m8541_wd"
     ]};
 
     case (primaryWeapon player isKindof ['rhs_weap_m240_base', configFile >> 'CfgWeapons']): {[
         "rhs_weap_m240B",
-        "rhs_weap_m240G"
+        "rhs_weap_m240G",
+        
+        // Attachments
+        "rhsusf_acc_elcan_ard",
+        "rhsusf_acc_anpeq16a",
+        "rhsusf_acc_su230a",
+        "rhsusf_acc_su230a_c",
+        "rhsusf_acc_su230a_mrds",
+        "rhsusf_acc_su230a_mrds_c"
     ]};
 
     case (primaryWeapon player isKindof ['rhs_weap_m249_pip', configFile >> 'CfgWeapons']
