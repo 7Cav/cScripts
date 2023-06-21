@@ -2,7 +2,7 @@
     
     Here is a copy paste friendly empty template:
 
-class My_Soldier_Classname_or_VariableName : CommonBlufor {
+class My_Soldier_Classname_or_VariableName: CommonBlufor {
     //regiment = "";
     //company = "";
 
