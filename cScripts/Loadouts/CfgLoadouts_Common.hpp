@@ -19,14 +19,14 @@ class CommonBlufor {
     //icon = "";
 };
 
-class Cav_B_Seventh_Cavalry_Base_F : CommonBlufor {
+class Cav_B_Seventh_Cavalry_Base_F: CommonBlufor {
     regiment = "7th Cavalry";
     scope = 0;
 
     icon = "iconMan";
 };
 
-class Cav_B_Alpha_base_F : Cav_B_Seventh_Cavalry_Base_F {
+class Cav_B_Alpha_base_F: Cav_B_Seventh_Cavalry_Base_F {
     category[] = {"cScripts_Loadout_Cat_Alpha"};
     company = "alpha";
     loadout = [[],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_cu_ocp_1stcav",[["ACE_MapTools",1],["ACE_fieldDressing",1],["ACE_quikclot",4],["ACE_splint",1],["ACE_tourniquet",1]]],["rhsusf_iotv_ocp",[["rhsusf_mag_15Rnd_9x19_FMJ",1,15]]],[],"rhsusf_patrolcap_ocp","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
@@ -36,7 +36,7 @@ class Cav_B_Alpha_base_F : Cav_B_Seventh_Cavalry_Base_F {
     postLoadout = "";
 };
 
-class Cav_B_Bravo_base_F : Cav_B_Seventh_Cavalry_Base_F {
+class Cav_B_Bravo_base_F: Cav_B_Seventh_Cavalry_Base_F {
     category[] = {"cScripts_Loadout_Cat_Bravo"};
     company = "bravo";
     insignia = "";
@@ -46,7 +46,7 @@ class Cav_B_Bravo_base_F : Cav_B_Seventh_Cavalry_Base_F {
     postLoadout = "";
 };
 
-class Cav_B_Charlie_base_F : Cav_B_Seventh_Cavalry_Base_F {
+class Cav_B_Charlie_base_F: Cav_B_Seventh_Cavalry_Base_F {
     category[] = {"cScripts_Loadout_Cat_Charlie"};
     company = "charlie";
     insignia = "";
