@@ -683,7 +683,7 @@ private _companyItems = switch (_company) do {
 };
 
 private _medicRole = getNumber (missionConfigFile >> "CfgLoadouts" >> _classname >> "abilityMedic");
-_medicGear = if (_medicRole >= 1) then {[
+private _medicGear = if (_medicRole >= 1) then {[
         "ACE_microDAGR",
         "ItemAndroid",
 
@@ -834,7 +834,6 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
 
 private _primaryWeapon = if (!isNil{_loadout#0#0}) then {_loadout#0#0} else {""};
 private _weaponSystemSpecific = switch (true) do {
-
     case (_primaryWeapon isKindof ['rhs_weap_mk18_m320', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {[
 
@@ -871,7 +870,6 @@ private _weaponSystemSpecific = switch (true) do {
 
     case (_primaryWeapon isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m16a4', configFile >> 'CfgWeapons']): {[
-
         "rhs_weap_m4a1_carryhandle",
         "rhs_weap_m4a1_carryhandle_mstock",
         "rhs_weap_m4a1",
