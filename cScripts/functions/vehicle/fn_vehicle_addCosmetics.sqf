@@ -24,7 +24,7 @@ if (!(faction _vehicle in _factionArray)) exitWith {};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
-private _textureMed = "\z\cav\addons\textures\data\vehicles\label\special\medic_s_ca.paa";
+private _textureMed = "\z\cav\addons\textures\data\vehicles\label\special\reddiamond_s_ca.paa";
 
 if (_vehicle iskindOf "rhsusf_hmmwe_base") then { // MRAP_01_base_F
     _vehicle animateSource ["iff_hide", 1, true];
