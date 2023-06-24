@@ -81,7 +81,17 @@ private _textures = [
             _vehicle setObjectTextureGlobal [12, ""];
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4];
         }
-    ]]
+    ]]//,
+    // ["", "OD Paint", [
+    //     {
+
+    //     }
+    // ]]
+    // ["", "FDE Paint", [
+    //     {
+
+    //     }
+    // ]]
 ];
 
 {
