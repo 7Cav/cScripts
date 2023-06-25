@@ -32,11 +32,13 @@ if (_vehicle iskindOf "rhsusf_hmmwe_base") then { // MRAP_01_base_F
     _vehicle animateSource ["snorkel_lower", 1, true];
     _vehicle animateSource ["Hide_A2Bumper", 1, true];
 
-    if (_vehicleType == "MED") then {
-        if (_vehicle isKindOf "rhsusf_m998_w_2dr") then {
+    switch (_vehicleType) do {
+        case "rhsusf_m998_w_2dr_fulltop";
+        case "rhsusf_m998_d_2dr_fulltop": {
             [_vehicle, [-1.1,-0.28,-0.91] , false, _textureMed, [[1,0,0], [0,0,1]]] call FUNC(createVehicleLable);
             [_vehicle, [1.1,-0.28,-0.91] , false, _textureMed, [[-1,0,0], [0,0,1]]] call FUNC(createVehicleLable);
         };
+        default {};
     };
 };
 
@@ -57,13 +59,15 @@ if (_vehicle iskindOf "rhsusf_fmtv_base") then {
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
     _vehicle animateSource ["Hide_CIP", 1, true];
-
-    if (_vehicleType == "MED") then {
-        [_vehicle, [-0.98,-1.32,-0.42] , false, _textureMed, [[1,0,-0.145], [1,0,0]]] call FUNC(createVehicleLable);
-        [_vehicle, [1.666,-1.32,-0.42] , false, _textureMed, [[-1,0,-0.152], [0,0,1]]] call FUNC(createVehicleLable);
+    switch (_vehicleType) do {
+        case "rhsusf_stryker_m1126_m2_d";
+        case "rhsusf_stryker_m1126_m2_wd": {
+            [_vehicle, [-0.98,-1.32,-0.42] , false, _textureMed, [[1,0,-0.145], [1,0,0]]] call FUNC(createVehicleLable);
+            [_vehicle, [1.666,-1.32,-0.42] , false, _textureMed, [[-1,0,-0.152], [0,0,1]]] call FUNC(createVehicleLable);
+        };
+        default {};
     };
-
-    _vehicle setObjectTextureGlobal [12, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\2_ca.paa"];
+    _vehicle setObjectTextureGlobal [12, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\1_ca.paa"];
     _vehicle setObjectTextureGlobal [13, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\-_ca.paa"];
     _vehicle setObjectTextureGlobal [14, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\B_ca.paa"];
     _vehicle setObjectTextureGlobal [15, ""];

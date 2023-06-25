@@ -140,13 +140,13 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
 
     // Interior
     switch (_vehicleType) do {
-        case "rhsusf_m998_d_2dr";
-        case "rhsusf_m998_w_2dr";
-        case "MED": {
+        case "rhsusf_m998_d_2dr_fulltop";
+        case "rhsusf_m998_w_2dr_fulltop": {
             [_vehicle, _medVicInv] call FUNC(addCargo);
             private _medCrateContents = ["atlas"] call FUNC(getMedicalCrate);
             ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
+            
         default {
             [_vehicle, [
                 ["ACE_Chemlight_HiGreen", 16],
