@@ -44,7 +44,7 @@ if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
 
 
 if (count _pylonList == 0) exitWith {false};
-
+private _icon = "";
 // Setup category
 private _mainCategory = ["ACE_SelfActions", QEGVAR(Actions_Vehicle,Main_Cat)];
 private _vehiclePylon = [QEGVAR(Actions_Vehicle,Pylon_Cat), "Vehicle Loadouts", _icon, {true}, { call FUNC(checkStagingZone) }] call ace_interact_menu_fnc_createAction;
