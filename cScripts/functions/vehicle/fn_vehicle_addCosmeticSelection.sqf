@@ -81,17 +81,32 @@ private _textures = [
             _vehicle setObjectTextureGlobal [12, ""];
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4];
         }
-    ]]//,
-    // ["", "OD Paint", [
-    //     {
-
-    //     }
-    // ]]
-    // ["", "FDE Paint", [
-    //     {
-
-    //     }
-    // ]]
+    ]],
+    ["I_APC_Wheeled_03_cannon_F", "OD Paint", [
+        "",
+        {
+            private _dragoonTexturesOD = ["\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_03_co.paa","\a3\data_f_tacops\data\rcws30_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_03_co.paa","\a3\armor_f\data\camonet_aaf_fia_green_co.paa","\a3\armor_f\data\cage_g3_co.paa"];
+            [_vehicle, _dragoonTexturesOD] call EFUNC(vehicle,applyTextures);
+        }
+    ]],
+    ["I_APC_Wheeled_03_cannon_F", "FDE Paint", [
+        "",
+        {
+            private _dragoonTexturesFDE = ["\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_02_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_02_co.paa","\a3\data_f_tacops\data\rcws30_ig_02_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_02_co.paa","\a3\armor_f\data\camonet_aaf_fia_desert_co.paa","\a3\armor_f\data\cage_sand_co.paa"];
+            [_vehicle, _dragoonTexturesFDE] call EFUNC(vehicle,applyTextures);
+        }
+    ]],
+    ["I_APC_Wheeled_03_cannon_F", "Toggle Slats", [
+        "",
+        {
+            private _slatsAreAttached = _vehicle animationSourcePhase "showSLATHull";
+            if (_slatsAreAttached == 1) then {
+                _vehicle animateSource ["showSLATHull",0, true];
+            } else {
+                _vehicle animateSource ["showSLATHull",1, true];
+            };
+        }
+    ]]
 ];
 
 {

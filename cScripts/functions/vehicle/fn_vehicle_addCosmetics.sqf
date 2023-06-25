@@ -63,12 +63,12 @@ if (typeOf _vehicle == "I_APC_Wheeled_03_cannon_F") then {
     _vehicle animateSource ["showBags",1, true];
     _vehicle animateSource ["showBags2",0, true];
     _vehicle animateSource ["showTools",0, true];
-    _vehicle animateSource ["showSLATHull",1, true];
+    _vehicle animateSource ["showSLATHull",0, true];
 
 
     // Set base coat to guerilla green.
-    private _dragoonTexturesWoodland = ["\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_03_co.paa","\a3\data_f_tacops\data\rcws30_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_03_co.paa","\a3\armor_f\data\camonet_aaf_fia_green_co.paa","\a3\armor_f\data\cage_g3_co.paa"];
-    [_vehicle, _dragoonTexturesWoodland] call EFUNC(vehicle,applyTextures);
+    private _dragoonTexturesOD = ["\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_03_co.paa","\a3\data_f_tacops\data\rcws30_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_03_co.paa","\a3\armor_f\data\camonet_aaf_fia_green_co.paa","\a3\armor_f\data\cage_g3_co.paa"];
+    [_vehicle, _dragoonTexturesOD] call EFUNC(vehicle,applyTextures);
 
 
     
