@@ -85,15 +85,27 @@ private _textures = [
     ["I_APC_Wheeled_03_cannon_F", "OD Paint", [
         "",
         {
-            private _dragoonTexturesOD = ["\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_03_co.paa","\a3\data_f_tacops\data\rcws30_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_03_co.paa","\a3\armor_f\data\camonet_aaf_fia_green_co.paa","\a3\armor_f\data\cage_g3_co.paa"];
-            [_vehicle, _dragoonTexturesOD] call EFUNC(vehicle,applyTextures);
+            [_vehicle, [
+                [0,"\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_03_co.paa"],
+                [1,"\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_03_co.paa"],
+                [2,"\a3\data_f_tacops\data\rcws30_ig_03_co.paa"],
+                [3,"\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_03_co.paa"],
+                [4,"\a3\armor_f\data\camonet_aaf_fia_green_co.paa"],
+                [5,"\a3\armor_f\data\cage_g3_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
         }
     ]],
     ["I_APC_Wheeled_03_cannon_F", "FDE Paint", [
         "",
         {
-            private _dragoonTexturesFDE = ["\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_02_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_02_co.paa","\a3\data_f_tacops\data\rcws30_ig_02_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_02_co.paa","\a3\armor_f\data\camonet_aaf_fia_desert_co.paa","\a3\armor_f\data\cage_sand_co.paa"];
-            [_vehicle, _dragoonTexturesFDE] call EFUNC(vehicle,applyTextures);
+            [_vehicle, [
+                [0, "\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_02_co.paa"],
+                [1, "\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_02_co.paa"],
+                [2, "\a3\data_f_tacops\data\rcws30_ig_02_co.paa"],
+                [3, "\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_02_co.paa"],
+                [4, "\a3\armor_f\data\camonet_aaf_fia_desert_co.paa"],
+                [5, "\a3\armor_f\data\cage_sand_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
         }
     ]],
     ["I_APC_Wheeled_03_cannon_F", "Toggle Slats", [
