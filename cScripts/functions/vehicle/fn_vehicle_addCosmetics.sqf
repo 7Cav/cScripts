@@ -34,7 +34,8 @@ if (_vehicle iskindOf "rhsusf_hmmwe_base") then { // MRAP_01_base_F
 
     switch (_vehicleType) do {
         case "rhsusf_m998_w_2dr_fulltop";
-        case "rhsusf_m998_d_2dr_fulltop": {
+        case "rhsusf_m998_d_2dr_fulltop";
+        case "MED": {
             [_vehicle, [-1.1,-0.28,-0.91] , false, _textureMed, [[1,0,0], [0,0,1]]] call FUNC(createVehicleLable);
             [_vehicle, [1.1,-0.28,-0.91] , false, _textureMed, [[-1,0,0], [0,0,1]]] call FUNC(createVehicleLable);
         };
@@ -61,7 +62,8 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
     _vehicle animateSource ["Hide_CIP", 1, true];
     switch (_vehicleType) do {
         case "rhsusf_stryker_m1126_m2_d";
-        case "rhsusf_stryker_m1126_m2_wd": {
+        case "rhsusf_stryker_m1126_m2_wd"; 
+        case "MED": {
             [_vehicle, [-0.98,-1.32,-0.42] , false, _textureMed, [[1,0,-0.145], [1,0,0]]] call FUNC(createVehicleLable);
             [_vehicle, [1.666,-1.32,-0.42] , false, _textureMed, [[-1,0,-0.152], [0,0,1]]] call FUNC(createVehicleLable);
         };
