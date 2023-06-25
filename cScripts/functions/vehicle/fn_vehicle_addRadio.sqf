@@ -25,13 +25,14 @@ if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup
 if (!(faction _vehicle in _factionArray));
 
 if (_vehicle iskindOf "MRAP_01_base_F") then {
-    [_vehicle, [17]] call EFUNC(vehicle,setRadio);
     switch (_vehicleType) do {
+        case "rhsusf_m998_d_2dr_fulltop";
+        case "rhsusf_m998_w_2dr_fulltop";
         case "MED": {
-            [_vehicle, [15]] call EFUNC(vehicle,setRadio);
+            [_vehicle, [6]] call EFUNC(vehicle,setRadio);
         };
         default {
-            [_vehicle, [17]] call EFUNC(vehicle,setRadio);
+            [_vehicle, [4]] call EFUNC(vehicle,setRadio);
         };
     };
 };
@@ -44,16 +45,25 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
         case "rhsusf_M1230a1_usarmy_wd";
         case "rhsusf_M1230a1_usarmy_d";
         case "MED": {
-            [_vehicle, [15]] call EFUNC(vehicle,setRadio);
+            [_vehicle, [6]] call EFUNC(vehicle,setRadio);
         };
         default {
-            [_vehicle, [17]] call EFUNC(vehicle,setRadio);
+            [_vehicle, [4]] call EFUNC(vehicle,setRadio);
         };
     };
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
-    [_vehicle, [4]] call EFUNC(vehicle,setRadio);
+    switch (_vehicleType) do {
+        case "rhsusf_stryker_m1126_m2_d";
+        case "rhsusf_stryker_m1126_m2_wd";
+        case "MED": {
+            [_vehicle, [6]] call EFUNC(vehicle,setRadio);
+        };
+        default {
+            [_vehicle, [3]] call EFUNC(vehicle,setRadio);
+        };
+    };
 };
 
 if (_vehicle iskindOf "RHS_M2A2_Base") then {
@@ -68,27 +78,27 @@ if (_vehicle iskindOf "RHS_MELB_base") then {
 };
 
 if (_vehicle iskindOf "RHS_UH60_Base") then {
-    [_vehicle, [2, 14]] call EFUNC(vehicle,setRadio);
+    [_vehicle, [2, 9]] call EFUNC(vehicle,setRadio);
 };
 
 if (_vehicle iskindOf "RHS_CH_47F_base") then {
-    [_vehicle, [2, 14]] call EFUNC(vehicle,setRadio);
+    [_vehicle, [2, 9]] call EFUNC(vehicle,setRadio);
 };
 
 if (_vehicle iskindOf "RHS_AH64_base") then {
-    [_vehicle, [12]] call EFUNC(vehicle,setRadio);
+    [_vehicle, [8]] call EFUNC(vehicle,setRadio);
 };
 
 if (_vehicle iskindOf "RHS_C130J_Base") then {
-    [_vehicle, [2, 14]] call EFUNC(vehicle,setRadio);
+    [_vehicle, [2, 9]] call EFUNC(vehicle,setRadio);
 };
 
 if (_vehicle iskindOf "Plane_Fighter_03_base_F") then {
-    [_vehicle, [2, 14]] call EFUNC(vehicle,setRadio);
+    [_vehicle, [2, 8]] call EFUNC(vehicle,setRadio);
 };
 
 if (_vehicle iskindOf "Plane_CAS_01_base_F") then {
-    [_vehicle, [13, 14]] call EFUNC(vehicle,setRadio);
+    [_vehicle, [2, 8]] call EFUNC(vehicle,setRadio);
 };
 
 _vehicle setVariable [QEGVAR(Vehicle,Radio), true];
