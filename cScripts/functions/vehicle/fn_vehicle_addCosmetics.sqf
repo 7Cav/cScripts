@@ -57,7 +57,6 @@ if (_vehicle iskindOf "rhsusf_fmtv_base") then {
 
 
 if (typeOf _vehicle == "I_APC_Wheeled_03_cannon_F") then {
-    
     // Animate slat armor and camo nets
     _vehicle animateSource ["showCamonetHull",1, true];
     _vehicle animateSource ["showBags",1, true];
@@ -65,13 +64,9 @@ if (typeOf _vehicle == "I_APC_Wheeled_03_cannon_F") then {
     _vehicle animateSource ["showTools",0, true];
     _vehicle animateSource ["showSLATHull",0, true];
 
-
     // Set base coat to guerilla green.
     private _dragoonTexturesOD = ["\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_03_co.paa","\a3\data_f_tacops\data\rcws30_ig_03_co.paa","\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_03_co.paa","\a3\armor_f\data\camonet_aaf_fia_green_co.paa","\a3\armor_f\data\cage_g3_co.paa"];
     [_vehicle, _dragoonTexturesOD] call EFUNC(vehicle,applyTextures);
-
-
-    
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
