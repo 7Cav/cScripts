@@ -1,5 +1,16 @@
 #include "..\script_component.hpp";
-
+/*
+ * Author: SPC.Turn.J
+ * This function applies textures to a given vehicle.
+ *
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ * 1: Textures <ARRAY>
+ * 0: Start Index <INT>
+ * Example:
+ * ["vic", "_myTextures"] call cScripts_fnc_vehicle_applyTextures;
+ * ["vic", "_myTextures", 3] call cScripts_fnc_vehicle_applyTextures;
+ */
 
 params ["_vehicle", "_textureArray", ["_startInd",1]];
 
