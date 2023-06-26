@@ -140,11 +140,14 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
 
     // Interior
     switch (_vehicleType) do {
+        case "rhsusf_m998_d_2dr_fulltop";
+        case "rhsusf_m998_w_2dr_fulltop";
         case "MED": {
             [_vehicle, _medVicInv] call FUNC(addCargo);
             private _medCrateContents = ["atlas"] call FUNC(getMedicalCrate);
             ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
         };
+            
         default {
             [_vehicle, [
                 ["ACE_Chemlight_HiGreen", 16],
@@ -231,90 +234,13 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
     [_vehicle, 6, 38, false, false] call FUNC(setCargoAttributes);
 
     switch (_vehicleType) do {
+        case "rhsusf_stryker_m1126_m2_d";
+        case "rhsusf_stryker_m1126_m2_wd";
         case "MED": {
             [_vehicle, _medVicInv] call FUNC(addCargo);
             
             private _medCrateContents = ["atlas"] call FUNC(getMedicalCrate);
             ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
-        };
-        case "rhsusf_stryker_m1126_m2_d";
-        case "rhsusf_stryker_m1126_m2_wd": {
-            [_vehicle, [
-                ["rhs_weap_fgm148", 1],
-                ["rhs_fgm148_magazine_AT", 2],
-                ["rhs_weap_M136_heat", 2],
-                ["rhs_weap_m32", 1],
-                ["rhsusf_mag_6Rnd_M397_HET", 2],
-                ["rhsusf_mag_6Rnd_M433_HEDP", 3],
-                ["rhsusf_mag_6Rnd_m4009", 3],
-                ["rhsusf_mag_6Rnd_M713_red", 2],
-                ["ACE_UAVBattery", 4],
-                ["ACE_wirecutter", 1]
-            ]] call FUNC(addCargo);
-
-            ["Box_NATO_Equip_F", [
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 21],
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 12],
-                ["rhsusf_100Rnd_762x51_m62_tracer", 10],
-                ["rhs_fgm148_magazine_AT", 3],
-                ["HandGrenade", 9],
-                ["SmokeShell", 27],
-                ["SmokeShellRed", 4],
-                ["SmokeShellBlue", 4],
-                ["SmokeShellYellow", 4],
-                ["SmokeShellGreen", 4],
-                ["rhs_mag_m433_HEDP", 20],
-                ["rhs_mag_m397_HET", 10],
-                ["rhs_mag_M664_red_cluster", 5],
-                ["rhs_mag_m714_White", 5],
-                ["ACE_40mm_Flare_IR", 5],
-                ["ACE_HUNTIR_M203", 5],
-                ["ACE_quikclot", 50],
-                ["ACE_tourniquet", 18]
-            ], _vehicle] call FUNC(createCargoCrate);
-        };
-        case "rhsusf_stryker_m1126_mk19_d";
-        case "rhsusf_stryker_m1126_mk19_wd": {
-            [_vehicle, [
-                ["NDS_B_M224_mortar", 4],
-                ["rhs_weap_fgm148", 1],
-                ["rhs_fgm148_magazine_AT", 1],
-                ["rhs_weap_M136_heat", 2],
-                ["rhs_weap_m32", 1],
-                ["rhsusf_mag_6Rnd_M397_HET", 2],
-                ["rhsusf_mag_6Rnd_M433_HEDP", 3],
-                ["rhsusf_mag_6Rnd_m4009", 3],
-                ["rhsusf_mag_6Rnd_M713_red", 2],
-                ["ACE_UAVBattery", 2],
-                ["ACE_wirecutter", 1]
-            ]] call FUNC(addCargo);
-
-            ["Box_NATO_Equip_F", [
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 21],
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 21],
-                ["rhsusf_100Rnd_762x51_m62_tracer", 10],
-                ["rhs_fgm148_magazine_AT", 3],
-                ["HandGrenade", 9],
-                ["SmokeShell", 27],
-                ["SmokeShellRed", 4],
-                ["SmokeShellBlue", 4],
-                ["SmokeShellYellow", 4],
-                ["SmokeShellGreen", 4],
-                ["rhs_mag_m433_HEDP", 20],
-                ["rhs_mag_m397_HET", 10],
-                ["rhs_mag_M664_red_cluster", 5],
-                ["rhs_mag_m714_White", 5],
-                ["ACE_40mm_Flare_IR", 5],
-                ["ACE_HUNTIR_M203", 5],
-                ["ACE_quikclot", 50],
-                ["ACE_tourniquet", 18]
-            ], _vehicle] call FUNC(createCargoCrate);
-
-            ["Box_NATO_Support_F", [
-                ["NDS_M_6Rnd_60mm_HE_0", 5],
-                ["NDS_M_6Rnd_60mm_HE", 5],
-                ["NDS_M_6Rnd_60mm_SMOKE", 5]
-            ], _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, [

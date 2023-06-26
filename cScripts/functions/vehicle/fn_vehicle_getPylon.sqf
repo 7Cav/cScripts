@@ -155,7 +155,7 @@ private _APC_Wheeled_03_base_F = createHashMapFromArray [
         ["2Rnd_GAT_missiles",[0],2],
         ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60],
         ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60]
-    ]]
+    ]],
     ["Assault",[
         ["SmokeLauncherMag",[0,0],6],
         ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
