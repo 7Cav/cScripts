@@ -213,6 +213,7 @@ class cScripts {
         class info {};
         class log {};
         class warning {};
+        class depricated {};
     };
     class testing {
         file = "cScripts\functions\testing";
