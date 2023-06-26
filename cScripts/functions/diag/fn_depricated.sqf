@@ -21,6 +21,7 @@ params [
     ["_newFunction", "", [""]],
 ];
 
+
 private _type = "DEPRICATED";
 
 // Check if arguments contain a object and save it
@@ -29,8 +30,9 @@ private _object = objNull;
     if (_x typeName "OBJECT") {
         _object = _x;
         break;
-    }
+    };
 } forEach _newArguments;
+
 
 // Print warning and call function
 if (!isNull _object) then {
