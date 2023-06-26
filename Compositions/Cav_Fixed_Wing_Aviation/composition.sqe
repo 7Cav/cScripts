@@ -1,2292 +1,937 @@
 version=54;
-center[]={6851.418,5,2155.4976};
+center[]={1632.2933,5,4666.167};
 class items
 {
-	items=1;
+	items=8;
 	class Item0
 	{
 		dataType="Layer";
-		name="Fixed Wing Aviation [DEVBUILD]";
+		name="FW Air Superiority (F-22A)";
 		class Entities
 		{
-			items=1;
+			items=6;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-34.852417,0.89242268,53.462402};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+					init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					description="Starter Crate";
+					dynamicSimulation=1;
+				};
+				id=2;
+				type="B_supplyCrate_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-44.942139,2.479682,59.905273};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=4;
+				type="USAF_F22_EWP_AG";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-24.942139,2.479682,60.405273};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=5;
+				type="USAF_F22_EWP_AG";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item3
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={-35.381104,0.036382675,61.110352};
+				};
+				title="FW Attack ASF (Tooltip)";
+				description="The F-22A is primarily an air to air intercept fighter. It excels best when it's slick. There's the stock slick version and three variants: EWP-AG, EWP-AA, Heavy. EWP is Enhanced Weapons Package. AG and AA is Air to Ground and Air to Air. Heavy is just outer hardpoints. All three of these variants technically negate the stealth benefits of the F-22. Pilots will pick what they want. Definitely throw some fast air at these guys, they'll love every minute of it.";
+				id=6;
+				atlOffset=0.036382675;
+			};
+			class Item4
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-37.26416,0.0014390945,50.523926};
+							angles[]={-0,0.019565141,0};
+						};
+						side="West";
+						flags=6;
+						class Attributes
+						{
+							skill=0.60000002;
+							rank="CAPTAIN";
+							init="call{this setgroupID[""RAPTOR-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""EAGLE-2""];}";
+							description="Pilot@RAPTOR-2";
+							isPlayable=1;
+						};
+						id=8;
+						type="Cav_B_A_Plane_Fighter_Pilot_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male12ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0.98000002;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=7;
+			};
+			class Item5
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-32.476318,0.0014390945,50.720703};
+							angles[]={-0,0.019565141,0};
+						};
+						side="West";
+						flags=6;
+						class Attributes
+						{
+							skill=0.60000002;
+							rank="CAPTAIN";
+							init="call{this setgroupID[""RAPTOR-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""EAGLE-1""];}";
+							description="Pilot@RAPTOR-1";
+							isPlayable=1;
+						};
+						id=10;
+						type="Cav_B_A_Plane_Fighter_Pilot_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male04ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1.04;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=9;
+			};
+		};
+		id=1;
+		atlOffset=0.0045480728;
+	};
+	class Item1
+	{
+		dataType="Layer";
+		name="FW Attack Ground (A-10C)";
+		class Entities
+		{
+			items=6;
+			class Item0
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-26.450439,0.0014390945,6.4785156};
+							angles[]={0,0.019565141,0};
+						};
+						side="West";
+						flags=7;
+						class Attributes
+						{
+							skill=0.60000002;
+							rank="CAPTAIN";
+							init="call{this setgroupID[""HOG-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""HOG-1""];}";
+							description="Pilot@HOG-1";
+							isPlayable=1;
+						};
+						id=13;
+						type="Cav_B_A_Plane_Fighter_Pilot_Hog_1_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male04ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1.04;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=12;
+			};
+			class Item1
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-34.5271,0.0014390945,6.3193359};
+							angles[]={0,0.019565141,0};
+						};
+						side="West";
+						flags=7;
+						class Attributes
+						{
+							skill=0.60000002;
+							rank="CAPTAIN";
+							init="call{this setgroupID[""HOG-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""HOG-2""];}";
+							description="Pilot@HOG-2";
+							isPlayable=1;
+						};
+						id=15;
+						type="Cav_B_A_Plane_Fighter_Pilot_Hog_2_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male12ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0.98000002;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=14;
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-20.187256,2.094676,13.667969};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=16;
+				type="USAF_A10";
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-40.187256,2.094676,13.167969};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=17;
+				type="USAF_A10";
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-30.518433,0.89242268,8.8339844};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+					init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					description="Starter Crate";
+					dynamicSimulation=1;
+				};
+				id=18;
+				type="B_supplyCrate_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item5
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={-30.484131,0.036382675,9.6381836};
+				};
+				title="FW Ground Attack";
+				description="The A-10 is venerable as one of the ""best"" A2G platforms on the market. There are only two key things here: if we have an A-10 up, there is no enemy fixed wing. A-10s only operate in air superiority environments where we control the skies. That's not to say you can't threaten them with a good time though.";
+				id=20;
+				atlOffset=0.036382675;
+			};
+		};
+		id=11;
+		atlOffset=0.018191338;
+	};
+	class Item2
+	{
+		dataType="Layer";
+		name="FW Attack Multirole (F-35A)";
+		class Entities
+		{
+			items=6;
+			class Item0
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-36.831299,0.0014390945,31.729004};
+							angles[]={-0,0.019565141,0};
+						};
+						side="West";
+						flags=6;
+						class Attributes
+						{
+							skill=0.60000002;
+							rank="CAPTAIN";
+							init="call{this setgroupID[""LIGHTNIG-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""EAGLE-2""];}";
+							description="Pilot@LIGHTNING-2";
+							isPlayable=1;
+						};
+						id=23;
+						type="Cav_B_A_Plane_Fighter_Pilot_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male12ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0.98000002;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=22;
+			};
+			class Item1
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-32.043213,0.0014390945,31.926758};
+							angles[]={-0,0.019565141,0};
+						};
+						side="West";
+						flags=6;
+						class Attributes
+						{
+							skill=0.60000002;
+							rank="CAPTAIN";
+							init="call{this setgroupID[""LIGHTNIG-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""EAGLE-1""];}";
+							description="Pilot@LIGHTNING-1";
+							isPlayable=1;
+						};
+						id=25;
+						type="Cav_B_A_Plane_Fighter_Pilot_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male04ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1.04;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=24;
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-34.395874,0.89242268,34.544434};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+					init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					description="Starter Crate";
+					dynamicSimulation=1;
+				};
+				id=26;
+				type="B_supplyCrate_F";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-24.442139,2.2409725,40.460449};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=28;
+				type="USAF_F35A";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-44.442139,2.2409725,39.960449};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=29;
+				type="USAF_F35A";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item5
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={-35.105225,0.036382675,38.40625};
+				};
+				title="FW Multirole (Tooltip)";
+				description="The F-35A is a versatile platform capable of carrying air to air and air to ground ordnance - pick the role you want it to do and stick to it. The F-35A also has an on-board satellite view of the battlespace. Stand-off ordnances from multiple kilometers away are the namesake of the F-35A, but it's capable of everything the A-10C is and more. (Sorry not sorry Suto)";
+				id=30;
+				atlOffset=0.036382675;
+			};
+		};
+		id=21;
+		atlOffset=0.018191338;
+	};
+	class Item3
+	{
+		dataType="Layer";
+		name="FW Drone Attack (MQ-9)";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={65.126465,1.7847018,25.190918};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+					init="this setGroupid [""RPR""];";
+					textures="USAF_TwoTone";
+					pylons="USAF_PylonRack_2Rnd_AGM114R[0];USAF_PylonRack_4Rnd_GBU53[0];USAF_PylonRack_4Rnd_GBU39[0];USAF_PylonRack_2Rnd_AGM114R[0];";
+				};
+				id=32;
+				type="USAF_MQ9";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="VehicleCustomization";
+						expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+						class Value
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="USAF_TwoTone";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+										};
+									};
+								};
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item1
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={65.146729,0.0014390945,33.947754};
+						};
+						side="West";
+						flags=7;
+						class Attributes
+						{
+							init="this setGroupid [""REAPER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""REAPER-1""];";
+							description="Drone Pilot@REAPER-1";
+							isPlayable=1;
+						};
+						id=34;
+						type="Cav_B_A_AirController_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male03ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0.95999998;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=33;
+			};
+			class Item2
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={65.147949,0.036382675,31.911621};
+				};
+				title="FW Drone Attack (Tooltip)";
+				description="The MQ-9 has a light armament available to it that is mostly Laser guided. All ordnance is capable of tracking and launching from the drone's camera, with little regard on the orientation of the drone (given enough altitude). cTAB tablets have the ability to interface with the drone gunner optics which allows ground force elements instant eyes-on to whatever the drone is seeing.";
+				id=35;
+				atlOffset=0.036382675;
+			};
+		};
+		id=31;
+		atlOffset=0.018191338;
+	};
+	class Item4
+	{
+		dataType="Layer";
+		name="FW Drone Recon (RQ-4A)";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={65.150879,1.8006945,-6.6000977};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+					init="this setGroupid [""DTHSTR""];";
+				};
+				id=37;
+				type="USAF_RQ4A";
+			};
+			class Item1
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={64.958984,0.036382675,2.1743164};
+				};
+				title="FW Drone Recon (Tooltip)";
+				description="The RQ-4 can be put in the air on a racetrack pattern and has enough fuel to last an entire 3hr op. If your operation is deemed to be in an area that has BLUFOR having air supremacy, it's a good idea to put one of these in the air at a height of 2500m or higher in a loiter pattern over the AO. Units with cTAB can tap into the drone's turret camera and observe the area for a better perspective, allowing freedom of information to the unit without the need of a middle-man calling out what he sees.";
+				id=38;
+				atlOffset=0.036382675;
+			};
+		};
+		id=36;
+		atlOffset=0.018191338;
+	};
+	class Item5
+	{
+		dataType="Layer";
+		name="FW Transport (C-130J)";
+		class Entities
+		{
+			items=5;
 			class Item0
 			{
 				dataType="Layer";
-				name="Fixed Wing Aviation";
+				name="C-130J Titan-1";
 				class Entities
 				{
-					items=8;
+					items=3;
 					class Item0
 					{
-						dataType="Layer";
-						name="FW Transport Heavy (C-17)";
-						class Entities
-						{
-							items=3;
-							class Item0
-							{
-								dataType="Comment";
-								class PositionInfo
-								{
-									position[]={29.989746,0,11.70459};
-								};
-								title="FW Heavy Transport (Tooltip)";
-								description="While one C-17 can carry an entire platoon in one transport, keep in mind that the more bodies in one bird, the longer your DZ or the need to have multiple sticks in one bird and have go-arounds, which means longer time before all troops are in the AO. For motorized jumps, the platoon has 11 vehicles. 10 if you forego the Platoon HQ vehicle and have them ride along with the infantry. Each C-17 fits 5 Vehicles. Math.";
-								id=103;
-							};
-							class Item1
-							{
-								dataType="Layer";
-								name="C-17 Titan-1";
-								class Entities
-								{
-									items=3;
-									class Item0
-									{
-										dataType="Group";
-										side="West";
-										class Entities
-										{
-											items=2;
-											class Item0
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={22.899414,0.0014390945,-1.0793457};
-												};
-												side="West";
-												flags=7;
-												class Attributes
-												{
-													skill=0.60000002;
-													rank="CAPTAIN";
-													init="call{this setgroupID[""TITAN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-													description="Pilot@TITAN-1";
-													isPlayable=1;
-												};
-												id=106;
-												type="Cav_B_A_Plane_Transport_Pilot_Titan_1_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male04ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1.03;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-											class Item1
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={23.899902,0.0014390945,-1.0788574};
-												};
-												side="West";
-												flags=5;
-												class Attributes
-												{
-													skill=0.55000001;
-													rank="LIEUTENANT";
-													init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-													description="Co-Pilot";
-													isPlayable=1;
-												};
-												id=107;
-												type="Cav_B_A_Plane_Transport_coPilot_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male03ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1.03;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-										};
-										class Attributes
-										{
-										};
-										id=105;
-									};
-									class Item1
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={23.899414,0.89242268,1.8706055};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-											init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-											description="Starter Crate";
-											dynamicSimulation=1;
-										};
-										id=108;
-										type="B_supplyCrate_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-									class Item2
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={29.293945,3.3578539,-12.94043};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-										};
-										id=109;
-										type="USAF_C17";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ItemGPS"",""ItemRadio""],[1,1]],[[""B_Parachute""],[14]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-								};
-								id=104;
-							};
-							class Item2
-							{
-								dataType="Layer";
-								name="C-17 Titan-2";
-								class Entities
-								{
-									items=3;
-									class Item0
-									{
-										dataType="Group";
-										side="West";
-										class Entities
-										{
-											items=2;
-											class Item0
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={24.976074,0.0014390945,63.597656};
-												};
-												side="West";
-												flags=7;
-												class Attributes
-												{
-													skill=0.60000002;
-													rank="CAPTAIN";
-													init="call{this setgroupID[""TITAN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
-													description="Pilot@TITAN-2";
-													isPlayable=1;
-												};
-												id=112;
-												type="Cav_B_A_Plane_Transport_Pilot_Titan_2_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male05ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0.95999998;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-											class Item1
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={25.977051,0.0014390945,63.598145};
-												};
-												side="West";
-												flags=5;
-												class Attributes
-												{
-													skill=0.55000001;
-													rank="LIEUTENANT";
-													init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
-													description="Co-Pilot";
-													isPlayable=1;
-												};
-												id=113;
-												type="Cav_B_A_Plane_Transport_coPilot_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male07ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1.01;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-										};
-										class Attributes
-										{
-										};
-										id=111;
-									};
-									class Item1
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={29.345703,3.3578539,48.991455};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-										};
-										id=114;
-										type="USAF_C17";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ItemGPS"",""ItemRadio""],[1,1]],[[""B_Parachute""],[60]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-									class Item2
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={25.399414,0.89242268,66.370605};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-											init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-											description="Starter Crate";
-											dynamicSimulation=1;
-										};
-										id=115;
-										type="B_supplyCrate_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-								};
-								id=110;
-							};
-						};
-						id=102;
-					};
-					class Item1
-					{
-						dataType="Layer";
-						name="FW Transport (C-130J)";
-						class Entities
-						{
-							items=5;
-							class Item0
-							{
-								dataType="Layer";
-								name="C-130J Titan-1";
-								class Entities
-								{
-									items=3;
-									class Item0
-									{
-										dataType="Group";
-										side="West";
-										class Entities
-										{
-											items=2;
-											class Item0
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={33.399414,0.0014390945,-42.579346};
-												};
-												side="West";
-												flags=7;
-												class Attributes
-												{
-													skill=0.60000002;
-													rank="CAPTAIN";
-													init="call{this setgroupID[""TITAN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-													description="Pilot@TITAN-1";
-													isPlayable=1;
-												};
-												id=119;
-												type="Cav_B_A_Plane_Transport_Pilot_Titan_1_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male04ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1.03;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-											class Item1
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={34.399902,0.0014390945,-42.578857};
-												};
-												side="West";
-												flags=5;
-												class Attributes
-												{
-													skill=0.55000001;
-													rank="LIEUTENANT";
-													init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-													description="Co-Pilot";
-													isPlayable=1;
-												};
-												id=120;
-												type="Cav_B_A_Plane_Transport_coPilot_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male03ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1.03;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-										};
-										class Attributes
-										{
-										};
-										id=118;
-									};
-									class Item1
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={33.899414,0.89242268,-40.629395};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-											init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-											description="Starter Crate";
-											dynamicSimulation=1;
-										};
-										id=121;
-										type="B_supplyCrate_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-									class Item2
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={29.389648,0.014522076,-50.770996};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-										};
-										id=122;
-										type="USAF_C130J";
-									};
-								};
-								id=117;
-							};
-							class Item1
-							{
-								dataType="Layer";
-								name="C-130J Titan-2";
-								class Entities
-								{
-									items=3;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={29.399414,0.014522076,-83.223877};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-										};
-										id=124;
-										type="USAF_C130J";
-									};
-									class Item1
-									{
-										dataType="Group";
-										side="West";
-										class Entities
-										{
-											items=2;
-											class Item0
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={25.476074,0.0014390945,-75.402344};
-												};
-												side="West";
-												flags=7;
-												class Attributes
-												{
-													skill=0.60000002;
-													rank="CAPTAIN";
-													init="call{this setgroupID[""TITAN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
-													description="Pilot@TITAN-2";
-													isPlayable=1;
-												};
-												id=126;
-												type="Cav_B_A_Plane_Transport_Pilot_Titan_2_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male05ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0.95999998;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-											class Item1
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={26.477051,0.0014390945,-75.401855};
-												};
-												side="West";
-												flags=5;
-												class Attributes
-												{
-													skill=0.55000001;
-													rank="LIEUTENANT";
-													init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
-													description="Co-Pilot";
-													isPlayable=1;
-												};
-												id=127;
-												type="Cav_B_A_Plane_Transport_coPilot_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male07ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1.01;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-										};
-										class Attributes
-										{
-										};
-										id=125;
-									};
-									class Item2
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={25.899414,0.89242268,-72.629395};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-											init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-											description="Starter Crate";
-											dynamicSimulation=1;
-										};
-										id=128;
-										type="B_supplyCrate_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-								};
-								id=123;
-							};
-							class Item2
-							{
-								dataType="Comment";
-								class PositionInfo
-								{
-									position[]={28.252441,0,-68.203369};
-								};
-								title="FW Transport (Tooltip)";
-								description="The C-130J's from USAF can fit *almost* the entire Bandit Platoon in one C-130J, however, keep in mind that the more bodies in one bird, the longer your DZ or the need to have multiple sticks in one bird and have go-arounds, which means longer time before all troops are in the AO. You won't be able to jump the entirety of the PLT's 11 vehicles with only 2 cargo variants (3 vehicles fit in one C-130J Cargo) so it's recommended to either forego the vehicles or zeus-assist them if you only plan on using the C-130s.";
-								id=129;
-							};
-							class Item3
-							{
-								dataType="Layer";
-								name="C-130J Titan-3";
-								class Entities
-								{
-									items=3;
-									class Item0
-									{
-										dataType="Group";
-										side="West";
-										class Entities
-										{
-											items=2;
-											class Item0
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={0.77441406,0.0014390945,-25.913574};
-												};
-												side="West";
-												flags=7;
-												class Attributes
-												{
-													skill=0.60000002;
-													rank="CAPTAIN";
-													init="call{this setgroupID[""TITAN-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-3""];}";
-													description="Pilot@TITAN-3";
-													isPlayable=1;
-												};
-												id=132;
-												type="Cav_B_A_Plane_Transport_Pilot_Titan_3_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male02ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1.05;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-											class Item1
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={1.7749023,0.0014390945,-25.913574};
-												};
-												side="West";
-												flags=5;
-												class Attributes
-												{
-													skill=0.55000001;
-													rank="LIEUTENANT";
-													init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-3""];}";
-													description="Co-Pilot";
-													isPlayable=1;
-												};
-												id=133;
-												type="Cav_B_A_Plane_Transport_coPilot_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male12ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1.03;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-										};
-										class Attributes
-										{
-										};
-										id=131;
-									};
-									class Item1
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-2.6635742,0.014522076,-34.677979};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-										};
-										id=134;
-										type="USAF_C130J_Cargo";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ItemGPS"",""ItemRadio""],[1,1]],[[""B_Parachute""],[14]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-									class Item2
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={1.3994141,0.89242268,-23.629395};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-											init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-											description="Starter Crate";
-											dynamicSimulation=1;
-										};
-										id=135;
-										type="B_supplyCrate_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-								};
-								id=130;
-							};
-							class Item4
-							{
-								dataType="Layer";
-								name="C-130J Titan-4";
-								class Entities
-								{
-									items=3;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={63.424316,0.014522076,-34.759766};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-										};
-										id=137;
-										type="USAF_C130J_Cargo";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ItemGPS"",""ItemRadio""],[1,1]],[[""B_Parachute""],[14]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-									class Item1
-									{
-										dataType="Group";
-										side="West";
-										class Entities
-										{
-											items=2;
-											class Item0
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={59.546875,0.0014390945,-25.765625};
-												};
-												side="West";
-												flags=7;
-												class Attributes
-												{
-													skill=0.60000002;
-													rank="CAPTAIN";
-													init="call{this setgroupID[""TITAN-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-4""];}";
-													description="Pilot@TITAN-4";
-													isPlayable=1;
-												};
-												id=139;
-												type="Cav_B_A_Plane_Transport_Pilot_Titan_4_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male06ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0.99000001;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-											class Item1
-											{
-												dataType="Object";
-												class PositionInfo
-												{
-													position[]={60.547363,0.0014390945,-25.765625};
-												};
-												side="West";
-												flags=5;
-												class Attributes
-												{
-													skill=0.55000001;
-													rank="LIEUTENANT";
-													init="call{this setVariable [""cScripts_Player_Unit"", ""TITAN-4""];}";
-													description="Co-Pilot";
-													isPlayable=1;
-												};
-												id=140;
-												type="Cav_B_A_Plane_Transport_coPilot_F";
-												class CustomAttributes
-												{
-													class Attribute0
-													{
-														property="speaker";
-														expression="_this setspeaker _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Male02ENG";
-															};
-														};
-													};
-													class Attribute1
-													{
-														property="pitch";
-														expression="_this setpitch _value;";
-														class Value
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0.98000002;
-															};
-														};
-													};
-													nAttributes=2;
-												};
-											};
-										};
-										class Attributes
-										{
-										};
-										id=138;
-									};
-									class Item2
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={59.899414,0.89242268,-23.129395};
-										};
-										side="Empty";
-										flags=4;
-										class Attributes
-										{
-											init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-											description="Starter Crate";
-											dynamicSimulation=1;
-										};
-										id=141;
-										type="B_supplyCrate_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="ammoBox";
-												expression="[_this,_value] call bis_fnc_initAmmoBox;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-													};
-												};
-											};
-											nAttributes=1;
-										};
-									};
-								};
-								id=136;
-							};
-						};
-						id=116;
-					};
-					class Item2
-					{
-						dataType="Layer";
-						name="USAF Service Menu";
-						class Entities
-						{
-							items=6;
-							class Item0
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-55.600586,1.9255862,-26.629395};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=143;
-								type="B_Truck_01_ammo_F";
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-50.600586,1.9160042,-26.629395};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=144;
-								type="B_Truck_01_fuel_F";
-							};
-							class Item2
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-45.600586,2.3134775,-26.629395};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=145;
-								type="B_Truck_01_Repair_F";
-							};
-							class Item3
-							{
-								dataType="Logic";
-								class PositionInfo
-								{
-									position[]={-55.600586,0,-16.629395};
-								};
-								id=146;
-								type="USAF_ServiceMenu_moduleAddRearmService";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="USAF_moduleServiceMenuAdd_RemoveCargo";
-										expression="_this setVariable ['RemoveCargo',_value,true];";
-										class Value
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=1;
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="USAF_moduleServiceMenuAdd_Loadout";
-										expression="_this setVariable ['Loadout',_value,true];";
-										class Value
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=1;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-							class Item4
-							{
-								dataType="Logic";
-								class PositionInfo
-								{
-									position[]={-50.600586,0,-16.629395};
-								};
-								id=147;
-								type="USAF_ServiceMenu_moduleAddRefuelService";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="USAF_moduleServiceMenuAdd_RemoveCargo";
-										expression="_this setVariable ['RemoveCargo',_value,true];";
-										class Value
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=1;
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item5
-							{
-								dataType="Logic";
-								class PositionInfo
-								{
-									position[]={-45.600586,0,-16.629395};
-								};
-								id=148;
-								type="USAF_ServiceMenu_moduleAddRepairService";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="USAF_moduleServiceMenuAdd_RemoveCargo";
-										expression="_this setVariable ['RemoveCargo',_value,true];";
-										class Value
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=1;
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-						};
-						id=142;
-					};
-					class Item3
-					{
-						dataType="Layer";
-						name="FW Attack Ground (A-10C)";
-						class Entities
-						{
-							items=7;
-							class Item0
-							{
-								dataType="Group";
-								side="West";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-42.108887,0.0014390945,-2.0561523};
-											angles[]={0,0.019565141,0};
-										};
-										side="West";
-										flags=7;
-										class Attributes
-										{
-											skill=0.60000002;
-											rank="CAPTAIN";
-											init="call{this setgroupID[""HOG-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""HOG-1""];}";
-											description="Pilot@HOG-1";
-											isPlayable=1;
-										};
-										id=151;
-										type="Cav_B_A_Plane_Fighter_Pilot_Hog_1_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="speaker";
-												expression="_this setspeaker _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Male04ENG";
-													};
-												};
-											};
-											class Attribute1
-											{
-												property="pitch";
-												expression="_this setpitch _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1.04;
-													};
-												};
-											};
-											nAttributes=2;
-										};
-									};
-								};
-								class Attributes
-								{
-								};
-								id=150;
-							};
-							class Item1
-							{
-								dataType="Group";
-								side="West";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-50.185547,0.0014390945,-2.215332};
-											angles[]={0,0.019565141,0};
-										};
-										side="West";
-										flags=7;
-										class Attributes
-										{
-											skill=0.60000002;
-											rank="CAPTAIN";
-											init="call{this setgroupID[""HOG-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""HOG-2""];}";
-											description="Pilot@HOG-2";
-											isPlayable=1;
-										};
-										id=153;
-										type="Cav_B_A_Plane_Fighter_Pilot_Hog_2_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="speaker";
-												expression="_this setspeaker _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Male12ENG";
-													};
-												};
-											};
-											class Attribute1
-											{
-												property="pitch";
-												expression="_this setpitch _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0.98000002;
-													};
-												};
-											};
-											nAttributes=2;
-										};
-									};
-								};
-								class Attributes
-								{
-								};
-								id=152;
-							};
-							class Item2
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-35.845703,2.094676,5.1330566};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=154;
-								type="USAF_A10";
-							};
-							class Item3
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-55.845703,2.094676,4.6330566};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=155;
-								type="USAF_A10";
-							};
-							class Item4
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-50.296387,0.89242268,-0.0390625};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-									description="Starter Crate";
-									dynamicSimulation=1;
-								};
-								id=156;
-								type="B_supplyCrate_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item5
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-42.508301,0.89242268,0.421875};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-									description="Starter Crate";
-									dynamicSimulation=1;
-								};
-								id=157;
-								type="B_supplyCrate_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item6
-							{
-								dataType="Comment";
-								class PositionInfo
-								{
-									position[]={-46.142578,0,1.1035156};
-								};
-								title="FW Ground Attack";
-								description="The A-10 is venerable as one of the ""best"" A2G platforms on the market. There are only two key things here: if we have an A-10 up, there is no enemy fixed wing. A-10s only operate in air superiority environments where we control the skies. That's not to say you can't threaten them with a good time though.";
-								id=158;
-							};
-						};
-						id=149;
-					};
-					class Item4
-					{
-						dataType="Layer";
-						name="FW Attack Multirole (F-35A)";
-						class Entities
-						{
-							items=7;
-							class Item0
-							{
-								dataType="Group";
-								side="West";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-52.489746,0.0014390945,23.19458};
-											angles[]={-0,0.019565141,0};
-										};
-										side="West";
-										flags=6;
-										class Attributes
-										{
-											skill=0.60000002;
-											rank="CAPTAIN";
-											init="call{this setgroupID[""LTNG-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""EAGLE-2""];}";
-											description="Pilot@LIGHTNING-2";
-											isPlayable=1;
-										};
-										id=161;
-										type="Cav_B_A_Plane_Fighter_Pilot_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="speaker";
-												expression="_this setspeaker _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Male12ENG";
-													};
-												};
-											};
-											class Attribute1
-											{
-												property="pitch";
-												expression="_this setpitch _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0.98000002;
-													};
-												};
-											};
-											nAttributes=2;
-										};
-									};
-								};
-								class Attributes
-								{
-								};
-								id=160;
-							};
-							class Item1
-							{
-								dataType="Group";
-								side="West";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-47.70166,0.0014390945,23.392578};
-											angles[]={-0,0.019565141,0};
-										};
-										side="West";
-										flags=6;
-										class Attributes
-										{
-											skill=0.60000002;
-											rank="CAPTAIN";
-											init="call{this setgroupID[""LTNG-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""EAGLE-1""];}";
-											description="Pilot@LIGHTNING-1";
-											isPlayable=1;
-										};
-										id=163;
-										type="Cav_B_A_Plane_Fighter_Pilot_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="speaker";
-												expression="_this setspeaker _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Male04ENG";
-													};
-												};
-											};
-											class Attribute1
-											{
-												property="pitch";
-												expression="_this setpitch _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1.04;
-													};
-												};
-											};
-											nAttributes=2;
-										};
-									};
-								};
-								class Attributes
-								{
-								};
-								id=162;
-							};
-							class Item2
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-52.600586,0.89242268,25.370605};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-									description="Starter Crate";
-									dynamicSimulation=1;
-								};
-								id=164;
-								type="B_supplyCrate_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item3
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-48.100586,0.89242268,25.870605};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-									description="Starter Crate";
-									dynamicSimulation=1;
-								};
-								id=165;
-								type="B_supplyCrate_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item4
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-40.100586,2.2409725,31.925781};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=166;
-								type="USAF_F35A";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item5
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-60.100586,2.2409725,31.425781};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=167;
-								type="USAF_F35A";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item6
-							{
-								dataType="Comment";
-								class PositionInfo
-								{
-									position[]={-50.763672,0,29.871582};
-								};
-								title="FW Multirole (Tooltip)";
-								description="The F-35A is a versatile platform capable of carrying air to air and air to ground ordnance - pick the role you want it to do and stick to it. The F-35A also has an on-board satellite view of the battlespace. Stand-off ordnances from multiple kilometers away are the namesake of the F-35A, but it's capable of everything the A-10C is and more. (Sorry not sorry Suto)";
-								id=168;
-							};
-						};
-						id=159;
-					};
-					class Item5
-					{
-						dataType="Layer";
-						name="FW Air Superiority (F-22A)";
-						class Entities
-						{
-							items=7;
-							class Item0
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-53.033691,0.89242268,44.164795};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-									description="Starter Crate";
-									dynamicSimulation=1;
-								};
-								id=170;
-								type="B_supplyCrate_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-48.533691,0.89242268,44.664795};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-									description="Starter Crate";
-									dynamicSimulation=1;
-								};
-								id=171;
-								type="B_supplyCrate_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item2
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-60.600586,2.479682,51.370605};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=172;
-								type="USAF_F22_EWP_AG";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item3
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-40.600586,2.479682,51.870605};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-								};
-								id=173;
-								type="USAF_F22_EWP_AG";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ammoBox";
-										expression="[_this,_value] call bis_fnc_initAmmoBox;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item4
-							{
-								dataType="Comment";
-								class PositionInfo
-								{
-									position[]={-51.039551,0,52.575684};
-								};
-								title="FW Attack ASF (Tooltip)";
-								description="The F-22A is primarily an air to air intercept fighter. It excels best when it's slick. There's the stock slick version and three variants: EWP-AG, EWP-AA, Heavy. EWP is Enhanced Weapons Package. AG and AA is Air to Ground and Air to Air. Heavy is just outer hardpoints. All three of these variants technically negate the stealth benefits of the F-22. Pilots will pick what they want. Definitely throw some fast air at these guys, they'll love every minute of it.";
-								id=174;
-							};
-							class Item5
-							{
-								dataType="Group";
-								side="West";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-52.922363,0.0014390945,41.98877};
-											angles[]={-0,0.019565141,0};
-										};
-										side="West";
-										flags=6;
-										class Attributes
-										{
-											skill=0.60000002;
-											rank="CAPTAIN";
-											init="call{this setgroupID[""RPTR-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""EAGLE-2""];}";
-											description="Pilot@RAPTOR-2";
-											isPlayable=1;
-										};
-										id=176;
-										type="Cav_B_A_Plane_Fighter_Pilot_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="speaker";
-												expression="_this setspeaker _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Male12ENG";
-													};
-												};
-											};
-											class Attribute1
-											{
-												property="pitch";
-												expression="_this setpitch _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0.98000002;
-													};
-												};
-											};
-											nAttributes=2;
-										};
-									};
-								};
-								class Attributes
-								{
-								};
-								id=175;
-							};
-							class Item6
-							{
-								dataType="Group";
-								side="West";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={-48.134277,0.0014390945,42.186768};
-											angles[]={-0,0.019565141,0};
-										};
-										side="West";
-										flags=6;
-										class Attributes
-										{
-											skill=0.60000002;
-											rank="CAPTAIN";
-											init="call{this setgroupID[""RPTR-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""EAGLE-1""];}";
-											description="Pilot@RAPTOR-1";
-											isPlayable=1;
-										};
-										id=178;
-										type="Cav_B_A_Plane_Fighter_Pilot_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="speaker";
-												expression="_this setspeaker _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Male04ENG";
-													};
-												};
-											};
-											class Attribute1
-											{
-												property="pitch";
-												expression="_this setpitch _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=1.04;
-													};
-												};
-											};
-											nAttributes=2;
-										};
-									};
-								};
-								class Attributes
-								{
-								};
-								id=177;
-							};
-						};
-						id=169;
-					};
-					class Item6
-					{
-						dataType="Layer";
-						name="FW Drone Attack (MQ-9)";
-						class Entities
-						{
-							items=3;
-							class Item0
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={78.140137,1.7847018,29.365234};
-								};
-								side="Empty";
-								flags=4;
-								class Attributes
-								{
-									init="this setGroupid [""RPR""];";
-									textures="USAF_TwoTone";
-									pylons="USAF_PylonRack_2Rnd_AGM114R[0];USAF_PylonRack_4Rnd_GBU53[0];USAF_PylonRack_4Rnd_GBU39[0];USAF_PylonRack_2Rnd_AGM114R[0];";
-								};
-								id=180;
-								type="USAF_MQ9";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="VehicleCustomization";
-										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
-										class Value
-										{
-											class data
-											{
-												singleType="ARRAY";
-												class value
-												{
-													items=2;
-													class Item0
-													{
-														class data
-														{
-															singleType="ARRAY";
-															class value
-															{
-																items=2;
-																class Item0
-																{
-																	class data
-																	{
-																		singleType="STRING";
-																		value="USAF_TwoTone";
-																	};
-																};
-																class Item1
-																{
-																	class data
-																	{
-																		singleType="SCALAR";
-																		value=1;
-																	};
-																};
-															};
-														};
-													};
-													class Item1
-													{
-														class data
-														{
-															singleType="ARRAY";
-														};
-													};
-												};
-											};
-										};
-									};
-									nAttributes=1;
-								};
-							};
-							class Item1
-							{
-								dataType="Group";
-								side="West";
-								class Entities
-								{
-									items=1;
-									class Item0
-									{
-										dataType="Object";
-										class PositionInfo
-										{
-											position[]={78.160645,0.0014390945,38.121826};
-										};
-										side="West";
-										flags=7;
-										class Attributes
-										{
-											init="this setGroupid [""RPR-1""];";
-											description="Drone Pilot@REAPER-1";
-											isPlayable=1;
-										};
-										id=182;
-										type="Cav_B_A_AirController_F";
-										class CustomAttributes
-										{
-											class Attribute0
-											{
-												property="speaker";
-												expression="_this setspeaker _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="STRING";
-														value="Male03ENG";
-													};
-												};
-											};
-											class Attribute1
-											{
-												property="pitch";
-												expression="_this setpitch _value;";
-												class Value
-												{
-													class data
-													{
-														singleType="SCALAR";
-														value=0.95999998;
-													};
-												};
-											};
-											nAttributes=2;
-										};
-									};
-								};
-								class Attributes
-								{
-								};
-								id=181;
-							};
-							class Item2
-							{
-								dataType="Comment";
-								class PositionInfo
-								{
-									position[]={78.161621,0,36.085693};
-								};
-								title="FW Drone Attack (Tooltip)";
-								description="The MQ-9 has a light armament available to it that is mostly Laser guided. All ordnance is capable of tracking and launching from the drone's camera, with little regard on the orientation of the drone (given enough altitude). cTAB tablets have the ability to interface with the drone gunner optics which allows ground force elements instant eyes-on to whatever the drone is seeing.";
-								id=183;
-							};
-						};
-						id=179;
-					};
-					class Item7
-					{
-						dataType="Layer";
-						name="FW Drone Recon (RQ-4A)";
+						dataType="Group";
+						side="West";
 						class Entities
 						{
 							items=2;
@@ -2295,36 +940,1280 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={78.164551,1.8006945,-2.4255371};
+									position[]={20.385742,0.0014390945,-46.753418};
 								};
-								side="Empty";
-								flags=4;
+								side="West";
+								flags=7;
 								class Attributes
 								{
-									init="this setGroupid [""DTHSTR""];";
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""TITAN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
+									description="Pilot@TITAN-1";
+									isPlayable=1;
 								};
-								id=185;
-								type="USAF_RQ4A";
+								id=42;
+								type="Cav_B_A_Plane_Transport_Pilot_Titan_1_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.03;
+											};
+										};
+									};
+									nAttributes=2;
+								};
 							};
 							class Item1
 							{
-								dataType="Comment";
+								dataType="Object";
 								class PositionInfo
 								{
-									position[]={77.972656,0,6.3486328};
+									position[]={21.386719,0.0014390945,-46.75293};
 								};
-								title="FW Drone Recon (Tooltip)";
-								description="The RQ-4 can be put in the air on a racetrack pattern and has enough fuel to last an entire 3hr op. If your operation is deemed to be in an area that has BLUFOR having air supremacy, it's a good idea to put one of these in the air at a height of 2500m or higher in a loiter pattern over the AO. Units with cTAB can tap into the drone's turret camera and observe the area for a better perspective, allowing freedom of information to the unit without the need of a middle-man calling out what he sees.";
-								id=186;
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setgroupID[""TITAN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=43;
+								type="Cav_B_A_Plane_Transport_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male03ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.03;
+											};
+										};
+									};
+									nAttributes=2;
+								};
 							};
 						};
-						id=184;
+						class Attributes
+						{
+						};
+						id=41;
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={20.885742,0.89242268,-44.803711};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							description="Starter Crate";
+							dynamicSimulation=1;
+						};
+						id=44;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={16.375977,0.014522076,-54.945313};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+						};
+						id=45;
+						type="USAF_C130J";
 					};
 				};
-				id=101;
+				id=40;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="C-130J Titan-2";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={16.385742,0.014522076,-87.398438};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+						};
+						id=47;
+						type="USAF_C130J";
+					};
+					class Item1
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={12.462402,0.0014390945,-79.57666};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""TITAN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
+									description="Pilot@TITAN-2";
+									isPlayable=1;
+								};
+								id=49;
+								type="Cav_B_A_Plane_Transport_Pilot_Titan_2_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male05ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={13.463623,0.0014390945,-79.576172};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setgroupID[""TITAN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=50;
+								type="Cav_B_A_Plane_Transport_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male07ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=48;
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={12.885742,0.89242268,-76.803711};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							description="Starter Crate";
+							dynamicSimulation=1;
+						};
+						id=51;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=46;
+			};
+			class Item2
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={15.23877,0.036382675,-72.377441};
+				};
+				title="FW Transport (Tooltip)";
+				description="The C-130J's from USAF can fit *almost* the entire Bandit Platoon in one C-130J, however, keep in mind that the more bodies in one bird, the longer your DZ or the need to have multiple sticks in one bird and have go-arounds, which means longer time before all troops are in the AO. You won't be able to jump the entirety of the PLT's 11 vehicles with only 2 cargo variants (3 vehicles fit in one C-130J Cargo) so it's recommended to either forego the vehicles or zeus-assist them if you only plan on using the C-130s.";
+				id=52;
+				atlOffset=0.036382675;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="C-130J Titan-3";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-12.239258,0.0014390945,-30.087891};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""TITAN-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-3""];}";
+									description="Pilot@TITAN-3";
+									isPlayable=1;
+								};
+								id=55;
+								type="Cav_B_A_Plane_Transport_Pilot_Titan_3_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-11.238281,0.0014390945,-30.087891};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setgroupID[""TITAN-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-3""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=56;
+								type="Cav_B_A_Plane_Transport_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.03;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=54;
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-15.677246,0.014522076,-38.852539};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+						};
+						id=57;
+						type="USAF_C130J_Cargo";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ItemGPS"",""ItemRadio""],[1,1]],[[""B_Parachute""],[14]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-11.614258,0.89242268,-27.803711};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							description="Starter Crate";
+							dynamicSimulation=1;
+						};
+						id=58;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=53;
+			};
+			class Item4
+			{
+				dataType="Layer";
+				name="C-130J Titan-4";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={50.410645,0.014522076,-38.934082};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+						};
+						id=60;
+						type="USAF_C130J_Cargo";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ItemGPS"",""ItemRadio""],[1,1]],[[""B_Parachute""],[14]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item1
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={46.533203,0.0014390945,-29.939941};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""TITAN-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-4""];}";
+									description="Pilot@TITAN-4";
+									isPlayable=1;
+								};
+								id=62;
+								type="Cav_B_A_Plane_Transport_Pilot_Titan_4_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={47.533691,0.0014390945,-29.939941};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setgroupID[""TITAN-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-4""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=63;
+								type="Cav_B_A_Plane_Transport_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.98000002;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=61;
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={46.885742,0.89242268,-27.303711};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							description="Starter Crate";
+							dynamicSimulation=1;
+						};
+						id=64;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=59;
 			};
 		};
-		id=187;
+		id=39;
+		atlOffset=0.0045480728;
+	};
+	class Item6
+	{
+		dataType="Layer";
+		name="FW Transport Heavy (C-17)";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={16.976074,0.036382675,7.5302734};
+				};
+				title="FW Heavy Transport (Tooltip)";
+				description="While one C-17 can carry an entire platoon in one transport, keep in mind that the more bodies in one bird, the longer your DZ or the need to have multiple sticks in one bird and have go-arounds, which means longer time before all troops are in the AO. For motorized jumps, the platoon has 11 vehicles. 10 if you forego the Platoon HQ vehicle and have them ride along with the infantry. Each C-17 fits 5 Vehicles. Math.";
+				id=66;
+				atlOffset=0.036382675;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="C-17 Titan-1";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={9.8857422,0.0014390945,-5.253418};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""TITAN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
+									description="Pilot@TITAN-1";
+									isPlayable=1;
+								};
+								id=69;
+								type="Cav_B_A_Plane_Transport_Pilot_Titan_1_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.03;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={10.886719,0.0014390945,-5.2529297};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setgroupID[""TITAN-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=70;
+								type="Cav_B_A_Plane_Transport_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male03ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.03;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=68;
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={10.885742,0.89242268,-2.3037109};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							description="Starter Crate";
+							dynamicSimulation=1;
+						};
+						id=71;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={16.280273,3.3578539,-17.114746};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+						};
+						id=72;
+						type="USAF_C17";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ItemGPS"",""ItemRadio""],[1,1]],[[""B_Parachute""],[14]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=67;
+			};
+			class Item2
+			{
+				dataType="Layer";
+				name="C-17 Titan-2";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={11.962402,0.0014390945,59.42334};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""TITAN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
+									description="Pilot@TITAN-2";
+									isPlayable=1;
+								};
+								id=75;
+								type="Cav_B_A_Plane_Transport_Pilot_Titan_2_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male05ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={12.963623,0.0014390945,59.423828};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setgroupID[""TITAN-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-2""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=76;
+								type="Cav_B_A_Plane_Transport_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male07ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=74;
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={16.332031,3.3578539,44.816895};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+						};
+						id=77;
+						type="USAF_C17";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""FirstAidKit""],[4]],[[],[]],[[""ItemGPS"",""ItemRadio""],[1,1]],[[""B_Parachute""],[60]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={12.385742,0.89242268,62.196289};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							description="Starter Crate";
+							dynamicSimulation=1;
+						};
+						id=78;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=73;
+			};
+		};
+		id=65;
+		atlOffset=0.0090956688;
+	};
+	class Item7
+	{
+		dataType="Layer";
+		name="USAF Service Menu";
+		class Entities
+		{
+			items=6;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-39.942139,1.9255862,-18.094727};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=80;
+				type="B_Truck_01_ammo_F";
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-34.942139,1.9160042,-18.094727};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=81;
+				type="B_Truck_01_fuel_F";
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-29.942139,2.3134775,-18.094727};
+				};
+				side="Empty";
+				flags=4;
+				class Attributes
+				{
+				};
+				id=82;
+				type="B_Truck_01_Repair_F";
+			};
+			class Item3
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-39.942139,0,-8.0947266};
+				};
+				id=83;
+				type="USAF_ServiceMenu_moduleAddRearmService";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="USAF_moduleServiceMenuAdd_RemoveCargo";
+						expression="_this setVariable ['RemoveCargo',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="USAF_moduleServiceMenuAdd_Loadout";
+						expression="_this setVariable ['Loadout',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item4
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-34.942139,0,-8.0947266};
+				};
+				id=84;
+				type="USAF_ServiceMenu_moduleAddRefuelService";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="USAF_moduleServiceMenuAdd_RemoveCargo";
+						expression="_this setVariable ['RemoveCargo',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+			class Item5
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-29.942139,0,-8.0947266};
+				};
+				id=85;
+				type="USAF_ServiceMenu_moduleAddRepairService";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="USAF_moduleServiceMenuAdd_RemoveCargo";
+						expression="_this setVariable ['RemoveCargo',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+					};
+					nAttributes=1;
+				};
+			};
+		};
+		id=79;
 	};
 };
 class connections
@@ -2339,8 +2228,8 @@ class connections
 		class Item0
 		{
 			linkID=0;
-			item0=146;
-			item1=143;
+			item0=83;
+			item1=80;
 			class CustomData
 			{
 				type="Sync";
@@ -2349,8 +2238,8 @@ class connections
 		class Item1
 		{
 			linkID=1;
-			item0=147;
-			item1=144;
+			item0=84;
+			item1=81;
 			class CustomData
 			{
 				type="Sync";
@@ -2359,8 +2248,8 @@ class connections
 		class Item2
 		{
 			linkID=2;
-			item0=148;
-			item1=145;
+			item0=85;
+			item1=82;
 			class CustomData
 			{
 				type="Sync";

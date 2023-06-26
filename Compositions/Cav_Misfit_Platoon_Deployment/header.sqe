@@ -1,17 +1,19 @@
 version=54;
-name="MISFIT Platoon Deployment [DEVBUILD]";
-author="=7CAV=1SG.Geki.T";
+name="MISFIT_Platoon_Deployment_[DEVBUILD]";
+author="=7Cav=2LT.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
 	"cav_charlie_characters",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
-	"cav_troops_bravo_atlas",
-	"cav_troops_charlie_weapons",
 	"Desert",
+	"cav_troops_charlie_weapons",
+	"cav_troops_bravo_atlas",
+	"rhsusf_vehicles",
 	"rhsusf_c_m11xx",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_dragging",
-	"rhsusf_vehicles"
+	"ace_medical_treatment",
+	"aceP_circulation"
 };
