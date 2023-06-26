@@ -45,11 +45,11 @@ class cScripts {
         
         class getMedicalCrate {};
 
-        class doStarterCrate {};
+        
         class doStarterCrateSupplies {};
         class doFieldHospital {};
 
-        class doSupplyCrate {};
+        
 
         class doEmptyCrate {};
 
@@ -94,6 +94,9 @@ class cScripts {
         
         class addBaseCrate {};
         class addStagingZone {};
+
+        class doStarterCrate {};
+        class doSupplyCrate {};
     };
     class systems {
         file = "cScripts\functions\systems";
