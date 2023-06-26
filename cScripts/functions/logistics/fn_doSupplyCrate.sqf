@@ -32,7 +32,8 @@ _crate addWeaponCargoGlobal ["rhs_weap_M136_hedp", (_quaScale * 8)];
 
 //================== AMMO ==================\\
 
-_crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", (_quaScale * 70)];
+_crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", (_quaScale * 50)];
+_crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_soft_pouch", (_quaScale * 15)];
 _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer", (_quaScale * 15)];
 _crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",4];
@@ -46,7 +47,7 @@ _crate addMagazineCargoGlobal ["rhs_fim92_mag", (_quaScale * 3)];
 
 //================== GRENADES ==================\\
 
-_crate addMagazineCargoGlobal ["rhs_mag_m67", (_quaScale * 20)];
+_crate addMagazineCargoGlobal ["HandGrenade", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["SmokeShell", (_quaScale * 30)];
 _crate addMagazineCargoGlobal ["SmokeShellRed", (_quaScale * 10)];
 _crate addMagazineCargoGlobal ["SmokeShellBlue", (_quaScale * 10)];
