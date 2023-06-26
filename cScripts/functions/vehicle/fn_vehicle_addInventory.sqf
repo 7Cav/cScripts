@@ -119,6 +119,48 @@ private _medVicInv = [
     ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8] // M856A1 PMAGs
 ];
 
+if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
+    [_vehicle, 6, 38, false, false] call FUNC(setCargoAttributes);
+    
+    // Vehicle Inventory
+    [_vehicle, [
+        ["rhs_weap_fgm148", 1],
+        ["rhs_fgm148_magazine_AT", 2],
+        ["rhs_weap_M136_heat", 2],
+        ["rhs_weap_m32", 1],
+        ["rhsusf_mag_6Rnd_M397_HET", 2],
+        ["rhsusf_mag_6Rnd_M433_HEDP", 3],
+        ["rhsusf_mag_6Rnd_m4009", 3],
+        ["rhsusf_mag_6Rnd_M713_red", 2],
+        ["ACE_UAVBattery", 4],
+        ["ACE_wirecutter", 1]
+    ]] call FUNC(addCargo);
+
+    // Supply Crate
+    ["Box_NATO_Equip_F", [
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 21],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 12],
+        ["rhsusf_100Rnd_762x51_m62_tracer", 10],
+        ["rhs_fgm148_magazine_AT", 3],
+        ["HandGrenade", 9],
+        ["SmokeShell", 27],
+        ["SmokeShellRed", 4],
+        ["SmokeShellBlue", 4],
+        ["SmokeShellYellow", 4],
+        ["SmokeShellGreen", 4],
+        ["rhs_mag_m433_HEDP", 20],
+        ["rhs_mag_m397_HET", 10],
+        ["rhs_mag_M664_red_cluster", 5],
+        ["rhs_mag_m714_White", 5],
+        ["ACE_40mm_Flare_IR", 5],
+        ["ACE_HUNTIR_M203", 5],
+        ["ACE_quikclot", 50],
+        ["ACE_tourniquet", 18]
+    ], _vehicle] call FUNC(createCargoCrate);
+
+    // Emergency Fuel Tank
+    ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
+};
 
 // Vehicles
 if (_vehicle iskindOf "MRAP_01_base_F") then {

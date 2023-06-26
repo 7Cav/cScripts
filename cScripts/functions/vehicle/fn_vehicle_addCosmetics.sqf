@@ -58,6 +58,26 @@ if (_vehicle iskindOf "rhsusf_m1152_base") then { // MRAP_01_base_F
 if (_vehicle iskindOf "rhsusf_fmtv_base") then {
 };
 
+
+if (typeOf _vehicle == "I_APC_Wheeled_03_cannon_F") then {
+    // Animate slat armor and camo nets
+    _vehicle animateSource ["showCamonetHull",1, true];
+    _vehicle animateSource ["showBags",1, true];
+    _vehicle animateSource ["showBags2",0, true];
+    _vehicle animateSource ["showTools",0, true];
+    _vehicle animateSource ["showSLATHull",0, true];
+
+    // Set base coat to guerilla green.
+    [_vehicle, [
+        [1, "\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_03_co.paa"],
+        [2, "\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_03_co.paa"],
+        [3, "\a3\data_f_tacops\data\rcws30_ig_03_co.paa"],
+        [4, "\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_03_co.paa"],
+        [5, "\a3\armor_f\data\camonet_aaf_fia_green_co.paa"],
+        [6, "\a3\armor_f\data\cage_g3_co.paa"]
+    ]] call EFUNC(vehicle,applyTextures);
+};
+
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
     _vehicle animateSource ["Hide_CIP", 1, true];
     switch (_vehicleType) do {

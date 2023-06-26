@@ -146,6 +146,8 @@ class cScripts {
         class vehicle_addRadio {};
         class vehicle_setRadio {};
 
+        class vehicle_applyTextures {};
+
         // Staging
         class vehicle_addStagingActions {};
 
