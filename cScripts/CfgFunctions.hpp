@@ -9,6 +9,8 @@ class cScripts {
         class init_vehicle {};
         class init_staging {};
 
+        class init_logistics {};
+
         class init_diary {};
         class init_message {};
         class init_chatCommands {};
@@ -50,6 +52,8 @@ class cScripts {
         class doSupplyCrate {};
 
         class doEmptyCrate {};
+
+        class logistics_getContainer {};
     };
     class players {
         file = "cScripts\functions\players";
