@@ -4,17 +4,17 @@ author="=7Cav=2LT.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"cav_charlie_characters_units",
 	"Desert",
+	"cav_charlie_characters_units",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
 	"cav_charlie_characters",
 	"cav_troops_charlie_weapons",
 	"cav_troops_bravo_atlas",
-	"rhsusf_c_m11xx",
+	"ace_medical_treatment",
+	"aceP_circulation",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_dragging",
 	"rhsusf_vehicles",
-	"ace_medical_treatment",
-	"aceP_circulation"
+	"rhsusf_c_m11xx"
 };
