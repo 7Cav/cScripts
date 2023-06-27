@@ -10,7 +10,7 @@
  * 3: Crate Size            <NUMBER> (Optional)
  *
  * Return Value:
- * Nothing
+ * Crate   <OBJECT>
  *
  * Example:
  * ["B_supplyCrate_F"] call cScripts_fnc_createCargoCrate;
@@ -67,3 +67,5 @@ if (_destCheck) then {
         ] call FUNC(error);
     };
 };
+
+_crate;
