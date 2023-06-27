@@ -45,7 +45,7 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
         [format["SUCCESS: Array size of loadout %1 size is %2", _class, _arraySize], "SUCCESS", false, false, "TESTING"] call FUNC(log);
     } else {
         [format["FAILED: Array size of loadout %1 size is %2", _class, _arraySize], "FAILED", true, false, "TESTING"] call FUNC(log);
-        _return = false
+        _return = false;
     };
 
     // Testing loadout array structure
@@ -110,7 +110,6 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
                 };
             };
         };
-        
     } forEach _loadout;
 
 
