@@ -4,7 +4,6 @@ author="=7Cav=2LT.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"rhsusf_c_stryker",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
 	"cav_troops_bravo_viking",
@@ -37,16 +36,18 @@ requiredAddons[]=
 	"rhsusf_c_troops",
 	"A3_Weapons_F_Items",
 	"Desert",
+	"A3_Armor_F_Gamma_APC_Wheeled_03",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_dragging",
 	"USP_Armor_Fix",
 	"acre_sys_prc152",
 	"acre_sys_prc343",
-	"UK3CB_BAF_Equipment_Helmets",
+	"UK3CB_Factions_Facegear",
 	"ace_trenches",
-	"ace_field_rations",
+	"A3_Characters_F",
+	"ace_goggles",
 	"A3_Drones_F_Weapons_F_Gamma_Items",
 	"ace_mx2a",
-	"ace_logistics_wirecutter",
+	"rhsusf_c_stryker",
 	"cav_troops_bravo_atlas"
 };
