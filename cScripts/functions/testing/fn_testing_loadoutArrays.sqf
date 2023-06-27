@@ -6,7 +6,7 @@
  * Arguments:
  *
  * Return Value:
- * True when done <Boolena>
+ * True or False
  *
  * Example:
  * call cScripts_fnc_testing_loadoutArrays
@@ -22,6 +22,9 @@ diag_log text "";
 diag_log text "";
 diag_log text "###############################################################################################################";
 diag_log text "";
+
+
+private _return = true;
 
 private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "getNumber (_x >> 'scope') >= 2", true];
 {
@@ -42,7 +45,74 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
         [format["SUCCESS: Array size of loadout %1 size is %2", _class, _arraySize], "SUCCESS", false, false, "TESTING"] call FUNC(log);
     } else {
         [format["FAILED: Array size of loadout %1 size is %2", _class, _arraySize], "FAILED", true, false, "TESTING"] call FUNC(log);
+        _return = false
     };
+
+    // Testing loadout array structure
+    ["Testing loadout array structure", "TEST", false, false, "TESTING"] call FUNC(log);
+        switch (_forEachIndex) do {
+            private _element = _x;
+            case 0: {
+                if (_element typeName != "ARRAY") then { 
+                    [format["FAILED: Loadout %1 Primary Weapon is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            };
+            case 1: {
+                if (_element typeName != "ARRAY") then { 
+                    [format["FAILED: Loadout %1 Secondary Weapon is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            };
+            case 2: {
+                if (_element typeName != "ARRAY") then { 
+                    [format["FAILED: Loadout %1 Handgun Weapon is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            case 3: {
+                if (_element typeName != "ARRAY") then { 
+                    [format["FAILED: Loadout %1 Uniform is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            case 4: {
+                if (_element typeName != "ARRAY") then { 
+                    [format["FAILED: Loadout %1 Vest is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            case 5: {
+                if (_element typeName != "ARRAY") then { 
+                    [format["FAILED: Loadout %1 Backpack is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            case 6: {
+                if (_element typeName != "STRING") then { 
+                    [format["FAILED: Loadout %1 Headgear is not a string got %1", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            case 7: {
+                if (_element typeName != "STRING") then { 
+                    [format["FAILED: Loadout %1 Goggles/Facewear is not a string got %1", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            case 8: {
+                if (_element typeName != "ARRAY") then { 
+                    [format["FAILED: Loadout %1 Binoculars is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            case 9: {
+                if (_element typeName != "ARRAY") then { 
+                    [format["FAILED: Loadout %1 Assigned Items is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+                if (count _element != 6) then { 
+                    [format["FAILED: Loadout %1 Assigned Items size array is wrong expected 6 got %2", _class, count _element], "FAILED", true, false, "TESTING"] call FUNC(log);
+                    _return = false;
+                };
+            };
+        };
+        
+    } forEach _loadout;
+
 
     [format["Testing loadout %1", _class], "TEST END", false, false, "TESTING"] call FUNC(log);
     diag_log text "";
@@ -54,4 +124,4 @@ diag_log text "";
 diag_log text "###############################################################################################################";
 diag_log text "";
 
-true
+_return;
