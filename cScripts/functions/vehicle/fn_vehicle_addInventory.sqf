@@ -138,10 +138,11 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
 
     // Supply Crate
     ["Box_NATO_Equip_F", [
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 21],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 12],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 28],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 21],
+        ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 7],
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
-        ["rhs_fgm148_magazine_AT", 3],
+        ["rhs_fgm148_magazine_AT", 1],
         ["HandGrenade", 9],
         ["SmokeShell", 27],
         ["SmokeShellRed", 4],
