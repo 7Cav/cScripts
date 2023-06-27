@@ -215,39 +215,6 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 ["rhs_mag_m714_White",6],
                 ["rhs_weap_fgm148",1]
             ]] call FUNC(addCargo);
-
-            ["Box_NATO_Equip_F", [
-                ["ACE_Banana",1],
-                ["ACE_EarPlugs",4],
-                ["UGL_FlareWhite_F",10],
-                ["ACE_HuntIR_M203",6],
-                ["rhs_mag_M433_HEDP",16],
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG",28],
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",28],
-                ["rhsusf_200Rnd_556x45_mixed_soft_pouch",10],
-                ["rhsusf_100Rnd_762x51_m61_ap",10],
-                ["rhsusf_100Rnd_762x51_m62_tracer",10],
-                ["rhs_mag_maaws_HEDP",4],
-                ["rhs_mag_maaws_HE",4],
-                ["SmokeShellRed",6],
-                ["SmokeShellBlue",6],
-                ["Chemlight_green",10],
-                ["Chemlight_blue",10],
-                ["UGL_FlareCIR_F",4],
-                ["rhs_mag_M397_HET",10],
-                ["ACE_40mm_Flare_ir",6],
-                ["MAA_MAAWS_MT756",2],
-                ["MAA_MAAWS_ASM509",2],
-                ["MAA_MAAWS_SMOKE469",4],
-                ["rhs_fgm148_magazine_AT",2],
-                ["HandGrenade",16],
-                ["SmokeShell",36],
-                ["SmokeShellGreen",6],
-                ["SmokeShellPurple",6],
-                ["rhs_mag_mk3a2",13],
-                ["rhs_weap_M136",1],
-                ["rhs_weap_M136_hedp",1]
-            ], _vehicle] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, [
@@ -271,39 +238,6 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 ["rhs_mag_m714_White",6],
                 ["rhs_weap_fgm148",1]
             ]] call FUNC(addCargo);
-
-            ["Box_NATO_Equip_F", [
-                ["ACE_Banana",1],
-                ["ACE_EarPlugs",4],
-                ["UGL_FlareWhite_F",10],
-                ["ACE_HuntIR_M203",6],
-                ["rhs_mag_M433_HEDP",16],
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG",28],
-                ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",28],
-                ["rhsusf_200Rnd_556x45_mixed_soft_pouch",14],
-                ["rhsusf_100Rnd_762x51_m61_ap",20],
-                ["rhsusf_100Rnd_762x51_m62_tracer",10],
-                ["rhs_mag_maaws_HEDP",8],
-                ["rhs_mag_maaws_HE",8],
-                ["SmokeShellRed",6],
-                ["SmokeShellBlue",6],
-                ["Chemlight_green",10],
-                ["Chemlight_blue",10],
-                ["UGL_FlareCIR_F",4],
-                ["rhs_mag_M397_HET",10],
-                ["ACE_40mm_Flare_ir",6],
-                ["MAA_MAAWS_MT756",2],
-                ["MAA_MAAWS_ASM509",2],
-                ["MAA_MAAWS_SMOKE469",4],
-                ["rhs_fgm148_magazine_AT",2],
-                ["HandGrenade",16],
-                ["SmokeShell",36],
-                ["SmokeShellGreen",6],
-                ["SmokeShellPurple",6],
-                ["rhs_mag_mk3a2",13],
-                ["rhs_weap_M136",1],
-                ["rhs_weap_M136_hedp",1]
-            ], _vehicle] call FUNC(createCargoCrate);
         };
     };
 };
