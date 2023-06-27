@@ -69,11 +69,13 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
                     [format["FAILED: Loadout %1 Handgun Weapon is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
                     _return = false;
                 };
+            };
             case 3: {
                 if (_element typeName != "ARRAY") then { 
                     [format["FAILED: Loadout %1 Uniform is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
                     _return = false;
                 };
+            };
             case 4: {
                 if (_element typeName != "ARRAY") then { 
                     [format["FAILED: Loadout %1 Vest is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
@@ -84,21 +86,25 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
                     [format["FAILED: Loadout %1 Backpack is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
                     _return = false;
                 };
+            };
             case 6: {
                 if (_element typeName != "STRING") then { 
                     [format["FAILED: Loadout %1 Headgear is not a string got %1", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
                     _return = false;
                 };
+            };
             case 7: {
                 if (_element typeName != "STRING") then { 
                     [format["FAILED: Loadout %1 Goggles/Facewear is not a string got %1", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
                     _return = false;
                 };
+            };
             case 8: {
                 if (_element typeName != "ARRAY") then { 
                     [format["FAILED: Loadout %1 Binoculars is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
                     _return = false;
                 };
+            };
             case 9: {
                 if (_element typeName != "ARRAY") then { 
                     [format["FAILED: Loadout %1 Assigned Items is not a array got %2", _class, _element], "FAILED", true, false, "TESTING"] call FUNC(log);
