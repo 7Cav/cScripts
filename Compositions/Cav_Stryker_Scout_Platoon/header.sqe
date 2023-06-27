@@ -4,8 +4,6 @@ author="=7Cav=2LT.Zaren.T,=7Cav=1SG.Geki.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"A3_Weapons_F_Ammoboxes",
-	"ace_cargo",
 	"cav_troops_bravo_viking",
 	"rhsusf_c_weapons",
 	"ace_compat_rhs_usf3",
@@ -35,8 +33,10 @@ requiredAddons[]=
 	"cav_bravo_characters",
 	"rhsusf_c_troops",
 	"A3_Weapons_F_Items",
-	"Desert",
 	"A3_Armor_F_Gamma_APC_Wheeled_03",
+	"A3_Weapons_F_Ammoboxes",
+	"ace_cargo",
+	"Desert",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_dragging",
 	"USP_Armor_Fix",
@@ -48,6 +48,6 @@ requiredAddons[]=
 	"ace_goggles",
 	"A3_Drones_F_Weapons_F_Gamma_Items",
 	"ace_mx2a",
-	"rhsusf_c_stryker",
-	"cav_troops_bravo_atlas"
+	"cav_troops_bravo_atlas",
+	"rhsusf_c_stryker"
 };
