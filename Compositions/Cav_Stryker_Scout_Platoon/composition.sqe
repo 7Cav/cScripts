@@ -13622,7 +13622,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={2.7241211,2.0752859,-16.683594};
+									position[]={2.7236328,2.0752859,-16.683594};
 								};
 								side="Empty";
 								flags=4;
@@ -13640,6 +13640,19 @@ class items
 								{
 									class Attribute0
 									{
+										property="ace_repair_editorLoadedWheels";
+										expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+									class Attribute1
+									{
 										property="VehicleCustomization";
 										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 										class Value
@@ -14044,33 +14057,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
-									{
-										property="ace_cookoff_enable";
-										expression="if !(_value) then {_this setVariable ['ace_cookoff_enable', _value, true];};";
-										class Value
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=1;
-											};
-										};
-									};
 									class Attribute2
-									{
-										property="ace_repair_editorLoadedWheels";
-										expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=3;
-											};
-										};
-									};
-									class Attribute3
 									{
 										property="ammoBox";
 										expression="[_this,_value] call bis_fnc_initAmmoBox;";
@@ -14080,6 +14067,19 @@ class items
 											{
 												singleType="STRING";
 												value="[[[[""rhs_weap_fgm148"",""rhs_weap_m32_usmc"",""rhs_weap_m4a1_blockII_KAC_SU230"",""rhs_weap_m240G"",""launch_MRAWS_olive_F"",""rhs_weap_M136_hedp"",""dzn_MG_Tripod_M122A1_M240Mount_Carry""],[2,1,2,2,1,2,2]],[[""rhs_fgm148_magazine_AT"",""rhs_mag_30Rnd_556x45_M855A1_PMAG"",""rhs_mag_100Rnd_556x45_M855A1_cmag_mixed"",""rhsusf_mag_6Rnd_M433_HEDP"",""rhsusf_mag_6Rnd_M397_HET"",""rhsusf_mag_6Rnd_m4009"",""rhsusf_mag_6Rnd_m661_green"",""rhsusf_mag_6Rnd_m662_red"",""rhsusf_mag_6Rnd_M713_red"",""rhsusf_mag_6Rnd_M714_white"",""rhsusf_200Rnd_556x45_mixed_soft_pouch"",""rhsusf_100Rnd_762x51_m62_tracer"",""MAA_MAAWS_ASM509"",""MAA_MAAWS_GMM_HE"",""MAA_MAAWS_GMM_MT"",""rhs_mag_maaws_HEAT"",""rhs_mag_maaws_HE""],[2,28,4,10,5,4,2,2,2,5,5,10,4,2,2,2,4]],[[""ACE_MX2A"",""ACE_UAVBattery"",""ACE_artilleryTable"",""ACE_EarPlugs"",""ACE_RangeTable_82mm"",""B_UavTerminal"",""Rev_darter_item""],[2,2,2,12,2,2,1]],[[],[]]],false]";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="ace_isMedicalVehicle";
+										expression="_this setVariable [""ace_medical_isMedicalVehicle"", _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
 											};
 										};
 									};
@@ -14109,7 +14109,20 @@ class items
 											};
 										};
 									};
-									nAttributes=6;
+									class Attribute6
+									{
+										property="ace_cookoff_enable";
+										expression="if !(_value) then {_this setVariable ['ace_cookoff_enable', _value, true];};";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=7;
 								};
 							};
 							class Item1
@@ -14117,7 +14130,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-3.2758789,2.0752859,-16.683594};
+									position[]={-3.2763672,2.0752859,-16.683594};
 								};
 								side="Empty";
 								flags=4;
@@ -14135,6 +14148,19 @@ class items
 								{
 									class Attribute0
 									{
+										property="ace_repair_editorLoadedWheels";
+										expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=3;
+											};
+										};
+									};
+									class Attribute1
+									{
 										property="VehicleCustomization";
 										expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 										class Value
@@ -14539,33 +14565,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
-									{
-										property="ace_cookoff_enable";
-										expression="if !(_value) then {_this setVariable ['ace_cookoff_enable', _value, true];};";
-										class Value
-										{
-											class data
-											{
-												singleType="BOOL";
-												value=1;
-											};
-										};
-									};
 									class Attribute2
-									{
-										property="ace_repair_editorLoadedWheels";
-										expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=3;
-											};
-										};
-									};
-									class Attribute3
 									{
 										property="ammoBox";
 										expression="[_this,_value] call bis_fnc_initAmmoBox;";
@@ -14575,6 +14575,19 @@ class items
 											{
 												singleType="STRING";
 												value="[[[[""rhs_weap_fgm148"",""rhs_weap_m32_usmc"",""rhs_weap_m4a1_blockII_KAC_SU230"",""rhs_weap_m240G"",""launch_MRAWS_olive_F"",""rhs_weap_M136_hedp"",""dzn_MG_Tripod_M122A1_M240Mount_Carry""],[2,1,2,2,1,2,2]],[[""rhs_fgm148_magazine_AT"",""rhs_mag_30Rnd_556x45_M855A1_PMAG"",""rhs_mag_100Rnd_556x45_M855A1_cmag_mixed"",""rhsusf_mag_6Rnd_M433_HEDP"",""rhsusf_mag_6Rnd_M397_HET"",""rhsusf_mag_6Rnd_m4009"",""rhsusf_mag_6Rnd_m661_green"",""rhsusf_mag_6Rnd_m662_red"",""rhsusf_mag_6Rnd_M713_red"",""rhsusf_mag_6Rnd_M714_white"",""rhsusf_200Rnd_556x45_mixed_soft_pouch"",""rhsusf_100Rnd_762x51_m62_tracer"",""MAA_MAAWS_ASM509"",""MAA_MAAWS_GMM_HE"",""MAA_MAAWS_GMM_MT"",""rhs_mag_maaws_HEAT"",""rhs_mag_maaws_HE""],[2,28,4,10,5,4,2,2,2,5,5,10,4,2,2,2,4]],[[""ACE_MX2A"",""ACE_UAVBattery"",""ACE_artilleryTable"",""ACE_EarPlugs"",""ACE_RangeTable_82mm"",""B_UavTerminal"",""Rev_darter_item""],[2,2,2,12,2,2,1]],[[],[]]],false]";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="ace_isMedicalVehicle";
+										expression="_this setVariable [""ace_medical_isMedicalVehicle"", _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
 											};
 										};
 									};
@@ -14604,7 +14617,20 @@ class items
 											};
 										};
 									};
-									nAttributes=6;
+									class Attribute6
+									{
+										property="ace_cookoff_enable";
+										expression="if !(_value) then {_this setVariable ['ace_cookoff_enable', _value, true];};";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=7;
 								};
 							};
 							class Item2
