@@ -116,7 +116,7 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
                 };
                 {
                     if (typeName _x != "STRING") then { 
-                        [format["FAILED: Loadout %1 Assigned Items expected item in string got %2", _class, _x typeName], "FAILED", true, false, "TESTING"] call FUNC(log);
+                        [format["FAILED: Loadout %1 Assigned Items expected item in string got %2", _class, typeName _x], "FAILED", true, false, "TESTING"] call FUNC(log);
                         _return = false;
                     }
                 } forEach _element;
