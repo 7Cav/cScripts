@@ -181,7 +181,7 @@ if (count _getVehiclePylons == 0) exitWith {[]};
 private _pylon = _getVehiclePylons getOrDefault [_loadout, []];
 
 #ifdef DEBUG_MODE
-    if (_pylon == []) then {
+    if (_pylon isEqualTo []) then {
         [format ["%1 not found in list of loadouts for %2.", _loadout, _vehicleKind], "Vehicle Pylon"] call FUNC(warning);
     };
 #endif
