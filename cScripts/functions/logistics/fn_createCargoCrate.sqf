@@ -8,6 +8,7 @@
  * 1: Inventory             <ARRAY/BOOL>
  * 2: Vehicle or Position   <OBJECT, ARRAY>
  * 3: Crate Size            <NUMBER> (Optional)
+ * 4: Rename                <STRING> (Optional)
  *
  * Return Value:
  * Crate   <OBJECT>
@@ -28,7 +29,8 @@ params [
     ["_classname", "B_supplyCrate_F", [""]],
     ["_inventory", false, [[], false]],
     ["_destination", objNull, [objNull, []]], 
-    ["_resize", nil, [2, nil]]
+    ["_resize", nil, [2, nil]],
+    ["_name", nil, ["", nil]]
 ];
 
 if (!isServer) exitwith {};
