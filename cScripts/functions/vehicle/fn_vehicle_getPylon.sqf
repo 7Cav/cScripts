@@ -180,7 +180,7 @@ private _getVehiclePylons = _pylons getOrDefault [_vehicleKind, []];
 if (count _getVehiclePylons == 0) exitWith {[]};
 private _pylon = _getVehiclePylons getOrDefault [_loadout, []];
 
-if (_pylon isEqualTo []) then {
+if (count _pylon == 0) then {
     [format ["%1 Does not exist for selected kind of %2.", _loadout, _vehicleKind], "Vehicle Pylon"] call FUNC(warning);
 };
 
