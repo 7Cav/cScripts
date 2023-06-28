@@ -35,9 +35,9 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
 if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
     _pylonList = [
         // TypeOf,                DisplayName,  Name,           Icon
-        ["APC_Wheeled_03_base_F", "AntiArmor",  "AntiArmor",    ""],
-        ["APC_Wheeled_03_base_F", "AntiAir",    "AnitAir",      ""],
-        ["APC_Wheeled_03_base_F", "Assault",    "Assault",      ""],
+        ["APC_Wheeled_03_base_F", "Anti-Armor",  "antiarmor",    ""],
+        ["APC_Wheeled_03_base_F", "Anti-Air",    "antiair",      ""],
+        ["APC_Wheeled_03_base_F", "Assault",    "assault",      ""],
         ["APC_Wheeled_03_base_F", "Default",    "default",      ""]
     ];
 };
