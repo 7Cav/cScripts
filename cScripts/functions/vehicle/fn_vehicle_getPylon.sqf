@@ -176,6 +176,10 @@ private _pylons = createHashMapFromArray [
     ["APC_Wheeled_03_base_F", _APC_Wheeled_03_base_F]
 ];
 
+#ifdef DEBUG_MODE
+    [format ["%1 not found in list of loadouts for %2.", _loadout, _vehicleKind], "Vehicle Pylon"] call FUNC(warning);
+#endif
+
 private _getVehiclePylons = _pylons getOrDefault [_vehicleKind, []];
 if (count _getVehiclePylons == 0) exitWith {[]};
 private _pylon = _getVehiclePylons getOrDefault [_loadout, []];
