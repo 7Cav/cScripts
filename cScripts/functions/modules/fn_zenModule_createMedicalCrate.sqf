@@ -47,7 +47,12 @@ private _displayTextList =
         
         private _groundLevel = ASLToAGL _modulePos;
         private _medCrateContents = [_crateType] call FUNC(getMedicalCrate);
-        ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] call FUNC(createCargoCrate);
+        private _crate = ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] call FUNC(createCargoCrate); 
+
+        // Add object to Zeus
+        [{
+            _this call ace_zeus_fnc_addObjectToCurator;
+        }, _crate] call CBA_fnc_execNextFrame;
     },
     {},
     [_modulePos]

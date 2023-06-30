@@ -15,7 +15,7 @@
  */
 
 params [
-    ["_vehicle", objNull [objNull]],
+    ["_vehicle", objNull, [objNull]],
     ["_textureIndexMap", [], [[]]]
 ];
 
