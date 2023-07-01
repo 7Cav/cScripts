@@ -20,7 +20,8 @@
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_inventory", [], [[]]]
+    ["_inventory", [], [[]]],
+    ["_crateName", "", [""]]
 ];
 
 if (!isServer) exitwith {}; 
@@ -29,6 +30,10 @@ clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 clearItemCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
+
+if !((_dbKey isEqualTo "") && (_inventory isEqualTo [])) then {
+    _inventory = _crateName call EFUNC(logistics,getContainer);
+};
 
 if ( count _inventory < 1 ) exitWith {};
 
