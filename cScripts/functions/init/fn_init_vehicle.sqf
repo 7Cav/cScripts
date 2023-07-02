@@ -33,11 +33,11 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     _x addEventHandler ["CuratorObjectPlaced", {
         params ["", "_vehicle"];
         if (_vehicle iskindOf "man") exitWith {};
-        _vehicle call EFUNC(vehicle,addFunctions);
-        _vehicle call EFUNC(vehicle,addInventory);
-        _vehicle call EFUNC(vehicle,addPylonLoadout);
-        _vehicle call EFUNC(vehicle,addCosmetics);
-        _vehicle call EFUNC(vehicle,addStagingActions);
-        _vehicle call EFUNC(vehicle,addRadio);
+        _vehicle remoteExec [QEFUNC(vehicle,addFunctions), 0];
+        _vehicle remoteExec [QEFUNC(vehicle,addInventory), 0];
+        _vehicle remoteExec [QEFUNC(vehicle,addPylonLoadout), 0];
+        _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 0];
+        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), 0];
+        _vehicle remoteExec [QEFUNC(vehicle,addRadio), 0];
     }];
 } forEach allCurators;
