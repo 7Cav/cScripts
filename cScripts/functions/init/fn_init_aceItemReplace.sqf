@@ -39,6 +39,21 @@ if (!isNil {ace_medical_treatment_convertItems == 2}) then {
     };
 };
 
+switch (EGVAR(Settings,replaceMagazines)) do {
+    case (1): {
+        ["vanilla_magazine","ace_magazine"] call ace_common_fnc_registerItemReplacement;
+        ["vanilla_magazine","RHS_Magazines"] call ace_common_fnc_registerItemReplacement;
+        ["ace_magazine","RHS_Magazines"] call ace_common_fnc_registerItemReplacement;
+        ["ace_magazine","RHS_Magazines"] call ace_common_fnc_registerItemReplacement;
+    case (2): {
+        ["vanilla_magazine","ace_magazine"] call ace_common_fnc_registerItemReplacement;
+        ["vanilla_magazine","RHS_Magazines"] call ace_common_fnc_registerItemReplacement;
+        ["RHS_Magazines","ace_magazine"] call ace_common_fnc_registerItemReplacement;
+        ["RHS_Magazines","ace_magazine"] call ace_common_fnc_registerItemReplacement;
+    };
+};
+
+
 switch (EGVAR(Settings,replaceHandGrenades)) do {
     case (1): {["rhs_mag_m67","HandGrenade"] call ace_common_fnc_registerItemReplacement};
     case (2): {["HandGrenade","rhs_mag_m67"] call ace_common_fnc_registerItemReplacement};
