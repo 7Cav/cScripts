@@ -12,16 +12,11 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
+if (isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {[formatText["Vehicle functions already applied for %1.", _vehicle]] call FUNC(warning);};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
-
-// Is valid vehicle
-private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
-if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle Pylon"] call FUNC(error);};
-if (!(faction _vehicle in _factionArray)) exitWith {};
-
 
 #ifdef DEBUG_MODE
     [formatText["Applying vehicle functions to %1.", _vehicle]] call FUNC(info);
