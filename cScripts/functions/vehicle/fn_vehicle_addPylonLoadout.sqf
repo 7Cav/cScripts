@@ -16,11 +16,7 @@ if (isServer) exitWith {};
 if (isNull _vehicle) then {["Vehicle is null and not defined", "Vehicle Default Pylon"] call FUNC(error);};
 if (_vehicle iskindOf "man") exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(Vehicle,PylonApplyed)}) exitWith {[format["Vehicle loadouts already applied for %1.", _vehicle], "Vehicle Default Pylon"] call FUNC(warning);};
-
-// Is valid vehicle
-private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
-if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle Default Pylon"] call FUNC(error);};
-if (!(faction _vehicle in _factionArray)) exitWith {};
+if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 #ifdef DEBUG_MODE
     [formatText["Applying vehicle lodout to %1.", _vehicle], "Vehicle Default Pylon"] call FUNC(info);

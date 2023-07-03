@@ -16,11 +16,7 @@ if (!isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (!EGVAR(Settings,enableVehicleInventory)) exitWith {};
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle], "Vehicle"] call FUNC(warning);};
-
-// Is valid vehicle
-private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
-if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle"] call FUNC(error);};
-if (!(faction _vehicle in _factionArray)) exitWith {};
+if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 #ifdef DEBUG_MODE
     [formatText["Applying inventory to %1 (%2)", _vehicle, typeOf _vehicle], "Vehicle"] call FUNC(info);
