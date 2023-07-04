@@ -54,6 +54,7 @@ switch (EGVAR(Settings,replaceMagazines)) do {
             //["ACE_30Rnd_556x45_Stanag_Tracer_Dim",      ""]
         ]
         { _x call ace_common_fnc_registerItemReplacement; } forEach _magazines;
+    };
     case (2): {
         private _magazines = [
             ["30Rnd_556x45_Stanag",                     "rhs_mag_30Rnd_556x45_M855A1_Stanag"],
