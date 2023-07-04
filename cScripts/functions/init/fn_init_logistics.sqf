@@ -29,7 +29,7 @@ private _dataArray = [
 
 
     // Resupply Crates \\
-    ["crate_bravo_atlas", [
+    ["crate_medicalAtlas", [
         // AEDs
         ["kat_AED",1],
         ["kat_X_AED",1],
@@ -108,7 +108,7 @@ private _dataArray = [
         ["ACE_SpraypaintBlue",1],
         ["ACE_SpraypaintRed",1]
     ]],
-    ["crate_bravo_dragoon", [
+    ["crate_strykerDragoon", [
         // Rifle Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 28],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 21],
@@ -194,13 +194,17 @@ private _dataArray = [
     ]],
 
     // Alpha Vehicles \\
-    ["vic_alpha_heliTransportMedium", [
-    ]],
-    ["vic_alpha_heliTransportHeavy", [
+    ["vehicle_heliTransport", [
+        ["ToolKit", 2],
+        ["ACE_quikclot", 32],
+        ["ACE_tourniquet", 8],
+        ["ACE_splint", 8],
+        ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 32],
+        ["SmokeShell", 8]
     ]],
 
     // Bravo Vehicles \\
-    ["vic_bravo_med",[
+    ["vehicle_medicalAtlas", [
         // AEDs
         ["kat_AED",1],
 
@@ -282,7 +286,7 @@ private _dataArray = [
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG",24], // M855A1 PMAGs
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8] // M856A1 PMAGs
     ]],
-    ["vic_bravo_dragoon", [
+    ["vehicle_strykerDragoon", [
         // AT
         ["rhs_weap_fgm148", 1],
         ["rhs_fgm148_magazine_AT", 2],
@@ -303,7 +307,7 @@ private _dataArray = [
     ]],
 
     // Charlie Vehicles \\
-    ["vic_charlie_HMMWV", [
+    ["vehicle_HMMWV", [
         // Rifle Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",42],
         
@@ -340,8 +344,10 @@ private _dataArray = [
         ["ACE_SpareBarrel",1]
     ]],
 
+    
+
     // Specialized \\
-    ["mortar_crate_60mm", [
+    ["crate_mortar_60mm", [
         ["NDS_M_6Rnd_60mm_HE_0",5],
         ["NDS_M_6Rnd_60mm_HE",5],
         ["NDS_M_6Rnd_60mm_SMOKE",2],
@@ -350,8 +356,21 @@ private _dataArray = [
     // ["demolitions", []],
     // ["radios", []],
 
-    // Empty 
-    ["empty_inv", []]
+    // No longer used \\
+    ["vehicle_bradley", [
+        ["rhs_weap_fgm148", 1],
+        ["rhs_fgm148_magazine_AT", 2],
+        ["rhs_weap_m32", 1],
+        ["rhsusf_mag_6Rnd_M397_HET", 2],
+        ["rhsusf_mag_6Rnd_M433_HEDP", 3],
+        ["rhsusf_mag_6Rnd_m4009", 3],
+        ["rhsusf_mag_6Rnd_M713_red", 2],
+        ["rhs_weap_M136_heat", 4],
+        ["B_UAV_01_backpack_F", 2],
+        ["B_UavTerminal", 1],
+        ["ACE_UAVBattery", 4],
+        ["ACE_wirecutter", 1]
+    ]]
 ];
 
 // build Database

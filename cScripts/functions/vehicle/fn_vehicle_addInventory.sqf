@@ -46,41 +46,15 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
     [_vehicle, 6, 38, false, false] call FUNC(setCargoAttributes);
     
     // Vehicle Inventory
-    [_vehicle, [
-        ["rhs_weap_fgm148", 1],
-        ["rhs_fgm148_magazine_AT", 2],
-        ["rhs_weap_M136_heat", 2],
-        ["rhs_weap_m32", 1],
-        ["rhsusf_mag_6Rnd_M397_HET", 2],
-        ["rhsusf_mag_6Rnd_M433_HEDP", 3],
-        ["rhsusf_mag_6Rnd_m4009", 3],
-        ["rhsusf_mag_6Rnd_M713_red", 2],
-        ["ACE_UAVBattery", 4],
-        ["ACE_wirecutter", 1]
-    ]] call FUNC(addCargo);
+    [_vehicle, 
+        "vehicle_strykerDragoon" call EFUNC(logistics,getContainer)
+    ] call FUNC(addCargo);
 
     // Supply Crate
-    ["Box_NATO_Equip_F", [
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 28],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 21],
-        ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 7],
-        ["rhsusf_100Rnd_762x51_m62_tracer", 10],
-        ["rhs_fgm148_magazine_AT", 1],
-        ["HandGrenade", 9],
-        ["SmokeShell", 27],
-        ["SmokeShellRed", 4],
-        ["SmokeShellBlue", 4],
-        ["SmokeShellYellow", 4],
-        ["SmokeShellGreen", 4],
-        ["rhs_mag_m433_HEDP", 20],
-        ["rhs_mag_m397_HET", 10],
-        ["rhs_mag_M664_red_cluster", 5],
-        ["rhs_mag_m714_White", 5],
-        ["ACE_40mm_Flare_IR", 5],
-        ["ACE_HUNTIR_M203", 5],
-        ["ACE_quikclot", 50],
-        ["ACE_tourniquet", 18]
-    ], _vehicle] call FUNC(createCargoCrate);
+    ["Box_NATO_Equip_F", 
+        "crate_strykerDragoon" call EFUNC(logistics,getContainer), 
+        _vehicle
+    ] call FUNC(createCargoCrate);
 
     // Emergency Fuel Tank
     ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
@@ -109,58 +83,27 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
         case "rhsusf_m998_d_2dr_fulltop";
         case "rhsusf_m998_w_2dr_fulltop";
         case "MED": {
-            [_vehicle, _medVicInv] call FUNC(addCargo);
-            private _medCrateContents = ["atlas"] call FUNC(getMedicalCrate);
-            ["ace_medicalSupplyCrate", _medCrateContents, _vehicle] call FUNC(createCargoCrate);
+            [_vehicle, 
+                ["vehicle_medicalAtlas"] call EFUNC(logistics,getContainer)
+            ] call FUNC(addCargo);
+
+            ["ace_medicalSupplyCrate",
+                ["crate_medicalAtlas"] call EFUNC(logistics,getContainer),
+                _vehicle
+            ] call FUNC(createCargoCrate);
         };
         case "rhsusf_m1165a1_gmv_m2_m240_socom_d";
         case "rhsusf_m1165a1_gmv_mk19_m240_socom_d";
         case "rhsusf_m1165a1_gmv_m2_m240_socom_w";
         case "rhsusf_m1165a1_gmv_mk19_m240_socom_w": {
-            [_vehicle, [
-                ["ACE_Chemlight_HiGreen",2],
-                ["ACE_Chemlight_HiRed",2],
-                ["SmokeShellBlue",2],
-                ["SmokeShellGreen",2],
-                ["rhs_mag_maaws_HE",2],
-                ["rhs_mag_maaws_HEAT",2],
-                ["rhs_fgm148_magazine_AT",1],
-                ["rhsusf_mag_6Rnd_M433_HEDP",10],
-                ["rhsusf_100Rnd_762x51_m62_tracer",5],
-                ["ACE_Chemlight_IR",4],
-                ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
-                ["ACE_SpareBarrel",1],
-                ["ACE_HuntIR_M203",1],
-                ["ACE_40mm_Flare_ir",2],
-                ["SmokeShell",10],
-                ["HandGrenade",8],
-                ["rhsusf_200Rnd_556x45_mixed_soft_pouch",5],
-                ["rhs_mag_m714_White",6],
-                ["rhs_weap_fgm148",1]
-            ]] call FUNC(addCargo);
+            [_vehicle, 
+                "vehicle_HMMWV" call EFUNC(logistics,getContainer)
+            ] call FUNC(addCargo);
         };
         default {
-            [_vehicle, [
-                ["ACE_Chemlight_HiGreen",2],
-                ["ACE_Chemlight_HiRed",2],
-                ["SmokeShellBlue",2],
-                ["SmokeShellGreen",2],
-                ["rhs_mag_maaws_HE",2],
-                ["rhs_mag_maaws_HEAT",2],
-                ["rhs_fgm148_magazine_AT",1],
-                ["rhsusf_mag_6Rnd_M433_HEDP",10],
-                ["rhsusf_100Rnd_762x51_m62_tracer",5],
-                ["ACE_Chemlight_IR",4],
-                ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
-                ["ACE_SpareBarrel",1],
-                ["ACE_HuntIR_M203",1],
-                ["ACE_40mm_Flare_ir",2],
-                ["SmokeShell",10],
-                ["HandGrenade",8],
-                ["rhsusf_200Rnd_556x45_mixed_soft_pouch",5],
-                ["rhs_mag_m714_White",6],
-                ["rhs_weap_fgm148",1]
-            ]] call FUNC(addCargo);
+            [_vehicle, 
+                "vehicle_HMMWV" call EFUNC(logistics,getContainer)
+            ] call FUNC(addCargo);
         };
     };
 };
@@ -174,16 +117,14 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
         case "rhsusf_M1230a1_usarmy_wd";
         case "rhsusf_M1230a1_usarmy_d";
         case "MED": {
-            [
-                _vehicle, 
-                ["vehicle_medicalAtlas"] call EFUNC(logistal,getContainer),
-            ] this FUNC(addCargo);
+            [_vehicle, 
+                ["vehicle_medicalAtlas"] call EFUNC(logistics,getContainer)
+            ] call FUNC(addCargo);
 
-            [
-                "ace_medicalSupplyCrate",
-                ["crate_medicalAtlas"] call EFUNC(logistal,getContainer),
+            ["ace_medicalSupplyCrate",
+                ["crate_medicalAtlas"] call EFUNC(logistics,getContainer),
                 _vehicle
-            ] FUNC(createCargoCrate);
+            ] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, []] call FUNC(addCargo);
@@ -198,32 +139,19 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
         case "rhsusf_stryker_m1126_m2_d";
         case "rhsusf_stryker_m1126_m2_wd";
         case "MED": {
-            [
-                _vehicle, 
-                ["vehicle_medicalAtlas"] call EFUNC(logistal,getContainer),
-            ] this FUNC(addCargo);
+            [_vehicle, 
+                ["vehicle_medicalAtlas"] call EFUNC(logistics,getContainer)
+            ] call FUNC(addCargo);
 
-            [
-                "ace_medicalSupplyCrate",
-                ["crate_medicalAtlas"] call EFUNC(logistal,getContainer),
+            ["ace_medicalSupplyCrate",
+                ["crate_medicalAtlas"] call EFUNC(logistics,getContainer),
                 _vehicle
-            ] FUNC(createCargoCrate);
+            ] call FUNC(createCargoCrate);
         };
         default {
-            [_vehicle, [
-                ["rhs_weap_fgm148", 1],
-                ["rhs_fgm148_magazine_AT", 2],
-                ["rhs_weap_m32", 1],
-                ["rhsusf_mag_6Rnd_M397_HET", 2],
-                ["rhsusf_mag_6Rnd_M433_HEDP", 3],
-                ["rhsusf_mag_6Rnd_m4009", 3],
-                ["rhsusf_mag_6Rnd_M713_red", 2],
-                ["rhs_weap_M136_heat", 4],
-                ["B_UAV_01_backpack_F", 2],
-                ["B_UavTerminal", 1],
-                ["ACE_UAVBattery", 4],
-                ["ACE_wirecutter", 1]
-            ]] call FUNC(addCargo);
+            [_vehicle, 
+                "vehicle_strykerDragoon" call EFUNC(logistics,getContainer)
+            ] call FUNC(addCargo);
         };
     };
     ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
@@ -232,22 +160,9 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
 if (_vehicle iskindOf "RHS_M2A2_Base") then {
     [_vehicle, 4, -1, false, false] call FUNC(setCargoAttributes);
 
-    [_vehicle, [
-        ["rhs_weap_M136_hp", 2],
-        ["ACE_quikclot", 60],
-        ["ACE_splint", 8],
-        ["ToolKit", 1],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 32],
-        ["rhsusf_200rnd_556x45_mixed_soft_pouch", 6],
-        ["HandGrenade", 8],
-        ["SmokeShell", 16],
-        ["SmokeShellBlue", 2],
-        ["ACE_Chemlight_IR", 4],
-        ["rhs_mag_M433_HEDP", 16],
-        ["rhs_mag_m713_Red", 4],
-        ["ACE_40mm_Flare_ir", 4],
-        ["ACE_HuntIR_M203", 2]
-    ]] call FUNC(addCargo);
+    [_vehicle, 
+        "vehicle_bradley" call EFUNC(logistics,getContainer)
+    ] call FUNC(addCargo);
 
     ["ACE_Track", _vehicle, true] call ace_cargo_fnc_loadItem;
 };
@@ -255,17 +170,9 @@ if (_vehicle iskindOf "RHS_M2A2_Base") then {
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     [_vehicle, 4, -1, false, false] call FUNC(setCargoAttributes);
     ["ACE_Track", _vehicle, true] call ace_cargo_fnc_loadItem;
-    // [_vehicle, [
-    //     ["ToolKit", 2],
-    //     ["ACE_quikclot", 32],
-    //     ["ACE_tourniquet", 8],
-    //     ["ACE_splint", 8],
-    //     ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 32],
-    //     ["SmokeShell", 8]
-    // ]] call FUNC(addCargo);
 
     [_vehicle, 
-        ["vehicle_heliTransport"] call EFUNC(logistal,getContainer),
+        ["vehicle_bradley"] call EFUNC(logistics,getContainer)
     ] call FUNC(addCargo);
 };
 
@@ -281,17 +188,17 @@ if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
         case "RHS_UH60M_MEV";
         case "MED": {
             [_vehicle, 
-                ["vehicle_medicalAtlas"] call EFUNC(logistal,getContainer),
-            ] this FUNC(addCargo);
+                ["vehicle_medicalAtlas"] call EFUNC(logistics,getContainer)
+            ] call FUNC(addCargo);
 
             ["ace_medicalSupplyCrate",
-                ["crate_medicalAtlas"] call EFUNC(logistal,getContainer),
+                ["crate_medicalAtlas"] call EFUNC(logistics,getContainer),
                 _vehicle
-            ] FUNC(createCargoCrate);
+            ] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, 
-                ["vehicle_heliTransport"] call EFUNC(logistal,getContainer),
+                ["vehicle_heliTransport"] call EFUNC(logistics,getContainer)
             ] call FUNC(addCargo);
         };
     };
@@ -299,7 +206,7 @@ if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
 
 if (_vehicle iskindOf "Heli_Transport_02_base_F") then {
     [_vehicle, 
-        ["vehicle_heliTransport"] call EFUNC(logistal,getContainer),
+        ["vehicle_heliTransport"] call EFUNC(logistics,getContainer)
     ] call FUNC(addCargo);
 };
 
