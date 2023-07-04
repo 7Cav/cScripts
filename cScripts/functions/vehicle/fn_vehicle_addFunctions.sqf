@@ -72,6 +72,8 @@ if (_vehicle iskindOf "USAF_C17") then {
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     [_vehicle, 4, 40, false, false] call FUNC(setCargoAttributes);
     switch (_vehicleType) do {
+        case "rhsusf_m998_d_2dr_fulltop";
+        case "rhsusf_m998_w_2dr_fulltop";
         case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
         default {};
     };
@@ -92,6 +94,8 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
     switch (_vehicleType) do {
+        case "rhsusf_stryker_m1126_m2_d";
+        case "rhsusf_stryker_m1126_m2_wd";
         case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
         default {};
     };
