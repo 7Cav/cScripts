@@ -70,8 +70,8 @@ if (_destCheck) then {
     };
 };
 
-if ((!isNil {ace_cargo_noRename} && ace_cargo_noRename isNotEqualTo 1) && _name isNotEqualTo "") then {
-    _crate setVariable ["ace_cargo_customName", _name, true];
+if (_name isNotEqualTo "") then {
+    [_crate, _name] call FUNC(renameObject);
 };
 
 _crate;

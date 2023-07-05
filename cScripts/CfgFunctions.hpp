@@ -133,6 +133,7 @@ class cScripts {
         class createVehicleLable {};
         class getVehicleLable {};
 
+        class renameObject {};
         class getIcon {};
 
         class getAttendance {};
