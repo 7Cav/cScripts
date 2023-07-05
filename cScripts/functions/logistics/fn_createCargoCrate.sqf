@@ -30,7 +30,7 @@ params [
     ["_inventory", false, [[], false]],
     ["_destination", objNull, [objNull, []]], 
     ["_resize", nil, [2, nil]],
-    ["_name", nil, ["", nil]]
+    ["_name", "", [""]]
 ];
 
 if (!isServer) exitwith {};
@@ -68,6 +68,10 @@ if (_destCheck) then {
             "Vehicle Cargo", false
         ] call FUNC(error);
     };
+};
+
+if ((!isNil {ace_cargo_noRename} && ace_cargo_noRename isNotEqualTo 1) && _name isNotEqualTo "") then {
+    _crate setVariable ["ace_cargo_customName", _name, true];
 };
 
 _crate;
