@@ -17,8 +17,8 @@ params ["_modulePos", "_objectPos"];
 
 // The crate type that will be passed to the supply crate spawner.
 private _crateTypeList = [
-    'atlas', 
-    'platoon'
+    'crate_medicalAtlas', 
+    'crate_medicalInfantry'
 ];
 
 // Display text for the crate list selection. This is what the zeus sees.
@@ -46,8 +46,11 @@ private _displayTextList =
         _pos params ["_modulePos"];
         
         private _groundLevel = ASLToAGL _modulePos;
-        private _medCrateContents = [_crateType] call FUNC(getMedicalCrate);
-        private _crate = ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] call FUNC(createCargoCrate); 
+        private _crate = [
+            "ace_medicalSupplyCrate", 
+            [_crateType] call EFUNC(logistics,getContainer),
+            _groundLevel
+        ] call FUNC(createCargoCrate); 
 
         // Add object to Zeus
         [{

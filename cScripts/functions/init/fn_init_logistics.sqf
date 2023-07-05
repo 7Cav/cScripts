@@ -29,6 +29,43 @@ private _dataArray = [
 
 
     // Resupply Crates \\
+    ["crate_medicalInfantry", [
+        // Bandages
+        ["ACE_elasticBandage",60],
+        ["ACE_packingBandage",90],
+        ["ACE_quikclot",150],
+
+        // Tourniquets
+        ["ACE_tourniquet",50],
+        
+        // Fluids
+        ["ACE_plasmaIV",20],
+        ["ACE_plasmaIV_500",20],
+        
+        // IV & IO Catheters
+        ["kat_IO_FAST",10],
+        ["kat_IV_16",20],
+        
+        // Autoinjector Medication
+        ["kat_naloxone",20],
+        ["ACE_epinephrine",20],
+        ["kat_phenylephrine_inject",24],
+        
+        // Oral Medication
+        ["kat_Painkiller",60],
+        
+        // Splints
+        ["ACE_splint",40],
+        
+        // Surgical Medication
+        ["kat_lidocaine",16],
+        
+        // Surgical Kits
+        ["ACE_surgicalKit",2],
+        
+        // Body Bags
+        ["ACE_bodyBag", 20]
+    ]],
     ["crate_medicalAtlas", [
         // AEDs
         ["kat_AED",1],
