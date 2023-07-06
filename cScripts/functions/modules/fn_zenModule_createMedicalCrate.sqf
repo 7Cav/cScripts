@@ -45,17 +45,13 @@ private _displayTextList =
         _arg params ["_crateType"];
         _pos params ["_modulePos"];
         
+        _crateContents = [_crateType] call EFUNC(logistics,getContainer);
         private _groundLevel = ASLToAGL _modulePos;
-        private _crate = [
+        [
             "ace_medicalSupplyCrate", 
-            [_crateType] call EFUNC(logistics,getContainer),
+            _crateContents,
             _groundLevel
-        ] call FUNC(createCargoCrate); 
-
-        // Add object to Zeus
-        [{
-            _this call ace_zeus_fnc_addObjectToCurator;
-        }, _crate] call CBA_fnc_execNextFrame;
+        ] remoteExec [QFUNC(createCargoCrate),2]; 
     },
     {},
     [_modulePos]
