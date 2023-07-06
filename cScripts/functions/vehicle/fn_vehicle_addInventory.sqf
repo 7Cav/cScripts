@@ -198,10 +198,10 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 ["rhs_mag_maaws_HE",2],
                 ["rhs_mag_maaws_HEAT",2],
                 ["rhs_fgm148_magazine_AT",1],
-                ["rhsusf_mag_6Rnd_M433_HEDP",10],
+                ["rhsusf_mag_M433_HEDP",20],
                 ["rhsusf_100Rnd_762x51_m62_tracer",5],
                 ["ACE_Chemlight_IR",4],
-                ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
+                ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",42],
                 ["ACE_SpareBarrel",1],
                 ["ACE_HuntIR_M203",1],
                 ["ACE_40mm_Flare_ir",2],
@@ -221,10 +221,10 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 ["rhs_mag_maaws_HE",2],
                 ["rhs_mag_maaws_HEAT",2],
                 ["rhs_fgm148_magazine_AT",1],
-                ["rhsusf_mag_6Rnd_M433_HEDP",10],
+                ["rhsusf_mag_M433_HEDP",20],
                 ["rhsusf_100Rnd_762x51_m62_tracer",5],
                 ["ACE_Chemlight_IR",4],
-                ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
+                ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",42],
                 ["ACE_SpareBarrel",1],
                 ["ACE_HuntIR_M203",1],
                 ["ACE_40mm_Flare_ir",2],
@@ -321,7 +321,7 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
         ["ACE_quikclot", 32],
         ["ACE_tourniquet", 8],
         ["ACE_splint", 8],
-        ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 32],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 32],
         ["SmokeShell", 8]
     ]] call FUNC(addCargo);
 
@@ -348,7 +348,7 @@ if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
             [_vehicle, [
                 ["ACE_rope18", 4],
                 ["ACE_rope27", 4],
-                ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 22],
+                ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 22],
                 ["rhsusf_200Rnd_556x45_box", 6],
                 ["SmokeShell", 12],
                 ["ACE_tourniquet", 4],
@@ -363,7 +363,7 @@ if (_vehicle iskindOf "Heli_Transport_02_base_F") then {
     [_vehicle, [
         ["ACE_rope18", 4],
         ["ACE_rope27", 4],
-        ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 22],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 22],
         ["rhsusf_200Rnd_556x45_box", 6],
         ["SmokeShell", 12],
         ["ACE_tourniquet", 6],
