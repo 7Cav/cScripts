@@ -47,7 +47,7 @@ private _displayTextList =
         
         private _groundLevel = ASLToAGL _modulePos;
         private _medCrateContents = [_crateType] call FUNC(getMedicalCrate);
-        private _crate = ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] remoteExec [QFUNC(createCargoCrate),0,true]; 
+        private _crate = ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] remoteExec [QFUNC(createCargoCrate),2]; 
 
         // Add object to Zeus
         [{
