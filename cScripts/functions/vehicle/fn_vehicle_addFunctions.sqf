@@ -15,6 +15,8 @@ params [["_vehicle", objNull, [objNull]]];
 if (_vehicle iskindOf "man") exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {[formatText["Vehicle functions already applied for %1.", _vehicle]] call FUNC(warning);};
 
+_vehicle setVariable [QEGVAR(Vehicle,Functions), true];
+
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
 #ifdef DEBUG_MODE
@@ -69,6 +71,8 @@ if (_vehicle iskindOf "USAF_C17") then {
     [_vehicle] call FUNC(addHaloJump);
 };
 
+if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
+
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     [_vehicle, 4, 40, false, false] call FUNC(setCargoAttributes);
     switch (_vehicleType) do {
@@ -100,5 +104,3 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
         default {};
     };
 };
-
-_vehicle setVariable [QEGVAR(Vehicle,Functions), true];
