@@ -43,13 +43,8 @@ class cScripts {
         class checkItemValidity {};
         class createCargoCrate {};
         
-        class logiDB_medicalCrate {};
-        class logiDB_medicalVehicle {};
-        
         class doStarterCrateSupplies {};
         class doFieldHospital {};
-
-        
 
         class doEmptyCrate {};
 
