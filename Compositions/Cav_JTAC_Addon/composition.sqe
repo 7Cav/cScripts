@@ -6,7 +6,7 @@ class items
 	class Item0
 	{
 		dataType="Layer";
-		name="Single JTAC";
+		name="Single JTAC [DEVBUILD]";
 		class Entities
 		{
 			items=4;
