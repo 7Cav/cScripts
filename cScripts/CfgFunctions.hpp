@@ -136,6 +136,9 @@ class cScripts {
         class getIcon {};
 
         class getAttendance {};
+
+        class isValidFaction {};
+
         class getServerMetrics {};
     };
     class vehicle {

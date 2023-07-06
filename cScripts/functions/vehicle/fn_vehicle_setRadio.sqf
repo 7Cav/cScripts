@@ -20,11 +20,7 @@ if (!EGVAR(patches,usesACRE)) exitWith {};
 if (!EGVAR(Settings,enableACRE)) exitWith {};
 if (!EGVAR(Settings,enableVehicleRadios)) exitWith {};
 if (isNull _vehicle) exitWith { ["Vehicle is null", "Vehicle Radio"] call FUNC(error); };
-
-// Is valid vehicle
-private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
-if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle"] call FUNC(error);};
-if (!(faction _vehicle in _factionArray)) exitWith {};
+if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 [_vehicle, "default"] call acre_api_fnc_setVehicleRacksPreset;
 [_vehicle, {}] call acre_api_fnc_initVehicleRacks;

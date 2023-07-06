@@ -37,8 +37,8 @@ if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
         // TypeOf,                DisplayName,  Name,           Icon
         ["APC_Wheeled_03_base_F", "Anti-Armor",  "antiarmor",    ""],
         ["APC_Wheeled_03_base_F", "Anti-Air",    "antiair",      ""],
-        ["APC_Wheeled_03_base_F", "Assault",    "assault",      ""],
-        ["APC_Wheeled_03_base_F", "Default",    "default",      ""]
+        ["APC_Wheeled_03_base_F", "Assault",     "assault",      ""],
+        ["APC_Wheeled_03_base_F", "Default",     "default",      ""]
     ];
 };
 
