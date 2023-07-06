@@ -47,12 +47,8 @@ private _displayTextList =
         
         private _groundLevel = ASLToAGL _modulePos;
         private _medCrateContents = [_crateType] call FUNC(getMedicalCrate);
-        private _crate = ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] remoteExec [QFUNC(createCargoCrate),2]; 
+        ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] remoteExec [QFUNC(createCargoCrate),2]; 
 
-        // Add object to Zeus
-        [{
-            _this call ace_zeus_fnc_addObjectToCurator;
-        }, _crate] call CBA_fnc_execNextFrame;
     },
     {},
     [_modulePos]
