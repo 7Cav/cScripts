@@ -21,7 +21,7 @@ if (!EGVAR(Settings,enableVehicleRadios)) exitWith {};
 if (isNull _vehicle) exitWith { ["Vehicle is null", "Vehicle Radio"] call FUNC(error); };
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
-
+// ACRE
 if (!EGVAR(patches,usesACRE)) exitWith {
     if (!isServer) exitWith {};
 
@@ -52,6 +52,7 @@ if (!EGVAR(patches,usesACRE)) exitWith {
     } forEach _racks;
 };
 
+// TFAR
 if (!EGVAR(patches,usesTFAR)) exitWith {
     /** FIXME: Code goes here */
 };
