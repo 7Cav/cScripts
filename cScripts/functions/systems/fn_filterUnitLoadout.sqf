@@ -43,10 +43,10 @@ private _replaceRadio = {
     };
     if (!EGVAR(Patches,TFAR)) then {
         // Replace only if string (array can be eg. weapon inside container) and an TFAR radio
-        // FIXME GET BASECLASS
-        //if (!(_item isEqualType []) && {[_item] call TFAR_fnc_isRadio}) then {
-        //    _this set [0, [_item] call acre_api_fnc_getBaseRadio]; // FIXME this is wrong function
-        //};
+        if (!(_item isEqualType []) && {[_item] call TFAR_fnc_isRadio}) then {
+            private _baseClassRadio = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
+            _this set [0, _baseClassRadio];
+        };
     };
 };
 if ((_loadout select 3) isNotEqualTo []) then {
