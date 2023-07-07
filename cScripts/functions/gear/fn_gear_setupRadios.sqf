@@ -16,9 +16,9 @@
  * Public: No
  */
 
-
 if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {};
 if (!EGVAR(Settings,enableRadios)) exitWith {};
+
 
 // ACRE
 if (!EGVAR(patches,usesACRE)) exitWith {

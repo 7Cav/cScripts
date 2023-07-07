@@ -17,27 +17,39 @@
 
 params [["_player", objNull, [objNull]]];
 
-if !(EGVAR(patches,usesACRE)) exitWith {};
-if !(EGVAR(Settings,enableRadios)) exitWith {};
-if !(isPlayer player) exitWith {};
+if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {};
+if (!EGVAR(Settings,enableRadios)) exitWith {};
+if (!GVAR(isPlayer)) exitWith {};
 
-_player setVariable [QEGVAR(Player,RadioChannel), []];
-private _playerRadios = [_player] call acre_api_fnc_getCurrentRadioList;
-{
-    if !(_x == "") then {
-        private _radio = [_x] call acre_api_fnc_getBaseRadio;
-        private _channel = [[_player] call FUNC(getSquadName), _radio] call FUNC(getRadioChannel);
 
-        [_x, _channel] call acre_api_fnc_setRadioChannel;
-        #ifdef DEBUG_MODE
-            [format["%1 radio (%2) have its channel set to %3", _player, _x, _channel], "Radio"] call FUNC(info);
-        #endif
+// ACRE
+if (!EGVAR(patches,usesACRE)) exitWith {
+    _player setVariable [QEGVAR(Player,RadioChannel), []];
+    private _playerRadios = [_player] call acre_api_fnc_getCurrentRadioList;
+    {
+        if !(_x == "") then {
+            private _radio = [_x] call acre_api_fnc_getBaseRadio;
+            private _channel = [[_player] call FUNC(getSquadName), _radio] call FUNC(getRadioChannel);
 
-        // Store radio channels in variable.
-        private _radioAndChannel = _player getVariable [QEGVAR(Player,RadioChannel), []];
-        _radioAndChannel pushBack [[_x] call acre_api_fnc_getBaseRadio, _channel];
-        _player setVariable [QEGVAR(Player,RadioChannel), _radioAndChannel];
-    } else {
-        [format["Empty radio is trying to get it's channel applied for %1", _player], "Radio"] call FUNC(warning);
-    };
-} forEach _playerRadios;
+            [_x, _channel] call acre_api_fnc_setRadioChannel;
+            #ifdef DEBUG_MODE
+                [format["%1 radio (%2) have its channel set to %3", _player, _x, _channel], "Radio"] call FUNC(info);
+            #endif
+
+            // Store radio channels in variable.
+            private _radioAndChannel = _player getVariable [QEGVAR(Player,RadioChannel), []];
+            _radioAndChannel pushBack [[_x] call acre_api_fnc_getBaseRadio, _channel];
+            _player setVariable [QEGVAR(Player,RadioChannel), _radioAndChannel];
+        } else {
+            [format["Empty radio is trying to get it's channel applied for %1", _player], "Radio"] call FUNC(warning);
+        };
+    } forEach _playerRadios;
+};
+
+
+// TFAR
+if (!EGVAR(patches,usesTFAR)) exitWith {
+    /** FIXME: Code goes here */
+};
+
+["Fatal", "Radio", true] call FUNC(error);

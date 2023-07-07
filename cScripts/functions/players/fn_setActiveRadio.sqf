@@ -17,20 +17,33 @@
 
 params [["_radio", 'ACRE_PRC343', ['ACRE_PRC343']]];
 
-if !(EGVAR(Settings,enableRadios)) exitWith {};
+if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {};
+if (!EGVAR(Settings,enableRadios)) exitWith {};
 if (!GVAR(isPlayer)) exitWith {};
 
-[{
-    _this params ["_radio"];
 
-    if (call acre_api_fnc_getCurrentRadio == call acre_api_fnc_getCurrentRadio) exitWith {};
-    
-    private _radioId = [_radio] call acre_api_fnc_getRadioByType;
-    [_radioId] call acre_api_fnc_setCurrentRadio;
-    
-    #ifdef DEBUG_MODE
-        [format["%1 radio %2 is current radio", player, call acre_api_fnc_getCurrentRadio], "Radio"] call FUNC(info);
-    #endif
-    [] call acre_api_fnc_getCurrentRadio;
+// ACRE
+if (!EGVAR(patches,usesACRE)) exitWith {
+    [{
+        _this params ["_radio"];
 
-}, [_radio], 1] call CBA_fnc_waitAndExecute;
+        if (call acre_api_fnc_getCurrentRadio == call acre_api_fnc_getCurrentRadio) exitWith {};
+        
+        private _radioId = [_radio] call acre_api_fnc_getRadioByType;
+        [_radioId] call acre_api_fnc_setCurrentRadio;
+        
+        #ifdef DEBUG_MODE
+            [format["%1 radio %2 is current radio", player, call acre_api_fnc_getCurrentRadio], "Radio"] call FUNC(info);
+        #endif
+        [] call acre_api_fnc_getCurrentRadio;
+
+    }, [_radio], 1] call CBA_fnc_waitAndExecute;
+};
+
+
+// TFAR
+if (!EGVAR(patches,usesTFAR)) exitWith {
+    /** FIXME: Code goes here */
+};
+
+["Fatal", "Radio", true] call FUNC(error);
