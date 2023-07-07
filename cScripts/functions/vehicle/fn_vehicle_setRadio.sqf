@@ -7,8 +7,13 @@
  * 0: Vehicle <OBJECT>
  * 1: Channel <NUMBER>
  *
+ * Return Value:
+ * Nothing
+ *
  * Example:
  * ["vic"] call cScripts_fnc_vehicle_setRadio;
+ *
+ * Public: No
  */
 params [
     ["_vehicle", objNull, [objNull]],
@@ -51,6 +56,7 @@ if (!EGVAR(patches,usesACRE)) exitWith {
         };
     } forEach _racks;
 };
+
 
 // TFAR
 if (!EGVAR(patches,usesTFAR)) exitWith {
