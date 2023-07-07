@@ -56,4 +56,4 @@ if (!EGVAR(patches,usesTFAR)) exitWith {
     /** FIXME: Code goes here */
 };
 
-["Fatal error", "Vehicle Radio"] call FUNC(error);
+["Fatal", "Vehicle Radio"] call FUNC(error);
