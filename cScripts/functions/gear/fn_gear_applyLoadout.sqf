@@ -82,7 +82,7 @@ if (GVAR(isPlayer)) then {
     [_unit] call EFUNC(gear,applyCosmetics);
 
     // Radios
-    if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
+    if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableRadios)) then {
         if (EGVAR(Settings,setRadio)) then {
             [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
                 _this params ["_unit"];

@@ -18,7 +18,7 @@ private _number = 0;
 _channelsLr = _channelsLr apply { 
     _number = _number + 1; 
     private _name = _x;
-    if (EGVAR(Settings,enableACRE)) then {
+    if (EGVAR(Settings,enableRadios)) then {
         _x = format ["    <font color='#ffc61a'>%1</font> - %2<br/>                <font color='#808080'>Frequency: TX %3, RX %3</font>", _number, _name, 9.242 + _number]; 
     } else {
         _x = format ["    <font color='#ffc61a'>%1</font> - %2", _number, _name];
@@ -48,6 +48,6 @@ player setVariable [QEGVAR(document,shortrange_channels), compileFinal str _chan
 player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Long Range Radio", call (player getVariable QEGVAR(document,longrange_channels))]], taskNull, "", false];
 player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Radio Channels", call (player getVariable QEGVAR(document,shortrange_channels))]], taskNull, "", false];
 
-if (EGVAR(Settings,enableACRE)) then {
+if (EGVAR(Settings,enableRadios)) then {
     player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Radio", "    <execute expression='[] call cScripts_fnc_clearRadioIds'>Reprogram Radio</execute> - Use to reset your radios frequencies and channels."]], taskNull, "", false];
 };

@@ -15,35 +15,44 @@ params [
     ["_radioChannel", [], [[]]]
 ];
 
-if (!isServer) exitWith {};
-if (!EGVAR(patches,usesACRE)) exitWith {};
-if (!EGVAR(Settings,enableACRE)) exitWith {};
+if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {}
+if (!EGVAR(Settings,enableRadios)) exitWith {};
 if (!EGVAR(Settings,enableVehicleRadios)) exitWith {};
 if (isNull _vehicle) exitWith { ["Vehicle is null", "Vehicle Radio"] call FUNC(error); };
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
-[_vehicle, "default"] call acre_api_fnc_setVehicleRacksPreset;
-[_vehicle, {}] call acre_api_fnc_initVehicleRacks;
 
-waitUntil { _vehicle call acre_api_fnc_areVehicleRacksInitialized };
+if (!EGVAR(patches,usesACRE)) exitWith {
+    if (!isServer) exitWith {};
 
-#ifdef DEBUG_MODE
-    [format["Vehicle rack initzialized for %1 (%2)", _vehicle, typeOf _vehicle], "Vehicle Radio" ] call FUNC(info);
-#endif
+    [_vehicle, "default"] call acre_api_fnc_setVehicleRacksPreset;
+    [_vehicle, {}] call acre_api_fnc_initVehicleRacks;
 
-private _racks = [_vehicle] call acre_api_fnc_getVehicleRacks;
-if (count _racks == 0) exitWith {[format["No Vehicle Racks discoverd for %1 (%2).", _vehicle, typeOf _vehicle], "Vehicle Radio"] call FUNC(info)};
+    waitUntil { _vehicle call acre_api_fnc_areVehicleRacksInitialized };
 
-// Add extra channels
-_radioChannel = _radioChannel + [1,1,1,1,1];
+    #ifdef DEBUG_MODE
+        [format["Vehicle rack initzialized for %1 (%2)", _vehicle, typeOf _vehicle], "Vehicle Radio" ] call FUNC(info);
+    #endif
 
-{
-    private _radio = [_x] call acre_api_fnc_getMountedRackRadio;
-    if (count _radio != 0) then {
-        private _channel = _radioChannel select _forEachIndex;
-        [_radio, _channel] call acre_api_fnc_setRadioChannel;
-        #ifdef DEBUG_MODE
-            [format["Vehicle %1 (%2) radio %3 in rack %3 have radio set to channel %4", _vehicle, typeOf _vehicle, _radio, _x, _channel], "Vehicle Radio"] call FUNC(info);
-        #endif
-    };
-} forEach _racks;
+    private _racks = [_vehicle] call acre_api_fnc_getVehicleRacks;
+    if (count _racks == 0) exitWith {[format["No Vehicle Racks discoverd for %1 (%2).", _vehicle, typeOf _vehicle], "Vehicle Radio"] call FUNC(info)};
+
+    // Add extra channels
+    _radioChannel = _radioChannel + [1,1,1,1,1];
+
+    {
+        private _radio = [_x] call acre_api_fnc_getMountedRackRadio;
+        if (count _radio != 0) then {
+            private _channel = _radioChannel select _forEachIndex;
+            [_radio, _channel] call acre_api_fnc_setRadioChannel;
+            #ifdef DEBUG_MODE
+                [format["Vehicle %1 (%2) radio %3 in rack %3 have radio set to channel %4", _vehicle, typeOf _vehicle, _radio, _x, _channel], "Vehicle Radio"] call FUNC(info);
+            #endif
+        };
+    } forEach _racks;
+};
+
+if (!EGVAR(patches,usesTFAR)) {
+    /** FIXME: Code goes here */
+};
+

@@ -15,7 +15,7 @@
  */
 
 if !(EGVAR(patches,usesACRE)) exitWith {};
-if !(EGVAR(Settings,enableACRE)) exitWith {};
+if !(EGVAR(Settings,enableRadios)) exitWith {};
 
 private _playerRadios = [] call acre_api_fnc_getCurrentRadioList;
 

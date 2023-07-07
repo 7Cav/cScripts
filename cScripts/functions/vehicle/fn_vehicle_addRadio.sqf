@@ -13,7 +13,7 @@
 params [["_vehicle", objNull, [objNull]]];
 if (!isServer) exitWith {};
 if !(EGVAR(patches,usesACRE)) exitWith {};
-if !(EGVAR(Settings,enableACRE)) exitWith {};
+if !(EGVAR(Settings,enableRadios)) exitWith {};
 if !(EGVAR(Settings,enableVehicleRadios)) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (!isMultiplayer) exitWith { [format["Vehicle rack initzialized for %1 (%2) is stopped due to being in a SP enviroment.", _vehicle, typeOf _vehicle], "Vehicle Radio"] call FUNC(warning); };

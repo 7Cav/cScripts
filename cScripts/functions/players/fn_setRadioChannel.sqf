@@ -18,7 +18,7 @@
 params [["_player", objNull, [objNull]]];
 
 if !(EGVAR(patches,usesACRE)) exitWith {};
-if !(EGVAR(Settings,enableACRE)) exitWith {};
+if !(EGVAR(Settings,enableRadios)) exitWith {};
 if !(isPlayer player) exitWith {};
 
 _player setVariable [QEGVAR(Player,RadioChannel), []];

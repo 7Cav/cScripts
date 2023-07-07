@@ -20,7 +20,7 @@ private _worldName = getText (configFile >> "CfgWorlds" >> worldName >> "descrip
 private _serverName = if (serverName != "") then {serverName} else {"localhost"}; 
 
 private _radioChannel = "";
-if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
+if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableRadios)) then {
     _radioChannel = [_group, "ACRE_PRC343"] call FUNC(getRadioChannel);
     _radioChannel = [_radioChannel] call FUNC(getChannelName);
     if !(_radioChannel == "ERROR" ) then {

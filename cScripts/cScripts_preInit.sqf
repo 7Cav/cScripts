@@ -52,12 +52,12 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_fnc_addSetting;
 
 
-//2; ACRE Radios
+//2; Radios
 [ // Enable
-    QEGVAR(Settings,enableACRE),
+    EGVAR(Settings,enableRadios),
     "CHECKBOX",
     ["Enable","Allow cScripts to set up and handle radio distrubution"],
-    [_cScriptSettings, "2; ACRE Radios"],
+    [_cScriptSettings, "2; Radios"],
     true,
     true,
     {},
@@ -67,7 +67,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,setRadioChannelNames),
     "EDITBOX",
     ["Long Range Radio Channels","Array of radio channels used for ACRE"],
-    [_cScriptSettings, "2; ACRE Radios"],
+    [_cScriptSettings, "2; Radios"],
     '["UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","ATLAS","FARP","CONVOY","ZEUS","CAG","COMMAND"]',
     true,
     {},
@@ -77,7 +77,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     QEGVAR(Settings,setRadio),
     "CHECKBOX",
     ["Squad Radio Channels","Allow radio channels to be changed based on player squadname."],
-    [_cScriptSettings, "2; ACRE Radios"],
+    [_cScriptSettings, "2; Radios"],
     true,
     true,
     {},
