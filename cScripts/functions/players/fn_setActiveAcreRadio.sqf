@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * ["ACRE_PRC343"] call cScripts_fnc_setActiveRadio
+ * ["ACRE_PRC343"] call cScripts_fnc_setActiveAcreRadio
  *
  * Public: No
  */

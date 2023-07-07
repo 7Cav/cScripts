@@ -8,7 +8,7 @@
  * 1: Channel <NUMBER>
  *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_setRadio;
+ * ["vic"] call cScripts_fnc_vehicle_setAcreRadio;
  */
 params [
     ["_vehicle", objNull, [objNull]],
@@ -24,7 +24,7 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 [_vehicle, "default"] call acre_api_fnc_setVehicleRacksPreset;
 [_vehicle, {}] call acre_api_fnc_initVehicleRacks;
-
+_radioId
 waitUntil { _vehicle call acre_api_fnc_areVehicleRacksInitialized };
 
 #ifdef DEBUG_MODE

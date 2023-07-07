@@ -26,7 +26,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     _vehicle call EFUNC(vehicle,addPylonLoadout);
     _vehicle call EFUNC(vehicle,addCosmetics);
     _vehicle call EFUNC(vehicle,addStagingActions);
-    _vehicle call EFUNC(vehicle,addRadio);
+    _vehicle call EFUNC(vehicle,addAcreRadio);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 {
@@ -38,6 +38,6 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
         _vehicle remoteExec [QEFUNC(vehicle,addPylonLoadout), -2, true];
         _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
         _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), -2, true];
-        _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addAcreRadio), 2];
     }];
 } forEach allCurators;

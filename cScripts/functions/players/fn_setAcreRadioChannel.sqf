@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * ["bob"] call cScripts_fnc_setRadioChannel
+ * ["bob"] call cScripts_fnc_setAcreRadioChannel
  *
  * Public: No
  */

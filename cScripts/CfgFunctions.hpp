@@ -128,7 +128,7 @@ class cScripts {
         class addObjectToCurator {};
 
         class getChannelName {};
-        class clearRadioIds {};
+        class clearAcreRadioIds {};
 
         class createVehicleLable {};
         class getVehicleLable {};
@@ -147,8 +147,8 @@ class cScripts {
         class vehicle_addInventory {};
         class vehicle_addFunctions {};
         class vehicle_addCosmetics {};
-        class vehicle_addRadio {};
-        class vehicle_setRadio {};
+        class vehicle_addAcreRadio {};
+        class vehicle_setAcreRadio {};
 
         class vehicle_applyTextures {};
 
@@ -199,7 +199,7 @@ class cScripts {
         class gear_selectLoadout {};
         class gear_getSideConfig {};
         
-        class gear_setupRadios {};
+        class gear_setupAcerRadios {};
 
         // Save and Load
         class gear_saveLoadout {};

@@ -48,7 +48,7 @@
         _objectPos call EFUNC(vehicle,addPylonLoadout);
         _objectPos call EFUNC(vehicle,addCosmetics);
         _objectPos call EFUNC(vehicle,addStagingActions);
-        _objectPos call EFUNC(vehicle,addRadio);
+        _objectPos call EFUNC(vehicle,addAcreRadio);
         
     },
     {},
