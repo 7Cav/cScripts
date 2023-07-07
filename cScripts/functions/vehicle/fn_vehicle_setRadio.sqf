@@ -15,7 +15,7 @@ params [
     ["_radioChannel", [], [[]]]
 ];
 
-if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {}
+if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {};
 if (!EGVAR(Settings,enableRadios)) exitWith {};
 if (!EGVAR(Settings,enableVehicleRadios)) exitWith {};
 if (isNull _vehicle) exitWith { ["Vehicle is null", "Vehicle Radio"] call FUNC(error); };
@@ -52,7 +52,8 @@ if (!EGVAR(patches,usesACRE)) exitWith {
     } forEach _racks;
 };
 
-if (!EGVAR(patches,usesTFAR)) {
+if (!EGVAR(patches,usesTFAR)) exitWith {
     /** FIXME: Code goes here */
 };
 
+["Fatal error", "Vehicle Radio"] call FUNC(error);
