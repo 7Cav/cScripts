@@ -129,17 +129,17 @@ class cScripts {
 
         class getChannelName {};
         class clearRadioIds {};
+        class filterUnitLoadout {};
 
+        class isValidFaction {};
+        
         class createVehicleLable {};
         class getVehicleLable {};
 
         class renameObject {};
         class getIcon {};
-
+        
         class getAttendance {};
-
-        class isValidFaction {};
-
         class getServerMetrics {};
     };
     class vehicle {
