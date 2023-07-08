@@ -82,13 +82,24 @@ if (GVAR(isPlayer)) then {
     [_unit] call EFUNC(gear,applyCosmetics);
 
     // Radios
-    if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableRadios)) then {
-        if (EGVAR(Settings,setRadio)) then {
-            [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
-                _this params ["_unit"];
-                [format["Setting up ACRE primary radio and channels for %1...", name _unit], "Gear Radio"] call FUNC(info);
+    if (EGVAR(Settings,enableRadios)) then {
+
+        if (EGVAR(patches,usesACRE)) then {
+            if (EGVAR(Settings,setRadio)) then {
+                [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
+                    _this params ["_unit"];
+                    [format["Setting up ACRE primary radio and channels for %1...", name _unit], "Gear Radio"] call FUNC(info);
+                    [_unit] call FUNC(setRadioChannel);
+                    ["ACRE_PRC343"] call FUNC(setActiveRadio);
+                }, [_unit]] call CBA_fnc_waitUntilAndExecute;
+            };
+        };
+        if (EGVAR(patches,usesTFAR)) then {
+            [{GVAR(Radio) && EGVAR(RADIO,TFAR)}, {
                 [_unit] call FUNC(setRadioChannel);
-                ["ACRE_PRC343"] call FUNC(setActiveRadio);
+                [{
+                    ["TFAR_anprc152"] call FUNC(setActiveRadio);
+                }, [_unit]] call CBA_fnc_execNextFrame;
             }, [_unit]] call CBA_fnc_waitUntilAndExecute;
         };
     };

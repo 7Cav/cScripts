@@ -54,7 +54,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 //2; Radios
 [ // Enable
-    EGVAR(Settings,enableRadios),
+    QEGVAR(Settings,enableRadios),
     "CHECKBOX",
     ["Enable","Allow cScripts to set up and handle radio distrubution"],
     [_cScriptSettings, "2; Radios"],
@@ -66,7 +66,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [ // Long Range Radio Channels
     QEGVAR(Settings,setRadioChannelNames),
     "EDITBOX",
-    ["Long Range Radio Channels","Array of radio channels used for ACRE"],
+    ["Long Range Radio Channels (ACRE)","Array of radio channels used for ACRE the index of the array translate to channel."],
     [_cScriptSettings, "2; Radios"],
     '["UNUSED","AVIATION","VIKING","LANCER","BANSHEE","SABRE","BANDIT","MISFIT","HAVOC","IDF-1","IDF-2","CAS-1","CAS-2","GROUND-TO-AIR","ATLAS","FARP","CONVOY","ZEUS","CAG","COMMAND"]',
     true,

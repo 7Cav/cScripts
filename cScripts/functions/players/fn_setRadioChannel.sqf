@@ -17,13 +17,13 @@
 
 params [["_player", objNull, [objNull]]];
 
-if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {};
+if (!EGVAR(Patches,usesACRE) && !EGVAR(Patches,usesTFAR)) exitWith {};
 if (!EGVAR(Settings,enableRadios)) exitWith {};
 if (!GVAR(isPlayer)) exitWith {};
 
 
 // ACRE
-if (!EGVAR(patches,usesACRE)) exitWith {
+if (EGVAR(patches,usesACRE)) exitWith {
     _player setVariable [QEGVAR(Player,RadioChannel), []];
     private _playerRadios = [_player] call acre_api_fnc_getCurrentRadioList;
     {
@@ -48,8 +48,13 @@ if (!EGVAR(patches,usesACRE)) exitWith {
 
 
 // TFAR
-if (!EGVAR(patches,usesTFAR)) exitWith {
-    /** FIXME: Code goes here */
+if (EGVAR(patches,usesTFAR)) exitWith {
+    _player setVariable [QEGVAR(Player,RadioChannel), []];
+    private _playerRadios = [_player] call acre_api_fnc_getCurrentRadioList;
+
+    //[call TFAR_fnc_activeSwRadio, "76.2"] call TFAR_fnc_setSwFrequency;
+
+    //[call TFAR_fnc_activeSwRadio, "76.2"] call TFAR_fnc_setSwFrequency;
 };
 
 ["Fatal", "Radio", true] call FUNC(error);

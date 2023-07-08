@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ACRE2Team, CPL.Brostrom.A
  * Filters unitLoadout for ACRE or TFAR ID classes and replacing them for base classes.
@@ -35,13 +35,13 @@ if ((_loadout select 9) select 2 == "ItemRadioAcreFlagged") then {
 // Set ACRE base classes
 private _replaceRadio = {
     params ["_item"];
-    if (!EGVAR(Patches,ACRE)) then {
+    if (EGVAR(Patches,usesACRE)) then {
         // Replace only if string (array can be eg. weapon inside container) and an ACRE radio
         if (!(_item isEqualType []) && {[_item] call acre_api_fnc_isRadio}) then {
             _this set [0, [_item] call acre_api_fnc_getBaseRadio];
         };
     };
-    if (!EGVAR(Patches,TFAR)) then {
+    if (EGVAR(Patches,usesTFAR)) then {
         // Replace only if string (array can be eg. weapon inside container) and an TFAR radio
         if (!(_item isEqualType []) && {[_item] call TFAR_fnc_isRadio}) then {
             private _baseClassRadio = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");

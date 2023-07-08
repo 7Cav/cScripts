@@ -130,6 +130,7 @@ class cScripts {
         class getChannelName {};
         class clearRadioIds {};
         class filterUnitLoadout {};
+        class getRadioBase {};
 
         class isValidFaction {};
         

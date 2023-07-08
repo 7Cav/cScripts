@@ -20,14 +20,14 @@ params [
     ["_radioChannel", [], [[]]]
 ];
 
-if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {};
+if (!EGVAR(Patches,usesACRE) && !EGVAR(Patches,usesTFAR)) exitWith {};
 if (!EGVAR(Settings,enableRadios)) exitWith {};
 if (!EGVAR(Settings,enableVehicleRadios)) exitWith {};
 if (isNull _vehicle) exitWith { ["Vehicle is null", "Vehicle Radio"] call FUNC(error); };
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 // ACRE
-if (!EGVAR(patches,usesACRE)) exitWith {
+if (EGVAR(patches,usesACRE)) exitWith {
     if (!isServer) exitWith {};
 
     [_vehicle, "default"] call acre_api_fnc_setVehicleRacksPreset;
@@ -59,7 +59,7 @@ if (!EGVAR(patches,usesACRE)) exitWith {
 
 
 // TFAR
-if (!EGVAR(patches,usesTFAR)) exitWith {
+if (EGVAR(patches,usesTFAR)) exitWith {
     /** FIXME: Code goes here */
 };
 

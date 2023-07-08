@@ -29,6 +29,7 @@ if (isClass (missionConfigFile >> "CfgLoadouts")) then {
         };
 
         if (_unit == player && {!EGVAR(gear,playerLoadoutGiven)}) then {
+            EGVAR(RADIO,TFAR) = false;
             EGVAR(gear,playerLoadoutGiven) = true;
             private _loadout = [_unit] call EFUNC(gear,selectLoadout);
             [_unit, _loadout] call EFUNC(gear,applyLoadout);
@@ -46,6 +47,7 @@ if (isClass (missionConfigFile >> "CfgLoadouts")) then {
     ["CAManBase", "Respawn", {
         params ["_unit"];
         if (_unit == player) then {
+            EGVAR(RADIO,TFAR) = false;
             if (_unit call EFUNC(gear,hasSavedLoadout)) then {
                 _unit call EFUNC(gear,loadLoadout);
             } else {
@@ -58,6 +60,7 @@ if (isClass (missionConfigFile >> "CfgLoadouts")) then {
     ["CAManBase", "Local", {
         params ["_unit"];
         if (_unit == player && {local _unit} && {!EGVAR(gear,playerLoadoutGiven)}) then {
+            EGVAR(RADIO,TFAR) = false;
             EGVAR(gear,playerLoadoutGiven) = true;
             private _loadout = [_unit] call EFUNC(gear,selectLoadout);
             [_unit, _loadout] call EFUNC(gear,applyLoadout);

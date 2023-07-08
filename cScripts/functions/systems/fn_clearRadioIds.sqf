@@ -14,12 +14,12 @@
  *
  */
 
-if (!EGVAR(Patches,ACRE) && !EGVAR(Patches,TFAR)) exitWith {};
+if (!EGVAR(Patches,usesACRE) && !EGVAR(Patches,usesTFAR)) exitWith {};
 if (!EGVAR(Settings,enableRadios)) exitWith {};
 if (!GVAR(isPlayer)) exitWith {};
 
 // ACRE
-if (!EGVAR(patches,usesACRE)) exitWith {
+if (EGVAR(patches,usesACRE)) exitWith {
     private _playerRadios = [] call acre_api_fnc_getCurrentRadioList;
 
     {
@@ -38,7 +38,7 @@ if (!EGVAR(patches,usesACRE)) exitWith {
 };
 
 // TFAR
-if (!EGVAR(patches,usesTFAR)) exitWith {
+if (EGVAR(patches,usesTFAR)) exitWith {
     /** FIXME: Code goes here */
 };
 
