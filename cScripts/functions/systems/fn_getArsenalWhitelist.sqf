@@ -361,8 +361,36 @@ private _commonGear = [
     "USP_PACK_POINTMAN",
     "USP_45L_RUCKSACK_MC",
     "USP_PATROL_PACK",
+    "USP_PATROL_PACK_CB",
+    "USP_PATROL_PACK_CB_CS",
+    "USP_PATROL_PACK_CB_CS_FH",
+    "USP_PATROL_PACK_CB_CS_FH",
+    "USP_PATROL_PACK_CB_CS_FH_RP",
+    "USP_PATROL_PACK_CB_CS_FH_ZT",
+    "USP_PATROL_PACK_CB_CS_RP",
+    "USP_PATROL_PACK_CB_CS_RP_ZT",
+    "USP_PATROL_PACK_CB_CS_ZT",
+    "USP_PATROL_PACK_CB_FH",
+    "USP_PATROL_PACK_CB_FH_RP",
+    "USP_PATROL_PACK_CB_FH_RP_ZT",
+    "USP_PATROL_PACK_CB_FH_ZT",
+    "USP_PATROL_PACK_CB_RP",
+    "USP_PATROL_PACK_CB_RP_ZT",
+    "USP_PATROL_PACK_CB_ZT",
+    "USP_PATROL_PACK_CS",
+    "USP_PATROL_PACK_CS_FH",
+    "USP_PATROL_PACK_CS_FH_ZT",
+    "USP_PATROL_PACK_CS_FH_ZT",
+    "USP_PATROL_PACK_FH",
+    "USP_PATROL_PACK_FH_ZT",
+    "USP_PATROL_PACK_ZT",
     "USP_ZIPON_PANEL_MC",
+    "USP_ZIPON_PANEL_MC_RF",
+    "USP_ZIPON_PANEL_MC_RF2",
+    "USP_ROLLFLAG2",
+    
     "USP_PACK_HYDRATION",
+    "USP_PATROL_PACK_ZT",
     
     //Launchers
     "rhs_weap_M136",
@@ -428,41 +456,7 @@ private _commonGear = [
     "rhsusf_acc_anpeq15_bk",
     "rhsusf_acc_anpeq15_bk_light",
     "rhsusf_acc_m952v",
-    "acc_flashlight",
-    "rhsusf_acc_sf3p556",
-    "rhsusf_acc_eotech",
-    "rhsusf_acc_g33_t1",
-    "rhsusf_acc_g33_xps3",
-    "rhsusf_acc_g33_xps3_tan",
-    "rhsusf_acc_elcan",
-    "rhsusf_acc_elcan_ard",
-    "rhsusf_acc_acog",
-    "rhsusf_acc_acog2",
-    "rhsusf_acc_acog3",
-    "rhsusf_acc_eotech_552",
-    "rhsusf_acc_eotech_552_d",
-    "rhsusf_acc_eotech_552_wd",
-    "rhsusf_acc_compm4",
-    "rhsusf_acc_su230",
-    "rhsusf_acc_su230_c",
-    "rhsusf_acc_su230_mrds",
-    "rhsusf_acc_su230_mrds_c",
-    "rhsusf_acc_t1_high",
-    "rhsusf_acc_acog_rmr",
-    "rhsusf_acc_acog_d",
-    "rhsusf_acc_acog_wd",
-    "rhsusf_acc_grip2",
-    "rhsusf_acc_grip2_tan",
-    "rhsusf_acc_grip2_wd",
-    "rhsusf_acc_grip1",
-    "rhsusf_acc_kac_grip",
-    "rhsusf_acc_rvg_blk",
-    "rhsusf_acc_rvg_de",
-    "rhsusf_acc_tdstubby_blk",
-    "rhsusf_acc_tdstubby_tan",
-    "rhsusf_acc_grip3",
-    "rhsusf_acc_grip3_tan",
-    "rhsusf_acc_eotech_xps3"
+    "acc_flashlight"
     
 ];
 
@@ -505,18 +499,6 @@ private _companyItems = switch (_company) do {
         "USP_OPSCORE_FASTMTC_CGTW",
         "USP_OPSCORE_FASTMTC_CSW",
         "USP_OPSCORE_FASTMTC_CTW",
-
-        // Backpack
-        "B_AssaultPack_mcamo",
-        "B_Kitbag_mcamo",
-        "rhsusf_assault_eagleaiii_ocp",
-        "USP_PACK_BREACHER",
-        "USP_PACK_FASTHAWK",
-        "USP_PACK_POINTMAN",
-        "USP_45L_RUCKSACK_MC",
-        "USP_PATROL_PACK",
-        "USP_ZIPON_PANEL_MC",
-        "USP_PACK_HYDRATION",
 
         // Grenades
         "HandGrenade",
@@ -569,9 +551,6 @@ private _companyItems = switch (_company) do {
     ]};
     case "bravo": {[
         // Helmets
-        "UK3CB_BAF_H_Mk7_Scrim_A",
-        "UK3CB_BAF_H_Mk7_Scrim_B",
-        "UK3CB_BAF_H_Mk7_Scrim_C",
         "USP_OPS_FASTXP_TAN_MC_02",
         "USP_OPS_FASTXP_TAN_MC_03",
         "USP_OPS_FASTXP_TAN_MC_04",
@@ -619,33 +598,9 @@ private _companyItems = switch (_company) do {
         "B_Carryall_mcamo",
         "B_UAV_01_backpack_F",
         "B_Kitbag_mcamo",
-        "UK3CB_BAF_B_Bergen_MTP_Rifleman_H_A",
-        "UK3CB_BAF_B_Bergen_MTP_Rifleman_H_B",
-        "UK3CB_BAF_B_Bergen_MTP_Rifleman_H_C",
-        "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_A",
-        "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_B",
-        "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_C",
-        "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D",
-        "UK3CB_BAF_B_Bergen_MTP_Radio_H_A",
-        "UK3CB_BAF_B_Bergen_MTP_Radio_H_B",
-        "UK3CB_BAF_B_Bergen_MTP_Radio_L_A",
-        "UK3CB_BAF_B_Bergen_MTP_Radio_L_B",
-        "UK3CB_BAF_B_Bergen_MTP_JTAC_H_A",
-        "UK3CB_BAF_B_Bergen_MTP_JTAC_L_A",
-        "UK3CB_BAF_B_Bergen_MTP_Engineer_H_A",
-        "UK3CB_BAF_B_Bergen_MTP_Engineer_L_A",
-        "UK3CB_BAF_B_Bergen_MTP_SL_H_A",
-        "UK3CB_BAF_B_Bergen_MTP_SL_L_A",
         "UK3CB_B_Backpack_Pocket_OLI",
         "UK3CB_B_Backpack_Pocket",
         "B_rhsusf_B_BACKPACK",
-        "USP_PACK_BREACHER_MC",
-        "USP_PACK_FASTHAWK",
-        "USP_PACK_POINTMAN",
-        "USP_45L_RUCKSACK_MC",
-        "USP_PATROL_PACK",
-        "USP_ZIPON_PANEL_MC",
-        "USP_PACK_HYDRATION",
 
         // Weapons
         "dzn_MG_Tripod_M122A1_M240Mount_Carry",
@@ -744,7 +699,18 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "USP_VEST_STRANDHOGG2_MC",
         "USP_VEST_STRANDHOGG2_CBR",
         "ACE_Vector",
-        "ACE_MX2A"
+        "ACE_MX2A",
+
+        //Backpack
+        "USP_TACTICAL_PACK_CCT",
+        "USP_TACTICAL_PACK_CCT2",
+        "USP_TACTICAL_PACK_CCT3",
+        "USP_TACTICAL_PACK_CCT4",
+        "USP_TACTICAL_PACK_CCT5",
+        "USP_TACTICAL_PACK_CCT6",
+        "USP_TACTICAL_PACK_CCT7",
+        "USP_TACTICAL_PACK_CCT8"
+
     ]};
     case "squadleader": {[
         "ACE_microDAGR",
@@ -755,8 +721,16 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "USP_VEST_STRANDHOGG2_CBR",
         "ACE_Vector",
         "ACE_MX2A",
-        "UK3CB_BAF_B_Bergen_MTP_SL_L_A",
-        "UK3CB_BAF_B_Bergen_MTP_SL_H_A"
+
+        //Backpack
+        "USP_TACTICAL_PACK_CCT",
+        "USP_TACTICAL_PACK_CCT2",
+        "USP_TACTICAL_PACK_CCT3",
+        "USP_TACTICAL_PACK_CCT4",
+        "USP_TACTICAL_PACK_CCT5",
+        "USP_TACTICAL_PACK_CCT6",
+        "USP_TACTICAL_PACK_CCT7",
+        "USP_TACTICAL_PACK_CCT8"
     ]};
     case "fireteamleader": {[
         "ACE_microDAGR",
@@ -764,7 +738,17 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "rhsusf_weap_glock17g4",
         "USP_VEST_STRANDHOGG2_MC",
         "USP_VEST_STRANDHOGG2_CBR",
-        "ACE_HuntIR_monitor"
+        "ACE_HuntIR_monitor",
+
+        //Backpack
+        "USP_TACTICAL_PACK_CCT",
+        "USP_TACTICAL_PACK_CCT2",
+        "USP_TACTICAL_PACK_CCT3",
+        "USP_TACTICAL_PACK_CCT4",
+        "USP_TACTICAL_PACK_CCT5",
+        "USP_TACTICAL_PACK_CCT6",
+        "USP_TACTICAL_PACK_CCT7",
+        "USP_TACTICAL_PACK_CCT8"
     ]};
     case "pilot";
     case "rotarypilot": {[
@@ -865,7 +849,42 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_mk18_KAC_d",
         "rhs_weap_mk18_KAC",
         "rhs_weap_mk18_wd",
-        "rhs_weap_mk18_KAC_wd"
+        "rhs_weap_mk18_KAC_wd",
+
+        //Attachments
+        "rhsusf_acc_sf3p556",
+        "rhsusf_acc_eotech",
+        "rhsusf_acc_g33_t1",
+        "rhsusf_acc_g33_xps3",
+        "rhsusf_acc_g33_xps3_tan",
+        "rhsusf_acc_elcan",
+        "rhsusf_acc_acog",
+        "rhsusf_acc_acog2",
+        "rhsusf_acc_acog3",
+        "rhsusf_acc_eotech_552",
+        "rhsusf_acc_eotech_552_d",
+        "rhsusf_acc_eotech_552_wd",
+        "rhsusf_acc_compm4",
+        "rhsusf_acc_su230",
+        "rhsusf_acc_su230_c",
+        "rhsusf_acc_su230_mrds",
+        "rhsusf_acc_su230_mrds_c",
+        "rhsusf_acc_t1_high",
+        "rhsusf_acc_acog_rmr",
+        "rhsusf_acc_acog_d",
+        "rhsusf_acc_acog_wd",
+        "rhsusf_acc_grip2",
+        "rhsusf_acc_grip2_tan",
+        "rhsusf_acc_grip2_wd",
+        "rhsusf_acc_grip1",
+        "rhsusf_acc_kac_grip",
+        "rhsusf_acc_rvg_blk",
+        "rhsusf_acc_rvg_de",
+        "rhsusf_acc_tdstubby_blk",
+        "rhsusf_acc_tdstubby_tan",
+        "rhsusf_acc_grip3",
+        "rhsusf_acc_grip3_tan",
+        "rhsusf_acc_eotech_xps3"
     ]};
 
     case (_primaryWeapon isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
@@ -895,7 +914,42 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_mk18_KAC_d",
         "rhs_weap_mk18_KAC",
         "rhs_weap_mk18_wd",
-        "rhs_weap_mk18_KAC_wd"
+        "rhs_weap_mk18_KAC_wd",
+
+        //Attachments
+        "rhsusf_acc_sf3p556",
+        "rhsusf_acc_eotech",
+        "rhsusf_acc_g33_t1",
+        "rhsusf_acc_g33_xps3",
+        "rhsusf_acc_g33_xps3_tan",
+        "rhsusf_acc_elcan",
+        "rhsusf_acc_acog",
+        "rhsusf_acc_acog2",
+        "rhsusf_acc_acog3",
+        "rhsusf_acc_eotech_552",
+        "rhsusf_acc_eotech_552_d",
+        "rhsusf_acc_eotech_552_wd",
+        "rhsusf_acc_compm4",
+        "rhsusf_acc_su230",
+        "rhsusf_acc_su230_c",
+        "rhsusf_acc_su230_mrds",
+        "rhsusf_acc_su230_mrds_c",
+        "rhsusf_acc_t1_high",
+        "rhsusf_acc_acog_rmr",
+        "rhsusf_acc_acog_d",
+        "rhsusf_acc_acog_wd",
+        "rhsusf_acc_grip2",
+        "rhsusf_acc_grip2_tan",
+        "rhsusf_acc_grip2_wd",
+        "rhsusf_acc_grip1",
+        "rhsusf_acc_kac_grip",
+        "rhsusf_acc_rvg_blk",
+        "rhsusf_acc_rvg_de",
+        "rhsusf_acc_tdstubby_blk",
+        "rhsusf_acc_tdstubby_tan",
+        "rhsusf_acc_grip3",
+        "rhsusf_acc_grip3_tan",
+        "rhsusf_acc_eotech_xps3"
         
     ]};
 
@@ -911,6 +965,11 @@ private _weaponSystemSpecific = switch (true) do {
         "rhsusf_acc_harris_bipod",
         "rhsusf_acc_m8541_d",
         "rhsusf_acc_m8541_mrds",
+        "rhsusf_acc_elcan_ard",
+        "rhsusf_acc_su230a",
+        "rhsusf_acc_su230a_c",
+        "rhsusf_acc_su230a_mrds",
+        "rhsusf_acc_su230a_mrds_c",
         "rhsusf_acc_m8541_wd"
     ]};
 
@@ -940,6 +999,26 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_m249_pip_S",
 
         // Attachements
+        "rhsusf_acc_eotech",
+        "rhsusf_acc_g33_t1",
+        "rhsusf_acc_g33_xps3",
+        "rhsusf_acc_g33_xps3_tan",
+        "rhsusf_acc_elcan",
+        "rhsusf_acc_acog",
+        "rhsusf_acc_acog2",
+        "rhsusf_acc_acog3",
+        "rhsusf_acc_eotech_552",
+        "rhsusf_acc_eotech_552_d",
+        "rhsusf_acc_eotech_552_wd",
+        "rhsusf_acc_compm4",
+        "rhsusf_acc_su230",
+        "rhsusf_acc_su230_c",
+        "rhsusf_acc_su230_mrds",
+        "rhsusf_acc_su230_mrds_c",
+        "rhsusf_acc_t1_high",
+        "rhsusf_acc_acog_rmr",
+        "rhsusf_acc_acog_d",
+        "rhsusf_acc_acog_wd",
         "rhsusf_acc_kac_grip_saw_bipod",
         "rhsusf_acc_grip4",
         "rhsusf_acc_grip4_bipod",
