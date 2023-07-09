@@ -17,11 +17,10 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
+if (isServer) exitWith {};
 if !(EGVAR(Settings,enableStagingSystem)) exitWith {};
 if (isNull _vehicle) exitWith {};
-private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
-if !(_factionArray isEqualType []) exitWith {["Faction array have not been setup correctly.", "Vehicle"] call FUNC(error);};
-if (!(faction _vehicle in _factionArray)) exitWith {};
+if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 #ifdef DEBUG_MODE
     ["Adding vehicle staging actions", "Vehicle Staging"] call FUNC(info);

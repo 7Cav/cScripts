@@ -133,9 +133,13 @@ class cScripts {
         class createVehicleLable {};
         class getVehicleLable {};
 
+        class renameObject {};
         class getIcon {};
 
         class getAttendance {};
+
+        class isValidFaction {};
+
         class getServerMetrics {};
     };
     class vehicle {
