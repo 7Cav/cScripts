@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function apply loadouts to vehicles.
+ * This function apply a default loadouts to a selected vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -12,12 +12,14 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (isNull _vehicle) then {["Vehicle is null and not defined"] call FUNC(error);};
+if (isServer) exitWith {};
+if (isNull _vehicle) then {["Vehicle is null and not defined", "Vehicle Default Pylon"] call FUNC(error);};
 if (_vehicle iskindOf "man") exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,PylonApplyed)}) exitWith {[format["Vehicle loadouts already applied for %1.", _vehicle]] call FUNC(warning);};
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,PylonApplyed)}) exitWith {[format["Vehicle loadouts already applied for %1.", _vehicle], "Vehicle Default Pylon"] call FUNC(warning);};
+if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 #ifdef DEBUG_MODE
-    [formatText["Applying vehicle functions to %1.", _vehicle]] call FUNC(info);
+    [formatText["Applying vehicle lodout to %1.", _vehicle], "Vehicle Default Pylon"] call FUNC(info);
 #endif
 
 // Default pylon applied
