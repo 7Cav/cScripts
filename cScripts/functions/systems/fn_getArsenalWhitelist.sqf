@@ -978,6 +978,15 @@ private _weaponSystemSpecific = switch (true) do {
         "rhs_weap_m240G",
         
         // Attachments
+        "rhsusf_acc_eotech",
+        "rhsusf_acc_g33_t1",
+        "rhsusf_acc_g33_xps3",
+        "rhsusf_acc_g33_xps3_tan",
+        "rhsusf_acc_eotech_552",
+        "rhsusf_acc_eotech_552_d",
+        "rhsusf_acc_eotech_552_wd",
+        "rhsusf_acc_compm4",
+        "rhsusf_acc_t1_high",
         "rhsusf_acc_elcan_ard",
         "rhsusf_acc_anpeq16a",
         "rhsusf_acc_su230a",
