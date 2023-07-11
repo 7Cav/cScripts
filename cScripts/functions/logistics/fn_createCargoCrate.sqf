@@ -51,7 +51,7 @@ if (!isNil{_resize}) then {
 };
 
 if (_hasCargo) then {
-    if (_inventory isEqualTo true) { _inventory = [] };
+    if (_inventory isEqualTo true) then { _inventory = [] };
     [_crate, _inventory] call FUNC(addCargo);
 };
 
