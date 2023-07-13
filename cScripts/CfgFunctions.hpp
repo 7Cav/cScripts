@@ -81,6 +81,7 @@ class cScripts {
         class addLoadoutAction {};
 
         class addGetOutHelo {};
+        class addEscapeWreck {};
 
         class addLineJump {};
         class addHaloJump {};
@@ -126,6 +127,7 @@ class cScripts {
         class createActionCategory {};
 
         class doGetOutHeloSide {};
+        class escapeWreck {};
 
         class addObjectToCurator {};
 
