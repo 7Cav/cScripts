@@ -32,7 +32,8 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     ];
 };
 
-if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
+
+if (_vehicle iskindOf "APC_Wheeled_03_base_F" && !(_vehicle isKindOf "cav_dragoon_unarmed_base_F")) then {
     _pylonList = [
         // TypeOf,                DisplayName,  Name,           Icon
         ["APC_Wheeled_03_base_F", "Anti-Armor",  "antiarmor",    ""],
