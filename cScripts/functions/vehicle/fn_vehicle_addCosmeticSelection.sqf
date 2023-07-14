@@ -108,6 +108,17 @@ private _textures = [
             ]] call EFUNC(vehicle,applyTextures);
         }
     ]],
+    ["I_APC_Wheeled_03_cannon_F", "Toggle Camo Net", [
+        "",
+        {
+            private _camoNetMounted = _vehicle animationSourcePhase "showCamonetHull";
+            if (_camoNetMounted == 1) then {
+                _vehicle animateSource ["showCamonetHull",0, true];
+            } else {
+                _vehicle animateSource ["showCamonetHull",1, true];
+            };
+        }
+    ]],
     ["I_APC_Wheeled_03_cannon_F", "Toggle Slats", [
         "",
         {
