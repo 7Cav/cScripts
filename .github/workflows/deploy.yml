@@ -16,7 +16,7 @@ jobs:
       - name: Build release
         run: ./tools/deploy.sh ${{ steps.get_version.outputs.VERSION }}
 
-      - name: Upload Release
+      - name: Upload releases
         uses: actions/upload-artifact@v2
         with:
            path: release/*.zip
