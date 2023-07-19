@@ -101,4 +101,4 @@ if (_vehicle iskindOf "Plane_CAS_01_base_F") then {
     [_vehicle, [2, 8]] call EFUNC(vehicle,setRadio);
 };
 
-_vehicle setVariable [QEGVAR(Vehicle,Radio), true];
+_vehicle setVariable [QEGVAR(Vehicle,Radio), true, true];

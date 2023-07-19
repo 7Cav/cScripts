@@ -16,14 +16,16 @@ if (isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {[formatText["Vehicle functions already applied for %1.", _vehicle]] call FUNC(warning);};
 
-_vehicle setVariable [QEGVAR(Vehicle,Functions), true];
-
-private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
-
 #ifdef DEBUG_MODE
     [formatText["Applying vehicle functions to %1.", _vehicle]] call FUNC(info);
 #endif
 
+private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
+
+_vehicle setVariable [QEGVAR(Vehicle,Functions), true, true];
+
+
+// Jump and get out systems universal for all airframes and non nato factions.
 if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
     [_vehicle] call FUNC(addGetOutHelo);
 };
