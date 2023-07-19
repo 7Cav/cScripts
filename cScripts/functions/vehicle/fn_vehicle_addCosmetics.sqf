@@ -84,10 +84,12 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
         };
         default {};
     };
-    _vehicle setObjectTextureGlobal [12, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\1_ca.paa"];
-    _vehicle setObjectTextureGlobal [13, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\-_ca.paa"];
-    _vehicle setObjectTextureGlobal [14, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\B_ca.paa"];
-    _vehicle setObjectTextureGlobal [15, ""];
+    [_vehicle, [
+        [12, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\1_ca.paa"],
+        [13, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\-_ca.paa"],
+        [14, "\rhsusf\addons\RHSUSF_Decals\Data\Numbers\USStencil\B_ca.paa"],
+        [15, ""],
+    ]] call EFUNC(vehicle,applyTextures);
 };
 
 if (_vehicle iskindOf "RHS_M2A2_Base") then {
@@ -106,38 +108,74 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
 
     switch (_vehicle getVariable [QEGVAR(Vehicle,Callsign), 0]) do {
         case 1: {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 1, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-1", true];
         };
         case 2: {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa"],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 2, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-2", true];
         };
         case 3: {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa"],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 3, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-3", true];
         };
         case 4: {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa"],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-4", true];
         };
         case -1: {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"],
+                [12, ""],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -1, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-1", true];
         };
         case -2: {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"],
+                [12, ""],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -2, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-2", true];
         };
         case -3: {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"],
+                [12, ""],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -3, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-3", true];
         };
         case -4: {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
+                [12, ""],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "SABRE-4", true];
         };
         default {
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\0_ca.paa"],
+                [12, ""],
+            ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 0, true];
             _vehicle setVariable [QEGVAR(Vehicle,Name), "", true];
         };
@@ -186,4 +224,4 @@ _vehicle addEventHandler ["Deleted", {
     };
 }];
 
-_vehicle setVariable [QEGVAR(Vehicle,Cosmetics), true];
+_vehicle setVariable [QEGVAR(Vehicle,Cosmetics), true, true];
