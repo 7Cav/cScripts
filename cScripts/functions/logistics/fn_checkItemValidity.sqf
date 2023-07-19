@@ -14,11 +14,15 @@
  */
 
 params [
-    ["_item", "", ["", objNull]]
+    ["_item", "", [""]]
 ];
 
 private _fn_isValid = {
-    params [_item", "_kindOfItem"; "_variable"];
+    params [
+         ["_item", "", [""]],
+         ["_kindOfItem", [""]],
+         ["_variable", true, [true, nil]]
+    ];
     if (_item isKindOf _kindOfItem) then {
         if (!isNil {_variable}) then { 
             _variable;
