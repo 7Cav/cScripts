@@ -36,7 +36,7 @@ if (EGVAR(patches,usesACE)) then {
     if (![_item, "ACE_WaterBottle", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
     if (![_item, "ACE_Canteen", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
     if (![_item, "ACE_Can_Spirit", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
-    if (![_item, "ACE_MRE_LambCurry"", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
+    if (![_item, "ACE_MRE_LambCurry", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
     if (![_item, "ACE_WaterBottle", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
 };
 
