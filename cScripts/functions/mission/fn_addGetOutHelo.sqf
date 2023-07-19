@@ -29,18 +29,18 @@ if (_useColor) then {
     _rightSide = "<t color='#0000ff'>Get out Right Side</t>";
 };
 
-_vehicle addAction [
+private _actionIDL = _vehicle addAction [
     _leftSide,
     {[_this select 0, true] call FUNC(doGetOutHeloSide)},
     0, 1.5, true, true, "User12",
     "(_target getCargoIndex _this) != -1"
 ];
 
-_vehicle addAction [
+private _actionIDR = _vehicle addAction [
     _rightSide,
     {[_this select 0, false] call FUNC(doGetOutHeloSide)},
     0, 1.5, true, true, "User13",
     "(_target getCargoIndex _this) != -1"
 ];
 
-_vehicle setVariable [QEGVAR(Vehicle,doGetOutHeloSide),"true"];
+_vehicle setVariable [QEGVAR(Vehicle,GetOutRightLeft), [_vehicle, [_actionIDL, _actionIDR]], true];
