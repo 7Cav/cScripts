@@ -167,6 +167,7 @@ class cScripts {
         class vehicle_getPylon {};
 
         // Other
+        class vehicle_reset {};
         class vehicle_addFlagAction {};
     };
     class modules {
