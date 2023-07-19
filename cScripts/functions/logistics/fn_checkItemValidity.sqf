@@ -17,18 +17,35 @@ params [
     ["_item", "", ["", objNull]]
 ];
 
-private _return = true;
-
-if (EGVAR(patches,usesACE)) then {
-    if (_item isKindOf "ACE_EarPlugs") then {
-        _return = if (!isNil {ace_hearing_disableEarRinging}) then {ace_hearing_disableEarRinging} else {false};
-    };
-    if (_item isKindOf "ACE_ropeBase") then {
-        _return = if (!isNil {ace_fastroping_requireRopeItems}) then {ace_fastroping_requireRopeItems} else {false};
-    };
-    if (_item isKindOf "ACE_WaterBottle" || _item isKindOf "ACE_Canteen" || _item isKindOf "ACE_Can_Spirit" || _item isKindOf "ACE_MRE_LambCurry") then {
-        _return = if (!isNil {acex_field_rations_enabled}) then {acex_field_rations_enabled} else {false};
+private _fn_isValid = {
+    params [_item", "_kindOfItem"; "_variable"];
+    if (_item isKindOf _kindOfItem) then {
+        if (!isNil {_variable}) then { 
+            _variable;
+        } else {
+            false;
+        };
     };
 };
 
-_return
+if (EGVAR(patches,usesACE)) then {
+    if (![_item, "ACE_EarPlugs", ace_hearing_disableEarRinging] call _fn_isValid) exitWith {false};
+
+    if (![_item, "ACE_ropeBase", ace_fastroping_requireRopeItems] call _fn_isValid) exitWith {false};
+
+    if (![_item, "ACE_WaterBottle", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
+    if (![_item, "ACE_Canteen", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
+    if (![_item, "ACE_Can_Spirit", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
+    if (![_item, "ACE_MRE_LambCurry"", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
+    if (![_item, "ACE_WaterBottle", ace_field_rations_enabled] call _fn_isValid) exitWith {false};
+};
+
+if (EGVAR(patches,usesACRE)) then {
+    if (![_item, "itemRadioAcre", EGVAR(patches,usesRadios)] call _fn_isValid) exitWith {false};
+};
+
+if (EGVAR(patches,usesTFAR)) then {
+    if (![_item, "itemRadioTFAR", EGVAR(patches,usesRadios)}] call _fn_isValid) exitWith {false};
+};
+
+true
