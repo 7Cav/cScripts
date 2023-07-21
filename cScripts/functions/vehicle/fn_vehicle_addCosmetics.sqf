@@ -57,8 +57,8 @@ if (_vehicle iskindOf "rhsusf_fmtv_base") then {
 if (_vehicle isKindOf "I_APC_Wheeled_03_cannon_F") then {
     // Animate slat armor and camo nets
     _vehicle animateSource ["showCamonetHull",0, true];
-    _vehicle animateSource ["showBags",1, true];
-    _vehicle animateSource ["showBags2",0, true];
+    _vehicle animateSource ["showBags",0, true];
+    _vehicle animateSource ["showBags2",1, true];
     _vehicle animateSource ["showTools",0, true];
     _vehicle animateSource ["showSLATHull",0, true];
 };
