@@ -121,6 +121,7 @@ if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
     ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
    
     switch (_vehicleType) do {
+        case "cav_dragoon_A_V4";
         case "cav_dragoon_D_V4";
         case "cav_dragoon_WD_V4": {
             [_vehicle, 17, 38, false, false] call FUNC(setCargoAttributes);
@@ -166,7 +167,6 @@ if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
                 ["ACE_tourniquet", 18],
                 ["ace_csw_carryMortarBaseplate", 2],
                 ["ace_compat_rhs_usf3_m252_carry", 2]
-                
             ], _vehicle] call FUNC(createCargoCrate);
             
             // 60mm crate
@@ -190,8 +190,10 @@ if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
                 ["ACE_1Rnd_82mm_Mo_Smoke", 8] 
             ], _vehicle] call FUNC(createCargoCrate);
         };
+        case "cav_dragoon_A_WH7";
         case "cav_dragoon_D_WH7";
         case "cav_dragoon_WD_WH7";
+        case "cav_dragoon_A_V5";
         case "cav_dragoon_D_V5";
         case "cav_dragoon_WD_V5": {
             [_vehicle, 17, 38, false, false] call FUNC(setCargoAttributes);
