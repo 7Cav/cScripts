@@ -59,7 +59,7 @@ if (_vehicle isKindOf "APC_Wheeled_03_base_F") then {
     _vehicle animateSource ["showCamonetHull",0, true];
     _vehicle animateSource ["showBags",0, true];
     _vehicle animateSource ["showBags2",1, true];
-    _vehicle animateSource ["showTools",0, true];
+    _vehicle animateSource ["showTools",1, true];
     _vehicle animateSource ["showSLATHull",0, true];
 };
 
