@@ -12,8 +12,11 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
+if (isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {[formatText["Vehicle functions already applied for %1.", _vehicle]] call FUNC(warning);};
+
+_vehicle setVariable [QEGVAR(Vehicle,Functions), true];
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
@@ -69,9 +72,13 @@ if (_vehicle iskindOf "USAF_C17") then {
     [_vehicle] call FUNC(addHaloJump);
 };
 
+if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
+
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     [_vehicle, 4, 40, false, false] call FUNC(setCargoAttributes);
     switch (_vehicleType) do {
+        case "rhsusf_m998_d_2dr_fulltop";
+        case "rhsusf_m998_w_2dr_fulltop";
         case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
         default {};
     };
@@ -92,9 +99,9 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
     switch (_vehicleType) do {
+        case "rhsusf_stryker_m1126_m2_d";
+        case "rhsusf_stryker_m1126_m2_wd";
         case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
         default {};
     };
 };
-
-_vehicle setVariable [QEGVAR(Vehicle,Functions), true];
