@@ -37,9 +37,20 @@ _radioType = switch (_radio) do {
 };
 
 private _srHashMap = [
+    ["GODFATHER",       [["ACRE", 4], ["TFAR", 50]]],
     ["GODFATHER-5",     [["ACRE", 4], ["TFAR", 100]]],
     ["GODFATHER-6",     [["ACRE", 4], ["TFAR", 100]]],
     ["GODFATHER-7",     [["ACRE", 4], ["TFAR", 100]]],
+
+    ["WARHORSE",        [["ACRE", 4], ["TFAR", 53]]],
+    ["WARHORSE-5",      [["ACRE", 4], ["TFAR", 120.5]]],
+    ["WARHORSE-6",      [["ACRE", 4], ["TFAR", 120.5]]],
+    ["WARHORSE-7",      [["ACRE", 4], ["TFAR", 120.5]]],
+
+    ["HITMAN",          [["ACRE", 4], ["TFAR", 54]]],
+    ["HITMAN-5",        [["ACRE", 4], ["TFAR", 130.5]]],
+    ["HITMAN-6",        [["ACRE", 4], ["TFAR", 130.5]]],
+    ["HITMAN-7",        [["ACRE", 4], ["TFAR", 130.5]]],
 
     //["MUSTANG-1",       [["ACRE", 2], ["TFAR", 0]]],
     //["MUSTANG-2",       [["ACRE", 3], ["TFAR", 0]]],
@@ -48,15 +59,17 @@ private _srHashMap = [
     //["APOLLO-5",        [["ACRE", 1], ["TFAR", 0]]],
     //["APOLLO-6",        [["ACRE", 1], ["TFAR", 0]]],
 
-    ["ATLAS-1",         [["ACRE", 2], ["TFAR", 120.1]]],
-    ["ATLAS-2",         [["ACRE", 3], ["TFAR", 120.2]]],
-    ["ATLAS-3",         [["ACRE", 1], ["TFAR", 120.3]]],
-    ["ATLAS-4",         [["ACRE", 1], ["TFAR", 120.4]]],
-    ["ATLAS-5",         [["ACRE", 1], ["TFAR", 120.5]]],
-    ["ATLAS-6",         [["ACRE", 1], ["TFAR", 120.5]]],
-    ["ATLAS-7",         [["ACRE", 1], ["TFAR", 120.5]]],
+    ["ATLAS",           [["ACRE", 2], ["TFAR", 121]]],
+    ["ATLAS-1",         [["ACRE", 2], ["TFAR", 121.1]]],
+    ["ATLAS-2",         [["ACRE", 3], ["TFAR", 121.2]]],
+    ["ATLAS-3",         [["ACRE", 1], ["TFAR", 121.3]]],
+    ["ATLAS-4",         [["ACRE", 1], ["TFAR", 121.4]]],
+    ["ATLAS-5",         [["ACRE", 1], ["TFAR", 121.5]]],
+    ["ATLAS-6",         [["ACRE", 1], ["TFAR", 121.5]]],
+    ["ATLAS-7",         [["ACRE", 1], ["TFAR", 121.5]]],
 
     //Air   
+    ["PEGASUS",         [["ACRE", 1], ["TFAR", 52]]],
     ["PEGASUS-5",       [["ACRE", 1], ["TFAR", 52]]],
     ["PEGASUS-6",       [["ACRE", 1], ["TFAR", 52]]],
     ["PEGASUS-7",       [["ACRE", 1], ["TFAR", 52]]],
@@ -116,11 +129,13 @@ private _srHashMap = [
     ["HOG-4",           [["ACRE", 1], ["TFAR", 52.9]]],
 
     // Ground
+    ["SABER",           [["ACRE", 97], ["TFAR", 123]]],
     ["SABER-1",         [["ACRE", 97], ["TFAR", 123.1]]],
     ["SABER-2",         [["ACRE", 97], ["TFAR", 123.2]]],
     ["SABER-3",         [["ACRE", 98], ["TFAR", 123.3]]],
     ["SABER-4",         [["ACRE", 98], ["TFAR", 123.4]]],
 
+    ["VIKING",          [["ACRE", 65], ["TFAR", 122.1]]],
     ["VIKING-1",        [["ACRE", 65], ["TFAR", 122.1]]],
     ["VIKING-2",        [["ACRE", 66], ["TFAR", 122.2]]],
     ["VIKING-3",        [["ACRE", 67], ["TFAR", 122.3]]],
@@ -137,6 +152,7 @@ private _srHashMap = [
     //["LANCER-6",        [["ACRE", 85], ["TFAR", 0]]],
     //["LANCER-7",        [["ACRE", 85], ["TFAR", 0]]],
 
+    ["BANDIT",          [["ACRE", 17], ["TFAR", 131]]],
     ["BANDIT-1",        [["ACRE", 17], ["TFAR", 131.1]]],
     ["BANDIT-2",        [["ACRE", 18], ["TFAR", 131.2]]],
     ["BANDIT-3",        [["ACRE", 19], ["TFAR", 131.3]]],
@@ -145,6 +161,7 @@ private _srHashMap = [
     ["BANDIT-6",        [["ACRE", 21], ["TFAR", 131.5]]],
     ["BANDIT-7",        [["ACRE", 21], ["TFAR", 131.5]]],
 
+    ["MISFIT",          [["ACRE", 33], ["TFAR", 132]]],
     ["MISFIT-1",        [["ACRE", 33], ["TFAR", 132.1]]],
     ["MISFIT-2",        [["ACRE", 34], ["TFAR", 132.2]]],
     ["MISFIT-3",        [["ACRE", 35], ["TFAR", 132.3]]],
@@ -153,6 +170,7 @@ private _srHashMap = [
     ["MISFIT-6",        [["ACRE", 37], ["TFAR", 132.5]]],
     ["MISFIT-7",        [["ACRE", 37], ["TFAR", 132.5]]],
 
+    //["GUNSLINGER",      [["ACRE", 1], ["TFAR", 132]]],
     //["GUNSLINGER-1",    [["ACRE", 1], ["TFAR", 132.1]]],
     //["GUNSLINGER-2",    [["ACRE", 1], ["TFAR", 132.2]]],
     //["GUNSLINGER-3",    [["ACRE", 1], ["TFAR", 132.3]]],
@@ -161,6 +179,12 @@ private _srHashMap = [
     //["GUNSLINGER-6",    [["ACRE", 1], ["TFAR", 132.5]]],
     //["GUNSLINGER-7",    [["ACRE", 1], ["TFAR", 132.5]]],
     
+    // Misc radio volume
+    ["BRAVO HQ",        [["ACRE", 1], ["TFAR", 53]]],
+    ["CHARLIE HQ",      [["ACRE", 1], ["TFAR", 54]]],
+    ["ATLAS",           [["ACRE", 1], ["TFAR", 56]]],
+    ["AVIATION",        [["ACRE", 1], ["TFAR", 52]]],
+
     ["ZEUS",            [["ACRE", 1], ["TFAR", 50]]]
 ];
 
@@ -169,6 +193,16 @@ private _lrHashMap = [
     ["GODFATHER-5",     [["ACRE", 20], ["TFAR", 50]]],
     ["GODFATHER-6",     [["ACRE", 20], ["TFAR", 50]]],
     ["GODFATHER-7",     [["ACRE", 20], ["TFAR", 50]]],
+
+    ["WARHORSE",        [["ACRE", 4], ["TFAR", 53]]],
+    ["WARHORSE-5",      [["ACRE", 4], ["TFAR", 54]]],
+    ["WARHORSE-6",      [["ACRE", 4], ["TFAR", 54]]],
+    ["WARHORSE-7",      [["ACRE", 4], ["TFAR", 54]]],
+
+    ["HITMAN",          [["ACRE", 4], ["TFAR", 54]]],
+    ["HITMAN-5",        [["ACRE", 4], ["TFAR", 54]]],
+    ["HITMAN-6",        [["ACRE", 4], ["TFAR", 54]]],
+    ["HITMAN-7",        [["ACRE", 4], ["TFAR", 54]]],
 
     //["MUSTANG-1",       [["ACRE", 15], ["TFAR", 0]]],
     //["MUSTANG-2",       [["ACRE", 15], ["TFAR", 0]]],
@@ -297,7 +331,13 @@ private _lrHashMap = [
     //["GUNSLINGER-5",    [["ACRE", 8], ["TFAR", 132]]],
     //["GUNSLINGER-6",    [["ACRE", 8], ["TFAR", 132]]],
     //["GUNSLINGER-7",    [["ACRE", 8], ["TFAR", 132]]],
-    
+
+    // Misc radio volume
+    ["BRAVO HQ",        [["ACRE", 0], ["TFAR", 53]]],
+    ["CHARLIE HQ",      [["ACRE", 0], ["TFAR", 54]]],
+    ["ATLAS",           [["ACRE", 0], ["TFAR", 56]]],
+    ["AVIATION",        [["ACRE", 0], ["TFAR", 52]]],
+
     ["ZEUS",            [["ACRE", 18], ["TFAR", 50]]]
 ];
 
