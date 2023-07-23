@@ -24,7 +24,7 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
-_vehicle setVariable [QEGVAR(Vehicle,Inventory), true];
+_vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
 
 if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
