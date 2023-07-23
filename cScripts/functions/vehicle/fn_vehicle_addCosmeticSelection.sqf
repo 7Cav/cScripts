@@ -23,7 +23,7 @@ private _textures = [
         {
             [_vehicle, [
                 [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
-                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"]
             ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 1, true];
         }
@@ -33,7 +33,7 @@ private _textures = [
         {
             [_vehicle, [
                 [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
-                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa"]
             ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 2, true];
         }
@@ -43,7 +43,7 @@ private _textures = [
         {
             [_vehicle, [
                 [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
-                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa"]
             ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 3, true];
         }
@@ -53,7 +53,7 @@ private _textures = [
         {
             [_vehicle, [
                 [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
-                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa"]
             ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4, true];
         }
@@ -63,7 +63,7 @@ private _textures = [
         {
             [_vehicle, [
                 [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"],
-                [12, ""],
+                [12, ""]
             ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -1, true];
         }
@@ -73,7 +73,7 @@ private _textures = [
         {
             [_vehicle, [
                 [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"],
-                [12, ""],
+                [12, ""]
             ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -2, true];
         }
@@ -83,7 +83,7 @@ private _textures = [
         {
             [_vehicle, [
                 [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"],
-                [12, ""],
+                [12, ""]
             ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -3, true];
         }
@@ -93,7 +93,7 @@ private _textures = [
         {
             [_vehicle, [
                 [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
-                [12, ""],
+                [12, ""]
             ]] call EFUNC(vehicle,applyTextures);
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4, true];
         }
