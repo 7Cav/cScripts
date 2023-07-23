@@ -27,10 +27,11 @@ if (_group isEqualTo "") exitWith {0};
 _group = toUpper(_group);
 
 private _radioMod = if (EGVAR(Patches,usesACRE)) then {"ACRE"} else {"TFAR"};
+_radio = toUpper(_radio);
 
 _radioType = switch (_radio) do {
     case "ACRE_PRC343";
-    case "TFAR_anprc152";
+    case "TFAR_ANPRC152";
     case "SR": {"SR"};
     default {"LR"};
 };

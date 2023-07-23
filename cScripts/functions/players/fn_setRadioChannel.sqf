@@ -49,12 +49,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
 
 // TFAR
 if (EGVAR(patches,usesTFAR)) exitWith {
-    _player setVariable [QEGVAR(Player,RadioChannel), []];
-    private _playerRadios = [_player] call acre_api_fnc_getCurrentRadioList;
-
-    //[call TFAR_fnc_activeSwRadio, "76.2"] call TFAR_fnc_setSwFrequency;
-
-    //[call TFAR_fnc_activeSwRadio, "76.2"] call TFAR_fnc_setSwFrequency;
+    /** FIXME: Code goes here */
 };
 
 ["Fatal", "Radio", true] call FUNC(error);
