@@ -68,7 +68,7 @@ if (EGVAR(patches,usesTFAR)) exitWith {
 
     private _srFormatList = _srChannelList apply {
         private _SRRadio = [_x, "SR"] call FUNC(getRadioChannel);
-        private _channelNumberName = [_channel] call FUNC(getChannelName);
+        private _channelNumberName = [_SRRadio] call FUNC(getChannelName);
         private _text = if !(_x == "") then {
             format ["    <font color='#ffc61a'>%1</font> - %2", _x, _channelNumberName]; 
         } else {
