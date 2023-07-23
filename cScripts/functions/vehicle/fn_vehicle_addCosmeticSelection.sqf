@@ -82,7 +82,7 @@ private _textures = [
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4];
         }
     ]],
-    ["APC_Wheeled_03_base_F", "Toggle Camo Net", [
+    ["I_APC_Wheeled_03_cannon_F", "Toggle Camo Net", [
         "",
         {
             private _camoNetMounted = _vehicle animationSourcePhase "showCamonetHull";
