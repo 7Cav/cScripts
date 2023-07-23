@@ -83,7 +83,6 @@ if (GVAR(isPlayer)) then {
 
     // Radios
     if (EGVAR(Settings,enableRadios)) then {
-
         if (EGVAR(patches,usesACRE)) then {
             if (EGVAR(Settings,setRadio)) then {
                 [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
@@ -93,14 +92,6 @@ if (GVAR(isPlayer)) then {
                     ["ACRE_PRC343"] call FUNC(setActiveRadio);
                 }, [_unit]] call CBA_fnc_waitUntilAndExecute;
             };
-        };
-        if (EGVAR(patches,usesTFAR)) then {
-            [{GVAR(Radio) && EGVAR(RADIO,TFAR)}, {
-                [_unit] call FUNC(setRadioChannel);
-                [{
-                    ["TFAR_anprc152"] call FUNC(setActiveRadio);
-                }, [_unit]] call CBA_fnc_execNextFrame;
-            }, [_unit]] call CBA_fnc_waitUntilAndExecute;
         };
     };
 

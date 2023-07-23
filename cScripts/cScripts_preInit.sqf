@@ -76,7 +76,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 [ // Squad Radio Channels
     QEGVAR(Settings,setRadio),
     "CHECKBOX",
-    ["Squad Radio Channels","Allow radio channels to be changed based on player squadname."],
+    ["Squad Radio Channels (ACRE)","Allow radio channels to be changed based on player squadname."],
     [_cScriptSettings, "2; Radios"],
     true,
     true,

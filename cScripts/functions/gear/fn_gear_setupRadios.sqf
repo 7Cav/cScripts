@@ -19,7 +19,6 @@
 if (!EGVAR(Patches,usesACRE) && !EGVAR(Patches,usesTFAR)) exitWith {};
 if (!EGVAR(Settings,enableRadios)) exitWith {};
 
-
 // ACRE
 if (EGVAR(patches,usesACRE)) exitWith {
     if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
@@ -49,13 +48,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
 
 // TFAR
 if (EGVAR(patches,usesTFAR)) exitWith {
-    if (!GVAR(Radio)) exitWith {
-        EGVAR(RADIO,TFAR) = false;
-        ["TFAR_RadioRequestResponseEvent", {
-            EGVAR(RADIO,TFAR) = true;
-        }] call CBA_fnc_addEventHandler;
-        ["TFAR init complete...", "Gear Radio"] call FUNC(info)
-    };
+    ["TFAR Setup complete...", "Gear Radio"] call FUNC(info);
 };
 
 ["Fatal", "Gear Radio", true] call FUNC(error);
