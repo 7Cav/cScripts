@@ -93,7 +93,7 @@ private _textures = [
             };
         }
     ]],
-    ["APC_Wheeled_03_base_F", "Toggle Slats", [
+    ["I_APC_Wheeled_03_cannon_F", "Toggle Slats", [
         "",
         {
             private _slatsAreAttached = _vehicle animationSourcePhase "showSLATHull";
