@@ -7,48 +7,47 @@
  * None
  *
  * Return Value:
- * Team color <STRING>
+ * Team color or Empty <STRING>
  *
  * Example:
  * call cScripts_fnc_setTeamColor
  *
  */
 
-private _getTeamName = "";
+private _teamName = "";
 if !(roleDescription player == "") then {
-    _getTeamName = roleDescription player;
+    _teamName = roleDescription player;
 } else {
-    _getTeamName = getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
+    _teamName = getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
 };
-_getTeamName = _getTeamName splitString " ";
-_getTeamName = _getTeamName select 0;
+_teamName = _teamName splitString " ";
+_teamName = _teamName select 0;
 
-switch (_getTeamName) do {
+switch (_teamName) do {
     case "Alpha": {
         [player, "RED"] call ace_interaction_fnc_joinTeam;
-        (player) setVariable [QEGVAR(Player,Team), 'RED'];
+        player setVariable [QEGVAR(Player,Team), 'RED'];
     };
     case "Bravo": {
         [player, "BLUE"] call ace_interaction_fnc_joinTeam;
-        (player) setVariable [QEGVAR(Player,Team), 'BLUE'];
+        player setVariable [QEGVAR(Player,Team), 'BLUE'];
     };
     case "Charlie": {
         [player, "GREEN"] call ace_interaction_fnc_joinTeam;
-        (player) setVariable [QEGVAR(Player,Team), 'GREEN'];
+        player setVariable [QEGVAR(Player,Team), 'GREEN'];
     };
     case "Delta": {
         [player, "YELLOW"] call ace_interaction_fnc_joinTeam;
-        (player) setVariable [QEGVAR(Player,Team), 'YELLOW'];
+        player setVariable [QEGVAR(Player,Team), 'YELLOW'];
     };
     default {
-        _getTeamName = 'WHITE';
-        (player) setVariable [QEGVAR(Player,Team), 'WHITE'];
+        _teamName = 'WHITE';
+        player setVariable [QEGVAR(Player,Team), 'WHITE'];
     };
 };
-private _return = _getTeamName;
 
 #ifdef DEBUG_MODE
-    [format ["%1 was assigned as team %2.", player, _getTeamName], "SetTeamColor"] call FUNC(info);
+    [format ["%1 was assigned as team %2.", player, _teamName], "SetTeamColor"] call FUNC(info);
 #endif
 
-_return;
+_teamName;
