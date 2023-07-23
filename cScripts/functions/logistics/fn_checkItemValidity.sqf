@@ -17,16 +17,16 @@ params [
     ["_item", "", [""]]
 ];
 
-private _var = nil;
+private _var = "varNil";
 
 private _fn_isValid = {
     params [
         ["_item", "", [""]],
         ["_kindOfItem", [""]],
-        ["_variable", nil, []]
+        ["_variable", "varNil", []]
     ];
     if (_item isKindOf _kindOfItem) then {
-        if (!isNil {_variable}) then {
+        if (_variable == "varNil") then {
             _variable;
         } else {
             false;
@@ -35,6 +35,14 @@ private _fn_isValid = {
         true
     };
 };
+
+#ifdef DEBUG_MODE
+    if (!([_item, "Test_Item_False", _var] call _fn_isValid)) then {
+        [format["%1 testing if Test_Item_False... FAILED", _item], "Item"] call FUNC(error);
+    } else {
+        [format["%1 testing if Test_Item_False... PASSED", _item], "Item"] call FUNC(info);
+    };
+#endif
 
 // Check if item exists in config
 private _cfgMagazines = getText (configFile >> 'CfgMagazines' >> _item >> 'displayName');
@@ -47,13 +55,13 @@ if (_cfgMagazines == "" && _cfgWeapons == "" && _cfgVehicles == "") exitWith {
 
 // Check mod settings and item validity
 if (EGVAR(patches,usesACE)) then {
-    _var = if (!isNil {ace_hearing_disableEarRinging}) then {ace_hearing_disableEarRinging} else {nil};
+    _var = if (!isNil {ace_hearing_disableEarRinging}) then {ace_hearing_disableEarRinging} else {"varNil"};
     if (!([_item, "ACE_EarPlugs", _var] call _fn_isValid)) exitWith {false};
 
-    _var = if (!isNil {ace_fastroping_requireRopeItems}) then {ace_fastroping_requireRopeItems} else {nil};
+    _var = if (!isNil {ace_fastroping_requireRopeItems}) then {ace_fastroping_requireRopeItems} else {"varNil"};
     if (!([_item, "ACE_ropeBase", _var] call _fn_isValid)) exitWith {false};
 
-    _var = if (!isNil {acex_field_rations_enabled}) then {acex_field_rations_enabled} else {nil};
+    _var = if (!isNil {acex_field_rations_enabled}) then {acex_field_rations_enabled} else {"varNil"};
     if (!([_item, "ACE_WaterBottle", _var] call _fn_isValid)) exitWith {false};
     if (!([_item, "ACE_Canteen", _var] call _fn_isValid)) exitWith {false};
     if (!([_item, "ACE_Can_Spirit", _var] call _fn_isValid)) exitWith {false};
@@ -62,12 +70,12 @@ if (EGVAR(patches,usesACE)) then {
 };
 
 if (EGVAR(patches,usesACRE)) then {
-    _var = if (!isNil {EGVAR(patches,usesRadios)}) then {EGVAR(patches,usesRadios)} else {nil};
+    _var = if (!isNil {EGVAR(patches,usesRadios)}) then {EGVAR(patches,usesRadios)} else {"varNil"};
     if (!([_item, "ACRE_BaseRadio", _var] call _fn_isValid)) exitWith {false};
 };
 
 if (EGVAR(patches,usesTFAR)) then {
-    _var = if (!isNil {EGVAR(patches,usesRadios)}) then {EGVAR(patches,usesRadios)} else {nil};
+    _var = if (!isNil {EGVAR(patches,usesRadios)}) then {EGVAR(patches,usesRadios)} else {"varNil"};
     if (!([_item, "TFAR_anprc152", _var] call _fn_isValid)) exitWith {false};
     if (!([_item, "TFAR_anprc154", _var] call _fn_isValid)) exitWith {false};
     if (!([_item, "TFAR_anprc148jem", _var] call _fn_isValid)) exitWith {false};
