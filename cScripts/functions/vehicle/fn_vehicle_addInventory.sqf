@@ -115,7 +115,7 @@ private _medVicInv = [
     ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8] // M856A1 PMAGs
 ];
 
-if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
+if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
     [_vehicle, 17, 38, false, false] call FUNC(setCargoAttributes);
     ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
     ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
