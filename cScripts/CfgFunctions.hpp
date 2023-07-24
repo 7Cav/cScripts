@@ -127,7 +127,6 @@ class cScripts {
         class createActionCategory {};
 
         class doGetOutHeloSide {};
-        class escapeWreck {};
 
         class addObjectToCurator {};
 

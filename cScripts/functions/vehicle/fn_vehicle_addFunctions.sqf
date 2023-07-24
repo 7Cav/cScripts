@@ -85,7 +85,7 @@ if (_vehicle iskindOf "USAF_C17") then {
 
 if ((_vehicle isKindOf "USAF_F22_Heavy") || (_vehicle isKindOf "USAF_F35A") || (_vehicle isKindOf "USAF_A10")) then {
     [_vehicle] call FUNC(addEscapeWreck);
-}
+};
 
 
 

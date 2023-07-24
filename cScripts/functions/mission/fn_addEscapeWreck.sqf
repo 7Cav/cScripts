@@ -25,15 +25,15 @@ _conditionAction = '(!(assignedVehicleRole player isEqualTo [])) && ((damage veh
 [
     _vehicle,
     "<t color='#FDDA0D'>Escape Wreck (HOLD)</t>",
-    "cScripts\Data\Icon\icon_02.paa",
-    "cScripts\Data\Icon\icon_02.paa",
+    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_takeOff1_ca.paa",
+    "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_takeOff1_ca.paa",
     _conditionAction,
     "true",
     {},
     {},
     {
         params ["_target", "_caller", "_actionID"];
-        [_caller, _target] call FUNC(escapeWreck);
+        [_target, true] call FUNC(doGetOutHeloSide);
     },
     {},
     [],
