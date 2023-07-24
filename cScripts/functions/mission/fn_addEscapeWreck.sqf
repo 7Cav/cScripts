@@ -1,16 +1,14 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Turn.J
+ * Author: CPL.Turn.J, heavy influence from SGT.Brostrom.A
  * This adds a function to allow pilots to escape from wrecked airframes.
  * 
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Color Action <BOOL>
  *
  * Example:
- * [this] call cScripts_fnc_addGetOutHelo
- * [this, true] call cScripts_fnc_addGetOutHelo
+ * [this] call cScripts_fnc_addEscapeWreck
  */
 
 params [
