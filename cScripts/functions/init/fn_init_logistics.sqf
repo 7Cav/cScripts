@@ -360,10 +360,17 @@ private _dataArray = [
         ["ACE_tourniquet", 18]
     ]],
     ["crate_strykerDragoon_60mm",[
-
+        ["avm224_W_M224_mortar_carry",4],
+        ["avm224_M_6Rnd_60mm_HE_csw", 50],
+        ["avm224_M_6Rnd_60mm_HE_0_csw", 50],
+        ["avm224_M_6Rnd_60mm_ILLUM_IR_csw", 25],
+        ["avm224_M_6Rnd_60mm_SMOKE_csw", 25]
     ]],
     ["crate_strykerDragoon_82mm",[
-
+        ["ACE_1Rnd_82mm_Mo_HE", 24],
+        ["ACE_1Rnd_82mm_Mo_Illum", 8],
+        ["ACE_1Rnd_82mm_Mo_Smoke", 8],
+        ["ACE_1Rnd_82mm_Mo_HE_LaserGuided",8]
     ]],
     ["crate_resupply_general", [
         // Rifle Ammo
@@ -549,10 +556,11 @@ private _dataArray = [
         ["ACE_UAVBattery", 4],
         
         // Tools
-        ["ACE_wirecutter", 1]
+        ["ACE_wirecutter", 1],
 
         // 82mm Mortars
-        
+        ["ace_csw_carryMortarBaseplate", 2],
+        ["ace_csw_staticMortarCarry", 2]
     ]],
 
     // Charlie Vehicles \\
