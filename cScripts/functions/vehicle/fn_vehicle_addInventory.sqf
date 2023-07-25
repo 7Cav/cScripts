@@ -166,7 +166,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
                 ["ACE_quikclot", 50],
                 ["ACE_tourniquet", 18],
                 ["ace_csw_carryMortarBaseplate", 2],
-                ["ace_compat_rhs_usf3_m252_carry", 2]
+                ["ace_csw_staticMortarCarry", 2]
             ], _vehicle] call FUNC(createCargoCrate);
             
             // 60mm crate
@@ -180,14 +180,16 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             // _mortarCrate 
             // 82mm ammo crates
             ["ACE_Box_82mm_Mo_Combo", [
-                ["ACE_1Rnd_82mm_Mo_HE", 32],
+                ["ACE_1Rnd_82mm_Mo_HE", 24],
                 ["ACE_1Rnd_82mm_Mo_Illum", 8],
-                ["ACE_1Rnd_82mm_Mo_Smoke", 8] 
+                ["ACE_1Rnd_82mm_Mo_Smoke", 8],
+                ["ACE_1Rnd_82mm_Mo_HE_LaserGuided",8]
             ], _vehicle] call FUNC(createCargoCrate);
             ["ACE_Box_82mm_Mo_Combo", [
-                ["ACE_1Rnd_82mm_Mo_HE", 32],
+                ["ACE_1Rnd_82mm_Mo_HE", 24],
                 ["ACE_1Rnd_82mm_Mo_Illum", 8],
-                ["ACE_1Rnd_82mm_Mo_Smoke", 8] 
+                ["ACE_1Rnd_82mm_Mo_Smoke", 8],
+                ["ACE_1Rnd_82mm_Mo_HE_LaserGuided",8]
             ], _vehicle] call FUNC(createCargoCrate);
         };
         case "cav_dragoon_A_WH7";
