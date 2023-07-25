@@ -325,7 +325,7 @@ private _dataArray = [
         ["ACE_SpraypaintBlue",1],
         ["ACE_SpraypaintRed",1]
     ]],
-    ["crate_strykerDragoon", [
+    ["crate_strykerDragoon_resupply", [
         // Rifle Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 28],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 21],
@@ -359,7 +359,13 @@ private _dataArray = [
         ["ACE_quikclot", 50],
         ["ACE_tourniquet", 18]
     ]],
-    ["resupply_crate_general", [
+    ["crate_strykerDragoon_60mm",[
+
+    ]],
+    ["crate_strykerDragoon_82mm",[
+
+    ]],
+    ["crate_resupply_general", [
         // Rifle Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",70],
         
@@ -526,6 +532,28 @@ private _dataArray = [
         // Tools
         ["ACE_wirecutter", 1]
     ]],
+    ["vehicle_strykerDragoon_V4", [
+        // AT
+        ["rhs_weap_fgm148", 1],
+        ["rhs_fgm148_magazine_AT", 2],
+        ["rhs_weap_M136_heat", 2],
+
+        // M32 Rotary Grenade Launcher
+        ["rhs_weap_m32", 1],
+        ["rhsusf_mag_6Rnd_M397_HET", 2],
+        ["rhsusf_mag_6Rnd_M433_HEDP", 3],
+        ["rhsusf_mag_6Rnd_m4009", 3],
+        ["rhsusf_mag_6Rnd_M713_red", 2],
+        
+        // UAV Equipment
+        ["ACE_UAVBattery", 4],
+        
+        // Tools
+        ["ACE_wirecutter", 1]
+
+        // 82mm Mortars
+        
+    ]],
 
     // Charlie Vehicles \\
     ["vehicle_HMMWV", [
@@ -565,10 +593,8 @@ private _dataArray = [
         ["ACE_SpareBarrel",1]
     ]],
 
-    
-
     // Specialized \\
-    ["crate_mortar_60mm", [
+    ["crate_mortar_60mm_ammo", [
         ["NDS_M_6Rnd_60mm_HE_0",5],
         ["NDS_M_6Rnd_60mm_HE",5],
         ["NDS_M_6Rnd_60mm_SMOKE",2],

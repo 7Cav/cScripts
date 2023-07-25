@@ -25,7 +25,7 @@ clearitemcargoGlobal _crate;
 clearbackpackcargoGlobal _crate;
 
 // Add items from logistics database entry
-"resupply_crate_general" call EFUNC(logistics, getContainer);
+"crate_resupply_general" call EFUNC(logistics, getContainer);
 
 // Change ace logistics size of crate
 [_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];
