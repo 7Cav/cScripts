@@ -212,7 +212,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "EDITBOX",
     ["Factions","Array of factions allowing system loadout and pylon changes"],
     [_cScriptSettings, "5; Vehicle"],
-    '["BLU_F", "IND_F", "BLU_CTRG_F", "BLU_T_F", "BLU_USA_7CAV_F", "rhs_faction_usaf", "rhs_faction_usarmy", "rhs_faction_usarmy_d", "rhs_faction_usarmy_wd", "rhs_faction_usmc", "rhs_faction_usmc_d", "rhs_faction_usmc_wd", "rhs_faction_usn","rhs_faction_socom","USAF"]',
+    '["BLU_F", "BLU_CTRG_F", "BLU_T_F", "BLU_USA_7CAV_F", "rhs_faction_usaf", "rhs_faction_usarmy", "rhs_faction_usarmy_d", "rhs_faction_usarmy_wd", "rhs_faction_usmc", "rhs_faction_usmc_d", "rhs_faction_usmc_wd", "rhs_faction_usn","rhs_faction_socom","USAF"]',
     true,
     {},
     true

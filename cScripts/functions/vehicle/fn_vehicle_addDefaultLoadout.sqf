@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_addPylonLoadout
+ * ["vic"] call cScripts_fnc_vehicle_addDefaultLoadout
  */
 
 params [["_vehicle", objNull, [objNull]]];
@@ -30,9 +30,9 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
 };
 
-if (_vehicle iskindOf "APC_Wheeled_03_base_F") then {
+if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dragoon_unarmed_base_F")) then {
     _pylon = ["APC_Wheeled_03_base_F", "default"] call EFUNC(vehicle,getPylon);
     [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
 };
 
-_vehicle setVariable [QEGVAR(Vehicle,PylonApplyed), true];
+_vehicle setVariable [QEGVAR(Vehicle,PylonApplyed), true, true];

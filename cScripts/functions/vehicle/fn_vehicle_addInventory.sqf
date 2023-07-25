@@ -24,7 +24,7 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
-_vehicle setVariable [QEGVAR(Vehicle,Inventory), true];
+_vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
 
 // Remove ACE Cargo
 private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
@@ -50,6 +50,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
         case "cav_dragoon_D_V4";
         case "cav_dragoon_WD_V4": {
             [_vehicle, 17, 38, false, false] call FUNC(setCargoAttributes);
+
 
             // Vehicle Inventory
             [_vehicle, 
@@ -131,6 +132,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
                 "crate_strykerDragoon_resupply" call EFUNC(logistics,getContainer), 
                 _vehicle
             ] call FUNC(createCargoCrate);
+
         };
     };
 

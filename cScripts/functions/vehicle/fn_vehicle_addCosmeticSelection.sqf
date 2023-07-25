@@ -21,91 +21,92 @@ private _textures = [
     ["rhsusf_m1a1tank_base", "Saber-1 (120mm IV)", [
         "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa",
         {
-            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];
-            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 1];
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 1, true];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-2 (Bounty Hunters)", [
         "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa",
         {
-            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];
-            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa"];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 2];
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_BountyHunters_ca.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 2, true];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-3 (Iron Clad Lads)", [
         "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa",
         {
-            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];
-            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa"];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 3];
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_IronCladLads_ca.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 3, true];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-4 (War Saw)", [
         "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa",
         {
-            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];
-            _vehicle setObjectTextureGlobal [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa"];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4];
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
+                [12, "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_WarSaw_ca.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4, true];
         }
     ]],
         ["rhsusf_m1a1tank_base", "Saber-1", [
         "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa",
         {
-            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"];
-            _vehicle setObjectTextureGlobal [12, ""];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -1];
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa"],
+                [12, ""]
+            ]] call EFUNC(vehicle,applyTextures);
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -1, true];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-2", [
         "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa",
         {
-            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"];
-            _vehicle setObjectTextureGlobal [12, ""];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -2];
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\2_ca.paa"],
+                [12, ""]
+            ]] call EFUNC(vehicle,applyTextures);
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -2, true];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-3", [
         "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa",
         {
-            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"];
-            _vehicle setObjectTextureGlobal [12, ""];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -3];
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\3_ca.paa"],
+                [12, ""]
+            ]] call EFUNC(vehicle,applyTextures);
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -3, true];
         }
     ]],
     ["rhsusf_m1a1tank_base", "Saber-4", [
         "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa",
         {
-            _vehicle setObjectTextureGlobal [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"];
-            _vehicle setObjectTextureGlobal [12, ""];
-            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4];
+            [_vehicle, [
+                [11, "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\4_ca.paa"],
+                [12, ""]
+            ]] call EFUNC(vehicle,applyTextures);
+            _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4, true];
         }
     ]],
-    ["I_APC_Wheeled_03_cannon_F", "OD Paint", [
+    ["I_APC_Wheeled_03_cannon_F", "Toggle Camo Net", [
         "",
         {
-            [_vehicle, [
-                [0,"\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_03_co.paa"],
-                [1,"\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_03_co.paa"],
-                [2,"\a3\data_f_tacops\data\rcws30_ig_03_co.paa"],
-                [3,"\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_03_co.paa"],
-                [4,"\a3\armor_f\data\camonet_aaf_fia_green_co.paa"],
-                [5,"\a3\armor_f\data\cage_g3_co.paa"]
-            ]] call EFUNC(vehicle,applyTextures);
-        }
-    ]],
-    ["I_APC_Wheeled_03_cannon_F", "FDE Paint", [
-        "",
-        {
-            [_vehicle, [
-                [0, "\a3\data_f_tacops\data\apc_wheeled_03_ext_ig_02_co.paa"],
-                [1, "\a3\data_f_tacops\data\apc_wheeled_03_ext2_ig_02_co.paa"],
-                [2, "\a3\data_f_tacops\data\rcws30_ig_02_co.paa"],
-                [3, "\a3\data_f_tacops\data\apc_wheeled_03_ext_alpha_ig_02_co.paa"],
-                [4, "\a3\armor_f\data\camonet_aaf_fia_desert_co.paa"],
-                [5, "\a3\armor_f\data\cage_sand_co.paa"]
-            ]] call EFUNC(vehicle,applyTextures);
+            private _camoNetMounted = _vehicle animationSourcePhase "showCamonetHull";
+            if (_camoNetMounted == 1) then {
+                _vehicle animateSource ["showCamonetHull",0, true];
+            } else {
+                _vehicle animateSource ["showCamonetHull",1, true];
+            };
         }
     ]],
     ["I_APC_Wheeled_03_cannon_F", "Toggle Slats", [

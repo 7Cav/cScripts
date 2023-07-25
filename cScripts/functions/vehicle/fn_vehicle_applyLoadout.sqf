@@ -53,4 +53,4 @@ _vehicle setVehicleAmmo 1;
     };
 } forEach _vehicleLoadout;
 
-_vehicle setVariable [QEGVAR(vehicle,pylon), [_loadoutName, _vehicleLoadout]];
+_vehicle setVariable [QEGVAR(vehicle,pylon), [_loadoutName, _vehicleLoadout], true];

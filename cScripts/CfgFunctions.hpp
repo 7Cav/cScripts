@@ -165,10 +165,11 @@ class cScripts {
         class vehicle_setupPylonCategories {};
         
         class vehicle_applyLoadout {};
-        class vehicle_addPylonLoadout {};
+        class vehicle_addDefaultLoadout {};
         class vehicle_getPylon {};
 
         // Other
+        class vehicle_reset {};
         class vehicle_addFlagAction {};
     };
     class modules {

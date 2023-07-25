@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: player <STRING>
- * 1: type <STRING>     ['CAV', 'BIS', 'FORMAT']
+ * 1: type <STRING>     ['USA', 'BIS', 'USA_FORMAL']
  *
  * Return Value:
  * Rank based on name <STRING>
@@ -17,7 +17,7 @@
 
 params [
     ["_player", objNull, [objNull]],
-    ["_getType", 'BIS', ['']]
+    ["_rankType", 'BIS', ['']]
 ];
 
 private _return = "";
@@ -28,11 +28,11 @@ if ([_player, EGVAR(Settings,primaryClanTag)] call FUNC(isPlayerClan)) then {
     _profileName = toUpper(_profileName);
 };
 
-_getType = toUpper(_getType);
+_rankType = toUpper(_rankType);
 
-// Cav ranks
-if (_getType == 'CAV') then {
-    switch (_getType == 'CAV') do {
+// USA ranks
+if (_rankType == 'USA') then {
+    switch (_rankType == 'USA') do {
         case (_profileName in ['AR.', 'AR ']): {_return = 'Reservist'};
         case (_profileName in ['RET']): {_return = 'Retire'};
         case (_profileName in ['RCT']): {_return = 'Recruit'};
@@ -66,9 +66,9 @@ if (_getType == 'CAV') then {
     };
 };
 
-//Cav Formal Ranks
-if (_getType == 'FORMAL') then {
-    switch (_getType == 'FORMAL') do {
+// USA Formal Ranks
+if (_rankType == 'USA_FORMAL') then {
+    switch (_rankType == 'USA_FORMAL') do {
         case (_profileName in ['AR.', 'AR ']): {_return = 'Reservist'};
         case (_profileName in ['RET']): {_return = 'old man'};
         case (_profileName in ['RCT']): {_return = 'Recruit'};
@@ -85,8 +85,8 @@ if (_getType == 'FORMAL') then {
 };
 
 // Arma rank translations
-if (_getType == 'BIS') then {
-    switch (_getType == 'BIS') do {
+if (_rankType == 'BIS') then {
+    switch (_rankType == 'BIS') do {
         case (_profileName in ['AR.','AR ','RCT','PVT','PFC']): {_return = 'PRIVATE'};
         case (_profileName in ['RET','SPC','CPL','WO1']): {_return = 'CORPORAL'};
         case (_profileName in ['SGT','SSG','SFC','MSG','1SG','SGM','CSM','CW2','CW3','CW4','CW5']): {_return = 'SERGEANT'};
