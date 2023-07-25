@@ -1,15 +1,15 @@
 version=54;
-center[]={-34.783642,5,-3.6810911};
+center[]={21805.117,16.311354,18714.98};
 class items
 {
-	items=1;
+	items=2;
 	class Item0
 	{
 		dataType="Layer";
-		name="Single JTAC [DEVBUILD]";
+		name="FAC";
 		class Entities
 		{
-			items=4;
+			items=3;
 			class Item0
 			{
 				dataType="Group";
@@ -22,18 +22,18 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-0.94135666,0.0014390945,0.68409038};
+							position[]={-1.2519531,0.094182968,0.58007813};
 						};
 						side="West";
 						flags=7;
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="this setGroupid [""CHAOS-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""INFIDEL-2""];";
+							init="this setGroupid [""CHAOS-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""INFIDEL-1""];";
 							description="JTAC@CHAOS-2";
 							isPlayable=1;
 						};
-						id=3695;
+						id=2;
 						type="Cav_B_A_JFO_Infidel_1_F";
 						class CustomAttributes
 						{
@@ -70,7 +70,7 @@ class items
 				class Attributes
 				{
 				};
-				id=3694;
+				id=1;
 			};
 			class Item1
 			{
@@ -84,18 +84,18 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={1.2046432,0.0014390945,2.3190904};
+							position[]={0.89453125,0.027067184,2.2148438};
 						};
 						side="West";
 						flags=7;
 						class Attributes
 						{
 							rank="SERGEANT";
-							init="this setGroupid [""CHAOS-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""INFIDEL-1""];";
+							init="this setGroupid [""CHAOS-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""INFIDEL-2""];";
 							description="JTAC@CHAOS-1";
 							isPlayable=1;
 						};
-						id=3697;
+						id=4;
 						type="Cav_B_A_JFO_Infidel_1_F";
 						class CustomAttributes
 						{
@@ -132,147 +132,163 @@ class items
 				class Attributes
 				{
 				};
-				id=3696;
+				id=3;
 			};
 			class Item2
 			{
-				dataType="Layer";
-				name="TACP Team";
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={-1.7128906,0.68976974,2.1269531};
+				};
+				title="JTAC vs TACP (Tooltip)";
+				description="A single JTAC is best used when less than 2 air assets are on the field. A TACP Team almost becomes a necessity when there are more than 2 air assets in play for attack aviation. A TACP team handles BOTH CAS Fires and PZ Pickup Requests. (2x JTAC, 1x CCT, 1x Security)";
+				id=9;
+				atlOffset=0.58500671;
+			};
+		};
+		id=0;
+		atlOffset=0.29278183;
+	};
+	class Item1
+	{
+		dataType="Layer";
+		name="TACP IC";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Group";
+				side="West";
 				class Entities
 				{
 					items=1;
 					class Item0
 					{
-						dataType="Group";
-						side="West";
-						class Entities
+						dataType="Object";
+						class PositionInfo
 						{
-							items=2;
-							class Item0
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-0.18442154,0.0014390945,-2.6264408};
-									angles[]={-0,6.1807523,0};
-								};
-								side="West";
-								flags=6;
-								class Attributes
-								{
-									skill=0.44999999;
-									rank="CORPORAL";
-									init="this setGroupid [""PEGASUS-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""PEGASUS-1""];";
-									description="TACP Combat Controller@Pegasus-2";
-									isPlayable=1;
-								};
-								id=3700;
-								type="Cav_B_A_JFO_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male10ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0.98000002;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={2.14468,0.0014390945,-0.76657748};
-									angles[]={-0,6.1807523,0};
-								};
-								side="West";
-								flags=4;
-								class Attributes
-								{
-									skill=0.44999999;
-									rank="CORPORAL";
-									init="this setGroupid [""PEGASUS-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""PEGASUS-1""];";
-									description="TACP Combat Controller";
-									isPlayable=1;
-								};
-								id=3701;
-								type="Cav_B_B_Scout_PlatoonLead_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male10ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0.98000002;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
+							position[]={1.8339844,0.0014381409,-0.86914063};
+							angles[]={0.0013439035,6.1807523,6.2525201};
 						};
+						side="West";
+						flags=6;
 						class Attributes
 						{
+							skill=0.44999999;
+							rank="CORPORAL";
+							init="this setGroupid [""VANQUISH-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""PEGASUS-1""];";
+							description="TACP Combat Controller";
+							isPlayable=1;
 						};
-						id=3699;
+						id=8;
+						type="Cav_B_B_Scout_PlatoonLead_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male10ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0.98000002;
+									};
+								};
+							};
+							nAttributes=2;
+						};
 					};
 				};
-				id=3698;
-			};
-			class Item3
-			{
-				dataType="Comment";
-				class PositionInfo
+				class Attributes
 				{
-					position[]={-1.4031715,0.625,2.2304969};
 				};
-				title="JTAC vs TACP (Tooltip)";
-				description="A single JTAC is best used when less than 2 air assets are on the field. A TACP Team almost becomes a necessity when there are more than 2 air assets in play for attack aviation. A TACP team handles BOTH CAS Fires and PZ Pickup Requests. (2x JTAC, 1x CCT, 1x Security)";
-				id=3702;
-				atlOffset=0.625;
+				id=6;
+			};
+			class Item1
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-0.49414063,0.087362289,-2.7304688};
+							angles[]={0.041311946,6.1807523,6.2525201};
+						};
+						side="West";
+						flags=6;
+						class Attributes
+						{
+							skill=0.44999999;
+							rank="CORPORAL";
+							init="this setGroupid [""VANQUISH-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""PEGASUS-1""];";
+							description="TACP Combat Controller@Pegasus-2";
+							isPlayable=1;
+						};
+						id=7;
+						type="Cav_B_A_JFO_F";
+						atlOffset=1.9073486e-006;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male10ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0.98000002;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=11;
+				atlOffset=1.9073486e-006;
 			};
 		};
-		id=3693;
-		atlOffset=0.3125;
+		id=5;
+		atlOffset=0.0060062408;
 	};
 };
