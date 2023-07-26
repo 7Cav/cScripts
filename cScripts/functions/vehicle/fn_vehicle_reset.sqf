@@ -37,15 +37,15 @@ _vehicle setVariable [QEGVAR(Vehicle,Functions),  nil, true];
 
 
 // Clear and remove helicopter Get Out or Jump actions
-private _getOutActionIDs = _vehicle getVariable [QEGVAR(Vehicle,GetOutRightLeft), [_vehicle, [_actionIDL, _actionIDR]]];
+private _getOutActionIDs = _vehicle getVariable [QEGVAR(Vehicle,GetOutRightLeft), nil];
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,GetOutRightLeft)}) then {
     {_vehicle removeAction _x} forEach _getOutActionIDs select 1;
 }; 
-private _jumpActionID    = _vehicle getVariable [QEGVAR(Vehicle,Jump), [_vehicle, _actionID, _minAltetude, _maxAltetude, _maxSpeed, _chuteVehicleClass]];
+private _jumpActionID    = _vehicle getVariable [QEGVAR(Vehicle,Jump), nil];
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Jump)}) then {
     [_vehicle, _jumpActionID select 1] call BIS_fnc_holdActionRemove
 }; 
-private _heloActionID    = _vehicle getVariable [QEGVAR(Vehicle,Halo), [_vehicle, _actionID, _minAltetude, _chuteBackpackClass]];
+private _heloActionID    = _vehicle getVariable [QEGVAR(Vehicle,Halo), nil];
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Halo)}) then {
     [_vehicle, _heloActionID select 1] call BIS_fnc_holdActionRemove
 };
@@ -58,9 +58,12 @@ _vehicle setVariable [QEGVAR(Vehicle,Inventory),  nil, true];
 // Clear radio
 _vehicle setVariable [QEGVAR(Vehicle,Radio), nil, true];
 
-
-// Reset ACE Medical Vehicle
-_vehicle setVariable ["ace_medical_isMedicalVehicle", nil, true];
+private _vehicleConfig = configOf _vehicle;
+private _countAttendants = (_vehicleConfig >> "attendant") call BIS_fnc_getCfgData;
+if (_countAttendants == 0) then {
+    // Reset ACE Medical Vehicle
+    _vehicle setVariable ["ace_medical_isMedicalVehicle", nil, true];
+};
 
 
 // Remove any other random stuff
