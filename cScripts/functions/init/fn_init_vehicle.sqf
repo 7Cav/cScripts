@@ -33,7 +33,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     _x addEventHandler ["CuratorObjectPlaced", {
         params ["_curator", "_vehicle"];
         if (_vehicle iskindOf "man") exitWith {};
-        _curatorExcluder = clientOwner * -1;
+        private _curatorExcluder = clientOwner * -1;
 
         _vehicle remoteExec [QEFUNC(vehicle,addFunctions), _curatorExcluder, true];
         _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
