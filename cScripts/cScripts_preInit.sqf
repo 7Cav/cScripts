@@ -243,7 +243,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     ["Magazines","Force specific usage of sertain objects"],
     [_cScriptSettings, "6; Item Replacement"],
-    [[0,1,2], ["Disabled", "Use RHS then ACE magazines", "Use ACE then RHS magazines"], 1],
+    [[0,1,2], ["Disabled", "Use RHS then ACE magazines", "Use ACE then RHS magazines"], 0],
     true,
     {},
     true
