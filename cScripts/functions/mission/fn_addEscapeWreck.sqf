@@ -18,7 +18,7 @@ params [
 // Check so the options arent added twice.
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,escapeWreck)}) exitWith {[format["Escape wreck already set for %1.", _vehicle]] call FUNC(warning);};
 
-_conditionAction = '(!(assignedVehicleRole player isEqualTo [])) && ((damage vehicle player) >= 1)';
+private _conditionAction = '(!(assignedVehicleRole player isEqualTo [])) && ((damage vehicle player) >= 1)';
 
 private _actionID = [
     _vehicle,
