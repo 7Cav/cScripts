@@ -25,15 +25,5 @@ params[
     ["_distance", 30]
 ];
 
-private _pos = _object getPos [0, getdir _object];
-private _dir = getDir _object;
-[
-    _pos,
-    "AREA:", [3, _distance, _dir, true],
-    "ACT:", [_triggerSide, "PRESENT", true],
-    "STATE:", [
-        "this",
-        format["('%1' call BIS_fnc_objectFromNetId) animateSource ['Door_1_sound_source', 1]", _object call BIS_fnc_netId],
-        format["('%1' call BIS_fnc_objectFromNetId) animateSource ['Door_1_sound_source', 0]", _object call BIS_fnc_netId]
-    ]
-] call CBA_fnc_createTrigger;
+[format["Function 'cScripts_fnc_gate' on %1 is depricated (cScripts_fnc_gate => cav_mission_fnc_gate)...", _object], true, "DEPRICATED"] call FUNC(warning);
+[_object, _triggerSide, _distance] call cav_mission_fnc_gate;
