@@ -31,7 +31,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 
 {
     _x addEventHandler ["CuratorObjectPlaced", {
-        params ["_curator", "_vehicle"];
+        params ["", "_vehicle"];
         if (_vehicle iskindOf "man") exitWith {};
         _vehicle remoteExec [QEFUNC(vehicle,reset), 2];
         _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
