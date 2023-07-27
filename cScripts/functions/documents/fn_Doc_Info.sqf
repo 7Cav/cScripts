@@ -20,13 +20,15 @@ private _worldName = getText (configFile >> "CfgWorlds" >> worldName >> "descrip
 private _serverName = if (serverName != "") then {serverName} else {"localhost"}; 
 
 private _radioChannel = "";
-if (EGVAR(patches,usesACRE) && EGVAR(Settings,enableACRE)) then {
-    _radioChannel = [_group, "ACRE_PRC343"] call FUNC(getRadioChannel);
-    _radioChannel = [_radioChannel] call FUNC(getChannelName);
-    if !(_radioChannel == "ERROR" ) then {
-        _radioChannel = formatText["Your squad radio is <font color='#ffc61a'>%1</font>.<br/><br/>", _radioChannel];
-    } else {
-        _radioChannel = "";
+if (EGVAR(Patches,usesACRE) || EGVAR(Patches,usesTFAR)) then {
+    if (EGVAR(Settings,enableRadios)) then {
+        _radioChannel = [_group, "SR"] call FUNC(getRadioChannel);
+        _radioChannel = [_radioChannel] call FUNC(getChannelName);
+        if !(_radioChannel == "ERROR" ) then {
+            _radioChannel = formatText["Your squad radio is <font color='#ffc61a'>%1</font>.<br/><br/>", _radioChannel];
+        } else {
+            _radioChannel = "";
+        };
     };
 };
 
