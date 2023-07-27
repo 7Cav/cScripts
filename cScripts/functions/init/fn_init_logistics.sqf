@@ -420,11 +420,11 @@ private _dataArray = [
 
         // Explosives
         ["SatchelCharge_Remote_Mag",2],
-        ["DemoCharge_Remote_Mag",4]
+        ["DemoCharge_Remote_Mag",4],
 
-        ["ACE_EarPlugs", 3];
-        ["ACE_quikclot", 80];
-        ["ACE_tourniquet", 15];
+        ["ACE_EarPlugs", 3],
+        ["ACE_quikclot", 80],
+        ["ACE_tourniquet", 15]
     ]],
 
     // Alpha Vehicles \\
