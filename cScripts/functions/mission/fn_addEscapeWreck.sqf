@@ -20,7 +20,7 @@ if (!isNil {_vehicle getVariable QEGVAR(Vehicle,escapeWreck)}) exitWith {[format
 
 _conditionAction = '(!(assignedVehicleRole player isEqualTo [])) && ((damage vehicle player) >= 1)';
 
-[
+private _actionID = [
     _vehicle,
     "<t color='#FDDA0D'>Escape Wreck (HOLD)</t>",
     "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_takeOff1_ca.paa",
