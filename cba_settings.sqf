@@ -809,6 +809,97 @@ force force acre_sys_gestures_stopADS = false;
 //acre_sys_zeus_zeusCommunicateViaCamera = true;
 //acre_sys_zeus_zeusDefaultVoiceSource = false;
 
+// TFAR - Clientside settings
+//TFAR_curatorCamEars = false;
+//TFAR_default_radioVolume = 6;
+//TFAR_intercomDucking = 0.2;
+//TFAR_intercomVolume = 0.1;
+//TFAR_moveWhileTabbedOut = false;
+//TFAR_noAutomoveSpectator = false;
+//TFAR_oldVolumeHint = false;
+//TFAR_pluginTimeout = 4;
+//TFAR_PosUpdateMode = 0.1;
+//TFAR_showChannelChangedHint = true;
+//TFAR_ShowDiaryRecord = true;
+//TFAR_showTransmittingHint = true;
+//TFAR_ShowVolumeHUD = false;
+//TFAR_splendidCamEars = false;
+//TFAR_tangentReleaseDelay = 0;
+//TFAR_VolumeHudTransparency = 0;
+//TFAR_volumeModifier_forceSpeech = false;
+
+// TFAR - Global settings
+force force TFAR_AICanHearPlayer = true;
+force force TFAR_AICanHearSpeaker = true;
+force force TFAR_allowDebugging = true;
+force force tfar_core_noTSNotConnectedHint = false;
+force force TFAR_defaultIntercomSlot = 0;
+force force TFAR_disableAutoMute = false;
+force force TFAR_enableIntercom = true;
+force force TFAR_experimentalVehicleIsolation = true;
+force force TFAR_externalIntercomEnable = 0;
+force force TFAR_externalIntercomMaxRange_Phone = 5;
+force force TFAR_externalIntercomMaxRange_Wireless = 15;
+force force TFAR_fullDuplex = false;
+force force TFAR_giveLongRangeRadioToGroupLeaders = false;
+force force TFAR_giveMicroDagrToSoldier = true;
+force force TFAR_givePersonalRadioToRegularSoldier = false;
+force force TFAR_globalRadioRangeCoef = 1;
+force force TFAR_instantiate_instantiateAtBriefing = false;
+force force TFAR_objectInterceptionEnabled = true;
+force force TFAR_objectInterceptionStrength = 400;
+force force tfar_radiocode_east = "_opfor";
+force force tfar_radiocode_independent = "_independent";
+force force tfar_radiocode_west = "_bluefor";
+force force tfar_radioCodesDisabled = true;
+force force TFAR_SameLRFrequenciesForSide = false;
+force force TFAR_SameSRFrequenciesForSide = false;
+force force TFAR_setting_defaultFrequencies_lr_east = "";
+force force TFAR_setting_defaultFrequencies_lr_independent = "";
+force force TFAR_setting_defaultFrequencies_lr_west = "";
+force force TFAR_setting_defaultFrequencies_sr_east = "";
+force force TFAR_setting_defaultFrequencies_sr_independent = "";
+force force TFAR_setting_defaultFrequencies_sr_west = "";
+force force TFAR_setting_DefaultRadio_Airborne_east = "TFAR_mr6000l";
+force force TFAR_setting_DefaultRadio_Airborne_Independent = "TFAR_anarc164";
+force force TFAR_setting_DefaultRadio_Airborne_West = "TFAR_rt1523g";
+force force TFAR_setting_DefaultRadio_Backpack_east = "TFAR_mr3000";
+force force TFAR_setting_DefaultRadio_Backpack_Independent = "TFAR_anprc155";
+force force TFAR_setting_DefaultRadio_Backpack_west = "TFAR_rt1523g";
+force force TFAR_setting_DefaultRadio_Personal_east = "TFAR_fadak";
+force force TFAR_setting_DefaultRadio_Personal_Independent = "TFAR_anprc148jem";
+force force TFAR_setting_DefaultRadio_Personal_West = "TFAR_anprc152";
+force force TFAR_setting_DefaultRadio_Rifleman_East = "TFAR_pnr1000a";
+force force TFAR_setting_DefaultRadio_Rifleman_Independent = "TFAR_anprc154";
+force force TFAR_setting_DefaultRadio_Rifleman_West = "TFAR_anprc152";
+force force TFAR_setting_externalIntercomWirelessHeadgear = "";
+force force TFAR_spectatorCanHearEnemyUnits = true;
+force force TFAR_spectatorCanHearFriendlies = true;
+force force TFAR_takingRadio = 2;
+force force TFAR_Teamspeak_Channel_Name = "TaskForceRadio";
+force force TFAR_Teamspeak_Channel_Password = "123";
+force force tfar_terrain_interception_coefficient = 7;
+force force TFAR_voiceCone = false;
+
+// USAF
+force force usaf_afterburner_setting_allow_ai = true;
+force force USAF_allowNuke = true;
+force force usaf_debug_setting_enabled_clients = false;
+force force usaf_debug_setting_enabled_server = false;
+force force usaf_f35a_allow_das_coverage = true;
+force force usaf_f35a_allow_sar_imagery = true;
+force force usaf_serviceMenu_setting_allowHangarRearm = true;
+force force usaf_serviceMenu_setting_allowHangarRefuel = true;
+force force usaf_serviceMenu_setting_allowHangarRepair = true;
+force force usaf_serviceMenu_setting_allowLoadoutModification = true;
+force force usaf_serviceMenu_setting_enabled = true;
+force force usaf_serviceMenu_setting_refuelTime = "100";
+force force usaf_serviceMenu_setting_reloadTime = "15";
+force force usaf_serviceMenu_setting_repairTime = "100";
+force force usaf_serviceMenu_setting_replaceSources = true;
+force force usaf_serviceMenu_setting_selectorSearchRadius = "100";
+force force usaf_setting_allow_aiFormlights = true;
+
 // BettIR
 force force BettIR_ViewDistance = 300;
 
