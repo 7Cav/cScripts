@@ -54,7 +54,7 @@ if !(_companySelector == 'NONE') then {
     // TEMP REMOVED THIS RELEASE
 
     // // Radios
-    // if (EGVAR(Settings,enableACRE)) then {
+    // if (EGVAR(Settings,enableRadios)) then {
     //      _crate addItemCargoGlobal ["ACRE_PRC152",10];
     //      _crate addItemCargoGlobal ["ACRE_PRC117F",10];
     //      _crate addItemCargoGlobal ["ACRE_PRC343",20];
@@ -144,11 +144,11 @@ if (_companySelector in _alpha or _alwaysAvalible) then {
     // Old Container
     if (_companySelector in ['ALPHA', 'BUFFALO', 'TITAN', 'RAIDER', 'SPARROW' ] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
-        // if (EGVAR(Settings,enableACRE)) then {
-        //     _crate addItemCargoGlobal ["ACRE_PRC152",50];
-        //     _crate addItemCargoGlobal ["ACRE_PRC117F",10];
-        //     _crate addItemCargoGlobal ["ACRE_PRC343",12];
-        // };
+        if (EGVAR(Settings,enableRadios)) then {
+            _crate addItemCargoGlobal ["ACRE_PRC152",50];
+            _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+            _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        };
 
         ["starter_alpha"] call EFUNC(logistics,getContainer);
     };
@@ -162,11 +162,11 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     // Container Viking
     if (_companySelector in ['BRAVO', 'VIKING'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
-        // if (EGVAR(Settings,enableACRE)) then {
-        //     _crate addItemCargoGlobal ["ACRE_PRC152",50];
-        //     _crate addItemCargoGlobal ["ACRE_PRC117F",10];
-        //     _crate addItemCargoGlobal ["ACRE_PRC343",12];
-        // };
+        if (EGVAR(Settings,enableRadios)) then {
+            _crate addItemCargoGlobal ["ACRE_PRC152",50];
+            _crate addItemCargoGlobal ["ACRE_PRC117F",10];
+            _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        };
 
         ["starter_bravo_viking"] call EFUNC(logistics,getContainer);
         
@@ -175,7 +175,7 @@ if (_companySelector in _bravo or _alwaysAvalible) then {
     // Container ATLAS
     if (_companySelector in ['BRAVO', 'ATLAS'] or _alwaysAvalible) then {
         //================== RADIOS ==================\\
-        if (EGVAR(Settings,enableACRE)) then {
+        if (EGVAR(Settings,enableRadios)) then {
             _crate addItemCargoGlobal ["ACRE_PRC152",50];
             _crate addItemCargoGlobal ["ACRE_PRC117F",10];
             _crate addItemCargoGlobal ["ACRE_PRC343",12];
@@ -196,11 +196,11 @@ if (_companySelector in _charlie or _alwaysAvalible) then {
     };
     
 
-    // //================== RADIOS ==================\\
-    // if (EGVAR(Settings,enableACRE)) then {
-    //     _crate addItemCargoGlobal ["ACRE_PRC343",12];
-    //     _crate addItemCargoGlobal ["ACRE_PRC152",10];
-    // };
+    //================== RADIOS ==================\\
+    if (EGVAR(Settings,enableRadios)) then {
+        _crate addItemCargoGlobal ["ACRE_PRC343",12];
+        _crate addItemCargoGlobal ["ACRE_PRC152",10];
+    };
 
     ["starter_charlie"] call EFUNC(logistics,getContainer);
     

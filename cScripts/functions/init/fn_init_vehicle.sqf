@@ -33,6 +33,8 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     _x addEventHandler ["CuratorObjectPlaced", {
         params ["", "_vehicle"];
         if (_vehicle iskindOf "man") exitWith {};
+        _vehicle remoteExec [QEFUNC(vehicle,reset), 0];
+
         _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
         _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
         _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), -2, true];

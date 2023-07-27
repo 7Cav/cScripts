@@ -21,420 +21,332 @@ params [
     ["_radio", "ACRE_PRC343", ["ACRE_PRC343"]]
 ];
 
-private _channel = 1;
+if (!EGVAR(Patches,usesACRE) && !EGVAR(Patches,usesTFAR)) exitWith {nil};
+
+if (_group isEqualTo "") exitWith {0};
 _group = toUpper(_group);
 
-if (_radio == "ACRE_PRC343") then {
-    switch (_group) do {
-
-        case "GODFATHER-5": {_channel = 4};
-        case "GODFATHER-6": {_channel = 4};
-        case "GODFATHER-7": {_channel = 4};
-
-        case "MUSTANG-1": {_channel = 2};
-        case "MUSTANG-2": {_channel = 3};
-
-        case "APOLLO-1": {_channel = 1};
-        case "APOLLO-5": {_channel = 1};
-        case "APOLLO-6": {_channel = 1};
-        
-        case "ATLAS-1": {_channel = 2};
-        case "ATLAS-2": {_channel = 3};
-        case "ATLAS-3": {_channel = 1};
-        case "ATLAS-4": {_channel = 1};
-        case "ATLAS-5": {_channel = 1};
-        case "ATLAS-6": {_channel = 1};
-        
-        //Air
-        case "PEGASUS-2": {_channel = 1};
-
-        case "BUFFALO-1": {_channel = 113};
-        case "BUFFALO-2": {_channel = 114};
-        case "BUFFALO-3": {_channel = 115};
-        case "BUFFALO-4": {_channel = 116};
-
-        case "GRIZZLY-1": {_channel = 117};
-        case "GRIZZLY-2": {_channel = 118};
-        case "GRIZZLY-3": {_channel = 119};
-
-        case "RAVEN-1": {_channel = 120};
-        case "RAVEN-2": {_channel = 121};
-        case "RAVEN-3": {_channel = 122};
-        case "RAVEN-4": {_channel = 123};
-
-        case "EAGLE-1": {_channel = 1};
-        case "EAGLE-2": {_channel = 1};
-        case "EAGLE-3": {_channel = 1};
-
-        case "HOG-1": {_channel = 1};
-        case "HOG-2": {_channel = 1};
-        case "HOG-3": {_channel = 1};
-        case "HOG-4": {_channel = 1};
-
-        case "RAIDER-1": {_channel = 124};
-        case "RAIDER-2": {_channel = 125};
-
-        case "TITAN-1": {_channel = 129};
-        case "TITAN-2": {_channel = 130};
-        case "TITAN-3": {_channel = 131};
-        case "TITAN-4": {_channel = 132};
-
-        // Ground
-        case "SABER-1": {_channel = 97};
-        case "SABER-2": {_channel = 97};
-        case "SABER-3": {_channel = 98};
-        case "SABER-4": {_channel = 98};
-        case "SABER-7": {_channel = 100};
-
-        case "VIKING-1": {_channel = 65};
-        case "VIKING-2": {_channel = 66};
-        case "VIKING-3": {_channel = 67};
-        case "VIKING-4": {_channel = 68};
-        case "VIKING-5": {_channel = 69};
-        case "VIKING-6": {_channel = 69};
-        case "VIKING-7": {_channel = 69};
-
-        case "LANCER-1": {_channel = 81};
-        case "LANCER-2": {_channel = 82};
-        case "LANCER-3": {_channel = 83};
-        case "LANCER-4": {_channel = 84};
-        case "LANCER-5": {_channel = 85};
-        case "LANCER-6": {_channel = 85};
-        case "LANCER-7": {_channel = 85};
-
-        case "BANDIT-1": {_channel = 17};
-        case "BANDIT-2": {_channel = 18};
-        case "BANDIT-3": {_channel = 19};
-        case "BANDIT-4": {_channel = 20};
-        case "BANDIT-5": {_channel = 21};
-        case "BANDIT-6": {_channel = 21};
-        case "BANDIT-7": {_channel = 21};
-
-        case "MISFIT-1": {_channel = 33};
-        case "MISFIT-2": {_channel = 34};
-        case "MISFIT-3": {_channel = 35};
-        case "MISFIT-4": {_channel = 36};
-        case "MISFIT-5": {_channel = 37};
-        case "MISFIT-6": {_channel = 37};
-        case "MISFIT-7": {_channel = 37};
-
-        case "GUNSLINGER-1": {_channel = 1};
-        case "GUNSLINGER-2": {_channel = 1};
-        case "GUNSLINGER-3": {_channel = 1};
-        case "GUNSLINGER-4": {_channel = 1};
-        case "GUNSLINGER-5": {_channel = 1};
-        case "GUNSLINGER-6": {_channel = 1};
-        case "GUNSLINGER-7": {_channel = 1};
-
-        // LETTER NAMING
-        case "GODFATHER FIVE": {_channel = 4};
-        case "GODFATHER SIX": {_channel = 4};
-        case "GODFATHER SEVEN": {_channel = 4};
-
-        case "MUSTANG ONE": {_channel = 2};
-        case "MUSTANG TWO": {_channel = 3};
-
-        case "APOLLO ONE": {_channel = 1};
-        case "APOLLO FIVE": {_channel = 1};
-        case "APOLLO SIX": {_channel = 1};
-        
-        case "ATLAS ONE": {_channel = 2};
-        case "ATLAS TWO": {_channel = 3};
-        case "ATLAS THREE": {_channel = 1};
-        case "ATLAS FOUR": {_channel = 1};
-        case "ATLAS FIVE": {_channel = 1};
-        case "ATLAS SIX": {_channel = 1};
-        
-        //Air
-        case "PEGASUS TWO": {_channel = 1};
-
-        case "BUFFALO ONE": {_channel = 113};
-        case "BUFFALO TWO": {_channel = 114};
-        case "BUFFALO THREE": {_channel = 115};
-        case "BUFFALO FOUR": {_channel = 116};
-
-        case "GRIZZLY ONE": {_channel = 117};
-        case "GRIZZLY TWO": {_channel = 118};
-        case "GRIZZLY THREE": {_channel = 119};
-
-        case "RAVEN ONE": {_channel = 120};
-        case "RAVEN TWO": {_channel = 121};
-        case "RAVEN THREE": {_channel = 122};
-        case "RAVEN FOUR": {_channel = 123};
-
-        case "EAGLE ONE": {_channel = 1};
-        case "EAGLE TWO": {_channel = 1};
-        case "EAGLE THREE": {_channel = 1};
-
-        case "HOG ONE": {_channel = 1};
-        case "HOG TWO": {_channel = 1};
-        case "HOG THREE": {_channel = 1};
-        case "HOG FOUR": {_channel = 1};
-
-        case "RAIDER ONE": {_channel = 124};
-        case "RAIDER TWO": {_channel = 125};
-
-        case "TITAN ONE": {_channel = 129};
-        case "TITAN TWO": {_channel = 130};
-        case "TITAN THREE": {_channel = 131};
-        case "TITAN FOUR": {_channel = 132};
-
-        // Ground
-        case "SABER ONE": {_channel = 97};
-        case "SABER TWO": {_channel = 98};
-        case "SABER THREE": {_channel = 99};
-        case "SABER FOUR": {_channel = 100};
-        case "SABER SEVEN": {_channel = 100};
-
-        case "VIKING ONE": {_channel = 65};
-        case "VIKING TWO": {_channel = 66};
-        case "VIKING THREE": {_channel = 67};
-        case "VIKING FOUR": {_channel = 68};
-        case "VIKING FIVE": {_channel = 69};
-        case "VIKING SIX": {_channel = 69};
-        case "VIKING SEVEN": {_channel = 69};
-
-        case "LANCER ONE": {_channel = 81};
-        case "LANCER TWO": {_channel = 82};
-        case "LANCER THREE": {_channel = 83};
-        case "LANCER FOUR": {_channel = 84};
-        case "LANCER FIVE": {_channel = 85};
-        case "LANCER SIX": {_channel = 85};
-        case "LANCER SEVEN": {_channel = 85};
-
-        case "BANDIT ONE": {_channel = 17};
-        case "BANDIT TWO": {_channel = 18};
-        case "BANDIT THREE": {_channel = 19};
-        case "BANDIT FOUR": {_channel = 20};
-        case "BANDIT FIVE": {_channel = 21};
-        case "BANDIT SIX": {_channel = 21};
-        case "BANDIT SEVEN": {_channel = 21};
-
-        case "MISFIT ONE": {_channel = 33};
-        case "MISFIT TWO": {_channel = 34};
-        case "MISFIT THREE": {_channel = 35};
-        case "MISFIT FOUR": {_channel = 36};
-        case "MISFIT FIVE": {_channel = 37};
-        case "MISFIT SIX": {_channel = 37};
-        case "MISFIT SEVEN": {_channel = 37};
-
-        case "GUNSLINGER ONE": {_channel = 1};
-        case "GUNSLINGER TWO": {_channel = 1};
-        case "GUNSLINGER THREE": {_channel = 1};
-        case "GUNSLINGER FOUR": {_channel = 1};
-        case "GUNSLINGER FIVE": {_channel = 1};
-        case "GUNSLINGER SIX": {_channel = 1};
-        case "GUNSLINGER SEVEN": {_channel = 1};
-
-        case "ZEUS": {_channel = 1};
-
-        default {_channel = 1};
-    };
-} else {
-    switch (_group) do {
-        case "GODFATHER-5": {_channel = 20};
-        case "GODFATHER-6": {_channel = 20};
-        case "GODFATHER-7": {_channel = 20};
-
-        case "MUSTANG-1": {_channel = 15};
-        case "MUSTANG-2": {_channel = 15};
-
-        case "APOLLO-1": {_channel = 15};
-        case "APOLLO-5": {_channel = 15};
-        case "APOLLO-6": {_channel = 15};
-        
-        case "ATLAS-1": {_channel = 15};
-        case "ATLAS-2": {_channel = 15};
-        case "ATLAS-3": {_channel = 15};
-        case "ATLAS-4": {_channel = 15};
-        case "ATLAS-5": {_channel = 15};
-        case "ATLAS-6": {_channel = 15};
-        
-        //Air
-        case "PEGASUS-2": {_channel = 2};
-
-        case "BUFFALO-1": {_channel = 2};
-        case "BUFFALO-2": {_channel = 2};
-        case "BUFFALO-3": {_channel = 2};
-        case "BUFFALO-4": {_channel = 2};
-
-        case "GRIZZLY-1": {_channel = 2};
-        case "GRIZZLY-2": {_channel = 2};
-        case "GRIZZLY-3": {_channel = 2};
-
-        case "RAVEN-1": {_channel = 2};
-        case "RAVEN-2": {_channel = 2};
-        case "RAVEN-3": {_channel = 2};
-        case "RAVEN-4": {_channel = 2};
-
-        case "EAGLE-1": {_channel = 2};
-        case "EAGLE-2": {_channel = 2};
-        case "EAGLE-3": {_channel = 2};
-
-        case "HOG-1": {_channel = 2};
-        case "HOG-2": {_channel = 2};
-        case "HOG-3": {_channel = 2};
-        case "HOG-4": {_channel = 2};
-
-        case "RAIDER-1": {_channel = 2};
-        case "RAIDER-2": {_channel = 2};
-
-        case "TITAN-1": {_channel = 2};
-        case "TITAN-2": {_channel = 2};
-        case "TITAN-3": {_channel = 2};
-        case "TITAN-4": {_channel = 2};
-
-        // Ground
-        case "SABER-1": {_channel = 6};
-        case "SABER-2": {_channel = 6};
-        case "SABER-3": {_channel = 6};
-        case "SABER-4": {_channel = 6};
-        case "SABER-7": {_channel = 6};
-
-        case "VIKING-1": {_channel = 2};
-        case "VIKING-2": {_channel = 2};
-        case "VIKING-3": {_channel = 2};
-        case "VIKING-4": {_channel = 2};
-        case "VIKING-5": {_channel = 2};
-        case "VIKING-6": {_channel = 2};
-        case "VIKING-7": {_channel = 2};
-
-        case "LANCER-1": {_channel = 3};
-        case "LANCER-2": {_channel = 3};
-        case "LANCER-3": {_channel = 3};
-        case "LANCER-4": {_channel = 3};
-        case "LANCER-5": {_channel = 3};
-        case "LANCER-6": {_channel = 3};
-        case "LANCER-7": {_channel = 3};
-
-        case "BANDIT-1": {_channel = 7};
-        case "BANDIT-2": {_channel = 7};
-        case "BANDIT-3": {_channel = 7};
-        case "BANDIT-4": {_channel = 7};
-        case "BANDIT-5": {_channel = 7};
-        case "BANDIT-6": {_channel = 7};
-        case "BANDIT-7": {_channel = 7};
-
-        case "MISFIT-1": {_channel = 8};
-        case "MISFIT-2": {_channel = 8};
-        case "MISFIT-3": {_channel = 8};
-        case "MISFIT-4": {_channel = 8};
-        case "MISFIT-5": {_channel = 8};
-        case "MISFIT-6": {_channel = 8};
-        case "MISFIT-7": {_channel = 8};
-
-        case "GUNSLINGER-1": {_channel = 8};
-        case "GUNSLINGER-2": {_channel = 8};
-        case "GUNSLINGER-3": {_channel = 8};
-        case "GUNSLINGER-4": {_channel = 8};
-        case "GUNSLINGER-5": {_channel = 8};
-        case "GUNSLINGER-6": {_channel = 8};
-        case "GUNSLINGER-7": {_channel = 8};
-
-        // LETTER NAMING
-        case "GODFATHER FIVE": {_channel = 20};
-        case "GODFATHER SIX": {_channel = 20};
-        case "GODFATHER SEVEN": {_channel = 20};
-
-        case "MUSTANG ONE": {_channel = 15};
-        case "MUSTANG TWO": {_channel = 15};
-
-        case "APOLLO ONE": {_channel = 15};
-        case "APOLLO FIVE": {_channel = 15};
-        case "APOLLO SIX": {_channel = 15};
-        
-        case "ATLAS ONE": {_channel = 15};
-        case "ATLAS TWO": {_channel = 15};
-        case "ATLAS THREE": {_channel = 15};
-        case "ATLAS FOUR": {_channel = 15};
-        case "ATLAS FIVE": {_channel = 15};
-        case "ATLAS SIX": {_channel = 15};
-        
-        //Air
-        case "PEGASUS TWO": {_channel = 2};
-
-        case "BUFFALO ONE": {_channel = 2};
-        case "BUFFALO TWO": {_channel = 2};
-        case "BUFFALO THREE": {_channel = 2};
-        case "BUFFALO FOUR": {_channel = 2};
-
-        case "GRIZZLY ONE": {_channel = 2};
-        case "GRIZZLY TWO": {_channel = 2};
-        case "GRIZZLY THREE": {_channel = 2};
-
-        case "RAVEN ONE": {_channel = 2};
-        case "RAVEN TWO": {_channel = 2};
-        case "RAVEN THREE": {_channel = 2};
-        case "RAVEN FOUR": {_channel = 2};
-
-        case "EAGLE ONE": {_channel = 2};
-        case "EAGLE TWO": {_channel = 2};
-        case "EAGLE THREE": {_channel = 2};
-
-        case "HOG ONE": {_channel = 2};
-        case "HOG TWO": {_channel = 2};
-        case "HOG THREE": {_channel = 2};
-        case "HOG FOUR": {_channel = 2};
-
-        case "RAIDER ONE": {_channel = 2};
-        case "RAIDER TWO": {_channel = 2};
-
-        case "TITAN ONE": {_channel = 2};
-        case "TITAN TWO": {_channel = 2};
-        case "TITAN THREE": {_channel = 2};
-        case "TITAN FOUR": {_channel = 2};
-
-        // Ground
-        case "SABER ONE": {_channel = 6};
-        case "SABER TWO": {_channel = 6};
-        case "SABER THREE": {_channel = 6};
-        case "SABER FOUR": {_channel = 6};
-        case "SABER SEVEN": {_channel = 6};
-
-        case "VIKING ONE": {_channel = 2};
-        case "VIKING TWO": {_channel = 2};
-        case "VIKING THREE": {_channel = 2};
-        case "VIKING FOUR": {_channel = 2};
-        case "VIKING FIVE": {_channel = 2};
-        case "VIKING SIX": {_channel = 2};
-        case "VIKING SEVEN": {_channel = 2};
-
-        case "LANCER ONE": {_channel = 3};
-        case "LANCER TWO": {_channel = 3};
-        case "LANCER THREE": {_channel = 3};
-        case "LANCER FOUR": {_channel = 3};
-        case "LANCER FIVE": {_channel = 3};
-        case "LANCER SIX": {_channel = 3};
-        case "LANCER SEVEN": {_channel = 3};
-
-        case "BANDIT ONE": {_channel = 7};
-        case "BANDIT TWO": {_channel = 7};
-        case "BANDIT THREE": {_channel = 7};
-        case "BANDIT FOUR": {_channel = 7};
-        case "BANDIT FIVE": {_channel = 7};
-        case "BANDIT SIX": {_channel = 7};
-        case "BANDIT SEVEN": {_channel = 7};
-
-        case "MISFIT ONE": {_channel = 8};
-        case "MISFIT TWO": {_channel = 8};
-        case "MISFIT THREE": {_channel = 8};
-        case "MISFIT FOUR": {_channel = 8};
-        case "MISFIT FIVE": {_channel = 8};
-        case "MISFIT SIX": {_channel = 8};
-        case "MISFIT SEVEN": {_channel = 8};
-
-        case "GUNSLINGER ONE": {_channel = 0};
-        case "GUNSLINGER TWO": {_channel = 0};
-        case "GUNSLINGER THREE": {_channel = 0};
-        case "GUNSLINGER FOUR": {_channel = 0};
-        case "GUNSLINGER FIVE": {_channel = 0};
-        case "GUNSLINGER SIX": {_channel = 0};
-        case "GUNSLINGER SEVEN": {_channel = 0};
-
-        case "ZEUS": {_channel = 18};
-
-        default {_channel = 0};
-    };
+private _radioMod = if (EGVAR(Patches,usesACRE)) then {"ACRE"} else {"TFAR"};
+_radio = toUpper(_radio);
+
+_radioType = switch (_radio) do {
+    case "ACRE_PRC343";
+    case "TFAR_ANPRC152";
+    case "SR": {"SR"};
+    default {"LR"};
 };
 
-_channel;
+private _srHashMap = [
+    ["GODFATHER",       [["ACRE", 4], ["TFAR", 50]]],
+    ["GODFATHER-5",     [["ACRE", 4], ["TFAR", 100]]],
+    ["GODFATHER-6",     [["ACRE", 4], ["TFAR", 100]]],
+    ["GODFATHER-7",     [["ACRE", 4], ["TFAR", 100]]],
+
+    ["WARHORSE",        [["ACRE", 4], ["TFAR", 53]]],
+    ["WARHORSE-5",      [["ACRE", 4], ["TFAR", 120.5]]],
+    ["WARHORSE-6",      [["ACRE", 4], ["TFAR", 120.5]]],
+    ["WARHORSE-7",      [["ACRE", 4], ["TFAR", 120.5]]],
+
+    ["HITMAN",          [["ACRE", 4], ["TFAR", 54]]],
+    ["HITMAN-5",        [["ACRE", 4], ["TFAR", 130.5]]],
+    ["HITMAN-6",        [["ACRE", 4], ["TFAR", 130.5]]],
+    ["HITMAN-7",        [["ACRE", 4], ["TFAR", 130.5]]],
+
+    //["MUSTANG-1",       [["ACRE", 2], ["TFAR", 0]]],
+    //["MUSTANG-2",       [["ACRE", 3], ["TFAR", 0]]],
+
+    //["APOLLO-1",        [["ACRE", 1], ["TFAR", 0]]],
+    //["APOLLO-5",        [["ACRE", 1], ["TFAR", 0]]],
+    //["APOLLO-6",        [["ACRE", 1], ["TFAR", 0]]],
+
+    ["ATLAS",           [["ACRE", 2], ["TFAR", 121]]],
+    ["ATLAS-1",         [["ACRE", 2], ["TFAR", 121.1]]],
+    ["ATLAS-2",         [["ACRE", 3], ["TFAR", 121.2]]],
+    ["ATLAS-3",         [["ACRE", 1], ["TFAR", 121.3]]],
+    ["ATLAS-4",         [["ACRE", 1], ["TFAR", 121.4]]],
+    ["ATLAS-5",         [["ACRE", 1], ["TFAR", 121.5]]],
+    ["ATLAS-6",         [["ACRE", 1], ["TFAR", 121.5]]],
+    ["ATLAS-7",         [["ACRE", 1], ["TFAR", 121.5]]],
+
+    //Air   
+    ["PEGASUS",         [["ACRE", 1], ["TFAR", 52]]],
+    ["PEGASUS-5",       [["ACRE", 1], ["TFAR", 52]]],
+    ["PEGASUS-6",       [["ACRE", 1], ["TFAR", 52]]],
+    ["PEGASUS-7",       [["ACRE", 1], ["TFAR", 52]]],
+
+    ["BUFFALO",         [["ACRE", 113], ["TFAR", 52.1]]],
+    ["BUFFALO-1",       [["ACRE", 113], ["TFAR", 52.1]]],
+    ["BUFFALO-2",       [["ACRE", 114], ["TFAR", 52.1]]],
+    ["BUFFALO-3",       [["ACRE", 115], ["TFAR", 52.1]]],
+    ["BUFFALO-4",       [["ACRE", 116], ["TFAR", 52.1]]],
+
+    ["GRIZZLY",         [["ACRE", 117], ["TFAR", 52.2]]],
+    ["GRIZZLY-1",       [["ACRE", 117], ["TFAR", 52.2]]],
+    ["GRIZZLY-2",       [["ACRE", 118], ["TFAR", 52.2]]],
+    ["GRIZZLY-3",       [["ACRE", 119], ["TFAR", 52.2]]],
+
+    ["RAVEN",           [["ACRE", 120], ["TFAR", 52.3]]],
+    ["RAVEN-1",         [["ACRE", 120], ["TFAR", 52.3]]],
+    ["RAVEN-2",         [["ACRE", 121], ["TFAR", 52.3]]],
+    ["RAVEN-3",         [["ACRE", 122], ["TFAR", 52.3]]],
+    ["RAVEN-4",         [["ACRE", 123], ["TFAR", 52.3]]],
+
+    ["SPARROW",         [["ACRE", 1], ["TFAR", 52.4]]],
+    ["SPARROW-1",       [["ACRE", 1], ["TFAR", 52.4]]],
+    ["SPARROW-1",       [["ACRE", 1], ["TFAR", 52.4]]],
+    ["SPARROW-1",       [["ACRE", 1], ["TFAR", 52.4]]],
+    ["SPARROW-1",       [["ACRE", 1], ["TFAR", 52.4]]],
+
+    ["RAIDER",          [["ACRE", 124], ["TFAR", 52.5]]],
+    ["RAIDER-1",        [["ACRE", 124], ["TFAR", 52.5]]],
+    ["RAIDER-2",        [["ACRE", 125], ["TFAR", 52.5]]],
+
+    ["EAGLE",           [["ACRE", 1], ["TFAR", 52.6]]],
+    ["EAGLE-1",         [["ACRE", 1], ["TFAR", 52.6]]],
+    ["EAGLE-2",         [["ACRE", 1], ["TFAR", 52.6]]],
+    ["EAGLE-3",         [["ACRE", 1], ["TFAR", 52.6]]],
+
+    ["LIGHTNING",       [["ACRE", 1], ["TFAR", 52.7]]],
+    ["LIGHTNING-1",     [["ACRE", 1], ["TFAR", 52.7]]],
+    ["LIGHTNING-2",     [["ACRE", 1], ["TFAR", 52.7]]],
+    ["LIGHTNING-3",     [["ACRE", 1], ["TFAR", 52.7]]],
+
+    ["RAPTOR",           [["ACRE", 1], ["TFAR", 52.8]]],
+    ["RAPTOR-1",         [["ACRE", 1], ["TFAR", 52.8]]],
+    ["RAPTOR-2",         [["ACRE", 1], ["TFAR", 52.8]]],
+    ["RAPTOR-3",         [["ACRE", 1], ["TFAR", 52.8]]],
+
+    ["TITAN",           [["ACRE", 129], ["TFAR", 113.1]]],
+    ["TITAN-1",         [["ACRE", 129], ["TFAR", 113.1]]],
+    ["TITAN-2",         [["ACRE", 130], ["TFAR", 113.1]]],
+    ["TITAN-3",         [["ACRE", 131], ["TFAR", 113.1]]],
+    ["TITAN-4",         [["ACRE", 132], ["TFAR", 113.1]]],
+
+    ["HOG",             [["ACRE", 1], ["TFAR", 52.9]]],
+    ["HOG-1",           [["ACRE", 1], ["TFAR", 52.9]]],
+    ["HOG-2",           [["ACRE", 1], ["TFAR", 52.9]]],
+    ["HOG-3",           [["ACRE", 1], ["TFAR", 52.9]]],
+    ["HOG-4",           [["ACRE", 1], ["TFAR", 52.9]]],
+
+    // Ground
+    ["SABER",           [["ACRE", 97], ["TFAR", 123]]],
+    ["SABER-1",         [["ACRE", 97], ["TFAR", 123.1]]],
+    ["SABER-2",         [["ACRE", 97], ["TFAR", 123.2]]],
+    ["SABER-3",         [["ACRE", 98], ["TFAR", 123.3]]],
+    ["SABER-4",         [["ACRE", 98], ["TFAR", 123.4]]],
+
+    ["VIKING",          [["ACRE", 65], ["TFAR", 122.1]]],
+    ["VIKING-1",        [["ACRE", 65], ["TFAR", 122.1]]],
+    ["VIKING-2",        [["ACRE", 66], ["TFAR", 122.2]]],
+    ["VIKING-3",        [["ACRE", 67], ["TFAR", 122.3]]],
+    ["VIKING-4",        [["ACRE", 68], ["TFAR", 122.4]]],
+    ["VIKING-5",        [["ACRE", 69], ["TFAR", 122.5]]],
+    ["VIKING-6",        [["ACRE", 69], ["TFAR", 122.5]]],
+    ["VIKING-7",        [["ACRE", 69], ["TFAR", 122.5]]],
+
+    //["LANCER-1",        [["ACRE", 81], ["TFAR", 0]]],
+    //["LANCER-2",        [["ACRE", 82], ["TFAR", 0]]],
+    //["LANCER-3",        [["ACRE", 83], ["TFAR", 0]]],
+    //["LANCER-4",        [["ACRE", 84], ["TFAR", 0]]],
+    //["LANCER-5",        [["ACRE", 85], ["TFAR", 0]]],
+    //["LANCER-6",        [["ACRE", 85], ["TFAR", 0]]],
+    //["LANCER-7",        [["ACRE", 85], ["TFAR", 0]]],
+
+    ["BANDIT",          [["ACRE", 17], ["TFAR", 131]]],
+    ["BANDIT-1",        [["ACRE", 17], ["TFAR", 131.1]]],
+    ["BANDIT-2",        [["ACRE", 18], ["TFAR", 131.2]]],
+    ["BANDIT-3",        [["ACRE", 19], ["TFAR", 131.3]]],
+    ["BANDIT-4",        [["ACRE", 20], ["TFAR", 131.4]]],
+    ["BANDIT-5",        [["ACRE", 21], ["TFAR", 131.5]]],
+    ["BANDIT-6",        [["ACRE", 21], ["TFAR", 131.5]]],
+    ["BANDIT-7",        [["ACRE", 21], ["TFAR", 131.5]]],
+
+    ["MISFIT",          [["ACRE", 33], ["TFAR", 132]]],
+    ["MISFIT-1",        [["ACRE", 33], ["TFAR", 132.1]]],
+    ["MISFIT-2",        [["ACRE", 34], ["TFAR", 132.2]]],
+    ["MISFIT-3",        [["ACRE", 35], ["TFAR", 132.3]]],
+    ["MISFIT-4",        [["ACRE", 36], ["TFAR", 132.4]]],
+    ["MISFIT-5",        [["ACRE", 37], ["TFAR", 132.5]]],
+    ["MISFIT-6",        [["ACRE", 37], ["TFAR", 132.5]]],
+    ["MISFIT-7",        [["ACRE", 37], ["TFAR", 132.5]]],
+
+    //["GUNSLINGER",      [["ACRE", 1], ["TFAR", 132]]],
+    //["GUNSLINGER-1",    [["ACRE", 1], ["TFAR", 132.1]]],
+    //["GUNSLINGER-2",    [["ACRE", 1], ["TFAR", 132.2]]],
+    //["GUNSLINGER-3",    [["ACRE", 1], ["TFAR", 132.3]]],
+    //["GUNSLINGER-4",    [["ACRE", 1], ["TFAR", 132.4]]],
+    //["GUNSLINGER-5",    [["ACRE", 1], ["TFAR", 132.5]]],
+    //["GUNSLINGER-6",    [["ACRE", 1], ["TFAR", 132.5]]],
+    //["GUNSLINGER-7",    [["ACRE", 1], ["TFAR", 132.5]]],
+    
+    // Misc radio volume
+    ["BRAVO HQ",        [["ACRE", 1], ["TFAR", 53]]],
+    ["CHARLIE HQ",      [["ACRE", 1], ["TFAR", 54]]],
+    ["ATLAS",           [["ACRE", 1], ["TFAR", 56]]],
+    ["AVIATION",        [["ACRE", 1], ["TFAR", 52]]],
+
+    ["ZEUS",            [["ACRE", 1], ["TFAR", 50]]]
+];
+
+private _lrHashMap = [
+    ["GODFATHER",       [["ACRE", 20], ["TFAR", 50]]],
+    ["GODFATHER-5",     [["ACRE", 20], ["TFAR", 50]]],
+    ["GODFATHER-6",     [["ACRE", 20], ["TFAR", 50]]],
+    ["GODFATHER-7",     [["ACRE", 20], ["TFAR", 50]]],
+
+    ["WARHORSE",        [["ACRE", 4], ["TFAR", 53]]],
+    ["WARHORSE-5",      [["ACRE", 4], ["TFAR", 54]]],
+    ["WARHORSE-6",      [["ACRE", 4], ["TFAR", 54]]],
+    ["WARHORSE-7",      [["ACRE", 4], ["TFAR", 54]]],
+
+    ["HITMAN",          [["ACRE", 4], ["TFAR", 54]]],
+    ["HITMAN-5",        [["ACRE", 4], ["TFAR", 54]]],
+    ["HITMAN-6",        [["ACRE", 4], ["TFAR", 54]]],
+    ["HITMAN-7",        [["ACRE", 4], ["TFAR", 54]]],
+
+    //["MUSTANG-1",       [["ACRE", 15], ["TFAR", 0]]],
+    //["MUSTANG-2",       [["ACRE", 15], ["TFAR", 0]]],
+
+    //["APOLLO-1",        [["ACRE", 15], ["TFAR", 0]]],
+    //["APOLLO-5",        [["ACRE", 15], ["TFAR", 0]]],
+    //["APOLLO-6",        [["ACRE", 15], ["TFAR", 0]]],
+
+    ["ATLAS",           [["ACRE", 15], ["TFAR", 121]]],
+    ["ATLAS-1",         [["ACRE", 15], ["TFAR", 121]]],
+    ["ATLAS-2",         [["ACRE", 15], ["TFAR", 121]]],
+    ["ATLAS-3",         [["ACRE", 15], ["TFAR", 121]]],
+    ["ATLAS-4",         [["ACRE", 15], ["TFAR", 121]]],
+    ["ATLAS-5",         [["ACRE", 15], ["TFAR", 121]]],
+    ["ATLAS-6",         [["ACRE", 15], ["TFAR", 121]]],
+    ["ATLAS-7",         [["ACRE", 15], ["TFAR", 121]]],
+
+    //Air
+    ["PEGASUS",         [["ACRE", 2], ["TFAR", 50]]],
+    ["PEGASUS-6",       [["ACRE", 2], ["TFAR", 50]]],
+    ["PEGASUS-5",       [["ACRE", 2], ["TFAR", 50]]],
+    ["PEGASUS-7",       [["ACRE", 2], ["TFAR", 50]]],
+
+    ["BUFFALO",         [["ACRE", 2], ["TFAR", 52]]],
+    ["BUFFALO-1",       [["ACRE", 2], ["TFAR", 52]]],
+    ["BUFFALO-2",       [["ACRE", 2], ["TFAR", 52]]],
+    ["BUFFALO-3",       [["ACRE", 2], ["TFAR", 52]]],
+    ["BUFFALO-4",       [["ACRE", 2], ["TFAR", 52]]],
+
+    ["GRIZZLY",         [["ACRE", 2], ["TFAR", 52]]],
+    ["GRIZZLY-1",       [["ACRE", 2], ["TFAR", 52]]],
+    ["GRIZZLY-2",       [["ACRE", 2], ["TFAR", 52]]],
+    ["GRIZZLY-3",       [["ACRE", 2], ["TFAR", 52]]],
+
+    ["RAVEN",           [["ACRE", 2], ["TFAR", 52]]],
+    ["RAVEN-1",         [["ACRE", 2], ["TFAR", 52]]],
+    ["RAVEN-2",         [["ACRE", 2], ["TFAR", 52]]],
+    ["RAVEN-3",         [["ACRE", 2], ["TFAR", 52]]],
+    ["RAVEN-4",         [["ACRE", 2], ["TFAR", 52]]],
+
+    ["SPARROW",         [["ACRE", 1], ["TFAR", 52]]],
+    ["SPARROW-1",       [["ACRE", 1], ["TFAR", 52]]],
+    ["SPARROW-1",       [["ACRE", 1], ["TFAR", 52]]],
+    ["SPARROW-1",       [["ACRE", 1], ["TFAR", 52]]],
+    ["SPARROW-1",       [["ACRE", 1], ["TFAR", 52]]],
+
+    ["RAIDER",          [["ACRE", 2], ["TFAR", 52]]],
+    ["RAIDER-1",        [["ACRE", 2], ["TFAR", 52]]],
+    ["RAIDER-2",        [["ACRE", 2], ["TFAR", 52]]],
+
+    ["EAGLE",           [["ACRE", 2], ["TFAR", 52]]],
+    ["EAGLE-1",         [["ACRE", 2], ["TFAR", 52]]],
+    ["EAGLE-2",         [["ACRE", 2], ["TFAR", 52]]],
+    ["EAGLE-3",         [["ACRE", 2], ["TFAR", 52]]],
+
+    ["LIGHTNING",       [["ACRE", 2], ["TFAR", 52]]],
+    ["LIGHTNING-1",     [["ACRE", 2], ["TFAR", 52]]],
+    ["LIGHTNING-2",     [["ACRE", 2], ["TFAR", 52]]],
+    ["LIGHTNING-3",     [["ACRE", 2], ["TFAR", 52]]],
+
+    ["RAPTOR",           [["ACRE", 2], ["TFAR", 52]]],
+    ["RAPTOR-1",         [["ACRE", 2], ["TFAR", 52]]],
+    ["RAPTOR-2",         [["ACRE", 2], ["TFAR", 52]]],
+    ["RAPTOR-3",         [["ACRE", 2], ["TFAR", 52]]],
+
+    ["TITAN",           [["ACRE", 2], ["TFAR", 52]]],
+    ["TITAN-1",         [["ACRE", 2], ["TFAR", 52]]],
+    ["TITAN-2",         [["ACRE", 2], ["TFAR", 52]]],
+    ["TITAN-3",         [["ACRE", 2], ["TFAR", 52]]],
+    ["TITAN-4",         [["ACRE", 2], ["TFAR", 52]]],
+
+    ["HOG",             [["ACRE", 2], ["TFAR", 52]]],
+    ["HOG-2",           [["ACRE", 2], ["TFAR", 52]]],
+    ["HOG-3",           [["ACRE", 2], ["TFAR", 52]]],
+    ["HOG-4",           [["ACRE", 2], ["TFAR", 52]]],
+
+
+    // Ground
+    ["SABER",           [["ACRE", 6], ["TFAR", 123]]],
+    ["SABER-1",         [["ACRE", 6], ["TFAR", 123]]],
+    ["SABER-2",         [["ACRE", 6], ["TFAR", 123]]],
+    ["SABER-3",         [["ACRE", 6], ["TFAR", 123]]],
+    ["SABER-4",         [["ACRE", 6], ["TFAR", 123]]],
+
+    ["VIKING",          [["ACRE", 2], ["TFAR", 122]]],
+    ["VIKING-1",        [["ACRE", 2], ["TFAR", 122]]],
+    ["VIKING-2",        [["ACRE", 2], ["TFAR", 122]]],
+    ["VIKING-3",        [["ACRE", 2], ["TFAR", 122]]],
+    ["VIKING-4",        [["ACRE", 2], ["TFAR", 122]]],
+    ["VIKING-5",        [["ACRE", 2], ["TFAR", 122]]],
+    ["VIKING-6",        [["ACRE", 2], ["TFAR", 122]]],
+    ["VIKING-7",        [["ACRE", 2], ["TFAR", 122]]],
+
+    //["LANCER",          [["ACRE", 3], ["TFAR", 0]]],
+    //["LANCER-1",        [["ACRE", 3], ["TFAR", 0]]],
+    //["LANCER-2",        [["ACRE", 3], ["TFAR", 0]]],
+    //["LANCER-3",        [["ACRE", 3], ["TFAR", 0]]],
+    //["LANCER-4",        [["ACRE", 3], ["TFAR", 0]]],
+    //["LANCER-5",        [["ACRE", 3], ["TFAR", 0]]],
+    //["LANCER-6",        [["ACRE", 3], ["TFAR", 0]]],
+    //["LANCER-7",        [["ACRE", 3], ["TFAR", 0]]],
+
+    ["BANDIT",          [["ACRE", 7], ["TFAR", 131]]],
+    ["BANDIT-1",        [["ACRE", 7], ["TFAR", 131]]],
+    ["BANDIT-2",        [["ACRE", 7], ["TFAR", 131]]],
+    ["BANDIT-3",        [["ACRE", 7], ["TFAR", 131]]],
+    ["BANDIT-4",        [["ACRE", 7], ["TFAR", 131]]],
+    ["BANDIT-5",        [["ACRE", 7], ["TFAR", 131]]],
+    ["BANDIT-6",        [["ACRE", 7], ["TFAR", 131]]],
+    ["BANDIT-7",        [["ACRE", 7], ["TFAR", 131]]],
+
+    ["MISFIT",          [["ACRE", 8], ["TFAR", 132]]],
+    ["MISFIT-1",        [["ACRE", 8], ["TFAR", 132]]],
+    ["MISFIT-2",        [["ACRE", 8], ["TFAR", 132]]],
+    ["MISFIT-3",        [["ACRE", 8], ["TFAR", 132]]],
+    ["MISFIT-4",        [["ACRE", 8], ["TFAR", 132]]],
+    ["MISFIT-5",        [["ACRE", 8], ["TFAR", 132]]],
+    ["MISFIT-6",        [["ACRE", 8], ["TFAR", 132]]],
+    ["MISFIT-7",        [["ACRE", 8], ["TFAR", 132]]],
+
+    //["GUNSLINGER",      [["ACRE", 8], ["TFAR", 132]]],
+    //["GUNSLINGER-1",    [["ACRE", 8], ["TFAR", 132]]],
+    //["GUNSLINGER-2",    [["ACRE", 8], ["TFAR", 132]]],
+    //["GUNSLINGER-3",    [["ACRE", 8], ["TFAR", 132]]],
+    //["GUNSLINGER-4",    [["ACRE", 8], ["TFAR", 132]]],
+    //["GUNSLINGER-5",    [["ACRE", 8], ["TFAR", 132]]],
+    //["GUNSLINGER-6",    [["ACRE", 8], ["TFAR", 132]]],
+    //["GUNSLINGER-7",    [["ACRE", 8], ["TFAR", 132]]],
+
+    // Misc radio volume
+    ["BRAVO HQ",        [["ACRE", 0], ["TFAR", 53]]],
+    ["CHARLIE HQ",      [["ACRE", 0], ["TFAR", 54]]],
+    ["ATLAS",           [["ACRE", 0], ["TFAR", 56]]],
+    ["AVIATION",        [["ACRE", 0], ["TFAR", 52]]],
+
+    ["ZEUS",            [["ACRE", 18], ["TFAR", 50]]]
+];
+
+private _radioHashMap = createHashMapFromArray [
+    ["SR", createHashMapFromArray _srHashMap],
+    ["LR", createHashMapFromArray _lrHashMap]
+];
+private _radioMap = _radioHashMap get _radioType;
+private _groupNameChannel = _radioMap getOrDefault [_group, [["ACRE", 0], ["TFAR", 0]]];
+private _modRadio = createHashMapFromArray _groupNameChannel;
+
+_modRadio getOrDefault [_radioMod, 0];
