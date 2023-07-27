@@ -41,4 +41,3 @@ _conditionAction = '(!(assignedVehicleRole player isEqualTo [])) && ((damage veh
 ] call BIS_fnc_holdActionAdd;
 
 _vehicle setVariable [QEGVAR(Vehicle,escapeWreck), [player, _vehicle]];
-// <t color='#FDDA0D'>Escape Wreck (HOLD)</t>
