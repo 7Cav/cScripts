@@ -39,6 +39,40 @@ if (!isNil {ace_medical_treatment_convertItems == 2}) then {
     };
 };
 
+switch (EGVAR(Settings,replaceMagazines)) do {
+    case (1): {
+        private _magazines = [
+            ["30Rnd_556x45_Stanag",                     "rhs_mag_30Rnd_556x45_M855A1_Stanag"],
+            ["30Rnd_556x45_Stanag_red",                 "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"],
+            ["30Rnd_556x45_Stanag_green",               "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green"],
+            ["30Rnd_556x45_Stanag_Tracer_Red",          "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"],
+            ["30Rnd_556x45_Stanag_Tracer_Green",        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green"],
+            ["30Rnd_556x45_Stanag_Tracer_Yellow",       "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow"],
+            //["ACE_30Rnd_556x45_Stanag_M995_AP_mag",   ""],
+            ["ACE_30Rnd_556x45_Stanag_Mk262_mag",       "rhs_mag_30Rnd_556x45_Mk262_Stanag"],
+            ["ACE_30Rnd_556x45_Stanag_Mk318_mag",       "rhs_mag_30Rnd_556x45_Mk318_Stanag"]
+            //["ACE_30Rnd_556x45_Stanag_Tracer_Dim",      ""]
+        ]
+        { _x call ace_common_fnc_registerItemReplacement; } forEach _magazines;
+    };
+    case (2): {
+        private _magazines = [
+            ["30Rnd_556x45_Stanag",                     "rhs_mag_30Rnd_556x45_M855A1_Stanag"],
+            ["30Rnd_556x45_Stanag_red",                 "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"],
+            ["30Rnd_556x45_Stanag_green",               "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green"],
+            ["30Rnd_556x45_Stanag_Tracer_Red",          "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"],
+            ["30Rnd_556x45_Stanag_Tracer_Green",        "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green"],
+            ["30Rnd_556x45_Stanag_Tracer_Yellow",       "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow"],
+            //["ACE_30Rnd_556x45_Stanag_M995_AP_mag",   ""],
+            ["rhs_mag_30Rnd_556x45_Mk262_Stanag",       "ACE_30Rnd_556x45_Stanag_Mk262_mag"],
+            ["rhs_mag_30Rnd_556x45_Mk318_Stanag",       "ACE_30Rnd_556x45_Stanag_Mk318_mag"]
+            //["ACE_30Rnd_556x45_Stanag_Tracer_Dim",      ""]
+        ]
+        { _x call ace_common_fnc_registerItemReplacement; } forEach _magazines;
+    };
+};
+
+
 switch (EGVAR(Settings,replaceHandGrenades)) do {
     case (1): {["rhs_mag_m67","HandGrenade"] call ace_common_fnc_registerItemReplacement};
     case (2): {["HandGrenade","rhs_mag_m67"] call ace_common_fnc_registerItemReplacement};

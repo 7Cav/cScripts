@@ -238,6 +238,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+[ // Magazines
+    QEGVAR(Settings,replaceMagazines),
+    "LIST",
+    ["Magazines","Force specific usage of sertain objects"],
+    [_cScriptSettings, "6; Item Replacement"],
+    [[0,1,2], ["Disabled", "Use RHS then ACE magazines", "Use ACE then RHS magazines"], 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 [ // M67 Fragmentation Grenade
     QEGVAR(Settings,replaceHandGrenades),
     "LIST",
