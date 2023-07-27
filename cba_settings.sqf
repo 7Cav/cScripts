@@ -604,6 +604,28 @@ force force ace_zeus_revealMines = 0;
 force force ace_zeus_zeusAscension = false;
 force force ace_zeus_zeusBird = false;
 
+// ACRE2
+force force acre_sys_core_automaticAntennaDirection = false;
+//acre_sys_core_defaultRadioVolume = 0.8;
+force force acre_sys_core_fullDuplex = false;
+//acre_sys_core_godVolume = 1;
+force force acre_sys_core_ignoreAntennaDirection = false;
+force force acre_sys_core_interference = false;
+//acre_sys_core_postmixGlobalVolume = 1;
+//acre_sys_core_premixGlobalVolume = 1;
+force force acre_sys_core_revealToAI = 1;
+//acre_sys_core_spectatorVolume = 1;
+force force acre_sys_core_terrainLoss = 0;
+force force acre_sys_core_ts3ChannelName = "";
+force force acre_sys_core_ts3ChannelPassword = "";
+force force acre_sys_core_ts3ChannelSwitch = false;
+force force acre_sys_core_unmuteClients = true;
+force force acre_sys_signal_signalModel = 0;
+
+// ACRE2 Gestures
+force force acre_sys_gestures_enabled = true;
+force force acre_sys_gestures_stopADS = false;
+
 // TFAR - Clientside settings
 //TFAR_curatorCamEars = false;
 //TFAR_default_radioVolume = 6;
