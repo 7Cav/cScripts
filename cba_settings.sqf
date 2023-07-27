@@ -626,6 +626,31 @@ force force acre_sys_signal_signalModel = 0;
 force force acre_sys_gestures_enabled = true;
 force force acre_sys_gestures_stopADS = false;
 
+// ACRE2 UI
+//acre_sys_godmode_rxNotification = true;
+//acre_sys_godmode_rxNotificationColor = [0.8,0.8,0.8,1];
+//acre_sys_godmode_txNotification = true;
+//acre_sys_godmode_txNotificationCurrentChatColor = [0.8,0.8,0.8,1];
+//acre_sys_godmode_txNotificationGroup1Color = [0.8,0.8,0.8,1];
+//acre_sys_godmode_txNotificationGroup2Color = [0.8,0.8,0.8,1];
+//acre_sys_godmode_txNotificationGroup3Color = [0.8,0.8,0.8,1];
+//acre_sys_gui_volumeColorScale = [[1,1,0,0.5],[1,0.83,0,0.5],[1,0.65,0,0.5],[1,0.44,0,0.5],[1,0,0,0.5]];
+//acre_sys_list_CycleRadiosColor = [0.66,0.05,1,1];
+//acre_sys_list_DefaultPTTColor = [1,0.8,0,1];
+//acre_sys_list_HintBackgroundColor = [0,0,0,0.8];
+//acre_sys_list_HintTextFont = "RobotoCondensed";
+//acre_sys_list_LanguageColor = [1,0.29,0.16,1];
+//acre_sys_list_PTT1Color = [1,0.8,0,1];
+//acre_sys_list_PTT2Color = [1,0.8,0,1];
+//acre_sys_list_PTT3Color = [1,0.8,0,1];
+//acre_sys_list_SwitchChannelColor = [0.66,0.05,1,1];
+//acre_sys_list_ToggleHeadsetColor = [0.66,0.05,1,1];
+
+// ACRE2 Zeus
+//force force acre_sys_zeus_zeusCanSpectate = true;
+//force force acre_sys_zeus_zeusCommunicateViaCamera = true;
+//force force acre_sys_zeus_zeusDefaultVoiceSource = false;
+
 // TFAR - Clientside settings
 //TFAR_curatorCamEars = false;
 //TFAR_default_radioVolume = 6;
@@ -716,32 +741,6 @@ force force usaf_serviceMenu_setting_repairTime = "100";
 force force usaf_serviceMenu_setting_replaceSources = true;
 force force usaf_serviceMenu_setting_selectorSearchRadius = "100";
 force force usaf_setting_allow_aiFormlights = true;
-
-
-// ACRE2 UI
-//acre_sys_godmode_rxNotification = true;
-//acre_sys_godmode_rxNotificationColor = [0.8,0.8,0.8,1];
-//acre_sys_godmode_txNotification = true;
-//acre_sys_godmode_txNotificationCurrentChatColor = [0.8,0.8,0.8,1];
-//acre_sys_godmode_txNotificationGroup1Color = [0.8,0.8,0.8,1];
-//acre_sys_godmode_txNotificationGroup2Color = [0.8,0.8,0.8,1];
-//acre_sys_godmode_txNotificationGroup3Color = [0.8,0.8,0.8,1];
-//acre_sys_gui_volumeColorScale = [[1,1,0,0.5],[1,0.83,0,0.5],[1,0.65,0,0.5],[1,0.44,0,0.5],[1,0,0,0.5]];
-//acre_sys_list_CycleRadiosColor = [0.66,0.05,1,1];
-//acre_sys_list_DefaultPTTColor = [1,0.8,0,1];
-//acre_sys_list_HintBackgroundColor = [0,0,0,0.8];
-//acre_sys_list_HintTextFont = "RobotoCondensed";
-//acre_sys_list_LanguageColor = [1,0.29,0.16,1];
-//acre_sys_list_PTT1Color = [1,0.8,0,1];
-//acre_sys_list_PTT2Color = [1,0.8,0,1];
-//acre_sys_list_PTT3Color = [1,0.8,0,1];
-//acre_sys_list_SwitchChannelColor = [0.66,0.05,1,1];
-//acre_sys_list_ToggleHeadsetColor = [0.66,0.05,1,1];
-
-// ACRE2 Zeus
-//force force acre_sys_zeus_zeusCanSpectate = true;
-//force force acre_sys_zeus_zeusCommunicateViaCamera = true;
-//force force acre_sys_zeus_zeusDefaultVoiceSource = false;
 
 // BettIR
 force force BettIR_ViewDistance = 300;
