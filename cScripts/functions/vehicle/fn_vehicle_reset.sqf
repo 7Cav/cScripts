@@ -58,12 +58,8 @@ _vehicle setVariable [QEGVAR(Vehicle,Inventory),  nil, true];
 // Clear radio
 _vehicle setVariable [QEGVAR(Vehicle,Radio), nil, true];
 
-private _vehicleConfig = configOf _vehicle;
-private _countAttendants = (_vehicleConfig >> "attendant") call BIS_fnc_getCfgData;
-if (_countAttendants == 0) then {
-    // Reset ACE Medical Vehicle
-    _vehicle setVariable ["ace_medical_isMedicalVehicle", nil, true];
-};
+// Reset ACE Medical Vehicle
+_vehicle setVariable ["ace_medical_isMedicalVehicle", nil, true];
 
 
 // Remove any other random stuff
