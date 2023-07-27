@@ -14,22 +14,25 @@
  * Example:
  * [MyCrate, [["ACE_EarPlugs", 60]]] call cScripts_fnc_addCargo;
  * [MyTruck, [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]]] call cScripts_fnc_addCargo;
- *
+ * [MyTruck, [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]], "myCrate", false] call cScripts_fnc_addCargo;
  * Public: Yes
  */
 
 params [
     ["_vehicle", objNull, [objNull]],
     ["_inventory", [], [[]]],
-    ["_crateName", "", [""]]
+    ["_crateName", "", [""]],
+    ["_clearInventory", true, [true]]
 ];
 
 if (!isServer) exitwith {}; 
 
-clearWeaponCargoGlobal _vehicle;
-clearMagazineCargoGlobal _vehicle;
-clearItemCargoGlobal _vehicle;
-clearBackpackCargoGlobal _vehicle;
+if (_clearInventory) then {
+    clearWeaponCargoGlobal _vehicle;
+    clearMagazineCargoGlobal _vehicle;
+    clearItemCargoGlobal _vehicle;
+    clearBackpackCargoGlobal _vehicle;
+};
 
 if ( count _inventory < 1 ) exitWith {};
 
