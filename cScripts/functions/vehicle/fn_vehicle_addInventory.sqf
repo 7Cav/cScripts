@@ -24,6 +24,13 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
+// Remove ACE Cargo
+private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
+{   
+    [_x, _vehicle] call ace_cargo_fnc_removeCargoItem;
+    
+} forEach _cargoArray;
+
 _vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
 
 // Remove ACE Cargo
@@ -210,11 +217,15 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
             [_vehicle, []] call FUNC(addCargo);
         };
     };
+    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
     [_vehicle, 6, 38, false, false] call FUNC(setCargoAttributes);
 
+    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+    
     switch (_vehicleType) do {
         case "rhsusf_stryker_m1126_m2_d";
         case "rhsusf_stryker_m1126_m2_wd";
