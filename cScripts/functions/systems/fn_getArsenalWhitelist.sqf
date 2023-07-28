@@ -652,7 +652,7 @@ private _companyItems = switch (_company) do {
         "USP_TACTICAL_PACK_CCT6",
         "USP_TACTICAL_PACK_CCT7",
         "USP_TACTICAL_PACK_CCT8",
-        "UK3CB_US_B_B_RIF_OCP_Radio"
+        "UK3CB_US_B_B_RIF_OCP_Radio",
 
         // Weapons
         "dzn_MG_Tripod_M122A1_M240Mount_Carry",
@@ -870,9 +870,9 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "weapons": {[
         // Launchers
         "rhs_weap_maaws",
-        "launch_MRAW_green_F",
-        "launch_MRAW_sand_F",
-        "launch_MRAW_olive_F",
+        "launch_MRAWS_green_F",
+        "launch_MRAWS_sand_F",
+        "launch_MRAWS_olive_F",
 
         // MAAWS ammo
         "rhs_mag_maaws_HEAT",
