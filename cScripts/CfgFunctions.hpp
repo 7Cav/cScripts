@@ -9,6 +9,8 @@ class cScripts {
         class init_vehicle {};
         class init_staging {};
 
+        class init_logistics {};
+
         class init_diary {};
         class init_message {};
         class init_chatCommands {};
@@ -41,15 +43,12 @@ class cScripts {
         class checkItemValidity {};
         class createCargoCrate {};
 
-        class getMedicalCrate {};
-
-        class doStarterCrate {};
         class doStarterCrateSupplies {};
         class doFieldHospital {};
 
-        class doSupplyCrate {};
-
         class doEmptyCrate {};
+
+        class logistics_getContainer {};
     };
     class players {
         file = "cScripts\functions\players";
@@ -90,6 +89,9 @@ class cScripts {
         
         class addBaseCrate {};
         class addStagingZone {};
+
+        class doStarterCrate {};
+        class doSupplyCrate {};
     };
     class systems {
         file = "cScripts\functions\systems";

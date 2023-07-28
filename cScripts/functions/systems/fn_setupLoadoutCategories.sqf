@@ -65,6 +65,8 @@ if (_aceCategory == "ACE_SelfActions") then {
 [_object, "cScripts_Loadout_Cat_Charlie_Weapons",         "Weapons", _speciIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Charlie_Special",         "Special", _speciIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
 
+[_object, "cScripts_Loadout_Cat_Training",                "Training", "",                 [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
+
 [_object, "cScripts_Loadout_Cat_Other",                   "Other", "",                    [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Other_Russian",           "Russian", "",                  [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Other_Insurgent",         "Insurgent", "",                [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
