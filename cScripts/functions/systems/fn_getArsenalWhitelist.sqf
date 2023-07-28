@@ -870,9 +870,9 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "weapons": {[
         // Launchers
         "rhs_weap_maaws",
-        "launch_MRAW_green_F",
-        "launch_MRAW_sand_F",
-        "launch_MRAW_olive_F",
+        "launch_MRAWS_green_F",
+        "launch_MRAWS_sand_F",
+        "launch_MRAWS_olive_F",
 
         // MAAWS ammo
         "rhs_mag_maaws_HEAT",
