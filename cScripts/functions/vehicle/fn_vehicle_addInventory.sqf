@@ -74,10 +74,13 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
                 "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer), 
                 _vehicle
             ] call FUNC(createCargoCrate);
-            ["ACE_Box_82mm_Mo_Combo", 
-                "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer),
-                _vehicle
-            ] call FUNC(createCargoCrate);
+
+            [
+                ["ACE_Box_82mm_Mo_Combo", 
+                    "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer),
+                    _this select 0
+                ] call FUNC(createCargoCrate),
+            [_vehicle]] call CBA_fnc_execNextFrame;
         };
 
         // Logistical strykers: Have same inventory, but a lot of wheels in cargo.
