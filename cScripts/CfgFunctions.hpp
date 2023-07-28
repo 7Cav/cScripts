@@ -4,10 +4,12 @@ class cScripts {
         class init_aceArsenalDefault {};
         class init_aceTagging {};
         class init_aceItemReplace {};
-        
+
         class init_skillAdjustment {};
         class init_vehicle {};
         class init_staging {};
+
+        class init_logistics {};
 
         class init_diary {};
         class init_message {};
@@ -40,16 +42,13 @@ class cScripts {
         class setCargoAttributes {};
         class checkItemValidity {};
         class createCargoCrate {};
-        
-        class getMedicalCrate {};
 
-        class doStarterCrate {};
         class doStarterCrateSupplies {};
         class doFieldHospital {};
 
-        class doSupplyCrate {};
-
         class doEmptyCrate {};
+
+        class logistics_getContainer {};
     };
     class players {
         file = "cScripts\functions\players";
@@ -71,7 +70,7 @@ class cScripts {
         
         class getCompanyVariable {};
         class hasCompanyVariable {};
-        
+
         class getSquadName {};
         class getSquadInsignia {};
     };
@@ -90,6 +89,9 @@ class cScripts {
         
         class addBaseCrate {};
         class addStagingZone {};
+
+        class doStarterCrate {};
+        class doSupplyCrate {};
     };
     class systems {
         file = "cScripts\functions\systems";
@@ -129,17 +131,18 @@ class cScripts {
 
         class getChannelName {};
         class clearRadioIds {};
+        class filterUnitLoadout {};
+        class getRadioBase {};
 
+        class isValidFaction {};
+        
         class createVehicleLable {};
         class getVehicleLable {};
 
         class renameObject {};
         class getIcon {};
-
+        
         class getAttendance {};
-
-        class isValidFaction {};
-
         class getServerMetrics {};
     };
     class vehicle {
@@ -161,7 +164,7 @@ class cScripts {
         class vehicle_addCosmeticSelection {};
         class vehicle_addPylonSelection {};
         class vehicle_setupPylonCategories {};
-        
+
         class vehicle_applyLoadout {};
         class vehicle_addDefaultLoadout {};
         class vehicle_getPylon {};
@@ -199,7 +202,7 @@ class cScripts {
 
         class gear_selectLoadout {};
         class gear_getSideConfig {};
-        
+
         class gear_setupRadios {};
 
         // Save and Load

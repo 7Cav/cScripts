@@ -1,5 +1,5 @@
 version=54;
-center[]={1647.1104,5,4694.1836};
+center[]={6289.8735,5,3982.8591};
 class items
 {
 	items=6;
@@ -22,7 +22,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-19.451294,0.89242268,23.185059};
+							position[]={-19.631836,0.89242268,23.270264};
 						};
 						side="Empty";
 						flags=4;
@@ -32,7 +32,7 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=90;
+						id=263;
 						type="B_supplyCrate_F";
 						class CustomAttributes
 						{
@@ -57,7 +57,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-11.315918,2.3659716,19.106445};
+							position[]={-11.49707,2.3659716,19.192139};
 						};
 						side="Empty";
 						flags=4;
@@ -68,7 +68,7 @@ class items
 							receiveRemoteTargets=1;
 							reportOwnPosition=1;
 						};
-						id=91;
+						id=264;
 						type="RHS_AH64D_wd";
 					};
 					class Item2
@@ -83,7 +83,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-17.041992,0.0014390945,21.101074};
+									position[]={-17.223633,0.0014390945,21.186279};
 								};
 								side="West";
 								flags=7;
@@ -95,318 +95,8 @@ class items
 									description="Pilot@RAIDER-1";
 									isPlayable=1;
 								};
-								id=93;
+								id=266;
 								type="Cav_B_A_Helicopter_Att_Pilot_Raider_1_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male10ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1.02;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-16.041992,0.0014390945,21.101074};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									skill=0.55000001;
-									rank="LIEUTENANT";
-									init="call{this setVariable [""cScripts_Player_Unit"", ""RAIDER-1""];}";
-									description="Co-Pilot";
-									isPlayable=1;
-								};
-								id=94;
-								type="Cav_B_A_Helicopter_Att_coPilot_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male07ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0.97000003;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-						};
-						class Attributes
-						{
-							dynamicSimulation=1;
-						};
-						id=92;
-					};
-				};
-				id=89;
-			};
-			class Item1
-			{
-				dataType="Layer";
-				name="AH-64D Raider-2";
-				class Entities
-				{
-					items=2;
-					class Item0
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-26.192505,2.3659716,20.061035};
-						};
-						side="Empty";
-						flags=4;
-						class Attributes
-						{
-							dynamicSimulation=1;
-							reportRemoteTargets=1;
-							receiveRemoteTargets=1;
-							reportOwnPosition=1;
-						};
-						id=97;
-						type="RHS_AH64D_wd";
-					};
-					class Item1
-					{
-						dataType="Group";
-						side="West";
-						class Entities
-						{
-							items=2;
-							class Item0
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-22.396362,0.0014390945,21.569824};
-								};
-								side="West";
-								flags=7;
-								class Attributes
-								{
-									skill=0.60000002;
-									rank="CAPTAIN";
-									init="call{this setgroupID[""RAIDER-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""RAIDER-2""];}";
-									description="Pilot@RAIDER-2";
-									isPlayable=1;
-								};
-								id=99;
-								type="Cav_B_A_Helicopter_Att_Pilot_Raider_2_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male09ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0.95999998;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-21.396118,0.0014390945,21.569824};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									skill=0.55000001;
-									rank="LIEUTENANT";
-									init="call{this setVariable [""cScripts_Player_Unit"", ""RAIDER-2""];}";
-									description="Co-Pilot";
-									isPlayable=1;
-								};
-								id=100;
-								type="Cav_B_A_Helicopter_Att_coPilot_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male12ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1.04;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-						};
-						class Attributes
-						{
-							dynamicSimulation=1;
-						};
-						id=98;
-					};
-				};
-				id=95;
-			};
-			class Item2
-			{
-				dataType="Comment";
-				class PositionInfo
-				{
-					position[]={-19.866699,5.3125,22.564453};
-				};
-				title="Rotary Attack (Tooltip)";
-				description="The Apache functions much differently compared to what you may think attack rotary does. This is a glass cannon. It uses ATGMs and it's cannon from stand-off distances to achieve effects. These can also function largely without a JTAC and are much easier for a PLTHQ to call for fire if needed compared to Fixed Wing Attack. The Apaches can also theoretically be Airborne Forward Air Controllers (FAC-A) but it's usually not recommended depending on scale.";
-				id=101;
-				atlOffset=5.3125;
-			};
-		};
-		id=88;
-		atlOffset=2.65625;
-	};
-	class Item1
-	{
-		dataType="Layer";
-		name="Rotary Hybrid (MH-60 DAP MLASS)";
-		class Entities
-		{
-			items=3;
-			class Item0
-			{
-				dataType="Layer";
-				name="DAP MLASS Bison-1";
-				class Entities
-				{
-					items=2;
-					class Item0
-					{
-						dataType="Group";
-						side="West";
-						class Entities
-						{
-							items=2;
-							class Item0
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={23.627808,0.0014390945,-19.945801};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									skill=0.55000001;
-									rank="LIEUTENANT";
-									init="this setgroupid [""BISON-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];";
-									description="Co-Pilot";
-									isPlayable=1;
-								};
-								id=105;
-								type="Cav_B_A_Helicopter_Tra_coPilot_F";
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={22.627319,0.0014390945,-19.946289};
-								};
-								side="West";
-								flags=6;
-								class Attributes
-								{
-									skill=0.60000002;
-									rank="CAPTAIN";
-									init="this setgroupid [""BISON-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];";
-									description="DAP Pilot@BISON-1";
-									isPlayable=1;
-								};
-								id=106;
-								type="Cav_B_A_Helicopter_Tra_Pilot_F";
 								class CustomAttributes
 								{
 									class Attribute0
@@ -431,7 +121,7 @@ class items
 											class data
 											{
 												singleType="STRING";
-												value="Male04ENG";
+												value="Male10ENG";
 											};
 										};
 									};
@@ -451,19 +141,284 @@ class items
 									nAttributes=3;
 								};
 							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-16.223633,0.0014390945,21.186279};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setVariable [""cScripts_Player_Unit"", ""RAIDER-1""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=267;
+								type="Cav_B_A_Helicopter_Att_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male07ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
 						};
 						class Attributes
 						{
 							dynamicSimulation=1;
 						};
-						id=104;
+						id=265;
 					};
-					class Item1
+				};
+				id=262;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="AH-64D Raider-2";
+				class Entities
+				{
+					items=2;
+					class Item0
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={29.470215,2.0242615,-22.254395};
+							position[]={-26.374023,2.3659716,20.145264};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							dynamicSimulation=1;
+							reportRemoteTargets=1;
+							receiveRemoteTargets=1;
+							reportOwnPosition=1;
+						};
+						id=269;
+						type="RHS_AH64D_wd";
+					};
+					class Item1
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-22.577148,0.0014390945,21.655029};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""RAIDER-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""RAIDER-2""];}";
+									description="Pilot@RAIDER-2";
+									isPlayable=1;
+								};
+								id=271;
+								type="Cav_B_A_Helicopter_Att_Pilot_Raider_2_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-21.577148,0.0014390945,21.655029};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setVariable [""cScripts_Player_Unit"", ""RAIDER-2""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=272;
+								type="Cav_B_A_Helicopter_Att_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.04;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=270;
+					};
+				};
+				id=268;
+			};
+			class Item2
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={-20.047852,5.777462,22.64917};
+				};
+				title="Rotary Attack (Tooltip)";
+				description="The Apache functions much differently compared to what you may think attack rotary does. This is a glass cannon. It uses ATGMs and it's cannon from stand-off distances to achieve effects. These can also function largely without a JTAC and are much easier for a PLTHQ to call for fire if needed compared to Fixed Wing Attack. The Apaches can also theoretically be Airborne Forward Air Controllers (FAC-A) but it's usually not recommended depending on scale.";
+				id=273;
+				atlOffset=5.777462;
+			};
+		};
+		id=261;
+		atlOffset=2.888731;
+	};
+	class Item1
+	{
+		dataType="Layer";
+		name="Rotary Hybrid (MH-60 DAP MLASS)";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Layer";
+				name="DAP MLASS Bison-1";
+				class Entities
+				{
+					items=2;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={29.290039,2.0242615,-22.169189};
 							angles[]={-0,0.0050614546,0};
 						};
 						side="Empty";
@@ -475,7 +430,7 @@ class items
 							reportOwnPosition=1;
 							pylons="VTX_4Rnd_ACE_Hellfire_AGM114K;VTX_M230_Chaingun_R;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;VTX_PylonRack_M261_DAGR;VTX_PylonRack_M261_M229;;";
 						};
-						id=108;
+						id=276;
 						type="vtx_MH60M_DAP_MLASS";
 						class CustomAttributes
 						{
@@ -828,17 +783,7 @@ class items
 							nAttributes=5;
 						};
 					};
-				};
-				id=103;
-			};
-			class Item1
-			{
-				dataType="Layer";
-				name="DAP MLASS Bison-2";
-				class Entities
-				{
-					items=3;
-					class Item0
+					class Item1
 					{
 						dataType="Group";
 						side="West";
@@ -850,57 +795,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={19.024658,0.0014390945,-20.041504};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									skill=0.55000001;
-									rank="LIEUTENANT";
-									init="this setgroupid [""BISON-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];";
-									description="Co-Pilot";
-									isPlayable=1;
-								};
-								id=111;
-								type="Cav_B_A_Helicopter_Tra_coPilot_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male08ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1.01;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={18.025635,0.0014390945,-20.041504};
+									position[]={22.446289,0.0014410019,-19.862549};
 								};
 								side="West";
 								flags=6;
@@ -908,12 +803,13 @@ class items
 								{
 									skill=0.60000002;
 									rank="CAPTAIN";
-									init="this setgroupid [""BISON-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];";
-									description="DAP Pilot@BISON-2";
+									init="this setgroupid [""BISON-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];";
+									description="DAP Pilot@BISON-1";
 									isPlayable=1;
 								};
-								id=112;
+								id=278;
 								type="Cav_B_A_Helicopter_Tra_Pilot_F";
+								atlOffset=1.9073486e-006;
 								class CustomAttributes
 								{
 									class Attribute0
@@ -938,7 +834,7 @@ class items
 											class data
 											{
 												singleType="STRING";
-												value="Male03ENG";
+												value="Male04ENG";
 											};
 										};
 									};
@@ -958,19 +854,79 @@ class items
 									nAttributes=3;
 								};
 							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={23.887695,0.0014390945,-19.937012};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="this setgroupid [""BISON-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];";
+									description="Co-Pilot";
+									isPlayer=1;
+								};
+								id=279;
+								type="Cav_B_A_Helicopter_Tra_Pilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
 						};
 						class Attributes
 						{
 							dynamicSimulation=1;
 						};
-						id=110;
+						id=277;
+						atlOffset=1.9073486e-006;
 					};
-					class Item1
+				};
+				id=275;
+				atlOffset=9.5367432e-007;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="DAP MLASS Bison-2";
+				class Entities
+				{
+					items=3;
+					class Item0
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={20.867188,0.89242268,-17.563965};
+							position[]={20.686523,0.89242458,-17.479736};
 						};
 						side="Empty";
 						flags=4;
@@ -980,8 +936,9 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=113;
+						id=281;
 						type="B_supplyCrate_F";
+						atlOffset=1.9073486e-006;
 						class CustomAttributes
 						{
 							class Attribute0
@@ -1000,12 +957,12 @@ class items
 							nAttributes=1;
 						};
 					};
-					class Item2
+					class Item1
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={12.654541,2.0242615,-21.73584};
+							position[]={12.473633,2.0242615,-21.651611};
 							angles[]={-0,0.0050614546,0};
 						};
 						side="Empty";
@@ -1017,7 +974,7 @@ class items
 							reportOwnPosition=1;
 							pylons="VTX_4Rnd_ACE_Hellfire_AGM114K;VTX_M230_Chaingun_R;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;VTX_PylonRack_M261_DAGR;VTX_PylonRack_M261_M229;;";
 						};
-						id=114;
+						id=282;
 						type="vtx_MH60M_DAP_MLASS";
 						class CustomAttributes
 						{
@@ -1370,24 +1327,162 @@ class items
 							nAttributes=5;
 						};
 					};
+					class Item2
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={16.676758,0.0014390945,-19.655518};
+								};
+								side="West";
+								flags=6;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="this setgroupid [""BISON-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];";
+									description="DAP Pilot@BISON-2";
+									isPlayable=1;
+								};
+								id=284;
+								type="Cav_B_A_Helicopter_Tra_Pilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male03ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={17.561523,0.0014390945,-19.811768};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="this setgroupid [""BISON-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];";
+									description="Co-Pilot";
+								};
+								id=285;
+								type="Cav_B_A_Helicopter_Tra_Pilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=283;
+					};
 				};
-				id=109;
+				id=280;
+				atlOffset=4.7683716e-007;
 			};
 			class Item2
 			{
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={14.521973,5.3125,-26.285156};
+					position[]={14.34082,5.777462,-26.200439};
 				};
 				title="Rotary Hybrid (Tooltip)";
 				description="While the DAPs can transport infantry, it is NOT their primary purpose. The DAPs provide a great option for escort with MH-60s due to being pretty much the same bird, and you can also flex additional personnel on here if needed. Think about using this if the mission calls for closer support and less armor-focused when comparing to the AH-64. This isn't going to replace CAS, it works great for escort of the birds, but that's it. It's going to struggle to deal with large concentrations of OPFOR.";
-				id=115;
-				atlOffset=5.3125;
+				id=286;
+				atlOffset=5.777462;
 			};
 		};
-		id=102;
-		atlOffset=2.65625;
+		id=274;
+		atlOffset=2.8887315;
 	};
 	class Item2
 	{
@@ -1405,126 +1500,10 @@ class items
 					items=2;
 					class Item0
 					{
-						dataType="Group";
-						side="West";
-						class Entities
-						{
-							items=2;
-							class Item0
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-15.42334,0.0014390945,1.9711914};
-									angles[]={0,0.019358397,-0};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									skill=0.55000001;
-									rank="LIEUTENANT";
-									init="call{this setgroupID[""SPARROW-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SPARROW-1""];}";
-									description="Co-Pilot";
-									isPlayable=1;
-								};
-								id=120;
-								type="Cav_B_A_Helicopter_Att_coPilot_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male08ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0.95999998;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-16.423096,0.0014390945,1.9907227};
-									angles[]={-0,0.019358397,0};
-								};
-								side="West";
-								flags=6;
-								class Attributes
-								{
-									skill=0.60000002;
-									rank="CAPTAIN";
-									init="call{this setgroupID[""SPARROW-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SPARROW-1""];}";
-									description="Pilot@SPARROW-1";
-									isPlayable=1;
-								};
-								id=121;
-								type="Cav_B_A_Helicopter_Att_Pilot_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male11ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1.04;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-						};
-						class Attributes
-						{
-							dynamicSimulation=1;
-						};
-						id=119;
-					};
-					class Item1
-					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-12.476807,1.9401751,-0.72851563};
+							position[]={-12.657227,1.9401751,-0.64379883};
 						};
 						side="Empty";
 						flags=4;
@@ -1535,7 +1514,7 @@ class items
 							receiveRemoteTargets=1;
 							reportOwnPosition=1;
 						};
-						id=122;
+						id=289;
 						type="RHS_MELB_AH6M";
 						class CustomAttributes
 						{
@@ -1568,8 +1547,154 @@ class items
 							nAttributes=2;
 						};
 					};
+					class Item1
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-16.604492,0.0014410019,2.0749512};
+									angles[]={-0,0.019358397,0};
+								};
+								side="West";
+								flags=6;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""SPARROW-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SPARROW-1""];}";
+									description="Pilot@SPARROW-1";
+									isPlayable=1;
+								};
+								id=291;
+								type="Cav_B_A_Helicopter_Att_Pilot_F";
+								atlOffset=1.9073486e-006;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.04;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-15.098633,0.0014410019,1.7683105};
+									angles[]={-0,0.019355701,0};
+								};
+								side="West";
+								flags=4;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""SPARROW-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SPARROW-1""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=292;
+								type="Cav_B_A_Helicopter_Att_Pilot_F";
+								atlOffset=1.9073486e-006;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.04;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=290;
+						atlOffset=1.9073486e-006;
+					};
 				};
-				id=117;
+				id=288;
+				atlOffset=9.5367432e-007;
 			};
 			class Item1
 			{
@@ -1583,7 +1708,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-18.011719,0.89242268,4.53125};
+							position[]={-18.192383,0.89242458,4.6159668};
 							angles[]={-0,3.1415925,0};
 						};
 						side="Empty";
@@ -1594,8 +1719,9 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=124;
+						id=294;
 						type="B_supplyCrate_F";
+						atlOffset=1.9073486e-006;
 						class CustomAttributes
 						{
 							class Attribute0
@@ -1619,7 +1745,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-22.976807,1.9401751,-0.72851563};
+							position[]={-23.157227,1.9401751,-0.64379883};
 						};
 						side="Empty";
 						flags=4;
@@ -1630,7 +1756,7 @@ class items
 							receiveRemoteTargets=1;
 							reportOwnPosition=1;
 						};
-						id=125;
+						id=295;
 						type="RHS_MELB_AH6M";
 						class CustomAttributes
 						{
@@ -1675,58 +1801,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-19.341553,0.0014390945,2.112793};
-									angles[]={0,0.016603449,-0};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									skill=0.55000001;
-									rank="LIEUTENANT";
-									init="call{this setgroupID[""SPARROW-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SPARROW-2""];}";
-									description="Co-Pilot";
-									isPlayable=1;
-								};
-								id=127;
-								type="Cav_B_A_Helicopter_Att_coPilot_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male11ENG";
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={-20.341187,0.0014390945,2.1289063};
+									position[]={-20.522461,0.0014390945,2.213623};
 									angles[]={-0,0.016603449,0};
 								};
 								side="West";
@@ -1739,11 +1814,24 @@ class items
 									description="Pilot@SPARROW-2";
 									isPlayable=1;
 								};
-								id=128;
+								id=297;
 								type="Cav_B_A_Helicopter_Att_Pilot_F";
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -1756,7 +1844,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -1769,7 +1857,71 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-19.432617,0.0014390945,2.1062012};
+									angles[]={-0,0.019355701,0};
+								};
+								side="West";
+								flags=4;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""SPARROW-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SPARROW-2""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=298;
+								type="Cav_B_A_Helicopter_Att_Pilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.04;
+											};
+										};
+									};
+									nAttributes=3;
 								};
 							};
 						};
@@ -1777,26 +1929,27 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=126;
+						id=296;
 					};
 				};
-				id=123;
+				id=293;
+				atlOffset=4.7683716e-007;
 			};
 			class Item2
 			{
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={-17.866699,5.3125,0.56445313};
+					position[]={-18.047852,5.777462,0.64916992};
 				};
 				title="Rotary Light Attack (Tooltip)";
 				description="Not as long distance as the AH-64, the AH-6s function closer in reality to Fixed Wing, they come in low and fast, do a run, and get out. They can conversely be used as observation aircraft due to the FLIR camera as well and can pick off targets, but they will go down quite easily due to being entirely open. It's recommended to avoid using these in operations that have armor heavier than BTRs.";
-				id=129;
-				atlOffset=5.3125;
+				id=299;
+				atlOffset=5.777462;
 			};
 		};
-		id=116;
-		atlOffset=2.65625;
+		id=287;
+		atlOffset=2.8887315;
 	};
 	class Item3
 	{
@@ -1817,7 +1970,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-11.866699,1.9401751,-18.435547};
+							position[]={-12.047852,1.940177,-18.35083};
 						};
 						side="Empty";
 						flags=4;
@@ -1828,8 +1981,9 @@ class items
 							receiveRemoteTargets=1;
 							reportOwnPosition=1;
 						};
-						id=133;
+						id=302;
 						type="RHS_MELB_MH6M";
+						atlOffset=1.9073486e-006;
 						class CustomAttributes
 						{
 							class Attribute0
@@ -1860,7 +2014,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-15.843018,0.0014390945,-14.858887};
+									position[]={-16.024414,0.0014410019,-14.774658};
 								};
 								side="West";
 								flags=7;
@@ -1872,11 +2026,25 @@ class items
 									description="Pilot@RAVEN-1";
 									isPlayable=1;
 								};
-								id=135;
+								id=304;
 								type="Cav_B_A_Helicopter_Att_Pilot_Raven_1_F";
+								atlOffset=1.9073486e-006;
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -1889,7 +2057,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -1902,7 +2070,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
 								};
 							};
 							class Item1
@@ -1910,7 +2078,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-14.842773,0.0014390945,-14.858887};
+									position[]={-15.024414,0.0014410019,-14.774658};
 								};
 								side="West";
 								flags=5;
@@ -1922,11 +2090,25 @@ class items
 									description="Co-Pilot";
 									isPlayable=1;
 								};
-								id=136;
+								id=305;
 								type="Cav_B_A_Helicopter_Att_coPilot_F";
+								atlOffset=1.9073486e-006;
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -1939,7 +2121,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -1952,7 +2134,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
 								};
 							};
 						};
@@ -1960,10 +2142,12 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=134;
+						id=303;
+						atlOffset=1.9073486e-006;
 					};
 				};
-				id=131;
+				id=301;
+				atlOffset=1.9073486e-006;
 			};
 			class Item1
 			{
@@ -1977,7 +2161,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-17.332397,0.89242268,-12.647461};
+							position[]={-17.512695,0.89242458,-12.563721};
 						};
 						side="Empty";
 						flags=4;
@@ -1987,8 +2171,9 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=138;
+						id=307;
 						type="B_supplyCrate_F";
+						atlOffset=1.9073486e-006;
 						class CustomAttributes
 						{
 							class Attribute0
@@ -2012,7 +2197,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-22.866699,1.9401751,-18.435547};
+							position[]={-23.047852,1.9401751,-18.35083};
 						};
 						side="Empty";
 						flags=4;
@@ -2023,7 +2208,7 @@ class items
 							receiveRemoteTargets=1;
 							reportOwnPosition=1;
 						};
-						id=139;
+						id=308;
 						type="RHS_MELB_MH6M";
 						class CustomAttributes
 						{
@@ -2055,7 +2240,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-20.036255,0.0014390945,-14.305664};
+									position[]={-20.217773,0.0014390945,-14.221924};
 								};
 								side="West";
 								flags=7;
@@ -2067,11 +2252,24 @@ class items
 									description="Pilot@RAVEN-2";
 									isPlayable=1;
 								};
-								id=141;
+								id=310;
 								type="Cav_B_A_Helicopter_Att_Pilot_Raven_2_F";
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -2084,7 +2282,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -2097,7 +2295,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
 								};
 							};
 							class Item1
@@ -2105,7 +2303,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-19.036255,0.0014390945,-14.305664};
+									position[]={-19.217773,0.0014390945,-14.221924};
 								};
 								side="West";
 								flags=5;
@@ -2117,11 +2315,24 @@ class items
 									description="Co-Pilot";
 									isPlayable=1;
 								};
-								id=142;
+								id=311;
 								type="Cav_B_A_Helicopter_Att_coPilot_F";
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -2134,7 +2345,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -2147,7 +2358,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
 								};
 							};
 						};
@@ -2155,10 +2366,11 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=140;
+						id=309;
 					};
 				};
-				id=137;
+				id=306;
+				atlOffset=4.7683716e-007;
 			};
 			class Item2
 			{
@@ -2168,6 +2380,79 @@ class items
 				{
 					items=3;
 					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-18.040039,0.89242458,-26.339111};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							description="Starter Crate";
+							dynamicSimulation=1;
+						};
+						id=313;
+						type="B_supplyCrate_F";
+						atlOffset=1.9073486e-006;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-24.047852,1.940177,-32.35083};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							dynamicSimulation=1;
+							reportRemoteTargets=1;
+							receiveRemoteTargets=1;
+							reportOwnPosition=1;
+						};
+						id=314;
+						type="RHS_MELB_MH6M";
+						atlOffset=1.9073486e-006;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="rhs_MELB_TailNumber";
+								expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="NoChange";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item2
 					{
 						dataType="Group";
 						side="West";
@@ -2179,7 +2464,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-20.440308,0.0014390945,-27.936035};
+									position[]={-20.620117,0.0014390945,-27.85083};
 								};
 								side="West";
 								flags=7;
@@ -2191,11 +2476,24 @@ class items
 									description="Pilot@RAVEN-3";
 									isPlayable=1;
 								};
-								id=145;
+								id=316;
 								type="Cav_B_A_Helicopter_Att_Pilot_Raven_3_F";
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -2208,7 +2506,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -2221,7 +2519,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
 								};
 							};
 							class Item1
@@ -2229,7 +2527,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-19.440552,0.0014390945,-27.936035};
+									position[]={-19.62207,0.0014390945,-27.85083};
 								};
 								side="West";
 								flags=5;
@@ -2241,11 +2539,24 @@ class items
 									description="Co-Pilot";
 									isPlayable=1;
 								};
-								id=146;
+								id=317;
 								type="Cav_B_A_Helicopter_Att_coPilot_F";
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -2258,7 +2569,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -2271,7 +2582,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
 								};
 							};
 						};
@@ -2279,49 +2590,25 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=144;
+						id=315;
 					};
-					class Item1
+				};
+				id=312;
+				atlOffset=9.5367432e-007;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="MH-6 Raven-4";
+				class Entities
+				{
+					items=2;
+					class Item0
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-17.858765,0.89242268,-26.424316};
-						};
-						side="Empty";
-						flags=4;
-						class Attributes
-						{
-							init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-							description="Starter Crate";
-							dynamicSimulation=1;
-						};
-						id=147;
-						type="B_supplyCrate_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="ammoBox";
-								expression="[_this,_value] call bis_fnc_initAmmoBox;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-									};
-								};
-							};
-							nAttributes=1;
-						};
-					};
-					class Item2
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-23.866699,1.9401751,-32.435547};
+							position[]={-12.047852,1.940177,-32.85083};
 						};
 						side="Empty";
 						flags=4;
@@ -2332,8 +2619,9 @@ class items
 							receiveRemoteTargets=1;
 							reportOwnPosition=1;
 						};
-						id=148;
+						id=319;
 						type="RHS_MELB_MH6M";
+						atlOffset=1.9073486e-006;
 						class CustomAttributes
 						{
 							class Attribute0
@@ -2352,17 +2640,7 @@ class items
 							nAttributes=1;
 						};
 					};
-				};
-				id=143;
-			};
-			class Item3
-			{
-				dataType="Layer";
-				name="MH-6 Raven-4";
-				class Entities
-				{
-					items=2;
-					class Item0
+					class Item1
 					{
 						dataType="Group";
 						side="West";
@@ -2374,7 +2652,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-16.076172,0.0014390945,-28.711426};
+									position[]={-16.256836,0.0014410019,-28.626221};
 								};
 								side="West";
 								flags=7;
@@ -2386,11 +2664,25 @@ class items
 									description="Pilot@RAVEN-4";
 									isPlayable=1;
 								};
-								id=151;
+								id=321;
 								type="Cav_B_A_Helicopter_Att_Pilot_Raven_4_F";
+								atlOffset=1.9073486e-006;
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -2403,7 +2695,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -2416,7 +2708,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
 								};
 							};
 							class Item1
@@ -2424,7 +2716,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-15.07666,0.0014390945,-28.711426};
+									position[]={-15.256836,0.0014410019,-28.626221};
 								};
 								side="West";
 								flags=5;
@@ -2436,11 +2728,25 @@ class items
 									description="Co-Pilot";
 									isPlayable=1;
 								};
-								id=152;
+								id=322;
 								type="Cav_B_A_Helicopter_Att_coPilot_F";
+								atlOffset=1.9073486e-006;
 								class CustomAttributes
 								{
 									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
 									{
 										property="speaker";
 										expression="_this setspeaker _value;";
@@ -2453,7 +2759,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute2
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -2466,7 +2772,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=3;
 								};
 							};
 						};
@@ -2474,62 +2780,28 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=150;
-					};
-					class Item1
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-11.866699,1.9401751,-32.935547};
-						};
-						side="Empty";
-						flags=4;
-						class Attributes
-						{
-							dynamicSimulation=1;
-							reportRemoteTargets=1;
-							receiveRemoteTargets=1;
-							reportOwnPosition=1;
-						};
-						id=154;
-						type="RHS_MELB_MH6M";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="rhs_MELB_TailNumber";
-								expression="if(_value != 'NoChange')then{ [_this,'d_SN',_value] call RHS_MELB_fnc_tailNumber}";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="NoChange";
-									};
-								};
-							};
-							nAttributes=1;
-						};
+						id=320;
+						atlOffset=1.9073486e-006;
 					};
 				};
-				id=149;
+				id=318;
+				atlOffset=1.9073486e-006;
 			};
 			class Item4
 			{
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={-17.651489,5.3125,-20.070801};
+					position[]={-17.833008,5.777462,-19.985596};
 				};
 				title="Rotary Light Transport (Tooltip)";
 				description="IOT lift an entire platoon (with 2x 4-man Atlas teams), you will need up to 3 lifts. Separate the squads into one fireteam per bird, SL rides with one team, PL member with the other. You may be able to squeeze one Atlas team in the second lift. Best practice would be to use half a platoon (2 squads) with one 4-man medical team and then bring additional assets along for fun and variety.";
-				id=155;
-				atlOffset=5.3125;
+				id=323;
+				atlOffset=5.777462;
 			};
 		};
-		id=130;
-		atlOffset=2.65625;
+		id=300;
+		atlOffset=2.888732;
 	};
 	class Item4
 	{
@@ -2547,6 +2819,376 @@ class items
 					items=2;
 					class Item0
 					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={29.084961,2.0242615,26.588623};
+							angles[]={-0,0.0050614546,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							textures="mh60m";
+							dynamicSimulation=1;
+							reportOwnPosition=1;
+							pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
+						};
+						id=326;
+						type="vtx_MH60M";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="VehicleCustomization";
+								expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+								class Value
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=2;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="mh60m";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+													};
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=30;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Cockpitdoors_Hide";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item2
+														{
+															class data
+															{
+																singleType="STRING";
+																value="RADAR_HIDE";
+															};
+														};
+														class Item3
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item4
+														{
+															class data
+															{
+																singleType="STRING";
+																value="FLIR_HIDE";
+															};
+														};
+														class Item5
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item6
+														{
+															class data
+															{
+																singleType="STRING";
+																value="FuelProbe_show";
+															};
+														};
+														class Item7
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item8
+														{
+															class data
+															{
+																singleType="STRING";
+																value="MAWS_Tubes_Show";
+															};
+														};
+														class Item9
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item10
+														{
+															class data
+															{
+																singleType="STRING";
+																value="ERFS_show";
+															};
+														};
+														class Item11
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item12
+														{
+															class data
+															{
+																singleType="STRING";
+																value="MH60MMisc_show";
+															};
+														};
+														class Item13
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item14
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hoist_hide";
+															};
+														};
+														class Item15
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item16
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Skis_show";
+															};
+														};
+														class Item17
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item18
+														{
+															class data
+															{
+																singleType="STRING";
+																value="HH60Flares_show";
+															};
+														};
+														class Item19
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item20
+														{
+															class data
+															{
+																singleType="STRING";
+																value="HH60GRadar_show";
+															};
+														};
+														class Item21
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item22
+														{
+															class data
+															{
+																singleType="STRING";
+																value="HH60GFlir_show";
+															};
+														};
+														class Item23
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item24
+														{
+															class data
+															{
+																singleType="STRING";
+																value="GunnerSeats_Hide";
+															};
+														};
+														class Item25
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item26
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Minigun_Sight_L_hide";
+															};
+														};
+														class Item27
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item28
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Minigun_Sight_R_hide";
+															};
+														};
+														class Item29
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="vtx_attribute_doorNumbers";
+								expression="[_this, _value] call vtx_uh60_misc_fnc_setDoorNumbers;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="01";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_fastroping_equipFRIES";
+								expression="if (_value) then {[_this] call ace_fastroping_fnc_equipFRIES}";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="vtx_attribute_markings";
+								expression="_this setObjectTextureGlobal [19, _value];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="\z\vtx\addons\uh60_misc\data\markings\markings_venom_ca.paa";
+									};
+								};
+							};
+							nAttributes=5;
+						};
+					};
+					class Item1
+					{
 						dataType="Group";
 						side="West";
 						class Entities
@@ -2557,7 +3199,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={23.36499,0.0014390945,25.45752};
+									position[]={23.18457,0.0014390945,25.541748};
 								};
 								side="West";
 								flags=7;
@@ -2569,7 +3211,7 @@ class items
 									description="Pilot@BUFFALO-1";
 									isPlayable=1;
 								};
-								id=159;
+								id=328;
 								type="Cav_B_A_Helicopter_Tra_Pilot_B1_F";
 								class CustomAttributes
 								{
@@ -2633,7 +3275,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={24.364746,0.0014390945,25.458008};
+									position[]={24.18457,0.0014390945,25.543701};
 								};
 								side="West";
 								flags=5;
@@ -2645,7 +3287,7 @@ class items
 									description="Co-Pilot";
 									isPlayable=1;
 								};
-								id=160;
+								id=329;
 								type="Cav_B_A_Helicopter_Tra_coPilot_F";
 								class CustomAttributes
 								{
@@ -2683,7 +3325,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={23.364746,0.0014390945,24.458008};
+									position[]={23.18457,0.0014390945,24.543701};
 								};
 								side="West";
 								flags=5;
@@ -2694,7 +3336,7 @@ class items
 									description="Crew Chief";
 									isPlayable=1;
 								};
-								id=161;
+								id=330;
 								type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 								class CustomAttributes
 								{
@@ -2732,7 +3374,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={24.364746,0.0014390945,24.458008};
+									position[]={24.18457,0.0014390945,24.543701};
 								};
 								side="West";
 								flags=5;
@@ -2744,7 +3386,7 @@ class items
 									description="Crew";
 									isPlayable=1;
 								};
-								id=162;
+								id=331;
 								type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 								class CustomAttributes
 								{
@@ -2782,380 +3424,10 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=158;
-					};
-					class Item1
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={29.265625,2.0242615,26.503418};
-							angles[]={-0,0.0050614546,0};
-						};
-						side="Empty";
-						flags=4;
-						class Attributes
-						{
-							textures="mh60m";
-							dynamicSimulation=1;
-							reportOwnPosition=1;
-							pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
-						};
-						id=164;
-						type="vtx_MH60M";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="VehicleCustomization";
-								expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
-								class Value
-								{
-									class data
-									{
-										singleType="ARRAY";
-										class value
-										{
-											items=2;
-											class Item0
-											{
-												class data
-												{
-													singleType="ARRAY";
-													class value
-													{
-														items=2;
-														class Item0
-														{
-															class data
-															{
-																singleType="STRING";
-																value="mh60m";
-															};
-														};
-														class Item1
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1;
-															};
-														};
-													};
-												};
-											};
-											class Item1
-											{
-												class data
-												{
-													singleType="ARRAY";
-													class value
-													{
-														items=30;
-														class Item0
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Cockpitdoors_Hide";
-															};
-														};
-														class Item1
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item2
-														{
-															class data
-															{
-																singleType="STRING";
-																value="RADAR_HIDE";
-															};
-														};
-														class Item3
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item4
-														{
-															class data
-															{
-																singleType="STRING";
-																value="FLIR_HIDE";
-															};
-														};
-														class Item5
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item6
-														{
-															class data
-															{
-																singleType="STRING";
-																value="FuelProbe_show";
-															};
-														};
-														class Item7
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item8
-														{
-															class data
-															{
-																singleType="STRING";
-																value="MAWS_Tubes_Show";
-															};
-														};
-														class Item9
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1;
-															};
-														};
-														class Item10
-														{
-															class data
-															{
-																singleType="STRING";
-																value="ERFS_show";
-															};
-														};
-														class Item11
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1;
-															};
-														};
-														class Item12
-														{
-															class data
-															{
-																singleType="STRING";
-																value="MH60MMisc_show";
-															};
-														};
-														class Item13
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1;
-															};
-														};
-														class Item14
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Hoist_hide";
-															};
-														};
-														class Item15
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item16
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Skis_show";
-															};
-														};
-														class Item17
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item18
-														{
-															class data
-															{
-																singleType="STRING";
-																value="HH60Flares_show";
-															};
-														};
-														class Item19
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=1;
-															};
-														};
-														class Item20
-														{
-															class data
-															{
-																singleType="STRING";
-																value="HH60GRadar_show";
-															};
-														};
-														class Item21
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item22
-														{
-															class data
-															{
-																singleType="STRING";
-																value="HH60GFlir_show";
-															};
-														};
-														class Item23
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item24
-														{
-															class data
-															{
-																singleType="STRING";
-																value="GunnerSeats_Hide";
-															};
-														};
-														class Item25
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item26
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Minigun_Sight_L_hide";
-															};
-														};
-														class Item27
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-														class Item28
-														{
-															class data
-															{
-																singleType="STRING";
-																value="Minigun_Sight_R_hide";
-															};
-														};
-														class Item29
-														{
-															class data
-															{
-																singleType="SCALAR";
-																value=0;
-															};
-														};
-													};
-												};
-											};
-										};
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="vtx_attribute_doorNumbers";
-								expression="[_this, _value] call vtx_uh60_misc_fnc_setDoorNumbers;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="01";
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="ammoBox";
-								expression="[_this,_value] call bis_fnc_initAmmoBox;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
-									};
-								};
-							};
-							class Attribute3
-							{
-								property="ace_fastroping_equipFRIES";
-								expression="if (_value) then {[_this] call ace_fastroping_fnc_equipFRIES}";
-								class Value
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=0;
-									};
-								};
-							};
-							class Attribute4
-							{
-								property="vtx_attribute_markings";
-								expression="_this setObjectTextureGlobal [19, _value];";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="\z\vtx\addons\uh60_misc\data\markings\markings_venom_ca.paa";
-									};
-								};
-							};
-							nAttributes=5;
-						};
+						id=327;
 					};
 				};
-				id=157;
+				id=325;
 			};
 			class Item1
 			{
@@ -3166,275 +3438,10 @@ class items
 					items=3;
 					class Item0
 					{
-						dataType="Group";
-						side="West";
-						class Entities
-						{
-							items=4;
-							class Item0
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={16.926025,0.0014390945,25.285645};
-								};
-								side="West";
-								flags=7;
-								class Attributes
-								{
-									skill=0.60000002;
-									rank="CAPTAIN";
-									init="call{this setgroupID[""BUFFALO-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
-									description="Pilot@BUFFALO-2";
-									isPlayable=1;
-								};
-								id=167;
-								type="Cav_B_A_Helicopter_Tra_Pilot_B2_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ace_isMedic";
-										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="ace_isEngineer";
-										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									class Attribute2
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male03ENG";
-											};
-										};
-									};
-									class Attribute3
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1.02;
-											};
-										};
-									};
-									nAttributes=4;
-								};
-							};
-							class Item1
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={17.925049,0.0014390945,25.286133};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									skill=0.55000001;
-									rank="LIEUTENANT";
-									init="call{this setgroupID[""BUFFALO-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
-									description="Co-Pilot";
-									isPlayable=1;
-								};
-								id=168;
-								type="Cav_B_A_Helicopter_Tra_coPilot_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ace_isEngineer";
-										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="ace_isMedic";
-										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-							class Item2
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={16.924561,0.0014390945,24.286621};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									rank="SERGEANT";
-									init="call{this setgroupID[""BUFFALO-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
-									description="Crew Chief";
-									isPlayable=1;
-								};
-								id=169;
-								type="Cav_B_A_Helicopter_Tra_CrewChief_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ace_isMedic";
-										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="ace_isEngineer";
-										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									class Attribute2
-									{
-										property="speaker";
-										expression="_this setspeaker _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="STRING";
-												value="Male01ENG";
-											};
-										};
-									};
-									class Attribute3
-									{
-										property="pitch";
-										expression="_this setpitch _value;";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0.99000001;
-											};
-										};
-									};
-									nAttributes=4;
-								};
-							};
-							class Item3
-							{
-								dataType="Object";
-								class PositionInfo
-								{
-									position[]={17.925049,0.0014390945,24.286133};
-								};
-								side="West";
-								flags=5;
-								class Attributes
-								{
-									skill=0.44999999;
-									rank="CORPORAL";
-									init="call{this setgroupID[""BUFFALO-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
-									description="Crew";
-									isPlayable=1;
-								};
-								id=170;
-								type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
-								class CustomAttributes
-								{
-									class Attribute0
-									{
-										property="ace_isEngineer";
-										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									class Attribute1
-									{
-										property="ace_isMedic";
-										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									nAttributes=2;
-								};
-							};
-						};
-						class Attributes
-						{
-							dynamicSimulation=1;
-						};
-						id=166;
-					};
-					class Item1
-					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={12.546631,2.0242615,24.914063};
+							position[]={12.366211,2.0242615,24.998779};
 							angles[]={-0,0.0050614546,0};
 						};
 						side="Empty";
@@ -3446,7 +3453,7 @@ class items
 							reportOwnPosition=1;
 							pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
 						};
-						id=171;
+						id=333;
 						type="vtx_MH60M";
 						class CustomAttributes
 						{
@@ -3799,12 +3806,12 @@ class items
 							nAttributes=5;
 						};
 					};
-					class Item2
+					class Item1
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={20.881836,0.89242268,26.357422};
+							position[]={20.700195,0.89242268,26.442139};
 						};
 						side="Empty";
 						flags=4;
@@ -3814,7 +3821,7 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=172;
+						id=334;
 						type="B_supplyCrate_F";
 						class CustomAttributes
 						{
@@ -3834,17 +3841,7 @@ class items
 							nAttributes=1;
 						};
 					};
-				};
-				id=165;
-			};
-			class Item2
-			{
-				dataType="Layer";
-				name="MH-60 Buffalo-3";
-				class Entities
-				{
-					items=2;
-					class Item0
+					class Item2
 					{
 						dataType="Group";
 						side="West";
@@ -3856,7 +3853,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={23.552002,0.0014390945,5.6162109};
+									position[]={16.745117,0.0014390945,25.369873};
 								};
 								side="West";
 								flags=7;
@@ -3864,12 +3861,12 @@ class items
 								{
 									skill=0.60000002;
 									rank="CAPTAIN";
-									init="call{this setgroupID[""BUFFALO-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
-									description="Pilot@BUFFALO-3";
+									init="call{this setgroupID[""BUFFALO-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
+									description="Pilot@BUFFALO-2";
 									isPlayable=1;
 								};
-								id=175;
-								type="Cav_B_A_Helicopter_Tra_Pilot_B3_F";
+								id=336;
+								type="Cav_B_A_Helicopter_Tra_Pilot_B2_F";
 								class CustomAttributes
 								{
 									class Attribute0
@@ -3907,7 +3904,7 @@ class items
 											class data
 											{
 												singleType="STRING";
-												value="Male07ENG";
+												value="Male03ENG";
 											};
 										};
 									};
@@ -3920,7 +3917,7 @@ class items
 											class data
 											{
 												singleType="SCALAR";
-												value=1.04;
+												value=1.02;
 											};
 										};
 									};
@@ -3932,7 +3929,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={24.552002,0.0014390945,5.6162109};
+									position[]={17.745117,0.0014390945,25.371826};
 								};
 								side="West";
 								flags=5;
@@ -3940,11 +3937,11 @@ class items
 								{
 									skill=0.55000001;
 									rank="LIEUTENANT";
-									init="call{this setgroupID[""BUFFALO-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
+									init="call{this setgroupID[""BUFFALO-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
 									description="Co-Pilot";
 									isPlayable=1;
 								};
-								id=176;
+								id=337;
 								type="Cav_B_A_Helicopter_Tra_coPilot_F";
 								class CustomAttributes
 								{
@@ -3982,35 +3979,22 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={23.552002,0.0014390945,4.6162109};
+									position[]={16.743164,0.0014390945,24.371826};
 								};
 								side="West";
 								flags=5;
 								class Attributes
 								{
 									rank="SERGEANT";
-									init="call{this setgroupID[""BUFFALO-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
+									init="call{this setgroupID[""BUFFALO-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
 									description="Crew Chief";
 									isPlayable=1;
 								};
-								id=177;
+								id=338;
 								type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 								class CustomAttributes
 								{
 									class Attribute0
-									{
-										property="ace_isEngineer";
-										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-										class Value
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-									};
-									class Attribute1
 									{
 										property="ace_isMedic";
 										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
@@ -4023,7 +4007,46 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male01ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=4;
 								};
 							};
 							class Item3
@@ -4031,7 +4054,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={24.552002,0.0014390945,4.6162109};
+									position[]={17.745117,0.0014390945,24.371826};
 								};
 								side="West";
 								flags=5;
@@ -4039,11 +4062,11 @@ class items
 								{
 									skill=0.44999999;
 									rank="CORPORAL";
-									init="call{this setgroupID[""BUFFALO-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
+									init="call{this setgroupID[""BUFFALO-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-2""];}";
 									description="Crew";
 									isPlayable=1;
 								};
-								id=178;
+								id=339;
 								type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 								class CustomAttributes
 								{
@@ -4081,14 +4104,24 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=174;
+						id=335;
 					};
-					class Item1
+				};
+				id=332;
+			};
+			class Item2
+			{
+				dataType="Layer";
+				name="MH-60 Buffalo-3";
+				class Entities
+				{
+					items=2;
+					class Item0
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={29.035645,2.0242615,4.7416992};
+							position[]={28.854492,2.0242615,4.8269043};
 							angles[]={-0,0.0050614546,0};
 						};
 						side="Empty";
@@ -4100,7 +4133,7 @@ class items
 							reportOwnPosition=1;
 							pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
 						};
-						id=179;
+						id=341;
 						type="vtx_MH60M";
 						class CustomAttributes
 						{
@@ -4453,17 +4486,7 @@ class items
 							nAttributes=5;
 						};
 					};
-				};
-				id=173;
-			};
-			class Item3
-			{
-				dataType="Layer";
-				name="MH-60 Buffalo-4";
-				class Entities
-				{
-					items=3;
-					class Item0
+					class Item1
 					{
 						dataType="Group";
 						side="West";
@@ -4475,7 +4498,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={17.517578,0.0014390945,5.1459961};
+									position[]={23.37207,0.0014390945,5.6999512};
 								};
 								side="West";
 								flags=7;
@@ -4483,12 +4506,12 @@ class items
 								{
 									skill=0.60000002;
 									rank="CAPTAIN";
-									init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
-									description="Pilot@BUFFALO-4";
+									init="call{this setgroupID[""BUFFALO-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
+									description="Pilot@BUFFALO-3";
 									isPlayable=1;
 								};
-								id=183;
-								type="Cav_B_A_Helicopter_Tra_Pilot_B4_F";
+								id=343;
+								type="Cav_B_A_Helicopter_Tra_Pilot_B3_F";
 								class CustomAttributes
 								{
 									class Attribute0
@@ -4526,7 +4549,7 @@ class items
 											class data
 											{
 												singleType="STRING";
-												value="Male06ENG";
+												value="Male07ENG";
 											};
 										};
 									};
@@ -4539,7 +4562,7 @@ class items
 											class data
 											{
 												singleType="SCALAR";
-												value=0.99000001;
+												value=1.04;
 											};
 										};
 									};
@@ -4551,7 +4574,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={18.517578,0.0014390945,5.1459961};
+									position[]={24.37207,0.0014390945,5.6999512};
 								};
 								side="West";
 								flags=5;
@@ -4559,11 +4582,11 @@ class items
 								{
 									skill=0.55000001;
 									rank="LIEUTENANT";
-									init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+									init="call{this setgroupID[""BUFFALO-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
 									description="Co-Pilot";
 									isPlayable=1;
 								};
-								id=184;
+								id=344;
 								type="Cav_B_A_Helicopter_Tra_coPilot_F";
 								class CustomAttributes
 								{
@@ -4601,18 +4624,18 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={17.517578,0.0014390945,4.1459961};
+									position[]={23.37207,0.0014390945,4.6999512};
 								};
 								side="West";
 								flags=5;
 								class Attributes
 								{
 									rank="SERGEANT";
-									init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+									init="call{this setgroupID[""BUFFALO-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
 									description="Crew Chief";
 									isPlayable=1;
 								};
-								id=185;
+								id=345;
 								type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 								class CustomAttributes
 								{
@@ -4650,7 +4673,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={18.517578,0.0014390945,4.1459961};
+									position[]={24.37207,0.0014390945,4.6999512};
 								};
 								side="West";
 								flags=5;
@@ -4658,11 +4681,11 @@ class items
 								{
 									skill=0.44999999;
 									rank="CORPORAL";
-									init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+									init="call{this setgroupID[""BUFFALO-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-3""];}";
 									description="Crew";
 									isPlayable=1;
 								};
-								id=186;
+								id=346;
 								type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 								class CustomAttributes
 								{
@@ -4700,14 +4723,24 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=182;
+						id=342;
 					};
-					class Item1
+				};
+				id=340;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="MH-60 Buffalo-4";
+				class Entities
+				{
+					items=3;
+					class Item0
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={12.31665,2.0242615,3.1518555};
+							position[]={12.135742,2.0242615,3.2370605};
 							angles[]={-0,0.0050614546,0};
 						};
 						side="Empty";
@@ -4719,7 +4752,7 @@ class items
 							reportOwnPosition=1;
 							pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
 						};
-						id=187;
+						id=348;
 						type="vtx_MH60M";
 						class CustomAttributes
 						{
@@ -5072,12 +5105,12 @@ class items
 							nAttributes=5;
 						};
 					};
-					class Item2
+					class Item1
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={21.014404,0.89242268,7.8208008};
+							position[]={20.833008,0.89242268,7.9050293};
 						};
 						side="Empty";
 						flags=4;
@@ -5087,7 +5120,7 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=188;
+						id=349;
 						type="B_supplyCrate_F";
 						class CustomAttributes
 						{
@@ -5107,24 +5140,263 @@ class items
 							nAttributes=1;
 						};
 					};
+					class Item2
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={17.336914,0.0014390945,5.2312012};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									skill=0.60000002;
+									rank="CAPTAIN";
+									init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+									description="Pilot@BUFFALO-4";
+									isPlayable=1;
+								};
+								id=351;
+								type="Cav_B_A_Helicopter_Tra_Pilot_B4_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={18.336914,0.0014390945,5.2312012};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.55000001;
+									rank="LIEUTENANT";
+									init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+									description="Co-Pilot";
+									isPlayable=1;
+								};
+								id=352;
+								type="Cav_B_A_Helicopter_Tra_coPilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={17.336914,0.0014390945,4.2312012};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+									description="Crew Chief";
+									isPlayable=1;
+								};
+								id=353;
+								type="Cav_B_A_Helicopter_Tra_CrewChief_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={18.336914,0.0014390945,4.2312012};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.44999999;
+									rank="CORPORAL";
+									init="call{this setgroupID[""BUFFALO-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-4""];}";
+									description="Crew";
+									isPlayable=1;
+								};
+								id=354;
+								type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=350;
+					};
 				};
-				id=181;
+				id=347;
 			};
 			class Item4
 			{
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={21.674805,5.3125,18.746094};
+					position[]={21.495117,5.777462,18.830811};
 				};
 				title="Rotary Transport (Tooltip)";
 				description="These are MH-60Ms, they can lift the entire platoon, but it is going to be tight to have too many additional attachments to the platoon. You may be able to swap for the UH-60M for one more seat per bird, but that's about it. It's also less cool sitting in a seat vs the side of the helicopter... A good rule of thumb is to include some form of Attack Rotary escort with the Serial.";
-				id=189;
-				atlOffset=5.3125;
+				id=355;
+				atlOffset=5.777462;
 			};
 		};
-		id=156;
-		atlOffset=2.65625;
+		id=324;
+		atlOffset=2.888731;
 	};
 	class Item5
 	{
@@ -5138,14 +5410,14 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.0705566,1.9255862,3.5771484};
+					position[]={-6.2509766,1.9255862,3.6628418};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
 				};
-				id=274;
+				id=357;
 				type="B_Truck_01_ammo_F";
 			};
 			class Item1
@@ -5153,14 +5425,14 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.0705566,1.9160042,3.5771484};
+					position[]={-1.2509766,1.9160042,3.6608887};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
 				};
-				id=275;
+				id=358;
 				type="B_Truck_01_fuel_F";
 			};
 			class Item2
@@ -5168,17 +5440,17 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={3.9294434,2.3134775,3.5771484};
+					position[]={3.7490234,2.3134775,3.6608887};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
 				};
-				id=276;
+				id=359;
 				type="B_Truck_01_Repair_F";
 			};
 		};
-		id=266;
+		id=356;
 	};
 };
