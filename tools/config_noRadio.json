@@ -4,7 +4,7 @@
     },
     "cba_settings.sqf" : {
         "add": [
-            "// cScripts Mission Settings",
+            "\n// cScripts Mission Settings",
             "force force cScripts_Settings_enableRadio = false;"
         ]
     }
