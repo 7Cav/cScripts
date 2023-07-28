@@ -37,20 +37,20 @@ if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
 // Inventories
 
-
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
-    [_vehicle, 5, 38, false, false] call FUNC(setCargoAttributes);
-    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+    [_vehicle, 15, 38, false, false] call FUNC(setCargoAttributes);
     
+    // Emergency kit in case of tire damage and fuel loss.
+    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+    ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+    ["FlexibleTank_01_forest_F", _vehicle, true] call ace_cargo_fnc_loadItem; // Emergency Fuel Tank
+
     switch (_vehicleType) do {
 
         // Weapons squad strykers: Have several mortars, both 60mm and 82mm.
         case "cav_dragoon_A_V4";
         case "cav_dragoon_D_V4";
         case "cav_dragoon_WD_V4": {
-            [_vehicle, 17, 38, false, false] call FUNC(setCargoAttributes);
-
 
             // Vehicle Inventory
             [_vehicle, 
@@ -70,17 +70,16 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             ] call FUNC(createCargoCrate);
 
             // Ammo for 2x 82mm mortars
+            private _mortar_ammo_82mm = "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer);
             ["ACE_Box_82mm_Mo_Combo", 
-                "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer), 
+                _mortar_ammo_82mm, 
                 _vehicle
             ] call FUNC(createCargoCrate);
-
-            [
-                ["ACE_Box_82mm_Mo_Combo", 
-                    "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer),
-                    _this select 0
-                ] call FUNC(createCargoCrate),
-            [_vehicle]] call CBA_fnc_execNextFrame;
+            
+            ["ACE_Box_82mm_Mo_Combo", 
+                _mortar_ammo_82mm, 
+                _vehicle
+            ] call FUNC(createCargoCrate);
         };
 
         // Logistical strykers: Have same inventory, but a lot of wheels in cargo.
@@ -90,7 +89,6 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
         case "cav_dragoon_A_V5";
         case "cav_dragoon_D_V5";
         case "cav_dragoon_WD_V5": {
-            [_vehicle, 17, 38, false, false] call FUNC(setCargoAttributes);
 
             // Vehicle Inventory
             [_vehicle, 
@@ -138,9 +136,6 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
 
         };
     };
-
-    // Emergency Fuel Tank
-    ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
 };
 
 // Vehicles
