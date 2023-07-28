@@ -52,7 +52,7 @@ switch (EGVAR(Settings,replaceMagazines)) do {
             ["ACE_30Rnd_556x45_Stanag_Mk262_mag",       "rhs_mag_30Rnd_556x45_Mk262_Stanag"],
             ["ACE_30Rnd_556x45_Stanag_Mk318_mag",       "rhs_mag_30Rnd_556x45_Mk318_Stanag"]
             //["ACE_30Rnd_556x45_Stanag_Tracer_Dim",      ""]
-        ]
+        ];
         { _x call ace_common_fnc_registerItemReplacement; } forEach _magazines;
     };
     case (2): {
@@ -67,7 +67,7 @@ switch (EGVAR(Settings,replaceMagazines)) do {
             ["rhs_mag_30Rnd_556x45_Mk262_Stanag",       "ACE_30Rnd_556x45_Stanag_Mk262_mag"],
             ["rhs_mag_30Rnd_556x45_Mk318_Stanag",       "ACE_30Rnd_556x45_Stanag_Mk318_mag"]
             //["ACE_30Rnd_556x45_Stanag_Tracer_Dim",      ""]
-        ]
+        ];
         { _x call ace_common_fnc_registerItemReplacement; } forEach _magazines;
     };
 };
