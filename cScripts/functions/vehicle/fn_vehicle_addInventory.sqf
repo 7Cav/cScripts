@@ -33,13 +33,6 @@ private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
 
 _vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
 
-// Remove ACE Cargo
-private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
-{   
-    [_x, _vehicle] call ace_cargo_fnc_removeCargoItem;
-    
-} forEach _cargoArray;
-
 if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
 // Inventories
