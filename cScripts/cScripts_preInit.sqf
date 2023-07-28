@@ -25,6 +25,8 @@ EGVAR(Staging,OverrideCompanyVar) = false;
 GVAR(isPlayer) = hasInterface || {isPlayer player};
 GVAR(OneLife) = !isNil{(getArray (missionconfigfile >> "respawnTemplates") select 0) == "ace_spectator"};
 
+GVAR(DATABASE) = call EFUNC(init,logistics);
+
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";

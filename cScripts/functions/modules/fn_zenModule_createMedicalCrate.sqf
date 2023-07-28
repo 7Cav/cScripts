@@ -17,8 +17,8 @@ params ["_modulePos", "_objectPos"];
 
 // The crate type that will be passed to the supply crate spawner.
 private _crateTypeList = [
-    'atlas', 
-    'platoon'
+    'crate_medicalAtlas', 
+    'crate_medicalInfantry'
 ];
 
 // Display text for the crate list selection. This is what the zeus sees.
@@ -45,10 +45,13 @@ private _displayTextList =
         _arg params ["_crateType"];
         _pos params ["_modulePos"];
         
+        _crateContents = [_crateType] call EFUNC(logistics,getContainer);
         private _groundLevel = ASLToAGL _modulePos;
-        private _medCrateContents = [_crateType] call FUNC(getMedicalCrate);
-        ["ace_medicalSupplyCrate", _medCrateContents, _groundLevel] remoteExec [QFUNC(createCargoCrate),2]; 
-
+        [
+            "ace_medicalSupplyCrate", 
+            _crateContents,
+            _groundLevel
+        ] remoteExec [QFUNC(createCargoCrate),2]; 
     },
     {},
     [_modulePos]
