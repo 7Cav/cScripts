@@ -21,6 +21,8 @@ if (isServer) exitWith {};
 if !(EGVAR(Settings,enableStagingSystem)) exitWith {};
 if (isNull _vehicle) exitWith {};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,StagingActions)}) exitWith {[formatText["Vehicle staging actions already applied for %1.", _vehicle]] call FUNC(warning);};
+
 
 #ifdef DEBUG_MODE
     ["Adding vehicle staging actions", "Vehicle Staging"] call FUNC(info);
@@ -37,3 +39,5 @@ private _stagingCat = [QEGVAR(Actions_Vehicle,Cosmetic_Cat), "Vehicle Cosmetics"
 [_vehicle] call EFUNC(vehicle,addRepairAction);
 [_vehicle] call EFUNC(vehicle,addCosmeticSelection);
 [_vehicle] call EFUNC(vehicle,setupPylonCategories);
+
+_vehicle setVariable [QEGVAR(Vehicle,StagingActions), true];

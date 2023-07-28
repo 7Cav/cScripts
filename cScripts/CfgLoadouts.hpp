@@ -12,5 +12,7 @@ class CfgLoadouts {
     #include "Loadouts\CfgLoadouts_Charlie_Squad.hpp"
     #include "Loadouts\CfgLoadouts_Charlie_Weapon.hpp"
 
+    #include "Loadouts\CfgLoadouts_Training.hpp"
+
     #include "Loadouts\CfgLoadouts_UserCustom.hpp"
 };

@@ -20,7 +20,7 @@ if (isMultiplayer) then {
     call EFUNC(gear,setupRadios);
     GVAR(Radio) = true;
 } else {
-    ["Mission in singelplayer enviroment ACRE radio preset will not be set!", "init", true] call FUNC(warning);
+    ["Mission in singelplayer enviroment radio setup will not be performed", "init", true] call FUNC(warning);
 };
 
 enableSaving [false, false];

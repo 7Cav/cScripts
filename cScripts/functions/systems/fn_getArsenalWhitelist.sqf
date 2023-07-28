@@ -414,8 +414,7 @@ private _commonGear = [
     "ACE_Chemlight_Shield",
     
     // Radios
-    "ACRE_PRC343",
-    "ACRE_PRC152",
+    "TFAR_anprc152",
 
     // Medical
     "ACE_EarPlugs",
@@ -526,6 +525,10 @@ private _companyItems = switch (_company) do {
     ]};
     case "charlie": {[
         
+        //cTab
+        "ItemAndroid",
+        "ItemcTab",
+
         //Helmets
         "DAR_Beret_Mar",
         "USP_OPSCORE_FASTMTC_CGW",
@@ -564,6 +567,7 @@ private _companyItems = switch (_company) do {
         "rhs_mag_m664_red_cluster",
         "rhs_mag_m713_Red",
         "rhs_mag_m716_yellow",
+        
         "rhs_mag_maaws_HE",
         "rhs_mag_maaws_HEAT",
         "MAA_MAAWS_ASM509",
@@ -648,11 +652,12 @@ private _companyItems = switch (_company) do {
         "USP_TACTICAL_PACK_CCT6",
         "USP_TACTICAL_PACK_CCT7",
         "USP_TACTICAL_PACK_CCT8",
+        "UK3CB_US_B_B_RIF_OCP_Radio"
 
         // Weapons
         "dzn_MG_Tripod_M122A1_M240Mount_Carry",
         "ace_csw_carryMortarBaseplate",
-        "ace_compat_rhs_usf3_m252_carry",
+        "ace_csw_staticMortarCarry",
         "avm224_W_M224_mortar_carry",
         
         "avm224_M_6Rnd_60mm_HE_csw",
@@ -756,7 +761,8 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "USP_TACTICAL_PACK_CCT5",
         "USP_TACTICAL_PACK_CCT6",
         "USP_TACTICAL_PACK_CCT7",
-        "USP_TACTICAL_PACK_CCT8"
+        "USP_TACTICAL_PACK_CCT8",
+        "UK3CB_US_B_B_RIF_OCP_Radio"
 
     ]};
     case "squadleader": {[
@@ -777,7 +783,8 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "USP_TACTICAL_PACK_CCT5",
         "USP_TACTICAL_PACK_CCT6",
         "USP_TACTICAL_PACK_CCT7",
-        "USP_TACTICAL_PACK_CCT8"
+        "USP_TACTICAL_PACK_CCT8",
+        "UK3CB_US_B_B_RIF_OCP_Radio"
     ]};
     case "fireteamleader": {[
         "ACE_microDAGR",
@@ -818,7 +825,11 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "rhsusf_hgu56p_white",
         "rhsusf_hgu56p",
 
-        "rhsusf_ihadss"
+        "rhsusf_ihadss",
+        
+
+        //Backpack
+        "UK3CB_US_B_B_RIF_OCP_Radio"
     ]};
     case "rotarycrew": {[
         "H_CrewHelmetHeli_B",
@@ -845,15 +856,33 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
         "rhsusf_hgu56p_mask_saf",
         "rhsusf_hgu56p_visor_mask_saf",
         "rhsusf_hgu56p_mask_smiley",
-        "rhsusf_hgu56p_visor_mask_smiley"
+        "rhsusf_hgu56p_visor_mask_smiley",
+
+        //Backpack
+        "UK3CB_US_B_B_RIF_OCP_Radio"
     ]};
     case "pilotfighter": {[
-        "RHS_jetpilot_usaf"
+        "RHS_jetpilot_usaf",
+        
+        //Backpack
+        "UK3CB_US_B_B_RIF_OCP_Radio"
     ]};
     case "weapons": {[
-
-
         // Launchers
+        "rhs_weap_maaws",
+        "launch_MRAW_green_F",
+        "launch_MRAW_sand_F",
+        "launch_MRAW_olive_F",
+
+        // MAAWS ammo
+        "rhs_mag_maaws_HEAT",
+        "rhs_mag_maaws_HEDP",
+        "MAA_MAAWS_ASM509",
+        "MAA_MAAWS_HEDP502",
+        "MAA_MAAWS_GMM_MT",
+        "MAA_MAAWS_MT756",
+        "rhs_mag_maaws_HE",
+        "MRAWS_HE_F",
 
         // Backpacks
         "B_Carryall_mcamo",
@@ -1017,7 +1046,8 @@ private _weaponSystemSpecific = switch (true) do {
         "rhsusf_acc_su230a_c",
         "rhsusf_acc_su230a_mrds",
         "rhsusf_acc_su230a_mrds_c",
-        "rhsusf_acc_m8541_wd"
+        "rhsusf_acc_m8541_wd",
+        "rhsusf_acc_acog_mdo"
     ]};
 
     case (primaryWeapon player isKindof ['rhs_weap_m240_base', configFile >> 'CfgWeapons']): {[
@@ -1039,7 +1069,8 @@ private _weaponSystemSpecific = switch (true) do {
         "rhsusf_acc_su230a",
         "rhsusf_acc_su230a_c",
         "rhsusf_acc_su230a_mrds",
-        "rhsusf_acc_su230a_mrds_c"
+        "rhsusf_acc_su230a_mrds_c",
+        "rhsusf_acc_acog_mdo"
     ]};
 
     case (primaryWeapon player isKindof ['rhs_weap_m249_pip', configFile >> 'CfgWeapons']

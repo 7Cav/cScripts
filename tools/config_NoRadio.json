@@ -1,11 +1,11 @@
 {
     "build" : {
-        "scriptName": "cScripts NoACRE"
+        "scriptName": "cScripts NoRadio"
     },
     "cba_settings.sqf" : {
         "add": [
             "// cScripts Mission Settings",
-            "force force cScripts_Settings_enableACRE = false;"
+            "force force cScripts_Settings_enableRadio = false;"
         ]
     }
 }
