@@ -17,8 +17,8 @@ params [
     ["_item", "", [""]]
 ];
 
+// Validity check function
 private _var = "varNil";
-
 private _fn_isValid = {
     params [
         ["_item", "", [""]],
@@ -35,14 +35,6 @@ private _fn_isValid = {
         true
     };
 };
-
-#ifdef DEBUG_MODE
-    if (!([_item, "Test_Item_False", _var] call _fn_isValid)) then {
-        [format["%1 testing if Test_Item_False... FAILED", _item], "Item"] call FUNC(error);
-    } else {
-        [format["%1 testing if Test_Item_False... PASSED", _item], "Item"] call FUNC(info);
-    };
-#endif
 
 // Check if item exists in config
 private _cfgMagazines = getText (configFile >> 'CfgMagazines' >> _item >> 'displayName');
