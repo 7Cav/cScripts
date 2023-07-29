@@ -56,8 +56,8 @@ force force ace_artillerytables_advancedCorrections = false;
 force force ace_artillerytables_disableArtilleryComputer = false;
 force force ace_mk6mortar_airResistanceEnabled = false;
 force force ace_mk6mortar_allowCompass = true;
-force force ace_mk6mortar_allowComputerRangefinder = false;
-force force ace_mk6mortar_useAmmoHandling = false;
+force force ace_mk6mortar_allowComputerRangefinder = true;
+force force ace_mk6mortar_useAmmoHandling = true;
 
 // ACE Captives
 force force ace_captives_allowHandcuffOwnSide = true;
@@ -166,7 +166,7 @@ force force ace_hearing_disableEarRinging = false;
 force force ace_hearing_earplugsVolume = 0.5;
 force force ace_hearing_enableCombatDeafness = true;
 force force ace_hearing_enabledForZeusUnits = false;
-force force ace_hearing_unconsciousnessVolume = 0.4;
+force force ace_hearing_unconsciousnessVolume = 0.1;
 
 // ACE Interaction
 force force ace_interaction_disableNegativeRating = true;
@@ -350,12 +350,12 @@ force force ace_repair_displayTextOnRepair = true;
 force force ace_repair_engineerSetting_fullRepair = 2;
 force force ace_repair_engineerSetting_repair = 1;
 force force ace_repair_engineerSetting_wheel = 0;
-force force ace_repair_fullRepairLocation = 0;
+force force ace_repair_fullRepairLocation = 1;
 force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
-force force ace_repair_locationsBoostTraining = true;
+force force ace_repair_locationsBoostTraining = false;
 force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
-force force ace_repair_repairDamageThreshold = 0.800653;
-force force ace_repair_repairDamageThreshold_engineer = 0.904635;
+force force ace_repair_repairDamageThreshold = 0.7;
+force force ace_repair_repairDamageThreshold_engineer = 0.9;
 force force ace_repair_wheelRepairRequiredItems = [];
 force force ace_towing_addRopeToVehicleInventory = false;
 
@@ -754,7 +754,7 @@ force force ace_winddeflection_simulationInterval = 0.05;
 force force ace_winddeflection_vehicleEnabled = true;
 
 // ACE Zeus
-force force ace_zeus_autoAddObjects = true;
+force force ace_zeus_autoAddObjects = false;
 force force ace_zeus_canCreateZeus = 0;
 force force ace_zeus_radioOrdnance = false;
 force force ace_zeus_remoteWind = false;
@@ -840,7 +840,7 @@ force force TFAR_experimentalVehicleIsolation = true;
 force force TFAR_externalIntercomEnable = 0;
 force force TFAR_externalIntercomMaxRange_Phone = 5;
 force force TFAR_externalIntercomMaxRange_Wireless = 15;
-force force TFAR_fullDuplex = false;
+force force TFAR_fullDuplex = true;
 force force TFAR_giveLongRangeRadioToGroupLeaders = false;
 force force TFAR_giveMicroDagrToSoldier = true;
 force force TFAR_givePersonalRadioToRegularSoldier = false;
