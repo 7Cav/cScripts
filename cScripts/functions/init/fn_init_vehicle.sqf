@@ -21,6 +21,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 ["AllVehicles", "init", {
     _this params ["_vehicle"];
     if (_vehicle iskindOf "man") exitWith {};
+    waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
     _vehicle call EFUNC(vehicle,addFunctions);
     _vehicle call EFUNC(vehicle,addInventory);
     _vehicle call EFUNC(vehicle,addDefaultLoadout);
@@ -33,6 +34,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     _x addEventHandler ["CuratorObjectPlaced", {
         params ["", "_vehicle"];
         if (_vehicle iskindOf "man") exitWith {};
+        waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
         _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
         _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
         _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
