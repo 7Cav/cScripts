@@ -742,7 +742,7 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148", 1],
         ["rhs_fgm148_magazine_AT", 2],
-        ["rhs_weap_M136_heat", 2],
+        ["rhs_weap_M136", 2],
 
         // M32 Rotary Grenade Launcher
         ["rhs_weap_m32", 1],
@@ -761,7 +761,7 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148", 1],
         ["rhs_fgm148_magazine_AT", 2],
-        ["rhs_weap_M136_heat", 2],
+        ["rhs_weap_M136", 2],
 
         // M32 Rotary Grenade Launcher
         ["rhs_weap_m32", 1],
@@ -848,7 +848,7 @@ private _dataArray = [
         ["rhsusf_mag_6Rnd_M433_HEDP", 3],
         ["rhsusf_mag_6Rnd_m4009", 3],
         ["rhsusf_mag_6Rnd_M713_red", 2],
-        ["rhs_weap_M136_heat", 4],
+        ["rhs_weap_M136", 4],
         ["B_UAV_01_backpack_F", 2],
         ["B_UavTerminal", 1],
         ["ACE_UAVBattery", 4],
