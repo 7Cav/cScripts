@@ -228,9 +228,8 @@ private _dataArray = [
         ["USP_TACTICAL_PACK_CCT6", 0],
         ["USP_TACTICAL_PACK_CCT7", 0],
         ["USP_TACTICAL_PACK_CCT8", 0],
-        ["UK3CB_US_B_B_RIF_OCP_Radio", 0],
+        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
-
     ["starter_bravo_viking", [
         // Radios
         ["ACRE_PRC343", 30],
@@ -417,14 +416,6 @@ private _dataArray = [
         ["USP_PVS15", 0],
         ["USP_L4G19", 0],
         ["USP_RHINO", 0]
-    ]],
-
-    ["starter_radios", [
-        ["ACRE_PRC343", 40],
-        ["ACRE_PRC152", 40],
-        ["ACRE_PRC117F", 40],
-
-        ["TFAR_anprc152", 40]
     ]],
 
     // // // // // // //
@@ -790,7 +781,6 @@ private _dataArray = [
         ["ace_csw_staticMortarCarry", 2]
     ]],
 
-    
     // // // // // // // //
     // Charlie Vehicles \\
     // // // // // // // //
@@ -842,11 +832,11 @@ private _dataArray = [
     ]],
     // ["demolitions", []],
     ["radios", [
-        ["ACRE_PRC343", 20],
-        ["ACRE_PRC152", 10],
-        ["ACRE_PRC117F", 5],
+        ["ACRE_PRC343", 40],
+        ["ACRE_PRC152", 40],
+        ["ACRE_PRC117F", 40],
 
-        ["TFAR_anprc152", 25]
+        ["TFAR_anprc152", 40]
     ]],
 
     // No longer used \\
@@ -1332,7 +1322,7 @@ private _dataArray = [
         ["B_Carryall_mcamo", 0],
 
         // Tools and Items
-        ["ACE_Vector" 0]
+        ["ACE_Vector", 0]
     ]],
     ["arsenal_role_rotarypilot", [
         ["H_PilotHelqmetHeli_B", 0],
@@ -1391,9 +1381,14 @@ private _dataArray = [
 
         //Backpack
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
-    ]],
+    ]]
 ];
 
 private _return = createHashMapFromArray _dataArray;
+
+if (typeName _return != "HASHMAP") exitWith {
+    [format ["Fatal error creating database (database base type faulty %1)...", typeName _return], "Logistics Database"] call FUNC(error);
+    createHashMapFromArray [["", []]];
+};
 
 _return;
