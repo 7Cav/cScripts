@@ -244,7 +244,7 @@ private _dataArray = [
         ["rhs_weap_fim92",2],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry",2],
         ["ace_csw_carryMortarBaseplate",4],
-        ["ace_compat_rhs_usf3_m252_carry",4],
+        ["ace_csw_staticMortarCarry",4],
         ["avm224_W_M224_mortar_carry",4],
 
         // Ammo
