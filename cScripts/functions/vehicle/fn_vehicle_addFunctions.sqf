@@ -12,7 +12,6 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {[formatText["Vehicle functions already applied for %1.", _vehicle]] call FUNC(warning);};
 
@@ -74,6 +73,8 @@ if (_vehicle iskindOf "USAF_C17") then {
     [_vehicle] call FUNC(addHaloJump);
 };
 
+
+// Below functions only gets applied to approved factions
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 if (_vehicle iskindOf "MRAP_01_base_F") then {
@@ -97,6 +98,19 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
+};
+
+
+if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
+    [_vehicle] call EFUNC(vehicle,addFlagAction);
+
+    switch (_vehicleType) do {
+        case "cav_dragoon_Unarmed_WD";
+        case "cav_dragoon_Unarmed_A";
+        case "cav_dragoon_Unarmed_D";
+        case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
+        default {};
+    };
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
