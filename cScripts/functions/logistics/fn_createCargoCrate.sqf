@@ -60,14 +60,16 @@ if (_isInCargo) then {
     if !(_success) then {
         [
             format[
-                "Failed to load %1 (%2) in to %3 to big (Size of crate i %4)?...",
+                "Failed to load %1 (%2) in to %3 to big (Size of crate is %4 and there is only %5 out of %6 left.).",
                 _crate, 
                 _classname,
                 _destination,
-                [_crate] call ace_cargo_fnc_getSizeItem
+                [_crate] call ace_cargo_fnc_getSizeItem,
+                [_destination] call ace_cargo_fnc_getCargoSpaceLeft,
+                _destination getVariable ["ace_cargo_size", 0]
             ],
             "Create Cargo Crate", false
-        ] call FUNC(error);
+        ] call FUNC(warning);
     };
 };
 
