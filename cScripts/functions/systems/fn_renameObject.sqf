@@ -23,7 +23,7 @@ params[
 
 if (!EGVAR(patches,usesACE)) exitWith {""};
 if (!isNil {ace_cargo_noRename}) exitWith {""};
-if (ace_cargo_noRename isNotEqualTo 0) exitWith {""};
+if (_object getVariable ["ace_cargo_noRename", false]) exitWith {""};
 
 if (_name isEqualTo "") exitWith {
     _object setVariable ["ace_cargo_customName", nil, true];

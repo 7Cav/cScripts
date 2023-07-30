@@ -14,7 +14,6 @@
  *
  * Public: No
  */
-#define DEBUG_MODE
 
 params [["_vehicle", objNull, [objNull]]];
 
