@@ -40,4 +40,4 @@ private _actionID = [
     true
 ] call BIS_fnc_holdActionAdd;
 
-_vehicle setVariable [QEGVAR(Vehicle,escapeWreck), [player, _vehicle]];
+_vehicle setVariable [QEGVAR(Vehicle,escapeWreck), [_actionID]];
