@@ -51,7 +51,7 @@ if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Halo)}) then {
 };
 private _escapeActionID  = _vehicle getVariable [QEGVAR(Vehicle,escapeWreck), nil];
 if (!isNil {_vehicle getVariable QEGVAR(Vehicle,escapeWreck)}) then {
-    [_vehicle, _escapeActionID select 0] call BIS_fnc_holdActionRemove
+    [_vehicle, _escapeActionID] call BIS_fnc_holdActionRemove
 };
 
 // Reset vehicle inventory variable
