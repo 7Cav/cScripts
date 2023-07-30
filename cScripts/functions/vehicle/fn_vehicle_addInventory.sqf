@@ -9,6 +9,7 @@
  * Example:
  * ["vic"] call cScripts_fnc_vehicle_addInventory;
  */
+#define DEBUG_MODE
 
 params [["_vehicle", objNull, [objNull]]];
 
@@ -46,9 +47,10 @@ if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
 
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
-    [_vehicle, 5, 38, false, false] call FUNC(setCargoAttributes);
+    [_vehicle, 5, 40, false, false] call FUNC(setCargoAttributes);
     ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
     ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+    ["FlexibleTank_01_forest_F", _vehicle, true] call ace_cargo_fnc_loadItem;
     
     switch (_vehicleType) do {
 
@@ -56,9 +58,6 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
         case "cav_dragoon_A_V4";
         case "cav_dragoon_D_V4";
         case "cav_dragoon_WD_V4": {
-            [_vehicle, 17, 38, false, false] call FUNC(setCargoAttributes);
-
-
             // Vehicle Inventory
             [_vehicle, 
                 "vehicle_strykerDragoon_V4" call EFUNC(logistics,getContainer)
@@ -94,7 +93,11 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
         case "cav_dragoon_A_V5";
         case "cav_dragoon_D_V5";
         case "cav_dragoon_WD_V5": {
-            [_vehicle, 17, 38, false, false] call FUNC(setCargoAttributes);
+
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
 
             // Vehicle Inventory
             [_vehicle, 
@@ -106,10 +109,6 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
                 "crate_strykerDragoon_resupply" call EFUNC(logistics,getContainer), 
                 _vehicle
             ] call FUNC(createCargoCrate);
-            
-            for "_y" from 0 to 5 step 1 do { 
-                ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem; 
-            };
         };
         
         // Ambulance strykers: Carry medical supplies and a medical resupply crate.
@@ -142,9 +141,6 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
 
         };
     };
-
-    // Emergency Fuel Tank
-    ["FlexibleTank_01_forest_F", false, _vehicle, 1] call FUNC(createCargoCrate);
 };
 
 // Vehicles

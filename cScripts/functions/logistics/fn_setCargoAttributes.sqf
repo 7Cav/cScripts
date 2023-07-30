@@ -28,7 +28,7 @@ params [
     ["_carryable", true, [true]]
 ];
 
-if !(isServer) exitWith {};
+if (!isServer) exitWith {};
 
 if (!isNil{_space}) then {
     [_vehicle, _space] call ace_cargo_fnc_setSpace;
