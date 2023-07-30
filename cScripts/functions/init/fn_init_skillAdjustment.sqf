@@ -13,7 +13,7 @@
     ["Applying AI Event Handler to units...", "init"] call FUNC(info);
 #endif
 
-if !(isServer) exitWith {};
+if (!isServer) exitWith {};
 
 ["CAManBase", "init", {
     params ["_unit"];
