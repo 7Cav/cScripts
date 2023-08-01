@@ -22,7 +22,7 @@ params [
 
 if (!GVAR(isPlayer)) exitWith {};
 
-private _playerClan = [_player] call FUNC(getPlayerClan);
+private _playerClan = [_player] call FUNC(getClanTag);
 _clanTag = toUpper(_clanTag);
 
 _return = if (_playerClan == _clanTag) then {true} else {false};

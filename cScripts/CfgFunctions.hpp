@@ -52,7 +52,7 @@ class cScripts {
     };
     class players {
         file = "cScripts\functions\players";
-        class getPlayerClan {};
+        class getClanTag {};
         class isPlayerClan {};
 
         class getPlayerRank {};

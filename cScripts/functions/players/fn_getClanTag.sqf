@@ -1,16 +1,16 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * Retun the player clan tag
+ * This function return players clan tag or empty if none.
  *
  * Arguments:
  * 0: player <STRING>
  *
  * Return Value:
- * Clan Tag <STRING>
+ * ClanTag or Empty <STRING>
  *
  * Example:
- * [player] call cScripts_fnc_getPlayerClan
+ * [player] call cScripts_fnc_getClanTag
  *
  */
 
@@ -18,10 +18,10 @@ params [
     ["_player", objNull, [objNull]]
 ];
 
-private _playerClan = "";
+private _clanTag = "";
 if !(isNil {squadParams _player select 0 select 0}) then {
-    _playerClan = squadParams _player select 0 select 0;
-    _playerClan = toUpper(_playerClan);
+    _clanTag = squadParams _player select 0 select 0;
+    _clanTag = toUpper(_clanTag);
 };
 
-_playerClan;
+_clanTag;
