@@ -81,6 +81,7 @@ class cScripts {
         class addLoadoutAction {};
 
         class addGetOutHelo {};
+        class addEscapeWreck {};
 
         class addLineJump {};
         class addHaloJump {};
