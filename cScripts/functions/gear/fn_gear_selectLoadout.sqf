@@ -27,7 +27,7 @@ private _sideConfig    = [side group _unit] call EFUNC(gear,getSideConfig);
 switch (true) do {
     case (_unit call EFUNC(gear,hasSavedLoadout)): {
         _saved
-    }
+    };
     case (isClass (_config >> _variable)): {
         if !(_variable isKindOf [_sideConfig, _config]) then {
             SHOW_CHAT_WARNING_2("Gear", "The loadout for '%1' does not inherit from '%2'.", _variable, _sideConfig);
