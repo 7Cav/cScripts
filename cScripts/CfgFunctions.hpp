@@ -201,7 +201,7 @@ class cScripts {
         class gear_applyLoadout {};
         class gear_applyCosmetics {};
         class gear_applyAbilities {};
-
+        class gear_applyFunctions {};
         class gear_selectLoadout {};
         class gear_getSideConfig {};
 
