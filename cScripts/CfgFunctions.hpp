@@ -4,6 +4,8 @@ class cScripts {
         class init_aceArsenalDefault {};
         class init_aceTagging {};
         class init_aceItemReplace {};
+        
+        class init_player {};
 
         class init_skillAdjustment {};
         class init_vehicle {};
