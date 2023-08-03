@@ -70,12 +70,14 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             ] call FUNC(createCargoCrate);
 
             // Ammo for 2x 82mm mortars
+            private _crate_strykerDragoon_82mm = call EFUNC(logistics,getContainer);
             ["ACE_Box_82mm_Mo_Combo", 
-                "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer), 
+                _crate_strykerDragoon_82mm,
                 _vehicle, 1, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
+            
             ["ACE_Box_82mm_Mo_Combo", 
-                "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer),
+                _crate_strykerDragoon_82mm,
                 _vehicle, 1, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
         };
