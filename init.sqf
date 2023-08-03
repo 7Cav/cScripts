@@ -8,7 +8,7 @@
 
 if (!isMultiplayer) then {SHOW_CHAT_WARNING("", "Mission is running on singelplayer enviroment!");};
 #ifdef DEBUG_MODE
-    SHOW_INFO("init", "cScripts init Initializing");
+    SHOW_INFO("init", "Initializing...");
     SHOW_CHAT_INFO_1("init", "cScripts Version %1 is running.", VERSION);
     SHOW_CHAT_WARNING("init", "Debug mode is currently active.");
     logEntities;
@@ -28,6 +28,6 @@ enableSaving [false, false];
 ACE_maxWeightCarry = 7500;
 ACE_maxWeightDrag = 10000;
 
-INFO("init", "cScripts init initialization completed.");
+INFO("init", "Initialization completed.");
 
 /* APPLY STUFF ONLY BELOW THIS LINE */

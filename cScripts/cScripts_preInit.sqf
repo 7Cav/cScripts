@@ -4,9 +4,7 @@
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 
-#ifdef DEBUG_MODE
-    ["Initializing CBA Settings...", "preInit"] call FUNC(info);
-#endif
+INFO("preInit", "Initializing CBA Settings..");
 
 // Check installed moduels
 EGVAR(patches,usesACE)          = isClass (configFile >> "CfgPatches" >> "ace_main");
@@ -350,25 +348,21 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-#ifdef DEBUG_MODE
-    if !(is3DEN) then {
-        ["Initialization of CBA Settings completed...", "preInit"] call FUNC(info);
-    } else {
-        ["Initialization of CBA Settings completed...", "EDEN"] call FUNC(info);
-    };
-#endif
+if !(is3DEN) then {
+    INFO("preInit", "Initialization of CBA Settings completed...");
+} else {
+    INFO("preInit EDEN", "Initialization of CBA Settings completed...");
+};
 
-[] call EFUNC(init,aceArsenalDefault);
+call EFUNC(init,aceArsenalDefault);
 
 // Load preInit mission settings
 if (is3DEN) exitWith {};
 
-#ifdef DEBUG_MODE
-    ["Initializing...", "preInit"] call FUNC(info);
-#endif
+INFO("preInit", "Initializing...");
 
 if (EGVAR(Settings,allowCustomTagging)) then {
-    [] call EFUNC(init,aceTagging);
+    call EFUNC(init,aceTagging);
 };
 
 call EFUNC(init,chatCommands);
@@ -376,11 +370,9 @@ call EFUNC(init,chatCommands);
 call EFUNC(init,zenModuels);
 
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
-    [] call EFUNC(init,skillAdjustment);
+    call EFUNC(init,skillAdjustment);
 };
 
-[] call EFUNC(init,eventHandlers);
+call EFUNC(init,eventHandlers);
 
-#ifdef DEBUG_MODE
-    ["Initialization completed", "preInit"] call FUNC(info);
-#endif
+INFO("preInit", "Initialization completed.");
