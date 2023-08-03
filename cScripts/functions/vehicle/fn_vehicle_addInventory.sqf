@@ -24,21 +24,12 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
-
-// Remove ACE Cargo
-private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
-{   
-    [_x, _vehicle] call ace_cargo_fnc_removeCargoItem;
-    
-} forEach _cargoArray;
-
 _vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
 
 // Remove ACE Cargo
 private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
 {   
     [_x, _vehicle] call ace_cargo_fnc_removeCargoItem;
-    
 } forEach _cargoArray;
 
 // Do not allow renaming of vehicles
@@ -79,12 +70,14 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             ] call FUNC(createCargoCrate);
 
             // Ammo for 2x 82mm mortars
+            private _crate_strykerDragoon_82mm = call EFUNC(logistics,getContainer);
             ["ACE_Box_82mm_Mo_Combo", 
-                "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer), 
+                _crate_strykerDragoon_82mm,
                 _vehicle, 1, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
+            
             ["ACE_Box_82mm_Mo_Combo", 
-                "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer),
+                _crate_strykerDragoon_82mm,
                 _vehicle, 1, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
         };
