@@ -26,17 +26,17 @@ private _abilityEOD           = getNumber (_config >> "abilityEOD");
 
 // Set Medic ability
 private _isMedic = (_abilityMedicLevel > 0);
-_unit setVariable ["ACE_medical_medicClass", _abilityMedicLevel, _isMedic];
+_unit setVariable ["ACE_medical_medicClass", _abilityMedicLevel, true];
 _unit setUnitTrait ["medic", _isMedic];
 
 // Set Engineer ability
 private _isEngineer = (_abilityEngineerLevel > 0);
-_unit setVariable ["ACE_isEngineer", _abilityEngineerLevel, _isEngineer];
+_unit setVariable ["ACE_isEngineer", _abilityEngineerLevel, true];
 _unit setUnitTrait ["engineer", _isEngineer];
 
 // Set EOD ability
 private _isEOD = (_abilityEOD > 0);
-_unit setVariable ["ACE_isEOD", _isEOD, _isEOD];
+_unit setVariable ["ACE_isEOD", _isEOD, true];
 _unit setUnitTrait ["explosiveSpecialist", _isEOD];
 
 _unit setVariable [QEGVAR(Player,Abilities), [["Medic", _abilityMedicLevel, _isMedic], ["Engineer", _abilityEngineerLevel, _isEngineer], ["EOD", _isEOD, _isEOD]]];
