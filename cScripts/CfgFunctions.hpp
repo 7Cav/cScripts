@@ -76,9 +76,8 @@ class cScripts {
         class getRadioChannel {};
         class setRadioChannel {};
         class setActiveRadio {};
-        
-        class getCompanyVariable {};
-        class hasCompanyVariable {};
+
+        class player_getCompany {};
 
     };
     class mission {
@@ -106,6 +105,7 @@ class cScripts {
         class addInsigniaSelection {};
         class addInsigniaSelectionList {};
 
+        class allowLoadout {};
         class setupLoadoutSelection {};
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
