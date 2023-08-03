@@ -61,25 +61,25 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             // Supply Crate
             ["Box_NATO_Equip_F", 
                 "crate_strykerDragoon_resupply" call EFUNC(logistics,getContainer), 
-                _vehicle, 2, "Supply Crate"
+                _vehicle, nil, "Supply Crate"
             ] call FUNC(createCargoCrate);
 
             // 4x 60mm mortars with ammo
             ["Box_Syndicate_WpsLaunch_F", 
                 "crate_strykerDragoon_60mm" call EFUNC(logistics,getContainer), 
-                _vehicle, 1, "4x 60mm mortars with ammo"
+                _vehicle, nil, "4x 60mm mortars with ammo"
             ] call FUNC(createCargoCrate);
 
             // Ammo for 2x 82mm mortars
             private _mortar_ammo_82mm = "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer);
             ["ACE_Box_82mm_Mo_Combo", 
                 _mortar_ammo_82mm, 
-                _vehicle, 1, "Ammo for 2x 82mm mortars"
+                _vehicle, nil, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
             
             ["ACE_Box_82mm_Mo_Combo", 
                 _mortar_ammo_82mm,
-                _vehicle, 1, "Ammo for 2x 82mm mortars"
+                _vehicle, nil, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
         };
 
@@ -103,7 +103,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             // Supply Crate
             ["Box_NATO_Equip_F", 
                 "crate_strykerDragoon_resupply" call EFUNC(logistics,getContainer), 
-                _vehicle, 1, "Resupply Crate"
+                _vehicle, nil, "Resupply Crate"
             ] call FUNC(createCargoCrate);
         };
         
@@ -118,7 +118,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
 
             ["ace_medicalSupplyCrate",
                 ["crate_medicalAtlas"] call EFUNC(logistics,getContainer),
-                _vehicle, 2, "Medical Supply Crate"
+                _vehicle, nil, "Medical Supply Crate"
             ] call FUNC(createCargoCrate);
         };
         
@@ -132,7 +132,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             // Supply Crate
             ["Box_NATO_Equip_F", 
                 "crate_strykerDragoon_resupply" call EFUNC(logistics,getContainer), 
-                _vehicle, 2, "Resupply Crate"
+                _vehicle, nil, "Resupply Crate"
             ] call FUNC(createCargoCrate);
         };
     };
