@@ -44,3 +44,20 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
         _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
     }];
 } forEach allCurators;
+
+["ace_zeusCreated", {
+    if (isNull{player setVariable [QEGVAR(player,zeus), false]}) exitWith {};
+    player setVariable [QEGVAR(player,zeus), true];
+    player addEventHandler ["CuratorObjectPlaced", {
+        params ["", "_vehicle"];
+        if (_vehicle iskindOf "man") exitWith {};
+        waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
+        _vehicle remoteExec [QEFUNC(vehicle,reset), 0, true]; 
+        _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
+        _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), -2];
+        _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
+    }];
+}] call CBA_fnc_addEventHandler;
