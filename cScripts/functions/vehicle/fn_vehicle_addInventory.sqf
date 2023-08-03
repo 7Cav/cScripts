@@ -24,21 +24,12 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
-
-// Remove ACE Cargo
-private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
-{   
-    [_x, _vehicle] call ace_cargo_fnc_removeCargoItem;
-    
-} forEach _cargoArray;
-
 _vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
 
 // Remove ACE Cargo
 private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
 {   
     [_x, _vehicle] call ace_cargo_fnc_removeCargoItem;
-    
 } forEach _cargoArray;
 
 // Do not allow renaming of vehicles
