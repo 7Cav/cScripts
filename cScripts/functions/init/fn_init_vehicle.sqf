@@ -40,7 +40,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
         _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
         _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
         _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), -2, true];
+        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), -2];
         _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
     }];
 } forEach allCurators;
