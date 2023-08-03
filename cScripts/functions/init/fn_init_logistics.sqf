@@ -498,7 +498,7 @@ private _dataArray = [
         ["kat_naloxone",20],
         ["ACE_morphine",20],
         ["ACE_epinephrine",40],
-        ["ACE_phenylephrine_inject",40],
+        ["kat_phenylephrine_inject",40],
         
         // Splints
         ["ACE_splint",40],
@@ -694,7 +694,7 @@ private _dataArray = [
         ["kat_naloxone",20],
         ["ACE_morphine",20],
         ["ACE_epinephrine",40],
-        ["ACE_phenylephrine_inject",40],
+        ["kat_phenylephrine_inject",40],
 
         // Splints
         ["ACE_splint",20],
