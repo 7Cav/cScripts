@@ -6,11 +6,11 @@
  * Read more about Initzialisation order here: https://community.bistudio.com/wiki/Initialization_Order
  */
 
-if (!isMultiplayer) then {["Mission is running on singelplayer enviroment!", "", true] call FUNC(warning)};
+if (!isMultiplayer) then {SHOW_CHAT_WARNING("", "Mission is running on singelplayer enviroment!");};
 #ifdef DEBUG_MODE
-    ["init Initializing.", "init"] call FUNC(info);
-    [format["cScripts Version %1 is running.",VERSION], "init"] call FUNC(info);
-    [format["Debug mode is currently active."], "init", true] call FUNC(warning);
+    SHOW_INFO("init", "Initializing...");
+    SHOW_CHAT_INFO_1("init", "cScripts Version %1 is running.", VERSION);
+    SHOW_CHAT_WARNING("init", "Debug mode is currently active.");
     logEntities;
 #endif
 
@@ -20,7 +20,7 @@ if (isMultiplayer) then {
     call EFUNC(gear,setupRadios);
     GVAR(Radio) = true;
 } else {
-    ["Mission in singelplayer enviroment radio setup will not be performed", "init", true] call FUNC(warning);
+    SHOW_CHAT_WARNING("init", "Mission in singelplayer environment radio setup will not be performed");
 };
 
 enableSaving [false, false];
@@ -28,8 +28,6 @@ enableSaving [false, false];
 ACE_maxWeightCarry = 7500;
 ACE_maxWeightDrag = 10000;
 
-#ifdef DEBUG_MODE
-    ["init initialization completed.", "init"] call FUNC(info);
-#endif
+INFO("init", "Initialization completed.");
 
 /* APPLY STUFF ONLY BELOW THIS LINE */

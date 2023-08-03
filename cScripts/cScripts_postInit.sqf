@@ -5,9 +5,7 @@
  */
 if (is3DEN) exitWith {};
 
-#ifdef DEBUG_MODE
-    ["Initializing...", "postInit"] call FUNC(info);
-#endif
+INFO("postInit", "Initializing...");
 
 // Change inventory content of supply crates on mission start.
 [] call EFUNC(init,vehicle);
@@ -32,6 +30,4 @@ onPlayerConnected {
     [QEGVAR(log,player), [name player]] call CBA_fnc_serverEvent;
 };
 
-#ifdef DEBUG_MODE
-    ["Initialization completed", "postInit"] call FUNC(info);
-#endif
+INFO("postInit", "Initialization completed.");
