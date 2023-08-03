@@ -31,7 +31,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 {
-    if (!isNull{_x setVariable [QEGVAR(player,zeus), false]}) exitWith {};
+    if (!isNil{_x getVariable QEGVAR(player,zeus)}) exitWith {};
     _x setVariable [QEGVAR(player,zeus), true];
     _x addEventHandler ["CuratorObjectPlaced", {
         params ["", "_vehicle"];
@@ -48,7 +48,7 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 } forEach allCurators;
 
 ["ace_zeusCreated", {
-    if (!isNull{player setVariable [QEGVAR(player,zeus), false]}) exitWith {};
+    if (!isNil{player getVariable QEGVAR(player,zeus)}) exitWith {};
     player setVariable [QEGVAR(player,zeus), true];
     player addEventHandler ["CuratorObjectPlaced", {
         params ["", "_vehicle"];
