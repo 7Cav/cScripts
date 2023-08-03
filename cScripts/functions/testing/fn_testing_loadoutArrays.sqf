@@ -10,6 +10,7 @@
  *
  * Example:
  * call cScripts_fnc_testing_loadoutArrays
+ * 0 spawn compile preprocessFileLineNumbers 'cScripts\functions\testing\fn_testing_loadoutArrays.sqf'
  *
  */
 
@@ -130,6 +131,12 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
 
 } forEach _classnameList;
 
+
+if (_return) then {
+    ["TEST SUCCESSFUL", "INFO", true, false, "TESTING"] call FUNC(log);
+} else {
+    ["TEST FAILED", "INFO", true, false, "TESTING"] call FUNC(log);
+};
 ["TEST COMPLETED", "INFO", true, false, "TESTING"] call FUNC(log);
 diag_log text "";
 diag_log text "###############################################################################################################";

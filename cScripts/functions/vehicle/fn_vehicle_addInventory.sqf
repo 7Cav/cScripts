@@ -24,6 +24,7 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
+
 // Remove ACE Cargo
 private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
 {   
@@ -46,12 +47,10 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
     ["FlexibleTank_01_forest_F", _vehicle, true] call ace_cargo_fnc_loadItem; // Emergency Fuel Tank
 
     switch (_vehicleType) do {
-
         // Weapons squad strykers: Have several mortars, both 60mm and 82mm.
         case "cav_dragoon_A_V4";
         case "cav_dragoon_D_V4";
         case "cav_dragoon_WD_V4": {
-
             // Vehicle Inventory
             [_vehicle, 
                 "vehicle_strykerDragoon_V4" call EFUNC(logistics,getContainer)
@@ -60,25 +59,25 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             // Supply Crate
             ["Box_NATO_Equip_F", 
                 "crate_strykerDragoon_resupply" call EFUNC(logistics,getContainer), 
-                _vehicle
+                _vehicle, 2, "Supply Crate"
             ] call FUNC(createCargoCrate);
 
             // 4x 60mm mortars with ammo
             ["Box_Syndicate_WpsLaunch_F", 
                 "crate_strykerDragoon_60mm" call EFUNC(logistics,getContainer), 
-                _vehicle
+                _vehicle, 1, "4x 60mm mortars with ammo"
             ] call FUNC(createCargoCrate);
 
             // Ammo for 2x 82mm mortars
             private _mortar_ammo_82mm = "crate_strykerDragoon_82mm" call EFUNC(logistics,getContainer);
             ["ACE_Box_82mm_Mo_Combo", 
                 _mortar_ammo_82mm, 
-                _vehicle
+                _vehicle, 1, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
             
             ["ACE_Box_82mm_Mo_Combo", 
-                _mortar_ammo_82mm, 
-                _vehicle
+                _mortar_ammo_82mm,
+                _vehicle, 1, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
         };
 
@@ -89,6 +88,10 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
         case "cav_dragoon_A_V5";
         case "cav_dragoon_D_V5";
         case "cav_dragoon_WD_V5": {
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
 
             // Vehicle Inventory
             [_vehicle, 
@@ -98,12 +101,8 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             // Supply Crate
             ["Box_NATO_Equip_F", 
                 "crate_strykerDragoon_resupply" call EFUNC(logistics,getContainer), 
-                _vehicle
+                _vehicle, 1, "Resupply Crate"
             ] call FUNC(createCargoCrate);
-            
-            for "_y" from 0 to 5 step 1 do { 
-                ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem; 
-            };
         };
         
         // Ambulance strykers: Carry medical supplies and a medical resupply crate.
@@ -117,7 +116,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
 
             ["ace_medicalSupplyCrate",
                 ["crate_medicalAtlas"] call EFUNC(logistics,getContainer),
-                _vehicle
+                _vehicle, 2, "Medical Supply Crate"
             ] call FUNC(createCargoCrate);
         };
         
@@ -131,9 +130,8 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             // Supply Crate
             ["Box_NATO_Equip_F", 
                 "crate_strykerDragoon_resupply" call EFUNC(logistics,getContainer), 
-                _vehicle
+                _vehicle, 2, "Resupply Crate"
             ] call FUNC(createCargoCrate);
-
         };
     };
 };

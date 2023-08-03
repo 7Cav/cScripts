@@ -123,8 +123,8 @@ private _rhsusf_m1a1tank_base = createHashMapFromArray [
     ]]
 ];
 
-// _APC_Wheeled_03_base_F
-private _APC_Wheeled_03_base_F = createHashMapFromArray [
+// I_APC_Wheeled_03_cannon_F
+private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
     ["antiarmor", [
         ["SmokeLauncherMag",[0,0],6],
         ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
@@ -173,7 +173,7 @@ private _APC_Wheeled_03_base_F = createHashMapFromArray [
 // Loadout vehicle list
 private _pylons = createHashMapFromArray [
     ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base],
-    ["APC_Wheeled_03_base_F", _APC_Wheeled_03_base_F]
+    ["I_APC_Wheeled_03_cannon_F", _I_APC_Wheeled_03_cannon_F]
 ];
 
 private _getVehiclePylons = _pylons getOrDefault [_vehicleKind, []];

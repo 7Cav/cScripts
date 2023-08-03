@@ -81,6 +81,7 @@ class cScripts {
         class addLoadoutAction {};
 
         class addGetOutHelo {};
+        class addEscapeWreck {};
 
         class addLineJump {};
         class addHaloJump {};
@@ -225,5 +226,6 @@ class cScripts {
     class testing {
         file = "cScripts\functions\testing";
         class testing_loadoutArrays {};
+        class testing_equipmentUsed {};
     };
 };

@@ -12,7 +12,6 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {[formatText["Vehicle functions already applied for %1.", _vehicle]] call FUNC(warning);};
 
@@ -28,7 +27,9 @@ _vehicle setVariable [QEGVAR(Vehicle,Functions), true, true];
 // Jump and get out systems universal for all airframes and non nato factions.
 if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
     [_vehicle] call FUNC(addGetOutHelo);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
+
 if (_vehicle iskindOf "RHS_UH60_Base") then {
     switch (_vehicleType) do {
         case "RHS_UH60M_MEV2_d";
@@ -41,39 +42,54 @@ if (_vehicle iskindOf "RHS_UH60_Base") then {
 };
 if (_vehicle iskindOf "rhs_uh1h_base") then {
     [_vehicle] call FUNC(addGetOutHelo);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
 if (_vehicle iskindOf "RHS_UH1_Base") then {
     [_vehicle] call FUNC(addGetOutHelo);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
 
 if (_vehicle iskindOf "RHS_Mi24_base") then {
     [_vehicle] call FUNC(addGetOutHelo);
     [_vehicle] call FUNC(addLineJump);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
 
 if (_vehicle iskindOf "RHS_Mi8_base") then {
     [_vehicle] call FUNC(addLineJump);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
 
 if (_vehicle iskindOf "Heli_Transport_02_base_F") then {
     [_vehicle] call FUNC(addLineJump);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
 
 if (_vehicle iskindOf "RHS_C130J_Base") then {
     [_vehicle] call FUNC(addLineJump);
     [_vehicle] call FUNC(addHaloJump);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
 
 if (_vehicle iskindOf "USAF_C130J") then {
     [_vehicle] call FUNC(addLineJump);
     [_vehicle] call FUNC(addHaloJump);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
 
 if (_vehicle iskindOf "USAF_C17") then {
     [_vehicle] call FUNC(addLineJump);
     [_vehicle] call FUNC(addHaloJump);
+    [_vehicle] call FUNC(addEscapeWreck);
 };
 
+if ((_vehicle isKindOf "USAF_F22_Heavy") || (_vehicle isKindOf "USAF_F35A") || (_vehicle isKindOf "USAF_A10")) then {
+    [_vehicle] call FUNC(addEscapeWreck);
+};
+
+
+
+// Below functions only gets applied to approved factions
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 if (_vehicle iskindOf "MRAP_01_base_F") then {
@@ -97,6 +113,19 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
+};
+
+
+if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
+    [_vehicle] call EFUNC(vehicle,addFlagAction);
+
+    switch (_vehicleType) do {
+        case "cav_dragoon_Unarmed_WD";
+        case "cav_dragoon_Unarmed_A";
+        case "cav_dragoon_Unarmed_D";
+        case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
+        default {};
+    };
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {

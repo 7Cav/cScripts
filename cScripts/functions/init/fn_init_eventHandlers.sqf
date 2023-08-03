@@ -15,7 +15,7 @@
 }] call CBA_fnc_addEventHandler;
 
 // Server Events
-if !(isServer) exitWith {};
+if (!isServer) exitWith {};
 
 [QEGVAR(log,text), {
     diag_log text _this;
@@ -26,4 +26,10 @@ if !(isServer) exitWith {};
     private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
     _playerLog pushBack _playerName;
     missionNamespace setVariable [QEGVAR(log,players), _playerLog];
+}] call CBA_fnc_addEventHandler;
+
+// Vehicle
+[QEGVAR(vehicle,applyLoadout), {
+    _this params ["_vehicle", "_loadoutName", "_pylon"];
+    [_vehicle, _loadoutName, _pylon] call EFUNC(vehicle,applyLoadout);
 }] call CBA_fnc_addEventHandler;
