@@ -87,6 +87,11 @@ if ((_vehicle isKindOf "USAF_F22_Heavy") || (_vehicle isKindOf "USAF_F35A") || (
     [_vehicle] call FUNC(addEscapeWreck);
 };
 
+if (_vehicle iskindOf "vtx_MH60M") then {
+    [_vehicle] call FUNC(addGetOutHelo);
+    [_vehicle] call FUNC(addEscapeWreck);
+};
+
 
 
 // Below functions only gets applied to approved factions

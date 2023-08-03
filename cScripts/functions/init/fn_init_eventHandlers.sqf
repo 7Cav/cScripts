@@ -9,13 +9,36 @@
  * Public: No
  */
 
+#ifdef DEBUG_MODE
+    ["Creating Global EventHandlers", "InitEventHandlers"] call FUNC(info);
+#endif
 
 [QGVAR(getAttendance), {
     call FUNC(getAttendance);
 }] call CBA_fnc_addEventHandler;
 
+["ace_zeusCreated", {
+    _this params ["_player"];
+    _player addEventHandler ["CuratorObjectPlaced", {
+        params ["", "_vehicle"];
+        if (_vehicle iskindOf "man") exitWith {};
+        waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
+        _vehicle remoteExec [QEFUNC(vehicle,reset), 0, true]; 
+        _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
+        _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
+    }];
+}] call CBA_fnc_addEventHandler;
+
 // Server Events
 if (!isServer) exitWith {};
+
+#ifdef DEBUG_MODE
+    ["Creating Server EventHandlers", "InitEventHandlers"] call FUNC(info);
+#endif
 
 [QEGVAR(log,text), {
     diag_log text _this;
