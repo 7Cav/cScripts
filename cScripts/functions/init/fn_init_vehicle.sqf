@@ -12,9 +12,7 @@
  * Public: No
  */
 
-#ifdef DEBUG_MODE
-    ["Applying Event Handers (init) to vehicles for function expantions...", "InitVehicle"] call FUNC(info);
-#endif
+LOG("InitVehicle","Applying Event Handers (init) to vehicles for function expantions...");
 
 if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 
@@ -22,10 +20,13 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     _this params ["_vehicle"];
     if (_vehicle iskindOf "man") exitWith {};
     waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
-    _vehicle call EFUNC(vehicle,addFunctions);
-    _vehicle call EFUNC(vehicle,addInventory);
-    _vehicle call EFUNC(vehicle,addDefaultLoadout);
-    _vehicle call EFUNC(vehicle,addCosmetics);
-    _vehicle call EFUNC(vehicle,addStagingActions);
-    _vehicle call EFUNC(vehicle,addRadio);
+    [{
+        _this params ["_vehicle"];
+        _vehicle call EFUNC(vehicle,addFunctions);
+        _vehicle call EFUNC(vehicle,addInventory);
+        _vehicle call EFUNC(vehicle,addDefaultLoadout);
+        _vehicle call EFUNC(vehicle,addCosmetics);
+        _vehicle call EFUNC(vehicle,addStagingActions);
+        _vehicle call EFUNC(vehicle,addRadio);
+    }, [_vehicle], 1] call CBA_fnc_waitAndExecute;
 }, true, [], true] call CBA_fnc_addClassEventHandler;

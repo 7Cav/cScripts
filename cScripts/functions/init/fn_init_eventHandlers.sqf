@@ -9,36 +9,16 @@
  * Public: No
  */
 
-#ifdef DEBUG_MODE
-    ["Creating Global EventHandlers", "InitEventHandlers"] call FUNC(info);
-#endif
+INFO("InitEventHandlers","Creating Global and Client EventHandlers");
 
 [QGVAR(getAttendance), {
     call FUNC(getAttendance);
 }] call CBA_fnc_addEventHandler;
 
-["ace_zeusCreated", {
-    _this params ["_player"];
-    _player addEventHandler ["CuratorObjectPlaced", {
-        params ["", "_vehicle"];
-        if (_vehicle iskindOf "man") exitWith {};
-        waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
-        _vehicle remoteExec [QEFUNC(vehicle,reset), 0, true]; 
-        _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
-        _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
-    }];
-}] call CBA_fnc_addEventHandler;
 
 // Server Events
 if (!isServer) exitWith {};
-
-#ifdef DEBUG_MODE
-    ["Creating Server EventHandlers", "InitEventHandlers"] call FUNC(info);
-#endif
+INFO("InitEventHandlers","Creating Server EventHandlers");
 
 [QEGVAR(log,text), {
     diag_log text _this;
@@ -54,5 +34,8 @@ if (!isServer) exitWith {};
 // Vehicle
 [QEGVAR(vehicle,applyLoadout), {
     _this params ["_vehicle", "_loadoutName", "_pylon"];
+    LOG_1(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG EVENT","%1", _vehicle);
+    LOG_1(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG EVENT","%1", _loadoutName);
+    LOG_1(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG EVENT","%1", _pylon);
     [_vehicle, _loadoutName, _pylon] call EFUNC(vehicle,applyLoadout);
 }] call CBA_fnc_addEventHandler;

@@ -30,36 +30,28 @@ INFO_3("VehiclePylonApply", "Applying pylon '%1' to %2 (%3)", _loadoutName, _veh
 _vehicle setVehicleAmmo 1;
 
 // Clear magazine
-[{
-    _this params ["_vehicle", "_loadoutName", "_vehicleLoadout"];
-    {
-        _x params ["_magazineClassname", "_turretPath"];
-        INFO_4("VehiclePylonApply", "Removing magazine '%1' in turrent %2 to %3 (%4)", _magazineClassname, _turretPath, _vehicle, typeOf _vehicle);
-        _vehicle removeMagazinesTurret [_magazineClassname, _turretPath];
-    } forEach magazinesAllTurrets _vehicle;
+{
+    _x params ["_magazineClassname", "_turretPath"];
+    INFO_4("VehiclePylonApply", "Removing magazine '%1' in turrent %2 to %3 (%4)", _magazineClassname, _turretPath, _vehicle, typeOf _vehicle);
+    _vehicle removeMagazinesTurret [_magazineClassname, _turretPath];
+} forEach magazinesAllTurrets _vehicle;
 
-    // Add magazine
-    [{
-        _this params ["_vehicle", "_loadoutName", "_vehicleLoadout"];
-        {
-            _x params [
-                ["_magazineClassname", "", [""]],
-                ["_turretPath", [], [[]]],
-                ["_amount", -1, [0]]
-            ];
-            if (_amount != 0) then {
-                INFO_5("VehiclePylonApply", "Adding magazine '%1' (%2) in turrent %23 to %4 (%5)", _magazineClassname, _amount, _turretPath, _vehicle, typeOf _vehicle);
-                _vehicle addMagazineTurret [
-                    _magazineClassname,
-                    _turretPath,
-                    if (_amount < 0) then {getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "count")} else {_amount}
-                ];
-            };
-        } forEach _vehicleLoadout;
-        
-        INFO_3("VehiclePylonApply", "Vehicle %1 (%2) have been rearmed with '%3'", _vehicle, typeOf _vehicle, _loadoutName);
-        _vehicle setVariable [QEGVAR(vehicle,pylon), [_loadoutName, _vehicleLoadout], true];
+// Add magazine
+{
+    _x params [
+        ["_magazineClassname", "", [""]],
+        ["_turretPath", [], [[]]],
+        ["_amount", -1, [0]]
+    ];
+    if (_amount != 0) then {
+        INFO_5("VehiclePylonApply", "Adding magazine '%1' (%2) in turrent %23 to %4 (%5)", _magazineClassname, _amount, _turretPath, _vehicle, typeOf _vehicle);
+        _vehicle addMagazineTurret [
+            _magazineClassname,
+            _turretPath,
+            if (_amount < 0) then {getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "count")} else {_amount}
+        ];
+    };
+} forEach _vehicleLoadout;
 
-    }, [_vehicle, _loadoutName, _vehicleLoadout]] call CBA_fnc_execNextFrame;
-}, [_vehicle, _loadoutName, _vehicleLoadout]] call CBA_fnc_execNextFrame;
-
+INFO_3("VehiclePylonApply", "Vehicle %1 (%2) have been rearmed with '%3'", _vehicle, typeOf _vehicle, _loadoutName);
+_vehicle setVariable [QEGVAR(vehicle,pylon), [_loadoutName, _vehicleLoadout], true];
