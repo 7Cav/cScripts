@@ -35,21 +35,20 @@ params [
 private _condition = { 
     params ["_vehicle", "", "_params"];
     _params params ["_vehicleKind"];
-    _vehicle iskindOf _vehicleKind
+    _vehicle iskindOf _vehicleKind;
 };
 
 private _statement = {
-    params ["_vehicle", "", "_params"];
+    params ["_vehicle", "_player", "_params"];
     _params params ["", "_loadoutName", "_pylon"];
-    [QEGVAR(vehicle,applyLoadout), [_vehicle, _loadoutName, _pylon]] call CBA_fnc_serverEvent;
+    LOG_3(">>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG","%1%2%3",_vehicle,_loadoutName,_pylon);
+    [_vehicle, _loadoutName, _pylon] call EFUNC(vehicle,applyLoadout);
 };
 
 private _selfCategory = ["ACE_SelfActions", QEGVAR(Actions_Vehicle,Main_Cat), QEGVAR(Actions_Vehicle,Pylon_Cat)];
 private _actionName = format["%1_%2_%3", QGVAR(Pylon), _vehicleKind, _loadoutName];
 
-private _action = [_actionName, _displayName, _icon, _statement, _condition, nil, [_className, _loadoutName, _pylon]] call ace_interact_menu_fnc_createAction;
+private _action = [_actionName, _displayName, _icon, _statement, _condition, nil, [_vehicleKind, _loadoutName, _pylon]] call ace_interact_menu_fnc_createAction;
 [_vehicle, 1, _selfCategory, _action] call ace_interact_menu_fnc_addActionToObject;
 
-#ifdef DEBUG_MODE
-    [format["Selector for kindOf '%1' named '%2' added to %3 (%4)", _vehicleKind, _displayName, _vehicle, typeOf _vehicle], "Vehicle Pylon Selector"] call FUNC(info);
-#endif
+INFO_4("VehiclePylonSelector", "Selector for kindOf '%1' named '%2' added to %3 (%4)", _vehicleKind, _displayName, _vehicle, typeOf _vehicle);

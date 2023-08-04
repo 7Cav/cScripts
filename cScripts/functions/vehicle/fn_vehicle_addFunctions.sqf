@@ -13,11 +13,9 @@
 params [["_vehicle", objNull, [objNull]]];
 
 if (_vehicle iskindOf "man") exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {[formatText["Vehicle functions already applied for %1.", _vehicle]] call FUNC(warning);};
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {SHOW_WARNING_1("Vehicle", "Vehicle functions already applied for %1." _vehicle);};
 
-#ifdef DEBUG_MODE
-    [formatText["Applying vehicle functions to %1.", _vehicle]] call FUNC(info);
-#endif
+INFO_1("Vehicle","Applying vehicle functions to %1.", _vehicle);
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
@@ -84,6 +82,11 @@ if (_vehicle iskindOf "USAF_C17") then {
 };
 
 if ((_vehicle isKindOf "USAF_F22_Heavy") || (_vehicle isKindOf "USAF_F35A") || (_vehicle isKindOf "USAF_A10")) then {
+    [_vehicle] call FUNC(addEscapeWreck);
+};
+
+if (_vehicle iskindOf "vtx_MH60M") then {
+    [_vehicle] call FUNC(addGetOutHelo);
     [_vehicle] call FUNC(addEscapeWreck);
 };
 

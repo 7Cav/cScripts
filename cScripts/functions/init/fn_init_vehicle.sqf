@@ -12,54 +12,25 @@
  * Public: No
  */
 
-#ifdef DEBUG_MODE
-    ["Applying Event Handers (init) to vehicles for function expantions...", "InitVehicle"] call FUNC(info);
-#endif
+INFO("InitVehicle","Applying Event Handers (init) to vehicles for function expantions...");
 
 if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 
 ["AllVehicles", "init", {
     _this params ["_vehicle"];
     if (_vehicle iskindOf "man") exitWith {};
-    waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
-    _vehicle call EFUNC(vehicle,addFunctions);
-    _vehicle call EFUNC(vehicle,addInventory);
-    _vehicle call EFUNC(vehicle,addDefaultLoadout);
-    _vehicle call EFUNC(vehicle,addCosmetics);
-    _vehicle call EFUNC(vehicle,addStagingActions);
-    _vehicle call EFUNC(vehicle,addRadio);
+    [{
+        _this params ["_vehicle"];
+        _vehicle call EFUNC(vehicle,addFunctions);
+        _vehicle call EFUNC(vehicle,addInventory);
+        _vehicle call EFUNC(vehicle,addDefaultLoadout);
+        _vehicle call EFUNC(vehicle,addCosmetics);
+        _vehicle call EFUNC(vehicle,addStagingActions);
+        _vehicle call EFUNC(vehicle,addRadio);
+    }, [_vehicle], 1] call CBA_fnc_waitAndExecute;
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 {
     if (!isNil{_x getVariable QEGVAR(player,zeus)}) exitWith {};
-    _x setVariable [QEGVAR(player,zeus), true];
-    _x addEventHandler ["CuratorObjectPlaced", {
-        params ["", "_vehicle"];
-        if (_vehicle iskindOf "man") exitWith {};
-        waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
-        _vehicle remoteExec [QEFUNC(vehicle,reset), 0, true]; 
-        _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
-        _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), -2];
-        _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
-    }];
+    [QGVAR(setCuratorEventHandlers), [_x]] call CBA_fnc_targetEvent;
 } forEach allCurators;
-
-["ace_zeusCreated", {
-    if (!isNil{player getVariable QEGVAR(player,zeus)}) exitWith {};
-    player setVariable [QEGVAR(player,zeus), true];
-    player addEventHandler ["CuratorObjectPlaced", {
-        params ["", "_vehicle"];
-        if (_vehicle iskindOf "man") exitWith {};
-        waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
-        _vehicle remoteExec [QEFUNC(vehicle,reset), 0, true]; 
-        _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
-        _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), 2];
-        _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
-    }];
-}] call CBA_fnc_addEventHandler;

@@ -53,9 +53,7 @@ private _vehiclePylon = [QEGVAR(Actions_Vehicle,Pylon_Cat), "Vehicle Loadouts", 
 // Setup loadouts selection
 {
     _x params ["_vehicleKind", "_displayName", "_loadoutName", ["_icon", ""]];
-    #ifdef DEBUG_MODE
-        [format ["Creating loadout '%1' (%2) action for vehicle %3 (%4)", _displayName, _loadoutName, _vehicle, typeOf _vehicle], "Vehicle Pylon Setup"] call FUNC(info);
-    #endif
+    INFO_4("VehiclePylonSetup", "Creating loadout '%1' (%2) action for vehicle %3 (%4)", _displayName, _loadoutName, _vehicle, typeOf _vehicle);
     private _pylon = [_vehicleKind, _loadoutName] call EFUNC(vehicle,getPylon);
     [_vehicle, _displayName, _vehicleKind, _loadoutName, _pylon, _icon] call EFUNC(vehicle,addPylonSelection);
 } forEach _pylonList;

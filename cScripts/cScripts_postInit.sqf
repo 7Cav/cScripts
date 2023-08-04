@@ -8,22 +8,22 @@ if (is3DEN) exitWith {};
 INFO("postInit", "Initializing...");
 
 // Change inventory content of supply crates on mission start.
-[] call EFUNC(init,vehicle);
+call EFUNC(init,vehicle);
 
 // item replacement
 if (EGVAR(Settings,allowReplaceItem)) then {
-    [] call EFUNC(init,aceItemReplace);
+    call EFUNC(init,aceItemReplace);
 };
 
 // staging
-[] call EFUNC(init,staging);
+call EFUNC(init,staging);
 
 // messages 
-[] call EFUNC(init,message);
+call EFUNC(init,message);
 
 // diary records
 if (EGVAR(Settings,showDiaryRecords)) then {
-    [] call EFUNC(init,diary);
+    call EFUNC(init,diary);
 };
 
 onPlayerConnected { 
