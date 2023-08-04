@@ -21,3 +21,11 @@ jobs:
       with:
         args: --exit e --directory cScripts/functions
       continue-on-error: true # No failure due to many false-positives
+
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source code
+      uses: actions/checkout@master
+    - name: Check for DEBUG_MODE
+      run: bash tools/lookForDebug.sh
