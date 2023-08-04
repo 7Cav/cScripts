@@ -19,7 +19,6 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 ["AllVehicles", "init", {
     _this params ["_vehicle"];
     if (_vehicle iskindOf "man") exitWith {};
-    waitUntil {!isNull _vehicle && _vehicle == _vehicle;};
     [{
         _this params ["_vehicle"];
         _vehicle call EFUNC(vehicle,addFunctions);
@@ -30,3 +29,19 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
         _vehicle call EFUNC(vehicle,addRadio);
     }, [_vehicle], 1] call CBA_fnc_waitAndExecute;
 }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+{
+    if (!isNil{_x getVariable QEGVAR(player,zeus)}) exitWith {};
+    _x addEventHandler ["CuratorObjectPlaced", {
+        params ["", "_vehicle"];
+        if (_vehicle iskindOf "man") exitWith {};
+        _vehicle remoteExec [QEFUNC(vehicle,reset), 0, true]; 
+        _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
+        _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
+        _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), -2];
+        _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
+    }];
+    _x setVariable [QEGVAR(player,zeus), true];
+} forEach allCurators;

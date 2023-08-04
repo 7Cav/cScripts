@@ -30,12 +30,3 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
     _playerLog pushBack _playerName;
     missionNamespace setVariable [QEGVAR(log,players), _playerLog];
 }] call CBA_fnc_addEventHandler;
-
-// Vehicle
-[QEGVAR(vehicle,applyLoadout), {
-    _this params ["_vehicle", "_loadoutName", "_pylon"];
-    LOG_1(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG EVENT","%1", _vehicle);
-    LOG_1(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG EVENT","%1", _loadoutName);
-    LOG_1(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG EVENT","%1", _pylon);
-    [_vehicle, _loadoutName, _pylon] call EFUNC(vehicle,applyLoadout);
-}] call CBA_fnc_addEventHandler;

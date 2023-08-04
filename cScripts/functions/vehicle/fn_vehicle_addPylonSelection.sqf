@@ -41,8 +41,8 @@ private _condition = {
 private _statement = {
     params ["_vehicle", "_player", "_params"];
     _params params ["", "_loadoutName", "_pylon"];
-    INFO_3("VehiclePylonSelector", "Sending server event to apply pylon '%1' pylon %2 (%3)", _loadoutName, _vehicle, typeOf _vehicle);
-    [QEGVAR(vehicle,applyLoadout), [_vehicle, _loadoutName, _pylon]] call CBA_fnc_serverEvent;
+    LOG_3(">>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG","%1%2%3",_vehicle,_loadoutName,_pylon);
+    [_vehicle, _loadoutName, _pylon] call EFUNC(vehicle,applyLoadout);
 };
 
 private _selfCategory = ["ACE_SelfActions", QEGVAR(Actions_Vehicle,Main_Cat), QEGVAR(Actions_Vehicle,Pylon_Cat)];

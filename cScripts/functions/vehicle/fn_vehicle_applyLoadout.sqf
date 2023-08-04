@@ -18,7 +18,6 @@ params [
     ["_vehicleLoadout", [], [[]]]
 ];
 
-if (!isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 if (isNull _vehicle) exitWith {};
 if (_loadoutName == "") exitWith {};
