@@ -27,7 +27,7 @@ private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehic
 
 // Remove ACE Cargo
 private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
-{   
+{
     [_x, _vehicle] call ace_cargo_fnc_removeCargoItem;
 } forEach _cargoArray;
 

@@ -17,7 +17,7 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (isNull _vehicle) exitWith {};
+if (isNull _vehicle) exitWith {SHOW_WARNING("FlagAction", "Attempted to apply function to null vehicle");};
 
 private _icon = "iconLogic" call FUNC(getIcon);
 

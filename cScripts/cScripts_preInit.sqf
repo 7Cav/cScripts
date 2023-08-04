@@ -365,8 +365,6 @@ if (EGVAR(Settings,allowCustomTagging)) then {
     call EFUNC(init,aceTagging);
 };
 
-call EFUNC(init,player);
-
 call EFUNC(init,chatCommands);
 
 call EFUNC(init,zenModuels);
