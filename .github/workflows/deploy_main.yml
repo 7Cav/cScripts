@@ -13,7 +13,7 @@ jobs:
 
       - name: Get the commit
         id: get_commit_number
-        run: echo "{name}={COMMIT}" >> ${git rev-parse --short HEAD}
+        run: echo "{name}={COMMIT}" >> $(git rev-parse --short HEAD)
 
       - name: Build releases
         run: ./tools/deploy.sh DevBuild-${{ steps.get_commit_number.outputs.COMMIT }}
