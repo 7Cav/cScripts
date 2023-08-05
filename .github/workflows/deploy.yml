@@ -1,7 +1,7 @@
 name: Publish releases
 on:
   release:
-      types: [ published, prereleased ]
+      types: [ published ]
 jobs:
   build:
     name: Create And Upload Release
