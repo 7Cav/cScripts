@@ -21,31 +21,42 @@ jobs:
         run: ./tools/deploy.sh ${{ steps.get_version.outputs.VERSION }}
 
       - name: Upload release (cScripts)
-        uses: actions/upload-artifact@v3
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: cScripts-${{ steps.get_version.outputs.VERSION }}.zip
-          path: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          asset_name: cScripts-${{ steps.get_version.outputs.VERSION }}.zip
+          file: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
 
       - name: Upload release (Compositions)
-        uses: actions/upload-artifact@v3
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: Compositions-${{ steps.get_version.outputs.VERSION }}.zip
-          path: release/Compositions-${{ steps.get_version.outputs.VERSION }}.zip
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          asset_name: Compositions-${{ steps.get_version.outputs.VERSION }}.zip
+          file: release/Compositions-${{ steps.get_version.outputs.VERSION }}.zip
 
       - name: Upload release (cScripts_Debug)
-        uses: actions/upload-artifact@v3
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
-          path: release/cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          asset_name: cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
+          file: release/cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
+
 
       - name: Upload release (cScripts_NoRadio)
-        uses: actions/upload-artifact@v3
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
-          path: release/cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          asset_name: cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
+          file: release/cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
 
       - name: Upload release (cScripts_NoLoadouts)
-        uses: actions/upload-artifact@v3
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
-          path: release/cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          asset_name: cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
+          file: release/cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
