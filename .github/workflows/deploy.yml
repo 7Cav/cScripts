@@ -13,36 +13,32 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
 
-      - name: Get the version
-        id: get_version
-        run: echo "{name}={VERSION}" >> ${GITHUB_REF/refs\/tags\//}
-
       - name: Build releases
-        run: ./tools/deploy.sh ${{ steps.get_version.outputs.VERSION }}
+        run: ./tools/deploy.sh ${{github.ref_name}}
 
       - name: Upload release (cScripts)
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
-          asset_name: cScripts-${{ steps.get_version.outputs.VERSION }}.zip
-          file: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
+          asset_name: cScripts-${{github.ref_name}}.zip
+          file: release/cScripts-${{github.ref_name}}.zip
 
       - name: Upload release (Compositions)
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
-          asset_name: Compositions-${{ steps.get_version.outputs.VERSION }}.zip
-          file: release/Compositions-${{ steps.get_version.outputs.VERSION }}.zip
+          asset_name: Compositions-${{github.ref_name}}.zip
+          file: release/Compositions-${{github.ref_name}}.zip
 
       - name: Upload release (cScripts_Debug)
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
-          asset_name: cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
-          file: release/cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
+          asset_name: cScripts_Debug-${{github.ref_name}}.zip
+          file: release/cScripts_Debug-${{github.ref_name}}.zip
 
 
       - name: Upload release (cScripts_NoRadio)
@@ -50,13 +46,13 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
-          asset_name: cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
-          file: release/cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
+          asset_name: cScripts_NoRadio-${{github.ref_name}}.zip
+          file: release/cScripts_NoRadio-${{github.ref_name}}.zip
 
       - name: Upload release (cScripts_NoLoadouts)
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
-          asset_name: cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
-          file: release/cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
+          asset_name: cScripts_NoLoadouts-${{github.ref_name}}.zip
+          file: release/cScripts_NoLoadouts-${{github.ref_name}}.zip
