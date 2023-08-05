@@ -14,33 +14,8 @@ jobs:
       - name: Build releases
         run: ./tools/deploy.sh DevBuild-$(git rev-parse --short HEAD)
 
-      - name: Upload release (cScripts)
+      - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts-DevBuild-*
-          path: release/cScripts-DevBuild-*
-
-      - name: Upload release (Compositions)
-        uses: actions/upload-artifact@v3
-        with:
-          name: Compositions-DevBuild-*
-          path: release/Compositions-DevBuild-*
-
-      - name: Upload release (cScripts_Debug)
-        uses: actions/upload-artifact@v3
-        with:
-          name: cScripts_Debug-DevBuild-*
-          path: release/cScripts_Debug-DevBuild-*
-
-
-      - name: Upload release (cScripts_NoRadio)
-        uses: actions/upload-artifact@v3
-        with:
-          name: cScripts_NoRadio-DevBuild-*
-          path: release/cScripts_NoRadio-DevBuild-*
-
-      - name: Upload release (cScripts_NoLoadouts)
-        uses: actions/upload-artifact@v3
-        with:
-          name: cScripts_NoLoadouts-DevBuild-*
-          path: release/cScripts_NoLoadouts-DevBuild-*
+          name: Releases
+          path: release/*
