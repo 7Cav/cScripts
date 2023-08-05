@@ -24,7 +24,6 @@ params [
     ["_type", "none", [""]]
 ];
 
-if (!isPlayer _object) exitWith {false};
 if (_object isKindOf "Man") exitWith {false};
 
 [_object, _type, true, true, true, true, false, true] call FUNC(doStarterCrate);
