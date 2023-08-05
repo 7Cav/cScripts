@@ -1,0 +1,46 @@
+name: Deploy Devbuild Artifacts
+on:
+  push:
+      tags:
+        - '*'
+jobs:
+  build:
+    name: Create And Upload Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+
+      - name: Build releases
+        run: ./tools/deploy.sh ${{github.ref_name}}
+
+      - name: Upload release (cScripts)
+        uses: actions/upload-artifact@v3
+        with:
+          name: cScripts-${{github.ref_name}}.zip
+          path: release/cScripts-${{github.ref_name}}.zip
+
+      - name: Upload release (Compositions)
+        uses: actions/upload-artifact@v3
+        with:
+          name: Compositions-${{github.ref_name}}.zip
+          path: release/Compositions-${{github.ref_name}}.zip
+
+      - name: Upload release (cScripts_Debug)
+        uses: actions/upload-artifact@v3
+        with:
+          name: cScripts_Debug-${{github.ref_name}}.zip
+          path: release/cScripts_Debug-${{github.ref_name}}.zip
+
+
+      - name: Upload release (cScripts_NoRadio)
+        uses: actions/upload-artifact@v3
+        with:
+          name: cScripts_NoRadio-${{github.ref_name}}.zip
+          path: release/cScripts_NoRadio-${{github.ref_name}}.zip
+
+      - name: Upload release (cScripts_NoLoadouts)
+        uses: actions/upload-artifact@v3
+        with:
+          name: cScripts_NoLoadouts-${{github.ref_name}}.zip
+          path: release/cScripts_NoLoadouts-${{github.ref_name}}.zip
