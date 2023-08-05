@@ -1,10 +1,7 @@
-name: Deploy
+name: Publish releases
 on:
   release:
       types: [ published, prereleased ]
-  push:
-      tags:
-        - '*'
 jobs:
   build:
     name: Create And Upload Release
