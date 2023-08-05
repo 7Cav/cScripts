@@ -1,10 +1,12 @@
 name: Deploy
 on:
+  release:
+      types: [ published, prereleased ]
   push:
       tags:
         - '*'
       branches:
-        - 'main'
+        - main
 jobs:
   build:
     name: Create And Upload Release
@@ -12,14 +14,25 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@master
+
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo "{name}={VERSION}" >> ${GITHUB_REF/refs\/tags\//}
 
-      - name: Build release
+      - name: Build releases
         run: ./tools/deploy.sh ${{ steps.get_version.outputs.VERSION }}
 
       - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-           path: release/*.zip
+          name: cScripts-${{ steps.get_version.outputs.VERSION }}.zip
+          path: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
+        with:
+          name: cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
+          path: release/cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
+        with:
+          name: cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
+          path: release/cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
+        with:
+          name: cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
+          path: release/cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
