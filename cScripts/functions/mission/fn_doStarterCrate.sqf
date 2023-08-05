@@ -36,16 +36,17 @@ params [
     ["_hasStagingZone", true, [true]]
 ];
 
-#ifdef DEBUG_MODE
-    [format["Starter Crate system applied to %1.", _object]] call FUNC(info);
-#endif
+INFO_2("StarterCrate", "Starting to apply functions to %1 (%2)", _crate, typeOf _crate);
 
 // Lowercase
 _quickSelectScale = toLower(_quickSelectScale);
 
 // If isServer call equipBase
 if (isServer) then {
-    [_object, _quickSelectScale] call FUNC(doStarterCrateSupplies);
+    [{!isNil{EGVAR(DATABASE,DONE)} && EGVAR(DATABASE,DONE);}, {
+        _this params ["_object", "_quickSelectScale"];
+        [_object, _quickSelectScale] call FUNC(doStarterCrateSupplies);
+    }, [_object, _quickSelectScale]] call CBA_fnc_waitUntilAndExecute;
 };
 
 // Make addAction Topic

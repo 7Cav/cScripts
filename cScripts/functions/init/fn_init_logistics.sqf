@@ -12,10 +12,7 @@
  * Public: No
  */
 
-#ifdef DEBUG_MODE
-    ["Creating logistical database", "Logistics"] call FUNC(info);
-#endif
-
+INFO("Logistics", "Creating logistical database");
 private _dataArray = [
     // // // // // // //
     // Starter Crates \\
@@ -230,7 +227,8 @@ private _dataArray = [
         ["USP_TACTICAL_PACK_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
-    ["starter_bravo_viking", [
+
+    ["bravo_company_viking", [
         // Radios
         ["ACRE_PRC343", 30],
         ["ACRE_PRC152", 20],
@@ -304,7 +302,7 @@ private _dataArray = [
         ["kat_Painkiller",10]
     ]],
 
-    ["starter_bravo_atlas", [
+    ["bravo_company_atlas", [
         // Tools and Items
         ["ACE_wirecutter",10],
         ["ACE_EntrenchingTool",20],

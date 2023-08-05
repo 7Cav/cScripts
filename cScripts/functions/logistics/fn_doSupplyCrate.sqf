@@ -25,7 +25,13 @@ clearitemcargoGlobal _crate;
 clearbackpackcargoGlobal _crate;
 
 // Add items from logistics database entry
-"crate_resupply_general" call EFUNC(logistics, getContainer);
+if (isServer) then {
+    [{!isNil{EGVAR(DATABASE,DONE)} && EGVAR(DATABASE,DONE);}, {
+        _this params ["_crate"];
+        private _container = ["crate_resupply_general"] call EFUNC(logistics,getContainer);
+        [_crate, _container] call FUNC(addCargo);
+}, [_crate, _quickSelectScale]] call CBA_fnc_waitUntilAndExecute;
+};
 
 // Change ace logistics size of crate
 [_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];

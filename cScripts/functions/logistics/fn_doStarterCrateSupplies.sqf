@@ -15,7 +15,7 @@
  * [this,"none"] call cScripts_fnc_doStarterCrateSupplies;
  *
  */
- 
+
 params [
     ["_crate", objNull, [objNull]],
     ["_companySelector", "NONE"]
@@ -33,8 +33,10 @@ private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "ATLAS"];
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
 if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo + _charlie)) exitWith {
-    [format["%1 (Starter Crate Supplies) is using a unsupported cartegory '%2'.", _crate, _companySelector]] call FUNC(error);
+    ERROR_2("StarterCrate", "%1 (Starter Crate Supplies) is using a unsupported cartegory '%2'.", _crate, _companySelector);
 };
+
+INFO_3("StarterCrate", "Applying %1 items to %2 (%3)", _companySelector, _crate, typeOf _crate);
 
 private _container = switch (_companySelector) do {
     case "BUFFALO";
@@ -65,7 +67,6 @@ private _container = switch (_companySelector) do {
     case "NONE": {[]};
     default {[]};
 };
-
 
 [_crate, _container] call FUNC(addCargo);
 

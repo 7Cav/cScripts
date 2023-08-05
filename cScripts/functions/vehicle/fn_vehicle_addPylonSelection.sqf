@@ -41,7 +41,6 @@ private _condition = {
 private _statement = {
     params ["_vehicle", "_player", "_params"];
     _params params ["", "_loadoutName", "_pylon"];
-    LOG_3(">>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG","%1%2%3",_vehicle,_loadoutName,_pylon);
     [_vehicle, _loadoutName, _pylon] call EFUNC(vehicle,applyLoadout);
 };
 

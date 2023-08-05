@@ -188,7 +188,6 @@ private _weaponSystemSpecific = switch (true) do {
         "rhsusf_acc_grip3",
         "rhsusf_acc_grip3_tan",
         "rhsusf_acc_eotech_xps3"
-        
     ]};
 
     case (_primaryWeapon isKindof ['rhs_weap_sr25_ec', configFile >> 'CfgWeapons']): {[
