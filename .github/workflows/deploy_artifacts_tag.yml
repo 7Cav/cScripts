@@ -14,33 +14,8 @@ jobs:
       - name: Build releases
         run: ./tools/deploy.sh ${{github.ref_name}}
 
-      - name: Upload release (cScripts)
+      - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts-${{github.ref_name}}.zip
-          path: release/cScripts-${{github.ref_name}}.zip
-
-      - name: Upload release (Compositions)
-        uses: actions/upload-artifact@v3
-        with:
-          name: Compositions-${{github.ref_name}}.zip
-          path: release/Compositions-${{github.ref_name}}.zip
-
-      - name: Upload release (cScripts_Debug)
-        uses: actions/upload-artifact@v3
-        with:
-          name: cScripts_Debug-${{github.ref_name}}.zip
-          path: release/cScripts_Debug-${{github.ref_name}}.zip
-
-
-      - name: Upload release (cScripts_NoRadio)
-        uses: actions/upload-artifact@v3
-        with:
-          name: cScripts_NoRadio-${{github.ref_name}}.zip
-          path: release/cScripts_NoRadio-${{github.ref_name}}.zip
-
-      - name: Upload release (cScripts_NoLoadouts)
-        uses: actions/upload-artifact@v3
-        with:
-          name: cScripts_NoLoadouts-${{github.ref_name}}.zip
-          path: release/cScripts_NoLoadouts-${{github.ref_name}}.zip
+          name: Releases
+          path: release/*
