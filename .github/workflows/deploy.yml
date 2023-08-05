@@ -17,6 +17,6 @@ jobs:
         run: ./tools/deploy.sh ${{ steps.get_version.outputs.VERSION }}
 
       - name: Upload releases
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
            path: release/*.zip
