@@ -1,4 +1,4 @@
-name: Deploy Devbuild Artifacts
+name: Deploy DevBuild Artifacts
 on:
   push:
       branches:
@@ -17,30 +17,30 @@ jobs:
       - name: Upload release (cScripts)
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts-DevBuild-$(git rev-parse --short HEAD).zip
-          path: release/cScripts-DevBuild-$(git rev-parse --short HEAD).zip
+          name: cScripts-DevBuild-*
+          path: release/cScripts-DevBuild-*
 
       - name: Upload release (Compositions)
         uses: actions/upload-artifact@v3
         with:
-          name: Compositions-DevBuild-$(git rev-parse --short HEAD).zip
-          path: release/Compositions-DevBuild-$(git rev-parse --short HEAD).zip
+          name: Compositions-DevBuild-*
+          path: release/Compositions-DevBuild-*
 
       - name: Upload release (cScripts_Debug)
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts_Debug-DevBuild-$(git rev-parse --short HEAD).zip
-          path: release/cScripts_Debug-DevBuild-$(git rev-parse --short HEAD).zip
+          name: cScripts_Debug-DevBuild-*
+          path: release/cScripts_Debug-DevBuild-*
 
 
       - name: Upload release (cScripts_NoRadio)
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts_NoRadio-DevBuild-$(git rev-parse --short HEAD).zip
-          path: release/cScripts_NoRadio-DevBuild-$(git rev-parse --short HEAD).zip
+          name: cScripts_NoRadio-DevBuild-*
+          path: release/cScripts_NoRadio-DevBuild-*
 
       - name: Upload release (cScripts_NoLoadouts)
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts_NoLoadouts-DevBuild-$(git rev-parse --short HEAD).zip
-          path: release/cScripts_NoLoadouts-DevBuild-$(git rev-parse --short HEAD).zip
+          name: cScripts_NoLoadouts-DevBuild-*
+          path: release/cScripts_NoLoadouts-DevBuild-*

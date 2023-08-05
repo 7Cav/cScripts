@@ -1,4 +1,4 @@
-name: Deploy Devbuild Artifacts
+name: Deploy Tag Artifacts
 on:
   push:
       tags:
