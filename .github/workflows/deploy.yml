@@ -22,17 +22,32 @@ jobs:
       - name: Build releases
         run: ./tools/deploy.sh ${{ steps.get_version.outputs.VERSION }}
 
-      - name: Upload releases
+      - name: Upload release (cScripts)
         uses: actions/upload-artifact@v3
         with:
           name: cScripts-${{ steps.get_version.outputs.VERSION }}.zip
           path: release/cScripts-${{ steps.get_version.outputs.VERSION }}.zip
+
+      - name: Upload release (Compositions)
+        uses: actions/upload-artifact@v3
+        with:
+          name: Compositions-${{ steps.get_version.outputs.VERSION }}.zip
+          path: release/Compositions-${{ steps.get_version.outputs.VERSION }}.zip
+
+      - name: Upload release (cScripts_Debug)
+        uses: actions/upload-artifact@v3
         with:
           name: cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
           path: release/cScripts_Debug-${{ steps.get_version.outputs.VERSION }}.zip
+
+      - name: Upload release (cScripts_NoRadio)
+        uses: actions/upload-artifact@v3
         with:
           name: cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
           path: release/cScripts_NoRadio-${{ steps.get_version.outputs.VERSION }}.zip
+
+      - name: Upload release (cScripts_NoLoadouts)
+        uses: actions/upload-artifact@v3
         with:
           name: cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
           path: release/cScripts_NoLoadouts-${{ steps.get_version.outputs.VERSION }}.zip
