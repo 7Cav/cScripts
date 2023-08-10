@@ -1067,9 +1067,9 @@ force force js_jc_fa18_mav_tdcDepressRequiredForMove = false;
 force force js_jc_fa18_showLabels = true;
 
 // Fawks' Enhanced NVGs
-force force PDT_ENVG_ACE = false;
+// force force PDT_ENVG_ACE = true;
 force force PDT_ENVG_Blacklist = "";
-force force PDT_ENVG_Effect = "";
+// force force PDT_ENVG_Effect = "";
 
 // Hatchet Vehicle Framework
 //vxf_interaction_showLabels = 2;
