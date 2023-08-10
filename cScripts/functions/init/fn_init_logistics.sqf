@@ -154,7 +154,19 @@ private _dataArray = [
         ["USP_PVS14", 0],
         ["USP_PVS15", 0],
         ["USP_L4G19", 0],
-        ["USP_RHINO", 0]
+        ["USP_RHINO", 0],
+
+        //Backpack
+        ["USP_TACTICAL_PACK", 0],
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
+        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
 
     ["bravo_company", [
@@ -207,8 +219,19 @@ private _dataArray = [
         ["rhs_mag_m664_red_cluster", 50],
         ["rhs_mag_m713_Red", 50],
         ["rhs_mag_m716_yellow", 50],
+        
+        // NVG
+        ["USP_PVS14", 0],
+        ["USP_PVS15", 0],
+        ["USP_L4G19", 0],
+        ["USP_RHINO", 0],
 
-        // Tools and Items
+        // cTab
+        ["ItemAndroid", 0],
+        ["ItemcTab", 0],
+
+        // Tools
+        ["ACE_EntrenchingTool", 0],
 
         // Backpacks
         ["B_Carryall_mcamo", 0],
@@ -294,12 +317,7 @@ private _dataArray = [
         ["ACE_CableTie",100],
         ["ACE_wirecutter",5],
         ["ACE_EntrenchingTool",20],
-        ["B_UavTerminal",20],
-
-        // Medical
-        ["ACE_EarPlugs",250],
-        ["ACE_bodyBag",12],
-        ["kat_Painkiller",10]
+        ["B_UavTerminal",20]
     ]],
 
     ["bravo_company_atlas", [
@@ -1220,7 +1238,15 @@ private _dataArray = [
         ["USP_ZIPON_PANEL_MC_RF2", 0],
         ["USP_ROLLFLAG2", 0],
         ["USP_PACK_HYDRATION", 0],
-        ["USP_PATROL_PACK_ZT", 0]
+        ["USP_PATROL_PACK_ZT", 0],
+        
+        // Medical
+        ["ACE_EarPlugs",250],
+        ["ACE_bodyBag",12],
+        ["kat_Painkiller",10],
+
+        // Common Gear
+        ["ACE_IR_Strobe_Item",20]
     ]],
 
     ["arsenal_company_fallback", [
