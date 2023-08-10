@@ -27,5 +27,12 @@ jobs:
     steps:
     - name: Checkout the source code
       uses: actions/checkout@master
-    - name: Check for DEBUG_MODE
-      run: bash tools/lookForDebug.sh
+    - name: Check DEBUG_MODE
+      if: always()
+      run: bash tools/checkDebug.sh
+    - name: Check for FIXME
+      if: always()
+      run: bash tools/checkFixme.sh
+    - name: Check for LOGGING
+      if: always()
+      run: bash tools/checkLogging.sh
