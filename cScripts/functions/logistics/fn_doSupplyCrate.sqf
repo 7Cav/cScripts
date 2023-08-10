@@ -17,12 +17,10 @@ if (!isServer) exitWith {};
 
 params [["_crate", objNull, [objNull]]];
 
-private _quaScale = 1;
-
-clearweaponcargoGlobal _crate;
-clearmagazinecargoGlobal _crate;
-clearitemcargoGlobal _crate;
-clearbackpackcargoGlobal _crate;
+clearWeaponCargoGlobal _crate;
+clearMagazineCargoGlobal _crate;
+clearItemCargoGlobal _crate;
+clearBackpackCargoGlobal _crate;
 
 // Add items from logistics database entry
 if (isServer) then {
