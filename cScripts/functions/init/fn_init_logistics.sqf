@@ -226,6 +226,9 @@ private _dataArray = [
         ["USP_L4G19", 0],
         ["USP_L4G24",0],
         ["USP_PVS31",0],
+        ["USP_PVS31_HIGH",0],
+        ["USP_PVS31_LOW",0],
+        ["USP_PVS31_COMPACT",0],
         ["USP_RHINO", 0],
 
         // cTab
