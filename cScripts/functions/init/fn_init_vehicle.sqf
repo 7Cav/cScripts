@@ -16,21 +16,25 @@ INFO("InitVehicle","Applying Event Handers (init) to vehicles for function expan
 
 if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 
-["AllVehicles", "init", {
-    _this params ["_vehicle"];
-    if (_vehicle iskindOf "man") exitWith {};
-    [{
-        _this params ["_vehicle"];
-        _vehicle call EFUNC(vehicle,addFunctions);
-        _vehicle call EFUNC(vehicle,addInventory);
-        _vehicle call EFUNC(vehicle,addDefaultLoadout);
-        _vehicle call EFUNC(vehicle,addCosmetics);
-        _vehicle call EFUNC(vehicle,addStagingActions);
-        _vehicle call EFUNC(vehicle,addRadio);
-    }, [_vehicle], 1] call CBA_fnc_waitAndExecute;
-}, true, [], true] call CBA_fnc_addClassEventHandler;
+//Events tied to init
+[QEGVAR(vehicle,functionsEH), {params ["_vehicle"]; _vehicle call EFUNC(vehicle,addFunctions)} ] call CBA_fnc_addEventHandler;
+[QEGVAR(vehicle,inventoryEH), {params ["_vehicle"]; _vehicle call EFUNC(vehicle,addInventory)} ] call CBA_fnc_addEventHandler;
+[QEGVAR(vehicle,loadoutEH), {params ["_vehicle"]; _vehicle call EFUNC(vehicle,addDefaultLoadout)} ] call CBA_fnc_addEventHandler;
+[QEGVAR(vehicle,cosmeticsEH), {params ["_vehicle"]; _vehicle call EFUNC(vehicle,addCosmetics)} ] call CBA_fnc_addEventHandler;
+[QEGVAR(vehicle,stagingEH), {params ["_vehicle"]; _vehicle call EFUNC(vehicle,addStagingActions)} ] call CBA_fnc_addEventHandler;
+[QEGVAR(vehicle,radioEH), {params ["_vehicle"]; _vehicle call EFUNC(vehicle,addStagingActions)} ] call CBA_fnc_addEventHandler;
 
-{
-    if (!isNil{_x getVariable QEGVAR(player,zeus)}) exitWith {};
-    [QGVAR(setCuratorEventHandlers), [_x]] call CBA_fnc_targetEvent;
-} forEach allCurators;
+
+["AllVehicles", "initPost", {
+    params ["_vehicle"];
+    // [{
+        // params ["_vehicle"];
+    // [QEGVAR(vehicle,functionsEH), [_vehicle]] call CBA_fnc_localEvent;
+    _vehicle call EFUNC(vehicle,addFunctions);
+    [QEGVAR(vehicle,inventoryEH), [_vehicle]] call CBA_fnc_localEvent;
+    [QEGVAR(vehicle,loadoutEH), [_vehicle]] call CBA_fnc_serverEvent;
+    [QEGVAR(vehicle,cosmeticsEH), [_vehicle]] call CBA_fnc_localEvent;
+    [QEGVAR(vehicle,stagingEH), [_vehicle]] call CBA_fnc_globalEvent;
+    [QEGVAR(vehicle,radioEH), [_vehicle]] call CBA_fnc_serverEvent;
+    // }, [_vehicle], 1] call CBA_fnc_waitAndExecute;
+}, true, ["man"], true] call CBA_fnc_addClassEventHandler;
