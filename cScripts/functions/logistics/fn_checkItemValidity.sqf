@@ -41,7 +41,7 @@ private _cfgMagazines = getText (configFile >> 'CfgMagazines' >> _item >> 'displ
 private _cfgWeapons = getText (configFile >> 'CfgWeapons' >> _item >> 'displayName');
 private _cfgVehicles = getText (configFile >> 'CfgVehicles' >> _item >> 'displayName');
 if (_cfgMagazines == "" && _cfgWeapons == "" && _cfgVehicles == "") exitWith {
-    [format ["Item '%1' does not exist in CfgMagazines, CfgWeapons or CfgVehicles.", _item], "Item"] call FUNC(warning);
+    SHOW_WARNING_1("Item", "Item '%1' does not exist in CfgMagazines, CfgWeapons or CfgVehicles.", _item);
     false
 };
 
@@ -59,42 +59,6 @@ if (EGVAR(patches,usesACE)) then {
     if (!([_item, "ACE_Can_Spirit", _var] call _fn_isValid)) exitWith {false};
     if (!([_item, "ACE_MRE_LambCurry", _var] call _fn_isValid)) exitWith {false};
     if (!([_item, "ACE_WaterBottle", _var] call _fn_isValid)) exitWith {false};
-};
-
-if (EGVAR(patches,usesACRE)) then {
-    _var = if (!isNil {EGVAR(patches,usesRadios)}) then {EGVAR(patches,usesRadios)} else {"varNil"};
-    if (!([_item, "ACRE_BaseRadio", _var] call _fn_isValid)) exitWith {false};
-};
-
-if (EGVAR(patches,usesTFAR)) then {
-    _var = if (!isNil {EGVAR(patches,usesRadios)}) then {EGVAR(patches,usesRadios)} else {"varNil"};
-    if (!([_item, "TFAR_anprc152", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_anprc154", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_anprc148jem", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_fadak", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_fadak", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_pnr1000a", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rf7800str", _var] call _fn_isValid)) exitWith {false};
-
-    if (!([_item, "TFAR_rt1523g", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_big", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_sage", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_green", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_black", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_fabric", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_bwmod", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_big_bwmod", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_big_bwmod_tropen", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_big_rhs", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_rt1523g_rhs", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_mr3000", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_mr3000_multicam", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_mr3000_bwmod", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_mr3000_bwmod_tropen", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_mr3000_rhs", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_bussole", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_anprc155", _var] call _fn_isValid)) exitWith {false};
-    if (!([_item, "TFAR_anprc155_coyote", _var] call _fn_isValid)) exitWith {false};
 };
 
 true
