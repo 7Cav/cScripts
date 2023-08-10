@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This function changes the inventory of the given vehicle.
  *
  * Arguments:
@@ -22,16 +22,15 @@ if (!EGVAR(Patches,usesACRE) && !EGVAR(Patches,usesTFAR)) exitWith {};
 if (!EGVAR(Settings,enableRadios)) exitWith {};
 if (!EGVAR(Settings,enableVehicleRadios)) exitWith {};
 
-if (_vehicle iskindOf "man") exitWith {};
-if (!isMultiplayer) exitWith { [format["Vehicle rack initzialized for %1 (%2) is stopped due to being in a SP enviroment.", _vehicle, typeOf _vehicle], "Vehicle Radio"] call FUNC(warning); };
-if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Radio);}) exitWith {[format["Vehicle Radio already applied for %1.", _vehicle], "Vehicle Radio"] call FUNC(warning);};
+if (!isMultiplayer) exitWith {SHOW_WARNING_2("VehicleRadio", "Vehicle rack initialisation for %1 [%2] is stopped due to being in a SP environment.", _vehicle, typeOf _vehicle);};
 
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Radio);}) exitWith {SHOW_WARNING_2("VehicleRadio", "Vehicle radios already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
+// If ACRE wait for init
 if (EGVAR(patches,usesACRE)) then { waitUntil {GVAR(Radio) && [] call acre_api_fnc_isInitialized}; };
 
-// FIXME
-// Add code to handle channel selection THO i think TFAR and ACRE have similar setup here.
+INFO_2("VehicleRadio", "Applying vehicle radios to %1 (%2)", _vehicle, typeOf _vehicle);
 
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     switch (_vehicleType) do {

@@ -33,7 +33,6 @@ params [
     ["_name", "", [""]]
 ];
 
-if (!isServer) exitwith {};
 private _hasCargo = _inventory isEqualType [];
 private _isInCargo  = _destination isEqualType objNull;
 

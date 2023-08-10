@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
- * This function add eventhandelers adding cav functionality to all vehicles.
+ * Author: SGT.Brostrom.A
+ * This function make sure all the vehicles gets their functions and systems applied
  *
  * Return Value:
  * Nothing
@@ -12,25 +12,35 @@
  * Public: No
  */
 
-INFO("InitVehicle","Applying Event Handers (init) to vehicles for function expantions...");
+INFO("InitVehicle","Applying Event Handers (init) to vehicles for function expansions...");
 
 if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 
 ["AllVehicles", "init", {
-    _this params ["_vehicle"];
-    if (_vehicle iskindOf "man") exitWith {};
-    [{
-        _this params ["_vehicle"];
-        _vehicle call EFUNC(vehicle,addFunctions);
-        _vehicle call EFUNC(vehicle,addInventory);
+    params ["_vehicle"];
+    INFO_2("VehicleInit", "Applying Init to %1 [%2]...", _vehicle, typeOf _vehicle);
+    INFO_2("VehicleInit", "Applying Client Init: (%1 [%2])...", _vehicle, typeOf _vehicle);
+    _vehicle call EFUNC(vehicle,addFunctions);
+    _vehicle call EFUNC(vehicle,addStagingActions);
+    INFO_2("VehicleInit", "Init applied to %1 [%2]", _vehicle, typeOf _vehicle);
+}, true, ["man"], true] call CBA_fnc_addClassEventHandler;
+
+["AllVehicles", "initPost", {
+    params ["_vehicle"];
+    INFO_2("VehicleinitPost", "Applying initPost to %1 [%2]...", _vehicle, typeOf _vehicle);
+    if (isServer) then {
+        INFO_2("VehicleinitPost", "Applying Server Init: (%1 [%2])", _vehicle, typeOf _vehicle);
         _vehicle call EFUNC(vehicle,addDefaultLoadout);
         _vehicle call EFUNC(vehicle,addCosmetics);
-        _vehicle call EFUNC(vehicle,addStagingActions);
         _vehicle call EFUNC(vehicle,addRadio);
-    }, [_vehicle], 1] call CBA_fnc_waitAndExecute;
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-
-{
-    if (!isNil{_x getVariable QEGVAR(player,zeus)}) exitWith {};
-    [QGVAR(setCuratorEventHandlers), [_x]] call CBA_fnc_targetEvent;
-} forEach allCurators;
+        _vehicle call EFUNC(vehicle,addFunctionsGlobal);
+    };
+    if (local _vehicle) then {
+        INFO_2("VehicleinitPost", "Applying Local Init: (%1 [%2])", _vehicle, typeOf _vehicle);
+        [{
+            params["_vehicle"];
+            _vehicle call EFUNC(vehicle,addInventory);
+        }, [_vehicle], 1] call CBA_fnc_waitAndExecute;
+    };
+    INFO_2("VehicleinitPost", "initPost applied to %1 [%2]", _vehicle, typeOf _vehicle);
+}, true, ["man"], true] call CBA_fnc_addClassEventHandler;

@@ -150,6 +150,7 @@ class cScripts {
         file = "cScripts\functions\vehicle";
         class vehicle_addInventory {};
         class vehicle_addFunctions {};
+        class vehicle_addFunctionsGlobal {};
         class vehicle_addCosmetics {};
         class vehicle_addRadio {};
         class vehicle_setRadio {};

@@ -13,14 +13,10 @@
 params [["_vehicle", objNull, [objNull]]];
 
 if (!isServer) exitWith {};
-if (isNull _vehicle) then {["Vehicle is null and not defined", "Vehicle Default Pylon"] call FUNC(error);};
-if (_vehicle iskindOf "man") exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,PylonApplyed)}) exitWith {[format["Vehicle loadouts already applied for %1.", _vehicle], "Vehicle Default Pylon"] call FUNC(warning);};
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,PylonApplyed)}) exitWith {SHOW_WARNING_2("VehicleDefaultLoadout", "Vehicle loadouts already applied for %1. [%2].", _vehicle, typeOf _vehicle);};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
-#ifdef DEBUG_MODE
-    [formatText["Applying vehicle loadout to %1.", _vehicle], "Vehicle Default Pylon"] call FUNC(info);
-#endif
+INFO_2("VehicleDefaultLoadout", "Applying vehicle loadout to %1 [%2].", _vehicle, typeOf _vehicle);
 
 // Default pylon applied
 private _pylon = [];
