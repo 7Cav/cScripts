@@ -370,7 +370,7 @@ private _dataArray = [
         ["ACE_tourniquet",0],
         ["kat_TXA",0],
         ["kat_Carbonate",0],
-        ["kat_Painkiller",0]
+        ["kat_Painkiller",0],
 
         // Tools and Items
         ["ACE_wirecutter",10],
@@ -1420,6 +1420,14 @@ private _dataArray = [
         ["rhsusf_ihadss", 0],
 
         //Backpack
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
     ["arsenal_role_pilotcrew", [
@@ -1449,12 +1457,42 @@ private _dataArray = [
         ["rhsusf_hgu56p_visor_mask_smiley", 0],
 
         //Backpack
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
     ["arsenal_role_pilotfighter", [
         ["RHS_jetpilot_usaf", 0],
 
         //Backpack
+        ["USP_TACTICAL_PACK_MCB_CCT", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT2", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT3", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT4", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT5", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT6", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT7", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT8", 0],
+        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
+    ]],
+    ["arsenal_role_pilottransport", [
+        ["USP_BASEBALL_CAP_OD_C", 0],
+
+        //Backpack
+        ["USP_TACTICAL_PACK_MCB_CCT", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT2", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT3", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT4", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT5", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT6", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT7", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]]
 ];

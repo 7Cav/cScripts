@@ -50,6 +50,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "rotarypilot": {["arsenal_role_rotarypilot", true] call EFUNC(logistics,getContainer);};
     case "rotarycrew": {["arsenal_role_pilotcrew", true] call EFUNC(logistics,getContainer);};
     case "pilotfighter": {["arsenal_role_pilotfighter", true] call EFUNC(logistics,getContainer);};
+    case "pilottransport": {["arsenal_role_pilottransport", true] call EFUNC(logistics,getContainer);};
     default {[]};
 };
 
