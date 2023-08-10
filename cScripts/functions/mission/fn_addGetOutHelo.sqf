@@ -43,4 +43,4 @@ private _actionIDR = _vehicle addAction [
     "(_target getCargoIndex _this) != -1"
 ];
 
-_vehicle setVariable [QEGVAR(Vehicle,GetOutRightLeft), [_vehicle, [_actionIDL, _actionIDR]], true];
+_vehicle setVariable [QEGVAR(Vehicle,GetOutRightLeft), [_vehicle, [_actionIDL, _actionIDR]]];
