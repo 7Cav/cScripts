@@ -38,7 +38,7 @@ private _companyItems = switch (_company) do {
 
 
 private _medicRole = getNumber (missionConfigFile >> "CfgLoadouts" >> _classname >> "abilityMedic");
-private _medicGear = if (_medicRole >= 1) then {["crate_medicalAtlas", true] call EFUNC(logistics,getContainer);} else {[]};
+private _medicGear = if (_medicRole >= 1) then {["bravo_company_atlas", true] call EFUNC(logistics,getContainer);} else {[]};
 
 
 private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
