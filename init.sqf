@@ -14,15 +14,6 @@ if (!isMultiplayer) then {SHOW_CHAT_WARNING("", "Mission is running on singelpla
     logEntities;
 #endif
 
-// ACRE radio init
-if (isMultiplayer) then {
-    GVAR(Radio) = false;
-    call EFUNC(gear,setupRadios);
-    GVAR(Radio) = true;
-} else {
-    SHOW_CHAT_WARNING("init", "Mission in singelplayer environment radio setup will not be performed");
-};
-
 enableSaving [false, false];
 
 ACE_maxWeightCarry = 7500;
