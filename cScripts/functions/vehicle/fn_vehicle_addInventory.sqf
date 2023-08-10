@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This function changes the inventory of the given vehicle.
  *
  * Arguments:
@@ -12,15 +12,11 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (!isServer) exitWith {};
-if (_vehicle iskindOf "man") exitWith {};
 if (!EGVAR(Settings,enableVehicleInventory)) exitWith {};
-if (!isNil {_vehicle getVariable QEGVAR(Vehicle,Inventory);}) exitWith {[formatText["Vehicle inventory already applied for %1.", _vehicle], "Vehicle"] call FUNC(warning);};
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Inventory)}) exitWith {SHOW_WARNING_2("VehicleInventory", "Vehicle inventory already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
-#ifdef DEBUG_MODE
-    [formatText["Applying inventory to %1 (%2)", _vehicle, typeOf _vehicle], "Vehicle"] call FUNC(info);
-#endif
+INFO_2("VehicleInventory", "Applying vehicle inventory to %1 (%2)", _vehicle, typeOf _vehicle);
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
@@ -38,8 +34,8 @@ _vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
 
 if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
-// Inventories
 
+// Inventories
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
     [_vehicle, 15, 38, false, false] call FUNC(setCargoAttributes);
     

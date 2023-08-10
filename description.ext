@@ -22,19 +22,13 @@ disableChannels[]        = {{0,false,true},{1,false,true},{2,true,true},{6,true,
 cba_settings_hasSettingsFile = 1;
 cba_settings_whitelist[] = {
     "76561197962051582",    // Brostrom.A
-    "76561198007260563",    // Tharen.R
-    "76561198006952602",    // Rosefield.M
-    "76561198070981528",    // Schmidt.A
-    "76561198044636421"     // Phoenix.G
+    "76561198136771473"     // Turn.J
 };
 
 enableTargetDebug = 1;
 enableDebugConsole[] = {
     "76561197962051582",    // Brostrom.A
-    "76561198007260563",    // Tharen.R
-    "76561198006952602",    // Rosefield.M
-    "76561198070981528",    // Schmidt.A
-    "76561198044636421"     // Phoenix.G
+    "76561198136771473"     // Turn.J
 };
 
 forceRotorLibSimulation  = 1;

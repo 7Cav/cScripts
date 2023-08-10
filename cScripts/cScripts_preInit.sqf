@@ -28,6 +28,9 @@ GVAR(DATABASE) = call EFUNC(init,logistics);
 EGVAR(DATABASE,DONE) = true;
 
 
+// Disable decals for RHS vehicles
+RHSDecalsOff=true;
+
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
 

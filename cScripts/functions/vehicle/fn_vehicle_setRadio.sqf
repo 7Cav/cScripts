@@ -60,7 +60,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
 
 // TFAR
 if (EGVAR(patches,usesTFAR)) exitWith {
-    /** FIXME: Code goes here */
+    /** TODO: Code goes here */
 };
 
 ["Fatal", "Vehicle Radio", true] call FUNC(error);

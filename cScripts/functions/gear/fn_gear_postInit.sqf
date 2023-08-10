@@ -14,6 +14,16 @@
  *
  */
 
+if (isServer) then {
+    if (isMultiplayer) then {
+        GVAR(Radio) = false;
+        call EFUNC(gear,setupRadios);
+        GVAR(Radio) = true;
+    } else {
+        SHOW_CHAT_WARNING("Gear_PostInit", "Mission in singelplayer environment radio setup will not be performed");
+    };
+};
+
 if (hasInterface) then {
     ["ace_arsenal_displayClosed", {
         player call EFUNC(gear,saveLoadout);

@@ -53,4 +53,4 @@ private _actionID = [
     false
 ] call BIS_fnc_holdActionAdd;
 
-_vehicle setVariable [QEGVAR(Vehicle,Jump), [_vehicle, _actionID, _minAltetude, _maxAltetude, _maxSpeed, _chuteVehicleClass], true];
+_vehicle setVariable [QEGVAR(Vehicle,Jump), [_vehicle, _actionID, _minAltetude, _maxAltetude, _maxSpeed, _chuteVehicleClass]];

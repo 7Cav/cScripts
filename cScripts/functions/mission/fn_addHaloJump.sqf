@@ -48,4 +48,4 @@ private _actionID = [
     false
 ] call BIS_fnc_holdActionAdd;
 
-_vehicle setVariable [QEGVAR(Vehicle,Halo), [_vehicle, _actionID, _minAltetude, _chuteBackpackClass], true];
+_vehicle setVariable [QEGVAR(Vehicle,Halo), [_vehicle, _actionID, _minAltetude, _chuteBackpackClass]];

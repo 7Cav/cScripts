@@ -21,18 +21,13 @@
 params [
     ["_vehicle", objNull, [objNull]],
     ["_inventory", [], [[]]],
-    ["_crateName", "", [""]],
-    ["_clearInventory", true, [true]]
+    ["_crateName", "", [""]]
 ];
 
-if (!isServer) exitwith {}; 
-
-if (_clearInventory) then {
-    clearWeaponCargoGlobal _vehicle;
-    clearMagazineCargoGlobal _vehicle;
-    clearItemCargoGlobal _vehicle;
-    clearBackpackCargoGlobal _vehicle;
-};
+clearWeaponCargoGlobal _vehicle;
+clearMagazineCargoGlobal _vehicle;
+clearItemCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
 
 if ( count _inventory < 1 ) exitWith {};
 

@@ -15,48 +15,31 @@ INFO("InitEventHandlers","Creating Global EventHandlers");
     call FUNC(getAttendance);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(setCuratorEventHandlers), {
-    _this params ["_player"];
-    if (!isNil{_x getVariable QEGVAR(player,zeus)}) exitWith {};
-        
+[QEGVAR(EH_Vehicle,addFunctions), {
+    params ["_vehicle"];
+    INFO_2("EH_InitVehicle_addFunctions", "Applying function to %1 [%2]", _vehicle, typeOf _vehicle);
+    _vehicle call EFUNC(vehicle,addFunctions);
+}] call CBA_fnc_addEventHandler;
 
-    _player addEventHandler ["CuratorObjectPlaced", {
-        params ["", "_vehicle"];
-        INFO("Curator", "Object (%1) placed by curator, Applying functions", _vehicle);
-        [{
-            _this params ["_vehicle"];
-            if (_vehicle iskindOf "man") exitWith {};
-            _vehicle remoteExec [QEFUNC(vehicle,reset), 0, true]; 
-            _vehicle remoteExec [QEFUNC(vehicle,addFunctions), -2, true];
-            _vehicle remoteExec [QEFUNC(vehicle,addInventory), 2];
-            _vehicle remoteExec [QEFUNC(vehicle,addDefaultLoadout), 2];
-            _vehicle remoteExec [QEFUNC(vehicle,addCosmetics), 2];
-            _vehicle remoteExec [QEFUNC(vehicle,addStagingActions), -2];
-            _vehicle remoteExec [QEFUNC(vehicle,addRadio), 2];
-        }, [_vehicle], 1] call CBA_fnc_waitAndExecute;
-
-    }];
-
-    _player setVariable [QEGVAR(player,zeus), true];
+[QEGVAR(EH_Vehicle,addStagingActions), {
+    params ["_vehicle"];
+    INFO_2("EH_InitVehicle_addStagingActions", "Applying function to %1 [%2]", _vehicle, typeOf _vehicle);
+    _vehicle call EFUNC(vehicle,addStagingActions);
 }] call CBA_fnc_addEventHandler;
 
 
-
-INFO("InitEventHandlers","Creating Client EventHandlers");
+// Player Events
 if (GVAR(isPlayer)) then {
+    INFO("InitEventHandlers","Creating Client EventHandlers");
 
-    ["ace_zeusCreated", {
-        _this params ["_zeus"];
-        LOG_1("CuratorCreate_ACE", "ACE curator created");
-        [QGVAR(setCuratorEventHandlers), [_zeus]] call CBA_fnc_targetEvent;
-    }] call CBA_fnc_addEventHandler;
-    
-    ["zen_common_createZeus", {
-        _this params ["_zeus"];
-        LOG_1("CuratorCreate_ZEN", "ZEN curator created");
-        [QGVAR(setCuratorEventHandlers), [_zeus]] call CBA_fnc_targetEvent;
-    }] call CBA_fnc_addEventHandler;
-
+    // TODO: Possibly use in the future 
+    //["ace_zeusCreated", {
+    //    _this params ["_zeus"];
+    //}] call CBA_fnc_addEventHandler;
+    //
+    //["zen_common_createZeus", {
+    //    _this params ["_zeus"];
+    //}] call CBA_fnc_addEventHandler;
 };
 
 

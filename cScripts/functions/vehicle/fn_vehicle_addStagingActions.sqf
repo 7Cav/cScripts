@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
- * This function add stadgeing to vehicles
+ * Author: SGT.Brostrom.A
+ * This function add staging actions to vehicles
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -19,13 +19,10 @@ params [["_vehicle", objNull, [objNull]]];
 
 if (!hasInterface) exitWith {};
 if (!EGVAR(Settings,enableStagingSystem)) exitWith {};
-if (isNull _vehicle) exitWith {};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,StagingActions)}) exitWith {[formatText["Vehicle staging actions already applied for %1.", _vehicle]] call FUNC(warning);};
+if (!isNil{_vehicle getVariable QEGVAR(Vehicle,StagingActions)}) exitWith {SHOW_WARNING_2("VehicleStagingActions", "Vehicle staging actions already applied for %1. [%2].", _vehicle, typeOf _vehicle);};
 
-#ifdef DEBUG_MODE
-    [format ["Adding vehicle staging actions to %1.", _vehicle], "Vehicle Staging"] call FUNC(info);
-#endif
+INFO_2("VehicleStagingActions", "Applying vehicle staging actions to %1 (%2)", _vehicle, typeOf _vehicle);
 
 private _condition = { call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions_Vehicle,Main_Cat), "Vehicle Staging Zone", "cScripts\Data\Icon\icon_00.paa", {true}, _condition] call ace_interact_menu_fnc_createAction;
