@@ -1,7 +1,7 @@
 name: Pull Request
 on:
   pull_request:
-    types: [ labeled ]
+    types: [ labeled unlabeled ]
 
 jobs:
   build:
