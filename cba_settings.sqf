@@ -876,8 +876,8 @@ force force TFAR_setting_externalIntercomWirelessHeadgear = "";
 force force TFAR_spectatorCanHearEnemyUnits = true;
 force force TFAR_spectatorCanHearFriendlies = true;
 force force TFAR_takingRadio = 2;
-force force TFAR_Teamspeak_Channel_Name = "TaskForceRadio";
-force force TFAR_Teamspeak_Channel_Password = "123";
+force force TFAR_Teamspeak_Channel_Name = "TacticalRealism TFAR";
+force force TFAR_Teamspeak_Channel_Password = "Browncoats";
 force force tfar_terrain_interception_coefficient = 7;
 force force TFAR_voiceCone = false;
 
