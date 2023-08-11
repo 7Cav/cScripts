@@ -154,7 +154,19 @@ private _dataArray = [
         ["USP_PVS14", 0],
         ["USP_PVS15", 0],
         ["USP_L4G19", 0],
-        ["USP_RHINO", 0]
+        ["USP_RHINO", 0],
+
+        //Backpack
+        ["USP_TACTICAL_PACK", 0],
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
+        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
 
     ["bravo_company", [
@@ -207,8 +219,24 @@ private _dataArray = [
         ["rhs_mag_m664_red_cluster", 50],
         ["rhs_mag_m713_Red", 50],
         ["rhs_mag_m716_yellow", 50],
+        
+        // NVG
+        ["USP_PVS14", 0],
+        ["USP_PVS15", 0],
+        ["USP_L4G19", 0],
+        ["USP_L4G24",0],
+        ["USP_PVS31",0],
+        ["USP_PVS31_HIGH",0],
+        ["USP_PVS31_LOW",0],
+        ["USP_PVS31_COMPACT",0],
+        ["USP_RHINO", 0],
 
-        // Tools and Items
+        // cTab
+        ["ItemAndroid", 0],
+        ["ItemcTab", 0],
+
+        // Tools
+        ["ACE_EntrenchingTool", 0],
 
         // Backpacks
         ["B_Carryall_mcamo", 0],
@@ -294,15 +322,59 @@ private _dataArray = [
         ["ACE_CableTie",100],
         ["ACE_wirecutter",5],
         ["ACE_EntrenchingTool",20],
-        ["B_UavTerminal",20],
-
-        // Medical
-        ["ACE_EarPlugs",250],
-        ["ACE_bodyBag",12],
-        ["kat_Painkiller",10]
+        ["B_UavTerminal",20]
     ]],
 
     ["bravo_company_atlas", [
+        ["ACE_microDAGR",0],
+        ["ItemAndroid",0],
+
+        ["kat_IV_16",0],
+        ["ACE_adenosine",0],
+        ["kat_AED","kat_X_AED",0],
+        ["ACE_packingBandage",0],
+        ["ACE_quikclot","ACE_elasticBandage",0],
+        ["ACE_bloodIV",0],
+        ["ACE_bloodIV_250",0],
+        ["ACE_bloodIV_500",0],
+        ["ACE_bodyBag",0],
+        ["kat_plate",0],
+        ["ACE_CableTie",0],
+        ["ACE_Chemlight_Shield",0],
+        ["kat_clamp",0],
+        ["Rev_pelican_item",0],
+        ["kat_vacuum",0],
+        ["kat_EACA",0],
+        ["ACE_EarPlugs",0],
+        ["ACE_EntrenchingTool",0],
+        ["ACE_epinephrine",0],
+        ["kat_etomidate",0],
+        ["kat_IO_FAST",0],
+        ["kat_flumazenil",0],
+        ["kat_lidocaine",0],
+        ["kat_lorazepam",0],
+        ["ACE_morphine",0],
+        ["kat_naloxone",0],
+        ["kat_nitroglycerin",0],
+        ["kat_norepinephrine",0],
+        ["ACE_personalAidKit",0],
+        ["kat_phenylephrine",0],
+        ["kat_phenylephrine_inject",0],
+        ["ACE_plasmaIV",0],
+        ["ACE_plasmaIV_250",0],
+        ["ACE_plasmaIV_500",0],
+        ["kat_retractor",0],
+        ["ACE_salineIV",0],
+        ["ACE_salineIV_250",0],
+        ["ACE_salineIV_500",0],
+        ["kat_scalpel",0],
+        ["ACE_splint",0],
+        ["ACE_surgicalKit",0],
+        ["ACE_tourniquet",0],
+        ["kat_TXA",0],
+        ["kat_Carbonate",0],
+        ["kat_Painkiller",0],
+
         // Tools and Items
         ["ACE_wirecutter",10],
         ["ACE_EntrenchingTool",20],
@@ -1220,7 +1292,15 @@ private _dataArray = [
         ["USP_ZIPON_PANEL_MC_RF2", 0],
         ["USP_ROLLFLAG2", 0],
         ["USP_PACK_HYDRATION", 0],
-        ["USP_PATROL_PACK_ZT", 0]
+        ["USP_PATROL_PACK_ZT", 0],
+        
+        // Medical
+        ["ACE_EarPlugs",250],
+        ["ACE_bodyBag",12],
+        ["kat_Painkiller",10],
+
+        // Common Gear
+        ["ACE_IR_Strobe_Item",20]
     ]],
 
     ["arsenal_company_fallback", [
@@ -1343,6 +1423,14 @@ private _dataArray = [
         ["rhsusf_ihadss", 0],
 
         //Backpack
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
     ["arsenal_role_pilotcrew", [
@@ -1372,12 +1460,42 @@ private _dataArray = [
         ["rhsusf_hgu56p_visor_mask_smiley", 0],
 
         //Backpack
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
     ["arsenal_role_pilotfighter", [
         ["RHS_jetpilot_usaf", 0],
 
         //Backpack
+        ["USP_TACTICAL_PACK_MCB_CCT", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT2", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT3", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT4", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT5", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT6", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT7", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT8", 0],
+        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
+    ]],
+    ["arsenal_role_pilottransport", [
+        ["USP_BASEBALL_CAP_OD_C", 0],
+
+        //Backpack
+        ["USP_TACTICAL_PACK_MCB_CCT", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT2", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT3", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT4", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT5", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT6", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT7", 0],
+        ["USP_TACTICAL_PACK_MCB_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]]
 ];
