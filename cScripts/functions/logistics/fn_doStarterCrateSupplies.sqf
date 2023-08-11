@@ -58,7 +58,7 @@ private _container = switch (_companySelector) do {
     case "ALL": {
         private _fullContainer = [];
         {
-            private _items = GET_CONTAINER(_x);
+            private _items = _x call EFUNC(logistics,getContainer);
             _fullContainer append _items;
         } forEach ["alpha_company", "bravo_company_atlas", "bravo_company_viking", "charlie_company"];
     };
