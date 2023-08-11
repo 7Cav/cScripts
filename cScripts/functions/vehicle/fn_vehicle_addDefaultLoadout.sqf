@@ -13,7 +13,7 @@
 params [["_vehicle", objNull, [objNull]]];
 
 if (!isServer) exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,PylonApplyed)}) exitWith {SHOW_WARNING_2("VehicleDefaultLoadout", "Vehicle loadouts already applied for %1. [%2].", _vehicle, typeOf _vehicle);};
+if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,DefaultPylon)}) exitWith {SHOW_WARNING_2("VehicleDefaultLoadout", "Vehicle loadouts already applied for %1. [%2].", _vehicle, typeOf _vehicle);};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 INFO_2("VehicleDefaultLoadout", "Applying vehicle loadout to %1 [%2].", _vehicle, typeOf _vehicle);
@@ -31,4 +31,4 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dr
     [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
 };
 
-_vehicle setVariable [QEGVAR(Vehicle,PylonApplyed), true, true];
+_vehicle setVariable [QEGVAR(VehicleFunc,DefaultPylon), true, true];

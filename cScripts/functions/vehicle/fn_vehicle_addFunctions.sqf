@@ -12,13 +12,13 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Functions)}) exitWith {SHOW_WARNING_1("VehicleFunctions", "Vehicle functions already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
+if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,Functions)}) exitWith {SHOW_WARNING_1("VehicleFunctions", "Vehicle functions already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 
 INFO_2("VehicleFunctions", "Applying vehicle functions to %1 (%2)", _vehicle, typeOf _vehicle);
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
-_vehicle setVariable [QEGVAR(Vehicle,Functions), true];
+_vehicle setVariable [QEGVAR(VehicleFunc,Functions), true];
 
 
 // Jump and get out systems universal for all airframes and non nato factions.

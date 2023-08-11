@@ -13,7 +13,7 @@
 params [["_vehicle", objNull, [objNull]]];
 
 if (!EGVAR(Settings,enableVehicleInventory)) exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Inventory)}) exitWith {SHOW_WARNING_2("VehicleInventory", "Vehicle inventory already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
+if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,Inventory)}) exitWith {SHOW_WARNING_2("VehicleInventory", "Vehicle inventory already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 INFO_2("VehicleInventory", "Applying vehicle inventory to %1 (%2)", _vehicle, typeOf _vehicle);
@@ -30,7 +30,7 @@ private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
 // Do not allow renaming of vehicles
 _vehicle setVariable ["ace_cargo_noRename", true];
 
-_vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
+_vehicle setVariable [QEGVAR(VehicleFunc,Inventory), true, true];
 
 if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
