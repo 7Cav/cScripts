@@ -17,9 +17,7 @@
 
 if !(EGVAR(Settings,enableStagingSystem)) exitWith {};
 
-#ifdef DEBUG_MODE
-    ["Setting up Staging", "staging"] call FUNC(info);
-#endif
+INFO("Staging", "Setting up Staging");
 
 private _respawnMarkers = [
     "respawn_west",
@@ -33,7 +31,17 @@ private _respawnMarkers = [
     "respawn_west_7",
     "respawn_west_8",
     "respawn_west_9",
-    "respawn_west_10"
+    "respawn_west_10",
+    "respawn_west_11",
+    "respawn_west_12",
+    "respawn_west_13",
+    "respawn_west_14",
+    "respawn_west_15",
+    "respawn_west_16",
+    "respawn_west_17",
+    "respawn_west_18",
+    "respawn_west_19",
+    "respawn_west_20"
 ];
 private _stagingMarkers = [
     "zone_staging",
@@ -52,7 +60,22 @@ private _stagingMarkers = [
     "zone_staging_12",
     "zone_staging_13",
     "zone_staging_14",
-    "zone_staging_15"
+    "zone_staging_15",
+    "zone_staging_16",
+    "zone_staging_17",
+    "zone_staging_18",
+    "zone_staging_19",
+    "zone_staging_20",
+    "zone_staging_21",
+    "zone_staging_22",
+    "zone_staging_23",
+    "zone_staging_24",
+    "zone_staging_25",
+    "zone_staging_26",
+    "zone_staging_27",
+    "zone_staging_28",
+    "zone_staging_29",
+    "zone_staging_30"
 ];
 
 {
@@ -104,4 +127,4 @@ if !(GVAR(OneLife)) then {[player, _category] call FUNC(addHeal)};
 [player, true, "ACE_SelfActions"] call FUNC(setupLoadoutSelection);
 [_category] call FUNC(addArsenal);
 
-[format["Staging options for %1 have been setup.", name player], "Staging"] call FUNC(info);
+INFO_1("Staging", "Staging options for %1 have been setup.", name player)
