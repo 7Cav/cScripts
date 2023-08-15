@@ -92,7 +92,7 @@ params ["_modulePos", "_objectPos"];
                                 hint parseText (_hftitle + _hfimage + _hftext);
                                 format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(info), 0];
                                 if ( _unit getVariable [QEGVAR(player,endexFiredWeapon), ""] != _muzzle ) then {
-                                    format ["Hold your fire %1 %2!", [_unit, 'USA'] call EFUNC(player,getRank);, [_unit,'PROFILE'] call EFUNC(unit,getName)] remoteExecCall ["systemChat", 0];
+                                    format ["Hold your fire %1 %2!", [_unit, 'USA'] call EFUNC(player,getRank);, [_unit] call EFUNC(unit,getName)] remoteExecCall ["systemChat", 0];
                                     _unit setVariable [QEGVAR(player,endexFiredWeapon), _muzzle];
                                 };
                             }

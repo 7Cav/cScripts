@@ -10,12 +10,12 @@
  * Classname of insignia
  *
  * Example:
- * call cScripts_fnc_player_loadInsignia
+ * call cScripts_fnc_profile_loadInsignia
  *
  * Public: No
  */
 
-if (GVAR(isPlayer)) exitWith {""};
+if (!GVAR(isPlayer)) exitWith {""};
 
 // remove later
 if (!isNil{profileNamespace getVariable [EGVAR(cav,insignia), nil]}) then {

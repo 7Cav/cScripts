@@ -7,9 +7,6 @@ if (is3DEN) exitWith {};
 
 INFO("postInit", "Initializing...");
 
-// Initialises player data
-[true] call EFUNC(player,setData)
-
 // Change inventory content of supply crates on mission start.
 call EFUNC(init,vehicle);
 

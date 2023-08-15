@@ -29,7 +29,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
     {
         if !(_x == "") then {
             private _radio = [_x] call acre_api_fnc_getBaseRadio;
-            private _channel = [[_player] call FUNC(getSquadName), _radio] call FUNC(getRadioChannel);
+            private _channel = [[_player] call EFUNC(unit,getSquadName), _radio] call FUNC(getRadioChannel);
 
             [_x, _channel] call acre_api_fnc_setRadioChannel;
             INFO_3("Radio", "%1 radio (%2) have its channel set to %3", _player, _x, _channel);

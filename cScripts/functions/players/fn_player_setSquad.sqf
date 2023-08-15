@@ -11,8 +11,8 @@
  * Squad Name <STRING>
  *
  * Example:
- * [this, "Bandit-1"] call cScripts_fnc_setSquad
- * [this, "Bandit-1", true] call cScripts_fnc_setSquad
+ * [this, "Bandit-1"] call cScripts_fnc_player_setSquad
+ * [this, "Bandit-1", true] call cScripts_fnc_player_setSquad
  *
  */
 
@@ -32,6 +32,5 @@ if (_squadLeader) then {
     _group setGroupIdGlobal ["_squadName"];
 };
 
-[["squad", _squadName]] call EFUNC(player,setData);
-
-[["squadInsignia", _squadName]] call EFUNC(player,setData);
+player SETVAR(QEGVAR(Player,Squad), _rank);
+_rank

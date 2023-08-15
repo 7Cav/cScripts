@@ -7,7 +7,7 @@
  * 0: Company <STRING>
  *
  * Return Value:
- * Nothing
+ * Company Name <STRING>
  *
  * Example:
  * ["Charlie"] call cScripts_fnc_player_setCompany;
@@ -18,4 +18,6 @@
 params [["_company", "", [""]]];
 
 _company = toLower _company;
-[["company", _company]] call EFUNC(player,setData);
+player SETVAR(QEGVAR(Player,Company), _company);
+
+_company

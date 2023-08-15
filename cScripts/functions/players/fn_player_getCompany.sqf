@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * CompanyName or Empty
+ * CompanyName <STRING>
  *
  * Example:
  * call cScripts_fnc_player_getCompany;
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _company = ["company"] call EFUNC(getData);
+private _company = player GETEVAR(Player,Company, "")
 _company = toLower _company;
 
 _company

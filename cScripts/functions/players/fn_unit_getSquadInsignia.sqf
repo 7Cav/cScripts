@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _group = [player] call FUNC(getSquadName);
+private _group = [player] call EFUNC(unit,getSquadName);
 _group = toUpper(_group);
 
 private _return = switch (_group) do {

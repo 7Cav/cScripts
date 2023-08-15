@@ -18,23 +18,23 @@ params [["_unit", objNull, [objNull]]];
 
 
 // Player Name without rank prefix
-if (["name"] call EFUNC(player,getData) == "") then {
+if (!isNil{_unit GETEGVAR(Unit,Name,nil)}) then {
     private _name = [_unit] call EFUNC(unit,getName);
-    [["name", _name]] call EFUNC(player,setData);
+    _unit SETVAR(EGVAR(Unit,Name), _name);
 };
 
 
 // Player Rank to ingame rank
 if (EGVAR(Settings,setPlayerRank)) then {
-    if (["rank"] call EFUNC(player,getData) == "") then {
-        private _rank = [_unit] call EFUNC(unit,getName);
-        [["rank", _rank]] call EFUNC(player,setData);
+    if (!isNil{_unit GETEGVAR(Unit,Rank,nil)}) then {
+        private _rank = [_unit] call EFUNC(player,getRank);
+        _unit SETVAR(EGVAR(Unit,Rank), _rank);
     };
 };
 
 
 // Team Color
-if (!isNil{_unit setVariable [QEGVAR(Unit,TeamColor), nil]}) then {
+if (!isNil{_unit GETEGVAR(Unit,TeamColor,nil)}) then {
     [_unit] call EFUNC(unit,setTeamColor);
 };
 

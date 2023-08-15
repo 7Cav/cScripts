@@ -10,7 +10,7 @@
  * BIS Rank
  *
  * Example:
- * ["bob"] call cScripts_fnc_player_setRank;
+ * [bob] call cScripts_fnc_player_setRank;
  *
  */
 
@@ -20,7 +20,7 @@ if (!GVAR(isPlayer)) exitWith {};
 waitUntil {!isNull player && player == player};
 
 private _rank = 'PRIVATE';
-if ([_player, EGVAR(Settings,primaryClanTag)] call FUNC(isPlayerClan)) then {
+if (call EFUNC(player,hasClanTag)) then {
     _rank = [_player, 'BIS'] call EFUNC(player,getRank);
 };
 
@@ -28,6 +28,5 @@ if (_rank in ['PRIVATE','CORPORAL','SERGEANT','LIEUTENANT','CAPTAIN','MAJOR','CO
     _player setRank _rank;
 };
 
-_player setVariable [QEGVAR(Cav,Rank), _rank];
-
+_player SETVAR(QEGVAR(Player,Rank), _rank);
 _rank

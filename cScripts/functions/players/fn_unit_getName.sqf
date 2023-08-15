@@ -10,7 +10,7 @@
  *  Rank striped profileName OR profileName <STRING>
  *
  * Example:
- * call cScripts_fnc_unit_getName
+ * [bob] call cScripts_fnc_unit_getName
  *
  */
 
@@ -19,7 +19,7 @@ parmas [["_unit", objNull, [objNull]]];
 if (!GVAR(isPlayer)) exitWith {name _unit};
 if (!isMultiplayer) exitWith {profileName};
 
-if ([_unit] call FUNC(hasPlayerClan)) exitWith {
+if (call EFUNC(player,hasClanTag)) exitWith {
     [profileName, 4] call BIS_fnc_trimString;
 };
 

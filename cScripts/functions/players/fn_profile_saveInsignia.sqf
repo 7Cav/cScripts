@@ -10,12 +10,14 @@
  * True
  *
  * Example:
- * call cScripts_fnc_player_saveInsignia
+ * call cScripts_fnc_profile_saveInsignia
  *
  * Public: No
  */
 
 params [["_insignia", "", [""]]];
+
+if (!GVAR(isPlayer)) exitWith {};
 
 // remove later
 if (!isNil{profileNamespace getVariable [EGVAR(cav,insignia), nil]}) then {

@@ -52,26 +52,24 @@ class cScripts {
     };
     class players {
         file = "cScripts\functions\players";
-        class player_setData {};
-        class player_getData {};
 
-        class player_saveInsignia {};
-        class player_loadInsignia {};
+        class profile_saveInsignia {};
+        class profile_loadInsignia {};
 
         class player_hasClanTag {};
         class player_getClanTag {};
 
         class player_getRank {};
         class player_setRank {};
+        class player_getRole {};
 
         class unit_setTeamColor {};
         
+        class unit_getName {};
         class unit_setInsignia {};
         class unit_getSquadInsignia {};
+        class unit_getSquadName {};
 
-        class unit_getName {};
-
-        class getPlayerRole {};
 
         class getRadioChannel {};
         class setRadioChannel {};
@@ -79,6 +77,8 @@ class cScripts {
 
         class player_getCompany {};
 
+        // Other Functions
+        class unit_getVariables {};
     };
     class mission {
         file = "cScripts\functions\mission";

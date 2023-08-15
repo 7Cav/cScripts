@@ -16,7 +16,7 @@
 
 params [["_unit", objNull, [objNull]]];
 
-if (!isNil{_unit setVariable [QEGVAR(Unit,TeamColor), nil]}) exitWith {};
+if (!isNil{_unit GETEGVAR(Unit,TeamColor,nil)}) exitWith {};
 
 private _name = "";
 if !(roleDescription _unit == "") then {
@@ -37,11 +37,8 @@ private _color = switch (_nameUpper) do {
 };
 
 [_unit, _color] call ace_interaction_fnc_joinTeam;
-_unit setVariable [QEGVAR(Unit,TeamColor), _color];
-if (GVAR(isPlayer)) then { [["team", _color]] call FUNC(setUnitData); };
+_unit SETVAR(QEGVAR(Unit,TeamColor), _color);
 
-#ifdef DEBUG_MODE
-    [format ["%1 was assigned as team %2.", _unit, _color], "SetTeamColor"] call FUNC(info);
-#endif
+INFO_2("TeamColor", "%1 was assigned as team %2.", _unit, _color);
 
 [_name, _color];
