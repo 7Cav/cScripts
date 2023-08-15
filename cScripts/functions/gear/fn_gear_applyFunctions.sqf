@@ -14,9 +14,6 @@
  *
  */
 
-
-if (!GVAR(isPlayer)) exitWith {};
-
 // Radios
 if (EGVAR(Settings,enableRadios)) then {
     if (EGVAR(patches,usesACRE)) then {

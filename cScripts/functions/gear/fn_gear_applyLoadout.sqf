@@ -73,7 +73,9 @@ switch (true) do {
 [_unit, _config] call EFUNC(gear,applyAbilities);
 
 // Functions
-call EFUNC(gear,applyFunctions);
+if (GVAR(isPlayer)) exitWith {
+    call EFUNC(gear,applyFunctions);
+};
 
 // Select weapon
 _unit selectWeapon (primaryWeapon _unit);
