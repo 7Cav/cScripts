@@ -22,11 +22,10 @@ if (EGVAR(Settings,enableRadios)) then {
     if (EGVAR(patches,usesACRE)) then {
         if (EGVAR(Settings,setRadio)) then {
             [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
-                _this params ["player"];
-                [format["Setting up ACRE primary radio and channels for %1...", name player], "Gear Radio"] call FUNC(info);
+                INFO_1("GearRadio" "Setting up ACRE primary radio and channels for %1...", player);
                 [player] call FUNC(setRadioChannel);
                 ["ACRE_PRC343"] call FUNC(setActiveRadio);
-            }, [player]] call CBA_fnc_waitUntilAndExecute;
+            }, []] call CBA_fnc_waitUntilAndExecute;
         };
     };
 };
