@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: CPL.Brostrom.A
- * This function return your current loadout.
+ * This function return a units current loadout.
  *
  * Arguments:
  * 0: Unit <Object>
@@ -17,6 +17,6 @@
 
 params [["_unit", objNull, [objNull]]];
 
-private _return = _unit getVariable [QEGVAR(Gear,loadoutClass), typeOf player];
+private _return = _unit GETEVAR(Gear,loadoutClass, typeOf player);
 
 _return
