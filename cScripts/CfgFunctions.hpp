@@ -222,7 +222,7 @@ class cScripts {
 
         // other
         class gear_getLoadoutRole {};
-        class gear_getCurrentLoadoutName {};
+        class gear_getLoadoutName {};
     };
     class diag {
         file = "cScripts\functions\diag";
