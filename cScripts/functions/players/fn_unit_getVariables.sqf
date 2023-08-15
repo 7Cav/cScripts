@@ -21,17 +21,17 @@ private _classname = typeOf _unit;
 private _netId = netId _unit;
 private _uid = if (isPlayer _unit) then {getPlayerUID _unit} else {""};
 
-private _name = _unit GETEVAR(Unit,Name,"");
+private _name = _unit GETVAR(QEGVAR(Unit,Name), "");
 private _profileName = if (isPlayer _unit) then {profileName} else {""};
 private _profileNameSteam = if (isPlayer _unit) then {profileNameSteam} else {""};
 private _clanTag = call EFUNC(player,getClanTag);
 
 private _rank = "";
-private _rank_bis = _unit GETEVAR(Player,Rank,"PRIVATE");
+private _rank_bis = _unit GETVAR(QEGVAR(Player,Rank), "PRIVATE");
 
 private _regiment = "";
 private _company = "";
-private _squad = _unit GETEVAR(Player,Squad,groupId group _unit);
+private _squad = _unit GETVAR(QEGVAR(Player,Squad), groupId group _unit);
 private _squadInsignia = [_unit] BIS_fnc_getUnitInsignia;
 private _team = "";
 
