@@ -10,8 +10,8 @@
  * Loadout name <STRING>
  *
  * Example:
- * [player] call cScripts_fnc_gear_getCurrentLoadoutName;
- * [cursorObject] call cScripts_fnc_gear_getCurrentLoadoutName;
+ * [player] call cScripts_fnc_gear_getLoadoutName;
+ * [cursorObject] call cScripts_fnc_gear_getLoadoutName;
  *
  */
 
