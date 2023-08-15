@@ -28,9 +28,7 @@ params [
     ["_vector",[0,0,1], [[]]]
 ];
 
-#ifdef DEBUG_MODE
-    [format["Texture label '%1' is being created for %2 (%3).", _texture, _vehicle, typeOf _vehicle]] call FUNC(info);
-#endif
+INFO_3("VehicleLabel","Texture label '%1' is being created for %2 (%3).", _texture, _vehicle, typeOf _vehicle);
 
 if (!isServer) exitWith {};
 if (_texture == '') exitWith {};

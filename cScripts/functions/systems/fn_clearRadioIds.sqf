@@ -34,7 +34,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
     }] call CBA_fnc_execNextFrame;
 
     "Your radios have been reset" call CBA_fnc_notify;
-    [format["%1: Your radios have been reset", name player], "Clear Radio ID", true] call FUNC(info);
+    [format["%1: Your radios have been reset", name player], "ClearRadioID", true] call FUNC(info);
 };
 
 // TFAR
@@ -42,4 +42,4 @@ if (EGVAR(patches,usesTFAR)) exitWith {
     /** TODO: Code goes here */
 };
 
-["Fatal", "Clear Radio ID", true] call FUNC(error);
+SHOW_CHAT_ERROR("Fatal", "ClearRadioID");

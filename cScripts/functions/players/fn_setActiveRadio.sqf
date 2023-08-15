@@ -68,4 +68,4 @@ if (EGVAR(patches,usesTFAR)) exitWith {
     }, [_radio], 1] call CBA_fnc_waitAndExecute;
 };
 
-SHOW_CHAT_ERROR("Fatal", "Radio");
+SHOW_CHAT_ERROR("Fatal", "RadioSetActive");

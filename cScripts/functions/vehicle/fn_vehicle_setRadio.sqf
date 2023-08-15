@@ -35,9 +35,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
 
     waitUntil { _vehicle call acre_api_fnc_areVehicleRacksInitialized };
 
-    #ifdef DEBUG_MODE
-        [format["Vehicle rack initzialized for %1 (%2)", _vehicle, typeOf _vehicle], "Vehicle Radio" ] call FUNC(info);
-    #endif
+    INFO_4("VehicleRadio", "Vehicle rack initzialized for %1 (%2)", _vehicle, typeOf _vehicle);
 
     private _racks = [_vehicle] call acre_api_fnc_getVehicleRacks;
     if (count _racks == 0) exitWith {[format["No Vehicle Racks discoverd for %1 (%2).", _vehicle, typeOf _vehicle], "Vehicle Radio"] call FUNC(info)};
@@ -50,9 +48,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
         if (count _radio != 0) then {
             private _channel = _radioChannel select _forEachIndex;
             [_radio, _channel] call acre_api_fnc_setRadioChannel;
-            #ifdef DEBUG_MODE
-                [format["Vehicle %1 (%2) radio %3 in rack %3 have radio set to channel %4", _vehicle, typeOf _vehicle, _radio, _x, _channel], "Vehicle Radio"] call FUNC(info);
-            #endif
+            INFO_4("VehicleRadio", "Vehicle %1 (%2) radio %3 in rack %3 have radio set to channel %4", _vehicle, typeOf _vehicle, _radio, _x, _channel);
         };
     } forEach _racks;
 };
@@ -63,4 +59,4 @@ if (EGVAR(patches,usesTFAR)) exitWith {
     /** TODO: Code goes here */
 };
 
-["Fatal", "Vehicle Radio", true] call FUNC(error);
+SHOW_CHAT_ERROR("Fatal", "VehicleRadio");
