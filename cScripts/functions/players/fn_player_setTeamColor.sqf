@@ -16,8 +16,6 @@
 
 params [["_unit", objNull, [objNull]]];
 
-if (!isNil{_unit GETEGVAR(Unit,TeamColor,nil)}) exitWith {};
-
 private _name = "";
 if !(roleDescription _unit == "") then {
     _name = roleDescription _unit;
