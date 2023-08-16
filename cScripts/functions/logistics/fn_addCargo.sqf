@@ -32,6 +32,11 @@ clearBackpackCargoGlobal _vehicle;
 if ( count _inventory < 1 ) exitWith {};
 
 {
+    if !(_x isEqualTypeArray ["",0]) then {
+        SHOW_WARNING_1("addCargo","Item not added because %1 does not contain the proper format. Must be [STRING, SCALAR].", _x);
+        continue;
+    };
+
     _x params [["_item", "", [""]], ["_amount", 0, [0]]];
     if (_item call FUNC(checkItemValidity)) then {
         _vehicle addItemCargoGlobal [_item, _amount];
