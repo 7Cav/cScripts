@@ -24,7 +24,7 @@ if (!GVAR(isPlayer)) exitWith {};
 
 // ACRE
 if (EGVAR(patches,usesACRE)) exitWith {
-    _player setVariable [QEGVAR(Player,RadioChannel), []];
+    SETVAR(_player, QEGVAR(Player,RadioChannel), []);
     private _playerRadios = [_player] call acre_api_fnc_getCurrentRadioList;
     {
         if !(_x == "") then {
@@ -37,7 +37,8 @@ if (EGVAR(patches,usesACRE)) exitWith {
             // Store radio channels in variable.
             private _radioAndChannel = _player getVariable [QEGVAR(Player,RadioChannel), []];
             _radioAndChannel pushBack [[_x] call acre_api_fnc_getBaseRadio, _channel];
-            _player setVariable [QEGVAR(Player,RadioChannel), _radioAndChannel];
+            SETVAR(_player, QEGVAR(Player,RadioChannel), _radioAndChannel);
+
         } else {
             SHOW_SERVER_WARNING_1("Radio", "Empty radio is trying to get it's channel applied for %1", _player);
         };
