@@ -26,6 +26,4 @@ if (!isNil{profileNamespace getVariable [QEGVAR(Profile,Insignia), nil]}) then {
 
 INFO_2("PlayerProfile", %1 insignia '%2' saved on profile variable...", player, _insignia);
 
-private _map = profileNamespace getVariable [EGVAR(player,profile), createHashMap];
-_map = _map set ["insignia", _insignia]
-profileNamespace setVariable [EGVAR(player,profile), _map];
+true

@@ -16,4 +16,4 @@
 
 params [["_unit", objNull, [objNull]]];
 
-_unit getVariable [QEGVAR(Gear,savedLoadout), false];
+_unit getVariable [QEGVAR(Gear,SavedLoadout), false];

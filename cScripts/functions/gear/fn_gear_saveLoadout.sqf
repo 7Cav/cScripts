@@ -20,8 +20,8 @@ private _loadout = getUnitLoadout _unit;
 if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout; };
 _loadout = [_unit] call CBA_fnc_getLoadout;
 
-_unit setVariable [QEGVAR(gear,Loadout), _loadout];
-_unit setVariable [QEGVAR(gear,savedLoadout), true];
+_unit setVariable [QEGVAR(Gear,Loadout), _loadout];
+_unit setVariable [QEGVAR(Gear,SavedLoadout), true];
 
 private _insignia = _unit call BIS_fnc_getUnitInsignia;
 if (_insignia != "") then {
@@ -35,4 +35,4 @@ if (_insignia != "") then {
     [""]
 ] call CBA_fnc_notify;
 
-_unit getVariable [QEGVAR(gear,savedLoadout), false];
+_unit getVariable [QEGVAR(Gear,SavedLoadout), false];
