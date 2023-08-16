@@ -28,7 +28,7 @@ private _cargoArray = _vehicle getVariable ["ace_cargo_loaded",[]];
 } forEach _cargoArray;
 
 // Do not allow renaming of vehicles
-_vehicle setVariable ["ace_cargo_noRename", true];
+_vehicle setVariable ["ace_cargo_noRename", true, true];
 
 _vehicle setVariable [QEGVAR(Vehicle,Inventory), true, true];
 
