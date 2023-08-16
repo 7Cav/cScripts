@@ -20,13 +20,11 @@ params [["_insignia", "", [""]]];
 if (!GVAR(isPlayer)) exitWith {};
 
 // remove later
-if (!isNil{profileNamespace getVariable [EGVAR(cav,insignia), nil]}) then {
-    profileNamespace setVariable [EGVAR(cav,insignia), nil];
+if (!isNil{profileNamespace getVariable [QEGVAR(Profile,Insignia), nil]}) then {
+    profileNamespace setVariable [QEGVAR(Profile,Insignia), nil];
 };
 
-#ifdef DEBUG_MODE
-    [format["%1 insignia '%2' saved on profile variable...", player, _insignia], "PlayerProfile"] call FUNC(info);
-#endif
+INFO_2("PlayerProfile", %1 insignia '%2' saved on profile variable...", player, _insignia);
 
 private _map = profileNamespace getVariable [EGVAR(player,profile), createHashMap];
 _map = _map set ["insignia", _insignia]

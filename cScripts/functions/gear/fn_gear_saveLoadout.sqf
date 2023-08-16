@@ -25,7 +25,7 @@ _unit setVariable [QEGVAR(gear,savedLoadout), true];
 
 private _insignia = _unit call BIS_fnc_getUnitInsignia;
 if (_insignia != "") then {
-    profileNamespace setVariable [QEGVAR(Cav,Insignia), _insignia];
+    profileNamespace setVariable [QEGVAR(Profile,Insignia), _insignia];
 };
 
 [

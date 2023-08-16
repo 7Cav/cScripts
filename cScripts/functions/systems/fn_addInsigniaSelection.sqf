@@ -37,16 +37,18 @@ if (!isPlayer _object) then {
     if (_category isEqualTo ["ACE_MainActions", "cScriptInsigniaSelectionMenu"]) then {
         _object addAction [format ["   <img image='%1' /> <t color='#66ff66'>%2</t>", _icon, _lable], {
             [player, _this select 3] call BIS_fnc_setUnitInsignia;
-            profileNamespace setVariable [QEGVAR(Cav,Insignia), _this select 3];
+            _this select 3 call cScripts_fnc_profile_saveInsignia
         }, _className, 1.5, true, true, "", "true", 5];
     };
 };
 
 //add aceInteraction
 private _insigniaSelection = [format ["cScriptInsigniaSelection_%1", _className], _lable, _icon, {
-    [player, _this select 2] call BIS_fnc_setUnitInsignia;
-    profileNamespace setVariable [QEGVAR(Cav,Insignia), _this select 2];
-}, {true}, {}, _className] call ace_interact_menu_fnc_createAction;
+    params ["_object", "_caller", "_params"];
+    _params params ["_className"];
+    [player, _className] call BIS_fnc_setUnitInsignia;
+    _className call cScripts_fnc_profile_saveInsignia
+}, {true}, {}, [_className]] call ace_interact_menu_fnc_createAction;
 
 private _actionType = if (isPlayer _object) then {1} else {0};
 [_object, _actionType, _category, _insigniaSelection] call ace_interact_menu_fnc_addActionToObject;

@@ -17,17 +17,17 @@
 
 if (!GVAR(isPlayer)) exitWith {""};
 
-// remove later
-if (!isNil{profileNamespace getVariable [EGVAR(cav,insignia), nil]}) then {
-    private _legacy = profileNamespace getVariable [EGVAR(cav,insignia), nil]
-    profileNamespace setVariable [EGVAR(player,insignia), _legacy];
-    profileNamespace setVariable [EGVAR(cav,insignia), nil];
+// TODO: Remove later
+if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil]}) then {
+    private _legacy = profileNamespace getVariable [QEGVAR(cav,Insignia), nil];
+    // Save New 
+    profileNamespace setVariable [QEGVAR(Profile,Insignia), _legacy];
+    // Remove Legacy
+    profileNamespace setVariable [QEGVAR(Cav,Insignia), nil];
 };
 
-private _insignia = profileNamespace getVariable [EGVAR(player,insignia), ""];
+private _insignia = profileNamespace getVariable [QEGVAR(Profile,Insignia), ""];
 
-#ifdef DEBUG_MODE
-    [format["%1 insignia '%2' obtained on profile variable...", player, _insignia], "PlayerProfile"] call FUNC(info);
-#endif
+INFO_2("PlayerProfile", %1 insignia '%2' obtained on profile variable...", player, _insignia);
 
 _insignia
