@@ -26,28 +26,28 @@ private _sideConfig    = [side group _unit] call EFUNC(gear,getSideConfig);
 switch (true) do {
     case (isClass (_config >> _variable)): {
         if !(_variable isKindOf [_sideConfig, _config]) then {
-            [format["The loadout for '%1' does not inherit from '%2'.", _variable, _sideConfig], "Gear", true] call FUNC(warning);
+            SHOW_CHAT_WARNING_2("Gear", "The loadout for '%1' does not inherit from '%2'.", _variable, _sideConfig);
         };
         _variable
     };
     case (isClass (_config >> _variableName)): {
         if !(_variableName isKindOf [_sideConfig, _config]) then {
-            [format["The loadout for '%1' does not inherit from '%2'.", _variableName, _sideConfig], "Gear", true] call FUNC(warning);
+            SHOW_CHAT_WARNING_2("Gear", "The loadout for '%1' does not inherit from '%2'.", _variableName, _sideConfig);
         };
         _variableName
     };
     case (isClass (_config >> _className)): {
         if !(_className isKindOf [_sideConfig, _config]) then {
-            [format["The loadout for '%1' does not inherit from '%2'.", _className, _sideConfig], "Gear", true] call FUNC(warning);
+            SHOW_CHAT_WARNING_2("Gear", "The loadout for '%1' does not inherit from '%2'.", _className, _sideConfig);
         };
         _className
     };
     case (isClass (_config >> _sideConfig)): {
-        [format["'%1' does not have a class specific loadout. Applying '%2'.", _className, _sideConfig], "Gear", true] call FUNC(warning);
+        SHOW_CHAT_WARNING_2("Gear", "'%1' does not have a class specific loadout. Applying '%2'.", _className, _sideConfig);
         _sideConfig
     };
     default {
-        [format["'%1'does not have a class specific loadout. Applying default loadout.", _className], "Gear", true] call FUNC(warning);
+        SHOW_CHAT_WARNING_1("Gear", "'%1'does not have a class specific loadout. Applying default loadout.", _className);
         ""
     };
 };

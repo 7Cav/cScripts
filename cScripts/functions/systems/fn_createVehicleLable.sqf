@@ -28,14 +28,14 @@ params [
     ["_vector",[0,0,1], [[]]]
 ];
 
-#ifdef DEBUG_MODE
-    [format["Texture label '%1' is being created for %2 (%3).", _texture, _vehicle, typeOf _vehicle]] call FUNC(info);
-#endif
 
 if (!isServer) exitWith {};
 if (_texture == '') exitWith {};
-if (!fileExists _texture) exitWith {[format["Texture '%1' does not exist.", _texture]] call FUNC(error);};
+if (!fileExists _texture) exitWith {
+    SHOW_CHAT_ERROR_3("VehicleLable", "Texture '%1' tried to be applied to %2 (%3) does not exist.", _texture, _vehicle, typeOf _vehicle);
+};
 
+INFO_3("VehicleLabel","Texture label '%1' is being created for %2 (%3).", _texture, _vehicle, typeOf _vehicle);
 
 private _label = "UserTexture1m_F" createVehicle [0,0,0];
 _label attachTo [_vehicle, _pos];

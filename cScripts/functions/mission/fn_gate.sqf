@@ -25,5 +25,5 @@ params[
     ["_distance", 30]
 ];
 
-[format["Function 'cScripts_fnc_gate' on %1 is depricated (cScripts_fnc_gate => cav_mission_fnc_gate)...", _object], true, "DEPRICATED"] call FUNC(warning);
+SHOW_WARNING_1("DEPRICATED", "Function 'cScripts_fnc_gate' on %1 is depricated (cScripts_fnc_gate => cav_mission_fnc_gate)...", _object);
 [_object, _triggerSide, _distance] call cav_mission_fnc_gate;

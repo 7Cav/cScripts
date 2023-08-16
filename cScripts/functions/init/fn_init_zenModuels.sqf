@@ -18,9 +18,7 @@
 if !(EGVAR(patches,usesZen)) exitWith {};
 if !(EGVAR(Settings,enable7cavZeusModules)) exitWith {};
 
-#ifdef DEBUG_MODE
-    ["Initializing 7Cav custom Zen Modules.", "init"] call FUNC(info);
-#endif
+INFO("init", "Initializing custom Zen Modules.");
 
 ["7Cav AI", "Enable Unit Simulation",
     {
@@ -117,6 +115,4 @@ if (EGVAR(Settings,enableRadios)) then {
     "\a3\modules_f\data\portraitmodule_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-#ifdef DEBUG_MODE
-    ["7Cav Custom Zen Modules initialization complete", "init"] call FUNC(info);
-#endif
+INFO("init", "Custom Zen Modules initialization complete");

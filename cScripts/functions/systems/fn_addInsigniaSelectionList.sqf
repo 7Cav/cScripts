@@ -20,9 +20,7 @@ params [
     ["_aceCategory", ["ACE_MainActions"], [["ACE_MainActions"]]]
 ];
 
-#ifdef DEBUG_MODE
-    [format["Setting up insignia selecton list on %1...",_object]] call FUNC(info);
-#endif
+INFO_1("InsigniaSelection", "Setting up insignia selection list on %1...", _object);
 
 private _defaultCategory = _aceCategory + ["cScriptInsigniaSelectionMenu"];
 private _alphaCategory   = _aceCategory + ["cScriptInsigniaSelectionMenu", "cScriptInsigniaSelectionAlpha"];
@@ -121,6 +119,5 @@ if (!isPlayer _object) then {
 
 [_object,"S3","specialized_s3","z\cav\addons\insignia\data\specialized_s3.paa",_specialCategory] call FUNC(addInsigniaSelection);
 
-#ifdef DEBUG_MODE
-    [format["Setup insignia selection list on %1 is completed.",_object]] call FUNC(info);
-#endif
+
+INFO_1("addInsigniaSelectionList", "Setup insignia selection list on %1 is completed.", _object);

@@ -87,4 +87,4 @@ if (EGVAR(patches,usesTFAR)) exitWith {
     player createDiaryRecord ["7Cav", ["Radio", format ["<font size=20>%1</font><br/>%2", "Radio Channels", call (player getVariable QEGVAR(document,shortrange_channels))]], taskNull, "", false];
 };
 
-["Fatal", "Radio", true] call FUNC(error);
+SHOW_CHAT_ERROR("Radio", "Fatal");

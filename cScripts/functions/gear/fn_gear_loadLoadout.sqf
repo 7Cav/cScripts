@@ -24,8 +24,6 @@ if !(_unit getVariable [QEGVAR(gear,savedLoadout), false]) exitWith {false};
 private _loadout = _unit getVariable QEGVAR(gear,Loadout);
 [_unit, _loadout] call EFUNC(gear,applyLoadout);
 
-#ifdef DEBUG_MODE
-    ["Loaded stored loadout.", "Gear"] call FUNC(info);
-#endif
+INFO("Gear", "Loaded stored loadout.");
 
 true

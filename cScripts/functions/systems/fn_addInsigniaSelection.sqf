@@ -30,9 +30,7 @@ if (_className != '') then {
     _className = _className;
 };
 
-#ifdef DEBUG_MODE
-    [format["Created insignia selection for '%1' on '%2'", _className, _object]] call FUNC(info);
-#endif
+INFO_2("InsigniaSelection", "Created insignia selection for '%1' on '%2'", _className, _object);
 
 //add addAction
 if (!isPlayer _object) then {

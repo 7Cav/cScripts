@@ -15,7 +15,7 @@
 
 private _classname = call EFUNC(gear,getCurrentLoadout);
 if !(isClass (missionConfigFile >> "CfgLoadouts" >> _classname)) exitWith {
-    [format["Loadout '%1' does not exist inside of mission config. No whitelist will be created.", _classname], "Arsenal Whitelist", true] call FUNC(warning);
+    SHOW_CHAT_WARNING_1("ArsenalWhitelist", "Loadout '%1' does not exist inside of mission config. No whitelist will be created.", _classname);
     [];
 };
 

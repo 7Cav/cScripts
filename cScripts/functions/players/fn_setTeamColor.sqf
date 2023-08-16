@@ -46,8 +46,6 @@ switch (_teamName) do {
     };
 };
 
-#ifdef DEBUG_MODE
-    [format ["%1 was assigned as team %2.", player, _teamName], "SetTeamColor"] call FUNC(info);
-#endif
+INFO_2("SetTeamColor", "%1 was assigned as team %2.", player, _teamName);
 
 _teamName;

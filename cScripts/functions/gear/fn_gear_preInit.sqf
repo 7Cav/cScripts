@@ -24,7 +24,7 @@ if (isClass (missionConfigFile >> "CfgLoadouts")) then {
         params ["_unit"];
         if (!local _unit) exitWith {
             if (_unit == player) then {
-                ["Non-local player in initPost", "Debug"] call FUNC(warning);
+                SHOW_WARNING("Gear", "Non-local player in initPost");
             };
         };
 

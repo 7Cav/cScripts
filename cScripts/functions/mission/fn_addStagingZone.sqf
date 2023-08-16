@@ -38,5 +38,5 @@ missionNamespace setVariable [QEGVAR(Staging,Zones), _stagingZones];
     _debugMarker setMarkerShapeLocal "ELLIPSE";
     _debugMarker setMarkerSizeLocal [_size, _size];
     _debugMarker setMarkerColorLocal "colorCivilian";
-    [format["Staging zone %1 created.", count _stagingZones], "Staging"] call FUNC(info);
+    INFO_1("Staging", "Staging zone %1 created.", count _stagingZones);
 #endif

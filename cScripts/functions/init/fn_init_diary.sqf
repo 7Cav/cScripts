@@ -11,11 +11,9 @@
 
 waitUntil {!isNull player && player == player};
 waitUntil {profileName != ""};
-if (!isNil{player getVariable QEGVAR(player,documents)}) exitWith {[format["Diary Records already applied for %1.", player], "init"] call FUNC(warning);};
+if (!isNil{player getVariable QEGVAR(player,documents)}) exitWith {SHOW_WARNING_1("initDiary", "Diary Records already applied for %1.", player)};
 
-#ifdef DEBUG_MODE
-    [format["Applying Diary Records to %1...", player]] call FUNC(info);
-#endif
+INFO_1("initDiary", "Applying Diary Records to %1...", player);
 
 // Add New Topic (7th Cavalry)
 if !(player diarySubjectExists "7Cav") then {

@@ -289,5 +289,5 @@ if (EGVAR(Patches,usesACRE)) exitWith {
 // TFAR
 if (EGVAR(patches,usesTFAR)) exitWith { str _channel };
 
-["Fatal", "Radio Get Channel Name", true] call FUNC(error);
+SHOW_CHAT_ERROR("GetChannelName", "Fatal");
 ""

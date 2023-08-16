@@ -16,10 +16,7 @@ params [["_vehicle", objNull, [objNull]]];
 if (!isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 
-#ifdef DEBUG_MODE
-    [formatText["Clearing systems on vehicle %1.", _vehicle], "Vehicle Reset"] call FUNC(info);
-#endif
-
+INFO_1("VehicleReset", "Clearing systems on vehicle %1.", _vehicle);
 
 // Clear cosmetics and labels
 private _labels = _vehicle getVariable [QEGVAR(Vehicle,Labels), []];

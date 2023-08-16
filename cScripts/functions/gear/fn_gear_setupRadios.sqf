@@ -24,14 +24,14 @@ if (EGVAR(patches,usesACRE)) exitWith {
     if (count allMissionObjects "acre_api_basicMissionSetup" > 0)  exitWith {};
     if (count allMissionObjects "acre_api_nameChannels" > 0)       exitWith {};
 
-    ["Setting up ACRE preset...", "Gear Radio"] call FUNC(info);
+    SHOW_INFO("GearRadio", "Setting up ACRE preset...");
 
     // Sets a manual frequency number for each will add 1 each channel
     GVAR(FREQUENCY) = 10.242;
 
     // Handle Radio preset from cba settings
     private _lrChannels = parseSimpleArray EGVAR(Settings,setRadioChannelNames);
-    if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup correctly.", "Gear Radio"] call FUNC(error);};
+    if !(_lrChannels isEqualType []) exitWith {SHOW_CHAT_ERROR("GearRadio", "Radio array have not been setup correctly.")};
 
     // Set LR radio labels and frequency
     {
@@ -48,7 +48,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
 
 // TFAR
 if (EGVAR(patches,usesTFAR)) exitWith {
-    ["TFAR Setup complete...", "Gear Radio"] call FUNC(info);
+    SHOW_INFO("GearRadio", "TFAR Setup complete...");
 };
 
-["Fatal", "Gear Radio", true] call FUNC(error);
+SHOW_CHAT_ERROR("GearRadio", "Fatal");
