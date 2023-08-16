@@ -1503,7 +1503,7 @@ private _dataArray = [
 
 private _return = createHashMapFromArray _dataArray;
 
-if (typeName _return != "HASHMAP") exitWith {
+if (!(_return isEqualType createHashMap)) exitWith {
     [format ["Fatal error creating database (database base type faulty %1)...", typeName _return], "Logistics Database"] call FUNC(error);
     createHashMapFromArray [["", []]];
 };
