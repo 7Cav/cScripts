@@ -15,7 +15,7 @@
  * Public: No
  */
 
-if ( !GVAR(isPlayer) ) exitWith {""};
+if (!GVAR(isPlayer)) exitWith {""};
 
 // TODO: Legacy handler, remove later
 if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil];}) then {
