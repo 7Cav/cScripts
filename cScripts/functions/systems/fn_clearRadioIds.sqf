@@ -43,4 +43,4 @@ if (EGVAR(patches,usesTFAR)) exitWith {
     /** TODO: Code goes here */
 };
 
-SHOW_CHAT_ERROR("Fatal", "ClearRadioID");
+SHOW_CHAT_ERROR("ClearRadioID", "Fatal");

@@ -59,4 +59,4 @@ if (EGVAR(patches,usesTFAR)) exitWith {
     /** TODO: Code goes here */
 };
 
-SHOW_CHAT_ERROR("Fatal", "VehicleRadio");
+SHOW_CHAT_ERROR("VehicleRadio", "Fatal");

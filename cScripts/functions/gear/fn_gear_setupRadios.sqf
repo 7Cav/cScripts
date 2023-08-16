@@ -51,4 +51,4 @@ if (EGVAR(patches,usesTFAR)) exitWith {
     SHOW_INFO("GearRadio", "TFAR Setup complete...");
 };
 
-SHOW_CHAT_ERROR("Fatal", "GearRadio");
+SHOW_CHAT_ERROR("GearRadio", "Fatal");

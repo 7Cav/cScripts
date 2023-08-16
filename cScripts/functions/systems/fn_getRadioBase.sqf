@@ -28,5 +28,5 @@ if (EGVAR(patches,usesTFAR)) exitWith {
     _radioBase;
 };
 
-SHOW_CHAT_ERROR("Fatal", "RadioGetBase");
+SHOW_CHAT_ERROR("RadioGetBase", "Fatal");
 _radio

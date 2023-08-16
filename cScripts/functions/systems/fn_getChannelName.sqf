@@ -289,5 +289,5 @@ if (EGVAR(Patches,usesACRE)) exitWith {
 // TFAR
 if (EGVAR(patches,usesTFAR)) exitWith { str _channel };
 
-SHOW_CHAT_ERROR("Fatal", "GetChannelName");
+SHOW_CHAT_ERROR("GetChannelName", "Fatal");
 ""
