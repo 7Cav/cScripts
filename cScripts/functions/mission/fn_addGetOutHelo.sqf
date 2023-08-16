@@ -19,7 +19,7 @@ params [
 ];
 
 // Check so the options arent added twice.
-if (!isNil {_vehicle getVariable QEGVAR(VehicleFunc,GetOutAction)}) exitWith {[format["Helicopter Get out setting already applied for %1.", _vehicle]] call FUNC(warning);};
+if (!isNil {_vehicle getVariable QEGVAR(VehicleFunc,GetOutAction)}) exitWith {SHOW_WARNING_1("GetOutHelo", "Helicopter Get out setting already applied for %1.", _vehicle)};
 
 private _leftSide = "Get out Left Side";
 private _rightSide = "Get out Right Side";

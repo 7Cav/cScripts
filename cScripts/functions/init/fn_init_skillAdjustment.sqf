@@ -9,7 +9,7 @@
  * Public: No
  */
 
-INFO("init", "Applying AI Event Handler to units...")
+INFO("init", "Applying AI Event Handler to units...");
 
 if (!isServer) exitWith {};
 
@@ -83,8 +83,9 @@ if (!isServer) exitWith {};
                     _unit setSkill ["aimingshake",     0.100];
                     _unit setSkill ["reloadSpeed",     0.800];
             };
-            //FIXME: Check so multiline works
-            INFO_3("init","AI unit %1 (%2) have skill levels %3.", _unit, typeOf _unit, [
+
+            // For logging
+            private _skillArray = [
                 ["general", _unit skill "general"],
                 ["commanding", _unit skill "commanding"],
                 ["courage", _unit skill "courage"],
@@ -94,7 +95,8 @@ if (!isServer) exitWith {};
                 ["reloadSpeed", _unit skill "reloadSpeed"],
                 ["spottime", _unit skill "spottime"],
                 ["spotdistance", _unit skill "spotdistance"]
-            ]);
+            ];
+            INFO_3("init","AI unit %1 (%2) have skill levels %3.", _unit, typeOf _unit, _skillArray);
         };
     };
 }, true, [], true] call CBA_fnc_addClassEventHandler;

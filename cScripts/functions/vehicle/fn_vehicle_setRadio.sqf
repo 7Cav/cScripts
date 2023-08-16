@@ -23,7 +23,7 @@ params [
 if (!EGVAR(Patches,usesACRE) && !EGVAR(Patches,usesTFAR)) exitWith {};
 if (!EGVAR(Settings,enableRadios)) exitWith {};
 if (!EGVAR(Settings,enableVehicleRadios)) exitWith {};
-if (isNull _vehicle) exitWith { ["Vehicle is null", "Vehicle Radio"] call FUNC(error); };
+if (isNull _vehicle) exitWith {};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 // ACRE
@@ -38,7 +38,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
     INFO_4("VehicleRadio", "Vehicle rack initzialized for %1 (%2)", _vehicle, typeOf _vehicle);
 
     private _racks = [_vehicle] call acre_api_fnc_getVehicleRacks;
-    if (count _racks == 0) exitWith {[format["No Vehicle Racks discoverd for %1 (%2).", _vehicle, typeOf _vehicle], "Vehicle Radio"] call FUNC(info)};
+    if (count _racks == 0) exitWith {INFO_2("VehicleRadio", "No Vehicle Racks discoverd for %1 (%2).", _vehicle, typeOf _vehicle);};
 
     // Add extra channels
     _radioChannel = _radioChannel + [1,1,1,1,1];

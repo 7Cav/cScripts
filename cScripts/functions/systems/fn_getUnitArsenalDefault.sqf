@@ -18,7 +18,7 @@ private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 
 private _loadout = call EFUNC(gear,getCurrentLoadout);
 if !(isClass (missionConfigFile >> "CfgLoadouts" >> _loadout)) exitWith {
-    [format["Loadout '%1' does not exist inside of mission config. No default arsenal will be created.", _loadout], "Arsenal Default", true] call FUNC(warning);
+    SHOW_CHAT_WARNING_1("ArsenalDefault", "Loadout '%1' does not exist inside of mission config. No default arsenal will be created.", _loadout);
 };
 
 private _name = getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "displayName");

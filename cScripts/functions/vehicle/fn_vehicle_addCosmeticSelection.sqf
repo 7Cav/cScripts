@@ -143,8 +143,6 @@ private _textures = [
         private _action = [format ["cScripts_Cosmetic_%1_%2", _classname, _forEachIndex], _displayName, "", _statement, {true}, nil, _textureCode] call ace_interact_menu_fnc_createAction;
         [_vehicle, 1, _category, _action] call ace_interact_menu_fnc_addActionToObject;
 
-        #ifdef DEBUG_MODE
-            [format["Selector for classname '%1' named '%2' added to %3 (%4)", typeOf _vehicle, _displayName, _vehicle, typeOf _vehicle], "Vehicle Cosmetic Selector"] call FUNC(info);
-        #endif
+        INFO_4("VehicleCosmeticSelector", "Selector for classname '%1' named '%2' added to %3 (%4)", typeOf _vehicle, _displayName, _vehicle, typeOf _vehicle);
     };
 } foreach _textures;

@@ -31,7 +31,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
 
     // Handle Radio preset from cba settings
     private _lrChannels = parseSimpleArray EGVAR(Settings,setRadioChannelNames);
-    if !(_lrChannels isEqualType []) exitWith {["Radio array have not been setup correctly.", "Gear Radio"] call FUNC(error);};
+    if !(_lrChannels isEqualType []) exitWith {SHOW_CHAT_ERROR("GearRadio", "Radio array have not been setup correctly.")};
 
     // Set LR radio labels and frequency
     {

@@ -13,7 +13,7 @@ if (isServer) exitWith {};
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};
 
 // FIXME: Test so the IF actually works
-INFO(if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}, "Setting up Default ACE Arsenal loadouts.")
+INFO(if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}, "Setting up Default ACE Arsenal loadouts.");
 
 private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 ["<empty>", _empty] call ace_arsenal_fnc_addDefaultLoadout;

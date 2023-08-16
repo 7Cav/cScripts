@@ -20,11 +20,11 @@ params [
 ];
 
 if (_vehicleKind == "") exitWith {
-    ["No kind of vehicle is defined", "Vehicle Pylon"] call FUNC(warning);
+    SHOW_WARNING("VehiclePylon", "No kind of vehicle is defined");
     [];
 };
 if (_loadout == "") exitWith {
-    ["No vehicle loadout is defined", "Vehicle Pylon"] call FUNC(warning);
+    SHOW_WARNING("VehiclePylon", "No vehicle loadout is defined");
     [];
 };
 
@@ -181,7 +181,7 @@ if (count _getVehiclePylons == 0) exitWith {[]};
 private _pylon = _getVehiclePylons getOrDefault [_loadout, []];
 
 if (count _pylon == 0) then {
-    [format ["%1 Does not exist for selected kind of %2.", _loadout, _vehicleKind], "Vehicle Pylon"] call FUNC(warning);
+    SHOW_WARNING_2("VehiclePylon", "%1 Does not exist for selected kind of %2.", _loadout, _vehicleKind);
 };
 
 _pylon;

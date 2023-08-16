@@ -24,9 +24,8 @@ params[
     ["_aceCategory", "ACE_MainActions", ["ACE_MainActions"]]
 ];
 
-#ifdef DEBUG_MODE
-    [format["Setting up loadout selections on %1.", _object], "LoadoutSelector"] call FUNC(info);
-#endif
+
+INFO_1("LoadoutSelector", "Setting up loadout selections on %1.", _object);
 
 // Setup categories
 private _mainCategory = [_object, _aceCategory] call FUNC(setupLoadoutCategories);
@@ -42,15 +41,10 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     private _company = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "company");
     private _category = getArray (missionConfigFile >> 'CfgLoadouts' >> _class >> "category");
     
-
-    #ifdef DEBUG_MODE
-        [format["Setting up %1 loadout on %2.", _displayName, _object], "LoadoutSelector"] call FUNC(info);
-    #endif
+    INFO_2("LoadoutSelector", "Setting up %1 loadout on %2.", _displayName, _object);
 
     _category = [_aceCategory, _mainCategory] + _category;
     [_object, _displayName, _classname, _icon, _category, _company, _allowOnlyForCompany] call FUNC(addLoadoutSelection);
 } forEach _classnameList;
 
-#ifdef DEBUG_MODE
-    [format["Done setting up quick selections on %1.", _object]] call FUNC(info);
-#endif 
+INFO_1("LoadoutSelector", "Done setting up quick selections on %1.", _object);
