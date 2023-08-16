@@ -43,8 +43,8 @@
 #define SETPRVAR(var1,var2) profileNamespace SETVAR_SYS(var1,var2)
 #define SETPAVAR(var1,var2) parsingNamespace SETVAR_SYS(var1,var2)
 
-#define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
-#define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
+#define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2) // FIXME: REMOVE?
+#define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3) // FIXME: REMOVE?
 
 #define FORMAT_1(STR,ARG1) format[STR, ARG1]
 #define FORMAT_2(STR,ARG1,ARG2) format[STR, ARG1, ARG2]
