@@ -17,7 +17,7 @@
 
 if (!GVAR(isPlayer)) exitWith {""};
 
-// TODO: Remove later
+// TODO: Legacy handler, remove later
 if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil]}) then {
     private _legacy = profileNamespace getVariable [QEGVAR(Cav,Insignia), nil];
     // Save New 
@@ -26,7 +26,7 @@ if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil]}) then {
     profileNamespace setVariable [QEGVAR(Cav,Insignia), nil];
 };
 
-private _insignia = profileNamespace getVariable [QEGVAR(Profile,Insignia), ""];
+private _insignia = GETPRVAR(QEGVAR(Profile,Insignia), "");
 
 INFO_2("PlayerProfile", %1 insignia '%2' obtained on profile variable...", player, _insignia);
 

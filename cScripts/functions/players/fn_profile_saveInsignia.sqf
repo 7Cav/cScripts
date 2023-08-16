@@ -19,10 +19,12 @@ params [["_insignia", "", [""]]];
 
 if (!GVAR(isPlayer)) exitWith {};
 
-// remove later
-if (!isNil{profileNamespace getVariable [QEGVAR(Profile,Insignia), nil]}) then {
-    profileNamespace setVariable [QEGVAR(Profile,Insignia), nil];
+// TODO: Legacy handler, remove later
+if (!isNil{GETPRVAR(QEGVAR(Cav,Insignia), nil)}) then {
+    SETPRVAR(QEGVAR(Cav,Insignia), nil);
 };
+
+SETPRVAR(QEGVAR(Profile,Insignia), _insignia)
 
 INFO_2("PlayerProfile", %1 insignia '%2' saved on profile variable...", player, _insignia);
 
