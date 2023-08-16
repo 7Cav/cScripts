@@ -18,6 +18,6 @@
 params [["_company", "", [""]]];
 
 _company = toLower _company;
-player SETVAR(QEGVAR(Player,Company), _company);
+SETVAR(player, QEGVAR(Player,Company), _company);
 
 _company

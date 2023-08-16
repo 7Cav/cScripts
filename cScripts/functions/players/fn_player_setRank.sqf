@@ -28,5 +28,5 @@ if (_rank in ['PRIVATE','CORPORAL','SERGEANT','LIEUTENANT','CAPTAIN','MAJOR','CO
     _player setRank _rank;
 };
 
-_player SETVAR(QEGVAR(Player,Rank), _rank);
+SETVAR(_player, QEGVAR(Player,Rank), _rank);
 _rank

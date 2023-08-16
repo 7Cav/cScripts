@@ -18,17 +18,17 @@ params [["_unit", objNull, [objNull]]];
 
 
 // Player Name without rank prefix
-if (!isNil{_unit GETEGVAR(Unit,Name,nil)}) then {
+if (!isNil{GETVAR(_unit, QEGVAR(Unit,Name), nil)}) then {
     private _name = [_unit] call EFUNC(unit,getName);
-    _unit SETVAR(EGVAR(Unit,Name), _name);
+    SETVAR(_unit, QEGVAR(Unit,Name), _name);
 };
 
 
 // Player Rank to ingame rank
 if (EGVAR(Settings,setPlayerRank)) then {
-    if (!isNil{_unit GETEGVAR(Unit,Rank,nil)}) then {
+    if (!isNil{GETVAR(_unit, QEGVAR(Unit,Rank), nil)}) then {
         private _rank = [_unit] call EFUNC(player,getRank);
-        _unit SETVAR(EGVAR(Unit,Rank), _rank);
+        SETVAR(_unit, QEGVAR(Unit,Rank), _rank);
     };
 };
 

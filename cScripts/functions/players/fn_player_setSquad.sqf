@@ -32,5 +32,5 @@ if (_squadLeader) then {
     _group setGroupIdGlobal ["_squadName"];
 };
 
-player SETVAR(QEGVAR(Player,Squad), _rank);
+SETVAR(player, QEGVAR(Player,Squad), _rank);
 _rank

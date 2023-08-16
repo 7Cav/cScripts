@@ -17,6 +17,6 @@
 
 params [["_unit", objNull, [objNull]]];
 
-private _return = _unit GETVAR(QEGVAR(Gear,loadoutClass), typeOf player);
+private _return = GETVAR(_unit, QEGVAR(Gear,loadoutClass), typeOf player);
 
 _return

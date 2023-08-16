@@ -35,7 +35,7 @@ private _color = switch (_nameUpper) do {
 };
 
 [_unit, _color] call ace_interaction_fnc_joinTeam;
-_unit SETVAR(QEGVAR(Unit,TeamColor), _color);
+SETVAR(_unit, QEGVAR(Unit,TeamColor), _color);
 
 INFO_2("TeamColor", "%1 was assigned as team %2.", _unit, _color);
 
