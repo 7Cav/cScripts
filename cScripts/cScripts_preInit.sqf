@@ -4,7 +4,7 @@
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 
-INFO("preInit", "Initializing CBA Settings..");
+INFO(if (is3DEN) then {"EDEN"} else {"preInit"}, "Initializing CBA Settings...");
 
 // Check installed moduels
 EGVAR(patches,usesACE)          = isClass (configFile >> "CfgPatches" >> "ace_main");
@@ -22,11 +22,6 @@ EGVAR(Staging,ZoneStatus) = false;
 EGVAR(Staging,OverrideCompanyVar) = false;
 GVAR(isPlayer) = hasInterface || {isPlayer player};
 GVAR(OneLife) = !isNil{(getArray (missionconfigfile >> "respawnTemplates") select 0) == "ace_spectator"};
-
-EGVAR(DATABASE,DONE) = false;
-GVAR(DATABASE) = call EFUNC(init,logistics);
-EGVAR(DATABASE,DONE) = true;
-
 
 // Make settings name
 private _cScriptSettings = "cScripts Mission Settings";
@@ -350,18 +345,22 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-if !(is3DEN) then {
-    INFO("preInit", "Initialization of CBA Settings completed...");
-} else {
-    INFO("preInit EDEN", "Initialization of CBA Settings completed...");
-};
+INFO(if (is3DEN) then {"EDEN"} else {"preInit"}, "Initialization of CBA Settings completed...");
 
+// Ace Arsenal
 call EFUNC(init,aceArsenalDefault);
+
 
 // Load preInit mission settings
 if (is3DEN) exitWith {};
-
 INFO("preInit", "Initializing...");
+
+
+// Logistical Database
+EGVAR(DATABASE,DONE) = false;
+GVAR(DATABASE) = call EFUNC(init,logistics);
+EGVAR(DATABASE,DONE) = true;
+
 
 if (EGVAR(Settings,allowCustomTagging)) then {
     call EFUNC(init,aceTagging);
