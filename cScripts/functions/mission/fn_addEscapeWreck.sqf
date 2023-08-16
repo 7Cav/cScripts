@@ -16,7 +16,7 @@ params [
 ];
 
 // Check so the options arent added twice.
-if (!isNil {_vehicle getVariable QEGVAR(Vehicle,escapeWreck)}) exitWith {[format["Escape wreck already set for %1.", _vehicle]] call FUNC(warning);};
+if (!isNil {_vehicle getVariable QEGVAR(VehicleFunc,EscapeAction)}) exitWith {[format["Escape wreck already set for %1.", _vehicle]] call FUNC(warning);};
 
 private _conditionAction = '(!(assignedVehicleRole player isEqualTo [])) && ((damage vehicle player) >= 1)';
 
@@ -40,4 +40,4 @@ private _actionID = [
     true
 ] call BIS_fnc_holdActionAdd;
 
-_vehicle setVariable [QEGVAR(Vehicle,escapeWreck), _actionID];
+_vehicle setVariable [QEGVAR(VehicleFunc,EscapeAction), _actionID];
