@@ -26,11 +26,11 @@ private _profileName = if (isPlayer _unit) then {profileName} else {""};
 private _profileNameSteam = if (isPlayer _unit) then {profileNameSteam} else {""};
 private _clanTag = call EFUNC(player,getClanTag);
 
-private _rank = "";
+private _rank = [player, 'USA'] call cScripts_fnc_player_getRank;
 private _rank_bis = GETVAR(_unit, QEGVAR(Player,Rank), "PRIVATE");
 
 private _regiment = "";
-private _company = "";
+private _company = GETVAR(player, QEGVAR(Player,Company), "");
 private _squad = GETVAR(_unit, QEGVAR(Player,Squad), groupId group _unit);
 private _squadInsignia = [_unit] BIS_fnc_getUnitInsignia;
 private _team = "";
@@ -40,28 +40,28 @@ private _abilityEngineer = [];
 private _abilityEOD = [];
 
 private _map = createHashMapFromArray [
-    ["isPlayer", _isPlayer],
-    ["unit", _unit],
-    ["classname", _classname],
-    ["netId", _netId],
-    ["uid", _uid],
+    ["isPlayer",            _isPlayer],
+    ["unit",                _unit],
+    ["classname",           _classname],
+    ["netId",               _netId],
+    ["uid",                 _uid],
 
-    ["name", _name],
-    ["profileName", _profileName],
-    ["profileNameSteam", _profileNameSteam],
-    ["clanTag", _clanTag],
+    ["name",                _name],
+    ["profileName",         _profileName],
+    ["profileNameSteam",    _profileNameSteam],
+    ["clanTag",             _clanTag],
 
-    ["rank", _rank],
-    ["rank_bis", _rank_bis],
+    ["rank",                _rank],
+    ["rank_bis",            _rank_bis],
 
-    ["regiment", ""],
-    ["company", ""],
-    ["squad", ""],
-    ["squadInsignia", ""],
-    ["team", ""],               // Team Color
+    ["regiment",            _regiment],
+    ["company",             _company],
+    ["squad",               _squad],
+    ["squadInsignia",       _squadInsignia],
+    ["team",                _team],             // Team Color
 
-    ["abilityMedic", _abilityMedic],       // ace ability
-    ["abilityEngineer", _abilityEngineer],    // ace ability
-    ["abilityEOD", _abilityEOD]          // ace ability
+    ["abilityMedic",        _abilityMedic],     // ace ability
+    ["abilityEngineer",     _abilityEngineer],  // ace ability
+    ["abilityEOD",          _abilityEOD]        // ace ability
 ];
 _map
