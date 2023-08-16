@@ -43,16 +43,16 @@ private _container = switch (_companySelector) do {
     case "TITAN";
     case "RAIDER";
     case "SPARROW";
-    case "ALPHA": {["alpha_company"] call EFUNC(logistics,getContainer);};
+    case "ALPHA": {GET_CONTAINER(alpha_company);};
 
-    case "ATLAS": {["bravo_company_atlas"] call EFUNC(logistics,getContainer);};
+    case "ATLAS": {GET_CONTAINER(bravo_company_atlas);};
     case "SABER";
     case "VIKING";
-    case "BRAVO": {["bravo_company_viking"] call EFUNC(logistics,getContainer);};
+    case "BRAVO": {GET_CONTAINER(bravo_company_viking);};
 
     case "BANDIT";
     case "MISFIT";
-    case "CHARLIE": {["charlie_company"] call EFUNC(logistics,getContainer);};
+    case "CHARLIE": {GET_CONTAINER(charlie_company);};
 
     case "FULL";
     case "ALL": {

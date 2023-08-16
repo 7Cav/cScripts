@@ -25,32 +25,32 @@ _unitItems = parseSimpleArray ("[" + _unitItems + "]");
 _unitItems = _unitItems arrayIntersect _unitItems select {_x isEqualType "" && {_x != ""}};
 
 
-private _commonGear = ["arsenal_common", true] call EFUNC(logistics,getContainer);
+private _commonGear = GET_CONTAINER_KEYS(arsenal_common);
 
 
 private _company = call FUNC(getCompanyVariable);
 private _companyItems = switch (_company) do {
-    case "alpha": {["alpha_company", true] call EFUNC(logistics,getContainer);};
-    case "bravo": {["bravo_company", true] call EFUNC(logistics,getContainer);};
-    case "charlie": {["charlie_company", true] call EFUNC(logistics,getContainer);};
-    default {["arsenal_company_fallback", true] call EFUNC(logistics,getContainer);};
+    case "alpha": {GET_CONTAINER_KEYS(alpha_company);};
+    case "bravo": {GET_CONTAINER_KEYS(bravo_company);};
+    case "charlie": {GET_CONTAINER_KEYS(charlie_company);};
+    default {GET_CONTAINER_KEYS(arsenal_company_fallback);};
 };
 
 
 private _medicRole = getNumber (missionConfigFile >> "CfgLoadouts" >> _classname >> "abilityMedic");
-private _medicGear = if (_medicRole >= 1) then {["bravo_company_atlas", true] call EFUNC(logistics,getContainer);} else {[]};
+private _medicGear = if (_medicRole >= 1) then {GET_CONTAINER_KEYS(bravo_company_atlas);} else {[]};
 
 
 private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
-    case "officer": {["arsenal_role_officer", true] call EFUNC(logistics,getContainer);};
-    case "squadleader": {["arsenal_role_squadleader", true] call EFUNC(logistics,getContainer);};
-    case "fireteamleader": {["arsenal_role_fireteamleader", true] call EFUNC(logistics,getContainer);};
-    case "weapons": {["arsenal_role_weapons", true] call EFUNC(logistics,getContainer);};
+    case "officer": {GET_CONTAINER_KEYS(arsenal_role_officer);};
+    case "squadleader": {GET_CONTAINER_KEYS(arsenal_role_squadleader);};
+    case "fireteamleader": {GET_CONTAINER_KEYS(arsenal_role_fireteamleader);};
+    case "weapons": {GET_CONTAINER_KEYS(arsenal_role_weapons);};
     case "pilot";
-    case "rotarypilot": {["arsenal_role_rotarypilot", true] call EFUNC(logistics,getContainer);};
-    case "rotarycrew": {["arsenal_role_pilotcrew", true] call EFUNC(logistics,getContainer);};
-    case "pilotfighter": {["arsenal_role_pilotfighter", true] call EFUNC(logistics,getContainer);};
-    case "pilottransport": {["arsenal_role_pilottransport", true] call EFUNC(logistics,getContainer);};
+    case "rotarypilot": {GET_CONTAINER_KEYS(arsenal_role_rotarypilot);};
+    case "rotarycrew": {GET_CONTAINER_KEYS(arsenal_role_pilotcrew);};
+    case "pilotfighter": {GET_CONTAINER_KEYS(arsenal_role_pilotfighter);};
+    case "pilottransport": {GET_CONTAINER_KEYS(arsenal_role_pilottransport);};
     default {[]};
 };
 
