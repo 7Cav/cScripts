@@ -26,6 +26,6 @@ if (!isNil{ GETPRVAR(QEGVAR(Cav,Insignia), nil); }) then { // FIXME: GETPRVAR(QE
 
 SETPRVAR(QEGVAR(Profile,Insignia), _insignia)
 
-INFO_2("PlayerProfile", %1 insignia '%2' saved on profile variable...", player, _insignia);
+INFO_2("PlayerProfile", "%1 insignia '%2' saved on profile variable...", player, _insignia);
 
 true

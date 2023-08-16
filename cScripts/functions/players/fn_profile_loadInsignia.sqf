@@ -28,6 +28,6 @@ if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil];}) then {
 
 private _insignia = GETPRVAR(QEGVAR(Profile,Insignia), "");  // FIXME: GETPRVAR(QEGVAR(Cav,Insignia) is considerd one ) less
 
-INFO_2("PlayerProfile", %1 insignia '%2' obtained on profile variable...", player, _insignia);
+INFO_2("PlayerProfile", "%1 insignia '%2' obtained on profile variable...", player, _insignia);
 
 _insignia
