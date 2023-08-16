@@ -18,7 +18,7 @@
 if (!GVAR(isPlayer)) exitWith {""};
 
 // TODO: Legacy handler, remove later
-if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil]}) then {
+if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil];}) then {
     private _legacy = profileNamespace getVariable [QEGVAR(Cav,Insignia), nil];
     // Save New 
     profileNamespace setVariable [QEGVAR(Profile,Insignia), _legacy];

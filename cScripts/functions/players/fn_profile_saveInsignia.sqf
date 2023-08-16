@@ -20,7 +20,7 @@ params [["_insignia", "", [""]]];
 if (!GVAR(isPlayer)) exitWith {};
 
 // TODO: Legacy handler, remove later
-if (!isNil{GETPRVAR(QEGVAR(Cav,Insignia), nil)}) then {
+if (!isNil{GETPRVAR(QEGVAR(Cav,Insignia), nil);}) then {
     SETPRVAR(QEGVAR(Cav,Insignia), nil);
 };
 
