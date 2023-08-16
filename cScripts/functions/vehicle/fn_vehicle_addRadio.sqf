@@ -24,7 +24,7 @@ if (!EGVAR(Settings,enableVehicleRadios)) exitWith {};
 
 if (!isMultiplayer) exitWith {SHOW_WARNING_2("VehicleRadio", "Vehicle rack initialisation for %1 [%2] is stopped due to being in a SP environment.", _vehicle, typeOf _vehicle);};
 
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Radio);}) exitWith {SHOW_WARNING_2("VehicleRadio", "Vehicle radios already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
+if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,Radio);}) exitWith {SHOW_WARNING_2("VehicleRadio", "Vehicle radios already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 // If ACRE wait for init
@@ -109,4 +109,4 @@ if (_vehicle iskindOf "Plane_CAS_01_base_F") then {
     [_vehicle, [2, 8]] call EFUNC(vehicle,setRadio);
 };
 
-_vehicle setVariable [QEGVAR(Vehicle,Radio), true, true];
+_vehicle setVariable [QEGVAR(VehicleFunc,Radio), true, true];

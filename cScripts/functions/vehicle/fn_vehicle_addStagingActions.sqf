@@ -20,7 +20,7 @@ params [["_vehicle", objNull, [objNull]]];
 if (!hasInterface) exitWith {};
 if (!EGVAR(Settings,enableStagingSystem)) exitWith {};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,StagingActions)}) exitWith {SHOW_WARNING_2("VehicleStagingActions", "Vehicle staging actions already applied for %1. [%2].", _vehicle, typeOf _vehicle);};
+if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,StagingActions)}) exitWith {SHOW_WARNING_2("VehicleStagingActions", "Vehicle staging actions already applied for %1. [%2].", _vehicle, typeOf _vehicle);};
 
 INFO_2("VehicleStagingActions", "Applying vehicle staging actions to %1 (%2)", _vehicle, typeOf _vehicle);
 
@@ -36,4 +36,4 @@ private _stagingCat = [QEGVAR(Actions_Vehicle,Cosmetic_Cat), "Vehicle Cosmetics"
 [_vehicle] call EFUNC(vehicle,addCosmeticSelection);
 [_vehicle] call EFUNC(vehicle,setupPylonCategories);
 
-_vehicle setVariable [QEGVAR(Vehicle,StagingActions), _actionArray];
+_vehicle setVariable [QEGVAR(VehicleFunc,StagingActions), _actionArray];

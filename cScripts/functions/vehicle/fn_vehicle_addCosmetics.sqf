@@ -13,7 +13,7 @@
 params [["_vehicle", objNull, [objNull]]];
 
 if (!isServer) exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,Cosmetics)}) exitWith {SHOW_WARNING_2("VehicleCosmetics", "Vehicle cosmetics already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
+if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,Cosmetics)}) exitWith {SHOW_WARNING_2("VehicleCosmetics", "Vehicle cosmetics already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
 INFO_2("VehicleCosmetics", "Applying vehicle cosmetics to %1 [%2].", _vehicle, typeOf _vehicle);
@@ -23,6 +23,8 @@ private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehic
 private _textureMed = "\z\cav\addons\textures\data\vehicles\label\special\reddiamond_s_ca.paa";
 
 if (_vehicle iskindOf "rhsusf_hmmwe_base") then { // MRAP_01_base_F
+    _vehicle setVariable ["RHS_Decal_Enabled", false, true];
+
     _vehicle animateSource ["iff_hide", 1, true];
     _vehicle animateSource ["hide_CIP", 1, true];
     _vehicle animateSource ["snorkel_lower", 1, true];
@@ -40,18 +42,23 @@ if (_vehicle iskindOf "rhsusf_hmmwe_base") then { // MRAP_01_base_F
 };
 
 if (_vehicle iskindOf "rhsusf_m1151_base") then { // MRAP_01_base_F
+    _vehicle setVariable ["RHS_Decal_Enabled", false, true];
+
     _vehicle animateSource ["snorkel_lower", 1, true];
     _vehicle animateSource ["iff_hide", 1, true];
     _vehicle animateSource ["dwf_kit_Hide", 1, true];
 };
 
 if (_vehicle iskindOf "rhsusf_m1152_base") then { // MRAP_01_base_F
+    _vehicle setVariable ["RHS_Decal_Enabled", false, true];
+
     _vehicle animateSource ["snorkel_lower", 1, true];
     _vehicle animateSource ["iff_hide", 1, true];
     _vehicle animateSource ["dwf_kit_Hide", 1, true];
 };
 
 if (_vehicle iskindOf "rhsusf_fmtv_base") then {
+    _vehicle setVariable ["RHS_Decal_Enabled", false, true];
 };
 
 
@@ -65,6 +72,7 @@ if (_vehicle isKindOf "I_APC_Wheeled_03_cannon_F") then {
 };
 
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
+    _vehicle setVariable ["RHS_Decal_Enabled", false, true];
     _vehicle animateSource ["Hide_CIP", 1, true];
     switch (_vehicleType) do {
         case "rhsusf_stryker_m1126_m2_d";
@@ -84,13 +92,15 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
 };
 
 if (_vehicle iskindOf "RHS_M2A2_Base") then {
+    _vehicle setVariable ["RHS_Decal_Enabled", false, true];
 };
 
 if (_vehicle iskindOf "RHS_MELB_base") then {
+    _vehicle setVariable ["RHS_Decal_Enabled", false, true];
 };
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
-    _vehicle setVariable ["RHS_Decal_Enabled", false];
+    _vehicle setVariable ["RHS_Decal_Enabled", false, true];
 
     [{
         (_this select 0) animateSource ["Miles_Hide", 1, true];
@@ -215,4 +225,4 @@ _vehicle addEventHandler ["Deleted", {
     };
 }];
 
-_vehicle setVariable [QEGVAR(Vehicle,Cosmetics), true, true];
+_vehicle setVariable [QEGVAR(VehicleFunc,Cosmetics), true, true];

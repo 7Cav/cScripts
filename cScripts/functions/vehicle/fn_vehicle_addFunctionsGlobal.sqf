@@ -13,13 +13,13 @@
 params [["_vehicle", objNull, [objNull]]];
 
 if (!isServer) exitWith {};
-if (!isNil{_vehicle getVariable QEGVAR(Vehicle,FunctionsGlobal)}) exitWith {SHOW_WARNING_1("VehicleFunctionsGlobal", "Vehicle functions already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
+if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,FunctionsGlobal)}) exitWith {SHOW_WARNING_1("VehicleFunctionsGlobal", "Vehicle functions already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 
 INFO_2("VehicleFunctionsGlobal", "Applying vehicle functions to %1 (%2)", _vehicle, typeOf _vehicle);
 
 private _vehicleType = _vehicle getVariable [QEGVAR(Vehicle,Type), typeOf _vehicle];
 
-_vehicle setVariable [QEGVAR(Vehicle,FunctionsGlobal), true];
+_vehicle setVariable [QEGVAR(VehicleFunc,FunctionsGlobal), true];
 
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 

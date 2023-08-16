@@ -328,12 +328,13 @@ private _dataArray = [
     ["bravo_company_atlas", [
         ["ACE_microDAGR",0],
         ["ItemAndroid",0],
-
         ["kat_IV_16",0],
         ["ACE_adenosine",0],
-        ["kat_AED","kat_X_AED",0],
+        ["kat_AED",0],
+        ["kat_X_AED",0],
         ["ACE_packingBandage",0],
-        ["ACE_quikclot","ACE_elasticBandage",0],
+        ["ACE_quikclot",0],
+        ["ACE_elasticBandage",0],
         ["ACE_bloodIV",0],
         ["ACE_bloodIV_250",0],
         ["ACE_bloodIV_500",0],
@@ -1502,7 +1503,7 @@ private _dataArray = [
 
 private _return = createHashMapFromArray _dataArray;
 
-if (typeName _return != "HASHMAP") exitWith {
+if (!(_return isEqualType createHashMap)) exitWith {
     [format ["Fatal error creating database (database base type faulty %1)...", typeName _return], "Logistics Database"] call FUNC(error);
     createHashMapFromArray [["", []]];
 };
