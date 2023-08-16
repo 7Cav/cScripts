@@ -16,7 +16,7 @@
 
 private _return = "trooper";
 
-private _loadout = GETVAR(player, QEGVAR(Gear,loadoutClass), typeOf player);
+private _loadout = GETVAR(player,EGVAR(Gear,loadoutClass),typeOf player);
 
 private _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
 private _role = getText (_config >> "role");

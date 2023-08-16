@@ -19,10 +19,10 @@ private _group = [player] call EFUNC(unit,getSquadName);
 _group = toUpper(_group);
 
 private _return = switch (_group) do {
-    case GODFATHER-5";
-    case GODFATHER-6";
-    case GODFATHER-7";
-    case GODFATHER":        {"Cav_Insignia_Custom_Cav_7_ocp"};
+    case "GODFATHER-5";
+    case "GODFATHER-6";
+    case "GODFATHER-7";
+    case "GODFATHER":        {"Cav_Insignia_Custom_Cav_7_ocp"};
 
     // Alpha
     case "PEGASUS-5";
@@ -73,14 +73,14 @@ private _return = switch (_group) do {
     case "HOG-1";
     case "HOG-2";
     case "HOG-3";
-    case "HOG-4"            {"Cav_Insignia_specialized_pegasus"};
+    case "HOG-4":           {"Cav_Insignia_specialized_pegasus"};
 
 
     // Bravo
-    case WARHORSE-5";
-    case WARHORSE-6";
-    case WARHORSE-7";
-    case WARHORSE":         {"Cav_Insignia_Custom_Cav_7_ocp"};
+    case "WARHORSE-5";
+    case "WARHORSE-6";
+    case "WARHORSE-7";
+    case "WARHORSE":        {"Cav_Insignia_Custom_Cav_7_ocp"};
 
     case "ATLAS-1":         {"Cav_Insignia_Bravo_1_1"};
     case "ATLAS-2":         {"Cav_Insignia_Bravo_1"};
@@ -102,10 +102,10 @@ private _return = switch (_group) do {
 
 
     // Charlie
-    case HITMAN-5";
-    case HITMAN-6";
-    case HITMAN-7";
-    case HITMAN":           {"Cav_Insignia_Custom_Cav_7_ocp"};
+    case "HITMAN-5";
+    case "HITMAN-6";
+    case "HITMAN-7";
+    case "HITMAN":          {"Cav_Insignia_Custom_Cav_7_ocp"};
 
     case "BANDIT-1":        {"Cav_Insignia_Charlie_1_1"};
     case "BANDIT-2":        {"Cav_Insignia_Charlie_1_2"};

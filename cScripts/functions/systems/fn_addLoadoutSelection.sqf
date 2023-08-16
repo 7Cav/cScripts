@@ -31,14 +31,16 @@ params [
 ];
 
 private _condition = {
-    _this#2 params ["", "_company", "_showAllLoadouts"]
+    params ["", "", "_params"];
+    _params params ["", "_company", "_showAllLoadouts"];
     if (_showAllLoadouts) exitWith {true};
     if ([_company] call FUNC(allowLoadout)) exitWith {true};
     false;
 };
 
 private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, {
-    _this#2 params ["_className"];
+    params ["", "", "_params"];
+    _params params ["_className"];
     [player] call EFUNC(gear,removeLoadout);
     [player, _className] call EFUNC(gear,applyLoadout);
 }, _condition, {}, [_className, _company, _showAllLoadouts]] call ace_interact_menu_fnc_createAction;
@@ -46,4 +48,4 @@ private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, {
 private _actionType = if (isPlayer _object) then {1} else {0};
 [_object, _actionType, _category, _action] call ace_interact_menu_fnc_addActionToObject;
 
-INFO_4("LoadoutSelector", "%1; selector '%2' with type %3 added for '%4' crate.", _object, _lable, _actionType, _platoon);
+INFO_4("LoadoutSelector", "%1; selector '%2' with type %3 added for '%4' crate.", _object, _lable, _actionType, _company);

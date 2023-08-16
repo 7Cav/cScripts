@@ -26,7 +26,7 @@ if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil];}) then {
     profileNamespace setVariable [QEGVAR(Cav,Insignia), nil];
 };
 
-private _insignia = GETPRVAR(QEGVAR(Profile,Insignia), "");
+private _insignia = GETPRVAR(EGVAR(Profile,Insignia), "");
 
 INFO_2("PlayerProfile", "%1 insignia '%2' obtained on profile variable...", player, _insignia);
 

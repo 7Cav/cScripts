@@ -14,7 +14,7 @@
  *
  */
 
-parmas [["_unit", objNull, [objNull]]];
+params [["_unit", objNull, [objNull]]];
 
 if (!GVAR(isPlayer)) exitWith {name _unit};
 if (!isMultiplayer) exitWith {profileName};
