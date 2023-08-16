@@ -75,7 +75,7 @@ class cScripts {
         class setRadioChannel {};
         class setActiveRadio {};
 
-        class player_getCompany {};
+        class player_setCompany {};
 
         // Other Functions
         class unit_getVariables {};

@@ -20,4 +20,6 @@ params [["_company", "", [""]]];
 _company = toLower _company;
 SETVAR(player,EGVAR(Player,Company),_company);
 
+INFO_2("Player", "%1 have company set to '%2'", name _unit, _company);
+
 _company

@@ -40,7 +40,6 @@ if (_loadConfig) then {
     if (GVAR(isPlayer)) then {
         private _company = getText (_config >> "company");
         [_company] call EFUNC(player,setCompany);
-        if (_company != "") then {INFO_2("Gear", "%1 have company variable set to %2", name _unit, _company);};
     };
 };
 

@@ -10,7 +10,8 @@
  * HASHMAP
  *
  * Example:
- *  call cScripts_fnc_unit_getVariables
+ *  [player] call cScripts_fnc_unit_getVariables
+ *  [cursorObject] call cScripts_fnc_unit_getVariables
  *
  */
 
