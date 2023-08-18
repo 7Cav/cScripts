@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function add a stagion loadout selection ace action.
+ * This function add a staging loadout selection ace action.
  *
  * Arguments:
  * 0: Vehicle       <OBJECT>
@@ -13,10 +13,10 @@
  * 6: Category      <ARRAY>
  *
  * Return Value:
- * Nothing
+ * nothing
  *
  * Example:
- * [this, "Default Loadout", "rhsusf_m1a1tank_base", "default", [], ""] call cScripts_fnc_vehicle_addPylonSelection;
+ * [_vehicle, "Default Loadout", "rhsusf_m1a1tank_base", "default", [], ""] call cScripts_fnc_vehicle_addPylonSelection;
  * [_vehicle, _displayName, _vehicleKind, _loadoutName, _pylon, _icon] call cScripts_fnc_vehicle_addPylonSelection;
  * [_vehicle, "Default Loadout", "rhsusf_m1a1tank_base", "default", [_vehicle, "rhsusf_m1a1tank_base", "default"] call cScripts_fnc_vehicle_getPylon, ""] call cScripts_fnc_vehicle_addPylonSelection;
  *

@@ -7,7 +7,7 @@
  * 0: Vehicle/Object/Crate <OBJECT>
  *
  * Return Value:
- * Main category used for creation <STRING>
+ * True on success <BOOLEAN>
  *
  * Example:
  * [this] call cScripts_fnc_vehicle_setupPylonCategories;

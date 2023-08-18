@@ -7,10 +7,10 @@
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * nothing
  *
  * Example:
- * ["truckMcTruckLoad"] call cScripts_fnc_vehicle_addRepairAction
+ * [_vehicle] call cScripts_fnc_vehicle_addRepairAction
  *
  * Public: No
  */

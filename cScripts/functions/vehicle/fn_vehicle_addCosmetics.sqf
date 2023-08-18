@@ -1,18 +1,22 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function changes appearence of the given vehicle within bluefor us objects
+ * This function changes appearance for approved vehicles defined in the faction setting.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_addCosmetics;
+ * [_vehicle] call cScripts_fnc_vehicle_addCosmetics;
+ *
+ * Public: No
  */
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (!isServer) exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,Cosmetics)}) exitWith {SHOW_WARNING_2("VehicleCosmetics", "Vehicle cosmetics already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
