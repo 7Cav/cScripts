@@ -50,7 +50,7 @@ respawnDelay           = 4;
 //respawnDelay           = 30000;               // Enable for 1 life operations and disable the other.
 respawnOnStart         = -1;
 respawnTemplatesWest[] = {"MenuPosition"};
-//respawnTemplates[] = {"ace_spectator"};       // Enable for 1 life operations and disable the other.
+//respawnTemplates[] = {"spectator"};       // Enable for 1 life operations and disable the other.
 
 /*          SYSTEMS           */
 
