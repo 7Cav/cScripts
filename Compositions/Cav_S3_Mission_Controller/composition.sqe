@@ -1,5 +1,5 @@
 version=54;
-center[]={197.50946,5,3288.5427};
+center[]={1522.2307,5,3645.5027};
 class items
 {
 	items=1;
@@ -22,7 +22,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-1.8755493,0.0014390945,1.6921387};
+							position[]={-1.8757324,0.0014390945,1.6921387};
 							angles[]={-0,4.6973796,0};
 						};
 						side="West";
@@ -34,7 +34,7 @@ class items
 							description="Lead Mission Controller@MISSION CONTROLLERS";
 							isPlayable=1;
 						};
-						id=19;
+						id=2;
 						type="Cav_B_A_JFO_F";
 						class CustomAttributes
 						{
@@ -53,6 +53,19 @@ class items
 							};
 							class Attribute1
 							{
+								property="allowDamage";
+								expression="_this allowdamage _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
 								property="speaker";
 								expression="_this setspeaker _value;";
 								class Value
@@ -64,7 +77,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
+							class Attribute3
 							{
 								property="pitch";
 								expression="_this setpitch _value;";
@@ -77,7 +90,20 @@ class items
 									};
 								};
 							};
-							nAttributes=3;
+							class Attribute4
+							{
+								property="enableStamina";
+								expression="_this enablestamina _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							nAttributes=5;
 						};
 					};
 					class Item1
@@ -85,7 +111,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-1.9625549,0.0014390945,0.34912109};
+							position[]={-1.9626465,0.0014390945,0.34912109};
 							angles[]={-0,4.6973796,0};
 						};
 						side="West";
@@ -97,7 +123,7 @@ class items
 							description="Assistant Mission Controller@MISSION CONTROLLERS";
 							isPlayable=1;
 						};
-						id=20;
+						id=3;
 						type="Cav_B_A_JFO_F";
 						class CustomAttributes
 						{
@@ -116,6 +142,19 @@ class items
 							};
 							class Attribute1
 							{
+								property="allowDamage";
+								expression="_this allowdamage _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
 								property="speaker";
 								expression="_this setspeaker _value;";
 								class Value
@@ -127,7 +166,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
+							class Attribute3
 							{
 								property="pitch";
 								expression="_this setpitch _value;";
@@ -140,7 +179,20 @@ class items
 									};
 								};
 							};
-							nAttributes=3;
+							class Attribute4
+							{
+								property="enableStamina";
+								expression="_this enablestamina _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							nAttributes=5;
 						};
 					};
 					class Item2
@@ -148,7 +200,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.013443,0.0014390945,-0.8125};
+							position[]={-2.0135498,0.0014390945,-0.8125};
 							angles[]={-0,4.6973796,0};
 						};
 						side="West";
@@ -160,7 +212,7 @@ class items
 							description="Assistant Mission Controller@MISSION CONTROLLERS";
 							isPlayable=1;
 						};
-						id=21;
+						id=4;
 						type="Cav_B_A_JFO_F";
 						class CustomAttributes
 						{
@@ -179,6 +231,19 @@ class items
 							};
 							class Attribute1
 							{
+								property="allowDamage";
+								expression="_this allowdamage _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
 								property="speaker";
 								expression="_this setspeaker _value;";
 								class Value
@@ -190,7 +255,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
+							class Attribute3
 							{
 								property="pitch";
 								expression="_this setpitch _value;";
@@ -203,23 +268,36 @@ class items
 									};
 								};
 							};
-							nAttributes=3;
+							class Attribute4
+							{
+								property="enableStamina";
+								expression="_this enablestamina _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							nAttributes=5;
 						};
 					};
 				};
 				class Attributes
 				{
 				};
-				id=18;
+				id=1;
 			};
 			class Item1
 			{
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={3.7084503,0,-3.4211426};
+					position[]={3.708252,0,-3.4211426};
 				};
-				id=22;
+				id=5;
 				type="ModuleCuratorAddEditableObjects";
 				class CustomAttributes
 				{
@@ -257,11 +335,11 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={-0.2664032,0,1.9174805};
-					angles[]={-0,3.1985602,0};
+					position[]={-0.26660156,0,1.9174805};
+					angles[]={0,3.1985602,0};
 				};
 				name="Z1";
-				id=23;
+				id=6;
 				type="ModuleCurator_F";
 				class CustomAttributes
 				{
@@ -325,11 +403,11 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={-0.36442566,0,0.50390625};
-					angles[]={-0,3.1985602,0};
+					position[]={-0.36450195,0,0.50390625};
+					angles[]={0,3.1985602,0};
 				};
 				name="Z2";
-				id=24;
+				id=7;
 				type="ModuleCurator_F";
 				class CustomAttributes
 				{
@@ -393,11 +471,11 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={-0.47866821,0,-0.78271484};
-					angles[]={-0,3.1985602,0};
+					position[]={-0.47875977,0,-0.78271484};
+					angles[]={0,3.1985602,0};
 				};
 				name="Z3";
-				id=25;
+				id=8;
 				type="ModuleCurator_F";
 				class CustomAttributes
 				{
@@ -461,11 +539,11 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={-0.48112488,0,-2.1174316};
-					angles[]={-0,3.1985602,0};
+					position[]={-0.48120117,0,-2.1174316};
+					angles[]={0,3.1985602,0};
 				};
 				name="Z4";
-				id=26;
+				id=9;
 				type="ModuleCurator_F";
 				class CustomAttributes
 				{
@@ -529,9 +607,9 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={3.7034912,0,1.4443359};
+					position[]={3.7033691,0,1.4443359};
 				};
-				id=27;
+				id=10;
 				type="ModuleRespawnPositionWest_F";
 			};
 			class Item7
@@ -539,15 +617,15 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={1.9058838,0.024414063,-0.2668457};
+					position[]={1.9057617,0.024414063,-0.2668457};
 				};
 				title="Mission Controllers & Zeus (Tooltip)";
 				description="Do NOT delete things from this composition. All of these tools are vital for missions";
-				id=28;
+				id=11;
 				atlOffset=0.024414063;
 			};
 		};
-		id=29;
+		id=12;
 		atlOffset=-0.0073242188;
 	};
 };
@@ -563,8 +641,8 @@ class connections
 		class Item0
 		{
 			linkID=0;
-			item0=22;
-			item1=27;
+			item0=5;
+			item1=10;
 			class CustomData
 			{
 				type="Sync";
@@ -573,8 +651,8 @@ class connections
 		class Item1
 		{
 			linkID=1;
-			item0=23;
-			item1=22;
+			item0=6;
+			item1=5;
 			class CustomData
 			{
 				type="Sync";
@@ -583,8 +661,8 @@ class connections
 		class Item2
 		{
 			linkID=2;
-			item0=24;
-			item1=22;
+			item0=7;
+			item1=5;
 			class CustomData
 			{
 				type="Sync";
@@ -593,8 +671,8 @@ class connections
 		class Item3
 		{
 			linkID=3;
-			item0=25;
-			item1=22;
+			item0=8;
+			item1=5;
 			class CustomData
 			{
 				type="Sync";
@@ -603,8 +681,8 @@ class connections
 		class Item4
 		{
 			linkID=4;
-			item0=26;
-			item1=22;
+			item0=9;
+			item1=5;
 			class CustomData
 			{
 				type="Sync";
