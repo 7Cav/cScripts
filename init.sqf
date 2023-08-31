@@ -21,4 +21,6 @@ ACE_maxWeightDrag = 10000;
 
 INFO("init", "Initialization completed.");
 
+enableEnvironment [false, true, 0.5]; // To Turns off or on ambient Wildelife, Ambient Sounds and wind sound strenght.
+
 /* APPLY STUFF ONLY BELOW THIS LINE */
