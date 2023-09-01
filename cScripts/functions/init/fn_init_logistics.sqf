@@ -717,9 +717,13 @@ private _dataArray = [
     // // // // // // //
     ["vehicle_heliTransport", [
         ["ToolKit", 2],
+        ["ACE_rope18", 4],
+        ["ACE_rope36", 2],
+
         ["ACE_quikclot", 32],
         ["ACE_tourniquet", 8],
         ["ACE_splint", 8],
+
         ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 32],
         ["SmokeShell", 8]
     ]],
