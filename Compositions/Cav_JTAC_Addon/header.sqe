@@ -4,8 +4,8 @@ author="=7Cav=2LT.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
+	"RSPN_Assets",
 	"cav_alpha_characters_units",
-	"Desert",
-	"cav_troops_bravo_viking",
-	"cav_alpha_characters"
+	"cav_alpha_characters",
+	"cav_troops_bravo_viking"
 };
