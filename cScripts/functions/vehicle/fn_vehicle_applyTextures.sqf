@@ -7,6 +7,9 @@
  * 0: Vehicle <OBJECT>
  * 1: Textures <ARRAY>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
  * ["vic", [[1, "path/to/texture.paa"]]] call cScripts_fnc_vehicle_applyTextures;
  * ["vic",] call cScripts_fnc_vehicle_applyTextures;

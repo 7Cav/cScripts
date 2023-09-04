@@ -6,8 +6,13 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_addInventory;
+ * [_vehicle] call cScripts_fnc_vehicle_addInventory;
+ *
+ * Public: No
  */
 
 params [["_vehicle", objNull, [objNull]]];
