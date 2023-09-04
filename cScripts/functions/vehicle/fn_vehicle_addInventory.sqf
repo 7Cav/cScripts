@@ -40,7 +40,7 @@ _vehicle setVariable [QEGVAR(VehicleFunc,Inventory), true, true];
 if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
 
-// Inventories
+// Ground Vehicles
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
     [_vehicle, 15, 38, false, false] call FUNC(setCargoAttributes);
     
@@ -139,7 +139,6 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
     };
 };
 
-// Vehicles
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     
     // Cargo
@@ -263,6 +262,26 @@ if (_vehicle iskindOf "RHS_MELB_base") then {
     [_vehicle, []] call FUNC(addCargo);
 };
 
+
+// Deployable
+if (_vehicle iskindOf "rhs_m2staticmg_base") then {
+    [_vehicle, []] call FUNC(addCargo);
+};
+
+if (_vehicle iskindOf "RHS_MK19_TriPod_base") then {
+    [_vehicle, []] call FUNC(addCargo);
+};
+
+if (_vehicle iskindOf "RHS_TOW_TriPod_base") then {
+    [_vehicle, []] call FUNC(addCargo);
+};
+
+if (_vehicle iskindOf "NDS_M224_mortar_base") then {
+    [_vehicle, []] call FUNC(addCargo);
+};
+
+
+// Rotary Wing
 if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
     switch (_vehicleType) do {
         case "RHS_UH60M_MEV2_d";
@@ -293,26 +312,17 @@ if (_vehicle iskindOf "Heli_Transport_02_base_F") then {
     ] call FUNC(addCargo);
 };
 
+if (_vehicle iskindOf "vtx_MH60M") then {
+    [_vehicle, 
+        GET_CONTAINER(vehicle_heliTransport)
+    ] call FUNC(addCargo);
+};
+
 if (_vehicle iskindOf "RHS_AH64_base") then {
     [_vehicle, []] call FUNC(addCargo);
 };
 
-if (_vehicle iskindOf "rhs_m2staticmg_base") then {
-    [_vehicle, []] call FUNC(addCargo);
-};
-
-if (_vehicle iskindOf "RHS_MK19_TriPod_base") then {
-    [_vehicle, []] call FUNC(addCargo);
-};
-
-if (_vehicle iskindOf "RHS_TOW_TriPod_base") then {
-    [_vehicle, []] call FUNC(addCargo);
-};
-
-if (_vehicle iskindOf "NDS_M224_mortar_base") then {
-    [_vehicle, []] call FUNC(addCargo);
-};
-
+// Fixed Wing
 if (_vehicle iskindOf "RHS_C130J_Base") then {
     [_vehicle, 45, -1, false, false] call FUNC(setCargoAttributes);
 
