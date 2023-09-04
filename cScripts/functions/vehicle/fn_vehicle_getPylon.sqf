@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function return a vehicle loadout based on loadout name and vehicle kind.
+ * This function return a vehicle loadout based on provided name and vehicle kind.
  *
  * Arguments:
  * 0: VehicleKind <STRING>

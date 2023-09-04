@@ -8,8 +8,13 @@
  * 1: LoadoutName <OBJECT>
  * 2: VehicleLoadout <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
- * ["vic", "default", []] call cScripts_fnc_vehicle_applyLoadout;
+ * [_vehicle, "default", []] call cScripts_fnc_vehicle_applyLoadout;
+ *
+ * Public: No
  */
 
 params [
