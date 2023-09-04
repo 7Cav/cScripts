@@ -6,13 +6,17 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_reset;
+ * [_vehicle] call cScripts_fnc_vehicle_reset;
  *
  * Public: No
  */
 
 params [["_vehicle", objNull, [objNull]]];
+
 if (!isServer) exitWith {};
 if (_vehicle iskindOf "man") exitWith {};
 

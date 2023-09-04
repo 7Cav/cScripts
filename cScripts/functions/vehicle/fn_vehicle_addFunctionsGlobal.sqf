@@ -6,13 +6,17 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_addFunctionsGlobal
+ * [_vehicle] call cScripts_fnc_vehicle_addFunctionsGlobal
+ *
+ * Public: No
  */
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (!isServer) exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,FunctionsGlobal)}) exitWith {SHOW_WARNING_1("VehicleFunctionsGlobal", "Vehicle functions already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 
 INFO_2("VehicleFunctionsGlobal", "Applying vehicle functions to %1 (%2)", _vehicle, typeOf _vehicle);
