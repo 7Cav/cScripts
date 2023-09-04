@@ -93,10 +93,10 @@ if (_vehicle iskindOf "vtx_MH60M") then {
 
 // Below functions only gets applied to approved factions
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
+
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
 };
-
 
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
