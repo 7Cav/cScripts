@@ -27,6 +27,26 @@ _vehicle setVariable [QEGVAR(VehicleFunc,FunctionsGlobal), true];
 
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
+
+// Airframes
+if (_vehicle iskindOf "RHS_UH60_Base") then {
+    switch (_vehicleType) do {
+        case "RHS_UH60M_MEV2_d";
+        case "RHS_UH60M_MEV_d";
+        case "RHS_UH60M_MEV2";
+        case "RHS_UH60M_MEV";
+        case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
+        default {};
+    };
+    [_vehicle] call ace_fastroping_fnc_equipFRIES;
+};
+
+if (_vehicle iskindOf "vtx_MH60M") then {
+    [_vehicle] call ace_fastroping_fnc_equipFRIES;
+};
+
+
+// Ground vehicles
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     switch (_vehicleType) do {
         case "rhsusf_m998_d_2dr_fulltop";
