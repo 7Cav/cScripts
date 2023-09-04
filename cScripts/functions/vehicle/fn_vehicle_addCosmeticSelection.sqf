@@ -1,16 +1,16 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function add cosmetic options to vehicles
+ * This function add cosmetic customization action to vehicles
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * nothing
  *
  * Example:
- * ["truckMcTruckLoad"] call cScripts_fnc_vehicle_addCosmeticSelection
+ * [_vehicle] call cScripts_fnc_vehicle_addCosmeticSelection;
  *
  * Public: No
  */

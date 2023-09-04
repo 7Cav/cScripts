@@ -1,13 +1,18 @@
 #include "..\script_component.hpp";
 /*
  * Author: SGT.Brostrom.A
- * This function apply functions to vehicles.
+ * This function apply functions to local vehicles.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_addFunctions
+ * [_vehicle] call cScripts_fnc_vehicle_addFunctions;
+ *
+ * Public: No
  */
 
 params [["_vehicle", objNull, [objNull]]];

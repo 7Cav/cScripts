@@ -7,10 +7,10 @@
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * nothing
  *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_addRadio;
+ * [_vehicle] call cScripts_fnc_vehicle_addRadio;
  *
  * Public: No
  */
