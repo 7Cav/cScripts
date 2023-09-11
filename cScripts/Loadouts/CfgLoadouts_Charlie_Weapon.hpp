@@ -86,12 +86,12 @@ class Cav_B_C_Weapons_Stinger_Gunner_F_Local: Cav_B_Charlie_Weapons_base_F {
 class Cav_B_C_Weapons_SquadLeader_1_4_F: Cav_B_C_Weapons_SquadLeader_F { scope = 1; };
 class Cav_B_C_Weapons_SquadLeader_2_4_F: Cav_B_C_Weapons_SquadLeader_F { scope = 1; };
 
-class Cav_B_C_Weapons_Alpha_FireTeamLeader_F: Cav_B_C_Weapons_M240B_MachinegunnerAmmoBearer_F { scope = 1; };
+class Cav_B_C_Weapons_Alpha_FireTeamLeader_F: Cav_B_C_Weapons_M240B_FireTeamLeader_F { scope = 1; };
 class Cav_B_C_Weapons_Alpha_Trooper_2_F: Cav_B_C_Weapons_M240B_Machinegunner_F { scope = 1; };
 class Cav_B_C_Weapons_Alpha_Trooper_3_F: Cav_B_C_Weapons_M240B_MachinegunnerAmmoBearer_F { scope = 1; };
 class Cav_B_C_Weapons_Alpha_Trooper_4_F: Cav_B_C_Weapons_MAAWS_MAAWSGunner_F { scope = 1; };
 
-class Cav_B_C_Weapons_Bravo_FireTeamLeader_F: Cav_B_C_Weapons_M240B_MachinegunnerAmmoBearer_F { scope = 1; };
+class Cav_B_C_Weapons_Bravo_FireTeamLeader_F: Cav_B_C_Weapons_M240B_FireTeamLeader_F { scope = 1; };
 class Cav_B_C_Weapons_Bravo_Trooper_2_F: Cav_B_C_Weapons_M240B_Machinegunner_F { scope = 1; };
 class Cav_B_C_Weapons_Bravo_Trooper_3_F: Cav_B_C_Weapons_M240B_MachinegunnerAmmoBearer_F { scope = 1; };
 class Cav_B_C_Weapons_Bravo_Trooper_4_F: Cav_B_C_Weapons_MAAWS_MAAWSGunner_F { scope = 1; };
