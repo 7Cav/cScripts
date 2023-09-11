@@ -328,13 +328,12 @@ private _dataArray = [
     ["bravo_company_atlas", [
         ["ACE_microDAGR",0],
         ["ItemAndroid",0],
+
         ["kat_IV_16",0],
         ["ACE_adenosine",0],
-        ["kat_AED",0],
-        ["kat_X_AED",0],
+        ["kat_AED","kat_X_AED",0],
         ["ACE_packingBandage",0],
-        ["ACE_quikclot",0],
-        ["ACE_elasticBandage",0],
+        ["ACE_quikclot","ACE_elasticBandage",0],
         ["ACE_bloodIV",0],
         ["ACE_bloodIV_250",0],
         ["ACE_bloodIV_500",0],
@@ -717,13 +716,9 @@ private _dataArray = [
     // // // // // // //
     ["vehicle_heliTransport", [
         ["ToolKit", 2],
-        ["ACE_rope18", 4],
-        ["ACE_rope36", 2],
-
         ["ACE_quikclot", 32],
         ["ACE_tourniquet", 8],
         ["ACE_splint", 8],
-
         ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 32],
         ["SmokeShell", 8]
     ]],
@@ -1390,6 +1385,9 @@ private _dataArray = [
         ["launch_MRAWS_green_F", 0],
         ["launch_MRAWS_sand_F", 0],
         ["launch_MRAWS_olive_F", 0],
+        ["rhs_weap_fgm148",0],
+        ["rhs_weap_fim92",0],
+
 
         // MAAWS ammo
         ["rhs_mag_maaws_HEAT", 0],
@@ -1399,6 +1397,8 @@ private _dataArray = [
         ["MAA_MAAWS_GMM_MT", 0],
         ["MAA_MAAWS_MT756", 0],
         ["rhs_mag_maaws_HE", 0],
+        ["rhs_fgm148_magazine_AT",0],
+        ["rhs_fim92_mag",0],
         ["MRAWS_HE_F", 0],
 
         // Backpacks
@@ -1507,8 +1507,8 @@ private _dataArray = [
 
 private _return = createHashMapFromArray _dataArray;
 
-if (!(_return isEqualType createHashMap)) exitWith {
-    SHOW_CHAT_ERROR_1("LogisticsDatabase", "Fatal error creating database (database base type faulty %1)...", typeName _return);
+if (typeName _return != "HASHMAP") exitWith {
+    [format ["Fatal error creating database (database base type faulty %1)...", typeName _return], "Logistics Database"] call FUNC(error);
     createHashMapFromArray [["", []]];
 };
 
