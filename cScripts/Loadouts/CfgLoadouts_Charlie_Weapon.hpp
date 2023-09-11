@@ -15,7 +15,7 @@ class Cav_B_C_Weapons_M240B_FireTeamLeader_F: Cav_B_Charlie_Weapons_base_F {
     icon = "iconManLeader";
 };
 class Cav_B_C_Weapons_M240B_Machinegunner_F: Cav_B_Charlie_Weapons_base_F {
-    displayName = "Charlie Machine Gunner";
+    displayName = "Machine Gunner";
     scope = 2;
     loadout = [["rhs_weap_m240B","rhsusf_acc_ARDEC_M240","","rhsusf_acc_ACOG_MDO",["rhsusf_100Rnd_762x51_m62_tracer",100],[],""],[],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_EarPlugs",1],["ACE_microDAGR",1],["ACE_packingBandage",10],["kat_Painkiller",1,10]]],["USP_CRYE_JPC_MGB",[["SmokeShell",4,1],["rhsusf_100Rnd_762x51_m62_tracer",5,100],["ACE_Chemlight_IR",2,1],["HandGrenade",2,1]]],["USP_PACK_POINTMAN",[["USP_PVS15",1],["ACE_splint",2],["rhsusf_100Rnd_762x51_m62_tracer",2,100]]],"USP_OPSCORE_FASTMTC_CW","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     icon = "iconManMG";
