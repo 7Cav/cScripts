@@ -63,25 +63,6 @@ class Cav_B_C_Weapons_Mortar_AutomaticRifleman_F: Cav_B_Charlie_Weapons_base_F {
     icon = "iconManMG";
 };
 
-class Cav_B_C_Weapons_Javelin_Gunner_F: Cav_B_Charlie_Weapons_base_F {
-    displayName = "FGM-148 Gunner";
-    scope = 2;
-    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],""],["rhs_weap_fgm148","","","",["rhs_fgm148_magazine_AT",1],[],""],[],["USP_G3C_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",10],["ACE_EarPlugs",1]]],["USP_CRYE_JPC_FS",[["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1]]],["USP_ZIPON_PANEL_MC",[["ACE_splint",2],["USP_PVS15",1],["kat_Painkiller",1,10]]],"USP_OPSCORE_FASTMTC_CGW","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
-    icon = "iconManAT";
-};
-class Cav_B_C_Weapons_Javelin_Assistant_F: Cav_B_Charlie_Weapons_base_F {
-    displayName = "FGM-148 Assistant Gunner";
-    scope = 2;
-    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],""],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_tourniquet",4],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_Flashlight_XL50",1],["ACE_EarPlugs",1],["ACE_splint",2],["kat_Painkiller",1,10]]],["USP_CRYE_CPC_COMMS_BELT_MC",[["USP_PVS15",1],["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",11,30],["HandGrenade",2,1]]],["B_Carryall_mcamo",[["rhs_fgm148_magazine_AT",1,1]]],"USP_OPSCORE_FASTMTC_CW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
-};
-
-class Cav_B_C_Weapons_Stinger_Gunner_F: Cav_B_Charlie_Weapons_base_F {
-    displayName = "Stinger Gunner";
-    scope = 2;
-    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],""],["rhs_weap_fim92","","","",["rhs_fim92_mag",1],[],""],[],["USP_G3C_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_splint",2],["ACE_packingBandage",10],["kat_Painkiller",1,10]]],["USP_CRYE_JPC_FS",[["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1]]],["USP_45L_RUCKSACK_MC",[["USP_PVS15",1],["rhs_fim92_mag",1,1]]],"USP_OPSCORE_FASTMTC_CGW","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
-    icon = "iconManAT";
-};
-
 // Named
 class Cav_B_C_Weapons_SquadLeader_1_4_F: Cav_B_C_Weapons_SquadLeader_F { scope = 1; };
 class Cav_B_C_Weapons_SquadLeader_2_4_F: Cav_B_C_Weapons_SquadLeader_F { scope = 1; };
