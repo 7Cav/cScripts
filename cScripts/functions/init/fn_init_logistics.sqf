@@ -483,7 +483,7 @@ private _dataArray = [
 
         // NVG
         ["USP_PVS14", 0],
-        ["USP_PVS15", 0Y],
+        ["USP_PVS15", 0],
         ["USP_L4G19", 0],
         ["rhsusf_ANPVS_14", 0],
         ["rhsusf_ANPVS_15", 0],
