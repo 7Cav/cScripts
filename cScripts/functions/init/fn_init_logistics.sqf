@@ -331,7 +331,7 @@ private _dataArray = [
 
         ["kat_IV_16",0],
         ["ACE_adenosine",0],
-        ["kat_AED","kat_X_AED",0],
+        ["kat_AED",0],
         ["ACE_packingBandage",0],
         ["ACE_quikclot",0],
         ["ACE_bloodIV",0],
