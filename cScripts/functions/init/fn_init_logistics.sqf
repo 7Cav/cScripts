@@ -333,7 +333,7 @@ private _dataArray = [
         ["ACE_adenosine",0],
         ["kat_AED","kat_X_AED",0],
         ["ACE_packingBandage",0],
-        ["ACE_quikclot","ACE_elasticBandage",0],
+        ["ACE_quikclot",0],
         ["ACE_bloodIV",0],
         ["ACE_bloodIV_250",0],
         ["ACE_bloodIV_500",0],
