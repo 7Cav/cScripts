@@ -1,0 +1,7317 @@
+version=54;
+center[]={1189.5778,5,5735.7495};
+class items
+{
+	items=5;
+	class Item0
+	{
+		dataType="Layer";
+		name="1. GODFATHER";
+		class Entities
+		{
+			items=1;
+			class Item0
+			{
+				dataType="Group";
+				side="West";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-8.3359375,0.0015382767,-0.49462891};
+							angles[]={0,4.981257,0};
+						};
+						side="West";
+						flags=7;
+						class Attributes
+						{
+							rank="LIEUTENANT";
+							init="call{this setGroupId [""GODFATHER""];}";
+							name="commandant";
+							description="Commander@GODFATHER";
+							isPlayable=1;
+							class Inventory
+							{
+								class binocular
+								{
+									name="ACE_VectorDay";
+								};
+								class uniform
+								{
+									typeName="rhs_uniform_cu_ocp";
+									isBackpack=0;
+								};
+								class vest
+								{
+									typeName="rhsusf_iotv_ocp_Rifleman";
+									isBackpack=0;
+								};
+								class backpack
+								{
+									typeName="rhsusf_assault_eagleaiii_ocp";
+									isBackpack=1;
+								};
+								map="ItemMap";
+								compass="ItemCompass";
+								watch="ItemWatch";
+								gps="ItemGPS";
+								goggles="G_Combat";
+								hmd="rhsusf_ANPVS_14";
+								headgear="rhsusf_ach_bare";
+							};
+						};
+						id=2;
+						type="B_officer_F";
+						atlOffset=9.9182129e-005;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male08ENG";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1.03;
+									};
+								};
+							};
+							nAttributes=2;
+						};
+					};
+				};
+				class Attributes
+				{
+				};
+				id=1;
+				atlOffset=9.9182129e-005;
+			};
+		};
+		id=0;
+		atlOffset=9.9182129e-005;
+	};
+	class Item1
+	{
+		dataType="Layer";
+		name="2. Gunslinger HQ";
+		class Entities
+		{
+			items=6;
+			class Item0
+			{
+				dataType="Layer";
+				name="1. GUN-6";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-8.1560059,0.0015382767,1.2456055};
+									angles[]={0,4.981257,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="LIEUTENANT";
+									init="call{this setGroupId [""GUNSLINGER-6""];}";
+									description="Platoon Leader (Gunslinger-6)@GUNSLINGER-6";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=6;
+								type="B_officer_F";
+								atlOffset=9.9182129e-005;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male08ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.03;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=5;
+						atlOffset=9.9182129e-005;
+					};
+				};
+				id=4;
+				atlOffset=9.9182129e-005;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="2. GUN-5";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-7.1069336,0.0015382767,4.6977539};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""GUNSLINGER-5""];}";
+									description="Platoon Sergeant (Gunslinger-5)@GUNSLINGER-5";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=9;
+								type="B_Soldier_SL_F";
+								atlOffset=9.9182129e-005;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=8;
+						atlOffset=9.9182129e-005;
+					};
+				};
+				id=7;
+				atlOffset=9.9182129e-005;
+			};
+			class Item2
+			{
+				dataType="Layer";
+				name="3. GUN-7";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-7.6899414,0.0015382767,3.1293945};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""GUNSLINGER-7""];}";
+									description="Platoon Medic (Gunslinger-7)@GUNSLINGER-7";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=12;
+								type="B_medic_F";
+								atlOffset=9.9182129e-005;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male03ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.03;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=11;
+						atlOffset=9.9182129e-005;
+					};
+				};
+				id=10;
+				atlOffset=9.9182129e-005;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="4. GUN-1";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=9;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-7.2431641,0.0015382767,-2.8999023};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Squad Leader@GUNSLINGER-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=15;
+								type="B_Soldier_SL_F";
+								atlOffset=9.9182129e-005;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-7.0878906,0.0014390945,-3.668457};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="CORPORAL";
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Alpha Fireteam Leader";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=16;
+								type="B_Soldier_TL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-5.7514648,0.0014390945,-3.862793};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Alpha Automatic Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=17;
+								type="B_soldier_AR_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.503418,0.10133839,-4.0893555};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Alpha Grenadier";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=18;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item4
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.2561035,0.10133839,-4.3178711};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Alpha Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=19;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item5
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-6.5681152,0.0014390945,-2.2475586};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="CORPORAL";
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Bravo Fireteam Leader";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=20;
+								type="B_Soldier_TL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item6
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-5.4272461,0.0014390945,-2.4799805};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Bravo Automatic Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=21;
+								type="B_soldier_AR_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item7
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.2280273,0.10133839,-2.8217773};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Bravo Grenadier";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=22;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item8
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.0991211,0.10133839,-3.0737305};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-1""];}";
+									description="Bravo Combat Lifesaver";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=23;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=14;
+						atlOffset=9.9182129e-005;
+					};
+				};
+				id=13;
+				atlOffset=9.9182129e-005;
+			};
+			class Item4
+			{
+				dataType="Layer";
+				name="5. GUN-2";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=9;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-6.4101563,0.0014390945,0.26416016};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Squad Leader@GUNSLINGER-2";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=26;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-6.0578613,0.0014390945,-0.46533203};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="CORPORAL";
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Alpha Fireteam Leader";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=27;
+								type="B_Soldier_TL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.9157715,0.0014390945,-0.69873047};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Alpha Automatic Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=28;
+								type="B_soldier_AR_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.779541,0.10133839,-0.92919922};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Alpha Grenadier";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=29;
+								type="B_Soldier_GL_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item4
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.6721191,0.10133839,-1.1831055};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Alpha Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=30;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item5
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-5.7294922,0.0014390945,0.91357422};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="CORPORAL";
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Bravo Fireteam Leader";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=31;
+								type="B_Soldier_TL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item6
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.5893555,0.0014390945,0.68115234};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Bravo Automatic Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=32;
+								type="B_soldier_AR_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item7
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.1333008,0.10133839,0.30029297};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Bravo Grenadier";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=33;
+								type="B_Soldier_GL_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item8
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.0258789,0.10134602,0.049316406};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-2""];}";
+									description="Bravo Combat Lifesaver";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=34;
+								type="B_Soldier_F";
+								atlOffset=0.099906921;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=25;
+					};
+				};
+				id=24;
+			};
+			class Item5
+			{
+				dataType="Layer";
+				name="6. GUN-3";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=9;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-5.4335938,0.0014390945,3.1557617};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Squad Leader@GUNSLINGER-3";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=37;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-5.0810547,0.0014390945,2.4272461};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="CORPORAL";
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Alpha Fireteam Leader";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=38;
+								type="B_Soldier_TL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.9382324,0.0014390945,2.1938477};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Alpha Automatic Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=39;
+								type="B_soldier_AR_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.8034668,0.10133839,1.9624023};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Alpha Grenadier";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=40;
+								type="B_Soldier_GL_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item4
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-1.6953125,0.10133839,1.7094727};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Alpha Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=41;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item5
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.7539063,0.0014390945,3.8081055};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="CORPORAL";
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Bravo Fireteam Leader";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=42;
+								type="B_Soldier_TL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item6
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.6125488,0.10134029,3.5737305};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Bravo Automatic Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=43;
+								type="B_soldier_AR_F";
+								atlOffset=0.099901199;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item7
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.4753418,0.10133648,3.3442383};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Bravo Grenadier";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=44;
+								type="B_Soldier_GL_F";
+								atlOffset=0.099897385;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item8
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-1.3691406,0.10133839,3.0913086};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""GUNSLINGER-3""];}";
+									description="Bravo Combat Lifesaver";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=45;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=36;
+					};
+				};
+				id=35;
+			};
+		};
+		id=3;
+		atlOffset=2.4795532e-005;
+	};
+	class Item2
+	{
+		dataType="Layer";
+		name="3. Ground Support";
+		class Entities
+		{
+			items=6;
+			class Item0
+			{
+				dataType="Layer";
+				name="1. VIKING-1";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=11;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-5.0864258,0.0014390945,6.3481445};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Squad Leader@VIKING-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=49;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.574707,0.0014390945,5.7143555};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="CORPORAL";
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Alpha Fireteam Leader";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=50;
+								type="B_Soldier_TL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.4382324,0.0014390945,5.4526367};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Alpha Automatic Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=51;
+								type="B_soldier_AR_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.2412109,0.10133839,5.1186523};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Alpha Grenadier";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=52;
+								type="B_Soldier_GL_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item4
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-1.1323242,0.10133839,4.8647461};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Alpha Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=53;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item5
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.2963867,0.0014390945,6.7104492};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="CORPORAL";
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Bravo Fireteam Leader";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=54;
+								type="B_Soldier_TL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male12ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item6
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-3.1555176,0.0014390945,6.4780273};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Bravo Automatic Rifleman";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=55;
+								type="B_soldier_AR_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male02ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item7
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-2.0209961,0.10121632,6.2495117};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Bravo Grenadier";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=56;
+								type="B_Soldier_GL_F";
+								atlOffset=0.099777222;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item8
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.91186523,0.10133839,5.9946289};
+									angles[]={0,4.9435043,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Bravo Combat Lifesaver";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=57;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item9
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.045898438,0.10133839,4.5483398};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Vehicle Commander";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=58;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item10
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={0.16723633,0.10133839,5.6586914};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""VIKING-1""];}";
+									description="Vehicle Driver";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=59;
+								type="B_Soldier_F";
+								atlOffset=0.099899292;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male04ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.01;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=48;
+					};
+				};
+				id=47;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="2. ATLAS";
+				class Entities
+				{
+					items=2;
+					class Item0
+					{
+						dataType="Layer";
+						name="ATLAS-1";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=4;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={0.61645508,0.10133839,-0.21923828};
+											angles[]={0,4.9435053,0};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											rank="SERGEANT";
+											init="call{this setGroupId [""ATLAS-1""];}";
+											description="Medical Team Leader@ATLAS-1";
+											isPlayable=1;
+											class Inventory
+											{
+												class binocular
+												{
+													name="ACE_VectorDay";
+												};
+												class uniform
+												{
+													typeName="rhs_uniform_cu_ocp";
+													isBackpack=0;
+												};
+												class vest
+												{
+													typeName="rhsusf_iotv_ocp_Rifleman";
+													isBackpack=0;
+												};
+												class backpack
+												{
+													typeName="rhsusf_assault_eagleaiii_ocp";
+													isBackpack=1;
+												};
+												map="ItemMap";
+												compass="ItemCompass";
+												watch="ItemWatch";
+												gps="ItemGPS";
+												goggles="G_Combat";
+												hmd="rhsusf_ANPVS_14";
+												headgear="rhsusf_ach_bare";
+											};
+										};
+										id=63;
+										type="B_medic_F";
+										atlOffset=0.099899292;
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="ace_isMedic";
+												expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male02ENG";
+													};
+												};
+											};
+											class Attribute2
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=3;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={0.90698242,0.0015153885,0.83642578};
+											angles[]={0,4.9435053,0};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											init="call{this setGroupId [""ATLAS-1""];}";
+											description="Medic@ATLAS-1";
+											isPlayable=1;
+											class Inventory
+											{
+												class binocular
+												{
+													name="ACE_VectorDay";
+												};
+												class uniform
+												{
+													typeName="rhs_uniform_cu_ocp";
+													isBackpack=0;
+												};
+												class vest
+												{
+													typeName="rhsusf_iotv_ocp_Rifleman";
+													isBackpack=0;
+												};
+												class backpack
+												{
+													typeName="rhsusf_assault_eagleaiii_ocp";
+													isBackpack=1;
+												};
+												map="ItemMap";
+												compass="ItemCompass";
+												watch="ItemWatch";
+												gps="ItemGPS";
+												goggles="G_Combat";
+												hmd="rhsusf_ANPVS_14";
+												headgear="rhsusf_ach_bare";
+											};
+										};
+										id=64;
+										type="B_medic_F";
+										atlOffset=7.6293945e-005;
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="ace_isMedic";
+												expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male02ENG";
+													};
+												};
+											};
+											class Attribute2
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=3;
+										};
+									};
+									class Item2
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={2.112793,0.0015153885,-0.74951172};
+											angles[]={0,4.9435053,0};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											init="call{this setGroupId [""ATLAS-1""];}";
+											description="Medic@ATLAS-1";
+											isPlayable=1;
+											class Inventory
+											{
+												class binocular
+												{
+													name="ACE_VectorDay";
+												};
+												class uniform
+												{
+													typeName="rhs_uniform_cu_ocp";
+													isBackpack=0;
+												};
+												class vest
+												{
+													typeName="rhsusf_iotv_ocp_Rifleman";
+													isBackpack=0;
+												};
+												class backpack
+												{
+													typeName="rhsusf_assault_eagleaiii_ocp";
+													isBackpack=1;
+												};
+												map="ItemMap";
+												compass="ItemCompass";
+												watch="ItemWatch";
+												gps="ItemGPS";
+												goggles="G_Combat";
+												hmd="rhsusf_ANPVS_14";
+												headgear="rhsusf_ach_bare";
+											};
+										};
+										id=65;
+										type="B_medic_F";
+										atlOffset=7.6293945e-005;
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="ace_isMedic";
+												expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male02ENG";
+													};
+												};
+											};
+											class Attribute2
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=3;
+										};
+									};
+									class Item3
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={2.5410156,0.0015153885,0.51416016};
+											angles[]={0,4.9435053,0};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											init="call{this setGroupId [""ATLAS-1""];}";
+											description="Medic@ATLAS-1";
+											isPlayable=1;
+											class Inventory
+											{
+												class binocular
+												{
+													name="ACE_VectorDay";
+												};
+												class uniform
+												{
+													typeName="rhs_uniform_cu_ocp";
+													isBackpack=0;
+												};
+												class vest
+												{
+													typeName="rhsusf_iotv_ocp_Rifleman";
+													isBackpack=0;
+												};
+												class backpack
+												{
+													typeName="rhsusf_assault_eagleaiii_ocp";
+													isBackpack=1;
+												};
+												map="ItemMap";
+												compass="ItemCompass";
+												watch="ItemWatch";
+												gps="ItemGPS";
+												goggles="G_Combat";
+												hmd="rhsusf_ANPVS_14";
+												headgear="rhsusf_ach_bare";
+											};
+										};
+										id=66;
+										type="B_medic_F";
+										atlOffset=7.6293945e-005;
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="ace_isMedic";
+												expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male02ENG";
+													};
+												};
+											};
+											class Attribute2
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=0.97000003;
+													};
+												};
+											};
+											nAttributes=3;
+										};
+									};
+								};
+								class Attributes
+								{
+								};
+								id=62;
+								atlOffset=0.099899292;
+							};
+						};
+						id=61;
+						atlOffset=0.099899292;
+					};
+					class Item1
+					{
+						dataType="Layer";
+						name="ATLAS-4";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Group";
+								side="West";
+								class Entities
+								{
+									items=2;
+									class Item0
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={1.680542,0.0014390945,2.5561523};
+											angles[]={0,4.9435053,0};
+										};
+										side="West";
+										flags=7;
+										class Attributes
+										{
+											rank="SERGEANT";
+											init="call{this setGroupId [""ATLAS-4""];}";
+											description="Logistics Team Leader@ATLAS-4";
+											isPlayable=1;
+											class Inventory
+											{
+												class binocular
+												{
+													name="ACE_VectorDay";
+												};
+												class uniform
+												{
+													typeName="rhs_uniform_cu_ocp";
+													isBackpack=0;
+												};
+												class vest
+												{
+													typeName="rhsusf_iotv_ocp_Rifleman";
+													isBackpack=0;
+												};
+												class backpack
+												{
+													typeName="rhsusf_assault_eagleaiii_ocp";
+													isBackpack=1;
+												};
+												map="ItemMap";
+												compass="ItemCompass";
+												watch="ItemWatch";
+												gps="ItemGPS";
+												goggles="G_Combat";
+												hmd="rhsusf_ANPVS_14";
+												headgear="rhsusf_ach_bare";
+											};
+										};
+										id=69;
+										type="B_soldier_repair_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="ace_isEngineer";
+												expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male10ENG";
+													};
+												};
+											};
+											class Attribute2
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.04;
+													};
+												};
+											};
+											class Attribute3
+											{
+												property="ace_isEOD";
+												expression="_this setVariable ['ACE_isEOD', _value, true]";
+												class Value
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=1;
+													};
+												};
+											};
+											nAttributes=4;
+										};
+									};
+									class Item1
+									{
+										dataType="Object";
+										class PositionInfo
+										{
+											position[]={1.911499,0.0014390945,3.4331055};
+											angles[]={0,4.9435053,0};
+										};
+										side="West";
+										flags=5;
+										class Attributes
+										{
+											init="call{this setGroupId [""ATLAS-4""];}";
+											description="Logistics Specialist@ATLAS-4";
+											isPlayable=1;
+											class Inventory
+											{
+												class binocular
+												{
+													name="ACE_VectorDay";
+												};
+												class uniform
+												{
+													typeName="rhs_uniform_cu_ocp";
+													isBackpack=0;
+												};
+												class vest
+												{
+													typeName="rhsusf_iotv_ocp_Rifleman";
+													isBackpack=0;
+												};
+												class backpack
+												{
+													typeName="rhsusf_assault_eagleaiii_ocp";
+													isBackpack=1;
+												};
+												map="ItemMap";
+												compass="ItemCompass";
+												watch="ItemWatch";
+												gps="ItemGPS";
+												goggles="G_Combat";
+												hmd="rhsusf_ANPVS_14";
+												headgear="rhsusf_ach_bare";
+											};
+										};
+										id=70;
+										type="B_soldier_repair_F";
+										class CustomAttributes
+										{
+											class Attribute0
+											{
+												property="ace_isEngineer";
+												expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=2;
+													};
+												};
+											};
+											class Attribute1
+											{
+												property="speaker";
+												expression="_this setspeaker _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Male10ENG";
+													};
+												};
+											};
+											class Attribute2
+											{
+												property="pitch";
+												expression="_this setpitch _value;";
+												class Value
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1.04;
+													};
+												};
+											};
+											class Attribute3
+											{
+												property="ace_isEOD";
+												expression="_this setVariable ['ACE_isEOD', _value, true]";
+												class Value
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=1;
+													};
+												};
+											};
+											nAttributes=4;
+										};
+									};
+								};
+								class Attributes
+								{
+								};
+								id=68;
+							};
+						};
+						id=67;
+					};
+				};
+				id=60;
+				atlOffset=0.049949646;
+			};
+			class Item2
+			{
+				dataType="Layer";
+				name="3. Chaos";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={3.2019043,0.0014390945,1.9516602};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""CHAOS-1""];}";
+									description="FAC@CHAOS-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=73;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={3.4938965,0.0014390945,3.1567383};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""CHAOS-1""];}";
+									description="FAC Observer@CHAOS-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=74;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=72;
+					};
+				};
+				id=71;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="4. Longshot";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={10.615845,0.0014390945,-0.25488281};
+									angles[]={0,4.9837527,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									init="call{this setGroupId [""LONGSHOT-1""];}";
+									description="Sniper@LONGSHOT-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=77;
+								type="B_sniper_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male05ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={10.934692,0.0014390945,0.78808594};
+									angles[]={0,4.9837527,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""LONGSHOT-1""];}";
+									description="Spotter@LONGSHOT-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=78;
+								type="B_sniper_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male05ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=76;
+					};
+				};
+				id=75;
+			};
+			class Item4
+			{
+				dataType="Layer";
+				name="5. Sabre";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={3.4769287,0.0014390945,-3.7963867};
+									angles[]={0,5.0497775,-0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="LIEUTENANT";
+									init="call{this setGroupId [""SABRE-1""];}";
+									description="Tank Commander@SABRE-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=81;
+								type="B_crew_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={4.1202393,0.0014390945,-5.8164063};
+									angles[]={0,5.0497775,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""SABRE-1""];}";
+									description="Gunner@SABRE-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=82;
+								type="B_crew_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={5.309082,0.0014390945,-2.9604492};
+									angles[]={0,5.0497775,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""SABRE-1""];}";
+									description="Driver@SABRE-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=83;
+								type="B_crew_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={4.788208,0.0014390945,-4.3085938};
+									angles[]={0,5.0497775,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""SABRE-1""];}";
+									description="Loader@SABRE-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=84;
+								type="B_crew_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=80;
+					};
+				};
+				id=79;
+			};
+			class Item5
+			{
+				dataType="Layer";
+				name="6. Banshee";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={5.4760742,0.0015153885,0.90380859};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="LIEUTENANT";
+									init="call{this setGroupId [""BANSHEE-1""];}";
+									description="Bradley IFV Commander@BANSHEE-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=87;
+								type="B_crew_F";
+								atlOffset=7.6293945e-005;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={6.3288574,0.0015153885,-1.0356445};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""BANSHEE-1""];}";
+									description="Gunner@BANSHEE-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=88;
+								type="B_crew_F";
+								atlOffset=7.6293945e-005;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={7.2080078,0.0015153885,1.9311523};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""BANSHEE-1""];}";
+									description="Driver@BANSHEE-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=89;
+								type="B_crew_F";
+								atlOffset=7.6293945e-005;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={6.8330078,0.0015153885,0.53466797};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""BANSHEE-1""];}";
+									description="Loader@BANSHEE-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=90;
+								type="B_crew_F";
+								atlOffset=7.6293945e-005;
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male06ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.97000003;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=86;
+						atlOffset=7.6293945e-005;
+					};
+				};
+				id=85;
+				atlOffset=7.6293945e-005;
+			};
+		};
+		id=46;
+		atlOffset=0.0015993118;
+	};
+	class Item3
+	{
+		dataType="Layer";
+		name="4. Air Support";
+		class Entities
+		{
+			items=6;
+			class Item0
+			{
+				dataType="Layer";
+				name="1. Buffalo-1";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.28320313,0.0014390945,-3.2197266};
+									angles[]={0,4.9435115,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""BUFFALO-1""];}";
+									description="Transport Rotary Wing Pilot@BUFFALO-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=94;
+								type="B_Helipilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-0.065917969,0.0014390945,-2.3896484};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""BUFFALO-1""];}";
+									description="Transport Rotary Wing Co-Pilot@BUFFALO-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=95;
+								type="B_Helipilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={0.98803711,0.0014390945,-3.5419922};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""BUFFALO-1""];}";
+									description="Transport Rotary Wing Crew Chief@BUFFALO-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=96;
+								type="B_helicrew_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.04;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={1.1992188,0.0014390945,-2.7666016};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									init="call{this setGroupId [""BUFFALO-1""];}";
+									description="Transport Rotary Wing Door Gunner@BUFFALO-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=97;
+								type="B_helicrew_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.04;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=93;
+					};
+				};
+				id=92;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="2. Raven-1";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={8.2734375,0.0014390945,-1.6918945};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""RAVEN-1""];}";
+									description="Transport Rotary Wing Pilot@RAVEN-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=100;
+								type="B_Helipilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={8.4885254,0.0014390945,-0.85498047};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""RAVEN-1""];}";
+									description="Transport Rotary Wing Co-Pilot@RAVEN-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=101;
+								type="B_Helipilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=99;
+					};
+				};
+				id=98;
+			};
+			class Item2
+			{
+				dataType="Layer";
+				name="3. Raven-2";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={9.0516357,0.0014390945,0.22998047};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""RAVEN-2""];}";
+									description="Transport Rotary Wing Pilot@RAVEN-2";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=104;
+								type="B_Helipilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={9.2667236,0.0014390945,1.065918};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""RAVEN-2""];}";
+									description="Transport Rotary Wing Co-Pilot@RAVEN-2";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=105;
+								type="B_Helipilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=3;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=103;
+					};
+				};
+				id=102;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="4. Raider-1";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={6.1746826,0.0014390945,-6.4311523};
+									angles[]={-0,5.0671678,0};
+								};
+								side="West";
+								flags=6;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""RAIDER-1""];}";
+									description="Attack Rotary Wing Pilot@RAIDER-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=108;
+								type="B_helicrew_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={6.4453125,0.0014390945,-5.5917969};
+									angles[]={-0,5.0671678,0};
+								};
+								side="West";
+								flags=4;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""RAIDER-1""];}";
+									description="Attack Rotary Wing Gunner@RAIDER-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=109;
+								type="B_helicrew_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=107;
+					};
+				};
+				id=106;
+			};
+			class Item4
+			{
+				dataType="Layer";
+				name="5. HOG";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={8.9047852,0.0014390945,-4.4267578};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									init="call{this setGroupId [""HOG-1""];}";
+									description="Attack Fixed Wing Pilot@HOG-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=112;
+								type="B_Pilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male08ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=111;
+					};
+				};
+				id=110;
+			};
+			class Item5
+			{
+				dataType="Layer";
+				name="6. TITAN";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={7.0136719,0.0014390945,-4.5258789};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""TITAN-1""];}";
+									description="Transport Fixed Wing Pilot@TITAN-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=115;
+								type="B_Pilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male03ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={7.1965332,0.0014390945,-3.7338867};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""TITAN-1""];}";
+									description="Transport Fixed Wing Co-Pilot@TITAN-1";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=116;
+								type="B_Pilot_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male03ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=114;
+					};
+				};
+				id=113;
+			};
+		};
+		id=91;
+	};
+	class Item4
+	{
+		dataType="Layer";
+		name="5. MP/MC";
+		class Entities
+		{
+			items=8;
+			class Item0
+			{
+				dataType="Layer";
+				name="1. MP";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={8.4938965,0.0014390945,-5.597168};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""MP""];}";
+									name="Militarypolice";
+									description="Military Police@MILITARY-POLICE";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=120;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={7.9086914,0.0014390945,-7.0683594};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""MP""];}";
+									name="Militarypolice1";
+									description="Military Police@MILITARY-POLICE";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=121;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=119;
+					};
+				};
+				id=118;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="2. MC";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=2;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={9.704834,0.0014390945,-2.1689453};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""ZEUS""];}";
+									name="Missioncontroller";
+									description="Mission Controller@MISSION-CONTROLLER";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=124;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_advanced_fatigue_performanceFactor";
+										expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute5
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=6;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={10.138062,0.0014390945,-1.1079102};
+									angles[]={0,4.9435053,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setGroupId [""ZEUS""];}";
+									name="Missioncontroller1";
+									description="Mission Controller@MISSION-CONTROLLER";
+									isPlayable=1;
+									class Inventory
+									{
+										class binocular
+										{
+											name="ACE_VectorDay";
+										};
+										class uniform
+										{
+											typeName="rhs_uniform_cu_ocp";
+											isBackpack=0;
+										};
+										class vest
+										{
+											typeName="rhsusf_iotv_ocp_Rifleman";
+											isBackpack=0;
+										};
+										class backpack
+										{
+											typeName="rhsusf_assault_eagleaiii_ocp";
+											isBackpack=1;
+										};
+										map="ItemMap";
+										compass="ItemCompass";
+										watch="ItemWatch";
+										gps="ItemGPS";
+										goggles="G_Combat";
+										hmd="rhsusf_ANPVS_14";
+										headgear="rhsusf_ach_bare";
+									};
+								};
+								id=125;
+								type="B_Soldier_SL_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male11ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_advanced_fatigue_performanceFactor";
+										expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"", _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute5
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=6;
+								};
+							};
+						};
+						class Attributes
+						{
+						};
+						id=123;
+					};
+				};
+				id=122;
+			};
+			class Item2
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-9.8959961,1.9073486e-006,0.28271484};
+					angles[]={6.1901217,2.0786352,0.02999169};
+				};
+				id=126;
+				type="ModuleCurator_F";
+				atlOffset=1.9073486e-006;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Missioncontroller";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item3
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-9.552002,1.9073486e-006,1.8432617};
+					angles[]={6.1901217,2.0781162,0.02999169};
+				};
+				id=127;
+				type="ModuleCurator_F";
+				atlOffset=1.9073486e-006;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Missioncontroller1";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item4
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-9.2734375,3.8146973e-006,3.1459961};
+					angles[]={6.1917739,2.0781162,0.028327573};
+				};
+				name="adminlogged_1";
+				id=128;
+				type="ModuleCurator_F";
+				atlOffset=3.8146973e-006;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="#adminlogged";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Admin";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=3;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item5
+			{
+				dataType="Logic";
+				class PositionInfo
+				{
+					position[]={-8.9648438,1.9073486e-006,4.5893555};
+					angles[]={6.1884694,2.0789442,0.028325468};
+				};
+				name="zm1_2";
+				id=129;
+				type="ModuleCurator_F";
+				atlOffset=1.9073486e-006;
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ModuleCurator_F_Owner";
+						expression="_this setVariable ['Owner',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="commandant";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ModuleCurator_F_Forced";
+						expression="_this setVariable ['Forced',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ModuleCurator_F_Name";
+						expression="_this setVariable ['Name',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="OVERLORD";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ModuleInfo";
+						expression="false";
+						class Value
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=1;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="ModuleCurator_F_Addons";
+						expression="_this setVariable ['Addons',_value,true];";
+						class Value
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=3;
+							};
+						};
+					};
+					nAttributes=5;
+				};
+			};
+			class Item6
+			{
+				dataType="Layer";
+				name="3. Headless Client";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={-10.667236,0,2.894043};
+							angles[]={6.1901217,2.0781162,0.02666023};
+						};
+						name="HC1";
+						isPlayable=1;
+						id=131;
+						type="HeadlessClient_F";
+					};
+				};
+				id=130;
+			};
+			class Item7
+			{
+				dataType="Comment";
+				class PositionInfo
+				{
+					position[]={-8.2027588,0,2.2143555};
+				};
+				description="Only for use in Tac R Liberation, Domination, H&M  ETC...";
+				id=133;
+			};
+		};
+		id=117;
+		atlOffset=4.7683716e-007;
+	};
+};
