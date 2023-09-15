@@ -1,12 +1,12 @@
 version=54;
-center[]={3493.9995,4.9853516,6091.4409};
+center[]={1522.2307,5,3645.5027};
 class items
 {
 	items=1;
 	class Item0
 	{
 		dataType="Layer";
-		name="S3_MIssion_Controllers_[DEVBUILD]";
+		name="S3_Mission_Controllers_[DEVBUILD]";
 		class Entities
 		{
 			items=8;
@@ -22,133 +22,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-1.1137695,0.016087532,2.1396484};
-							angles[]={-0,4.6973796,0};
-						};
-						side="West";
-						flags=4;
-						class Attributes
-						{
-							init="this setGroupid [""ZEUS""];" \n "this setVariable [""cScripts_Player_Unit"", ""ZEUS""];";
-							name="S3_1";
-							description="Mission Controller";
-							isPlayable=1;
-						};
-						id=2815;
-						type="Cav_B_B_Scout_PlatoonLead_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="acex_headless_blacklist";
-								expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
-								class Value
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=0;
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Male05ENG";
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=0.98000002;
-									};
-								};
-							};
-							nAttributes=3;
-						};
-					};
-					class Item1
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-1.0566406,0.016087532,0.15332031};
-							angles[]={-0,4.6973796,0};
-						};
-						side="West";
-						flags=4;
-						class Attributes
-						{
-							init="this setGroupid [""ZEUS""];" \n "this setVariable [""cScripts_Player_Unit"", ""ZEUS""];";
-							name="S3_2";
-							description="Mission Controller";
-							isPlayable=1;
-						};
-						id=2816;
-						type="Cav_B_C_PlatoonLeader_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="acex_headless_blacklist";
-								expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
-								class Value
-								{
-									class data
-									{
-										singleType="BOOL";
-										value=0;
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Male05ENG";
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=0.98000002;
-									};
-								};
-							};
-							nAttributes=3;
-						};
-					};
-					class Item2
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-1.0876465,0.016087532,4.168457};
+							position[]={-1.8757324,0.0014390945,1.6921387};
 							angles[]={-0,4.6973796,0};
 						};
 						side="West";
@@ -157,10 +31,10 @@ class items
 						{
 							init="this setGroupid [""ZEUS""];" \n "this setVariable [""cScripts_Player_Unit"", ""ZEUS""];";
 							name="S3";
-							description="Mission Controller@MISSION CONTROLLERS";
+							description="Lead Mission Controller@MISSION CONTROLLERS";
 							isPlayable=1;
 						};
-						id=2817;
+						id=2;
 						type="Cav_B_A_JFO_F";
 						class CustomAttributes
 						{
@@ -179,6 +53,19 @@ class items
 							};
 							class Attribute1
 							{
+								property="allowDamage";
+								expression="_this allowdamage _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
 								property="speaker";
 								expression="_this setspeaker _value;";
 								class Value
@@ -190,7 +77,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
+							class Attribute3
 							{
 								property="pitch";
 								expression="_this setpitch _value;";
@@ -203,23 +90,214 @@ class items
 									};
 								};
 							};
-							nAttributes=3;
+							class Attribute4
+							{
+								property="enableStamina";
+								expression="_this enablestamina _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							nAttributes=5;
+						};
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-1.9626465,0.0014390945,0.34912109};
+							angles[]={-0,4.6973796,0};
+						};
+						side="West";
+						flags=4;
+						class Attributes
+						{
+							init="this setGroupid [""ZEUS""];" \n "this setVariable [""cScripts_Player_Unit"", ""ZEUS""];";
+							name="S3_1";
+							description="Assistant Mission Controller@MISSION CONTROLLERS";
+							isPlayable=1;
+						};
+						id=3;
+						type="Cav_B_A_JFO_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="acex_headless_blacklist";
+								expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="allowDamage";
+								expression="_this allowdamage _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male05ENG";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0.98000002;
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="enableStamina";
+								expression="_this enablestamina _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							nAttributes=5;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-2.0135498,0.0014390945,-0.8125};
+							angles[]={-0,4.6973796,0};
+						};
+						side="West";
+						flags=4;
+						class Attributes
+						{
+							init="this setGroupid [""ZEUS""];" \n "this setVariable [""cScripts_Player_Unit"", ""ZEUS""];";
+							name="S3_2";
+							description="Assistant Mission Controller@MISSION CONTROLLERS";
+							isPlayable=1;
+						};
+						id=4;
+						type="Cav_B_A_JFO_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="acex_headless_blacklist";
+								expression="_this setVariable [""acex_headless_blacklist"", _value, true]";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="allowDamage";
+								expression="_this allowdamage _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="speaker";
+								expression="_this setspeaker _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="Male05ENG";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="pitch";
+								expression="_this setpitch _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0.98000002;
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="enableStamina";
+								expression="_this enablestamina _value;";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							nAttributes=5;
 						};
 					};
 				};
 				class Attributes
 				{
 				};
-				id=2814;
+				id=1;
 			};
 			class Item1
 			{
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={4.4960938,0.014648438,-0.94384766};
+					position[]={3.708252,0,-3.4211426};
 				};
-				id=2818;
+				id=5;
 				type="ModuleCuratorAddEditableObjects";
 				class CustomAttributes
 				{
@@ -232,7 +310,7 @@ class items
 							class data
 							{
 								singleType="STRING";
-								value="Z1,Z2,Z3";
+								value="Z1,Z2,Z3,Z4";
 							};
 						};
 					};
@@ -257,10 +335,11 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={0.88964844,0.014648438,4.1196289};
+					position[]={-0.26660156,0,1.9174805};
 					angles[]={0,3.1985602,0};
 				};
-				id=2819;
+				name="Z1";
+				id=6;
 				type="ModuleCurator_F";
 				class CustomAttributes
 				{
@@ -324,10 +403,11 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={0.86547852,0.014648438,2.1728516};
+					position[]={-0.36450195,0,0.50390625};
 					angles[]={0,3.1985602,0};
 				};
-				id=2820;
+				name="Z2";
+				id=7;
 				type="ModuleCurator_F";
 				class CustomAttributes
 				{
@@ -391,10 +471,11 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={0.87060547,0.014648438,0.15966797};
+					position[]={-0.47875977,0,-0.78271484};
 					angles[]={0,3.1985602,0};
 				};
-				id=2821;
+				name="Z3";
+				id=8;
 				type="ModuleCurator_F";
 				class CustomAttributes
 				{
@@ -458,10 +539,11 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={0.81665039,0.014648438,-1.6992188};
+					position[]={-0.48120117,0,-2.1174316};
 					angles[]={0,3.1985602,0};
 				};
-				id=2822;
+				name="Z4";
+				id=9;
 				type="ModuleCurator_F";
 				class CustomAttributes
 				{
@@ -525,9 +607,9 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={4.628418,0.014648438,5.043457};
+					position[]={3.7033691,0,1.4443359};
 				};
-				id=2823;
+				id=10;
 				type="ModuleRespawnPositionWest_F";
 			};
 			class Item7
@@ -535,16 +617,16 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={2.6936035,0.024414063,2.2099609};
+					position[]={1.9057617,0.024414063,-0.2668457};
 				};
 				title="Mission Controllers & Zeus (Tooltip)";
 				description="Do NOT delete things from this composition. All of these tools are vital for missions";
-				id=2824;
-				atlOffset=0.009765625;
+				id=11;
+				atlOffset=0.024414063;
 			};
 		};
-		id=2825;
-		atlOffset=-0.014648438;
+		id=12;
+		atlOffset=-0.0073242188;
 	};
 };
 class connections
@@ -559,8 +641,8 @@ class connections
 		class Item0
 		{
 			linkID=0;
-			item0=2818;
-			item1=2823;
+			item0=5;
+			item1=10;
 			class CustomData
 			{
 				type="Sync";
@@ -569,8 +651,8 @@ class connections
 		class Item1
 		{
 			linkID=1;
-			item0=2819;
-			item1=2818;
+			item0=6;
+			item1=5;
 			class CustomData
 			{
 				type="Sync";
@@ -579,8 +661,8 @@ class connections
 		class Item2
 		{
 			linkID=2;
-			item0=2820;
-			item1=2818;
+			item0=7;
+			item1=5;
 			class CustomData
 			{
 				type="Sync";
@@ -589,8 +671,8 @@ class connections
 		class Item3
 		{
 			linkID=3;
-			item0=2821;
-			item1=2818;
+			item0=8;
+			item1=5;
 			class CustomData
 			{
 				type="Sync";
@@ -599,8 +681,8 @@ class connections
 		class Item4
 		{
 			linkID=4;
-			item0=2822;
-			item1=2818;
+			item0=9;
+			item1=5;
 			class CustomData
 			{
 				type="Sync";

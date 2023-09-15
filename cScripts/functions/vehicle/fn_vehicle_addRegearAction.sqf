@@ -1,16 +1,16 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function add a regear action to a vehicle inside of a staging zone.
+ * This function add a reGear action to a vehicle inside of a staging zone.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * nothing
  *
  * Example:
- * ["truckMcTruckLoad"] call cScripts_fnc_vehicle_addRegearAction
+ * [_vehicle] call cScripts_fnc_vehicle_addRegearAction
  *
  * Public: No
  */
