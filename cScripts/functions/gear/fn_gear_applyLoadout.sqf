@@ -68,7 +68,9 @@ switch (true) do {
 };
 
 // Abilities
-[_unit, _config] call EFUNC(gear,applyAbilities);
+if (!_loadArray) {
+    [_unit, _config] call EFUNC(gear,applyAbilities);
+};
 
 // Functions
 if (GVAR(isPlayer)) then {
