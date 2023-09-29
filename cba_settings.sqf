@@ -883,11 +883,11 @@ force force TFAR_voiceCone = false;
 
 // USAF
 force force usaf_afterburner_setting_allow_ai = true;
-force force USAF_allowNuke = true;
+force force USAF_allowNuke = false;
 force force usaf_debug_setting_enabled_clients = false;
 force force usaf_debug_setting_enabled_server = false;
 force force usaf_f35a_allow_das_coverage = true;
-force force usaf_f35a_allow_sar_imagery = true;
+force force usaf_f35a_allow_sar_imagery = false;
 force force usaf_serviceMenu_setting_allowHangarRearm = true;
 force force usaf_serviceMenu_setting_allowHangarRefuel = true;
 force force usaf_serviceMenu_setting_allowHangarRepair = true;
