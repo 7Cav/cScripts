@@ -66,8 +66,8 @@ force force ace_captives_requireSurrender = 0;
 force force ace_captives_requireSurrenderAi = false;
 
 // ACE Casings
-//ace_casings_enabled = true;
-//ace_casings_maxCasings = 50;
+ace_casings_enabled = true;
+ace_casings_maxCasings = 50;
 
 // ACE Common
 force force ace_common_allowFadeMusic = true;
