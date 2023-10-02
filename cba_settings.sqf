@@ -67,7 +67,7 @@ force force ace_captives_requireSurrenderAi = false;
 
 // ACE Casings
 //ace_casings_enabled = true;
-//ace_casings_maxCasings = 250;
+//ace_casings_maxCasings = 50;
 
 // ACE Common
 force force ace_common_allowFadeMusic = true;
@@ -136,8 +136,8 @@ force force ace_fortify_timeMin = 1.5;
 
 // ACE Fragmentation Simulation
 force force ace_frag_enabled = true;
-force force ace_frag_maxTrack = 10;
-force force ace_frag_maxTrackPerFrame = 10;
+force force ace_frag_maxTrack = 5;
+force force ace_frag_maxTrackPerFrame = 5;
 force force ace_frag_reflectionsEnabled = true;
 force force ace_frag_spallEnabled = false;
 
