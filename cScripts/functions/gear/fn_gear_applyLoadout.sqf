@@ -68,7 +68,7 @@ switch (true) do {
 };
 
 // Abilities
-if (!_loadArray) {
+if (!_loadArray) then {
     [_unit, _config] call EFUNC(gear,applyAbilities);
 };
 
