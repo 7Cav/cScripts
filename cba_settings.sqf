@@ -10,11 +10,11 @@
 //A3TI_REMOVE_FILMGRAIN_RHS = true;
 
 // ACE Advanced Ballistics
-force force ace_advanced_ballistics_ammoTemperatureEnabled = true;
-force force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
-force force ace_advanced_ballistics_bulletTraceEnabled = true;
-force force ace_advanced_ballistics_enabled = true;
-force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
+force force ace_advanced_ballistics_ammoTemperatureEnabled = false;
+force force ace_advanced_ballistics_barrelLengthInfluenceEnabled = false;
+force force ace_advanced_ballistics_bulletTraceEnabled = false;
+force force ace_advanced_ballistics_enabled = false;
+force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = false;
 force force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
@@ -66,8 +66,8 @@ force force ace_captives_requireSurrender = 0;
 force force ace_captives_requireSurrenderAi = false;
 
 // ACE Casings
-//ace_casings_enabled = true;
-//ace_casings_maxCasings = 250;
+ace_casings_enabled = true;
+ace_casings_maxCasings = 20;
 
 // ACE Common
 force force ace_common_allowFadeMusic = true;
@@ -136,8 +136,8 @@ force force ace_fortify_timeMin = 1.5;
 
 // ACE Fragmentation Simulation
 force force ace_frag_enabled = true;
-force force ace_frag_maxTrack = 10;
-force force ace_frag_maxTrackPerFrame = 10;
+force force ace_frag_maxTrack = 5;
+force force ace_frag_maxTrackPerFrame = 5;
 force force ace_frag_reflectionsEnabled = true;
 force force ace_frag_spallEnabled = false;
 
@@ -469,17 +469,17 @@ force force ace_medical_treatment_convertItems = 2;
 force force ace_medical_treatment_cprSuccessChanceMax = 0.4;
 force force ace_medical_treatment_cprSuccessChanceMin = 0.4;
 force force ace_medical_treatment_holsterRequired = 0;
-force force ace_medical_treatment_litterCleanupDelay = 600;
+force force ace_medical_treatment_litterCleanupDelay = 100;
 force force ace_medical_treatment_locationEpinephrine = 0;
 force force ace_medical_treatment_locationIV = 0;
 force force ace_medical_treatment_locationPAK = 0;
 force force ace_medical_treatment_locationsBoostTraining = true;
 force force ace_medical_treatment_locationSurgicalKit = 0;
-force force ace_medical_treatment_maxLitterObjects = 100;
+force force ace_medical_treatment_maxLitterObjects = 20;
 force force ace_medical_treatment_medicEpinephrine = 1;
-force force ace_medical_treatment_medicIV = 1;
+force force ace_medical_treatment_medicIV = 2;
 force force ace_medical_treatment_medicPAK = 2;
-force force ace_medical_treatment_medicSurgicalKit = 1;
+force force ace_medical_treatment_medicSurgicalKit = 2;
 force force ace_medical_treatment_timeCoefficientPAK = 0.7;
 force force ace_medical_treatment_treatmentTimeAutoinjector = 5;
 force force ace_medical_treatment_treatmentTimeBodyBag = 10;
@@ -851,7 +851,7 @@ force force TFAR_objectInterceptionStrength = 400;
 force force tfar_radiocode_east = "_opfor";
 force force tfar_radiocode_independent = "_independent";
 force force tfar_radiocode_west = "_bluefor";
-force force tfar_radioCodesDisabled = true;
+force force tfar_radioCodesDisabled = false;
 force force TFAR_SameLRFrequenciesForSide = false;
 force force TFAR_SameSRFrequenciesForSide = false;
 force force TFAR_setting_defaultFrequencies_lr_east = "";
@@ -883,11 +883,11 @@ force force TFAR_voiceCone = false;
 
 // USAF
 force force usaf_afterburner_setting_allow_ai = true;
-force force USAF_allowNuke = true;
+force force USAF_allowNuke = false;
 force force usaf_debug_setting_enabled_clients = false;
 force force usaf_debug_setting_enabled_server = false;
 force force usaf_f35a_allow_das_coverage = true;
-force force usaf_f35a_allow_sar_imagery = true;
+force force usaf_f35a_allow_sar_imagery = false;
 force force usaf_serviceMenu_setting_allowHangarRearm = true;
 force force usaf_serviceMenu_setting_allowHangarRefuel = true;
 force force usaf_serviceMenu_setting_allowHangarRepair = true;

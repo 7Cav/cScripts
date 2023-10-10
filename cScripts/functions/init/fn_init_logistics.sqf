@@ -328,13 +328,12 @@ private _dataArray = [
     ["bravo_company_atlas", [
         ["ACE_microDAGR",0],
         ["ItemAndroid",0],
+
         ["kat_IV_16",0],
         ["ACE_adenosine",0],
         ["kat_AED",0],
-        ["kat_X_AED",0],
         ["ACE_packingBandage",0],
         ["ACE_quikclot",0],
-        ["ACE_elasticBandage",0],
         ["ACE_bloodIV",0],
         ["ACE_bloodIV_250",0],
         ["ACE_bloodIV_500",0],
@@ -486,6 +485,8 @@ private _dataArray = [
         ["USP_PVS14", 0],
         ["USP_PVS15", 0],
         ["USP_L4G19", 0],
+        ["rhsusf_ANPVS_14", 0],
+        ["rhsusf_ANPVS_15", 0],
         ["USP_RHINO", 0]
     ]],
 
@@ -1390,6 +1391,9 @@ private _dataArray = [
         ["launch_MRAWS_green_F", 0],
         ["launch_MRAWS_sand_F", 0],
         ["launch_MRAWS_olive_F", 0],
+        ["rhs_weap_fgm148",0],
+        ["rhs_weap_fim92",0],
+
 
         // MAAWS ammo
         ["rhs_mag_maaws_HEAT", 0],
@@ -1399,6 +1403,8 @@ private _dataArray = [
         ["MAA_MAAWS_GMM_MT", 0],
         ["MAA_MAAWS_MT756", 0],
         ["rhs_mag_maaws_HE", 0],
+        ["rhs_fgm148_magazine_AT",0],
+        ["rhs_fim92_mag",0],
         ["MRAWS_HE_F", 0],
 
         // Backpacks
