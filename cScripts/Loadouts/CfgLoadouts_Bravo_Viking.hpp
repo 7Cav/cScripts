@@ -27,7 +27,7 @@ class Cav_B_B_Scout_PlatoonSergeant_F: Cav_B_B_Scout_Officer_F {
     abilityEngineer = 1;
 };
 
-class Cav_B_B_Scout_PlatoonMedic_F: Cav_B_B_Scout_Base_F {
+class Cav_B_B_Scout_PlatoonMedic_F: Cav_B_B_Scout_Officer_F {
     displayName = "Viking Platoon Medic";
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
     scope = 2;
