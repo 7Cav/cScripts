@@ -25,7 +25,7 @@ class Cav_B_C_PlatoonMedic_F: Cav_B_C_Officer_F {
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14]]],["USP_CRYE_CPC_MEDIC_BELT_MC",[["ACE_IR_Strobe_Item",2],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",7,30],["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["ACE_Chemlight_HiBlue",4,1],["SmokeShellBlue",2,1],["SmokeShellGreen",2,1],["HandGrenade",2,1]]],["B_Carryall_mcamo",[["USP_PVS15",1],["ACE_EarPlugs",2],["ACE_packingBandage",30],["ACE_quikclot",20],["kat_IO_FAST",3],["ACE_EntrenchingTool",1],["ACE_splint",8],["ACE_tourniquet",6],["kat_naloxone",4],["ACE_epinephrine",4],["ACE_surgicalKit",1],["ACE_SpraypaintBlue",1],["ACE_elasticBandage",40],["kat_IV_16",20],["ACE_plasmaIV_500",8],["ACE_salineIV_500",4],["ACE_salineIV",2],["ACE_plasmaIV",2],["ACE_bloodIV_500",4],["ACE_adenosine",4],["ACE_morphine",4],["kat_EACA",10],["kat_lidocaine",4],["kat_nitroglycerin",10],["kat_norepinephrine",10],["kat_phenylephrine",10],["kat_TXA",20],["kat_Painkiller",4,10],["kat_Carbonate",2,10]]],"USP_OPSCORE_FASTMTC_CS","USP_MFRAME_TAN",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     insignia = "cav_insignia_specialized_cls";
-    abilityMedic = 1;
+    abilityMedic = 2;
     role = "medic";
     icon = "iconManMedic";
 };
