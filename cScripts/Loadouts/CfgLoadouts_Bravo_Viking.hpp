@@ -33,7 +33,7 @@ class Cav_B_B_Scout_PlatoonMedic_F: Cav_B_B_Scout_Officer_F {
     scope = 2;
     loadout = [["rhs_weap_mk18_grip2_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_grip2_wd"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_tourniquet",10],["kat_IV_16",30],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_splint",6],["kat_Painkiller",4,10],["kat_Carbonate",2,10]]],["USP_CRYE_CPC_MEDIC_BELT_MC",[["ACE_surgicalKit",1],["ACE_Chemlight_Shield",1],["ACE_Chemlight_IR",2,1],["HandGrenade",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",8,30],["Chemlight_red",1,1],["SmokeShellBlue",2,1],["SmokeShellPurple",2,1]]],["USP_TACTICAL_PACK_CCT3",[["ACE_elasticBandage",30],["ACE_epinephrine",10],["ACE_packingBandage",10],["ACE_quikclot",40],["ACE_morphine",10],["kat_naloxone",4],["ACE_plasmaIV_500",10],["ACE_plasmaIV",10],["ACE_salineIV_250",5],["kat_phenylephrine_inject",10],["kat_AED",1],["ACE_EntrenchingTool",1],["kat_Painkiller",6,10]]],"USP_OPS_FASTXP_TAN_MC_06","USP_DETCORD_SMC1_MC2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch","USP_PVS31_LOW"]];
     insignia = "cav_insignia_specialized_cls";
-    abilityMedic = 1;
+    abilityMedic = 2;
     role = "medic";
     icon = "iconManMedic";
 };
