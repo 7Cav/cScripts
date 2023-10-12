@@ -19,10 +19,10 @@ private _dataArray = [
     // // // // // // //
     ["alpha_company", [
         // Radios
-        ["ACRE_PRC343", 30],
-        ["ACRE_PRC152", 20],
-        ["ACRE_PRC117F", 30],
-        ["TFAR_anprc152", 30],
+        ["ACRE_PRC343", 0],
+        ["ACRE_PRC152", 0],
+        ["ACRE_PRC117F", 0],
+        ["TFAR_anprc152", 0],
 
         // Helmets
         ["H_Cap_tan", 0],
@@ -81,13 +81,13 @@ private _dataArray = [
         ["rhs_weap_m240B",2],
         ["rhs_weap_M136_hp",6],
 
-        ["acc_flashlight",50],
-        ["rhsusf_acc_anpeq15_bk_light",50],
-        ["rhsusf_acc_acog_mdo",50],
-        ["rhsusf_acc_ELCAN",50],
-        ["rhsusf_acc_compm4",50],
-        ["rhsusf_acc_acog3",50],
-        ["rhsusf_acc_eotech_xps3",50],
+        ["acc_flashlight",0],
+        ["rhsusf_acc_anpeq15_bk_light",0],
+        ["rhsusf_acc_acog_mdo",0],
+        ["rhsusf_acc_ELCAN",0],
+        ["rhsusf_acc_compm4",0],
+        ["rhsusf_acc_acog3",0],
+        ["rhsusf_acc_eotech_xps3",0],
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 250],
@@ -122,13 +122,13 @@ private _dataArray = [
         ["Chemlight_yellow",25],
 
         // Tools and Items
-        ["Toolkit",50],
-        ["ACE_Flashlight_MX991",50],
-        ["itemcTabHCam",50],
+        ["Toolkit",10],
+        ["ACE_Flashlight_MX991",0],
+        ["itemcTabHCam",0],
         ["ACE_CableTie",50],
         ["ACE_Chemlight_Shield",25],
-        ["ACE_VMH3",20],
-        ["ACE_VMM3",20],
+        ["ACE_VMH3",2],
+        ["ACE_VMM3",2],
         ["Flagstack_Red",20],
         ["Signpack_Mines",20],
         
@@ -137,7 +137,7 @@ private _dataArray = [
         ["ItemcTab", 0],
 
         // Medical
-        ["ACE_EarPlugs",250],
+        ["ACE_EarPlugs",10],
         ["ACE_quikclot",250],
         ["ACE_packingBandage",250],
         ["ACE_tourniquet",250],
@@ -171,10 +171,10 @@ private _dataArray = [
 
     ["bravo_company", [
         // Radios
-        ["ACRE_PRC343", 30],
-        ["ACRE_PRC152", 20],
-        ["ACRE_PRC117F", 30],
-        ["TFAR_anprc152", 30],
+        ["ACRE_PRC343", 0],
+        ["ACRE_PRC152", 0],
+        ["ACRE_PRC117F", 0],
+        ["TFAR_anprc152", 0],
 
         // Helmets
         ["USP_OPS_FASTXP_TAN_MC_02", 0],
@@ -258,10 +258,10 @@ private _dataArray = [
 
     ["bravo_company_viking", [
         // Radios
-        ["ACRE_PRC343", 30],
-        ["ACRE_PRC152", 20],
-        ["ACRE_PRC117F", 20],
-        ["TFAR_anprc152", 30],
+        ["ACRE_PRC343", 0],
+        ["ACRE_PRC152", 0],
+        ["ACRE_PRC117F", 0],
+        ["TFAR_anprc152", 0],
 
         // Lunchers and mortars
         ["rhs_weap_M136_hedp",1],
@@ -318,11 +318,11 @@ private _dataArray = [
         ["ClaymoreDirectionalMine_Remote_Mag",2],
 
         // Tools and Items
-        ["ACE_Flashlight_MX991",50],
+        ["ACE_Flashlight_MX991",0],
         ["ACE_CableTie",100],
         ["ACE_wirecutter",5],
         ["ACE_EntrenchingTool",20],
-        ["B_UavTerminal",20]
+        ["B_UavTerminal",5]
     ]],
 
     ["bravo_company_atlas", [
@@ -378,10 +378,10 @@ private _dataArray = [
         // Tools and Items
         ["ACE_wirecutter",10],
         ["ACE_EntrenchingTool",20],
-        ["ACE_IR_Strobe_Item",20],
+        ["ACE_IR_Strobe_Item",0],
          
         // Medical
-        ["ACE_EarPlugs",250],
+        ["ACE_EarPlugs",10],
 
         // Backpacks
         ["B_Carryall_mcamo", 0],
@@ -403,9 +403,9 @@ private _dataArray = [
 
     ["charlie_company", [
         // Radios
-        ["ACRE_PRC343", 30],
-        ["ACRE_PRC152", 20],
-        ["TFAR_anprc152", 30],
+        ["ACRE_PRC343", 0],
+        ["ACRE_PRC152", 0],
+        ["TFAR_anprc152", 0],
 
         // Helmets
         ["DAR_Beret_Mar", 0],
@@ -482,7 +482,7 @@ private _dataArray = [
 
         // Tools and Items
         ["ACE_CableTie",100],
-        ["USP_PVS15",50],
+        ["USP_PVS15",0],
         ["ACE_EntrenchingTool",10],
         ["ACE_wirecutter",10],
         ["rhs_weap_rsp30_green",10],
@@ -926,11 +926,11 @@ private _dataArray = [
     ]],
     // ["demolitions", []],
     ["radios", [
-        ["ACRE_PRC343", 40],
-        ["ACRE_PRC152", 40],
-        ["ACRE_PRC117F", 40],
+        ["ACRE_PRC343", 0],
+        ["ACRE_PRC152", 0],
+        ["ACRE_PRC117F", 0],
 
-        ["TFAR_anprc152", 40]
+        ["TFAR_anprc152", 0]
     ]],
 
     // No longer used \\
@@ -1324,7 +1324,7 @@ private _dataArray = [
         ["kat_Painkiller",10],
 
         // Common Gear
-        ["ACE_IR_Strobe_Item",20]
+        ["ACE_IR_Strobe_Item",0]
     ]],
 
     ["arsenal_company_fallback", [
