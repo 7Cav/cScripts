@@ -378,9 +378,27 @@ private _dataArray = [
         // Tools and Items
         ["ACE_wirecutter",10],
         ["ACE_EntrenchingTool",20],
-        ["ACE_IR_Strobe_Item",20], 
+        ["ACE_IR_Strobe_Item",20],
+         
         // Medical
-        ["ACE_EarPlugs",250]
+        ["ACE_EarPlugs",250],
+
+        // Backpacks
+        ["B_Carryall_mcamo", 0],
+        ["B_UAV_01_backpack_F", 0],
+        ["B_Kitbag_mcamo", 0],
+        ["UK3CB_B_Backpack_Pocket_OLI", 0],
+        ["UK3CB_B_Backpack_Pocket", 0],
+        ["B_rhsusf_B_BACKPACK", 0],
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
+        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
 
     ["charlie_company", [
