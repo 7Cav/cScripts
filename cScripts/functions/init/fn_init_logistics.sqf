@@ -91,7 +91,7 @@ private _dataArray = [
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 250],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 0],
@@ -204,7 +204,7 @@ private _dataArray = [
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 250],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["rhs_mag_30Rnd_556x45_Mk262_PMAG", 0],
@@ -430,7 +430,7 @@ private _dataArray = [
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 250],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 0],
