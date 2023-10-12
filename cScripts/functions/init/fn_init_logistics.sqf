@@ -265,6 +265,7 @@ private _dataArray = [
 
         // Lunchers and mortars
         ["rhs_weap_M136_hedp",1],
+        ["rhs_weap_m72a7",10],
         ["rhs_weap_fgm148",1],
         ["rhs_weap_fim92",2],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry",2],
@@ -424,7 +425,7 @@ private _dataArray = [
         // Weapons
         ["rhs_weap_M136_hp",10],
         ["rhs_weap_M136_hedp",10],
-        ["rhs_weap_m72a7",50],
+        ["rhs_weap_m72a7",10],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry",5],
 
         // Ammo
