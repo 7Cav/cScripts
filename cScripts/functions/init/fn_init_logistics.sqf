@@ -27,7 +27,7 @@ private _dataArray = [
         // Helmets
         ["H_Cap_tan", 0],
         ["H_Cap_headphones", 0],
-        ["DAR_Beret_Mar", 12],
+        ["DAR_Beret_Mar", 0],
         ["rhsusf_hgu56p_black", 0],
         ["rhsusf_hgu56p_green", 0],
         ["rhsusf_hgu56p_mask_black_skull", 0],
@@ -68,7 +68,7 @@ private _dataArray = [
         ["rhsusf_hgu56p_white", 0],
         ["rhsusf_hgu56p", 0],
         ["rhsusf_ihadss", 12],
-        ["rhsusf_patrolcap_ocp", 5],
+        ["rhsusf_patrolcap_ocp", 0],
         
         // Vest
         ["B_ACU_crye_ocp_SH_1", 0],
