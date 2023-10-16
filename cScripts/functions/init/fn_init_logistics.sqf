@@ -1529,7 +1529,7 @@ private _dataArray = [
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
     // Weapons
-    ["arsenal_weap_underbarrel", [
+    ["arsenal_weap_ugl", [
         ["rhs_weap_m4a1_m320", 0],
         ["rhs_weap_mk18_m320", 0],
         ["rhs_weap_M320", 0],

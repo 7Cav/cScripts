@@ -58,7 +58,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
 private _primaryWeapon = if (!isNil{_loadout#0#0}) then {_loadout#0#0} else {""};
 private _weaponSystemSpecific = switch (true) do {
     case (_primaryWeapon isKindof ['rhs_weap_mk18_m320', configFile >> 'CfgWeapons']
-            || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS(arsenal_weap_underbarrel);};
+            || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS(arsenal_weap_ugl);};
 
     case (_primaryWeapon isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m16a4', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS(arsenal_weap_m4);};
