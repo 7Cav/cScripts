@@ -30,7 +30,7 @@ class Cav_B_C_Weapons_M240B_AssistantMachinegunner_F: Cav_B_Charlie_Weapons_base
 class Cav_B_C_Weapons_MAAWS_MAAWSGunner_F: Cav_B_Charlie_Weapons_base_F {
     displayName = "MAAWS Gunner";
     scope = 2;
-    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],""],["rhs_weap_maaws","","","rhs_optic_maaws",["rhs_mag_maaws_HEAT",1],[],""],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_splint",2],["kat_Painkiller",1,10]]],["USP_CRYE_CPC_LIGHT_MC",[["USP_PVS15",1],["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1],["ACE_Chemlight_IR",2,1]]],["B_AssaultPack_mcamo",[["rhs_mag_maaws_HEAT",1,1]]],"USP_OPSCORE_FASTMTC_CW","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
+    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],""],["launch_MRAWS_green_F","","","",["rhs_mag_maaws_HEAT",1],[],""],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_splint",2],["kat_Painkiller",1,10]]],["USP_CRYE_CPC_LIGHT_MC",[["USP_PVS15",1],["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["HandGrenade",2,1],["ACE_Chemlight_IR",2,1]]],["B_AssaultPack_mcamo",[["rhs_mag_maaws_HEAT",1,1],["rhs_mag_maaws_HE",1,1]]],"USP_OPSCORE_FASTMTC_CW","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     icon = "iconManAT";
 };
 
