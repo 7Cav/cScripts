@@ -1178,6 +1178,8 @@ force force lambs_danger_disableAIPlayerGroupReaction = false;
 force force lambs_danger_disableAutonomousFlares = false;
 force force lambs_danger_disableAutonomousSmokeGrenades = false;
 force force lambs_danger_panicChance = 0.1;
+
+// LAMBS Danger Eventhandlers
 force force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
 force force lambs_eventhandlers_ExplosionReactionTime = 9;
 
@@ -1206,6 +1208,8 @@ force force lambs_main_radioEast = 500;
 force force lambs_main_radioGuer = 500;
 force force lambs_main_radioShout = 100;
 force force lambs_main_radioWest = 500;
+
+// LAMBS Danger WP
 force force lambs_wp_autoAddArtillery = false;
 
 // Simple Suppress
