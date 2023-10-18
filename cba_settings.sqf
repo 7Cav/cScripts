@@ -100,6 +100,8 @@ force force ace_csw_progressBarTimeCoefficent = 1;
 
 // ACE Dragging
 force force ace_dragging_dragAndFire = true;
+force force ace_dragging_allowRunWithLightweight = true;
+force force ace_dragging_skipContainerWeight = false;
 
 // ACE Explosives
 force force ace_explosives_customTimerDefault = 30;
@@ -108,19 +110,6 @@ force force ace_explosives_customTimerMin = 5;
 force force ace_explosives_explodeOnDefuse = false;
 force force ace_explosives_punishNonSpecialists = false;
 force force ace_explosives_requireSpecialist = true;
-
-// ACE Field Rations
-force force acex_field_rations_affectAdvancedFatigue = true;
-force force acex_field_rations_enabled = false;
-force force acex_field_rations_hudShowLevel = 70;
-//acex_field_rations_hudTransparency = -1;
-//acex_field_rations_hudType = 0;
-force force acex_field_rations_hungerSatiated = 1;
-force force acex_field_rations_terrainObjectActions = false;
-force force acex_field_rations_thirstQuenched = 1;
-force force acex_field_rations_timeWithoutFood = 504;
-force force acex_field_rations_timeWithoutWater = 168;
-force force acex_field_rations_waterSourceActions = 2;
 
 // ACE Fire
 force force ace_fire_dropWeapon = 1;
@@ -489,6 +478,21 @@ force force ace_medical_treatment_treatmentTimeSplint = 7;
 force force ace_medical_treatment_treatmentTimeTourniquet = 7;
 force force ace_medical_treatment_woundReopenChance = 1;
 force force ace_medical_treatment_woundStitchTime = 5;
+force force ace_medical_ai_requireItems = true;
+force force ace_medical_dropWeaponUnconsciousChance = false;
+force force ace_medical_engine_damagePassThroughEffect = 0;
+//force force ace_medical_gui_bodyPartOutlineColor = false;
+//force force ace_medical_gui_peekMedicalInfoReleaseDelay = false;
+//force force ace_medical_gui_peekMedicualOnHit = false;
+//force force ace_medical_gui_peekMedicalOnHitDuration = false;
+//force force ace_medical_gui_showDamageEntry = false;
+force force ace_medical_gui_tourniquetWarning = true;
+force force ace_medical_painUnconsciousThreshold = 0.5;
+force force ace_medical_treatment_allowGraveDigging = false;
+force force ace_medical_treatment_bandageEffectiveness = 1;
+force force ace_medical_treatment_bandageRollover = true;
+force force ace_medical_treartment_graveDiggingMarker = false;
+force force ace_medical_treartment_treatmentTimeGrave = false;
 
 // ACE Name Tags
 //ace_nametags_ambientBrightnessAffectViewDist = 1;
@@ -533,50 +537,148 @@ force force ace_overheating_unJamFailChance = 0.1;
 force force ace_overheating_unJamOnreload = false;
 force force ace_overheating_unJamOnSwapBarrel = true;
 
-// ACE Pharmacy - AED
-force force aceP_circulation_CPR_Chance_Default = 25;
-force force aceP_circulation_CPR_Chance_Doctor = 40;
-force force aceP_circulation_CPR_Chance_RegularMedic = 35;
-force force aceP_circulation_DeactMon_whileAED_X = true;
-force force aceP_circulation_distanceLimit_AEDX = 30;
-force force aceP_circulation_enable_CPR_Chances = true;
-force force aceP_circulation_medLvl_AED_X = 1;
-force force aceP_circulation_SuccesCh_AED = 60;
-force force aceP_circulation_SuccesCh_AED_X = 80;
-force force aceP_circulation_timeLimit_AEDX = 1800;
-force force aceP_circulation_useLocation_AED = 0;
+// KAT - ADV Medical: Airway
+force kat_airway_Accuvac_time = 5.19822;
+force kat_airway_CancelRecoveryPosition_Time = 6;
+force kat_airway_CheckAirway_time = 2;
+force kat_airway_checkbox_puking_sound = true;
+force kat_airway_Colored_logs = true;
+force kat_airway_enable = false;
+force kat_airway_Guedeltubus_time = 5.60715;
+force kat_airway_Larynxtubus_time = 6.53977;
+force kat_airway_medLvl_Accuvac = 1;
+force kat_airway_medLvl_Guedeltubus = 1;
+force kat_airway_medLvl_Larynxtubus = 2;
+force kat_airway_occlusion_repeatTimer = 60;
+force kat_airway_Overstretch_time = 3;
+force kat_airway_probability_headturning = 50;
+force kat_airway_probability_obstruction = 15;
+force kat_airway_probability_occluded = 10;
+force kat_airway_RecoveryPosition_Time = 6;
+force kat_airway_string_exit = "";
+force kat_airway_TurnAround_time = 2;
 
-// ACE Pharmacy - Fractures
-force force aceP_circulation_closedLocation = 0;
-force force aceP_circulation_closedReduction = 1;
-force force aceP_circulation_closedTime = 10;
-force force aceP_circulation_compoundChance = 30;
-force force aceP_circulation_enable_fracture = true;
-force force aceP_circulation_etomidateTime = 45;
-force force aceP_circulation_fractureCheck_Level = 0;
-force force aceP_circulation_incisionTime = 10;
-force force aceP_circulation_openTime = 15;
-force force aceP_circulation_simpleChance = 60;
-force force aceP_circulation_surgicalAction = 2;
-force force aceP_circulation_surgicalLocation = 0;
-force force aceP_circulation_surgicalTime = 8;
+// KAT - ADV Medical: Breathing
+force kat_breathing_advPtxChance = 15;
+force kat_breathing_advPtxEnable = true;
+force kat_breathing_cyanosisShowInMenu = false;
+force kat_breathing_deterioratingPneumothorax_chance = 4.87837;
+force kat_breathing_deterioratingPneumothorax_countdown = 120;
+force kat_breathing_enable = false;
+force kat_breathing_enable_selfChestseal = 0;
+force kat_breathing_enableCyanosis = true;
+force kat_breathing_enableSPO2Flashing = true;
+force kat_breathing_HPTXBleedAmount = 0.06;
+force kat_breathing_hptxChance = 10;
+force kat_breathing_lowSPO2Level = 90;
+force kat_breathing_medLvl_Chestseal = 2;
+force kat_breathing_medLvl_Cyanosis = 1;
+force kat_breathing_medLvl_hemopneumothoraxTreatment = 2;
+force kat_breathing_medLvl_Pulseoximeter = 0;
+force kat_breathing_mildValue = 75;
+force kat_breathing_pneumothorax_hardcore = true;
+force kat_breathing_pneumothoraxChance = 14.9219;
+force kat_breathing_pneumothoraxDamageThreshold = 0.4;
+force kat_breathing_severeValue = 66;
+force kat_breathing_showPneumothorax_dupe = true;
+force kat_breathing_slightValue = 90;
+force kat_breathing_SpO2_dieActive = true;
+force kat_breathing_SpO2_dieValue = 65;
+force kat_breathing_SpO2_MultiplyNegative = 1;
+force kat_breathing_SpO2_MultiplyPositive = 1;
+force kat_breathing_SpO2_perfusion = true;
+force kat_breathing_SpO2_PerfusionMultiplier = 1;
+force kat_breathing_SpO2_unconscious = 75;
+force kat_breathing_Stable_spo2 = 85;
+force kat_breathing_staminaLossAtLowSPO2 = true;
+kat_breathing_stethoscopeSoundVolume = 2;
+force kat_breathing_tensionhemothorax_hardcore = true;
 
-// ACE Pharmacy - Medications
-force force aceP_circulation_aiEnableAdvanced = false;
-force force aceP_circulation_blockChance = 20;
-force force aceP_circulation_coagulation = true;
-force force aceP_circulation_factorDrugs = 2;
-force force aceP_circulation_IOestablish = 7;
-force force aceP_circulation_IVdrop = 600;
-force force aceP_circulation_IVdropEnable = true;
-force force aceP_circulation_IVestablish = 6;
-force force aceP_circulation_IVmedic = 2;
-force force aceP_circulation_IVreuse = false;
-force force aceP_circulation_kidneyAction = false;
-force force aceP_circulation_maxStack = 5;
-force force aceP_circulation_PushTime = 7;
-force force aceP_circulation_surgicalDrugs = 2;
-force force aceP_circulation_vasoDrugs = 1;
+// KAT - ADV Medical: Pharmacy
+force kat_pharma_blockChance = 19.9438;
+force kat_pharma_carbonateChance = 100;
+force kat_pharma_chromatic_aberration_checkbox_fentanyl = true;
+force kat_pharma_chromatic_aberration_checkbox_ketamine = true;
+force kat_pharma_chromatic_aberration_checkbox_pervitin = true;
+force kat_pharma_chromatic_aberration_slider_fentanyl = 2;
+force kat_pharma_chromatic_aberration_slider_ketamine = 1.5;
+force kat_pharma_chromatic_aberration_slider_pervitin = 1.5;
+force kat_pharma_coagulation = true;
+force kat_pharma_ivCheckLimbDamage = false;
+force kat_pharma_IVdrop = 1200;
+force kat_pharma_IVdropEnable = true;
+force kat_pharma_IVreuse = true;
+force kat_pharma_kidneyAction = true;
+force kat_pharma_MedicationsRequireInsIV = true;
+force kat_pharma_medLvl_Amiodarone = 2;
+force kat_pharma_medLvl_ApplyIO = 2;
+force kat_pharma_medLvl_ApplyIV = 2;
+force kat_pharma_medLvl_Atropine = 2;
+force kat_pharma_medLvl_Carbonate = 0;
+force kat_pharma_medLvl_EACA = 2;
+force kat_pharma_medLvl_Etomidate = 2;
+force kat_pharma_medLvl_Fentanyl = 2;
+force kat_pharma_medLvl_Flumezenil = 2;
+force kat_pharma_medLvl_Ketamine = 1;
+force kat_pharma_medLvl_Lidocaine = 2;
+force kat_pharma_medLvl_Lorazepam = 2;
+force kat_pharma_medLvl_Nalbuphine = 1;
+force kat_pharma_medLvl_Naloxone = 0;
+force kat_pharma_medLvl_Nitroglycerin = 2;
+force kat_pharma_medLvl_Norepinephrine = 2;
+force kat_pharma_medLvl_Pervitin = 2;
+force kat_pharma_medLvl_Phenylephrine = 2;
+force kat_pharma_medLvl_Reorientation = 0;
+force kat_pharma_medLvl_TXA = 2;
+force kat_pharma_pervitinSpeed = 1.15;
+force kat_pharma_Reorientation_Enable = true;
+force kat_pharma_Reorientation_Slap = true;
+force kat_pharma_reorientationChance = 100;
+force kat_pharma_RequireInsIV = true;
+force kat_pharma_treatmentTime_Amiodarone = 5;
+force kat_pharma_treatmentTime_ApplyIO = 5;
+force kat_pharma_treatmentTime_ApplyIV = 5;
+force kat_pharma_treatmentTime_Atropine = 5;
+force kat_pharma_treatmentTime_Carbonate = 5;
+force kat_pharma_treatmentTime_EACA = 5;
+force kat_pharma_treatmentTime_Etomidate = 2;
+force kat_pharma_treatmentTime_Fentanyl = 5;
+force kat_pharma_treatmentTime_Flumazenil = 2;
+force kat_pharma_treatmentTime_Ketamine = 5;
+force kat_pharma_treatmentTime_Lidocaine = 5;
+force kat_pharma_treatmentTime_Lorazepam = 2;
+force kat_pharma_treatmentTime_Nalbuphine = 5;
+force kat_pharma_treatmentTime_Naloxone = 5;
+force kat_pharma_treatmentTime_Nitroglycerin = 5;
+force kat_pharma_treatmentTime_Norepinephrine = 5;
+force kat_pharma_treatmentTime_Pervitin = 5;
+force kat_pharma_treatmentTime_Phenylephrine = 5;
+force kat_pharma_treatmentTime_Reorientation = 2;
+force kat_pharma_treatmentTime_TXA = 5;
+force kat_pharma_weapon_sway_pervitin = true;
+
+// KAT - ADV Medical: Surgery
+force kat_surgery_BreathCheck_MedLevel = 1;
+force kat_surgery_BreathCheck_Time = 2;
+force kat_surgery_closedLocation = 0;
+force kat_surgery_closedReduction_MedLevel = 2;
+force kat_surgery_closedReductionFailChance = 0;
+force kat_surgery_closedTime = 10;
+force kat_surgery_compoundChance = 20;
+force kat_surgery_debrideTime = 20;
+force kat_surgery_enable_fracture = true;
+force kat_surgery_enable_selfCheckFracture = 1;
+force kat_surgery_etomidateTime = 45;
+force kat_surgery_fractureCheck_MedLevel = 0;
+force kat_surgery_fractureCheck_Time = 5;
+force kat_surgery_incisionTime = 10;
+force kat_surgery_intermediateTime = 8;
+force kat_surgery_npwtTime = 20;
+force kat_surgery_openTime = 15;
+force kat_surgery_simpleChance = 60;
+force kat_surgery_surgicalAction_MedLevel = 2;
+force kat_surgery_surgicalLocation = 0;
+force kat_surgery_uncon_requieredForActions = true;
 
 // ACE Pointing
 force force ace_finger_enabled = true;
@@ -606,6 +708,21 @@ force force ace_quickmount_speed = 5;
 force force ace_respawn_removeDeadBodiesDisconnected = false;
 force force ace_respawn_savePreDeathGear = false;
 
+// ACE Repair
+force force ace_repair_enabled = true;
+force force ace_repair_miscRepairTime = 15;
+force force ace_repair_patchWheelEnabled = 0;
+force force ace_repair_patchWheelLocation = 0;
+force force ace_repair_patchWheelMaximumRepair = 0.5;
+force force ace_repair_patchWheelRequiredItems = 1;
+force force ace_repair_patchWheelTime = 2.5;
+force force ace_repair_timeCoefficientFullRepair = 1.5;
+force force ace_repair_wheelChangeTime = 5;
+
+// ACE Rearm
+force force ace_rearm_enable = true;
+force force ace_refuel_cargoRate = 10;
+
 // ACE Scopes
 force force ace_scopes_correctZeroing = true;
 force force ace_scopes_deduceBarometricPressureFromTerrainAltitude = false;
@@ -619,8 +736,28 @@ force force ace_scopes_zeroReferenceBarometricPressure = 1013.25;
 force force ace_scopes_zeroReferenceHumidity = 0;
 force force ace_scopes_zeroReferenceTemperature = 15;
 
-// ACE Sitting
+// ACEX
+force force acex_field_rations_affectAdvancedFatigue = true;
+force force acex_field_rations_enabled = false;
+force force acex_field_rations_hudShowLevel = 70;
+force force acex_field_rations_hungerSatiated = 1;
+force force acex_field_rations_terrainObjectActions = false;
+force force acex_field_rations_thirstQuenched = 1;
+force force acex_field_rations_timeWithoutFood = 504;
+force force acex_field_rations_timeWithoutWater = 168;
+force force acex_field_rations_waterSourceActions = 2;
+force force acex_headless_delay = 15;
+force force acex_headless_enabled = false;
+force force acex_headless_endMission = 0;
+force force acex_headless_log = false;
+force force acex_headless_transferLoadout = 1;
 force force acex_sitting_enable = true;
+force force acex_viewrestriction_mode = 1;
+force force acex_viewrestriction_modeSelectiveAir = 1;
+force force acex_viewrestriction_modeSelectiveFoot = 1;
+force force acex_viewrestriction_modeSelectiveLand = 1;
+force force acex_viewrestriction_modeSelectiveSea = 1;
+force force acex_viewrestriction_preserveView = false;
 
 // ACE Spectator
 //ace_spectator_enableAI = false;
@@ -761,53 +898,6 @@ force force ace_zeus_remoteWind = false;
 force force ace_zeus_revealMines = 0;
 force force ace_zeus_zeusAscension = false;
 force force ace_zeus_zeusBird = false;
-
-// ACRE2
-force force acre_sys_core_automaticAntennaDirection = false;
-//acre_sys_core_defaultRadioVolume = 0.8;
-force force acre_sys_core_fullDuplex = false;
-//acre_sys_core_godVolume = 1;
-force force acre_sys_core_ignoreAntennaDirection = false;
-force force acre_sys_core_interference = false;
-//acre_sys_core_postmixGlobalVolume = 1;
-//acre_sys_core_premixGlobalVolume = 1;
-force force acre_sys_core_revealToAI = 1;
-//acre_sys_core_spectatorVolume = 1;
-force force acre_sys_core_terrainLoss = 0;
-force force acre_sys_core_ts3ChannelName = "";
-force force acre_sys_core_ts3ChannelPassword = "";
-force force acre_sys_core_ts3ChannelSwitch = false;
-force force acre_sys_core_unmuteClients = true;
-force force acre_sys_signal_signalModel = 0;
-
-// ACRE2 Gestures
-force force acre_sys_gestures_enabled = true;
-force force acre_sys_gestures_stopADS = false;
-
-// ACRE2 UI
-//acre_sys_godmode_rxNotification = true;
-//acre_sys_godmode_rxNotificationColor = [0.8,0.8,0.8,1];
-//acre_sys_godmode_txNotification = true;
-//acre_sys_godmode_txNotificationCurrentChatColor = [0.8,0.8,0.8,1];
-//acre_sys_godmode_txNotificationGroup1Color = [0.8,0.8,0.8,1];
-//acre_sys_godmode_txNotificationGroup2Color = [0.8,0.8,0.8,1];
-//acre_sys_godmode_txNotificationGroup3Color = [0.8,0.8,0.8,1];
-//acre_sys_gui_volumeColorScale = [[1,1,0,0.5],[1,0.83,0,0.5],[1,0.65,0,0.5],[1,0.44,0,0.5],[1,0,0,0.5]];
-//acre_sys_list_CycleRadiosColor = [0.66,0.05,1,1];
-//acre_sys_list_DefaultPTTColor = [1,0.8,0,1];
-//acre_sys_list_HintBackgroundColor = [0,0,0,0.8];
-//acre_sys_list_HintTextFont = "RobotoCondensed";
-//acre_sys_list_LanguageColor = [1,0.29,0.16,1];
-//acre_sys_list_PTT1Color = [1,0.8,0,1];
-//acre_sys_list_PTT2Color = [1,0.8,0,1];
-//acre_sys_list_PTT3Color = [1,0.8,0,1];
-//acre_sys_list_SwitchChannelColor = [0.66,0.05,1,1];
-//acre_sys_list_ToggleHeadsetColor = [0.66,0.05,1,1];
-
-// ACRE2 Zeus
-//acre_sys_zeus_zeusCanSpectate = true;
-//acre_sys_zeus_zeusCommunicateViaCamera = true;
-//acre_sys_zeus_zeusDefaultVoiceSource = false;
 
 // TFAR - Clientside settings
 //TFAR_curatorCamEars = false;
@@ -1088,13 +1178,8 @@ force force lambs_danger_disableAIPlayerGroupReaction = false;
 force force lambs_danger_disableAutonomousFlares = false;
 force force lambs_danger_disableAutonomousSmokeGrenades = false;
 force force lambs_danger_panicChance = 0.1;
-
-// LAMBS Danger Eventhandlers
 force force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
 force force lambs_eventhandlers_ExplosionReactionTime = 9;
-
-// LAMBS Danger WP
-force force lambs_wp_autoAddArtillery = false;
 
 // LAMBS Main
 force force lambs_main_combatShareRange = 200;
@@ -1121,6 +1206,7 @@ force force lambs_main_radioEast = 500;
 force force lambs_main_radioGuer = 500;
 force force lambs_main_radioShout = 100;
 force force lambs_main_radioWest = 500;
+force force lambs_wp_autoAddArtillery = false;
 
 // Simple Suppress
 simplesuppress_suppress_checkLOS = false;
