@@ -12,9 +12,7 @@
 if (isServer) exitWith {};
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};
 
-#ifdef DEBUG_MODE
-    ["Setting up Default ACE Arsenal loadouts.", if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}] call FUNC(info);
-#endif
+INFO(if (is3DEN) then {"EDENArsenal"} else {"Arsenal"}, "Setting up Default ACE Arsenal loadouts.");
 
 private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 ["<empty>", _empty] call ace_arsenal_fnc_addDefaultLoadout;
@@ -31,17 +29,14 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
     private _name = format["[%1] %2 - %3", EGVAR(Settings,primaryClanTag), _company, _displayName];
 
-    #ifdef DEBUG_MODE
-        [format["Setting up default arsenal loadout '%1'.", _displayName], if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}] call FUNC(info);
-    #endif
+    INFO_1(if (is3DEN) then {"EDENArsenal"} else {"Arsenal"}, "Setting up default arsenal loadout '%1'.", _displayName);
+
     // Error if 
     if (_displayName == "") exitWith {
         private _scope = getNumber (missionConfigFile >> 'CfgLoadouts' >> _class >> "scope");
-        [format["No displayName for %1 with scope %2.", _class, _scope], if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}] call FUNC(error);
+        SHOW_ERROR_2(if (is3DEN) then {"EDENArsenal"} else {"Arsenal"}, "No displayName for %1 with scope %2.", _class, _scope);
     };
     [_name, _loadout] call ace_arsenal_fnc_addDefaultLoadout;
 } forEach _classnameList;
 
-#ifdef DEBUG_MODE
-    ["Default ACE Arsenal loadouts setup completed.", if (is3DEN) then { "EDEN Arsenal"} else {"Arsenal"}] call FUNC(info);
-#endif
+INFO(if (is3DEN) then { "EDENArsenal"} else {"Arsenal"}, "Default ACE Arsenal loadouts setup completed.");

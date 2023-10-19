@@ -11,9 +11,7 @@
 
 if (!EGVAR(patches,usesACE)) exitWith {};
 
-#ifdef DEBUG_MODE
-    ["Initializing Item replacement system.", "init"] call FUNC(info);
-#endif
+INFO("init", "Initializing Item replacement system.");
 
 if (!isNil {ace_medical_treatment_convertItems == 2}) then {
     switch (EGVAR(Settings,replaceMedical)) do {
@@ -98,6 +96,4 @@ switch (EGVAR(Settings,replaceSmokeGrenades)) do {
     };
 };
 
-#ifdef DEBUG_MODE
-    ["Item replacement initialization completed.", "init"] call FUNC(info);
-#endif
+INFO("init", "Item replacement initialization completed.");

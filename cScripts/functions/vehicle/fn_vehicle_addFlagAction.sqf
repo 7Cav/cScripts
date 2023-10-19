@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function adds a takedown and put up flag action to the given vehicle.
+ * This function adds a put up and take down flag action to the given vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -10,7 +10,7 @@
  * nothing
  *
  * Example:
- * [this] call cScripts_fnc_vehicle_addFlagAction;
+ * [_vehicle] call cScripts_fnc_vehicle_addFlagAction;
  *
  * Public: No
  */

@@ -47,6 +47,4 @@ private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, {
 private _actionType = if (isPlayer _object) then {1} else {0};
 [_object, _actionType, _category, _action] call ace_interact_menu_fnc_addActionToObject;
 
-#ifdef DEBUG_MODE
-    [format["%1; selector '%2' with type %3 added for '%4' crate.", _object, _lable, _actionType, _platoon], "LoadoutSelector"] call FUNC(info);
-#endif
+INFO_4("LoadoutSelector","%1; selector '%2' with type %3 added for '%4' crate.", _object, _lable, _actionType, _platoon);

@@ -20,7 +20,7 @@ params[["_unit", objNull, [objNull]]];
 private _factionArray = parseSimpleArray EGVAR(Settings,vehicleFactions);
 
 if !(_factionArray isEqualType []) exitWith {
-    ["Faction array have not been setup correctly.", "Faction Array"] call FUNC(error);
+    SHOW_CHAT_ERROR("FactionArray", "Faction array have not been setup correctly.");
     false
 };
 

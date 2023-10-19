@@ -9,9 +9,7 @@
  * Public: No
  */
 
-#ifdef DEBUG_MODE
-    ["Applying AI Event Handler to units...", "init"] call FUNC(info);
-#endif
+INFO("init", "Applying AI Event Handler to units...");
 
 if (!isServer) exitWith {};
 
@@ -85,19 +83,20 @@ if (!isServer) exitWith {};
                     _unit setSkill ["aimingshake",     0.100];
                     _unit setSkill ["reloadSpeed",     0.800];
             };
-            #ifdef DEBUG_MODE
-                [format ["AI unit %1 (%2) have skill levels %3.", _unit, typeOf _unit, [
-                    ["general", _unit skill "general"],
-                    ["commanding", _unit skill "commanding"],
-                    ["courage", _unit skill "courage"],
-                    ["aimingspeed", _unit skill "aimingspeed"],
-                    ["aimingaccuracy", _unit skill "aimingaccuracy"],
-                    ["aimingshake", _unit skill "aimingshake"],
-                    ["reloadSpeed", _unit skill "reloadSpeed"],
-                    ["spottime", _unit skill "spottime"],
-                    ["spotdistance", _unit skill "spotdistance"]
-                ]], "init"] call FUNC(info);
-            #endif
+
+            // For logging
+            private _skillArray = [
+                ["general", _unit skill "general"],
+                ["commanding", _unit skill "commanding"],
+                ["courage", _unit skill "courage"],
+                ["aimingspeed", _unit skill "aimingspeed"],
+                ["aimingaccuracy", _unit skill "aimingaccuracy"],
+                ["aimingshake", _unit skill "aimingshake"],
+                ["reloadSpeed", _unit skill "reloadSpeed"],
+                ["spottime", _unit skill "spottime"],
+                ["spotdistance", _unit skill "spotdistance"]
+            ];
+            INFO_3("init","AI unit %1 (%2) have skill levels %3.", _unit, typeOf _unit, _skillArray);
         };
     };
 }, true, [], true] call CBA_fnc_addClassEventHandler;

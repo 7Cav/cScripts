@@ -19,9 +19,7 @@ params [
     ["_isFacility", true]
 ];
 
-#ifdef DEBUG_MODE
-    [format["Field Hostiptal applied to %1.", _crate]] call FUNC(info);
-#endif
+INFO("", "Field Hostiptal applied to %1.", _crate);
 
 // Make addAction Topic
 _crate addAction ["<img image='cScripts\Data\Icon\icon_00.paa' /> 7th Cavalry Field Hospital", {}, [], 1.5, true, true, "", "true", 5];

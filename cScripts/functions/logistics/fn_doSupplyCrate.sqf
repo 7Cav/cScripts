@@ -26,7 +26,7 @@ clearBackpackCargoGlobal _crate;
 if (isServer) then {
     [{!isNil{EGVAR(DATABASE,DONE)} && EGVAR(DATABASE,DONE);}, {
         _this params ["_crate"];
-        private _container = ["crate_resupply_general"] call EFUNC(logistics,getContainer);
+        private _container = GET_CONTAINER(crate_resupply_general);
         [_crate, _container] call FUNC(addCargo);
 }, [_crate, _quickSelectScale]] call CBA_fnc_waitUntilAndExecute;
 };

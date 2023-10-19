@@ -5,8 +5,8 @@ class Cav_B_B_Scout_Base_F: Cav_B_Bravo_base_F {
 
 class Cav_B_B_Scout_Officer_F: Cav_B_B_Scout_Base_F {
     displayName = "Viking Platoon Staff";
-    category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
     scope = 2;
+    category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
     loadout = [["rhs_weap_mk18_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",1]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["ItemcTabHCam",1],["ACE_EarPlugs",1],["HandGrenade",2,1],["SmokeShell",4,1],["ACE_IR_Strobe_Item",4],["SmokeShellBlue",2,1],["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["ACE_HandFlare_Yellow",2,1],["rhs_mag_mk3a2",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",3,30],["rhs_mag_30Rnd_556x45_M855A1_PMAG",4,30],["SmokeShellPurple",1,1],["SmokeShellYellow",2,1]]],["USP_TACTICAL_PACK_CCT6",[["ACE_HuntIR_monitor",1],["ACE_splint",8],["ACE_tourniquet",8],["ACE_SpraypaintGreen",1],["ACE_artilleryTable",1],["ACE_CableTie",5],["ACE_EarPlugs",2],["kat_Painkiller",2,10],["B_IR_Grenade",2,1],["SmokeShellGreen",2,1],["SmokeShellYellow",2,1],["ACE_Chemlight_IR",2,1]]],"USP_OPS_FASTXP_TAN_MC_03","USP_DETCORD_SMG1_BLK2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemcTab","","ItemCompass","ItemWatch","USP_PVS31_LOW"]];
     icon = "iconManOfficer";
     role = "officer";
@@ -14,26 +14,23 @@ class Cav_B_B_Scout_Officer_F: Cav_B_B_Scout_Base_F {
 
 class Cav_B_B_Scout_PlatoonLeader_F: Cav_B_B_Scout_Officer_F {
     displayName = "Viking Platoon Leader";
-    category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
     scope = 2;
     loadout = [["rhs_weap_mk18_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",1]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["ItemcTabHCam",1],["ACE_EarPlugs",1],["HandGrenade",2,1],["SmokeShell",4,1],["ACE_IR_Strobe_Item",4],["SmokeShellBlue",2,1],["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["ACE_HandFlare_Yellow",2,1],["rhs_mag_mk3a2",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",3,30],["rhs_mag_30Rnd_556x45_M855A1_PMAG",4,30],["SmokeShellPurple",1,1],["SmokeShellYellow",2,1]]],["USP_TACTICAL_PACK_CCT6",[["ACE_HuntIR_monitor",1],["ACE_splint",8],["ACE_tourniquet",8],["ACE_SpraypaintGreen",1],["ACE_artilleryTable",1],["ACE_CableTie",5],["ACE_EarPlugs",2],["kat_Painkiller",2,10],["B_IR_Grenade",2,1],["SmokeShellGreen",2,1],["SmokeShellYellow",2,1],["ACE_Chemlight_IR",2,1]]],"USP_OPS_FASTXP_TAN_MC_03","USP_DETCORD_SMG1_BLK2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemcTab","","ItemCompass","ItemWatch","USP_PVS31_LOW"]];
 };
 
 class Cav_B_B_Scout_PlatoonSergeant_F: Cav_B_B_Scout_Officer_F {
     displayName = "Viking Platoon Sergeant";
-    category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
-    scope = 0;
+    scope = 2;
     loadout = [["rhs_weap_mk18_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",1]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["ItemcTabHCam",1],["ACE_EarPlugs",1],["HandGrenade",2,1],["SmokeShell",4,1],["ACE_IR_Strobe_Item",4],["SmokeShellBlue",2,1],["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["ACE_HandFlare_Yellow",2,1],["rhs_mag_mk3a2",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",3,30],["rhs_mag_30Rnd_556x45_M855A1_PMAG",4,30],["SmokeShellPurple",1,1],["SmokeShellYellow",2,1]]],["USP_TACTICAL_PACK_CCT6",[["ACE_HuntIR_monitor",1],["ACE_splint",8],["ACE_tourniquet",8],["ACE_SpraypaintGreen",1],["ACE_artilleryTable",1],["ACE_CableTie",5],["ACE_EarPlugs",2],["kat_Painkiller",2,10],["B_IR_Grenade",2,1],["SmokeShellGreen",2,1],["SmokeShellYellow",2,1],["ACE_Chemlight_IR",2,1]]],"USP_OPS_FASTXP_TAN_MC_03","USP_DETCORD_SMG1_BLK2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemcTab","","ItemCompass","ItemWatch","USP_PVS31_LOW"]];
     abilityEngineer = 1;
 };
 
-class Cav_B_B_Scout_PlatoonMedic_F: Cav_B_B_Scout_Base_F {
+class Cav_B_B_Scout_PlatoonMedic_F: Cav_B_B_Scout_Officer_F {
     displayName = "Viking Platoon Medic";
-    category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
     scope = 2;
     loadout = [["rhs_weap_mk18_grip2_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_grip2_wd"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_tourniquet",10],["kat_IV_16",30],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_splint",6],["kat_Painkiller",4,10],["kat_Carbonate",2,10]]],["USP_CRYE_CPC_MEDIC_BELT_MC",[["ACE_surgicalKit",1],["ACE_Chemlight_Shield",1],["ACE_Chemlight_IR",2,1],["HandGrenade",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",8,30],["Chemlight_red",1,1],["SmokeShellBlue",2,1],["SmokeShellPurple",2,1]]],["USP_TACTICAL_PACK_CCT3",[["ACE_elasticBandage",30],["ACE_epinephrine",10],["ACE_packingBandage",10],["ACE_quikclot",40],["ACE_morphine",10],["kat_naloxone",4],["ACE_plasmaIV_500",10],["ACE_plasmaIV",10],["ACE_salineIV_250",5],["kat_phenylephrine_inject",10],["kat_AED",1],["ACE_EntrenchingTool",1],["kat_Painkiller",6,10]]],"USP_OPS_FASTXP_TAN_MC_06","USP_DETCORD_SMC1_MC2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch","USP_PVS31_LOW"]];
     insignia = "cav_insignia_specialized_cls";
-    abilityMedic = 1;
+    abilityMedic = 2;
     role = "medic";
     icon = "iconManMedic";
 };
@@ -113,7 +110,7 @@ class Cav_B_B_Scout_CombatLifeSaver_F: Cav_B_B_Scout_Base_F {
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
     loadout = [["rhs_weap_m4a1_blockII_grip2_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_grip2"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_Chemlight_Shield",1],["ACE_Chemlight_White",1,1]]],["USP_CRYE_CPC_COMMS_BELT_MC",[["HandGrenade",2,1],["SmokeShell",4,1],["ACE_Chemlight_IR",2,1],["rhs_mag_mk3a2",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",9,30],["SmokeShellPurple",1,1],["ACE_CTS9",2,1],["kat_Painkiller",2,10],[["ACE_MX2A","","","",[],[],""],1]]],["B_Kitbag_cbr",[["ACE_EntrenchingTool",1],["ACE_packingBandage",40],["ACE_quikclot",40],["ACE_tourniquet",16],["ACE_splint",8],["ACE_EarPlugs",2],["kat_phenylephrine_inject",5],["ACE_epinephrine",5],["kat_Painkiller",3,10]]],"USP_OPS_FASTXP_TAN_MC_03","USP_MFRAME_SMC1_TAN2",["ACE_Vector","","","",[],[],""],["ItemMap","B_UavTerminal","","ItemCompass","ItemWatch","USP_PVS15"]];
     insignia = "cav_insignia_specialized_cls";
-    abilityMedic = 0;
+    abilityMedic = 1;
     icon = "iconManMedic";
 };
 

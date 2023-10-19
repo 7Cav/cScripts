@@ -1,0 +1,18 @@
+version=54;
+name="TacR_Public_Compositions[DEVBUILD]";
+author="=7Cav=CPL.Zaren.T";
+category="Cav_EdSubcat_Deploy_Platoon";
+requiredAddons[]=
+{
+	"A3_Characters_F",
+	"ace_vector",
+	"A3_Weapons_F",
+	"ace_goggles",
+	"rhsusf_c_troops",
+	"ace_compat_rhs_usf3",
+	"ace_explosives",
+	"ace_gforces",
+	"ace_parachute",
+	"A3_Modules_F_Curator_Curator",
+	"RSPN_Assets"
+};

@@ -30,9 +30,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
         private _radioId = [_radio] call acre_api_fnc_getRadioByType;
         [_radioId] call acre_api_fnc_setCurrentRadio;
         
-        #ifdef DEBUG_MODE
-            [format["%1 radio %2 is current radio", player, call acre_api_fnc_getCurrentRadio], "Radio SetActive"] call FUNC(info);
-        #endif
+        INFO_2("RadioSetActive", "%1 radio %2 is current radio", player, call acre_api_fnc_getCurrentRadio)
     }, [_radio], 1] call CBA_fnc_waitAndExecute;
 };
 
@@ -54,26 +52,20 @@ if (EGVAR(patches,usesTFAR)) exitWith {
         } forEach _allRadios;
         
         if (!([player, _activeRadio] call BIS_fnc_hasItem)) exitWith {
-            #ifdef DEBUG_MODE
-                [format["%1 tried to set a radio it does not have expected %2", player, _activeRadio], "Radio SetActive"] call FUNC(warning);
-            #endif
+            WARNING_2("RadioSetActive", "%1 tried to set a radio it does not have expected %2", player, _activeRadio);
         };
         if (_activeRadio isEqualTo "nullObject") exitWith {
-            #ifdef DEBUG_MODE
-                [format["%1 radio can't be set due to no radio ID discoverd (%2, %3)", player, _radio, _activeRadio], "Radio SetActive"] call FUNC(warning);
-            #endif
+            WARNING_3("RadioSetActive", "%1 radio can't be set due to no radio ID discoverd (%2, %3)", player, _radio, _activeRadio);
         };
 
         [_activeRadio] call TFAR_fnc_setActiveSwRadio;
         
         if (isNil{call TFAR_fnc_activeSwRadio}) then { // TFAR bug
-            [format["%1 radio %2 seams to not match wanted radio type %3.", player, call TFAR_fnc_activeSwRadio, _activeRadio], "Radio SetActive"] call FUNC(error);
+            SHOW_ERROR_3("RadioSetActive", "%1 radio %2 seams to not match wanted radio type %3.", player, call TFAR_fnc_activeSwRadio, _activeRadio);
         };
         
-        #ifdef DEBUG_MODE
-            [format["%1 radio %2 is current radio", player, call TFAR_fnc_activeSwRadio], "Radio SetActive"] call FUNC(info);    
-        #endif
+        INFO_2("RadioSetActive", "%1 radio %2 is current radio", player, call TFAR_fnc_activeSwRadio);
     }, [_radio], 1] call CBA_fnc_waitAndExecute;
 };
 
-["Fatal", "Radio", true] call FUNC(error);
+SHOW_CHAT_ERROR("RadioSetActive", "Fatal");
