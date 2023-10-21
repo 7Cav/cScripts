@@ -69,6 +69,7 @@ switch (true) do {
 };
 
 // Abilities
+// Apply only abilities for config loadouts to avoid resets of abilities when loading a saved loadout.
 if (!_loadArray) then {
     [_unit, _config] call EFUNC(gear,applyAbilities);
 };
