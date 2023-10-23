@@ -6,13 +6,17 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_addFunctionsGlobal
+ * [_vehicle] call cScripts_fnc_vehicle_addFunctionsGlobal
+ *
+ * Public: No
  */
 
 params [["_vehicle", objNull, [objNull]]];
 
-if (!isServer) exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,FunctionsGlobal)}) exitWith {SHOW_WARNING_1("VehicleFunctionsGlobal", "Vehicle functions already applied for %1 [%2].", _vehicle, typeOf _vehicle);};
 
 INFO_2("VehicleFunctionsGlobal", "Applying vehicle functions to %1 (%2)", _vehicle, typeOf _vehicle);
@@ -23,6 +27,26 @@ _vehicle setVariable [QEGVAR(VehicleFunc,FunctionsGlobal), true];
 
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 
+
+// Airframes
+if (_vehicle iskindOf "RHS_UH60_Base") then {
+    switch (_vehicleType) do {
+        case "RHS_UH60M_MEV2_d";
+        case "RHS_UH60M_MEV_d";
+        case "RHS_UH60M_MEV2";
+        case "RHS_UH60M_MEV";
+        case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
+        default {};
+    };
+    [_vehicle] call ace_fastroping_fnc_equipFRIES;
+};
+
+if (_vehicle iskindOf "vtx_MH60M") then {
+    [_vehicle] call ace_fastroping_fnc_equipFRIES;
+};
+
+
+// Ground vehicles
 if (_vehicle iskindOf "MRAP_01_base_F") then {
     switch (_vehicleType) do {
         case "rhsusf_m998_d_2dr_fulltop";

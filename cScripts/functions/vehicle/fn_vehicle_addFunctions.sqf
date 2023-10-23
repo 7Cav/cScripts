@@ -1,13 +1,18 @@
 #include "..\script_component.hpp";
 /*
  * Author: SGT.Brostrom.A
- * This function apply functions to vehicles.
+ * This function apply functions to local vehicles.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
- * ["vic"] call cScripts_fnc_vehicle_addFunctions
+ * [_vehicle] call cScripts_fnc_vehicle_addFunctions;
+ *
+ * Public: No
  */
 
 params [["_vehicle", objNull, [objNull]]];
@@ -93,10 +98,10 @@ if (_vehicle iskindOf "vtx_MH60M") then {
 
 // Below functions only gets applied to approved factions
 if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
+
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
 };
-
 
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
