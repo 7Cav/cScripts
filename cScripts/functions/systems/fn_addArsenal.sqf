@@ -17,6 +17,8 @@ params [
 
 private _icon = "cScripts\Data\Icon\icon_arsenal_ca.paa";
 private _arsenalStatement = {
+    INFO_2("Staging Arsenal", "Creating staging arsenal for %1 (%2)", player, typeOf player);
+
     ace_arsenal_defaultLoadoutsList = [];
     [] call FUNC(getUnitArsenalDefault);
 
@@ -31,6 +33,7 @@ private _arsenalStatement = {
         ] call CBA_fnc_notify;
     };
     [{
+        INFO_2("Staging Arsenal", "Opening Staging Arsenal for %1 (%2)", player, typeOf player);
         [player, player, false] call ace_arsenal_fnc_openBox;
         [{
             private _loadout = [player] call EFUNC(gear,getCurrentLoadout);
@@ -39,16 +42,17 @@ private _arsenalStatement = {
             [(findDisplay 1127001), format["Arsenal for %1 Co. %2 loaded", [_company] call CBA_fnc_capitalize, _name]] call ace_arsenal_fnc_message;
         }, [], 0.35] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_execNextFrame;
-
-    [{
-        [player, true] call ace_arsenal_fnc_removeBox;
-    }] call CBA_fnc_execNextFrame;
 };
 
+INFO_2("Staging Arsenal", "Adding staging arsenal action to %1 (%2)", player, typeOf player);
 private _arsenalAction = [QEGVAR(Actions,ArsenalAction), "Arsenal", _icon, _arsenalStatement, {true}] call ace_interact_menu_fnc_createAction;
 [player, 1, _category, _arsenalAction] call ace_interact_menu_fnc_addActionToObject;
 
 // Recreate after closing
 ["ace_arsenal_displayClosed", {
-    [] call EFUNC(init,aceArsenalDefault);
+    INFO_2("Arsenal", "Destroying %1 (%2) personal arsenal box.", player, typeOf player);
+    [player, true] call ace_arsenal_fnc_removeBox;
+
+    // Resetting loadouts
+    call EFUNC(init,aceArsenalDefault);
 }] call CBA_fnc_addEventHandler;
