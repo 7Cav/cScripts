@@ -50,4 +50,3 @@ private _arsenalStatement = {
 INFO_2("Staging Arsenal", "Adding staging arsenal action to %1 (%2)", player, typeOf player);
 private _arsenalAction = [QEGVAR(Actions,ArsenalAction), "Arsenal", _icon, _arsenalStatement, {true}] call ace_interact_menu_fnc_createAction;
 [player, 1, _category, _arsenalAction] call ace_interact_menu_fnc_addActionToObject;
-
