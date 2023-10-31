@@ -33,7 +33,6 @@ private _curator = player getVariable [QEGVAR(Player,Unit), ""];
 _curator = toLower _curator;
 if (_curator == "s3") exitWith {true};
 if (_curator == "zeus") exitWith {true};
-
 if (_curator == "curator") exitWith {true};
 if (_curator == "debug") exitWith {true};
 
