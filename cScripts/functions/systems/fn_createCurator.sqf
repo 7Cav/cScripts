@@ -7,7 +7,7 @@
  * 0: Player <OBJECT>
  *
  * Example:
- * cScripts_fnc_player_createCurator
+ * cScripts_fnc_createCurator
  *
  * Public: No
  */
@@ -18,6 +18,10 @@ params [
 
 if (!isServer) exitWith {};
 if (!isNull (getAssignedCuratorLogic _player)) exitWith { WARNING("Zeus", "Player already assigned as curator"); };
+
+private _unit = _player getVariable [QEGVAR(Player,Unit), ""];
+_unit = toLower _unit;
+if (!(_unit in ["s3", "zeus", "curator", "debug"])) exitWith {}
 
 
 private _curator = "curator" createVehicle [0,0,0];
