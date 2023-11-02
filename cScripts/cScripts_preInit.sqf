@@ -47,6 +47,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+[ // Ai dismount
+    QEGVAR(Settings,setAiBanDismountOfCrew),
+    "LIST",
+    ["Allow", "This allow or disallow ai crew to dismount vehicles."],
+    [_cScriptSettings, "1; Mission"],
+    true,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
 
 //2; Radios
@@ -370,9 +380,7 @@ call EFUNC(init,chatCommands);
 
 call EFUNC(init,zenModuels);
 
-if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
-    call EFUNC(init,skillAdjustment);
-};
+call EFUNC(init,ai);
 
 call EFUNC(init,eventHandlers);
 
