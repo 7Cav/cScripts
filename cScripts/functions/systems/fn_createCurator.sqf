@@ -21,7 +21,7 @@ if (!isNull (getAssignedCuratorLogic _player)) exitWith { WARNING("Zeus", "Playe
 
 private _unit = _player getVariable [QEGVAR(Player,Unit), ""];
 _unit = toLower _unit;
-if (!(_unit in ["s3", "zeus", "curator", "debug"])) exitWith {}
+if (!(_unit in ["s3", "zeus", "curator", "debug"])) exitWith {};
 
 
 private _curator = "curator" createVehicle [0,0,0];
