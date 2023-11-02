@@ -58,4 +58,7 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
     missionNamespace setVariable [QEGVAR(log,players), _playerLog];
 }] call CBA_fnc_addEventHandler;
 
-
+[QEGVAR(curator,create), {
+    _this params ["_player"];
+    [_player] call EFUNC(player,createCurator);
+}] call CBA_fnc_addEventHandler;
