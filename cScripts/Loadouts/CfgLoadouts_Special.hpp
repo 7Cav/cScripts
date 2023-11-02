@@ -8,7 +8,7 @@ class S3_Base: Cav_B_Seventh_Cavalry_Base_F {
     company = "";
     
     insignia = "specialized_s3";
-    preLoadout = "this setVariable ["cScripts_Player_Unit", "S3"];";
+    preLoadout = "this setVariable ['cScripts_Player_Unit', 'S3'];";
     postLoadout = "";
 };
 
