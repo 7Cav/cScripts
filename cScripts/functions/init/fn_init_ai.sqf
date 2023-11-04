@@ -9,7 +9,7 @@
  * Public: No
  */
 
-if (!isServer) {};
+if (!isServer) exitWith {};
 INFO("init", "Applying AI Event Handler to units and vehicles...");
 
 // AI Behavior
