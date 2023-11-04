@@ -9,9 +9,8 @@
  * Public: No
  */
 
-INFO("init", "Applying AI Event Handler to units and vehicles...");
-
 if (!isServer) {};
+INFO("init", "Applying AI Event Handler to units and vehicles...");
 
 // AI Behavior
 if (EGVAR(Settings,setAiBanDismountOfCrew)) then {
