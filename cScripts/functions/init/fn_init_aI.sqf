@@ -11,6 +11,8 @@
 
 INFO("init", "Applying AI Event Handler to units and vehicles...");
 
+if (!isServer) {};
+
 // AI Behavior
 if (EGVAR(Settings,setAiBanDismountOfCrew)) then {
     ["AllVehicles", "init", {
@@ -97,17 +99,17 @@ if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
     
                 // For logging
                 private _skillArray = [
-                    ["general", _unit skill "general"],
-                    ["commanding", _unit skill "commanding"],
-                    ["courage", _unit skill "courage"],
-                    ["aimingspeed", _unit skill "aimingspeed"],
-                    ["aimingaccuracy", _unit skill "aimingaccuracy"],
-                    ["aimingshake", _unit skill "aimingshake"],
-                    ["reloadSpeed", _unit skill "reloadSpeed"],
-                    ["spottime", _unit skill "spottime"],
-                    ["spotdistance", _unit skill "spotdistance"]
+                    ["general", _unit skill "general", _unit skillFinal "general"],
+                    ["commanding", _unit skill "commanding", _unit skillFinal "commanding"],
+                    ["courage", _unit skill "courage", _unit skillFinal "courage"],
+                    ["aimingspeed", _unit skill "aimingspeed", _unit skillFinal "aimingspeed"],
+                    ["aimingaccuracy", _unit skill "aimingaccuracy", _unit skillFinal "aimingaccuracy"],
+                    ["aimingshake", _unit skill "aimingshake", _unit skillFinal "aimingshake"],
+                    ["reloadSpeed", _unit skill "reloadSpeed", _unit skillFinal "reloadSpeed"],
+                    ["spottime", _unit skill "spottime", _unit skill "spottime"],
+                    ["spotdistance", _unit skill "spotdistance", _unit skillFinal "spotdistance"]
                 ];
-                INFO_3("init","AI unit %1 (%2) have skill levels %3.", _unit, typeOf _unit, _skillArray);
+                INFO_3("AI","Unit %1 (%2) have skill levels %3.", _unit, typeOf _unit, _skillArray);
             };
         };
     }, true, [], true] call CBA_fnc_addClassEventHandler;
