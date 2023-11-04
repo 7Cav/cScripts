@@ -11,6 +11,7 @@
 
 INFO("init", "Applying AI Event Handler to units and vehicles...");
 
+// AI Behavior
 if (EGVAR(Settings,setAiBanDismountOfCrew)) then {
     ["AllVehicles", "init", {
         params ["_vehicle"];
@@ -27,9 +28,7 @@ if (EGVAR(Settings,setAiBanDismountOfCrew)) then {
     }, true, ["man"], true] call CBA_fnc_addClassEventHandler;
 };
 
-
-if (!isServer) exitWith {};
-
+// AI Skills
 if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
     ["CAManBase", "init", {
         params ["_unit"];
