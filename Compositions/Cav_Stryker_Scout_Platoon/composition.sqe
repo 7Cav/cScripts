@@ -1,5 +1,5 @@
 version=54;
-center[]={4764.4087,5,7446.9121};
+center[]={1364.6357,5,2107.1011};
 class items
 {
 	items=8;
@@ -22,7 +22,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-3.0307617,0.0014390945,17.67041};
+							position[]={-3.0390625,0.0014390945,17.906982};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -35,7 +35,7 @@ class items
 							description="Scout Platoon Leader@VIKING-6";
 							isPlayable=1;
 						};
-						id=834;
+						id=350;
 						type="Cav_B_B_Scout_PlatoonLead_2_6_F";
 						class CustomAttributes
 						{
@@ -65,20 +65,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item1
@@ -86,7 +73,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-3.0307617,0.0014390945,19.169922};
+							position[]={-3.0390625,0.0014390945,19.406494};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -98,7 +85,7 @@ class items
 							description="Stryker Vehicle Commander";
 							isPlayable=1;
 						};
-						id=835;
+						id=351;
 						type="Cav_B_B_Ifv_Commander_F";
 						class CustomAttributes
 						{
@@ -149,7 +136,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-3.0307617,0.0014390945,20.669922};
+							position[]={-3.0390625,0.0014390945,20.906494};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -161,7 +148,7 @@ class items
 							description="Stryker Driver";
 							isPlayable=1;
 						};
-						id=836;
+						id=352;
 						type="Cav_B_B_Ifv_Driver_F";
 						class CustomAttributes
 						{
@@ -212,14 +199,14 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=833;
+				id=349;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.28857422,0.89242268,15.242676};
+					position[]={-0.296875,0.89242268,15.479248};
 					angles[]={-0,1.5526583,0};
 				};
 				side="Empty";
@@ -229,14 +216,14 @@ class items
 					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=837;
+				id=353;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -255,7 +242,7 @@ class items
 							class data
 							{
 								singleType="STRING";
-								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 							};
 						};
 					};
@@ -280,7 +267,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={14.26416,0.89242268,4.9370117};
+					position[]={14.255859,0.89242268,5.173584};
 				};
 				side="Empty";
 				flags=4;
@@ -289,14 +276,14 @@ class items
 					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=838;
+				id=354;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -315,7 +302,7 @@ class items
 							class data
 							{
 								singleType="STRING";
-								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 							};
 						};
 					};
@@ -340,18 +327,18 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={1.7006836,0,9.7617188};
+					position[]={1.6923828,0,9.998291};
 				};
 				title="Stryker Scout Platoon (Tooltip)";
 				description="B/1-7's Stryker Scout Platoon is a hybrid fighting force that specializes in scout tasks and missions. They handle everything from Screening Operations, Guard Operations, Ambushes, Area Reconnaissance, and all other general infantry tasks. While the composition utilizes 6 Strykers for the Platoon, unless it's completely full, they'll mostly only use 4 or 5. Viking does NOT require a JTAC to call in CAS as they are trained and capable of doing so internally.";
-				id=839;
+				id=355;
 			};
 			class Item4
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.5688477,2.6142888,22.027344};
+					position[]={-6.5771484,2.6142888,22.263916};
 				};
 				side="Empty";
 				flags=4;
@@ -359,11 +346,28 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=840;
+				id=356;
 				type="cav_dragoon_WD_V6";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
 			};
 		};
-		id=832;
+		id=348;
 	};
 	class Item1
 	{
@@ -371,7 +375,7 @@ class items
 		name="2. Stryker Platoon Sergeant";
 		class Entities
 		{
-			items=4;
+			items=2;
 			class Item0
 			{
 				dataType="Group";
@@ -384,7 +388,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.9692383,0.0014390945,17.669922};
+							position[]={2.9609375,0.0014390945,17.906494};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -397,7 +401,7 @@ class items
 							description="Scout Platoon Sergeant@VIKING-5";
 							isPlayable=1;
 						};
-						id=843;
+						id=359;
 						type="Cav_B_B_Scout_PlatoonLead_2_5_F";
 						class CustomAttributes
 						{
@@ -427,20 +431,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item1
@@ -448,7 +439,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.9692383,0.0014390945,19.169922};
+							position[]={2.9609375,0.0014390945,19.406494};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -460,7 +451,7 @@ class items
 							description="Stryker Driver";
 							isPlayable=1;
 						};
-						id=844;
+						id=360;
 						type="Cav_B_B_Ifv_Driver_F";
 						class CustomAttributes
 						{
@@ -511,15 +502,15 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=842;
+				id=358;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.94580078,0,10.953125};
-					angles[]={-0,1.548975,0};
+					position[]={6.1865234,2.6142888,22.19751};
+					angles[]={-0,0.005982683,0};
 				};
 				side="Empty";
 				flags=4;
@@ -527,27 +518,8 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=845;
-				type="ACE_medicalSupplyCrate_advanced";
-			};
-			class Item2
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={0.10791016,0.38152885,10.829102};
-					angles[]={-0,0.0019896752,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-					init="call{[this,1] call cScripts_fnc_doSupplyCrate;}";
-					description="Resupply Crate";
-					dynamicSimulation=1;
-				};
-				id=846;
-				type="Box_NATO_Equip_F";
+				id=363;
+				type="cav_dragoon_WD_V5";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -566,25 +538,8 @@ class items
 					nAttributes=1;
 				};
 			};
-			class Item3
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={6.1948242,2.6142888,21.960938};
-					angles[]={-0,0.005982683,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-					dynamicSimulation=1;
-				};
-				id=847;
-				type="cav_dragoon_WD_V5";
-			};
 		};
-		id=841;
+		id=357;
 	};
 	class Item2
 	{
@@ -605,7 +560,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={1.6152344,0.0014390945,18.598633};
+							position[]={1.6069336,0.0014390945,18.835205};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -618,7 +573,7 @@ class items
 							description="Scout Platoon Medic@VIKING-7";
 							isPlayable=1;
 						};
-						id=850;
+						id=366;
 						type="Cav_B_B_Scout_PlatoonMedic_2_7_F";
 						class CustomAttributes
 						{
@@ -661,20 +616,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 				};
@@ -682,10 +624,10 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=849;
+				id=365;
 			};
 		};
-		id=848;
+		id=364;
 	};
 	class Item3
 	{
@@ -706,7 +648,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-11.781738,0.0014390945,2.40625};
+							position[]={-11.790039,0.0014390945,2.6428223};
 						};
 						side="West";
 						flags=6;
@@ -717,7 +659,7 @@ class items
 							description="Scout Squad Leader@VIKING-1";
 							isPlayable=1;
 						};
-						id=853;
+						id=369;
 						type="Cav_B_B_Scout_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -747,20 +689,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item1
@@ -768,7 +697,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-13.781738,0.0014390945,1.40625};
+							position[]={-13.790039,0.0014390945,1.6428223};
 						};
 						side="West";
 						flags=5;
@@ -780,7 +709,7 @@ class items
 							description="Alpha Scout Team Leader";
 							isPlayable=1;
 						};
-						id=854;
+						id=370;
 						type="Cav_B_B_Scout_Alpha_TeamLead_F";
 						class CustomAttributes
 						{
@@ -810,20 +739,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item2
@@ -831,7 +747,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-13.781738,0.0014390945,-0.09375};
+							position[]={-13.790039,0.0014390945,0.14282227};
 						};
 						side="West";
 						flags=5;
@@ -842,7 +758,7 @@ class items
 							description="Alpha Machine Gunner";
 							isPlayable=1;
 						};
-						id=855;
+						id=371;
 						type="Cav_B_B_Scout_Alpha_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -872,20 +788,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item3
@@ -893,7 +796,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-13.781738,0.0014390945,-1.5942383};
+							position[]={-13.790039,0.0014390945,-1.357666};
 						};
 						side="West";
 						flags=4;
@@ -904,7 +807,7 @@ class items
 							description="Alpha Scout";
 							isPlayable=1;
 						};
-						id=856;
+						id=372;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -934,20 +837,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item4
@@ -955,7 +845,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-13.781738,0.0014390945,-3.09375};
+							position[]={-13.790039,0.0014390945,-2.8571777};
 						};
 						side="West";
 						flags=5;
@@ -966,7 +856,7 @@ class items
 							description="Alpha Scout";
 							isPlayable=1;
 						};
-						id=857;
+						id=373;
 						type="Cav_B_B_Scout_Alpha_Rifleman_F";
 						class CustomAttributes
 						{
@@ -996,20 +886,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item5
@@ -1017,7 +894,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7817383,0.0014390945,1.40625};
+							position[]={-9.7900391,0.0014390945,1.6428223};
 						};
 						side="West";
 						flags=5;
@@ -1029,7 +906,7 @@ class items
 							description="Bravo Scout Team Leader";
 							isPlayable=1;
 						};
-						id=858;
+						id=374;
 						type="Cav_B_B_Scout_Bravo_TeamLead_F";
 						class CustomAttributes
 						{
@@ -1059,20 +936,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item6
@@ -1080,7 +944,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7817383,0.0014390945,-0.09375};
+							position[]={-9.7900391,0.0014390945,0.14282227};
 						};
 						side="West";
 						flags=5;
@@ -1091,7 +955,7 @@ class items
 							description="Bravo Machine Gunner";
 							isPlayable=1;
 						};
-						id=859;
+						id=375;
 						type="Cav_B_B_Scout_Bravo_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -1129,7 +993,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7817383,0.0014390945,-1.59375};
+							position[]={-9.7900391,0.0014390945,-1.3571777};
 						};
 						side="West";
 						flags=4;
@@ -1140,7 +1004,7 @@ class items
 							description="Bravo Scout";
 							isPlayable=1;
 						};
-						id=860;
+						id=376;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -1178,7 +1042,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7817383,0.0014390945,-3.0942383};
+							position[]={-9.7900391,0.0014390945,-2.857666};
 						};
 						side="West";
 						flags=5;
@@ -1189,7 +1053,7 @@ class items
 							description="Bravo Combat Lifesaver";
 							isPlayable=1;
 						};
-						id=861;
+						id=377;
 						type="Cav_B_B_Scout_Bravo_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -1219,20 +1083,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item9
@@ -1240,7 +1091,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-11.781738,0.0014390945,0.40625};
+							position[]={-11.790039,0.0014390945,0.64282227};
 						};
 						side="West";
 						flags=5;
@@ -1251,7 +1102,7 @@ class items
 							description="Stryker Vehicle Commander";
 							isPlayable=1;
 						};
-						id=862;
+						id=378;
 						type="Cav_B_B_Ifv_Commander_F";
 						class CustomAttributes
 						{
@@ -1294,20 +1145,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 					class Item10
@@ -1315,7 +1153,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-11.781738,0.0014390945,-1.09375};
+							position[]={-11.790039,0.0014390945,-0.85717773};
 						};
 						side="West";
 						flags=5;
@@ -1326,7 +1164,7 @@ class items
 							description="Stryker Driver";
 							isPlayable=1;
 						};
-						id=863;
+						id=379;
 						type="Cav_B_B_Ifv_Driver_F";
 						class CustomAttributes
 						{
@@ -1369,20 +1207,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 				};
@@ -1390,14 +1215,14 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=852;
+				id=368;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-8.7114258,0.89242268,3.8032227};
+					position[]={-8.7197266,0.89242268,4.0397949};
 				};
 				side="Empty";
 				flags=4;
@@ -1406,14 +1231,14 @@ class items
 					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=864;
+				id=380;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -1432,7 +1257,7 @@ class items
 							class data
 							{
 								singleType="STRING";
-								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 							};
 						};
 					};
@@ -1457,7 +1282,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-12.644043,2.6142888,10.451172};
+					position[]={-12.652344,2.6142888,10.687744};
 				};
 				side="Empty";
 				flags=4;
@@ -1465,11 +1290,28 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=865;
+				id=381;
 				type="cav_dragoon_WD_V1";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
 			};
 		};
-		id=851;
+		id=367;
 	};
 	class Item4
 	{
@@ -1490,7 +1332,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-4.1928711,0.0014390945,-2.0131836};
+							position[]={-4.2011719,0.0014390945,-1.7766113};
 						};
 						side="West";
 						flags=6;
@@ -1501,7 +1343,7 @@ class items
 							description="Scout Squad Leader@VIKING-2";
 							isPlayable=1;
 						};
-						id=868;
+						id=384;
 						type="Cav_B_B_Scout_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -1531,20 +1373,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item1
@@ -1552,7 +1381,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.1928711,0.0014390945,-3.0131836};
+							position[]={-6.2011719,0.0014390945,-2.7766113};
 						};
 						side="West";
 						flags=5;
@@ -1564,7 +1393,7 @@ class items
 							description="Alpha Scout Team Leader";
 							isPlayable=1;
 						};
-						id=869;
+						id=385;
 						type="Cav_B_B_Scout_Alpha_TeamLead_F";
 						class CustomAttributes
 						{
@@ -1594,20 +1423,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item2
@@ -1615,7 +1431,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.1928711,0.0014390945,-4.5131836};
+							position[]={-6.2011719,0.0014390945,-4.2766113};
 						};
 						side="West";
 						flags=5;
@@ -1626,7 +1442,7 @@ class items
 							description="Alpha Machine Gunner";
 							isPlayable=1;
 						};
-						id=870;
+						id=386;
 						type="Cav_B_B_Scout_Alpha_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -1656,20 +1472,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item3
@@ -1677,7 +1480,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.1928711,0.0014390945,-6.0131836};
+							position[]={-6.2011719,0.0014390945,-5.7766113};
 						};
 						side="West";
 						flags=4;
@@ -1688,7 +1491,7 @@ class items
 							description="Alpha Scout";
 							isPlayable=1;
 						};
-						id=871;
+						id=387;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -1718,20 +1521,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item4
@@ -1739,7 +1529,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.1928711,0.0014390945,-7.5131836};
+							position[]={-6.2011719,0.0014390945,-7.2766113};
 						};
 						side="West";
 						flags=5;
@@ -1750,7 +1540,7 @@ class items
 							description="Alpha Scout";
 							isPlayable=1;
 						};
-						id=872;
+						id=388;
 						type="Cav_B_B_Scout_Alpha_Rifleman_F";
 						class CustomAttributes
 						{
@@ -1780,20 +1570,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item5
@@ -1801,7 +1578,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.1928711,0.0014390945,-3.0131836};
+							position[]={-2.2011719,0.0014390945,-2.7766113};
 						};
 						side="West";
 						flags=5;
@@ -1813,7 +1590,7 @@ class items
 							description="Bravo Scout Team Leader";
 							isPlayable=1;
 						};
-						id=873;
+						id=389;
 						type="Cav_B_B_Scout_Bravo_TeamLead_F";
 						class CustomAttributes
 						{
@@ -1843,20 +1620,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item6
@@ -1864,7 +1628,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.1928711,0.0014390945,-4.5131836};
+							position[]={-2.2011719,0.0014390945,-4.2766113};
 						};
 						side="West";
 						flags=5;
@@ -1875,7 +1639,7 @@ class items
 							description="Bravo Machine Gunner";
 							isPlayable=1;
 						};
-						id=874;
+						id=390;
 						type="Cav_B_B_Scout_Bravo_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -1913,7 +1677,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.1928711,0.0014390945,-6.0131836};
+							position[]={-2.2011719,0.0014390945,-5.7766113};
 						};
 						side="West";
 						flags=4;
@@ -1924,7 +1688,7 @@ class items
 							description="Bravo Scout";
 							isPlayable=1;
 						};
-						id=875;
+						id=391;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -1962,7 +1726,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.1928711,0.0014390945,-7.5131836};
+							position[]={-2.2011719,0.0014390945,-7.2766113};
 						};
 						side="West";
 						flags=5;
@@ -1973,7 +1737,7 @@ class items
 							description="Bravo Combat Lifesaver";
 							isPlayable=1;
 						};
-						id=876;
+						id=392;
 						type="Cav_B_B_Scout_Bravo_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -2003,20 +1767,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item9
@@ -2024,7 +1775,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-4.1928711,0.0014390945,-4.0131836};
+							position[]={-4.2011719,0.0014390945,-3.7766113};
 						};
 						side="West";
 						flags=5;
@@ -2035,7 +1786,7 @@ class items
 							description="Stryker Vehicle Commander";
 							isPlayable=1;
 						};
-						id=877;
+						id=393;
 						type="Cav_B_B_Ifv_Commander_F";
 						class CustomAttributes
 						{
@@ -2078,20 +1829,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 					class Item10
@@ -2099,7 +1837,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-4.1928711,0.0014390945,-5.5131836};
+							position[]={-4.2011719,0.0014390945,-5.2766113};
 						};
 						side="West";
 						flags=5;
@@ -2110,7 +1848,7 @@ class items
 							description="Stryker Driver";
 							isPlayable=1;
 						};
-						id=878;
+						id=394;
 						type="Cav_B_B_Ifv_Driver_F";
 						class CustomAttributes
 						{
@@ -2153,20 +1891,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 				};
@@ -2174,14 +1899,14 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=867;
+				id=383;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.6948242,0.89242268,0.37207031};
+					position[]={-1.703125,0.89242268,0.60864258};
 				};
 				side="Empty";
 				flags=4;
@@ -2190,14 +1915,14 @@ class items
 					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=879;
+				id=395;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -2216,7 +1941,7 @@ class items
 							class data
 							{
 								singleType="STRING";
-								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 							};
 						};
 					};
@@ -2241,7 +1966,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.8701172,2.6142888,6.2861328};
+					position[]={-4.878418,2.6142888,6.5227051};
 				};
 				side="Empty";
 				flags=4;
@@ -2249,11 +1974,28 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=880;
+				id=396;
 				type="cav_dragoon_WD_V2";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
 			};
 		};
-		id=866;
+		id=382;
 	};
 	class Item5
 	{
@@ -2274,7 +2016,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={4.3071289,0.0014390945,-2.0131836};
+							position[]={4.2988281,0.0014390945,-1.7766113};
 						};
 						side="West";
 						flags=6;
@@ -2285,7 +2027,7 @@ class items
 							description="Scout Squad Leader@VIKING-3";
 							isPlayable=1;
 						};
-						id=883;
+						id=399;
 						type="Cav_B_B_Scout_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -2315,20 +2057,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item1
@@ -2336,7 +2065,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.3071289,0.0014390945,-3.0131836};
+							position[]={2.2988281,0.0014390945,-2.7766113};
 						};
 						side="West";
 						flags=5;
@@ -2348,7 +2077,7 @@ class items
 							description="Alpha Scout Team Leader";
 							isPlayable=1;
 						};
-						id=884;
+						id=400;
 						type="Cav_B_B_Scout_Alpha_TeamLead_F";
 						class CustomAttributes
 						{
@@ -2378,20 +2107,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item2
@@ -2399,7 +2115,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.3071289,0.0014390945,-4.5131836};
+							position[]={2.2988281,0.0014390945,-4.2766113};
 						};
 						side="West";
 						flags=5;
@@ -2410,7 +2126,7 @@ class items
 							description="Alpha Machine Gunner";
 							isPlayable=1;
 						};
-						id=885;
+						id=401;
 						type="Cav_B_B_Scout_Alpha_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -2440,20 +2156,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item3
@@ -2461,7 +2164,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.3071289,0.0014390945,-6.0131836};
+							position[]={2.2988281,0.0014390945,-5.7766113};
 						};
 						side="West";
 						flags=4;
@@ -2472,7 +2175,7 @@ class items
 							description="Alpha Scout";
 							isPlayable=1;
 						};
-						id=886;
+						id=402;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -2502,20 +2205,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item4
@@ -2523,7 +2213,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.3071289,0.0014390945,-7.5131836};
+							position[]={2.2988281,0.0014390945,-7.2766113};
 						};
 						side="West";
 						flags=5;
@@ -2534,7 +2224,7 @@ class items
 							description="Alpha Scout";
 							isPlayable=1;
 						};
-						id=887;
+						id=403;
 						type="Cav_B_B_Scout_Alpha_Rifleman_F";
 						class CustomAttributes
 						{
@@ -2564,20 +2254,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item5
@@ -2585,7 +2262,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.3071289,0.0014390945,-3.0131836};
+							position[]={6.2988281,0.0014390945,-2.7766113};
 						};
 						side="West";
 						flags=5;
@@ -2597,7 +2274,7 @@ class items
 							description="Bravo Scout Team Leader";
 							isPlayable=1;
 						};
-						id=888;
+						id=404;
 						type="Cav_B_B_Scout_Bravo_TeamLead_F";
 						class CustomAttributes
 						{
@@ -2627,20 +2304,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item6
@@ -2648,7 +2312,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.3071289,0.0014390945,-4.5131836};
+							position[]={6.2988281,0.0014390945,-4.2766113};
 						};
 						side="West";
 						flags=5;
@@ -2659,7 +2323,7 @@ class items
 							description="Bravo Machine Gunner";
 							isPlayable=1;
 						};
-						id=889;
+						id=405;
 						type="Cav_B_B_Scout_Bravo_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -2697,7 +2361,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.3071289,0.0014390945,-6.0131836};
+							position[]={6.2988281,0.0014390945,-5.7766113};
 						};
 						side="West";
 						flags=4;
@@ -2708,7 +2372,7 @@ class items
 							description="Bravo Scout";
 							isPlayable=1;
 						};
-						id=890;
+						id=406;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -2746,7 +2410,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.3071289,0.0014390945,-7.5131836};
+							position[]={6.2988281,0.0014390945,-7.2766113};
 						};
 						side="West";
 						flags=5;
@@ -2757,7 +2421,7 @@ class items
 							description="Bravo Combat Lifesaver";
 							isPlayable=1;
 						};
-						id=891;
+						id=407;
 						type="Cav_B_B_Scout_Bravo_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -2787,20 +2451,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item9
@@ -2808,7 +2459,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={4.3071289,0.0014390945,-4.0131836};
+							position[]={4.2988281,0.0014390945,-3.7766113};
 						};
 						side="West";
 						flags=5;
@@ -2819,7 +2470,7 @@ class items
 							description="Stryker Vehicle Commander";
 							isPlayable=1;
 						};
-						id=892;
+						id=408;
 						type="Cav_B_B_Ifv_Commander_F";
 						class CustomAttributes
 						{
@@ -2862,20 +2513,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 					class Item10
@@ -2883,7 +2521,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={4.3071289,0.0014390945,-5.5131836};
+							position[]={4.2988281,0.0014390945,-5.2766113};
 						};
 						side="West";
 						flags=5;
@@ -2894,7 +2532,7 @@ class items
 							description="Stryker Driver";
 							isPlayable=1;
 						};
-						id=893;
+						id=409;
 						type="Cav_B_B_Ifv_Driver_F";
 						class CustomAttributes
 						{
@@ -2937,20 +2575,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 				};
@@ -2958,14 +2583,14 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=882;
+				id=398;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.4956055,0.89242268,0.49853516};
+					position[]={1.4873047,0.89242268,0.73510742};
 				};
 				side="Empty";
 				flags=4;
@@ -2974,14 +2599,14 @@ class items
 					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=894;
+				id=410;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -3000,7 +2625,7 @@ class items
 							class data
 							{
 								singleType="STRING";
-								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 							};
 						};
 					};
@@ -3025,7 +2650,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.0693359,2.6142888,6.5336914};
+					position[]={4.0610352,2.6142888,6.7702637};
 				};
 				side="Empty";
 				flags=4;
@@ -3033,11 +2658,28 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=895;
+				id=411;
 				type="cav_dragoon_WD_V3";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
 			};
 		};
-		id=881;
+		id=397;
 	};
 	class Item6
 	{
@@ -3058,7 +2700,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={11.307129,0.0014390945,2.4868164};
+							position[]={11.298828,0.0014390945,2.7233887};
 						};
 						side="West";
 						flags=6;
@@ -3069,7 +2711,7 @@ class items
 							description="Scout Squad Leader@VIKING-4";
 							isPlayable=1;
 						};
-						id=898;
+						id=414;
 						type="Cav_B_B_Scout_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -3099,20 +2741,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item1
@@ -3120,7 +2749,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.3071289,0.0014390945,1.4868164};
+							position[]={9.2988281,0.0014390945,1.7233887};
 						};
 						side="West";
 						flags=5;
@@ -3132,7 +2761,7 @@ class items
 							description="Alpha Scout Team Leader";
 							isPlayable=1;
 						};
-						id=899;
+						id=415;
 						type="Cav_B_B_Scout_Alpha_TeamLead_F";
 						class CustomAttributes
 						{
@@ -3162,20 +2791,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item2
@@ -3183,7 +2799,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.3071289,0.0014390945,-0.013183594};
+							position[]={9.2988281,0.0014390945,0.22338867};
 						};
 						side="West";
 						flags=5;
@@ -3194,7 +2810,7 @@ class items
 							description="Alpha Machine Gunner";
 							isPlayable=1;
 						};
-						id=900;
+						id=416;
 						type="Cav_B_B_Scout_Alpha_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -3224,20 +2840,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item3
@@ -3245,7 +2848,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.3071289,0.0014390945,-1.5131836};
+							position[]={9.2988281,0.0014390945,-1.2766113};
 						};
 						side="West";
 						flags=4;
@@ -3256,7 +2859,7 @@ class items
 							description="Alpha Scout";
 							isPlayable=1;
 						};
-						id=901;
+						id=417;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -3286,20 +2889,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item4
@@ -3307,7 +2897,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.3071289,0.0014390945,-3.0131836};
+							position[]={9.2988281,0.0014390945,-2.7766113};
 						};
 						side="West";
 						flags=5;
@@ -3318,7 +2908,7 @@ class items
 							description="Alpha Scout";
 							isPlayable=1;
 						};
-						id=902;
+						id=418;
 						type="Cav_B_B_Scout_Alpha_Rifleman_F";
 						class CustomAttributes
 						{
@@ -3348,20 +2938,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item5
@@ -3369,7 +2946,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={13.307129,0.0014390945,1.4868164};
+							position[]={13.298828,0.0014390945,1.7233887};
 						};
 						side="West";
 						flags=5;
@@ -3381,7 +2958,7 @@ class items
 							description="Bravo Scout Team Leader";
 							isPlayable=1;
 						};
-						id=903;
+						id=419;
 						type="Cav_B_B_Scout_Bravo_TeamLead_F";
 						class CustomAttributes
 						{
@@ -3411,20 +2988,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item6
@@ -3432,7 +2996,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={13.307129,0.0014390945,-0.013183594};
+							position[]={13.298828,0.0014390945,0.22338867};
 						};
 						side="West";
 						flags=5;
@@ -3443,7 +3007,7 @@ class items
 							description="Bravo Machine Gunner";
 							isPlayable=1;
 						};
-						id=904;
+						id=420;
 						type="Cav_B_B_Scout_Bravo_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -3473,20 +3037,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item7
@@ -3494,7 +3045,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={13.307129,0.0014390945,-1.5131836};
+							position[]={13.298828,0.0014390945,-1.2766113};
 						};
 						side="West";
 						flags=4;
@@ -3505,7 +3056,7 @@ class items
 							description="Bravo Scout";
 							isPlayable=1;
 						};
-						id=905;
+						id=421;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -3535,20 +3086,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item8
@@ -3556,7 +3094,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={13.307129,0.0014390945,-3.0131836};
+							position[]={13.298828,0.0014390945,-2.7766113};
 						};
 						side="West";
 						flags=5;
@@ -3567,7 +3105,7 @@ class items
 							description="Bravo Combat Lifesaver";
 							isPlayable=1;
 						};
-						id=906;
+						id=422;
 						type="Cav_B_B_Scout_Bravo_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -3597,20 +3135,7 @@ class items
 									};
 								};
 							};
-							class Attribute2
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=3;
+							nAttributes=2;
 						};
 					};
 					class Item9
@@ -3618,7 +3143,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={11.307129,0.0014390945,0.48681641};
+							position[]={11.298828,0.0014390945,0.72338867};
 						};
 						side="West";
 						flags=5;
@@ -3629,7 +3154,7 @@ class items
 							description="Stryker Vehicle Commander";
 							isPlayable=1;
 						};
-						id=907;
+						id=423;
 						type="Cav_B_B_Ifv_Commander_F";
 						class CustomAttributes
 						{
@@ -3672,20 +3197,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 					class Item10
@@ -3693,7 +3205,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={11.307129,0.0014390945,-1.0131836};
+							position[]={11.298828,0.0014390945,-0.77661133};
 						};
 						side="West";
 						flags=5;
@@ -3704,7 +3216,7 @@ class items
 							description="Stryker Driver";
 							isPlayable=1;
 						};
-						id=908;
+						id=424;
 						type="Cav_B_B_Ifv_Driver_F";
 						class CustomAttributes
 						{
@@ -3747,20 +3259,7 @@ class items
 									};
 								};
 							};
-							class Attribute3
-							{
-								property="aceax_textureOptions";
-								expression="[_this, _value, false] call aceax_gearinfo_fnc_setTextureOptions;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="[[""USP_G3C_pantscamo"",""""],[""USP_G3C_mxcamo"",""""],[""USP_G3C_orcamo"",""""],[""USP_G3C_flagright"",""""],[""USP_G3C_flagleft"",""""]]";
-									};
-								};
-							};
-							nAttributes=4;
+							nAttributes=3;
 						};
 					};
 				};
@@ -3768,14 +3267,14 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=897;
+				id=413;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={10.992188,2.6142888,9.512207};
+					position[]={10.983887,2.6142888,9.7487793};
 				};
 				side="Empty";
 				flags=4;
@@ -3783,11 +3282,28 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=909;
+				id=425;
 				type="cav_dragoon_WD_V4";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ammoBox";
+						expression="[_this,_value] call bis_fnc_initAmmoBox;";
+						class Value
+						{
+							class data
+							{
+								singleType="STRING";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							};
+						};
+					};
+					nAttributes=1;
+				};
 			};
 		};
-		id=896;
+		id=412;
 	};
 	class Item7
 	{
@@ -3801,7 +3317,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.46826172,0.89242268,-13.680176};
+					position[]={0.45996094,0.89242268,-13.443604};
 					angles[]={-0,1.5767576,0};
 				};
 				side="Empty";
@@ -3811,14 +3327,14 @@ class items
 					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=911;
+				id=427;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
 					class Attribute0
 					{
 						property="ace_isRepairFacility";
-						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+						expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
 						class Value
 						{
 							class data
@@ -3837,7 +3353,7 @@ class items
 							class data
 							{
 								singleType="STRING";
-								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
+								value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 							};
 						};
 					};
@@ -3876,7 +3392,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={1.7993164,0.0014390945,-16.080566};
+									position[]={1.7910156,0.0014390945,-15.843994};
 								};
 								side="West";
 								flags=7;
@@ -3887,7 +3403,7 @@ class items
 									description="Medical Team Leader@ATLAS-1";
 									isPlayable=1;
 								};
-								id=914;
+								id=430;
 								type="Cav_B_B_Atlas_Medic_TeamLeader_3_2_F";
 								class CustomAttributes
 								{
@@ -3951,7 +3467,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={3.6645508,0.0014390945,-15.738281};
+									position[]={3.65625,0.0014390945,-15.501709};
 								};
 								side="West";
 								flags=5;
@@ -3962,7 +3478,7 @@ class items
 									description="Medical Team Member";
 									isPlayable=1;
 								};
-								id=915;
+								id=431;
 								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
 								class CustomAttributes
 								{
@@ -4026,7 +3542,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={1.6313477,0.0014390945,-17.752441};
+									position[]={1.6230469,0.0014390945,-17.515869};
 								};
 								side="West";
 								flags=5;
@@ -4037,7 +3553,7 @@ class items
 									description="Medical Team Member";
 									isPlayable=1;
 								};
-								id=916;
+								id=432;
 								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
 								class CustomAttributes
 								{
@@ -4101,7 +3617,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={3.6547852,0.0014390945,-17.751465};
+									position[]={3.6464844,0.0014390945,-17.514893};
 								};
 								side="West";
 								flags=5;
@@ -4112,7 +3628,7 @@ class items
 									description="Medical Team Member";
 									isPlayable=1;
 								};
-								id=917;
+								id=433;
 								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
 								class CustomAttributes
 								{
@@ -4176,14 +3692,14 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=913;
+						id=429;
 					};
 					class Item1
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.6318359,2.6142888,-13.597168};
+							position[]={6.6235352,2.6142888,-13.360596};
 						};
 						side="Empty";
 						flags=4;
@@ -4191,11 +3707,28 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=918;
+						id=434;
 						type="cav_dragoon_Unarmed_WD";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
 					};
 				};
-				id=912;
+				id=428;
 			};
 			class Item2
 			{
@@ -4216,7 +3749,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-3.3203125,0.0014390945,-15.783691};
+									position[]={-3.3286133,0.0014390945,-15.547119};
 								};
 								side="West";
 								flags=7;
@@ -4227,7 +3760,7 @@ class items
 									description="Medical Team Leader@ATLAS-2";
 									isPlayable=1;
 								};
-								id=921;
+								id=437;
 								type="Cav_B_B_Atlas_Medic_TeamLeader_3_2_F";
 								class CustomAttributes
 								{
@@ -4291,7 +3824,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-1.3203125,0.0014390945,-15.783691};
+									position[]={-1.3286133,0.0014390945,-15.547119};
 								};
 								side="West";
 								flags=5;
@@ -4302,7 +3835,7 @@ class items
 									description="Medical Team Member";
 									isPlayable=1;
 								};
-								id=922;
+								id=438;
 								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
 								class CustomAttributes
 								{
@@ -4366,7 +3899,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-3.3203125,0.0014390945,-17.783691};
+									position[]={-3.3286133,0.0014390945,-17.547119};
 								};
 								side="West";
 								flags=5;
@@ -4377,7 +3910,7 @@ class items
 									description="Medical Team Member";
 									isPlayable=1;
 								};
-								id=923;
+								id=439;
 								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
 								class CustomAttributes
 								{
@@ -4441,7 +3974,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-1.3203125,0.0014390945,-17.783691};
+									position[]={-1.3286133,0.0014390945,-17.547119};
 								};
 								side="West";
 								flags=5;
@@ -4452,7 +3985,7 @@ class items
 									description="Medical Team Member";
 									isPlayable=1;
 								};
-								id=924;
+								id=440;
 								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
 								class CustomAttributes
 								{
@@ -4516,14 +4049,14 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=920;
+						id=436;
 					};
 					class Item1
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.7641602,2.6142888,-13.654297};
+							position[]={-6.7724609,2.6142888,-13.417725};
 						};
 						side="Empty";
 						flags=4;
@@ -4531,13 +4064,30 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=925;
+						id=441;
 						type="cav_dragoon_Unarmed_WD";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
 					};
 				};
-				id=919;
+				id=435;
 			};
 		};
-		id=910;
+		id=426;
 	};
 };

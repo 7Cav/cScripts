@@ -10,9 +10,5 @@ requiredAddons[]=
 	"ace_cargo",
 	"RSPN_Assets",
 	"cav_vehicles_dragoon",
-	"ace_medical_treatment",
-	"aceP_circulation",
-	"A3_Supplies_F_Exp_Ammoboxes",
-	"ace_dragging",
 	"cav_troops_bravo_atlas"
 };
