@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This function fetches your rank based on your name prefix.
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * Rank based on name <STRING>
  *
  * Example:
- * [player,'BIS'] call cScripts_fnc_getPlayerRank
+ * [player, 'BIS'] call cScripts_fnc_player_getRank
  *
  */
 
@@ -23,7 +23,7 @@ params [
 private _return = "";
 
 private _profileName = profileName;
-if ([_player, EGVAR(Settings,primaryClanTag)] call FUNC(isPlayerClan)) then {
+if (call EFUNC(player,hasClanTag)) then {
     _profileName = [_profileName, 0, 2] call BIS_fnc_trimString;
     _profileName = toUpper(_profileName);
 };

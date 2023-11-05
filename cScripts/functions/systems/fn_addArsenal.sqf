@@ -39,7 +39,7 @@ private _arsenalStatement = {
         [player, player, false] call ace_arsenal_fnc_openBox;
         [QEGVAR(EH_StagingArsenal,displayOpen)] call CBA_fnc_localEvent;
         [{
-            private _loadout = [player] call EFUNC(gear,getCurrentLoadout);
+            private _loadout = [player] call EFUNC(gear,getLoadoutName);
             private _name = getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "displayName");
             private _company = getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "company");
             [(findDisplay 1127001), format["Arsenal for %1 Co. %2 loaded", [_company] call CBA_fnc_capitalize, _name]] call ace_arsenal_fnc_message;

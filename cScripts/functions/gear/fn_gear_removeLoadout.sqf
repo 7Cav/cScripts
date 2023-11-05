@@ -18,7 +18,7 @@ params [["_unit", objNull, [objNull]]];
 
 if (_unit call EFUNC(gear,hasSavedLoadout)) exitWith {false};
 
-_unit setVariable [QEGVAR(gear,Loadout), nil];
-_unit setVariable [QEGVAR(gear,savedLoadout), nil];
+_unit setVariable [QEGVAR(Gear,Loadout), nil];
+_unit setVariable [QEGVAR(Gear,SavedLoadout), nil];
 
 true

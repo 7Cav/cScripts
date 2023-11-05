@@ -17,6 +17,7 @@
 
 params ["_unit"];
 
+private _saved         = [_unit] call EFUNC(gear,loadLoadout);
 private _config        = missionConfigFile >> "CfgLoadouts";
 private _variable      = _unit getVariable [QEGVAR(Gear,LoadoutClass), ""];
 private _variableName  = vehicleVarName _unit;
@@ -24,6 +25,9 @@ private _className     = typeOf _unit;
 private _sideConfig    = [side group _unit] call EFUNC(gear,getSideConfig);
 
 switch (true) do {
+    case (_unit call EFUNC(gear,hasSavedLoadout)): {
+        _saved
+    };
     case (isClass (_config >> _variable)): {
         if !(_variable isKindOf [_sideConfig, _config]) then {
             SHOW_CHAT_WARNING_2("Gear", "The loadout for '%1' does not inherit from '%2'.", _variable, _sideConfig);

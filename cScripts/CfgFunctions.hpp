@@ -52,27 +52,33 @@ class cScripts {
     };
     class players {
         file = "cScripts\functions\players";
-        class getPlayerClan {};
-        class isPlayerClan {};
 
-        class getPlayerRank {};
-        class setPlayerRank {};
+        class profile_saveInsignia {};
+        class profile_loadInsignia {};
 
-        class getPlayerRole {};
+        class player_hasClanTag {};
+        class player_getClanTag {};
 
-        class getPlayerName {};
+        class player_getRank {};
+        class player_setRank {};
+        class player_getRole {};
 
-        class setTeamColor {};
+        class unit_setTeamColor {};
+        
+        class unit_getName {};
+        class unit_setInsignia {};
+        class unit_getSquadInsignia {};
+        class unit_getSquadName {};
+
 
         class getRadioChannel {};
         class setRadioChannel {};
         class setActiveRadio {};
-        
-        class getCompanyVariable {};
-        class hasCompanyVariable {};
 
-        class getSquadName {};
-        class getSquadInsignia {};
+        class player_setCompany {};
+
+        // Other Functions
+        class unit_getVariables {};
     };
     class mission {
         file = "cScripts\functions\mission";
@@ -99,6 +105,7 @@ class cScripts {
         class addInsigniaSelection {};
         class addInsigniaSelectionList {};
 
+        class allowLoadout {};
         class setupLoadoutSelection {};
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
@@ -201,7 +208,7 @@ class cScripts {
         class gear_applyLoadout {};
         class gear_applyCosmetics {};
         class gear_applyAbilities {};
-
+        class gear_applyFunctions {};
         class gear_selectLoadout {};
         class gear_getSideConfig {};
 
@@ -215,7 +222,7 @@ class cScripts {
 
         // other
         class gear_getLoadoutRole {};
-        class gear_getCurrentLoadout {};
+        class gear_getLoadoutName {};
     };
     class diag {
         file = "cScripts\functions\diag";

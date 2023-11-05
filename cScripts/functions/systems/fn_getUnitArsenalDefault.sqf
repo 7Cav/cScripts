@@ -16,7 +16,7 @@
 private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 ["<empty>", _empty, false] call ace_arsenal_fnc_addDefaultLoadout;
 
-private _loadout = call EFUNC(gear,getCurrentLoadout);
+private _loadout = [player] call EFUNC(gear,getLoadoutName);
 if !(isClass (missionConfigFile >> "CfgLoadouts" >> _loadout)) exitWith {
     SHOW_CHAT_WARNING_1("ArsenalDefault", "Loadout '%1' does not exist inside of mission config. No default arsenal will be created.", _loadout);
 };

@@ -10,7 +10,7 @@
  * Squad Name <STRING>
  *
  * Example:
- * [Bob] call cScripts_fnc_getSquadName;
+ * [Bob] call cScripts_fnc_unit_getSquadName;
  *
  * Public: No
  */
