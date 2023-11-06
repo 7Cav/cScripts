@@ -5,7 +5,10 @@ _throw() {
     exit 1
 }
 
+
 string="$*"
+
+echo "Validating '$string'..."
 
 if [[ ${#string} -lt 20 ]]; then _throw "short name"; fi
 if [[ $string == "Update cba_settings.sqf" ]]; then _throw "bad name"; fi
