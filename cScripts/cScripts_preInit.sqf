@@ -37,6 +37,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+
 [ // Ai setting
     QEGVAR(Settings,setAiSystemDifficulty),
     "LIST",
