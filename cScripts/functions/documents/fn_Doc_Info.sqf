@@ -10,9 +10,9 @@
  * call cScripts_fnc_Doc_Info
  */
 
-private _playerRole = call FUNC(getPlayerRole);
+private _playerRole = call EFUNC(player,getRole);
 
-private _group = [player] call FUNC(getSquadName);
+private _group = [player] call EFUNC(unit,getSquadName);
 private _playerGroup = "";
 if (_group == "") then { _playerGroup = "in your squad" } else { _playerGroup = formatText["under the callsign <font color='#ffc61a'>%1</font>", _group]};
 

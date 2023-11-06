@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
- * Author: BaerMitUmlaut, CPL.Brostrom.A
- * This function apply abilities to a player based on config entries
+ * Author: SGT.Brostrom.A
+ * This function apply cosmetician attributes to a unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -16,39 +16,38 @@
 
 params [["_unit", objNull, [objNull]]];
 
+
 // Player Name without rank prefix
-if (!isNil{_vehicle getVariable QEGVAR(Player,Name)}) then {
-    private _unitName = [_unit, 'PROFILE'] call FUNC(getPlayerName);
-    _unit setVariable [QEGVAR(Player,Name), _unitName];
-    INFO_2("Gear", "%1 name is %2", _unit, _unitName);
+if (!isNil{GETVAR(_unit,EGVAR(Unit,Name),nil)}) then {
+    private _name = [_unit] call EFUNC(unit,getName);
+    SETVAR(_unit,EGVAR(Unit,Name),_name);
 };
+
 
 // Player Rank to ingame rank
 if (EGVAR(Settings,setPlayerRank)) then {
-    if (isNil {_player getVariable QEGVAR(Cav,Rank)}) then {
-        [_unit] call FUNC(setPlayerRank);
+    if (!isNil{GETVAR(_unit,EGVAR(Unit,Rank),nil)}) then {
+        private _rank = [_unit] call EFUNC(player,getRank);
+        SETVAR(_unit,EGVAR(Unit,Rank),_rank);
     };
 };
+
 
 // Team Color
-if (isNil {_unit getVariable QEGVAR(Player,Team)}) then {
-    call FUNC(setTeamColor);
+if (!isNil{GETVAR(_unit,EGVAR(Unit,TeamColor),nil)}) then {
+    [_unit] call EFUNC(unit,setTeamColor);
 };
 
-// Squad insignias
+
+// Apply squad insignia 
 if (EGVAR(Settings,allowInsigniaApplication)) then {
-    private _insignia = "";
-    if !(isNil {profileNamespace getVariable QEGVAR(Cav,Insignia)}) then {
-        _insignia = profileNamespace getVariable QEGVAR(Cav,Insignia);
-        INFO_2("Gear", "%1 insignia '%2' obtained based on saved variable...", _unit, _insignia);
+    private _insignia = if (call EFUNC(player,loadInsignia) != "") then {
+        call EFUNC(player,loadInsignia);
     } else {
-        _insignia = [_unit] call FUNC(getSquadInsignia);
-        INFO_2("Gear", "%1 insignia '%2' obtained based on squad name...", _unit, _insignia);
+        call EFUNC(unit,getSquadInsignia);
     };
-    if (_insignia == "") then {_insignia = getText (_config >> "insignia")};
     [{
         params ["_unit", "_insignia"];
-        [_unit, _insignia] call BIS_fnc_setUnitInsignia;
-        INFO_2("Gear", "%1 got insignia '%2' assinged", _unit, _insignia);
+        [_unit, _insignia] call EFUNC(unit,setInsignia);
     }, [_unit, _insignia], 2] call CBA_fnc_waitAndExecute;
 };

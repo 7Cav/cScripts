@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * [] call cScripts_fnc_gear_setupRadios
+ * call cScripts_fnc_gear_setupRadios
  *
  * Public: No
  */

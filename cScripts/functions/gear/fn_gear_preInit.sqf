@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: BaerMitUmlaut, CPL.Brostrom.A
+ * Author: BaerMitUmlaut, SGT.Brostrom.A
  * This function runs on preInit and setup the gear system using CBA addClassEventHandler.
  *
  * Arguments:
@@ -46,12 +46,8 @@ if (isClass (missionConfigFile >> "CfgLoadouts")) then {
     ["CAManBase", "Respawn", {
         params ["_unit"];
         if (_unit == player) then {
-            if (_unit call EFUNC(gear,hasSavedLoadout)) then {
-                _unit call EFUNC(gear,loadLoadout);
-            } else {
-                private _loadout = [_unit] call EFUNC(gear,selectLoadout);
-                [_unit, _loadout] call EFUNC(gear,applyLoadout);
-            };
+            private _loadout = [_unit] call EFUNC(gear,selectLoadout);
+            [_unit, _loadout] call EFUNC(gear,applyLoadout);
         };
     }] call CBA_fnc_addClassEventHandler;
 

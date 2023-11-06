@@ -22,8 +22,9 @@ params [
     ["_size", 12, [0]]
 ];
 
-private _stagingZones = missionNamespace getVariable [QEGVAR(Staging,Zones), []];
+private _stagingZones = GETMVAR(EGVAR(Staging,Zones), []);
 
+// Check if zone is marker
 if (_zone isEqualType "") then {
     private _markerPos = getMarkerPos _zone;
     _zone = "UserTexture1m_F" createVehicle _markerPos;
@@ -31,12 +32,15 @@ if (_zone isEqualType "") then {
 
 _stagingZones pushBack [_zone, _size];
 
-missionNamespace setVariable [QEGVAR(Staging,Zones), _stagingZones];
+SETMVAR(EGVAR(Staging,Zones), _stagingZones)
 
-#ifdef DEBUG_MODE
-    private _debugMarker = createMarkerLocal [format["DebugStadgeingMarker_%1", count _stagingZones], _zone];
-    _debugMarker setMarkerShapeLocal "ELLIPSE";
-    _debugMarker setMarkerSizeLocal [_size, _size];
-    _debugMarker setMarkerColorLocal "colorCivilian";
-    INFO_1("Staging", "Staging zone %1 created.", count _stagingZones);
-#endif
+INFO_2("Staging", "Staging zone %1 (%2) created.", count _stagingZones, _zone);
+
+// Vehicles dont paint out the zone
+if (_zone isKindOf "AllVehicles") exitWith {};
+INFO_2("Staging", "Revlealing staging zone %1 (%2)", count _stagingZones, _zone);
+
+private _visibleZone = createMarkerLocal [format["VisibleStadgeingMarker_%1", count _stagingZones], _zone];
+_visibleZone setMarkerShapeLocal "ELLIPSE";
+_visibleZone setMarkerSizeLocal [_size, _size];
+_visibleZone setMarkerColorLocal "ColorYellow";

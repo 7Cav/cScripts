@@ -40,6 +40,30 @@ if (GVAR(isPlayer)) then {
     //["zen_common_createZeus", {
     //    _this params ["_zeus"];
     //}] call CBA_fnc_addEventHandler;
+
+
+    // CavArsenal
+    ["ace_arsenal_displayClosed", {
+        if (GVAR(StagingArsenalOpen)) then {
+            [QEGVAR(EH_StagingArsenal,displayClose)] call CBA_fnc_localEvent;
+        };
+    }] call CBA_fnc_addEventHandler;
+
+    [QEGVAR(EH_StagingArsenal,displayOpen), {
+        GVAR(StagingArsenalOpen) = true;
+    }] call CBA_fnc_addEventHandler;
+
+    [QEGVAR(EH_StagingArsenal,displayClosed), {
+        [player, true] call ace_arsenal_fnc_removeBox;
+        GVAR(StagingArsenalOpen) = false;
+
+        // Reset default loadouts
+        call EFUNC(init,aceArsenalDefault);
+
+    }] call CBA_fnc_addEventHandler;
+
+
+
 };
 
 
