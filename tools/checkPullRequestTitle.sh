@@ -17,14 +17,14 @@ if [[ $string == "Update cba_settings.sqf" ]];  then _throw "Sad name"; fi
 if [[ $string == "Update settings" ]];          then _throw "Sad name"; fi
 
 # Descriptor
-if [[ $string != *"Added"* ]] then
-    if [[ $string != *"added"* ]] then
-        if [[ $string != *"Fixed"* ]] then
-            if [[ $string != *"fixed"* ]] then
-                if [[ $string != *"Updated"* ]] then
-                    if [[ $string != *"updated"* ]] then
-                        if [[ $string != *"Adjusted"* ]] then
-                            if [[ $string != *"adjusted"* ]] then _throw "missing descriptor [Added, Fixed, Adjusted, Updated]"; fi
+if [[ $string != *"Added"* ]]; then
+    if [[ $string != *"added"* ]]; then
+        if [[ $string != *"Fixed"* ]]; then
+            if [[ $string != *"fixed"* ]]; then
+                if [[ $string != *"Updated"* ]]; then
+                    if [[ $string != *"updated"* ]]; then
+                        if [[ $string != *"Adjusted"* ]]; then
+                            if [[ $string != *"adjusted"* ]]; then _throw "missing descriptor [Added, Fixed, Adjusted, Updated]"; fi
                         fi
                     fi
                 fi
