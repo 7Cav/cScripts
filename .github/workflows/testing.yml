@@ -36,3 +36,5 @@ jobs:
     - name: Check for LOGGING
       if: always()
       run: bash tools/checkLogging.sh
+    - name Check Pull Request Name
+      run: bash tools/checkPullRequestTitle.sh ${{ github.event.pull_request.title }}
