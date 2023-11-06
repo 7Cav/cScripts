@@ -1,4 +1,4 @@
-name: Arma
+name: Testing
 on: [push, pull_request]
 jobs:
   validate:
