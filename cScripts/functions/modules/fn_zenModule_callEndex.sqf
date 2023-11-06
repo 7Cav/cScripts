@@ -85,14 +85,22 @@ params ["_modulePos", "_objectPos"];
                             {
                                 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 
-                                private _hftitle = format["<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1 %2<br />hold your Fire!</t><br /><br />", [_unit, 'USA'] call FUNC(getPlayerRank), [_unit, 'PROFILE'] call FUNC(getPlayerName)];
+                                private _hftitle = format[
+                                    "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1 %2<br />hold your Fire!</t><br /><br />",
+                                    [_unit, 'USA'] call EFUNC(player,getRank),
+                                    [_unit] call EFUNC(unit,getName)
+                                ];
                                 private _hfimage = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
                                 private _hftext = "You are not allowed to discharge your weapon during Endex.<br />";
 
                                 hint parseText (_hftitle + _hfimage + _hftext);
                                 format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(info), 0];
                                 if ( _unit getVariable [QEGVAR(player,endexFiredWeapon), ""] != _muzzle ) then {
-                                    format ["Hold your fire %1 %2!", [_unit, 'USA'] call FUNC(getPlayerRank), [_unit,'PROFILE'] call FUNC(getPlayerName)] remoteExecCall ["systemChat", 0];
+                                    format [
+                                        "Hold your fire %1 %2!",
+                                        [_unit, 'USA'] call EFUNC(player,getRank),
+                                        [_unit] call EFUNC(unit,getName)
+                                    ] remoteExecCall ["systemChat", 0];
                                     _unit setVariable [QEGVAR(player,endexFiredWeapon), _muzzle];
                                 };
                             }

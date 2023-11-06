@@ -37,9 +37,10 @@ if (_loadConfig) then {
     _unit setVariable [QEGVAR(Gear,LoadoutClass), _loadout];
 
     // Company
-    private _company = getText (_config >> "company");
-    _unit setVariable [QEGVAR(Cav,Company), _company];
-    if (_company != "") then {INFO_2("Gear", "%1 have company variable set to %2", name _unit, _company);};
+    if (GVAR(isPlayer)) then {
+        private _company = getText (_config >> "company");
+        [_company] call EFUNC(player,setCompany);
+    };
 };
 
 // preLoadout
@@ -68,45 +69,14 @@ switch (true) do {
 };
 
 // Abilities
+// Apply only abilities for config loadouts to avoid resets of abilities when loading a saved loadout.
 if (!_loadArray) then {
     [_unit, _config] call EFUNC(gear,applyAbilities);
 };
 
 // Functions
-if (GVAR(isPlayer)) then {
-    // Handle Cosmetics
-    [_unit] call EFUNC(gear,applyCosmetics);
-
-    // Radios
-    if (EGVAR(Settings,enableRadios)) then {
-        if (EGVAR(patches,usesACRE)) then {
-            if (EGVAR(Settings,setRadio)) then {
-                [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
-                    _this params ["_unit"];
-                    SHOW_CHAT_INFO_1("GearRadio", "Setting up ACRE primary radio and channels for %1...", name _unit);
-                    [_unit] call FUNC(setRadioChannel);
-                    ["ACRE_PRC343"] call FUNC(setActiveRadio);
-                }, [_unit]] call CBA_fnc_waitUntilAndExecute;
-            };
-        };
-    };
-
-    // Earplugs
-    if (EGVAR(Settings,addEarplugs)) then {
-        if !([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {
-            [{
-                params ["_unit"];
-                [_unit] call ace_hearing_fnc_putInEarplugs;
-            }, [_unit]] call CBA_fnc_execNextFrame;
-        };
-    };
-
-    //Server metrics
-    if ((call BIS_fnc_admin) >= 2) then {
-        player addAction ["Server Metrics", {
-            [owner player] call FUNC(getServerMetrics);
-        }, [], 0, false, true];
-    };
+if (GVAR(isPlayer)) exitWith {
+    call EFUNC(gear,applyFunctions);
 };
 
 // Select weapon

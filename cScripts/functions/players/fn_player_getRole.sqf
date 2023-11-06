@@ -10,13 +10,14 @@
  * Role name <STRING>
  *
  * Example:
- *  call cScripts_fnc_getPlayerRole
+ *  call cScripts_fnc_player_getRole
  *
  */
 
 private _return = "Trooper";
 
-if !(isMultiplayer) exitWith { _return };
+if (!isMultiplayer) exitWith { _return };
+if (!GVAR(isPlayer)) exitWith { _return };
 
 private _playerRole = roleDescription player;
 

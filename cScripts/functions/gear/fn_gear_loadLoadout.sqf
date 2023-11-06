@@ -1,17 +1,16 @@
 #include "..\script_component.hpp";
 /*
  * Author: BaerMitUmlaut, CPL.Brostrom.A
- * This function apply abilities to a player based on config entries
+ * This function loads a loadout array stored in unit variable.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Loadout <STRING / ARRAY>
  *
  * Return Value:
- * true or false based on successful load <BOOL>
+ * loadout array <LOADOUT ARRAY>
  *
  * Example:
- * [player] call cScripts_fnc_gear_loadLoadout
+ * [bob] call cScripts_fnc_gear_loadLoadout
  *
  */
 
@@ -19,11 +18,10 @@ params [
     ["_unit", objNull, [objNull]]
 ];
 
-if !(_unit getVariable [QEGVAR(gear,savedLoadout), false]) exitWith {false};
+private _emptyLoadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 
-private _loadout = _unit getVariable QEGVAR(gear,Loadout);
-[_unit, _loadout] call EFUNC(gear,applyLoadout);
+if (!(_unit call EFUNC(gear,hasSavedLoadout))) exitWith {_emptyLoadout};
 
 INFO("Gear", "Loaded stored loadout.");
 
-true
+_unit getVariable [QEGVAR(gear,loadout), _emptyLoadout];
