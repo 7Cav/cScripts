@@ -10,7 +10,8 @@
  * ARRAY of items and amounts or items or empty
  *
  * Example:
- * [""] call cScripts_fnc_logistics_getContainer;
+ * call cScripts_fnc_logistics_getAllContainerItems;
+ * [true] call cScripts_fnc_logistics_getAllContainerItems;
  *
  * Public: yes
  */
