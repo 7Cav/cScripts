@@ -41,7 +41,6 @@ if (GVAR(isPlayer)) then {
     //    _this params ["_zeus"];
     //}] call CBA_fnc_addEventHandler;
 
-
     // CavArsenal
     ["ace_arsenal_displayClosed", {
         if (GVAR(StagingArsenalOpen)) then {
@@ -61,9 +60,6 @@ if (GVAR(isPlayer)) then {
         call EFUNC(init,aceArsenalDefault);
 
     }] call CBA_fnc_addEventHandler;
-
-
-
 };
 
 
@@ -81,5 +77,3 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
     _playerLog pushBack _playerName;
     missionNamespace setVariable [QEGVAR(log,players), _playerLog];
 }] call CBA_fnc_addEventHandler;
-
-
