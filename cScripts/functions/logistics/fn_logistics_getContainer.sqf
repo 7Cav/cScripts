@@ -5,9 +5,10 @@
  *
  * Arguments:
  * 0: Crate type <STRING>
+ * 1: Return only keys <BOOLEAN>
  *
  * Return:
- * ARRAY of items or empty
+ * ARRAY of items and amounts or items or empty
  *
  * Example:
  * [""] call cScripts_fnc_logistics_getContainer;
@@ -21,13 +22,15 @@ params [
 if (_key == "") exitWith {};
 
 private _containerMap = GVAR(DATABASE);
-private _container = _containerMap getOrDefaultCall [_key, {WARNING_1("Logistics", "%1 does not exist.", _key); []}];
+private _container = [];
 
 if (_keysOnly) then {
      private _containerItemMap = createHashMapFromArray _container;
      _container = keys _containerItemMap;
+} else {
+    _container = _containerMap getOrDefaultCall [_key, {WARNING_1("Logistics", "%1 does not exist.", _key); []}];
 };
 
-if (isNil{_container}) exitWith {ERROR_1("Logistics", "%1 returned null.", _key);};
+if (isNil{_container}) exitWith {ERROR_1("Logistics", "%1 returned null.", _key); []};
 
 _container;
