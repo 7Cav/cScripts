@@ -11,9 +11,9 @@
  *
  * Example:
  * call cScripts_fnc_logistics_getAllContainerItems;
- * [true] call cScripts_fnc_logistics_getAllContainerItems;
+ * [false] call cScripts_fnc_logistics_getAllContainerItems;
  *
- * Public: yes
+ * Public: Yes
  */
 
 params [
@@ -23,7 +23,7 @@ params [
 private _containerMap = GVAR(DATABASE);
 private _container = keys _containerMap;
 
-private _itemList = [];
+private _allContainers = [];
 
 {
     if (_keysOnly) then {
@@ -36,6 +36,4 @@ private _itemList = [];
     };
 } foreach _container;
 
-if (isNil{_container}) exitWith {ERROR_1("Logistics", "All items returned null."); []};
-
-_itemList;
+_allContainers;
