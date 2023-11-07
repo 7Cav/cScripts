@@ -1,7 +1,8 @@
+#define DEBUG_MODE;
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A, SPC.Turn.J
- * This function return a array of all available content in logistics
+ * This function return a array of all available content in logistics.
  *
  * Arguments:
  * 0: Return only keys <BOOLEAN>
@@ -17,23 +18,23 @@
  */
 
 params [
-    ["_keysOnly", false, [false]]
+    ["_keysOnly", false, []]
 ];
 
 private _containerMap = GVAR(DATABASE);
-private _container = keys _containerMap;
-
 private _allContainers = [];
 
 {
     if (_keysOnly) then {
-        private _containerItemMap = createHashMapFromArray _x;
-        _container = keys _containerItemMap;
-        _itemList append _container
+        private _keys = [_x, true] call EFUNC(logistics,getContainer);
+        _allContainers append _keys;
     } else {
-        private _container = _containerMap getOrDefault [_x, []];
-        _itemList append _container
+        _allContainers append _y;
     };
-} foreach _container;
+} foreach _containerMap;
+
+if (_keysOnly) then {
+    _allContainers = _allContainers arrayIntersect _allContainers;
+};
 
 _allContainers;
