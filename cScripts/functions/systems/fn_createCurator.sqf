@@ -1,4 +1,3 @@
-#define DEBUG_MODE;
 #include "..\script_component.hpp";
 /*
  * Author: SGT.Brostrom.A
@@ -8,7 +7,7 @@
  * 0: Player <OBJECT>
  *
  * Example:
- * cScripts_fnc_createCurator
+ * [player] call cScripts_fnc_createCurator
  *
  * Public: No
  */
