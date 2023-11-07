@@ -12,6 +12,9 @@
  *
  * Example:
  * [""] call cScripts_fnc_logistics_getContainer;
+ * ["", false] call cScripts_fnc_logistics_getContainer;
+ *
+ * Public: Yes
  */
 
 params [
@@ -22,15 +25,13 @@ params [
 if (_key == "") exitWith {};
 
 private _containerMap = GVAR(DATABASE);
-private _container = [];
+private _container = _containerMap getOrDefaultCall [_key, {WARNING_1("Logistics", "%1 does not exist.", _key); []}];
 
 if (_keysOnly) then {
      private _containerItemMap = createHashMapFromArray _container;
      _container = keys _containerItemMap;
-} else {
-    _container = _containerMap getOrDefaultCall [_key, {WARNING_1("Logistics", "%1 does not exist.", _key); []}];
 };
 
-if (isNil{_container}) exitWith {ERROR_1("Logistics", "%1 returned null.", _key); []};
+if (isNil{_container}) exitWith {ERROR_1("Logistics", "%1 returned null.", _key);};
 
 _container;
