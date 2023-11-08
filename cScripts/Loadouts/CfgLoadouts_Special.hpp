@@ -8,7 +8,7 @@ class S3_Base: Cav_B_Seventh_Cavalry_Base_F {
     company = "";
     
     insignia = "specialized_s3";
-    preLoadout = "this setVariable ['cScripts_Player_Unit', 'S3'];";
+    preLoadout = "_this#0 setVariable ['cScripts_Player_Unit', 'S3'];";
     postLoadout = "";
 };
 
@@ -20,8 +20,6 @@ class S3_3 : S3_Base { scope = 1; };
 class S3_4 : S3_Base { scope = 1; };
 class S3_5 : S3_Base { scope = 1; };
 class S3_6 : S3_Base { scope = 1; };
-class S3_7 : S3_Base { scope = 1; };
-class S3_8 : S3_Base { scope = 1; };
 
 class S3_1_1 : S3_Base { scope = 1; };
 class S3_2_1 : S3_Base { scope = 1; };

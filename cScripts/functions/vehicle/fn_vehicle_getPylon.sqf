@@ -164,17 +164,19 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
 ];
 
 // Loadout vehicle list
-private _pylons = createHashMapFromArray [
+private _allVehiclePylons = createHashMapFromArray [
     ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base],
     ["I_APC_Wheeled_03_cannon_F", _I_APC_Wheeled_03_cannon_F]
 ];
 
 // Return keys or full hashmap
-is (_vehicleKind isEqualType true) exitWith {
-    if (_vehicleKind) then {_pylons = keys _pylons};
-    _pylons
+if (_vehicleKind isEqualType true) exitWith {
+    if (_vehicleKind) then {_allVehiclePylons = keys _allVehiclePylons};
+    _allVehiclePylons;
 };
 
+
+// Check if valid input
 if (_vehicleKind == "") exitWith {
     SHOW_WARNING("VehiclePylon", "No kind of vehicle is defined");
     [];
@@ -182,12 +184,13 @@ if (_vehicleKind == "") exitWith {
 if (_loadout == "") exitWith {
     SHOW_WARNING("VehiclePylon", "No vehicle loadout is defined");
     [];
-
-    _pylons
 };
 
+// Obtain pylon
+private _vehiclePylons = _allVehiclePylons getOrDefault [_vehicleKind, []];
+private _pylon = _vehiclePylons getOrDefault [_loadout, []];
 if (count _pylon == 0) then {
-    SHOW_WARNING_2("VehiclePylon", "%1 Does not exist for selected kind of %2.", _loadout, _vehicleKind);
+    SHOW_WARNING_2("VehiclePylon", "%1 does not exist for selected kind of %2.", _loadout, _vehicleKind);
 };
 
 _pylon;

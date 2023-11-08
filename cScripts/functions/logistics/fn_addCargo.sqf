@@ -15,6 +15,7 @@
  * [MyCrate, [["ACE_EarPlugs", 60]]] call cScripts_fnc_addCargo;
  * [MyTruck, [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]]] call cScripts_fnc_addCargo;
  * [MyTruck, [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]], "myCrate", false] call cScripts_fnc_addCargo;
+ *
  * Public: Yes
  */
 
