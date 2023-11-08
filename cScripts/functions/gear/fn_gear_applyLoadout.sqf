@@ -32,7 +32,7 @@ if (_loadConfig) then {
     _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
     _scope = getNumber (_config >> "scope");
     if (_scope == 0) exitWith {
-        SHOW_CHAT_WARNING_3("Gear", "Scope for loadout %1 is %2 and will not be applied to %3", _loadout, _scope, _unit)
+        SHOW_CHAT_WARNING_4("Gear", "Scope for loadout %1 is %2 and will not be applied to %3 [%4]", _loadout, _scope, _unit, typeOf _unit);
     };
     _unit setVariable [QEGVAR(Gear,LoadoutClass), _loadout];
 
@@ -45,6 +45,7 @@ if (_loadConfig) then {
 
 // preLoadout
 if (_loadConfig) then {
+    INFO_2("Gear", "Applying preLoadout for %1 [%2]", _unit, typeOf _unit);
     [_unit, _loadout] call compile (getText (_config >> "preLoadout"));
 };
 
@@ -52,7 +53,7 @@ if (_loadConfig) then {
 switch (true) do {
     case _loadArray: {
         [_unit, _loadout] call CBA_fnc_setLoadout;
-        INFO("Gear", "Loadout array applied to %1", _unit);
+        INFO_2("Gear", "Loadout array applied to %1 [%2]", _unit, typeOf _unit);
     };
     case _loadConfig: {
         _loadout = getText (_config >> "loadout");
@@ -61,7 +62,7 @@ switch (true) do {
             _loadout = parseSimpleArray _loadout;
             if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
             [_unit, _loadout] call CBA_fnc_setLoadout;
-            INFO_2("Gear", "Loadout %1 applied to %2", _classname, _unit);
+            INFO_3("Gear", "Loadout config %1 applied to %2 [%3]", _classname, _unit, typeOf _unit);
         } else {
             SHOW_CHAT_WARNING_1("Gear", "No loadout discoverd nothing will be applied for %1.", _unit);
         };
@@ -75,7 +76,7 @@ if (!_loadArray) then {
 };
 
 // Functions
-if (GVAR(isPlayer)) exitWith {
+if (GVAR(isPlayer)) then {
     call EFUNC(gear,applyFunctions);
 };
 
@@ -90,5 +91,6 @@ if !(weaponLowered _unit) then {_unit action ["WeaponOnBack", _unit]};
 
 
 if (_loadConfig) then {
+    INFO_2("Gear", "Applying postLoadout code for %1 [%2]", _unit, typeOf _unit);
     [_unit, _loadout] call compile (getText (_config >> "postLoadout"));
 };

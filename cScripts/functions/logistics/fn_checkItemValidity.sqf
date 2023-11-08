@@ -11,6 +11,8 @@
  *
  * Example:
  * ["ACE_EarPlugs"] call cScripts_fnc_checkItemValidity;
+ *
+ * Public: No
  */
 
 params [

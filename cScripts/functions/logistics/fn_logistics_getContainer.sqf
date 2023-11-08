@@ -5,12 +5,16 @@
  *
  * Arguments:
  * 0: Crate type <STRING>
+ * 1: Return only keys <BOOLEAN>
  *
  * Return:
- * ARRAY of items or empty
+ * ARRAY of items and amounts or items or empty
  *
  * Example:
  * [""] call cScripts_fnc_logistics_getContainer;
+ * ["", false] call cScripts_fnc_logistics_getContainer;
+ *
+ * Public: Yes
  */
 
 params [

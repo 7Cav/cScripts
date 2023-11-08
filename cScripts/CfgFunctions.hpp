@@ -49,6 +49,7 @@ class cScripts {
         class doEmptyCrate {};
 
         class logistics_getContainer {};
+        class logistics_getAllContainerItems {};
     };
     class players {
         file = "cScripts\functions\players";
