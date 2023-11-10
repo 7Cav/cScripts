@@ -32,7 +32,7 @@ if (_zone isEqualType "") then {
 
 _stagingZones pushBack [_zone, _size];
 
-SETMVAR(EGVAR(Staging,Zones), _stagingZones)
+SETMVAR(EGVAR(Staging,Zones), _stagingZones);
 
 INFO_2("Staging", "Staging zone %1 (%2) created.", count _stagingZones, _zone);
 
@@ -43,4 +43,5 @@ INFO_2("Staging", "Revlealing staging zone %1 (%2)", count _stagingZones, _zone)
 private _visibleZone = createMarkerLocal [format["VisibleStadgeingMarker_%1", count _stagingZones], _zone];
 _visibleZone setMarkerShapeLocal "ELLIPSE";
 _visibleZone setMarkerSizeLocal [_size, _size];
+_visibleZone setMarkerBrushLocal "Border";
 _visibleZone setMarkerColorLocal "ColorYellow";
