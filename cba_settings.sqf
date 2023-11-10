@@ -344,7 +344,7 @@ force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_locationsBoostTraining = true;
 force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_repairDamageThreshold = 0.3;
-force force ace_repair_repairDamageThreshold_engineer = 0.1;
+force force ace_repair_repairDamageThreshold_engineer = 0.2;
 force force ace_repair_wheelRepairRequiredItems = [];
 force force ace_towing_addRopeToVehicleInventory = false;
 
