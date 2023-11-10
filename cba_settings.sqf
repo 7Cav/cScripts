@@ -341,10 +341,10 @@ force force ace_repair_engineerSetting_repair = 1;
 force force ace_repair_engineerSetting_wheel = 0;
 force force ace_repair_fullRepairLocation = 1;
 force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
-force force ace_repair_locationsBoostTraining = false;
+force force ace_repair_locationsBoostTraining = true;
 force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
-force force ace_repair_repairDamageThreshold = 0.7;
-force force ace_repair_repairDamageThreshold_engineer = 0.9;
+force force ace_repair_repairDamageThreshold = 0.3;
+force force ace_repair_repairDamageThreshold_engineer = 0.2;
 force force ace_repair_wheelRepairRequiredItems = [];
 force force ace_towing_addRopeToVehicleInventory = false;
 
