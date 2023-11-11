@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * TBD
+ * This function handle the casualties and send the information to all curators
  *
  * Arguments:
  * None
@@ -10,32 +10,30 @@
  * Nothing
  *
  * Example:
- * call cScripts_fnc_civ_civilianZone
+ * call cScripts_fnc_civ_damage
  *
  * Public: No
  */
 
-params ["_marker", "_dencity", "_projectile"];
+params ["_marker", "_dencity", "_projectile", "_unit"];
 
 if (!GVAR(ALLOW_CIV_ZONE_DAMAGE)) exitWith {};
 
 INFO_1("Civ", "Checking for possible civilian casualties at %1.", _marker);
 
-private _damageChanse = switch (_dencity) do {
-    case "high": {0.6};
-    case "medium": {0.4};
-    case "low": {0.2};
-    default {0.4};
+private _damageChance = switch (_dencity) do {
+    case "high": {0.4};
+    case "medium": {0.35};
+    case "low": {0.1};
+    default {0.35};
 };
 
-LOG_1("DEBUG DAMAGE", _damageChanse)
-
-if (random 1 > _damageChanse) then {
+if (random 1 < _damageChance) then {
     GVAR(ALLOW_CIV_ZONE_DAMAGE) = false;
     INFO_1("Civ", "Civilian casualties at %1.", _marker);
     {
         private _curator = getAssignedCuratorUnit _x;
-        [QEGVAR(Civilian,Casualties), [_marker, _dencity, _projectile], _curator] call CBA_fnc_targetEvent;
+        [QEGVAR(Civilian,Casualties), [_marker, _dencity, _projectile, _unit], _curator] call CBA_fnc_targetEvent;
     } forEach allCurators;
 } else {
     INFO_1("Civ", "No civilian casualties at %1 detected.", _marker);

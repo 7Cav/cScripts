@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * TBD
+ * This function checks a given projectile and se if it can damage a target
  *
  * Arguments:
  * None
@@ -15,14 +15,12 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
+params ["", "", "", "", "", "", "_projectile"];
 
 if (!GVAR(isPlayer)) exitWith {};
 if (typeOf _projectile isKindOf "Chemlight_base") exitWith {};
 if (typeOf _projectile isKindOf "SmokeShell") exitWith {};
 if (typeOf _projectile isKindOf "rhs_ammo_m84") exitWith {};
-
-LOG_3("DEBUG", "Projectile %1 [%2] >> %3", _projectile, typeOf _projectile, inheritsFrom (configFile >> "CfgVehicles" >> typeOf _projectile));
 
 _projectile addEventHandler ["HitExplosion", { 
     params ["_projectile", "_hitEntity", "_projectileOwner", "_hitSelections"];
@@ -32,7 +30,7 @@ _projectile addEventHandler ["HitExplosion", {
         _x params ["_marker", "", "", "", "_dencity"];
         private _inArea = _pos inArea _marker;
         if (_inArea) then {
-            [_marker, _dencity, _projectile] call EFUNC(civ,damage);
+            [_marker, _dencity, _projectile, player] call EFUNC(civ,damage);
         };
     } forEach GETMVAR(EGVAR(Civ,Zones), []);
 }];
