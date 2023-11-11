@@ -15,7 +15,7 @@
  * Public: No
  */
 
-INFO("CIV", "Setting up civilian zones...");
+INFO("Civ", "Checking for population zones...");
 
 GVAR(ALLOW_CIV_ZONE_DAMAGE) = true;
 private _civZones = [];
@@ -28,42 +28,18 @@ private _civZones = [];
         private _pos = getMarkerPos _x;
         private _dir = markerDir _x;
         private _size = markerSize _x;
-        private _isRectangle = markerShape _x == "RECTANGLE";
         _civZones append [[_x, _pos, _dir, _size, _dencity]];
         _x setMarkerAlpha 0;
+        INFO_5("Civ", "Population zone added [%1, %2, %3, %4, %5]", _x, _pos, _dir, _size, _dencity);
     };
 } forEach allMapMarkers;
 
+if (_civZones isEqualTo []) exitWith {INFO("Civ", "No population zones detected");};
 SETMVAR(EGVAR(Civ,Zones), _civZones);
-
-// Setup zones
-{
-    _x params ["_marker"];
-
-    private _size = markerSize _marker;
-    private _dir = markerDir _marker;
-    private _pos = getMarkerPos _marker;
-    private _isRectangle = markerShape _marker == "RECTANGLE";
-
-    private _onAct = toString {[QGVAR(entreCivlianZone)] call CBA_fnc_localEvent;};
-    private _onDea = toString {[QGVAR(exitCivlianZone)] call CBA_fnc_localEvent;};
-
-    [
-        _pos,
-        "AREA:", [_size#0, _size#1, _dir, true],
-        "ACT:", ["WEST", "PRESENT", true],
-        "STATE:", [
-            "this",
-            _onAct,
-            _onDea
-        ]
-    ] call CBA_fnc_createTrigger;
-} forEach GETMVAR(EGVAR(Civ,Zones), []);
 
 
 // Create diary records for the zones
 if !(player diarySubjectExists "CivCenter") then {
-    _civilianCenterRecords = [];
     {
         _x params ["_marker", "_pos", "", "", "_dencity"];
         player createDiarySubject ["CivCenter","Population Centers"];
@@ -74,10 +50,7 @@ if !(player diarySubjectExists "CivCenter") then {
         private _record = player createDiaryRecord ["CivCenter", [_location, format [
             "%1%2", _textLocation, _textDencetry
         ]]];
-        _civilianCenterRecords append [_location];
     } forEach GETMVAR(EGVAR(Civ,Zones), []);
-    
-    SETMVAR(EGVAR(Civ,Population_Centers), _civilianCenterRecords);
 };
 
 
