@@ -183,6 +183,13 @@ class cScripts {
         class vehicle_reset {};
         class vehicle_addFlagAction {};
     };
+    class civ {
+        file = "cScripts\functions\civ";
+        class civ_init {};
+        class civ_zone {};
+        class civ_damage {};
+
+    };
     class modules {
         file = "cScripts\functions\modules";
         class zenModule_EnableUnitSimulation {};
