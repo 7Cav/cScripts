@@ -21,10 +21,18 @@ if [[ $string != *"Added"* ]]; then
     if [[ $string != *"added"* ]]; then
         if [[ $string != *"Fixed"* ]]; then
             if [[ $string != *"fixed"* ]]; then
-                if [[ $string != *"Updated"* ]]; then
-                    if [[ $string != *"updated"* ]]; then
-                        if [[ $string != *"Adjusted"* ]]; then
-                            if [[ $string != *"adjusted"* ]]; then _throw "Missing descriptor [Added, Fixed, Adjusted, Updated]"; fi
+                if [[ $string != *"Changed"* ]]; then
+                    if [[ $string != *"changed"* ]]; then
+                        if [[ $string != *"Updated"* ]]; then
+                            if [[ $string != *"updated"* ]]; then
+                                if [[ $string != *"Improved"* ]]; then
+                                    if [[ $string != *"improved"* ]]; then
+                                        if [[ $string != *"Adjusted"* ]]; then
+                                            if [[ $string != *"adjusted"* ]]; then _throw "Missing descriptor [Added, Fixed, Changed, Improved, Adjusted, Updated]"; fi
+                                        fi
+                                    fi
+                                fi
+                            fi
                         fi
                     fi
                 fi
@@ -32,6 +40,6 @@ if [[ $string != *"Added"* ]]; then
         fi
     fi
 fi
-    
+
 echo "SUCCESS"
 exit 0
