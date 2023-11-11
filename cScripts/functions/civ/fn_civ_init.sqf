@@ -66,7 +66,7 @@ if !(player diarySubjectExists "CivCenter") then {
     _civilianCenterRecords = [];
     {
         _x params ["_marker", "_pos", "", "", "_dencity"];
-        player createDiarySubject ["CivCenter","Populatiuon Centers"];
+        player createDiarySubject ["CivCenter","Population Centers"];
 
         private _location = text nearestLocation [_pos, ""];
         private _textLocation = formatText["<font color='#ffc61a'>%1</font> is a population center located at <font color='#ffc61a'>%2</font>.<br/><br/>", _location, mapGridPosition _pos];
