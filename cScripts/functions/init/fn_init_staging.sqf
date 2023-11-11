@@ -24,14 +24,17 @@ private _stagingZoneMarkers = [];
     private _markerName = [_x, 0, 11] call BIS_fnc_trimString;
     _markerName = toLower _markerName;
     if (_markerName in ["zone_staging", "respawn_west"]) then {
-        _stagingZoneMarkers append [_x];
+        private _type = markerShape _x;
+        private _pos = getMarkerPos _x;
+        _stagingZoneMarkers append [[_x, _type, _pos]];
     };
 } forEach allMapMarkers;
 
 {
-    if (_x in allMapMarkers) then {
-        [_x, 60] call FUNC(addStagingZone);
-    };
+    _x params["_marker", "_type", "_pos"];
+    private _size = if (_type == "ICON") then {60} else {_type};
+    private _zone = if (_type == "ICON") then {_pos} else {_marker};
+    [_zone, _size] call FUNC(addStagingZone);
 } forEach _stagingZoneMarkers;
 
 if !(GVAR(isPlayer)) exitWith {};

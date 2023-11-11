@@ -92,7 +92,7 @@ _object enableRopeAttach false;
 
 // Stageing zone
 if (_hasStagingZone) then {
-    [_object, 25] call FUNC(addStagingZone);
+    [getPos _object, 25] call FUNC(addStagingZone);
 };
 
 // Add save gear eventHandler
