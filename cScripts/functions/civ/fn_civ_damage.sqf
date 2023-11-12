@@ -23,9 +23,9 @@ INFO_1("Civ", "Checking for possible civilian casualties at %1.", _marker);
 
 private _damageChance = switch (_dencity) do {
     case "high": {0.4};
-    case "medium": {0.35};
+    case "medium": {0.30};
     case "low": {0.1};
-    default {0.35};
+    default {0.30};
 };
 
 if (random 1 < _damageChance) then {
