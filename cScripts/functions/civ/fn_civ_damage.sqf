@@ -15,13 +15,13 @@
  * Public: No
  */
 
-params ["_marker", "_dencity", "_projectile", "_unit"];
+params ["_marker", "_density", "_projectile", "_unit"];
 
 if (!GVAR(ALLOW_CIV_ZONE_DAMAGE)) exitWith {};
 
 INFO_1("Civ", "Checking for possible civilian casualties at %1.", _marker);
 
-private _damageChance = switch (_dencity) do {
+private _damageChance = switch (_density) do {
     case "high": {0.4};
     case "medium": {0.30};
     case "low": {0.1};
@@ -33,7 +33,7 @@ if (random 1 < _damageChance) then {
     INFO_1("Civ", "Civilian casualties at %1.", _marker);
     {
         private _curator = getAssignedCuratorUnit _x;
-        [QEGVAR(Civilian,Casualties), [_marker, _dencity, _projectile, _unit], _curator] call CBA_fnc_targetEvent;
+        [QEGVAR(Civilian,Casualties), [_marker, _density, _projectile, _unit], _curator] call CBA_fnc_targetEvent;
     } forEach allCurators;
 } else {
     INFO_1("Civ", "No civilian casualties at %1 detected.", _marker);
