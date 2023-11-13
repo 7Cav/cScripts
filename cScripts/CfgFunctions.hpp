@@ -6,7 +6,7 @@ class cScripts {
         class init_aceItemReplace {};
 
         class init_skillAdjustment {};
-        class init_vehicle {};
+        class init_vehicle {};checkProjectile
         class init_staging {};
 
         class init_logistics {};
@@ -186,7 +186,7 @@ class cScripts {
     class civ {
         file = "cScripts\functions\civ";
         class civ_init {};
-        class civ_zone {};
+        class civ_checkProjectile {};
         class civ_damage {};
 
     };
