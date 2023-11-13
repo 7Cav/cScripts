@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * call cScripts_fnc_civ_tbd
+ * call cScripts_fnc_civ_init
  *
  * Public: No
  */
