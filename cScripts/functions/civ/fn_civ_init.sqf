@@ -25,6 +25,7 @@ private _civZones = [];
     if (_markerName == "cscripts_civilan_zone_") then {
         private _density = [_x, 21] call BIS_fnc_trimString;
         _density = (_density splitString "_")#0;
+        if !(_density in ["high", "medium", "low"]) exitWith {WARNING_2("Civ", "Zone %1 have invalid density '%2'.", _x, _density)};
         private _pos = getMarkerPos _x;
         private _dir = markerDir _x;
         private _size = markerSize _x;
