@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * call cScripts_fnc_civ_civilianZone
+ * call cScripts_fnc_civ_h
  *
  * Public: No
  */
