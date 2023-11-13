@@ -59,9 +59,9 @@ if !(player diarySubjectExists "CivCenter") then {
 
 
 // Event handlers 
-[player, "fired", {_this call EFUNC(civ,zone)}] call CBA_fnc_addBISEventHandler;
-["ace_firedPlayer", {_this call EFUNC(civ,zone)}] call CBA_fnc_addEventHandler;
-["ace_firedPlayerVehicle", {_this call EFUNC(civ,zone)}] call CBA_fnc_addEventHandler;
+[player, "fired", {_this call EFUNC(civ,checkProjectile)}] call CBA_fnc_addBISEventHandler;
+["ace_firedPlayer", {_this call EFUNC(civ,checkProjectile)}] call CBA_fnc_addEventHandler;
+["ace_firedPlayerVehicle", {_this call EFUNC(civ,checkProjectile)}] call CBA_fnc_addEventHandler;
 
 [QEGVAR(Civilian,Casualties), {
     params ["_marker", "_density", "_projectile", "_unit"];
