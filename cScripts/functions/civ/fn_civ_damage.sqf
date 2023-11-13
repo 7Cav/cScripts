@@ -1,10 +1,13 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function handle the casualties and send the information to all curators
+ * This function handle the casualties and send the information to all curators.
  *
  * Arguments:
- * None
+ * 0: Marker <STRING>
+ * 1: Density <STRING>
+ * 2: Projectile <OBJECT>
+ * 4: Unit <OBJECT>
  *
  * Return Value:
  * Nothing
