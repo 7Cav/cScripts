@@ -23,14 +23,14 @@ private _civZones = [];
     private _markerName = [_x, 0, 21] call BIS_fnc_trimString;
     _markerName = toLower _markerName;
     if (_markerName == "cscripts_civilan_zone_") then {
-        private _dencity = [_x, 21] call BIS_fnc_trimString;
-        _dencity = (_dencity splitString "_")#0;
+        private _density = [_x, 21] call BIS_fnc_trimString;
+        _density = (_density splitString "_")#0;
         private _pos = getMarkerPos _x;
         private _dir = markerDir _x;
         private _size = markerSize _x;
-        _civZones append [[_x, _pos, _dir, _size, _dencity]];
+        _civZones append [[_x, _pos, _dir, _size, _density]];
         _x setMarkerAlpha 0;
-        INFO_5("Civ", "Population zone added [%1, %2, %3, %4, %5]", _x, _pos, _dir, _size, _dencity);
+        INFO_5("Civ", "Population zone added [%1, %2, %3, %4, %5]", _x, _pos, _dir, _size, _density);
     };
 } forEach allMapMarkers;
 
@@ -41,14 +41,14 @@ SETMVAR(EGVAR(Civ,Zones), _civZones);
 // Create diary records for the zones
 if !(player diarySubjectExists "CivCenter") then {
     {
-        _x params ["_marker", "_pos", "", "", "_dencity"];
+        _x params ["_marker", "_pos", "", "", "_density"];
         player createDiarySubject ["CivCenter","Population Centers"];
 
         private _location = text nearestLocation [_pos, ""];
         private _textLocation = formatText["<font color='#ffc61a'>%1</font> is a population center located at <font color='#ffc61a'>%2</font>.<br/><br/>", _location, mapGridPosition _pos];
-        private _textDencetry = formatText["The location have <font color='#ffc61a'>%1</font> dencety.", _dencity];
+        private _textDensity = formatText["The location have <font color='#ffc61a'>%1</font> density.", _density];
         private _record = player createDiaryRecord ["CivCenter", [_location, format [
-            "%1%2", _textLocation, _textDencetry
+            "%1%2", _textLocation, _textDensity
         ]]];
     } forEach GETMVAR(EGVAR(Civ,Zones), []);
 };
@@ -60,7 +60,7 @@ if !(player diarySubjectExists "CivCenter") then {
 ["ace_firedPlayerVehicle", {_this call EFUNC(civ,zone)}] call CBA_fnc_addEventHandler;
 
 [QEGVAR(Civilian,Casualties), {
-    params ["_marker", "_dencity", "_projectile", "_unit"];
+    params ["_marker", "_density", "_projectile", "_unit"];
     private _location = text nearestLocation [markerPos _marker, ""];
     [
         [],
