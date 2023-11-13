@@ -188,7 +188,6 @@ class cScripts {
         class civ_init {};
         class civ_checkProjectile {};
         class civ_damage {};
-
     };
     class modules {
         file = "cScripts\functions\modules";
