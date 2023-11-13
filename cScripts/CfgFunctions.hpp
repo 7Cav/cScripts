@@ -6,7 +6,7 @@ class cScripts {
         class init_aceItemReplace {};
 
         class init_skillAdjustment {};
-        class init_vehicle {};checkProjectile
+        class init_vehicle {};
         class init_staging {};
 
         class init_logistics {};
