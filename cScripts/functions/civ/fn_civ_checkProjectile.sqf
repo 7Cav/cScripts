@@ -1,16 +1,22 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function checks a given projectile and se if it can damage a target
+ * This function checks a given projectile and se if it can damage a target.
  *
  * Arguments:
- * None
+ * 1: Not used <NIL>
+ * 2: Not used <NIL>
+ * 3: Not used <NIL>
+ * 4: Not used <NIL>
+ * 5: Not used <NIL>
+ * 6: Not used <NIL>
+ * 7: Projectile <OBJECT>
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * call cScripts_fnc_civ_h
+ * call cScripts_fnc_civ_checkProjectile
  *
  * Public: No
  */
