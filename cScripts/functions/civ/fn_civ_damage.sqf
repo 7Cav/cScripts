@@ -21,6 +21,7 @@
 params ["_marker", "_density", "_projectile", "_unit"];
 
 if (!GVAR(ALLOW_CIV_ZONE_DAMAGE)) exitWith {};
+GVAR(ALLOW_CIV_ZONE_DAMAGE) = false;
 
 INFO_1("Civ", "Checking for possible civilian casualties at %1.", _marker);
 
@@ -32,7 +33,6 @@ private _damageChance = switch (_density) do {
 };
 
 if (random 1 < _damageChance) then {
-    GVAR(ALLOW_CIV_ZONE_DAMAGE) = false;
     INFO_1("Civ", "Civilian casualties at %1.", _marker);
     {
         private _curator = getAssignedCuratorUnit _x;
