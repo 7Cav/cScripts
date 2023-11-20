@@ -67,7 +67,7 @@ force force ace_captives_requireSurrenderAi = false;
 
 // ACE Casings
 ace_casings_enabled = true;
-ace_casings_maxCasings = 20;
+ace_casings_maxCasings = 100;
 
 // ACE Common
 force force ace_common_allowFadeMusic = true;
@@ -341,10 +341,10 @@ force force ace_repair_engineerSetting_repair = 1;
 force force ace_repair_engineerSetting_wheel = 0;
 force force ace_repair_fullRepairLocation = 1;
 force force ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
-force force ace_repair_locationsBoostTraining = false;
+force force ace_repair_locationsBoostTraining = true;
 force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
-force force ace_repair_repairDamageThreshold = 0.7;
-force force ace_repair_repairDamageThreshold_engineer = 0.9;
+force force ace_repair_repairDamageThreshold = 0.3;
+force force ace_repair_repairDamageThreshold_engineer = 0.2;
 force force ace_repair_wheelRepairRequiredItems = [];
 force force ace_towing_addRopeToVehicleInventory = false;
 
@@ -478,7 +478,7 @@ force force ace_medical_treatment_locationIV = 0;
 force force ace_medical_treatment_locationPAK = 0;
 force force ace_medical_treatment_locationsBoostTraining = true;
 force force ace_medical_treatment_locationSurgicalKit = 0;
-force force ace_medical_treatment_maxLitterObjects = 20;
+force force ace_medical_treatment_maxLitterObjects = 50;
 force force ace_medical_treatment_medicEpinephrine = 1;
 force force ace_medical_treatment_medicIV = 2;
 force force ace_medical_treatment_medicPAK = 2;
@@ -810,9 +810,9 @@ force force ace_respawn_savePreDeathGear = false;
 force force ace_repair_enabled = true;
 force force ace_repair_miscRepairTime = 15;
 force force ace_repair_patchWheelEnabled = 0;
-force force ace_repair_patchWheelLocation = 0;
+force force ace_repair_patchWheelLocation = ["ground","vehicle"];
 force force ace_repair_patchWheelMaximumRepair = 0.5;
-force force ace_repair_patchWheelRequiredItems = 1;
+force force ace_repair_patchWheelRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_patchWheelTime = 2.5;
 force force ace_repair_timeCoefficientFullRepair = 1.5;
 force force ace_repair_wheelChangeTime = 5;

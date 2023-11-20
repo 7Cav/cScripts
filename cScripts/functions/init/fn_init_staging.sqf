@@ -19,70 +19,23 @@ if !(EGVAR(Settings,enableStagingSystem)) exitWith {};
 
 INFO("Staging", "Setting up Staging");
 
-private _respawnMarkers = [
-    "respawn_west",
-    "respawn_west_0",
-    "respawn_west_1",
-    "respawn_west_2",
-    "respawn_west_3",
-    "respawn_west_4",
-    "respawn_west_5",
-    "respawn_west_6",
-    "respawn_west_7",
-    "respawn_west_8",
-    "respawn_west_9",
-    "respawn_west_10",
-    "respawn_west_11",
-    "respawn_west_12",
-    "respawn_west_13",
-    "respawn_west_14",
-    "respawn_west_15",
-    "respawn_west_16",
-    "respawn_west_17",
-    "respawn_west_18",
-    "respawn_west_19",
-    "respawn_west_20"
-];
-private _stagingMarkers = [
-    "zone_staging",
-    "zone_staging_0",
-    "zone_staging_1",
-    "zone_staging_2",
-    "zone_staging_3",
-    "zone_staging_4",
-    "zone_staging_5",
-    "zone_staging_6",
-    "zone_staging_7",
-    "zone_staging_8",
-    "zone_staging_9",
-    "zone_staging_10",
-    "zone_staging_11",
-    "zone_staging_12",
-    "zone_staging_13",
-    "zone_staging_14",
-    "zone_staging_15",
-    "zone_staging_16",
-    "zone_staging_17",
-    "zone_staging_18",
-    "zone_staging_19",
-    "zone_staging_20",
-    "zone_staging_21",
-    "zone_staging_22",
-    "zone_staging_23",
-    "zone_staging_24",
-    "zone_staging_25",
-    "zone_staging_26",
-    "zone_staging_27",
-    "zone_staging_28",
-    "zone_staging_29",
-    "zone_staging_30"
-];
+private _stagingZoneMarkers = [];
+{
+    private _markerName = [_x, 0, 11] call BIS_fnc_trimString;
+    _markerName = toLower _markerName;
+    if (_markerName in ["zone_staging", "respawn_west"]) then {
+        private _type = markerShape _x;
+        private _pos = getMarkerPos _x;
+        _stagingZoneMarkers append [[_x, _type, _pos]];
+    };
+} forEach allMapMarkers;
 
 {
-    if (_x in allMapMarkers) then {
-        [_x, 60] call FUNC(addStagingZone);
-    };
-} forEach _respawnMarkers + _stagingMarkers;
+    _x params["_marker", "_type", "_pos"];
+    private _size = if (_type == "ICON") then {60} else {_type};
+    private _zone = if (_type == "ICON") then {_pos} else {_marker};
+    [_zone, _size] call FUNC(addStagingZone);
+} forEach _stagingZoneMarkers;
 
 if !(GVAR(isPlayer)) exitWith {};
 
