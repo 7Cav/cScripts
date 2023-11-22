@@ -44,3 +44,17 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     };
     INFO_2("VehicleinitPost", "initPost applied to %1 [%2]", _vehicle, typeOf _vehicle);
 }, true, ["man"], true] call CBA_fnc_addClassEventHandler;
+
+if !(EGVAR(Settings,enableIncreasedFuelUsage)) then {
+    INFO("VehicleFuelUsage", "Increase fuel usage system enabled");
+
+    if (isServer) then {
+        ["AllVehicles", "initPost", {
+            params ["_vehicle"];
+            if (_vehicle isKindOf "LandVehicle") then {
+                INFO_2("VehicleFuelUsage", "Vehicle fuel usage increased by x2 to %1 [%2]...", _vehicle, typeOf _vehicle);
+                _vehicle setFuelConsumptionCoef 2;
+            };
+        }, true, ["man"], true] call CBA_fnc_addClassEventHandler;
+    };
+};
