@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This function changes AI behaviours 
  *
  * Example:
@@ -10,16 +10,15 @@
  */
 
 if (!isServer) exitWith {};
-INFO("init", "Applying AI Event Handler to units and vehicles...");
+INFO("AI", "Applying AI Custom AI...");
 
 // AI Behavior
 if (EGVAR(Settings,setAiBanDismountOfCrew)) then {
+    SHOW_WARNING("AI Experimental", "Vehicle AI dismount ban system applied to all vehicles.");
     ["AllVehicles", "init", {
         params ["_vehicle"];
-        if (local _vehicle) then {
-            _vehicle setUnloadInCombat [true, false];
-            _vehicle allowCrewInImmobile [true, false];
-        };
+        _vehicle setUnloadInCombat [true, false];
+        _vehicle allowCrewInImmobile [true, false];
     }, true, ["man"], true] call CBA_fnc_addClassEventHandler;
 };
 

@@ -1,6 +1,6 @@
 #include "script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This is the rules set for the mission using the cba XEH. Each setting here is alterd via cbaSettings
  */
 
@@ -37,21 +37,20 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-
-[ // Ai setting
+[ // AI setting
     QEGVAR(Settings,setAiSystemDifficulty),
     "LIST",
-    ["AI Setting", "This adjustes the ai and make them less godlike and more arcade to play against."],
+    ["AI Setting", "This adjusts the ai and make them less godlike and more arcade to play against."],
     [_cScriptSettings, "1; Mission"],
     [[0,1,2], ["Arma Default", "Adjusted", "Faction Based"], 2],
     true,
     {},
     true
 ] call CBA_fnc_addSetting;
-[ // Ai dismount
+[ // AI dismount
     QEGVAR(Settings,setAiBanDismountOfCrew),
     "LIST",
-    ["Allow", "This allow or disallow ai crew to dismount vehicles."],
+    ["(Experimental) Allow AI dismount", "This allow or disallow ai crew to dismount vehicles."],
     [_cScriptSettings, "1; Mission"],
     true,
     true,
@@ -60,7 +59,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 ] call CBA_fnc_addSetting;
 
 
-//2; Radios
+// 2; Radios
 [ // Enable
     QEGVAR(Settings,enableRadios),
     "CHECKBOX",
