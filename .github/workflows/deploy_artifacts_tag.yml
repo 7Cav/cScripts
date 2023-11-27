@@ -17,5 +17,11 @@ jobs:
       - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-          name: Releases
+          name: Releases ${{github.ref_name}}
           path: release/*
+
+      - name: Upload release debug only
+        uses: actions/upload-artifact@v3
+        with:
+          name: cScripts_Debug-${{github.ref_name}}
+          path: release/cScripts_Debug-${{github.ref_name}}.zip
