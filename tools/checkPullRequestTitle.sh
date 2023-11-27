@@ -5,41 +5,28 @@ _throw() {
     exit 1
 }
 
-
 string="$*"
+string=${string,,}
 
+echo "Validating '$*'..."
 
-echo "Validating '$string'..."
 if [[ ${#string} == 0 ]];                       then echo "SUCCESS: Empty name (Assumed bransh run)"; exit 0; fi
 
 if [[ ${#string} -lt 20 ]];                     then _throw "Short name"; fi
-if [[ $string == "Update cba_settings.sqf" ]];  then _throw "Bad name"; fi
-if [[ $string == "Update settings" ]];          then _throw "Bad name"; fi
+if [[ $string == "update"*".sqf" ]];            then _throw "Bad name"; fi
+if [[ $string == "add"*".sqf" ]];               then _throw "Bad name"; fi
+if [[ $string == "remove"*".sqf" ]];            then _throw "Bad name"; fi
+
 
 # Descriptor
-if [[ $string != *"Added"* ]]; then
-    if [[ $string != *"added"* ]]; then
-        if [[ $string != *"Fixed"* ]]; then
-            if [[ $string != *"fixed"* ]]; then
-                if [[ $string != *"Changed"* ]]; then
-                    if [[ $string != *"changed"* ]]; then
-                        if [[ $string != *"Updated"* ]]; then
-                            if [[ $string != *"updated"* ]]; then
-                                if [[ $string != *"Improved"* ]]; then
-                                    if [[ $string != *"improved"* ]]; then
-                                        if [[ $string != *"Adjusted"* ]]; then
-                                            if [[ $string != *"adjusted"* ]]; then _throw "Missing descriptor [Added, Fixed, Changed, Improved, Adjusted, Updated]"; fi
-                                        fi
-                                    fi
-                                fi
-                            fi
-                        fi
-                    fi
-                fi
-            fi
-        fi
-    fi
-fi
+valid_list=(Added Fixed Changed Updated Improved Cleaned Removed Reverted Revert)
+missing_descriptor_error="Missing descriptor [${valid_list[@]}]"
+_valid=false
+for contain in ${valid_list[@]}; do
+    contain=${contain,,}
+    [[ $string == *${contain}* ]] && _valid=true && break
+done
+[ "$_valid" == "false" ] && _throw "$missing_descriptor_error"
 
 echo "SUCCESS"
 exit 0
