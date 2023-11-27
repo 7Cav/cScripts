@@ -17,11 +17,5 @@ jobs:
       - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-          name: Releases
+          name: cScripts_DevBuild-$(git rev-parse --short HEAD)
           path: release/*
-
-      - name: Upload release debug only
-        uses: actions/upload-artifact@v3
-        with:
-          name: cScripts_Debug-$(git rev-parse --short HEAD)
-          path: release/cScripts_Debug-$(git rev-parse --short HEAD).zip
