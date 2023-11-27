@@ -5,7 +5,7 @@ on:
         - main
 jobs:
   build:
-    name: Create And Upload Release
+    name: Create And Upload Releases
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
