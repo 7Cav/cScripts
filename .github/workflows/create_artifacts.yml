@@ -14,5 +14,5 @@ jobs:
       - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts_DevBuild_${{ github.ref_name }}-$(git rev-parse --short HEAD)
+          name: cScripts_DevBuilds
           path: release/*
