@@ -17,5 +17,5 @@ jobs:
       - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts-$(git rev-parse --short HEAD)
+          name: cScripts_Releases
           path: release/*
