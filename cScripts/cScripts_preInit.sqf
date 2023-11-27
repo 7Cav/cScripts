@@ -52,7 +52,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     "LIST",
     ["(Experimental) Allow AI dismount", "This allow or disallow ai crew to dismount vehicles."],
     [_cScriptSettings, "1; Mission"],
-    true,
+    false,
     true,
     {},
     true
