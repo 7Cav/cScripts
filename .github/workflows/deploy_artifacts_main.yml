@@ -5,7 +5,7 @@ on:
         - main
 jobs:
   build:
-    name: Create And Upload Release
+    name: Create And Upload Releases
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,5 +17,5 @@ jobs:
       - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-          name: Releases
+          name: cScripts_DevBuilds
           path: release/*

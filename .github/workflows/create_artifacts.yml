@@ -1,8 +1,5 @@
-name: Deploy Tag Artifacts
-on:
-  push:
-      tags:
-        - '*'
+name: Create Artifacts
+on: workflow_dispatch
 jobs:
   build:
     name: Create And Upload Releases
@@ -12,10 +9,10 @@ jobs:
         uses: actions/checkout@master
 
       - name: Build releases
-        run: ./tools/deploy.sh ${{github.ref_name}}
+        run: ./tools/deploy.sh DevBuild_${{ github.ref_name }}-$(git rev-parse --short HEAD)
 
       - name: Upload releases
         uses: actions/upload-artifact@v3
         with:
-          name: cScripts_Releases
+          name: cScripts_DevBuilds
           path: release/*
