@@ -202,7 +202,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[ // Radio
+[ // Increased fuel usage
     QEGVAR(Settings,enableIncreasedFuelUsage),
     "CHECKBOX",
     ["Increased Fuel Usage", "Enables increased fuel usage for vehicles"],
