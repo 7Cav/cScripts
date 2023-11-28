@@ -19,9 +19,11 @@ body:
       label: Version
       description: What version of cScripts are you running?
       options:
-        - Release Build
-        - Tampered Release Build
-        - Development Build
+        - Release build
+        - Tampered release build
+        - Outdated build
+        - Tampered outdated build
+        - Development build
       default: 0
     validations:
       required: true
