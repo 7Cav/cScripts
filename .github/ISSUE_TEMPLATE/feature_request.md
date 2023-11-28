@@ -6,5 +6,3 @@ labels: feature request
 assignees: ''
 
 ---
-
-**I suggest the following feature:**
