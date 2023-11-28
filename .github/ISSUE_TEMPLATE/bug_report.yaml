@@ -10,8 +10,7 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
+      description: Describe what happened. You can also provide a screenshot.
     validations:
       required: true
   - type: dropdown
