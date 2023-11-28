@@ -1,0 +1,38 @@
+name: Bug Report
+description: File a report to help us improve
+title: ''
+labels: ['bug']
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: ""
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of cScripts are you running?
+      options:
+        - Release Build
+        - Tampered Release Build
+        - Development Build
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: RPT log
+      description: Please copy and paste any relevant RPT log output. (If applicable)
+      render: shell
