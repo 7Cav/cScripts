@@ -13,7 +13,7 @@
  * Public: No 
  */
 
-if !(isClass (configFile >> "CfgPatches" >> "cav_insignia")) exitWith {["cfgPatches for Cav Addon Insignias not detected, terminating insignia selection tab on object."] call FUNC(info);};
+if !(isClass (configFile >> "CfgPatches" >> "cav_insignia")) exitWith {SHOW_WARNING("InsigniaSelection", "cfgPatches for Cav Addon Insignias not detected, terminating insignia selection tab on object.")};
 
 params [
     ["_object", objNull, [objNull]],

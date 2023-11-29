@@ -19,7 +19,7 @@ EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_ma
 
 // Global Variables
 EGVAR(Staging,ZoneStatus) = false;
-EGVAR(Staging,OverrideCompanyVar) = false;
+EGVAR(Staging,showAllLoadouts) = false;
 GVAR(isPlayer) = hasInterface || {isPlayer player};
 GVAR(OneLife) = !isNil{(getArray (missionconfigfile >> "respawnTemplates") select 0) == "ace_spectator"};
 
@@ -155,7 +155,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     {
         params ["_value"];
-        { EGVAR(Staging,OverrideCompanyVar) = _value; } remoteExecCall ["call"];
+        { EGVAR(Staging,showAllLoadouts) = _value; } remoteExecCall ["call"];
     },
     false
 ] call CBA_fnc_addSetting;

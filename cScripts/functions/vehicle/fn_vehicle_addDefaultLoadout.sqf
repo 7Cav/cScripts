@@ -24,16 +24,19 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 INFO_2("VehicleDefaultLoadout", "Applying vehicle loadout to %1 [%2].", _vehicle, typeOf _vehicle);
 
 // Default pylon applied
+private _vehicleTypes = [true] call EFUNC(vehicle,getPylon);
 private _pylon = [];
 
-if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
-    _pylon = ["rhsusf_m1a1tank_base", "default"] call EFUNC(vehicle,getPylon);
-    [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
-};
+{
+    if (_vehicle iskindOf _x) exitWith {
+        _pylon = [_x, "default"] call EFUNC(vehicle,getPylon);
+        INFO_3("VehicleDefaultLoadout", "Vehicle %1 [%2] applied have loadout %3.", _vehicle, typeOf _vehicle, _pylon);
+        [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
+    };
+} forEach _vehicleTypes;
 
-if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dragoon_unarmed_base_F")) then {
-    _pylon = ["I_APC_Wheeled_03_cannon_F", "default"] call EFUNC(vehicle,getPylon);
-    [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
+if (count _pylon == 0) then {
+    WARNING_2("VehicleDefaultLoadout", "Vehicle %1 [%2] has no loadout setup.", _vehicle, typeOf _vehicle);
 };
 
 _vehicle setVariable [QEGVAR(VehicleFunc,DefaultPylon), true, true];

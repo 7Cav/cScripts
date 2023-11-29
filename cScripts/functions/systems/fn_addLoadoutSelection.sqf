@@ -9,13 +9,15 @@
  * 2: Loadout classname <STRING>                            [Default: ""]
  * 3: Path to icon <STRING>                     (Optional)  [Default: ""]
  * 4: Categorys <ARRAY>                         (Optional)  [Default: ["ACE_MainActions","cScripts_Loadout_Cat_Main"]]
- * 5: Platoon required to use                   (Optional)  [Default: ""]
- * 6: Require Company Variable <BOOL>           (Optional)  [Default: false]
+ * 5: Company required to use                   (Optional)  [Default: ""]
+ * 6: Allow All Loadouts <BOOL>                 (Optional)  [Default: false]
  *
  * Example:
  * [this,"Rifleman","Class_Rifleman"] call cScripts_fnc_addLoadoutSelection;
  * [this,"Rifleman","Class_Rifleman","",["ACE_MainActions","cScripts_Loadout_Cat_Main"],""] call cScripts_fnc_addLoadoutSelection;
  * [this,"Rifleman","Class_Rifleman","",["ACE_MainActions","cScripts_Loadout_Cat_Main"],"", false] call cScripts_fnc_addLoadoutSelection;
+ * 
+ * Public: No
  */
 
 params [
@@ -24,27 +26,26 @@ params [
     ["_className", "", [""]],
     ["_icon", "", [""]],
     ["_category", ["ACE_MainActions", "cScripts_Loadout_Cat_Main"], [[]]],
-    ["_platoon", "", [""]],
-    ["_allowOnlyForCompany", false]
+    ["_company", "", [""]],
+    ["_showAllLoadouts", false]
 ];
 
-private _condition = { true };
-
-if (_allowOnlyForCompany) then {
-    _condition = {
-        _this#2 params ["", "_platoon"];
-        if !(EGVAR(Staging,OverrideCompanyVar)) exitWith {[player, _platoon] call FUNC(hasCompanyVariable);};
-        true
-    };
+private _condition = {
+    params ["", "", "_params"];
+    _params params ["", "_company", "_showAllLoadouts"];
+    if (_showAllLoadouts) exitWith {true};
+    if ([_company] call FUNC(allowLoadout)) exitWith {true};
+    false;
 };
 
 private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, {
-    _this#2 params ["_className"];
+    params ["", "", "_params"];
+    _params params ["_className"];
     [player] call EFUNC(gear,removeLoadout);
     [player, _className] call EFUNC(gear,applyLoadout);
-}, _condition, {}, [_className, _platoon]] call ace_interact_menu_fnc_createAction;
+}, _condition, {}, [_className, _company, _showAllLoadouts]] call ace_interact_menu_fnc_createAction;
 
 private _actionType = if (isPlayer _object) then {1} else {0};
 [_object, _actionType, _category, _action] call ace_interact_menu_fnc_addActionToObject;
 
-INFO_4("LoadoutSelector","%1; selector '%2' with type %3 added for '%4' crate.", _object, _lable, _actionType, _platoon);
+INFO_4("LoadoutSelector", "%1; selector '%2' with type %3 added for '%4' crate.", _object, _lable, _actionType, _company);

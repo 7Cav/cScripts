@@ -10,13 +10,10 @@
  * True you have a saved loadout <BOOL>
  *
  * Example:
- * ["bob"] call cScripts_fnc_gear_hasSavedLoadout
+ * [bob] call cScripts_fnc_gear_hasSavedLoadout
  *
  */
 
-params [
-    ["_unit", objNull, [objNull]]
-];
+params [["_unit", objNull, [objNull]]];
 
-_unit getVariable [QEGVAR(Gear,savedLoadout), false];
-
+_unit getVariable [QEGVAR(Gear,SavedLoadout), false];

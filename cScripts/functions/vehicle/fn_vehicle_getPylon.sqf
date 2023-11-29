@@ -4,30 +4,23 @@
  * This function return a vehicle loadout based on provided name and vehicle kind.
  *
  * Arguments:
- * 0: VehicleKind <STRING>
+ * 0: VehicleKind or ListOfVehicleKind(true) or Everything(false) <STRING|BOOLEAN>
  * 1: LoadoutName <STRING> (Default; "default")
  *
  * Return Value:
- * Vehicle loadout Array <ARRAY>
+ * Vehicle loadout Array or keys <ARRAY>
  *
  * Example:
  * ["rhsusf_m1a1tank_base", "default"] call cScripts_fnc_vehicle_getPylon;
+ * [true] call cScripts_fnc_vehicle_getPylon;
+ *
+ * Public: No
  */
 
 params [
-    ["_vehicleKind", "", [""]],
+    ["_vehicleKind", "", ["", true]],
     ["_loadout", "default", [""]]
 ];
-
-if (_vehicleKind == "") exitWith {
-    SHOW_WARNING("VehiclePylon", "No kind of vehicle is defined");
-    [];
-};
-if (_loadout == "") exitWith {
-    SHOW_WARNING("VehiclePylon", "No vehicle loadout is defined");
-    [];
-};
-
 
 // rhsusf_m1a1tank_base
 private _rhsusf_m1a1tank_base = createHashMapFromArray [
@@ -171,17 +164,33 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
 ];
 
 // Loadout vehicle list
-private _pylons = createHashMapFromArray [
+private _allVehiclePylons = createHashMapFromArray [
     ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base],
     ["I_APC_Wheeled_03_cannon_F", _I_APC_Wheeled_03_cannon_F]
 ];
 
-private _getVehiclePylons = _pylons getOrDefault [_vehicleKind, []];
-if (count _getVehiclePylons == 0) exitWith {[]};
-private _pylon = _getVehiclePylons getOrDefault [_loadout, []];
+// Return keys or full hashmap
+if (_vehicleKind isEqualType true) exitWith {
+    if (_vehicleKind) then {_allVehiclePylons = keys _allVehiclePylons};
+    _allVehiclePylons;
+};
 
+
+// Check if valid input
+if (_vehicleKind == "") exitWith {
+    SHOW_WARNING("VehiclePylon", "No kind of vehicle is defined");
+    [];
+};
+if (_loadout == "") exitWith {
+    SHOW_WARNING("VehiclePylon", "No vehicle loadout is defined");
+    [];
+};
+
+// Obtain pylon
+private _vehiclePylons = _allVehiclePylons getOrDefault [_vehicleKind, []];
+private _pylon = _vehiclePylons getOrDefault [_loadout, []];
 if (count _pylon == 0) then {
-    SHOW_WARNING_2("VehiclePylon", "%1 Does not exist for selected kind of %2.", _loadout, _vehicleKind);
+    SHOW_WARNING_2("VehiclePylon", "%1 does not exist for selected kind of %2.", _loadout, _vehicleKind);
 };
 
 _pylon;

@@ -32,18 +32,20 @@ if (_loadConfig) then {
     _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
     _scope = getNumber (_config >> "scope");
     if (_scope == 0) exitWith {
-        SHOW_CHAT_WARNING_3("Gear", "Scope for loadout %1 is %2 and will not be applied to %3", _loadout, _scope, _unit)
+        SHOW_CHAT_WARNING_4("Gear", "Scope for loadout %1 is %2 and will not be applied to %3 [%4]", _loadout, _scope, _unit, typeOf _unit);
     };
     _unit setVariable [QEGVAR(Gear,LoadoutClass), _loadout];
 
     // Company
-    private _company = getText (_config >> "company");
-    _unit setVariable [QEGVAR(Cav,Company), _company];
-    if (_company != "") then {INFO_2("Gear", "%1 have company variable set to %2", name _unit, _company);};
+    if (GVAR(isPlayer)) then {
+        private _company = getText (_config >> "company");
+        [_company] call EFUNC(player,setCompany);
+    };
 };
 
 // preLoadout
 if (_loadConfig) then {
+    INFO_2("Gear", "Applying preLoadout for %1 [%2]", _unit, typeOf _unit);
     [_unit, _loadout] call compile (getText (_config >> "preLoadout"));
 };
 
@@ -51,7 +53,7 @@ if (_loadConfig) then {
 switch (true) do {
     case _loadArray: {
         [_unit, _loadout] call CBA_fnc_setLoadout;
-        INFO("Gear", "Loadout array applied to %1", _unit);
+        INFO_2("Gear", "Loadout array applied to %1 [%2]", _unit, typeOf _unit);
     };
     case _loadConfig: {
         _loadout = getText (_config >> "loadout");
@@ -60,7 +62,7 @@ switch (true) do {
             _loadout = parseSimpleArray _loadout;
             if (EGVAR(patches,usesACRE)) then { _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout };
             [_unit, _loadout] call CBA_fnc_setLoadout;
-            INFO_2("Gear", "Loadout %1 applied to %2", _classname, _unit);
+            INFO_3("Gear", "Loadout config %1 applied to %2 [%3]", _classname, _unit, typeOf _unit);
         } else {
             SHOW_CHAT_WARNING_1("Gear", "No loadout discoverd nothing will be applied for %1.", _unit);
         };
@@ -68,45 +70,14 @@ switch (true) do {
 };
 
 // Abilities
+// Apply only abilities for config loadouts to avoid resets of abilities when loading a saved loadout.
 if (!_loadArray) then {
     [_unit, _config] call EFUNC(gear,applyAbilities);
 };
 
 // Functions
 if (GVAR(isPlayer)) then {
-    // Handle Cosmetics
-    [_unit] call EFUNC(gear,applyCosmetics);
-
-    // Radios
-    if (EGVAR(Settings,enableRadios)) then {
-        if (EGVAR(patches,usesACRE)) then {
-            if (EGVAR(Settings,setRadio)) then {
-                [{GVAR(Radio) && [] call acre_api_fnc_isInitialized}, {
-                    _this params ["_unit"];
-                    SHOW_CHAT_INFO_1("GearRadio", "Setting up ACRE primary radio and channels for %1...", name _unit);
-                    [_unit] call FUNC(setRadioChannel);
-                    ["ACRE_PRC343"] call FUNC(setActiveRadio);
-                }, [_unit]] call CBA_fnc_waitUntilAndExecute;
-            };
-        };
-    };
-
-    // Earplugs
-    if (EGVAR(Settings,addEarplugs)) then {
-        if !([_unit] call ace_hearing_fnc_hasEarPlugsIn) then {
-            [{
-                params ["_unit"];
-                [_unit] call ace_hearing_fnc_putInEarplugs;
-            }, [_unit]] call CBA_fnc_execNextFrame;
-        };
-    };
-
-    //Server metrics
-    if ((call BIS_fnc_admin) >= 2) then {
-        player addAction ["Server Metrics", {
-            [owner player] call FUNC(getServerMetrics);
-        }, [], 0, false, true];
-    };
+    call EFUNC(gear,applyFunctions);
 };
 
 // Select weapon
@@ -120,5 +91,6 @@ if !(weaponLowered _unit) then {_unit action ["WeaponOnBack", _unit]};
 
 
 if (_loadConfig) then {
+    INFO_2("Gear", "Applying postLoadout code for %1 [%2]", _unit, typeOf _unit);
     [_unit, _loadout] call compile (getText (_config >> "postLoadout"));
 };

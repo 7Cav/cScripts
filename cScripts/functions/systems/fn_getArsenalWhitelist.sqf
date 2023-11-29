@@ -13,7 +13,7 @@
  * [] call cScripts_fnc_getArsenalWhitelist;
  */
 
-private _classname = call EFUNC(gear,getCurrentLoadout);
+private _classname = [player] call EFUNC(gear,getLoadoutName);
 if !(isClass (missionConfigFile >> "CfgLoadouts" >> _classname)) exitWith {
     SHOW_CHAT_WARNING_1("ArsenalWhitelist", "Loadout '%1' does not exist inside of mission config. No whitelist will be created.", _classname);
     [];
@@ -28,7 +28,7 @@ _unitItems = _unitItems arrayIntersect _unitItems select {_x isEqualType "" && {
 private _commonGear = GET_CONTAINER_KEYS(arsenal_common);
 
 
-private _company = call FUNC(getCompanyVariable);
+private _company = call EFUNC(player,getCompany);
 private _companyItems = switch (_company) do {
     case "alpha": {GET_CONTAINER_KEYS(alpha_company);};
     case "bravo": {GET_CONTAINER_KEYS(bravo_company);};

@@ -1,4 +1,4 @@
-name: Arma
+name: Testing
 on: [push, pull_request]
 jobs:
   validate:
@@ -36,3 +36,6 @@ jobs:
     - name: Check for LOGGING
       if: always()
       run: bash tools/checkLogging.sh
+    - name: Check Pull Request Name
+      if: always()
+      run: bash tools/checkPullRequestTitle.sh ${{ github.event.pull_request.title }}

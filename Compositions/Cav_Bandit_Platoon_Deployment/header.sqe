@@ -11,10 +11,6 @@ requiredAddons[]=
 	"cav_charlie_characters",
 	"cav_troops_charlie_weapons",
 	"cav_troops_bravo_atlas",
-	"ace_medical_treatment",
-	"aceP_circulation",
-	"A3_Supplies_F_Exp_Ammoboxes",
-	"ace_dragging",
 	"rhsusf_vehicles",
 	"rhsusf_c_m11xx"
 };

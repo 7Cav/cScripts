@@ -25,7 +25,7 @@ params ["_modulePos", "_objectPos"];
         _arg params ["_size"];
         _pos params ["_modulePos"];
 
-        private _crate = "B_CargoNet_01_ammo_F" createVehicle _modulePos;
+        private _crate = "Box_NATO_Equip_F" createVehicle _modulePos;
         
         [_crate, _size] remoteExec [QFUNC(doSupplyCrate), 0, true];
 

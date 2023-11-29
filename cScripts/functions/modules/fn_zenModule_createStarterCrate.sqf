@@ -67,7 +67,7 @@ params ["_modulePos", "_objectPos"];
                 1,
                 12
             ], false],
-        ["CHECKBOX", ["Owned by category", "Loadouts only avalible for selected company if your not in this company or squad you cant select the loadout."], false, false],
+        ["CHECKBOX", ["Show all loadouts", "Allow all loadouts to be shown."], false, false],
         ["CHECKBOX", ["Arsenal", "Enable the 7Cav Arsenal. It is limited to only cav equipment used."], false, false]
     ],
     {
@@ -77,12 +77,12 @@ params ["_modulePos", "_objectPos"];
             "_reHealOption",
             "_InsigniaSelectOption",
             "_quickSelectScale",
-            "_requireCompanyVariable",
+            "_showAllLoadouts",
             "_arsenal"
         ];
         _pos params ["_modulePos"];
         private _crate = "B_supplyCrate_F" createVehicle _modulePos;
-        [_crate, _quickSelectScale, _reGearOption, _reHealOption, _InsigniaSelectOption, _requireCompanyVariable, _arsenal] remoteExec [QFUNC(doStarterCrate), 0, true];
+        [_crate, _quickSelectScale, _reGearOption, _reHealOption, _InsigniaSelectOption, _showAllLoadouts, _arsenal] remoteExec [QFUNC(doStarterCrate), 0, true];
 
         // Add object to Zeus
         [{
