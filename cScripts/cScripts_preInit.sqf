@@ -332,13 +332,13 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
-// 9; Preformence
+// 9; Performance
 [ // Dynamic Simulation
     QEGVAR(Settings,dynamicSimulation),
     "LIST",
-    ["Dynamic Simulation (Experimental)","Enable Dynamic Simulation for Eden and zeus spawned objects automaticly\n"],
-    [_cScriptSettings, "9; Preformence"],
-    [[0,1,2,3], ["Disabled", "Enabled", "Enabled (Only Eden Objects)", "Enabled (Only Zeus Spawned Objects)"], 0],
+    ["Dynamic Simulation (Experimental)","Enable Dynamic Simulation for Eden and zeus spawned objects automatically\n"],
+    [_cScriptSettings, "9; Performance"],
+    [[0,1], ["Disabled", "Enabled"], 0],
     true,
     {},
     true
