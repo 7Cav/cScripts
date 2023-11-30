@@ -18,7 +18,7 @@ if (EGVAR(Settings,setAiBanDismountOfCrew)) then {
     ["AllVehicles", "init", {
         params ["_vehicle"];
         _vehicle setUnloadInCombat [true, false];
-        _vehicle allowCrewInImmobile [true, false];
+        _vehicle allowCrewInImmobile [false, true];
     }, true, ["man"], true] call CBA_fnc_addClassEventHandler;
 };
 
