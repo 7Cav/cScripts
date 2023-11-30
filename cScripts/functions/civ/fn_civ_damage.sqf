@@ -29,6 +29,7 @@ private _damageChance = switch (_density) do {
     case "high": {0.4};
     case "medium": {0.25};
     case "low": {0.1};
+    case "none": {0};
     default {0};
 };
 
