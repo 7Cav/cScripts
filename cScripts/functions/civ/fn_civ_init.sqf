@@ -26,7 +26,7 @@ private _civZones = [];
         private _density = [_x, 21] call BIS_fnc_trimString;
         _density = (_density splitString "_")#0;
         if !(_density in ["extream", "high", "medium", "low", "none"]) then {
-            WARNING_2("Civ", "Zone %1 have invalid density '%2'.", _x, _density);
+            SHOW_CHAT_WARNING_2("Civ", "Zone %1 have invalid density '%2'.", _x, _density);
             continue;
         };
         private _pos = getMarkerPos _x;
