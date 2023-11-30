@@ -26,6 +26,7 @@ GVAR(ALLOW_CIV_ZONE_DAMAGE) = false;
 INFO_1("Civ", "Checking for possible civilian casualties at %1.", _marker);
 
 private _damageChance = switch (_density) do {
+    case "extream" {0.65};
     case "high": {0.4};
     case "medium": {0.25};
     case "low": {0.1};
