@@ -890,8 +890,8 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148",1],
         ["rhs_fgm148_magazine_AT",1],
-        ["rhs_mag_maaws_HE",2],
-        ["rhs_mag_maaws_HEAT",2],
+        ["MRAWS_HE_F",2],
+        ["MRAWS_HEAT_F",2],
 
         // M320 Ammo
         ["rhsusf_mag_M433_HEDP",20],
