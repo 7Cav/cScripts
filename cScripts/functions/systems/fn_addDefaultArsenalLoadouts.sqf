@@ -1,18 +1,16 @@
 #include "..\script_component.hpp";
 /* 
- * Author: CPL.Brostrom.A
- * This function initzialise ace arsenal default loadouts in eden and in mission.
+ * Author: SGT.Brostrom.A
+ * This adds default arsenal loadouts based on cfgLoadouts gear system loadouts.
  *
  * Example:
- * call cScripts_fnc_init_aceArsenalDefault
+ * call cScripts_fnc_addDefaultArsenalLoadouts
  *
  * Public: No
  */
 
 if (isServer) exitWith {};
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};
-
-INFO(if (is3DEN) then {"EDENArsenal"} else {"Arsenal"}, "Setting up Default ACE Arsenal loadouts.");
 
 private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 ["<empty>", _empty] call ace_arsenal_fnc_addDefaultLoadout;
@@ -38,5 +36,3 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     };
     [_name, _loadout] call ace_arsenal_fnc_addDefaultLoadout;
 } forEach _classnameList;
-
-INFO(if (is3DEN) then { "EDENArsenal"} else {"Arsenal"}, "Default ACE Arsenal loadouts setup completed.");

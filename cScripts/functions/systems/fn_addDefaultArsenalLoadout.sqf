@@ -1,7 +1,8 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A 
- * This function creates a defualt loadout based on your current selected loadout class
+ * This function creates a default loadouts and adds it to the arsenal based on the config loadout name.
+ * The loadout is added to the players arsenal.
  *
  * Arguments:
  * None
@@ -10,8 +11,11 @@
  * Nothing
  *
  * Example:
- * [] call cScripts_fnc_getUnitArsenalDefault;
+ * call cScripts_fnc_addDefaultArsenalLoadout;
  */
+
+if (isServer) exitWith {};
+if (!EGVAR(patches,usesACEArsenal)) exitWith {};
 
 private _empty = [[],[],[],[],[],[],"","",[],["","","","","",""]];
 ["<empty>", _empty, false] call ace_arsenal_fnc_addDefaultLoadout;

@@ -19,8 +19,8 @@ private _icon = "cScripts\Data\Icon\icon_arsenal_ca.paa";
 private _arsenalStatement = {
     INFO_2("Staging Arsenal", "Creating staging arsenal for %1 (%2)", player, typeOf player);
 
-    ace_arsenal_defaultLoadoutsList = [];
-    call FUNC(getUnitArsenalDefault);
+    call FUNC(removeDefaultArsenalLoadouts);
+    call FUNC(addDefaultArsenalLoadout);
 
     private _items = call FUNC(getArsenalWhitelist);
     if (count _items == 0) exitWith {

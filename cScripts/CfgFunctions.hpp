@@ -1,7 +1,7 @@
 class cScripts {
     class init {
         file = "cScripts\functions\init";
-        class init_aceArsenalDefault {};
+        class init_aceArsenal {};
         class init_aceTagging {};
         class init_aceItemReplace {};
 
@@ -64,6 +64,8 @@ class cScripts {
         class player_setRank {};
         class player_getRole {};
 
+        class player_isCurator {};
+
         class unit_setTeamColor {};
         
         class unit_getName {};
@@ -110,6 +112,9 @@ class cScripts {
         class setupLoadoutSelection {};
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
+
+        class addDefaultArsenalLoadouts {};
+        class removeDefaultArsenalLoadouts {};
 
         class checkStagingZone {};
 
