@@ -15,16 +15,6 @@
 
 if (EGVAR(Settings,dynamicSimulation) == 0) exitWith {};
 
-// Don't enable system if there are airframes
-// TODO: make this system work with airframes in a reliable way
-//private _hasAirframes = {
-//    if (_x isKindOf "Air") exitWith {true};
-//    false
-//} forEach vehicles;
-//if (_hasAirframes) exitWith {
-//    SHOW_WARNING("DynamicSimulation", "Dynamic Simulation have terminated it self due to mission containing airframes");
-//};
-
 INFO("DynamicSimulation", "Dynamic Simulation Enabled");
 
 // System Values
