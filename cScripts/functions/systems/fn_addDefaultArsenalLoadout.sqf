@@ -1,4 +1,3 @@
-#define DEBUG_MODE
 #include "..\script_component.hpp";
 /*
  * Author: SGT.Brostrom.A 
@@ -15,7 +14,6 @@
  * call cScripts_fnc_addDefaultArsenalLoadout
  */
 
-diag_log "DEBUG cScripts here 2";
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};
 
 INFO("Default Arsenal", "Setting up default arsenal loadout for unit...");
