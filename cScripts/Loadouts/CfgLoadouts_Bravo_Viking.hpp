@@ -181,4 +181,5 @@ class Cav_B_B_Scout_Bravo_CombatLifeSaver_F: Cav_B_B_Scout_CombatLifeSaver_F { s
 
 // Depricated (Will be removed eventually)
 class Cav_B_B_Scout_Bravo_TeamLead_F: Cav_B_B_Scout_Bravo_TeamLeader_F {};
+
 class Cav_B_B_Scout_Alpha_TeamLead_F: Cav_B_B_Scout_Alpha_TeamLeader_F {};
