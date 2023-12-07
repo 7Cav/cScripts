@@ -113,6 +113,7 @@ class cScripts {
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
+        class addDefaultArsenalLoadout {};
         class addDefaultArsenalLoadouts {};
         class removeDefaultArsenalLoadouts {};
 
@@ -135,7 +136,6 @@ class cScripts {
         class addHeal {};
         class addArsenal {};
         class getArsenalWhitelist {};
-        class getUnitArsenalDefault {};
         
         class createActionCategory {};
 
