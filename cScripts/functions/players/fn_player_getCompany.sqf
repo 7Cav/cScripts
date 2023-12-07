@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _company = GETVAR(player,EGVAR(Player,Company),"");
+private _company = GETVAR(player,EGVAR(Player,Company), "");
 _company = toLower _company;
 
 _company

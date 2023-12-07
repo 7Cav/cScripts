@@ -10,7 +10,7 @@
  * ARRAY of items
  *
  * Example:
- * [] call cScripts_fnc_getArsenalWhitelist;
+ * call cScripts_fnc_getArsenalWhitelist;
  */
 
 private _classname = [player] call EFUNC(gear,getLoadoutName);

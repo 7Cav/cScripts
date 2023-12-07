@@ -1,7 +1,7 @@
 class cScripts {
     class init {
         file = "cScripts\functions\init";
-        class init_aceArsenalDefault {};
+        class init_aceArsenal {};
         class init_aceTagging {};
         class init_aceItemReplace {};
 
@@ -66,6 +66,8 @@ class cScripts {
         class player_setRank {};
         class player_getRole {};
 
+        class player_isCurator {};
+
         class unit_setTeamColor {};
         
         class unit_getName {};
@@ -78,6 +80,7 @@ class cScripts {
         class setRadioChannel {};
         class setActiveRadio {};
 
+        class player_getCompany {};
         class player_setCompany {};
 
         // Other Functions
@@ -113,6 +116,12 @@ class cScripts {
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
+        // Arsenal releated
+        class getArsenalWhitelist {};
+        class addDefaultArsenalLoadout {};
+        class addDefaultArsenalLoadouts {};
+        class clearDefaultArsenalLoadouts {};
+
         class checkStagingZone {};
 
         class deleteDroppedObjects {};
@@ -130,6 +139,7 @@ class cScripts {
         // Buttons and options
         class addReGear {};
         class addHeal {};
+      
         class addArsenal {};
         class getArsenalWhitelist {};
         class getUnitArsenalDefault {};

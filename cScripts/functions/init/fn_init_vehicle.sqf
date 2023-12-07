@@ -16,6 +16,21 @@ INFO("InitVehicle","Applying Event Handers (init) to vehicles for function expan
 
 if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
 
+// Event Handlers
+[QEGVAR(EH_Vehicle,addFunctions), {
+    params ["_vehicle"];
+    INFO_2("EH_InitVehicle_addFunctions", "Applying function to %1 [%2]", _vehicle, typeOf _vehicle);
+    _vehicle call EFUNC(vehicle,addFunctions);
+}] call CBA_fnc_addEventHandler;
+
+[QEGVAR(EH_Vehicle,addStagingActions), {
+    params ["_vehicle"];
+    INFO_2("EH_InitVehicle_addStagingActions", "Applying function to %1 [%2]", _vehicle, typeOf _vehicle);
+    _vehicle call EFUNC(vehicle,addStagingActions);
+}] call CBA_fnc_addEventHandler;
+
+
+// Vehicle init
 ["AllVehicles", "init", {
     params ["_vehicle"];
     INFO_2("VehicleInit", "Applying Init to %1 [%2]...", _vehicle, typeOf _vehicle);
