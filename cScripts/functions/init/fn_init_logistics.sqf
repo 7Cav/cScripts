@@ -281,8 +281,8 @@ private _dataArray = [
         ["rhsusf_100Rnd_762x51_m62_tracer",0],
         ["rhs_fgm148_magazine_AT",1],
         ["rhs_fim92_mag",2],
-        ["rhs_mag_maaws_HE",2],
-        ["rhs_mag_maaws_HEAT",2],
+        ["MRAWS_HE_F",2],
+        ["MRAWS_HEAT_F",2],
         ["MAA_MAAWS_ASM509",0],
         ["MAA_MAAWS_GMM_MT",0],
 
@@ -448,8 +448,8 @@ private _dataArray = [
         ["rhs_mag_m713_Red", 0],
         ["rhs_mag_m716_yellow", 0],
         
-        ["rhs_mag_maaws_HE", 0],
-        ["rhs_mag_maaws_HEAT", 0],
+        ["MRAWS_HE_F", 0],
+        ["MRAWS_HEAT_F", 0],
         ["MAA_MAAWS_ASM509", 0],
         ["MAA_MAAWS_GMM_MT", 0],
         ["NDS_M_6Rnd_60mm_HE_0", 0],
@@ -687,8 +687,8 @@ private _dataArray = [
 
         // AT
         ["rhs_fgm148_magazine_AT",3],
-        ["rhs_mag_maaws_HEAT",4],
-        ["rhs_mag_maaws_HE",4],
+        ["MRAWS_HEAT_F",4],
+        ["MRAWS_HE_F",4],
         ["rhs_weap_M136_hedp",8],
         
         // AA
@@ -890,8 +890,8 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148",1],
         ["rhs_fgm148_magazine_AT",1],
-        ["rhs_mag_maaws_HE",2],
-        ["rhs_mag_maaws_HEAT",2],
+        ["MRAWS_HE_F",2],
+        ["MRAWS_HEAT_F",2],
 
         // M320 Ammo
         ["rhsusf_mag_M433_HEDP",20],
@@ -1415,16 +1415,14 @@ private _dataArray = [
 
 
         // MAAWS ammo
-        ["rhs_mag_maaws_HEAT", 0],
-        ["rhs_mag_maaws_HEDP", 0],
+        ["MRAWS_HEAT_F", 0],
+        ["MRAWS_HE_F", 0],
         ["MAA_MAAWS_ASM509", 0],
         ["MAA_MAAWS_HEDP502", 0],
         ["MAA_MAAWS_GMM_MT", 0],
         ["MAA_MAAWS_MT756", 0],
-        ["rhs_mag_maaws_HE", 0],
         ["rhs_fgm148_magazine_AT",0],
         ["rhs_fim92_mag",0],
-        ["MRAWS_HE_F", 0],
 
         // Backpacks
         ["B_Carryall_mcamo", 0],
