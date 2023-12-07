@@ -1,3 +1,4 @@
+#define DEBUG_MODE;
 #include "..\script_component.hpp";
 /* 
  * Author: CPL.Brostrom.A
@@ -11,13 +12,11 @@
 
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};
 
-INFO(if (is3DEN) then {"EDENArsenal"} else {"Arsenal"}, "Setting up Default ACE Arsenal loadouts.");
-
-call FUNC(addDefaultArsenalLoadouts)
-
-INFO(if (is3DEN) then { "EDENArsenal"} else {"Arsenal"}, "Default ACE Arsenal loadouts setup completed.");
+call FUNC(addDefaultArsenalLoadouts);
 
 if (is3DEN) exitWith {};
+
+GVAR(StagingArsenalOpen) = false;
 
 // Event Handlers
 ["ace_arsenal_displayClosed", {

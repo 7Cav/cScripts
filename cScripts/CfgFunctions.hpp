@@ -78,6 +78,7 @@ class cScripts {
         class setRadioChannel {};
         class setActiveRadio {};
 
+        class player_getCompany {};
         class player_setCompany {};
 
         // Other Functions
@@ -113,9 +114,11 @@ class cScripts {
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
+        // Arsenal releated
+        class getArsenalWhitelist {};
         class addDefaultArsenalLoadout {};
         class addDefaultArsenalLoadouts {};
-        class removeDefaultArsenalLoadouts {};
+        class clearDefaultArsenalLoadouts {};
 
         class checkStagingZone {};
 
@@ -135,7 +138,6 @@ class cScripts {
         class addReGear {};
         class addHeal {};
         class addArsenal {};
-        class getArsenalWhitelist {};
         
         class createActionCategory {};
 

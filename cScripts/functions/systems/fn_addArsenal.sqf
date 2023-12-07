@@ -1,3 +1,4 @@
+#define DEBUG_MODE
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
@@ -19,10 +20,13 @@ private _icon = "cScripts\Data\Icon\icon_arsenal_ca.paa";
 private _arsenalStatement = {
     INFO_2("Staging Arsenal", "Creating staging arsenal for %1 (%2)", player, typeOf player);
 
-    call FUNC(removeDefaultArsenalLoadouts);
+    call FUNC(clearDefaultArsenalLoadouts);
+    waitUntil { count ace_arsenal_defaultLoadoutsList == 0 };
     call FUNC(addDefaultArsenalLoadout);
+    waitUntil { count ace_arsenal_defaultLoadoutsList != 0 };
 
     private _items = call FUNC(getArsenalWhitelist);
+    INFO_3("Staging Arsenal", "Whitleist containing %1 items added to %2 (%3)", count _items, player, typeOf player);
     if (count _items == 0) exitWith {
         [
             [],
@@ -31,6 +35,7 @@ private _arsenalStatement = {
             [""]
         ] call CBA_fnc_notify;
     };
+
 
     [player, _items] call ace_arsenal_fnc_initBox;
 

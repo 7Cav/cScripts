@@ -9,7 +9,6 @@
  * Public: No
  */
 
-if (isServer) exitWith {};
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};
 
 ace_arsenal_defaultLoadoutsList = [];
