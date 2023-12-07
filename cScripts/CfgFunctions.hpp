@@ -139,11 +139,7 @@ class cScripts {
         // Buttons and options
         class addReGear {};
         class addHeal {};
-      
         class addArsenal {};
-        class getArsenalWhitelist {};
-        class getUnitArsenalDefault {};
-
         class createActionCategory {};
 
         class doGetOutHeloSide {};
