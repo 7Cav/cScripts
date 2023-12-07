@@ -12,3 +12,10 @@
 ["attendance", {
     [QGVAR(getAttendance)] call CBA_fnc_localEvent;
 }, "all"] call CBA_fnc_registerChatCommand;
+
+["enableAI", {
+    //[QGVAR(getAttendance)] call CBA_fnc_localEvent;
+}, "all"] call CBA_fnc_registerChatCommand;
+["disableAI", {
+    //[QGVAR(getAttendance)] call CBA_fnc_localEvent;
+}, "all"] call CBA_fnc_registerChatCommand;

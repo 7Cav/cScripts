@@ -17,13 +17,13 @@ if (EGVAR(Settings,dynamicSimulation) == 0) exitWith {};
 
 // Don't enable system if there are airframes
 // TODO: make this system work with airframes in a reliable way
-private _hasAirframes = {
-    if (_x isKindOf "Air") exitWith {true};
-    false
-} forEach vehicles;
-if (_hasAirframes) exitWith {
-    SHOW_WARNING("DynamicSimulation", "Dynamic Simulation have terminated it self due to mission containing airframes");
-};
+//private _hasAirframes = {
+//    if (_x isKindOf "Air") exitWith {true};
+//    false
+//} forEach vehicles;
+//if (_hasAirframes) exitWith {
+//    SHOW_WARNING("DynamicSimulation", "Dynamic Simulation have terminated it self due to mission containing airframes");
+//};
 
 INFO("DynamicSimulation", "Dynamic Simulation Enabled");
 
@@ -65,9 +65,7 @@ private _antiAircraftUnits = [];
         _antiAircraftUnits append [_name];
         continue 
     };
-} forEach ("configName _x isKindOf 'LandVehicle'" configClasses (configFile >> "CfgVehicles"));
-
-diag_log format ["O_Soldier_AA_F, %1", ("O_Soldier_AA_F" in _antiAircraftUnits)];
+} forEach ("configName _x isKindOf 'LandVehicle' or configName _x isKindOf 'man'" configClasses (configFile >> "CfgVehicles"));
 
 // Apply event handlers to objects
 INFO("DynamicSimulation", "Applying Event Handers (init) to mission objects...");
@@ -116,11 +114,12 @@ INFO("DynamicSimulation", "Applying Event Handers (init) to mission objects...")
     params ["_unit"];
     if (typeOf _unit in _antiAircraftUnits) exitWith {
         [{
-        params ["_unit"];
+            params ["_unit"];
             INFO_2("DynamicSimulation", "Dynamic simulation system disabeld for Anti Aircraft unit %1 (%2)", _unit, typeOf _unit);
             _unit enableDynamicSimulation false;
+            group _unit enableDynamicSimulation false;
             {
-                group (_x) enableDynamicSimulation false;
+                group _x enableDynamicSimulation false;
                 _x enableDynamicSimulation false;
             } forEach crew _vehicle;
         }, [_unit], 2] call CBA_fnc_waitAndExecute;
@@ -133,8 +132,9 @@ INFO("DynamicSimulation", "Applying Event Handers (init) to mission objects...")
             params ["_vehicle"];
             INFO_2("DynamicSimulation", "Dynamic simulation system disabeld for Anti Aircraft vehicle %1 (%2)", _vehicle, typeOf _vehicle);
             _vehicle enableDynamicSimulation false;
+            group _unit enableDynamicSimulation false;
             {
-                group (_x) enableDynamicSimulation false;
+                group _x enableDynamicSimulation false;
                 _x enableDynamicSimulation false;
             } forEach crew _vehicle;
         }, [_vehicle], 2] call CBA_fnc_waitAndExecute;
@@ -147,14 +147,14 @@ INFO("DynamicSimulation", "Applying Event Handers (init) to mission objects...")
         params ["_vehicle"];
             INFO_2("DynamicSimulation", "Dynamic simulation system disabeld for Anti Aircraft vehicle %1 (%2)", _vehicle, typeOf _vehicle);
             _vehicle enableDynamicSimulation false;
+            group _unit enableDynamicSimulation false;
             {
-                group (_x) enableDynamicSimulation false;
+                group _x enableDynamicSimulation false;
                 _x enableDynamicSimulation false;
             } forEach crew _vehicle;
         }, [_vehicle], 2] call CBA_fnc_waitAndExecute;
     };
 }, true, [], true] call CBA_fnc_addClassEventHandler;
-
 ["Air", "init", {
     params ["_vehicle"];
     [{
@@ -166,3 +166,31 @@ INFO("DynamicSimulation", "Applying Event Handers (init) to mission objects...")
         } forEach crew _vehicle;
     }, [_vehicle], 3] call CBA_fnc_waitAndExecute;
 }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+
+// Handle aircraft and death
+player addEventHandler ["GetInMan", {
+    params ["_unit", "_role", "_vehicle", "_turret"];
+    if (isPlayer _unit) then {
+        if (_vehicle isKindOf "Air") then {
+            INFO_2("DynamicSimulation", "Disabled simulation activation for %1 (%2) due to entre aircraft", _unit, typeof _unit);
+            _unit triggerDynamicSimulation false;
+        };
+    };
+}];
+player addEventHandler ["GetOutMan", {
+    params ["_unit", "_role", "_vehicle", "_turret"];
+    if (isPlayer _unit) then {
+        if (_vehicle isKindOf "Air") then {
+            INFO_2("DynamicSimulation", "Enabled simulation activation for %1 (%2) due to exit aircraft", _unit, typeof _unit);
+            _unit triggerDynamicSimulation true;
+        };
+    };
+}];
+player addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+    if (isPlayer _unit) then {
+        INFO_2("DynamicSimulation", "Enabled simulation activation for %1 (%2) due to death", _unit, typeof _unit);
+        _unit triggerDynamicSimulation true;
+    };
+}];

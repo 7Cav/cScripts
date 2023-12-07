@@ -193,7 +193,7 @@ class cScripts {
     };
     class modules {
         file = "cScripts\functions\modules";
-        class zenModule_EnableUnitSimulation {};
+        class zenModule_toggleUnitSimulation {};
 
         class zenModule_CreateFieldHospital {};
         class zenModule_CreateMedicalCrate {};
