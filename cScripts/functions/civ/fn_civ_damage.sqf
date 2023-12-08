@@ -26,7 +26,7 @@ GVAR(ALLOW_CIV_ZONE_DAMAGE) = false;
 INFO_1("Civ", "Checking for possible civilian casualties at %1.", _marker);
 
 private _damageChance = switch (_density) do {
-    case "extream" {0.65};
+    case "extream": {0.65};
     case "high": {0.4};
     case "medium": {0.25};
     case "low": {0.1};
@@ -36,9 +36,10 @@ private _damageChance = switch (_density) do {
 
 if (random 1 < _damageChance) then {
     INFO_1("Civ", "Civilian casualties at %1.", _marker);
+    private _location = text nearestLocation [markerPos _marker, ""];
     {
         private _curator = getAssignedCuratorUnit _x;
-        [QEGVAR(Civilian,Casualties), [_marker, _density, _projectile, _unit], _curator] call CBA_fnc_targetEvent;
+        [QEGVAR(Civilian,Casualties), [_location, _unit], _curator] call CBA_fnc_targetEvent;
     } forEach allCurators;
 } else {
     INFO_1("Civ", "No civilian casualties at %1 detected.", _marker);

@@ -100,6 +100,8 @@ class cScripts {
 
         class doStarterCrate {};
         class doSupplyCrate {};
+
+        class makeAgent {};
     };
     class systems {
         file = "cScripts\functions\systems";

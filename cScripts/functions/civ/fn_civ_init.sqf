@@ -1,3 +1,4 @@
+#define DEBUG_MODE
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
@@ -58,14 +59,32 @@ if !(player diarySubjectExists "CivCenter") then {
 };
 
 
-// Event handlers 
+// Event Handlers
 [player, "fired", {_this call EFUNC(civ,checkProjectile)}] call CBA_fnc_addBISEventHandler;
 ["ace_firedPlayer", {_this call EFUNC(civ,checkProjectile)}] call CBA_fnc_addEventHandler;
 ["ace_firedPlayerVehicle", {_this call EFUNC(civ,checkProjectile)}] call CBA_fnc_addEventHandler;
 
+
+// Physical civilian units
+["CAManBase", "init", {
+    params ["_unit"];
+    if (isPlayer _unit) exitWith {};
+    if (side _unit == civilian) then {
+        INFO_2("Civ", "Civilian unit detected %1 (%2) applying eventhandler.", _unit, typeOf _unit);
+        [_unit, "killed", {
+            params ["_unit", "_source", "_damage", "_instigator"];
+            private _location = text nearestLocation [getPosASLVisual _unit, ""];
+            INFO_1("Civ", "Civilian casualties at %1.", _location);
+            {
+                private _curator = getAssignedCuratorUnit _x;
+                [QEGVAR(Civilian,Casualties), [_location, _source], _curator] call CBA_fnc_targetEvent;
+            } forEach allCurators;
+        }] call CBA_fnc_addBISEventHandler;
+    };
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+
 [QEGVAR(Civilian,Casualties), {
-    params ["_marker", "_density", "_projectile", "_unit"];
-    private _location = text nearestLocation [markerPos _marker, ""];
+    params ["_location", "_unit"];
     [
         [],
         ["Civilian Casualties", 1.2, [1, 0.776, 0.102, 1]],
