@@ -178,7 +178,7 @@ player addEventHandler ["GetOutMan", {
     };
 }];
 player addEventHandler ["Killed", {
-	params ["_unit", "_killer", "_instigator", "_useEffects"];
+    params ["_unit", "_killer", "_instigator", "_useEffects"];
     if (isPlayer _unit) then {
         INFO_2("DynamicSimulation", "Enabled simulation activation for %1 (%2) due to death", _unit, typeof _unit);
         _unit triggerDynamicSimulation true;
