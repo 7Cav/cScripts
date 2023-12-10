@@ -17,12 +17,7 @@
 
 params [["_insignia", "", [""]]];
 
-if (!GVAR(isPlayer)) exitWith {};
-
-// TODO: Legacy handler, remove later
-if (!isNil{ GETPRVAR(EGVAR(Cav,Insignia), nil); }) then {
-    SETPRVAR(EGVAR(Cav,Insignia), nil);
-};
+if (!isPlayer _unit) exitWith {};
 
 SETPRVAR(EGVAR(Profile,Insignia), _insignia);
 
