@@ -10,7 +10,7 @@
  * 2: ReGear action <BOOL>          (Default: true)
  * 3: Heal action <BOOL>            (Default: true)
  * 4: Insignia Selection <BOOL>     (Default: true)
- * 5: Company variable <BOOL>       (Default: true)
+ * 5: Show all Loadouts <BOOL>      (Default: false)
  * 6: Arsenal <BOOL>                (Default: false)
  * 7: Staging <BOOL>                (Default: true)
  *
@@ -20,8 +20,8 @@
  * Example:
  * [this] call cScripts_fnc_doStarterCrate;
  * [this,"none",true] call cScripts_fnc_doStarterCrate;
- * [this,"none",true,true,true,true,false] call cScripts_fnc_doStarterCrate;
- * [this,"none",true,true,true,true,false,true] call cScripts_fnc_doStarterCrate;
+ * [this,"none",true,true,true,false,false] call cScripts_fnc_doStarterCrate;
+ * [this,"none",true,true,true,false,false,true] call cScripts_fnc_doStarterCrate;
  *
  */
 
@@ -31,7 +31,7 @@ params [
     ["_reGearOption", true, [true]],
     ["_reHealOption", true, [true]],
     ["_InsigniaSelectOption", true, [true]],
-    ["_allowOnlyForCompany", true, [true]],
+    ["_allowAllLoadouts", false, [false]],
     ["_arsenal", false, [false]],   // not used
     ["_hasStagingZone", true, [true]]
 ];
@@ -71,7 +71,7 @@ if (_reHealOption) then {
 };
 
 // Call Quick Selection
-[_object, _allowOnlyForCompany] call FUNC(setupLoadoutSelection);
+[_object, "ACE_MainActions", _allowAllLoadouts] call FUNC(setupLoadoutSelection);
 
 // Call Insignia Selection
 if (_InsigniaSelectOption) then {

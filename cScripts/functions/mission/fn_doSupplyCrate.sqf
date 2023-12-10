@@ -36,8 +36,8 @@ _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", (_
 _crate addMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", (_quaScale * 20)];
 _crate addMagazineCargoGlobal ["rhsusf_200rnd_556x45_mixed_soft_pouch", (_quaScale * 15)];
 _crate addMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer", (_quaScale * 15)];
-_crate addMagazineCargoGlobal ["rhs_mag_maaws_HEAT",4];
-_crate addMagazineCargoGlobal ["rhs_mag_maaws_HE",4];
+_crate addMagazineCargoGlobal ["MRAWS_HEAT_F",4];
+_crate addMagazineCargoGlobal ["MRAWS_HE_F",4];
 _crate addMagazineCargoGlobal ["NDS_M_6Rnd_60mm_HE_0",5];
 _crate addMagazineCargoGlobal ["NDS_M_6Rnd_60mm_HE",5];
 _crate addMagazineCargoGlobal ["NDS_M_6Rnd_60mm_SMOKE",2];

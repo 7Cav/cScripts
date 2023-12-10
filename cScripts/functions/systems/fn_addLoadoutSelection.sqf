@@ -27,15 +27,16 @@ params [
     ["_icon", "", [""]],
     ["_category", ["ACE_MainActions", "cScripts_Loadout_Cat_Main"], [[]]],
     ["_company", "", [""]],
-    ["_showAllLoadouts", false]
+    ["_allowAllLoadouts", false]
 ];
 
 private _condition = {
     params ["", "", "_params"];
-    _params params ["", "_company", "_showAllLoadouts"];
-    if (_showAllLoadouts) exitWith {true};
+    _params params ["_className", "_company", "_allowAllLoadouts"];
+    if (_allowAllLoadouts) exitWith {true};
+    if ([player] call EFUNC(gear,getLoadoutName) == _className) exitWith {true};
     if ([_company] call FUNC(allowLoadout)) exitWith {true};
-    false;
+    false
 };
 
 private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, {
@@ -43,7 +44,7 @@ private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, {
     _params params ["_className"];
     [player] call EFUNC(gear,removeLoadout);
     [player, _className] call EFUNC(gear,applyLoadout);
-}, _condition, {}, [_className, _company, _showAllLoadouts]] call ace_interact_menu_fnc_createAction;
+}, _condition, {}, [_className, _company, _allowAllLoadouts]] call ace_interact_menu_fnc_createAction;
 
 private _actionType = if (isPlayer _object) then {1} else {0};
 [_object, _actionType, _category, _action] call ace_interact_menu_fnc_addActionToObject;
