@@ -31,8 +31,6 @@ if (hasInterface) then {
 };
 
 [QEGVAR(gear,applyLoadout), {
-    if (player call EFUNC(gear,hasSavedLoadout)) then {
-        private _loadout = [player] call EFUNC(gear,selectLoadout);
-        [player, _loadout] call EFUNC(gear,applyLoadout);
-    };
+    private _loadout = [player] call EFUNC(gear,selectLoadout);
+    [player, _loadout] call EFUNC(gear,applyLoadout);
 }] call CBA_fnc_addEventHandler;
