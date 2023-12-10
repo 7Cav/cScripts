@@ -12,16 +12,16 @@
  * Nothing
  *
  * Example:
- * [this, "Charlie", true, "ACE_MainActions"] call cScripts_fnc_setupLoadoutSelection;
- * [this, "Charlie", true, "ACE_SelfActions"] call cScripts_fnc_setupLoadoutSelection;
+ * [this, "Charlie", "ACE_MainActions", true] call cScripts_fnc_setupLoadoutSelection;
+ * [this, "Charlie", "ACE_SelfActions", true] call cScripts_fnc_setupLoadoutSelection;
  *
  * Public: No
  */
 
 params[
     ["_object", objNull, [objNull]],
-    ["_allowOnlyForCompany", true, [true]],
-    ["_aceCategory", "ACE_MainActions", ["ACE_MainActions"]]
+    ["_aceCategory", "ACE_MainActions", ["ACE_MainActions"]],
+    ["_allowAllLoadouts", true, [true]]
 ];
 
 
@@ -44,7 +44,7 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     INFO_2("LoadoutSelector", "Setting up %1 loadout on %2.", _displayName, _object);
 
     _category = [_aceCategory, _mainCategory] + _category;
-    [_object, _displayName, _classname, _icon, _category, _company, _allowOnlyForCompany] call FUNC(addLoadoutSelection);
+    [_object, _displayName, _classname, _icon, _category, _company, _allowAllLoadouts] call FUNC(addLoadoutSelection);
 } forEach _classnameList;
 
 INFO_1("LoadoutSelector", "Done setting up quick selections on %1.", _object);

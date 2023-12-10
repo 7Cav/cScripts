@@ -37,4 +37,4 @@ if (_playerCompany == "") exitWith {false};
 
 if (_playerCompany == _company) exitWith {true};
 
-true
+false
