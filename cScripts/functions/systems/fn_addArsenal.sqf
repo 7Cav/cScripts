@@ -35,13 +35,12 @@ private _arsenalStatement = {
         ] call CBA_fnc_notify;
     };
 
-
-    [player, _items] call ace_arsenal_fnc_initBox;
+    [player, _items] call ace_arsenal_fnc_addVirtualItems;
 
     [{
         INFO_2("Staging Arsenal", "Opening Staging Arsenal for %1 (%2)", player, typeOf player);
         [player, player, false] call ace_arsenal_fnc_openBox;
-        [QEGVAR(EH_StagingArsenal,displayOpen)] call CBA_fnc_localEvent;
+        [QEGVAR(StagingArsenal,displayOpen)] call CBA_fnc_localEvent;
         [{
             private _loadout = [player] call EFUNC(gear,getLoadoutName);
             private _name = getText (missionConfigFile >> "CfgLoadouts" >> _loadout >> "displayName");
