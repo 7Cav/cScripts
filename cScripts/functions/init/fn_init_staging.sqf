@@ -80,7 +80,7 @@ player addEventHandler ["InventoryClosed", {
 [player, _category] call FUNC(addReGear);
 if !(GVAR(OneLife)) then {[player, _category] call FUNC(addHeal)};
 [player, _category] call FUNC(addInsigniaSelectionList);
-[player, true, "ACE_SelfActions"] call FUNC(setupLoadoutSelection);
+[player, "ACE_SelfActions", false] call FUNC(setupLoadoutSelection);
 [_category] call FUNC(addArsenal);
 
 INFO_1("Staging", "Staging options for %1 have been setup.", name player)

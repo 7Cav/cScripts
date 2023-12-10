@@ -11,13 +11,13 @@
  * Main category used for creation <STRING>
  *
  * Example:
- * [this, "ACE_MainActions"] call cScripts_fnc_setupLoadoutSelection;
- * [this, "ACE_SelfActions"] call cScripts_fnc_setupLoadoutSelection;
+ * [this, "ACE_MainActions"] call cScripts_fnc_setupLoadoutCategories;
+ * [this, "ACE_SelfActions"] call cScripts_fnc_setupLoadoutCategories;
  *
  * Public: No
  */
 
-params[
+ params[
     ["_object", objNull, [objNull]],
     ["_aceCategory", "ACE_MainActions", ["ACE_MainActions"]]
 ];

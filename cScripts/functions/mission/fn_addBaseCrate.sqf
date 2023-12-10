@@ -26,6 +26,6 @@ params [
 
 if (_object isKindOf "Man") exitWith {false};
 
-[_object, _type, true, true, true, true, false, true] call FUNC(doStarterCrate);
+[_object, _type, true, true, true, false, false, true] call FUNC(doStarterCrate);
 
 true
