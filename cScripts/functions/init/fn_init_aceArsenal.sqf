@@ -24,6 +24,10 @@ GVAR(StagingArsenalOpen) = false;
             [player, true] call ace_arsenal_fnc_removeBox;
             GVAR(StagingArsenalOpen) = false;
 
+            // Save insignia
+            private _insigniaClass = [player] call BIS_fnc_getUnitInsignia;
+            [_insigniaClass] call cScripts_fnc_profile_saveInsignia;
+
             // Reset default loadouts
             call FUNC(addDefaultArsenalLoadouts);
         }] call CBA_fnc_execNextFrame;

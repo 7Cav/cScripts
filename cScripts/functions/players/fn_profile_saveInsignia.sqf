@@ -10,7 +10,7 @@
  * True
  *
  * Example:
- * call cScripts_fnc_profile_saveInsignia
+ * ["curator"] call cScripts_fnc_profile_saveInsignia
  *
  * Public: No
  */

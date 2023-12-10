@@ -10,7 +10,7 @@
  * true/False <BOOLEAN>
  *
  * Example:
- * call cScripts_fnc_unit_setInsignia
+ * call cScripts_fnc_unit_isCurator
  *
  */
 
