@@ -20,11 +20,13 @@ GVAR(StagingArsenalOpen) = false;
 // Event Handlers
 ["ace_arsenal_displayClosed", {
     if (GVAR(StagingArsenalOpen)) then {
-        [player, true] call ace_arsenal_fnc_removeBox;
-        GVAR(StagingArsenalOpen) = false;
+        [{
+            [player, true] call ace_arsenal_fnc_removeBox;
+            GVAR(StagingArsenalOpen) = false;
 
-        // Reset default loadouts
-        call FUNC(addDefaultArsenalLoadouts);
+            // Reset default loadouts
+            call FUNC(addDefaultArsenalLoadouts);
+        }] call CBA_fnc_execNextFrame;
     };
 }] call CBA_fnc_addEventHandler;
 
