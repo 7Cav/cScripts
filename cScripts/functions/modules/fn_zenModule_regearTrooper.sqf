@@ -17,7 +17,7 @@ params ["_modulePos", "_objectPos"];
 
 if (_objectPos isKindOf "Man") exitWith {
     private _unit = _objectPos;
-    [QEGVAR(gear,applyLoadout), [], _unit] call CBA_fnc_targetEvent;
+    [QEGVAR(gear,applyLoadout), [_unit], _unit] call CBA_fnc_targetEvent;
     [format["Regeared %1", name _unit]] call zen_common_fnc_showMessage;
 };
 
