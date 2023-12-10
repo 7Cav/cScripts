@@ -14,17 +14,7 @@
  *
  * Public: No
  */
-
-if (!GVAR(isPlayer)) exitWith {""};
-
-// TODO: Legacy handler, remove later
-if (!isNil{profileNamespace getVariable [QEGVAR(Cav,Insignia), nil];}) then {
-    private _legacy = profileNamespace getVariable [QEGVAR(Cav,Insignia), nil];
-    // Save New 
-    profileNamespace setVariable [QEGVAR(Profile,Insignia), _legacy];
-    // Remove Legacy
-    profileNamespace setVariable [QEGVAR(Cav,Insignia), nil];
-};
+if (!isPlayer _unit) exitWith {};
 
 private _insignia = GETPRVAR(EGVAR(Profile,Insignia), "");
 
