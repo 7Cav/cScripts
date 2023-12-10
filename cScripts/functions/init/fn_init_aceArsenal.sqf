@@ -30,6 +30,6 @@ GVAR(StagingArsenalOpen) = false;
     };
 }] call CBA_fnc_addEventHandler;
 
-[QEGVAR(EH_StagingArsenal,displayOpen), {
+[QEGVAR(StagingArsenal,displayOpen), {
     GVAR(StagingArsenalOpen) = true;
 }] call CBA_fnc_addEventHandler;
