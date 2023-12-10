@@ -72,6 +72,14 @@ INFO("init", "Initializing custom Zen Modules.");
     "\z\ACE\addons\medical_gui\ui\cross.paa"
 ] call zen_custom_modules_fnc_register;
 
+["7Cav Utilities", "Apply Loadout",
+    {
+        params ["_modulePos", "_objectPos"];
+        [_modulePos, _objectPos] call EFUNC(zenModule,ApplyLoadout);
+    },
+    "\a3\modules_f\data\portraitmodule_ca.paa"
+] call zen_custom_modules_fnc_register;
+
 ["7Cav Utilities", "Regear Trooper",
     {
         params ["_modulePos", "_objectPos"];

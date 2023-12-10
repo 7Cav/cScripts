@@ -199,6 +199,7 @@ class cScripts {
         class zenModule_CreateStarterCrate {};
         class zenModule_CreateSupplyCrate {};
 
+        class zenModule_applyLoadout {};
         class zenModule_RegearTrooper {};
         // class zenModule_RekitVehicle {};
         class zenModule_ResetPlayerRadio {};
