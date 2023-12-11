@@ -41,7 +41,7 @@ if (isClass (missionConfigFile >> "CfgLoadouts")) then {
                 [_unit, _loadout] call EFUNC(gear,applyLoadout);
             } else {
                 if (
-                    EGVAR(Settings,AllowAiLoadouts)
+                    EGVAR(Settings,AllowAILoadouts)
                     && {typeOf _unit != "HeadlessClient_F"}
             ) then {
                     private _loadout = [_unit] call EFUNC(gear,selectLoadout);
