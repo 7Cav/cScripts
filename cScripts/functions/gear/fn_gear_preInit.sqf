@@ -39,6 +39,14 @@ if (isClass (missionConfigFile >> "CfgLoadouts")) then {
             ) then {
                 private _loadout = [_unit] call EFUNC(gear,selectLoadout);
                 [_unit, _loadout] call EFUNC(gear,applyLoadout);
+            } else {
+                if (
+                    EGVAR(Settings,AllowAiLoadouts)
+                    && {typeOf _unit != "HeadlessClient_F"}
+            ) then {
+                    private _loadout = [_unit] call EFUNC(gear,selectLoadout);
+                    [_unit, _loadout] call EFUNC(gear,applyLoadout);
+                };
             };
         };
     }] call CBA_fnc_addClassEventHandler;
