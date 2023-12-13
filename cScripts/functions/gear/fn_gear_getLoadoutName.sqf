@@ -17,6 +17,7 @@
 
 params [["_unit", objNull, [objNull]]];
 
-private _return = GETVAR(_unit,EGVAR(Gear,loadoutClass),typeOf player);
+
+private _return = GETVAR(_unit,EGVAR(Gear,loadoutClass), typeOf _unit);
 
 _return

@@ -29,13 +29,7 @@ if (EGVAR(Staging,showAllLoadouts)) exitWith {true};
 
 
 // Check if player is Zeus or Debug
-private _curator = player getVariable [QEGVAR(Player,Unit), ""];
-_curator = toLower _curator;
-if (_curator == "s3") exitWith {true};
-if (_curator == "zeus") exitWith {true};
-if (_curator == "curator") exitWith {true};
-if (_curator == "debug") exitWith {true};
-
+if (call EFUNC(player,isCurator)) exitWith {true};
 
 // Check if does not have any company
 private _playerCompany = call EFUNC(player,getCompany);
@@ -43,4 +37,4 @@ if (_playerCompany == "") exitWith {false};
 
 if (_playerCompany == _company) exitWith {true};
 
-true
+false

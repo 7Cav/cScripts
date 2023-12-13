@@ -41,13 +41,13 @@ if (!isNil{GETVAR(_unit,EGVAR(Unit,TeamColor),nil)}) then {
 
 // Apply squad insignia 
 if (EGVAR(Settings,allowInsigniaApplication)) then {
-    private _insignia = if (call EFUNC(player,loadInsignia) != "") then {
-        call EFUNC(player,loadInsignia);
+    private _insignia = if (call EFUNC(profile,loadInsignia) != "") then {
+        call EFUNC(profile,loadInsignia);
     } else {
         call EFUNC(unit,getSquadInsignia);
     };
     [{
         params ["_unit", "_insignia"];
-        [_unit, _insignia] call EFUNC(unit,setInsignia);
+        [_unit, _insignia, false] call EFUNC(unit,setInsignia);
     }, [_unit, _insignia], 2] call CBA_fnc_waitAndExecute;
 };

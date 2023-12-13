@@ -17,8 +17,14 @@
 
 params [
     ["_unit", objNull, [objNull]],
-    ["_insignia", "", [""]]
+    ["_insignia", "", [""]],
+    ["_save", true, [true]]
+
 ];
 
 [_unit, _insignia] call BIS_fnc_setUnitInsignia;
-if (GVAR(isPlayer)) then {[_insignia] call EFUNC(player,saveInsignia);};
+
+if (!isPlayer _unit) exitWith {};
+if (!_save) exitWith {};
+
+[_insignia] call EFUNC(profile,saveInsignia);

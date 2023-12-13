@@ -10,19 +10,14 @@
  * True
  *
  * Example:
- * call cScripts_fnc_profile_saveInsignia
+ * ["curator"] call cScripts_fnc_profile_saveInsignia
  *
  * Public: No
  */
 
 params [["_insignia", "", [""]]];
 
-if (!GVAR(isPlayer)) exitWith {};
-
-// TODO: Legacy handler, remove later
-if (!isNil{ GETPRVAR(EGVAR(Cav,Insignia), nil); }) then {
-    SETPRVAR(EGVAR(Cav,Insignia), nil);
-};
+if (!isPlayer _unit) exitWith {};
 
 SETPRVAR(EGVAR(Profile,Insignia), _insignia);
 
