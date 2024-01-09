@@ -26,6 +26,8 @@ if (EGVAR(Settings,showDiaryRecords)) then {
     call EFUNC(init,diary);
 };
 
+call EFUNC(civ,init);
+
 onPlayerConnected { 
     [QEGVAR(log,player), [name player]] call CBA_fnc_serverEvent;
 };
