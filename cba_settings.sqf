@@ -73,8 +73,8 @@ force force ace_captives_requireSurrender = 0;
 force force ace_captives_requireSurrenderAi = false;
 
 // ACE Casings
-ace_casings_enabled = true;
-ace_casings_maxCasings = 100;
+// ace_casings_enabled = true;
+// ace_casings_maxCasings = 100;
 
 // ACE Common
 force force ace_common_allowFadeMusic = true;
@@ -109,7 +109,7 @@ force force ace_csw_progressBarTimeCoefficent = 1;
 force force ace_dragging_allowRunWithLightweight = true;
 force force ace_dragging_dragAndFire = true;
 force force ace_dragging_skipContainerWeight = false;
-ace_dragging_weightCoefficient = 1;
+force force ace_dragging_weightCoefficient = 1;
 
 // ACE Explosives
 force force ace_explosives_customTimerDefault = 30;
@@ -716,12 +716,12 @@ force force kat_breathing_SpO2_unconscious = 75;
 force force kat_breathing_Stable_spo2 = 85;
 force force kat_breathing_staminaLossAtLowSPO2 = true;
 force force kat_breathing_stethoscopeListeningTime = 15;
-kat_breathing_stethoscopeSoundVolume = 2;
+//kat_breathing_stethoscopeSoundVolume = 2;
 force force kat_breathing_TensionHemothoraxAlwaysVisible = false;
 
 // KAT - ADV Medical: Chemical
 force force kat_chemical_affectAI = false;
-force force kat_chemical_availGasmask = "'G_AirPurifyingRespirator_01_F', 'kat_mask_M50', 'kat_mask_M04', 'USP_M50_BLK2'";
+force force kat_chemical_availGasmask = "'G_AirPurifyingRespirator_01_F', 'kat_mask_M50', 'kat_mask_M04', 'USP_M50_BLK', 'USP_M50_BLK2', 'USP_M50_BLK3','USP_M50_FC_BLK', 'USP_M50_FC_BLK2', 'USP_M50_FC_BLK3', 'USP_M50_FC2_BLK, 'USP_M50_FC2_BLK2', 'USP_M50_FC2_BLK3'";
 force force kat_chemical_gasmask_durability = 900;
 force force kat_chemical_infectionTime = 60;
 
@@ -755,7 +755,7 @@ force force kat_circulation_bloodGroups = false;
 force force kat_circulation_bloodTypeCustomList = "O,O,A,A,O_N,B,A_N,AB,B_N,AB_N";
 force force kat_circulation_bloodTypeRandomWeighted = true;
 force force kat_circulation_bloodTypeSetting = 4;
-kat_circulation_bloodTypeSettingPlayer = "O_N";
+//kat_circulation_bloodTypeSettingPlayer = "O_N";
 force force kat_circulation_cardiacArrestBleedRate = 0.05;
 force force kat_circulation_CPR_ChanceInterval = 15;
 force force kat_circulation_CPR_MaxChance_Default = 30;
@@ -953,9 +953,9 @@ force force ace_repair_locationsBoostTraining = false;
 force force ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_miscRepairTime = 15;
 force force ace_repair_patchWheelEnabled = 0;
-ace_repair_patchWheelLocation = ["ground","vehicle"];
+force ace_repair_patchWheelLocation = ["ground","vehicle"];
 force force ace_repair_patchWheelMaximumRepair = 0.5;
-ace_repair_patchWheelRequiredItems = ["ace_repair_anyToolKit"];
+force force ace_repair_patchWheelRequiredItems = ["ace_repair_anyToolKit"];
 force force ace_repair_patchWheelTime = 2.5;
 force force ace_repair_repairDamageThreshold = 0.7;
 force force ace_repair_repairDamageThreshold_engineer = 0.9;
@@ -984,10 +984,10 @@ force force ace_scopes_zeroReferenceTemperature = 15;
 force force acex_sitting_enable = true;
 
 // ACE Spectator
-// ace_spectator_enableAI = false;
-// ace_spectator_maxFollowDistance = 5;
-// ace_spectator_restrictModes = 0;
-// ace_spectator_restrictVisions = 0;
+//ace_spectator_enableAI = false;
+//ace_spectator_maxFollowDistance = 5;
+//ace_spectator_restrictModes = 0;
+//ace_spectator_restrictVisions = 0;
 
 // ACE Switch Units
 force force ace_switchunits_enableSafeZone = true;
@@ -1005,7 +1005,7 @@ force force ace_trenches_smallEnvelopeDigDuration = 20;
 force force ace_trenches_smallEnvelopeRemoveDuration = 12;
 
 // ACE Uncategorized
-forcve force ace_fastroping_autoAddFRIES = false;
+force force ace_fastroping_autoAddFRIES = false;
 force force ace_fastroping_requireRopeItems = false;
 force force ace_gunbag_swapGunbagEnabled = true;
 force force ace_hitreactions_minDamageToTrigger = 0.363636;
@@ -1431,12 +1431,12 @@ force force lambs_main_radioShout = 100;
 force force lambs_main_radioWest = 500;
 
 // Simple Suppress
-simplesuppress_suppress_checkLOS = false;
-simplesuppress_suppress_overlayFadeoutTime = 10;
-simplesuppress_suppress_overlayOpacity = 0.96;
-simplesuppress_suppress_overlayTexture = 1;
-simplesuppress_suppress_projectileMaxDistance = 9;
-simplesuppress_suppress_shooterMinDistance = 0;
+force force simplesuppress_suppress_checkLOS = false;
+force force simplesuppress_suppress_overlayFadeoutTime = 10;
+force force simplesuppress_suppress_overlayOpacity = 0.96;
+force force simplesuppress_suppress_overlayTexture = 1;
+force force simplesuppress_suppress_projectileMaxDistance = 9;
+force force simplesuppress_suppress_shooterMinDistance = 0;
 
 // UH-60M
 force force vtx_ace_viv_loadDistance = 15;
