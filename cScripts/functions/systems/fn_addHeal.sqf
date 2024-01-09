@@ -31,7 +31,7 @@ private _healStatement = {
     [[],["You have been healed"], [""], [""]] call CBA_fnc_notify;
 };
 
-private _actionType = if (isPlayer _object) then {1} else {0};
+private _actionType = parseNumber (isPlayer _object);
 
 private _healAction = [QEGVAR(Actions,HealAction), "Heal", "\z\ACE\addons\medical_gui\ui\cross.paa", _healStatement, {!GVAR(OneLife)}] call ace_interact_menu_fnc_createAction;
 [_object, _actionType, _category, _healAction] call ace_interact_menu_fnc_addActionToObject;
