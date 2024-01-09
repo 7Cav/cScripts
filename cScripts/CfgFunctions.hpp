@@ -16,6 +16,8 @@ class cScripts {
         class init_chatCommands {};
 
         class init_eventHandlers {};
+        
+        class init_virtualBackpacks {};
 
         class init_zenModuels {};
     };
@@ -136,6 +138,12 @@ class cScripts {
         class para_equipment {};
         class para_backpack {};
 
+        // Virtual Backpack
+        class saveVirtualBackpack {};
+        class loadVirtualBackpack {};
+        class swapVirtualBackpack {};
+        class getVirtualBackpackName {};
+        
         // Buttons and options
         class addReGear {};
         class addHeal {};
