@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This function checks and enables eventhandlers for the the civ population simulation system.
  *
  * Arguments:

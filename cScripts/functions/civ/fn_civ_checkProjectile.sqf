@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This function checks a given projectile and se if it can damage a target.
  *
  * Arguments:

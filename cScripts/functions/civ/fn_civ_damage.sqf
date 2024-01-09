@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This function handle the casualties and send the information to all curators.
  *
  * Arguments:
