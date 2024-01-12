@@ -13,9 +13,6 @@
  */
 
 
-// TODO: Determine what medical equipment needs to be available to troopers and pilots besides chest seals.
-// TODO: Update resupply crates and vehicle inventories with new medical supplies.
-
 INFO("Logistics", "Creating logistical database");
 private _dataArray = [
     // // // // // // //
