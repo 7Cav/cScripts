@@ -103,6 +103,8 @@ class cScripts {
 
         class doStarterCrate {};
         class doSupplyCrate {};
+
+        class makeAgent {};
     };
     class systems {
         file = "cScripts\functions\systems";
@@ -189,6 +191,12 @@ class cScripts {
         // Other
         class vehicle_reset {};
         class vehicle_addFlagAction {};
+    };
+    class civ {
+        file = "cScripts\functions\civ";
+        class civ_init {};
+        class civ_checkProjectile {};
+        class civ_damage {};
     };
     class modules {
         file = "cScripts\functions\modules";

@@ -46,7 +46,7 @@ private _action = [format ["cScripts_Loadout_%1", _className], _lable, _icon, {
     [player, _className] call EFUNC(gear,applyLoadout);
 }, _condition, {}, [_className, _company, _allowAllLoadouts]] call ace_interact_menu_fnc_createAction;
 
-private _actionType = if (isPlayer _object) then {1} else {0};
+private _actionType = parseNumber (isPlayer _object);
 [_object, _actionType, _category, _action] call ace_interact_menu_fnc_addActionToObject;
 
 INFO_4("LoadoutSelector", "%1; selector '%2' with type %3 added for '%4' crate.", _object, _lable, _actionType, _company);
