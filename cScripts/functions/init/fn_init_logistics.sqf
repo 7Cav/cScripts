@@ -827,7 +827,7 @@ private _dataArray = [
         ["kat_accuvac",1],
         ["kat_chestSeal",4],
         ["ACE_quikclot",20],
-        ["ACE_packingBandage",20]
+        ["ACE_packingBandage",20],
 
         ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 32],
         ["SmokeShell", 8]
