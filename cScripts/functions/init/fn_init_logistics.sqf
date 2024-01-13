@@ -948,7 +948,7 @@ private _dataArray = [
 
         // MG
         ["rhs_weap_m240B",1],
-        ["rhs_usf_acc_su230A",1],
+        ["rhsusf_acc_su230A",1],
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
         
         // UAV Equipment
@@ -979,7 +979,7 @@ private _dataArray = [
 
         // MG
         ["rhs_weap_m240B",1],
-        ["rhs_usf_acc_su230A",1],
+        ["rhsusf_acc_su230A",1],
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
         
         // UAV Equipment
