@@ -211,6 +211,8 @@ private _dataArray = [
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
+        ["30Rnd_556x45_Stanag_Sand_red", 0],
+        ["30Rnd_556x45_Stanag_red", 0],
         ["rhs_mag_30Rnd_556x45_Mk262_PMAG", 0],
         ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 0],
         ["rhsusf_100Rnd_762x51_m62_tracer", 0],
@@ -749,6 +751,10 @@ private _dataArray = [
         ["ACE_1Rnd_82mm_Mo_Smoke", 8],
         ["ACE_1Rnd_82mm_Mo_HE_LaserGuided",8]
     ]],
+    ["crate_stinger",[
+        ["rhs_weap_fim92", 1],
+        ["rhs_fim92_mag",2]
+    ]],
     ["crate_resupply_general", [
         // Rifle Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",70],
@@ -939,14 +945,11 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148", 1],
         ["rhs_fgm148_magazine_AT", 2],
-        ["rhs_weap_M136", 2],
 
-        // M32 Rotary Grenade Launcher
-        ["rhs_weap_m32", 1],
-        ["rhsusf_mag_6Rnd_M397_HET", 2],
-        ["rhsusf_mag_6Rnd_M433_HEDP", 3],
-        ["rhsusf_mag_6Rnd_m4009", 3],
-        ["rhsusf_mag_6Rnd_M713_red", 2],
+        // MG
+        ["rhs_weap_m240B",1],
+        ["rhs_usf_acc_su230A",1],
+        ["rhsusf_100Rnd_762x51_m62_tracer", 10],
         
         // UAV Equipment
         ["ACE_UAVBattery", 4],
@@ -973,14 +976,11 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148", 1],
         ["rhs_fgm148_magazine_AT", 2],
-        ["rhs_weap_M136", 2],
 
-        // M32 Rotary Grenade Launcher
-        ["rhs_weap_m32", 1],
-        ["rhsusf_mag_6Rnd_M397_HET", 2],
-        ["rhsusf_mag_6Rnd_M433_HEDP", 3],
-        ["rhsusf_mag_6Rnd_m4009", 3],
-        ["rhsusf_mag_6Rnd_M713_red", 2],
+        // MG
+        ["rhs_weap_m240B",1],
+        ["rhs_usf_acc_su230A",1],
+        ["rhsusf_100Rnd_762x51_m62_tracer", 10],
         
         // UAV Equipment
         ["ACE_UAVBattery", 4],

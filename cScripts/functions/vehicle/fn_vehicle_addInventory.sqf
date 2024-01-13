@@ -82,6 +82,11 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
                 _mortar_ammo_82mm,
                 _vehicle, nil, "Ammo for 2x 82mm mortars"
             ] call FUNC(createCargoCrate);
+
+            ["Box_NATO_WpsLaunch_F", 
+                GET_CONTAINER(crate_stinger), 
+                _vehicle, nil, "MANPAD"
+            ] call FUNC(createCargoCrate);
         };
 
         // Logistical strykers: Have same inventory, but a lot of wheels in cargo.
@@ -105,6 +110,11 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             ["Box_NATO_Equip_F", 
                 GET_CONTAINER(crate_strykerDragoon_resupply), 
                 _vehicle, nil, "Resupply Crate"
+            ] call FUNC(createCargoCrate);
+
+            ["Box_NATO_WpsLaunch_F", 
+                GET_CONTAINER(crate_stinger), 
+                _vehicle, nil, "MANPAD"
             ] call FUNC(createCargoCrate);
         };
         
@@ -134,6 +144,11 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             ["Box_NATO_Equip_F", 
                 GET_CONTAINER(crate_strykerDragoon_resupply), 
                 _vehicle, nil, "Resupply Crate"
+            ] call FUNC(createCargoCrate);
+            
+            ["Box_NATO_WpsLaunch_F", 
+                GET_CONTAINER(crate_stinger), 
+                _vehicle, nil, "MANPAD"
             ] call FUNC(createCargoCrate);
         };
     };
