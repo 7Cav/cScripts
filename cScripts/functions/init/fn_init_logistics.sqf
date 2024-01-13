@@ -948,11 +948,8 @@ private _dataArray = [
 
         // MG
         ["rhs_weap_m240B",1],
-        ["rhsusf_acc_su230A",1],
+        ["rhsusf_acc_su230a",1],
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
-        
-        // UAV Equipment
-        ["ACE_UAVBattery", 4],
         
         // Tools
         ["ACE_wirecutter", 1],
@@ -979,11 +976,8 @@ private _dataArray = [
 
         // MG
         ["rhs_weap_m240B",1],
-        ["rhsusf_acc_su230A",1],
+        ["rhsusf_acc_su230a",1],
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
-        
-        // UAV Equipment
-        ["ACE_UAVBattery", 4],
         
         // Tools
         ["ACE_wirecutter", 1],
