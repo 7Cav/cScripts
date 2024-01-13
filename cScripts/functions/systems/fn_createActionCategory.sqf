@@ -27,5 +27,5 @@ params [
 
 // Make ACE Category
 private _aceInteractionAction = [_name, _lable, _Icon, {}, _condition] call ace_interact_menu_fnc_createAction;
-private _actionType = if (isPlayer _object) then {1} else {0};
+private _actionType = parseNumber (isPlayer _object);
 [_object, _actionType, _category, _aceInteractionAction] call ace_interact_menu_fnc_addActionToObject;

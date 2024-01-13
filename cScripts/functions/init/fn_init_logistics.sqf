@@ -12,6 +12,7 @@
  * Public: No
  */
 
+
 INFO("Logistics", "Creating logistical database");
 private _dataArray = [
     // // // // // // //
@@ -135,6 +136,8 @@ private _dataArray = [
         //cTab
         ["ItemAndroid", 0],
         ["ItemcTab", 0],
+        ["ItemcTabMisc", 0],
+        ["ItemAndroidMisc",0],
 
         // Medical
         ["ACE_EarPlugs",10],
@@ -149,6 +152,7 @@ private _dataArray = [
         ["kat_carbonate",0],
         ["kat_naloxone",0],
         ["kat_Painkiller",0],
+        ["kat_chestSeal",0],
 
         // NVG
         ["USP_PVS14", 0],
@@ -234,6 +238,8 @@ private _dataArray = [
         // cTab
         ["ItemAndroid", 0],
         ["ItemcTab", 0],
+        ["ItemcTabMisc", 0],
+        ["ItemAndroidMisc",0],
 
         // Tools
         ["ACE_EntrenchingTool", 0],
@@ -281,8 +287,8 @@ private _dataArray = [
         ["rhsusf_100Rnd_762x51_m62_tracer",0],
         ["rhs_fgm148_magazine_AT",1],
         ["rhs_fim92_mag",2],
-        ["rhs_mag_maaws_HE",2],
-        ["rhs_mag_maaws_HEAT",2],
+        ["MRAWS_HE_F",2],
+        ["MRAWS_HEAT_F",2],
         ["MAA_MAAWS_ASM509",0],
         ["MAA_MAAWS_GMM_MT",0],
 
@@ -310,6 +316,14 @@ private _dataArray = [
         ["ACE_Chemlight_HiBlue",0],
         ["ACE_Chemlight_HiRed",0],
 
+         // Medical
+        ["ACE_EarPlugs",10],
+        ["kat_chestSeal",0],
+        ["ACE_quikclot",0],
+        ["ACE_tourniquet",0],
+        ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
+
         // Mines and Explosives
         ["ACE_Clacker",0],
         ["ACE_DefusalKit",0],
@@ -329,60 +343,123 @@ private _dataArray = [
     ["bravo_company_atlas", [
         ["ACE_microDAGR",0],
         ["ItemAndroid",0],
+        ["ItemAndroidMisc",0],
 
-        ["kat_IV_16",0],
-        ["ACE_adenosine",0],
+        // AEDs
         ["kat_AED",0],
+        ["kat_X_AED",0],
+
+        // Airway Management and Respiration
+        ["kat_aatKit",0],
+        ["kat_accuvac",0],
+        ["kat_BVM",0],
+        ["kat_chestSeal",0],
+        ["kat_guedel",0],
+        ["kat_larynx",0],
+        ["kat_ncdKit",0],
+        ["kat_pocketBVM",0],
+
+        // Autoinjectors
+        ["ACE_adenosine",0],
+        ["ACE_epinephrine",0],
+        ["ACE_morphine",0],
+        ["kat_phenylephrineAuto",0],
+
+        // Bandages and Stitching
+        ["ACE_elasticBandage",0],
         ["ACE_packingBandage",0],
         ["ACE_quikclot",0],
+        ["ACE_surgicalKit",0],
+
+        // Diagnostic Tools
+        ["kat_Pulseoximeter",0],
+        ["kat_ultrasound",0],
+        ["kat_stethoscope",0],
+
+        // Fluids
         ["ACE_bloodIV",0],
         ["ACE_bloodIV_250",0],
         ["ACE_bloodIV_500",0],
-        ["ACE_bodyBag",0],
-        ["kat_plate",0],
-        ["ACE_CableTie",0],
-        ["ACE_Chemlight_Shield",0],
-        ["kat_clamp",0],
-        ["Rev_pelican_item",0],
-        ["kat_vacuum",0],
-        ["kat_EACA",0],
-        ["ACE_EarPlugs",0],
-        ["ACE_EntrenchingTool",0],
-        ["ACE_epinephrine",0],
-        ["kat_etomidate",0],
-        ["kat_IO_FAST",0],
-        ["kat_flumazenil",0],
-        ["kat_lidocaine",0],
-        ["kat_lorazepam",0],
-        ["ACE_morphine",0],
-        ["kat_naloxone",0],
-        ["kat_nitroglycerin",0],
-        ["kat_norepinephrine",0],
-        ["ACE_personalAidKit",0],
-        ["kat_phenylephrine",0],
-        ["kat_phenylephrine_inject",0],
         ["ACE_plasmaIV",0],
         ["ACE_plasmaIV_250",0],
         ["ACE_plasmaIV_500",0],
-        ["kat_retractor",0],
         ["ACE_salineIV",0],
         ["ACE_salineIV_250",0],
         ["ACE_salineIV_500",0],
-        ["kat_scalpel",0],
-        ["ACE_splint",0],
-        ["ACE_surgicalKit",0],
-        ["ACE_tourniquet",0],
-        ["kat_TXA",0],
+
+        //Pills and Inhalants
         ["kat_Carbonate",0],
+        ["kat_CarbonateItem",0],
+        ["kat_naloxone",0],
         ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
+        ["kat_PenthroxItem",0],
+
+        // Massive Hemorrhage Control
+        ["kat_reboa",0],
+        ["ACE_tourniquet",0],
+
+        //--------------------------
+        // Catheters and Medication
+        //--------------------------
+
+        // Catheters
+        ["kat_IV_16",0],
+        ["kat_IO_FAST",0],
+    
+        // Analgesic Medication
+        ["kat_fentanyl",0],
+        ["kat_ketamine",0],
+        ["kat_nalbuphine",0],
+
+        // BP Medication
+        ["kat_nitroglycerin",0],
+        ["kat_norepinephrine",0],
+        ["kat_phenylephrine",0],
+        
+        // Cardiac resuscitation
+        ["kat_amiodarone",0],
+
+        // Hemorrhage control
+        ["kat_EACA",0],
+        ["kat_TXA",0],
+
+        // Surgical Medication
+        ["kat_etomidate",0],
+        ["kat_flumazenil",0],
+        ["kat_lidocaine",0],
+        ["kat_lorazepam",0],
+        //--------------------------
+
+        //--------------------------
+        // Surgery and Fractures
+        //--------------------------
+
+        // Debridement
+        ["kat_vacuum",0],
+
+        // Splints
+        ["ACE_splint",0],
+
+        // Surgical Equipment
+        ["kat_clamp",0],
+        ["kat_plate",0],
+        ["kat_retractor",0],
+        ["kat_scalpel",0],
+        //--------------------------
 
         // Tools and Items
-        ["ACE_wirecutter",10],
+        ["ACE_CableTie",0],
+        ["ACE_Chemlight_Shield",0],
         ["ACE_EntrenchingTool",0],
         ["ACE_IR_Strobe_Item",0],
-         
+        ["ACE_wirecutter",10],
+        ["Rev_pelican_item",0],
+
         // Medical
         ["ACE_EarPlugs",10],
+        ["ACE_bodyBag",0],
+        ["ACE_personalAidKit",0],
 
         // Backpacks
         ["B_Carryall_mcamo", 0],
@@ -424,6 +501,7 @@ private _dataArray = [
 
         // Weapons
         ["rhs_weap_M136_hp",0],
+        ["rhs_weap_M136",0],
         ["rhs_weap_M136_hedp",10],
         ["rhs_weap_m72a7",10],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry",0],
@@ -448,8 +526,8 @@ private _dataArray = [
         ["rhs_mag_m713_Red", 0],
         ["rhs_mag_m716_yellow", 0],
         
-        ["rhs_mag_maaws_HE", 0],
-        ["rhs_mag_maaws_HEAT", 0],
+        ["MRAWS_HE_F", 0],
+        ["MRAWS_HEAT_F", 0],
         ["MAA_MAAWS_ASM509", 0],
         ["MAA_MAAWS_GMM_MT", 0],
         ["NDS_M_6Rnd_60mm_HE_0", 0],
@@ -493,12 +571,6 @@ private _dataArray = [
         //cTab
         ["ItemAndroid", 0],
         ["ItemcTab", 0],
-
-        // Medical
-        ["ACE_EarPlugs",10],
-        ["ACE_quikclot",0],
-        ["ACE_tourniquet",0],
-        ["kat_Painkiller",0],
 
         // NVG
         ["USP_PVS14", 0],
@@ -687,8 +759,8 @@ private _dataArray = [
 
         // AT
         ["rhs_fgm148_magazine_AT",3],
-        ["rhs_mag_maaws_HEAT",4],
-        ["rhs_mag_maaws_HE",4],
+        ["MRAWS_HEAT_F",4],
+        ["MRAWS_HE_F",4],
         ["rhs_weap_M136_hedp",8],
         
         // AA
@@ -740,9 +812,19 @@ private _dataArray = [
         ["ACE_rope18", 4],
         ["ACE_rope36", 2],
 
-        ["ACE_quikclot", 32],
-        ["ACE_tourniquet", 8],
-        ["ACE_splint", 8],
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20],
 
         ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 32],
         ["SmokeShell", 8]
@@ -754,6 +836,22 @@ private _dataArray = [
     ["vehicle_medicalAtlas", [
         // AEDs
         ["kat_AED",1],
+        ["kat_X_AED",1],
+
+        // Analgesic
+        ["kat_fentanyl",10],
+        ["kat_ketamine",20],
+        ["kat_nalbuphine",30],
+        ["kat_PenthroxItem",20],
+
+        // Airway Management and Respiration
+        ["kat_aatKit",4],
+        ["kat_accuvac",1],
+        ["kat_BVM",2],
+        ["kat_chestSeal",30],
+        ["kat_larynx",15],
+        ["kat_pocketBVM",3],
+        
 
         // Bandages
         ["ACE_elasticBandage",150],
@@ -762,6 +860,7 @@ private _dataArray = [
 
         // Tourniquets
         ["ACE_tourniquet",20],
+        ["kat_reboa",10],
 
         // Fluids
         ["ACE_plasmaIV",30],
@@ -780,6 +879,8 @@ private _dataArray = [
         // Hemorrhage Control Medication
         ["kat_EACA",40],
         ["kat_TXA",40],
+        ["kat_amiodarone",15],
+        ["ACE_epinephrine",10],
 
         // Oral Medication
         ["kat_carbonate",20],
@@ -790,6 +891,7 @@ private _dataArray = [
         ["ACE_morphine",20],
         ["ACE_epinephrine",40],
         ["kat_phenylephrine_inject",40],
+        ["ACE_adenosine",0],
 
         // Splints
         ["ACE_splint",20],
@@ -850,7 +952,22 @@ private _dataArray = [
         ["ACE_UAVBattery", 4],
         
         // Tools
-        ["ACE_wirecutter", 1]
+        ["ACE_wirecutter", 1],
+
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20]
     ]],
     ["vehicle_strykerDragoon_V4", [
         // AT
@@ -873,7 +990,21 @@ private _dataArray = [
 
         // 82mm Mortars
         ["ace_csw_carryMortarBaseplate", 2],
-        ["ace_csw_staticMortarCarry", 2]
+        ["ace_csw_staticMortarCarry", 2],
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20]
     ]],
 
     // // // // // // // //
@@ -913,7 +1044,21 @@ private _dataArray = [
         ["ACE_Chemlight_IR",4],
         
         // Misc
-        ["ACE_SpareBarrel",1]
+        ["ACE_SpareBarrel",1],
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20]
     ]],
 
     // // // // // //
@@ -1320,9 +1465,12 @@ private _dataArray = [
         ["USP_PATROL_PACK_ZT", 0],
         
         // Medical
-        ["ACE_EarPlugs",250],
-        ["ACE_bodyBag",12],
-        ["kat_Painkiller",10],
+        ["ACE_EarPlugs",10],
+        ["kat_chestSeal",0],
+        ["ACE_quikclot",0],
+        ["ACE_tourniquet",0],
+        ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
 
         // Common Gear
         ["ACE_IR_Strobe_Item",0]
@@ -1415,16 +1563,14 @@ private _dataArray = [
 
 
         // MAAWS ammo
-        ["rhs_mag_maaws_HEAT", 0],
-        ["rhs_mag_maaws_HEDP", 0],
+        ["MRAWS_HEAT_F", 0],
+        ["MRAWS_HE_F", 0],
         ["MAA_MAAWS_ASM509", 0],
         ["MAA_MAAWS_HEDP502", 0],
         ["MAA_MAAWS_GMM_MT", 0],
         ["MAA_MAAWS_MT756", 0],
-        ["rhs_mag_maaws_HE", 0],
         ["rhs_fgm148_magazine_AT",0],
         ["rhs_fim92_mag",0],
-        ["MRAWS_HE_F", 0],
 
         // Backpacks
         ["B_Carryall_mcamo", 0],

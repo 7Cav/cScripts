@@ -348,7 +348,7 @@ private _cScriptSettings = "cScripts Mission Settings";
 INFO(if (is3DEN) then {"EDEN"} else {"preInit"}, "Initialization of CBA Settings completed...");
 
 // Ace Arsenal
-call EFUNC(init,aceArsenalDefault);
+call EFUNC(init,aceArsenal);
 
 
 // Load preInit mission settings

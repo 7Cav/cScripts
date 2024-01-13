@@ -1,7 +1,7 @@
 class cScripts {
     class init {
         file = "cScripts\functions\init";
-        class init_aceArsenalDefault {};
+        class init_aceArsenal {};
         class init_aceTagging {};
         class init_aceItemReplace {};
 
@@ -64,6 +64,8 @@ class cScripts {
         class player_setRank {};
         class player_getRole {};
 
+        class player_isCurator {};
+
         class unit_setTeamColor {};
         
         class unit_getName {};
@@ -76,6 +78,7 @@ class cScripts {
         class setRadioChannel {};
         class setActiveRadio {};
 
+        class player_getCompany {};
         class player_setCompany {};
 
         // Other Functions
@@ -100,6 +103,8 @@ class cScripts {
 
         class doStarterCrate {};
         class doSupplyCrate {};
+
+        class makeAgent {};
     };
     class systems {
         file = "cScripts\functions\systems";
@@ -110,6 +115,12 @@ class cScripts {
         class setupLoadoutSelection {};
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
+
+        // Arsenal releated
+        class getArsenalWhitelist {};
+        class addDefaultArsenalLoadout {};
+        class addDefaultArsenalLoadouts {};
+        class clearDefaultArsenalLoadouts {};
 
         class checkStagingZone {};
 
@@ -129,8 +140,6 @@ class cScripts {
         class addReGear {};
         class addHeal {};
         class addArsenal {};
-        class getArsenalWhitelist {};
-        class getUnitArsenalDefault {};
         
         class createActionCategory {};
 
@@ -183,6 +192,12 @@ class cScripts {
         class vehicle_reset {};
         class vehicle_addFlagAction {};
     };
+    class civ {
+        file = "cScripts\functions\civ";
+        class civ_init {};
+        class civ_checkProjectile {};
+        class civ_damage {};
+    };
     class modules {
         file = "cScripts\functions\modules";
         class zenModule_EnableUnitSimulation {};
@@ -192,6 +207,7 @@ class cScripts {
         class zenModule_CreateStarterCrate {};
         class zenModule_CreateSupplyCrate {};
 
+        class zenModule_applyLoadout {};
         class zenModule_RegearTrooper {};
         // class zenModule_RekitVehicle {};
         class zenModule_ResetPlayerRadio {};

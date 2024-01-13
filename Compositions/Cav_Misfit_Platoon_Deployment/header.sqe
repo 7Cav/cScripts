@@ -1,15 +1,7 @@
 version=54;
-name="MISFIT_Platoon_Deployment_[DEVBUILD]";
+name="MISFIT_Platoon_Deployment_vTEST";
 author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"cav_charlie_characters",
-	"A3_Weapons_F_Ammoboxes",
-	"ace_cargo",
-	"RSPN_Assets",
-	"cav_troops_charlie_weapons",
-	"cav_troops_bravo_atlas",
-	"rhsusf_vehicles",
-	"rhsusf_c_m11xx"
 };

@@ -37,8 +37,11 @@ private _stagingZoneMarkers = [];
     [_zone, _size] call FUNC(addStagingZone);
 } forEach _stagingZoneMarkers;
 
+
+// Player specific actions
 if !(GVAR(isPlayer)) exitWith {};
 
+// Interaction system
 private _condition = { call FUNC(checkStagingZone) };
 private _stagingCat = [QEGVAR(Actions,StagingCategory), "Staging Zone", "cScripts\Data\Icon\icon_00.paa", {true}, _condition] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _stagingCat] call ace_interact_menu_fnc_addActionToObject;
@@ -77,7 +80,7 @@ player addEventHandler ["InventoryClosed", {
 [player, _category] call FUNC(addReGear);
 if !(GVAR(OneLife)) then {[player, _category] call FUNC(addHeal)};
 [player, _category] call FUNC(addInsigniaSelectionList);
-[player, true, "ACE_SelfActions"] call FUNC(setupLoadoutSelection);
+[player, "ACE_SelfActions", false] call FUNC(setupLoadoutSelection);
 [_category] call FUNC(addArsenal);
 
 INFO_1("Staging", "Staging options for %1 have been setup.", name player)
