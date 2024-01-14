@@ -116,9 +116,10 @@ class Cav_B_B_Scout_CombatLifeSaver_F: Cav_B_B_Scout_Base_F {
 
 //Stryker Crew
 class Cav_B_B_Crew_F: Cav_B_B_Scout_Base_F {
-    displayName = "Crew";
-    scope = 2;
+    displayName = "Stryker Crew";
+    scope = 0;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
+    loadout = [["rhs_weap_mk18_grip2_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_T1_high",["rhs_mag_30Rnd_556x45_Mk262_PMAG",30],[],"rhsusf_acc_grip2"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",1]]],["rhsusf_iotv_ocp_Repair",[["HandGrenade",2,1],["SmokeShellPurple",1,1],["SmokeShell",4,1],["ACE_IR_Strobe_Item",2],["ACE_Chemlight_IR",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",4,30]]],["USP_TACTICAL_PACK",[["ToolKit",1],["ACE_tourniquet",8],["ACE_quikclot",10],["ACE_packingBandage",10]]],"rhsusf_cvc_green_helmet","USP_BALACLAVA_ADV_SMC1_RGR2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch","USP_PVS15"]];
     abilityEngineer = 1;
 };
 class Cav_B_B_Ifv_Driver_F: Cav_B_B_Scout_Base_F {
