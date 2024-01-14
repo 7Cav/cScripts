@@ -19,7 +19,7 @@ force force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
 force force ace_advanced_fatigue_deployedSwayFactor = 1;
-force force ace_advanced_fatigue_enabled = true;
+force force ace_advanced_fatigue_enabled = false;
 //ace_advanced_fatigue_enableStaminaBar = true;
 //ace_advanced_fatigue_fadeStaminaBar = true;
 force force ace_advanced_fatigue_loadFactor = 1;
@@ -1769,3 +1769,4 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_faction_filter_3_UK3CB_ADC_C = true;
 //zen_faction_filter_3_UK3CB_CHC_C = true;
 //zen_faction_filter_3_UK3CB_TKC_C = true;
+
