@@ -48,5 +48,5 @@ private _insigniaSelection = [format ["cScriptInsigniaSelection_%1", _className]
     [player, _className] call EFUNC(unit,setInsignia);
 }, {true}, {}, [_className]] call ace_interact_menu_fnc_createAction;
 
-private _actionType = if (isPlayer _object) then {1} else {0};
+private _actionType = parseNumber (isPlayer _object);
 [_object, _actionType, _category, _insigniaSelection] call ace_interact_menu_fnc_addActionToObject;
