@@ -22,7 +22,7 @@ private _civZones = [];
 {
     private _markerName = [_x, 0, 21] call BIS_fnc_trimString;
     _markerName = toLower _markerName;
-    if (_markerName == "cscripts_civilan_zone_") then {
+    if (_markerName == "cscripts_civilian_zone_") then {
         private _density = [_x, 21] call BIS_fnc_trimString;
         _density = (_density splitString "_")#0;
         if !(_density in ["extream", "high", "medium", "low", "none"]) then {
