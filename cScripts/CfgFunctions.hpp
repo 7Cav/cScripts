@@ -248,9 +248,4 @@ class cScripts {
         class log {};
         class warning {};
     };
-    class testing {
-        file = "cScripts\functions\testing";
-        class testing_loadoutArrays {};
-        class testing_equipmentUsed {};
-    };
 };
