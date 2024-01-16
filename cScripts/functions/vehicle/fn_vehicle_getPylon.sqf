@@ -142,6 +142,7 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
+        ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
         ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60],
         ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60]
     ]]
