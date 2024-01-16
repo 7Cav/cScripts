@@ -866,7 +866,7 @@ class items
 								{
 									init="this setgroupid [""BISON-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""BUFFALO-1""];";
 									description="Co-Pilot@BISON-1";
-									isPlayer=1;
+									isPlayable=1;
 								};
 								id=18;
 								type="Cav_B_A_Helicopter_Tra_Pilot_F";
