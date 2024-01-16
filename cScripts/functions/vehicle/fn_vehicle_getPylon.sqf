@@ -163,10 +163,121 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
     ]]
 ];
 
+// FixedWings
+// getPylonMagazines cursorObject
+
+// USAF_A10
+private _USAF_A10 = createHashMapFromArray [
+    ["default", [
+        "USAF_PylonRack_2Rnd_AIM9X_LAU105",
+        "USAF_PylonRack_1Rnd_ANAAQ28",
+        "USAF_PylonRack_2Rnd_AGM65K",
+        "USAF_PylonRack_1Rnd_GBU54",
+        "USAF_PylonRack_1Rnd_GBU12",
+        "",
+        "USAF_PylonRack_1Rnd_GBU12",
+        "USAF_PylonRack_1Rnd_GBU54",
+        "USAF_PylonRack_2Rnd_AGM65D",
+        "USAF_PylonRack_7Rnd_APKWS",
+        "USAF_PylonRack_1Rnd_ANALQ131"
+    ]],
+    ["groundsuperiority", [
+        "USAF_PylonRack_21Rnd_HYDRA70",
+        "USAF_PylonRack_21Rnd_HYDRA70",
+        "USAF_PylonRack_21Rnd_HYDRA70",
+        "USAF_PylonRack_21Rnd_HYDRA70",
+        "USAF_PylonRack_1Rnd_GBU12",
+        "",
+        "USAF_PylonRack_1Rnd_GBU12",
+        "USAF_PylonRack_21Rnd_HYDRA70",
+        "USAF_PylonRack_21Rnd_HYDRA70",
+        "USAF_PylonRack_21Rnd_HYDRA70",
+        "USAF_PylonRack_21Rnd_HYDRA70"
+    ]],
+    ["test", [
+        "rhs_mag_b8m1_s8kom",
+        "rhs_mag_b8m1_s8kom",
+        "rhs_mag_b8m1_s8kom",
+        "rhs_mag_b8m1_s8kom",
+        "USAF_PylonRack_1Rnd_GBU12",
+        "",
+        "USAF_PylonRack_1Rnd_GBU12",
+        "rhs_mag_b8m1_s8kom",
+        "rhs_mag_b8m1_s8kom",
+        "rhs_mag_b8m1_s8kom",
+        "rhs_mag_b8m1_s8kom"
+    ]]
+];
+
+// USAF_F22_EWP_AG
+private _USAF_F22_EWP_AG = createHashMapFromArray [
+    ["default", [
+        "",
+        "",
+        "USAF_MISSILE_1Rnd_AIM9X",
+        "USAF_Missile_1Rnd_AIM120_Int",
+        "USAF_PylonRack_4Rnd_GBU53",
+        "USAF_PylonRack_4Rnd_GBU53",
+        "USAF_Missile_1Rnd_AIM120_Int",
+        "USAF_MISSILE_1Rnd_AIM9X",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "USAF_PylonRack_4Rnd_GBU53",
+        "USAF_PylonRack_4Rnd_GBU53"
+    ]]
+];
+
+// USAF_F35A
+private _USAF_F35A = createHashMapFromArray [
+    ["default", [
+        "USAF_MISSILE_1Rnd_AIM9X",
+        "USAF_PylonRack_1Rnd_AIM120",
+        "USAF_PylonRack_1Rnd_AIM120",
+        "USAF_Missile_1Rnd_AIM120",
+        "USAF_PylonRack_4Rnd_GBU53",
+        "USAF_PylonRack_4Rnd_GBU53",
+        "USAF_Missile_1Rnd_AIM120",
+        "USAF_PylonRack_1Rnd_AIM120",
+        "USAF_PylonRack_1Rnd_AIM120",
+        "USAF_MISSILE_1Rnd_AIM9X"
+    ]]
+];
+
+// Helicopters
+// RHS_AH64D
+private _RHS_AH64D = createHashMapFromArray [
+    ["default", [
+        "", // Wing tips
+        "rhs_mag_M151_19",
+        "rhs_mag_AGM114L_4",
+        "rhs_mag_AGM114K_4",
+        "rhs_mag_M151_19",
+        "", // Wing tips
+        "rhsusf_M130_CMFlare_Chaff_Magazine_x2"
+    ]]
+];
+
+
 // Loadout vehicle list
 private _allVehiclePylons = createHashMapFromArray [
     ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base],
-    ["I_APC_Wheeled_03_cannon_F", _I_APC_Wheeled_03_cannon_F]
+    ["I_APC_Wheeled_03_cannon_F", _I_APC_Wheeled_03_cannon_F],
+
+    // FixedWings
+    ["USAF_A10", _USAF_A10],
+    ["USAF_F22_EWP_AG", _USAF_F22_EWP_AG],
+    ["USAF_F35A", _USAF_F35A],
+
+    // Helicopters 
+    ["RHS_AH64D", _RHS_AH64D]
 ];
 
 // Return keys or full hashmap

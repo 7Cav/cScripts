@@ -25,23 +25,53 @@ private _pylonList = [];
 
 if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     _pylonList = [
-        // TypeOf,               DisplayName,   Name,           Icon
-        ["rhsusf_m1a1tank_base", "Hard",        "hard",         ""],
-        ["rhsusf_m1a1tank_base", "Soft",        "soft",         ""],
-        ["rhsusf_m1a1tank_base", "Default",     "default",      ""]
+        // TypeOf,                DisplayName,   Name,           Icon
+        ["rhsusf_m1a1tank_base",  "Hard",        "hard",         ""],
+        ["rhsusf_m1a1tank_base",  "Soft",        "soft",         ""],
+        ["rhsusf_m1a1tank_base",  "Mixed",       "default",      ""]
     ];
 };
-
-
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dragoon_unarmed_base_F")) then {
     _pylonList = [
         // TypeOf,                     DisplayName,  Name,           Icon
-        ["I_APC_Wheeled_03_cannon_F", "Anti-Armor",  "antiarmor",    ""],
-        ["I_APC_Wheeled_03_cannon_F", "Anti-Air",    "antiair",      ""],
-        ["I_APC_Wheeled_03_cannon_F", "Assault",     "assault",      ""],
-        ["I_APC_Wheeled_03_cannon_F", "Default",     "default",      ""]
+        ["I_APC_Wheeled_03_cannon_F",  "Anti-Armor",  "antiarmor",    ""],
+        ["I_APC_Wheeled_03_cannon_F",  "Anti-Air",    "antiair",      ""],
+        ["I_APC_Wheeled_03_cannon_F",  "Assault",     "assault",      ""],
+        ["I_APC_Wheeled_03_cannon_F",  "Sandard",     "default",      ""]
     ];
 };
+
+// FixedWings
+if (_vehicle iskindOf "USAF_A10") then {
+    _pylonList = [
+        // TypeOf,     DisplayName,             Name,                   Icon
+        ["USAF_A10",   "Default",               "default",              ""],
+        ["USAF_A10",   "Ground Superiority",    "groundsuperiority",    ""]
+    ];
+};
+if (_vehicle iskindOf "USAF_F22_EWP_AG") then {
+    _pylonList = [
+        // TypeOf,            DisplayName,      Name,           Icon
+        ["USAF_F22_EWP_AG",   "Default",        "default",      ""]
+    ];
+};
+if (_vehicle iskindOf "USAF_F35A") then {
+    _pylonList = [
+        // TypeOf,        DisplayName,          Name,           Icon
+        ["USAF_F35A",     "Default",            "default",      ""]
+    ];
+};
+
+//Helicopters
+if (_vehicle iskindOf "RHS_AH64D") then {
+    _pylonList = [
+        // TypeOf,        DisplayName,          Name,           Icon
+        ["RHS_AH64D",     "Default",            "default",      ""]
+    ];
+};
+
+
+
 
 
 if (count _pylonList == 0) exitWith {false};
