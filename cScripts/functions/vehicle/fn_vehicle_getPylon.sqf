@@ -135,7 +135,7 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
         ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
         ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
         ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60],
-        ["4Rnd_Titan_long_missiles",[0],4],
+        ["4Rnd_Titan_long_missiles",[0],4]
     ]],
     ["default",[
         ["SmokeLauncherMag",[0,0],6],
