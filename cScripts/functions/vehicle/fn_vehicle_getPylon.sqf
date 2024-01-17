@@ -6,12 +6,14 @@
  * Arguments:
  * 0: VehicleKind or ListOfVehicleKind(true) or Everything(false) <STRING|BOOLEAN>
  * 1: LoadoutName <STRING> (Default; "default")
+ * 2: DisplayName <BOOLEAN> (Optional, Default; False)
  *
  * Return Value:
  * Vehicle loadout Array or keys <ARRAY>
  *
  * Example:
  * ["rhsusf_m1a1tank_base", "default"] call cScripts_fnc_vehicle_getPylon;
+ * ["rhsusf_m1a1tank_base", "default", true] call cScripts_fnc_vehicle_getPylon;
  * [true] call cScripts_fnc_vehicle_getPylon;
  *
  * Public: No
@@ -19,7 +21,8 @@
 
 params [
     ["_vehicleKind", "", ["", true]],
-    ["_loadout", "default", [""]]
+    ["_loadout", "default", [""]],
+    [["_displayName"] false, [false]]
 ];
 
 // Loadout vehicle list
@@ -31,27 +34,32 @@ if (_vehicleKind isEqualType true) exitWith {
     _pylonMap;
 };
 
-
-// Check if valid input
-if ((_vehicleKind == "") && (_loadout == "")) exitWith {
-    SHOW_CHAT_WARNING("VehiclePylon", "No kind of vehicle and no vehicle loadout is defined");
-    [];
-};
+// Handle missing or faulty params
 if (_vehicleKind == "") exitWith {
-    SHOW_CHAT_WARNING("VehiclePylon", "No kind of vehicle is defined");
+    SHOW_WARNING("VehiclePylon", "No kind of vehicle is defined");
     [];
 };
 if (_loadout == "") exitWith {
-    SHOW_CHAT_WARNING("VehiclePylon", "No vehicle loadout is defined");
+    SHOW_WARNING("VehiclePylon", "No vehicle loadout is defined");
     [];
 };
 
-// Obtain pylon
-private _vehiclePylons = _pylonMap getOrDefault [_vehicleKind, []];
-private _vehiclePylonsMap = createHashMapFromArray _vehiclePylons;
-if (count _vehiclePylonsMap == 0) exitWith {
+
+// Obtain pylons
+private _vehicleMap = _pylonMap getOrDefault [_vehicleKind, []];
+private _vehiclePylonsMap = _vehicleMap getOrDefault [_loadout, []];;
+
+// Show only displayName
+if (_displayName) exitWith {
+    _vehiclePylonsMap getOrDefault ["displayName", ""];
+};
+
+// Get loadout
+private _vehicleLoadouts = _vehiclePylonsMap getOrDefault ["loadout", []];
+
+if (count _vehicleLoadouts == 0) exitWith {
     SHOW_WARNING_1("VehiclePylon", "%1 does not have any pylons.", _vehicleKind);
-    [];
+    _vehicleLoadouts;
 };
 
 private _pylon = _vehiclePylonsMap getOrDefault [_loadout, []];

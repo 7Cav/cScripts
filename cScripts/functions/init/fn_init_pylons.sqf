@@ -17,6 +17,13 @@ private _dataArray = call compileFinal preprocessfilelinenumbers 'cScripts\cScri
 
 private _return = createHashMapFromArray _dataArray;
 
+{
+    _x params ["_vehicleKind"];
+    private _vehiclePylons = _dataArray getOrDefault [_vehicleKind, []];
+    private _vehiclePylonsMap = createHashMapFromArray _vehiclePylons;
+    _dataArray set [_vehicleKind, _vehiclePylonsMap];
+} forEach keys _dataArray;
+
 if (!(_return isEqualType createHashMap)) exitWith {
     SHOW_CHAT_ERROR_1("LogisticsDatabase", "Fatal error creating database (database base type faulty %1)...", typeName _return);
     createHashMapFromArray [["", []]];
