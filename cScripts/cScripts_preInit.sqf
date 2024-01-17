@@ -350,6 +350,7 @@ INFO(if (is3DEN) then {"EDEN"} else {"preInit"}, "Initialization of CBA Settings
 // Ace Arsenal
 call EFUNC(init,aceArsenal);
 
+call EFUNC(EDEN,initLoadout);
 
 // Load preInit mission settings
 if (is3DEN) exitWith {};

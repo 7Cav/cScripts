@@ -19,6 +19,10 @@ class cScripts {
 
         class init_zenModuels {};
     };
+    class eden {
+        file = "cScripts\functions\eden";
+        class EDEN_initLoadouts {};
+    };
     class documents {
         file = "cScripts\functions\documents";
         class Doc_Info {};
