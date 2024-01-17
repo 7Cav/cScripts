@@ -1,19 +1,19 @@
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A
- * This function initzializes the logistical database
+ * This function initzializes the pylons database
  *
  * Return Value:
  * HashMap
  *
  * Example:
- * call cScripts_fnc_init_logistics
+ * call cScripts_fnc_init_pylons
  *
  * Public: No
  */
 
-INFO("Logistics", "Creating logistical database");
-private _dataArray = call compileFinal preprocessfilelinenumbers 'cScripts\cScripts_logistics.sqf';
+INFO("Logistics", "Creating pylons database");
+private _dataArray = call compileFinal preprocessfilelinenumbers 'cScripts\cScripts_pylons.sqf';
 
 private _return = createHashMapFromArray _dataArray;
 

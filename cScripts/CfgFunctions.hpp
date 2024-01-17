@@ -10,6 +10,7 @@ class cScripts {
         class init_staging {};
 
         class init_logistics {};
+        class init_pylons {};
 
         class init_diary {};
         class init_message {};
