@@ -19,10 +19,10 @@ private _return = createHashMapFromArray _dataArray;
 
 {
     _x params ["_vehicleKind"];
-    private _vehiclePylons = _dataArray getOrDefault [_vehicleKind, []];
+    private _vehiclePylons = _return getOrDefault [_vehicleKind, []];
     private _vehiclePylonsMap = createHashMapFromArray _vehiclePylons;
-    _dataArray set [_vehicleKind, _vehiclePylonsMap];
-} forEach keys _dataArray;
+    _return set [_vehicleKind, _vehiclePylonsMap];
+} forEach keys _return;
 
 if (!(_return isEqualType createHashMap)) exitWith {
     SHOW_CHAT_ERROR_1("LogisticsDatabase", "Fatal error creating database (database base type faulty %1)...", typeName _return);
