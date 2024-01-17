@@ -24,7 +24,6 @@ params [
 
 // Loadout vehicle list
 private _pylonMap = GVAR(PYLONS);
-private _pylon = [];
 
 // Return keys or full hashmap
 if (_vehicleKind isEqualType true) exitWith {
@@ -36,20 +35,24 @@ if (_vehicleKind isEqualType true) exitWith {
 // Check if valid input
 if ((_vehicleKind == "") && (_loadout == "")) exitWith {
     SHOW_CHAT_WARNING("VehiclePylon", "No kind of vehicle and no vehicle loadout is defined");
-    _pylon;
+    [];
 };
 if (_vehicleKind == "") exitWith {
     SHOW_CHAT_WARNING("VehiclePylon", "No kind of vehicle is defined");
-    _pylon;
+    [];
 };
 if (_loadout == "") exitWith {
     SHOW_CHAT_WARNING("VehiclePylon", "No vehicle loadout is defined");
-    _pylon;
+    [];
 };
 
 // Obtain pylon
 private _vehiclePylons = _pylonMap getOrDefault [_vehicleKind, []];
 private _vehiclePylonsMap = createHashMapFromArray _vehiclePylons;
+if (count _vehiclePylonsMap == 0) exitWith {
+    SHOW_WARNING_1("VehiclePylon", "%1 does not have any pylons.", _vehicleKind);
+    [];
+};
 
 private _pylon = _vehiclePylonsMap getOrDefault [_loadout, []];
 if (count _pylon == 0) then {
