@@ -14,6 +14,8 @@
  *
  */
 
+if (!is3DEN) exitWith {};
+
 getMissionLayerEntities 42 params [["_objects", []]];
 
 {
