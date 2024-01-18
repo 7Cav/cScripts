@@ -22,7 +22,7 @@
 params [
     ["_vehicleKind", "", ["", true]],
     ["_loadout", "default", [""]],
-    [["_displayName"] false, [false]]
+    ["_displayName", false, [false]]
 ];
 
 // Loadout vehicle list
@@ -47,7 +47,9 @@ if (_loadout == "") exitWith {
 
 // Obtain pylons
 private _vehicleMap = _pylonMap getOrDefault [_vehicleKind, []];
+diag_log _vehicleMap;
 private _vehiclePylonsMap = _vehicleMap getOrDefault [_loadout, []];;
+diag_log _vehiclePylonsMap;
 
 // Show only displayName
 if (_displayName) exitWith {

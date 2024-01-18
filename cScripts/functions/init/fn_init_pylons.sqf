@@ -15,18 +15,25 @@
 INFO("Logistics", "Creating pylons database");
 private _dataArray = call compileFinal preprocessfilelinenumbers 'cScripts\cScripts_pylons.sqf';
 
-private _return = createHashMapFromArray _dataArray;
+private _pylonDataMap = createHashMapFromArray _dataArray;
 
 {
     _x params ["_vehicleKind"];
-    private _vehiclePylons = _return getOrDefault [_vehicleKind, []];
+    private _vehiclePylons = _pylonDataMap getOrDefault [_vehicleKind, []];
     private _vehiclePylonsMap = createHashMapFromArray _vehiclePylons;
-    _return set [_vehicleKind, _vehiclePylonsMap];
-} forEach keys _return;
+    _pylonDataMap set [_vehicleKind, _vehiclePylonsMap];
+    {
+        _x params ["_pylonType"];
+        _pylonItem = _vehiclePylonsMap getOrDefault [_pylonType, []];
+        _pylonItemMap = createHashMapFromArray _pylonItem;
+        _vehiclePylonsMap set [_pylonType, _pylonItemMap];
+    } forEach keys _vehiclePylonsMap;
+    _pylonDataMap set [_vehicleKind, _vehiclePylonsMap];
+} forEach keys _pylonDataMap;
 
-if (!(_return isEqualType createHashMap)) exitWith {
+if (!(_pylonDataMap isEqualType createHashMap)) exitWith {
     SHOW_CHAT_ERROR_1("LogisticsDatabase", "Fatal error creating database (database base type faulty %1)...", typeName _return);
     createHashMapFromArray [["", []]];
 };
 
-_return;
+_pylonDataMap;
