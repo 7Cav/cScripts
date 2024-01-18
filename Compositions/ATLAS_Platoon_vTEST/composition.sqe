@@ -1,0 +1,3872 @@
+version=54;
+center[]={395.14911,4.9999995,2433.8586};
+class items
+{
+	items=3;
+	class Item0
+	{
+		dataType="Layer";
+		name="1. ATLAS Platoon HQ";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Layer";
+				name="ATLAS Platoon Leader";
+				class Entities
+				{
+					items=1;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={0.23632813,0.0014395714,8.6967773};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""ATLAS-6""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-6""];}";
+									description="Platoon Leader@ATLAS-6";
+									isPlayable=1;
+								};
+								id=360;
+								type="Cav_B_C_PlatoonLeader_Bandit_6_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male03ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.05;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=359;
+					};
+				};
+				id=358;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="ATLAS Platoon Sergeant";
+				class Entities
+				{
+					items=4;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=1;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={2.2663269,0.0014395714,8.6799316};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""ATLAS-5""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-5""];}";
+									description="Platoon Sergeant@ATLAS-5";
+									isPlayable=1;
+								};
+								id=363;
+								type="Cav_B_C_PlatoonSergeant_Bandit_5_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.95999998;
+											};
+										};
+									};
+									nAttributes=2;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=362;
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={1.2845154,0.89242315,10.950928};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Atlas"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							dynamicSimulation=1;
+						};
+						id=364;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_isRepairFacility";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ace_isMedicalFacility";
+								expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=3;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-0.48864746,3.1061692,16.566406};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							textures="rhs_woodland";
+						};
+						id=365;
+						type="rhsusf_M1238A1_M2_socom_d";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="VehicleCustomization";
+								expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+								class Value
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=2;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="rhs_woodland";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+													};
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=12;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="DUKE_Hide";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item2
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_rhino";
+															};
+														};
+														class Item3
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item4
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_spare";
+															};
+														};
+														class Item5
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item6
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_ammoboxes";
+															};
+														};
+														class Item7
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item8
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_towbar";
+															};
+														};
+														class Item9
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item10
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_srchlight_cvr";
+															};
+														};
+														class Item11
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={3.6641235,1.8048949,17.559326};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							textures="rhs_woodland";
+							reportRemoteTargets=1;
+							receiveRemoteTargets=1;
+							reportOwnPosition=1;
+						};
+						id=366;
+						type="rhsusf_m1151_m2crows_usmc_wd";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=361;
+			};
+		};
+		id=357;
+	};
+	class Item1
+	{
+		dataType="Layer";
+		name="2. Atlas Medical Teams";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Layer";
+				name="ATLAS 1";
+				class Entities
+				{
+					items=5;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-8.8364868,0.89242315,3.4255371};
+							angles[]={-0,1.5768372,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Atlas"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							dynamicSimulation=1;
+						};
+						id=369;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_isRepairFacility";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ace_isMedicalFacility";
+								expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=3;
+						};
+					};
+					class Item1
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-6.0180359,0.0014395714,2.4697266};
+									angles[]={0,4.6955252,-0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""ATLAS-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-1""];}";
+									description="Medical Team Leader@ATLAS-1";
+									isPlayable=1;
+								};
+								id=371;
+								type="Cav_B_B_Atlas_Medic_TeamLeader_3_1_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-6.0518799,0.0014395714,4.4694824};
+									angles[]={0,4.6955252,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""ATLAS-1""];}";
+									description="Medical Team Member";
+									isPlayable=1;
+								};
+								id=372;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.0352173,0.0014395714,3.5031738};
+									angles[]={0,4.6955252,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""ATLAS-1""];}";
+									description="Medical Team Member";
+									isPlayable=1;
+								};
+								id=373;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-4.0690308,0.0014395714,5.5029297};
+									angles[]={0,4.6955252,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""ATLAS-1""];}";
+									description="Medical Team Member";
+									isPlayable=1;
+								};
+								id=374;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=370;
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-8.2140198,3.0851159,-4.6577148};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+						};
+						id=375;
+						type="rhsusf_M1230a1_usarmy_wd";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-14.48819,2.6142893,-3.010498};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=376;
+						type="cav_dragoon_Unarmed_WD";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item4
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-3.4307861,1.9449997,-4.0664063};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="this setVariable [""cScripts_vehicle_type"", ""MED"", true];";
+							dynamicSimulation=1;
+						};
+						id=377;
+						type="rhsusf_m998_w_2dr_fulltop";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="rhs_decalMask";
+								expression="if(_value != 'NoChange')then{ [_this,'unitdecals_1',_value] call rhs_fnc_hmmwv_setDecal}";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="NoChange";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="rhs_decalDoors";
+								expression="if(_value != 'NoChange')then{ [_this,'unitdecals_2',_value] call rhs_fnc_hmmwv_setDecal}";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="NoChange";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=3;
+						};
+					};
+				};
+				id=368;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="ATLAS 2";
+				class Entities
+				{
+					items=4;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-11.446777,0.0014395714,4.5847168};
+									angles[]={0,1.5768372,-0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""ATLAS-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-2""];}";
+									description="Medical Team Leader@ATLAS-2";
+									isPlayable=1;
+								};
+								id=380;
+								type="Cav_B_B_Atlas_Medic_TeamLeader_3_2_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male09ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-11.458862,0.0014395714,2.5847168};
+									angles[]={0,1.5768372,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""ATLAS-2""];}";
+									description="Medical Team Member";
+									isPlayable=1;
+								};
+								id=381;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-13.464874,0.0014395714,1.5966797};
+									angles[]={0,1.5768372,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""ATLAS-2""];}";
+									description="Medical Team Member";
+									isPlayable=1;
+								};
+								id=382;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={-13.452789,0.0014395714,3.5966797};
+									angles[]={0,1.5768372,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setVariable [""cScripts_Player_Unit"", ""ATLAS-2""];}";
+									description="Medical Team Member";
+									isPlayable=1;
+								};
+								id=383;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1.02;
+											};
+										};
+									};
+									nAttributes=4;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=379;
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-3.4732666,1.9449997,-12.953613};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="this setVariable [""cScripts_vehicle_type"", ""MED"", true];";
+							dynamicSimulation=1;
+						};
+						id=384;
+						type="rhsusf_m998_w_2dr_fulltop";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="rhs_decalMask";
+								expression="if(_value != 'NoChange')then{ [_this,'unitdecals_1',_value] call rhs_fnc_hmmwv_setDecal}";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="NoChange";
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="rhs_decalDoors";
+								expression="if(_value != 'NoChange')then{ [_this,'unitdecals_2',_value] call rhs_fnc_hmmwv_setDecal}";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="NoChange";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=3;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-14.46051,2.6142893,-13.861328};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=385;
+						type="cav_dragoon_Unarmed_WD";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={-8.1304321,3.0851159,-13.457275};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+						};
+						id=386;
+						type="rhsusf_M1230a1_usarmy_wd";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=378;
+			};
+		};
+		id=367;
+	};
+	class Item2
+	{
+		dataType="Layer";
+		name="3. Logistics & FARP Teams";
+		class Entities
+		{
+			items=2;
+			class Item0
+			{
+				dataType="Layer";
+				name="ATLAS 3";
+				class Entities
+				{
+					items=4;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={9.0515747,0.89242315,0.12036133};
+							angles[]={-0,1.5697142,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="call{[this,""Atlas"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							dynamicSimulation=1;
+						};
+						id=389;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_isRepairFacility";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ace_isMedicalFacility";
+								expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=1;
+									};
+								};
+							};
+							nAttributes=3;
+						};
+					};
+					class Item1
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={12.007446,0.0014395714,-1.0351563};
+									angles[]={0,4.7879443,0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""ATLAS-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-3""];}";
+									description="Logistics Team Leader@ATLAS-3";
+									isPlayable=1;
+								};
+								id=391;
+								type="Cav_B_B_Atlas_Medic_TeamLeader_3_1_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={12.157928,0.0014395714,0.95898438};
+									angles[]={0,4.7879391,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setgroupID[""ATLAS-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-3""];}";
+									description="Logistics Team Member";
+									isPlayable=1;
+								};
+								id=392;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={14.076904,0.0014395714,-0.18896484};
+									angles[]={0,4.7879391,-0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setgroupID[""ATLAS-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-3""];}";
+									description="Logistics Team Member";
+									isPlayable=1;
+								};
+								id=393;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={14.227448,0.0014395714,1.8049316};
+									angles[]={0,4.7879443,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setgroupID[""ATLAS-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-3""];}";
+									description="Logistics Team Member";
+									isPlayable=1;
+								};
+								id=394;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=390;
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={11.656677,2.0752864,-19.291016};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							textures="Olive";
+							reportRemoteTargets=1;
+							receiveRemoteTargets=1;
+							reportOwnPosition=1;
+						};
+						id=395;
+						type="rhsusf_stryker_m1132_m2_wd";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_repair_editorLoadedWheels";
+								expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=6;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="VehicleCustomization";
+								expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+								class Value
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=2;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Olive";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+													};
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=54;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="SMP";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item2
+														{
+															class data
+															{
+																singleType="STRING";
+																value="SMP_L";
+															};
+														};
+														class Item3
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item4
+														{
+															class data
+															{
+																singleType="STRING";
+																value="SMP_R";
+															};
+														};
+														class Item5
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item6
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_SMP";
+															};
+														};
+														class Item7
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item8
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_CIP";
+															};
+														};
+														class Item9
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item10
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Dispenser_Fold";
+															};
+														};
+														class Item11
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item12
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Commander";
+															};
+														};
+														class Item13
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item14
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Front";
+															};
+														};
+														class Item15
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item16
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Left";
+															};
+														};
+														class Item17
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item18
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Right";
+															};
+														};
+														class Item19
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item20
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Ramp";
+															};
+														};
+														class Item21
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item22
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_Antenna_1";
+															};
+														};
+														class Item23
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item24
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_Antenna_2";
+															};
+														};
+														class Item25
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item26
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_Antenna_3";
+															};
+														};
+														class Item27
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item28
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_DEK";
+															};
+														};
+														class Item29
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item30
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_DUKE";
+															};
+														};
+														class Item31
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item32
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_ExDiff";
+															};
+														};
+														class Item33
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item34
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_FCans";
+															};
+														};
+														class Item35
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item36
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_WCans";
+															};
+														};
+														class Item37
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item38
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_GPS";
+															};
+														};
+														class Item39
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item40
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_PioKit";
+															};
+														};
+														class Item41
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item42
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_StgBar";
+															};
+														};
+														class Item43
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item44
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_STORM";
+															};
+														};
+														class Item45
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item46
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_SuspCov";
+															};
+														};
+														class Item47
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item48
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_Towbar";
+															};
+														};
+														class Item49
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item50
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Extend_Mirrors";
+															};
+														};
+														class Item51
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item52
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Driver";
+															};
+														};
+														class Item53
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_refuel_fuelCargo";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_refuel_fuelCargo"")) then {getNumber (configOf _this >> ""ace_refuel_fuelCargo"")} else {-1})) then {[_this, _value] call ace_refuel_fnc_makeSource}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-10;
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="ace_isRepairVehicle";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairVehicle', _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+							class Attribute5
+							{
+								property="ace_cargo_space";
+								expression="[_this, _value] call ace_cargo_fnc_setSpace";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=40;
+									};
+								};
+							};
+							class Attribute6
+							{
+								property="ace_tagging_stencilVehicle";
+								expression="[_this, _value] call ace_tagging_fnc_stencilVehicle";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="ATLAS";
+									};
+								};
+							};
+							class Attribute7
+							{
+								property="acex_field_rations_waterSupply";
+								expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""acex_field_rations_waterSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""acex_field_rations_waterSupply"")} else {-1})) then {_this setVariable [""ace_field_rations_currentWaterSupply"", _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-10;
+									};
+								};
+							};
+							nAttributes=8;
+						};
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={11.987701,3.2261033,-7.3986816};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							textures="rhs_woodland";
+							dynamicSimulation=1;
+						};
+						id=396;
+						type="rhsusf_M1239_M2_Deploy_socom_d";
+						atlOffset=-4.7683716e-007;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_repair_editorLoadedWheels";
+								expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="VehicleCustomization";
+								expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+								class Value
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=2;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="rhs_woodland";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+													};
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=8;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="DUKE_Hide";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item2
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_spare";
+															};
+														};
+														class Item3
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item4
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_ammoboxes";
+															};
+														};
+														class Item5
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item6
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_srchlight_cvr";
+															};
+														};
+														class Item7
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_refuel_fuelCargo";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_refuel_fuelCargo"")) then {getNumber (configOf _this >> ""ace_refuel_fuelCargo"")} else {-1})) then {[_this, _value] call ace_refuel_fnc_makeSource}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-10;
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="ace_tagging_stencilVehicle";
+								expression="[_this, _value] call ace_tagging_fnc_stencilVehicle";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="ATLAS";
+									};
+								};
+							};
+							class Attribute5
+							{
+								property="ace_cargo_space";
+								expression="[_this, _value] call ace_cargo_fnc_setSpace";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=40;
+									};
+								};
+							};
+							class Attribute6
+							{
+								property="acex_field_rations_waterSupply";
+								expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""acex_field_rations_waterSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""acex_field_rations_waterSupply"")} else {-1})) then {_this setVariable [""ace_field_rations_currentWaterSupply"", _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-10;
+									};
+								};
+							};
+							nAttributes=7;
+						};
+					};
+				};
+				id=388;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="ATLAS 4";
+				class Entities
+				{
+					items=3;
+					class Item0
+					{
+						dataType="Group";
+						side="West";
+						class Entities
+						{
+							items=4;
+							class Item0
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={5.9796753,0.0014395714,1.7231445};
+									angles[]={0,1.5391899,-0};
+								};
+								side="West";
+								flags=7;
+								class Attributes
+								{
+									rank="SERGEANT";
+									init="call{this setgroupID[""ATLAS-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-4""];}";
+									description="FARP Team Leader@ATLAS-4";
+									isPlayable=1;
+								};
+								id=399;
+								type="Cav_B_B_Atlas_Medic_TeamLeader_3_1_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.99000001;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item1
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={6.0426636,0.0014395714,-0.27587891};
+									angles[]={0,1.5391885,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setgroupID[""ATLAS-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-4""];}";
+									description="FARP Team Member";
+									isPlayable=1;
+								};
+								id=400;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item2
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={4.0119019,0.0014395714,0.66015625};
+									angles[]={0,1.5391885,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setgroupID[""ATLAS-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-4""];}";
+									description="FARP Team Member";
+									isPlayable=1;
+								};
+								id=401;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+							class Item3
+							{
+								dataType="Object";
+								class PositionInfo
+								{
+									position[]={4.0751648,0.0014395714,-1.3383789};
+									angles[]={0,1.5391885,0};
+								};
+								side="West";
+								flags=5;
+								class Attributes
+								{
+									skill=0.40000001;
+									init="call{this setgroupID[""ATLAS-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""ATLAS-4""];}";
+									description="FARP Team Member";
+									isPlayable=1;
+								};
+								id=402;
+								type="Cav_B_B_Atlas_Medic_CombatMedic_F";
+								class CustomAttributes
+								{
+									class Attribute0
+									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=2;
+											};
+										};
+									};
+									class Attribute2
+									{
+										property="speaker";
+										expression="_this setspeaker _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="STRING";
+												value="Male10ENG";
+											};
+										};
+									};
+									class Attribute3
+									{
+										property="pitch";
+										expression="_this setpitch _value;";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0.94999999;
+											};
+										};
+									};
+									class Attribute4
+									{
+										property="ace_isEOD";
+										expression="_this setVariable ['ACE_isEOD', _value, true]";
+										class Value
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=1;
+											};
+										};
+									};
+									nAttributes=5;
+								};
+							};
+						};
+						class Attributes
+						{
+							dynamicSimulation=1;
+						};
+						id=398;
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={5.6364441,3.2261033,-7.6889648};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							textures="rhs_woodland";
+							dynamicSimulation=1;
+						};
+						id=403;
+						type="rhsusf_M1239_M2_Deploy_socom_d";
+						atlOffset=-4.7683716e-007;
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_repair_editorLoadedWheels";
+								expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="VehicleCustomization";
+								expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+								class Value
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=2;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="rhs_woodland";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+													};
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=8;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="DUKE_Hide";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item2
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_spare";
+															};
+														};
+														class Item3
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item4
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_ammoboxes";
+															};
+														};
+														class Item5
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item6
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_srchlight_cvr";
+															};
+														};
+														class Item7
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_refuel_fuelCargo";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_refuel_fuelCargo"")) then {getNumber (configOf _this >> ""ace_refuel_fuelCargo"")} else {-1})) then {[_this, _value] call ace_refuel_fnc_makeSource}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-10;
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="ace_tagging_stencilVehicle";
+								expression="[_this, _value] call ace_tagging_fnc_stencilVehicle";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="ATLAS";
+									};
+								};
+							};
+							class Attribute5
+							{
+								property="ace_cargo_space";
+								expression="[_this, _value] call ace_cargo_fnc_setSpace";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=40;
+									};
+								};
+							};
+							class Attribute6
+							{
+								property="acex_field_rations_waterSupply";
+								expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""acex_field_rations_waterSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""acex_field_rations_waterSupply"")} else {-1})) then {_this setVariable [""ace_field_rations_currentWaterSupply"", _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-10;
+									};
+								};
+							};
+							nAttributes=7;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={5.8031921,2.0752864,-19.164307};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							textures="Olive";
+							reportRemoteTargets=1;
+							receiveRemoteTargets=1;
+							reportOwnPosition=1;
+						};
+						id=404;
+						type="rhsusf_stryker_m1132_m2_wd";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_repair_editorLoadedWheels";
+								expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=6;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="VehicleCustomization";
+								expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+								class Value
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=2;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Olive";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+													};
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="ARRAY";
+													class value
+													{
+														items=54;
+														class Item0
+														{
+															class data
+															{
+																singleType="STRING";
+																value="SMP";
+															};
+														};
+														class Item1
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item2
+														{
+															class data
+															{
+																singleType="STRING";
+																value="SMP_L";
+															};
+														};
+														class Item3
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item4
+														{
+															class data
+															{
+																singleType="STRING";
+																value="SMP_R";
+															};
+														};
+														class Item5
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item6
+														{
+															class data
+															{
+																singleType="STRING";
+																value="hide_SMP";
+															};
+														};
+														class Item7
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item8
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_CIP";
+															};
+														};
+														class Item9
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item10
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Dispenser_Fold";
+															};
+														};
+														class Item11
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item12
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Commander";
+															};
+														};
+														class Item13
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item14
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Front";
+															};
+														};
+														class Item15
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item16
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Left";
+															};
+														};
+														class Item17
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item18
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Right";
+															};
+														};
+														class Item19
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item20
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Ramp";
+															};
+														};
+														class Item21
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=1;
+															};
+														};
+														class Item22
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_Antenna_1";
+															};
+														};
+														class Item23
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item24
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_Antenna_2";
+															};
+														};
+														class Item25
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item26
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_Antenna_3";
+															};
+														};
+														class Item27
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item28
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_DEK";
+															};
+														};
+														class Item29
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item30
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_DUKE";
+															};
+														};
+														class Item31
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item32
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_ExDiff";
+															};
+														};
+														class Item33
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item34
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_FCans";
+															};
+														};
+														class Item35
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item36
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_WCans";
+															};
+														};
+														class Item37
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item38
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_GPS";
+															};
+														};
+														class Item39
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item40
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_PioKit";
+															};
+														};
+														class Item41
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item42
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_StgBar";
+															};
+														};
+														class Item43
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item44
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_STORM";
+															};
+														};
+														class Item45
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item46
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_SuspCov";
+															};
+														};
+														class Item47
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item48
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hide_Towbar";
+															};
+														};
+														class Item49
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item50
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Extend_Mirrors";
+															};
+														};
+														class Item51
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+														class Item52
+														{
+															class data
+															{
+																singleType="STRING";
+																value="Hatch_Driver";
+															};
+														};
+														class Item53
+														{
+															class data
+															{
+																singleType="SCALAR";
+																value=0;
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_refuel_fuelCargo";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_refuel_fuelCargo"")) then {getNumber (configOf _this >> ""ace_refuel_fuelCargo"")} else {-1})) then {[_this, _value] call ace_refuel_fnc_makeSource}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-10;
+									};
+								};
+							};
+							class Attribute4
+							{
+								property="ace_isRepairVehicle";
+								expression="if (_value != (if (isNumber (configOf _this >> ""ace_repair_canRepair"")) then {getNumber (configOf _this >> ""ace_repair_canRepair"")} else {(parseNumber (getRepairCargo _this > 0))})) then {_this setVariable ['ace_isRepairVehicle', _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+							class Attribute5
+							{
+								property="ace_cargo_space";
+								expression="[_this, _value] call ace_cargo_fnc_setSpace";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=40;
+									};
+								};
+							};
+							class Attribute6
+							{
+								property="ace_tagging_stencilVehicle";
+								expression="[_this, _value] call ace_tagging_fnc_stencilVehicle";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="ATLAS";
+									};
+								};
+							};
+							class Attribute7
+							{
+								property="acex_field_rations_waterSupply";
+								expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""acex_field_rations_waterSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""acex_field_rations_waterSupply"")} else {-1})) then {_this setVariable [""ace_field_rations_currentWaterSupply"", _value, true]}";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=-10;
+									};
+								};
+							};
+							nAttributes=8;
+						};
+					};
+				};
+				id=397;
+			};
+		};
+		id=387;
+	};
+};
