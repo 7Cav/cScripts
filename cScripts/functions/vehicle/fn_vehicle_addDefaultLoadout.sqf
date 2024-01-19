@@ -16,6 +16,7 @@
  */
 
 params [["_vehicle", objNull, [objNull]]];
+if (true) exitWith {};
 
 if (!isServer) exitWith {};
 if (!isNil{_vehicle getVariable QEGVAR(VehicleFunc,DefaultPylon)}) exitWith {SHOW_WARNING_2("VehicleDefaultLoadout", "Vehicle loadouts already applied for %1. [%2].", _vehicle, typeOf _vehicle);};
