@@ -2,6 +2,7 @@
     ["rhsusf_m1a1tank_base", [
         ["hard", [
             ["displayName", "Hard"],
+            ["icon", ""],
             ["loadout", [
                 ["rhs_mag_smokegen",[-1],999],
                 ["rhs_mag_M829A3_max",[0],44],
@@ -35,6 +36,7 @@
         ]],
         [ "default", [
             ["displayName", "Default"],
+            ["icon", ""],
             ["loadout", [
                 ["rhs_mag_smokegen",[-1],999],
                 ["rhs_mag_M829A3_max",[0],28],
@@ -67,6 +69,7 @@
         ]],
         ["soft", [
             ["displayName", "Soft"],
+            ["icon", ""],
             ["loadout", [
                 ["rhs_mag_smokegen",[-1],999],
                 ["rhs_mag_M829A3_max",[0],4],
@@ -104,6 +107,7 @@
     ["I_APC_Wheeled_03_cannon_F", [
         ["antiarmor", [
             ["displayName", "Anti-Armor"],
+            ["icon", ""],
             ["loadout", [
                 ["SmokeLauncherMag",[0,0],6],
                 ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
@@ -118,6 +122,7 @@
         ]],
         [ "antiair", [
             ["displayName", "Anti-Air"],
+            ["icon", ""],
             ["loadout", [
                 ["SmokeLauncherMag",[0,0],6],
                 ["2000Rnd_762x51_Belt_T_Red",[0],2000],
@@ -131,6 +136,7 @@
         ]],
         ["default", [
             ["displayName", "Default"],
+            ["icon", ""],
             ["loadout", [
                 ["SmokeLauncherMag",[0,0],6],
                 ["2000Rnd_762x51_Belt_T_Red",[0],2000],
@@ -144,6 +150,7 @@
         ]],
         ["assault", [
             ["displayName", "Assault"],
+            ["icon", ""],
             ["loadout", [
                 ["SmokeLauncherMag",[0,0],6],
                 ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],

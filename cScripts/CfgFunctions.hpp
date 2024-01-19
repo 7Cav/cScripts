@@ -187,7 +187,10 @@ class cScripts {
 
         class vehicle_applyLoadout {};
         class vehicle_addDefaultLoadout {};
-        class vehicle_getPylon {};
+
+        class vehicle_getPylonName {};
+        class vehicle_getPylonLoadout {};
+        class vehicle_getPylonIcon {};
 
         // Other
         class vehicle_reset {};
