@@ -21,4 +21,4 @@ params [
     ["_loadout", "default", [""]]
 ];
 
-GVAR(PYLONS) get _classname get _loadout get "displayName"
+GVAR(PYLONS) get _classname get _loadout getOrDefault ["displayName", ""]

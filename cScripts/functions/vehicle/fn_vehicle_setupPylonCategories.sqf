@@ -28,9 +28,9 @@ private _pylonList = [];
     if (_vehicle iskindOf _classname) then {
         {
             _x params ["_pylonName"];
-            private _displayName = [_classname, _pylon] call EFUNC(vehicle,getPylonName);
-            private _loadout = [_classname, _pylon] call EFUNC(vehicle,getPylonLoadout);
-            private _icon = [_classname, _pylon] call EFUNC(vehicle,getPylonIcon);
+            private _displayName = [_classname, _pylonName] call EFUNC(vehicle,getPylonName);
+            private _loadout = [_classname, _pylonName] call EFUNC(vehicle,getPylonLoadout);
+            private _icon = [_classname, _pylonName] call EFUNC(vehicle,getPylonIcon);
             _pylonList append [[_classname, _displayName, _pylonName, _loadout, _icon]];
         } forEach (keys (GVAR(PYLONS) get _classname));
         break;

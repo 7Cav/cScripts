@@ -22,7 +22,7 @@ params [
 ];
 
 
-private _icon = GVAR(PYLONS) get _classname get _loadout get "icon";
+private _icon = GVAR(PYLONS) get _classname get _loadout getOrDefault ["icon", ""];
 private _return = [_icon] call FUNC(getIcon);
 
 _return
