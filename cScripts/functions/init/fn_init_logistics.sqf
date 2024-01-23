@@ -470,6 +470,7 @@ private _dataArray = [
         ["UK3CB_B_Backpack_Pocket_OLI", 0],
         ["UK3CB_B_Backpack_Pocket", 0],
         ["B_rhsusf_B_BACKPACK", 0],
+        ["USP_DELTA_BAG_MC", 0],
         ["USP_TACTICAL_PACK_CCT", 0],
         ["USP_TACTICAL_PACK_CCT2", 0],
         ["USP_TACTICAL_PACK_CCT3", 0],
