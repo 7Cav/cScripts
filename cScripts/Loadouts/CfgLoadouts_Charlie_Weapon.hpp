@@ -59,7 +59,7 @@ class Cav_B_C_Weapons_Mortar_Assistant_F: Cav_B_Charlie_Weapons_base_F {
 class Cav_B_C_Weapons_Mortar_AutomaticRifleman_F: Cav_B_Charlie_Weapons_base_F {
     displayName = "Mortar M249 Gunner";
     scope = 2;
-    loadout = [["rhs_weap_m249_light_S","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ELCAN_ard",["rhsusf_200Rnd_556x45_mixed_soft_pouch",200],[],"rhsusf_acc_grip4_bipod"],[],[],["USP_G3C_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_splint",2],["ACE_Chemlight_IR",2,1],["kat_Painkiller",1,10]]],["USP_CRYE_JPC_MGB",[["SmokeShell",4,1],["HandGrenade",2,1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",4,200]]],["B_AssaultPack_mcamo",[["USP_PVS15",1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",2,200]]],"USP_OPSCORE_FASTMTC_CGSW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
+    loadout = [["rhs_weap_m249_light_S","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ELCAN_ard",["rhsusf_200Rnd_556x45_mixed_soft_pouch",200],[],"rhsusf_acc_grip4_bipod"],[],[],["USP_G3C_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_splint",2],["ACE_Chemlight_IR",2,1],["kat_Painkiller",1,10]]],["USP_CRYE_JPC_MGB",[["SmokeShell",4,1],["HandGrenade",2,1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",4,200]]],["USP_ZIPON_PACK_CPC_MC",[["USP_PVS15",1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",2,200]]],"USP_OPSCORE_FASTMTC_CGSW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     icon = "iconManMG";
 };
 
