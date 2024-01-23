@@ -19,11 +19,11 @@ force force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
 force force ace_advanced_fatigue_deployedSwayFactor = 1;
-force force ace_advanced_fatigue_enabled = false;
+force force ace_advanced_fatigue_enabled = true;
 //ace_advanced_fatigue_enableStaminaBar = true;
 //ace_advanced_fatigue_fadeStaminaBar = true;
 force force ace_advanced_fatigue_loadFactor = 1;
-force force ace_advanced_fatigue_performanceFactor = 1.40374;
+force force ace_advanced_fatigue_performanceFactor = 1.75;
 force force ace_advanced_fatigue_recoveryFactor = 3.03773;
 force force ace_advanced_fatigue_restedSwayFactor = 1;
 force force ace_advanced_fatigue_swayFactor = 1;
@@ -781,7 +781,7 @@ force force kat_circulation_useLocation_AED = 0;
 
 // KAT - ADV Medical: GUI
 kat_gui_ColoredLogs = true;
-kat_gui_overlayBodyPart = true;
+force force kat_gui_overlayBodyPart = true;
 force force kat_gui_showBleedRate = false;
 force force kat_gui_showInactiveStatuses = true;
 //kat_gui_showPatientSideLabels = false;
@@ -822,7 +822,7 @@ force force kat_misc_MFAKSecondSlotItem = "[['ACE_packingBandage', 15], ['ACE_qu
 force force kat_misc_MFAKSeventhSlotItem = "[['ACE_salineIV_250', 3], ['kat_IV_16', 4]]";
 force force kat_misc_MFAKSixthSlotItem = "[['ACE_morphine', 6], ['ACE_epinephrine', 6], ['ACE_adenosine', 6]]";
 force force kat_misc_MFAKThirdSlotItem = "[['kat_Painkiller', 4], ['kat_Penthrox', 4]]";
-force force kat_misc_neckTourniquet = true;
+force force kat_misc_neckTourniquet = false;
 force force kat_misc_tourniquetEffects_Enable = true;
 force force kat_misc_tourniquetEffects_NegativeMultiplier = 1;
 force force kat_misc_tourniquetEffects_PositiveMultiplier = 1;
