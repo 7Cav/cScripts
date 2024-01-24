@@ -1422,36 +1422,9 @@ private _dataArray = [
         
         // Backpack
         ["B_AssaultPack_mcamo", 0],
-        ["B_Kitbag_mcamo", 0],
-        ["rhsusf_assault_eagleaiii_ocp", 0],
         ["USP_PACK_BREACHER_MC", 0],
         ["USP_PACK_FASTHAWK", 0],
         ["USP_PACK_POINTMAN", 0],
-        ["USP_45L_RUCKSACK_MC", 0],
-        ["USP_PATROL_PACK", 0],
-        ["USP_PATROL_PACK_CB", 0],
-        ["USP_PATROL_PACK_CB_CS", 0],
-        ["USP_PATROL_PACK_CB_CS_FH", 0],
-        ["USP_PATROL_PACK_CB_CS_FH", 0],
-        ["USP_PATROL_PACK_CB_CS_FH_RP", 0],
-        ["USP_PATROL_PACK_CB_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_CB_CS_RP", 0],
-        ["USP_PATROL_PACK_CB_CS_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_CS_ZT", 0],
-        ["USP_PATROL_PACK_CB_FH", 0],
-        ["USP_PATROL_PACK_CB_FH_RP", 0],
-        ["USP_PATROL_PACK_CB_FH_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_FH_ZT", 0],
-        ["USP_PATROL_PACK_CB_RP", 0],
-        ["USP_PATROL_PACK_CB_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_ZT", 0],
-        ["USP_PATROL_PACK_CS", 0],
-        ["USP_PATROL_PACK_CS_FH", 0],
-        ["USP_PATROL_PACK_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_FH", 0],
-        ["USP_PATROL_PACK_FH_ZT", 0],
-        ["USP_PATROL_PACK_ZT", 0],
         ["USP_ZIPON_PANEL_CPC_MC", 0],
         ["USP_ZIPON_PACK_CPC_MC", 0],
         ["USP_ZIPON_PACK_CPC_BC_MC", 0],
@@ -1569,9 +1542,6 @@ private _dataArray = [
         ["MAA_MAAWS_MT756", 0],
         ["rhs_fgm148_magazine_AT",0],
         ["rhs_fim92_mag",0],
-
-        // Backpacks
-        ["B_Carryall_mcamo", 0],
 
         // Tools and Items
         ["ACE_Vector", 0]
