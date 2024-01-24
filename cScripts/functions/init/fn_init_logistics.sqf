@@ -1433,7 +1433,6 @@ private _dataArray = [
         ["USP_REEBOW_3DAP_ACC10_MC", 0],
         ["USP_ROLLFLAG2", 0],
         ["USP_PACK_HYDRATION", 0],
-        ["USP_PATROL_PACK_ZT", 0],
         
         // Medical
         ["ACE_EarPlugs",10],
