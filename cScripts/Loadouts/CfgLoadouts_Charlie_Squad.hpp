@@ -59,19 +59,6 @@ class Cav_B_C_Grenadier_F: Cav_B_Charlie_base_F {
     category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
     loadout = [["rhs_weap_m4a1_m320","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR_3d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],["rhs_mag_M433_HEDP",1],""],[],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_splint",2],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_GRB",[["SmokeShell",4,1],["HandGrenade",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["rhs_mag_M433_HEDP",12,1],["rhs_mag_m714_White",4,1],["rhs_mag_m713_Red",2,1]]],["USP_ZIPON_PACK_CPC_MC",[["USP_PVS15",1],["ACE_EarPlugs",1],["ACE_EntrenchingTool",1]]],"USP_OPSCORE_FASTMTC_CGSW","",["rhsusf_bino_m24_ARD","","","",[],[],""],["ItemMap","","","ItemCompass","ACE_Altimeter",""]];
 };
-class Cav_B_C_Rifleman_F: Cav_B_Charlie_base_F {
-    displayName = "$STR_Cav_Charlie_Characters_C_Rifleman";
-    scope = 2;
-    category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
-    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR_3d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_splint",2],["ACE_EarPlugs",1],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_ASLTB",[["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1]]],["USP_ZIPON_PACK_CPC_BC_MC",[["USP_PVS15",1],["ACE_EntrenchingTool",1]]],"USP_OPSCORE_FASTMTC_GSW","",[],["ItemMap","","","ItemCompass","ACE_Altimeter",""]];
-};
-class Cav_B_C_RiflemanAT_F: Cav_B_Charlie_base_F {
-    displayName = "$STR_Cav_Charlie_Characters_C_RiflemanAT";
-    scope = 0;
-    category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
-    loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR_3d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],["rhs_weap_M136_hedp","","","",[],[],""],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_splint",2],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_ASLTB",[["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1]]],["USP_ZIPON_PACK_CPC_BC_MC",[["USP_PVS15",1],["ACE_EntrenchingTool",1]]],"USP_OPSCORE_FASTMTC_CGSW","",[],["ItemMap","","","ItemCompass","ACE_Altimeter",""]];
-    icon = "iconManAT";
-};
 class Cav_B_C_RiflemanLAT_F: Cav_B_Charlie_base_F {
     displayName = "$STR_Cav_Charlie_Characters_C_RiflemanLAT";
     scope = 2;
@@ -154,15 +141,11 @@ class Cav_B_C_PlatoonMedic_Misfit_7_F: Cav_B_C_PlatoonMedic_F { scope = 1; };
 class Cav_B_C_Alpha_FireTeamLeader_F: Cav_B_C_FireTeamLeader_F { scope = 1; };
 class Cav_B_C_Alpha_AutomaticRifleman_F: Cav_B_C_AutomaticRifleman_F { scope = 1; };
 class Cav_B_C_Alpha_Grenadier_F: Cav_B_C_Grenadier_F { scope = 1; };
-class Cav_B_C_Alpha_Rifleman_F: Cav_B_C_Rifleman_F { scope = 1; };
-class Cav_B_C_Alpha_RiflemanAT_F: Cav_B_C_RiflemanAT_F { scope = 1; };
 class Cav_B_C_Alpha_RiflemanLAT_F: Cav_B_C_RiflemanLAT_F { scope = 1; };
 class Cav_B_C_Alpha_CombatLifeSaver_F: Cav_B_C_CombatLifeSaver_F { scope = 1; };
 
 class Cav_B_C_Bravo_FireTeamLeader_F: Cav_B_C_FireTeamLeader_F { scope = 1; };
 class Cav_B_C_Bravo_AutomaticRifleman_F: Cav_B_C_AutomaticRifleman_F { scope = 1; };
 class Cav_B_C_Bravo_Grenadier_F: Cav_B_C_Grenadier_F { scope = 1; };
-class Cav_B_C_Bravo_Rifleman_F: Cav_B_C_Rifleman_F { scope = 1; };
-class Cav_B_C_Bravo_RiflemanAT_F: Cav_B_C_RiflemanAT_F { scope = 1; };
 class Cav_B_C_Bravo_RiflemanLAT_F: Cav_B_C_RiflemanLAT_F { scope = 1; };
 class Cav_B_C_Bravo_CombatLifeSaver_F: Cav_B_C_CombatLifeSaver_F { scope = 1; };
