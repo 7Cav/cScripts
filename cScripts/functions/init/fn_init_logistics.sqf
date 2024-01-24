@@ -464,12 +464,6 @@ private _dataArray = [
         ["ACE_personalAidKit",0],
 
         // Backpacks
-        ["B_Carryall_mcamo", 0],
-        ["B_UAV_01_backpack_F", 0],
-        ["B_Kitbag_mcamo", 0],
-        ["UK3CB_B_Backpack_Pocket_OLI", 0],
-        ["UK3CB_B_Backpack_Pocket", 0],
-        ["B_rhsusf_B_BACKPACK", 0],
         ["USP_DELTA_BAG_MC", 0],
         ["USP_TACTICAL_PACK_CCT", 0],
         ["USP_TACTICAL_PACK_CCT2", 0],
@@ -478,8 +472,7 @@ private _dataArray = [
         ["USP_TACTICAL_PACK_CCT5", 0],
         ["USP_TACTICAL_PACK_CCT6", 0],
         ["USP_TACTICAL_PACK_CCT7", 0],
-        ["USP_TACTICAL_PACK_CCT8", 0],
-        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
+        ["USP_TACTICAL_PACK_CCT8", 0]
     ]],
 
     ["charlie_company", [
