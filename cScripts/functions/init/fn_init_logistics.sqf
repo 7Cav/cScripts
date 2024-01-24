@@ -1421,6 +1421,7 @@ private _dataArray = [
         ["USP_ZIPON_PANEL_CPC_MC", 0],
         ["USP_ZIPON_PACK_CPC_MC", 0],
         ["USP_ZIPON_PACK_CPC_BC_MC", 0],
+        ["USP_ZIPON_PANEL_CPC_SMK_MC", 0],
         ["USP_REEBOW_3DAP_MC", 0],
         ["USP_REEBOW_3DAP_ACC1_MC", 0],
         ["USP_REEBOW_3DAP_ACC10_MC", 0],
