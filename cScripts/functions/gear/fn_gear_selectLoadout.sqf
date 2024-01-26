@@ -19,6 +19,7 @@ params ["_unit"];
 
 private _saved         = [_unit] call EFUNC(gear,loadLoadout);
 private _config        = missionConfigFile >> "CfgLoadouts";
+// FIXME: Add config check for CfgVehilce here
 private _variable      = _unit getVariable [QEGVAR(Gear,LoadoutClass), ""];
 private _variableName  = vehicleVarName _unit;
 private _className     = typeOf _unit;
