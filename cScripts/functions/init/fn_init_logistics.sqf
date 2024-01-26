@@ -585,6 +585,8 @@ private _dataArray = [
         ["ACE_elasticBandage",60],
         ["ACE_packingBandage",90],
         ["ACE_quikclot",150],
+        ["kat_chestSeal",20],
+        ["kat_guedel",10],
 
         // Tourniquets
         ["ACE_tourniquet",50],
@@ -627,6 +629,8 @@ private _dataArray = [
         ["ACE_elasticBandage",150],
         ["ACE_packingBandage",90],
         ["ACE_quikclot",150],
+        ["kat_chestSeal",20],
+        ["kat_guedel",10],
         
         // Tourniquets
         ["ACE_tourniquet",20],
