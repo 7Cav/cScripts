@@ -4,4 +4,10 @@ author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
+	"cav_troops_bravo_viking",
+	"cav_bravo_characters",
+	"A3_Weapons_F_Ammoboxes",
+	"ace_cargo",
+	"RSPN_Assets",
+	"cav_vehicles_dragoon"
 };

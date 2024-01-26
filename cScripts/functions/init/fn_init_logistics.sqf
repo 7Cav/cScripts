@@ -464,12 +464,7 @@ private _dataArray = [
         ["ACE_personalAidKit",0],
 
         // Backpacks
-        ["B_Carryall_mcamo", 0],
-        ["B_UAV_01_backpack_F", 0],
-        ["B_Kitbag_mcamo", 0],
-        ["UK3CB_B_Backpack_Pocket_OLI", 0],
-        ["UK3CB_B_Backpack_Pocket", 0],
-        ["B_rhsusf_B_BACKPACK", 0],
+        ["USP_DELTA_BAG_MC", 0],
         ["USP_TACTICAL_PACK_CCT", 0],
         ["USP_TACTICAL_PACK_CCT2", 0],
         ["USP_TACTICAL_PACK_CCT3", 0],
@@ -477,8 +472,7 @@ private _dataArray = [
         ["USP_TACTICAL_PACK_CCT5", 0],
         ["USP_TACTICAL_PACK_CCT6", 0],
         ["USP_TACTICAL_PACK_CCT7", 0],
-        ["USP_TACTICAL_PACK_CCT8", 0],
-        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
+        ["USP_TACTICAL_PACK_CCT8", 0]
     ]],
 
     ["charlie_company", [
@@ -591,6 +585,8 @@ private _dataArray = [
         ["ACE_elasticBandage",60],
         ["ACE_packingBandage",90],
         ["ACE_quikclot",150],
+        ["kat_chestSeal",20],
+        ["kat_guedel",10],
 
         // Tourniquets
         ["ACE_tourniquet",50],
@@ -633,6 +629,8 @@ private _dataArray = [
         ["ACE_elasticBandage",150],
         ["ACE_packingBandage",90],
         ["ACE_quikclot",150],
+        ["kat_chestSeal",20],
+        ["kat_guedel",10],
         
         // Tourniquets
         ["ACE_tourniquet",20],
@@ -1421,42 +1419,18 @@ private _dataArray = [
         
         // Backpack
         ["B_AssaultPack_mcamo", 0],
-        ["B_Kitbag_mcamo", 0],
-        ["rhsusf_assault_eagleaiii_ocp", 0],
         ["USP_PACK_BREACHER_MC", 0],
         ["USP_PACK_FASTHAWK", 0],
         ["USP_PACK_POINTMAN", 0],
-        ["USP_45L_RUCKSACK_MC", 0],
-        ["USP_PATROL_PACK", 0],
-        ["USP_PATROL_PACK_CB", 0],
-        ["USP_PATROL_PACK_CB_CS", 0],
-        ["USP_PATROL_PACK_CB_CS_FH", 0],
-        ["USP_PATROL_PACK_CB_CS_FH", 0],
-        ["USP_PATROL_PACK_CB_CS_FH_RP", 0],
-        ["USP_PATROL_PACK_CB_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_CB_CS_RP", 0],
-        ["USP_PATROL_PACK_CB_CS_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_CS_ZT", 0],
-        ["USP_PATROL_PACK_CB_FH", 0],
-        ["USP_PATROL_PACK_CB_FH_RP", 0],
-        ["USP_PATROL_PACK_CB_FH_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_FH_ZT", 0],
-        ["USP_PATROL_PACK_CB_RP", 0],
-        ["USP_PATROL_PACK_CB_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_ZT", 0],
-        ["USP_PATROL_PACK_CS", 0],
-        ["USP_PATROL_PACK_CS_FH", 0],
-        ["USP_PATROL_PACK_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_FH", 0],
-        ["USP_PATROL_PACK_FH_ZT", 0],
-        ["USP_PATROL_PACK_ZT", 0],
-        ["USP_ZIPON_PANEL_MC", 0],
-        ["USP_ZIPON_PANEL_MC_RF", 0],
-        ["USP_ZIPON_PANEL_MC_RF2", 0],
+        ["USP_ZIPON_PANEL_CPC_MC", 0],
+        ["USP_ZIPON_PACK_CPC_MC", 0],
+        ["USP_ZIPON_PACK_CPC_BC_MC", 0],
+        ["USP_ZIPON_PANEL_CPC_SMK_MC", 0],
+        ["USP_REEBOW_3DAP_MC", 0],
+        ["USP_REEBOW_3DAP_ACC1_MC", 0],
+        ["USP_REEBOW_3DAP_ACC10_MC", 0],
         ["USP_ROLLFLAG2", 0],
         ["USP_PACK_HYDRATION", 0],
-        ["USP_PATROL_PACK_ZT", 0],
         
         // Medical
         ["ACE_EarPlugs",10],
@@ -1565,9 +1539,6 @@ private _dataArray = [
         ["MAA_MAAWS_MT756", 0],
         ["rhs_fgm148_magazine_AT",0],
         ["rhs_fim92_mag",0],
-
-        // Backpacks
-        ["B_Carryall_mcamo", 0],
 
         // Tools and Items
         ["ACE_Vector", 0]
