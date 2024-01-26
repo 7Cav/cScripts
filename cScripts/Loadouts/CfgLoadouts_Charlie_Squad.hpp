@@ -15,6 +15,11 @@ class Cav_B_C_PlatoonSergeant_F: Cav_B_C_Officer_F {
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR_3d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["rhsusf_weap_glock17g4","","acc_flashlight_pistol","",["rhsusf_mag_17Rnd_9x19_FMJ",17],[],""],["USP_G3C_RS2_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_EarPlugs",1],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_ASLTB",[["rhsusf_mag_17Rnd_9x19_FMJ",2,17],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["SmokeShell",4,1],["SmokeShellBlue",2,1],["HandGrenade",2,1]]],["USP_TACTICAL_PACK",[["USP_PVS15",1],["ACE_splint",2],["ACE_SpraypaintRed",1],["ACE_EntrenchingTool",1],["ACE_CableTie",2],["SmokeShellPurple",1,1],["SmokeShellRed",2,1],["SmokeShellBlue",2,1]]],"USP_OPSCORE_FASTMTC_CGTW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
 };
+class Cav_B_C_PlatoonSergeantVintage_F: Cav_B_C_Officer_F {
+    displayName = "Vintage Platoon Sergeant";
+    scope = 2;
+    loadout = [["UK3CB_M16A1","","","",["rhs_mag_20Rnd_556x45_M855A1_Stanag",20],[],""],[],["rhsusf_weap_m1911a1","","","",["rhsusf_mag_7x45acp_MHP",7],[],""],["USP_G3C_RS2_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_EarPlugs",1],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_ASLTB",[["SmokeShell",4,1],["SmokeShellBlue",2,1],["HandGrenade",2,1],["rhs_mag_20Rnd_556x45_M855A1_Stanag",12,20],["rhsusf_mag_7x45acp_MHP",3,7]]],["USP_TACTICAL_PACK",[["USP_PVS15",1],["ACE_splint",2],["ACE_SpraypaintRed",1],["ACE_EntrenchingTool",1],["ACE_CableTie",2],["SmokeShellPurple",1,1],["SmokeShellRed",2,1],["SmokeShellBlue",2,1]]],"USP_OPSCORE_FASTMTC_CGTW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
+};
 class Cav_B_C_PlatoonMedic_F: Cav_B_C_Officer_F {
     displayName = "$STR_Cav_Charlie_Characters_C_PlatoonMedic";
     scope = 2;
