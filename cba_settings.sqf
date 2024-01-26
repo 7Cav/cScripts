@@ -956,7 +956,7 @@ force force kat_circulation_useLocation_AED = 0;
 
 // KAT - ADV Medical: GUI
 //kat_gui_ColoredLogs = true;
-//kat_gui_overlayBodyPart = true;
+force force kat_gui_overlayBodyPart = true;
 force force kat_gui_showBleedRate = false;
 force force kat_gui_showInactiveStatuses = true;
 //kat_gui_showPatientSideLabels = false;
