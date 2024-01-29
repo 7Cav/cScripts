@@ -1440,6 +1440,9 @@ private _dataArray = [
         ["kat_Painkiller",0],
         ["kat_PainkillerItem",0],
 
+        // Radios
+        ["TFAR_anprc152", 0],
+
         // Common Gear
         ["ACE_IR_Strobe_Item",0]
     ]],
