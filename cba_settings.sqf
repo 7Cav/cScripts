@@ -44,7 +44,7 @@ force force ace_vehicle_damage_removeAmmoDuringCookoff = true;
 // ACE AI
 force force ace_ai_assignNVG = false;
 
-// ACE Arsenal
+// ACE Arsenals
 force force ace_arsenal_allowDefaultLoadouts = true;
 force force ace_arsenal_allowSharedLoadouts = true;
 //ace_arsenal_camInverted = false;
