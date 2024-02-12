@@ -19,7 +19,7 @@ if [[ $string == "remove"*".sqf" ]];            then _throw "Bad name"; fi
 
 
 # Descriptor
-valid_list=(Added Fixed Adjusted Changed Updated Improved Cleaned Replaced Removed Reverted Revert)
+valid_list=(Added Fixed Adjusted Changed Updated Improved Cleaned Replaced Removed Reverted Revert Enabled Disabled)
 missing_descriptor_error="Missing descriptor [${valid_list[@]}]"
 _valid=false
 for contain in ${valid_list[@]}; do
