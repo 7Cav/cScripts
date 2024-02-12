@@ -24,7 +24,7 @@ private _arsenalStatement = {
     call FUNC(addDefaultArsenalLoadout);
     waitUntil { count ace_arsenal_defaultLoadoutsList != 0 };
 
-    private _items = call FUNC(getArsenalWhitelist);
+    private _items = GETVAR(player,EGVAR(Player,ArsenalWhitelist), []);
     INFO_3("Staging Arsenal", "Whitleist containing %1 items added to %2 (%3)", count _items, player, typeOf player);
     if (count _items == 0) exitWith {
         [
