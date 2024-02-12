@@ -1672,6 +1672,13 @@ private _dataArray = [
         ["rhs_weap_mk18_KAC_wd", 0],
 
         //Attachments
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0],
         ["rhsusf_acc_sf3p556", 0],
         ["rhsusf_acc_eotech", 0],
         ["rhsusf_acc_g33_t1", 0],
@@ -1767,7 +1774,14 @@ private _dataArray = [
         ["rhsusf_acc_tdstubby_tan", 0],
         ["rhsusf_acc_grip3", 0],
         ["rhsusf_acc_grip3_tan", 0],
-        ["rhsusf_acc_eotech_xps3", 0]
+        ["rhsusf_acc_eotech_xps3", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]],
     ["arsenal_weap_sr25", [
         ["rhs_weap_sr25_ec", 0],
@@ -1779,15 +1793,16 @@ private _dataArray = [
         
         //Attachments
         ["rhsusf_acc_harris_bipod", 0],
-        ["rhsusf_acc_m8541_d", 0],
-        ["rhsusf_acc_m8541_mrds", 0],
-        ["rhsusf_acc_elcan_ard", 0],
-        ["rhsusf_acc_su230a", 0],
-        ["rhsusf_acc_su230a_c", 0],
-        ["rhsusf_acc_su230a_mrds", 0],
-        ["rhsusf_acc_su230a_mrds_c", 0],
-        ["rhsusf_acc_m8541_wd", 0],
-        ["rhsusf_acc_acog_mdo", 0]
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0],
+        ["optic_AMS", 0],
+        ["optic_AMS_khk", 0],
+        ["optic_AMS_snd", 0]
     ]],
     ["arsenal_weap_m240", [
         ["rhs_weap_m240B", 0],
@@ -1804,12 +1819,18 @@ private _dataArray = [
         ["rhsusf_acc_compm4", 0],
         ["rhsusf_acc_t1_high", 0],
         ["rhsusf_acc_elcan_ard", 0],
-        ["rhsusf_acc_anpeq16a", 0],
         ["rhsusf_acc_su230a", 0],
         ["rhsusf_acc_su230a_c", 0],
         ["rhsusf_acc_su230a_mrds", 0],
         ["rhsusf_acc_su230a_mrds_c", 0],
-        ["rhsusf_acc_acog_mdo", 0]
+        ["rhsusf_acc_acog_mdo", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]],
     ["arsenal_weap_m249", [
         ["rhs_weap_m249_pip", 0],
@@ -1845,7 +1866,14 @@ private _dataArray = [
         ["rhsusf_acc_kac_grip_saw_bipod", 0],
         ["rhsusf_acc_grip4", 0],
         ["rhsusf_acc_grip4_bipod", 0],
-        ["rhsusf_acc_saw_lw_bipod", 0]
+        ["rhsusf_acc_saw_lw_bipod", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]]
 
 ];
