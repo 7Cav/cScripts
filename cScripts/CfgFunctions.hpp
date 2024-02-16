@@ -5,7 +5,8 @@ class cScripts {
         class init_aceTagging {};
         class init_aceItemReplace {};
 
-        class init_skillAdjustment {};
+        class init_ai {};
+
         class init_vehicle {};
         class init_staging {};
 
