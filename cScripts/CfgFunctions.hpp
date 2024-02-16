@@ -146,6 +146,7 @@ class cScripts {
         class doGetOutHeloSide {};
 
         class addObjectToCurator {};
+        class createCurator {};
 
         class getChannelName {};
         class clearRadioIds {};
