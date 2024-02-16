@@ -332,13 +332,25 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 
+// 9; Performance
+[ // Dynamic Simulation
+    QEGVAR(Settings,dynamicSimulation),
+    "LIST",
+    ["Dynamic Simulation (Experimental)","Enable Dynamic Simulation for Eden and zeus spawned objects automatically\n"],
+    [_cScriptSettings, "9; Performance"],
+    [[0,1], ["Disabled", "Enabled"], 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
-// 9; Other
+
+// 10; Other
 [ // Primary Clan Tag
     QEGVAR(Settings,primaryClanTag),
     "EDITBOX",
     ["Primary Clantag","Primary clan tag to to check for"],
-    [_cScriptSettings, "9; Other"],
+    [_cScriptSettings, "10; Other"],
     '7CAV',
     true,
     {},
@@ -375,5 +387,10 @@ if (EGVAR(Settings,setAiSystemDifficulty) >= 1 ) then {
 };
 
 call EFUNC(init,eventHandlers);
+
+// Dynamic Simulation handler
+if (EGVAR(Settings,dynamicSimulation) >= 1) then {
+    call EFUNC(init,simulation);
+};
 
 INFO("preInit", "Initialization completed.");

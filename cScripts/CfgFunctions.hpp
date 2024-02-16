@@ -5,6 +5,8 @@ class cScripts {
         class init_aceTagging {};
         class init_aceItemReplace {};
 
+        class init_simulation {};
+
         class init_skillAdjustment {};
         class init_vehicle {};
         class init_staging {};
@@ -97,7 +99,7 @@ class cScripts {
         class addHaloJump {};
 
         class setVehicleLable {};
-        
+
         class addBaseCrate {};
         class addStagingZone {};
 
@@ -140,7 +142,6 @@ class cScripts {
         class addReGear {};
         class addHeal {};
         class addArsenal {};
-        
         class createActionCategory {};
 
         class doGetOutHeloSide {};
@@ -153,13 +154,13 @@ class cScripts {
         class getRadioBase {};
 
         class isValidFaction {};
-        
+
         class createVehicleLable {};
         class getVehicleLable {};
 
         class renameObject {};
         class getIcon {};
-        
+
         class getAttendance {};
         class getServerMetrics {};
     };
@@ -200,7 +201,7 @@ class cScripts {
     };
     class modules {
         file = "cScripts\functions\modules";
-        class zenModule_EnableUnitSimulation {};
+        class zenModule_toggleUnitSimulation {};
 
         class zenModule_CreateFieldHospital {};
         class zenModule_CreateMedicalCrate {};

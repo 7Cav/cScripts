@@ -20,10 +20,10 @@ if !(EGVAR(Settings,enable7cavZeusModules)) exitWith {};
 
 INFO("init", "Initializing custom Zen Modules.");
 
-["7Cav AI", "Enable Unit Simulation",
+["7Cav AI", "Toggle Unit Simulation",
     {
         params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call EFUNC(zenModule,EnableUnitSimulation);    
+        [_modulePos, _objectPos] call EFUNC(zenModule,toggleUnitSimulation);    
     },
     "\A3\ui_f\data\map\vehicleicons\iconManVirtual_ca.paa"
 ] call zen_custom_modules_fnc_register;
