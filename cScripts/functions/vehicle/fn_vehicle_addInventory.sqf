@@ -186,11 +186,15 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
             ] call FUNC(createCargoCrate);
         };
         case "rhsusf_m1165a1_gmv_m2_m240_socom_d";
-        case "rhsusf_m1165a1_gmv_mk19_m240_socom_d";
-        case "rhsusf_m1165a1_gmv_m2_m240_socom_w";
-        case "rhsusf_m1165a1_gmv_mk19_m240_socom_w": {
+        case "rhsusf_m1165a1_gmv_m2_m240_socom_w": {
             [_vehicle, 
                 GET_CONTAINER(vehicle_HMMWV)
+            ] call FUNC(addCargo);
+        };
+        case "rhsusf_m1165a1_gmv_mk19_m240_socom_d";
+        case "rhsusf_m1165a1_gmv_mk19_m240_socom_w": {
+            [_vehicle, 
+                GET_CONTAINER(vehicle_HMMWV_Weapons)
             ] call FUNC(addCargo);
         };
         default {
