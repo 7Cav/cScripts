@@ -1053,8 +1053,8 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148",1],
         ["rhs_fgm148_magazine_AT",1],
-        ["MRAWS_HE_F",6],
-        ["MRAWS_HEAT_F",6],
+        ["MRAWS_HE_F",4],
+        ["MRAWS_HEAT_F",4],
 
         // M320 Ammo
         ["rhs_mag_m713_Red",4],
@@ -1078,7 +1078,7 @@ private _dataArray = [
         ["ACE_tourniquet",8],
         ["kat_guedel",4],
         ["kat_chestSeal",6],
-        ["ACE_packingBandage",25]
+        ["ACE_packingBandage",40]
     ]],
 
     // // // // // //
