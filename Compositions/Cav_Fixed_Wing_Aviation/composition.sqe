@@ -1,8 +1,8 @@
 version=54;
-center[]={4794.0229,5,7516.3813};
+center[]={5664.8892,5,7211.1616};
 class items
 {
-	items=9;
+	items=8;
 	class Item0
 	{
 		dataType="Layer";
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-28.291016,0.89242268,36.995605};
+					position[]={-28.081055,0.89242268,36.59668};
 				};
 				side="Empty";
 				flags=4;
@@ -25,7 +25,7 @@ class items
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
-				id=201;
+				id=356;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -50,7 +50,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-38.380859,2.479682,43.438965};
+					position[]={-38.170898,2.479682,43.040039};
 				};
 				side="Empty";
 				flags=4;
@@ -58,7 +58,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=202;
+				id=357;
 				type="USAF_F22_EWP_AG";
 				class CustomAttributes
 				{
@@ -83,7 +83,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-18.380859,2.479682,43.938965};
+					position[]={-18.170898,2.479682,43.540039};
 				};
 				side="Empty";
 				flags=4;
@@ -91,7 +91,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=203;
+				id=358;
 				type="USAF_F22_EWP_AG";
 				class CustomAttributes
 				{
@@ -116,11 +116,11 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={-28.819336,0.036382675,44.644043};
+					position[]={-28.609375,0.036382675,44.245117};
 				};
 				title="FW Attack ASF (Tooltip)";
 				description="The F-22A is primarily an air to air intercept fighter. It excels best when it's slick. There's the stock slick version and three variants: EWP-AG, EWP-AA, Heavy. EWP is Enhanced Weapons Package. AG and AA is Air to Ground and Air to Air. Heavy is just outer hardpoints. All three of these variants technically negate the stealth benefits of the F-22. Pilots will pick what they want. Definitely throw some fast air at these guys, they'll love every minute of it.";
-				id=204;
+				id=359;
 				atlOffset=0.036382675;
 			};
 			class Item4
@@ -135,7 +135,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-30.702637,0.0014390945,34.057129};
+							position[]={-30.492676,0.0014390945,33.658203};
 							angles[]={-0,0.019565141,0};
 						};
 						side="West";
@@ -148,7 +148,7 @@ class items
 							description="Pilot@RAPTOR-1";
 							isPlayable=1;
 						};
-						id=206;
+						id=361;
 						type="Cav_B_A_Plane_Fighter_Pilot_F";
 						class CustomAttributes
 						{
@@ -198,7 +198,7 @@ class items
 				class Attributes
 				{
 				};
-				id=205;
+				id=360;
 			};
 			class Item5
 			{
@@ -212,7 +212,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-25.914551,0.0014390945,34.254395};
+							position[]={-25.70459,0.0014390945,33.855469};
 							angles[]={-0,0.019565141,0};
 						};
 						side="West";
@@ -225,7 +225,7 @@ class items
 							description="Pilot@RAPTOR-2";
 							isPlayable=1;
 						};
-						id=208;
+						id=363;
 						type="Cav_B_A_Plane_Fighter_Pilot_F";
 						class CustomAttributes
 						{
@@ -275,10 +275,10 @@ class items
 				class Attributes
 				{
 				};
-				id=207;
+				id=362;
 			};
 		};
-		id=200;
+		id=355;
 		atlOffset=0.0045480728;
 	};
 	class Item1
@@ -300,7 +300,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-23.024902,0.0014390945,-9.8256836};
+							position[]={-22.814941,0.0014390945,-10.224609};
 							angles[]={0,0.019565141,0};
 						};
 						side="West";
@@ -313,7 +313,7 @@ class items
 							description="Pilot@HOG-1";
 							isPlayable=1;
 						};
-						id=211;
+						id=366;
 						type="Cav_B_A_Plane_Fighter_Pilot_Hog_1_F";
 						class CustomAttributes
 						{
@@ -363,7 +363,7 @@ class items
 				class Attributes
 				{
 				};
-				id=210;
+				id=365;
 			};
 			class Item1
 			{
@@ -377,7 +377,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-31.102051,0.0014390945,-9.9848633};
+							position[]={-30.89209,0.0014390945,-10.383789};
 							angles[]={0,0.019565141,0};
 						};
 						side="West";
@@ -390,7 +390,7 @@ class items
 							description="Pilot@HOG-2";
 							isPlayable=1;
 						};
-						id=213;
+						id=368;
 						type="Cav_B_A_Plane_Fighter_Pilot_Hog_2_F";
 						class CustomAttributes
 						{
@@ -440,14 +440,14 @@ class items
 				class Attributes
 				{
 				};
-				id=212;
+				id=367;
 			};
 			class Item2
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-16.762207,2.094676,-2.6362305};
+					position[]={-16.552246,2.094676,-3.0351563};
 				};
 				side="Empty";
 				flags=4;
@@ -455,7 +455,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=214;
+				id=369;
 				type="USAF_A10";
 			};
 			class Item3
@@ -463,7 +463,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-36.762207,2.094676,-3.1362305};
+					position[]={-36.552246,2.094676,-3.5351563};
 				};
 				side="Empty";
 				flags=4;
@@ -471,7 +471,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=215;
+				id=370;
 				type="USAF_A10";
 			};
 			class Item4
@@ -479,7 +479,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-27.093262,0.89242268,-7.4702148};
+					position[]={-26.883301,0.89242268,-7.8691406};
 				};
 				side="Empty";
 				flags=4;
@@ -489,7 +489,7 @@ class items
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
-				id=216;
+				id=371;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -514,15 +514,15 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={-27.059082,0.036382675,-6.6660156};
+					position[]={-26.849121,0.036382675,-7.0649414};
 				};
 				title="FW Ground Attack";
 				description="The A-10 is venerable as one of the ""best"" A2G platforms on the market. There are only two key things here: if we have an A-10 up, there is no enemy fixed wing. A-10s only operate in air superiority environments where we control the skies. That's not to say you can't threaten them with a good time though.";
-				id=217;
+				id=372;
 				atlOffset=0.036382675;
 			};
 		};
-		id=209;
+		id=364;
 		atlOffset=0.018191338;
 	};
 	class Item2
@@ -544,7 +544,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-30.269531,0.0014390945,15.261719};
+							position[]={-30.05957,0.0014390945,14.862793};
 							angles[]={-0,0.019565141,0};
 						};
 						side="West";
@@ -557,7 +557,7 @@ class items
 							description="Pilot@LIGHTNING-1";
 							isPlayable=1;
 						};
-						id=220;
+						id=375;
 						type="Cav_B_A_Plane_Fighter_Pilot_F";
 						class CustomAttributes
 						{
@@ -607,7 +607,7 @@ class items
 				class Attributes
 				{
 				};
-				id=219;
+				id=374;
 			};
 			class Item1
 			{
@@ -621,7 +621,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-25.481445,0.0014390945,15.459961};
+							position[]={-25.271484,0.0014390945,15.061035};
 							angles[]={-0,0.019565141,0};
 						};
 						side="West";
@@ -634,7 +634,7 @@ class items
 							description="Pilot@LIGHTNING-2";
 							isPlayable=1;
 						};
-						id=222;
+						id=377;
 						type="Cav_B_A_Plane_Fighter_Pilot_F";
 						class CustomAttributes
 						{
@@ -684,14 +684,14 @@ class items
 				class Attributes
 				{
 				};
-				id=221;
+				id=376;
 			};
 			class Item2
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-27.834473,0.89242268,18.077637};
+					position[]={-27.624512,0.89242268,17.678711};
 				};
 				side="Empty";
 				flags=4;
@@ -701,7 +701,7 @@ class items
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
-				id=223;
+				id=378;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -726,7 +726,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-17.880859,2.2409725,23.993652};
+					position[]={-17.670898,2.2409725,23.594727};
 				};
 				side="Empty";
 				flags=4;
@@ -734,7 +734,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=224;
+				id=379;
 				type="USAF_F35A";
 				class CustomAttributes
 				{
@@ -759,7 +759,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-37.880859,2.2409725,23.493652};
+					position[]={-37.670898,2.2409725,23.094727};
 				};
 				side="Empty";
 				flags=4;
@@ -767,7 +767,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=225;
+				id=380;
 				type="USAF_F35A";
 				class CustomAttributes
 				{
@@ -792,15 +792,15 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={-28.543945,0.036382675,21.939941};
+					position[]={-28.333984,0.036382675,21.541016};
 				};
 				title="FW Multirole (Tooltip)";
 				description="The F-35A is a versatile platform capable of carrying air to air and air to ground ordnance - pick the role you want it to do and stick to it. The F-35A also has an on-board satellite view of the battlespace. Stand-off ordnances from multiple kilometers away are the namesake of the F-35A, but it's capable of everything the A-10C is and more. (Sorry not sorry Suto)";
-				id=226;
+				id=381;
 				atlOffset=0.036382675;
 			};
 		};
-		id=218;
+		id=373;
 		atlOffset=0.018191338;
 	};
 	class Item3
@@ -815,7 +815,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={44.559082,1.7847018,34.537109};
+					position[]={44.769043,1.7847018,34.138184};
 				};
 				side="Empty";
 				flags=4;
@@ -826,7 +826,7 @@ class items
 					dynamicSimulation=1;
 					pylons="USAF_PylonRack_2Rnd_AGM114R[0];USAF_PylonRack_4Rnd_GBU53[0];USAF_PylonRack_4Rnd_GBU39[0];USAF_PylonRack_2Rnd_AGM114R[0];";
 				};
-				id=228;
+				id=383;
 				type="USAF_MQ9";
 				class CustomAttributes
 				{
@@ -895,7 +895,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={44.492676,0.0014390945,20.841309};
+							position[]={44.702637,0.0014390945,20.442383};
 						};
 						side="West";
 						flags=7;
@@ -905,7 +905,7 @@ class items
 							description="Drone Pilot@REAPER-1";
 							isPlayable=1;
 						};
-						id=230;
+						id=385;
 						type="Cav_B_A_AirController_F";
 						class CustomAttributes
 						{
@@ -955,22 +955,22 @@ class items
 				class Attributes
 				{
 				};
-				id=229;
+				id=384;
 			};
 			class Item2
 			{
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={44.580566,0.036382198,41.257813};
+					position[]={44.790527,0.036382198,40.858887};
 				};
 				title="FW Drone Attack (Tooltip)";
 				description="The MQ-9 has a light armament available to it that is mostly Laser guided. All ordnance is capable of tracking and launching from the drone's camera, with little regard on the orientation of the drone (given enough altitude). cTAB tablets have the ability to interface with the drone gunner optics which allows ground force elements instant eyes-on to whatever the drone is seeing.";
-				id=231;
+				id=386;
 				atlOffset=0.036382198;
 			};
 		};
-		id=227;
+		id=382;
 		atlOffset=0.018191338;
 	};
 	class Item4
@@ -985,7 +985,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={44.583496,1.8006945,2.7460938};
+					position[]={44.793457,1.8006945,2.347168};
 				};
 				side="Empty";
 				flags=4;
@@ -994,7 +994,7 @@ class items
 					init="this setGroupid [""DTHSTR""];";
 					dynamicSimulation=1;
 				};
-				id=233;
+				id=388;
 				type="USAF_RQ4A";
 			};
 			class Item1
@@ -1002,557 +1002,18 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={44.391602,0.036382198,11.520508};
+					position[]={44.601563,0.036382198,11.121582};
 				};
 				title="FW Drone Recon (Tooltip)";
 				description="The RQ-4 can be put in the air on a racetrack pattern and has enough fuel to last an entire 3hr op. If your operation is deemed to be in an area that has BLUFOR having air supremacy, it's a good idea to put one of these in the air at a height of 2500m or higher in a loiter pattern over the AO. Units with cTAB can tap into the drone's turret camera and observe the area for a better perspective, allowing freedom of information to the unit without the need of a middle-man calling out what he sees.";
-				id=234;
+				id=389;
 				atlOffset=0.036382198;
 			};
 		};
-		id=232;
+		id=387;
 		atlOffset=0.018191338;
 	};
 	class Item5
-	{
-		dataType="Layer";
-		name="FW Gunship (AC-130)";
-		class Entities
-		{
-			items=3;
-			class Item0
-			{
-				dataType="Group";
-				side="West";
-				class Entities
-				{
-					items=6;
-					class Item0
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-1.5400391,0.0014390945,32.219238};
-							angles[]={0,0.0061959187,0};
-						};
-						side="West";
-						flags=7;
-						class Attributes
-						{
-							skill=0.60000002;
-							rank="CAPTAIN";
-							init="call{this setgroupID[""HAMMER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-							description="Pilot@HAMMER-1";
-							isPlayable=1;
-						};
-						id=237;
-						type="Cav_B_A_Plane_Transport_Pilot_Titan_1_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="ace_isMedic";
-								expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="ace_isEngineer";
-								expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Male04ENG";
-									};
-								};
-							};
-							class Attribute3
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1.03;
-									};
-								};
-							};
-							nAttributes=4;
-						};
-					};
-					class Item1
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-0.54101563,0.0014390945,32.213379};
-							angles[]={0,0.0061959187,0};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.55000001;
-							rank="LIEUTENANT";
-							init="call{this setgroupID[""HAMMER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-							description="Co-Pilot@HAMMER-1";
-							isPlayable=1;
-						};
-						id=238;
-						type="Cav_B_A_Plane_Transport_coPilot_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="ace_isMedic";
-								expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="ace_isEngineer";
-								expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Male03ENG";
-									};
-								};
-							};
-							class Attribute3
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1.03;
-									};
-								};
-							};
-							nAttributes=4;
-						};
-					};
-					class Item2
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-1.4750977,0.0014390945,31.152344};
-							angles[]={0,0.0061959187,0};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.55000001;
-							rank="LIEUTENANT";
-							init="call{this setgroupID[""HAMMER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-							description="IR Operator@HAMMER-1";
-							isPlayable=1;
-						};
-						id=239;
-						type="Cav_B_A_Plane_Transport_coPilot_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="ace_isMedic";
-								expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="ace_isEngineer";
-								expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Male03ENG";
-									};
-								};
-							};
-							class Attribute3
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1.03;
-									};
-								};
-							};
-							nAttributes=4;
-						};
-					};
-					class Item3
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-0.54492188,0.0014390945,31.05957};
-							angles[]={0,0.0061959187,0};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.55000001;
-							rank="LIEUTENANT";
-							init="call{this setgroupID[""HAMMER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-							description="TV Operator@HAMMER-1";
-							isPlayable=1;
-						};
-						id=240;
-						type="Cav_B_A_Plane_Transport_coPilot_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="ace_isMedic";
-								expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="ace_isEngineer";
-								expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Male03ENG";
-									};
-								};
-							};
-							class Attribute3
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1.03;
-									};
-								};
-							};
-							nAttributes=4;
-						};
-					};
-					class Item4
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-1.4921875,0.0014390945,30.030273};
-							angles[]={0,0.0061959187,0};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.55000001;
-							rank="LIEUTENANT";
-							init="call{this setgroupID[""HAMMER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-							description="Fire Control Officer@HAMMER-1";
-							isPlayable=1;
-						};
-						id=241;
-						type="Cav_B_A_Plane_Transport_coPilot_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="ace_isMedic";
-								expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="ace_isEngineer";
-								expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Male03ENG";
-									};
-								};
-							};
-							class Attribute3
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1.03;
-									};
-								};
-							};
-							nAttributes=4;
-						};
-					};
-					class Item5
-					{
-						dataType="Object";
-						class PositionInfo
-						{
-							position[]={-0.51171875,0.0014390945,29.989258};
-							angles[]={0,0.0061959187,0};
-						};
-						side="West";
-						flags=5;
-						class Attributes
-						{
-							skill=0.55000001;
-							rank="LIEUTENANT";
-							init="call{this setgroupID[""HAMMER-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""TITAN-1""];}";
-							description="Electronic Warfare Officer@HAMMER-1";
-							isPlayable=1;
-						};
-						id=242;
-						type="Cav_B_A_Plane_Transport_coPilot_F";
-						class CustomAttributes
-						{
-							class Attribute0
-							{
-								property="ace_isMedic";
-								expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute1
-							{
-								property="ace_isEngineer";
-								expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-							class Attribute2
-							{
-								property="speaker";
-								expression="_this setspeaker _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="STRING";
-										value="Male03ENG";
-									};
-								};
-							};
-							class Attribute3
-							{
-								property="pitch";
-								expression="_this setpitch _value;";
-								class Value
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1.03;
-									};
-								};
-							};
-							nAttributes=4;
-						};
-					};
-				};
-				class Attributes
-				{
-					dynamicSimulation=1;
-				};
-				id=236;
-			};
-			class Item1
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={-0.80029297,0.89242268,34.959473};
-					angles[]={-0,3.1290414,0};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-					init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
-					description="Starter Crate";
-					dynamicSimulation=1;
-				};
-				id=243;
-				type="B_supplyCrate_F";
-				class CustomAttributes
-				{
-					class Attribute0
-					{
-						property="ammoBox";
-						expression="[_this,_value] call bis_fnc_initAmmoBox;";
-						class Value
-						{
-							class data
-							{
-								singleType="STRING";
-								value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F"",""FirstAidKit""],[1,2,1,10]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_20Rnd_65x47_Scenar_mag"",""ACE_30Rnd_65x47_Scenar_mag"",""ACE_20Rnd_65_Creedmor_mag"",""ACE_30Rnd_65_Creedmor_mag"",""ACE_10Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_10Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_10Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim""],[24,6,6,6,6,3,1,2,2,6,2,6,6,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,4,4]],[[""Laserdesignator"",""acc_flashlight"",""bipod_01_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_Kitbag_mcamo""],[2]]],false]";
-							};
-						};
-					};
-					nAttributes=1;
-				};
-			};
-			class Item2
-			{
-				dataType="Object";
-				class PositionInfo
-				{
-					position[]={11.453125,5.8589764,25.025879};
-				};
-				side="Empty";
-				flags=4;
-				class Attributes
-				{
-					dynamicSimulation=1;
-				};
-				id=244;
-				type="USAF_AC130U";
-				atlOffset=4.7683716e-007;
-			};
-		};
-		id=235;
-	};
-	class Item6
 	{
 		dataType="Layer";
 		name="FW Transport (C-130J)";
@@ -1578,7 +1039,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={3.6005859,0.0014390945,-34.148926};
+									position[]={7.4575195,0.0014390945,-29.879883};
 								};
 								side="West";
 								flags=7;
@@ -1590,7 +1051,7 @@ class items
 									description="Pilot@TITAN-1";
 									isPlayable=1;
 								};
-								id=248;
+								id=402;
 								type="Cav_B_A_Plane_Transport_Pilot_Titan_1_F";
 								class CustomAttributes
 								{
@@ -1641,7 +1102,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={4.6020508,0.0014390945,-34.148438};
+									position[]={8.4589844,0.0014390945,-29.879395};
 								};
 								side="West";
 								flags=5;
@@ -1653,7 +1114,7 @@ class items
 									description="Co-Pilot@TITAN-1";
 									isPlayable=1;
 								};
-								id=249;
+								id=403;
 								type="Cav_B_A_Plane_Transport_coPilot_F";
 								class CustomAttributes
 								{
@@ -1703,14 +1164,14 @@ class items
 						class Attributes
 						{
 						};
-						id=247;
+						id=401;
 					};
 					class Item1
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={4.1005859,0.89242268,-32.199219};
+							position[]={7.9575195,0.89242268,-27.930176};
 						};
 						side="Empty";
 						flags=4;
@@ -1720,7 +1181,7 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=250;
+						id=404;
 						type="B_supplyCrate_F";
 						class CustomAttributes
 						{
@@ -1745,7 +1206,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={11.349121,0.014522076,-58.958496};
+							position[]={10.490723,0.014522076,-48.806152};
 						};
 						side="Empty";
 						flags=4;
@@ -1753,11 +1214,11 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=251;
+						id=405;
 						type="USAF_C130J";
 					};
 				};
-				id=246;
+				id=400;
 			};
 			class Item1
 			{
@@ -1771,7 +1232,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={11.358887,0.014522076,-91.411621};
+							position[]={10.500488,0.014522076,-81.259277};
 						};
 						side="Empty";
 						flags=4;
@@ -1779,7 +1240,7 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=253;
+						id=407;
 						type="USAF_C130J";
 					};
 					class Item1
@@ -1794,7 +1255,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={7.4355469,0.0014390945,-83.589844};
+									position[]={6.5771484,0.0014390945,-73.4375};
 								};
 								side="West";
 								flags=7;
@@ -1806,7 +1267,7 @@ class items
 									description="Pilot@TITAN-2";
 									isPlayable=1;
 								};
-								id=255;
+								id=409;
 								type="Cav_B_A_Plane_Transport_Pilot_Titan_2_F";
 								class CustomAttributes
 								{
@@ -1857,7 +1318,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={8.4370117,0.0014390945,-83.589355};
+									position[]={7.5786133,0.0014390945,-73.437012};
 								};
 								side="West";
 								flags=5;
@@ -1869,7 +1330,7 @@ class items
 									description="Co-Pilot@TITAN-2";
 									isPlayable=1;
 								};
-								id=256;
+								id=410;
 								type="Cav_B_A_Plane_Transport_coPilot_F";
 								class CustomAttributes
 								{
@@ -1919,14 +1380,14 @@ class items
 						class Attributes
 						{
 						};
-						id=254;
+						id=408;
 					};
 					class Item2
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={7.8588867,0.89242268,-80.816895};
+							position[]={7.0004883,0.89242268,-70.664551};
 						};
 						side="Empty";
 						flags=4;
@@ -1936,7 +1397,7 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=257;
+						id=411;
 						type="B_supplyCrate_F";
 						class CustomAttributes
 						{
@@ -1957,18 +1418,18 @@ class items
 						};
 					};
 				};
-				id=252;
+				id=406;
 			};
 			class Item2
 			{
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={10.211914,0.036382198,-76.390625};
+					position[]={9.3535156,0.036382198,-66.238281};
 				};
 				title="FW Transport (Tooltip)";
 				description="The C-130J's from USAF can fit *almost* the entire Bandit Platoon in one C-130J, however, keep in mind that the more bodies in one bird, the longer your DZ or the need to have multiple sticks in one bird and have go-arounds, which means longer time before all troops are in the AO. You won't be able to jump the entirety of the PLT's 11 vehicles with only 2 cargo variants (3 vehicles fit in one C-130J Cargo) so it's recommended to either forego the vehicles or zeus-assist them if you only plan on using the C-130s.";
-				id=258;
+				id=412;
 				atlOffset=0.036382198;
 			};
 			class Item3
@@ -1990,7 +1451,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-17.266113,0.0014390945,-34.101074};
+									position[]={-18.124512,0.0014390945,-23.94873};
 								};
 								side="West";
 								flags=7;
@@ -2002,7 +1463,7 @@ class items
 									description="Pilot@TITAN-3";
 									isPlayable=1;
 								};
-								id=261;
+								id=415;
 								type="Cav_B_A_Plane_Transport_Pilot_Titan_3_F";
 								class CustomAttributes
 								{
@@ -2053,7 +1514,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-16.265137,0.0014390945,-34.101563};
+									position[]={-17.123535,0.0014390945,-23.949219};
 								};
 								side="West";
 								flags=5;
@@ -2065,7 +1526,7 @@ class items
 									description="Co-Pilot@TITAN-3";
 									isPlayable=1;
 								};
-								id=262;
+								id=416;
 								type="Cav_B_A_Plane_Transport_coPilot_F";
 								class CustomAttributes
 								{
@@ -2115,14 +1576,14 @@ class items
 						class Attributes
 						{
 						};
-						id=260;
+						id=414;
 					};
 					class Item1
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-20.704102,0.014522076,-42.865723};
+							position[]={-21.5625,0.014522076,-32.713379};
 						};
 						side="Empty";
 						flags=4;
@@ -2130,7 +1591,7 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=263;
+						id=417;
 						type="USAF_C130J_Cargo";
 						class CustomAttributes
 						{
@@ -2155,7 +1616,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-16.641113,0.89242268,-31.816895};
+							position[]={-17.499512,0.89242268,-21.664551};
 						};
 						side="Empty";
 						flags=4;
@@ -2165,7 +1626,7 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=264;
+						id=418;
 						type="B_supplyCrate_F";
 						class CustomAttributes
 						{
@@ -2186,7 +1647,7 @@ class items
 						};
 					};
 				};
-				id=259;
+				id=413;
 			};
 			class Item4
 			{
@@ -2200,7 +1661,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={45.383789,0.014522076,-42.947266};
+							position[]={44.525391,0.014522076,-32.794922};
 						};
 						side="Empty";
 						flags=4;
@@ -2208,7 +1669,7 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=266;
+						id=420;
 						type="USAF_C130J_Cargo";
 						class CustomAttributes
 						{
@@ -2240,7 +1701,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={41.506348,0.0014390945,-33.953125};
+									position[]={40.647949,0.0014390945,-23.800781};
 								};
 								side="West";
 								flags=7;
@@ -2252,7 +1713,7 @@ class items
 									description="Pilot@TITAN-4";
 									isPlayable=1;
 								};
-								id=268;
+								id=422;
 								type="Cav_B_A_Plane_Transport_Pilot_Titan_4_F";
 								class CustomAttributes
 								{
@@ -2303,7 +1764,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={42.506836,0.0014390945,-33.953613};
+									position[]={41.648438,0.0014390945,-23.80127};
 								};
 								side="West";
 								flags=5;
@@ -2315,7 +1776,7 @@ class items
 									description="Co-Pilot@TITAN-4";
 									isPlayable=1;
 								};
-								id=269;
+								id=423;
 								type="Cav_B_A_Plane_Transport_coPilot_F";
 								class CustomAttributes
 								{
@@ -2365,14 +1826,14 @@ class items
 						class Attributes
 						{
 						};
-						id=267;
+						id=421;
 					};
 					class Item2
 					{
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={41.858887,0.89242268,-31.316895};
+							position[]={41.000488,0.89242268,-21.164551};
 						};
 						side="Empty";
 						flags=4;
@@ -2382,7 +1843,7 @@ class items
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=270;
+						id=424;
 						type="B_supplyCrate_F";
 						class CustomAttributes
 						{
@@ -2403,13 +1864,13 @@ class items
 						};
 					};
 				};
-				id=265;
+				id=419;
 			};
 		};
-		id=245;
+		id=399;
 		atlOffset=0.0045480728;
 	};
-	class Item7
+	class Item6
 	{
 		dataType="Layer";
 		name="FW Transport Heavy (C-17)";
@@ -2421,11 +1882,11 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={9.9726563,0,7.6303711};
+					position[]={10.182617,0,7.2314453};
 				};
 				title="FW Heavy Transport (Tooltip)";
 				description="While one C-17 can carry an entire platoon in one transport, keep in mind that the more bodies in one bird, the longer your DZ or the need to have multiple sticks in one bird and have go-arounds, which means longer time before all troops are in the AO. For motorized jumps, the platoon has 11 vehicles. 10 if you forego the Platoon HQ vehicle and have them ride along with the infantry. Each C-17 fits 5 Vehicles. Math.";
-				id=272;
+				id=426;
 			};
 			class Item1
 			{
@@ -2439,7 +1900,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={11.10498,3.3578539,-14.803711};
+							position[]={11.08252,3.3578539,20.386719};
 						};
 						side="Empty";
 						flags=4;
@@ -2447,7 +1908,7 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=274;
+						id=428;
 						type="USAF_C17";
 						class CustomAttributes
 						{
@@ -2468,12 +1929,12 @@ class items
 						};
 					};
 				};
-				id=273;
+				id=427;
 			};
 		};
-		id=271;
+		id=425;
 	};
-	class Item8
+	class Item7
 	{
 		dataType="Layer";
 		name="USAF Service Menu";
@@ -2485,7 +1946,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.0727539,1.9255862,52.067871};
+					position[]={6.2827148,1.9255862,51.668945};
 				};
 				side="Empty";
 				flags=4;
@@ -2493,7 +1954,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=276;
+				id=430;
 				type="B_Truck_01_ammo_F";
 				class CustomAttributes
 				{
@@ -2531,7 +1992,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={11.072754,1.9160042,52.067871};
+					position[]={11.282715,1.9160042,51.668945};
 				};
 				side="Empty";
 				flags=4;
@@ -2539,7 +2000,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=277;
+				id=431;
 				type="B_Truck_01_fuel_F";
 				class CustomAttributes
 				{
@@ -2577,7 +2038,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={16.072754,2.3134775,52.067871};
+					position[]={16.282715,2.3134775,51.668945};
 				};
 				side="Empty";
 				flags=4;
@@ -2585,7 +2046,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=278;
+				id=432;
 				type="B_Truck_01_Repair_F";
 				class CustomAttributes
 				{
@@ -2623,9 +2084,9 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={6.0727539,0,62.067871};
+					position[]={6.2827148,0,61.668945};
 				};
-				id=279;
+				id=433;
 				type="USAF_ServiceMenu_moduleAddRearmService";
 				class CustomAttributes
 				{
@@ -2663,9 +2124,9 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={11.072754,0,62.067871};
+					position[]={11.282715,0,61.668945};
 				};
-				id=280;
+				id=434;
 				type="USAF_ServiceMenu_moduleAddRefuelService";
 				class CustomAttributes
 				{
@@ -2690,9 +2151,9 @@ class items
 				dataType="Logic";
 				class PositionInfo
 				{
-					position[]={16.072754,0,62.067871};
+					position[]={16.282715,0,61.668945};
 				};
-				id=281;
+				id=435;
 				type="USAF_ServiceMenu_moduleAddRepairService";
 				class CustomAttributes
 				{
@@ -2713,7 +2174,7 @@ class items
 				};
 			};
 		};
-		id=275;
+		id=429;
 	};
 };
 class connections
@@ -2728,8 +2189,8 @@ class connections
 		class Item0
 		{
 			linkID=0;
-			item0=279;
-			item1=276;
+			item0=433;
+			item1=430;
 			class CustomData
 			{
 				type="Sync";
@@ -2738,8 +2199,8 @@ class connections
 		class Item1
 		{
 			linkID=1;
-			item0=280;
-			item1=277;
+			item0=434;
+			item1=431;
 			class CustomData
 			{
 				type="Sync";
@@ -2748,8 +2209,8 @@ class connections
 		class Item2
 		{
 			linkID=2;
-			item0=281;
-			item1=278;
+			item0=435;
+			item1=432;
 			class CustomData
 			{
 				type="Sync";

@@ -1,5 +1,5 @@
 version=54;
-center[]={4790.3262,5,7504.4702};
+center[]={5673.6069,5,7232.1265};
 class items
 {
 	items=2;
@@ -15,12 +15,11 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={0.08984375,0.68976974,-0.14892578};
+					position[]={0.088867188,0,-0.1484375};
 				};
 				title="JTAC vs TACP (Tooltip)";
 				description="A single JTAC is best used when less than 2 air assets are on the field. A TACP Team almost becomes a necessity when there are more than 2 air assets in play for attack aviation. A TACP team handles BOTH CAS Fires and PZ Pickup Requests. (2x JTAC, 1x CCT, 1x Security)";
-				id=371;
-				atlOffset=0.68976974;
+				id=438;
 			};
 			class Item1
 			{
@@ -41,7 +40,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-0.61230469,0.0014390945,0.53076172};
+									position[]={-0.61328125,0.0014390945,0.53125};
 								};
 								side="West";
 								flags=7;
@@ -52,7 +51,7 @@ class items
 									description="JTAC@CHAOS-1";
 									isPlayable=1;
 								};
-								id=368;
+								id=441;
 								type="Cav_B_A_JFO_Infidel_1_F";
 								class CustomAttributes
 								{
@@ -89,10 +88,10 @@ class items
 						class Attributes
 						{
 						};
-						id=367;
+						id=440;
 					};
 				};
-				id=378;
+				id=439;
 			};
 			class Item2
 			{
@@ -113,7 +112,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={0.60058594,0.0014390945,1.4936523};
+									position[]={0.59960938,0.0014390945,1.4941406};
 								};
 								side="West";
 								flags=7;
@@ -124,7 +123,7 @@ class items
 									description="JTAC@CHAOS-2";
 									isPlayable=1;
 								};
-								id=381;
+								id=444;
 								type="Cav_B_A_JFO_Infidel_1_F";
 								class CustomAttributes
 								{
@@ -161,14 +160,13 @@ class items
 						class Attributes
 						{
 						};
-						id=380;
+						id=443;
 					};
 				};
-				id=379;
+				id=442;
 			};
 		};
-		id=366;
-		atlOffset=0.17244244;
+		id=437;
 	};
 	class Item1
 	{
@@ -196,7 +194,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-0.68164063,0.0014390945,-1.2719727};
+									position[]={-0.68261719,0.0014390945,-1.2714844};
 									angles[]={-0,6.2674112,0};
 								};
 								side="West";
@@ -209,7 +207,7 @@ class items
 									description="TACP Combat Controller@VANQUISH-1";
 									isPlayable=1;
 								};
-								id=376;
+								id=448;
 								type="Cav_B_A_JFO_F";
 								class CustomAttributes
 								{
@@ -246,10 +244,10 @@ class items
 						class Attributes
 						{
 						};
-						id=375;
+						id=447;
 					};
 				};
-				id=382;
+				id=446;
 			};
 			class Item1
 			{
@@ -270,7 +268,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={0.6171875,0.0014390945,-0.46875};
+									position[]={0.61621094,0.0014390945,-0.46826172};
 									angles[]={-0,6.2425685,0};
 								};
 								side="West";
@@ -283,7 +281,7 @@ class items
 									description="TACP Combat Controller@VANQUISH-2";
 									isPlayable=1;
 								};
-								id=374;
+								id=451;
 								type="Cav_B_B_Scout_PlatoonLead_F";
 								class CustomAttributes
 								{
@@ -320,12 +318,12 @@ class items
 						class Attributes
 						{
 						};
-						id=373;
+						id=450;
 					};
 				};
-				id=384;
+				id=449;
 			};
 		};
-		id=372;
+		id=445;
 	};
 };

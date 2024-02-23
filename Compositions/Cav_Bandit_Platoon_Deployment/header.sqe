@@ -4,7 +4,7 @@ author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"RSPN_Assets",
+	"Desert",
 	"cav_charlie_characters_units",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
