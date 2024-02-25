@@ -1070,10 +1070,7 @@ private _dataArray = [
         // Chemlights
         ["ACE_Chemlight_HiBlue",2],
         ["ACE_Chemlight_IR",2],
-        
-        // Misc
-        ["ACE_SpareBarrel",1],
-
+    
         // Medical
         ["ACE_splint",4],
         ["ACE_tourniquet",8],
