@@ -1012,12 +1012,13 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148",1],
         ["rhs_fgm148_magazine_AT",1],
+        ["rhs_weap_M136_hedp",2]
 
         // M320 Ammo
         ["rhsusf_mag_M433_HEDP",20],
         ["rhs_mag_m714_White",6],
-        ["rhs_mag_m713_Red",6],
-        ["ACE_HuntIR_M203",2],
+        ["rhs_mag_m713_Red",4],
+        ["ACE_HuntIR_M203",1],
 
         // Offensive/Defensive Hand Grenades
         ["HandGrenade",8],
@@ -1053,8 +1054,8 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148",1],
         ["rhs_fgm148_magazine_AT",1],
-        ["MRAWS_HE_F",4],
-        ["MRAWS_HEAT_F",4],
+        ["MRAWS_HE_F",2],
+        ["MRAWS_HEAT_F",6],
 
         // M320 Ammo
         ["rhs_mag_m713_Red",4],
