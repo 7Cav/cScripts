@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, J.Turn
  * This module function spawn a supply crate.
  *
  * Arguments:
@@ -14,20 +14,57 @@
  */
 
 params ["_modulePos", "_objectPos"];
+// The crate type that will be passed to the supply crate spawner.
+private _crateTypeList = [
+    'crate_resupply_general',
+    'crate_medicalAtlas', 
+    'crate_medicalInfantry',
+    'crate_stinger'
+];
 
+// Display text for the crate list selection. This is what the zeus sees.
+private _displayTextList = 
 [
-    "7th Cavalry Supply Crate", 
+    ['Infantry Resupply', "Contains weapons, ammo, and supplies for one infantry platoon"],
+    ['Atlas Team', "Contains enough supplies to sustain two Atlas teams as well supplementing one infantry platoon."],
+    ['Infantry Medical', "Contains enough medical supplies for one infantry platoon."],
+    ['Stinger MANPAD', "Contains 1 launcher and 2 missiles."]
+];
+[
+    "7th Cavalry Supply Crates", 
     [
-        ["SLIDER:PERCENT", ["Supply size", "Regulate the total amount of supplies in the crate"], [0, 1, 1], false]
+        ["LIST", ["Crate Type", "Select the type of unit you are supplying with this crate"],
+            [
+                _crateTypeList,
+                _displayTextList,
+                0,
+                4
+            ], false]
     ], 
     {
         params ["_arg", "_pos"];
-        _arg params ["_size"];
+        _arg params ["_crateType"];
         _pos params ["_modulePos"];
-
-        private _crate = "Box_NATO_Equip_F" createVehicle _modulePos;
         
-        [_crate, _size] remoteExec [QFUNC(doSupplyCrate), 0, true];
+        // Crate model changes based on container of the crate
+        private _crateModel = "";
+
+        switch (_crateType) do {
+            case "crate_medicalAtlas";
+            case "crate_medicalInfantry": {
+                _crateModel = "ace_medicalSupplyCrate";
+            };
+            case "crate_stinger": {
+                _crateModel = "Box_NATO_WpsLaunch_F";
+            };
+            default {
+                _crateModel = "Box_NATO_Equip_F";
+            };
+        };
+
+        private _crate = _crateModel createVehicle _modulePos;
+        
+        [_crate, _crateType] remoteExec [QFUNC(doSupplyCrate), 0, true];
 
 
         // Change ace characteristics of crate

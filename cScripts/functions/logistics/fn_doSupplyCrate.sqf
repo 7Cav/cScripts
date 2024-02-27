@@ -15,7 +15,10 @@
 
 if (!isServer) exitWith {};
 
-params [["_crate", objNull, [objNull]]];
+params [
+    ["_crate", objNull, [objNull]], 
+    ["_crateType","crate_resupply_general",[""]]
+];
 
 clearWeaponCargoGlobal _crate;
 clearMagazineCargoGlobal _crate;
@@ -25,10 +28,10 @@ clearBackpackCargoGlobal _crate;
 // Add items from logistics database entry
 if (isServer) then {
     [{!isNil{EGVAR(DATABASE,DONE)} && EGVAR(DATABASE,DONE);}, {
-        _this params ["_crate"];
-        private _container = GET_CONTAINER(crate_resupply_general);
+        _this params ["_crate","_crateType"];
+        private _container = [_crateType] call EFUNC(logistics,getContainer);
         [_crate, _container] call FUNC(addCargo);
-}, [_crate, _quickSelectScale]] call CBA_fnc_waitUntilAndExecute;
+}, [_crate, _crateType]] call CBA_fnc_waitUntilAndExecute;
 };
 
 // Change ace logistics size of crate

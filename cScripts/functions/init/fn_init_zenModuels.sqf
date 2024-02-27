@@ -64,13 +64,13 @@ INFO("init", "Initializing custom Zen Modules.");
     "\A3\ui_f\data\map\vehicleicons\iconCrate_ca.paa"
 ] call zen_custom_modules_fnc_register;
 
-["7Cav Logistics", "Spawn Medical Crate",
-    {
-        params ["_modulePos", "_objectPos"];
-        [_modulePos, _objectPos] call EFUNC(zenModule,CreateMedicalCrate);
-    },
-    "\z\ACE\addons\medical_gui\ui\cross.paa"
-] call zen_custom_modules_fnc_register;
+// ["7Cav Logistics", "Spawn Medical Crate",
+//     {
+//         params ["_modulePos", "_objectPos"];
+//         [_modulePos, _objectPos] call EFUNC(zenModule,CreateMedicalCrate);
+//     },
+//     "\z\ACE\addons\medical_gui\ui\cross.paa"
+// ] call zen_custom_modules_fnc_register;
 
 ["7Cav Utilities", "Apply Loadout",
     {
