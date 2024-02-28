@@ -1,16 +1,16 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, J.Turn
  * This populats a given object with items.
  * Use for mission resupplies.
  *
  * Arguments:
- * 0: Crate <OBJECT>
- * 1: Scale cargo ammount <NUMBER> (Default: 1)
+ * 0: Module Position <ARRAY> (Default: [0.0,0.0,0.0])
+ * 1: Crate Type <STRING> (Default: "crate_resupply_general")
  *
  * Example:
- * [this,0.5] call cScripts_fnc_doSupplyCrate;
- * [this,1] call cScripts_fnc_doSupplyCrate;
+ * [[0.0,0.0,0.0],"crate_resupply_general"] call cScripts_fnc_doSupplyCrate;
+ * [[0.0,0.0,0.0],"crate_medicalAtlas"] call cScripts_fnc_doSupplyCrate;
  */
 
 if (!isServer) exitWith {};
