@@ -16,28 +16,43 @@
 if (!isServer) exitWith {};
 
 params [
-    ["_crate", objNull, [objNull]], 
+    ["_modulePos", [0.0,0.0,0.0], [[0.0,0.0,0.0]]], 
     ["_crateType","crate_resupply_general",[""]]
 ];
 
-clearWeaponCargoGlobal _crate;
-clearMagazineCargoGlobal _crate;
-clearItemCargoGlobal _crate;
-clearBackpackCargoGlobal _crate;
+// Crate model changes based on container of the crate
+private _crateModel = "";
+
+switch (_crateType) do {
+    case "crate_medicalAtlas";
+    case "crate_medicalInfantry": {
+        _crateModel = "ace_medicalSupplyCrate";
+    };
+    case "crate_stinger": {
+        _crateModel = "Box_NATO_WpsLaunch_F";
+    };
+    default {
+        _crateModel = "Box_NATO_Equip_F";
+    };
+};
+
+// Create crate at module position
+LOG_2("Logistics", "Spawning %1 on %2", _crateType, _modulePos);
+private _crate = _crateModel createVehicle _modulePos;
 
 // Add items from logistics database entry
 if (isServer) then {
     [{!isNil{EGVAR(DATABASE,DONE)} && EGVAR(DATABASE,DONE);}, {
         _this params ["_crate","_crateType"];
-        private _container = GET_CONTAINER(_crateType);
+        private _container = [_crateType] call EFUNC(logistics,getContainer);
         [_crate, _container] call FUNC(addCargo);
 }, [_crate, _crateType]] call CBA_fnc_waitUntilAndExecute;
 };
 
-// Change ace logistics size of crate
-[_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];
-[_crate, true] remoteExec ["ace_dragging_fnc_setDraggable",0,true];
-[_crate, true] remoteExec ["ace_dragging_fnc_setCarryable",0,true];
+// Change ace characteristics of crate
+[_crate, 1] call ace_cargo_fnc_setSize;
+[_crate, true] call ace_dragging_fnc_setDraggable;
+[_crate, true] call ace_dragging_fnc_setCarryable;
 
 // If a correct classname add texture
 private _smallBox = [
@@ -73,3 +88,6 @@ if (typeOf _crate in _smallBox) then {
 if (typeOf _crate in _largeBox) then {
     _crate setObjectTextureGlobal  [1, "\z\cav\addons\supplies\data\Ammobox_7CAV_co.paa"];
 };
+
+// Add object to the curator for all Zeuses
+_crate call ace_zeus_fnc_addObjectToCurator;

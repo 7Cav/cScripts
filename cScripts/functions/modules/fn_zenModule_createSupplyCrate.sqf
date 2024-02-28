@@ -46,36 +46,7 @@ private _displayTextList =
         _arg params ["_crateType"];
         _pos params ["_modulePos"];
         
-        // Crate model changes based on container of the crate
-        private _crateModel = "";
-
-        switch (_crateType) do {
-            case "crate_medicalAtlas";
-            case "crate_medicalInfantry": {
-                _crateModel = "ace_medicalSupplyCrate";
-            };
-            case "crate_stinger": {
-                _crateModel = "Box_NATO_WpsLaunch_F";
-            };
-            default {
-                _crateModel = "Box_NATO_Equip_F";
-            };
-        };
-
-        private _crate = _crateModel createVehicle _modulePos;
-        
-        [_crate, _crateType] remoteExec [QFUNC(doSupplyCrate), 0, true];
-
-
-        // Change ace characteristics of crate
-        [_crate, 1] call ace_cargo_fnc_setSize;
-        [_crate, true] call ace_dragging_fnc_setDraggable;
-        [_crate, true] call ace_dragging_fnc_setCarryable;
-
-        // Add object to Zeus
-        [{
-            _this call ace_zeus_fnc_addObjectToCurator;
-        }, _crate] call CBA_fnc_execNextFrame;
+        [_modulePos, _crateType] remoteExec [QFUNC(doSupplyCrate), 2, false];
     },
     {},
     [_modulePos]
