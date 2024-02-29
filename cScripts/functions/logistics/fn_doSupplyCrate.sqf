@@ -37,7 +37,7 @@ switch (_crateType) do {
 };
 
 // Create crate at module position
-LOG_2("Logistics", "Spawning %1 on %2", _crateType, _modulePos);
+INFO_2("Logistics", "Spawning %1 on %2", _crateType, _modulePos);
 private _crate = _crateModel createVehicle _modulePos;
 
 // Add items from logistics database entry
