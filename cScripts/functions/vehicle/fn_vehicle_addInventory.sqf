@@ -327,6 +327,12 @@ if (_vehicle iskindOf "Heli_Transport_02_base_F") then {
     ] call FUNC(addCargo);
 };
 
+if (_vehicle iskindOf "TF373_SOAR_MH47G_Base") then {
+    [_vehicle, 
+        GET_CONTAINER("vehicle_heliTransport")
+    ] call FUNC(addCargo);
+};
+
 if (_vehicle iskindOf "vtx_MH60M") then {
     [_vehicle, 
         GET_CONTAINER("vehicle_heliTransport")
