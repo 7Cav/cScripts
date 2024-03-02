@@ -94,6 +94,12 @@ if (_vehicle iskindOf "vtx_MH60M") then {
     [_vehicle] call FUNC(addEscapeWreck);
 };
 
+if (_vehicle iskindOf "TF373_SOAR_MH47G_Base") then {
+    [_vehicle] call FUNC(addLineJump);
+    [_vehicle] call FUNC(addEscapeWreck);
+};
+
+
 
 
 // Below functions only gets applied to approved factions
