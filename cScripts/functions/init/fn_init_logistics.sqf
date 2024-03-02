@@ -12,6 +12,7 @@
  * Public: No
  */
 
+
 INFO("Logistics", "Creating logistical database");
 private _dataArray = [
     // // // // // // //
@@ -135,6 +136,8 @@ private _dataArray = [
         //cTab
         ["ItemAndroid", 0],
         ["ItemcTab", 0],
+        ["ItemcTabMisc", 0],
+        ["ItemAndroidMisc",0],
 
         // Medical
         ["ACE_EarPlugs",10],
@@ -149,6 +152,7 @@ private _dataArray = [
         ["kat_carbonate",0],
         ["kat_naloxone",0],
         ["kat_Painkiller",0],
+        ["kat_chestSeal",0],
 
         // NVG
         ["USP_PVS14", 0],
@@ -207,6 +211,8 @@ private _dataArray = [
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
+        ["30Rnd_556x45_Stanag_Sand_red", 0],
+        ["30Rnd_556x45_Stanag_red", 0],
         ["rhs_mag_30Rnd_556x45_Mk262_PMAG", 0],
         ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 0],
         ["rhsusf_100Rnd_762x51_m62_tracer", 0],
@@ -234,6 +240,8 @@ private _dataArray = [
         // cTab
         ["ItemAndroid", 0],
         ["ItemcTab", 0],
+        ["ItemcTabMisc", 0],
+        ["ItemAndroidMisc",0],
 
         // Tools
         ["ACE_EntrenchingTool", 0],
@@ -310,6 +318,14 @@ private _dataArray = [
         ["ACE_Chemlight_HiBlue",0],
         ["ACE_Chemlight_HiRed",0],
 
+         // Medical
+        ["ACE_EarPlugs",10],
+        ["kat_chestSeal",0],
+        ["ACE_quikclot",0],
+        ["ACE_tourniquet",0],
+        ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
+
         // Mines and Explosives
         ["ACE_Clacker",0],
         ["ACE_DefusalKit",0],
@@ -329,68 +345,126 @@ private _dataArray = [
     ["bravo_company_atlas", [
         ["ACE_microDAGR",0],
         ["ItemAndroid",0],
+        ["ItemAndroidMisc",0],
 
-        ["kat_IV_16",0],
-        ["ACE_adenosine",0],
+        // AEDs
         ["kat_AED",0],
+        ["kat_X_AED",0],
+
+        // Airway Management and Respiration
+        ["kat_aatKit",0],
+        ["kat_accuvac",0],
+        ["kat_BVM",0],
+        ["kat_chestSeal",0],
+        ["kat_guedel",0],
+        ["kat_larynx",0],
+        ["kat_ncdKit",0],
+        ["kat_pocketBVM",0],
+
+        // Autoinjectors
+        ["ACE_adenosine",0],
+        ["ACE_epinephrine",0],
+        ["ACE_morphine",0],
+        ["kat_phenylephrineAuto",0],
+
+        // Bandages and Stitching
+        ["ACE_elasticBandage",0],
         ["ACE_packingBandage",0],
         ["ACE_quikclot",0],
+        ["ACE_surgicalKit",0],
+
+        // Diagnostic Tools
+        ["kat_Pulseoximeter",0],
+        ["kat_ultrasound",0],
+        ["kat_stethoscope",0],
+
+        // Fluids
         ["ACE_bloodIV",0],
         ["ACE_bloodIV_250",0],
         ["ACE_bloodIV_500",0],
-        ["ACE_bodyBag",0],
-        ["kat_plate",0],
-        ["ACE_CableTie",0],
-        ["ACE_Chemlight_Shield",0],
-        ["kat_clamp",0],
-        ["Rev_pelican_item",0],
-        ["kat_vacuum",0],
-        ["kat_EACA",0],
-        ["ACE_EarPlugs",0],
-        ["ACE_EntrenchingTool",0],
-        ["ACE_epinephrine",0],
-        ["kat_etomidate",0],
-        ["kat_IO_FAST",0],
-        ["kat_flumazenil",0],
-        ["kat_lidocaine",0],
-        ["kat_lorazepam",0],
-        ["ACE_morphine",0],
-        ["kat_naloxone",0],
-        ["kat_nitroglycerin",0],
-        ["kat_norepinephrine",0],
-        ["ACE_personalAidKit",0],
-        ["kat_phenylephrine",0],
-        ["kat_phenylephrine_inject",0],
         ["ACE_plasmaIV",0],
         ["ACE_plasmaIV_250",0],
         ["ACE_plasmaIV_500",0],
-        ["kat_retractor",0],
         ["ACE_salineIV",0],
         ["ACE_salineIV_250",0],
         ["ACE_salineIV_500",0],
-        ["kat_scalpel",0],
-        ["ACE_splint",0],
-        ["ACE_surgicalKit",0],
-        ["ACE_tourniquet",0],
-        ["kat_TXA",0],
+
+        //Pills and Inhalants
         ["kat_Carbonate",0],
+        ["kat_CarbonateItem",0],
+        ["kat_naloxone",0],
         ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
+        ["kat_PenthroxItem",0],
+
+        // Massive Hemorrhage Control
+        ["kat_reboa",0],
+        ["ACE_tourniquet",0],
+
+        //--------------------------
+        // Catheters and Medication
+        //--------------------------
+
+        // Catheters
+        ["kat_IV_16",0],
+        ["kat_IO_FAST",0],
+    
+        // Analgesic Medication
+        ["kat_fentanyl",0],
+        ["kat_ketamine",0],
+        ["kat_nalbuphine",0],
+
+        // BP Medication
+        ["kat_nitroglycerin",0],
+        ["kat_norepinephrine",0],
+        ["kat_phenylephrine",0],
+        
+        // Cardiac resuscitation
+        ["kat_amiodarone",0],
+
+        // Hemorrhage control
+        ["kat_EACA",0],
+        ["kat_TXA",0],
+
+        // Surgical Medication
+        ["kat_etomidate",0],
+        ["kat_flumazenil",0],
+        ["kat_lidocaine",0],
+        ["kat_lorazepam",0],
+        //--------------------------
+
+        //--------------------------
+        // Surgery and Fractures
+        //--------------------------
+
+        // Debridement
+        ["kat_vacuum",0],
+
+        // Splints
+        ["ACE_splint",0],
+
+        // Surgical Equipment
+        ["kat_clamp",0],
+        ["kat_plate",0],
+        ["kat_retractor",0],
+        ["kat_scalpel",0],
+        //--------------------------
 
         // Tools and Items
-        ["ACE_wirecutter",10],
+        ["ACE_CableTie",0],
+        ["ACE_Chemlight_Shield",0],
         ["ACE_EntrenchingTool",0],
         ["ACE_IR_Strobe_Item",0],
-         
+        ["ACE_wirecutter",10],
+        ["Rev_pelican_item",0],
+
         // Medical
         ["ACE_EarPlugs",10],
+        ["ACE_bodyBag",0],
+        ["ACE_personalAidKit",0],
 
         // Backpacks
-        ["B_Carryall_mcamo", 0],
-        ["B_UAV_01_backpack_F", 0],
-        ["B_Kitbag_mcamo", 0],
-        ["UK3CB_B_Backpack_Pocket_OLI", 0],
-        ["UK3CB_B_Backpack_Pocket", 0],
-        ["B_rhsusf_B_BACKPACK", 0],
+        ["USP_DELTA_BAG_MC", 0],
         ["USP_TACTICAL_PACK_CCT", 0],
         ["USP_TACTICAL_PACK_CCT2", 0],
         ["USP_TACTICAL_PACK_CCT3", 0],
@@ -398,8 +472,7 @@ private _dataArray = [
         ["USP_TACTICAL_PACK_CCT5", 0],
         ["USP_TACTICAL_PACK_CCT6", 0],
         ["USP_TACTICAL_PACK_CCT7", 0],
-        ["USP_TACTICAL_PACK_CCT8", 0],
-        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
+        ["USP_TACTICAL_PACK_CCT8", 0]
     ]],
 
     ["charlie_company", [
@@ -424,6 +497,7 @@ private _dataArray = [
 
         // Weapons
         ["rhs_weap_M136_hp",0],
+        ["rhs_weap_M136",0],
         ["rhs_weap_M136_hedp",10],
         ["rhs_weap_m72a7",10],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry",0],
@@ -494,12 +568,6 @@ private _dataArray = [
         ["ItemAndroid", 0],
         ["ItemcTab", 0],
 
-        // Medical
-        ["ACE_EarPlugs",10],
-        ["ACE_quikclot",0],
-        ["ACE_tourniquet",0],
-        ["kat_Painkiller",0],
-
         // NVG
         ["USP_PVS14", 0],
         ["USP_PVS15", 0],
@@ -517,6 +585,8 @@ private _dataArray = [
         ["ACE_elasticBandage",60],
         ["ACE_packingBandage",90],
         ["ACE_quikclot",150],
+        ["kat_chestSeal",20],
+        ["kat_guedel",10],
 
         // Tourniquets
         ["ACE_tourniquet",50],
@@ -559,6 +629,8 @@ private _dataArray = [
         ["ACE_elasticBandage",150],
         ["ACE_packingBandage",90],
         ["ACE_quikclot",150],
+        ["kat_chestSeal",20],
+        ["kat_guedel",10],
         
         // Tourniquets
         ["ACE_tourniquet",20],
@@ -677,6 +749,10 @@ private _dataArray = [
         ["ACE_1Rnd_82mm_Mo_Smoke", 8],
         ["ACE_1Rnd_82mm_Mo_HE_LaserGuided",8]
     ]],
+    ["crate_stinger",[
+        ["rhs_weap_fim92", 1],
+        ["rhs_fim92_mag",2]
+    ]],
     ["crate_resupply_general", [
         // Rifle Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",70],
@@ -740,9 +816,19 @@ private _dataArray = [
         ["ACE_rope18", 4],
         ["ACE_rope36", 2],
 
-        ["ACE_quikclot", 32],
-        ["ACE_tourniquet", 8],
-        ["ACE_splint", 8],
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20],
 
         ["rhs_mag_30Rnd_556x45_M855A1_Stanag", 32],
         ["SmokeShell", 8]
@@ -754,6 +840,22 @@ private _dataArray = [
     ["vehicle_medicalAtlas", [
         // AEDs
         ["kat_AED",1],
+        ["kat_X_AED",1],
+
+        // Analgesic
+        ["kat_fentanyl",10],
+        ["kat_ketamine",20],
+        ["kat_nalbuphine",30],
+        ["kat_PenthroxItem",20],
+
+        // Airway Management and Respiration
+        ["kat_aatKit",4],
+        ["kat_accuvac",1],
+        ["kat_BVM",2],
+        ["kat_chestSeal",30],
+        ["kat_larynx",15],
+        ["kat_pocketBVM",3],
+        
 
         // Bandages
         ["ACE_elasticBandage",150],
@@ -762,6 +864,7 @@ private _dataArray = [
 
         // Tourniquets
         ["ACE_tourniquet",20],
+        ["kat_reboa",10],
 
         // Fluids
         ["ACE_plasmaIV",30],
@@ -780,6 +883,8 @@ private _dataArray = [
         // Hemorrhage Control Medication
         ["kat_EACA",40],
         ["kat_TXA",40],
+        ["kat_amiodarone",15],
+        ["ACE_epinephrine",10],
 
         // Oral Medication
         ["kat_carbonate",20],
@@ -790,6 +895,7 @@ private _dataArray = [
         ["ACE_morphine",20],
         ["ACE_epinephrine",40],
         ["kat_phenylephrine_inject",40],
+        ["ACE_adenosine",0],
 
         // Splints
         ["ACE_splint",20],
@@ -837,43 +943,60 @@ private _dataArray = [
         // AT
         ["rhs_weap_fgm148", 1],
         ["rhs_fgm148_magazine_AT", 2],
-        ["rhs_weap_M136", 2],
 
-        // M32 Rotary Grenade Launcher
-        ["rhs_weap_m32", 1],
-        ["rhsusf_mag_6Rnd_M397_HET", 2],
-        ["rhsusf_mag_6Rnd_M433_HEDP", 3],
-        ["rhsusf_mag_6Rnd_m4009", 3],
-        ["rhsusf_mag_6Rnd_M713_red", 2],
-        
-        // UAV Equipment
-        ["ACE_UAVBattery", 4],
+        // MG
+        ["rhs_weap_m240B",1],
+        ["rhsusf_acc_su230a",1],
+        ["rhsusf_100Rnd_762x51_m62_tracer", 10],
         
         // Tools
-        ["ACE_wirecutter", 1]
+        ["ACE_wirecutter", 1],
+
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20]
     ]],
     ["vehicle_strykerDragoon_V4", [
         // AT
         ["rhs_weap_fgm148", 1],
         ["rhs_fgm148_magazine_AT", 2],
-        ["rhs_weap_M136", 2],
 
-        // M32 Rotary Grenade Launcher
-        ["rhs_weap_m32", 1],
-        ["rhsusf_mag_6Rnd_M397_HET", 2],
-        ["rhsusf_mag_6Rnd_M433_HEDP", 3],
-        ["rhsusf_mag_6Rnd_m4009", 3],
-        ["rhsusf_mag_6Rnd_M713_red", 2],
-        
-        // UAV Equipment
-        ["ACE_UAVBattery", 4],
+        // MG
+        ["rhs_weap_m240B",1],
+        ["rhsusf_acc_su230a",1],
+        ["rhsusf_100Rnd_762x51_m62_tracer", 10],
         
         // Tools
         ["ACE_wirecutter", 1],
 
         // 82mm Mortars
         ["ace_csw_carryMortarBaseplate", 2],
-        ["ace_csw_staticMortarCarry", 2]
+        ["ace_csw_staticMortarCarry", 2],
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20]
     ]],
 
     // // // // // // // //
@@ -884,20 +1007,18 @@ private _dataArray = [
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",42],
         
         // MG Ammo
-        ["rhsusf_200Rnd_556x45_mixed_soft_pouch",5],
-        ["rhsusf_100Rnd_762x51_m62_tracer",5],
+        ["rhsusf_200Rnd_556x45_mixed_soft_pouch",8],
 
         // AT
         ["rhs_weap_fgm148",1],
         ["rhs_fgm148_magazine_AT",1],
-        ["MRAWS_HE_F",2],
-        ["MRAWS_HEAT_F",2],
+        ["rhs_weap_M136_hedp",2],
 
         // M320 Ammo
         ["rhsusf_mag_M433_HEDP",20],
         ["rhs_mag_m714_White",6],
+        ["rhs_mag_m713_Red",4],
         ["ACE_HuntIR_M203",1],
-        ["ACE_40mm_Flare_ir",2],
 
         // Offensive/Defensive Hand Grenades
         ["HandGrenade",8],
@@ -905,15 +1026,57 @@ private _dataArray = [
         // Smoke Grenades
         ["SmokeShell",10],
         ["SmokeShellBlue",2],
-        ["SmokeShellGreen",2],
+        ["SmokeShellRed",2],
 
         // Chemlights
-        ["ACE_Chemlight_HiGreen",2],
+        ["ACE_Chemlight_HiBlue",2],
         ["ACE_Chemlight_HiRed",2],
         ["ACE_Chemlight_IR",4],
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",4],
+        ["kat_chestSeal",6],
+        ["ACE_packingBandage",40]
+    ]],
+
+    ["vehicle_HMMWV_Weapons", [
+        // Rifle Ammo
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",25],
         
-        // Misc
-        ["ACE_SpareBarrel",1]
+        // MG Ammo
+        ["rhsusf_100Rnd_762x51_m62_tracer",18],
+
+        // AT
+        ["rhs_weap_fgm148",1],
+        ["rhs_fgm148_magazine_AT",1],
+        ["MRAWS_HE_F",2],
+        ["MRAWS_HEAT_F",6],
+
+        // M320 Ammo
+        ["rhs_mag_m713_Red",4],
+
+        // Offensive/Defensive Hand Grenades
+        ["HandGrenade",4],
+
+        // Smoke Grenades
+        ["SmokeShell",6],
+        ["SmokeShellBlue",1],
+
+        // Chemlights
+        ["ACE_Chemlight_HiBlue",2],
+        ["ACE_Chemlight_IR",2],
+    
+        // Medical
+        ["ACE_splint",4],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",4],
+        ["kat_chestSeal",6],
+        ["ACE_packingBandage",40]
     ]],
 
     // // // // // //
@@ -1282,47 +1445,26 @@ private _dataArray = [
         
         // Backpack
         ["B_AssaultPack_mcamo", 0],
-        ["B_Kitbag_mcamo", 0],
-        ["rhsusf_assault_eagleaiii_ocp", 0],
         ["USP_PACK_BREACHER_MC", 0],
         ["USP_PACK_FASTHAWK", 0],
         ["USP_PACK_POINTMAN", 0],
-        ["USP_45L_RUCKSACK_MC", 0],
-        ["USP_PATROL_PACK", 0],
-        ["USP_PATROL_PACK_CB", 0],
-        ["USP_PATROL_PACK_CB_CS", 0],
-        ["USP_PATROL_PACK_CB_CS_FH", 0],
-        ["USP_PATROL_PACK_CB_CS_FH", 0],
-        ["USP_PATROL_PACK_CB_CS_FH_RP", 0],
-        ["USP_PATROL_PACK_CB_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_CB_CS_RP", 0],
-        ["USP_PATROL_PACK_CB_CS_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_CS_ZT", 0],
-        ["USP_PATROL_PACK_CB_FH", 0],
-        ["USP_PATROL_PACK_CB_FH_RP", 0],
-        ["USP_PATROL_PACK_CB_FH_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_FH_ZT", 0],
-        ["USP_PATROL_PACK_CB_RP", 0],
-        ["USP_PATROL_PACK_CB_RP_ZT", 0],
-        ["USP_PATROL_PACK_CB_ZT", 0],
-        ["USP_PATROL_PACK_CS", 0],
-        ["USP_PATROL_PACK_CS_FH", 0],
-        ["USP_PATROL_PACK_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_CS_FH_ZT", 0],
-        ["USP_PATROL_PACK_FH", 0],
-        ["USP_PATROL_PACK_FH_ZT", 0],
-        ["USP_PATROL_PACK_ZT", 0],
-        ["USP_ZIPON_PANEL_MC", 0],
-        ["USP_ZIPON_PANEL_MC_RF", 0],
-        ["USP_ZIPON_PANEL_MC_RF2", 0],
+        ["USP_ZIPON_PANEL_CPC_MC", 0],
+        ["USP_ZIPON_PACK_CPC_MC", 0],
+        ["USP_ZIPON_PACK_CPC_BC_MC", 0],
+        ["USP_ZIPON_PANEL_CPC_SMK_MC", 0],
+        ["USP_REEBOW_3DAP_MC", 0],
+        ["USP_REEBOW_3DAP_ACC1_MC", 0],
+        ["USP_REEBOW_3DAP_ACC10_MC", 0],
         ["USP_ROLLFLAG2", 0],
         ["USP_PACK_HYDRATION", 0],
-        ["USP_PATROL_PACK_ZT", 0],
         
         // Medical
-        ["ACE_EarPlugs",250],
-        ["ACE_bodyBag",12],
-        ["kat_Painkiller",10],
+        ["ACE_EarPlugs",10],
+        ["kat_chestSeal",0],
+        ["ACE_quikclot",0],
+        ["ACE_tourniquet",0],
+        ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
 
         // Common Gear
         ["ACE_IR_Strobe_Item",0]
@@ -1423,9 +1565,6 @@ private _dataArray = [
         ["MAA_MAAWS_MT756", 0],
         ["rhs_fgm148_magazine_AT",0],
         ["rhs_fim92_mag",0],
-
-        // Backpacks
-        ["B_Carryall_mcamo", 0],
 
         // Tools and Items
         ["ACE_Vector", 0]
@@ -1559,6 +1698,13 @@ private _dataArray = [
         ["rhs_weap_mk18_KAC_wd", 0],
 
         //Attachments
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0],
         ["rhsusf_acc_sf3p556", 0],
         ["rhsusf_acc_eotech", 0],
         ["rhsusf_acc_g33_t1", 0],
@@ -1654,7 +1800,14 @@ private _dataArray = [
         ["rhsusf_acc_tdstubby_tan", 0],
         ["rhsusf_acc_grip3", 0],
         ["rhsusf_acc_grip3_tan", 0],
-        ["rhsusf_acc_eotech_xps3", 0]
+        ["rhsusf_acc_eotech_xps3", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]],
     ["arsenal_weap_sr25", [
         ["rhs_weap_sr25_ec", 0],
@@ -1666,15 +1819,16 @@ private _dataArray = [
         
         //Attachments
         ["rhsusf_acc_harris_bipod", 0],
-        ["rhsusf_acc_m8541_d", 0],
-        ["rhsusf_acc_m8541_mrds", 0],
-        ["rhsusf_acc_elcan_ard", 0],
-        ["rhsusf_acc_su230a", 0],
-        ["rhsusf_acc_su230a_c", 0],
-        ["rhsusf_acc_su230a_mrds", 0],
-        ["rhsusf_acc_su230a_mrds_c", 0],
-        ["rhsusf_acc_m8541_wd", 0],
-        ["rhsusf_acc_acog_mdo", 0]
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0],
+        ["optic_AMS", 0],
+        ["optic_AMS_khk", 0],
+        ["optic_AMS_snd", 0]
     ]],
     ["arsenal_weap_m240", [
         ["rhs_weap_m240B", 0],
@@ -1691,12 +1845,18 @@ private _dataArray = [
         ["rhsusf_acc_compm4", 0],
         ["rhsusf_acc_t1_high", 0],
         ["rhsusf_acc_elcan_ard", 0],
-        ["rhsusf_acc_anpeq16a", 0],
         ["rhsusf_acc_su230a", 0],
         ["rhsusf_acc_su230a_c", 0],
         ["rhsusf_acc_su230a_mrds", 0],
         ["rhsusf_acc_su230a_mrds_c", 0],
-        ["rhsusf_acc_acog_mdo", 0]
+        ["rhsusf_acc_acog_mdo", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]],
     ["arsenal_weap_m249", [
         ["rhs_weap_m249_pip", 0],
@@ -1732,7 +1892,14 @@ private _dataArray = [
         ["rhsusf_acc_kac_grip_saw_bipod", 0],
         ["rhsusf_acc_grip4", 0],
         ["rhsusf_acc_grip4_bipod", 0],
-        ["rhsusf_acc_saw_lw_bipod", 0]
+        ["rhsusf_acc_saw_lw_bipod", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]]
 
 ];

@@ -23,9 +23,10 @@ private _stagingZoneMarkers = [];
 {
     private _markerName = [_x, 0, 11] call BIS_fnc_trimString;
     _markerName = toLower _markerName;
-    if (_markerName in ["zone_staging", "respawn_west"]) then {
+    if (_markerName in ["zone_staging", "respawn_west", "cscripts_staging_zone"]) then {
         private _type = markerShape _x;
         private _pos = getMarkerPos _x;
+        _x setMarkerAlpha 0;
         _stagingZoneMarkers append [[_x, _type, _pos]];
     };
 } forEach allMapMarkers;

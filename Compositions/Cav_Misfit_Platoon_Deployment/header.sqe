@@ -4,4 +4,10 @@ author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
+	"cav_charlie_characters",
+	"A3_Weapons_F_Ammoboxes",
+	"ace_cargo",
+	"Desert",
+	"cav_troops_charlie_weapons",
+	"rhsusf_c_m11xx"
 };

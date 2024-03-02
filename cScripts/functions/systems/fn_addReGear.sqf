@@ -33,7 +33,7 @@ private _regearStatement = {
     [QEGVAR(gear,applyLoadout)] call CBA_fnc_localEvent;
     [[],["You have been rearmed"], [""], [""]] call CBA_fnc_notify;
 };
-private _actionType = if (isPlayer _object) then {1} else {0};
+private _actionType = parseNumber (isPlayer _object);
 
 private _regearAction = ["cScriptsReGearAce", "ReGear", _Icon, _regearStatement, {true}] call ace_interact_menu_fnc_createAction;
 [_object, _actionType, _category, _regearAction] call ace_interact_menu_fnc_addActionToObject;

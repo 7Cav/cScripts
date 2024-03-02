@@ -4,4 +4,8 @@ author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
+	"cav_alpha_characters",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Modules_F_Curator_Respawn",
+	"Desert"
 };

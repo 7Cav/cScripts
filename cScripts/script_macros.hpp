@@ -56,8 +56,8 @@
 #define FORMAT_8(STR,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) format[STR, ARG1, ARG2, ARG3, ARG4, ARG5, ARG6, ARG7, ARG8]
 
 /* Logistics macros */
-#define GET_CONTAINER(BOX) [QUOTE(BOX)] call EFUNC(logistics,getContainer)
-#define GET_CONTAINER_KEYS(BOX) [QUOTE(BOX),true] call EFUNC(logistics,getContainer)
+#define GET_CONTAINER(BOX) [BOX] call EFUNC(logistics,getContainer)
+#define GET_CONTAINER_KEYS(BOX) [BOX,true] call EFUNC(logistics,getContainer)
 
 
 /* LOGGING */

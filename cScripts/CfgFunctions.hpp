@@ -45,6 +45,7 @@ class cScripts {
 
         class doStarterCrateSupplies {};
         class doFieldHospital {};
+        class doSupplyCrate {};
 
         class doEmptyCrate {};
 
@@ -102,7 +103,8 @@ class cScripts {
         class addStagingZone {};
 
         class doStarterCrate {};
-        class doSupplyCrate {};
+
+        class makeAgent {};
     };
     class systems {
         file = "cScripts\functions\systems";
@@ -190,12 +192,16 @@ class cScripts {
         class vehicle_reset {};
         class vehicle_addFlagAction {};
     };
+    class civ {
+        file = "cScripts\functions\civ";
+        class civ_init {};
+        class civ_checkProjectile {};
+        class civ_damage {};
+    };
     class modules {
         file = "cScripts\functions\modules";
         class zenModule_EnableUnitSimulation {};
 
-        class zenModule_CreateFieldHospital {};
-        class zenModule_CreateMedicalCrate {};
         class zenModule_CreateStarterCrate {};
         class zenModule_CreateSupplyCrate {};
 

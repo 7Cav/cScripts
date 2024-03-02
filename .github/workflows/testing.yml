@@ -30,6 +30,10 @@ jobs:
     - name: Check DEBUG_MODE
       if: always()
       run: bash tools/checkDebug.sh
+    - name: Check TODO
+      if: always()
+      run: bash tools/checkTodo.sh
+      continue-on-error: true
     - name: Check for FIXME
       if: always()
       run: bash tools/checkFixme.sh
