@@ -47,7 +47,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-
+[ // Ai setting
+    QEGVAR(Settings,AllowAILoadouts),
+    "CHECKBOX",
+    ["AI Loadouts (Experimental)", "Allow gear system to apply loadouts to AI units as well as player."],
+    [_cScriptSettings, "1; Mission"],
+    false,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 
 //2; Radios
 [ // Enable
