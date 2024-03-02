@@ -56,23 +56,23 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
         case "cav_dragoon_WD_V4": {
             // Vehicle Inventory
             [_vehicle, 
-                GET_CONTAINER(vehicle_strykerDragoon_V4)
+                GET_CONTAINER("vehicle_strykerDragoon_V4")
             ] call FUNC(addCargo);
 
             // Supply Crate
             ["Box_NATO_Equip_F", 
-                GET_CONTAINER(crate_strykerDragoon_resupply), 
+                GET_CONTAINER("crate_strykerDragoon_resupply"), 
                 _vehicle, nil, "Supply Crate"
             ] call FUNC(createCargoCrate);
 
             // 4x 60mm mortars with ammo
             ["Box_Syndicate_WpsLaunch_F", 
-                GET_CONTAINER(crate_strykerDragoon_60mm), 
+                GET_CONTAINER("crate_strykerDragoon_60mm"), 
                 _vehicle, nil, "4x 60mm mortars with ammo"
             ] call FUNC(createCargoCrate);
 
             // Ammo for 2x 82mm mortars
-            private _mortar_ammo_82mm = GET_CONTAINER(crate_strykerDragoon_82mm);
+            private _mortar_ammo_82mm = GET_CONTAINER("crate_strykerDragoon_82mm");
             ["ACE_Box_82mm_Mo_Combo", 
                 _mortar_ammo_82mm, 
                 _vehicle, nil, "Ammo for 2x 82mm mortars"
@@ -84,7 +84,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
             ] call FUNC(createCargoCrate);
 
             ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER(crate_stinger), 
+                GET_CONTAINER("crate_stinger"), 
                 _vehicle, nil, "MANPAD"
             ] call FUNC(createCargoCrate);
         };
@@ -103,17 +103,17 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
 
             // Vehicle Inventory
             [_vehicle, 
-                GET_CONTAINER(vehicle_strykerDragoon)
+                GET_CONTAINER("vehicle_strykerDragoon")
             ] call FUNC(addCargo);
 
             // Supply Crate
             ["Box_NATO_Equip_F", 
-                GET_CONTAINER(crate_strykerDragoon_resupply), 
+                GET_CONTAINER("crate_strykerDragoon_resupply"), 
                 _vehicle, nil, "Resupply Crate"
             ] call FUNC(createCargoCrate);
 
             ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER(crate_stinger), 
+                GET_CONTAINER("crate_stinger"), 
                 _vehicle, nil, "MANPAD"
             ] call FUNC(createCargoCrate);
         };
@@ -124,11 +124,11 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
         case "cav_dragoon_Unarmed_D";
         case "MED": {
             [_vehicle, 
-                GET_CONTAINER(vehicle_medicalAtlas)
+                GET_CONTAINER("vehicle_medicalAtlas")
             ] call FUNC(addCargo);
 
             ["ace_medicalSupplyCrate",
-                GET_CONTAINER(crate_medicalAtlas),
+                GET_CONTAINER("crate_medicalAtlas"),
                 _vehicle, nil, "Medical Supply Crate"
             ] call FUNC(createCargoCrate);
         };
@@ -137,17 +137,17 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
         default {
             // Vehicle Inventory
             [_vehicle, 
-                GET_CONTAINER(vehicle_strykerDragoon)
+                GET_CONTAINER("vehicle_strykerDragoon")
             ] call FUNC(addCargo);
 
             // Supply Crate
             ["Box_NATO_Equip_F", 
-                GET_CONTAINER(crate_strykerDragoon_resupply), 
+                GET_CONTAINER("crate_strykerDragoon_resupply"), 
                 _vehicle, nil, "Resupply Crate"
             ] call FUNC(createCargoCrate);
             
             ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER(crate_stinger), 
+                GET_CONTAINER("crate_stinger"), 
                 _vehicle, nil, "MANPAD"
             ] call FUNC(createCargoCrate);
         };
@@ -177,11 +177,11 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
         case "rhsusf_m998_w_2dr_fulltop";
         case "MED": {
             [_vehicle, 
-                GET_CONTAINER(vehicle_medicalAtlas)
+                GET_CONTAINER("vehicle_medicalAtlas")
             ] call FUNC(addCargo);
 
             ["ace_medicalSupplyCrate",
-                GET_CONTAINER(crate_medicalAtlas),
+                GET_CONTAINER("crate_medicalAtlas"),
                 _vehicle
             ] call FUNC(createCargoCrate);
         };
@@ -190,12 +190,12 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
         case "rhsusf_m1165a1_gmv_m2_m240_socom_w";
         case "rhsusf_m1165a1_gmv_mk19_m240_socom_w": {
             [_vehicle, 
-                GET_CONTAINER(vehicle_HMMWV)
+                GET_CONTAINER("vehicle_HMMWV")
             ] call FUNC(addCargo);
         };
         default {
             [_vehicle, 
-                GET_CONTAINER(vehicle_HMMWV)
+                GET_CONTAINER("vehicle_HMMWV")
             ] call FUNC(addCargo);
         };
     };
@@ -211,11 +211,11 @@ if (_vehicle iskindOf "Truck_01_base_F") then {
         case "rhsusf_M1230a1_usarmy_d";
         case "MED": {
             [_vehicle, 
-                GET_CONTAINER(vehicle_medicalAtlas)
+                GET_CONTAINER("vehicle_medicalAtlas")
             ] call FUNC(addCargo);
 
             ["ace_medicalSupplyCrate",
-                GET_CONTAINER(crate_medicalAtlas),
+                GET_CONTAINER("crate_medicalAtlas"),
                 _vehicle
             ] call FUNC(createCargoCrate);
         };
@@ -237,17 +237,17 @@ if (_vehicle iskindOf "rhsusf_stryker_base") then {
         case "rhsusf_stryker_m1126_m2_wd";
         case "MED": {
             [_vehicle, 
-                GET_CONTAINER(vehicle_medicalAtlas)
+                GET_CONTAINER("vehicle_medicalAtlas")
             ] call FUNC(addCargo);
 
             ["ace_medicalSupplyCrate",
-                GET_CONTAINER(crate_medicalAtlas),
+                GET_CONTAINER("crate_medicalAtlas"),
                 _vehicle
             ] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, 
-                GET_CONTAINER(vehicle_strykerDragoon)
+                GET_CONTAINER("vehicle_strykerDragoon")
             ] call FUNC(addCargo);
         };
     };
@@ -258,7 +258,7 @@ if (_vehicle iskindOf "RHS_M2A2_Base") then {
     [_vehicle, 4, -1, false, false] call FUNC(setCargoAttributes);
 
     [_vehicle, 
-        GET_CONTAINER(vehicle_bradley)
+        GET_CONTAINER("vehicle_bradley")
     ] call FUNC(addCargo);
 
     ["ACE_Track", _vehicle, true] call ace_cargo_fnc_loadItem;
@@ -269,7 +269,7 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     ["ACE_Track", _vehicle, true] call ace_cargo_fnc_loadItem;
 
     [_vehicle, 
-        GET_CONTAINER(vehicle_bradley)
+        GET_CONTAINER("vehicle_bradley")
     ] call FUNC(addCargo);
 };
 
@@ -305,17 +305,17 @@ if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
         case "RHS_UH60M_MEV";
         case "MED": {
             [_vehicle, 
-                GET_CONTAINER(vehicle_medicalAtlas)
+                GET_CONTAINER("vehicle_medicalAtlas")
             ] call FUNC(addCargo);
 
             ["ace_medicalSupplyCrate",
-                GET_CONTAINER(crate_medicalAtlas),
+                GET_CONTAINER("crate_medicalAtlas"),
                 _vehicle
             ] call FUNC(createCargoCrate);
         };
         default {
             [_vehicle, 
-                GET_CONTAINER(vehicle_heliTransport)
+                GET_CONTAINER("vehicle_heliTransport")
             ] call FUNC(addCargo);
         };
     };
@@ -323,7 +323,7 @@ if (_vehicle iskindOf "Heli_Transport_01_base_F") then {
 
 if (_vehicle iskindOf "Heli_Transport_02_base_F") then {
     [_vehicle, 
-        GET_CONTAINER(vehicle_heliTransport)
+        GET_CONTAINER("vehicle_heliTransport")
     ] call FUNC(addCargo);
 };
 
@@ -335,7 +335,7 @@ if (_vehicle iskindOf "TF373_SOAR_MH47G_Base") then {
 
 if (_vehicle iskindOf "vtx_MH60M") then {
     [_vehicle, 
-        GET_CONTAINER(vehicle_heliTransport)
+        GET_CONTAINER("vehicle_heliTransport")
     ] call FUNC(addCargo);
 };
 
