@@ -194,7 +194,7 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
         case "rhsusf_m1165a1_gmv_mk19_m240_socom_d";
         case "rhsusf_m1165a1_gmv_mk19_m240_socom_w": {
             [_vehicle, 
-                GET_CONTAINER(vehicle_HMMWV_Weapons)
+                GET_CONTAINER("vehicle_HMMWV_Weapons")
             ] call FUNC(addCargo);
         };
         default {
