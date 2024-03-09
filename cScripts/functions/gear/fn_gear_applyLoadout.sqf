@@ -29,6 +29,7 @@ private _loadConfig = _loadout isEqualType "";
 // Check Scope
 private _scope = 1;
 if (_loadConfig) then {
+    // FIXME: Check here if the loadout exist in CfgVehilce >> _loadout if non exist in mission use that.
     _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
     _scope = getNumber (_config >> "scope");
     if (_scope == 0) exitWith {
