@@ -1,13 +1,13 @@
 version=54;
-name="1.VIKING_Platoon_Deployment_vTEST";
+name="3.MISFIT_Platoon_vTEST";
 author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"cav_troops_bravo_viking",
+	"cav_charlie_characters",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
 	"Desert",
-	"cav_vehicles_dragoon",
-	"cav_bravo_characters"
+	"cav_troops_charlie_weapons",
+	"rhsusf_c_m11xx"
 };
