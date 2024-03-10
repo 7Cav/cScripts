@@ -756,6 +756,7 @@ private _dataArray = [
     ["crate_resupply_general", [
         // Rifle Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",70],
+        ["rhsusf_20Rnd_762x51_SR25_m118_special_Mag",5],
         
         // MG Ammo
         ["rhsusf_200rnd_556x45_mixed_soft_pouch",15],
@@ -763,7 +764,7 @@ private _dataArray = [
 
         // AT
         ["rhs_fgm148_magazine_AT",3],
-        ["MRAWS_HEAT_F",4],
+        ["MRAWS_HEAT_F",5],
         ["MRAWS_HE_F",4],
         ["rhs_weap_M136_hedp",8],
         
@@ -778,10 +779,10 @@ private _dataArray = [
         ["ACE_40mm_Flare_IR",10],
 
         // Mortar Ammo
-        ["NDS_M_6Rnd_60mm_HE_0",5],
-        ["NDS_M_6Rnd_60mm_HE",5],
+        ["NDS_M_6Rnd_60mm_HE_0",3],
+        ["NDS_M_6Rnd_60mm_HE",7],
         ["NDS_M_6Rnd_60mm_SMOKE",2],
-        ["NDS_M_6Rnd_60mm_ILLUM",2],
+        ["NDS_M_6Rnd_60mm_ILLUM",1],
         
         // Offensive/Defensive Hand Grenades
         ["HandGrenade",20],
