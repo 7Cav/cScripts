@@ -759,8 +759,8 @@ private _dataArray = [
         ["rhsusf_20Rnd_762x51_SR25_m118_special_Mag",7],
         
         // MG Ammo
-        ["rhsusf_200rnd_556x45_mixed_soft_pouch",19],
-        ["rhsusf_100Rnd_762x51_m62_tracer",15],
+        ["rhsusf_200rnd_556x45_mixed_soft_pouch",16],
+        ["rhsusf_100Rnd_762x51_m62_tracer",19],
 
         // AT
         ["rhs_fgm148_magazine_AT",3],
