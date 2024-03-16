@@ -211,6 +211,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
+[ // Increased fuel usage
+    QEGVAR(Settings,enableIncreasedFuelUsage),
+    "CHECKBOX",
+    ["Increased Fuel Usage", "Enables increased fuel usage for vehicles"],
+    [_cScriptSettings, "5; Vehicle"],
+    false,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 [ // Factions
     QEGVAR(Settings,vehicleFactions),
     "EDITBOX",
