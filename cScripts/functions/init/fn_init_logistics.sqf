@@ -1463,6 +1463,7 @@ private _dataArray = [
         ["kat_chestSeal",0],
         ["ACE_packingBandage",0]
         ["ACE_quikclot",0],
+        ["ACE_splint",0],
         ["ACE_tourniquet",0],
         ["kat_Painkiller",0],
         ["kat_PainkillerItem",0],
