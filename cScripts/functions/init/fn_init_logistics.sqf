@@ -1459,8 +1459,9 @@ private _dataArray = [
         ["USP_PACK_HYDRATION", 0],
         
         // Medical
-        ["ACE_EarPlugs",10],
+        ["ACE_EarPlugs",0],
         ["kat_chestSeal",0],
+        ["ACE_packingBandage",0]
         ["ACE_quikclot",0],
         ["ACE_tourniquet",0],
         ["kat_Painkiller",0],
