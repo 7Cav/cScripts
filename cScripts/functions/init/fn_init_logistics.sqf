@@ -1567,6 +1567,7 @@ private _dataArray = [
         ["rhs_fim92_mag",0],
 
         // Tools and Items
+        ["ACE_PlottingBoard",0],
         ["ACE_Vector", 0]
     ]],
     ["arsenal_role_rotarypilot", [
