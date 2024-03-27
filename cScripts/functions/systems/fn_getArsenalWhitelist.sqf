@@ -37,8 +37,8 @@ private _companyItems = switch (_company) do {
 };
 
 
-private _medicLevel = getText (missionConfigFile >> "CfgLoadouts" >> _classname >> "medLevel");
-private _medContainer = format ["arsenal_med_%1",_medicLevel];
+private _medLevel = getText (missionConfigFile >> "CfgLoadouts" >> _classname >> "medLevel");
+private _medContainer = format ["arsenal_med_%1",_medLevel];
 private _medicGear = GET_CONTAINER_KEYS(_medContainer);
 
 
