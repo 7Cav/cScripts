@@ -318,7 +318,7 @@ private _dataArray = [
         ["ACE_Chemlight_HiBlue",0],
         ["ACE_Chemlight_HiRed",0],
 
-         // Medical
+        // Medical
         ["ACE_EarPlugs",10],
         ["kat_chestSeal",0],
         ["ACE_quikclot",0],
