@@ -37,8 +37,9 @@ private _companyItems = switch (_company) do {
 };
 
 
-private _medicRole = getNumber (missionConfigFile >> "CfgLoadouts" >> _classname >> "abilityMedic");
-private _medicGear = if (_medicRole >= 1) then {GET_CONTAINER_KEYS("bravo_company_atlas");} else {[]};
+private _medicLevel = getText (missionConfigFile >> "CfgLoadouts" >> _classname >> "medLevel");
+private _medContainer = format ["arsenal_med_%1",_medicLevel];
+private _medicGear = GET_CONTAINER_KEYS(_medContainer);
 
 
 private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {

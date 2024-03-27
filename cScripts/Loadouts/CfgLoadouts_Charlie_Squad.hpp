@@ -26,6 +26,7 @@ class Cav_B_C_PlatoonMedic_F: Cav_B_C_Officer_F {
     loadout = [["rhs_weap_m4a1_blockII","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],""],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_tourniquet",10],["ACE_EarPlugs",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_IR_Strobe_Item",2],["ACE_CableTie",2],["ACE_epinephrine",6],["kat_PenthroxItem",4],["kat_Painkiller",2,10],["kat_Carbonate",2,10],["ACE_Chemlight_IR",2,1]]],["USP_CRYE_CPC_MEDIC_BELT_MC",[["ACE_surgicalKit",1],["kat_IV_16",15],["kat_amiodarone",5],["kat_atropine",5],["ACE_adenosine",3],["kat_chestSeal",10],["kat_EACA",10],["kat_fentanyl",5],["kat_ketamine",5],["kat_larynx",10],["kat_lidocaine",10],["kat_nalbuphine",10],["kat_naloxone",5],["kat_nitroglycerin",10],["kat_norepinephrine",10],["kat_phenylephrine",10],["kat_stethoscope",1],["kat_Pulseoximeter",5],["kat_IO_FAST",5],["kat_aatKit",5],["ACE_splint",2],["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",7,30],["SmokeShellBlue",2,1],["SmokeShellPurple",1,1],["kat_Penthrox",5,10]]],["USP_TACTICAL_PACK",[["ACE_plasmaIV",5],["ACE_plasmaIV_500",4],["ACE_salineIV",1],["ACE_elasticBandage",30],["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_salineIV_250",2],["USP_PVS15",1],["kat_accuvac",1],["ACE_splint",6]]],"USP_OPSCORE_FASTMTC_CTW","USP_MFRAME_BLK2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     insignia = "cav_insignia_specialized_cls";
     abilityMedic = 2;
+    medLevel = "pltmedic";
     role = "medic";
     icon = "iconManMedic";
 };
@@ -78,6 +79,7 @@ class Cav_B_C_CombatLifeSaver_F: Cav_B_Charlie_base_F {
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_splint",2],["ACE_EarPlugs",1],["ACE_Chemlight_IR",2,1]]],["USP_CRYE_JPC_DMB",[["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1],["SmokeShellBlue",1,1],["SmokeShellPurple",1,1]]],["USP_DELTA_BAG_MC",[["USP_PVS15",1],["ACE_packingBandage",40],["ACE_quikclot",40],["ACE_EntrenchingTool",1],["ACE_splint",8],["ACE_tourniquet",12],["kat_chestSeal",10],["ACE_epinephrine",3],["kat_guedel",10],["kat_ncdKit",5],["kat_pocketBVM",1],["kat_accuvac",1],["kat_phenylephrineAuto",3],["kat_CarbonateItem",1],["kat_Painkiller",7,10]]],"USP_OPSCORE_FASTMTC_GSW","USP_MFRAME_TAN",[],["ItemMap","","","ItemCompass","ACE_Altimeter",""]];    insignia = "cav_insignia_specialized_cls";
     abilityMedic = 1;
     icon = "iconManMedic";
+    medLevel = "cls";
 };
 class Cav_B_C_Marksman_F_Local: Cav_B_Charlie_base_F {
     displayName = "Designated Marksman";

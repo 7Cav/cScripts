@@ -15,6 +15,7 @@ class CommonBlufor {
     //preLoadout = "";
     //postLoadout = "";
 
+    //medLevel = "";
     //role = "";
     //icon = "";
 };
@@ -34,6 +35,7 @@ class Cav_B_Alpha_base_F: Cav_B_Seventh_Cavalry_Base_F {
     insignia = "cav_insignia_specialized_pegasus";
     preLoadout = "";
     postLoadout = "";
+    medLevel = "trooper";
 };
 
 class Cav_B_Bravo_base_F: Cav_B_Seventh_Cavalry_Base_F {
@@ -44,6 +46,7 @@ class Cav_B_Bravo_base_F: Cav_B_Seventh_Cavalry_Base_F {
     
     preLoadout = "";
     postLoadout = "";
+    medLevel = "trooper";
 };
 
 class Cav_B_Charlie_base_F: Cav_B_Seventh_Cavalry_Base_F {
@@ -54,4 +57,5 @@ class Cav_B_Charlie_base_F: Cav_B_Seventh_Cavalry_Base_F {
 
     preLoadout = "";
     postLoadout = "";
+    medLevel = "trooper";
 };
