@@ -77,6 +77,7 @@ class Cav_B_C_CombatLifeSaver_F: Cav_B_Charlie_base_F {
     category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_splint",2],["ACE_EarPlugs",1],["ACE_Chemlight_IR",2,1]]],["USP_CRYE_JPC_DMB",[["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1],["SmokeShellBlue",1,1],["SmokeShellPurple",1,1]]],["USP_DELTA_BAG_MC",[["USP_PVS15",1],["ACE_packingBandage",40],["ACE_quikclot",40],["ACE_EntrenchingTool",1],["ACE_splint",8],["ACE_tourniquet",12],["kat_chestSeal",10],["ACE_epinephrine",3],["kat_guedel",10],["kat_ncdKit",5],["kat_pocketBVM",1],["kat_accuvac",1],["kat_phenylephrineAuto",3],["kat_CarbonateItem",1],["kat_Painkiller",7,10]]],"USP_OPSCORE_FASTMTC_GSW","USP_MFRAME_TAN",[],["ItemMap","","","ItemCompass","ACE_Altimeter",""]];    insignia = "cav_insignia_specialized_cls";
     abilityMedic = 1;
+    role = "cls";
     icon = "iconManMedic";
 };
 class Cav_B_C_Marksman_F_Local: Cav_B_Charlie_base_F {
