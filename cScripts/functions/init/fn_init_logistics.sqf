@@ -1461,15 +1461,24 @@ private _dataArray = [
         
         // Medical
         ["ACE_EarPlugs",0],
+        
+        // Airway Management and Respiration
         ["kat_chestSeal",0],
-        ["ACE_packingBandage",0]
-        ["ACE_quikclot",0],
-        ["ACE_splint",0],
-        ["ACE_tourniquet",0],
+
+        // Bandages and Stitching
+        ["ACE_packingBandage",0],
+
+        //Pills and Inhalants
         ["kat_Painkiller",0],
         ["kat_PainkillerItem",0],
 
-        // Common Gear
+        // Massive Hemorrhage Control
+        ["ACE_tourniquet",0],
+
+        // Splints
+        ["ACE_splint",0],
+
+        // Night Gear
         ["ACE_IR_Strobe_Item",0]
     ]],
 
@@ -1668,6 +1677,218 @@ private _dataArray = [
         ["USP_TACTICAL_PACK_MCB_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
+    ["arsenal_role_doctor",[
+        // AEDs
+        ["kat_AED",0],
+        ["kat_X_AED",0],
+
+        // Airway Management and Respiration
+        ["kat_aatKit",0],
+        ["kat_accuvac",0],
+        ["kat_BVM",0],
+        ["kat_chestSeal",0],
+        ["kat_guedel",0],
+        ["kat_larynx",0],
+        ["kat_ncdKit",0],
+        ["kat_pocketBVM",0],
+
+        // Autoinjectors
+        ["ACE_adenosine",0],
+        ["ACE_epinephrine",0],
+        ["ACE_morphine",0],
+        ["kat_phenylephrineAuto",0],
+
+        // Bandages and Stitching
+        ["ACE_elasticBandage",0],
+        ["ACE_packingBandage",0],
+        ["ACE_quikclot",0],
+        ["ACE_surgicalKit",0],
+
+        // Diagnostic Tools
+        ["kat_Pulseoximeter",0],
+        ["kat_ultrasound",0],
+        ["kat_stethoscope",0],
+
+        // Fluids
+        ["ACE_bloodIV",0],
+        ["ACE_bloodIV_250",0],
+        ["ACE_bloodIV_500",0],
+        ["ACE_plasmaIV",0],
+        ["ACE_plasmaIV_250",0],
+        ["ACE_plasmaIV_500",0],
+        ["ACE_salineIV",0],
+        ["ACE_salineIV_250",0],
+        ["ACE_salineIV_500",0],
+
+        //Pills and Inhalants
+        ["kat_Carbonate",0],
+        ["kat_CarbonateItem",0],
+        ["kat_naloxone",0],
+        ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
+        ["kat_PenthroxItem",0],
+
+        // Massive Hemorrhage Control
+        ["kat_reboa",0],
+        ["ACE_tourniquet",0],
+
+        //--------------------------
+        // Catheters and Medication
+        //--------------------------
+
+        // Catheters
+        ["kat_IV_16",0],
+        ["kat_IO_FAST",0],
+    
+        // Analgesic Medication
+        ["kat_fentanyl",0],
+        ["kat_ketamine",0],
+        ["kat_nalbuphine",0],
+
+        // BP Medication
+        ["kat_nitroglycerin",0],
+        ["kat_norepinephrine",0],
+        ["kat_phenylephrine",0],
+        ["kat_atropine",0],
+        
+        // Cardiac resuscitation
+        ["kat_amiodarone",0],
+
+        // Hemorrhage control
+        ["kat_EACA",0],
+        ["kat_TXA",0],
+
+        // Surgical Medication
+        ["kat_etomidate",0],
+        ["kat_flumazenil",0],
+        ["kat_lidocaine",0],
+        ["kat_lorazepam",0],
+        //--------------------------
+
+        //--------------------------
+        // Surgery and Fractures
+        //--------------------------
+
+        // Debridement
+        ["kat_vacuum",0],
+
+        // Splints
+        ["ACE_splint",0],
+
+        // Surgical Equipment
+        ["kat_clamp",0],
+        ["kat_plate",0],
+        ["kat_retractor",0],
+        ["kat_scalpel",0]
+        //--------------------------
+    ]],
+    ["arsenal_role_medic",[
+        // Airway Management and Respiration
+        ["kat_accuvac",0],
+        ["kat_chestSeal",0],
+        ["kat_guedel",0],
+        ["kat_ncdKit",0],
+        ["kat_pocketBVM",0],
+
+        // Autoinjectors
+        ["ACE_adenosine",0],
+        ["ACE_epinephrine",0],
+        ["ACE_morphine",0],
+        ["kat_phenylephrineAuto",0],
+
+        // Bandages and Stitching
+        ["ACE_elasticBandage",0],
+        ["ACE_packingBandage",0],
+        ["ACE_quikclot",0],
+        ["ACE_surgicalKit",0],
+
+        // Diagnostic Tools
+        ["kat_Pulseoximeter",0],
+        ["kat_stethoscope",0],
+
+        // Fluids
+        ["ACE_bloodIV",0],
+        ["ACE_bloodIV_250",0],
+        ["ACE_bloodIV_500",0],
+        ["ACE_plasmaIV",0],
+        ["ACE_plasmaIV_250",0],
+        ["ACE_plasmaIV_500",0],
+        ["ACE_salineIV",0],
+        ["ACE_salineIV_250",0],
+        ["ACE_salineIV_500",0],
+
+        //Pills and Inhalants
+        ["kat_Carbonate",0],
+        ["kat_CarbonateItem",0],
+        ["kat_naloxone",0],
+        ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
+        ["kat_PenthroxItem",0],
+
+        // Massive Hemorrhage Control
+        ["ACE_tourniquet",0],
+
+        //--------------------------
+        // Catheters and Medication
+        //--------------------------
+
+        // Catheters
+        ["kat_IV_16",0],
+        ["kat_IO_FAST",0],
+    
+        // Analgesic Medication
+        ["kat_fentanyl",0],
+        ["kat_ketamine",0],
+        ["kat_nalbuphine",0],
+
+        // BP Medication
+        ["kat_nitroglycerin",0],
+        ["kat_norepinephrine",0],
+        ["kat_phenylephrine",0],
+        ["kat_atropine",0],
+        
+        // Cardiac resuscitation
+        ["kat_amiodarone",0],
+
+        // Hemorrhage control
+        ["kat_EACA",0],
+        ["kat_TXA",0],
+
+        // Splints
+        ["ACE_splint",0]
+        //--------------------------
+    ]],
+    ["arsenal_role_cls",[
+        // Airway Management and Respiration
+        ["kat_accuvac",0],
+        ["kat_chestSeal",0],
+        ["kat_guedel",0],
+        ["kat_ncdKit",0],
+        ["kat_pocketBVM",0],
+
+        // Autoinjectors
+        ["ACE_epinephrine",0],
+        ["kat_phenylephrineAuto",0],
+
+        // Bandages and Stitching
+        ["ACE_packingBandage",0],
+        ["ACE_quikclot",0],
+
+        //Pills and Inhalants
+        ["kat_Carbonate",0],
+        ["kat_CarbonateItem",0],
+        ["kat_Painkiller",0],
+        ["kat_PainkillerItem",0],
+        ["kat_PenthroxItem",0],
+
+        // Massive Hemorrhage Control
+        ["ACE_tourniquet",0],
+
+        // Splints
+        ["ACE_splint",0]
+        //--------------------------
+    ]],
+
     // Weapons
     ["arsenal_weap_ugl", [
         ["rhs_weap_m4a1_m320", 0],
@@ -1904,252 +2125,6 @@ private _dataArray = [
         ["rhsusf_acc_wmx_bk", 0],
         ["acc_flashlight", 0]
     ]]
-
-    // Medical
-    ["arsenal_med_atlas",[
-        // AEDs
-        ["kat_AED",0],
-        ["kat_X_AED",0],
-
-        // Airway Management and Respiration
-        ["kat_aatKit",0],
-        ["kat_accuvac",0],
-        ["kat_BVM",0],
-        ["kat_chestSeal",0],
-        ["kat_guedel",0],
-        ["kat_larynx",0],
-        ["kat_ncdKit",0],
-        ["kat_pocketBVM",0],
-
-        // Autoinjectors
-        ["ACE_adenosine",0],
-        ["ACE_epinephrine",0],
-        ["ACE_morphine",0],
-        ["kat_phenylephrineAuto",0],
-
-        // Bandages and Stitching
-        ["ACE_elasticBandage",0],
-        ["ACE_packingBandage",0],
-        ["ACE_quikclot",0],
-        ["ACE_surgicalKit",0],
-
-        // Diagnostic Tools
-        ["kat_Pulseoximeter",0],
-        ["kat_ultrasound",0],
-        ["kat_stethoscope",0],
-
-        // Fluids
-        ["ACE_bloodIV",0],
-        ["ACE_bloodIV_250",0],
-        ["ACE_bloodIV_500",0],
-        ["ACE_plasmaIV",0],
-        ["ACE_plasmaIV_250",0],
-        ["ACE_plasmaIV_500",0],
-        ["ACE_salineIV",0],
-        ["ACE_salineIV_250",0],
-        ["ACE_salineIV_500",0],
-
-        //Pills and Inhalants
-        ["kat_Carbonate",0],
-        ["kat_CarbonateItem",0],
-        ["kat_naloxone",0],
-        ["kat_Painkiller",0],
-        ["kat_PainkillerItem",0],
-        ["kat_PenthroxItem",0],
-
-        // Massive Hemorrhage Control
-        ["kat_reboa",0],
-        ["ACE_tourniquet",0],
-
-        //--------------------------
-        // Catheters and Medication
-        //--------------------------
-
-        // Catheters
-        ["kat_IV_16",0],
-        ["kat_IO_FAST",0],
-    
-        // Analgesic Medication
-        ["kat_fentanyl",0],
-        ["kat_ketamine",0],
-        ["kat_nalbuphine",0],
-
-        // BP Medication
-        ["kat_nitroglycerin",0],
-        ["kat_norepinephrine",0],
-        ["kat_phenylephrine",0],
-        ["kat_atropine",0],
-        
-        // Cardiac resuscitation
-        ["kat_amiodarone",0],
-
-        // Hemorrhage control
-        ["kat_EACA",0],
-        ["kat_TXA",0],
-
-        // Surgical Medication
-        ["kat_etomidate",0],
-        ["kat_flumazenil",0],
-        ["kat_lidocaine",0],
-        ["kat_lorazepam",0],
-        //--------------------------
-
-        //--------------------------
-        // Surgery and Fractures
-        //--------------------------
-
-        // Debridement
-        ["kat_vacuum",0],
-
-        // Splints
-        ["ACE_splint",0],
-
-        // Surgical Equipment
-        ["kat_clamp",0],
-        ["kat_plate",0],
-        ["kat_retractor",0],
-        ["kat_scalpel",0],
-        //--------------------------
-    ]];
-    ["arsenal_med_pltmedic",[
-        // Airway Management and Respiration
-        ["kat_accuvac",0],
-        ["kat_chestSeal",0],
-        ["kat_guedel",0],
-        ["kat_ncdKit",0],
-        ["kat_pocketBVM",0],
-
-        // Autoinjectors
-        ["ACE_adenosine",0],
-        ["ACE_epinephrine",0],
-        ["ACE_morphine",0],
-        ["kat_phenylephrineAuto",0],
-
-        // Bandages and Stitching
-        ["ACE_elasticBandage",0],
-        ["ACE_packingBandage",0],
-        ["ACE_quikclot",0],
-        ["ACE_surgicalKit",0],
-
-        // Diagnostic Tools
-        ["kat_Pulseoximeter",0],
-        ["kat_stethoscope",0],
-
-        // Fluids
-        ["ACE_bloodIV",0],
-        ["ACE_bloodIV_250",0],
-        ["ACE_bloodIV_500",0],
-        ["ACE_plasmaIV",0],
-        ["ACE_plasmaIV_250",0],
-        ["ACE_plasmaIV_500",0],
-        ["ACE_salineIV",0],
-        ["ACE_salineIV_250",0],
-        ["ACE_salineIV_500",0],
-
-        //Pills and Inhalants
-        ["kat_Carbonate",0],
-        ["kat_CarbonateItem",0],
-        ["kat_naloxone",0],
-        ["kat_Painkiller",0],
-        ["kat_PainkillerItem",0],
-        ["kat_PenthroxItem",0],
-
-        // Massive Hemorrhage Control
-        ["ACE_tourniquet",0],
-
-        //--------------------------
-        // Catheters and Medication
-        //--------------------------
-
-        // Catheters
-        ["kat_IV_16",0],
-        ["kat_IO_FAST",0],
-    
-        // Analgesic Medication
-        ["kat_fentanyl",0],
-        ["kat_ketamine",0],
-        ["kat_nalbuphine",0],
-
-        // BP Medication
-        ["kat_nitroglycerin",0],
-        ["kat_norepinephrine",0],
-        ["kat_phenylephrine",0],
-        ["kat_atropine",0],
-        
-        // Cardiac resuscitation
-        ["kat_amiodarone",0],
-
-        // Hemorrhage control
-        ["kat_EACA",0],
-        ["kat_TXA",0],
-
-        //--------------------------
-        // Surgery and Fractures
-        //--------------------------
-
-        // Splints
-        ["ACE_splint",0]
-        //--------------------------
-
-    ]];
-    ["arsenal_med_cls",[
-        // Airway Management and Respiration
-        ["kat_accuvac",0],
-        ["kat_chestSeal",0],
-        ["kat_guedel",0],
-        ["kat_ncdKit",0],
-        ["kat_pocketBVM",0],
-
-        // Autoinjectors
-        ["ACE_epinephrine",0],
-        ["kat_phenylephrineAuto",0],
-
-        // Bandages and Stitching
-        ["ACE_packingBandage",0],
-        ["ACE_quikclot",0],
-
-        //Pills and Inhalants
-        ["kat_Carbonate",0],
-        ["kat_CarbonateItem",0],
-        ["kat_Painkiller",0],
-        ["kat_PainkillerItem",0],
-        ["kat_PenthroxItem",0],
-
-        // Massive Hemorrhage Control
-        ["ACE_tourniquet",0],
-
-        //--------------------------
-        // Surgery and Fractures
-        //--------------------------
-
-        // Splints
-        ["ACE_splint",0]
-        //--------------------------
-
-    ]];
-    ["arsenal_med_trooper",[
-        // Airway Management and Respiration
-        ["kat_chestSeal",0],
-
-        // Bandages and Stitching
-        ["ACE_packingBandage",0],
-
-        //Pills and Inhalants
-        ["kat_Painkiller",0],
-        ["kat_PainkillerItem",0],
-
-        // Massive Hemorrhage Control
-        ["ACE_tourniquet",0],
-
-        //--------------------------
-        // Surgery and Fractures
-        //--------------------------
-
-        // Splints
-        ["ACE_splint",0]
-        //--------------------------
-    ]];
-
 ];
 
 private _return = createHashMapFromArray _dataArray;

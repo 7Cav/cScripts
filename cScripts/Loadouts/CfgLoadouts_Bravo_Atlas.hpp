@@ -3,9 +3,8 @@ class Cav_B_Bravo_Atlas_base_F: Cav_B_Bravo_base_F {
     category[] += {"cScripts_Loadout_Cat_Bravo_Atlas"};
     insignia = "cav_insignia_Specialized_Medic0";
     abilityMedic = 2;
-    medLevel = "atlas";
     
-    role = "medic";
+    role = "doctor";
     icon = "iconManMedic";
 };
 

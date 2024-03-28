@@ -3,7 +3,6 @@ class Cav_B_Training_base_F: Cav_B_Seventh_Cavalry_Base_F {
     scope = 0;
 
     role = "training";
-    medLevel = "trooper";
 };
 
 class Cav_B_Training_Cadre_F: Cav_B_Training_base_F {
