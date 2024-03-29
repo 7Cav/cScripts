@@ -626,12 +626,27 @@ private _dataArray = [
         ["kat_AED",1],
         ["kat_X_AED",1],
         
+        // Airway Management and Respiration
+        ["kat_aatKit",10],
+        ["kat_accuvac",2],
+        ["kat_BVM",4],
+        ["kat_chestSeal",20],
+        ["kat_larynx",10],
+        
+        // Autoinjectors
+        ["ACE_morphine",20],
+        ["ACE_epinephrine",40],
+        ["kat_phenylephrineAuto",40],
+
         // Bandages
         ["ACE_elasticBandage",150],
         ["ACE_packingBandage",90],
         ["ACE_quikclot",150],
-        ["kat_chestSeal",20],
-        ["kat_guedel",10],
+
+        // Diagnostic Tools
+        ["kat_Pulseoximeter",12],
+        ["kat_ultrasound",2],
+        ["kat_stethoscope",4],
         
         // Tourniquets
         ["ACE_tourniquet",20],
@@ -645,6 +660,15 @@ private _dataArray = [
         ["kat_IO_FAST",20],
         ["kat_IV_16",40],
         
+        // Analgesic Medication
+        ["kat_fentanyl",10],
+        ["kat_ketamine",10],
+        ["kat_nalbuphine",40],
+
+        // Cardiac resuscitation
+        ["kat_amiodarone",10],
+        ["kat_atropine",10],
+
         // Blood Pressure Medication
         ["kat_nitroglycerin",40],
         ["kat_phenylephrine",40],
@@ -654,15 +678,11 @@ private _dataArray = [
         ["kat_EACA",40],
         ["kat_TXA",40],
         
-        // Oral Medication
+        // Oral Medication & 
+        ["kat_naloxone",20],
         ["kat_carbonate",20],
         ["kat_Painkiller",40],
-        
-        // Autoinjector & Nasal Spray Medication
-        ["kat_naloxone",20],
-        ["ACE_morphine",20],
-        ["ACE_epinephrine",40],
-        ["kat_phenylephrine_inject",40],
+        ["kat_PenthroxItem",10],
         
         // Splints
         ["ACE_splint",40],
@@ -673,6 +693,7 @@ private _dataArray = [
         ["kat_clamp",4],
         ["kat_retractor",4],
         ["kat_vacuum",1],
+        ["kat_reboa",12],
         
         // Surgical Medication
         ["kat_lidocaine",20],
@@ -681,7 +702,7 @@ private _dataArray = [
         ["kat_flumazenil",10],
         
         // Surgical Kits
-        ["ACE_surgicalKit",8],
+        ["ACE_surgicalKit",4],
         
         // Body Bags
         ["ACE_bodyBag",10],
