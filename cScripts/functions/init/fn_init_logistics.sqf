@@ -1919,7 +1919,7 @@ private _dataArray = [
         ["rhs_fgm148_magazine_AT",0],
         ["rhs_fim92_mag",0]
     ]],
-    ["arsenal_weap_sidarm",[
+    ["arsenal_weap_sidearm",[
         ["rhsusf_weap_glock17g4",0],
         ["rhsusf_weap_m1911a1",0],
         ["rhsusf_mag_7x45acp_MHP",0],
