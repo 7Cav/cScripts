@@ -78,8 +78,7 @@ private _handgunWeapon = if (!isNil{_loadout#2#0}) then {_loadout#2#0} else {""}
 private _handgunSpecific = switch (true) do {
     case (_handgunWeapon isKindOf ['rhs_weap_M320', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_ugl");};
     case (_handgunWeapon isKindOf ['rhsusf_weap_glock17g4', configFile >> 'CfgWeapons']
-            || _handgunWeapon isKindOf ['rhsusf_weap_m1911a1', configFile >> 'CfgWeapons']
-            || _handgunWeapon isKindOf ['rhsusf_weap_m9', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_sidearm");};
+            || _handgunWeapon isKindOf ['rhsusf_weap_m1911a1', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_sidearm");};
     default {[]};
 };
 
