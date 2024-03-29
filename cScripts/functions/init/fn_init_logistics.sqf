@@ -1511,6 +1511,7 @@ private _dataArray = [
         ["ACE_HuntIR_monitor", 0],
         ["ItemAndroid", 0],
         ["rhsusf_weap_glock17g4", 0],
+        ["rhsusf_mag_17Rnd_9x19_FMJ",0],
         ["USP_VEST_STRANDHOGG2_MC", 0],
         ["USP_VEST_STRANDHOGG2_CBR", 0],
         ["ACE_Vector", 0],
@@ -1531,6 +1532,7 @@ private _dataArray = [
         ["ACE_microDAGR", 0],
         ["ACE_MX2A", 0],
         ["rhsusf_weap_glock17g4", 0],
+        ["rhsusf_mag_17Rnd_9x19_FMJ",0],
         ["USP_VEST_STRANDHOGG2_MC", 0],
         ["USP_VEST_STRANDHOGG2_CBR", 0],
         ["ACE_HuntIR_monitor", 0],
@@ -1914,8 +1916,7 @@ private _dataArray = [
         ["rhsusf_weap_glock17g4",0],
         ["rhsusf_weap_m1911a1",0],
         ["rhsusf_mag_7x45acp_MHP",0],
-        ["rhsusf_mag_17Rnd_9x19_FMJ",0],
-        ["rhsusf_mag_17Rnd_9x19_JHP",0]
+        ["rhsusf_mag_17Rnd_9x19_FMJ",0]
     ]]
 ];
 
