@@ -1900,8 +1900,32 @@ private _dataArray = [
         ["rhsusf_acc_wmx", 0],
         ["rhsusf_acc_wmx_bk", 0],
         ["acc_flashlight", 0]
-    ]]
+    ]],
+    ["arsenal_weap_launchers", [
+        // Launchers
+        ["launch_MRAWS_green_F", 0],
+        ["launch_MRAWS_sand_F", 0],
+        ["launch_MRAWS_olive_F", 0],
+        ["rhs_weap_fgm148",0],
+        ["rhs_weap_fim92",0],
 
+        // Launcher ammo
+        ["MRAWS_HEAT_F", 0],
+        ["MRAWS_HE_F", 0],
+        ["MAA_MAAWS_ASM509", 0],
+        ["MAA_MAAWS_HEDP502", 0],
+        ["MAA_MAAWS_GMM_MT", 0],
+        ["MAA_MAAWS_MT756", 0],
+        ["rhs_fgm148_magazine_AT",0],
+        ["rhs_fim92_mag",0]
+    ]],
+    ["arsenal_weap_sidarm",[
+        ["rhsusf_weap_glock17g4",0],
+        ["rhsusf_weap_m1911a1",0],
+        ["rhsusf_mag_7x45acp_MHP",0],
+        ["rhsusf_mag_17Rnd_9x19_FMJ",0],
+        ["rhsusf_mag_17Rnd_9x19_JHP",0]
+    ]]
 ];
 
 private _return = createHashMapFromArray _dataArray;
