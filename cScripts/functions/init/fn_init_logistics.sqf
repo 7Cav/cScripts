@@ -1547,15 +1547,6 @@ private _dataArray = [
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
     ["arsenal_role_weapons", [
-        // Launchers
-        ["rhs_weap_maaws", 0],
-        ["launch_MRAWS_green_F", 0],
-        ["launch_MRAWS_sand_F", 0],
-        ["launch_MRAWS_olive_F", 0],
-        ["rhs_weap_fgm148",0],
-        ["rhs_weap_fim92",0],
-
-
         // MAAWS ammo
         ["MRAWS_HEAT_F", 0],
         ["MRAWS_HE_F", 0],
