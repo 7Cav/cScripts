@@ -981,7 +981,7 @@ private _dataArray = [
 
         // 82mm Mortars
         ["ace_compat_rhs_usf3_m252_carry", 2],
-        ["ace_csw_staticMortarCarry", 2],
+        ["ace_csw_carryMortarBaseplate", 2],
 
         // Medical
         ["kat_AED",1],
