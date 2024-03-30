@@ -23,7 +23,7 @@ params [
 
 // Set platoon number
 if (_platoon < 0 || _platoon > 4) exitWith {
-    WARNING("Platoon number is invalid. Must be between 0 and 4.");
+    WARNING("Player","Platoon number is invalid. Must be between 0 and 4.");
 };
 SETVAR(player, EGVAR(Player,Platoon), _platoon);
 
