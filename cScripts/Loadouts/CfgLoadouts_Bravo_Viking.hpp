@@ -1,4 +1,5 @@
 class Cav_B_B_Scout_Base_F: Cav_B_Bravo_base_F {
+    platoon = 2;
     scope = 0;
     role = "weapons";
 };

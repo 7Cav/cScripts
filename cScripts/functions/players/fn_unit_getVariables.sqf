@@ -32,6 +32,7 @@ private _rank_bis = GETVAR(_unit,EGVAR(Player,Rank),"PRIVATE");
 
 private _regiment = "";
 private _company = GETVAR(player,EGVAR(Player,Company), "");
+private _platoon = GETVAR(player,EGVAR(Player,Platoon), 0);
 private _squad = GETVAR(_unit,EGVAR(Player,Squad),groupId group _unit);
 private _squadInsignia = [_unit] call BIS_fnc_getUnitInsignia;
 private _team = "";
@@ -57,6 +58,7 @@ private _map = createHashMapFromArray [
 
     ["regiment",            _regiment],
     ["company",             _company],
+    ["platoon",             _platoon],
     ["squad",               _squad],
     ["squadInsignia",       _squadInsignia],
     ["team",                _team],             // Team Color

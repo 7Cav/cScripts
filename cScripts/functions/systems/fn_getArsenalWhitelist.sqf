@@ -28,11 +28,28 @@ _unitItems = _unitItems arrayIntersect _unitItems select {_x isEqualType "" && {
 private _commonGear = GET_CONTAINER_KEYS("arsenal_common");
 
 
-private _company = call EFUNC(player,getCompany);
-private _companyItems = switch (_company) do {
-    case "alpha": {GET_CONTAINER_KEYS("alpha_company");};
-    case "bravo": {GET_CONTAINER_KEYS("bravo_company");};
-    case "charlie": {GET_CONTAINER_KEYS("charlie_company");};
+private _organization = [player] call EFUNC(player,getOrganization);
+private _orgItems = switch (_organization#1) do {
+    case "alpha": {
+        GET_CONTAINER_KEYS("alpha_company");
+    };
+    case "bravo": {
+        // Bravo has two platoons that have different requirements
+        private _companyItems = GET_CONTAINER_KEYS("bravo_company");
+        private _platoonItems = switch (_organization#0) do {
+            case 1: {
+                GET_CONTAINER_KEYS("bravo_company_atlas");
+            };
+            case 2: {
+                GET_CONTAINER_KEYS("bravo_company_viking");
+            };
+            default {[]};
+        };
+        _companyItems + _platoonItems;
+    };
+    case "charlie": {
+        GET_CONTAINER_KEYS("charlie_company");
+    };
     default {GET_CONTAINER_KEYS("arsenal_company_fallback");};
 };
 
@@ -74,6 +91,6 @@ private _weaponSystemSpecific = switch (true) do {
     default {[]};
 };
 
-private _whitelist = _commonGear + _unitItems + _companyItems + _roleSpecific + _medicGear + _weaponSystemSpecific;
+private _whitelist = _commonGear + _unitItems + _orgItems + _roleSpecific + _medicGear + _weaponSystemSpecific;
 
 _whitelist
