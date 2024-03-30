@@ -343,6 +343,16 @@ private _cScriptSettings = "cScripts Mission Settings";
 
 
 // 9; Other
+[ // Virtual Backpack
+    QEGVAR(Settings,allowVirtualBackpacks),
+    "CHECKBOX",
+    ["Enable Virtual Backpacks","Allow usage of virtual backpacks"],
+    [_cScriptSettings, "9; Other"],
+    false,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
 [ // Primary Clan Tag
     QEGVAR(Settings,primaryClanTag),
     "EDITBOX",
