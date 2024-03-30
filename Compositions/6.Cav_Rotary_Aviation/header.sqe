@@ -12,11 +12,12 @@ requiredAddons[]=
 	"Desert",
 	"vtx_mh60m",
 	"rhsusf_c_melb",
-	"ace_compat_rhs_usf3_fastroping",
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Soft_F_Exp_Truck_01",
 	"USAF_ServiceMenu",
 	"ace_realisticnames",
 	"ace_rearm",
-	"ace_refuel"
+	"ace_refuel",
+	"ace_compat_rhs_usf3_fastroping",
+	"TF373_SOAR_Chinooks"
 };
