@@ -1007,20 +1007,18 @@ private _dataArray = [
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",42],
         
         // MG Ammo
-        ["rhsusf_200Rnd_556x45_mixed_soft_pouch",5],
-        ["rhsusf_100Rnd_762x51_m62_tracer",5],
+        ["rhsusf_200Rnd_556x45_mixed_soft_pouch",8],
 
         // AT
         ["rhs_weap_fgm148",1],
         ["rhs_fgm148_magazine_AT",1],
-        ["MRAWS_HE_F",2],
-        ["MRAWS_HEAT_F",2],
+        ["rhs_weap_M136_hedp",2],
 
         // M320 Ammo
         ["rhsusf_mag_M433_HEDP",20],
         ["rhs_mag_m714_White",6],
+        ["rhs_mag_m713_Red",4],
         ["ACE_HuntIR_M203",1],
-        ["ACE_40mm_Flare_ir",2],
 
         // Offensive/Defensive Hand Grenades
         ["HandGrenade",8],
@@ -1028,15 +1026,12 @@ private _dataArray = [
         // Smoke Grenades
         ["SmokeShell",10],
         ["SmokeShellBlue",2],
-        ["SmokeShellGreen",2],
+        ["SmokeShellRed",2],
 
         // Chemlights
-        ["ACE_Chemlight_HiGreen",2],
+        ["ACE_Chemlight_HiBlue",2],
         ["ACE_Chemlight_HiRed",2],
         ["ACE_Chemlight_IR",4],
-        
-        // Misc
-        ["ACE_SpareBarrel",1],
 
         // Medical
         ["kat_AED",1],
@@ -1044,13 +1039,44 @@ private _dataArray = [
         ["ACE_splint",4],
         ["kat_naloxone",2],
         ["ACE_tourniquet",8],
-        ["kat_guedel",2],
-        ["kat_ncdKit",2],
-        ["kat_pocketBVM",1],
-        ["kat_accuvac",1],
-        ["kat_chestSeal",4],
-        ["ACE_quikclot",20],
-        ["ACE_packingBandage",20]
+        ["kat_guedel",4],
+        ["kat_chestSeal",6],
+        ["ACE_packingBandage",40]
+    ]],
+
+    ["vehicle_HMMWV_Weapons", [
+        // Rifle Ammo
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",25],
+        
+        // MG Ammo
+        ["rhsusf_100Rnd_762x51_m62_tracer",18],
+
+        // AT
+        ["rhs_weap_fgm148",1],
+        ["rhs_fgm148_magazine_AT",1],
+        ["MRAWS_HE_F",2],
+        ["MRAWS_HEAT_F",6],
+
+        // M320 Ammo
+        ["rhs_mag_m713_Red",4],
+
+        // Offensive/Defensive Hand Grenades
+        ["HandGrenade",4],
+
+        // Smoke Grenades
+        ["SmokeShell",6],
+        ["SmokeShellBlue",1],
+
+        // Chemlights
+        ["ACE_Chemlight_HiBlue",2],
+        ["ACE_Chemlight_IR",2],
+    
+        // Medical
+        ["ACE_splint",4],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",4],
+        ["kat_chestSeal",6],
+        ["ACE_packingBandage",40]
     ]],
 
     // // // // // //
@@ -1672,6 +1698,13 @@ private _dataArray = [
         ["rhs_weap_mk18_KAC_wd", 0],
 
         //Attachments
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0],
         ["rhsusf_acc_sf3p556", 0],
         ["rhsusf_acc_eotech", 0],
         ["rhsusf_acc_g33_t1", 0],
@@ -1767,7 +1800,14 @@ private _dataArray = [
         ["rhsusf_acc_tdstubby_tan", 0],
         ["rhsusf_acc_grip3", 0],
         ["rhsusf_acc_grip3_tan", 0],
-        ["rhsusf_acc_eotech_xps3", 0]
+        ["rhsusf_acc_eotech_xps3", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]],
     ["arsenal_weap_sr25", [
         ["rhs_weap_sr25_ec", 0],
@@ -1779,15 +1819,16 @@ private _dataArray = [
         
         //Attachments
         ["rhsusf_acc_harris_bipod", 0],
-        ["rhsusf_acc_m8541_d", 0],
-        ["rhsusf_acc_m8541_mrds", 0],
-        ["rhsusf_acc_elcan_ard", 0],
-        ["rhsusf_acc_su230a", 0],
-        ["rhsusf_acc_su230a_c", 0],
-        ["rhsusf_acc_su230a_mrds", 0],
-        ["rhsusf_acc_su230a_mrds_c", 0],
-        ["rhsusf_acc_m8541_wd", 0],
-        ["rhsusf_acc_acog_mdo", 0]
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0],
+        ["optic_AMS", 0],
+        ["optic_AMS_khk", 0],
+        ["optic_AMS_snd", 0]
     ]],
     ["arsenal_weap_m240", [
         ["rhs_weap_m240B", 0],
@@ -1804,12 +1845,18 @@ private _dataArray = [
         ["rhsusf_acc_compm4", 0],
         ["rhsusf_acc_t1_high", 0],
         ["rhsusf_acc_elcan_ard", 0],
-        ["rhsusf_acc_anpeq16a", 0],
         ["rhsusf_acc_su230a", 0],
         ["rhsusf_acc_su230a_c", 0],
         ["rhsusf_acc_su230a_mrds", 0],
         ["rhsusf_acc_su230a_mrds_c", 0],
-        ["rhsusf_acc_acog_mdo", 0]
+        ["rhsusf_acc_acog_mdo", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]],
     ["arsenal_weap_m249", [
         ["rhs_weap_m249_pip", 0],
@@ -1845,7 +1892,14 @@ private _dataArray = [
         ["rhsusf_acc_kac_grip_saw_bipod", 0],
         ["rhsusf_acc_grip4", 0],
         ["rhsusf_acc_grip4_bipod", 0],
-        ["rhsusf_acc_saw_lw_bipod", 0]
+        ["rhsusf_acc_saw_lw_bipod", 0],
+        ["rhsusf_acc_anpeq15side", 0],
+        ["rhsusf_acc_anpeq15side_bk", 0],
+        ["rhsusf_acc_anpeq15A", 0],
+        ["rhsusf_acc_anpeq16A", 0],
+        ["rhsusf_acc_wmx", 0],
+        ["rhsusf_acc_wmx_bk", 0],
+        ["acc_flashlight", 0]
     ]]
 
 ];

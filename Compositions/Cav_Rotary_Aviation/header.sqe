@@ -1,7 +1,0 @@
-version=54;
-name="Rotary_Aviation_vTEST";
-author="=7Cav=CPL.Zaren.T";
-category="Cav_EdSubcat_Deploy_Platoon";
-requiredAddons[]=
-{
-};

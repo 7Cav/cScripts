@@ -1,40 +1,58 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, J.Turn
  * This populats a given object with items.
  * Use for mission resupplies.
  *
  * Arguments:
- * 0: Crate <OBJECT>
- * 1: Scale cargo ammount <NUMBER> (Default: 1)
+ * 0: Module Position <ARRAY> (Default: [0.0,0.0,0.0])
+ * 1: Crate Type <STRING> (Default: "crate_resupply_general")
  *
  * Example:
- * [this,0.5] call cScripts_fnc_doSupplyCrate;
- * [this,1] call cScripts_fnc_doSupplyCrate;
+ * [[0.0,0.0,0.0],"crate_resupply_general"] call cScripts_fnc_doSupplyCrate;
+ * [[0.0,0.0,0.0],"crate_medicalAtlas"] call cScripts_fnc_doSupplyCrate;
  */
 
 if (!isServer) exitWith {};
 
-params [["_crate", objNull, [objNull]]];
+params [
+    ["_modulePos", [0.0,0.0,0.0], [[0.0,0.0,0.0]]], 
+    ["_crateType","crate_resupply_general",[""]]
+];
 
-clearWeaponCargoGlobal _crate;
-clearMagazineCargoGlobal _crate;
-clearItemCargoGlobal _crate;
-clearBackpackCargoGlobal _crate;
+// Crate model changes based on container of the crate
+private _crateModel = "";
+
+switch (_crateType) do {
+    case "crate_medicalAtlas";
+    case "crate_medicalInfantry": {
+        _crateModel = "ace_medicalSupplyCrate";
+    };
+    case "crate_stinger": {
+        _crateModel = "Box_NATO_WpsLaunch_F";
+    };
+    default {
+        _crateModel = "Box_NATO_Equip_F";
+    };
+};
+
+// Create crate at module position
+INFO_2("Logistics", "Spawning %1 on %2", _crateType, _modulePos);
+private _crate = _crateModel createVehicle _modulePos;
 
 // Add items from logistics database entry
 if (isServer) then {
     [{!isNil{EGVAR(DATABASE,DONE)} && EGVAR(DATABASE,DONE);}, {
-        _this params ["_crate"];
-        private _container = GET_CONTAINER(crate_resupply_general);
+        _this params ["_crate","_crateType"];
+        private _container = GET_CONTAINER(_crateType);
         [_crate, _container] call FUNC(addCargo);
-}, [_crate, _quickSelectScale]] call CBA_fnc_waitUntilAndExecute;
+}, [_crate, _crateType]] call CBA_fnc_waitUntilAndExecute;
 };
 
-// Change ace logistics size of crate
-[_crate, 1] remoteExec ["ace_cargo_fnc_setSize",0,true];
-[_crate, true] remoteExec ["ace_dragging_fnc_setDraggable",0,true];
-[_crate, true] remoteExec ["ace_dragging_fnc_setCarryable",0,true];
+// Change ace characteristics of crate
+[_crate, 1] call ace_cargo_fnc_setSize;
+[_crate, true] call ace_dragging_fnc_setDraggable;
+[_crate, true] call ace_dragging_fnc_setCarryable;
 
 // If a correct classname add texture
 private _smallBox = [
@@ -70,3 +88,6 @@ if (typeOf _crate in _smallBox) then {
 if (typeOf _crate in _largeBox) then {
     _crate setObjectTextureGlobal  [1, "\z\cav\addons\supplies\data\Ammobox_7CAV_co.paa"];
 };
+
+// Add object to the curator for all Zeuses
+_crate call ace_zeus_fnc_addObjectToCurator;
