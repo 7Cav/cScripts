@@ -84,7 +84,7 @@ private _handgunSpecific = switch (true) do {
 
 private _launcherWeapon = if (!isNil{_loadout#1#0}) then {_loadout#1#0} else {""};
 private _launcherSpecific = switch (true) do {
-    case (_launcherWeapon isKindOf ['rhs_weap_fgm148', configFile >> 'CfgWeapons'],
+    case (_launcherWeapon isKindOf ['rhs_weap_fgm148', configFile >> 'CfgWeapons']
             || _launcherWeapon isKindof ['rhs_weap_fim92', configFile >> 'CfgWeapons']
             || _launcherWeapon isKindof ['rhs_weap_maaws', configFile >> 'CfgWeapons']
             || _launcherWeapon isKindof ['launch_MRAWS_green_F', configFile >> 'CfgWeapons']
