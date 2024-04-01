@@ -37,10 +37,6 @@ private _companyItems = switch (_company) do {
 };
 
 
-private _medicRole = getNumber (missionConfigFile >> "CfgLoadouts" >> _classname >> "abilityMedic");
-private _medicGear = if (_medicRole >= 1) then {GET_CONTAINER_KEYS("bravo_company_atlas");} else {[]};
-
-
 private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "officer": {GET_CONTAINER_KEYS("arsenal_role_officer");};
     case "squadleader": {GET_CONTAINER_KEYS("arsenal_role_squadleader");};
@@ -49,8 +45,16 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "pilot";
     case "rotarypilot": {GET_CONTAINER_KEYS("arsenal_role_rotarypilot");};
     case "rotarycrew": {GET_CONTAINER_KEYS("arsenal_role_pilotcrew");};
+    case "rotarycls": {
+        private _rotaryRole = GET_CONTAINER_KEYS("arsenal_role_pilotcrew");
+        private _clsRole = GET_CONTAINER_KEYS("arsenal_role_cls");
+        _rotaryRole + _clsRole;
+    };
     case "pilotfighter": {GET_CONTAINER_KEYS("arsenal_role_pilotfighter");};
     case "pilottransport": {GET_CONTAINER_KEYS("arsenal_role_pilottransport");};
+    case "cls": {GET_CONTAINER_KEYS("arsenal_role_cls");};
+    case "medic": {GET_CONTAINER_KEYS("arsenal_role_medic");};
+    case "doctor": {GET_CONTAINER_KEYS("arsenal_role_doctor");};
     default {[]};
 };
 
