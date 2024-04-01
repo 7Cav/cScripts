@@ -97,6 +97,6 @@ private _launcherSpecific = switch (true) do {
     default {[]};
 };
 
-private _whitelist = _commonGear + _unitItems + _companyItems + _roleSpecific + _medicGear + _primarySpecific + _handgunSpecific + _launcherSpecific;
+private _whitelist = _commonGear + _unitItems + _companyItems + _roleSpecific + _primarySpecific + _handgunSpecific + _launcherSpecific;
 
 _whitelist
