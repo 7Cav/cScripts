@@ -18,21 +18,19 @@ force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = false;
 force force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
-force force ace_advanced_fatigue_deployedSwayFactor = 1;
 force force ace_advanced_fatigue_enabled = true;
 //ace_advanced_fatigue_enableStaminaBar = true;
 //ace_advanced_fatigue_fadeStaminaBar = true;
 force force ace_advanced_fatigue_loadFactor = 1;
 force force ace_advanced_fatigue_performanceFactor = 1.75;
 force force ace_advanced_fatigue_recoveryFactor = 3;
-force force ace_advanced_fatigue_restedSwayFactor = 1;
-force force ace_advanced_fatigue_swayFactor = 1;
 force force ace_advanced_fatigue_terrainGradientFactor = 1;
 
 // ACE Advanced Throwing
 force force ace_advanced_throwing_enabled = true;
 force force ace_advanced_throwing_enablePickUp = true;
 force force ace_advanced_throwing_enablePickUpAttached = true;
+//ace_advanced_throwing_enableTempWindInfo = true;
 force force ace_advanced_throwing_showMouseControls = true;
 force force ace_advanced_throwing_showThrowArc = true;
 
@@ -81,12 +79,16 @@ force force ace_common_allowFadeMusic = true;
 force force ace_common_checkPBOsAction = 0;
 force force ace_common_checkPBOsCheckAll = false;
 force force ace_common_checkPBOsWhitelist = "[]";
+force force ace_common_deployedSwayFactor = 1;
 //ace_common_displayTextColor = [0,0,0,0.1];
 //ace_common_displayTextFontColor = [1,1,1,1];
+force force ace_common_enableSway = true;
 //ace_common_epilepsyFriendlyMode = false;
 //ace_common_progressBarInfo = 2;
+force force ace_common_restedSwayFactor = 1;
 //ace_common_settingFeedbackIcons = 1;
 //ace_common_settingProgressBarLocation = 0;
+force force ace_common_swayFactor = 1;
 
 // ACE Cook off
 force force ace_cookoff_ammoCookoffDuration = 0;
@@ -208,9 +210,13 @@ force force ace_interaction_interactWithTerrainObjects = false;
 //ace_interact_menu_useListMenu = true;
 //ace_interact_menu_useListMenuSelf = false;
 
+// ACE Kill Tracker
+force force ace_killtracker_trackAI = true;
+
 // ACE Logistics
 force force ace_cargo_carryAfterUnload = true;
 force force ace_cargo_enable = true;
+force force ace_cargo_enableDeploy = true;
 force force ace_cargo_enableRename = true;
 force force ace_cargo_loadTimeCoefficient = 0.2;
 force force ace_cargo_openAfterUnload = 0;
@@ -339,6 +345,7 @@ force force ace_medical_treatment_treatmentTimeSplint = 7;
 force force ace_medical_treatment_treatmentTimeTourniquet = 7;
 force force ace_medical_treatment_woundReopenChance = 0.495006;
 force force ace_medical_treatment_woundStitchTime = 5;
+force force ace_medical_vitals_simulateSpO2 = false;
 
 // ACE Medical Interface
 force force ace_medical_feedback_bloodVolumeEffectType = 0;
@@ -374,6 +381,7 @@ force force ace_medical_gui_openAfterTreatment = true;
 //ace_medical_gui_peekMedicalInfoReleaseDelay = 1;
 //ace_medical_gui_peekMedicalOnHit = false;
 //ace_medical_gui_peekMedicalOnHitDuration = 1;
+force force ace_medical_gui_showBleeding = 2;
 //ace_medical_gui_showBloodlossEntry = true;
 //ace_medical_gui_showDamageEntry = false;
 force force ace_medical_gui_tourniquetWarning = true;
@@ -572,6 +580,52 @@ force force ace_parachute_hideAltimeter = true;
 force force ace_vehiclelock_defaultLockpickStrength = 10;
 force force ace_vehiclelock_lockVehicleInventory = true;
 force force ace_vehiclelock_vehicleStartingLockState = -1;
+
+// ACE Vehicle Medical
+force force MIRA_Vehicle_Medical_CacheInterval = 0.4;
+//MIRA_Vehicle_Medical_EnableAVM = true;
+//MIRA_Vehicle_Medical_EnableIncapacitated = false;
+//MIRA_Vehicle_Medical_EnableStable = true;
+force force MIRA_Vehicle_Medical_EnableSupportKAT = true;
+//MIRA_Vehicle_Medical_EnableUnstable = true;
+//MIRA_Vehicle_Medical_Incapacitated_CanUnloadAll = true;
+//MIRA_Vehicle_Medical_Incapacitated_ShowCount = false;
+//MIRA_Vehicle_Medical_Stable_ShowCount = true;
+//MIRA_Vehicle_Medical_Stable_ThresholdLowBP = 80;
+//MIRA_Vehicle_Medical_Stable_ThresholdLowHR = 50;
+//MIRA_Vehicle_Medical_Stable_TrackFractures = true;
+//MIRA_Vehicle_Medical_Stable_TrackIV = true;
+//MIRA_Vehicle_Medical_Stable_TrackLowBP = true;
+//MIRA_Vehicle_Medical_Stable_TrackLowHR = true;
+//MIRA_Vehicle_Medical_Stable_TrackNeedsBandage = true;
+//MIRA_Vehicle_Medical_Stable_TrackSplints = true;
+//MIRA_Vehicle_Medical_Stable_TrackStitchableWounds = true;
+//MIRA_Vehicle_Medical_Stable_TrackTourniquets = true;
+//MIRA_Vehicle_Medical_Unstable_AllowUnload = true;
+//MIRA_Vehicle_Medical_Unstable_DogtagsDeadOnly = true;
+//MIRA_Vehicle_Medical_Unstable_ShowCount = true;
+//MIRA_Vehicle_Medical_Unstable_TakeDogtags = true;
+//MIRA_Vehicle_Medical_Unstable_ThresholdLowBP = 80;
+//MIRA_Vehicle_Medical_Unstable_ThresholdLowHR = 50;
+//MIRA_Vehicle_Medical_Unstable_TrackAirwayBlocked = true;
+//MIRA_Vehicle_Medical_Unstable_TrackAllPneumothorax = true;
+//MIRA_Vehicle_Medical_Unstable_TrackBleeding = true;
+//MIRA_Vehicle_Medical_Unstable_TrackCardiacArrest = true;
+//MIRA_Vehicle_Medical_Unstable_TrackDead = true;
+//MIRA_Vehicle_Medical_Unstable_TrackIV = true;
+//MIRA_Vehicle_Medical_Unstable_TrackLegFractures = true;
+//MIRA_Vehicle_Medical_Unstable_TrackLegSplints = true;
+//MIRA_Vehicle_Medical_Unstable_TrackLowBP = true;
+//MIRA_Vehicle_Medical_Unstable_TrackLowHR = true;
+//MIRA_Vehicle_Medical_Unstable_TrackSpO2 = true;
+//MIRA_Vehicle_Medical_Unstable_TrackUnconscious = true;
+//MIRA_Vehicle_Medical_Vehicles_EnableCar = true;
+//MIRA_Vehicle_Medical_Vehicles_EnableHelicopter = true;
+//MIRA_Vehicle_Medical_Vehicles_EnablePlane = true;
+//MIRA_Vehicle_Medical_Vehicles_EnableShip = true;
+//MIRA_Vehicle_Medical_Vehicles_EnableTank = true;
+//MIRA_Vehicle_Medical_VERSION = false;
+//MIRA_Vehicle_Medical_WarnViewingDead = true;
 
 // ACE Vehicles
 force force ace_novehicleclanlogo_enabled = false;
@@ -1089,6 +1143,10 @@ force force kat_surgery_Surgery_ConsciousnessRequirement = 3;
 force force kat_surgery_surgicalAction_MedLevel = 2;
 force force kat_surgery_surgicalLocation = 0;
 
+// KNB
+//KNB_panel_aceAction = true;
+force force KNB_panel_consume = true;
+
 // LAMBS Danger
 force force lambs_danger_cqbRange = 60;
 force force lambs_danger_disableAIAutonomousManoeuvres = false;
@@ -1236,6 +1294,11 @@ force force vtx_uh60m_simpleStartup = false;
 //vtx_uh60m_trackIR_interaction_cursor = false;
 //vtx_uh60m_trackIR_interaction_cursorSensitivity = 2.5;
 
+// UK3CB Factions
+//uk3cb_pipstretchfactor = 0;
+//uk3cb_preferedOptic = 0;
+//uk3cb_preferedOpticHighMag = 0;
+
 // USAF
 force force usaf_afterburner_setting_allow_ai = true;
 force force USAF_allowNuke = false;
@@ -1380,6 +1443,24 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_faction_filter_0_UK3CB_CHD_W_O = true;
 //zen_faction_filter_0_UK3CB_CHD_W_O_groups = true;
 //zen_faction_filter_0_UK3CB_CPD_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_A_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_A_O_groups = true;
+//zen_faction_filter_0_UK3CB_CSAT_B_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_B_O_groups = true;
+//zen_faction_filter_0_UK3CB_CSAT_F_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_F_O_groups = true;
+//zen_faction_filter_0_UK3CB_CSAT_G_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_G_O_groups = true;
+//zen_faction_filter_0_UK3CB_CSAT_M_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_M_O_groups = true;
+//zen_faction_filter_0_UK3CB_CSAT_N_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_N_O_groups = true;
+//zen_faction_filter_0_UK3CB_CSAT_S_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_S_O_groups = true;
+//zen_faction_filter_0_UK3CB_CSAT_U_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_U_O_groups = true;
+//zen_faction_filter_0_UK3CB_CSAT_W_O = true;
+//zen_faction_filter_0_UK3CB_CSAT_W_O_groups = true;
 //zen_faction_filter_0_UK3CB_CW_SOV_O_EARLY = true;
 //zen_faction_filter_0_UK3CB_CW_SOV_O_LATE = true;
 //zen_faction_filter_0_UK3CB_FIA_O = true;
@@ -1397,6 +1478,7 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_faction_filter_0_UK3CB_LNM_O_groups = true;
 //zen_faction_filter_0_UK3CB_LSM_O = true;
 //zen_faction_filter_0_UK3CB_MDF_O = true;
+//zen_faction_filter_0_UK3CB_MEC_O = true;
 //zen_faction_filter_0_UK3CB_MEE_O = true;
 //zen_faction_filter_0_UK3CB_MEI_O = true;
 //zen_faction_filter_0_UK3CB_NAP_O = true;
@@ -1427,6 +1509,8 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_faction_filter_1_rhsgref_faction_cdf_ground_b_groups = true;
 //zen_faction_filter_1_rhsgref_faction_cdf_ng_b = true;
 //zen_faction_filter_1_rhsgref_faction_hidf = true;
+//zen_faction_filter_1_TF373_RAF = true;
+//zen_faction_filter_1_TF373_SOAR = true;
 //zen_faction_filter_1_UK3CB_AAF_B = true;
 //zen_faction_filter_1_UK3CB_ADA_B = true;
 //zen_faction_filter_1_UK3CB_ADC_B = true;
@@ -1462,6 +1546,7 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_faction_filter_1_UK3CB_LNM_B_groups = true;
 //zen_faction_filter_1_UK3CB_LSM_B = true;
 //zen_faction_filter_1_UK3CB_MDF_B = true;
+//zen_faction_filter_1_UK3CB_MEC_B = true;
 //zen_faction_filter_1_UK3CB_MEI_B = true;
 //zen_faction_filter_1_UK3CB_NAP_B = true;
 //zen_faction_filter_1_UK3CB_NAP_B_groups = true;
@@ -1525,6 +1610,7 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_faction_filter_2_UK3CB_LNM_I_groups = true;
 //zen_faction_filter_2_UK3CB_LSM_I = true;
 //zen_faction_filter_2_UK3CB_MDF_I = true;
+//zen_faction_filter_2_UK3CB_MEC_I = true;
 //zen_faction_filter_2_UK3CB_MEE_I = true;
 //zen_faction_filter_2_UK3CB_MEI_I = true;
 //zen_faction_filter_2_UK3CB_NAP_I = true;
@@ -1544,4 +1630,5 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_faction_filter_3_IND_L_F = true;
 //zen_faction_filter_3_UK3CB_ADC_C = true;
 //zen_faction_filter_3_UK3CB_CHC_C = true;
+//zen_faction_filter_3_UK3CB_MEC_C = true;
 //zen_faction_filter_3_UK3CB_TKC_C = true;
