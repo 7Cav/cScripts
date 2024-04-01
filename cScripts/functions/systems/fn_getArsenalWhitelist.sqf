@@ -60,24 +60,43 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
 
 
 private _primaryWeapon = if (!isNil{_loadout#0#0}) then {_loadout#0#0} else {""};
-private _weaponSystemSpecific = switch (true) do {
+private _primarySpecific = switch (true) do {
     case (_primaryWeapon isKindof ['rhs_weap_mk18_m320', configFile >> 'CfgWeapons']
-            || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_ugl");};
+            || _primaryWeapon isKindof ['rhs_weap_m16a4_carryhandle_M203', configFile >> 'CfgWeapons']
+            || _primaryWeapon isKindof ['rhs_weap_m4a1_m320', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_ugl");};
 
     case (_primaryWeapon isKindof ['rhs_weap_m4a1', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m16a4', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_m4");};
 
     case (_primaryWeapon isKindof ['rhs_weap_sr25_ec', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_sr25");};
 
-    case (primaryWeapon player isKindof ['rhs_weap_m240_base', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_m240");};
+    case (_primaryWeapon isKindof ['rhs_weap_m240_base', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_m240");};
 
-    case (primaryWeapon player isKindof ['rhs_weap_m249_pip', configFile >> 'CfgWeapons']
+    case (_primaryWeapon isKindof ['rhs_weap_m249_pip', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m249_pip_L', configFile >> 'CfgWeapons']
             || _primaryWeapon isKindof ['rhs_weap_m249_pip_S', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_m249");};
-
     default {[]};
 };
 
-private _whitelist = _commonGear + _unitItems + _companyItems + _roleSpecific + _weaponSystemSpecific;
+private _handgunWeapon = if (!isNil{_loadout#2#0}) then {_loadout#2#0} else {""};
+private _handgunSpecific = switch (true) do {
+    case (_handgunWeapon isKindOf ['rhs_weap_M320', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_ugl");};
+    case (_handgunWeapon isKindOf ['rhsusf_weap_glock17g4', configFile >> 'CfgWeapons']
+            || _handgunWeapon isKindOf ['rhsusf_weap_m1911a1', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_sidearm");};
+    default {[]};
+};
+
+private _launcherWeapon = if (!isNil{_loadout#1#0}) then {_loadout#1#0} else {""};
+private _launcherSpecific = switch (true) do {
+    case (_launcherWeapon isKindOf ['rhs_weap_fgm148', configFile >> 'CfgWeapons']
+            || _launcherWeapon isKindof ['rhs_weap_fim92', configFile >> 'CfgWeapons']
+            || _launcherWeapon isKindof ['rhs_weap_maaws', configFile >> 'CfgWeapons']
+            || _launcherWeapon isKindof ['launch_MRAWS_green_F', configFile >> 'CfgWeapons']
+            || _launcherWeapon isKindof ['launch_MRAWS_sand_F', configFile >> 'CfgWeapons']
+            || _launcherWeapon isKindof ['launch_MRAWS_olive_F', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_launchers");};
+    default {[]};
+};
+
+private _whitelist = _commonGear + _unitItems + _companyItems + _roleSpecific + _medicGear + _primarySpecific + _handgunSpecific + _launcherSpecific;
 
 _whitelist
