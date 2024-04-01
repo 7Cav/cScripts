@@ -746,8 +746,7 @@ private _dataArray = [
     ["crate_strykerDragoon_82mm",[
         ["ACE_1Rnd_82mm_Mo_HE", 24],
         ["ACE_1Rnd_82mm_Mo_Illum", 8],
-        ["ACE_1Rnd_82mm_Mo_Smoke", 8],
-        ["ACE_1Rnd_82mm_Mo_HE_LaserGuided",8]
+        ["ACE_1Rnd_82mm_Mo_Smoke", 8]
     ]],
     ["crate_stinger",[
         ["rhs_weap_fim92", 1],
@@ -981,8 +980,8 @@ private _dataArray = [
         ["ACE_wirecutter", 1],
 
         // 82mm Mortars
+        ["ace_compat_rhs_usf3_m252_carry", 2],
         ["ace_csw_carryMortarBaseplate", 2],
-        ["ace_csw_staticMortarCarry", 2],
 
         // Medical
         ["kat_AED",1],
