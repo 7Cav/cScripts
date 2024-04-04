@@ -120,7 +120,6 @@ private _rhsusf_m1a1tank_base = createHashMapFromArray [
 private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
     ["antiarmor", [
         ["SmokeLauncherMag",[0,0],6],
-        ["SmokeLauncherMag",[0,0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
@@ -132,7 +131,6 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
     ]],
     // ["antiair", [
     //     ["SmokeLauncherMag",[0,0],6],
-    //     ["SmokeLauncherMag",[0,0],6],
     //     ["2000Rnd_762x51_Belt_T_Red",[0],2000],
     //     ["2000Rnd_762x51_Belt_T_Red",[0],2000],
     //     ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
@@ -142,7 +140,6 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
     //     ["4Rnd_Titan_long_missiles",[0],4]
     // ]],
     ["default",[
-        ["SmokeLauncherMag",[0,0],6],
         ["SmokeLauncherMag",[0,0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
@@ -154,7 +151,6 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
         ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
     ]],
     ["balanced",[
-        ["SmokeLauncherMag",[0,0],6],
         ["SmokeLauncherMag",[0,0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
