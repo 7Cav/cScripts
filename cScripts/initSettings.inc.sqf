@@ -147,12 +147,9 @@ private _cScriptSettings = "cScripts Mission Settings";
     "CHECKBOX",
     ["Use Filtered Arsenal","Use a filtered or show all items in the staging arsenal."],
     [_cScriptSettings, "4; Staging"],
-    false,
     true,
-    {
-        params ["_value"];
-        { EGVAR(Staging,showAllLoadouts) = _value; } remoteExecCall ["call"];
-    },
+    true,
+    {},
     false
 ] call CBA_fnc_addSetting;
 
