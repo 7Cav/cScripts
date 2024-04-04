@@ -89,6 +89,9 @@ _unit selectWeapon (primaryWeapon _unit);
 // Lower the weapon
 if !(weaponLowered _unit) then {_unit action ["WeaponOnBack", _unit]};
 
+if (GVAR(isPlayer)) then {
+    [QEGVAR(StagingArsenal,SaveWhitelist)] call CBA_fnc_localEvent;
+};
 
 if (_loadConfig) then {
     INFO_2("Gear", "Applying postLoadout code for %1 [%2]", _unit, typeOf _unit);

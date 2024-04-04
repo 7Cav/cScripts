@@ -43,22 +43,22 @@ private _container = switch (_companySelector) do {
     case "TITAN";
     case "RAIDER";
     case "SPARROW";
-    case "ALPHA": {GET_CONTAINER(alpha_company);};
+    case "ALPHA": {GET_CONTAINER("alpha_company");};
 
-    case "ATLAS": {GET_CONTAINER(bravo_company_atlas);};
+    case "ATLAS": {GET_CONTAINER("bravo_company_atlas");};
     case "SABER";
     case "VIKING";
-    case "BRAVO": {GET_CONTAINER(bravo_company_viking);};
+    case "BRAVO": {GET_CONTAINER("bravo_company_viking");};
 
     case "BANDIT";
     case "MISFIT";
-    case "CHARLIE": {GET_CONTAINER(charlie_company);};
+    case "CHARLIE": {GET_CONTAINER("charlie_company");};
 
     case "FULL";
     case "ALL": {
         private _fullContainer = [];
         {
-            private _items = _x call EFUNC(logistics,getContainer);
+            private _items = GET_CONTAINER(_x);
             _fullContainer append _items;
         } forEach ["alpha_company", "bravo_company_atlas", "bravo_company_viking", "charlie_company"];
     };

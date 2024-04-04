@@ -45,6 +45,7 @@ class cScripts {
 
         class doStarterCrateSupplies {};
         class doFieldHospital {};
+        class doSupplyCrate {};
 
         class doEmptyCrate {};
 
@@ -102,7 +103,6 @@ class cScripts {
         class addStagingZone {};
 
         class doStarterCrate {};
-        class doSupplyCrate {};
 
         class makeAgent {};
     };
@@ -202,8 +202,6 @@ class cScripts {
         file = "cScripts\functions\modules";
         class zenModule_EnableUnitSimulation {};
 
-        class zenModule_CreateFieldHospital {};
-        class zenModule_CreateMedicalCrate {};
         class zenModule_CreateStarterCrate {};
         class zenModule_CreateSupplyCrate {};
 
