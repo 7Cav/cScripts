@@ -14,15 +14,13 @@
  * Example:
  * [MyCrate, [["ACE_EarPlugs", 60]]] call cScripts_fnc_setCargo;
  * [MyTruck, [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]]] call cScripts_fnc_setCargo;
- * [MyTruck, [["ACE_personalAidKit", 8], ["ACE_tourniquet", 10]], "myCrate", false] call cScripts_fnc_setCargo;
  *
  * Public: Yes
  */
 
 params [
     ["_vehicle", objNull, [objNull]],
-    ["_inventory", [], [[]]],
-    ["_crateName", "", [""]]
+    ["_inventory", [], [[]]]
 ];
 
 clearWeaponCargoGlobal _vehicle;
@@ -30,16 +28,4 @@ clearMagazineCargoGlobal _vehicle;
 clearItemCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
-if ( count _inventory < 1 ) exitWith {};
-
-{
-    if !(_x isEqualTypeArray ["",0]) then {
-        SHOW_WARNING_1("addCargo","Item not added because %1 does not contain the proper format. Must be [STRING, SCALAR].", _x);
-        continue;
-    };
-
-    _x params [["_item", "", [""]], ["_amount", 0, [0]]];
-    if (_item call FUNC(checkItemValidity)) then {
-        _vehicle addItemCargoGlobal [_item, _amount];
-    };
-} forEach _inventory;
+[_vehicle, _inventory] call FUNC(addCargo);
