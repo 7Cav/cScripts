@@ -38,8 +38,8 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dr
         // TypeOf,                     DisplayName,  Name,           Icon
         ["I_APC_Wheeled_03_cannon_F", "Anti-Personnel (default)",     "default",      ""],
         ["I_APC_Wheeled_03_cannon_F", "Balanced",  "balanced",    ""],
-        ["I_APC_Wheeled_03_cannon_F", "Anti-Armor",     "antiarmor",      ""],
-        ["I_APC_Wheeled_03_cannon_F", "Anti-Air",    "antiair",      ""]
+        ["I_APC_Wheeled_03_cannon_F", "Anti-Armor",     "antiarmor",      ""]
+        // ["I_APC_Wheeled_03_cannon_F", "Anti-Air",    "antiair",      ""]
     ];
 };
 
