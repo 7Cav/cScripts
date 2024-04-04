@@ -112,7 +112,7 @@ class items
 						flags=4;
 						class Attributes
 						{
-							init="call{[this,""Bandit"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
+							init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
@@ -299,7 +299,7 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bandit"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
@@ -590,7 +590,7 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bandit"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
@@ -881,7 +881,7 @@ class items
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bandit"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
@@ -1169,7 +1169,7 @@ class items
 						flags=4;
 						class Attributes
 						{
-							init="call{[this,""Bandit"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
+							init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
