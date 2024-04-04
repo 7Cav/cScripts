@@ -1,12 +1,12 @@
 version=54;
-center[]={7647.748,5,5494.9014};
+center[]={790.24005,5,6043.4009};
 class items
 {
 	items=3;
 	class Item0
 	{
 		dataType="Layer";
-		name="Attack Rotary";
+		name="1.Attack Rotary";
 		class Entities
 		{
 			items=3;
@@ -29,17 +29,17 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-26.162598,0.89242268,26.549316};
+									position[]={-26.158203,0.89242268,26.549316};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									init="call{[this,""Alpha"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 									description="Starter Crate";
 									dynamicSimulation=1;
 								};
-								id=263;
+								id=555;
 								type="B_supplyCrate_F";
 								class CustomAttributes
 								{
@@ -64,7 +64,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-18.027832,2.3659716,22.47168};
+									position[]={-18.023438,2.3659716,22.47168};
 								};
 								side="Empty";
 								flags=4;
@@ -75,7 +75,7 @@ class items
 									receiveRemoteTargets=1;
 									reportOwnPosition=1;
 								};
-								id=264;
+								id=556;
 								type="RHS_AH64D_wd";
 							};
 							class Item2
@@ -90,7 +90,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-23.754395,0.0014390945,24.465332};
+											position[]={-23.75,0.0014390945,24.465332};
 										};
 										side="West";
 										flags=7;
@@ -102,7 +102,7 @@ class items
 											description="Pilot@RAIDER-1";
 											isPlayable=1;
 										};
-										id=266;
+										id=558;
 										type="Cav_B_A_Helicopter_Att_Pilot_Raider_1_F";
 										class CustomAttributes
 										{
@@ -153,7 +153,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-22.754883,0.0014390945,24.465332};
+											position[]={-22.750488,0.0014390945,24.465332};
 										};
 										side="West";
 										flags=5;
@@ -165,7 +165,7 @@ class items
 											description="Co-Pilot@RAIDER-1";
 											isPlayable=1;
 										};
-										id=267;
+										id=559;
 										type="Cav_B_A_Helicopter_Att_coPilot_F";
 										class CustomAttributes
 										{
@@ -216,10 +216,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=265;
+								id=557;
 							};
 						};
-						id=262;
+						id=554;
 					};
 					class Item1
 					{
@@ -233,7 +233,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-32.904785,2.3659716,23.424805};
+									position[]={-32.900391,2.3659716,23.424805};
 								};
 								side="Empty";
 								flags=4;
@@ -244,7 +244,7 @@ class items
 									receiveRemoteTargets=1;
 									reportOwnPosition=1;
 								};
-								id=269;
+								id=561;
 								type="RHS_AH64D_wd";
 							};
 							class Item1
@@ -259,7 +259,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-29.10791,0.0014390945,24.934082};
+											position[]={-29.103516,0.0014390945,24.934082};
 										};
 										side="West";
 										flags=7;
@@ -271,7 +271,7 @@ class items
 											description="Pilot@RAIDER-2";
 											isPlayable=1;
 										};
-										id=271;
+										id=563;
 										type="Cav_B_A_Helicopter_Att_Pilot_Raider_2_F";
 										class CustomAttributes
 										{
@@ -322,7 +322,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-28.10791,0.0014390945,24.934082};
+											position[]={-28.103516,0.0014390945,24.934082};
 										};
 										side="West";
 										flags=5;
@@ -334,7 +334,7 @@ class items
 											description="Co-Pilot@RAIDER-2";
 											isPlayable=1;
 										};
-										id=272;
+										id=564;
 										type="Cav_B_A_Helicopter_Att_coPilot_F";
 										class CustomAttributes
 										{
@@ -385,25 +385,25 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=270;
+								id=562;
 							};
 						};
-						id=268;
+						id=560;
 					};
 					class Item2
 					{
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-26.578613,5.777462,25.928223};
+							position[]={-26.574219,5.777462,25.928223};
 						};
 						title="Rotary Attack (Tooltip)";
 						description="The Apache functions much differently compared to what you may think attack rotary does. This is a glass cannon. It uses ATGMs and it's cannon from stand-off distances to achieve effects. These can also function largely without a JTAC and are much easier for a PLTHQ to call for fire if needed compared to Fixed Wing Attack. The Apaches can also theoretically be Airborne Forward Air Controllers (FAC-A) but it's usually not recommended depending on scale.";
-						id=273;
+						id=565;
 						atlOffset=5.777462;
 					};
 				};
-				id=261;
+				id=553;
 				atlOffset=2.888731;
 			};
 			class Item1
@@ -425,7 +425,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={22.712891,2.024261,-24.996582};
+									position[]={22.717285,2.024261,-24.996582};
 									angles[]={-0,0.0050614546,0};
 								};
 								side="Empty";
@@ -437,7 +437,7 @@ class items
 									reportOwnPosition=1;
 									pylons="VTX_4Rnd_ACE_Hellfire_AGM114K;VTX_M230_Chaingun_R;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;VTX_PylonRack_M261_DAGR;VTX_PylonRack_M261_M229;;";
 								};
-								id=276;
+								id=568;
 								type="vtx_MH60M_DAP_MLASS";
 								class CustomAttributes
 								{
@@ -802,7 +802,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={15.868652,0.0014390945,-22.69043};
+											position[]={15.873047,0.0014390945,-22.69043};
 										};
 										side="West";
 										flags=6;
@@ -814,7 +814,7 @@ class items
 											description="DAP Pilot@BISON-1";
 											isPlayable=1;
 										};
-										id=278;
+										id=570;
 										type="Cav_B_A_Helicopter_Tra_Pilot_F";
 										class CustomAttributes
 										{
@@ -865,7 +865,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={17.310547,0.0014390945,-22.76416};
+											position[]={17.314941,0.0014390945,-22.76416};
 										};
 										side="West";
 										flags=5;
@@ -875,7 +875,7 @@ class items
 											description="Co-Pilot@BISON-1";
 											isPlayable=1;
 										};
-										id=279;
+										id=571;
 										type="Cav_B_A_Helicopter_Tra_Pilot_F";
 										class CustomAttributes
 										{
@@ -913,10 +913,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=277;
+								id=569;
 							};
 						};
-						id=275;
+						id=567;
 					};
 					class Item1
 					{
@@ -930,17 +930,17 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={14.109375,0.89242458,-20.307129};
+									position[]={14.11377,0.89242458,-20.307129};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									init="call{[this,""Alpha"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 									description="Starter Crate";
 									dynamicSimulation=1;
 								};
-								id=281;
+								id=573;
 								type="B_supplyCrate_F";
 								atlOffset=1.9073486e-06;
 								class CustomAttributes
@@ -966,7 +966,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={5.8964844,2.024261,-24.479004};
+									position[]={5.9008789,2.024261,-24.479004};
 									angles[]={-0,0.0050614546,0};
 								};
 								side="Empty";
@@ -978,7 +978,7 @@ class items
 									reportOwnPosition=1;
 									pylons="VTX_4Rnd_ACE_Hellfire_AGM114K;VTX_M230_Chaingun_R;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;VTX_PylonRack_M261_DAGR;VTX_PylonRack_M261_M229;;";
 								};
-								id=282;
+								id=574;
 								type="vtx_MH60M_DAP_MLASS";
 								class CustomAttributes
 								{
@@ -1343,7 +1343,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={10.099609,0.0014390945,-22.48291};
+											position[]={10.104004,0.0014390945,-22.48291};
 										};
 										side="West";
 										flags=6;
@@ -1355,7 +1355,7 @@ class items
 											description="DAP Pilot@BISON-2";
 											isPlayable=1;
 										};
-										id=284;
+										id=576;
 										type="Cav_B_A_Helicopter_Tra_Pilot_F";
 										class CustomAttributes
 										{
@@ -1406,7 +1406,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={10.985352,0.0014390945,-22.638672};
+											position[]={10.989746,0.0014390945,-22.638672};
 										};
 										side="West";
 										flags=5;
@@ -1416,7 +1416,7 @@ class items
 											description="Co-Pilot@BISON-2";
 											isPlayable=1;
 										};
-										id=285;
+										id=577;
 										type="Cav_B_A_Helicopter_Tra_Pilot_F";
 										class CustomAttributes
 										{
@@ -1467,10 +1467,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=283;
+								id=575;
 							};
 						};
-						id=280;
+						id=572;
 						atlOffset=4.7683716e-07;
 					};
 					class Item2
@@ -1478,15 +1478,15 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={14.791016,5.777462,-30.57373};
+							position[]={14.79541,5.777462,-30.57373};
 						};
 						title="Rotary Hybrid (Tooltip)";
 						description="While the DAPs can transport infantry, it is NOT their primary purpose. The DAPs provide a great option for escort with MH-60s due to being pretty much the same bird, and you can also flex additional personnel on here if needed. Think about using this if the mission calls for closer support and less armor-focused when comparing to the AH-64. This isn't going to replace CAS, it works great for escort of the birds, but that's it. It's going to struggle to deal with large concentrations of OPFOR.";
-						id=286;
+						id=578;
 						atlOffset=5.777462;
 					};
 				};
-				id=274;
+				id=566;
 				atlOffset=2.888731;
 			};
 			class Item2
@@ -1508,7 +1508,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-19.187988,1.9401751,2.6352539};
+									position[]={-19.183594,1.9401751,2.6352539};
 								};
 								side="Empty";
 								flags=4;
@@ -1519,7 +1519,7 @@ class items
 									receiveRemoteTargets=1;
 									reportOwnPosition=1;
 								};
-								id=289;
+								id=581;
 								type="RHS_MELB_AH6M";
 								class CustomAttributes
 								{
@@ -1564,7 +1564,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-23.135254,0.0014410019,5.3540039};
+											position[]={-23.130859,0.0014410019,5.3540039};
 											angles[]={-0,0.019358397,0};
 										};
 										side="West";
@@ -1577,7 +1577,7 @@ class items
 											description="Pilot@SPARROW-1";
 											isPlayable=1;
 										};
-										id=291;
+										id=583;
 										type="Cav_B_A_Helicopter_Att_Pilot_F";
 										atlOffset=1.9073486e-06;
 										class CustomAttributes
@@ -1629,7 +1629,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-21.629883,0.0014390945,5.0473633};
+											position[]={-21.625488,0.0014390945,5.0473633};
 											angles[]={-0,0.019355701,0};
 										};
 										side="West";
@@ -1642,7 +1642,7 @@ class items
 											description="Co-Pilot@SPARROW-1";
 											isPlayable=1;
 										};
-										id=292;
+										id=584;
 										type="Cav_B_A_Helicopter_Att_Pilot_F";
 										class CustomAttributes
 										{
@@ -1693,11 +1693,11 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=290;
+								id=582;
 								atlOffset=1.9073486e-06;
 							};
 						};
-						id=288;
+						id=580;
 						atlOffset=9.5367432e-07;
 					};
 					class Item1
@@ -1712,18 +1712,18 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-24.723145,0.89242458,7.8950195};
+									position[]={-24.71875,0.89242458,7.8950195};
 									angles[]={-0,3.1415925,0};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									init="call{[this,""Alpha"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 									description="Starter Crate";
 									dynamicSimulation=1;
 								};
-								id=294;
+								id=586;
 								type="B_supplyCrate_F";
 								atlOffset=1.9073486e-06;
 								class CustomAttributes
@@ -1749,7 +1749,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-29.687988,1.9401751,2.6352539};
+									position[]={-29.683594,1.9401751,2.6352539};
 								};
 								side="Empty";
 								flags=4;
@@ -1760,7 +1760,7 @@ class items
 									receiveRemoteTargets=1;
 									reportOwnPosition=1;
 								};
-								id=295;
+								id=587;
 								type="RHS_MELB_AH6M";
 								class CustomAttributes
 								{
@@ -1805,7 +1805,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-27.053223,0.0014390945,5.4926758};
+											position[]={-27.048828,0.0014390945,5.4926758};
 											angles[]={-0,0.016603449,0};
 										};
 										side="West";
@@ -1818,7 +1818,7 @@ class items
 											description="Pilot@SPARROW-2";
 											isPlayable=1;
 										};
-										id=297;
+										id=589;
 										type="Cav_B_A_Helicopter_Att_Pilot_F";
 										class CustomAttributes
 										{
@@ -1869,7 +1869,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-25.962891,0.0014390945,5.3852539};
+											position[]={-25.958496,0.0014390945,5.3852539};
 											angles[]={-0,0.019355701,0};
 										};
 										side="West";
@@ -1882,7 +1882,7 @@ class items
 											description="Co-Pilot@SPARROW-2";
 											isPlayable=1;
 										};
-										id=298;
+										id=590;
 										type="Cav_B_A_Helicopter_Att_Pilot_F";
 										class CustomAttributes
 										{
@@ -1933,10 +1933,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=296;
+								id=588;
 							};
 						};
-						id=293;
+						id=585;
 						atlOffset=4.7683716e-07;
 					};
 					class Item2
@@ -1944,25 +1944,25 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-24.578613,5.777462,3.9282227};
+							position[]={-24.574219,5.777462,3.9282227};
 						};
 						title="Rotary Light Attack (Tooltip)";
 						description="Not as long distance as the AH-64, the AH-6s function closer in reality to Fixed Wing, they come in low and fast, do a run, and get out. They can conversely be used as observation aircraft due to the FLIR camera as well and can pick off targets, but they will go down quite easily due to being entirely open. It's recommended to avoid using these in operations that have armor heavier than BTRs.";
-						id=299;
+						id=591;
 						atlOffset=5.777462;
 					};
 				};
-				id=287;
+				id=579;
 				atlOffset=2.8887315;
 			};
 		};
-		id=387;
+		id=552;
 		atlOffset=2.888731;
 	};
 	class Item1
 	{
 		dataType="Layer";
-		name="Service Vehicles";
+		name="3.Service Vehicles";
 		class Entities
 		{
 			items=3;
@@ -1971,7 +1971,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-12.105469,1.9255862,5.2563477};
+					position[]={-12.101074,1.9255862,5.2563477};
 				};
 				side="Empty";
 				flags=4;
@@ -1979,7 +1979,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=357;
+				id=593;
 				type="B_Truck_01_ammo_F";
 				class CustomAttributes
 				{
@@ -2017,7 +2017,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-7.1054688,1.9160042,5.2543945};
+					position[]={-7.1010742,1.9160042,5.2543945};
 				};
 				side="Empty";
 				flags=4;
@@ -2025,7 +2025,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=358;
+				id=594;
 				type="B_Truck_01_fuel_F";
 				class CustomAttributes
 				{
@@ -2063,7 +2063,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.1054688,2.3134775,5.2543945};
+					position[]={-2.1010742,2.3134775,5.2543945};
 				};
 				side="Empty";
 				flags=4;
@@ -2071,7 +2071,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=359;
+				id=595;
 				type="B_Truck_01_Repair_F";
 				class CustomAttributes
 				{
@@ -2105,12 +2105,12 @@ class items
 				};
 			};
 		};
-		id=356;
+		id=592;
 	};
 	class Item2
 	{
 		dataType="Layer";
-		name="Transport Rotary";
+		name="2.Transport Rotary";
 		class Entities
 		{
 			items=3;
@@ -2133,7 +2133,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-18.578613,1.940177,-15.071777};
+									position[]={-18.574219,1.940177,-15.071777};
 								};
 								side="Empty";
 								flags=4;
@@ -2144,7 +2144,7 @@ class items
 									receiveRemoteTargets=1;
 									reportOwnPosition=1;
 								};
-								id=302;
+								id=599;
 								type="RHS_MELB_MH6M";
 								atlOffset=1.9073486e-06;
 								class CustomAttributes
@@ -2190,7 +2190,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-22.555176,0.0014410019,-11.495605};
+											position[]={-22.550781,0.0014410019,-11.495605};
 										};
 										side="West";
 										flags=7;
@@ -2202,7 +2202,7 @@ class items
 											description="Pilot@RAVEN-1";
 											isPlayable=1;
 										};
-										id=304;
+										id=601;
 										type="Cav_B_A_Helicopter_Att_Pilot_Raven_1_F";
 										atlOffset=1.9073486e-06;
 										class CustomAttributes
@@ -2254,7 +2254,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-21.554688,0.0014390945,-11.495605};
+											position[]={-21.550293,0.0014390945,-11.495605};
 										};
 										side="West";
 										flags=5;
@@ -2266,7 +2266,7 @@ class items
 											description="Co-Pilot@RAVEN-1";
 											isPlayable=1;
 										};
-										id=305;
+										id=602;
 										type="Cav_B_A_Helicopter_Att_coPilot_F";
 										class CustomAttributes
 										{
@@ -2317,11 +2317,11 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=303;
+								id=600;
 								atlOffset=1.9073486e-06;
 							};
 						};
-						id=301;
+						id=598;
 						atlOffset=1.9073486e-06;
 					};
 					class Item1
@@ -2336,17 +2336,17 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-24.043457,0.89242458,-9.284668};
+									position[]={-24.039063,0.89242458,-9.284668};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									init="call{[this,""Alpha"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 									description="Starter Crate";
 									dynamicSimulation=1;
 								};
-								id=307;
+								id=604;
 								type="B_supplyCrate_F";
 								atlOffset=1.9073486e-06;
 								class CustomAttributes
@@ -2372,7 +2372,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-29.578613,1.9401751,-15.071777};
+									position[]={-29.574219,1.9401751,-15.071777};
 								};
 								side="Empty";
 								flags=4;
@@ -2383,7 +2383,7 @@ class items
 									receiveRemoteTargets=1;
 									reportOwnPosition=1;
 								};
-								id=308;
+								id=605;
 								type="RHS_MELB_MH6M";
 								class CustomAttributes
 								{
@@ -2428,7 +2428,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-26.748535,0.0014390945,-10.942871};
+											position[]={-26.744141,0.0014390945,-10.942871};
 										};
 										side="West";
 										flags=7;
@@ -2440,7 +2440,7 @@ class items
 											description="Pilot@RAVEN-2";
 											isPlayable=1;
 										};
-										id=310;
+										id=607;
 										type="Cav_B_A_Helicopter_Att_Pilot_Raven_2_F";
 										class CustomAttributes
 										{
@@ -2491,7 +2491,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-25.749023,0.0014390945,-10.942871};
+											position[]={-25.744629,0.0014390945,-10.942871};
 										};
 										side="West";
 										flags=5;
@@ -2503,7 +2503,7 @@ class items
 											description="Co-Pilot@RAVEN-2";
 											isPlayable=1;
 										};
-										id=311;
+										id=608;
 										type="Cav_B_A_Helicopter_Att_coPilot_F";
 										class CustomAttributes
 										{
@@ -2554,10 +2554,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=309;
+								id=606;
 							};
 						};
-						id=306;
+						id=603;
 						atlOffset=4.7683716e-07;
 					};
 					class Item2
@@ -2572,17 +2572,17 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-24.570801,0.89242458,-23.060059};
+									position[]={-24.566406,0.89242458,-23.060059};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									init="call{[this,""Alpha"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 									description="Starter Crate";
 									dynamicSimulation=1;
 								};
-								id=313;
+								id=610;
 								type="B_supplyCrate_F";
 								atlOffset=1.9073486e-06;
 								class CustomAttributes
@@ -2608,7 +2608,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-30.578613,1.940177,-29.071777};
+									position[]={-30.574219,1.940177,-29.071777};
 								};
 								side="Empty";
 								flags=4;
@@ -2619,7 +2619,7 @@ class items
 									receiveRemoteTargets=1;
 									reportOwnPosition=1;
 								};
-								id=314;
+								id=611;
 								type="RHS_MELB_MH6M";
 								atlOffset=1.9073486e-06;
 								class CustomAttributes
@@ -2665,7 +2665,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-27.150879,0.0014390945,-24.571777};
+											position[]={-27.146484,0.0014390945,-24.571777};
 										};
 										side="West";
 										flags=7;
@@ -2677,7 +2677,7 @@ class items
 											description="Pilot@RAVEN-3";
 											isPlayable=1;
 										};
-										id=316;
+										id=613;
 										type="Cav_B_A_Helicopter_Att_Pilot_Raven_3_F";
 										class CustomAttributes
 										{
@@ -2728,7 +2728,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-26.152832,0.0014390945,-24.571777};
+											position[]={-26.148438,0.0014390945,-24.571777};
 										};
 										side="West";
 										flags=5;
@@ -2740,7 +2740,7 @@ class items
 											description="Co-Pilot@RAVEN-3";
 											isPlayable=1;
 										};
-										id=317;
+										id=614;
 										type="Cav_B_A_Helicopter_Att_coPilot_F";
 										class CustomAttributes
 										{
@@ -2791,10 +2791,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=315;
+								id=612;
 							};
 						};
-						id=312;
+						id=609;
 						atlOffset=9.5367432e-07;
 					};
 					class Item3
@@ -2809,7 +2809,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-18.578613,1.940177,-29.571777};
+									position[]={-18.574219,1.940177,-29.571777};
 								};
 								side="Empty";
 								flags=4;
@@ -2820,7 +2820,7 @@ class items
 									receiveRemoteTargets=1;
 									reportOwnPosition=1;
 								};
-								id=319;
+								id=616;
 								type="RHS_MELB_MH6M";
 								atlOffset=1.9073486e-06;
 								class CustomAttributes
@@ -2866,7 +2866,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-22.787598,0.0014410019,-25.347168};
+											position[]={-22.783203,0.0014410019,-25.347168};
 										};
 										side="West";
 										flags=7;
@@ -2878,7 +2878,7 @@ class items
 											description="Pilot@RAVEN-4";
 											isPlayable=1;
 										};
-										id=321;
+										id=618;
 										type="Cav_B_A_Helicopter_Att_Pilot_Raven_4_F";
 										atlOffset=1.9073486e-06;
 										class CustomAttributes
@@ -2930,7 +2930,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={-21.788086,0.0014390945,-25.34668};
+											position[]={-21.783691,0.0014390945,-25.34668};
 										};
 										side="West";
 										flags=5;
@@ -2942,7 +2942,7 @@ class items
 											description="Co-Pilot@RAVEN-4";
 											isPlayable=1;
 										};
-										id=322;
+										id=619;
 										type="Cav_B_A_Helicopter_Att_coPilot_F";
 										class CustomAttributes
 										{
@@ -2993,11 +2993,11 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=320;
+								id=617;
 								atlOffset=1.9073486e-06;
 							};
 						};
-						id=318;
+						id=615;
 						atlOffset=1.9073486e-06;
 					};
 					class Item4
@@ -3005,15 +3005,15 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-24.36377,5.777462,-16.706543};
+							position[]={-24.359375,5.777462,-16.706543};
 						};
 						title="Rotary Light Transport (Tooltip)";
 						description="IOT lift an entire platoon (with 2x 4-man Atlas teams), you will need up to 3 lifts. Separate the squads into one fireteam per bird, SL rides with one team, PL member with the other. You may be able to squeeze one Atlas team in the second lift. Best practice would be to use half a platoon (2 squads) with one 4-man medical team and then bring additional assets along for fun and variety.";
-						id=323;
+						id=620;
 						atlOffset=5.777462;
 					};
 				};
-				id=300;
+				id=597;
 				atlOffset=2.888732;
 			};
 			class Item1
@@ -3035,7 +3035,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={22.507813,2.024261,23.76123};
+									position[]={22.512207,2.024261,23.76123};
 									angles[]={-0,0.0050614546,0};
 								};
 								side="Empty";
@@ -3047,7 +3047,7 @@ class items
 									reportOwnPosition=1;
 									pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
 								};
-								id=326;
+								id=623;
 								type="vtx_MH60M";
 								class CustomAttributes
 								{
@@ -3412,7 +3412,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={16.60791,0.0014390945,22.714844};
+											position[]={16.612305,0.0014390945,22.714844};
 										};
 										side="West";
 										flags=7;
@@ -3424,7 +3424,7 @@ class items
 											description="Pilot@BUFFALO-1";
 											isPlayable=1;
 										};
-										id=328;
+										id=625;
 										type="Cav_B_A_Helicopter_Tra_Pilot_B1_F";
 										class CustomAttributes
 										{
@@ -3488,7 +3488,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={17.60791,0.0014390945,22.716797};
+											position[]={17.612305,0.0014390945,22.716797};
 										};
 										side="West";
 										flags=5;
@@ -3500,7 +3500,7 @@ class items
 											description="Co-Pilot@BUFFALO-1";
 											isPlayable=1;
 										};
-										id=329;
+										id=626;
 										type="Cav_B_A_Helicopter_Tra_coPilot_F";
 										class CustomAttributes
 										{
@@ -3564,7 +3564,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={16.60791,0.0014390945,21.716797};
+											position[]={16.612305,0.0014390945,21.716797};
 										};
 										side="West";
 										flags=5;
@@ -3575,7 +3575,7 @@ class items
 											description="Crew Chief@BUFFALO-1";
 											isPlayable=1;
 										};
-										id=330;
+										id=627;
 										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 										class CustomAttributes
 										{
@@ -3639,7 +3639,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={17.60791,0.0014390945,21.716797};
+											position[]={17.612305,0.0014390945,21.716797};
 										};
 										side="West";
 										flags=5;
@@ -3651,7 +3651,7 @@ class items
 											description="Crew@BUFFALO-1";
 											isPlayable=1;
 										};
-										id=331;
+										id=628;
 										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 										class CustomAttributes
 										{
@@ -3715,10 +3715,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=327;
+								id=624;
 							};
 						};
-						id=325;
+						id=622;
 					};
 					class Item1
 					{
@@ -3732,7 +3732,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={5.7890625,2.024261,22.171387};
+									position[]={5.793457,2.024261,22.171387};
 									angles[]={-0,0.0050614546,0};
 								};
 								side="Empty";
@@ -3744,7 +3744,7 @@ class items
 									reportOwnPosition=1;
 									pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
 								};
-								id=333;
+								id=630;
 								type="vtx_MH60M";
 								class CustomAttributes
 								{
@@ -4102,17 +4102,17 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={14.123047,0.89242268,23.614746};
+									position[]={14.126953,0.89242268,23.615234};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									init="call{[this,""Alpha"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 									description="Starter Crate";
 									dynamicSimulation=1;
 								};
-								id=334;
+								id=631;
 								type="B_supplyCrate_F";
 								class CustomAttributes
 								{
@@ -4144,7 +4144,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={10.167969,0.0014390945,22.542969};
+											position[]={10.172363,0.0014390945,22.542969};
 										};
 										side="West";
 										flags=7;
@@ -4156,7 +4156,7 @@ class items
 											description="Pilot@BUFFALO-2";
 											isPlayable=1;
 										};
-										id=336;
+										id=633;
 										type="Cav_B_A_Helicopter_Tra_Pilot_B2_F";
 										class CustomAttributes
 										{
@@ -4220,7 +4220,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={11.167969,0.0014390945,22.544922};
+											position[]={11.172363,0.0014390945,22.544922};
 										};
 										side="West";
 										flags=5;
@@ -4232,7 +4232,7 @@ class items
 											description="Co-Pilot@BUFFALO-2";
 											isPlayable=1;
 										};
-										id=337;
+										id=634;
 										type="Cav_B_A_Helicopter_Tra_coPilot_F";
 										class CustomAttributes
 										{
@@ -4296,7 +4296,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={10.165527,0.0014390945,21.544922};
+											position[]={10.169922,0.0014390945,21.544922};
 										};
 										side="West";
 										flags=5;
@@ -4307,7 +4307,7 @@ class items
 											description="Crew Chief@BUFFALO-2";
 											isPlayable=1;
 										};
-										id=338;
+										id=635;
 										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 										class CustomAttributes
 										{
@@ -4371,7 +4371,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={11.167969,0.0014390945,21.544922};
+											position[]={11.172363,0.0014390945,21.544922};
 										};
 										side="West";
 										flags=5;
@@ -4383,7 +4383,7 @@ class items
 											description="Crew@BUFFALO-2";
 											isPlayable=1;
 										};
-										id=339;
+										id=636;
 										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 										class CustomAttributes
 										{
@@ -4447,10 +4447,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=335;
+								id=632;
 							};
 						};
-						id=332;
+						id=629;
 					};
 					class Item2
 					{
@@ -4464,7 +4464,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={22.277344,2.024261,1.9995117};
+									position[]={22.281738,2.024261,1.9995117};
 									angles[]={-0,0.0050614546,0};
 								};
 								side="Empty";
@@ -4476,7 +4476,7 @@ class items
 									reportOwnPosition=1;
 									pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
 								};
-								id=341;
+								id=638;
 								type="vtx_MH60M";
 								class CustomAttributes
 								{
@@ -4841,7 +4841,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={16.794922,0.0014390945,2.8725586};
+											position[]={16.799316,0.0014390945,2.8725586};
 										};
 										side="West";
 										flags=7;
@@ -4853,7 +4853,7 @@ class items
 											description="Pilot@BUFFALO-3";
 											isPlayable=1;
 										};
-										id=343;
+										id=640;
 										type="Cav_B_A_Helicopter_Tra_Pilot_B3_F";
 										class CustomAttributes
 										{
@@ -4917,7 +4917,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={17.794922,0.0014390945,2.8725586};
+											position[]={17.799316,0.0014390945,2.8725586};
 										};
 										side="West";
 										flags=5;
@@ -4929,7 +4929,7 @@ class items
 											description="Co-Pilot@BUFFALO-3";
 											isPlayable=1;
 										};
-										id=344;
+										id=641;
 										type="Cav_B_A_Helicopter_Tra_coPilot_F";
 										class CustomAttributes
 										{
@@ -4993,7 +4993,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={16.794922,0.0014390945,1.8725586};
+											position[]={16.799316,0.0014390945,1.8725586};
 										};
 										side="West";
 										flags=5;
@@ -5004,7 +5004,7 @@ class items
 											description="Crew Chief@BUFFALO-3";
 											isPlayable=1;
 										};
-										id=345;
+										id=642;
 										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 										class CustomAttributes
 										{
@@ -5068,7 +5068,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={17.794922,0.0014390945,1.8725586};
+											position[]={17.799316,0.0014390945,1.8725586};
 										};
 										side="West";
 										flags=5;
@@ -5080,7 +5080,7 @@ class items
 											description="Crew@BUFFALO-3";
 											isPlayable=1;
 										};
-										id=346;
+										id=643;
 										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 										class CustomAttributes
 										{
@@ -5144,10 +5144,10 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=342;
+								id=639;
 							};
 						};
-						id=340;
+						id=637;
 					};
 					class Item3
 					{
@@ -5161,7 +5161,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={5.5585938,2.024261,0.40966797};
+									position[]={5.5629883,2.024261,0.40966797};
 									angles[]={-0,0.0050614546,0};
 								};
 								side="Empty";
@@ -5173,7 +5173,7 @@ class items
 									reportOwnPosition=1;
 									pylons=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;";
 								};
-								id=348;
+								id=645;
 								type="vtx_MH60M";
 								class CustomAttributes
 								{
@@ -5531,17 +5531,17 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={14.255859,0.89242268,5.0776367};
+									position[]={14.260254,0.89242268,5.0776367};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									init="call{[this,""Alpha"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 									description="Starter Crate";
 									dynamicSimulation=1;
 								};
-								id=349;
+								id=646;
 								type="B_supplyCrate_F";
 								class CustomAttributes
 								{
@@ -5573,7 +5573,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={10.759766,0.0014390945,2.4038086};
+											position[]={10.76416,0.0014390945,2.4038086};
 										};
 										side="West";
 										flags=7;
@@ -5585,7 +5585,7 @@ class items
 											description="Pilot@BUFFALO-4";
 											isPlayable=1;
 										};
-										id=351;
+										id=648;
 										type="Cav_B_A_Helicopter_Tra_Pilot_B4_F";
 										class CustomAttributes
 										{
@@ -5649,7 +5649,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={11.759766,0.0014390945,2.4038086};
+											position[]={11.76416,0.0014390945,2.4038086};
 										};
 										side="West";
 										flags=5;
@@ -5661,7 +5661,7 @@ class items
 											description="Co-Pilot@BUFFALO-4";
 											isPlayable=1;
 										};
-										id=352;
+										id=649;
 										type="Cav_B_A_Helicopter_Tra_coPilot_F";
 										class CustomAttributes
 										{
@@ -5725,7 +5725,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={10.759766,0.0014390945,1.4038086};
+											position[]={10.76416,0.0014390945,1.4038086};
 										};
 										side="West";
 										flags=5;
@@ -5736,7 +5736,7 @@ class items
 											description="Crew Chief@BUFFALO-4";
 											isPlayable=1;
 										};
-										id=353;
+										id=650;
 										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 										class CustomAttributes
 										{
@@ -5800,7 +5800,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={11.759766,0.0014390945,1.4038086};
+											position[]={11.76416,0.0014390945,1.4038086};
 										};
 										side="West";
 										flags=5;
@@ -5812,7 +5812,7 @@ class items
 											description="Crew@BUFFALO-4";
 											isPlayable=1;
 										};
-										id=354;
+										id=651;
 										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 										class CustomAttributes
 										{
@@ -5876,25 +5876,25 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=350;
+								id=647;
 							};
 						};
-						id=347;
+						id=644;
 					};
 					class Item4
 					{
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={14.917969,5.777462,16.003418};
+							position[]={14.922363,5.777462,16.003418};
 						};
 						title="Rotary Transport (Tooltip)";
 						description="These are MH-60Ms, they can lift the entire platoon, but it is going to be tight to have too many additional attachments to the platoon. You may be able to swap for the UH-60M for one more seat per bird, but that's about it. It's also less cool sitting in a seat vs the side of the helicopter... A good rule of thumb is to include some form of Attack Rotary escort with the Serial.";
-						id=355;
+						id=652;
 						atlOffset=5.777462;
 					};
 				};
-				id=324;
+				id=621;
 				atlOffset=2.888731;
 			};
 			class Item2
@@ -5923,7 +5923,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={42.081543,0.0014390945,-2.1982422};
+											position[]={42.085938,0.0014390945,-2.1982422};
 										};
 										side="West";
 										flags=7;
@@ -5935,7 +5935,7 @@ class items
 											description="Pilot@GRIZZLY-1";
 											isPlayable=1;
 										};
-										id=377;
+										id=656;
 										type="Cav_B_A_Helicopter_Tra_Pilot_B1_F";
 										class CustomAttributes
 										{
@@ -5999,7 +5999,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={43.081543,0.0014390945,-2.1962891};
+											position[]={43.085938,0.0014390945,-2.1962891};
 										};
 										side="West";
 										flags=5;
@@ -6011,7 +6011,7 @@ class items
 											description="Co-Pilot@GRIZZLY-1";
 											isPlayable=1;
 										};
-										id=378;
+										id=657;
 										type="Cav_B_A_Helicopter_Tra_coPilot_F";
 										class CustomAttributes
 										{
@@ -6075,7 +6075,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={42.081543,0.0014390945,-3.1962891};
+											position[]={42.085938,0.0014390945,-3.1962891};
 										};
 										side="West";
 										flags=5;
@@ -6086,7 +6086,7 @@ class items
 											description="Crew Chief@GRIZZLY-1";
 											isPlayable=1;
 										};
-										id=379;
+										id=658;
 										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 										class CustomAttributes
 										{
@@ -6150,7 +6150,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={43.081543,0.0014390945,-3.1962891};
+											position[]={43.085938,0.0014390945,-3.1962891};
 										};
 										side="West";
 										flags=5;
@@ -6162,7 +6162,7 @@ class items
 											description="Crew@GRIZZLY-1";
 											isPlayable=1;
 										};
-										id=380;
+										id=659;
 										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 										class CustomAttributes
 										{
@@ -6226,24 +6226,24 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=376;
+								id=655;
 							};
 							class Item1
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={39.649902,0.89242268,-1.5029297};
+									position[]={39.654297,0.89242268,-1.5029297};
 								};
 								side="Empty";
 								flags=4;
 								class Attributes
 								{
-									init="call{[this,""Alpha"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+									init="call{[this,""Alpha"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 									description="Starter Crate";
 									dynamicSimulation=1;
 								};
-								id=381;
+								id=660;
 								type="B_supplyCrate_F";
 								class CustomAttributes
 								{
@@ -6268,7 +6268,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={40.148926,2.8099375,18.473633};
+									position[]={40.15332,2.8099375,18.473633};
 								};
 								side="Empty";
 								flags=4;
@@ -6276,11 +6276,11 @@ class items
 								{
 									reportOwnPosition=1;
 								};
-								id=370;
+								id=661;
 								type="TF373_SOAR_MH47G_No_Rear_Guns";
 							};
 						};
-						id=390;
+						id=654;
 					};
 					class Item1
 					{
@@ -6301,7 +6301,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={36.395996,0.0014390945,-2.0336914};
+											position[]={36.400391,0.0014390945,-2.0336914};
 										};
 										side="West";
 										flags=7;
@@ -6313,7 +6313,7 @@ class items
 											description="Pilot@GRIZZLY-2";
 											isPlayable=1;
 										};
-										id=383;
+										id=664;
 										type="Cav_B_A_Helicopter_Tra_Pilot_B2_F";
 										class CustomAttributes
 										{
@@ -6377,7 +6377,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={37.395996,0.0014390945,-2.0317383};
+											position[]={37.400391,0.0014390945,-2.0317383};
 										};
 										side="West";
 										flags=5;
@@ -6389,7 +6389,7 @@ class items
 											description="Co-Pilot@GRIZZLY-2";
 											isPlayable=1;
 										};
-										id=384;
+										id=665;
 										type="Cav_B_A_Helicopter_Tra_coPilot_F";
 										class CustomAttributes
 										{
@@ -6453,7 +6453,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={36.393066,0.0014390945,-3.0317383};
+											position[]={36.397461,0.0014390945,-3.0317383};
 										};
 										side="West";
 										flags=5;
@@ -6464,7 +6464,7 @@ class items
 											description="Crew Chief@GRIZZLY-2";
 											isPlayable=1;
 										};
-										id=385;
+										id=666;
 										type="Cav_B_A_Helicopter_Tra_CrewChief_F";
 										class CustomAttributes
 										{
@@ -6528,7 +6528,7 @@ class items
 										dataType="Object";
 										class PositionInfo
 										{
-											position[]={37.395996,0.0014390945,-3.0317383};
+											position[]={37.400391,0.0014390945,-3.0317383};
 										};
 										side="West";
 										flags=5;
@@ -6540,7 +6540,7 @@ class items
 											description="Crew@GRIZZLY-2";
 											isPlayable=1;
 										};
-										id=386;
+										id=667;
 										type="Cav_B_A_Helicopter_Tra_DoorGunner_F";
 										class CustomAttributes
 										{
@@ -6604,14 +6604,14 @@ class items
 								{
 									dynamicSimulation=1;
 								};
-								id=382;
+								id=663;
 							};
 							class Item1
 							{
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={39.160645,2.8099375,-23.553223};
+									position[]={39.165039,2.8099375,-23.553223};
 								};
 								side="Empty";
 								flags=4;
@@ -6619,17 +6619,17 @@ class items
 								{
 									reportOwnPosition=1;
 								};
-								id=375;
+								id=668;
 								type="TF373_SOAR_MH47G_No_Rear_Guns";
 							};
 						};
-						id=391;
+						id=662;
 					};
 				};
-				id=389;
+				id=653;
 			};
 		};
-		id=388;
+		id=596;
 		atlOffset=1.4443655;
 	};
 };
