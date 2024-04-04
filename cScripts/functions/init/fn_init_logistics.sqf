@@ -47,9 +47,9 @@ private _dataArray = [
         ["rhsusf_hgu56p_tan", 0],
         ["rhsusf_hgu56p_usa", 0],
         ["rhsusf_hgu56p_visor_black", 0],
-        ["rhsusf_hgu56p_visor_green", 12],
+        ["rhsusf_hgu56p_visor_green", 0],
         ["rhsusf_hgu56p_visor_mask_black_skull", 0],
-        ["rhsusf_hgu56p_visor_mask_black", 12],
+        ["rhsusf_hgu56p_visor_mask_black", 0],
         ["rhsusf_hgu56p_visor_mask_Empire_black", 0],
         ["rhsusf_hgu56p_visor_mask_green_mo", 0],
         ["rhsusf_hgu56p_visor_mask_green", 0],
@@ -65,10 +65,10 @@ private _dataArray = [
         ["rhsusf_hgu56p_visor_tan", 0],
         ["rhsusf_hgu56p_visor_usa", 0],
         ["rhsusf_hgu56p_visor_white", 0],
-        ["rhsusf_hgu56p_visor", 12],
+        ["rhsusf_hgu56p_visor", 0],
         ["rhsusf_hgu56p_white", 0],
         ["rhsusf_hgu56p", 0],
-        ["rhsusf_ihadss", 12],
+        ["rhsusf_ihadss", 0],
         ["rhsusf_patrolcap_ocp", 0],
         
         // Vest
@@ -92,16 +92,16 @@ private _dataArray = [
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 0],
         ["rhs_mag_30Rnd_556x45_Mk262_PMAG", 0],
-        ["rhsusf_mag_15Rnd_9x19_JHP",10],
+        ["rhsusf_mag_15Rnd_9x19_JHP",0],
 
         // Grenades
-        ["rhs_mag_m67",10],
-        ["SmokeShell",10],
+        ["rhs_mag_m67",0],
+        ["SmokeShell",0],
         ["SmokeShellRed",0],
         ["SmokeShellBlue",0],
         ["SmokeShellGreen",0],
@@ -123,7 +123,7 @@ private _dataArray = [
         ["Chemlight_yellow",0],
 
         // Tools and Items
-        ["Toolkit",10],
+        ["Toolkit",0],
         ["ACE_Flashlight_MX991",0],
         ["itemcTabHCam",0],
         ["ACE_CableTie",0],
@@ -140,7 +140,7 @@ private _dataArray = [
         ["ItemAndroidMisc",0],
 
         // Medical
-        ["ACE_EarPlugs",10],
+        ["ACE_EarPlugs",0],
         ["ACE_quikclot",0],
         ["ACE_packingBandage",0],
         ["ACE_tourniquet",0],
@@ -208,7 +208,7 @@ private _dataArray = [
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["30Rnd_556x45_Stanag_Sand_red", 0],
@@ -217,7 +217,7 @@ private _dataArray = [
         ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 0],
         ["rhsusf_100Rnd_762x51_m62_tracer", 0],
         ["rhs_mag_M397_HET", 0],
-        ["rhs_mag_M433_HEDP", 50],
+        ["rhs_mag_M433_HEDP", 0],
         ["ACE_HuntIR_M203", 0],
         ["ACE_40mm_Flare_white", 0],
         ["ACE_40mm_Flare_red", 0],
@@ -272,30 +272,30 @@ private _dataArray = [
         ["TFAR_anprc152", 0],
 
         // Lunchers and mortars
-        ["rhs_weap_M136_hedp",1],
-        ["rhs_weap_m72a7",10],
-        ["rhs_weap_fgm148",1],
-        ["rhs_weap_fim92",1],
-        ["dzn_MG_Tripod_M122A1_M240Mount_Carry",2],
-        ["ace_csw_carryMortarBaseplate",2],
-        ["ace_csw_staticMortarCarry",2],
-        ["avm224_W_M224_mortar_carry",2],
+        ["rhs_weap_M136_hedp",0],
+        ["rhs_weap_m72a7",0],
+        ["rhs_weap_fgm148",0],
+        ["rhs_weap_fim92",0],
+        ["dzn_MG_Tripod_M122A1_M240Mount_Carry",0],
+        ["ace_csw_carryMortarBaseplate",0],
+        ["ace_csw_staticMortarCarry",0],
+        ["avm224_W_M224_mortar_carry",0],
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG",0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",28],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",0],
         ["ACE_30Rnd_556x45_Stanag_M995_AP_mag",0],
         ["rhsusf_200Rnd_556x45_soft_pouch",0],
         ["rhsusf_100Rnd_762x51_m62_tracer",0],
-        ["rhs_fgm148_magazine_AT",1],
-        ["rhs_fim92_mag",2],
-        ["MRAWS_HE_F",2],
-        ["MRAWS_HEAT_F",2],
+        ["rhs_fgm148_magazine_AT",0],
+        ["rhs_fim92_mag",0],
+        ["MRAWS_HE_F",0],
+        ["MRAWS_HEAT_F",0],
         ["MAA_MAAWS_ASM509",0],
         ["MAA_MAAWS_GMM_MT",0],
 
         ["rhs_mag_M397_HET",0],
-        ["rhs_mag_M433_HEDP",20],
+        ["rhs_mag_M433_HEDP",0],
         ["ACE_HuntIR_M203",0],
         ["ACE_40mm_Flare_white",0],
         ["ACE_40mm_Flare_red",0],
@@ -319,7 +319,7 @@ private _dataArray = [
         ["ACE_Chemlight_HiRed",0],
 
         // Medical
-        ["ACE_EarPlugs",10],
+        ["ACE_EarPlugs",0],
         ["kat_chestSeal",0],
         ["ACE_quikclot",0],
         ["ACE_tourniquet",0],
@@ -456,11 +456,11 @@ private _dataArray = [
         ["ACE_Chemlight_Shield",0],
         ["ACE_EntrenchingTool",0],
         ["ACE_IR_Strobe_Item",0],
-        ["ACE_wirecutter",10],
+        ["ACE_wirecutter",0],
         ["Rev_pelican_item",0],
 
         // Medical
-        ["ACE_EarPlugs",10],
+        ["ACE_EarPlugs",0],
         ["ACE_bodyBag",0],
         ["ACE_personalAidKit",0],
 
@@ -499,22 +499,22 @@ private _dataArray = [
         // Weapons
         ["rhs_weap_M136_hp",0],
         ["rhs_weap_M136",0],
-        ["rhs_weap_M136_hedp",10],
-        ["rhs_weap_m72a7",10],
+        ["rhs_weap_M136_hedp",0],
+        ["rhs_weap_m72a7",0],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry",0],
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 0],
         ["rhs_mag_30Rnd_556x45_Mk262_PMAG", 0],
         ["rhsusf_mag_17Rnd_9x19_FMJ", 0],
-        ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 10],
-        ["rhsusf_100Rnd_762x51_m62_tracer", 10],
+        ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 0],
+        ["rhsusf_100Rnd_762x51_m62_tracer", 0],
         ["rhs_mag_M397_HET", 0],
-        ["rhs_mag_M433_HEDP", 20],
+        ["rhs_mag_M433_HEDP", 0],
         ["ACE_HuntIR_M203", 0],
         ["ACE_40mm_Flare_white", 0],
         ["ACE_40mm_Flare_red", 0],
@@ -533,8 +533,8 @@ private _dataArray = [
         ["NDS_M_6Rnd_60mm_ILLUM", 0],
 
         // Grenades
-        ["HandGrenade",10],
-        ["SmokeShell",10],
+        ["HandGrenade",0],
+        ["SmokeShell",0],
         ["SmokeShellBlue",0],
         ["SmokeShellGreen",0],
         ["SmokeShellYellow",0],
@@ -559,11 +559,11 @@ private _dataArray = [
         // Tools and Items
         ["ACE_CableTie",0],
         ["USP_PVS15",0],
-        ["ACE_EntrenchingTool",10],
-        ["ACE_wirecutter",10],
+        ["ACE_EntrenchingTool",0],
+        ["ACE_wirecutter",0],
         ["rhs_weap_rsp30_green",0],
         ["rhs_weap_rsp30_red",0],
-        ["ACE_SpareBarrel", 4],
+        ["ACE_SpareBarrel", 0],
 
         //cTab
         ["ItemAndroid", 0],
