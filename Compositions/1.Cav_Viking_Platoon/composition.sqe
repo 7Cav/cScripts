@@ -1,5 +1,5 @@
 version=54;
-center[]={3421.3616,5,1282.7375};
+center[]={795.86157,5,6021.6689};
 class items
 {
 	items=7;
@@ -22,7 +22,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.9936523,0.0014390945,14.885498};
+							position[]={-2.9938354,0.0014390945,14.888672};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -35,7 +35,7 @@ class items
 							description="Platoon Leader@VIKING-6";
 							isPlayable=1;
 						};
-						id=80;
+						id=175;
 						type="Cav_B_B_Scout_PlatoonLead_2_6_F";
 						class CustomAttributes
 						{
@@ -73,24 +73,24 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=79;
+				id=174;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.2512207,0.89242268,12.458252};
+					position[]={-0.25140381,0.89242268,12.461914};
 					angles[]={-0,1.5526583,0};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Bravo"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=83;
+				id=176;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -141,16 +141,16 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={14.301514,0.89242268,2.1525879};
+					position[]={14.301331,0.89242268,2.15625};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Bravo"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=84;
+				id=177;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -201,18 +201,18 @@ class items
 				dataType="Comment";
 				class PositionInfo
 				{
-					position[]={1.7380371,0,6.9772949};
+					position[]={1.737854,0,6.9804688};
 				};
 				title="Stryker Scout Platoon (Tooltip)";
 				description="B/1-7's Stryker Scout Platoon is a hybrid fighting force that specializes in scout tasks and missions. They handle everything from Screening Operations, Guard Operations, Ambushes, Area Reconnaissance, and all other general infantry tasks. While the composition utilizes 6 Strykers for the Platoon, unless it's completely full, they'll mostly only use 4 or 5. Viking does NOT require a JTAC to call in CAS as they are trained and capable of doing so internally.";
-				id=85;
+				id=178;
 			};
 			class Item4
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-6.5314941,2.6142888,19.24292};
+					position[]={-6.5316772,2.6142888,19.246094};
 				};
 				side="Empty";
 				flags=4;
@@ -220,7 +220,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=86;
+				id=179;
 				type="cav_dragoon_WD_V6";
 				class CustomAttributes
 				{
@@ -259,7 +259,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-2.9936523,0.0014390945,16.385498};
+									position[]={-2.9938354,0.0014390945,16.388672};
 									angles[]={0,3.1415927,0};
 								};
 								side="West";
@@ -271,7 +271,7 @@ class items
 									description="Stryker Vehicle Commander@SIERRA-6";
 									isPlayable=1;
 								};
-								id=81;
+								id=182;
 								type="Cav_B_B_Ifv_Commander_F";
 								class CustomAttributes
 								{
@@ -322,7 +322,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-2.9936523,0.0014390945,17.885498};
+									position[]={-2.9938354,0.0014390945,17.888672};
 									angles[]={0,3.1415927,0};
 								};
 								side="West";
@@ -334,7 +334,7 @@ class items
 									description="Stryker Driver@SIERRA-6";
 									isPlayable=1;
 								};
-								id=82;
+								id=183;
 								type="Cav_B_B_Ifv_Driver_F";
 								class CustomAttributes
 								{
@@ -384,13 +384,13 @@ class items
 						class Attributes
 						{
 						};
-						id=168;
+						id=181;
 					};
 				};
-				id=167;
+				id=180;
 			};
 		};
-		id=78;
+		id=173;
 	};
 	class Item1
 	{
@@ -411,7 +411,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={3.0063477,0.0014390945,14.885498};
+							position[]={3.0061646,0.0014390945,14.888672};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -424,7 +424,7 @@ class items
 							description="Platoon Sergeant@VIKING-5";
 							isPlayable=1;
 						};
-						id=89;
+						id=186;
 						type="Cav_B_B_Scout_PlatoonLead_2_5_F";
 						class CustomAttributes
 						{
@@ -462,7 +462,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={3.0065918,0.0014390945,16.385498};
+							position[]={3.0064087,0.0014390945,16.388672};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -474,7 +474,7 @@ class items
 							description="Stryker Driver";
 							isPlayable=1;
 						};
-						id=90;
+						id=187;
 						type="Cav_B_B_Ifv_Driver_F";
 						class CustomAttributes
 						{
@@ -525,14 +525,14 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=88;
+				id=185;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={6.2321777,2.6142888,19.176514};
+					position[]={6.2319946,2.6142888,19.179688};
 					angles[]={-0,0.005982683,0};
 				};
 				side="Empty";
@@ -541,7 +541,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=91;
+				id=188;
 				type="cav_dragoon_WD_V5";
 				class CustomAttributes
 				{
@@ -562,7 +562,7 @@ class items
 				};
 			};
 		};
-		id=87;
+		id=184;
 	};
 	class Item2
 	{
@@ -583,7 +583,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={1.6523438,0.0014390945,15.814453};
+							position[]={1.6521606,0.0014390945,15.817871};
 							angles[]={0,3.1415927,0};
 						};
 						side="West";
@@ -596,7 +596,7 @@ class items
 							description="Platoon Medic@VIKING-7";
 							isPlayable=1;
 						};
-						id=94;
+						id=191;
 						type="Cav_B_B_Scout_PlatoonMedic_2_7_F";
 						class CustomAttributes
 						{
@@ -647,10 +647,10 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=93;
+				id=190;
 			};
 		};
-		id=92;
+		id=189;
 	};
 	class Item3
 	{
@@ -671,7 +671,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-11.744629,0.0014390945,-0.37854004};
+							position[]={-11.744812,0.0014390945,-0.375};
 						};
 						side="West";
 						flags=6;
@@ -682,7 +682,7 @@ class items
 							description="Squad Leader@VIKING-1";
 							isPlayable=1;
 						};
-						id=97;
+						id=194;
 						type="Cav_B_B_Scout_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -720,7 +720,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-13.744385,0.0014390945,-1.3781738};
+							position[]={-13.744568,0.0014390945,-1.375};
 						};
 						side="West";
 						flags=5;
@@ -732,7 +732,7 @@ class items
 							description="Alpha Team Leader";
 							isPlayable=1;
 						};
-						id=98;
+						id=195;
 						type="Cav_B_B_Scout_Alpha_TeamLead_F";
 						class CustomAttributes
 						{
@@ -770,7 +770,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-13.744385,0.0014390945,-2.8781738};
+							position[]={-13.744568,0.0014390945,-2.875};
 						};
 						side="West";
 						flags=5;
@@ -781,7 +781,7 @@ class items
 							description="Alpha Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=99;
+						id=196;
 						type="Cav_B_B_Scout_Alpha_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -819,7 +819,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-13.744385,0.0014390945,-4.3786621};
+							position[]={-13.744568,0.0014390945,-4.375};
 						};
 						side="West";
 						flags=4;
@@ -830,7 +830,7 @@ class items
 							description="Alpha Grenadier";
 							isPlayable=1;
 						};
-						id=100;
+						id=197;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -868,7 +868,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-13.744385,0.0014390945,-5.8781738};
+							position[]={-13.744568,0.0014390945,-5.875};
 						};
 						side="West";
 						flags=5;
@@ -879,7 +879,7 @@ class items
 							description="Alpha Rifleman";
 							isPlayable=1;
 						};
-						id=101;
+						id=198;
 						type="Cav_B_B_Scout_Alpha_Rifleman_F";
 						class CustomAttributes
 						{
@@ -917,7 +917,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7443848,0.0014390945,-1.3781738};
+							position[]={-9.7445679,0.0014390945,-1.375};
 						};
 						side="West";
 						flags=5;
@@ -929,7 +929,7 @@ class items
 							description="Bravo Team Leader";
 							isPlayable=1;
 						};
-						id=102;
+						id=199;
 						type="Cav_B_B_Scout_Bravo_TeamLead_F";
 						class CustomAttributes
 						{
@@ -967,7 +967,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7443848,0.0014390945,-2.8781738};
+							position[]={-9.7445679,0.0014390945,-2.875};
 						};
 						side="West";
 						flags=5;
@@ -978,7 +978,7 @@ class items
 							description="Bravo Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=103;
+						id=200;
 						type="Cav_B_B_Scout_Bravo_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -1016,7 +1016,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7443848,0.0014390945,-4.3781738};
+							position[]={-9.7445679,0.0014390945,-4.375};
 						};
 						side="West";
 						flags=4;
@@ -1027,7 +1027,7 @@ class items
 							description="Bravo Grenadier";
 							isPlayable=1;
 						};
-						id=104;
+						id=201;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -1065,7 +1065,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7443848,0.0014390945,-5.8786621};
+							position[]={-9.7445679,0.0014390945,-5.875};
 						};
 						side="West";
 						flags=5;
@@ -1076,7 +1076,7 @@ class items
 							description="Bravo Combat Lifesaver";
 							isPlayable=1;
 						};
-						id=105;
+						id=202;
 						type="Cav_B_B_Scout_Bravo_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -1114,23 +1114,23 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=96;
+				id=193;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-8.6740723,0.89242268,1.0187988};
+					position[]={-8.6742554,0.89242268,1.0224609};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Bravo"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=108;
+				id=203;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -1181,7 +1181,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-12.606689,2.6142888,7.666748};
+					position[]={-12.606873,2.6142888,7.6699219};
 				};
 				side="Empty";
 				flags=4;
@@ -1189,7 +1189,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=109;
+				id=204;
 				type="cav_dragoon_WD_V1";
 				class CustomAttributes
 				{
@@ -1228,7 +1228,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-11.744629,0.0014390945,-2.37854};
+									position[]={-11.744812,0.0014390945,-2.375};
 								};
 								side="West";
 								flags=7;
@@ -1239,7 +1239,7 @@ class items
 									description="Stryker Vehicle Commander@SIERRA-1";
 									isPlayable=1;
 								};
-								id=106;
+								id=207;
 								type="Cav_B_B_Ifv_Commander_F";
 								class CustomAttributes
 								{
@@ -1290,7 +1290,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-11.744629,0.0014390945,-3.87854};
+									position[]={-11.744812,0.0014390945,-3.875};
 								};
 								side="West";
 								flags=5;
@@ -1301,7 +1301,7 @@ class items
 									description="Stryker Driver@SIERRA-1";
 									isPlayable=1;
 								};
-								id=107;
+								id=208;
 								type="Cav_B_B_Ifv_Driver_F";
 								class CustomAttributes
 								{
@@ -1351,13 +1351,13 @@ class items
 						class Attributes
 						{
 						};
-						id=165;
+						id=206;
 					};
 				};
-				id=164;
+				id=205;
 			};
 		};
-		id=95;
+		id=192;
 	};
 	class Item4
 	{
@@ -1378,7 +1378,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-4.1555176,0.0014390945,-4.7974854};
+							position[]={-4.1557007,0.0014390945,-4.7939453};
 						};
 						side="West";
 						flags=6;
@@ -1389,7 +1389,7 @@ class items
 							description="Squad Leader@VIKING-2";
 							isPlayable=1;
 						};
-						id=112;
+						id=211;
 						type="Cav_B_B_Scout_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -1427,7 +1427,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.1555176,0.0014390945,-5.7976074};
+							position[]={-6.1557007,0.0014390945,-5.7939453};
 						};
 						side="West";
 						flags=5;
@@ -1439,7 +1439,7 @@ class items
 							description="Alpha Team Leader";
 							isPlayable=1;
 						};
-						id=113;
+						id=212;
 						type="Cav_B_B_Scout_Alpha_TeamLead_F";
 						class CustomAttributes
 						{
@@ -1477,7 +1477,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.1555176,0.0014390945,-7.2976074};
+							position[]={-6.1557007,0.0014390945,-7.2939453};
 						};
 						side="West";
 						flags=5;
@@ -1488,7 +1488,7 @@ class items
 							description="Alpha Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=114;
+						id=213;
 						type="Cav_B_B_Scout_Alpha_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -1526,7 +1526,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.1555176,0.0014390945,-8.7976074};
+							position[]={-6.1557007,0.0014390945,-8.7939453};
 						};
 						side="West";
 						flags=4;
@@ -1537,7 +1537,7 @@ class items
 							description="Alpha Grenadier";
 							isPlayable=1;
 						};
-						id=115;
+						id=214;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -1575,7 +1575,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.1555176,0.0014390945,-10.297607};
+							position[]={-6.1557007,0.0014390945,-10.293945};
 						};
 						side="West";
 						flags=5;
@@ -1586,7 +1586,7 @@ class items
 							description="Alpha Rifleman";
 							isPlayable=1;
 						};
-						id=116;
+						id=215;
 						type="Cav_B_B_Scout_Alpha_Rifleman_F";
 						class CustomAttributes
 						{
@@ -1624,7 +1624,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.1555176,0.0014390945,-5.7976074};
+							position[]={-2.1557007,0.0014390945,-5.7939453};
 						};
 						side="West";
 						flags=5;
@@ -1636,7 +1636,7 @@ class items
 							description="Bravo Team Leader";
 							isPlayable=1;
 						};
-						id=117;
+						id=216;
 						type="Cav_B_B_Scout_Bravo_TeamLead_F";
 						class CustomAttributes
 						{
@@ -1674,7 +1674,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.1555176,0.0014390945,-7.2976074};
+							position[]={-2.1557007,0.0014390945,-7.2939453};
 						};
 						side="West";
 						flags=5;
@@ -1685,7 +1685,7 @@ class items
 							description="Bravo Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=118;
+						id=217;
 						type="Cav_B_B_Scout_Bravo_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -1723,7 +1723,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.1555176,0.0014390945,-8.7976074};
+							position[]={-2.1557007,0.0014390945,-8.7939453};
 						};
 						side="West";
 						flags=4;
@@ -1734,7 +1734,7 @@ class items
 							description="Bravo Grenadier";
 							isPlayable=1;
 						};
-						id=119;
+						id=218;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -1772,7 +1772,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.1555176,0.0014390945,-10.297607};
+							position[]={-2.1557007,0.0014390945,-10.293945};
 						};
 						side="West";
 						flags=5;
@@ -1783,7 +1783,7 @@ class items
 							description="Bravo Combat Lifesaver";
 							isPlayable=1;
 						};
-						id=120;
+						id=219;
 						type="Cav_B_B_Scout_Bravo_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -1821,23 +1821,23 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=111;
+				id=210;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-1.6574707,0.89242268,-2.4123535};
+					position[]={-1.6576538,0.89242268,-2.4091797};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Bravo"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=123;
+				id=220;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -1888,7 +1888,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-4.8327637,2.6142888,3.501709};
+					position[]={-4.8329468,2.6142888,3.5048828};
 				};
 				side="Empty";
 				flags=4;
@@ -1896,7 +1896,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=124;
+				id=221;
 				type="cav_dragoon_WD_V2";
 				class CustomAttributes
 				{
@@ -1935,7 +1935,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-4.1555176,0.0014390945,-6.7974854};
+									position[]={-4.1557007,0.0014390945,-6.7939453};
 								};
 								side="West";
 								flags=7;
@@ -1946,7 +1946,7 @@ class items
 									description="Stryker Vehicle Commander@SIERRA-2";
 									isPlayable=1;
 								};
-								id=121;
+								id=224;
 								type="Cav_B_B_Ifv_Commander_F";
 								class CustomAttributes
 								{
@@ -1997,7 +1997,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-4.1555176,0.0014390945,-8.2974854};
+									position[]={-4.1557007,0.0014390945,-8.2939453};
 								};
 								side="West";
 								flags=5;
@@ -2008,7 +2008,7 @@ class items
 									description="Stryker Driver@SIERRA-2";
 									isPlayable=1;
 								};
-								id=122;
+								id=225;
 								type="Cav_B_B_Ifv_Driver_F";
 								class CustomAttributes
 								{
@@ -2058,13 +2058,13 @@ class items
 						class Attributes
 						{
 						};
-						id=163;
+						id=223;
 					};
 				};
-				id=161;
+				id=222;
 			};
 		};
-		id=110;
+		id=209;
 	};
 	class Item5
 	{
@@ -2085,7 +2085,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={4.3444824,0.0014390945,-4.7974854};
+							position[]={4.3442993,0.0014390945,-4.7939453};
 						};
 						side="West";
 						flags=6;
@@ -2096,7 +2096,7 @@ class items
 							description="Squad Leader@VIKING-3";
 							isPlayable=1;
 						};
-						id=127;
+						id=228;
 						type="Cav_B_B_Scout_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -2134,7 +2134,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.3444824,0.0014390945,-5.7976074};
+							position[]={2.3442993,0.0014390945,-5.7939453};
 						};
 						side="West";
 						flags=5;
@@ -2146,7 +2146,7 @@ class items
 							description="Alpha Team Leader";
 							isPlayable=1;
 						};
-						id=128;
+						id=229;
 						type="Cav_B_B_Scout_Alpha_TeamLead_F";
 						class CustomAttributes
 						{
@@ -2184,7 +2184,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.3444824,0.0014390945,-7.2976074};
+							position[]={2.3442993,0.0014390945,-7.2939453};
 						};
 						side="West";
 						flags=5;
@@ -2195,7 +2195,7 @@ class items
 							description="Alpha Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=129;
+						id=230;
 						type="Cav_B_B_Scout_Alpha_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -2233,7 +2233,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.3444824,0.0014390945,-8.7976074};
+							position[]={2.3442993,0.0014390945,-8.7939453};
 						};
 						side="West";
 						flags=4;
@@ -2244,7 +2244,7 @@ class items
 							description="Alpha Grenadier";
 							isPlayable=1;
 						};
-						id=130;
+						id=231;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -2282,7 +2282,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.3444824,0.0014390945,-10.297607};
+							position[]={2.3442993,0.0014390945,-10.293945};
 						};
 						side="West";
 						flags=5;
@@ -2293,7 +2293,7 @@ class items
 							description="Alpha Rifleman";
 							isPlayable=1;
 						};
-						id=131;
+						id=232;
 						type="Cav_B_B_Scout_Alpha_Rifleman_F";
 						class CustomAttributes
 						{
@@ -2331,7 +2331,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.3444824,0.0014390945,-5.7976074};
+							position[]={6.3442993,0.0014390945,-5.7939453};
 						};
 						side="West";
 						flags=5;
@@ -2343,7 +2343,7 @@ class items
 							description="Bravo Team Leader";
 							isPlayable=1;
 						};
-						id=132;
+						id=233;
 						type="Cav_B_B_Scout_Bravo_TeamLead_F";
 						class CustomAttributes
 						{
@@ -2381,7 +2381,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.3444824,0.0014390945,-7.2976074};
+							position[]={6.3442993,0.0014390945,-7.2939453};
 						};
 						side="West";
 						flags=5;
@@ -2392,7 +2392,7 @@ class items
 							description="Bravo Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=133;
+						id=234;
 						type="Cav_B_B_Scout_Bravo_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -2430,7 +2430,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.3444824,0.0014390945,-8.7976074};
+							position[]={6.3442993,0.0014390945,-8.7939453};
 						};
 						side="West";
 						flags=4;
@@ -2441,7 +2441,7 @@ class items
 							description="Bravo Grenadier";
 							isPlayable=1;
 						};
-						id=134;
+						id=235;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -2479,7 +2479,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.3444824,0.0014390945,-10.297607};
+							position[]={6.3442993,0.0014390945,-10.293945};
 						};
 						side="West";
 						flags=5;
@@ -2490,7 +2490,7 @@ class items
 							description="Bravo Combat Lifesaver";
 							isPlayable=1;
 						};
-						id=135;
+						id=236;
 						type="Cav_B_B_Scout_Bravo_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -2528,23 +2528,23 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=126;
+				id=227;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={1.532959,0.89242268,-2.2858887};
+					position[]={1.5327759,0.89242268,-2.2822266};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bravo"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Bravo"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=138;
+				id=237;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -2595,7 +2595,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={4.1066895,2.6142888,3.7492676};
+					position[]={4.1065063,2.6142888,3.7529297};
 				};
 				side="Empty";
 				flags=4;
@@ -2603,7 +2603,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=139;
+				id=238;
 				type="cav_dragoon_WD_V3";
 				class CustomAttributes
 				{
@@ -2642,7 +2642,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={4.3444824,0.0014390945,-6.7974854};
+									position[]={4.3442993,0.0014390945,-6.7939453};
 								};
 								side="West";
 								flags=7;
@@ -2653,7 +2653,7 @@ class items
 									description="Stryker Vehicle Commander@SIERRA-3";
 									isPlayable=1;
 								};
-								id=136;
+								id=241;
 								type="Cav_B_B_Ifv_Commander_F";
 								class CustomAttributes
 								{
@@ -2704,7 +2704,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={4.3444824,0.0014390945,-8.2974854};
+									position[]={4.3442993,0.0014390945,-8.2939453};
 								};
 								side="West";
 								flags=5;
@@ -2715,7 +2715,7 @@ class items
 									description="Stryker Driver@SIERRA-3";
 									isPlayable=1;
 								};
-								id=137;
+								id=242;
 								type="Cav_B_B_Ifv_Driver_F";
 								class CustomAttributes
 								{
@@ -2765,13 +2765,13 @@ class items
 						class Attributes
 						{
 						};
-						id=159;
+						id=240;
 					};
 				};
-				id=158;
+				id=239;
 			};
 		};
-		id=125;
+		id=226;
 	};
 	class Item6
 	{
@@ -2792,7 +2792,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={11.344482,0.0014390945,-0.29748535};
+							position[]={11.344299,0.0014390945,-0.29394531};
 						};
 						side="West";
 						flags=6;
@@ -2803,7 +2803,7 @@ class items
 							description="Squad Leader@VIKING-4";
 							isPlayable=1;
 						};
-						id=142;
+						id=245;
 						type="Cav_B_B_Scout_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -2841,7 +2841,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.3444824,0.0014390945,-1.2976074};
+							position[]={9.3442993,0.0014390945,-1.2939453};
 						};
 						side="West";
 						flags=5;
@@ -2853,7 +2853,7 @@ class items
 							description="Alpha Team Leader";
 							isPlayable=1;
 						};
-						id=143;
+						id=246;
 						type="Cav_B_B_Scout_Alpha_TeamLead_F";
 						class CustomAttributes
 						{
@@ -2891,7 +2891,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.3444824,0.0014390945,-2.7976074};
+							position[]={9.3442993,0.0014390945,-2.7939453};
 						};
 						side="West";
 						flags=5;
@@ -2902,7 +2902,7 @@ class items
 							description="Alpha Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=144;
+						id=247;
 						type="Cav_B_B_Scout_Alpha_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -2940,7 +2940,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.3444824,0.0014390945,-4.2976074};
+							position[]={9.3442993,0.0014390945,-4.2939453};
 						};
 						side="West";
 						flags=4;
@@ -2951,7 +2951,7 @@ class items
 							description="Alpha Grenadier";
 							isPlayable=1;
 						};
-						id=145;
+						id=248;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -2989,7 +2989,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.3444824,0.0014390945,-5.7976074};
+							position[]={9.3442993,0.0014390945,-5.7939453};
 						};
 						side="West";
 						flags=5;
@@ -3000,7 +3000,7 @@ class items
 							description="Alpha Rifleman";
 							isPlayable=1;
 						};
-						id=146;
+						id=249;
 						type="Cav_B_B_Scout_Alpha_Rifleman_F";
 						class CustomAttributes
 						{
@@ -3038,7 +3038,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={13.344482,0.0014390945,-1.2976074};
+							position[]={13.344299,0.0014390945,-1.2939453};
 						};
 						side="West";
 						flags=5;
@@ -3050,7 +3050,7 @@ class items
 							description="Bravo Team Leader";
 							isPlayable=1;
 						};
-						id=147;
+						id=250;
 						type="Cav_B_B_Scout_Bravo_TeamLead_F";
 						class CustomAttributes
 						{
@@ -3088,7 +3088,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={13.344482,0.0014390945,-2.7976074};
+							position[]={13.344299,0.0014390945,-2.7939453};
 						};
 						side="West";
 						flags=5;
@@ -3099,7 +3099,7 @@ class items
 							description="Bravo Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=148;
+						id=251;
 						type="Cav_B_B_Scout_Bravo_AutomaticRifleman_F";
 						class CustomAttributes
 						{
@@ -3137,7 +3137,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={13.344482,0.0014390945,-4.2976074};
+							position[]={13.344299,0.0014390945,-4.2939453};
 						};
 						side="West";
 						flags=4;
@@ -3148,7 +3148,7 @@ class items
 							description="Bravo Grenadier";
 							isPlayable=1;
 						};
-						id=149;
+						id=252;
 						type="Cav_B_B_Scout_Rifleman_F";
 						class CustomAttributes
 						{
@@ -3186,7 +3186,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={13.344482,0.0014390945,-5.7976074};
+							position[]={13.344299,0.0014390945,-5.7939453};
 						};
 						side="West";
 						flags=5;
@@ -3197,7 +3197,7 @@ class items
 							description="Bravo Combat Lifesaver";
 							isPlayable=1;
 						};
-						id=150;
+						id=253;
 						type="Cav_B_B_Scout_Bravo_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -3235,14 +3235,14 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=141;
+				id=244;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={11.029541,2.6142888,6.7277832};
+					position[]={11.029358,2.6142888,6.7314453};
 				};
 				side="Empty";
 				flags=4;
@@ -3250,7 +3250,7 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=153;
+				id=254;
 				type="cav_dragoon_WD_V4";
 				class CustomAttributes
 				{
@@ -3289,7 +3289,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={11.438477,0.0014390945,-3.5014648};
+									position[]={11.438293,0.0014390945,-3.4980469};
 								};
 								side="West";
 								flags=7;
@@ -3300,7 +3300,7 @@ class items
 									description="Stryker Vehicle Commander@SIERRA-4";
 									isPlayable=1;
 								};
-								id=151;
+								id=257;
 								type="Cav_B_B_Ifv_Commander_F";
 								class CustomAttributes
 								{
@@ -3351,7 +3351,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={11.438477,0.0014390945,-5.0014648};
+									position[]={11.438293,0.0014390945,-4.9980469};
 								};
 								side="West";
 								flags=5;
@@ -3362,7 +3362,7 @@ class items
 									description="Stryker Driver@SIERRA-4";
 									isPlayable=1;
 								};
-								id=152;
+								id=258;
 								type="Cav_B_B_Ifv_Driver_F";
 								class CustomAttributes
 								{
@@ -3412,12 +3412,12 @@ class items
 						class Attributes
 						{
 						};
-						id=156;
+						id=256;
 					};
 				};
-				id=155;
+				id=255;
 			};
 		};
-		id=140;
+		id=243;
 	};
 };
