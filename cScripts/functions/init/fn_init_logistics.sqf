@@ -234,14 +234,24 @@ private _dataArray = [
         ["TFAR_anprc152", 0],
 
         // Lunchers and mortars
+        ["rhs_weap_M136_hp",0],
+        ["rhs_weap_M136",0],
         ["rhs_weap_M136_hedp",1],
-        ["rhs_weap_m72a7",10],
-        ["rhs_weap_fgm148",1],
-        ["rhs_weap_fim92",1],
+        ["rhs_weap_m72a7",0],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry",2],
-        ["ace_csw_carryMortarBaseplate",2],
-        ["ace_csw_staticMortarCarry",2],
-        ["avm224_W_M224_mortar_carry",2],
+        ["dzn_MG_Tripod_M122A1_M240Mount_Carry", 0],
+        ["ace_csw_carryMortarBaseplate", 0],
+        ["ace_compat_rhs_usf3_m252_carry", 0],
+
+        ["avm224_W_M224_mortar_carry", 0],
+        ["avm224_M_6Rnd_60mm_HE_csw", 0],
+        ["avm224_M_6Rnd_60mm_HE_0_csw", 0],
+        ["avm224_M_6Rnd_60mm_ILLUM_IR_csw", 0],
+        ["avm224_M_6Rnd_60mm_SMOKE_csw", 0],
+
+        ["ACE_1Rnd_82mm_Mo_HE", 0],
+        ["ACE_1Rnd_82mm_Mo_Illum", 0],
+        ["ACE_1Rnd_82mm_Mo_Smoke", 0],
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG",0],
@@ -297,11 +307,17 @@ private _dataArray = [
     ]],
 
     ["bravo_company_atlas", [
+        
+        // Radios
+        ["ACRE_PRC343", 0],
+        ["ACRE_PRC152", 0],
+        ["TFAR_anprc152", 0],
         ["ACE_microDAGR",0],
         ["ItemAndroid",0],
         ["ItemAndroidMisc",0],
 
         // Tools and Items
+        ["ACE_Flashlight_MX991",0],
         ["ACE_CableTie",0],
         ["ACE_Chemlight_Shield",0],
         ["ACE_EntrenchingTool",0],
@@ -407,7 +423,6 @@ private _dataArray = [
 
         // Tools and Items
         ["ACE_CableTie",0],
-        ["USP_PVS15",0],
         ["ACE_EntrenchingTool",10],
         ["ACE_wirecutter",10],
         ["rhs_weap_rsp30_green",0],
@@ -1349,7 +1364,10 @@ private _dataArray = [
         ["ACE_splint",0],
 
         // Night Gear
-        ["ACE_IR_Strobe_Item",0]
+        ["ACE_IR_Strobe_Item",0],
+        
+        // Radios
+        ["TFAR_anprc152", 0]
     ]],
 
     ["arsenal_company_fallback", [
