@@ -52,7 +52,6 @@ class Cav_B_Bravo_base_F: Cav_B_Seventh_Cavalry_Base_F {
 class Cav_B_Charlie_base_F: Cav_B_Seventh_Cavalry_Base_F {
     category[] = {"cScripts_Loadout_Cat_Charlie"};
     company = "charlie";
-    platoon = 0;
     insignia = "";
     loadout = [["rhs_weap_m4a1_carryhandle","","","",["rhs_mag_30Rnd_556x45_M855A1_Stanag",30],[],""],[],[],["rhs_uniform_cu_ocp_1stcav",[["ACE_MapTools",1],["ACE_fieldDressing",1],["ACE_quikclot",4],["ACE_splint",1],["ACE_tourniquet",1]]],["rhsusf_iotv_ocp",[["rhs_mag_30Rnd_556x45_M855A1_Stanag",1,30]]],[],"rhsusf_patrolcap_ocp","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
 
