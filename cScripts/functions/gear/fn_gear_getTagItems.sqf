@@ -22,7 +22,7 @@ private _fn_getTagItemsList = {
     params [["_tag","",[]]];
     private _equipmentTag = getArray (missionConfigFile >> "CfgEquipmentTags" >> _tag);
     _equipmentTag;
-}
+};
 
 private _equipmentTagObjects = [_tag] call _fn_getTagItemsList;
 
