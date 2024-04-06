@@ -117,9 +117,9 @@ private _rhsusf_m1a1tank_base = createHashMapFromArray [
 ];
 
 // I_APC_Wheeled_03_cannon_F
-private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
+private _cav_dragoon_base_F = createHashMapFromArray [
     ["antiarmor", [
-        ["SmokeLauncherMag",[0,0],6],
+        ["SmokeLauncherMag",[0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
@@ -140,7 +140,7 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
     //     ["4Rnd_Titan_long_missiles",[0],4]
     // ]],
     ["default",[
-        ["SmokeLauncherMag",[0,0],6],
+        ["SmokeLauncherMag",[0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
@@ -151,7 +151,7 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
         ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
     ]],
     ["balanced",[
-        ["SmokeLauncherMag",[0,0],6],
+        ["SmokeLauncherMag",[0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
@@ -166,7 +166,7 @@ private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
 // Loadout vehicle list
 private _allVehiclePylons = createHashMapFromArray [
     ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base],
-    ["I_APC_Wheeled_03_cannon_F", _I_APC_Wheeled_03_cannon_F]
+    ["cav_dragoon_base_F", _cav_dragoon_base_F]
 ];
 
 // Return keys or full hashmap
