@@ -15,9 +15,15 @@
  * Public: No
  */
 
-private _platoon = GETVAR(player,EGVAR(Player,Platoon),0);
+private _loadout = [player] call EFUNC(gear,getLoadoutName);
 
-private _company = GETVAR(player,EGVAR(Player,Company),"");
+private _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
+
+private _configPlatoon = getNumber (_config >> "platoon"); 
+private _platoon = GETVAR(player,EGVAR(Player,Platoon),_configPlatoon);
+
+private _configCompany = getText (_config >> "company"); 
+private _company = GETVAR(player,EGVAR(Player,Company),_configCompany);
 _company = toLower _company;
 
 [_platoon, _company]

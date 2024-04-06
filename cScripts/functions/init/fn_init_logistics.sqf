@@ -467,7 +467,7 @@ private _dataArray = [
         // Autoinjector Medication
         ["kat_naloxone",20],
         ["ACE_epinephrine",20],
-        ["kat_phenylephrine_inject",24],
+        ["kat_phenylephrineAuto",24],
         
         // Oral Medication
         ["kat_Painkiller",60],
@@ -779,7 +779,7 @@ private _dataArray = [
         ["kat_naloxone",20],
         ["ACE_morphine",20],
         ["ACE_epinephrine",40],
-        ["kat_phenylephrine_inject",40],
+        ["kat_phenylephrineAuto",40],
         ["ACE_adenosine",0],
 
         // Splints
@@ -900,7 +900,7 @@ private _dataArray = [
         ["rhs_weap_M136_hedp",2],
 
         // M320 Ammo
-        ["rhsusf_mag_M433_HEDP",20],
+        ["rhs_mag_M433_HEDP",20],
         ["rhs_mag_m714_White",6],
         ["rhs_mag_m713_Red",4],
         ["ACE_HuntIR_M203",1],
@@ -1772,7 +1772,6 @@ private _dataArray = [
         ["kat_CarbonateItem",0],
         ["kat_Painkiller",0],
         ["kat_PainkillerItem",0],
-        ["kat_PenthroxItem",0],
 
         // Massive Hemorrhage Control
         ["ACE_tourniquet",0],

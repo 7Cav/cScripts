@@ -28,7 +28,7 @@ _unitItems = _unitItems arrayIntersect _unitItems select {_x isEqualType "" && {
 private _commonGear = GET_CONTAINER_KEYS("arsenal_common");
 
 
-private _organization = [player] call EFUNC(player,getOrganization);
+private _organization = call EFUNC(player,getOrganization);
 private _orgItems = switch (_organization#1) do {
     case "alpha": {
         GET_CONTAINER_KEYS("alpha_company");
