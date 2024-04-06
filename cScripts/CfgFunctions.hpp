@@ -235,6 +235,11 @@ class cScripts {
         class gear_removeLoadout {};
         class gear_hasSavedLoadout {};
 
+        // equipmentTags
+        class gear_getTagItems {};
+        class gear_getTags {};
+        class gear_isTag {};
+
         // other
         class gear_getLoadoutRole {};
         class gear_getLoadoutName {};
