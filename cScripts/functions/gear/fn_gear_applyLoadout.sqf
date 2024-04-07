@@ -38,8 +38,9 @@ if (_loadConfig) then {
 
     // Organizaiton
     if (GVAR(isPlayer)) then {
-        private _org = call EFUNC(Player,getOrganization);
-        _org call EFUNC(Player,setOrganization);
+        private _configPlatoon = getNumber (_config >> "platoon");
+        private _configCompany = getText (_config >> "company");
+        [_configPlatoon,_configCompany] call EFUNC(Player,setOrganization);
     };
 };
 
