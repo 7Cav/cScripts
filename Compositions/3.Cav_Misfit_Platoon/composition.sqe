@@ -1,5 +1,5 @@
 version=54;
-center[]={5671.4814,5,7227.3887};
+center[]={795.20221,5,6039.6377};
 class items
 {
 	items=6;
@@ -29,7 +29,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-0.32763672,0.0014390945,15.970703};
+									position[]={-0.328125,0.0014390945,15.969727};
 								};
 								side="West";
 								flags=6;
@@ -40,7 +40,7 @@ class items
 									description="Platoon Leader@MISFIT-6";
 									isPlayable=1;
 								};
-								id=456;
+								id=420;
 								type="Cav_B_C_PlatoonLeader_F";
 								class CustomAttributes
 								{
@@ -78,10 +78,10 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=455;
+						id=419;
 					};
 				};
-				id=454;
+				id=418;
 			};
 			class Item1
 			{
@@ -95,17 +95,17 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-0.47216797,0.89242268,17.765625};
+							position[]={-0.472229,0.89242268,17.76416};
 						};
 						side="Empty";
 						flags=4;
 						class Attributes
 						{
-							init="call{[this,""Misfit"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+							init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 							description="Starter Crate";
 							dynamicSimulation=1;
 						};
-						id=458;
+						id=422;
 						type="B_supplyCrate_F";
 						class CustomAttributes
 						{
@@ -137,7 +137,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={1.7001953,0.0014390945,15.953125};
+									position[]={1.699707,0.0014390945,15.952148};
 								};
 								side="West";
 								flags=6;
@@ -148,7 +148,7 @@ class items
 									description="Platoon Sergeant@MISFIT-5";
 									isPlayable=1;
 								};
-								id=460;
+								id=424;
 								type="Cav_B_C_PlatoonSergeant_F";
 								class CustomAttributes
 								{
@@ -186,7 +186,7 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=459;
+						id=423;
 					};
 					class Item2
 					{
@@ -200,7 +200,7 @@ class items
 								dataType="Object";
 								class PositionInfo
 								{
-									position[]={-2.2998047,0.0014390945,15.946289};
+									position[]={-2.300293,0.0014390945,15.945313};
 								};
 								side="West";
 								flags=6;
@@ -211,7 +211,7 @@ class items
 									description="Platoon Medic@MISFIT-7";
 									isPlayable=1;
 								};
-								id=462;
+								id=426;
 								type="Cav_B_C_PlatoonMedic_F";
 								class CustomAttributes
 								{
@@ -262,24 +262,24 @@ class items
 						{
 							dynamicSimulation=1;
 						};
-						id=461;
+						id=425;
 					};
 					class Item3
 					{
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-0.021484375,0,4.7529297};
+							position[]={-0.021972656,0,4.7519531};
 						};
 						title="Misfit (Tooltip)";
 						description="Charlie Company, when motorized, uses either M1151 Humvees (M240s for rifle squads, M2 and Mk19 for WPN Squads) or the M1240/A1 MRAPs. You can use the SOCOM GMVs as well as an up-gun solution depending on the op. For air assault (helicopter) solutions, delete the humvees. Airborne, depending on the mission, may require jumping the humvees with the troops for additional mobility and expansion of the airhead.";
-						id=463;
+						id=427;
 					};
 				};
-				id=457;
+				id=421;
 			};
 		};
-		id=453;
+		id=417;
 	};
 	class Item1
 	{
@@ -293,17 +293,17 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-7.2036133,0.89242268,5.3955078};
+					position[]={-7.2041016,0.89242268,5.3945313};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bandit"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
-				id=465;
+				id=429;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -335,7 +335,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-7.2036133,0.0014390945,3.4453125};
+							position[]={-7.2041016,0.0014390945,3.4443359};
 						};
 						side="West";
 						flags=6;
@@ -346,7 +346,7 @@ class items
 							description="Squad Leader@MISFIT-1";
 							isPlayable=1;
 						};
-						id=467;
+						id=431;
 						type="Cav_B_C_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -384,7 +384,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-5.7055664,0.0014390945,2.4453125};
+							position[]={-5.7060547,0.0014390945,2.4443359};
 						};
 						side="West";
 						flags=5;
@@ -396,7 +396,7 @@ class items
 							description="Alpha Fireteam Leader";
 							isPlayable=1;
 						};
-						id=468;
+						id=432;
 						type="Cav_B_C_Alpha_FireTeamLeader_F";
 					};
 					class Item2
@@ -404,7 +404,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.7055664,0.0014390945,2.4453125};
+							position[]={-6.7060547,0.0014390945,2.4443359};
 						};
 						side="West";
 						flags=5;
@@ -415,7 +415,7 @@ class items
 							description="Alpha Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=469;
+						id=433;
 						type="Cav_B_C_Alpha_AutomaticRifleman_F";
 					};
 					class Item3
@@ -423,7 +423,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-7.7055664,0.0014390945,2.4453125};
+							position[]={-7.7060547,0.0014390945,2.4443359};
 						};
 						side="West";
 						flags=5;
@@ -434,7 +434,7 @@ class items
 							description="Alpha Grenadier";
 							isPlayable=1;
 						};
-						id=470;
+						id=434;
 						type="Cav_B_C_Alpha_Grenadier_F";
 					};
 					class Item4
@@ -442,7 +442,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-8.7055664,0.0014390945,2.4453125};
+							position[]={-8.7060547,0.0014390945,2.4443359};
 						};
 						side="West";
 						flags=5;
@@ -453,7 +453,7 @@ class items
 							description="Alpha Rifleman (LAT)";
 							isPlayable=1;
 						};
-						id=471;
+						id=435;
 						type="Cav_B_C_Alpha_RiflemanLAT_F";
 					};
 					class Item5
@@ -461,7 +461,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-5.7055664,0.0014390945,1.4453125};
+							position[]={-5.7060547,0.0014390945,1.4443359};
 						};
 						side="West";
 						flags=5;
@@ -473,7 +473,7 @@ class items
 							description="Bravo Fireteam Leader";
 							isPlayable=1;
 						};
-						id=472;
+						id=436;
 						type="Cav_B_C_Bravo_FireTeamLeader_F";
 					};
 					class Item6
@@ -481,7 +481,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.7055664,0.0014390945,1.4453125};
+							position[]={-6.7060547,0.0014390945,1.4443359};
 						};
 						side="West";
 						flags=5;
@@ -492,7 +492,7 @@ class items
 							description="Bravo Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=473;
+						id=437;
 						type="Cav_B_C_Bravo_AutomaticRifleman_F";
 					};
 					class Item7
@@ -500,7 +500,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-7.7055664,0.0014390945,1.4453125};
+							position[]={-7.7060547,0.0014390945,1.4443359};
 						};
 						side="West";
 						flags=5;
@@ -511,7 +511,7 @@ class items
 							description="Bravo Grenadier";
 							isPlayable=1;
 						};
-						id=474;
+						id=438;
 						type="Cav_B_C_Bravo_Grenadier_F";
 					};
 					class Item8
@@ -519,7 +519,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-8.7133789,0.0014390945,1.3798828};
+							position[]={-8.7138672,0.0014390945,1.3789063};
 						};
 						side="West";
 						flags=5;
@@ -529,7 +529,7 @@ class items
 							description="Bravo CLS";
 							isPlayable=1;
 						};
-						id=475;
+						id=439;
 						type="Cav_B_C_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -567,10 +567,10 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=466;
+				id=430;
 			};
 		};
-		id=464;
+		id=428;
 	};
 	class Item2
 	{
@@ -584,17 +584,17 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={7.6552734,0.89242268,4.796875};
+					position[]={7.6547852,0.89242268,4.7958984};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bandit"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
-				id=477;
+				id=441;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -626,7 +626,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={7.6552734,0.0014390945,2.847168};
+							position[]={7.6547852,0.0014390945,2.8461914};
 						};
 						side="West";
 						flags=6;
@@ -637,7 +637,7 @@ class items
 							description="Squad Leader@MISFIT-2";
 							isPlayable=1;
 						};
-						id=479;
+						id=443;
 						type="Cav_B_C_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -675,7 +675,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.1552734,0.0014390945,1.8466797};
+							position[]={9.1547852,0.0014390945,1.8457031};
 						};
 						side="West";
 						flags=5;
@@ -687,7 +687,7 @@ class items
 							description="Alpha Fireteam Leader";
 							isPlayable=1;
 						};
-						id=480;
+						id=444;
 						type="Cav_B_C_Alpha_FireTeamLeader_F";
 					};
 					class Item2
@@ -695,7 +695,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={8.1552734,0.0014390945,1.8466797};
+							position[]={8.1547852,0.0014390945,1.8457031};
 						};
 						side="West";
 						flags=5;
@@ -706,7 +706,7 @@ class items
 							description="Alpha Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=481;
+						id=445;
 						type="Cav_B_C_Alpha_AutomaticRifleman_F";
 					};
 					class Item3
@@ -714,7 +714,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={7.1552734,0.0014390945,1.8466797};
+							position[]={7.1547852,0.0014390945,1.8457031};
 						};
 						side="West";
 						flags=5;
@@ -725,7 +725,7 @@ class items
 							description="Alpha Grenadier";
 							isPlayable=1;
 						};
-						id=482;
+						id=446;
 						type="Cav_B_C_Alpha_Grenadier_F";
 					};
 					class Item4
@@ -733,7 +733,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.1552734,0.0014390945,1.8466797};
+							position[]={6.1547852,0.0014390945,1.8457031};
 						};
 						side="West";
 						flags=5;
@@ -744,7 +744,7 @@ class items
 							description="Alpha Rifleman (LAT)";
 							isPlayable=1;
 						};
-						id=483;
+						id=447;
 						type="Cav_B_C_Alpha_RiflemanLAT_F";
 					};
 					class Item5
@@ -752,7 +752,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.1552734,0.0014390945,0.84667969};
+							position[]={9.1547852,0.0014390945,0.84570313};
 						};
 						side="West";
 						flags=5;
@@ -764,7 +764,7 @@ class items
 							description="Bravo Fireteam Leader";
 							isPlayable=1;
 						};
-						id=484;
+						id=448;
 						type="Cav_B_C_Bravo_FireTeamLeader_F";
 					};
 					class Item6
@@ -772,7 +772,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={8.1552734,0.0014390945,0.84667969};
+							position[]={8.1547852,0.0014390945,0.84570313};
 						};
 						side="West";
 						flags=5;
@@ -783,7 +783,7 @@ class items
 							description="Bravo Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=485;
+						id=449;
 						type="Cav_B_C_Bravo_AutomaticRifleman_F";
 					};
 					class Item7
@@ -791,7 +791,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={7.1552734,0.0014390945,0.84667969};
+							position[]={7.1547852,0.0014390945,0.84570313};
 						};
 						side="West";
 						flags=5;
@@ -802,7 +802,7 @@ class items
 							description="Bravo Grenadier";
 							isPlayable=1;
 						};
-						id=486;
+						id=450;
 						type="Cav_B_C_Bravo_Grenadier_F";
 					};
 					class Item8
@@ -810,7 +810,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.1572266,0.0014390945,0.85839844};
+							position[]={6.1567383,0.0014390945,0.85742188};
 						};
 						side="West";
 						flags=5;
@@ -820,7 +820,7 @@ class items
 							description="Bravo CLS";
 							isPlayable=1;
 						};
-						id=487;
+						id=451;
 						type="Cav_B_C_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -858,10 +858,10 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=478;
+				id=442;
 			};
 		};
-		id=476;
+		id=440;
 	};
 	class Item3
 	{
@@ -875,17 +875,17 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-8.2036133,0.89242268,-6.1044922};
+					position[]={-8.2041016,0.89242268,-6.1054688};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bandit"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
-				id=489;
+				id=453;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -917,7 +917,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-8.2036133,0.0014390945,-8.0546875};
+							position[]={-8.2041016,0.0014390945,-8.0556641};
 						};
 						side="West";
 						flags=6;
@@ -928,7 +928,7 @@ class items
 							description="Squad Leader@MISFIT-3";
 							isPlayable=1;
 						};
-						id=491;
+						id=455;
 						type="Cav_B_C_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -966,7 +966,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.7045898,0.0014390945,-9.0546875};
+							position[]={-6.7050781,0.0014390945,-9.0556641};
 						};
 						side="West";
 						flags=5;
@@ -978,7 +978,7 @@ class items
 							description="Alpha Fireteam Leader";
 							isPlayable=1;
 						};
-						id=492;
+						id=456;
 						type="Cav_B_C_Alpha_FireTeamLeader_F";
 					};
 					class Item2
@@ -986,7 +986,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-7.7045898,0.0014390945,-9.0546875};
+							position[]={-7.7050781,0.0014390945,-9.0556641};
 						};
 						side="West";
 						flags=5;
@@ -997,7 +997,7 @@ class items
 							description="Alpha Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=493;
+						id=457;
 						type="Cav_B_C_Alpha_AutomaticRifleman_F";
 					};
 					class Item3
@@ -1005,7 +1005,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-8.7045898,0.0014390945,-9.0546875};
+							position[]={-8.7050781,0.0014390945,-9.0556641};
 						};
 						side="West";
 						flags=5;
@@ -1016,7 +1016,7 @@ class items
 							description="Alpha Grenadier";
 							isPlayable=1;
 						};
-						id=494;
+						id=458;
 						type="Cav_B_C_Alpha_Grenadier_F";
 					};
 					class Item4
@@ -1024,7 +1024,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.7045898,0.0014390945,-9.0546875};
+							position[]={-9.7050781,0.0014390945,-9.0556641};
 						};
 						side="West";
 						flags=5;
@@ -1035,7 +1035,7 @@ class items
 							description="Alpha Rifleman (LAT)";
 							isPlayable=1;
 						};
-						id=495;
+						id=459;
 						type="Cav_B_C_Alpha_RiflemanLAT_F";
 					};
 					class Item5
@@ -1043,7 +1043,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-6.7045898,0.0014390945,-10.054688};
+							position[]={-6.7050781,0.0014390945,-10.055664};
 						};
 						side="West";
 						flags=5;
@@ -1055,7 +1055,7 @@ class items
 							description="Bravo Fireteam Leader";
 							isPlayable=1;
 						};
-						id=496;
+						id=460;
 						type="Cav_B_C_Bravo_FireTeamLeader_F";
 					};
 					class Item6
@@ -1063,7 +1063,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-7.7045898,0.0014390945,-10.054688};
+							position[]={-7.7050781,0.0014390945,-10.055664};
 						};
 						side="West";
 						flags=5;
@@ -1074,7 +1074,7 @@ class items
 							description="Bravo Automatic Rifleman";
 							isPlayable=1;
 						};
-						id=497;
+						id=461;
 						type="Cav_B_C_Bravo_AutomaticRifleman_F";
 					};
 					class Item7
@@ -1082,7 +1082,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-8.7045898,0.0014390945,-10.054688};
+							position[]={-8.7050781,0.0014390945,-10.055664};
 						};
 						side="West";
 						flags=5;
@@ -1093,7 +1093,7 @@ class items
 							description="Bravo Grenadier";
 							isPlayable=1;
 						};
-						id=498;
+						id=462;
 						type="Cav_B_C_Bravo_Grenadier_F";
 					};
 					class Item8
@@ -1101,7 +1101,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.5551758,0.0014390945,-10.09668};
+							position[]={-9.5556641,0.0014390945,-10.097656};
 						};
 						side="West";
 						flags=5;
@@ -1111,7 +1111,7 @@ class items
 							description="Bravo CLS";
 							isPlayable=1;
 						};
-						id=499;
+						id=463;
 						type="Cav_B_C_CombatLifeSaver_F";
 						class CustomAttributes
 						{
@@ -1149,10 +1149,10 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=490;
+				id=454;
 			};
 		};
-		id=488;
+		id=452;
 	};
 	class Item4
 	{
@@ -1166,17 +1166,17 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={7.8330078,0.89242268,-5.0771484};
+					position[]={7.8325195,0.89242268,-5.078125};
 				};
 				side="Empty";
 				flags=4;
 				class Attributes
 				{
-					init="call{[this,""Bandit"",true,true,true,true,false] call cScripts_fnc_doStarterCrate;}";
+					init="call{[this,""Charlie"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					description="Starter Crate";
 					dynamicSimulation=1;
 				};
-				id=501;
+				id=465;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -1208,7 +1208,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={7.6552734,0.0014390945,-7.152832};
+							position[]={7.6547852,0.0014390945,-7.1538086};
 						};
 						side="West";
 						flags=6;
@@ -1219,7 +1219,7 @@ class items
 							description="Squad Leader@MISFIT-4";
 							isPlayable=1;
 						};
-						id=503;
+						id=467;
 						type="Cav_B_C_Weapons_SquadLeader_F";
 						class CustomAttributes
 						{
@@ -1257,7 +1257,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.1552734,0.0014390945,-8.1533203};
+							position[]={9.1547852,0.0014390945,-8.1542969};
 						};
 						side="West";
 						flags=4;
@@ -1269,7 +1269,7 @@ class items
 							description="Alpha Fireteam Leader";
 							isPlayable=1;
 						};
-						id=504;
+						id=468;
 						type="Cav_B_C_Weapons_M240B_FireTeamLeader_F";
 						class CustomAttributes
 						{
@@ -1307,7 +1307,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={8.1552734,0.0014390945,-8.1533203};
+							position[]={8.1547852,0.0014390945,-8.1542969};
 						};
 						side="West";
 						flags=4;
@@ -1318,7 +1318,7 @@ class items
 							description="Alpha Machine Gunner";
 							isPlayable=1;
 						};
-						id=505;
+						id=469;
 						type="Cav_B_C_Weapons_M240B_Machinegunner_F";
 						class CustomAttributes
 						{
@@ -1356,7 +1356,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={7.1552734,0.0014390945,-8.1533203};
+							position[]={7.1547852,0.0014390945,-8.1542969};
 						};
 						side="West";
 						flags=4;
@@ -1367,7 +1367,7 @@ class items
 							description="Alpha M240 Ammo Bearer";
 							isPlayable=1;
 						};
-						id=506;
+						id=470;
 						type="Cav_B_C_Weapons_M240B_MachinegunnerAmmoBearer_F";
 						class CustomAttributes
 						{
@@ -1405,7 +1405,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.1552734,0.0014390945,-9.1533203};
+							position[]={9.1547852,0.0014390945,-9.1542969};
 						};
 						side="West";
 						flags=4;
@@ -1417,7 +1417,7 @@ class items
 							description="Bravo Fireteam Leader";
 							isPlayable=1;
 						};
-						id=507;
+						id=471;
 						type="Cav_B_C_Weapons_M240B_FireTeamLeader_F";
 						class CustomAttributes
 						{
@@ -1455,7 +1455,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={8.1552734,0.0014390945,-9.1533203};
+							position[]={8.1547852,0.0014390945,-9.1542969};
 						};
 						side="West";
 						flags=4;
@@ -1466,7 +1466,7 @@ class items
 							description="Bravo Machine Gunner";
 							isPlayable=1;
 						};
-						id=508;
+						id=472;
 						type="Cav_B_C_Weapons_M240B_Machinegunner_F";
 						class CustomAttributes
 						{
@@ -1504,7 +1504,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={7.1552734,0.0014390945,-9.1533203};
+							position[]={7.1547852,0.0014390945,-9.1542969};
 						};
 						side="West";
 						flags=4;
@@ -1515,7 +1515,7 @@ class items
 							description="Bravo M240 Ammo Bearer";
 							isPlayable=1;
 						};
-						id=509;
+						id=473;
 						type="Cav_B_C_Weapons_M240B_MachinegunnerAmmoBearer_F";
 						class CustomAttributes
 						{
@@ -1553,7 +1553,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.1552734,0.0014390945,-8.1533203};
+							position[]={6.1547852,0.0014390945,-8.1542969};
 						};
 						side="West";
 						flags=4;
@@ -1564,7 +1564,7 @@ class items
 							description="Charlie MAAWS Gunner";
 							isPlayable=1;
 						};
-						id=510;
+						id=474;
 						type="Cav_B_C_Weapons_MAAWS_MAAWSGunner_F";
 						class CustomAttributes
 						{
@@ -1602,7 +1602,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={6.1464844,0.0014390945,-9.1787109};
+							position[]={6.1459961,0.0014390945,-9.1796875};
 						};
 						side="West";
 						flags=4;
@@ -1612,7 +1612,7 @@ class items
 							description="Charlie MAAWS Assistant";
 							isPlayable=1;
 						};
-						id=511;
+						id=475;
 						type="Cav_B_C_Weapons_MAAWS_MAAWSAssistant_F";
 						class CustomAttributes
 						{
@@ -1650,10 +1650,10 @@ class items
 				{
 					dynamicSimulation=1;
 				};
-				id=502;
+				id=466;
 			};
 		};
-		id=500;
+		id=464;
 	};
 	class Item5
 	{
@@ -1667,7 +1667,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.32763672,1.7828913,11.92041};
+					position[]={-0.328125,1.7828913,11.919434};
 				};
 				side="Empty";
 				flags=4;
@@ -1678,7 +1678,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=513;
+				id=477;
 				type="rhsusf_m1152_rsv_usarmy_wd";
 				class CustomAttributes
 				{
@@ -1703,7 +1703,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={13.3125,1.7822218,2.7641602};
+					position[]={13.312012,1.7822218,2.7631836};
 				};
 				side="Empty";
 				flags=4;
@@ -1715,7 +1715,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=514;
+				id=478;
 				type="rhsusf_m1165a1_gmv_m2_m240_socom_d";
 				class CustomAttributes
 				{
@@ -2034,7 +2034,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.7456055,1.7822218,-7.2568359};
+					position[]={2.7451172,1.7822218,-7.2578125};
 				};
 				side="Empty";
 				flags=4;
@@ -2046,7 +2046,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=515;
+				id=479;
 				type="rhsusf_m1165a1_gmv_m2_m240_socom_d";
 				class CustomAttributes
 				{
@@ -2365,7 +2365,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.1875,1.7822218,-8.0693359};
+					position[]={-3.1879883,1.7822218,-8.0703125};
 				};
 				side="Empty";
 				flags=4;
@@ -2377,7 +2377,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=516;
+				id=480;
 				type="rhsusf_m1165a1_gmv_m2_m240_socom_d";
 				class CustomAttributes
 				{
@@ -2696,7 +2696,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-12.934082,1.7822218,-8.2802734};
+					position[]={-12.93457,1.7822218,-8.28125};
 				};
 				side="Empty";
 				flags=4;
@@ -2708,7 +2708,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=517;
+				id=481;
 				type="rhsusf_m1165a1_gmv_m2_m240_socom_d";
 				class CustomAttributes
 				{
@@ -3027,7 +3027,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-3.1386719,1.7822218,2.7421875};
+					position[]={-3.1391602,1.7822218,2.7412109};
 				};
 				side="Empty";
 				flags=4;
@@ -3039,7 +3039,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=518;
+				id=482;
 				type="rhsusf_m1165a1_gmv_m2_m240_socom_d";
 				class CustomAttributes
 				{
@@ -3358,7 +3358,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-12.929688,1.7822218,3.2373047};
+					position[]={-12.930176,1.7822218,3.2363281};
 				};
 				side="Empty";
 				flags=4;
@@ -3370,7 +3370,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=519;
+				id=483;
 				type="rhsusf_m1165a1_gmv_m2_m240_socom_d";
 				class CustomAttributes
 				{
@@ -3689,7 +3689,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.8476563,1.7822218,1.9248047};
+					position[]={2.847168,1.7822218,1.9238281};
 				};
 				side="Empty";
 				flags=4;
@@ -3701,7 +3701,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=520;
+				id=484;
 				type="rhsusf_m1165a1_gmv_m2_m240_socom_d";
 				class CustomAttributes
 				{
@@ -4020,7 +4020,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={12.930664,1.7822218,-8.0175781};
+					position[]={12.930176,1.7822218,-8.0185547};
 				};
 				side="Empty";
 				flags=4;
@@ -4032,7 +4032,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=521;
+				id=485;
 				type="rhsusf_m1165a1_gmv_mk19_m240_socom_d";
 				class CustomAttributes
 				{
@@ -4347,6 +4347,6 @@ class items
 				};
 			};
 		};
-		id=512;
+		id=476;
 	};
 };
