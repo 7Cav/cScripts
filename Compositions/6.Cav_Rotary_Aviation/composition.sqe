@@ -6277,7 +6277,7 @@ class items
 									reportOwnPosition=1;
 								};
 								id=661;
-								type="TF373_SOAR_MH47G_No_Rear_Guns";
+								type="TF373_SOAR_MH47G_EasyActions";
 							};
 						};
 						id=654;
@@ -6620,7 +6620,7 @@ class items
 									reportOwnPosition=1;
 								};
 								id=668;
-								type="TF373_SOAR_MH47G_No_Rear_Guns";
+								type="TF373_SOAR_MH47G_EasyActions";
 							};
 						};
 						id=662;
