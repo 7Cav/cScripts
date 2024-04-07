@@ -1661,7 +1661,7 @@ private _dataArray = [
         ["kat_clamp",0],
         ["kat_plate",0],
         ["kat_retractor",0],
-        ["kat_scalpel",0]
+        ["kat_scalpel",0],
         //--------------------------
 
         //Backpack
