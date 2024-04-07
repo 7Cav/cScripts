@@ -1574,6 +1574,7 @@ private _dataArray = [
         ["kat_larynx",0],
         ["kat_ncdKit",0],
         ["kat_pocketBVM",0],
+        ["kat_suction",0],
 
         // Autoinjectors
         ["ACE_adenosine",0],
@@ -1672,6 +1673,7 @@ private _dataArray = [
         ["kat_guedel",0],
         ["kat_ncdKit",0],
         ["kat_pocketBVM",0],
+        ["kat_suction",0],
 
         // Autoinjectors
         ["ACE_adenosine",0],
@@ -1759,6 +1761,7 @@ private _dataArray = [
         ["kat_guedel",0],
         ["kat_ncdKit",0],
         ["kat_pocketBVM",0],
+        ["kat_suction",0],
 
         // Autoinjectors
         ["ACE_epinephrine",0],
