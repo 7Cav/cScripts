@@ -1663,6 +1663,17 @@ private _dataArray = [
         ["kat_retractor",0],
         ["kat_scalpel",0]
         //--------------------------
+
+        //Backpack
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
+        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
     ["arsenal_role_medic",[
         // Airway Management and Respiration
