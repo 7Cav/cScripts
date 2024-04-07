@@ -20,22 +20,27 @@
 params [["_loadout", getUnitLoadout player, [[], objNull, "", configNull]]];
 
 if !(_loadout isEqualType []) then {
-    _loadout = getUnitLoadout _loadout;
+    _loadout = [_loadout] call CBA_fnc_getLoadout;
 };
 
 if (_loadout isEqualTo []) exitWith {
-    _loadout
+    _loadout;
+};
+
+private _baseLoadout = _loadout;
+if (EGVAR(Patches,usesACEAX)) then {
+    _baseLoadout = _loadout#0;
 };
 
 // Remove "ItemRadioAcreFlagged"
-if ((_loadout select 9) select 2 == "ItemRadioAcreFlagged") then {
-    (_loadout select 9) set [2, ""];
+if (_baseLoadout#9#2 == "ItemRadioAcreFlagged") then {
+    _baseLoadout#9 set [2, ""];
 };
 
 // Set ACRE base classes
 private _replaceRadio = {
     params ["_item"];
-    if (EGVAR(Patches,usesACRE)) then {
+        if (EGVAR(Patches,usesACRE)) then {
         // Replace only if string (array can be eg. weapon inside container) and an ACRE radio
         if (!(_item isEqualType []) && {[_item] call acre_api_fnc_isRadio}) then {
             _this set [0, [_item] call acre_api_fnc_getBaseRadio];
@@ -43,21 +48,27 @@ private _replaceRadio = {
     };
     if (EGVAR(Patches,usesTFAR)) then {
         // Replace only if string (array can be eg. weapon inside container) and an TFAR radio
-        if (!(_item isEqualType []) && {[_item] call TFAR_fnc_isRadio}) then {
+        if (!(_item isEqualType []) && {_item call TFAR_fnc_isRadio}) then {
             private _baseClassRadio = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
             _this set [0, _baseClassRadio];
         };
     };
 };
-if ((_loadout select 3) isNotEqualTo []) then {
-    {_x call _replaceRadio} forEach ((_loadout select 3) select 1); // Uniform items
-};
-if ((_loadout select 4) isNotEqualTo []) then {
-    {_x call _replaceRadio} forEach ((_loadout select 4) select 1); // Vest items
-};
-if ((_loadout select 5) isNotEqualTo []) then {
-    {_x call _replaceRadio} forEach ((_loadout select 5) select 1); // Backpack items
+
+if ((_baseLoadout#3) isNotEqualTo []) then {
+    {_x call _replaceRadio} forEach (_baseLoadout#3#1); // Uniform items
 };
 
+if ((_baseLoadout#4) isNotEqualTo []) then {
+    {_x call _replaceRadio} forEach (_baseLoadout#4#1); // Vest items
+};
+
+if ((_baseLoadout#5) isNotEqualTo []) then {
+    {_x call _replaceRadio} forEach (_baseLoadout#5#1); // Backpack items
+};
+
+if (EGVAR(Patches,usesACEAX)) then {
+    _loadout set [0,_baseLoadout];
+};
 
 _loadout
