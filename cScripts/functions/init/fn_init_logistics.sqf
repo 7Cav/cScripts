@@ -238,7 +238,6 @@ private _dataArray = [
         ["rhs_weap_M136",0],
         ["rhs_weap_M136_hedp",1],
         ["rhs_weap_m72a7",0],
-        ["dzn_MG_Tripod_M122A1_M240Mount_Carry",2],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry", 0],
         ["ace_csw_carryMortarBaseplate", 0],
         ["ace_compat_rhs_usf3_m252_carry", 0],
@@ -2042,6 +2041,9 @@ private _dataArray = [
         ["rhsusf_weap_m1911a1",0],
         ["rhsusf_mag_7x45acp_MHP",0],
         ["rhsusf_mag_17Rnd_9x19_FMJ",0],
+        ["UK3CB_P320_DES",0],
+        ["UK3CB_P320_BLK",0],
+        ["UK3CB_P320_9x21_17Rnd",0],
         ["acc_pistol_flashlight",0]
     ]]
 ];
