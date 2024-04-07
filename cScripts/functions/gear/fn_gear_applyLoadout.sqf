@@ -36,10 +36,11 @@ if (_loadConfig) then {
     };
     _unit setVariable [QEGVAR(Gear,LoadoutClass), _loadout];
 
-    // Company
+    // Organizaiton
     if (GVAR(isPlayer)) then {
-        private _company = getText (_config >> "company");
-        [_company] call EFUNC(player,setCompany);
+        private _configPlatoon = getNumber (_config >> "platoon");
+        private _configCompany = getText (_config >> "company");
+        [_configPlatoon,_configCompany] call EFUNC(Player,setOrganization);
     };
 };
 

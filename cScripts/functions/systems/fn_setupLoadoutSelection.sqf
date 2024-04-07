@@ -39,12 +39,13 @@ private _classnameList = configProperties [missionconfigfile >> "CfgLoadouts", "
     private _icon = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "icon") call FUNC(getIcon);
     if (isNil{_icon}) then { _icon = "iconMan" };
     private _company = getText (missionConfigFile >> 'CfgLoadouts' >> _class >> "company");
+    private _platoon = getNumber (missionConfigFile >> 'CfgLoadouts' >> _class >> "platoon");
     private _category = getArray (missionConfigFile >> 'CfgLoadouts' >> _class >> "category");
     
     INFO_2("LoadoutSelector", "Setting up %1 loadout on %2.", _displayName, _object);
 
     _category = [_aceCategory, _mainCategory] + _category;
-    [_object, _displayName, _classname, _icon, _category, _company, _allowAllLoadouts] call FUNC(addLoadoutSelection);
+    [_object, _displayName, _classname, _icon, _category, _company, _platoon, _allowAllLoadouts] call FUNC(addLoadoutSelection);
 } forEach _classnameList;
 
 INFO_1("LoadoutSelector", "Done setting up quick selections on %1.", _object);

@@ -40,7 +40,7 @@ GVAR(StagingArsenalOpen) = false;
 
 [QEGVAR(StagingArsenal,SaveWhitelist), {
     private _items = call FUNC(getArsenalWhitelist);
-    SETVAR(player,EGVAR(Player,ArsenalWhitelist), _items);
+    SETVAR(player,EGVAR(Player,ArsenalWhitelist),_items);
 }] call CBA_fnc_addEventHandler;
 
 
