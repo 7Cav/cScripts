@@ -41,7 +41,7 @@ if (_vehicleType == "EMPTY") exitWith { [_vehicle, []] call FUNC(addCargo); };
 
 
 // Ground Vehicles
-if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
+if (_vehicle iskindOf "cav_dragoon_base_F") then {
     [_vehicle, 15, 38, false, false] call FUNC(setCargoAttributes);
     
     // Emergency kit in case of tire damage and fuel loss.

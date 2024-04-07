@@ -37,6 +37,8 @@ private _pylon = [];
 
 if (count _pylon == 0) then {
     WARNING_2("VehicleDefaultLoadout", "Vehicle %1 [%2] has no loadout setup.", _vehicle, typeOf _vehicle);
+} else {
+    _vehicle setVariable ["ace_rearm_scriptedLoadout", true, true];
 };
 
 _vehicle setVariable [QEGVAR(VehicleFunc,DefaultPylon), true, true];
