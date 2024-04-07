@@ -94,6 +94,12 @@ if (_vehicle iskindOf "vtx_MH60M") then {
     [_vehicle] call FUNC(addEscapeWreck);
 };
 
+if (_vehicle iskindOf "TF373_SOAR_MH47G_Base") then {
+    [_vehicle] call FUNC(addLineJump);
+    [_vehicle] call FUNC(addEscapeWreck);
+};
+
+
 
 
 // Below functions only gets applied to approved factions
@@ -103,6 +109,6 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
 };
 
-if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F") then {
+if (_vehicle iskindOf "cav_dragoon_base_F") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
 };

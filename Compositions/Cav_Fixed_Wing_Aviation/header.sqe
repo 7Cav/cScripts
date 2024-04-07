@@ -1,7 +1,0 @@
-version=54;
-name="Fixed_Wing_Aviation_vTEST";
-author="=7Cav=cpl.Zaren.T";
-category="Cav_EdSubcat_Deploy_Platoon";
-requiredAddons[]=
-{
-};

@@ -117,56 +117,56 @@ private _rhsusf_m1a1tank_base = createHashMapFromArray [
 ];
 
 // I_APC_Wheeled_03_cannon_F
-private _I_APC_Wheeled_03_cannon_F = createHashMapFromArray [
+private _cav_dragoon_base_F = createHashMapFromArray [
     ["antiarmor", [
-        ["SmokeLauncherMag",[0,0],6],
-        ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
-        ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60],
-        ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60],
+        ["SmokeLauncherMag",[0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
-        ["2Rnd_GAT_missiles",[0],2],
-        ["2Rnd_GAT_missiles",[0],2],
-        ["2Rnd_GAT_missiles",[0],2]  
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
     ]],
-    [ "antiair", [
-        ["SmokeLauncherMag",[0,0],6],
-        ["2000Rnd_762x51_Belt_T_Red",[0],2000],
-        ["2000Rnd_762x51_Belt_T_Red",[0],2000],
-        ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60],
-        ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
-        ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
-        ["4Rnd_Titan_long_missiles",[0],4],
-        ["4Rnd_Titan_long_missiles",[0],4]
-    ]],
+    // ["antiair", [
+    //     ["SmokeLauncherMag",[0,0],6],
+    //     ["2000Rnd_762x51_Belt_T_Red",[0],2000],
+    //     ["2000Rnd_762x51_Belt_T_Red",[0],2000],
+    //     ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+    //     ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+    //     ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+    //     ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+    //     ["4Rnd_Titan_long_missiles",[0],4]
+    // ]],
     ["default",[
-        ["SmokeLauncherMag",[0,0],6],
+        ["SmokeLauncherMag",[0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
-        ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
-        ["2Rnd_GAT_missiles",[0],2],
-        ["2Rnd_GAT_missiles",[0],2],
-        ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60],
-        ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60]
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
     ]],
-    ["assault",[
-        ["SmokeLauncherMag",[0,0],6],
-        ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
-        ["140Rnd_30mm_MP_shells_Tracer_Red",[0],140],
-        ["2Rnd_GAT_missiles",[0],2],
+    ["balanced",[
+        ["SmokeLauncherMag",[0],6],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
         ["2000Rnd_762x51_Belt_T_Red",[0],2000],
-        ["2000Rnd_762x51_Belt_T_Red",[0],2000],
-        ["2000Rnd_762x51_Belt_T_Red",[0],2000],
-        ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60],
-        ["60Rnd_30mm_APFSDS_shells_Tracer_Red",[0],60]
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+        ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
     ]]
 ];
 
 // Loadout vehicle list
 private _allVehiclePylons = createHashMapFromArray [
     ["rhsusf_m1a1tank_base", _rhsusf_m1a1tank_base],
-    ["I_APC_Wheeled_03_cannon_F", _I_APC_Wheeled_03_cannon_F]
+    ["cav_dragoon_base_F", _cav_dragoon_base_F]
 ];
 
 // Return keys or full hashmap

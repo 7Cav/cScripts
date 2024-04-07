@@ -53,3 +53,11 @@ jobs:
           tag: ${{ github.ref }}
           asset_name: cScripts_NoLoadouts-${{github.ref_name}}.zip
           file: release/cScripts_NoLoadouts-${{github.ref_name}}.zip
+
+      - name: Upload CBA_Settings.sqf
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          asset_name: cba_settings.sqf
+          file: release/cba_settings.sqf

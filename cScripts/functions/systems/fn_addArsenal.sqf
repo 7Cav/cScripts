@@ -24,18 +24,22 @@ private _arsenalStatement = {
     call FUNC(addDefaultArsenalLoadout);
     waitUntil { count ace_arsenal_defaultLoadoutsList != 0 };
 
-    private _items = call FUNC(getArsenalWhitelist);
-    INFO_3("Staging Arsenal", "Whitleist containing %1 items added to %2 (%3)", count _items, player, typeOf player);
-    if (count _items == 0) exitWith {
-        [
-            [],
-            ["Arsenal is not avalible for your class."],
-            [""],
-            [""]
-        ] call CBA_fnc_notify;
+    if (EGVAR(Settings,useFilteredArsenal)) then {
+        private _items = GETVAR(player,EGVAR(Player,ArsenalWhitelist), []);
+        INFO_3("Staging Arsenal", "Whitleist containing %1 items added to %2 (%3)", count _items, player, typeOf player);
+        if (count _items == 0) exitWith {
+            [
+                [],
+                ["Arsenal is not avalible for your class."],
+                [""],
+                [""]
+            ] call CBA_fnc_notify;
+        };
+        [player, _items] call ace_arsenal_fnc_addVirtualItems;
+    } else {
+        [player, true] call ace_arsenal_fnc_addVirtualItems;
     };
 
-    [player, _items] call ace_arsenal_fnc_addVirtualItems;
 
     [{
         INFO_2("Staging Arsenal", "Opening Staging Arsenal for %1 (%2)", player, typeOf player);
