@@ -39,6 +39,7 @@ class cScripts {
     class logistics {
         file = "cScripts\functions\logistics";
         class addCargo {};
+        class setCargo {};
         class setCargoAttributes {};
         class checkItemValidity {};
         class createCargoCrate {};
