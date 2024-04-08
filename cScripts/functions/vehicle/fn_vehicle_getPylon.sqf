@@ -170,7 +170,6 @@ private _cav_dragoon_base_F = createHashMapFromArray [
         ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
         ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
         ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
-        ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
         ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
         ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
         ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
