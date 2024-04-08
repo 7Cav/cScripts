@@ -41,7 +41,7 @@ if (_vehicle iskindOf "RHS_UH60_Base") then {
         case "MED": {_vehicle setVariable ["ace_medical_isMedicalVehicle", true, true];};
         default {};
     };
-};
+}
 if (_vehicle iskindOf "rhs_uh1h_base") then {
     [_vehicle] call FUNC(addGetOutHelo);
     [_vehicle] call FUNC(addEscapeWreck);
