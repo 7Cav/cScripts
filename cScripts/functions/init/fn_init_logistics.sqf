@@ -2046,7 +2046,7 @@ private _dataArray = [
         ["rhsusf_mag_17Rnd_9x19_FMJ",0],
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
-        ["UK3CB_P320_9x21_17Rnd",0],
+        ["UK3CB_P320_9x19_17Rnd",0],
         ["acc_pistol_flashlight",0]
     ]]
 ];
