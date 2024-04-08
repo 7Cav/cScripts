@@ -1183,8 +1183,8 @@ force force kat_airway_RecoveryPosition_Time = 6;
 force force kat_airway_RecoveryPosition_TimeToDrain = 10;
 force force kat_airway_ReusableAirwayItems = false;
 force force kat_airway_string_exit = "";
-kat_airway_Suction_reuse = false;
-kat_airway_Suction_time = 12;
+force force kat_airway_Suction_reuse = false;
+force force kat_airway_Suction_time = 12;
 
 // KAT - ADV Medical: Breathing
 force force kat_breathing_advPtxChance = 5;
