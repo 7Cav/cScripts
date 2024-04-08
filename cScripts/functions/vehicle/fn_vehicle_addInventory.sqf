@@ -210,23 +210,23 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
             ["FlexibleTank_01_forest_F", _vehicle, true] call ace_cargo_fnc_loadItem; // Emergency Fuel Tank
             // Vehicle Inventory
             [_vehicle, 
-                GET_CONTAINER(vehicle_strykerDragoon)
+                GET_CONTAINER("vehicle_strykerDragoon")
             ] call FUNC(setCargo);
 
             // Supply Crate
             ["Box_NATO_Equip_F", 
-                GET_CONTAINER(crate_strykerDragoon_resupply), 
+                GET_CONTAINER("crate_strykerDragoon_resupply"), 
                 _vehicle, nil, "Resupply Crate"
             ] call FUNC(createCargoCrate);
 
             // 2 Stingers to distribute to 1 section.
             ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER(crate_stinger), 
+                GET_CONTAINER("crate_stinger"), 
                 _vehicle, nil, "MANPAD"
             ] call FUNC(createCargoCrate);
 
             ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER(crate_stinger), 
+                GET_CONTAINER("crate_stinger"), 
                 _vehicle, nil, "MANPAD"
             ] call FUNC(createCargoCrate);
         };
@@ -242,12 +242,12 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
 
             // Vehicle Inventory
             [_vehicle, 
-                GET_CONTAINER(vehicle_strykerDragoon)
+                GET_CONTAINER("vehicle_strykerDragoon")
             ] call FUNC(setCargo);
 
             // Supply Crate
             ["Box_NATO_Equip_F", 
-                GET_CONTAINER(crate_strykerDragoon_resupply), 
+                GET_CONTAINER("crate_strykerDragoon_resupply"), 
                 _vehicle, nil, "Resupply Crate"
             ] call FUNC(createCargoCrate);
         };
