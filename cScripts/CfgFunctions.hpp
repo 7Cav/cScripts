@@ -39,6 +39,7 @@ class cScripts {
     class logistics {
         file = "cScripts\functions\logistics";
         class addCargo {};
+        class setCargo {};
         class setCargoAttributes {};
         class checkItemValidity {};
         class createCargoCrate {};
@@ -79,8 +80,10 @@ class cScripts {
         class setRadioChannel {};
         class setActiveRadio {};
 
+        class player_getOrganization {};
         class player_getCompany {};
-        class player_setCompany {};
+        class player_getPlatoon {};
+        class player_setOrganization {};
 
         // Other Functions
         class unit_getVariables {};
