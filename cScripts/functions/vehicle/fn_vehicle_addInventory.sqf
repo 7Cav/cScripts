@@ -109,7 +109,7 @@ if (_vehicle iskindOf "cav_dragoon_base_F") then {
 
             // 2 Stingers to distribute to 1 section.
             ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER(crate_stinger), 
+                GET_CONTAINER("crate_stinger"), 
                 _vehicle, nil, "MANPAD"
             ] call FUNC(createCargoCrate);
 
