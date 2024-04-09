@@ -374,7 +374,6 @@ private _dataArray = [
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 0],
         ["rhs_mag_30Rnd_556x45_Mk262_PMAG", 0],
-        ["rhsusf_mag_17Rnd_9x19_FMJ", 0],
         ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 10],
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
         ["rhs_mag_M397_HET", 0],
@@ -1409,13 +1408,16 @@ private _dataArray = [
         ["ACE_microDAGR", 0],
         ["ACE_HuntIR_monitor", 0],
         ["ItemAndroid", 0],
-        ["rhsusf_weap_glock17g4", 0],
-        ["rhsusf_mag_17Rnd_9x19_FMJ",0],
-        ["acc_pistol_flashlight",0],
         ["USP_VEST_STRANDHOGG2_MC", 0],
         ["USP_VEST_STRANDHOGG2_CBR", 0],
         ["ACE_Vector", 0],
         ["ACE_MX2A", 0],
+
+        // Sidearm
+        ["UK3CB_P320_DES",0],
+        ["UK3CB_P320_BLK",0],
+        ["UK3CB_P320_9x19_17Rnd",0],
+        ["acc_pistol_flashlight",0],
 
         //Backpack
         ["USP_TACTICAL_PACK_CCT", 0],
@@ -1431,12 +1433,15 @@ private _dataArray = [
     ["arsenal_role_fireteamleader", [
         ["ACE_microDAGR", 0],
         ["ACE_MX2A", 0],
-        ["rhsusf_weap_glock17g4", 0],
-        ["rhsusf_mag_17Rnd_9x19_FMJ",0],
-        ["acc_pistol_flashlight",0],
         ["USP_VEST_STRANDHOGG2_MC", 0],
         ["USP_VEST_STRANDHOGG2_CBR", 0],
         ["ACE_HuntIR_monitor", 0],
+
+        // Sidearm
+        ["UK3CB_P320_DES",0],
+        ["UK3CB_P320_BLK",0],
+        ["UK3CB_P320_9x19_17Rnd",0],
+        ["acc_pistol_flashlight",0],
 
         //Backpack
         ["USP_TACTICAL_PACK_CCT", 0],
@@ -1976,7 +1981,13 @@ private _dataArray = [
         ["rhsusf_acc_anpeq16A", 0],
         ["rhsusf_acc_wmx", 0],
         ["rhsusf_acc_wmx_bk", 0],
-        ["acc_flashlight", 0]
+        ["acc_flashlight", 0],
+
+        // Sidearm
+        ["UK3CB_P320_DES",0],
+        ["UK3CB_P320_BLK",0],
+        ["UK3CB_P320_9x19_17Rnd",0],
+        ["acc_pistol_flashlight",0]
     ]],
     ["arsenal_weap_m249", [
         ["rhs_weap_m249_pip", 0],
@@ -2040,10 +2051,6 @@ private _dataArray = [
         ["rhs_fim92_mag",0]
     ]],
     ["arsenal_weap_sidearm",[
-        ["rhsusf_weap_glock17g4",0],
-        ["rhsusf_weap_m1911a1",0],
-        ["rhsusf_mag_7x45acp_MHP",0],
-        ["rhsusf_mag_17Rnd_9x19_FMJ",0],
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
