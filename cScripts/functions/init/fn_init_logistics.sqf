@@ -181,6 +181,7 @@ private _dataArray = [
         ["TFAR_anprc152", 0],
 
         // Helmets
+        ["USP_OPS_FASTXP_TAN_MC", 0],
         ["USP_OPS_FASTXP_TAN_MC_02", 0],
         ["USP_OPS_FASTXP_TAN_MC_03", 0],
         ["USP_OPS_FASTXP_TAN_MC_04", 0],
@@ -319,6 +320,7 @@ private _dataArray = [
         ["ACE_Flashlight_MX991",0],
         ["ACE_CableTie",0],
         ["ACE_Chemlight_Shield",0],
+        ["ACE_Chemlight_White",0],
         ["ACE_EntrenchingTool",0],
         ["ACE_IR_Strobe_Item",0],
         ["ACE_wirecutter",10],
