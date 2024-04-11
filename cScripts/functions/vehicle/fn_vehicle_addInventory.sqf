@@ -207,7 +207,7 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
             ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
             ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
             ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-            ["FlexibleTank_01_forest_F", _vehicle, true] call ace_cargo_fnc_loadItem; // Emergency Fuel Tank
+
             // Vehicle Inventory
             [_vehicle, 
                 GET_CONTAINER("vehicle_strykerDragoon")
@@ -399,6 +399,12 @@ if (_vehicle iskindOf "vtx_MH60M") then {
 
 if (_vehicle iskindOf "RHS_AH64_base") then {
     [_vehicle, []] call FUNC(setCargo);
+};
+
+if (_vehicle iskindOf "TF373_SOAR_MH47G_Base") then {
+    [_vehicle, 
+        GET_CONTAINER("vehicle_heliTransport")
+    ] call FUNC(setCargo);
 };
 
 // Fixed Wing
