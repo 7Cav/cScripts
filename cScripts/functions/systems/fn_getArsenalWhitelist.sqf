@@ -1,3 +1,4 @@
+#define DEBUG_MODE
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A 
@@ -12,6 +13,8 @@
  * Example:
  * call cScripts_fnc_getArsenalWhitelist;
  */
+
+waitUntil {!isNull player && player == player};
 
 private _classname = [player] call EFUNC(gear,getLoadoutName);
 if !(isClass (missionConfigFile >> "CfgLoadouts" >> _classname)) exitWith {
@@ -117,5 +120,7 @@ private _launcherSpecific = switch (true) do {
 };
 
 private _whitelist = _commonGear + _unitItems + _orgItems + _roleSpecific + _primarySpecific + _handgunSpecific + _launcherSpecific;
+
+INFO_2("Arsenal", "Whitelist created for %1 [%2].",player,typeof player);
 
 _whitelist

@@ -91,11 +91,7 @@ _unit selectWeapon (primaryWeapon _unit);
 if !(weaponLowered _unit) then {_unit action ["WeaponOnBack", _unit]};
 
 if (GVAR(isPlayer)) then {
-    [{!isNull player && player == player}, {
-        [QEGVAR(StagingArsenal,SaveWhitelist)] call CBA_fnc_localEvent;
-    }, [], 5, {
-        SHOW_SERVER_ERROR_2("Arsenal", "Whitelist creation have failed for %1 [%2]",name player,typeOf player);
-    }] call CBA_fnc_waitUntilAndExecute;
+    [QEGVAR(StagingArsenal,SaveWhitelist)] call CBA_fnc_localEvent;
 };
 
 if (_loadConfig) then {
