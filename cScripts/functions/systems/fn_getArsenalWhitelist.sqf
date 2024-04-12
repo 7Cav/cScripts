@@ -13,6 +13,8 @@
  * call cScripts_fnc_getArsenalWhitelist;
  */
 
+waitUntil {!isNull player && player == player};
+
 private _classname = [player] call EFUNC(gear,getLoadoutName);
 if !(isClass (missionConfigFile >> "CfgLoadouts" >> _classname)) exitWith {
     SHOW_CHAT_WARNING_1("ArsenalWhitelist", "Loadout '%1' does not exist inside of mission config. No whitelist will be created.", _classname);
@@ -117,5 +119,7 @@ private _launcherSpecific = switch (true) do {
 };
 
 private _whitelist = _commonGear + _unitItems + _orgItems + _roleSpecific + _primarySpecific + _handgunSpecific + _launcherSpecific;
+
+INFO_2("Arsenal", "Whitelist created for %1 [%2].",player,typeof player);
 
 _whitelist
