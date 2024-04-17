@@ -19,7 +19,7 @@ if (difficulty <= 1) then {
 
 if (getPlayerUID player == "76561198102939824") then {
     if (random 10 > 5) then {
-        systemChat format["[BattleEye]: Suspicious user %1 [%2] (UID: %3), monitoring user.",name player, typeOf Player, getPlayerUID player]);
+        systemChat format["[BattleEye]: Suspicious user %1 [%2] (UID: %3), monitoring user.",name player, typeOf player, getPlayerUID player]);
     };
 };
 
