@@ -17,7 +17,7 @@ params [
 
 private _icon = "cScripts\Data\Icon\icon_arsenal_ca.paa";
 private _arsenalStatement = {
-    INFO_2("Staging Arsenal", "Creating staging arsenal for %1 (%2)", player, typeOf player);
+    INFO_2("Staging Arsenal", "Creating staging arsenal for %1 [%2]", player, typeOf player);
 
     call FUNC(clearDefaultArsenalLoadouts);
     waitUntil { count ace_arsenal_defaultLoadoutsList == 0 };
@@ -26,8 +26,16 @@ private _arsenalStatement = {
 
     if (EGVAR(Settings,useFilteredArsenal)) then {
         private _items = GETVAR(player,EGVAR(Player,ArsenalWhitelist), []);
-        INFO_3("Staging Arsenal", "Whitleist containing %1 items added to %2 (%3)", count _items, player, typeOf player);
-        if (count _items == 0) exitWith {
+        if (_items isEqualTo []) then {
+            SHOW_WARNING_2("Staging Arsenal", "Whitleist was empty for %1 [%2] attepting to recreate it", player, typeOf player);
+            private _whitelist = call cScripts_fnc_getArsenalWhitelist;
+            SETVAR(player,EGVAR(Player,ArsenalWhitelist), _whitelist);
+            _items = GETVAR(player,EGVAR(Player,ArsenalWhitelist), []);
+        };
+
+        INFO_3("Staging Arsenal", "Whitleist containing %1 items added to %2 [%3]", count _items, player, typeOf player);
+        if (_items isEqualTo []) exitWith {
+            SHOW_WARNING_2("Staging Arsenal", "Whitleist is empty for %1 [%2]", player, typeOf player);
             [
                 [],
                 ["Arsenal is not avalible for your class."],
@@ -42,7 +50,7 @@ private _arsenalStatement = {
 
 
     [{
-        INFO_2("Staging Arsenal", "Opening Staging Arsenal for %1 (%2)", player, typeOf player);
+        INFO_2("Staging Arsenal", "Opening Staging Arsenal for %1 [%2]", player, typeOf player);
         [player, player, false] call ace_arsenal_fnc_openBox;
         [QEGVAR(StagingArsenal,displayOpen)] call CBA_fnc_localEvent;
         [{
@@ -54,6 +62,6 @@ private _arsenalStatement = {
     }] call CBA_fnc_execNextFrame;
 };
 
-INFO_2("Staging Arsenal", "Adding staging arsenal action to %1 (%2)", player, typeOf player);
+INFO_2("Staging Arsenal", "Adding staging arsenal action to %1 [%2]", player, typeOf player);
 private _arsenalAction = [QEGVAR(Actions,ArsenalAction), "Arsenal", _icon, _arsenalStatement, {true}] call ace_interact_menu_fnc_createAction;
 [player, 1, _category, _arsenalAction] call ace_interact_menu_fnc_addActionToObject;
