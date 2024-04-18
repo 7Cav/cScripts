@@ -79,6 +79,7 @@ if (!_loadArray) then {
 // Functions
 if (hasInterface) then {
     call EFUNC(gear,applyFunctions);
+    call EFUNC(gear,applyCosmetics);
 
     [_unit, goggles _unit] call ace_goggles_fnc_applyGlassesEffect;
 
