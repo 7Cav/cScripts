@@ -1419,7 +1419,7 @@ private _dataArray = [
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
-        ["acc_pistol_flashlight",0],
+        ["acc_flashlight_pistol",0],
 
         //Backpack
         ["USP_TACTICAL_PACK_CCT", 0],
@@ -1443,7 +1443,7 @@ private _dataArray = [
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
-        ["acc_pistol_flashlight",0],
+        ["acc_flashlight_pistol",0],
 
         //Backpack
         ["USP_TACTICAL_PACK_CCT", 0],
@@ -1989,7 +1989,7 @@ private _dataArray = [
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
-        ["acc_pistol_flashlight",0]
+        ["acc_flashlight_pistol",0]
     ]],
     ["arsenal_weap_m249", [
         ["rhs_weap_m249_pip", 0],
@@ -2056,7 +2056,7 @@ private _dataArray = [
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
-        ["acc_pistol_flashlight",0]
+        ["acc_flashlight_pistol",0]
     ]]
 ];
 
