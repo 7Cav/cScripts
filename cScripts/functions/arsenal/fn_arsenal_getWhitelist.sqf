@@ -87,19 +87,21 @@ private _weaponSystemItems = [];
     private _handgunWeapon = if (!isNil{_loadout#2#0}) then {_loadout#2#0} else {""};
     private _launcherWeapon = if (!isNil{_loadout#1#0}) then {_loadout#1#0} else {""};
     
-    LOG_5("DEBUG","(%1: %2), [%3, %4, %5]",_weaponTagName,_classWeaponName,_primaryWeapon,_handgunWeapon,_launcherWeapon);
-    diag_log format["DEBUG %1",_primaryWeapon isKindof [_classWeaponName, configFile >> 'CfgWeapons']];
-
     if (_primaryWeapon isKindof [_classWeaponName, configFile >> 'CfgWeapons']) then {
-        _weaponSystemItems append ([_weaponTagName] call EGVAR(gear,getTagItems));
+        LOG_1("DEBUG","Adding %1 weapon system",_weaponTagName);
+        _weaponSystemItems append ([_weaponTagName] call EFUNC(gear,getTagItems));
+        continue
     };
     if (_handgunWeapon isKindof [_classWeaponName, configFile >> 'CfgWeapons']) then {
-        _weaponSystemItems append ([_weaponTagName] call EGVAR(gear,getTagItems));
+        _weaponSystemItems append ([_weaponTagName] call EFUNC(gear,getTagItems));
+        continue
     };
     if (_launcherWeapon isKindof [_classWeaponName, configFile >> 'CfgWeapons']) then {
-        _weaponSystemItems append ([_weaponTagName] call EGVAR(gear,getTagItems));
+        _weaponSystemItems append ([_weaponTagName] call EFUNC(gear,getTagItems));
+        continue
     };
 } forEach _allEquipmentTags;
+diag_log format ["cScripts DEBUG: Weapon System: %1", _weaponSystemItems];
 
 private _whitelist = _loadoutSpecificItems + _commonSideItems + _companyItems + _companyPlatoonItems + _weaponSystemItems;
 

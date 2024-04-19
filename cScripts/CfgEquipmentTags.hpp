@@ -24,25 +24,51 @@ class CfgEquipmentTags {
     class_rhs_weap_m4a1[] = {
         "rhs_weap_m4a1_carryhandle",
         "rhs_weap_m4a1_carryhandle_mstock",
-        "rhs_weap_m4a1",
-        "rhs_weap_m4a1_mstock",
-        "rhs_weap_m4a1_d",
-        "rhs_weap_m4a1_d_mstock",
-        "rhs_weap_m4a1_wd",
-        "rhs_weap_m4a1_wd_mstock",
-
         "rhs_weap_m4a1_blockII",
-        "rhs_weap_m4a1_blockII_KAC",
         "rhs_weap_m4a1_blockII_bk",
+        "rhs_weap_m4a1_blockII_M203_bk",
         "rhs_weap_m4a1_blockII_KAC_bk",
         "rhs_weap_m4a1_blockII_d",
+        "rhs_weap_m4a1_blockII_M203_d",
         "rhs_weap_m4a1_blockII_KAC_d",
+        "rhs_weap_m4a1_blockII_KAC",
         "rhs_weap_m4a1_blockII_wd",
         "rhs_weap_m4a1_blockII_KAC_wd",
-
-        "equ_magazines_basic_stanag",
-        "equ_scopes_basic"
+        "rhs_weap_m4a1",
+        "rhs_weap_m4a1_d",
+        "rhs_weap_m4a1_mstock",
+        "rhs_weap_m4a1_wd",
+        "rhs_weap_m4a1_wd_mstock"
     };
+
+    class_rhs_weap_m4a1_m203[] = {
+        "rhs_weap_m4a1_carryhandle_m203",
+        "rhs_weap_m4a1_carryhandle_m203S",
+        "rhs_weap_m4a1_blockII_M203",
+        "rhs_weap_m4a1_blockII_M203_wd",
+        "rhs_weap_m4a1_m203s_d",
+        "rhs_weap_m4a1_d_mstock",
+        "rhs_weap_m4a1_m203",
+        "rhs_weap_m4a1_m203s",
+        "rhs_weap_m4a1_m320",
+        "rhs_weap_m4a1_m203s_wd"
+    };
+
+    class_rhs_weap_m249[] = {
+        "rhs_weap_m249",
+        "rhs_weap_m249_pip",
+        "rhs_weap_m249_light_L",
+        "rhs_weap_m249_pip_L_para",
+        "rhs_weap_m249_pip_L",
+        "rhs_weap_m249_pip_ris",
+        "rhs_weap_m249_light_S",
+        "rhs_weap_m249_pip_S_para",
+        "rhs_weap_m249_pip_S",
+        "equ_magazines_basic_box"
+    };
+    class_rhs_weap_m249_pip[] = {"class_rhs_weap_m249"};
+    class_rhs_weap_m249_pip_L[] = {"class_rhs_weap_m249"};
+    class_rhs_weap_m249_pip_S[] = {"class_rhs_weap_m249"};
 
     coll_weapons_sidearms[] = {"class_UK3CB_P320_BLK"};
     class_UK3CB_P320_BLK[] = {
@@ -52,6 +78,20 @@ class CfgEquipmentTags {
     };
 
     // Magazines
+    equ_magazines_basic_box[] = {
+        "rhsusf_200Rnd_556x45_mixed_soft_pouch",
+        "rhsusf_200Rnd_556x45_mixed_soft_pouch_coyote",
+        "rhsusf_200Rnd_556x45_mixed_soft_pouch_ucp",
+        "rhsusf_200Rnd_556x45_soft_pouch",
+        "rhsusf_200Rnd_556x45_soft_pouch_coyote",
+        "rhsusf_200Rnd_556x45_soft_pouch_ucp",
+        "rhsusf_100Rnd_556x45_soft_pouch",
+        "rhsusf_100Rnd_556x45_soft_pouch_coyote",
+        "rhsusf_100Rnd_556x45_soft_pouch_ucp",
+        "rhsusf_100Rnd_556x45_mixed_soft_pouch",
+        "rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote",
+        "rhsusf_100Rnd_556x45_mixed_soft_pouch_ucp"
+    };
     equ_magazines_basic_stanag[] = {
         "rhs_mag_30Rnd_556x45_M855A1_Stanag",
         "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"

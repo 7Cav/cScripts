@@ -19,7 +19,6 @@
 params [["_tag","",[""]]];
 
 if (_tag isEqualTo "") exitWith {[]};
-INFO_1("EquipmentTag","Adding '%1' to whitelist", _tag);
 
 private _fn_getTagItemsList = {
     params [["_tag","",[]]];
@@ -27,31 +26,28 @@ private _fn_getTagItemsList = {
     _equipmentTag;
 };
 
-EGVAR(gear,arsenalWhitelistAddedTags) append [_tag];
-
-private _equipmentTagObjects = [_tag] call _fn_getTagItemsList;
+private _tagItemList = [_tag] call _fn_getTagItemsList;
+INFO_1("EquipmentTag","Tag List: %1", _tagItemList);
 
 private _itemList = [];
 {
-    INFO_1("EquipmentTag","Checking and adding item %1", _x);
-    //FIXME: remove this check when we are stable
     if (_forEachIndex > 100) then {
         ERROR("EquipmentTag","Infinet loop detected stopping loop!");
         break;
     };
-    if (_x in EGVAR(gear,arsenalWhitelistAddedTags)) then { continue; };
+
+    LOG_1("DEBUG_TAG","Adding item: %1",_x);
 
     if ([_x] call EFUNC(gear,isTag)) then {
-        // if items already obtained continue
-        _equipmentTagObjects append [_x];
-        EGVAR(gear,arsenalWhitelistAddedTags) append [_x];
-        continue;
+        LOG_1("DEBUG_TAG","Item: %1 is tag",_x);
+        _tagItemList append ([_x] call _fn_getTagItemsList);
+        continue
     };
-    if (_x in _itemList) exitWith {continue};
-    if ([_x] call FUNC(checkItemValidity)) then {
-        _itemList append [_x];
-        continue;
+    if (_x in _itemList) exitWith {
+        WARNING_1("EquipmentTag","Item '%1' is item already in itemlist.",_x);
+        continue
     };
-} forEach _equipmentTagObjects;
+    _itemList append [_x];
+} forEach _tagItemList;
 
 _itemList;
