@@ -18,6 +18,7 @@ GVAR(Gear) = false;
 
 EGVAR(gear,groupIDsSynched) = false;
 EGVAR(gear,playerLoadoutGiven) = false;
+EGVAR(gear,arsenalWhitelistAddedTags) = [];
 
 if (isClass (missionConfigFile >> "CfgLoadouts")) then {
     ["CAManBase", "InitPost", {

@@ -1,6 +1,6 @@
 class Cav_B_Bravo_TankCrew_Base_F: Cav_B_Bravo_base_F {
     scope = 0;
-    role = "crew";
+    equipmentTags[] = {"role_crew"};
 };
 class Cav_B_B_Tank_Commander_F: Cav_B_Bravo_TankCrew_Base_F {
     displayName = "$STR_cav_Bravo_Characters_B_Tank_Commander";

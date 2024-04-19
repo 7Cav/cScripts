@@ -119,12 +119,6 @@ class cScripts {
         class setupLoadoutCategories {};
         class addLoadoutSelection {};
 
-        // Arsenal releated
-        class getArsenalWhitelist {};
-        class addDefaultArsenalLoadout {};
-        class addDefaultArsenalLoadouts {};
-        class clearDefaultArsenalLoadouts {};
-
         class checkStagingZone {};
 
         class deleteDroppedObjects {};
@@ -142,7 +136,6 @@ class cScripts {
         // Buttons and options
         class addReGear {};
         class addHeal {};
-        class addArsenal {};
         
         class createActionCategory {};
 
@@ -229,6 +222,8 @@ class cScripts {
         class gear_applyFunctions {};
         class gear_selectLoadout {};
         class gear_getSideConfig {};
+        
+        class gear_getLoadoutCompany {};
 
         class gear_setupRadios {};
 
@@ -238,9 +233,22 @@ class cScripts {
         class gear_removeLoadout {};
         class gear_hasSavedLoadout {};
 
+        // equipmentTags
+        class gear_getTagItems {};
+        class gear_getTags {};
+        class gear_isTag {};
+
         // other
-        class gear_getLoadoutRole {};
+        class gear_getLoadoutTags {};
         class gear_getLoadoutName {};
+    };
+    class arsenal {
+        file = "cScripts\functions\arsenal";
+        class addArsenal {};
+        class getArsenalWhitelist {};
+        class addDefaultArsenalLoadout {};
+        class addDefaultArsenalLoadouts {};
+        class clearDefaultArsenalLoadouts {};
     };
     class diag {
         file = "cScripts\functions\diag";

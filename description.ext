@@ -71,5 +71,6 @@ class CfgFunctions {
     #include "cScripts\CfgFunctions.hpp"
 };
 #include "cScripts\CfgLoadouts.hpp"
+#include "cScripts\CfgEquipmentTags.hpp"
 
 /*           OTHER            */

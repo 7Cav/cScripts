@@ -2,7 +2,7 @@ class Cav_B_Training_base_F: Cav_B_Seventh_Cavalry_Base_F {
     category[] = {"cScripts_Loadout_Cat_Training"};
     scope = 0;
 
-    role = "training";
+    equipmentTags[] = {"role_training"};
 };
 
 class Cav_B_Training_Cadre_F: Cav_B_Training_base_F {
