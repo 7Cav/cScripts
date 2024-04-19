@@ -14,6 +14,7 @@
  * [independent] call cScripts_fnc_gear_getSideConfig
  *
  */
+
 params ["_side"];
 
 switch (_side) do {
