@@ -11,7 +11,7 @@
  * True on success
  *
  * Example:
- * call cScripts_fnc_addDefaultArsenalLoadout
+ * call cScripts_fnc_arsenal_addDefaultLoadout
  */
 
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};

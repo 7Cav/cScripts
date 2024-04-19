@@ -11,7 +11,7 @@
  * ARRAY of items
  *
  * Example:
- * call cScripts_fnc_getArsenalWhitelist;
+ * call cScripts_fnc_arsenal_getWhitelist;
  */
 
 waitUntil {!isNull player && player == player};

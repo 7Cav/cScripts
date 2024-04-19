@@ -93,6 +93,7 @@ class cScripts {
         class gate {};
         class teleport {};
         class addLoadoutAction {};
+        class addArsenal {};
 
         class addGetOutHelo {};
         class addEscapeWreck {};
@@ -244,11 +245,11 @@ class cScripts {
     };
     class arsenal {
         file = "cScripts\functions\arsenal";
-        class addArsenal {};
-        class getArsenalWhitelist {};
-        class addDefaultArsenalLoadout {};
-        class addDefaultArsenalLoadouts {};
-        class clearDefaultArsenalLoadouts {};
+        class arsenal_createAction {};
+        class arsenal_getWhitelist {};
+        class arsenal_addDefaultLoadout {};
+        class arsenal_addDefaultLoadouts {};
+        class arsenal_clearDefaultLoadouts {};
     };
     class diag {
         file = "cScripts\functions\diag";

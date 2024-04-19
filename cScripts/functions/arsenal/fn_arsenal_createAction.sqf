@@ -8,7 +8,8 @@
  * 0: aceCategory <ARRAY> (Default: ["ACE_MainActions"])
  *
  * Example:
- * call cScripts_fnc_addArsenal
+ * call cScripts_fnc_arsenal_createAction
+ * ["ACE_MainActions"] call cScripts_fnc_arsenal_createAction
  */
 
 params [
@@ -19,16 +20,16 @@ private _icon = "cScripts\Data\Icon\icon_arsenal_ca.paa";
 private _arsenalStatement = {
     INFO_2("Staging Arsenal", "Creating staging arsenal for %1 [%2]", player, typeOf player);
 
-    call FUNC(clearDefaultArsenalLoadouts);
+    call EFUNC(arsenal,clearDefaultLoadouts);
     waitUntil { count ace_arsenal_defaultLoadoutsList == 0 };
-    call FUNC(addDefaultArsenalLoadout);
+    call EFUNC(arsenal,addDefaultLoadout);
     waitUntil { count ace_arsenal_defaultLoadoutsList != 0 };
 
     if (EGVAR(Settings,useFilteredArsenal)) then {
         private _items = GETVAR(player,EGVAR(Player,ArsenalWhitelist), []);
         if (_items isEqualTo []) then {
             SHOW_WARNING_2("Staging Arsenal", "Whitleist was empty for %1 [%2] attepting to recreate it", player, typeOf player);
-            private _whitelist = call cScripts_fnc_getArsenalWhitelist;
+            private _whitelist = call EFUNC(arsenal,getWhitelist);
             SETVAR(player,EGVAR(Player,ArsenalWhitelist), _whitelist);
             _items = GETVAR(player,EGVAR(Player,ArsenalWhitelist), []);
         };

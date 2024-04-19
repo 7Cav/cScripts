@@ -4,7 +4,7 @@
  * This function remove all ace arsenal default loadouts.
  *
  * Example:
- * call cScripts_fnc_removeDefaultArsenalLoadouts
+ * call cScripts_fnc__arsenal_removeDefaultLoadouts
  *
  * Public: No
  */
