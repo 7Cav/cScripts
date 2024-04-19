@@ -4,12 +4,20 @@ class CfgEquipmentTags {
     CommonBlufor[] = {"G_Aviator"};
 
     // Bluefor Company
-    CommonBluforCompanyAlpha[] = {"ace_banana", "coll_weapons_primary"};
-    CommonBluforCompanyBravo[] = {"ace_banana"};
-    CommonBluforCompanyCharlie[] = {"ace_banana"};
+    CommonBluforCompanyAlpha[] = {
+        "coll_weapons_sidearms"
+    };
+    CommonBluforCompanyBravo[] = {
+        "ace_banana"
+    };
+    CommonBluforCompanyCharlie[] = {
+        "coll_weapons_primary"
+    };
 
     // Platoons
-    CommonBluforCompanyBravo2[] = {"ace_banana"};
+    CommonBluforCompanyBravo2[] = {
+        "coll_weapons_primary"
+    };
 
     // Weapons
     coll_weapons_primary[] = {"class_rhs_weap_m4a1"};
