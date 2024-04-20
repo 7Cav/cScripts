@@ -240,14 +240,11 @@ private _dataArray = [
         ["rhs_weap_M136_hedp",1],
         ["rhs_weap_m72a7",0],
         ["dzn_MG_Tripod_M122A1_M240Mount_Carry", 0],
-        ["ace_csw_carryMortarBaseplate", 0],
-        ["ace_compat_rhs_usf3_m252_carry", 0],
 
-        ["avm224_W_M224_mortar_carry", 0],
-        ["avm224_M_6Rnd_60mm_HE_csw", 0],
-        ["avm224_M_6Rnd_60mm_HE_0_csw", 0],
-        ["avm224_M_6Rnd_60mm_ILLUM_IR_csw", 0],
-        ["avm224_M_6Rnd_60mm_SMOKE_csw", 0],
+        ["NDS_M_6Rnd_60mm_HE", 0],
+        ["NDS_M_6Rnd_60mm_HE_0", 0],
+        ["NDS_M_6Rnd_60mm_SMOKE", 0],
+        ["avm224_M_6Rnd_60mm_ILLUM_IR", 0]
 
         ["ACE_1Rnd_82mm_Mo_HE", 0],
         ["ACE_1Rnd_82mm_Mo_Illum", 0],
