@@ -450,8 +450,6 @@ private _dataArray = [
 
         //cTab
         ["ItemAndroid", 0],
-        ["ItemcTab", 0],
-        ["ItemcTabMisc", 0],
         ["ItemAndroidMisc",0],
 
         // NVG
@@ -1406,7 +1404,9 @@ private _dataArray = [
         ["ACE_microDAGR", 0],
         ["ACE_HuntIR_monitor", 0],
         ["ItemAndroid", 0],
+        ["ItemAndroidMisc",0],
         ["ItemcTab", 0],
+        ["ItemcTabMisc", 0],
         ["USP_VEST_STRANDHOGG2_MC", 0],
         ["USP_VEST_STRANDHOGG2_CBR", 0],
         ["ACE_Vector", 0],
@@ -1426,7 +1426,6 @@ private _dataArray = [
     ["arsenal_role_squadleader", [
         ["ACE_microDAGR", 0],
         ["ACE_HuntIR_monitor", 0],
-        ["ItemAndroid", 0],
         ["USP_VEST_STRANDHOGG2_MC", 0],
         ["USP_VEST_STRANDHOGG2_CBR", 0],
         ["ACE_Vector", 0],
