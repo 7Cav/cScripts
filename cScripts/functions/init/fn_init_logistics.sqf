@@ -244,7 +244,7 @@ private _dataArray = [
         ["NDS_M_6Rnd_60mm_HE", 0],
         ["NDS_M_6Rnd_60mm_HE_0", 0],
         ["NDS_M_6Rnd_60mm_SMOKE", 0],
-        ["avm224_M_6Rnd_60mm_ILLUM_IR", 0]
+        ["avm224_M_6Rnd_60mm_ILLUM_IR", 0],
 
         ["ACE_1Rnd_82mm_Mo_HE", 0],
         ["ACE_1Rnd_82mm_Mo_Illum", 0],
