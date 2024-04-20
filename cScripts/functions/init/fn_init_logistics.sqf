@@ -590,9 +590,10 @@ private _dataArray = [
 
     ["crate_strykerDragoon_resupply", [
         // Rifle Ammo
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 28],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 21],
-        ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 7],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 35],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 7],
+        ["ACE_30Rnd_556x45_Stanag_M995_AP_mag", 14],
+        ["rhsusf_200Rnd_556x45_mixed_soft_pouch",9],
         
         // MG Ammo
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
@@ -612,27 +613,30 @@ private _dataArray = [
         ["HandGrenade", 9],
 
         // Smoke Grenades
-        ["SmokeShell", 27],
-        ["SmokeShellRed", 4],
+        ["SmokeShell", 10],
+        ["SmokeShellRed", 10],
         ["SmokeShellBlue", 4],
-        ["SmokeShellYellow", 4],
-        ["SmokeShellGreen", 4],
+        ["SmokeShellYellow", 2],
+        ["SmokeShellGreen", 2],
         
         // Medical
         ["ACE_quikclot", 50],
         ["ACE_tourniquet", 18]
     ]],
     ["crate_strykerDragoon_60mm",[
-        ["avm224_W_M224_mortar_carry",4],
-        ["avm224_M_6Rnd_60mm_HE_csw", 50],
-        ["avm224_M_6Rnd_60mm_HE_0_csw", 50],
-        ["avm224_M_6Rnd_60mm_ILLUM_IR_csw", 25],
-        ["avm224_M_6Rnd_60mm_SMOKE_csw", 25]
+        ["NDS_M_6Rnd_60mm_HE", 7],
+        ["NDS_M_6Rnd_60mm_HE_0", 4],
+        ["NDS_M_6Rnd_60mm_SMOKE", 3],
+        ["avm224_M_6Rnd_60mm_ILLUM_IR", 1]
     ]],
-    ["crate_strykerDragoon_82mm",[
-        ["ACE_1Rnd_82mm_Mo_HE", 24],
-        ["ACE_1Rnd_82mm_Mo_Illum", 8],
-        ["ACE_1Rnd_82mm_Mo_Smoke", 8]
+    ["crate_strykerDragoon_81mm",[
+        ["ace_compat_rhs_usf3_m252_carry", 2],
+        ["ace_csw_carryMortarBaseplate", 2]
+    ]],
+    ["crate_strykerDragoon_81mm_ammo",[
+        ["ACE_1Rnd_82mm_Mo_HE", 21],
+        ["ACE_1Rnd_82mm_Mo_Illum", 6],
+        ["ACE_1Rnd_82mm_Mo_Smoke", 6]
     ]],
     ["crate_stinger",[
         ["rhs_weap_fim92", 1],
@@ -830,8 +834,6 @@ private _dataArray = [
         ["rhs_fgm148_magazine_AT", 2],
 
         // MG
-        ["rhs_weap_m240B",1],
-        ["rhsusf_acc_su230a",1],
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
         
         // Tools
@@ -858,16 +860,10 @@ private _dataArray = [
         ["rhs_fgm148_magazine_AT", 2],
 
         // MG
-        ["rhs_weap_m240B",1],
-        ["rhsusf_acc_su230a",1],
         ["rhsusf_100Rnd_762x51_m62_tracer", 10],
-        
+
         // Tools
         ["ACE_wirecutter", 1],
-
-        // 82mm Mortars
-        ["ace_compat_rhs_usf3_m252_carry", 2],
-        ["ace_csw_carryMortarBaseplate", 2],
 
         // Medical
         ["kat_AED",1],
