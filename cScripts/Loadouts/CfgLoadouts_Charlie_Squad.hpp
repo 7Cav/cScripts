@@ -71,6 +71,12 @@ class Cav_B_C_RiflemanLAT_F: Cav_B_Charlie_base_F {
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR_3d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],["rhs_weap_M136_hedp","","","",[],[],""],[],["USP_G3C_RS_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_splint",2],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_ASLTB",[["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1]]],["USP_ZIPON_PACK_CPC_BC_MC",[["USP_PVS15",1],["ACE_EntrenchingTool",1]]],"USP_OPSCORE_FASTMTC_CGSW","",[],["ItemMap","","","ItemCompass","ACE_Altimeter",""]];
     icon = "iconManAT";
 };
+class Cav_B_C_Marksman_F_Local: Cav_B_Charlie_base_F {
+    displayName = "Designated Marksman";
+    scope = 2;
+    category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
+    loadout = [["rhs_weap_sr25_ec","","rhsusf_acc_anpeq15side_bk","optic_AMS",["rhsusf_20Rnd_762x51_SR25_m118_special_Mag",20],[],"rhsusf_acc_harris_bipod"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["kat_chestSeal",2],["kat_guedel",1],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_Chemlight_Shield",1],["ACE_Chemlight_White",1,1]]],["USP_CRYE_JPC_DMB",[["HandGrenade",2,1],["SmokeShell",4,1],["SmokeShellPurple",1,1],["rhsusf_20Rnd_762x51_SR25_m118_special_Mag",9,20]]],["USP_ZIPON_PACK_CPC_MC",[["USP_PVS15",1],["ACE_wirecutter",1],["ACE_EntrenchingTool",1],["ACE_splint",4],["kat_Painkiller",2,10]]],"USP_OPSCORE_FASTMTC_GSW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
+};               
 class Cav_B_C_CombatLifeSaver_F: Cav_B_Charlie_base_F {
     displayName = "$STR_Cav_Charlie_Characters_C_CombatLifeSaver";
     scope = 2;
@@ -80,15 +86,6 @@ class Cav_B_C_CombatLifeSaver_F: Cav_B_Charlie_base_F {
     role = "cls";
     icon = "iconManMedic";
 };
-class Cav_B_C_Marksman_F_Local: Cav_B_Charlie_base_F {
-    displayName = "Designated Marksman";
-    scope = 2;
-    category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
-    loadout = [["rhs_weap_sr25_ec","","rhsusf_acc_anpeq15side_bk","optic_AMS",["rhsusf_20Rnd_762x51_SR25_m118_special_Mag",20],[],"rhsusf_acc_harris_bipod"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",10],["ACE_quikclot",10],["kat_chestSeal",2],["kat_guedel",1],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_Chemlight_Shield",1],["ACE_Chemlight_White",1,1]]],["USP_CRYE_JPC_DMB",[["HandGrenade",2,1],["SmokeShell",4,1],["SmokeShellPurple",1,1],["rhsusf_20Rnd_762x51_SR25_m118_special_Mag",9,20]]],["USP_ZIPON_PACK_CPC_MC",[["USP_PVS15",1],["ACE_wirecutter",1],["ACE_EntrenchingTool",1],["ACE_splint",4],["kat_Painkiller",2,10]]],"USP_OPSCORE_FASTMTC_GSW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
-    insignia = "cav_insignia_specialized_cls";
-    abilityMedic = 0;
-    icon = "iconManMedic";
-};               
 // Named
 class Cav_B_C_SquadLeader_Bandit_1_F: Cav_B_C_SquadLeader_F {
     scope = 1;
