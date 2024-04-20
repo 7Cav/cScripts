@@ -66,7 +66,7 @@ if (_vehicle iskindOf "cav_dragoon_base_F") then {
             _vehicle addWeaponWithAttachmentsCargoGlobal [["rhs_weap_m240B","","","rhsusf_acc_su230a",["rhsusf_100Rnd_762x51_m62_tracer",100],[],""],1]; 
 
             // Supply Crate
-            ["Box_NATO_Equip_F", 
+            ["Box_NATO_Wps_F", 
                 GET_CONTAINER("crate_strykerDragoon_resupply"), 
                 _vehicle, nil, "Supply Crate"
             ] call FUNC(createCargoCrate);
