@@ -250,18 +250,19 @@ private _dataArray = [
         ["ACE_1Rnd_82mm_Mo_Illum", 0],
         ["ACE_1Rnd_82mm_Mo_Smoke", 0],
 
-        // Ammo
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG",0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",28],
-        ["ACE_30Rnd_556x45_Stanag_M995_AP_mag",0],
-        ["rhsusf_200Rnd_556x45_soft_pouch",0],
-        ["rhsusf_100Rnd_762x51_m62_tracer",0],
         ["rhs_fgm148_magazine_AT",1],
         ["rhs_fim92_mag",2],
         ["MRAWS_HE_F",2],
         ["MRAWS_HEAT_F",2],
         ["MAA_MAAWS_ASM509",0],
         ["MAA_MAAWS_GMM_MT",0],
+
+        // Ammo
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG",0],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",28],
+        ["ACE_30Rnd_556x45_Stanag_M995_AP_mag",0],
+        ["rhsusf_200Rnd_556x45_soft_pouch",0],
+        ["rhsusf_100Rnd_762x51_m62_tracer",0],
 
         ["rhs_mag_M397_HET",0],
         ["rhs_mag_M433_HEDP",20],
