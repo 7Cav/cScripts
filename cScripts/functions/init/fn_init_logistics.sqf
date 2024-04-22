@@ -122,7 +122,7 @@ private _dataArray = [
         // Tools and Items
         ["Toolkit",10],
         ["ACE_Flashlight_MX991",0],
-        ["itemcTabHCam",0],
+        ["itemcTabHCam",0]
         ["ACE_CableTie",0],
         ["ACE_Chemlight_Shield",0],
         ["ACE_VMH3",0],
