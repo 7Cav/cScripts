@@ -14,7 +14,7 @@
  *
  */
 
-params [["_item","",[]]];
+params [["_item","",[""]]];
 
 private _cfgEquipmentTags = isArray (missionConfigFile >> "CfgEquipmentTags" >> _item);
 if (_cfgEquipmentTags) exitWith {true};

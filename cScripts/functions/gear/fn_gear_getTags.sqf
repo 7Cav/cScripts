@@ -15,7 +15,7 @@
  *
  */
 
-params [["_loadout","",[]]];
+params [["_loadout","",[""]]];
 
 if !(isClass (missionConfigFile >> "CfgEquipmentTags")) exitWith {
     SHOW_ERROR("Gear","cfgEquipmentTag config does not exist");
