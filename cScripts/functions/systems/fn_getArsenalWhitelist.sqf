@@ -59,6 +59,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "squadleader": {GET_CONTAINER_KEYS("arsenal_role_squadleader");};
     case "fireteamleader": {GET_CONTAINER_KEYS("arsenal_role_fireteamleader");};
     case "weapons": {GET_CONTAINER_KEYS("arsenal_role_weapons");};
+    case "strykercrew": {GET_CONTAINER_KEYS("arsenal_role_strykercrew");};
     case "pilot";
     case "rotarypilot": {GET_CONTAINER_KEYS("arsenal_role_rotarypilot");};
     case "rotarycrew": {GET_CONTAINER_KEYS("arsenal_role_pilotcrew");};
