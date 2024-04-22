@@ -17,6 +17,11 @@
 
 params [["_loadout","",[]]];
 
+if !(isClass (missionConfigFile >> "CfgEquipmentTags")) exitWith {
+    SHOW_ERROR("Gear","cfgEquipmentTag config does not exist");
+    []
+};
+
 private _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
 private _tags = getArray (_config >> "equipmentTags");
 

@@ -18,6 +18,10 @@
 
 params [["_tag","",[""]]];
 
+if (isClass (missionConfigFile >> "CfgEquipmentTags")) exitWith {
+    SHOW_ERROR("Gear","cfgEquipmentTag config does not exist");
+    [];
+};
 if (_tag isEqualTo "") exitWith {[]};
 
 private _fn_getTagItemsList = {
@@ -31,7 +35,7 @@ INFO_1("EquipmentTag","Tag List: %1", _tagItemList);
 
 private _itemList = [];
 {
-    if (_forEachIndex > 100) then {
+    if (_forEachIndex > 600) then {
         ERROR("EquipmentTag","Infinet loop detected stopping loop!");
         break;
     };
