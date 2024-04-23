@@ -42,6 +42,7 @@ class cScripts {
         class setCargo {};
         class setCargoAttributes {};
         class checkItemValidity {};
+        class getFilteredItem {};
         class createCargoCrate {};
 
         class doStarterCrateSupplies {};
