@@ -35,6 +35,7 @@ private _anySideCommonItems = ["Common"] call EFUNC(gear,getTagItems);
 
 // Side items
 private _side = [side group player] call EFUNC(gear,getSideConfig);
+LOG_1("DEBUG","Player side %1",_side);
 private _commonSideItems = switch (_side) do {
     case "CommonBlufor":        { ["CommonBlufor"] call EFUNC(gear,getTagItems); };
     case "CommonOpfor":         { ["CommonOpfor"] call EFUNC(gear,getTagItems); };
@@ -44,7 +45,7 @@ private _commonSideItems = switch (_side) do {
 };
 
 // Side company items
-private _company = (call EFUNC(player,getOrganization))#1;
+private _company = ([3] call EFUNC(player,getOrganization));
 private _titleCompany = [_company] call CBA_fnc_capitalize;
 private _companyItems = switch (_side) do {
     case "CommonBlufor":        { [format["CommonBluforCompany",_titleCompany]] call EFUNC(gear,getTagItems); };
@@ -55,7 +56,7 @@ private _companyItems = switch (_side) do {
 };
 
 // Side company platoon items
-private _companyPlatoon = (call EFUNC(player,getOrganization))#0;
+private _companyPlatoon = ([2] call EFUNC(player,getOrganization));
 private _companyPlatoonItems = switch (_side) do {
     case "CommonBlufor":        { [format["CommonBluforCompany%1%2",_titleCompany,_companyPlatoon]] call EFUNC(gear,getTagItems); };
     case "CommonOpfor":         { [format["CommonOpforCompany%1%2",_titleCompany,_companyPlatoon]] call EFUNC(gear,getTagItems); };

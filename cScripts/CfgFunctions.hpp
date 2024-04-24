@@ -82,8 +82,6 @@ class cScripts {
         class setActiveRadio {};
 
         class player_getOrganization {};
-        class player_getCompany {};
-        class player_getPlatoon {};
         class player_setOrganization {};
 
         // Other Functions

@@ -8,32 +8,32 @@
  * 1: Company <STRING>
  *
  * Return Value:
- * Organization <ARRAY>
+ * OrganizationArray <ARRAY>
  *
  * Example:
- * [2,"Charlie"] call cScripts_fnc_player_setOrganization;
+ * ["Alpha",1,2,"Alpha","7th Cavalry"] call cScripts_fnc_player_setOrganization;
  *
  * Public: No
  */
 
 params [
+    ["_team", "", [""]],
+    ["_squad", 0, [0]],
     ["_platoon", 0, [0]],
-    ["_company", "", [""]]
+    ["_company", "", [""]],
+    ["_regiment", "", [""]]
 ];
 
-// Set platoon number
-if (_platoon < 0 || _platoon > 4) then {
-    SHOW_WARNING_1("Player","Platoon number '%1' is invalid. Must be between 0 and 4. Setting to default.",_platoon);
-    _platoon = 0;
-};
-
+private _team = toLower _team;
+SETVAR(player,EGVAR(Player,Team),_team);
+private _squad = toLower _squad;
+SETVAR(player,EGVAR(Player,Squad),_squad);
 SETVAR(player,EGVAR(Player,Platoon),_platoon);
-
-// Set company name
-_company = toLower _company;
+private _company = toLower _company;
 SETVAR(player,EGVAR(Player,Company),_company);
+private _regiment = toLower _regiment;
+SETVAR(player,EGVAR(Player,Regiment),_regiment);
 
-private _unit = name player;
-INFO_3("Player", "%1 have company set to '%2' and platoon set to '%3'",_unit,_company,_platoon);
+INFO_3("Player", "Player %1 [%2] organizationArray set to %3.",player,typeOf player,[_team, _squad, _platoon, _company, _regiment]);
 
-[_platoon, _company]
+[_team, _squad, _platoon, _company, _regiment]
