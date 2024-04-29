@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: CPL.Brostrom.A, Elemtael
  * This function adds a Jump out option to a vehicle.
  *
  * Arguments:
