@@ -18,6 +18,7 @@
  *
  */
 
+//There is no way this code is going to work without this specific line.
 params [
     ["_vehicle", objNull, [objNull]],
     ["_minAltetude", 180, [180]],
