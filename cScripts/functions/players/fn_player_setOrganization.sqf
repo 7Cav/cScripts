@@ -33,6 +33,6 @@ SETVAR(player,EGVAR(Player,Company),_company);
 private _regiment = toLower _regiment;
 SETVAR(player,EGVAR(Player,Regiment),_regiment);
 
-INFO_7("Player", "Player %1 [%2] organizationArray set to [%3, %4, %5, %6, %7].",player,typeOf player,_team,_squad,_platoon,_company,_regiment);
+INFO_7("Player","Player %1 [%2] organizationArray set to [%3, %4, %5, %6, %7].",player,typeOf player,_team,_squad,_platoon,_company,_regiment);
 
 [_team, _squad, _platoon, _company, _regiment]
