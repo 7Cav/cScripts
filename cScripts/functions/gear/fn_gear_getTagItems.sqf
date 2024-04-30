@@ -31,25 +31,31 @@ private _fn_getTagItemsList = {
 };
 
 private _tagItemList = [_tag] call _fn_getTagItemsList;
-INFO_1("EquipmentTag","Tag List: %1", _tagItemList);
+INFO_2("EquipmentTag","Handling List: '%1': %2",_tag,_tagItemList);
 
+private _usedTagList = [];
 private _itemList = [];
 {
-    if (_forEachIndex > 600) then {
-        ERROR("EquipmentTag","Infinet loop detected stopping loop!");
+    if (_forEachIndex > 900) then {
+        SHOW_ERROR("EquipmentTag","Infinet loop detected stopping loop!");
         break;
     };
-
-    LOG_1("DEBUG_TAG","Adding item: %1",_x);
+    if (_x in _usedTagList) then {
+        WARNING_1("EquipmentTag","Tag collection '%1' is item already handled skipping.",_x);
+        continue;
+    };
+    
+    INFO_1("EquipmentTag","Adding item: %1",_x);
 
     if ([_x] call EFUNC(gear,isTag)) then {
-        LOG_1("DEBUG_TAG","Item: %1 is tag",_x);
+        INFO_1("EquipmentTag","Item: %1 is tag",_x);
         _tagItemList append ([_x] call _fn_getTagItemsList);
-        continue
+        _usedTagList append [_x];
+        continue;
     };
     if (_x in _itemList) exitWith {
         WARNING_1("EquipmentTag","Item '%1' is item already in itemlist.",_x);
-        continue
+        continue;
     };
     _itemList append [_x];
 } forEach _tagItemList;
