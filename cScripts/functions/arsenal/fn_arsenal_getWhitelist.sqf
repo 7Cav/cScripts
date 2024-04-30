@@ -35,7 +35,6 @@ private _anySideCommonItems = ["Common"] call EFUNC(gear,getTagItems);
 
 // Side items
 private _side = [side group player] call EFUNC(gear,getSideConfig);
-LOG_1("DEBUG","Player side %1",_side);
 private _commonSideItems = switch (_side) do {
     case "CommonBlufor":        { ["CommonBlufor"] call EFUNC(gear,getTagItems); };
     case "CommonOpfor":         { ["CommonOpfor"] call EFUNC(gear,getTagItems); };
@@ -104,8 +103,21 @@ private _weaponSystemItems = [];
 } forEach _allEquipmentTags;
 diag_log format ["cScripts DEBUG: Weapon System: %1", _weaponSystemItems];
 
-private _whitelist = _loadoutSpecificItems + _commonSideItems + _companyItems + _companyPlatoonItems + _weaponSystemItems;
+private _whitelist = _loadoutSpecificItems + _anySideCommonItems + _commonSideItems + _companyItems + _companyPlatoonItems + _weaponSystemItems;
 
+// Clean the whitelist
+private _finalWhitelist = [];
+if (!isNil{EGVAR(DATABASE,DONE)}) then {
+    INFO_2("Arsenal", "Database ready filtering Whitelist for %1 [%2].",player,typeof player);
+    {
+        private _items = [_x] call FUNC(getFilteredItem);
+        _finalWhitelist append _items;
+    } forEach _whitelist;
+} else {
+    WARNING_2("Arsenal", "Database not read skiping filtering of whitelist for %1 [%2].",player,typeof player);
+    _finalWhitelist = _whitelist;
+};
+diag_log str _finalWhitelist;
 
 INFO_2("Arsenal", "Whitelist created for %1 [%2].",player,typeof player);
 
@@ -114,6 +126,6 @@ diag_log format["_commonSideItems: %1",_commonSideItems isEqualType []];
 diag_log format["_companyItems: %1",_companyItems isEqualType []];
 diag_log format["_companyPlatoonItems: %1",_companyPlatoonItems isEqualType []];
 diag_log format["_weaponSystemItems: %1",_weaponSystemItems isEqualType []];
-diag_log format["_whitelist: %1",_whitelist isEqualType []];
+diag_log format["_whitelist: %1",_finalWhitelist isEqualType []];
 
-_whitelist
+_finalWhitelist

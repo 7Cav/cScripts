@@ -1,5 +1,8 @@
 class CfgEquipmentTags {
-    Common[] = {"G_Aviator"};
+    Common[] = {
+        "G_Aviator",
+        "Medikit"
+    };
 
     CommonBlufor[] = {"G_Aviator"};
 

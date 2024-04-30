@@ -12,8 +12,9 @@
  * Public: No
  */
 
-
 INFO("Logistics", "Creating logistical database");
+EGVAR(DATABASE,DONE) = false;
+
 private _dataArray = [
     // // // // // // //
     // Starter Crates \\
@@ -2069,6 +2070,7 @@ private _dataArray = [
 ];
 
 private _return = createHashMapFromArray _dataArray;
+EGVAR(DATABASE,DONE) = true;
 
 if (!(_return isEqualType createHashMap)) exitWith {
     SHOW_CHAT_ERROR_1("LogisticsDatabase", "Fatal error creating database (database base type faulty %1)...", typeName _return);

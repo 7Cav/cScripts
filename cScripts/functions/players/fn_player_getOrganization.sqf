@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params [["_showOnly", -1 [-1]]];
+params [["_showOnly", -1, [-1]]];
 
 private _emptyOrgArray = ["",0,0,"",""];
 
@@ -26,30 +26,23 @@ private _config = missionConfigFile >> "CfgLoadouts" >> _loadout;
 
 
 private _regiment = getText (_config >> "regiment");
-_regiment = GETVAR(player,EGVAR(Player,Regiment),_configPlatoon);
+_regiment = GETVAR(player,EGVAR(Player,Regiment),_regiment);
 _regiment = toLower _regiment;
 
 private _company = getText (_config >> "company");
-_company = GETVAR(player,EGVAR(Player,Company),_configPlatoon);
+_company = GETVAR(player,EGVAR(Player,Company),_company);
 _regiment = toLower _regiment;
 
 private _platoon = getNumber (_config >> "platoon");
-_platoon = GETVAR(player,EGVAR(Player,Platoon),_configPlatoon);
+_platoon = GETVAR(player,EGVAR(Player,Platoon),_platoon);
 
 private _squad = getNumber (_config >> "squad");
-_squad = GETVAR(player,EGVAR(Player,Squad),_configPlatoon);
+_squad = GETVAR(player,EGVAR(Player,Squad),_squad);
 
 private _team = getText (_config >> "team");
-_team = GETVAR(player,EGVAR(Player,Team),_configPlatoon);
+_team = GETVAR(player,EGVAR(Player,Team),_team);
 _team = toLower _team;
 
-
-private _configPlatoon = getNumber (_config >> "platoon"); 
-private _platoon = GETVAR(player,EGVAR(Player,Platoon),_configPlatoon);
-
-private _configCompany = getText (_config >> "company"); 
-private _company = GETVAR(player,EGVAR(Player,Company),_configCompany);
-_company = toLower _company;
 
 if (_showOnly isNotEqualTo -1) exitWith {
     [_team, _squad, _platoon, _company, _regiment] select _showOnly;

@@ -18,7 +18,7 @@
 
 params [["_tag","",[""]]];
 
-if (isClass (missionConfigFile >> "CfgEquipmentTags")) exitWith {
+if !(isClass (missionConfigFile >> "CfgEquipmentTags")) exitWith {
     SHOW_ERROR("Gear","cfgEquipmentTag config does not exist");
     [];
 };

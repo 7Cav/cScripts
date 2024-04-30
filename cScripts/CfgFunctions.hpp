@@ -223,8 +223,6 @@ class cScripts {
         class gear_selectLoadout {};
         class gear_getSideConfig {};
         
-        class gear_getLoadoutCompany {};
-
         class gear_setupRadios {};
 
         // Save and Load
