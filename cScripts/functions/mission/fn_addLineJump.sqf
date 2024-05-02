@@ -29,7 +29,21 @@ params [
 // Check so the options arent added twice.
 if (!isNil {_vehicle getVariable QEGVAR(VehicleFunc,JumpAction)}) exitWith {SHOW_WARNING_1("JumpAction", "Aircraft jump setting already applied for %1.", _vehicle)};
 
-private _conditionHoldAction = format ["((_target getCargoIndex player) != -1) && ((_target animationPhase 'ramp_bottom' > 0.64) or (_target animationPhase 'door_2_1' == 1) or (_target animationPhase 'door_2_2' == 1) or (_target animationPhase 'jumpdoor_1' == 1) or (_target animationPhase 'jumpdoor_2' == 1) or (_target animationPhase 'back_ramp_switch' == 1) or (_target animationPhase 'back_ramp_half_switch' == 1) or (_target doorPhase 'RearDoors' > 0.5) or (_target doorPhase 'Door_1_source' > 0.5) or (_target animationSourcePhase 'ramp_anim' > 0.5) or (_target animationPhase 'Ramp' < 0.5)) && ((getPosVisual _target) select 2 >= %1) && ((getPosVisual _target) select 2 <= %2) && (speed _target <= %3)", _minAltetude, _maxAltetude, _maxSpeed];
+private _doors = tostring {
+    ((_target animationPhase 'ramp_bottom' > 0.64) ||   // RHS_C130J
+    (_target animationPhase 'door_2_1' == 1) ||         // RHS_C130J
+    (_target animationPhase 'door_2_2' == 1) ||         // RHS_C130J
+    (_target animationPhase 'jumpdoor_1' == 1) ||
+    (_target animationPhase 'jumpdoor_2' == 1) ||
+    (_target animationPhase 'back_ramp_switch' == 1) ||
+    (_target animationPhase 'back_ramp_half_switch' == 1) ||
+    (_target doorPhase 'RearDoors' > 0.5) ||
+    (_target doorPhase 'Door_1_source' > 0.5) ||
+    (_target animationSourcePhase 'ramp_anim' > 0.5) ||
+    (_target animationPhase 'Ramp' < 0.5))              // TF373_RAF_HC5, TF373_SOAR_MH47G_No_Rear_Guns
+};
+
+private _conditionHoldAction = format ["((_target getCargoIndex player) != -1) && (%1) && ((getPosVisual _target) select 2 >= %2) && ((getPosVisual _target) select 2 <= %3) && (speed _target <= %4)", _doors, _minAltetude, _maxAltetude, _maxSpeed];
 
 // Add hold action for jump
 private _actionID = [
