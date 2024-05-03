@@ -10,6 +10,7 @@ class cScripts {
         class init_staging {};
 
         class init_logistics {};
+        class init_pylons {};
 
         class init_diary {};
         class init_message {};
@@ -189,7 +190,10 @@ class cScripts {
 
         class vehicle_applyLoadout {};
         class vehicle_addDefaultLoadout {};
-        class vehicle_getPylon {};
+
+        class vehicle_getPylonName {};
+        class vehicle_getPylonLoadout {};
+        class vehicle_getPylonIcon {};
 
         // Other
         class vehicle_reset {};
