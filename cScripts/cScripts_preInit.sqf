@@ -42,6 +42,9 @@ EGVAR(DATABASE,DONE) = false;
 GVAR(DATABASE) = call EFUNC(init,logistics);
 EGVAR(DATABASE,DONE) = true;
 
+EGVAR(PYLONS,DONE) = false;
+GVAR(PYLONS) = call EFUNC(init,pylons);
+EGVAR(PYLONS,DONE) = true;
 
 if (EGVAR(Settings,allowCustomTagging)) then {
     call EFUNC(init,aceTagging);
