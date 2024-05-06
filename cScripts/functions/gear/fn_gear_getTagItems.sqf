@@ -37,7 +37,7 @@ private _usedTagList = [];
 private _itemList = [];
 {
     if (_forEachIndex > 900) then {
-        SHOW_ERROR("EquipmentTag","Infinet loop detected stopping loop!");
+        SHOW_SERVER_ERROR_2("EquipmentTag","Infinet loop detected for player %1 [%2]. Loop have stopped.",player,typeOf player);
         break;
     };
     if (_x in _usedTagList) then {
