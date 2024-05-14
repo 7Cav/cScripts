@@ -106,6 +106,7 @@
 
     ["cav_dragoon_base_F", [
         ["antiarmor", [
+<<<<<<< HEAD
             ["displayName", "Anti-Armor"],
             ["icon", ""],
             ["loadout",[
@@ -123,6 +124,21 @@
                 ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
                 ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
             ]]
+=======
+            ["SmokeLauncherMag",[0],6],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
+>>>>>>> upstream/main
         ]],
         // ["antiair", [
         //     ["SmokeLauncherMag",[0,0],6],
@@ -139,6 +155,7 @@
         //     ["4Rnd_Titan_long_missiles",[0],4]
         // ]],
         ["default",[
+<<<<<<< HEAD
             ["displayName", "Anti-Personnel"],
             ["icon", ""],
             ["loadout",[
@@ -175,6 +192,36 @@
                 ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
                 ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
             ]]
+=======
+            ["SmokeLauncherMag",[0],6],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
+        ]],
+        ["balanced",[
+            ["SmokeLauncherMag",[0],6],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_mag_300Rnd_762x51_Belt_Red",[0],300],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_HEI_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
+            ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
+>>>>>>> upstream/main
         ]]
     ]]
 ];
