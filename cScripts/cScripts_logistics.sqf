@@ -190,6 +190,7 @@
         ["USP_PVS31_BLK2",0],
         ["USP_PVS31_TAN2",0],
         ["USP_RHINO", 0],
+
         // cTab
         ["ItemAndroid", 0],
         ["ItemcTab", 0],
