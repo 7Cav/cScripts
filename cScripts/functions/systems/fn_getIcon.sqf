@@ -26,3 +26,5 @@ params[["_icon", "", [""]]];
     getText (configfile >> "CfgUnitInsignia" >> _icon >> "texture"),
     if (fileExists _icon) then {_icon} else {""}
 ];
+
+""
