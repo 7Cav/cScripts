@@ -24,16 +24,15 @@ if (!(_vehicle call FUNC(isValidFaction))) exitWith {};
 INFO_2("VehicleDefaultLoadout", "Applying vehicle loadout to %1 [%2].", _vehicle, typeOf _vehicle);
 
 // Default pylon applied
-private _vehicleTypes = [true] call EFUNC(vehicle,getPylon);
 private _pylon = [];
 
 {
     if (_vehicle iskindOf _x) exitWith {
-        _pylon = [_x, "default"] call EFUNC(vehicle,getPylon);
+        _pylon = [_x, "default"] call EFUNC(vehicle,getPylonLoadout);
         INFO_3("VehicleDefaultLoadout", "Vehicle %1 [%2] applied have loadout %3.", _vehicle, typeOf _vehicle, _pylon);
         [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
     };
-} forEach _vehicleTypes;
+} forEach (keys GVAR(PYLONS));
 
 if (count _pylon == 0) then {
     WARNING_2("VehicleDefaultLoadout", "Vehicle %1 [%2] has no loadout setup.", _vehicle, typeOf _vehicle);
