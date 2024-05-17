@@ -25,13 +25,13 @@ private _processed = createHashMap;
         _x params ["_loadoutName", "_loadoutInfo"];
         private _loadoutMap = createHashMapFromArray _loadoutInfo;
         if !("displayName" in _loadoutMap) then {
-            SHOW_WARNING('VehiclePylon', _classname + " has no displayName!");
+            SHOW_WARNING_1('VehiclePylon',"%1 has no defined displayName.",_classname);
         };
         if !("loadout" in _loadoutMap) then {
-            SHOW_WARNING('VehiclePylon', _loadouts + " has no loadout!");
+            SHOW_WARNING_1('VehiclePylon',"%1 has no defined loadout.",_classname);
         };
         if !("icon" in _loadoutMap) then {
-            SHOW_WARNING('VehiclePylon', _icon + " has no icon!");
+            SHOW_WARNING_1('VehiclePylon',"%1 has no defined icon.",_classname);
         };
         _map set [_loadoutName, _loadoutMap];
     } forEach _loadouts;
