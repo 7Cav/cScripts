@@ -41,6 +41,10 @@ INFO("preInit", "Initializing...");
 // Logistical Database
 GVAR(DATABASE) = call EFUNC(init,logistics);
 
+EGVAR(PYLONS,DONE) = false;
+GVAR(PYLONS) = call EFUNC(init,pylons);
+EGVAR(PYLONS,DONE) = true;
+
 if (EGVAR(Settings,allowReplaceItem)) then {
     call EFUNC(init,aceItemReplace);
 };
