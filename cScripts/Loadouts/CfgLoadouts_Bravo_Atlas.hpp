@@ -5,7 +5,8 @@ class Cav_B_Bravo_Atlas_base_F: Cav_B_Bravo_base_F {
     insignia = "cav_insignia_Specialized_Medic0";
     abilityMedic = 2;
     
-    role = "doctor";
+    equipmentTags[] = {"tag_doctor"};
+    
     icon = "iconManMedic";
 };
 

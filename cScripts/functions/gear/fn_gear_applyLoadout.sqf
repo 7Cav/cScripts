@@ -38,9 +38,13 @@ if (_loadConfig) then {
 
     // Organizaiton
     if (hasInterface) then {
-        private _configPlatoon = getNumber (_config >> "platoon");
-        private _configCompany = getText (_config >> "company");
-        [_configPlatoon,_configCompany] call EFUNC(Player,setOrganization);
+        [
+            getText (_config >> "team"),
+            getNumber (_config >> "squad"),
+            getNumber (_config >> "platoon"),
+            getText (_config >> "company"),
+            getText (_config >> "regiment")
+        ] call EFUNC(Player,setOrganization);
     };
 };
 

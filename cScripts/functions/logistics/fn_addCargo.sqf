@@ -1,3 +1,4 @@
+#define DEBUG_MODE
 #include "..\script_component.hpp";
 /*
  * Author: Whitsel.M
@@ -25,6 +26,26 @@ params [
 
 if ( count _inventory < 1 ) exitWith {};
 
+private _fn_addFilteredItemDelay = {
+    params ["_item", "_amount"];
+    private _return = if (!isNil{EGVAR(DATABASE,DONE)}) then {
+        INFO_1("addCargo","Database is done adding item: '%1'",_item);
+        private _items = [_item] call FUNC(getFilteredItem);
+        {_vehicle addItemCargoGlobal [_x, _amount]} forEach _items;
+    } else {
+        WARNING_1("addCargo","Database not ready delaying addition of item: '%1'",_item);
+        if (_item call FUNC(checkItemValidity)) then {
+            [{!isNil{EGVAR(DATABASE,DONE) == true}}, {
+                params ["_vehicle", "_item", "_amount"];
+                private _items = [_item] call FUNC(getFilteredItem);
+                {_vehicle addItemCargoGlobal [_x, _amount]} forEach _items;
+            }, [_vehicle, _item, _amount], 10,{
+                params ["_vehicle", "_item"];
+            }] call CBA_fnc_waitUntilAndExecute;
+        };
+    };
+};
+
 {
     if !(_x isEqualTypeArray ["",0]) then {
         SHOW_WARNING_1("addCargo","Item not added because %1 does not contain the proper format. Must be [STRING, SCALAR].", _x);
@@ -33,6 +54,6 @@ if ( count _inventory < 1 ) exitWith {};
 
     _x params [["_item", "", [""]], ["_amount", 0, [0]]];
     if (_item call FUNC(checkItemValidity)) then {
-        _vehicle addItemCargoGlobal [_item, _amount];
+        [_item, _amount] call _fn_addFilteredItemDelay;
     };
 } forEach _inventory;

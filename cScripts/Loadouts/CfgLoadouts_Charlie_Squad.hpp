@@ -2,7 +2,7 @@ class Cav_B_C_Officer_F: Cav_B_Charlie_base_F {
     displayName = "$STR_Cav_Charlie_Characters_C_Officer";
     category[] += {"cScripts_Loadout_Cat_Charlie_Leadership"};
     scope = 0;
-    role = "officer";
+    equipmentTags[] = {"role_officer"};
     icon = "iconManOfficer";
 };
 class Cav_B_C_PlatoonLeader_F: Cav_B_C_Officer_F {
@@ -26,7 +26,7 @@ class Cav_B_C_PlatoonMedic_F: Cav_B_C_Officer_F {
     loadout = [["rhs_weap_m4a1_blockII","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],""],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_tourniquet",10],["ACE_EarPlugs",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_IR_Strobe_Item",2],["ACE_CableTie",2],["ACE_epinephrine",6],["kat_PenthroxItem",4],["kat_Painkiller",2,10],["kat_Carbonate",2,10],["ACE_Chemlight_IR",2,1]]],["USP_CRYE_CPC_MEDIC_BELT_MC",[["ACE_surgicalKit",1],["kat_IV_16",15],["kat_amiodarone",5],["kat_atropine",5],["ACE_adenosine",3],["kat_chestSeal",10],["kat_EACA",10],["kat_fentanyl",5],["kat_ketamine",5],["kat_larynx",10],["kat_lidocaine",10],["kat_nalbuphine",10],["kat_naloxone",5],["kat_nitroglycerin",10],["kat_norepinephrine",10],["kat_phenylephrine",10],["kat_stethoscope",1],["kat_Pulseoximeter",5],["kat_IO_FAST",5],["kat_aatKit",5],["ACE_splint",2],["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",7,30],["SmokeShellBlue",2,1],["SmokeShellPurple",1,1],["kat_Penthrox",5,10]]],["USP_TACTICAL_PACK",[["ACE_plasmaIV",5],["ACE_plasmaIV_500",4],["ACE_salineIV",1],["ACE_elasticBandage",30],["ACE_packingBandage",10],["ACE_quikclot",10],["ACE_salineIV_250",2],["USP_PVS15",1],["kat_accuvac",1],["ACE_splint",6]]],"USP_OPSCORE_FASTMTC_CTW","USP_MFRAME_BLK2",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     insignia = "cav_insignia_specialized_cls";
     abilityMedic = 2;
-    role = "medic";
+    equipmentTags[] = {"tag_medic"};
     icon = "iconManMedic";
 };
 class Cav_B_C_Drone_Operator_F_Local: Cav_B_C_Officer_F {
@@ -40,7 +40,7 @@ class Cav_B_C_SquadLeader_F: Cav_B_Charlie_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Charlie_Leadership"};
     loadout = [["rhs_weap_m4a1_m320","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15_bk","rhsusf_acc_ACOG_RMR_3d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_EarPlugs",1],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_TLB",[["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",9,30],["SmokeShell",4,1],["HandGrenade",2,1],["SmokeShellPurple",1,1],["rhs_mag_m713_Red",3,1],["rhs_mag_m714_White",4,1],["SmokeShellBlue",2,1]]],["USP_REEBOW_3DAP_MC",[["ACE_HuntIR_monitor",1],["USP_PVS15",1],["ACE_splint",2],["ACE_SpraypaintRed",1],["ACE_EntrenchingTool",1],["ACE_CableTie",2]]],"USP_OPSCORE_FASTMTC_CMGTW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
-    role = "squadleader";
+    equipmentTags[] = {"role_squadleader"};
     icon = "iconManLeader";
 };
 class Cav_B_C_FireTeamLeader_F: Cav_B_Charlie_base_F {
@@ -48,7 +48,7 @@ class Cav_B_C_FireTeamLeader_F: Cav_B_Charlie_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
     loadout = [["rhs_weap_m4a1_m320","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15_bk","rhsusf_acc_ACOG_RMR_3d",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["kat_chestSeal",2],["kat_guedel",1],["ACE_EarPlugs",1],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_TLB",[["ACE_IR_Strobe_Item",1],["SmokeShell",4,1],["HandGrenade",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",10,30],["ACE_HuntIR_M203",1,1],["rhs_mag_m713_Red",2,1],["rhs_mag_m714_White",2,1],["SmokeShellPurple",1,1]]],["USP_REEBOW_3DAP_MC",[["ACE_HuntIR_monitor",1],["ACE_splint",2],["ACE_EntrenchingTool",1],["ACE_SpraypaintRed",1],["ACE_CableTie",2],["USP_PVS15",1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",2,200],["SmokeShellBlue",2,1]]],"USP_OPSCORE_FASTMTC_CGSW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
-    role = "fireteamleader";
+    equipmentTags[] = {"role_fireteamleader"};
     icon = "iconManLeader";
 };
 class Cav_B_C_AutomaticRifleman_F: Cav_B_Charlie_base_F {
@@ -83,7 +83,7 @@ class Cav_B_C_CombatLifeSaver_F: Cav_B_Charlie_base_F {
     category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",30],[],""],[],[],["USP_G3C_CU_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",14],["ACE_splint",2],["ACE_EarPlugs",1],["ACE_Chemlight_IR",2,1]]],["USP_CRYE_JPC_DMB",[["SmokeShell",4,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",9,30],["HandGrenade",2,1],["SmokeShellBlue",1,1],["SmokeShellPurple",1,1]]],["USP_DELTA_BAG_MC",[["USP_PVS15",1],["ACE_packingBandage",40],["ACE_quikclot",40],["ACE_EntrenchingTool",1],["ACE_splint",8],["ACE_tourniquet",12],["kat_chestSeal",10],["ACE_epinephrine",3],["kat_guedel",10],["kat_ncdKit",5],["kat_pocketBVM",1],["kat_accuvac",1],["kat_phenylephrineAuto",3],["kat_CarbonateItem",1],["kat_Painkiller",7,10]]],"USP_OPSCORE_FASTMTC_GSW","USP_MFRAME_TAN",[],["ItemMap","","","ItemCompass","ACE_Altimeter",""]];    insignia = "cav_insignia_specialized_cls";
     abilityMedic = 1;
-    role = "cls";
+    equipmentTags[] = {"tag_cls"};
     icon = "iconManMedic";
 };
 // Named

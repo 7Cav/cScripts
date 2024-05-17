@@ -23,6 +23,7 @@ EGVAR(Staging,ZoneStatus) = false;
 EGVAR(Staging,showAllLoadouts) = false;
 GVAR(isPlayer) = hasInterface || {isPlayer player};
 GVAR(OneLife) = !isNil{(getArray (missionconfigfile >> "respawnTemplates") select 0) == "ace_spectator"};
+EGVAR(DATABASE,DONE) = false;
 
 #include "initSettings.inc.sqf"
 
@@ -38,13 +39,15 @@ INFO("preInit", "Initializing...");
 
 
 // Logistical Database
-EGVAR(DATABASE,DONE) = false;
 GVAR(DATABASE) = call EFUNC(init,logistics);
-EGVAR(DATABASE,DONE) = true;
 
 EGVAR(PYLONS,DONE) = false;
 GVAR(PYLONS) = call EFUNC(init,pylons);
 EGVAR(PYLONS,DONE) = true;
+
+if (EGVAR(Settings,allowReplaceItem)) then {
+    call EFUNC(init,aceItemReplace);
+};
 
 if (EGVAR(Settings,allowCustomTagging)) then {
     call EFUNC(init,aceTagging);

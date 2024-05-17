@@ -10,7 +10,7 @@
  * True on success
  *
  * Example:
- * call cScripts_fnc_addDefaultArsenalLoadouts
+ * call cScripts_fnc_arsenal_addDefaultLoadouts
  *
  * Public: No
  */
