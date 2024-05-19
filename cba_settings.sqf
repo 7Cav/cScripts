@@ -88,7 +88,7 @@ force force ace_common_enableSway = true;
 force force ace_common_restedSwayFactor = 1;
 //ace_common_settingFeedbackIcons = 1;
 //ace_common_settingProgressBarLocation = 0;
-force force ace_common_swayFactor = 1;
+force force ace_common_swayFactor = 0.75;
 
 // ACE Cook off
 force force ace_cookoff_ammoCookoffDuration = 0;
@@ -173,7 +173,7 @@ force force acex_headless_log = false;
 force force acex_headless_transferLoadout = 1;
 
 // ACE Hearing
-force force ace_hearing_autoAddEarplugsToUnits = false;
+force force ace_hearing_autoAddEarplugsToUnits = 2;
 force force ace_hearing_disableEarRinging = false;
 force force ace_hearing_earplugsVolume = 0.5;
 force force ace_hearing_enableCombatDeafness = true;
@@ -1315,20 +1315,20 @@ force force kat_misc_AFAKSecondSlotItem = "[['ACE_packingBandage', 10], ['ACE_qu
 force force kat_misc_AFAKSixthSlotItem = "[['ACE_morphine', 3], ['ACE_epinephrine', 3]]";
 force force kat_misc_AFAKThirdSlotItem = "[['kat_Penthrox', 2], ['kat_Painkiller', 1]]";
 force force kat_misc_allowSharedVehicleEquipment = 4;
-force force kat_misc_armbandSlingLeftArm = "0.2, -0.39, -0.2";
-force force kat_misc_armbandSlingLeftArmRotation = "240, 33, 26";
-force force kat_misc_armbandSlingLeftLeg = "0.435, -0.075, -0.38";
-force force kat_misc_armbandSlingLeftLegRotation = "-160, -5, 45";
-force force kat_misc_armbandSlingRightArm = "-0.228, -0.1, -0.43";
-force force kat_misc_armbandSlingRightArmRotation = "5, -5, -5";
-force force kat_misc_armbandSlingRightLeg = "-0.32, -0.29, -0.42";
-force force kat_misc_armbandSlingRightLegRotation = "-30, -5, 38";
+force force kat_misc_armbandSlingLeftArm = "[0.2, -0.39, -0.2]";
+force force kat_misc_armbandSlingLeftArmRotation = "[240, 33, 26]";
+force force kat_misc_armbandSlingLeftLeg = "[0.435, -0.075, -0.38]";
+force force kat_misc_armbandSlingLeftLegRotation = "[-160, -5, 45]";
+force force kat_misc_armbandSlingRightArm = "[-0.228, -0.1, -0.43]";
+force force kat_misc_armbandSlingRightArmRotation = "[5, -5, -5]";
+force force kat_misc_armbandSlingRightLeg = "[-0.32, -0.29, -0.42]";
+force force kat_misc_armbandSlingRightLegRotation = "[-30, -5, 38]";
 force force kat_misc_enable = true;
 force force kat_misc_enableStitchFullBody = true;
 force force kat_misc_IFAK_Container = 0;
 force force kat_misc_IFAK_Item_Color = [0.67,0.84,0.9];
 force force kat_misc_IFAK_RemoveWhenEmpty = true;
-force kat_misc_IFAK_Slot_Color = [1,0.3,0.3];
+force force kat_misc_IFAK_Slot_Color = [1,0.3,0.3];
 force force kat_misc_IFAKFirstSlotItem = "[['ACE_tourniquet', 2]]";
 force force kat_misc_IFAKFourthSlotItem = "[['kat_chestSeal', 1]]";
 force force kat_misc_IFAKSecondSlotItem = "[['ACE_packingBandage', 5], ['ACE_quikclot', 5]]";
@@ -1704,6 +1704,7 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_attributes_enableWaypointType = true;
 
 // Zeus Enhanced - Faction Filter
+//zen_faction_filter_0_EdCat_GO_CSAT_Arctic = true;
 //zen_faction_filter_0_OPF_F = true;
 //zen_faction_filter_0_OPF_G_F = true;
 //zen_faction_filter_0_OPF_GEN_F = true;
@@ -1795,6 +1796,7 @@ force force usaf_utility_core_allow_move_in_cargo = false;
 //zen_faction_filter_1_BLU_T_F = true;
 //zen_faction_filter_1_BLU_USA_7CAV_F = true;
 //zen_faction_filter_1_BLU_W_F = true;
+//zen_faction_filter_1_EdCat_GO_NATO_Arctic = true;
 //zen_faction_filter_1_rhs_faction_socom = true;
 //zen_faction_filter_1_rhs_faction_usaf = true;
 //zen_faction_filter_1_rhs_faction_usarmy_d = true;
