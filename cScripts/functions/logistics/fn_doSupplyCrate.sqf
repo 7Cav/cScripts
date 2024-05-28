@@ -45,7 +45,7 @@ if (isServer) then {
     [{!isNil{EGVAR(DATABASE,DONE)} && EGVAR(DATABASE,DONE);}, {
         _this params ["_crate","_crateType"];
         private _container = GET_CONTAINER(_crateType);
-        [_crate, _container] call FUNC(addCargo);
+        [_crate, _container] call FUNC(setCargo);
 }, [_crate, _crateType]] call CBA_fnc_waitUntilAndExecute;
 };
 

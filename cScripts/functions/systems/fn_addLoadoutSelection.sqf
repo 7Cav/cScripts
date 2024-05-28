@@ -27,6 +27,7 @@ params [
     ["_icon", "", [""]],
     ["_category", ["ACE_MainActions", "cScripts_Loadout_Cat_Main"], [[]]],
     ["_company", "", [""]],
+    ["_platoon", 0, [0]],
     ["_allowAllLoadouts", false]
 ];
 
@@ -35,7 +36,7 @@ private _condition = {
     _params params ["_className", "_company", "_allowAllLoadouts"];
     if (_allowAllLoadouts) exitWith {true};
     if ([player] call EFUNC(gear,getLoadoutName) == _className) exitWith {true};
-    if ([_company] call FUNC(allowLoadout)) exitWith {true};
+    if ([_company,_platoon] call FUNC(allowLoadout)) exitWith {true};
     false
 };
 

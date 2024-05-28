@@ -4,40 +4,34 @@
  * This function apply cosmetician attributes to a unit.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * None
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [player] call cScripts_fnc_gear_applyCosmetics
+ * call cScripts_fnc_gear_applyCosmetics
  *
  */
 
-params [["_unit", objNull, [objNull]]];
-
-
 // Player Name without rank prefix
-if (!isNil{GETVAR(_unit,EGVAR(Unit,Name),nil)}) then {
-    private _name = [_unit] call EFUNC(unit,getName);
-    SETVAR(_unit,EGVAR(Unit,Name),_name);
+if (!isNil{GETVAR(player,EGVAR(Unit,Name),nil)}) then {
+    private _name = [player] call EFUNC(unit,getName);
+    SETVAR(player,EGVAR(Unit,Name),_name);
 };
-
 
 // Player Rank to ingame rank
 if (EGVAR(Settings,setPlayerRank)) then {
-    if (!isNil{GETVAR(_unit,EGVAR(Unit,Rank),nil)}) then {
-        private _rank = [_unit] call EFUNC(player,getRank);
-        SETVAR(_unit,EGVAR(Unit,Rank),_rank);
+    if (!isNil{GETVAR(player,EGVAR(Unit,Rank),nil)}) then {
+        private _rank = [player] call EFUNC(player,getRank);
+        SETVAR(player,EGVAR(Unit,Rank),_rank);
     };
 };
 
-
 // Team Color
-if (!isNil{GETVAR(_unit,EGVAR(Unit,TeamColor),nil)}) then {
-    [_unit] call EFUNC(unit,setTeamColor);
+if (!isNil{GETVAR(player,EGVAR(Unit,TeamColor),nil)}) then {
+    [player] call EFUNC(unit,setTeamColor);
 };
-
 
 // Apply squad insignia 
 if (EGVAR(Settings,allowInsigniaApplication)) then {
@@ -47,7 +41,7 @@ if (EGVAR(Settings,allowInsigniaApplication)) then {
         call EFUNC(unit,getSquadInsignia);
     };
     [{
-        params ["_unit", "_insignia"];
-        [_unit, _insignia, false] call EFUNC(unit,setInsignia);
-    }, [_unit, _insignia], 2] call CBA_fnc_waitAndExecute;
+        params ["_insignia"];
+        [player, _insignia, false] call EFUNC(unit,setInsignia);
+    }, [_insignia], 2] call CBA_fnc_waitAndExecute;
 };

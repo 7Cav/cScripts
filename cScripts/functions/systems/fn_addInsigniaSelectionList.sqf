@@ -98,6 +98,7 @@ if (!isPlayer _object) then {
 [_object,"Squad Insignia 2/1/C/1-7","Charlie_1_2","z\cav\addons\insignia\data\Charlie_1_2.paa",_charlieCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 3/1/C/1-7","Charlie_1_3","z\cav\addons\insignia\data\Charlie_1_3.paa",_charlieCategory] call FUNC(addInsigniaSelection);
 [_object,"Squad Insignia 4/1/C/1-7","Charlie_1_4","z\cav\addons\insignia\data\Charlie_1_4.paa",_charlieCategory] call FUNC(addInsigniaSelection);
+[_object,"Squad Insignia 4/1/C/1-7 (Colored)","charlie_1_4_colored","z\cav\addons\insignia\data\Charlie_1_4_Colored.paa",_charlieCategory] call FUNC(addInsigniaSelection);
 
 // Charlie Company  2nd Platoon
 [_object,"Platoon Insignia 2/C/1-7","Charlie_2","z\cav\addons\insignia\data\Charlie_2.paa",_charlieCategory] call FUNC(addInsigniaSelection);

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A
+ * Author: SGT.Brostrom.A
  * This function setup a loadout categories
  *
  * Arguments:
@@ -23,26 +23,19 @@ params [["_vehicle", objNull, [objNull]]];
 // Loadout action setup
 private _pylonList = [];
 
-if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
-    _pylonList = [
-        // TypeOf,               DisplayName,   Name,           Icon
-        ["rhsusf_m1a1tank_base", "Hard",        "hard",         ""],
-        ["rhsusf_m1a1tank_base", "Soft",        "soft",         ""],
-        ["rhsusf_m1a1tank_base", "Default",     "default",      ""]
-    ];
-};
-
-
-if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dragoon_unarmed_base_F")) then {
-    _pylonList = [
-        // TypeOf,                     DisplayName,  Name,           Icon
-        // ["I_APC_Wheeled_03_cannon_F", "Anti-Armor",  "antiarmor",    ""],
-        ["I_APC_Wheeled_03_cannon_F", "Anti-Air",    "antiair",      ""],
-        // ["I_APC_Wheeled_03_cannon_F", "Assault",     "assault",      ""],
-        ["I_APC_Wheeled_03_cannon_F", "Default",     "default",      ""]
-    ];
-};
-
+{
+    _x params ["_classname"];
+    if (_vehicle iskindOf _classname) then {
+        {
+            _x params ["_pylonName"];
+            private _displayName = [_classname, _pylonName] call EFUNC(vehicle,getPylonName);
+            private _loadout = [_classname, _pylonName] call EFUNC(vehicle,getPylonLoadout);
+            private _icon = [_classname, _pylonName] call EFUNC(vehicle,getPylonIcon);
+            _pylonList append [[_classname, _displayName, _pylonName, _loadout, _icon]];
+        } forEach (keys (GVAR(PYLONS) get _classname));
+        break;
+    };
+} forEach (keys GVAR(PYLONS));
 
 if (count _pylonList == 0) exitWith {false};
 // Setup category
@@ -52,10 +45,9 @@ private _vehiclePylon = [QEGVAR(Actions_Vehicle,Pylon_Cat), "Vehicle Loadouts", 
 
 // Setup loadouts selection
 {
-    _x params ["_vehicleKind", "_displayName", "_loadoutName", ["_icon", ""]];
-    INFO_4("VehiclePylonSetup", "Creating loadout '%1' (%2) action for vehicle %3 (%4)", _displayName, _loadoutName, _vehicle, typeOf _vehicle);
-    private _pylon = [_vehicleKind, _loadoutName] call EFUNC(vehicle,getPylon);
-    [_vehicle, _displayName, _vehicleKind, _loadoutName, _pylon, _icon] call EFUNC(vehicle,addPylonSelection);
+    _x params ["_classname", "_displayName", "_pylonName", "_loadout", "_icon"];
+    INFO_4("VehiclePylonSetup", "Creating loadout '%1' (%2) action for vehicle %3 (%4)", _displayName, _pylonName, _vehicle, typeOf _vehicle);
+    [_vehicle, _displayName, _classname, _pylonName, _loadout, _icon] call EFUNC(vehicle,addPylonSelection);
 } forEach _pylonList;
 
 true

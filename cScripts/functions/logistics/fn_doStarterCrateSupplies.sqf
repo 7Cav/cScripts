@@ -68,6 +68,6 @@ private _container = switch (_companySelector) do {
     default {[]};
 };
 
-[_crate, _container] call FUNC(addCargo);
+[_crate, _container] call FUNC(setCargo);
 
 true

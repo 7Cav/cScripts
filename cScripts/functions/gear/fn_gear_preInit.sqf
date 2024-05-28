@@ -10,7 +10,7 @@
  * nothing
  *
  * Example:
- * call cScripts_fnc_gear_postInit
+ * call cScripts_fnc_gear_preInit
  *
  */
 

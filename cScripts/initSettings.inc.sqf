@@ -142,7 +142,16 @@ private _cScriptSettings = "cScripts Mission Settings";
     },
     false
 ] call CBA_fnc_addSetting;
-
+[ // Use Filtered Arsenal
+    QEGVAR(Settings,useFilteredArsenal),
+    "CHECKBOX",
+    ["Use Filtered Arsenal","Use a filtered or show all items in the staging arsenal."],
+    [_cScriptSettings, "4; Staging"],
+    true,
+    true,
+    {},
+    false
+] call CBA_fnc_addSetting;
 
 // 5; Vehicle
 [ // Enable

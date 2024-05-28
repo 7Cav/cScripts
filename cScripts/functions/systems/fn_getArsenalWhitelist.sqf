@@ -28,11 +28,28 @@ _unitItems = _unitItems arrayIntersect _unitItems select {_x isEqualType "" && {
 private _commonGear = GET_CONTAINER_KEYS("arsenal_common");
 
 
-private _company = call EFUNC(player,getCompany);
-private _companyItems = switch (_company) do {
-    case "alpha": {GET_CONTAINER_KEYS("alpha_company");};
-    case "bravo": {GET_CONTAINER_KEYS("bravo_company");};
-    case "charlie": {GET_CONTAINER_KEYS("charlie_company");};
+private _organization = call EFUNC(Player,getOrganization);
+private _orgItems = switch (_organization#1) do {
+    case "alpha": {
+        GET_CONTAINER_KEYS("alpha_company");
+    };
+    case "bravo": {
+        // Bravo has two platoons that have different requirements
+        private _companyItems = GET_CONTAINER_KEYS("bravo_company");
+        private _platoonItems = switch (_organization#0) do {
+            case 1: {
+                GET_CONTAINER_KEYS("bravo_company_atlas");
+            };
+            case 2: {
+                GET_CONTAINER_KEYS("bravo_company_viking");
+            };
+            default {[]};
+        };
+        _companyItems + _platoonItems;
+    };
+    case "charlie": {
+        GET_CONTAINER_KEYS("charlie_company");
+    };
     default {GET_CONTAINER_KEYS("arsenal_company_fallback");};
 };
 
@@ -42,6 +59,7 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "squadleader": {GET_CONTAINER_KEYS("arsenal_role_squadleader");};
     case "fireteamleader": {GET_CONTAINER_KEYS("arsenal_role_fireteamleader");};
     case "weapons": {GET_CONTAINER_KEYS("arsenal_role_weapons");};
+    case "strykercrew": {GET_CONTAINER_KEYS("arsenal_role_strykercrew");};
     case "pilot";
     case "rotarypilot": {GET_CONTAINER_KEYS("arsenal_role_rotarypilot");};
     case "rotarycrew": {GET_CONTAINER_KEYS("arsenal_role_pilotcrew");};
@@ -82,6 +100,8 @@ private _handgunWeapon = if (!isNil{_loadout#2#0}) then {_loadout#2#0} else {""}
 private _handgunSpecific = switch (true) do {
     case (_handgunWeapon isKindOf ['rhs_weap_M320', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_ugl");};
     case (_handgunWeapon isKindOf ['rhsusf_weap_glock17g4', configFile >> 'CfgWeapons']
+            || _handgunWeapon isKindOf ['UK3CB_P320_BLK', configFile >> 'CfgWeapons']
+            || _handgunWeapon isKindOf ['UK3CB_P320_DES', configFile >> 'CfgWeapons']
             || _handgunWeapon isKindOf ['rhsusf_weap_m1911a1', configFile >> 'CfgWeapons']): {GET_CONTAINER_KEYS("arsenal_weap_sidearm");};
     default {[]};
 };
@@ -97,6 +117,8 @@ private _launcherSpecific = switch (true) do {
     default {[]};
 };
 
-private _whitelist = _commonGear + _unitItems + _companyItems + _roleSpecific + _primarySpecific + _handgunSpecific + _launcherSpecific;
+private _whitelist = _commonGear + _unitItems + _orgItems + _roleSpecific + _primarySpecific + _handgunSpecific + _launcherSpecific;
+
+INFO_2("Arsenal", "Whitelist created for %1 [%2].",player,typeof player);
 
 _whitelist

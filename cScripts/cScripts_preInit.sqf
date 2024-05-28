@@ -16,6 +16,7 @@ EGVAR(patches,usesACRE)         = isClass (configFile >> "CfgPatches" >> "acre_s
 EGVAR(patches,usesTFAR)         = isClass (configFile >> "CfgPatches" >> "task_force_radio");
 EGVAR(patches,usesAlive)        = isClass (configFile >> "CfgPatches" >> "ALiVE_main");
 EGVAR(patches,usesZen)          = isClass (configFile >> "CfgPatches" >> "zen_main");
+EGVAR(patches,usesACEAX)        = isCLass (configFile >> "CfgPatches" >> "aceax_main");
 
 // Global Variables
 EGVAR(Staging,ZoneStatus) = false;
@@ -41,6 +42,9 @@ EGVAR(DATABASE,DONE) = false;
 GVAR(DATABASE) = call EFUNC(init,logistics);
 EGVAR(DATABASE,DONE) = true;
 
+EGVAR(PYLONS,DONE) = false;
+GVAR(PYLONS) = call EFUNC(init,pylons);
+EGVAR(PYLONS,DONE) = true;
 
 if (EGVAR(Settings,allowCustomTagging)) then {
     call EFUNC(init,aceTagging);
