@@ -226,64 +226,6 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
             ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
             ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
             ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-
-            // Vehicle Inventory
-            [_vehicle, 
-                GET_CONTAINER("vehicle_strykerDragoon")
-            ] call FUNC(setCargo);
-
-            // Supply Crate
-            ["Box_NATO_Wps_F", 
-                GET_CONTAINER("crate_strykerDragoon_resupply"), 
-                _vehicle, nil, "Resupply Crate"
-            ] call FUNC(createCargoCrate);
-
-            // 2 Stingers to distribute to 1 section.
-            ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER("crate_stinger"), 
-                _vehicle, nil, "MANPAD"
-            ] call FUNC(createCargoCrate);
-
-            ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER("crate_stinger"), 
-                _vehicle, nil, "MANPAD"
-            ] call FUNC(createCargoCrate);
-        };
-        case "rhsusf_M1238A1_socom_d";
-        case "rhsusf_M1238A1_M2_socom_d";
-        case "rhsusf_M1238A1_Mk19_socom_d": {
-            [_vehicle, 15, 38, false, false] call FUNC(setCargoAttributes);
-
-            // Emergency kit in case of tire damage and fuel loss.
-            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-            ["FlexibleTank_01_forest_F", _vehicle, true] call ace_cargo_fnc_loadItem; // Emergency Fuel Tank
-
-            // Vehicle Inventory
-            [_vehicle, 
-                GET_CONTAINER("vehicle_strykerDragoon")
-            ] call FUNC(setCargo);
-
-            // Supply Crate
-            ["Box_NATO_Wps_F", 
-                GET_CONTAINER("crate_strykerDragoon_resupply"), 
-                _vehicle, nil, "Resupply Crate"
-            ] call FUNC(createCargoCrate);
-        };
-        case "rhsusf_M1239_socom_d";
-        case "rhsusf_M1239_M2_socom_d";
-        case "rhsusf_M1239_MK19_socom_d";
-        case "rhsusf_M1239_M2_Deploy_socom_d";
-        case "rhsusf_M1239_MK19_Deploy_socom_d": {
-            [_vehicle, 15, 38, false, false] call FUNC(setCargoAttributes);
-
-            // Emergency kit in case of tire damage and fuel loss.
-            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
-            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
             ["FlexibleTank_01_forest_F", _vehicle, true] call ace_cargo_fnc_loadItem; // Emergency Fuel Tank
             // Vehicle Inventory
             [_vehicle, 
