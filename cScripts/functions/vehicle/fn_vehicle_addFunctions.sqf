@@ -112,3 +112,7 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
 if (_vehicle iskindOf "cav_dragoon_base_F") then {
     [_vehicle] call EFUNC(vehicle,addFlagAction);
 };
+
+if (_vehicle iskindOf "AFV_Wheeled_01_base_F") then {
+    [_vehicle] call EFUNC(vehicle,addFlagAction);
+};
