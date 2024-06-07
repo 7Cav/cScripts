@@ -1,5 +1,5 @@
 version=54;
-center[]={6281.5195,5,5116.2681};
+center[]={4510.1631,5,256.25546};
 class items
 {
 	items=4;
@@ -15,7 +15,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.262207,0.89242268,1.5151367};
+					position[]={-2.2612305,0.89242268,1.5154419};
 				};
 				side="Empty";
 				flags=4;
@@ -24,7 +24,7 @@ class items
 					init="call{[this,""Bravo"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=30;
+				id=1;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -82,7 +82,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.8818359,0.0014390945,-1.0615234};
+							position[]={-2.8808594,0.0014390945,-1.0614624};
 						};
 						side="West";
 						flags=6;
@@ -90,10 +90,10 @@ class items
 						{
 							rank="SERGEANT";
 							init="this setGroupid [""SABRE-1""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABRE-1""];";
-							description="Tank Platoon Commander@SIERRA-1";
+							description="Tank Platoon Commander@SABRE-1";
 							isPlayable=1;
 						};
-						id=97;
+						id=3;
 						type="Cav_B_B_Tank_Commander_F";
 						class CustomAttributes
 						{
@@ -144,7 +144,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.8818359,0.0014390945,-2.5615234};
+							position[]={-2.8808594,0.0014390945,-2.5612183};
 						};
 						side="West";
 						flags=4;
@@ -155,7 +155,7 @@ class items
 							description="Tank Gunner@SABRE-1";
 							isPlayable=1;
 						};
-						id=98;
+						id=4;
 						type="Cav_B_B_Tank_Gunner_F";
 						class CustomAttributes
 						{
@@ -206,7 +206,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-2.890625,0.0014390945,-4.0761719};
+							position[]={-2.8896484,0.0014390945,-4.0758667};
 						};
 						side="West";
 						flags=4;
@@ -217,7 +217,7 @@ class items
 							description="Tank Driver@SABRE-1";
 							isPlayable=1;
 						};
-						id=101;
+						id=5;
 						type="Cav_B_B_Tank_Driver_F";
 						class CustomAttributes
 						{
@@ -267,14 +267,14 @@ class items
 				class Attributes
 				{
 				};
-				id=33;
+				id=2;
 			};
 			class Item2
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-7.6147461,2.2639475,1.4541016};
+					position[]={-7.6137695,2.2639475,1.4544067};
 				};
 				side="Empty";
 				flags=4;
@@ -285,7 +285,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=89;
+				id=6;
 				type="B_AFV_Wheeled_01_up_cannon_F";
 				class CustomAttributes
 				{
@@ -395,7 +395,7 @@ class items
 				};
 			};
 		};
-		id=19;
+		id=0;
 	};
 	class Item1
 	{
@@ -409,7 +409,7 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.2666016,0.89242268,1.6743164};
+					position[]={2.2675781,0.89242268,1.6746216};
 				};
 				side="Empty";
 				flags=4;
@@ -418,7 +418,7 @@ class items
 					init="call{[this,""Bravo"",true,true,true,false,false] call cScripts_fnc_doStarterCrate;}";
 					dynamicSimulation=1;
 				};
-				id=47;
+				id=8;
 				type="B_supplyCrate_F";
 				class CustomAttributes
 				{
@@ -476,7 +476,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-1.5400391,0.0014390945,-1.1206055};
+							position[]={-1.5390625,0.0014390945,-1.1204529};
 						};
 						side="West";
 						flags=6;
@@ -484,10 +484,10 @@ class items
 						{
 							rank="SERGEANT";
 							init="this setGroupid [""SABRE-2""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABRE-2""];";
-							description="Tank Commander@SIERRA-2";
+							description="Tank Commander@SABRE-2";
 							isPlayable=1;
 						};
-						id=116;
+						id=10;
 						type="Cav_B_B_Tank_Commander_F";
 						class CustomAttributes
 						{
@@ -538,7 +538,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-1.5400391,0.0014390945,-2.6206055};
+							position[]={-1.5390625,0.0014390945,-2.6203003};
 						};
 						side="West";
 						flags=4;
@@ -549,7 +549,7 @@ class items
 							description="Tank Gunner@SABRE-2";
 							isPlayable=1;
 						};
-						id=117;
+						id=11;
 						type="Cav_B_B_Tank_Gunner_F";
 						class CustomAttributes
 						{
@@ -600,7 +600,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-1.5107422,0.0014390945,-4.109375};
+							position[]={-1.5097656,0.0014390945,-4.1090698};
 						};
 						side="West";
 						flags=4;
@@ -611,7 +611,7 @@ class items
 							description="Tank Driver@SABRE-2";
 							isPlayable=1;
 						};
-						id=106;
+						id=12;
 						type="Cav_B_B_Tank_Driver_F";
 						class CustomAttributes
 						{
@@ -661,14 +661,14 @@ class items
 				class Attributes
 				{
 				};
-				id=50;
+				id=9;
 			};
 			class Item2
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-2.2875977,2.2639475,9.340332};
+					position[]={-2.2866211,2.2639475,9.3406372};
 				};
 				side="Empty";
 				flags=4;
@@ -679,7 +679,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=94;
+				id=13;
 				type="B_AFV_Wheeled_01_up_cannon_F";
 				class CustomAttributes
 				{
@@ -789,7 +789,7 @@ class items
 				};
 			};
 		};
-		id=36;
+		id=7;
 	};
 	class Item2
 	{
@@ -810,7 +810,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={1.4335938,0.0014390945,-1.0073242};
+							position[]={1.4350586,0.0014390945,-1.0074615};
 						};
 						side="West";
 						flags=6;
@@ -818,10 +818,10 @@ class items
 						{
 							rank="SERGEANT";
 							init="this setGroupid [""SABRE-3""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABRE-3""];";
-							description="Tank Platoon Sergeant@SIERRA-3";
+							description="Tank Platoon Sergeant@SABRE-3";
 							isPlayable=1;
 						};
-						id=107;
+						id=16;
 						type="Cav_B_B_Tank_Commander_F";
 						class CustomAttributes
 						{
@@ -872,7 +872,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={1.3564453,0.0014390945,-2.2373047};
+							position[]={1.3574219,0.0014390945,-2.2369995};
 						};
 						side="West";
 						flags=4;
@@ -883,7 +883,7 @@ class items
 							description="Tank Gunner@SABRE-3";
 							isPlayable=1;
 						};
-						id=108;
+						id=17;
 						type="Cav_B_B_Tank_Gunner_F";
 						class CustomAttributes
 						{
@@ -934,7 +934,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={1.378418,0.0014390945,-3.5307617};
+							position[]={1.3793945,0.0014390945,-3.5304565};
 						};
 						side="West";
 						flags=4;
@@ -945,7 +945,7 @@ class items
 							description="Tank Driver@SABRE-3";
 							isPlayable=1;
 						};
-						id=110;
+						id=18;
 						type="Cav_B_B_Tank_Gunner_F";
 						class CustomAttributes
 						{
@@ -995,14 +995,14 @@ class items
 				class Attributes
 				{
 				};
-				id=67;
+				id=15;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={2.3452148,2.2639475,9.2895508};
+					position[]={2.3461914,2.2639475,9.289856};
 				};
 				side="Empty";
 				flags=4;
@@ -1013,7 +1013,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=95;
+				id=19;
 				type="B_AFV_Wheeled_01_up_cannon_F";
 				class CustomAttributes
 				{
@@ -1123,7 +1123,7 @@ class items
 				};
 			};
 		};
-		id=53;
+		id=14;
 	};
 	class Item3
 	{
@@ -1144,7 +1144,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.6982422,0.0014390945,-1.0092773};
+							position[]={2.6987305,0.0014390945,-1.0094604};
 						};
 						side="West";
 						flags=6;
@@ -1152,10 +1152,10 @@ class items
 						{
 							rank="SERGEANT";
 							init="this setGroupid [""SABRE-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""SABRE-4""];";
-							description="Tank Commander@SIERRA-4";
+							description="Tank Commander@SABRE-4";
 							isPlayable=1;
 						};
-						id=113;
+						id=22;
 						type="Cav_B_B_Tank_Commander_F";
 						class CustomAttributes
 						{
@@ -1206,7 +1206,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.7792969,0.0014390945,-2.4033203};
+							position[]={2.7802734,0.0014390945,-2.4030151};
 						};
 						side="West";
 						flags=4;
@@ -1217,7 +1217,7 @@ class items
 							description="Tank Gunner@SABRE-4";
 							isPlayable=1;
 						};
-						id=114;
+						id=23;
 						type="Cav_B_B_Tank_Gunner_F";
 						class CustomAttributes
 						{
@@ -1268,7 +1268,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={2.6972656,0.0014390945,-3.6074219};
+							position[]={2.6982422,0.0014390945,-3.6071167};
 						};
 						side="West";
 						flags=4;
@@ -1279,7 +1279,7 @@ class items
 							description="Tank Driver@SABRE-4";
 							isPlayable=1;
 						};
-						id=115;
+						id=24;
 						type="Cav_B_B_Tank_Driver_F";
 						class CustomAttributes
 						{
@@ -1329,14 +1329,14 @@ class items
 				class Attributes
 				{
 				};
-				id=83;
+				id=21;
 			};
 			class Item1
 			{
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={7.6972656,2.2639475,1.237793};
+					position[]={7.6982422,2.2639475,1.2380981};
 				};
 				side="Empty";
 				flags=4;
@@ -1347,7 +1347,7 @@ class items
 					receiveRemoteTargets=1;
 					reportOwnPosition=1;
 				};
-				id=96;
+				id=25;
 				type="B_AFV_Wheeled_01_up_cannon_F";
 				class CustomAttributes
 				{
@@ -1457,6 +1457,6 @@ class items
 				};
 			};
 		};
-		id=70;
+		id=40;
 	};
 };
