@@ -33,15 +33,21 @@
             _objectPos setVariable [QEGVAR(Vehicle,Type), nil, true];
         };
 
+        _objectPos setVariable [QEGVAR(Vehicle,Functions), nil, true];
         _objectPos setVariable [QEGVAR(Vehicle,Inventory), nil, true];
+        _objectPos setVariable [QEGVAR(Vehicle,PylonLoadout), nil, true];
+        _objectPos setVariable [QEGVAR(Vehicle,Cosmetics), nil, true];
+        _objectPos setVariable [QEGVAR(Vehicle,StagingActions), nil, true];
+        _objectPos setVariable [QEGVAR(Vehicle,Radio), nil, true];
 
-        
         private _cargoArray = _objectPos getVariable ["ace_cargo_loaded",[]];
 
         {   
             [_x, _objectPos] call ace_cargo_fnc_removeCargoItem;
             
         } forEach _cargoArray;
+
+        sleep 0.05;
 
         _objectPos call EFUNC(vehicle,addFunctions);
         _objectPos call EFUNC(vehicle,addInventory);
