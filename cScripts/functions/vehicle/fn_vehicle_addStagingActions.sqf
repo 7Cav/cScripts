@@ -32,7 +32,7 @@ private _stagingCat = [QEGVAR(Actions_Vehicle,Cosmetic_Cat), "Vehicle Cosmetics"
 [_vehicle, 1, ["ACE_SelfActions", QEGVAR(Actions_Vehicle,Main_Cat)], _stagingCat] call ace_interact_menu_fnc_addActionToObject;
 
 [_vehicle] call EFUNC(vehicle,addRegearAction);
-[_vehicle] call EFUNC(vehicle,addRepairAction);
+[_vehicle] call EFUNC(vehicle,addRepairRefuelAction);
 [_vehicle] call EFUNC(vehicle,addCosmeticSelection);
 [_vehicle] call EFUNC(vehicle,setupPylonCategories);
 

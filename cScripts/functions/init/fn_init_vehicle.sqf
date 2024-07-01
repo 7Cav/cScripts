@@ -37,6 +37,9 @@ if !(EGVAR(Settings,enableVehicleSystem)) exitWith {};
     INFO_2("VehicleInit", "Applying Client Init: (%1 [%2])...", _vehicle, typeOf _vehicle);
     _vehicle call EFUNC(vehicle,addFunctions);
     _vehicle call EFUNC(vehicle,addStagingActions);
+
+    [_vehicle, 300] call EFUNC(vehicle,addRepairRefuelAction);
+
     INFO_2("VehicleInit", "Init applied to %1 [%2]", _vehicle, typeOf _vehicle);
 }, true, ["man"], true] call CBA_fnc_addClassEventHandler;
 
