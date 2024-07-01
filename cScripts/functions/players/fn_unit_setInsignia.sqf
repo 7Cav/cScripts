@@ -26,5 +26,6 @@ params [
 
 if (!isPlayer _unit) exitWith {};
 if (!_save) exitWith {};
+if (!QEGVAR(Settings,allowProfileSavedInsignia)) exitWith {};
 
 [_insignia] call EFUNC(profile,saveInsignia);

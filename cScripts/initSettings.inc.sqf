@@ -1,16 +1,6 @@
 private _cScriptSettings = "cScripts Mission Settings";
 
 // 1; Mission
-[ // Mission Type
-    QEGVAR(Settings,setMissionType),
-    "LIST",
-    ["Mission Type", "This will deside on what kind of startup hint you get on mission start."],
-    [_cScriptSettings, "1; Mission"],
-    [[0,1,2,3], ["Custom", "Operation", "Training", "Public"], 1],
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
 [ // Ai setting
     QEGVAR(Settings,setAiSystemDifficulty),
     "LIST",
@@ -76,16 +66,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[ // Rank
-    QEGVAR(Settings,setPlayerRank),
-    "CHECKBOX",
-    ["Rank","Allow mission to apply arma rank based on name rank prefixes."],
-    [_cScriptSettings, "3; Player"],
-    true,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
 [ // Tagging
     QEGVAR(Settings,allowCustomTagging),
     "CHECKBOX",
@@ -97,26 +77,15 @@ private _cScriptSettings = "cScripts Mission Settings";
     true
 ] call CBA_fnc_addSetting;
 [ // Insignia
-    QEGVAR(Settings,allowInsigniaApplication),
+    QEGVAR(Settings,allowProfileSavedInsignia),
     "CHECKBOX",
-    ["Insignia","Automaticly apply insignias based on squad name."],
+    ["Insignia","Automaticly apply insignia saved on your user profile."],
     [_cScriptSettings, "3; Player"],
     true,
-    true,
+    false,
     {},
-    true
+    false
 ] call CBA_fnc_addSetting;
-[ // Apply Earplugs
-    QEGVAR(Settings,addEarplugs),
-    "CHECKBOX",
-    ["Apply Earplugs","Automaticly apply earplugs to players on spawn and respawn."],
-    [_cScriptSettings, "3; Player"],
-    true,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
 
 // 4; Staging
 [ // Enable
@@ -127,7 +96,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     true,
     true,
     {},
-    false
+    true
 ] call CBA_fnc_addSetting;
 [ // Show all loadouts
     QEGVAR(Settings,showAllLoadouts),
@@ -136,10 +105,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     [_cScriptSettings, "4; Staging"],
     false,
     true,
-    {
-        params ["_value"];
-        { EGVAR(Staging,showAllLoadouts) = _value; } remoteExecCall ["call"];
-    },
+    {},
     false
 ] call CBA_fnc_addSetting;
 [ // Use Filtered Arsenal
@@ -278,7 +244,7 @@ private _cScriptSettings = "cScripts Mission Settings";
     [[0,1,2], ["None", "Basic", "Advanced"], 2],
     true,
     {},
-    true
+    false
 ] call CBA_fnc_addSetting;
 [ // Include Night Vision Googles
     QEGVAR(Settings,jumpSimulationNVG),
