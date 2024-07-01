@@ -21,11 +21,9 @@ if (!isNil{GETVAR(player,EGVAR(Unit,Name),nil)}) then {
 };
 
 // Player Rank to ingame rank
-if (EGVAR(Settings,setPlayerRank)) then {
-    if (!isNil{GETVAR(player,EGVAR(Unit,Rank),nil)}) then {
-        private _rank = [player] call EFUNC(player,getRank);
-        SETVAR(player,EGVAR(Unit,Rank),_rank);
-    };
+if (!isNil{GETVAR(player,EGVAR(Unit,Rank),nil)}) then {
+    private _rank = [player] call EFUNC(player,getRank);
+    SETVAR(player,EGVAR(Unit,Rank),_rank);
 };
 
 // Team Color
@@ -34,14 +32,12 @@ if (!isNil{GETVAR(player,EGVAR(Unit,TeamColor),nil)}) then {
 };
 
 // Apply squad insignia 
-if (EGVAR(Settings,allowInsigniaApplication)) then {
-    private _insignia = if (call EFUNC(profile,loadInsignia) != "") then {
-        call EFUNC(profile,loadInsignia);
-    } else {
-        call EFUNC(unit,getSquadInsignia);
-    };
-    [{
-        params ["_insignia"];
-        [player, _insignia, false] call EFUNC(unit,setInsignia);
-    }, [_insignia], 2] call CBA_fnc_waitAndExecute;
+private _insignia = if (QEGVAR(Settings,allowProfileSavedInsignia) && (call EFUNC(profile,loadInsignia) != "")) then {
+    call EFUNC(profile,loadInsignia);
+} else {
+    call EFUNC(unit,getSquadInsignia);
 };
+[{
+    params ["_insignia"];
+    [player, _insignia, false] call EFUNC(unit,setInsignia);
+}, [_insignia], 2] call CBA_fnc_waitAndExecute;
