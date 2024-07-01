@@ -183,6 +183,7 @@ class cScripts {
 
         class vehicle_addRegearAction {};
         class vehicle_addRepairAction {};
+        class vehicle_addRepairRefuelAction {};
 
         class vehicle_addCosmeticSelection {};
         class vehicle_addPylonSelection {};
