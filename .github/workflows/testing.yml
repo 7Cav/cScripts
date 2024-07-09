@@ -1,45 +1,49 @@
 name: Testing
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    branches: main
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Validate SQF
-      run: python3 tools/sqf_validator.py
-    - name: Validate Config
-      run: python3 tools/config_style_checker.py
-      
+      - name: Checkout the source code
+        uses: actions/checkout@master
+      - name: Validate SQF
+        run: python3 tools/sqf_validator.py
+      - name: Validate Config
+        run: python3 tools/config_style_checker.py
+
   lint:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Lint (sqflint)
-      uses: arma-actions/sqflint@master
-      with:
-        args: --exit e --directory cScripts/functions
-      continue-on-error: true # No failure due to many false-positives
+      - name: Checkout the source code
+        uses: actions/checkout@master
+      - name: Lint (sqflint)
+        uses: arma-actions/sqflint@master
+        with:
+          args: --exit e --directory cScripts/functions
+        continue-on-error: true # No failure due to many false-positives
 
   testing:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Check DEBUG_MODE
-      if: always()
-      run: bash tools/checkDebug.sh
-    - name: Check TODO
-      if: always()
-      run: bash tools/checkTodo.sh
-      continue-on-error: true
-    - name: Check for FIXME
-      if: always()
-      run: bash tools/checkFixme.sh
-    - name: Check for LOGGING
-      if: always()
-      run: bash tools/checkLogging.sh
-    - name: Check Pull Request Name
-      if: always()
-      run: bash tools/checkPullRequestTitle.sh ${{ github.event.pull_request.title }}
+      - name: Checkout the source code
+        uses: actions/checkout@master
+      - name: Check DEBUG_MODE
+        if: always()
+        run: bash tools/checkDebug.sh
+      - name: Check TODO
+        if: always()
+        run: bash tools/checkTodo.sh
+        continue-on-error: true
+      - name: Check for FIXME
+        if: always()
+        run: bash tools/checkFixme.sh
+      - name: Check for LOGGING
+        if: always()
+        run: bash tools/checkLogging.sh
+      - name: Check Pull Request Name
+        if: always()
+        run: bash tools/checkPullRequestTitle.sh ${{ github.event.pull_request.title }}
