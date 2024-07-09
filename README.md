@@ -44,4 +44,4 @@ The modules are easy to use and allow for sand-boxing as well as tools for game 
 ### Automatic Loadout Distrubution
 cScripts core function is the automated loadout system. Heavily inspired by [Poppy](https://github.com/BaerMitUmlaut/Poppy), our loadout system apply team, radio, earplugs and multiply of other functions to lower the setup time and make our experience more fun.
 
-test
+test...
