@@ -1,8 +1,9 @@
 name: Deploy Tag Artifacts
 on:
   push:
-      tags:
-        - '*'
+    tags:
+      - "*"
+
 jobs:
   build:
     name: Create And Upload Releases
