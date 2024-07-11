@@ -86,16 +86,6 @@ private _cScriptSettings = "cScripts Mission Settings";
     {},
     true
 ] call CBA_fnc_addSetting;
-[ // Tagging
-    QEGVAR(Settings,allowCustomTagging),
-    "CHECKBOX",
-    ["Custom Tagging","Allow players to spray custom taggs."],
-    [_cScriptSettings, "3; Player"],
-    true,
-    true,
-    {},
-    true
-] call CBA_fnc_addSetting;
 [ // Insignia
     QEGVAR(Settings,allowInsigniaApplication),
     "CHECKBOX",
