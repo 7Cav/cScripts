@@ -1,7 +1,8 @@
 name: Deploy Release
 on:
   release:
-      types: [ published ]
+    types: [published]
+
 jobs:
   build:
     name: Create And Upload Release
@@ -36,7 +37,6 @@ jobs:
           tag: ${{ github.ref }}
           asset_name: cScripts_Debug-${{github.ref_name}}.zip
           file: release/cScripts_Debug-${{github.ref_name}}.zip
-
 
       - name: Upload release (cScripts_NoRadio)
         uses: svenstaro/upload-release-action@v2
