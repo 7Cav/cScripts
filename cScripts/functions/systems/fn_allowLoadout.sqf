@@ -33,6 +33,7 @@ if (EGVAR(Staging,showAllLoadouts)) exitWith {true};
 
 // Check if player is Zeus or Debug
 if (call EFUNC(player,isCurator)) exitWith {true};
+if (call EFUNC(player,isMissionAdmin)) exitWith {true};
 
 // Check if does not have any company
 private _playerCompany = call EFUNC(player,getCompany);
