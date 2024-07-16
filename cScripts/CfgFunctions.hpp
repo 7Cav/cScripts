@@ -245,6 +245,7 @@ class cScripts {
         // other
         class gear_getLoadoutRole {};
         class gear_getLoadoutName {};
+        class gear_getLoadoutDisplayName {};
     };
     class diag {
         file = "cScripts\functions\diag";
