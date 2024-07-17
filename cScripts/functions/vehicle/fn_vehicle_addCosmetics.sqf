@@ -75,6 +75,36 @@ if (_vehicle isKindOf "cav_dragoon_base_F") then {
     _vehicle animateSource ["showSLATHull",0, true];
 };
 
+if (_vehicle isKindOf "AFV_Wheeled_01_base_F") then {
+    _vehicle animateSource ["showCamonetHull",0, true];
+    _vehicle animateSource ["showCamonetTurret",0, true];
+    _vehicle animateSource ["showSLATHull",0, true];
+
+    switch (_vehicleType) do {
+        case "B_AFV_Wheeled_01_up_cannon_F": {
+            [_vehicle,[
+                [0, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext1_green_co.paa"],
+                [1, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext2_green_co.paa"],
+                [2, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_wheel_green_co.paa"],
+                [3, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_co.paa"],
+                [4, "a3\armor_f_tank\afv_wheeled_01\data\afv_commander_tow_co.paa"],
+                [5, "a3\armor_f\data\camonet_nato_green_co.paa"],
+                [6, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+        };
+        case "B_AFV_Wheeled_01_cannon_F": {
+            [_vehicle,[
+                [0, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext1_green_co.paa"],
+                [1, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext2_green_co.paa"],
+                [2, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_wheel_green_co.paa"],
+                [3, "a3\armor_f\data\camonet_nato_green_co.paa"],
+                [4, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+        };
+        default {};
+    };
+};
+
 if (_vehicle iskindOf "rhsusf_stryker_base") then {
     _vehicle setVariable ["RHS_Decal_Enabled", false, true];
     _vehicle animateSource ["Hide_CIP", 1, true];

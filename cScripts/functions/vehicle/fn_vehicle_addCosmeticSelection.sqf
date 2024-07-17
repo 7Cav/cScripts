@@ -119,6 +119,82 @@ private _textures = [
                 _vehicle animateSource ["showSLATHull",1, true];
             };
         }
+    ]],
+    ["AFV_Wheeled_01_base_F", "Toggle Camo Net", [
+        "",
+        {
+            private _camoNetMounted = _vehicle animationSourcePhase "showCamonetHull";
+            if (_camoNetMounted == 1) then {
+                _vehicle animateSource ["showCamonetTurret",0, true];
+                _vehicle animateSource ["showCamonetHull",0, true];
+            } else {
+                _vehicle animateSource ["showCamonetTurret",1, true];
+                _vehicle animateSource ["showCamonetHull",1, true];
+            };
+        }
+    ]],
+    ["AFV_Wheeled_01_base_F", "Toggle Slats", [
+        "",
+        {
+            private _slatsAreAttached = _vehicle animationSourcePhase "showSLATHull";
+            if (_slatsAreAttached == 1) then {
+                _vehicle animateSource ["showSLATHull",0, true];
+            } else {
+                _vehicle animateSource ["showSLATHull",1, true];
+            };
+        }
+    ]],
+    ["B_AFV_Wheeled_01_up_cannon_F", "Woodland Paint", [
+        "",
+        {
+            [_vehicle,[
+                [0, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext1_green_co.paa"],
+                [1, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext2_green_co.paa"],
+                [2, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_wheel_green_co.paa"],
+                [3, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_co.paa"],
+                [4, "a3\armor_f_tank\afv_wheeled_01\data\afv_commander_tow_co.paa"],
+                [5, "a3\armor_f\data\camonet_nato_green_co.paa"],
+                [6, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+        }
+    ]],
+    ["B_AFV_Wheeled_01_up_cannon_F", "Desert Paint", [
+        "",
+        {
+            [_vehicle, [
+                [0, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext1_co.paa"],
+                [1, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext2_co.paa"],
+                [2, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_wheel_co.paa"],
+                [3, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_sand_co.paa"],
+                [4, "a3\armor_f_tank\afv_wheeled_01\data\afv_commander_tow_sand_co.paa"],
+                [5, "a3\armor_f\data\camonet_nato_desert_co.paa"],
+                [6, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_sand_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+        }
+    ]],
+    ["B_AFV_Wheeled_01_cannon_F", "Woodland Paint", [
+        "",
+        {
+            [_vehicle,[
+                [0, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext1_green_co.paa"],
+                [1, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext2_green_co.paa"],
+                [2, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_wheel_green_co.paa"],
+                [3, "a3\armor_f\data\camonet_nato_green_co.paa"],
+                [4, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+        }
+    ]],
+    ["B_AFV_Wheeled_01_cannon_F", "Desert Paint", [
+        "",
+        {
+            [_vehicle,[
+                [0, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext1_co.paa"],
+                [1, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext2_co.paa"],
+                [2, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_wheel_co.paa"],
+                [3, "a3\armor_f\data\camonet_nato_desert_co.paa"],
+                [4, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_sand_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+        }
     ]]
 ];
 

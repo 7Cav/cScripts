@@ -861,6 +861,41 @@
         ["ACE_quikclot",20],
         ["ACE_packingBandage",20]
     ]],
+    ["vehicle_rooikat", [
+        // Ammo
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 16], // M856A1 PMAGs
+
+        // Grenades
+        ["HandGrenade",6],
+        ["SmokeShell",6],
+        ["SmokeShellBlue",2],
+        ["SmokeShellPurple",1],
+        ["SmokeShellRed",2],
+        
+        // Chemlights
+        ["ACE_Chemlight_HiBlue",2],
+        ["ACE_Chemlight_HiRed",2],
+        ["ACE_Chemlight_IR",4],
+
+        // Explosives
+        ["SatchelCharge_Remote_Mag",1],
+        ["ACE_M26_Clacker",1],
+
+        // Tools
+        ["ACE_EntrenchingTool",3],
+        ["ACE_wirecutter",1],
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",4],
+        ["kat_chestSeal",6],
+        ["kat_Painkiller",3],
+        ["ACE_packingBandage",40]
+    ]],
 
     // // // // // // // //
     // Charlie Vehicles \\
