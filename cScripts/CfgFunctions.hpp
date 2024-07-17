@@ -67,7 +67,7 @@ class cScripts {
         class player_getRole {};
 
         class player_isCurator {};
-
+        class player_isMissionAdmin {};
         class unit_setTeamColor {};
         
         class unit_getName {};
@@ -244,6 +244,7 @@ class cScripts {
         // other
         class gear_getLoadoutRole {};
         class gear_getLoadoutName {};
+        class gear_getLoadoutDisplayName {};
     };
     class diag {
         file = "cScripts\functions\diag";
