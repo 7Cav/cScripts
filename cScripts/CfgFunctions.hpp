@@ -2,7 +2,6 @@ class cScripts {
     class init {
         file = "cScripts\functions\init";
         class init_aceArsenal {};
-        class init_aceTagging {};
         class init_aceItemReplace {};
 
         class init_skillAdjustment {};
