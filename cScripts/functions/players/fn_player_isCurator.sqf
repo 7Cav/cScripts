@@ -10,9 +10,11 @@
  * true/False <BOOLEAN>
  *
  * Example:
- * call cScripts_fnc_unit_isCurator
+ * call cScripts_fnc_player_isCurator
  *
  */
+
+if (!isNull (getAssignedCuratorLogic player)) exitWith {true};
 
 private _curator = player getVariable [QEGVAR(Player,Unit), ""];
 _curator = toLower _curator;

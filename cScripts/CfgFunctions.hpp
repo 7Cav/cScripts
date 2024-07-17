@@ -68,7 +68,7 @@ class cScripts {
         class player_getRole {};
 
         class player_isCurator {};
-
+        class player_isMissionAdmin {};
         class unit_setTeamColor {};
         
         class unit_getName {};
