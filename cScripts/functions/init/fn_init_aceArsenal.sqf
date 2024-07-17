@@ -11,7 +11,7 @@
 
 if (!EGVAR(patches,usesACEArsenal)) exitWith {};
 
-call FUNC(addDefaultArsenalLoadouts);
+call EFUNC(arsenal,addDefaultLoadouts);
 
 if (is3DEN) exitWith {};
 
@@ -29,7 +29,7 @@ GVAR(StagingArsenalOpen) = false;
             [_insigniaClass] call EFUNC(profile,saveInsignia);
 
             // Reset default loadouts
-            call FUNC(addDefaultArsenalLoadouts);
+            call EFUNC(arsenal,addDefaultLoadouts);
         }] call CBA_fnc_execNextFrame;
     };
 }] call CBA_fnc_addEventHandler;
@@ -39,7 +39,7 @@ GVAR(StagingArsenalOpen) = false;
 }] call CBA_fnc_addEventHandler;
 
 [QEGVAR(StagingArsenal,SaveWhitelist), {
-    private _items = call FUNC(getArsenalWhitelist);
+    private _items = call EFUNC(arsenal,getWhitelist);
     SETVAR(player,EGVAR(Player,ArsenalWhitelist),_items);
 }] call CBA_fnc_addEventHandler;
 

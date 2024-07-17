@@ -35,7 +35,7 @@ if (EGVAR(Staging,showAllLoadouts)) exitWith {true};
 if (call EFUNC(player,isCurator)) exitWith {true};
 
 // Check if does not have any company
-private _playerCompany = call EFUNC(player,getCompany);
+private _playerCompany = [3] call EFUNC(player,getOrganization);
 if (_playerCompany == "") exitWith {false};
 
 if (_playerCompany == _company) exitWith {true};
