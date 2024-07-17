@@ -40,8 +40,12 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
 }] call CBA_fnc_addEventHandler;
 
 [QEGVAR(log,player), {
-    _this params ["_playerName"];
+    params ["_player"];
     private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
-    _playerLog pushBack _playerName;
+    _playerLog pushBack [
+        _player,
+        name _player,
+        [_player] call EFUNC(gear,getLoadoutDisplayName)
+    ];
     missionNamespace setVariable [QEGVAR(log,players), _playerLog];
 }] call CBA_fnc_addEventHandler;
