@@ -6,19 +6,21 @@
  * Arguments:
  * 0: Vehicle             <OBJECT>
  * 1: Minimum altetude    <NUMBER> (Optional) (Default; 5000)
- * 4: Chute Vehicle Class <OBJECT> (Optional) (Default; "B_Parachute")
+ * 2: Chute Vehicle Class <OBJECT> (Optional) (Default; "B_Parachute")
+ * 3: Staggared Jump <BOOL> (Optional) [Default; false]
  *
  * Example:
  * ["my_c130"] call cScripts_fnc_addHaloJump
  * ["my_c130", 5000] call cScripts_fnc_addHaloJump
- * ["my_c130", 5000, "B_Parachute"] call cScripts_fnc_addHaloJump
+ * ["my_c130", 5000, "B_Parachute", false] call cScripts_fnc_addHaloJump
  *
  */
 
 params [
     ["_vehicle", objNull, [objNull]],
     ["_minAltetude", 5000, [5000]],
-    ["_chuteBackpackClass", "B_Parachute", ["B_Parachute"]]
+    ["_chuteBackpackClass", "B_Parachute", ["B_Parachute"]],
+    ["_allowStaggared", false, [false]]
 ];
 
 // Check so the options arent added twice.
@@ -52,14 +54,14 @@ private _actionID = [
     {},
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
-        _arguments params ["_chuteBackpackClass"];
-        [_caller, _target, _chuteBackpackClass] call EFUNC(para,haloJump)
+        _arguments params ["_chuteBackpackClass", "_allowStaggared"];
+        [_caller, _target, _chuteBackpackClass, _allowStaggared] call EFUNC(para,haloJump)
     },
     {},
-    [_chuteBackpackClass],
+    [_chuteBackpackClass, _allowStaggared],
     0,
     25,
     false
 ] call BIS_fnc_holdActionAdd;
 
-_vehicle setVariable [QEGVAR(VehicleFunc,HaloAction), [_vehicle, _actionID, _minAltetude, _chuteBackpackClass]];
+_vehicle setVariable [QEGVAR(VehicleFunc,HaloAction), [_vehicle, _actionID, _minAltetude, _chuteBackpackClass, _allowStaggared]];
