@@ -60,18 +60,22 @@ class Cav_B_B_AssistantMachineGunner_F: Cav_B_Bravo_base_F { // Not used (scope 
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] = {};
 };
+
 class Cav_B_B_Grenadier_F: Cav_B_Bravo_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Squad"};
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] = {};
 };
+
+// ATGM and MANPAD
 class Cav_B_B_RiflemanLAT_F: Cav_B_Bravo_base_F { // Not used (scope 0)
     scope = 0;
     category[] += {"cScripts_Loadout_Cat_Bravo_Squad"};
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] = {};
 };
+
 class Cav_B_B_RiflemanAT_F: Cav_B_Bravo_base_F { // Not used (scope 0)
     scope = 0;
     category[] += {"cScripts_Loadout_Cat_Bravo_Weapons"};
@@ -84,6 +88,7 @@ class Cav_B_B_RiflemanATAssistant_F: Cav_B_Bravo_base_F { // Not used (scope 0)
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] = {};
 };
+
 class Cav_B_B_RiflemanAA_F: Cav_B_Bravo_base_F { // Not used (scope 0)
     scope = 0;
     category[] += {"cScripts_Loadout_Cat_Bravo_Weapons"};
@@ -96,6 +101,7 @@ class Cav_B_B_RiflemanAAAssistant_F: Cav_B_Bravo_base_F { // Not used (scope 0)
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] = {};
 };
+
 class Cav_B_B_RiflemanATR_F: Cav_B_Bravo_base_F { // Not used (scope 0)
     scope = 0;
     category[] += {"cScripts_Loadout_Cat_Bravo_Weapons"};
@@ -108,6 +114,17 @@ class Cav_B_B_RiflemanATRAssistant_F: Cav_B_Bravo_base_F { // Not used (scope 0)
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] = {};
 };
+
+// Engineers
+class Cav_B_B_Engineer_F: Cav_B_Bravo_base_F {
+};
+class Cav_B_B_EngineerTeamLeader_F: Cav_B_Bravo_base_F {
+};
+class Cav_B_B_EngineerTeamMember_F: Cav_B_Bravo_base_F {
+};
+
+
+// Medical personal
 class Cav_B_B_PlatoonMedic_F: Cav_B_Bravo_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Leadership"};
@@ -122,6 +139,27 @@ class Cav_B_B_Medic_F: Cav_B_Bravo_base_F { // Not used (scope 0)
     equipmentTags[] = {};
     abilityMedic = 3;
 };
+class Cav_B_B_MedicTeamLeader_F: Cav_B_Bravo_base_F  {
+    scope = 2;
+    category[] += {"cScripts_Loadout_Cat_Bravo_Medical"};
+    loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
+    equipmentTags[] = {};
+    abilityMedic = 3;
+};
+class Cav_B_B_MedicTeamMember_F: Cav_B_Bravo_base_F  {
+    scope = 2;
+    category[] += {"cScripts_Loadout_Cat_Bravo_Medical"};
+    loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
+    equipmentTags[] = {};
+    abilityMedic = 3;
+};
+class Cav_B_B_Surgeon_F: Cav_B_Bravo_base_F {
+    scope = 2;
+    category[] += {"cScripts_Loadout_Cat_Bravo_Medical"};
+    loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
+    equipmentTags[] = {};
+    abilityMedic = 3;
+};
 class Cav_B_B_CombatLifeSaver_F: Cav_B_Bravo_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Squad"};
@@ -131,6 +169,7 @@ class Cav_B_B_CombatLifeSaver_F: Cav_B_Bravo_base_F {
 };
 
 
+// Crew
 class Cav_B_B_IFV_Commander_F: Cav_B_Bravo_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_IFV"};

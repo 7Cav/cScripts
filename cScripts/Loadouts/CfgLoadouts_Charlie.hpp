@@ -67,6 +67,8 @@ class Cav_B_C_Grenadier_F: Cav_B_Charlie_base_F {
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] += {};
 };
+
+// ATGM and MANPAD
 class Cav_B_C_RiflemanLAT_F: Cav_B_Charlie_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Charlie_Squad"};
@@ -86,8 +88,9 @@ class Cav_B_C_RiflemanATAssistant_F: Cav_B_Charlie_base_F {
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] += {};
 };
+
 class Cav_B_C_RiflemanAA_F: Cav_B_Charlie_base_F { // Not used (scope 0)
-    scope = 2;
+    scope = 0;
     category[] += {"cScripts_Loadout_Cat_Charlie_Weapons"};
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] += {};
@@ -98,6 +101,7 @@ class Cav_B_C_RiflemanAAAssistant_F: Cav_B_Charlie_base_F { // Not used (scope 0
     loadout = [[],[],[],[],[],[],"","",[],["","","","","",""]];
     equipmentTags[] += {};
 };
+
 class Cav_B_C_RiflemanATR_F: Cav_B_Charlie_base_F { // Not used (scope 0)
     scope = 0;
     category[] += {"cScripts_Loadout_Cat_Charlie_Weapons"};
@@ -111,6 +115,7 @@ class Cav_B_C_RiflemanATRAssistant_F: Cav_B_Charlie_base_F { // Not used (scope 
     equipmentTags[] += {};
 };
 
+
 class Cav_B_C_Marksman_F: Cav_B_Charlie_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Charlie_Special"};
@@ -118,7 +123,7 @@ class Cav_B_C_Marksman_F: Cav_B_Charlie_base_F {
     equipmentTags[] += {};
 };
 
-
+// Medical personal
 class Cav_B_C_PlatoonMedic_F: Cav_B_Charlie_base_F {
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Charlie_Leadership"};
