@@ -6,7 +6,7 @@ class Cav_B_B_Scout_Base_F: Cav_B_Bravo_base_F {
 
 class Cav_B_B_Scout_Officer_F: Cav_B_B_Scout_Base_F {
     displayName = "Viking Platoon Staff";
-    scope = 2;
+    scope = 1;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Leadership"};
     loadout = [["rhs_weap_m4a1_blockII","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG3",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["UK3CB_P320_DES","","acc_flashlight_pistol","",["UK3CB_P320_9x19_17Rnd",17],[],""],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",16],["ACE_quikclot",8],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["kat_chestSeal",2],["kat_guedel",1],["ACE_splint",2],["ACE_EarPlugs",1],["ACE_CableTie",2],["ACE_Chemlight_IR",2,1],["kat_Painkiller",2,10]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["HandGrenade",2,1],["SmokeShell",4,1],["SmokeShellBlue",2,1],["UK3CB_P320_9x19_17Rnd",2,17],["SmokeShellPurple",1,1],["SmokeShellRed",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",9,30]]],["USP_TACTICAL_PACK",[["USP_PVS31_LOW",1],["KNB_PanelRed",1],["ACE_EntrenchingTool",1]]],"USP_OPS_FASTXP_TAN_MC_04","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch",""]];
     icon = "iconManOfficer";
@@ -14,13 +14,13 @@ class Cav_B_B_Scout_Officer_F: Cav_B_B_Scout_Base_F {
 };
 
 class Cav_B_B_Scout_PlatoonLeader_F: Cav_B_B_Scout_Officer_F {
-    displayName = "Viking Platoon Leader";
-    scope = 1;
+    displayName = "Platoon Leader";
+    scope = 2;
     loadout = [["rhs_weap_m4a1_blockII","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG3",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["UK3CB_P320_DES","","acc_flashlight_pistol","",["UK3CB_P320_9x19_17Rnd",17],[],""],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",16],["ACE_quikclot",8],["ACE_tourniquet",4],["ACE_microDAGR",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["kat_chestSeal",2],["kat_guedel",1],["ACE_splint",2],["ACE_EarPlugs",1],["ACE_CableTie",2],["ACE_Chemlight_IR",2,1],["kat_Painkiller",2,10]]],["USP_CRYE_CPC_LEAD_BELT_MC",[["HandGrenade",2,1],["SmokeShell",4,1],["SmokeShellBlue",2,1],["UK3CB_P320_9x19_17Rnd",2,17],["SmokeShellPurple",1,1],["SmokeShellRed",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",9,30]]],["USP_TACTICAL_PACK",[["USP_PVS31_LOW",1],["KNB_PanelRed",1],["ACE_EntrenchingTool",1]]],"USP_OPS_FASTXP_TAN_MC_04","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ItemWatch",""]];
 };
 class Cav_B_B_Scout_PlatoonSergeant_F: Cav_B_B_Scout_Officer_F {
-    displayName = "Viking Platoon Sergeant";
-    scope = 1;
+    displayName = "Platoon Sergeant";
+    scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_grip2_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_T1_high",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["UK3CB_P320_DES","","acc_flashlight_pistol","",["UK3CB_P320_9x19_17Rnd",17],[],""],["USP_G3C_RS2_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",16],["kat_chestSeal",2],["kat_guedel",1],["ACE_EarPlugs",1],["ACE_splint",2],["ACE_quikclot",8],["ACE_CableTie",2],["kat_Painkiller",2,10],["ACE_Chemlight_IR",1,1]]],["USP_CRYE_JPC_ASLTB",[["UK3CB_P320_9x19_17Rnd",2,17],["SmokeShell",4,1],["SmokeShellBlue",2,1],["HandGrenade",2,1],["SmokeShellPurple",1,1],["SmokeShellRed",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",7,30]]],["USP_TACTICAL_PACK",[["USP_PVS15",1],["ACE_EntrenchingTool",1],["KNB_PanelYellow",1],["ToolKit",1]]],"USP_OPSCORE_FASTMTC_CSW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     abilityEngineer = 1;
 };
@@ -125,11 +125,11 @@ class Cav_B_B_Scout_SquadLeader_2_4_F: Cav_B_B_Scout_SquadLeader_F {
 };
 
 // Teams
-class Cav_B_B_Scout_PlatoonLead_2_5_F: Cav_B_B_Scout_PlatoonLeader_F {
+class Cav_B_B_Scout_PlatoonLead_2_6_F: Cav_B_B_Scout_PlatoonLeader_F {
     scope = 1;
     insignia = "cav_insignia_bravo_2";
 };
-class Cav_B_B_Scout_PlatoonLead_2_6_F: Cav_B_B_Scout_PlatoonLeader_F {
+class Cav_B_B_Scout_PlatoonSergea_2_5_F: Cav_B_B_Scout_PlatoonSergeant_F {
     scope = 1;
     insignia = "cav_insignia_bravo_2";
 };
