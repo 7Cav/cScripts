@@ -4,7 +4,7 @@ class cScripts_B_B_Weapons_Rifleman_F: Cav_B_Bravo_base_F {
 };
 
 class Cav_B_B_Weapons_M240B_FireTeamLeader_F: cScripts_B_B_Weapons_Rifleman_F {
-    displayName = "Machine Gunner Fireteam Leader ";
+    displayName = "Machine Gun Fireteam Leader ";
     scope = 2;
     loadout = [["rhs_weap_m4a1_m320","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",29],["rhs_mag_M664_red_cluster",1],""],[],["UK3CB_P320_DES","","acc_flashlight_pistol","",["UK3CB_P320_9x19_17Rnd",17],[],""],["USP_G3C_RS_KP_OR_MC",[["ACE_packingBandage",16],["ACE_quikclot",8],["ACE_tourniquet",4],["kat_chestSeal",2],["kat_guedel",1],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_EarPlugs",1],["ACE_splint",2],["ACE_Flashlight_XL50",1],["ACE_Chemlight_IR",1,1],["kat_Painkiller",2,10]]],["USP_CRYE_CPC_COMMS_BELT_MC",[["HandGrenade",2,1],["SmokeShell",4,1],["SmokeShellBlue",2,1],["SmokeShellPurple",1,1],["SmokeShellRed",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",2,30],["rhs_mag_m713_Red",2,1],["rhs_mag_m714_White",6,1],["ACE_HuntIR_M203",2,1],["rhs_mag_M664_red_cluster",1,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",5,30]]],["USP_TACTICAL_PACK",[["ACE_HuntIR_monitor",1],["USP_PVS31_HIGH",1],["ACE_EntrenchingTool",1],["rhsusf_100Rnd_762x51_m62_tracer",3,100]]],"USP_OPS_FASTXP_TAN_MC_06","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];    
     icon = "iconManLeader";
@@ -17,7 +17,7 @@ class Cav_B_B_Weapons_M240B_Machinegunner_F: cScripts_B_B_Weapons_Rifleman_F {
 };
 
 class Cav_B_B_Weapons_M240B_MachinegunnerAmmoBearer_F: cScripts_B_B_Weapons_Rifleman_F {
-    displayName = "Machine Gunner Assistant";
+    displayName = "Machine Gun Assistant";
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_ACOG_RMR",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],""],["dzn_MG_Tripod_M122A1_M240Mount_Carry","","","",[],[],""],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",8],["kat_chestSeal",2],["kat_guedel",1],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_splint",2],["ACE_packingBandage",16],["ACE_EarPlugs",1],["ACE_CableTie",2],["kat_Painkiller",2,10]]],["USP_CRYE_JPC_MGB",[["SmokeShell",4,1],["HandGrenade",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",7,30]]],["B_Kitbag_mcamo",[["USP_PVS15",1],["ACE_EntrenchingTool",1],["rhsusf_100Rnd_762x51_m62_tracer",6,100],["ACE_SpareBarrel",1,1]]],"USP_OPSCORE_FASTMTC_CW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
 };
