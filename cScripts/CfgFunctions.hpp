@@ -2,7 +2,6 @@ class cScripts {
     class init {
         file = "cScripts\functions\init";
         class init_aceArsenal {};
-        class init_aceTagging {};
         class init_aceItemReplace {};
 
         class init_skillAdjustment {};
@@ -68,7 +67,7 @@ class cScripts {
         class player_getRole {};
 
         class player_isCurator {};
-
+        class player_isMissionAdmin {};
         class unit_setTeamColor {};
         
         class unit_getName {};
@@ -245,6 +244,7 @@ class cScripts {
         // other
         class gear_getLoadoutRole {};
         class gear_getLoadoutName {};
+        class gear_getLoadoutDisplayName {};
     };
     class diag {
         file = "cScripts\functions\diag";
