@@ -160,7 +160,7 @@ class Cav_B_B_Scout_SquadLeader_2_4_F: Cav_B_B_Scout_SquadLeader_F {
 };
 
 // Teams
-class Cav_B_B_Scout_PlatoonLead_2_5_F: Cav_B_B_Scout_PlatoonLeader_F {
+class Cav_B_B_Scout_PlatoonLead_2_5_F: Cav_B_B_Scout_PlatoonSergeant_F {
     scope = 1;
     insignia = "cav_insignia_bravo_2";
 };
