@@ -89,16 +89,16 @@ class Cav_B_B_Scout_DMR_F_Local: Cav_B_B_Scout_Base_F {
 };
 
 //Stryker Crew
-class Cav_B_B_Ifv_Driver_F: Cav_B_B_Scout_Base_F {
-    displayName = "Stryker Driver";
+class Cav_B_B_Ifv_Commander_F: Cav_B_B_Scout_Base_F {
+    displayName = "Stryker Vehicle Commander";
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
     loadout = [["rhs_weap_mk18_grip2_bk","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15A","rhsusf_acc_T1_high",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_grip2"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_CableTie",2],["ACE_IR_Strobe_Item",1],["ACE_EarPlugs",1],["ACE_Flashlight_XL50",1],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_packingBandage",16],["ACE_quikclot",8],["kat_chestSeal",2],["kat_guedel",1],["kat_PainkillerItem",2],["ACE_splint",2],["ACE_tourniquet",4]]],["USP_CRYE_JPC_FS",[["HandGrenade",2,1],["SmokeShell",2,1],["SmokeShellPurple",1,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",3,30]]],["USP_TACTICAL_PACK",[["USP_ACC_PVS31_BLK",1],["ACE_EntrenchingTool",1],["ToolKit",1]]],"rhsusf_cvc_green_ess","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     abilityEngineer = 1;
     role = "strykercrew";
 };
-class Cav_B_B_Ifv_Commander_F: Cav_B_B_Scout_Base_F {
-    displayName = "Stryker Vehicle Commander";
+class Cav_B_B_Ifv_Driver_F: Cav_B_B_Scout_Base_F {
+    displayName = "Stryker Driver";
     scope = 2;
     category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Squad"};
     loadout = [["rhs_weap_mk18_grip2_bk","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15A","rhsusf_acc_T1_high",["rhs_mag_30Rnd_556x45_M855A1_PMAG",30],[],"rhsusf_acc_grip2"],[],[],["USP_G3C_RS_KP_OR_MC",[["ACE_CableTie",2],["ACE_IR_Strobe_Item",1],["ACE_EarPlugs",1],["ACE_Flashlight_XL50",1],["ACE_microDAGR",1],["ACE_MapTools",1],["ACE_packingBandage",16],["ACE_quikclot",8],["kat_chestSeal",2],["kat_guedel",1],["kat_PainkillerItem",2],["ACE_splint",2],["ACE_tourniquet",4]]],["USP_CRYE_JPC_FS",[["HandGrenade",2,1],["SmokeShell",2,1],["SmokeShellPurple",1,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG",3,30]]],["USP_TACTICAL_PACK",[["USP_ACC_PVS31_BLK",1],["ACE_EntrenchingTool",1],["ToolKit",1]]],"rhsusf_cvc_green_ess","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
