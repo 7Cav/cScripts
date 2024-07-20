@@ -139,14 +139,12 @@ class Cav_B_B_Scout_Alpha_TeamLeader_F: Cav_B_B_Scout_TeamLeader_F { scope = 1; 
 class Cav_B_B_Scout_Alpha_AutomaticRifleman_F: Cav_B_B_Scout_AutomaticRifleman_F { scope = 1; };
 class Cav_B_B_Scout_Alpha_Grenadier_F: Cav_B_B_Scout_Grenadier_F { scope = 1; };
 class Cav_B_B_Scout_Alpha_Rifleman_F: Cav_B_B_Scout_Rifleman_F { scope = 1; };
-class Cav_B_B_Scout_Alpha_RiflemanAT_F: Cav_B_B_Scout_RiflemanAT_F { scope = 1; };
 class Cav_B_B_Scout_Alpha_CombatLifeSaver_F: Cav_B_B_Scout_CombatLifeSaver_F { scope = 1; };
 
 class Cav_B_B_Scout_Bravo_TeamLeader_F: Cav_B_B_Scout_TeamLeader_F { scope = 1; };
 class Cav_B_B_Scout_Bravo_AutomaticRifleman_F: Cav_B_B_Scout_AutomaticRifleman_F { scope = 1; };
 class Cav_B_B_Scout_Bravo_Grenadier_F: Cav_B_B_Scout_Grenadier_F { scope = 1; };
 class Cav_B_B_Scout_Bravo_Rifleman_F: Cav_B_B_Scout_Rifleman_F { scope = 1; };
-class Cav_B_B_Scout_Bravo_RiflemanAT_F: Cav_B_B_Scout_RiflemanAT_F { scope = 1; };
 class Cav_B_B_Scout_Bravo_CombatLifeSaver_F: Cav_B_B_Scout_CombatLifeSaver_F { scope = 1; };
 
 // Depricated (Will be removed eventually)
