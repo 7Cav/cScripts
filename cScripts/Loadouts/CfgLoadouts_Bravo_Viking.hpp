@@ -129,7 +129,7 @@ class Cav_B_B_Scout_PlatoonLead_2_6_F: Cav_B_B_Scout_PlatoonLeader_F {
     scope = 1;
     insignia = "cav_insignia_bravo_2";
 };
-class Cav_B_B_Scout_PlatoonSergea_2_5_F: Cav_B_B_Scout_PlatoonSergeant_F {
+class Cav_B_B_Scout_PlatoonLead_2_5_F: Cav_B_B_Scout_PlatoonSergeant_F {
     scope = 1;
     insignia = "cav_insignia_bravo_2";
 };
