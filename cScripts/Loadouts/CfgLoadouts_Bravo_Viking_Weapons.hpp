@@ -1,5 +1,5 @@
 class cScripts_B_B_Weapons_Rifleman_F: Cav_B_Bravo_base_F {
-    category[] += {"cScripts_Loadout_Cat_Bravo_Weapons"};
+    category[] += {"cScripts_Loadout_Cat_Bravo_Viking_Weapons"};
     role = "weapons";
 };
 
