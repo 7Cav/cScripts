@@ -1,0 +1,9 @@
+version=54;
+name="6.Air_Controllers_Devbuild";
+author="=7Cav=CPL.Zaren.T";
+category="Cav_EdSubcat_Deploy_Platoon";
+requiredAddons[]=
+{
+	"Desert",
+	"cav_infantry_alpha_labeled"
+};

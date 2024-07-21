@@ -4,12 +4,9 @@ author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"cav_charlie_characters_units",
-	"rhsusf_c_m11xx",
-	"rhsusf_c_RG33",
+	"cav_infantry_bravo_labeled",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
-	"cav_troops_bravo_atlas",
 	"rhsusf_vehicles",
 	"cav_vehicles_dragoon",
 	"rhsusf_c_Caiman",
