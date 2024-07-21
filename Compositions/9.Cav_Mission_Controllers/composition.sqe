@@ -363,9 +363,9 @@ class items
 						flags=7;
 						class Attributes
 						{
-							init="call{this setgroupID[""ZEUS""];}";
+							init="call{this setgroupID[""GODFATHER""];}";
 							name="S3";
-							description="1: Lead Mission Controller (ZEUS)@ZEUS";
+							description="1: Lead Mission Controller (GODFATHER)@GODFATHER";
 							isPlayable=1;
 						};
 						id=849;
@@ -413,9 +413,9 @@ class items
 						flags=5;
 						class Attributes
 						{
-							init="call{this setgroupID[""ZEUS""];}";
+							init="call{this setgroupID[""GODFATHER""];}";
 							name="S3_1";
-							description="2: Assistant Mission Controller (ZEUS)@ZEUS";
+							description="2: Assistant Mission Controller (GODFATHER)@GODFATHER";
 							isPlayable=1;
 						};
 						id=867;
@@ -463,9 +463,9 @@ class items
 						flags=5;
 						class Attributes
 						{
-							init="call{this setgroupID[""ZEUS""];}";
+							init="call{this setgroupID[""GODFATHER""];}";
 							name="S3_2";
-							description="3: Assistant Mission Controller (ZEUS)@ZEUS";
+							description="3: Assistant Mission Controller (GODFATHER)@GODFATHER";
 							isPlayable=1;
 						};
 						id=869;
