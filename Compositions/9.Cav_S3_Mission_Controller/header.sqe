@@ -1,11 +1,11 @@
 version=54;
-name="9.S3_Mission_Controllers_DEVBUILD";
+name="9.Mission_Controllers_DEVBUILD";
 author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"cav_alpha_characters",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Modules_F_Curator_Respawn",
-	"Desert"
+	"Desert",
+	"cav_infantry"
 };
