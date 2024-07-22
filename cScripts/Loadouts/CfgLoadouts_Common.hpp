@@ -1,7 +1,8 @@
 class CommonBlufor {
-    //regiment = "";
-    //company = "";
-    //platoon = 0;
+    //regimentName = "";
+    //regiment = -1
+    //battalion = -1
+    //platoon = -1;
     //squad = -1;
     //team = "";
 
@@ -23,8 +24,10 @@ class CommonBlufor {
 };
 
 class Cav_B_Seventh_Cavalry_Base_F: CommonBlufor {
-    regiment = "7th Cavalry";
     scope = 0;
+    regimentName = "7th Cavalry";
+    regiment = "7"
+    battalion = "1"
 
     icon = "iconMan";
 };
