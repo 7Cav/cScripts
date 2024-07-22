@@ -73,4 +73,3 @@ if (_aceCategory == "ACE_SelfActions") then {
 [_object, "cScripts_Loadout_Cat_Other_Insurgent",         "Insurgent", "",                [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
 
 _mainCategory
-
