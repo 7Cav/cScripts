@@ -284,6 +284,7 @@ class Cav_B_B_RiflemanATAssistant_2_4_C_F: Cav_B_B_RiflemanATAssistant_F {
     insignia = "cav_insignia_charlie_2_4";
 };
 
+
 // Second Platoon IFV Crew
 class Cav_B_B_IFV_Commander_2_5_F: Cav_B_B_IFV_Commander_F {
     scope = 1;

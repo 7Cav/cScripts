@@ -3,8 +3,9 @@
     Here is a copy paste friendly empty template:
 
 class My_Soldier_Classname_or_VariableName: CommonBlufor {
-    //regiment = "";
-    //company = "";
+    //regimentName = "";
+    //regiment = -1
+    //battalion = -1
     //platoon = -1;
     //squad = -1;
     //team = "";
