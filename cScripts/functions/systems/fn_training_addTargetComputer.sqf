@@ -5,8 +5,11 @@
  * Arguments:
  * 0: resetButtonObject <OBJECT>
  * 1: listOfTargets <ARRAY>
- * 1: actionCaption <STRING> (Optional)
+ * 2: actionCaption <STRING> (Optional)
  *
+ * Return:
+ * ActionID
+ * 
  * Example:
  * [this, [MyTargetVariableName], "Reset Range Targets"] call cScripts_fnc_training_addTargetComputer;
  * [this, [T1,T2,T3,T4]] call cScripts_fnc_training_addTargetComputer;
@@ -33,7 +36,6 @@ params [
         _target setVariable ["BIS_isPopping", false];
 
         _target animate ["Terc", 1];
-
     }];
 } forEach _targets;
 
