@@ -19,7 +19,6 @@ params [
 ];
 
 {
-    diag_log _x;
     _x setVariable ["BIS_poppingEnabled", false];
     _x setVariable ["BIS_isPopping", false];
     _x addEventHandler ["HitPart", {
