@@ -133,6 +133,8 @@ class cScripts {
         class training_addHitIndicator {};
         class training_clearhitIndicator {};
 
+        class training_addTargetComputer {};
+
        // Plane jump
         class para_lineJump {};
         class para_haloJump {};
