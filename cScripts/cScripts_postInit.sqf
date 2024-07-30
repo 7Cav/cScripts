@@ -28,8 +28,4 @@ if (EGVAR(Settings,showDiaryRecords)) then {
 
 call EFUNC(civ,init);
 
-onPlayerConnected { 
-    [QEGVAR(log,player), [getPlayerUID player, player]] call CBA_fnc_serverEvent;
-};
-
 INFO("postInit", "Initialization completed.");
