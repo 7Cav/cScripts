@@ -40,9 +40,10 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
 }] call CBA_fnc_addEventHandler;
 
 [QEGVAR(log,player), {
-    params ["_guid","_player"];
+    params ["_guid","_name"];
+    private _unit = [_guid] call BIS_fnc_getUnitByUID;
     private _playerLog = GETMVAR(EGVAR(log,players),createHashMap);
-    INFO_3("PlayerLog","Connected %1 [%2] (GUID: %3)",name _player,typeOf _player,_guid);
+    INFO_3("PlayerLog","Connected %1 [%2] (GUID: %3)",_name,typeOf _unit,_guid);
     
     if (!isNil{_playerLog get _guid}) then {
         INFO_1("PlayerLog","Updating Log Entry [%1]", isNil{_playerLog get _guid});
@@ -52,14 +53,15 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
         _connections pushBack systemTimeUTC;
         _data set ["connections", _connections];
 
-        _data set ["loadout", typeOf _player];
+        private _loadout = GETVAR(EGVAR(Gear,LoadoutClass), typeOf _unit);
+        _data set ["loadout", GETVAR(EGVAR(Gear,LoadoutClass), typeOf _unit)];
         
         _playerLog set [_guid,_data];
     } else {
         INFO_1("PlayerLog", "Creating Log Entry [%1]", isNil{_playerLog get _guid});
         private _entry = createHashMapFromArray [
-            ['name', name _player],
-            ['loadout', typeOf _player],
+            ['name', _name],
+            ['loadout', _loadout],
             ['connectTime', systemTimeUTC],
             ['connections', [systemTimeUTC]]
         ];
@@ -67,3 +69,8 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
     };
     SETMVAR(EGVAR(log,players),_playerLog);
 }] call CBA_fnc_addEventHandler;
+
+addMissionEventHandler ["PlayerConnected", {
+    params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+    [QEGVAR(log,player), [_uid, _name]] call CBA_fnc_serverEvent;
+}];
