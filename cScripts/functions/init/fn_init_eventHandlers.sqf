@@ -42,7 +42,7 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
 [QEGVAR(log,player), {
     params ["_guid","_name"];
     private _unit = [_guid] call BIS_fnc_getUnitByUID;
-    private _loadout = if (isNull _unit) then {"Trooper"} else {GETVAR(EGVAR(Gear,LoadoutClass), typeOf _unit)};
+    private _loadout = if (isNull _unit) then {"Trooper"} else {GETVAR(_unit,EGVAR(Gear,LoadoutClass), typeOf _unit)};
     private _playerLog = GETMVAR(EGVAR(log,players),createHashMap);
     INFO_3("PlayerLog","Connected %1 [%2] (GUID: %3)",_name,_unit,_guid);
     
