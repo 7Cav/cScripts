@@ -42,8 +42,9 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
 [QEGVAR(log,player), {
     params ["_guid","_name"];
     private _unit = [_guid] call BIS_fnc_getUnitByUID;
+    private _loadout = if (isNull _unit) then {"Trooper"} else {GETVAR(EGVAR(Gear,LoadoutClass), typeOf _unit)}
     private _playerLog = GETMVAR(EGVAR(log,players),createHashMap);
-    INFO_3("PlayerLog","Connected %1 [%2] (GUID: %3)",_name,typeOf _unit,_guid);
+    INFO_3("PlayerLog","Connected %1 [%2] (GUID: %3)",_name,_unit,_guid);
     
     if (!isNil{_playerLog get _guid}) then {
         INFO_1("PlayerLog","Updating Log Entry [%1]", isNil{_playerLog get _guid});
@@ -53,8 +54,7 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
         _connections pushBack systemTimeUTC;
         _data set ["connections", _connections];
 
-        private _loadout = GETVAR(EGVAR(Gear,LoadoutClass), typeOf _unit);
-        _data set ["loadout", GETVAR(EGVAR(Gear,LoadoutClass), typeOf _unit)];
+        _data set ["loadout", _loadout];
         
         _playerLog set [_guid,_data];
     } else {
