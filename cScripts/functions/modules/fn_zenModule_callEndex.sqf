@@ -113,9 +113,9 @@ params ["_modulePos", "_objectPos"];
                             };
                         };
                         if (!isNil{GETVAR(_unit,EGVAR(Endex,EventsAdded),nil)}) then {
-                            [player, "fired", {_this call _fn_handleDischarge}] call CBA_fnc_addBISEventHandler;
-                            ["ace_firedPlayer", {_this call _fn_handleDischarge}] call CBA_fnc_addEventHandler;
-                            ["ace_firedPlayerVehicle", {_this call _fn_handleDischarge}] call CBA_fnc_addEventHandler;
+                            [player, "fired", {_this call _thisArgs#0}, [_fn_handleDischarge]] call CBA_fnc_addBISEventHandler;
+                            ["ace_firedPlayer", {_this call _thisArgs#0}] call CBA_fnc_addEventHandler;
+                            ["ace_firedPlayerVehicle", {_this call _thisArgs#0}] call CBA_fnc_addEventHandler;
                             SETVAR(_unit,EGVAR(Endex,EventsAdded),true);
                         };
                     } remoteExecCall ["bis_fnc_call", 0];
