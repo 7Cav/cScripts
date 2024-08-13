@@ -1,3 +1,4 @@
+#define DEBUG_MODE
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A, CPL.Dunn.W
@@ -37,10 +38,15 @@ params ["_modulePos", "_objectPos"];
         _pos params ["_modulePos"];
 
         // End endex
-        if (!_endex && GETMVAR(EGVAR(Mission,Endex),false)) then {
-            "ENDEX CANCELED" remoteExecCall ["systemChat", -2];
-            SETMVAR(EGVAR(Mission,Endex),false);
-            INFO_2("ENDEX", "Mission var %1 is set %2",QEGVAR(Mission,Endex),GETMVAR(EGVAR(Mission,Endex),false));
+        if (!_endex) then {
+            if (GETMVAR(EGVAR(Mission,Endex),true)) exitWith {
+                "ENDEX CANCELED" remoteExecCall ["systemChat", -2];
+                SETMVAR(EGVAR(Mission,Endex),false);
+                INFO_2("ENDEX", "Mission var %1 is set %2",QEGVAR(Mission,Endex),GETMVAR(EGVAR(Mission,Endex),false));
+            };
+            if (!GETMVAR(EGVAR(Mission,Endex),true)) exitWith {
+                INFO_2("ENDEX", "No endex in progress",QEGVAR(Mission,Endex),GETMVAR(EGVAR(Mission,Endex),false));
+            };
         };
     
         //systemChat Endex message
@@ -59,20 +65,21 @@ params ["_modulePos", "_objectPos"];
 
         //Set Safety to all Players
         if (_weaponsSafe) then {
-            {
+            [{
                 private _weapon = currentWeapon player; 
                 private _safedWeapons = GETVAR(player,ace_safemode_safedWeapons,[]);
                 if !(_weapon in _safedWeapons) then {  
                     [player, currentWeapon player, currentMuzzle player] call ace_safemode_fnc_lockSafety;
-                    INFO_2("ZEN", "%1 weapon (%2) have been set to safe.");
+                    INFO_4("ENDEX", "Player %1 [%2] weapon ([%3, %4]) have been set to safe.",player, typeOf player, currentWeapon player, currentMuzzle player);
                 };
-            } remoteExecCall ["bis_fnc_call", -2]; 
+            }] remoteExec ["call", -2]; 
         };
 
         if (_healAllPlayers) then {
-            {
+            [{
                 [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
-            } remoteExecCall ["bis_fnc_call", -2]; 
+                INFO_2("ENDEX", "%1 [%2] have been healed.",player, typeOf player);
+            }] remoteExec ["call", -2]; 
         };
 
         //Change AI to careless (doesn't affected AI created after Endex)
@@ -87,7 +94,7 @@ params ["_modulePos", "_objectPos"];
         if (_holdFireMessage) then {
             [
                 {
-                    {
+                    [{
 
                         private _fn_handleDischarge = {
                             params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
@@ -108,17 +115,17 @@ params ["_modulePos", "_objectPos"];
                                     "Hold your fire %1 %2!",
                                     [_unit, 'USA'] call EFUNC(player,getRank),
                                     [_unit] call EFUNC(unit,getName)
-                                ] remoteExecCall ["systemChat", 0];
+                                ] remoteExec ["systemChat", 0];
                                 _unit setVariable [QEGVAR(player,endexFiredWeapon), _muzzle];
                             };
                         };
                         if (!isNil{GETVAR(_unit,EGVAR(Endex,EventsAdded),nil)}) then {
-                            [player, "fired", {_this call _thisArgs#0}, [_fn_handleDischarge]] call CBA_fnc_addBISEventHandler;
-                            ["ace_firedPlayer", {_this call _thisArgs#0}] call CBA_fnc_addEventHandler;
-                            ["ace_firedPlayerVehicle", {_this call _thisArgs#0}] call CBA_fnc_addEventHandler;
+                            [player, "fired", {player call _thisArgs#0}, [_fn_handleDischarge]] call CBA_fnc_addBISEventHandler;
+                            ["ace_firedPlayer", {player call _thisArgs#0;}, [_fn_handleDischarge]] call CBA_fnc_addEventHandlerArgs;
+                            ["ace_firedPlayerVehicle", {player call _thisArgs#0}, [_fn_handleDischarge]] call CBA_fnc_addEventHandlerArgs;
                             SETVAR(_unit,EGVAR(Endex,EventsAdded),true);
                         };
-                    } remoteExecCall ["bis_fnc_call", 0];
+                    }] remoteExec ["call", -2];
                 },
             [], 10] call CBA_fnc_waitAndExecute;
         };
