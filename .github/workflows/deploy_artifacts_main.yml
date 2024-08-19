@@ -1,8 +1,9 @@
 name: Deploy DevBuild Artifacts
 on:
   push:
-      branches:
-        - main
+    branches:
+      - main
+
 jobs:
   build:
     name: Create And Upload Releases

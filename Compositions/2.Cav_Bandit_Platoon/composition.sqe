@@ -1213,7 +1213,7 @@ class items
 								{
 									rank="SERGEANT";
 									init="call{this setgroupID[""BANDIT-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""BANDIT-4""];}";
-									description="Squad Leader@BANDIT-4";
+									description="Weapons Squad Leader@BANDIT-4";
 									isPlayable=1;
 								};
 								id=397;
