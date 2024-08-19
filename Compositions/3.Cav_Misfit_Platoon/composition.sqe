@@ -1216,7 +1216,7 @@ class items
 						{
 							rank="SERGEANT";
 							init="this setGroupid [""MISFIT-4""];" \n "this setVariable [""cScripts_Player_Unit"", ""MISFIT-4""];";
-							description="Squad Leader@MISFIT-4";
+							description="Weapons Squad Leader@MISFIT-4";
 							isPlayable=1;
 						};
 						id=467;

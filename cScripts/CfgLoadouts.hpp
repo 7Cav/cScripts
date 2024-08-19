@@ -7,6 +7,7 @@ class CfgLoadouts {
 
     #include "Loadouts\CfgLoadouts_Bravo_Crew.hpp"
     #include "Loadouts\CfgLoadouts_Bravo_Viking.hpp"
+    #include "Loadouts\CfgLoadouts_Bravo_Viking_Weapons.hpp"
     #include "Loadouts\CfgLoadouts_Bravo_Atlas.hpp"
 
     #include "Loadouts\CfgLoadouts_Charlie_Squad.hpp"

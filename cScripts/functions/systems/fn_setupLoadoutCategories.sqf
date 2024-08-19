@@ -50,9 +50,9 @@ if (_aceCategory == "ACE_SelfActions") then {
 [_object, "cScripts_Loadout_Cat_Alpha_Rotary",            "Rotary", _pilotIcon,           [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Alpha"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo",                   "Bravo Co.", "",                [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Leadership",        "Leadership", _leadIcon,        [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Bravo_Viking_Leadership", "Viking Leadership", _leadIcon, [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Bravo_Viking_Squad",      "Viking Squad", _squadIcon,     [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Bravo_Viking_Weapons",    "Viking Weapons", _speciIcon,   [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_Viking_Leadership", "Leadership", _leadIcon, [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_Viking_Rifle_Squad","Rifle Squad", _squadIcon,     [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Bravo_Viking_Weapons",    "Weapons Squad", _speciIcon,   [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Atlas",             "Atlas", _iconMedic,            [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_Tank",              "Tank", _iconTank,              [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Bravo_IFV",               "IFV", _iconIfv,                [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
@@ -60,10 +60,10 @@ if (_aceCategory == "ACE_SelfActions") then {
 [_object, "cScripts_Loadout_Cat_Bravo_Special",           "Special", _speciIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Bravo"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Charlie",                 "Charlie Co.", "",              [_aceCategory, _mainCategory]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Charlie_Leadership",      "Leadership", _leadIcon,        [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Charlie_Squad",           "Squad", _squadIcon,            [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Charlie_Rifle_Squad",     "Rifle Squad", _squadIcon,            [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Charlie_Bandit_Squad",    "Bandit Squad", _squadIcon,     [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Charlie_Misfit_Squad",    "Misfit Squad", _squadIcon,     [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
-[_object, "cScripts_Loadout_Cat_Charlie_Weapons",         "Weapons", _speciIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
+[_object, "cScripts_Loadout_Cat_Charlie_Weapons",         "Weapons Squad", _speciIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
 [_object, "cScripts_Loadout_Cat_Charlie_Special",         "Special", _speciIcon,          [_aceCategory, _mainCategory, "cScripts_Loadout_Cat_Charlie"]] call FUNC(createActionCategory);
 
 [_object, "cScripts_Loadout_Cat_Training",                "Training", "",                 [_aceCategory, _mainCategory]] call FUNC(createActionCategory);

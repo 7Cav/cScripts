@@ -10,3 +10,18 @@ trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+[*.yml]
+indent_size = 2
+
+[*.hpp]
+indent_style = space
+indent_size = 4
+
+[*.cpp]
+indent_style = space
+indent_size = 4
+
+[*.sqf]
+indent_style = space
+indent_size = 4
