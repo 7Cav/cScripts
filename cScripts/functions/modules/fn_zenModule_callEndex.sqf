@@ -1,3 +1,4 @@
+#define DEBUG_MODE
 #include "..\script_component.hpp";
 /*
  * Author: CPL.Brostrom.A, CPL.Dunn.W
@@ -19,6 +20,7 @@ params ["_modulePos", "_objectPos"];
 [
     "Call Endex", 
     [
+        ["CHECKBOX", ["Call Endex", "False will end the endex"], true, false],
         ["CHECKBOX", ["Set Player Weapons To Safe", ""], true, false],
         ["CHECKBOX", ["Pacify AI", ""], true, false],
         ["CHECKBOX", ["Hint Players That Fire", ""], true, false],
@@ -27,6 +29,7 @@ params ["_modulePos", "_objectPos"];
     {
         params ["_arg", "_pos"];
         _arg params [
+            "_endex",
             "_weaponsSafe",
             "_aiPacified",
             "_holdFireMessage",
@@ -34,6 +37,18 @@ params ["_modulePos", "_objectPos"];
         ];
         _pos params ["_modulePos"];
 
+        // End endex
+        if (!_endex) then {
+            if (GETMVAR(EGVAR(Mission,Endex),true)) exitWith {
+                "ENDEX CANCELED" remoteExecCall ["systemChat", -2];
+                SETMVAR(EGVAR(Mission,Endex),false);
+                INFO_2("ENDEX", "Mission var %1 is set %2",QEGVAR(Mission,Endex),GETMVAR(EGVAR(Mission,Endex),false));
+            };
+            if (!GETMVAR(EGVAR(Mission,Endex),true)) exitWith {
+                INFO_2("ENDEX", "No endex in progress",QEGVAR(Mission,Endex),GETMVAR(EGVAR(Mission,Endex),false));
+            };
+        };
+    
         //systemChat Endex message
         "ENDEX ENDEX ENDEX" remoteExecCall ["systemChat", -2];
         "DEBRIEF" remoteExecCall ["systemChat", -2];
@@ -50,74 +65,77 @@ params ["_modulePos", "_objectPos"];
 
         //Set Safety to all Players
         if (_weaponsSafe) then {
-            {
+            [{
                 private _weapon = currentWeapon player; 
-                private _safedWeapons = player getVariable ['ace_safemode_safedWeapons', []]; 
+                private _safedWeapons = GETVAR(player,ace_safemode_safedWeapons,[]);
                 if !(_weapon in _safedWeapons) then {  
                     [player, currentWeapon player, currentMuzzle player] call ace_safemode_fnc_lockSafety;
-                    INFO_2("ZEN", "%1 weapon (%2) have been set to safe.");
+                    INFO_4("ENDEX", "Player %1 [%2] weapon ([%3, %4]) have been set to safe.",player, typeOf player, currentWeapon player, currentMuzzle player);
                 };
-            } remoteExecCall ["bis_fnc_call", -2]; 
+            }] remoteExec ["call", -2]; 
         };
 
         if (_healAllPlayers) then {
-            {
+            [{
                 [player, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
-            } remoteExecCall ["bis_fnc_call", -2]; 
+                INFO_2("ENDEX", "%1 [%2] have been healed.",player, typeOf player);
+            }] remoteExec ["call", -2]; 
         };
 
         //Change AI to careless (doesn't affected AI created after Endex)
-        if (_aiPacified) then { 
+        if (_aiPacified) then {
             {
                 (group _x) setBehaviourStrong "CARELESS";
                 (group _x) setCombatMode "BLUE";
-                INFO_2("ZEN", "AI %1 group (%2) have been set to careless and blue.", _x, group _x);
+                INFO_2("ENDEX", "AI %1 group (%2) have been set to careless and blue.", _x, group _x);
             } forEach ((allUnits) - (allPlayers));
         };
 
         if (_holdFireMessage) then {
             [
                 {
-                    {
-                        [
-                            player,
-                            "fired",
-                            {
-                                params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+                    [{
 
-                                private _hftitle = format[
-                                    "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1 %2<br />hold your Fire!</t><br /><br />",
+                        private _fn_handleDischarge = {
+                            params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+
+                            if (!GETMVAR(EGVAR(Mission,Endex),false)) exitWith {};
+                            private _hftitle = format[
+                                "<t color='#ffc61a' size='1.2' shadow='1' shadowColor='#000000' align='center'>%1 %2<br />hold your Fire!</t><br /><br />",
+                                [_unit, 'USA'] call EFUNC(player,getRank),
+                                [_unit] call EFUNC(unit,getName)
+                            ];
+                            private _hfimage = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
+                            private _hftext = "You are not allowed to discharge your weapon during Endex.<br />";
+
+                            hint parseText (_hftitle + _hfimage + _hftext);
+                            format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(info), 0];
+                            if ( _unit getVariable [QEGVAR(player,endexFiredWeapon), ""] != _muzzle ) then {
+                                format [
+                                    "Hold your fire %1 %2!",
                                     [_unit, 'USA'] call EFUNC(player,getRank),
                                     [_unit] call EFUNC(unit,getName)
-                                ];
-                                private _hfimage = "<img size='5' image='cScripts\Data\Images\7CAV_LOGO_01.paa' align='center'/><br /><br />";
-                                private _hftext = "You are not allowed to discharge your weapon during Endex.<br />";
-
-                                hint parseText (_hftitle + _hfimage + _hftext);
-                                format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(info), 0];
-                                if ( _unit getVariable [QEGVAR(player,endexFiredWeapon), ""] != _muzzle ) then {
-                                    format [
-                                        "Hold your fire %1 %2!",
-                                        [_unit, 'USA'] call EFUNC(player,getRank),
-                                        [_unit] call EFUNC(unit,getName)
-                                    ] remoteExecCall ["systemChat", 0];
-                                    _unit setVariable [QEGVAR(player,endexFiredWeapon), _muzzle];
-                                };
-                            }
-                        ] call CBA_fnc_addBISEventHandler;
-                    } remoteExecCall ["bis_fnc_call", 0];
-                }, 
+                                ] remoteExec ["systemChat", 0];
+                                _unit setVariable [QEGVAR(player,endexFiredWeapon), _muzzle];
+                            };
+                        };
+                        if (!isNil{GETVAR(_unit,EGVAR(Endex,EventsAdded),nil)}) then {
+                            [player, "fired", {player call _thisArgs#0}, [_fn_handleDischarge]] call CBA_fnc_addBISEventHandler;
+                            ["ace_firedPlayer", {player call _thisArgs#0;}, [_fn_handleDischarge]] call CBA_fnc_addEventHandlerArgs;
+                            ["ace_firedPlayerVehicle", {player call _thisArgs#0}, [_fn_handleDischarge]] call CBA_fnc_addEventHandlerArgs;
+                            SETVAR(_unit,EGVAR(Endex,EventsAdded),true);
+                        };
+                    }] remoteExec ["call", -2];
+                },
             [], 10] call CBA_fnc_waitAndExecute;
         };
 
-        if (isNil{missionNamespace getVariable QEGVAR(Mission,Endex)}) then {
-            missionNamespace setVariable [QEGVAR(Mission,Endex), True];
-            INFO_2("", "Mission var %1 is set %2", QEGVAR(Mission,Endex), missionNamespace getVariable [QEGVAR(Mission,Endex), false]);
-        };
-        
+        SETMVAR(EGVAR(Mission,Endex),true);
+        INFO_2("ENDEX", "Mission var %1 is set %2",QEGVAR(Mission,Endex),GETMVAR(EGVAR(Mission,Endex),false));
+
         [QGVAR(getAttendance)] call CBA_fnc_localEvent;
 
-        ["Endex called (All attended players have been saved to your RPT log)"] call zen_common_fnc_showMessage;
+        ["Endex called"] call zen_common_fnc_showMessage;
     },
     {},
     [_modulePos]
