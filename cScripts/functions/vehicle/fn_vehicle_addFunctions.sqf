@@ -68,20 +68,20 @@ if (_vehicle iskindOf "Heli_Transport_02_base_F") then {
 };
 
 if (_vehicle iskindOf "RHS_C130J_Base") then {
-    [_vehicle,nil,nil,true] call FUNC(addLineJump);
-    [_vehicle,nil,nil,nil,nil,true] call FUNC(addHaloJump);
+    [_vehicle,nil,nil,nil,nil,true] call FUNC(addLineJump);
+    [_vehicle,nil,nil,true] call FUNC(addHaloJump);
     [_vehicle] call FUNC(addEscapeWreck);
 };
 
 if (_vehicle iskindOf "USAF_C130J") then {
-    [_vehicle,nil,nil,true] call FUNC(addLineJump);
-    [_vehicle,nil,nil,nil,nil,true] call FUNC(addHaloJump);
+    [_vehicle,nil,nil,nil,nil,true] call FUNC(addLineJump);
+    [_vehicle,nil,nil,true] call FUNC(addHaloJump);
     [_vehicle] call FUNC(addEscapeWreck);
 };
 
 if (_vehicle iskindOf "USAF_C17") then {
-    [_vehicle,nil,nil,true] call FUNC(addLineJump);
-    [_vehicle,nil,nil,nil,nil,true] call FUNC(addHaloJump);
+    [_vehicle,nil,nil,nil,nil,true] call FUNC(addLineJump);
+    [_vehicle,nil,nil,true] call FUNC(addHaloJump);
     [_vehicle] call FUNC(addEscapeWreck);
 };
 
