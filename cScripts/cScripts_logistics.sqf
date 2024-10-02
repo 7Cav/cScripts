@@ -353,7 +353,6 @@
         ["rhs_weap_M136",0],
         ["rhs_weap_M136_hedp",10],
         ["rhs_weap_m72a7",10],
-        ["dzn_MG_Tripod_M122A1_M240Mount_Carry",0],
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
@@ -1823,32 +1822,6 @@
         ["rhs_weap_m4a1_m320", 0],
         ["rhs_weap_mk18_m320", 0],
         ["rhs_weap_M320", 0],
-        ["rhs_weap_m4a1_carryhandle", 0],
-        ["rhs_weap_m4a1_carryhandle_mstock", 0],
-        ["rhs_weap_m4a1", 0],
-        ["rhs_weap_m4a1_mstock", 0],
-        ["rhs_weap_m4a1_d", 0],
-        ["rhs_weap_m4a1_d_mstock", 0],
-        ["rhs_weap_m4a1_wd", 0],
-        ["rhs_weap_m4a1_wd_mstock", 0],
-
-        ["rhs_weap_m4a1_blockII", 0],
-        ["rhs_weap_m4a1_blockII_KAC", 0],
-        ["rhs_weap_m4a1_blockII_bk", 0],
-        ["rhs_weap_m4a1_blockII_KAC_bk", 0],
-        ["rhs_weap_m4a1_blockII_d", 0],
-        ["rhs_weap_m4a1_blockII_KAC_d", 0],
-        ["rhs_weap_m4a1_blockII_wd", 0],
-        ["rhs_weap_m4a1_blockII_KAC_wd", 0],
-        
-        ["rhs_weap_mk18", 0],
-        ["rhs_weap_mk18_bk", 0],
-        ["rhs_weap_mk18_KAC_bk", 0],
-        ["rhs_weap_mk18_d", 0],
-        ["rhs_weap_mk18_KAC_d", 0],
-        ["rhs_weap_mk18_KAC", 0],
-        ["rhs_weap_mk18_wd", 0],
-        ["rhs_weap_mk18_KAC_wd", 0],
 
         //Attachments
         ["rhsusf_acc_anpeq15side", 0],
