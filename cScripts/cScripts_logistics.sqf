@@ -275,6 +275,12 @@
         ["DemoCharge_Remote_Mag",0],
         ["ClaymoreDirectionalMine_Remote_Mag",0],
 
+        // Backpack
+        ["B_AssaultPack_mcamo", 0],
+        ["USP_REEBOW_3DAP_MC", 0],
+        ["USP_REEBOW_3DAP_ACC1_MC", 0],
+        ["USP_REEBOW_3DAP_ACC10_MC", 0],
+
         // Tools and Items
         ["ACE_Flashlight_MX991",0],
         ["ACE_CableTie",0],
@@ -413,6 +419,15 @@
         //cTab
         ["ItemAndroid", 0],
         ["ItemAndroidMisc",0],
+
+        // Backpack
+        ["USP_PACK_BREACHER_MC", 0],
+        ["USP_PACK_FASTHAWK", 0],
+        ["USP_PACK_POINTMAN", 0],
+        ["USP_ZIPON_PANEL_CPC_MC", 0],
+        ["USP_ZIPON_PANEL_CPC_SMK_MC", 0],
+        ["USP_ROLLFLAG2", 0],
+        ["USP_PACK_HYDRATION", 0],
 
         // NVG
         ["USP_PVS14", 0],
@@ -1341,17 +1356,11 @@
         ["USP_OVERWHITE_G3C_OR_MCA_MC", 0],
         
         // Backpack
-        ["B_AssaultPack_mcamo", 0],
         ["USP_PACK_BREACHER_MC", 0],
         ["USP_PACK_FASTHAWK", 0],
         ["USP_PACK_POINTMAN", 0],
         ["USP_ZIPON_PANEL_CPC_MC", 0],
-        ["USP_ZIPON_PACK_CPC_MC", 0],
-        ["USP_ZIPON_PACK_CPC_BC_MC", 0],
         ["USP_ZIPON_PANEL_CPC_SMK_MC", 0],
-        ["USP_REEBOW_3DAP_MC", 0],
-        ["USP_REEBOW_3DAP_ACC1_MC", 0],
-        ["USP_REEBOW_3DAP_ACC10_MC", 0],
         ["USP_ROLLFLAG2", 0],
         ["USP_PACK_HYDRATION", 0],
         
@@ -1432,18 +1441,7 @@
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
-        ["acc_flashlight_pistol",0],
-
-        //Backpack
-        ["USP_TACTICAL_PACK_CCT", 0],
-        ["USP_TACTICAL_PACK_CCT2", 0],
-        ["USP_TACTICAL_PACK_CCT3", 0],
-        ["USP_TACTICAL_PACK_CCT4", 0],
-        ["USP_TACTICAL_PACK_CCT5", 0],
-        ["USP_TACTICAL_PACK_CCT6", 0],
-        ["USP_TACTICAL_PACK_CCT7", 0],
-        ["USP_TACTICAL_PACK_CCT8", 0],
-        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
+        ["acc_flashlight_pistol",0]
     ]],
     ["arsenal_role_fireteamleader", [
         ["ACE_microDAGR", 0],
@@ -1456,18 +1454,7 @@
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
-        ["acc_flashlight_pistol",0],
-
-        //Backpack
-        ["USP_TACTICAL_PACK_CCT", 0],
-        ["USP_TACTICAL_PACK_CCT2", 0],
-        ["USP_TACTICAL_PACK_CCT3", 0],
-        ["USP_TACTICAL_PACK_CCT4", 0],
-        ["USP_TACTICAL_PACK_CCT5", 0],
-        ["USP_TACTICAL_PACK_CCT6", 0],
-        ["USP_TACTICAL_PACK_CCT7", 0],
-        ["USP_TACTICAL_PACK_CCT8", 0],
-        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
+        ["acc_flashlight_pistol",0]
     ]],
     ["arsenal_role_weapons", [
         // MAAWS ammo
