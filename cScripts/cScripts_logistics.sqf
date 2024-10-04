@@ -204,7 +204,14 @@
         ["B_Carryall_mcamo", 0],
         ["B_Kitbag_mcamo", 0],
         ["UK3CB_B_Backpack_Pocket_OLI", 0],
-        ["UK3CB_B_Backpack_Pocket", 0]
+        ["UK3CB_B_Backpack_Pocket", 0],
+        ["USP_PACK_BREACHER_MC", 0],
+        ["USP_PACK_FASTHAWK", 0],
+        ["USP_PACK_POINTMAN", 0],
+        ["USP_ZIPON_PANEL_CPC_MC", 0],
+        ["USP_ZIPON_PANEL_CPC_SMK_MC", 0],
+        ["USP_ROLLFLAG2", 0],
+        ["USP_PACK_HYDRATION", 0]
     ]],
 
     ["bravo_company_viking", [
@@ -420,22 +427,12 @@
         ["ItemAndroid", 0],
         ["ItemAndroidMisc",0],
 
-        // Backpack
-        ["USP_PACK_BREACHER_MC", 0],
-        ["USP_PACK_FASTHAWK", 0],
-        ["USP_PACK_POINTMAN", 0],
-        ["USP_ZIPON_PANEL_CPC_MC", 0],
-        ["USP_ZIPON_PANEL_CPC_SMK_MC", 0],
-        ["USP_ROLLFLAG2", 0],
-        ["USP_PACK_HYDRATION", 0],
-
         // NVG
         ["USP_PVS14", 0],
         ["USP_PVS15", 0],
         ["USP_L4G19", 0],
         ["rhsusf_ANPVS_14", 0],
-        ["rhsusf_ANPVS_15", 0],
-        ["USP_RHINO", 0]
+        ["rhsusf_ANPVS_15", 0]
     ]],
 
     // // // // // // //
@@ -1354,15 +1351,6 @@
         ["USP_OVERWHITE_G3C_KP_OR_MCA_MC", 0],
         ["USP_OVERWHITE_G3C_MX_MCA_MC", 0],
         ["USP_OVERWHITE_G3C_OR_MCA_MC", 0],
-        
-        // Backpack
-        ["USP_PACK_BREACHER_MC", 0],
-        ["USP_PACK_FASTHAWK", 0],
-        ["USP_PACK_POINTMAN", 0],
-        ["USP_ZIPON_PANEL_CPC_MC", 0],
-        ["USP_ZIPON_PANEL_CPC_SMK_MC", 0],
-        ["USP_ROLLFLAG2", 0],
-        ["USP_PACK_HYDRATION", 0],
         
         // Medical
         ["ACE_EarPlugs",0],
