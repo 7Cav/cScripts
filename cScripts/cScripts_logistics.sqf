@@ -366,6 +366,8 @@
         ["rhs_weap_M136",0],
         ["rhs_weap_M136_hedp",10],
         ["rhs_weap_m72a7",10],
+        ["UK3CB_P320_DES",0],
+        ["UK3CB_P320_BLK",0],
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
