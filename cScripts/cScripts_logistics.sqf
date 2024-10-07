@@ -387,7 +387,6 @@
         ["rhs_mag_m664_red_cluster", 0],
         ["rhs_mag_m713_Red", 0],
         ["rhs_mag_m716_yellow", 0],
-        
         ["MRAWS_HE_F", 0],
         ["MRAWS_HEAT_F", 0],
         ["MAA_MAAWS_ASM509", 0],
