@@ -421,8 +421,6 @@
         ["ACE_CableTie",0],
         ["ACE_EntrenchingTool",10],
         ["ACE_wirecutter",10],
-        ["rhs_weap_rsp30_green",0],
-        ["rhs_weap_rsp30_red",0],
         ["ACE_SpareBarrel", 4],
 
         //cTab
@@ -1431,6 +1429,8 @@
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
+        ["rhs_weap_rsp30_green",0],
+        ["rhs_weap_rsp30_red",0],
         ["acc_flashlight_pistol",0]
     ]],
     ["arsenal_role_fireteamleader", [
@@ -1444,6 +1444,8 @@
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
         ["UK3CB_P320_9x19_17Rnd",0],
+        ["rhs_weap_rsp30_green",0],
+        ["rhs_weap_rsp30_red",0],
         ["acc_flashlight_pistol",0]
     ]],
     ["arsenal_role_weapons", [
