@@ -54,4 +54,4 @@ jobs:
         run: bash tools/checkLogging.sh
       - name: Check Pull Request Name
         if: always()
-        run: bash tools/checkPullRequestTitle.sh ${{ github.event.pull_request.title }}
+        run: bash tools/checkPullRequestTitle.sh "${{ github.event.pull_request.title }}"
