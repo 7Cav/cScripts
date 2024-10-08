@@ -369,6 +369,9 @@
         ["UK3CB_P320_DES",0],
         ["UK3CB_P320_BLK",0],
 
+        // Optics
+        ["optic_MRCO",0],
+        
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
@@ -403,6 +406,7 @@
         ["SmokeShellPurple",0],
         ["SmokeShellRed",0],
         ["ACE_Chemlight_HiBlue",0],
+        ["ACE_Chemlight_HiGreen",0],
         ["ACE_Chemlight_HiRed",0],
         ["ACE_Chemlight_IR",0],
         ["ACE_M84",0],
@@ -418,9 +422,11 @@
 
         // Tools and Items
         ["ACE_CableTie",0],
-        ["ACE_EntrenchingTool",10],
-        ["ACE_wirecutter",10],
-        ["ACE_SpareBarrel", 4],
+        ["ACE_EntrenchingTool",0],
+        ["ACE_wirecutter",0],
+        ["ACE_SpareBarrel",0],
+        ["ACE_Chemlight_Shield",0],
+        ["ACE_SpraypaintGreen",0],
 
         //cTab
         ["ItemAndroid", 0],
