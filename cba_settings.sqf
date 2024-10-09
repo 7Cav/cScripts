@@ -1365,6 +1365,7 @@ force force kat_pharma_coagulation = true;
 force force kat_pharma_ivCheckLimbDamage = true;
 force force kat_pharma_IVdrop = 600;
 force force kat_pharma_IVdropEnable = true;
+force force kat_pharma_IVflowControl = false;
 force force kat_pharma_IVreuse = false;
 force force kat_pharma_kidneyAction = true;
 force force kat_pharma_MedicationsRequireInsIV = true;
