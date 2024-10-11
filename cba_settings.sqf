@@ -1509,7 +1509,7 @@ force force kat_surgery_ultrasoundLocation = 0;
 force force kat_surgery_ultrasoundTime =15;
 
 // KAT - ADV Medical: Vitals
-force force kat_vitals_simpleMedical = false;
+force force kat_vitals_simpleMedical = true;
 
 // KAT - ADV Medical: Watch
 //force force kat_watch_altitudeUnit = 0;
