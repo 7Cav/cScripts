@@ -547,8 +547,8 @@ force force ace_maptools_rotateModifierKey = 1;
 // ACE Medical
 force force ace_medical_ai_enabledFor = 0;
 force force ace_medical_ai_requireItems = 0;
-force force ace_medical_AIDamageThreshold = 0.06;
-force force ace_medical_bleedingCoefficient = 0.3;
+force force ace_medical_AIDamageThreshold = 0.3;
+force force ace_medical_bleedingCoefficient = 0.5;
 force force ace_medical_blood_bloodLifetime = 900;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_blood_maxBloodObjects = 50;
@@ -564,12 +564,12 @@ force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1;
 force force ace_medical_painUnconsciousChance = 0.15;
 force force ace_medical_painUnconsciousThreshold = 0.601182;
-force force ace_medical_playerDamageThreshold = 6;
-force force ace_medical_spontaneousWakeUpChance = 0.4;
+force force ace_medical_playerDamageThreshold = 2;
+force force ace_medical_spontaneousWakeUpChance = 0.5;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 1.4;
 force force ace_medical_statemachine_AIUnconsciousness = false;
 force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
-force force ace_medical_statemachine_cardiacArrestTime = 300;
+force force ace_medical_statemachine_cardiacArrestTime = 360;
 force force ace_medical_statemachine_fatalInjuriesAI = 0;
 force force ace_medical_statemachine_fatalInjuriesPlayer = 2;
 force force ace_medical_treatment_advancedBandages = 2;
@@ -1237,6 +1237,10 @@ force force kat_breathing_staminaLossAtLowSPO2 = true;
 force force kat_breathing_stethoscopeListeningTime = 15;
 //kat_breathing_stethoscopeSoundVolume = 2;
 force force kat_breathing_TensionHemothoraxAlwaysVisible = false;
+force kat_breathing_Etco2_Enabled = false;
+force kat_breathing_Etco2_Units = 0;
+force kat_breathing_medLvl_NasalCannula = 0;
+force kat_breathing_NasalCannula_time = 3;
 
 // KAT - ADV Medical: Chemical
 force force kat_chemical_affectAI = false;
@@ -1275,7 +1279,6 @@ force force kat_circulation_bloodGroups = false;
 force force kat_circulation_bloodTypeCustomList = "O,O,A,A,O_N,B,A_N,AB,B_N,AB_N";
 force force kat_circulation_bloodTypeRandomWeighted = true;
 force force kat_circulation_bloodTypeSetting = 4;
-//kat_circulation_bloodTypeSettingPlayer = "O_N";
 force force kat_circulation_cardiacArrestBleedRate = 0.05;
 force force kat_circulation_CPR_ChanceInterval = 15;
 force force kat_circulation_CPR_MaxChance_Default = 30;
@@ -1298,10 +1301,14 @@ force force kat_circulation_medLvl_AED_Station_Interact = 0;
 force force kat_circulation_medLvl_AED_X = 2;
 force force kat_circulation_tamponadeChance = 10;
 force force kat_circulation_useLocation_AED = 0;
+force force kat_circulation_bloodTypeSettingPlayer = "O_N";
 
 // KAT - ADV Medical: GUI
-//kat_gui_ColoredLogs = true;
-//kat_gui_showPatientSideLabels = false;
+force kat_gui_ColoredLogs = true;
+force kat_gui_showPatientSideLabels = true;
+
+// KAT - ADV Medical: Hypothermia
+force force kat_hypothermia_hypothermiaActive = false;
 
 // KAT - ADV Medical: Misc
 force force kat_misc_AFAK_Container = 0;
@@ -1349,8 +1356,25 @@ force force kat_misc_MFAKThirdSlotItem = "[['kat_Painkiller', 4], ['kat_Penthrox
 force force kat_misc_neckTourniquet = false;
 force force kat_misc_tourniquetEffects_Enable = true;
 force force kat_misc_tourniquetEffects_NegativeMultiplier = 1;
-force force kat_misc_tourniquetEffects_PositiveMultiplier = 1;
+force force kat_misc_tourniquetEffects_PositiveMultiplier = 0.5;
 force force kat_misc_treatmentTimeDetachTourniquet = 7;
+force force kat_misc_AFAK_Container = 0;
+force force kat_misc_AFAK_Item_Color = [0.67,0.84,0.9];
+force force kat_misc_AFAK_Slot_Color = [1,0.96,0.32];
+force force kat_misc_armbandSlingLeftArm = "[0.2, -0.39, -0.2]";
+force force kat_misc_armbandSlingLeftArmRotation = "[240, 33, 26]";
+force force kat_misc_armbandSlingLeftLeg = "[0.435, -0.075, -0.38]";
+force force kat_misc_armbandSlingLeftLegRotation = "[-160, -5, 45]";
+force force kat_misc_armbandSlingRightArm = "[-0.228, -0.1, -0.43]";
+force force kat_misc_armbandSlingRightArmRotation = "[5, -5, -5]";
+force force kat_misc_armbandSlingRightLeg = "[-0.32, -0.29, -0.42]";
+force force kat_misc_armbandSlingRightLegRotation = "[-30, -5, 38]";
+force force kat_misc_IFAK_Container = 0;
+force force kat_misc_IFAK_Item_Color = [0.67,0.84,0.9];
+force force kat_misc_IFAK_Slot_Color = [1,0.3,0.3];
+force force kat_misc_MFAK_Container = 0;
+force force kat_misc_MFAK_Item_Color = [0.67,0.84,0.9];
+force force kat_misc_MFAK_Slot_Color = [0.56,0.93,0.56];
 
 // KAT - ADV Medical: Pharmacy
 force force kat_pharma_blockChance = 60;
@@ -1358,8 +1382,8 @@ force force kat_pharma_carbonateChance = 100;
 force force kat_pharma_chromatic_aberration_checkbox_fentanyl = true;
 force force kat_pharma_chromatic_aberration_checkbox_ketamine = true;
 force force kat_pharma_chromatic_aberration_checkbox_pervitin = true;
-force force kat_pharma_chromatic_aberration_slider_fentanyl = 2.5;
-force force kat_pharma_chromatic_aberration_slider_ketamine = 1.5;
+force force kat_pharma_chromatic_aberration_slider_fentanyl = 1;
+force force kat_pharma_chromatic_aberration_slider_ketamine = 0.5;
 force force kat_pharma_chromatic_aberration_slider_pervitin = 3.5;
 force force kat_pharma_coagulation = true;
 force force kat_pharma_ivCheckLimbDamage = true;
@@ -1418,6 +1442,39 @@ force force kat_pharma_treatmentTime_Phenylephrine = 7;
 force force kat_pharma_treatmentTime_Reorientation = 2;
 force force kat_pharma_treatmentTime_TXA = 7;
 force force kat_pharma_weapon_sway_pervitin = true;
+force force kat_feedback_effectLowSpO2 = 87;
+force force kat_feedback_enableOpioidEffect = true;
+force force kat_pharma_allowStackScript_EACA = true;
+force force kat_pharma_allowStackScript_TXA = true;
+force force kat_pharma_bandageCycleTime_EACA = 8;
+force force kat_pharma_bandageCycleTime_TXA = 5;
+force force kat_pharma_CheckCoag_Location = 0;
+force force kat_pharma_CheckCoag_MedLevel = 1;
+force force kat_pharma_CheckCoag_TreatmentTime = 10;
+force force kat_pharma_coagulation_allow_clot_text = true;
+force force kat_pharma_coagulation_allow_EACA_script = true;
+force force kat_pharma_coagulation_allow_LargeWounds = true;
+force force kat_pharma_coagulation_allow_MediumWounds = true;
+force force kat_pharma_coagulation_allow_MinorWounds = true;
+force force kat_pharma_coagulation_allow_TXA_script = true;
+force force kat_pharma_coagulation_allowOnAI = false;
+force force kat_pharma_coagulation_factor_count = 30;
+force force kat_pharma_coagulation_factor_limit = 60;
+force force kat_pharma_coagulation_factor_regenerate_time = 150;
+force force kat_pharma_coagulation_on_all_Bodyparts = true;
+force force kat_pharma_coagulation_requireBV = 3.6;
+force force kat_pharma_coagulation_requireHR = true;
+force force kat_pharma_coagulation_time = 10;
+force force kat_pharma_coagulation_time_large = 45;
+force force kat_pharma_coagulation_time_medium = 30;
+force force kat_pharma_coagulation_time_minor = 15;
+force force kat_pharma_coagulation_tourniquetBlock = true;
+force force kat_pharma_eacaClearTrauma = false;
+force force kat_pharma_IVflowControl = false;
+force force kat_pharma_keepScriptRunning_EACA = true;
+force force kat_pharma_keepScriptRunning_TXA = true;
+force force kat_pharma_medLvl_EpinephrineIV = 1;
+force force kat_pharma_treatmentTime_EpinephrineIV = 7;
 
 // KAT - ADV Medical: Surgery
 force force kat_surgery_closedLocation = 0;
@@ -1436,10 +1493,28 @@ force force kat_surgery_npwtLocation = 0;
 force force kat_surgery_npwtMedLevel = 2;
 force force kat_surgery_npwtTime = 20;
 force force kat_surgery_openTime = 15;
-force force kat_surgery_simpleChance = 69;
+force force kat_surgery_simpleChance = 60;
 force force kat_surgery_Surgery_ConsciousnessRequirement = 3;
 force force kat_surgery_surgicalAction_MedLevel = 2;
 force force kat_surgery_surgicalLocation = 0;
+force force kat_surgery_npwt_MedLevel = 2;
+force force kat_surgery_pericardialtap_MedLevel = 1;
+force force kat_surgery_pericardialtapLocation = 0;
+force force kat_surgery_pericardialtapTime = 8;
+force force kat_surgery_reboa_MedLevel = 2;
+force force kat_surgery_reboaLocation = 0;
+force force kat_surgery_reboaTime = 8;
+force force kat_surgery_ultrasound_MedLevel = 1;
+force force kat_surgery_ultrasoundLocation = 0;
+force force kat_surgery_ultrasoundTime =15;
+
+// KAT - ADV Medical: Vitals
+force force kat_vitals_simpleMedical = true;
+
+// KAT - ADV Medical: Watch
+//force force kat_watch_altitudeUnit = 0;
+//force force kat_watch_pressureUnit = 0;
+//force force kat_watch_temperatureUnit = 0;
 
 // KNB
 //KNB_panel_aceAction = true;
