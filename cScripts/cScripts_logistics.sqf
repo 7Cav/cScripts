@@ -548,7 +548,7 @@
         ["kat_naloxone",20],
         ["kat_carbonate",20],
         ["kat_Painkiller",40],
-        ["kat_PenthroxItem",10],
+        ["kat_Penthrox",10],
         
         // Splints
         ["ACE_splint",40],
@@ -737,7 +737,7 @@
         ["kat_fentanyl",10],
         ["kat_ketamine",20],
         ["kat_nalbuphine",30],
-        ["kat_PenthroxItem",20],
+        ["kat_Penthrox",20],
 
         // Airway Management and Respiration
         ["kat_aatKit",4],
@@ -1363,6 +1363,7 @@
         
         // Medical
         ["ACE_EarPlugs",0],
+        ["KAT_Katmin",0],
         
         // Airway Management and Respiration
         ["kat_chestSeal",0],
@@ -1612,13 +1613,13 @@
         ["ACE_salineIV_250",0],
         ["ACE_salineIV_500",0],
 
+        ["kat_epinephrineIV",0],
+        
         //Pills and Inhalants
         ["kat_Carbonate",0],
-        ["kat_CarbonateItem",0],
         ["kat_naloxone",0],
         ["kat_Painkiller",0],
-        ["kat_PainkillerItem",0],
-        ["kat_PenthroxItem",0],
+        ["kat_Penthrox",0],
 
         // Massive Hemorrhage Control
         ["kat_reboa",0],
@@ -1710,13 +1711,13 @@
         ["ACE_salineIV_250",0],
         ["ACE_salineIV_500",0],
 
+        ["kat_epinephrineIV",0],
+
         //Pills and Inhalants
         ["kat_Carbonate",0],
-        ["kat_CarbonateItem",0],
         ["kat_naloxone",0],
         ["kat_Painkiller",0],
-        ["kat_PainkillerItem",0],
-        ["kat_PenthroxItem",0],
+        ["kat_Penthrox",0],
 
         // Massive Hemorrhage Control
         ["ACE_tourniquet",0],
