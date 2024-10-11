@@ -171,6 +171,8 @@
         ["USP_OPS_FASTXP_TAN_MC_07", 0],
         ["USP_OPS_FASTXP_TAN_MC_08", 0],
         ["USP_BOONIE_HAT_MC", 0],
+        ["USP_OPSCORE_FASTMTC_MCA_CGSW", 0],
+        ["USP_OPSCORE_FASTMTC_MCA_CSW", 0],
 
         // Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
@@ -360,6 +362,8 @@
         ["USP_OPSCORE_FASTMTC_CGTW", 0],
         ["USP_OPSCORE_FASTMTC_CSW", 0],
         ["USP_OPSCORE_FASTMTC_CTW", 0],
+        ["USP_OPSCORE_FASTMTC_MCA_CGSW", 0],
+        ["USP_OPSCORE_FASTMTC_MCA_CSW", 0],
 
         // Weapons
         ["rhs_weap_M136_hp",0],
