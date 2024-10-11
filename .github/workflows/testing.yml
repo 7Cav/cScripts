@@ -1,14 +1,15 @@
 name: Testing
 on:
-  pull_request:
   push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request' ||
-      github.event.pull_request.head.repo.full_name !=
-      github.event.pull_request.base.repo.full_name
     steps:
       - name: Checkout the source code
         uses: actions/checkout@master
@@ -19,9 +20,6 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request' ||
-      github.event.pull_request.head.repo.full_name !=
-      github.event.pull_request.base.repo.full_name
     steps:
       - name: Checkout the source code
         uses: actions/checkout@master
@@ -31,11 +29,8 @@ jobs:
           args: --exit e --directory cScripts/functions
         continue-on-error: true # No failure due to many false-positives
 
-  testing:
+  quality:
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request' ||
-      github.event.pull_request.head.repo.full_name !=
-      github.event.pull_request.base.repo.full_name
     steps:
       - name: Checkout the source code
         uses: actions/checkout@master
