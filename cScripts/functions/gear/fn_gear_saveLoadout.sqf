@@ -29,7 +29,7 @@ if (_insignia != "") then {
 
 [
     [],
-    ["Loadout have been saved"],
+    ["Loadout has been saved"],
     [""],
     [""]
 ] call CBA_fnc_notify;
