@@ -36,3 +36,4 @@ class Cav_B_B_Atlas_Medic_Surgeon_F_Local: Cav_B_B_Atlas_Medic_TeamLeader_F {
 // Named
 class Cav_B_B_Atlas_Medic_TeamLeader_3_1_F: Cav_B_B_Atlas_Medic_TeamLeader_F { scope = 1; };
 class Cav_B_B_Atlas_Medic_TeamLeader_3_2_F: Cav_B_B_Atlas_Medic_TeamLeader_F { scope = 1; };
+
