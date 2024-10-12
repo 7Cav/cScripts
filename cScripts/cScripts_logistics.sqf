@@ -451,7 +451,7 @@
         // Bandages
         ["ACE_elasticBandage",60],
         ["ACE_packingBandage",90],
-        ["ACE_quikclot",150],
+        ["ACE_quikclot",60],
         ["kat_chestSeal",20],
         ["kat_guedel",10],
 
@@ -461,6 +461,8 @@
         // Fluids
         ["ACE_plasmaIV",20],
         ["ACE_plasmaIV_500",20],
+        ["ACE_bloodIV",20],
+        ["ACE_bloodIV_500",20],
         
         // IV & IO Catheters
         ["kat_IO_FAST",10],
@@ -521,6 +523,8 @@
         ["ACE_plasmaIV",30],
         ["ACE_plasmaIV_500",30],
         ["ACE_salineIV_250",20],
+        ["ACE_bloodIV",20],
+        ["ACE_bloodIV_500",20],
         
         // IV & IO Catheters
         ["kat_IO_FAST",20],
@@ -534,6 +538,7 @@
         // Cardiac resuscitation
         ["kat_amiodarone",10],
         ["kat_atropine",10],
+        ["kat_epinephrineIV",15],
 
         // Blood Pressure Medication
         ["kat_nitroglycerin",40],
@@ -555,17 +560,18 @@
         
         // Surgical Equipment
         ["kat_scalpel",40],
-        ["kat_plate",10],
-        ["kat_clamp",4],
-        ["kat_retractor",4],
+        ["kat_plate",12],
+        ["kat_clamp",2],
+        ["kat_retractor",2],
         ["kat_vacuum",1],
         ["kat_reboa",12],
+        ["kat_ultrasound",1],
         
         // Surgical Medication
         ["kat_lidocaine",20],
-        ["kat_lorazepam",10],
-        ["kat_etomidate",20],
-        ["kat_flumazenil",10],
+        ["kat_lorazepam",12],
+        ["kat_etomidate",26],
+        ["kat_flumazenil",12],
         
         // Surgical Kits
         ["ACE_surgicalKit",4],
@@ -747,6 +753,8 @@
         ["kat_larynx",15],
         ["kat_pocketBVM",3],
         
+        // Coagulation Equipment
+        ["kat_coag_sense",1],
 
         // Bandages
         ["ACE_elasticBandage",150],
@@ -827,8 +835,7 @@
         ["ACE_SpraypaintRed",1],
 
         // Rifle Ammo
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG",24], // M855A1 PMAGs
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",8] // M856A1 PMAGs
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",24] // M856A1 PMAGs Tracer
     ]],
     ["vehicle_strykerDragoon", [
         // AT
