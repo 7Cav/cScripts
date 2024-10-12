@@ -459,10 +459,11 @@
         ["ACE_tourniquet",50],
         
         // Fluids
-        ["ACE_plasmaIV",20],
-        ["ACE_plasmaIV_500",20],
-        ["ACE_bloodIV",20],
-        ["ACE_bloodIV_500",20],
+        ["ACE_plasmaIV",4],
+        ["ACE_plasmaIV_500",8],
+        ["ACE_salineIV_500",4],
+        ["ACE_bloodIV",4],
+        ["ACE_bloodIV_500",8],
         
         // IV & IO Catheters
         ["kat_IO_FAST",10],
@@ -520,11 +521,12 @@
         ["ACE_tourniquet",20],
         
         // Fluids
-        ["ACE_plasmaIV",30],
-        ["ACE_plasmaIV_500",30],
-        ["ACE_salineIV_250",20],
-        ["ACE_bloodIV",20],
-        ["ACE_bloodIV_500",20],
+        ["ACE_plasmaIV",10],
+        ["ACE_plasmaIV_500",15],
+        ["ACE_salineIV_500",4],
+        ["ACE_salineIV_250",10],
+        ["ACE_bloodIV",10],
+        ["ACE_bloodIV_500",15],
         
         // IV & IO Catheters
         ["kat_IO_FAST",20],
@@ -766,9 +768,12 @@
         ["kat_reboa",10],
 
         // Fluids
-        ["ACE_plasmaIV",30],
-        ["ACE_plasmaIV_500",30],
-        ["ACE_salineIV_250",20],
+        ["ACE_plasmaIV",10],
+        ["ACE_plasmaIV_500",15],
+        ["ACE_salineIV_500",4],
+        ["ACE_salineIV_250",12],
+        ["ACE_bloodIV",10],
+        ["ACE_bloodIV_500",15],
 
         // IV & IO Catheters
         ["kat_IO_FAST",20],
