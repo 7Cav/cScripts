@@ -365,6 +365,20 @@
         ["USP_OPSCORE_FASTMTC_MCA_CGSW", 0],
         ["USP_OPSCORE_FASTMTC_MCA_CSW", 0],
 
+        // Vests
+        ["USP_CRYE_CPC_COMMS_BELT_MC", 0],
+        ["USP_CRYE_CPC_COMMS_MC", 0],
+        ["USP_CRYE_CPC_FAST_BELT_MC", 0],
+        ["USP_CRYE_CPC_FAST_MC", 0],
+        ["USP_CRYE_CPC_LEAD_BELT_MC", 0],
+        ["USP_CRYE_CPC_LEAD_MC", 0],
+        ["USP_CRYE_CPC_LIGHT_BELT_MC", 0],
+        ["USP_CRYE_CPC_LIGHT_MC", 0],
+        ["USP_CRYE_CPC_MEDIC_BELT_MC", 0],
+        ["USP_CRYE_CPC_MEDIC_MC", 0],
+        ["USP_CRYE_CPC_WEAPON_BELT_MC", 0],
+        ["USP_CRYE_CPC_WEAPON_MC", 0],
+
         // Weapons
         ["rhs_weap_M136_hp",0],
         ["rhs_weap_M136",0],
@@ -402,6 +416,7 @@
         ["NDS_M_6Rnd_60mm_HE", 0],
         ["NDS_M_6Rnd_60mm_SMOKE", 0],
         ["NDS_M_6Rnd_60mm_ILLUM", 0],
+        ["UK3CB_P320_9x19_17Rnd", 0],
 
         // Grenades
         ["HandGrenade",10],
@@ -431,6 +446,7 @@
         ["ACE_SpareBarrel",0],
         ["ACE_Chemlight_Shield",0],
         ["ACE_SpraypaintGreen",0],
+        ["acc_flashlight_pistol", 0],
 
         //cTab
         ["ItemAndroid", 0],
