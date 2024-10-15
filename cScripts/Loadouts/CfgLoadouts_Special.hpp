@@ -12,25 +12,25 @@ class S3_Base: Cav_B_Seventh_Cavalry_Base_F {
     postLoadout = "";
 };
 
-class S3 : S3_Base { scope = 1; };
+class S3: S3_Base { scope = 1; };
 
-class S3_1 : S3_Base { scope = 1; };
-class S3_2 : S3_Base { scope = 1; };
-class S3_3 : S3_Base { scope = 1; };
-class S3_4 : S3_Base { scope = 1; };
-class S3_5 : S3_Base { scope = 1; };
-class S3_6 : S3_Base { scope = 1; };
+class S3_1: S3_Base { scope = 1; };
+class S3_2: S3_Base { scope = 1; };
+class S3_3: S3_Base { scope = 1; };
+class S3_4: S3_Base { scope = 1; };
+class S3_5: S3_Base { scope = 1; };
+class S3_6: S3_Base { scope = 1; };
 
-class S3_1_1 : S3_Base { scope = 1; };
-class S3_2_1 : S3_Base { scope = 1; };
-class S3_3_1 : S3_Base { scope = 1; };
-class S3_4_1 : S3_Base { scope = 1; };
-class S3_5_1 : S3_Base { scope = 1; };
-class S3_6_1 : S3_Base { scope = 1; };
+class S3_1_1: S3_Base { scope = 1; };
+class S3_2_1: S3_Base { scope = 1; };
+class S3_3_1: S3_Base { scope = 1; };
+class S3_4_1: S3_Base { scope = 1; };
+class S3_5_1: S3_Base { scope = 1; };
+class S3_6_1: S3_Base { scope = 1; };
 
-class S3_1_2 : S3_Base { scope = 1; };
-class S3_2_2 : S3_Base { scope = 1; };
-class S3_3_2 : S3_Base { scope = 1; };
-class S3_4_2 : S3_Base { scope = 1; };
-class S3_5_2 : S3_Base { scope = 1; };
-class S3_6_2 : S3_Base { scope = 1; };
+class S3_1_2: S3_Base { scope = 1; };
+class S3_2_2: S3_Base { scope = 1; };
+class S3_3_2: S3_Base { scope = 1; };
+class S3_4_2: S3_Base { scope = 1; };
+class S3_5_2: S3_Base { scope = 1; };
+class S3_6_2: S3_Base { scope = 1; };
