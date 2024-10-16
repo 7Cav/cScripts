@@ -55,7 +55,7 @@ params ["_modulePos", "_objectPos"];
                 private _safedWeapons = player getVariable ['ace_safemode_safedWeapons', []]; 
                 if !(_weapon in _safedWeapons) then {  
                     [player, currentWeapon player, currentMuzzle player] call ace_safemode_fnc_lockSafety;
-                    INFO_2("ZEN", "%1 weapon (%2) have been set to safe.");
+                    INFO_2("ZEN", "%1 weapon (%2) has been set to safe.");
                 };
             } remoteExecCall ["bis_fnc_call", -2]; 
         };
@@ -71,7 +71,7 @@ params ["_modulePos", "_objectPos"];
             {
                 (group _x) setBehaviourStrong "CARELESS";
                 (group _x) setCombatMode "BLUE";
-                INFO_2("ZEN", "AI %1 group (%2) have been set to careless and blue.", _x, group _x);
+                INFO_2("ZEN", "AI %1 group (%2) has been set to careless and blue.", _x, group _x);
             } forEach ((allUnits) - (allPlayers));
         };
 
@@ -94,7 +94,7 @@ params ["_modulePos", "_objectPos"];
                                 private _hftext = "You are not allowed to discharge your weapon during Endex.<br />";
 
                                 hint parseText (_hftitle + _hfimage + _hftext);
-                                format ["Player %1 have discharge his weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(info), 0];
+                                format ["Player %1 has discharged their weapon (%2; %3) during endex.", name _unit, _weapon, _muzzle] remoteExecCall [QFUNC(info), 0];
                                 if ( _unit getVariable [QEGVAR(player,endexFiredWeapon), ""] != _muzzle ) then {
                                     format [
                                         "Hold your fire %1 %2!",

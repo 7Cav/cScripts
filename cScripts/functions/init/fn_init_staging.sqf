@@ -84,4 +84,4 @@ if !(GVAR(OneLife)) then {[player, _category] call FUNC(addHeal)};
 [player, "ACE_SelfActions", false] call FUNC(setupLoadoutSelection);
 [_category] call FUNC(addArsenal);
 
-INFO_1("Staging", "Staging options for %1 have been setup.", name player)
+INFO_1("Staging", "Staging options for %1 has been setup.", name player)

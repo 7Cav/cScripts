@@ -32,7 +32,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
             private _channel = [[_player] call EFUNC(unit,getSquadName), _radio] call FUNC(getRadioChannel);
 
             [_x, _channel] call acre_api_fnc_setRadioChannel;
-            INFO_3("Radio", "%1 radio (%2) have its channel set to %3", _player, _x, _channel);
+            INFO_3("Radio", "%1 radio (%2) has its channel set to %3", _player, _x, _channel);
 
             // Store radio channels in variable.
             private _radioAndChannel = _player getVariable [QEGVAR(Player,RadioChannel), []];

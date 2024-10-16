@@ -28,7 +28,7 @@ private _stagingCat = [QEGVAR(Actions_Vehicle,Repair), "Repair and Refuel", _ico
      _vehicle setFuel 1;
      [
           [],
-          ["Vehicle have been refueld and repaired."],
+          ["Vehicle has been refueled and repaired."],
           [""],
           [""]
      ] call CBA_fnc_notify;

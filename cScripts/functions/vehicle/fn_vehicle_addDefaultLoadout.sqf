@@ -29,7 +29,7 @@ private _pylon = [];
 {
     if (_vehicle iskindOf _x) exitWith {
         _pylon = [_x, "default"] call EFUNC(vehicle,getPylonLoadout);
-        INFO_3("VehicleDefaultLoadout", "Vehicle %1 [%2] applied have loadout %3.", _vehicle, typeOf _vehicle, _pylon);
+        INFO_3("VehicleDefaultLoadout", "Vehicle %1 [%2] applied and has loadout %3.", _vehicle, typeOf _vehicle, _pylon);
         [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
     };
 } forEach (keys GVAR(PYLONS));
