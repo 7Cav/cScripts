@@ -95,3 +95,4 @@ if !(player diarySubjectExists "CivCenter") then {
     systemChat format ["Civilian casualties caused by %1 repoted near %2.", name _unit, _location];
     playSound "hint";
 }] call CBA_fnc_addEventHandler;
+
