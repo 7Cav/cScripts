@@ -26,7 +26,7 @@ private _civZones = [];
         private _density = [_x, 21] call BIS_fnc_trimString;
         _density = (_density splitString "_")#0;
         if !(_density in ["extream", "high", "medium", "low", "none"]) then {
-            SHOW_CHAT_WARNING_2("Civ", "Zone %1 have invalid density '%2'.", _x, _density);
+            SHOW_CHAT_WARNING_2("Civ", "Zone %1 has invalid density '%2'.", _x, _density);
             continue;
         };
         private _pos = getMarkerPos _x;
@@ -50,7 +50,7 @@ if !(player diarySubjectExists "CivCenter") then {
 
         private _location = text nearestLocation [_pos, ""];
         private _textLocation = formatText["<font color='#ffc61a'>%1</font> is a population center located at <font color='#ffc61a'>%2</font>.", _location, mapGridPosition _pos];
-        private _textDensity = if (_density != "none") then { formatText["<br/><br/>The location have <font color='#ffc61a'>%1</font> density.", _density]; } else {""};
+        private _textDensity = if (_density != "none") then { formatText["<br/><br/>The location has <font color='#ffc61a'>%1</font> density.", _density]; } else {""};
         private _record = player createDiaryRecord ["CivCenter", [_location, format [
             "%1%2", _textLocation, _textDensity
         ]]];
@@ -95,3 +95,4 @@ if !(player diarySubjectExists "CivCenter") then {
     systemChat format ["Civilian casualties caused by %1 repoted near %2.", name _unit, _location];
     playSound "hint";
 }] call CBA_fnc_addEventHandler;
+

@@ -49,7 +49,7 @@ if (EGVAR(patches,usesACRE)) exitWith {
         if (count _radio != 0) then {
             private _channel = _radioChannel select _forEachIndex;
             [_radio, _channel] call acre_api_fnc_setRadioChannel;
-            INFO_4("VehicleRadio", "Vehicle %1 (%2) radio %3 in rack %3 have radio set to channel %4", _vehicle, typeOf _vehicle, _radio, _x, _channel);
+            INFO_4("VehicleRadio", "Vehicle %1 (%2) radio %3 in rack %3 has radio set to channel %4", _vehicle, typeOf _vehicle, _radio, _x, _channel);
         };
     } forEach _racks;
 };

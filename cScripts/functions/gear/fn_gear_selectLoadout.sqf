@@ -1,7 +1,7 @@
 #include "..\script_component.hpp";
 /*
  * Author: BaerMitUmlaut, CPL.Brostrom.A
- * This function selects a loadout based on if you have a save variable loadout or config.
+ * This function selects a loadout based on if you have a saved variable loadout or config.
  *
  * Arguments:
  * 0: Unit <OBJECT>

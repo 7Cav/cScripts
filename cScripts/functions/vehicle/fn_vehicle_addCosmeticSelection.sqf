@@ -209,7 +209,7 @@ private _textures = [
             call _code;
             [
                 [],
-                ["Vehicle art have been changed"],
+                ["Vehicle art has been changed"],
                 [_texture, 10],
                 [""]
             ] call CBA_fnc_notify;

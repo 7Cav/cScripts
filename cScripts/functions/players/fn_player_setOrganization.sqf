@@ -34,6 +34,6 @@ _company = toLower _company;
 SETVAR(player,EGVAR(Player,Company),_company);
 
 private _unit = name player;
-INFO_3("Player", "%1 have company set to '%2' and platoon set to '%3'",_unit,_company,_platoon);
+INFO_3("Player", "%1 has company set to '%2' and platoon set to '%3'",_unit,_company,_platoon);
 
 [_platoon, _company]
