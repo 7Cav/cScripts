@@ -14,7 +14,7 @@
 
 params [["_object", objNull, [objNull]]];
 
-INFO_1("addObjectToCurator", "%1 have been added to all curators.", _object);
+INFO_1("addObjectToCurator", "%1 has been added to all curators.", _object);
 
 [{
     {

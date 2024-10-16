@@ -96,7 +96,7 @@ if (!isServer) exitWith {};
                 ["spottime", _unit skill "spottime"],
                 ["spotdistance", _unit skill "spotdistance"]
             ];
-            INFO_3("init","AI unit %1 (%2) have skill levels %3.", _unit, typeOf _unit, _skillArray);
+            INFO_3("init","AI unit %1 (%2) has skill levels %3.", _unit, typeOf _unit, _skillArray);
         };
     };
 }, true, [], true] call CBA_fnc_addClassEventHandler;
