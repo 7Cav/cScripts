@@ -1,4 +1,4 @@
-// A3TI
+// A3TII
 //A3TI_ACE_JAVELIN = false;
 //A3TI_ALLOW_TANK_DRIVER = false;
 //A3TI_ALLOW_VANILLA_TI = true;
