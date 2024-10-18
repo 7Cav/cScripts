@@ -19,8 +19,8 @@ enableSaving [false, false];
 // To Turns off or on ambient Wildelife, Ambient Sounds and wind sound strenght.
 enableEnvironment [false, true, 1];
 
-ACE_maxWeightCarry = 7500;
-ACE_maxWeightDrag = 10000;
+ACE_maxWeightCarry = 8000;
+ACE_maxWeightDrag = 12000;
 
 INFO("init", "Initialization completed.");
 
