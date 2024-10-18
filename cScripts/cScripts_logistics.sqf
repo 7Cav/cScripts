@@ -1469,7 +1469,18 @@
         ["UK3CB_P320_9x19_17Rnd",0],
         ["rhs_weap_rsp30_green",0],
         ["rhs_weap_rsp30_red",0],
-        ["acc_flashlight_pistol",0]
+        ["acc_flashlight_pistol",0],
+        
+        //Backpack
+        ["USP_TACTICAL_PACK_CCT", 0],
+        ["USP_TACTICAL_PACK_CCT2", 0],
+        ["USP_TACTICAL_PACK_CCT3", 0],
+        ["USP_TACTICAL_PACK_CCT4", 0],
+        ["USP_TACTICAL_PACK_CCT5", 0],
+        ["USP_TACTICAL_PACK_CCT6", 0],
+        ["USP_TACTICAL_PACK_CCT7", 0],
+        ["USP_TACTICAL_PACK_CCT8", 0],
+        ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
     ]],
     ["arsenal_role_fireteamleader", [
         ["ACE_microDAGR", 0],
