@@ -1,13 +1,13 @@
 #include "..\script_component.hpp";
 /*
- * Author: CPL.Brostrom.A, Elemtael
+ * Author: CPL.Brostrom.A
  * This function adds a auto ejection system to a vehicle
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Example:
- * ["my_jetFighter"] call cScripts_fnc_addLineJump
+ * ["my_jetFighter"] call cScripts_fnc_vehicle_planeAutoEject
  *
  */
 
