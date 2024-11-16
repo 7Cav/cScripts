@@ -18,7 +18,7 @@ if (!isNil {_vehicle GETVAR(QEGVAR(VehicleFunc,AutoEject),nil)}) exitWith {SHOW_
 
 _vehicle addEventHandler ["Hit", {
 	params ["_vehicle"];
-    if (damage _unit > 0.95) exitWith {
+    if (damage _vehicle > 0.95) exitWith {
         [driver _vehicle, _vehicle] call EFUNC(para,haloJump);
     };
 }];
