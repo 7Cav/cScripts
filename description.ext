@@ -72,4 +72,30 @@ class CfgFunctions {
 };
 #include "cScripts\CfgLoadouts.hpp"
 
+/*        FORTIFY PRESET      */
+
+class ACEX_Fortify_Presets {
+    class TAG_7Cav {
+        displayName = "7Cav Preset";
+        objects[] = {
+            {"Land_BagFence_01_short_green_F", 5, "Green Camo"},
+            {"Land_BagFence_01_long_green_F", 10, "Green Camo"},
+            {"Land_BagFence_01_round_green_F", 10, "Green Camo"},
+            {"StorageBladder_01_fuel_forest_F", 10, "Green Camo"},
+            {"UK3CB_Nest_Jun", 20, "Green Camo"},
+            {"CamoNet_BLUFOR_open_F", 20, "Green Camo"},
+            {"Land_MedicalTent_01_NATO_tropic_generic_open_F", 20, "Green Camo"},
+            {"Land_BagFence_short_F", 5, "Tan Camo"},
+            {"Land_BagFence_long_F", 10, "Tan Camo"},
+            {"Land_BagFence_round_F", 10, "Tan Camo"},
+            {"StorageBladder_01_fuel_sand_F", 10, "Green Camo"},
+            {"UK3CB_Nest", 20, "Tan Camo"},
+            {"Land_CamoNetVar_NATO_EP1", 20, "Tan Camo"},
+            {"Land_MedicalTent_01_NATO_generic_open_F", 20, "Tan Camo"},
+            {"Land_RoadCone_01_F", 5, "Misc"},
+            {"UK3CB_Nest_Win", 20, "Misc"}
+        };
+    };
+};
+
 /*           OTHER            */
