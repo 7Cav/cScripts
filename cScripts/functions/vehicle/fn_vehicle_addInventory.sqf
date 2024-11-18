@@ -214,12 +214,34 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 GET_CONTAINER("vehicle_HMMWV_Weapons")
             ] call FUNC(setCargo);
         };
+        
+        case "rhsusf_m998_w_s_4dr_fulltop";
+        case "rhsusf_m998_d_s_4dr_fulltop":{
+
+            // Vehicle Inventory
+            [_vehicle, 
+                GET_CONTAINER("vehicle_atlas_m998")
+            ] call FUNC(setCargo);
+        };
+        
+        case "rhsusf_m998_d_2dr_halftop";       
+        case "rhsusf_m998_w_2dr_halftop": {
+            [_vehicle, 10, 38, false, false] call FUNC(setCargoAttributes);
+
+            // Emergency kit in case of tire damage and fuel loss.
+            ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
+
+            // Vehicle Inventory
+            [_vehicle, 
+                GET_CONTAINER("vehicle_atlas_m998")
+            ] call FUNC(setCargo);
+        };
         case "rhsusf_M1239_socom_d";
         case "rhsusf_M1239_M2_socom_d";
         case "rhsusf_M1239_MK19_socom_d";
         case "rhsusf_M1239_M2_Deploy_socom_d";
         case "rhsusf_M1239_MK19_Deploy_socom_d": {
-            [_vehicle, 15, 38, false, false] call FUNC(setCargoAttributes);
+            [_vehicle, 16, 38, false, false] call FUNC(setCargoAttributes);
 
             // Emergency kit in case of tire damage and fuel loss.
             ["ACE_Wheel", _vehicle, true] call ace_cargo_fnc_loadItem;
@@ -231,7 +253,7 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
             ["FlexibleTank_01_forest_F", _vehicle, true] call ace_cargo_fnc_loadItem; // Emergency Fuel Tank
             // Vehicle Inventory
             [_vehicle, 
-                GET_CONTAINER("vehicle_strykerDragoon")
+                GET_CONTAINER("vehicle_atlas_auv")
             ] call FUNC(setCargo);
 
             // Supply Crate
@@ -239,13 +261,14 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 GET_CONTAINER("crate_strykerDragoon_resupply"), 
                 _vehicle, nil, "Resupply Crate"
             ] call FUNC(createCargoCrate);
-
-            // 2 Stingers to distribute to 1 section.
-            ["Box_NATO_WpsLaunch_F", 
-                GET_CONTAINER("crate_stinger"), 
-                _vehicle, nil, "MANPAD"
+            
+            // Medical Crate
+            ["ace_medicalSupplyCrate",
+                GET_CONTAINER("crate_medicalAtlas"),
+                _vehicle, nil, "Medical Supply Crate"
             ] call FUNC(createCargoCrate);
 
+            // Stinger
             ["Box_NATO_WpsLaunch_F", 
                 GET_CONTAINER("crate_stinger"), 
                 _vehicle, nil, "MANPAD"
