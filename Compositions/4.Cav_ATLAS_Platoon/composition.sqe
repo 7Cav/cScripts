@@ -797,7 +797,7 @@ class items
 					position[]={-12.856079,4.7683716e-07,7.4328613};
 				};
 				title="ATLAS-3 Logistics (Tooltip)";
-				description="ATLAS-3 should only be deployed for Bravo Operations and Charlie Mechanized operations but may also be deployed during any Defence or Platoon Retrograde operations, at the mission makers descretion." \n "" \n "M1239 AUV is deployed for FARP operations, it has the fortify area attached  to the vehicle with a custom preset (See description.ext) and is always deployed with a Humvee for Logistical runs." \n "" \n "If no FARPS are required you could simply deploy two of the Humvees for logistical runs and can have the medic removed at the mission makers descretion.";
+				description="ATLAS-3 should only be deployed for Bravo Operations and Charlie Motorized operations but may also be deployed during any Defence or Platoon Retrograde operations, at the mission makers descretion." \n "" \n "M1239 AUV is deployed for FARP operations, it has the fortify area attached  to the vehicle with a custom preset (See description.ext) and is always deployed with a Humvee for Logistical runs." \n "" \n "If no FARPS are required you could simply deploy two of the Humvees for logistical runs and can have the medic removed at the mission makers descretion.";
 				id=548;
 			};
 			class Item12
