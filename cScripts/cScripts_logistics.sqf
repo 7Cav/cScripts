@@ -331,6 +331,9 @@
         ["ACE_bodyBag",0],
         ["ACE_personalAidKit",0],
 
+        //Vests
+        ["V_TacChestrig_cbr_F", 0],
+
         // Backpacks
         ["USP_DELTA_BAG_MC", 0],
         ["USP_TACTICAL_PACK_CCT", 0],
@@ -1947,6 +1950,9 @@
         ["rhs_weap_mk18_wd", 0],
         ["rhs_weap_mk18_KAC_wd", 0],
 
+        //Vests
+        ["V_TacChestrig_cbr_F", 0],
+
         //Attachments
         ["rhsusf_acc_sf3p556", 0],
         ["rhsusf_acc_eotech", 0],
@@ -1996,7 +2002,10 @@
         
         //Magazines
         ["rhsusf_20Rnd_762x51_SR25_m118_special_Mag", 0],
-        
+
+        //Vests
+        ["V_TacChestrig_cbr_F", 0],
+
         //Attachments
         ["rhsusf_acc_harris_bipod", 0],
         ["rhsusf_acc_anpeq15side", 0],
