@@ -284,6 +284,9 @@
         ["DemoCharge_Remote_Mag",0],
         ["ClaymoreDirectionalMine_Remote_Mag",0],
 
+        //Vests
+        ["V_TacChestrig_cbr_F", 0],
+
         // Backpack
         ["B_AssaultPack_mcamo", 0],
         ["USP_REEBOW_3DAP_MC", 0],
@@ -330,9 +333,6 @@
         ["ACE_EarPlugs",10],
         ["ACE_bodyBag",0],
         ["ACE_personalAidKit",0],
-
-        //Vests
-        ["V_TacChestrig_cbr_F", 0],
 
         // Backpacks
         ["USP_DELTA_BAG_MC", 0],
