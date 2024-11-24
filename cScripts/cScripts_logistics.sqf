@@ -175,8 +175,8 @@
         ["USP_OPSCORE_FASTMTC_MCA_CSW", 0],
 
         // Ammo
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 56],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 56],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["30Rnd_556x45_Stanag_Sand_red", 0],
