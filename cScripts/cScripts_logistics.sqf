@@ -751,12 +751,14 @@
         ["ACE_Chemlight_IR",15],
 
         // Explosives
-        ["SatchelCharge_Remote_Mag",2],
-        ["DemoCharge_Remote_Mag",4],
+        ["DemoCharge_Remote_Mag",8],
 
         ["ACE_EarPlugs", 3],
-        ["ACE_quikclot", 80],
-        ["ACE_tourniquet", 15]
+        ["ACE_packingBandage", 50],
+        ["ACE_quikclot", 20],
+        ["ACE_splint",10],
+        ["ACE_tourniquet", 10],
+        ["kat_chestSeal",15]
     ]],
 
     // // // // // // //
@@ -1933,26 +1935,12 @@
     ]],    
     ["arsenal_role_logistics", [
         // Tools
-        ["ACE_wirecutter",0],
+        ["ACE_Clacker",0],
         ["ACE_Fortify",0],
         ["ACE_M26_Clacker",0],
+        ["ACE_wirecutter",0],
         
         // Equipment
-        ["ace_marker_flags_black",0],
-        ["ace_marker_flags_blue",0],
-        ["ace_marker_flags_green",0],
-        ["ace_marker_flags_orange",0],
-        ["ace_marker_flags_purple",0],
-        ["ace_marker_flags_red",0],
-        ["ace_marker_flags_white",0],
-        ["ace_marker_flags_yellow",0],
-        ["KNB_PanelGreen",0],
-        ["KNB_PanelRed",0],
-        ["KNB_PanelYellow",0],
-        ["ACE_rope3",0],
-        ["ACE_rope6",0],
-        ["ACE_rope12",0],
-        ["ACE_rope15",0],
         ["ACE_Chemlight_HiBlue",0],
         ["ACE_Chemlight_HiGreen",0],
         ["ACE_Chemlight_HiRed",0],
@@ -1961,12 +1949,26 @@
         ["ACE_Chemlight_UltraHiOrange",0],
         ["ACE_HandFlare_Green",0],
         ["ACE_HandFlare_Red",0],
-        ["ACE_HandFlare_Yellow",0]
+        ["ACE_HandFlare_Yellow",0],
+        ["ace_marker_flags_black",0],
+        ["ace_marker_flags_blue",0],
+        ["ace_marker_flags_green",0],
+        ["ace_marker_flags_orange",0],
+        ["ace_marker_flags_purple",0],
+        ["ace_marker_flags_red",0],
+        ["ace_marker_flags_white",0],
+        ["ace_marker_flags_yellow",0],
+        ["ACE_rope12",0],
+        ["ACE_rope15",0],
+        ["ACE_rope3",0],
+        ["ACE_rope6",0],
+        ["KNB_PanelGreen",0],
+        ["KNB_PanelRed",0],
+        ["KNB_PanelYellow",0],
 
-        /* Explosives (Disabled for now)
-        ["DemoCharge_Remote_Mag",0],
-        ["AMP_Breaching_Charge_Mag",0]
-        */
+        // Explosives
+        ["AMP_Breaching_Charge_Mag",0],
+        ["DemoCharge_Remote_Mag",0]
     ]],
     ["arsenal_role_cls",[
         // Airway Management and Respiration

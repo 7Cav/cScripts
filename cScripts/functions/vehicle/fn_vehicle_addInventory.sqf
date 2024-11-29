@@ -256,9 +256,9 @@ if (_vehicle iskindOf "MRAP_01_base_F") then {
                 GET_CONTAINER("vehicle_atlas_auv")
             ] call FUNC(setCargo);
 
-            // Supply Crate
-            ["Box_NATO_Wps_F", 
-                GET_CONTAINER("crate_strykerDragoon_resupply"), 
+            // General Supply Crate
+            ["I_supplyCrate_F", 
+                GET_CONTAINER("crate_resupply_general"), 
                 _vehicle, nil, "Resupply Crate"
             ] call FUNC(createCargoCrate);
             
