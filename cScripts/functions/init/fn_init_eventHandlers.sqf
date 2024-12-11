@@ -30,6 +30,20 @@ if (GVAR(isPlayer)) then {
     //}] call CBA_fnc_addEventHandler;
 };
 
+// Scale adjuster for 
+addMissionEventHandler ["MarkerCreated", {
+    params ["_marker", "_channelNumber", "_owner", "_local"];
+    switch (markerType _marker) do {
+        case "My_classname"; // test marker
+        case "_markerRescale" { 
+            private _size = getMarkerSize _marker;
+            if (_size#0 == 1 && _size#1 == 1) then {
+                _marker setMarkerSize "1.55"
+            };
+        };
+        default {};
+    };
+}];
 
 // Server Events
 if (!isServer) exitWith {};
