@@ -1738,6 +1738,7 @@
         // Diagnostic Tools
         ["kat_Pulseoximeter",0],
         ["kat_stethoscope",0],
+        ["kat_ultrasound",0],
 
         // Fluids
         ["ACE_bloodIV",0],
