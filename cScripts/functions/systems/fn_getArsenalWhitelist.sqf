@@ -73,7 +73,6 @@ private _roleSpecific = switch ([player] call EFUNC(gear,getLoadoutRole)) do {
     case "cls": {GET_CONTAINER_KEYS("arsenal_role_cls");};
     case "medic": {GET_CONTAINER_KEYS("arsenal_role_medic");};
     case "doctor": {GET_CONTAINER_KEYS("arsenal_role_doctor");};
-    case "logistics": {GET_CONTAINER_KEYS("arsenal_role_logistics");};
     default {[]};
 };
 

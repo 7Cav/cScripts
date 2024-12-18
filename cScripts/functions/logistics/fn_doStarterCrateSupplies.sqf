@@ -29,7 +29,7 @@ _companySelector = toUpper(_companySelector);
 // Create categories
 private _officer = ["OFFICER"];
 private _alpha   = ["ALPHA", "BUFFALO", "TITAN", "RAIDER", "SPARROW"];
-private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "ATLAS Medical","ATLAS Logistics"];
+private _bravo   = ["BRAVO", "LANCER", "VIKING", "SABER", "BANSHEE", "ATLAS"];
 private _charlie = ["CHARLIE", "BANDIT", "MISFIT"];
 
 if !(_companySelector in (["NONE", "FULL", "ALL"] + _officer + _alpha + _bravo + _charlie)) exitWith {
@@ -46,7 +46,6 @@ private _container = switch (_companySelector) do {
     case "ALPHA": {GET_CONTAINER("alpha_company");};
 
     case "ATLAS": {GET_CONTAINER("bravo_company_atlas");};
-    case "ATLAS_L": {GET_CONTAINER("bravo_company_atlas_logistics");};
     case "SABER";
     case "VIKING";
     case "BRAVO": {GET_CONTAINER("bravo_company_viking");};
@@ -61,7 +60,7 @@ private _container = switch (_companySelector) do {
         {
             private _items = GET_CONTAINER(_x);
             _fullContainer append _items;
-        } forEach ["alpha_company", "bravo_company_atlas","bravo_company_atlas_logistics", "bravo_company_viking", "charlie_company"];
+        } forEach ["alpha_company", "bravo_company_atlas", "bravo_company_viking", "charlie_company"];
     };
 
     case "";

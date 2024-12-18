@@ -1,18 +1,18 @@
 version=54;
-name="5.ATLAS_Platoon_v4.5.21";
-author="=7Cav=SGT.Blake.H";
+name="4.ATLAS_Platoon_DEVBUILD";
+author="=7Cav=CPL.Zaren.T";
 category="Cav_EdSubcat_Deploy_Platoon";
 requiredAddons[]=
 {
-	"ace_fortify",
-	"Desert",
 	"cav_charlie_characters_units",
+	"rhsusf_c_m11xx",
+	"rhsusf_c_RG33",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
 	"cav_troops_bravo_atlas",
 	"rhsusf_vehicles",
 	"cav_vehicles_dragoon",
 	"rhsusf_c_Caiman",
-	"rhsusf_c_M1239",
-	"cav_bravo_characters"
+	"rhsusf_c_stryker",
+	"rhsusf_c_M1239"
 };
