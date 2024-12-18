@@ -388,6 +388,42 @@
         ["USP_TACTICAL_PACK_CCT8", 0]
     ]],
 
+    ["bravo_company_atlas_logistics", [
+        // Tools
+        ["ACE_wirecutter", 0],
+        ["ACE_Fortify",0],
+        ["ACE_M26_Clacker",0],
+        
+        // Equipment
+        ["ace_marker_flags_black",0],
+        ["ace_marker_flags_blue",0],
+        ["ace_marker_flags_green",0],
+        ["ace_marker_flags_orange",0],
+        ["ace_marker_flags_purple",0],
+        ["ace_marker_flags_red",0],
+        ["ace_marker_flags_white",0],
+        ["ace_marker_flags_yellow",0],
+        ["KNB_PanelGreen",0],
+        ["KNB_PanelRed",0],
+        ["KNB_PanelYellow",0],
+        ["ACE_rope3",0],
+        ["ACE_rope6",0],
+        ["ACE_rope12",0],
+        ["ACE_rope15",0],
+        ["ACE_Chemlight_HiBlue",0],
+        ["ACE_Chemlight_HiGreen",0],
+        ["ACE_Chemlight_HiRed",0],
+        ["ACE_Chemlight_HiWhite",0],
+        ["ACE_Chemlight_HiYellow",0],
+        ["ACE_Chemlight_UltraHiOrange",0],
+        ["ACE_HandFlare_Green",0],
+        ["ACE_HandFlare_Red",0],
+        ["ACE_HandFlare_Yellow",0],
+
+        // Explosives
+        ["DemoCharge_Remote_Mag",0]
+    ]],
+
     ["charlie_company", [
         // Radios
         ["ACRE_PRC343", 0],
@@ -760,12 +796,14 @@
         ["ACE_Chemlight_IR",15],
 
         // Explosives
-        ["SatchelCharge_Remote_Mag",2],
-        ["DemoCharge_Remote_Mag",4],
+        ["DemoCharge_Remote_Mag",8],
 
         ["ACE_EarPlugs", 3],
-        ["ACE_quikclot", 80],
-        ["ACE_tourniquet", 15]
+        ["ACE_packingBandage", 50],
+        ["ACE_quikclot", 20],
+        ["ACE_splint",10],
+        ["ACE_tourniquet", 10],
+        ["kat_chestSeal",15]
     ]],
 
     // // // // // // //
@@ -903,6 +941,99 @@
         // Rifle Ammo
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",24] // M856A1 PMAGs Tracer
     ]],
+    
+    ["vehicle_atlas_m998", [
+        // AT
+        ["rhs_weap_M136_hedp", 2],
+
+        // Tools
+        ["ACE_wirecutter",1],
+        ["ACE_rope6",2],
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20],
+
+        // Grenades
+        ["HandGrenade",6],
+        ["SmokeShell",16],
+        ["SmokeShellBlue",4],
+        ["SmokeShellGreen",4],
+        ["SmokeShellPurple",4],
+
+        // Flags and Paint
+        ["ACE_SpraypaintBlue",1],
+        ["ACE_SpraypaintGreen",1],
+        ["ACE_SpraypaintRed",1],
+
+        // Rifle Ammo
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",12] // M856A1 PMAGs Tracer
+    ]],
+    
+    ["vehicle_atlas_auv", [
+        // AT
+        ["rhs_weap_M136_hedp", 2],
+
+        // Weapons
+        ["rhs_weap_m249_light_S_vfg2",1],
+
+        // Scopes
+        ["rhsusf_acc_ECLAN",1],
+        
+        // Attachments
+        ["rhsusf_acc_SF3P556",1],
+        
+        // MG Ammo
+        ["rhsusf_200Rnd_556x45_mixed_soft_pouch",6],
+
+        // Tools
+        ["ACE_wirecutter",1],
+        ["ACE_rope6",2],
+        ["Toolkit",1],
+
+        // Medical
+        ["kat_AED",1],
+        ["ACE_epinephrine",4],
+        ["ACE_splint",4],
+        ["kat_naloxone",2],
+        ["ACE_tourniquet",8],
+        ["kat_guedel",2],
+        ["kat_ncdKit",2],
+        ["kat_pocketBVM",1],
+        ["kat_accuvac",1],
+        ["kat_chestSeal",4],
+        ["ACE_quikclot",20],
+        ["ACE_packingBandage",20],
+
+        // Grenades
+        ["HandGrenade",4],
+        ["SmokeShell",12],
+        ["SmokeShellBlue",6],
+        ["SmokeShellGreen",6],
+        ["SmokeShellPurple",6],
+
+        // Flags and Paint
+        ["ace_marker_flags_green",6],
+        ["ace_marker_flags_red",6],
+        ["ace_marker_flags_blue",6],
+        ["ACE_SpraypaintBlue",1],
+        ["ACE_SpraypaintGreen",1],
+        ["ACE_SpraypaintRed",1],
+
+        // Rifle Ammo
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",12] // M856A1 PMAGs Tracer
+    ]],
+
     ["vehicle_strykerDragoon", [
         // AT
         ["rhs_weap_fgm148", 1],
@@ -1852,6 +1983,43 @@
         ["USP_TACTICAL_PACK_CCT7", 0],
         ["USP_TACTICAL_PACK_CCT8", 0],
         ["UK3CB_US_B_B_RIF_OCP_Radio", 0]
+    ]],    
+    ["arsenal_role_logistics", [
+        // Tools
+        ["ACE_Clacker",0],
+        ["ACE_Fortify",0],
+        ["ACE_M26_Clacker",0],
+        ["ACE_wirecutter",0],
+        
+        // Equipment
+        ["ACE_Chemlight_HiBlue",0],
+        ["ACE_Chemlight_HiGreen",0],
+        ["ACE_Chemlight_HiRed",0],
+        ["ACE_Chemlight_HiWhite",0],
+        ["ACE_Chemlight_HiYellow",0],
+        ["ACE_Chemlight_UltraHiOrange",0],
+        ["ACE_HandFlare_Green",0],
+        ["ACE_HandFlare_Red",0],
+        ["ACE_HandFlare_Yellow",0],
+        ["ace_marker_flags_black",0],
+        ["ace_marker_flags_blue",0],
+        ["ace_marker_flags_green",0],
+        ["ace_marker_flags_orange",0],
+        ["ace_marker_flags_purple",0],
+        ["ace_marker_flags_red",0],
+        ["ace_marker_flags_white",0],
+        ["ace_marker_flags_yellow",0],
+        ["ACE_rope12",0],
+        ["ACE_rope15",0],
+        ["ACE_rope3",0],
+        ["ACE_rope6",0],
+        ["KNB_PanelGreen",0],
+        ["KNB_PanelRed",0],
+        ["KNB_PanelYellow",0],
+
+        // Explosives
+        ["AMP_Breaching_Charge_Mag",0],
+        ["DemoCharge_Remote_Mag",0]
     ]],
     ["arsenal_role_cls",[
         // Airway Management and Respiration
