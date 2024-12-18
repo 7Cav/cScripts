@@ -18,6 +18,8 @@
 params [["_vehicle", objNull, [objNull]]];
 
 private _textures = [
+
+    // Saber
     ["rhsusf_m1a1tank_base", "Saber-1 (120mm IV)", [
         "\z\cav\addons\textures\data\vehicles\abrams\BarrelArt_120mmIV_ca.paa",
         {
@@ -58,7 +60,7 @@ private _textures = [
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), 4, true];
         }
     ]],
-        ["rhsusf_m1a1tank_base", "Saber-1", [
+    ["rhsusf_m1a1tank_base", "Saber-1", [
         "\rhsusf\addons\RHSUSF_Decals\Data\Labels\ArmyPlt_Abrams_D\1_ca.paa",
         {
             [_vehicle, [
@@ -98,6 +100,8 @@ private _textures = [
             _vehicle setVariable [QEGVAR(Vehicle,Callsign), -4, true];
         }
     ]],
+
+    // Dragoon
     ["cav_dragoon_base_F", "Toggle Camo Net", [
         "",
         {
@@ -193,6 +197,52 @@ private _textures = [
                 [2, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_wheel_co.paa"],
                 [3, "a3\armor_f\data\camonet_nato_desert_co.paa"],
                 [4, "a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_sand_co.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+        }
+    ]]
+
+    // USAF_A10
+    ["USAF_A10", "Clean", [
+        "",
+        {
+            _vehicle animateSource ["serial_nose",1, true];
+            _vehicle animateSource ["serial_gear",0, true];
+            [_vehicle, [
+                [0, "\usaf_a10\skins\a10_01_worn_co.paa"],
+
+                // Tail Number
+                [25, ""], //tail_art
+                [26, "\z\cav\addons\insignia\data\Alpha_1_D.paa"],
+                [27, "\usaf_main\characters\c_dg.paa"],
+                [28, "\usaf_main\characters\a_dg.paa"],
+
+                [29,"\usaf_main\data\tail\fy\70_d.paa"],
+
+                [30, "\usaf_main\characters\numbers\n_4_dg.paa"],
+                [21, "\usaf_main\characters\numbers\n_2_dg.paa"],
+                [22, "\usaf_main\characters\numbers\n_1_dg.paa"]
+            ]] call EFUNC(vehicle,applyTextures);
+        }
+    ]],
+    ["USAF_A10", "Shark", [
+        "",
+        {
+            _vehicle animateSource ["serial_nose",0, true];
+            _vehicle animateSource ["serial_gear",1, true];
+            [_vehicle, [
+                [0, "\usaf_a10\skins\a10_01_worn_shark_co.paa"],
+
+                // Tail Number
+                [25, ""], //tail_art
+                [26, "\z\cav\addons\insignia\data\Alpha_1_D.paa"],
+                [27, "\usaf_main\characters\c_dg.paa"],
+                [28, "\usaf_main\characters\a_dg.paa"],
+
+                [29,"\usaf_main\data\tail\fy\70_d.paa"],
+
+                [30, "\usaf_main\characters\numbers\n_4_dg.paa"],
+                [21, "\usaf_main\characters\numbers\n_2_dg.paa"],
+                [22, "\usaf_main\characters\numbers\n_1_dg.paa"]
             ]] call EFUNC(vehicle,applyTextures);
         }
     ]]

@@ -241,6 +241,26 @@ if (_vehicle iskindOf "NDS_M224_mortar_base") then {
 if (_vehicle iskindOf "RHS_C130J_Base") then {
 };
 
+if (_vehicle iskindOf "USAF_A10") then {
+    _vehicle animateSource ["serial_nose",1, true];
+    _vehicle animateSource ["serial_gear",0, true];
+    [_vehicle, [
+        [0, "\usaf_a10\skins\a10_01_worn_co.paa"],
+
+        // Tail Number
+        [25, ""], //tail_art
+        [26, "\z\cav\addons\insignia\data\Alpha_1_D.paa"],
+        [27, "\usaf_main\characters\c_dg.paa"],
+        [28, "\usaf_main\characters\a_dg.paa"],
+
+        [29,"\usaf_main\data\tail\fy\70_d.paa"],
+
+        [30, "\usaf_main\characters\numbers\n_4_dg.paa"],
+        [21, "\usaf_main\characters\numbers\n_2_dg.paa"],
+        [22, "\usaf_main\characters\numbers\n_1_dg.paa"]
+    ]] call EFUNC(vehicle,applyTextures);
+};
+
 _vehicle setPlateNumber "1/7 Cav";
 
 // Add eventHandlers to handle death and deletion.

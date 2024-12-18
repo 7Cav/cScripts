@@ -35,7 +35,7 @@
             ]]
         ]],
         [ "default", [
-            ["displayName", "Default"],
+            ["displayName", "Mixed"],
             ["icon", ""],
             ["loadout", [
                 ["rhs_mag_smokegen",[-1],999],
@@ -174,93 +174,6 @@
                 ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
                 ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78],
                 ["cav_78Rnd_30mm_APFSDS_shells_Tracer_Red",[0],78]
-            ]]
-        ]]
-    ]],
-    ["rhsusf_M1165A1_GMV_SAG2_M2_M240_base", [
-        ["default",[
-            ["displayName", "Default"],
-            ["icon", ""],
-            ["loadout",[
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200]
-            ]]
-        ]]
-    ]],
-    ["rhsusf_M1165A1_GMV_SAG2_Mk19_M240_base", [
-        ["default",[
-            ["displayName", "Default"],
-            ["icon", ""],
-            ["loadout",[
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[2],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200],
-                ["rhs_mag_762x51_M240_200",[3],200]
             ]]
         ]]
     ]],
@@ -432,4 +345,137 @@
             ]]
         ]]
     ]]
+
+    ["rhsusf_M1165A1_GMV_SAG2_M2_M240_base", [
+        ["default",[
+            ["displayName", "Default"],
+            ["icon", ""],
+            ["loadout",[
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_100rnd_127x99_mag_Tracer_Red",[0],100],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200]
+            ]]
+        ]]
+    ]],
+    ["rhsusf_M1165A1_GMV_SAG2_Mk19_M240_base", [
+        ["default",[
+            ["displayName", "Default"],
+            ["icon", ""],
+            ["loadout",[
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["RHS_48Rnd_40mm_MK19_M430A1",[0],48],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[2],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200],
+                ["rhs_mag_762x51_M240_200",[3],200]
+            ]]
+        ]]
+    ]],
+
+
+    // FixedWings
+    // > getPylonMagazines cursorObject
+
+    // USAF_A10
+    //["USAF_A10", [
+    //    ["groundsuperiority", [
+    //        ["displayName", "Ground Superiority"],
+    //        ["icon", ""],
+    //        ["loadout", [
+    //            "USAF_PylonRack_21Rnd_HYDRA70",
+    //            "USAF_PylonRack_21Rnd_HYDRA70",
+    //            "USAF_PylonRack_21Rnd_HYDRA70",
+    //            "USAF_PylonRack_21Rnd_HYDRA70",
+    //            "USAF_PylonRack_1Rnd_GBU12",
+    //            "",
+    //            "USAF_PylonRack_1Rnd_GBU12",
+    //            "USAF_PylonRack_21Rnd_HYDRA70",
+    //            "USAF_PylonRack_21Rnd_HYDRA70",
+    //            "USAF_PylonRack_21Rnd_HYDRA70",
+    //            "USAF_PylonRack_21Rnd_HYDRA70"
+    //        ]]
+    //    ]]
+    //]]
+
+
+    // Helicopters
+
+    // RHS_AH64D
+    //["RHS_AH64D", [
+    //    ["displayName", "Ground Superiority"],
+    //    ["icon", ""],
+    //        ["loadout", [
+    //        ["default", [
+    //            "", // Wing tips
+    //            "rhs_mag_M151_19",
+    //            "rhs_mag_AGM114L_4",
+    //            "rhs_mag_AGM114K_4",
+    //            "rhs_mag_M151_19",
+    //            "", // Wing tips
+    //            "rhsusf_M130_CMFlare_Chaff_Magazine_x2"
+    //        ]]
+    //    ]]
+    //]]
 ];
