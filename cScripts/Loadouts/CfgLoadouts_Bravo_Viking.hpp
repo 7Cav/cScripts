@@ -22,7 +22,6 @@ class Cav_B_B_Scout_PlatoonSergeant_F: Cav_B_B_Scout_Officer_F {
     displayName = "Platoon Sergeant";
     scope = 2;
     loadout = [["rhs_weap_m4a1_blockII_grip2_KAC","rhsusf_acc_SF3P556","rhsusf_acc_anpeq15","rhsusf_acc_T1_high",["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",30],[],"rhsusf_acc_grip2"],[],["UK3CB_P320_DES","","acc_flashlight_pistol","",["UK3CB_P320_9x19_17Rnd",17],[],""],["USP_G3C_RS2_KP_OR_MC",[["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",16],["kat_chestSeal",2],["kat_guedel",1],["ACE_EarPlugs",1],["ACE_splint",2],["ACE_quikclot",8],["ACE_CableTie",2],["kat_Painkiller",2,10],["ACE_Chemlight_IR",1,1]]],["USP_CRYE_JPC_ASLTB",[["UK3CB_P320_9x19_17Rnd",2,17],["SmokeShell",4,1],["SmokeShellBlue",2,1],["HandGrenade",2,1],["SmokeShellPurple",1,1],["SmokeShellRed",2,1],["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red",7,30]]],["USP_TACTICAL_PACK",[["USP_PVS15",1],["ACE_EntrenchingTool",1],["KNB_PanelYellow",1],["ToolKit",1]]],"USP_OPSCORE_FASTMTC_CSW","",["ACE_Vector","","","",[],[],""],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
-    abilityEngineer = 1;
 };
 
 class Cav_B_B_Scout_PlatoonMedic_F: Cav_B_B_Scout_Officer_F {
