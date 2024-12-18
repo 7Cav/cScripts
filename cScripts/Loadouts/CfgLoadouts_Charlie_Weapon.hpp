@@ -17,7 +17,7 @@ class Cav_B_C_Weapons_M240B_FireTeamLeader_F: Cav_B_Charlie_Weapons_base_F {
 class Cav_B_C_Weapons_M240B_Machinegunner_F: Cav_B_Charlie_Weapons_base_F {
     displayName = "Machine Gunner";
     scope = 2;
-    loadout = [["rhs_weap_m240B","rhsusf_acc_ARDEC_M240","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_MDO",["rhsusf_100Rnd_762x51_m62_tracer",100],[],""],[],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["kat_chestSeal",2],["kat_guedel",1],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_EarPlugs",1],["ACE_microDAGR",1],["ACE_packingBandage",10],["ACE_splint",2],["USP_PVS15",1],["kat_Painkiller",1,4],["SmokeShell",1,1]]],["USP_CRYE_JPC_MGB",[["SmokeShell",1,1],["rhsusf_100Rnd_762x51_m62_tracer",6,100],["HandGrenade",2,1]]],[],"USP_OPSCORE_FASTMTC_CW","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
+    loadout = [["rhs_weap_m240B","rhsusf_acc_ARDEC_M240","rhsusf_acc_anpeq15side_bk","rhsusf_acc_ACOG_MDO",["rhsusf_100Rnd_762x51_m62_tracer",100],[],""],[],[],["USP_G3C_RS2_KP_OR_MC",[["ACE_quikclot",10],["kat_chestSeal",2],["kat_guedel",1],["ACE_tourniquet",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_microDAGR",1],["ACE_packingBandage",10],["ACE_splint",2],["USP_PVS15",1],["ACE_EarPlugs",1],["kat_Painkiller",1,4],["SmokeShell",1,1]]],["USP_CRYE_JPC_MGB",[["SmokeShell",1,1],["rhsusf_100Rnd_762x51_m62_tracer",6,100],["HandGrenade",2,1]]],["USP_HYDRATION_PACK_MC",[]],"USP_OPSCORE_FASTMTC_CW","",[],["ItemMap","ItemAndroid","","ItemCompass","ACE_Altimeter",""]];
     icon = "iconManMG";
 };
 
