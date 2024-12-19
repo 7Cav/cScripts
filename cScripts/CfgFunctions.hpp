@@ -199,6 +199,7 @@ class cScripts {
         // Other
         class vehicle_reset {};
         class vehicle_addFlagAction {};
+        class vehicle_planeAutoEject {};
     };
     class civ {
         file = "cScripts\functions\civ";
