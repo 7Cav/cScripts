@@ -737,6 +737,19 @@ force force cba_network_loadoutValidation = 1;
 //ctab_core_useArmaMarker = true;
 //ctab_core_useMils = false;
 
+// Death && Hit Reactions
+force force WBK_DeathAnimMod_Death_Chance = "100";
+force force WBK_DeathAnimMod_Deaths_AI = true;
+force force WBK_DeathAnimMod_Deaths_HUGEANIMS = true;
+force force WBK_DeathAnimMod_Deaths_NECKSHOTS = true;
+force force WBK_DeathAnimMod_Deaths_PLR = true;
+force force WBK_DeathAnimMod_Flinch_AI = true;
+force force WBK_DeathAnimMod_Flinch_PLR = true;
+force force WBK_DeathAnimMod_Hit_AI = true;
+force force WBK_DeathAnimMod_Hit_Chance = "100";
+force force WBK_DeathAnimMod_Hit_Chance_PLR = "100";
+force force WBK_DeathAnimMod_Hit_PLR = false;
+
 // DUI - Squad Radar - Indicators
 //diwako_dui_indicators_crew_range_enabled = false;
 //diwako_dui_indicators_fov_scale = false;

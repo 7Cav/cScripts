@@ -175,8 +175,8 @@
         ["USP_OPSCORE_FASTMTC_MCA_CSW", 0],
 
         // Ammo
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 0],
-        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 50],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG", 56],
+        ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red", 56],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan", 0],
         ["rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red", 0],
         ["30Rnd_556x45_Stanag_Sand_red", 0],
@@ -186,11 +186,26 @@
         // NVG
         ["USP_PVS14", 0],
         ["USP_PVS15", 0],
-        ["USP_L4G19", 0],
-        ["USP_L4G24",0],
-        ["USP_PVS31",0],
+        ["USP_PVS15_WP", 0],
+        ["USP_L4G24_BLK",0],
+        ["USP_PVS31_BLK",0],
         ["USP_PVS31_BLK2",0],
-        ["USP_PVS31_TAN2",0],
+        ["USP_PVS31_WP_BLK",0],
+        ["USP_PVS31_WP_BLK2",0],
+        ["USP_PVS31_HIGH_BLK",0],
+        ["USP_PVS31_HIGH_BLK2",0],
+        ["USP_PVS31_WP_HIGH_BLK",0],
+        ["USP_PVS31_WP_HIGH_BLK2",0],
+        ["USP_PVS31_LOW_BLK",0],
+        ["USP_PVS31_LOW_BLK2",0],
+        ["USP_PVS31_WP_LOW_BLK",0],
+        ["USP_PVS31_WP_LOW_BLK2",0],
+        ["USP_PVS31_MID_BLK",0],
+        ["USP_PVS31_MID_BLK2",0],
+        ["USP_PVS31_WP_MID_BLK",0],
+        ["USP_PVS31_WP_MID_BLK2",0],
+        ["USP_PVS31_WP_BLK",0],
+        ["USP_PVS31_WP_BLK2",0],
         ["USP_RHINO", 0],
 
         // cTab
@@ -284,8 +299,38 @@
         ["DemoCharge_Remote_Mag",0],
         ["ClaymoreDirectionalMine_Remote_Mag",0],
 
+        //Vests
+        ["V_TacChestrig_cbr_F", 0],
+        ["V_CarrierRigKBT_01_light_OCP_F",0],
+
         // Backpack
         ["B_AssaultPack_mcamo", 0],
+        ["USP_45L_RUCKSACK_MC",0],
+        ["USP_ZIPON_PACK_CPC_MC",0],
+        ["USP_ZIPON_PACK_CPC_AT_MC",0],
+        ["USP_ZIPON_PACK_CPC_AT_RF2_MC",0],
+        ["USP_ZIPON_PACK_CPC_AT_RF2_SM_MC",0],
+        ["USP_ZIPON_PACK_CPC_AT_SM_MC",0],
+        ["USP_ZIPON_PACK_CPC_AT_RF2_MC",0],
+        ["USP_ZIPON_PACK_CPC_BC_SM_MC",0],
+        ["USP_ZIPON_PACK_CPC_RF2_SM_MC",0],
+        ["USP_ZIPON_PACK_CPC_AT_RF2_MC",0],
+        ["USP_ZIPON_PACK_CPC_SM_MC",0],
+        ["USP_ZIPON_PANEL_CPC_MC",0],
+        ["USP_ZIPON_PANEL_CPC_BC_MC",0],
+        ["USP_ZIPON_PANEL_CPC_BC_SM_MC",0],
+        ["USP_ZIPON_PANEL_CPC_BC_SMK_MC",0],
+        ["USP_ZIPON_PANEL_CPC_BC_SMK_SM_MC",0],
+        ["USP_ZIPON_PANEL_CPC_RF2_MC",0],
+        ["USP_ZIPON_PANEL_CPC_RF2_SM_MC",0],
+        ["USP_ZIPON_PANEL_CPC_RF2_SMK_MC",0],
+        ["USP_ZIPON_PANEL_CPC_RF2_SMK_SM_MC",0],
+        ["USP_ZIPON_PANEL_CPC_SM_MC",0],
+        ["USP_ZIPON_PANEL_CPC_SMK_MC",0],
+        ["USP_ZIPON_PANEL_CPC_SMK_SM_MC",0],
+        ["USP_REEBOW_3DAP_ACC3_MC",0],
+        ["USP_REEBOW_3DAP_ACC6_MC",0],
+        ["USP_TACTICAL_PACK_PO7",0],
         ["USP_REEBOW_3DAP_MC", 0],
         ["USP_REEBOW_3DAP_ACC1_MC", 0],
         ["USP_REEBOW_3DAP_ACC10_MC", 0],
@@ -1411,6 +1456,11 @@
         ["ACE_splint",0],
 
         // Night Gear
+        ["USP_PVS14",0],
+        ["USP_PVS15",0],
+        ["USP_PVS15_WP",0],
+        ["USP_RHINO",0],
+        ["USP_L4G24_BLK",0],
         ["ACE_IR_Strobe_Item",0],
         
         // Radios
@@ -1738,6 +1788,7 @@
         // Diagnostic Tools
         ["kat_Pulseoximeter",0],
         ["kat_stethoscope",0],
+        ["kat_ultrasound",0],
 
         // Fluids
         ["ACE_bloodIV",0],
@@ -1947,6 +1998,9 @@
         ["rhs_weap_mk18_wd", 0],
         ["rhs_weap_mk18_KAC_wd", 0],
 
+        //Vests
+        ["V_TacChestrig_cbr_F", 0],
+
         //Attachments
         ["rhsusf_acc_sf3p556", 0],
         ["rhsusf_acc_eotech", 0],
@@ -1996,7 +2050,10 @@
         
         //Magazines
         ["rhsusf_20Rnd_762x51_SR25_m118_special_Mag", 0],
-        
+
+        //Vests
+        ["V_TacChestrig_cbr_F", 0],
+
         //Attachments
         ["rhsusf_acc_harris_bipod", 0],
         ["rhsusf_acc_anpeq15side", 0],
