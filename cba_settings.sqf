@@ -180,7 +180,6 @@ force force ace_hearing_enabledForZeusUnits = false;
 force force ace_hearing_explosionDeafnessCoefficient = 0;
 force force ace_hearing_unconsciousnessVolume = 0.1;
 
-
 // ACE Interaction
 force force ace_interaction_disableNegativeRating = true;
 force force ace_interaction_enableAnimActions = true;
