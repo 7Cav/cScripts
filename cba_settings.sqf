@@ -173,11 +173,13 @@ force force acex_headless_transferLoadout = 1;
 
 // ACE Hearing
 force force ace_hearing_autoAddEarplugsToUnits = 2;
-force force ace_hearing_disableEarRinging = false;
+//force force ace_hearing_disableEarRinging = false;
 force force ace_hearing_earplugsVolume = 0.5;
 force force ace_hearing_enableCombatDeafness = true;
 force force ace_hearing_enabledForZeusUnits = false;
+force force ace_hearing_explosionDeafnessCoefficient = 0;
 force force ace_hearing_unconsciousnessVolume = 0.1;
+
 
 // ACE Interaction
 force force ace_interaction_disableNegativeRating = true;
